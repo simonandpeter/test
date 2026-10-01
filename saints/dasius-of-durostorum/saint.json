@@ -1,0 +1,60 @@
+{
+  "slug": "dasius-of-durostorum",
+  "display_name": "Dasius of Durostorum",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Δάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Δάσιος που μαρτύρησε στο Δορύστολο», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Δάσιος έζησε γύρω στα τέλη του 3ου μ.Χ. αιώνα επί Mαξιμιανού». The page gives no year; the interval is the end of that century as it prints it, and the reign of Maximian it names falls inside it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιος Δάσιος που μαρτύρησε στο Δορύστολο»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3046/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's other Dasius folders is this man: `dasius-3-november` is kept on the Greek 3 November, `dasius-of-axiopolis` on the Romanian 26 April, and `dasius-companion-of-caesarius`, `dasius-companion-of-gaius` and `dasius-companion-of-maron` each belong to another company on another day. Two entries on one calendar are two commemorations, so the 3 November row is not touched. This man is placed by his own city, Dorostolon on the Danube, and by Maximian. The folder is given no `locations`: the page names the city but no coordinate of the corpus's is worth more than the words. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Proclu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 noiembrie, «Sfântul Ierarh Proclu, Patriarhul Constantinopolului», with the rank words left off."
+    },
+    {
+      "form": "Πρόκλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Πρόκλος αρχιεπίσκοπος Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιος Πρόκλος αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3045/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους» and «Αγιος Προκλος Αρχιεπισκοπος Κωνσταντινουπολης (; - 447)», the same day the folder's Romanian row already carries, and the man is the folder's own: the disciple of John Chrysostom who came to the throne of Constantinople in 434 and brought his teacher's relics back from Comana. A death interval is proposed from the page's own year where the folder had none. The hymn taken is the Ἀπολυτίκιον (Κατέβασμα) that names him and Gregory the Decapolite together and no one else, the two saints of this day; it is drafted onto both folders, and the folder's existing Romanian tropar is a different text and is untouched. The page's own name-gloss block names the last Neoplatonist philosopher Proclus of Athens, 410 to 485, as a famous bearer of the name; that is the site's gloss on any name, it is not this man, and nothing of it is recorded. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -48,7 +63,8 @@
   "related": [
     "john-chrysostom",
     "paul-the-apostle",
-    "pulcheria-the-empress"
+    "pulcheria-the-empress",
+    "atticus-of-constantinople"
   ],
   "hymns": [
     {
@@ -66,9 +82,35 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Λυχνία ὡς δίπυρσος τῶν θεϊκῶν δωρεῶν, ἀκτῖσι τῆς χάριτος φωταγωγοῦσιν ἡμᾶς πατέρες οἱ ἔνθεοι, Πρόκλος τοῦ Βυζαντίου, ὁ σοφὸς ποιμενάρχης, Γρηγόριος ὁ θεόφρων, Δεκαπόλεως γόνος· διὸ μετὰ προθυμίας τούτοις προσέλθωμεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the only hymn on the page of «Άγιος Πρόκλος αρχιεπίσκοπος Κωνσταντινούπολης», and the same text stands on the page of «Όσιος Γρηγόριος ο Δεκαπολίτης». It names the two of them and no other saint.",
+        "url": "https://www.saint.gr/3045/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a lamp with two flames of the gifts of God, the godly fathers light our way with the rays of grace — Proclus of Byzantium, the wise chief shepherd, and Gregory of godly mind, the offspring of the Decapolis. Let us therefore come to them with eagerness.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 447,
+      "latest": 447,
+      "display": "447",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Προκλος Αρχιεπισκοπος Κωνσταντινουπολης (; - 447)» and the narrative closes with it: «Πατριάρχευσε δώδεκα χρόνια και τρεις μήνες και κοιμήθηκε το 447 μ.Χ.» The page gives no year of birth."
+    }
   }
 }

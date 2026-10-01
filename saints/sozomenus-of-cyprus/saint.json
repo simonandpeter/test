@@ -1,0 +1,61 @@
+{
+  "slug": "sozomenus-of-cyprus",
+  "display_name": "Sozomenus of Cyprus",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Σωζόμενος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Σωζόμενος ο θαυματουργός», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1100,
+      "latest": 1100,
+      "display": "about 1100",
+      "basis": "traditional",
+      "note": "saint.gr: «από την ακολουθία του, καθώς και από άλλες πηγές, μαθαίνουμε πως έζησε πριν από τη φράγκικη κατοχή της Κύπρου (περί το 1100 μ.Χ.)» — the page's own year, written «περί», about, and set before the Frankish occupation. It gives no year of birth or of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιος Σωζόμενος ο θαυματουργός»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3055/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. **The page itself records a second day for him** and it is a note here and not a second row: «Η μνήμη του αγίου γιορτάζεται σε πολλά μέρη του νησιού μας στις 20 Νοεμβρίου και σ' άλλα στην 21 μαζί με την εορτή των Εισοδίων» — kept in many parts of the island on 20 November and in others on the 21st along with the feast of the Entry. The row records the day page that was read. He is not the corpus's `sozomenus-of-the-alamanoi`, who is kept on the Greek 18 July as one of the Three Hundred. The page prints an Ἀπολυτίκιον in Ἦχος δ’ which names him, but gives it no model, so no hymn is drafted and the omission is named in the reader's report. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

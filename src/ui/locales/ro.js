@@ -1102,6 +1102,7 @@ export const ro = {
     'Patriarch of Jerusalem': 'Patriarh al Ierusalimului',
     'Patriarch of Moscow': 'Patriarh al Moscovei',
     'Patriarch of Serbia': 'Patriarh al Serbiei',
+    'Patrikios': 'Patrician',
     'Patrician and general of Sicily': 'Patrician și general al Siciliei',
     'Pope of Rome': 'Papă al Romei',
     'Presbyter': 'Presbiter',

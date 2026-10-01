@@ -1,0 +1,60 @@
+{
+  "slug": "theoctistus-20-november",
+  "display_name": "Theoctistus (20 November)",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Θεόκτιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Θεόκτιστος ο Ομολογητής», with the rank words left off."
+    }
+  ],
+  "office": "Patrikios",
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόκτιστος ο Ομολογητής έζησε τον 9ο αιώνα μ.Χ.» The page gives no year of birth or of death; the empress Theodora whose reign it names falls inside that century."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιος Θεόκτιστος ο Ομολογητής»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3053/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The display name takes the day because the corpus keeps eight folders of this name, all on other days, and because `lib/honorific.js` composes the rank the page gives him, «ο Ομολογητής», out of the `types`. His dignity of patrikios is recorded in `office`, which is what he held, not what he is called. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

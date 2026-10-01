@@ -1,0 +1,66 @@
+{
+  "slug": "eustathius-20-november",
+  "display_name": "Eustathius (20 November)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "thespesius-20-november",
+    "anatolius-20-november",
+    "lucian-of-antioch",
+    "anthimus-of-nicomedia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "300",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος έζησαν στα χρόνια του βασιλιά Μαξιμιανού το έτος 300 μ.Χ.», and the page's heading carries «(; - 300)» against each of the three names. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3052/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates three brothers by name, so there is a folder for each, and the three share one life. The corpus keeps ten folders of this name, all on other days, so the display name takes the day; the page's one addition for this brother is that Anthimus of Nicomedia ordained him deacon, which the `types` carry. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

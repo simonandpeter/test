@@ -1,0 +1,51 @@
+{
+  "slug": "john-of-nitria",
+  "display_name": "John of Nitria",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Όσιος Ιωάννης», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Όσιος Ιωάννης»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3049/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The same day keeps a second John, one of the six Persian martyrs on `https://www.saint.gr/3048/saint.aspx`, and this is the other notice. The page's long heading block on the name ΙΩΑΝΝΗΣ lists the Forerunner, the Evangelist and Chrysostom as famous bearers; that is the site's gloss on any name and nothing of it is recorded here. **The page disclaims one of its own sources** — «Τα περί της ζωής του, που αναφέρονται στο Λαυσαϊκό δεν ανταποκρίνονται στην πραγματικότητα», what is said of his life in the Lausiac History does not correspond to reality — and that sentence is quoted in the life, because it is the page's reason for telling nothing more. It is not the asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», neither of which is on the page: the entry itself is not withdrawn, only the stories told elsewhere about it. The reader's report names this. The place in the display name is the page's own Mount Nitria. No year, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

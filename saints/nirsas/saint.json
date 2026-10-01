@@ -1,0 +1,54 @@
+{
+  "slug": "nirsas",
+  "display_name": "Nirsas",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Νιρσάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Νιρσάς ο Επίσκοπος και Ιωσήφ ο μαθητής του και Επίσκοπος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "joseph-disciple-of-nirsas"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιοι Νιρσάς ο Επίσκοπος και Ιωσήφ ο μαθητής του και Επίσκοπος»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3047/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates both men by name, so there is a folder for each, and the two share one life. Neither is any of the corpus's Narses or Nerses folders: `narses-9-november` is kept on the Greek 9 November, `narses-companion-of-jonah` on 29 March and `nerses-the-martyr` on 15 June, and the Greek form here is Νιρσάς, not Ναρσής. The page gives no year — the persecution under Shapur II is named without one — so no `dates` object is proposed. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

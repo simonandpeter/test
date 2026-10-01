@@ -1,0 +1,62 @@
+{
+  "slug": "mama",
+  "display_name": "Mama",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Μάμα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Αγίες παρθένες Θέκλα, Βαουθά, Δενάχις, Τεντούς, Μάμα, Μαλοχία, Άννα, Νάνα, Άστη και Μαλάχ», with the rank words left off."
+    }
+  ],
+  "related": [
+    "thecla-20-november",
+    "bauthas",
+    "denachis",
+    "tentous",
+    "malochia",
+    "anna-20-november",
+    "nana-20-november",
+    "aste",
+    "malach"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Αγίες παρθένες Θέκλα, Βαουθά, Δενάχις, Τεντούς, Μάμα, Μαλοχία, Άννα, Νάνα, Άστη και Μαλάχ»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3051/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates ten women by name, so there is a folder for each, and the ten share one life. Nothing in the corpus answers to this name; the corpus's `mamas-*` folders are men of another name. The page gives no year, no city and no king by name, so no `dates` object is proposed. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

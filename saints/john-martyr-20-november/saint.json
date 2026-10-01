@@ -1,0 +1,66 @@
+{
+  "slug": "john-martyr-20-november",
+  "display_name": "John (20 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "isacius-20-november",
+    "saborius",
+    "onam",
+    "papias-20-november",
+    "isaacius-20-november"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 343,
+      "latest": 343,
+      "display": "343",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι τρεις πρώτοι μαρτύρησαν δια λιθοβολισμού το 343 μ.Χ. μαζί με τον ασκητή Ωνάμ, από τον βασιλιά των Περσών», and the page's own heading carries «(; - 343)» against this name. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Νοεμβρίου — «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος»",
+        "url": "https://www.saint.gr/11/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3048/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates six men by name, so there is a folder for each, and the six share one life. The same day keeps a second John, `john-of-nitria`, an ascetic of Nitria on his own page, who is a different man on a different notice; the display name takes the day for that reason and because the corpus keeps very many of this name. The page's long heading block on the name ΙΩΑΝΝΗΣ lists the Forerunner, the Evangelist and Chrysostom as famous bearers; it is that site's gloss on any name and says nothing about this man, and nothing of it is recorded here. The page notes that in the Paris Codices 1578 and 1624 they are called bishops; it gives them no see, so no `office` is recorded. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

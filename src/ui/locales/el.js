@@ -1103,6 +1103,7 @@ export const el = {
     'Patriarch of Jerusalem': 'Πατριάρχης Ιεροσολύμων',
     'Patriarch of Moscow': 'Πατριάρχης Μόσχας',
     'Patriarch of Serbia': 'Πατριάρχης Σερβίας',
+    'Patrikios': 'Πατρίκιος',
     'Patrician and general of Sicily': 'Πατρίκιος και στρατηγός Σικελίας',
     'Pope of Rome': 'Πάπας Ρώμης',
     'Presbyter': 'Πρεσβύτερος',
