@@ -6,6 +6,11 @@
       "form": "Metodie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Sfințit Mucenic Metodie, Episcopul Patarelor»; the form is the bare name, the rest of the line being rank and see."
+    },
+    {
+      "form": "Μεθόδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουνίου, «Άγιος Μεθόδιος ο Ιερομάρτυρας επίσκοπος Πατάρων», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Ιουνίου — «Άγιος Μεθόδιος ο Ιερομάρτυρας επίσκοπος Πατάρων»",
+        "url": "https://www.saint.gr/06/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. It is plainly the same man: the hieromartyr bishop of Patara, killed with a knife by a servant set on him by the Origenists he had driven back. The page prints no year in its own narrative, saying only «έζησε κατά τον 6ο μ.Χ. αιώνα», and then quotes S. Eustratiades against itself — that he flourished at the end of the third and the beginning of the fourth century, that according to Jerome and the historian Socrates he was bishop not of Patara but of Olympus in Lycia and afterwards of Tyre, that by another opinion he was bishop of Philippi in Macedonia, and that he was martyred at Chalcis in Syria under Diocletian. Because the page holds two irreconcilable datings and vouches for neither, no `dates` object is proposed here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,6 +74,23 @@
       },
       "english": {
         "text": "Having become a sharer of the apostles' ways and a successor to their thrones, thou didst find in action, O God-inspired one, an ascent to contemplation. Therefore, rightly dividing the word of truth, and contending for the faith even unto blood, O Hieromartyr Methodius, intercede with Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὡς στύλος ἀκλόνητος, τῆς Ἐκκλησίας Χριστοῦ, καὶ λύχνος ἀείφωτος τῆς οἰκουμένης σοφέ, ἐδείχθης Μεθόδιε· ἔλαμψας ἐν τῷ κόσμῳ, διὰ τοῦ μαρτυρίου, ἔλυσας τῶν εἰδώλων, τὴν σκοτόμαιναν μάκαρ, διὸ ἐν παρρησίᾳ Χριστῷ, πρέσβευε σωθῆναι ἡμᾶς.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε — the first of two apolytikia on the page of «Άγιος Μεθόδιος ο Ιερομάρτυρας επίσκοπος Πατάρων», and it names him",
+        "url": "https://www.saint.gr/1943/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown, O wise Methodius, an unshaken pillar of the Church of Christ and an ever-shining lamp of the whole world; you gave light to the world by your martyrdom, and you broke the darkness of the idols, O blessed one. Therefore intercede boldly with Christ, that we may be saved.",
         "rendered": "site"
       }
     }

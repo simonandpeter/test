@@ -1,0 +1,50 @@
+{
+  "slug": "two-ascetics",
+  "display_name": "The Two Ascetics",
+  "sex": "male",
+  "types": [
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Δύο Ασκητές",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουνίου, «Άγιοι Δύο Ασκητές», with the rank word left off. The page prints no personal name for either of them."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Ιουνίου — «Άγιοι Δύο Ασκητές»",
+        "url": "https://www.saint.gr/06/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουνίου εκάστου έτους», the same day as the listing, and gives no year. They are not the corpus's `three-women-ascetics`, who are three women of Constantinople out of the Ohrid Prologue on 10 September old style. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

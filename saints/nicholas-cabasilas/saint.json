@@ -6,6 +6,11 @@
       "form": "Nicolae Cabasila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Nicolae Cabasila»."
+    },
+    {
+      "form": "Νικόλαος Καβάσιλας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουνίου, «Άγιος Νικόλαος ο Καβάσιλας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Ιουνίου — «Άγιος Νικόλαος ο Καβάσιλας»",
+        "url": "https://www.saint.gr/06/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. It is plainly the same man: born at Thessalonica in 1322, nephew of Neilos Kabasilas the archbishop of Thessalonica, adherent of Gregory Palamas, who reposed a little after 1391 and was canonised on 19 July 1983. The page's own birth year, 1322, is the year the folder's `dates` already carries out of doxologia.ro, and its «λίγο μετά το 1391» falls inside the bracket already recorded, so no change to `dates` is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -76,6 +91,40 @@
       },
       "english": {
         "text": "Being a partaker of the everlasting gladness, pray without ceasing for us who honour thee, O blessed Nicholas, that we may be delivered from temptations and from dangers and from every distress and from grievous infirmities, and that we who run to thy fervent protection may be filled with the divine illumination.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ´.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς θεῖος διδάσκαλος, καὶ ὑποφήτης σοφός, δογμάτων τῆς πίστεως, καὶ ἀρετῶν ἱερῶν, Νικόλαε Ὅσιε, ἔλαμψας ἐν τῷ κόσμῳ, διὰ βίου καὶ λόγου. Ὅθεν Θεσσαλονίκη, τῇ σῇ δόξῃ καυχάται, καὶ πόθῳ ἑορτάζει, τὴν πάνσεπτον μνήμην σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ´, Ταχὺ προκατάλαβε — the only apolytikion on the page of «Άγιος Νικόλαος ο Καβάσιλας», and it names him and Thessalonica",
+        "url": "https://www.saint.gr/1947/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a divine teacher and a wise interpreter of the doctrines of the faith and of the sacred virtues, venerable Nicholas, you gave light to the world by your life and by your word. Therefore Thessalonica boasts in your glory, and keeps your all-venerable memory with longing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β´.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Λόγῳ ἐνθέῳ ἀνύων τὸν βίον σου, περιφανὴς ἐν σοφίᾳ καὶ χάριτι, καὶ ἐν λόγου δυνάμει γενόμενος, τῆς εὐσεβείας διδάσκαλος πέφηνας· διὸ σὲ ὑμνοῦμεν Νικόλαε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β´, Τοῖς τῶν αἱμάτων σου — the only kontakion on the page of «Άγιος Νικόλαος ο Καβάσιλας», and it names him",
+        "url": "https://www.saint.gr/1947/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Accomplishing your life by a word filled with God, and becoming conspicuous in wisdom and in grace and in the power of speech, you were shown a teacher of piety; therefore we hymn you, Nicholas.",
         "rendered": "site"
       }
     }

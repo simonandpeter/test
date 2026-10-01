@@ -6,6 +6,11 @@
       "form": "Calist",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 iunie, «Sfântul Ierarh Calist, Patriarhul Constantinopolului»; the form is the bare name, the rest of the line being rank and see."
+    },
+    {
+      "form": "Κάλλιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουνίου, «Όσιος Κάλλιστος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Ιουνίου — «Όσιος Κάλλιστος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/06/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and it closes by saying the Church appointed his memory for 20 Ιουνίου. It is the patriarch Callistus I, monk of Iviron and hesychast, disciple of Gregory of Sinai, not the corpus's `callistus-angelikoudes`, whom saint.gr does not name on this day. The page's parenthesis «(; - 1364)» and its dating of his second patriarchate to 20 June 1364 disagree with the 1363 the folder's `dates` carries out of doxologia.ro; both are reported and neither is changed here."
     },
     {
       "church": "serbian",
@@ -55,5 +70,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "῏Ηχος αʹ.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Βασιλίδος ἐδείχθης Πατριάρχης θεόσοφος, καὶ ̔Αγίου ῎Ορους τὸ κλέος, τῶν Σεῤῥαίων θησαύρισμα, τῶν θείων δὲ Χριστοῦ ἡσυχαστῶν ὁ φίλος καὶ συνήγορος ὁμοῦ· διὸ πάντες πάτερ Κάλλιστε ἐν χαρᾷ ὑμνοῦμέν σε κραυγάζοντες· Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ χορηγοῦντι διὰ σοῦ ἡμῖν τὰ κάλλιστα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, ῏Ηχος αʹ, Τῆς ἐρήμου πολίτης — the only apolytikion on the page of «Όσιος Κάλλιστος Πατριάρχης Κωνσταντινούπολης», and it names him, the Holy Mountain and Serres",
+        "url": "https://www.saint.gr/1946/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown a God-wise patriarch of the Queen of cities, the boast of the Holy Mountain and the treasure of the people of Serres, at once the friend and the advocate of Christ's divine hesychasts. Therefore, father Callistus, we all hymn you in gladness and cry: glory to Christ who glorified you, glory to him who made you wonderful, glory to him who through you supplies us with what is best.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
