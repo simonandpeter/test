@@ -6,6 +6,11 @@
       "form": "Dionisie Retorul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 iulie, «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul», with the rank word left off."
+    },
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουλίου, «Όσιοι Διονύσιος «ο ρήτωρ» και ο υποτακτικός του Άγιος Μητροφάνης ο πνευματικός», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουλίου — «Όσιοι Διονύσιος «ο ρήτωρ» και ο υποτακτικός του Άγιος Μητροφάνης ο πνευματικός»",
+        "url": "https://www.saint.gr/07/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same man: the Rhetor of the Great Church and his disciple Mitrophan, the pair the Romanian line names as «Sfinții Cuvioși Dionisie Retorul și Mitrofan Duhovnicul». The office, the disciple and the year 1606 settle him against the corpus's many other men of the name. The page heads him «(; - 1606)» and has him repose on 9 July 1606, adding that other manuscripts give 6 October 1596 or 1602; the folder's existing `dates` already read 1606 off doxologia's «6 octombrie 1606», so no change to `dates` is proposed and the disagreement over the day and the variant years is recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,5 +74,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείοις ἄνθραξι, τῆς ἐγκρατείας, πάθη φλέξαντες, τὰ φρυγανώδη, ἀσκητικῶς ἐν τῷ Ἄθῳ ἠστράψατε· τῷ γὰρ ἀδύτῳ φωτὶ λαμπρυνόμενοι, τῶν θεοφόρων ἐφάμιλλοι ὤφθητε, Διονύσιε σοφέ, καὶ θεῖε Μητρόφανες, αἰτούμενοι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the only apolytikion on the shared page of «Όσιοι Διονύσιος «ο ρήτωρ» και ο υποτακτικός του Άγιος Μητροφάνης ο πνευματικός», and it names them both",
+        "url": "https://www.saint.gr/2017/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Burning up the brushwood of the passions with the divine coals of abstinence, you flashed like lightning in ascesis on Athos; for, made bright by the light that never sets, you were seen to be rivals of the God-bearing fathers, wise Dionysius and divine Mitrophan, asking great mercy for us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Ὡς τῆς Τριάδος μυστηπόλοι ἱερώτατοι Καὶ τῶν Ὁσίων κοινωνοὶ καὶ ἰσοστάσιοι Διονύσιε σοφὲ σὺν τῷ Μητροφάνει, Μὴ ἐλλείπητε ἐχθροῦ τὰ πανουργεύματα Ἅ τεκταίνει καθ’ ἡμῶν συντρίβειν πάντοτε, Ἵνα κράζωμεν, θεοφόρητοι χαίρετε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’. Τῇ Ὑπερμάχῳ — the only kontakion on the shared page of the two, and it names them both",
+        "url": "https://www.saint.gr/2017/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As most sacred ministers of the mysteries of the Trinity, and partners and equals of the venerable, wise Dionysius with Mitrophan, do not cease ever to crush the knaveries the enemy contrives against us, that we may cry: Rejoice, you who are borne by God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

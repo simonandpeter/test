@@ -1,0 +1,105 @@
+{
+  "slug": "michael-paknanas",
+  "display_name": "Michael Paknanas the Gardener",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μιχαήλ Πακνανάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουλίου, «Άγιος Μιχαήλ Πακνανάς ο κηπουρός», with the rank word and the trade left off. The life page gives the surname as «Πακνανάς (ή Μπακνανάς)» and quotes an Athenian inscription that spells the man «ο Πακνανάς Μιχάλης»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1770,
+      "latest": 1771,
+      "display": "1770 or 1771",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Μιχαηλ Πακνανας ο Κηπουρος (; - 1771)» and its narrative has the executioner behead him «το 1771 μ.Χ.», with an inscription once legible on the first column of the Olympian Zeus at Athens: «1771 Ιουλίου 9 απεκεφαλίσθη ο Πακνανάς Μιχάλης». The same page closes by noting that some synaxarists, Nicodemus the Hagiorite among them, put the martyrdom «στα 1770 μ.Χ.», so the interval carries both years the one source prints."
+    }
+  },
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Athens, near the columns of the temple of Olympian Zeus",
+      "modern_name": "Athens, Greece",
+      "lat": 37.9693,
+      "lon": 23.733,
+      "uncertainty_km": 15,
+      "note": "saint.gr has him born at Athens, living in the quarter of Vlassarou below the Acropolis, and beheaded there; the inscription it quotes stood on the first column of the Olympian Zeus, and a caption on the same page puts the martyrdom «πλησίον των στύλων του Ολυμπίου Διός». The point is the temple and the uncertainty is the city, because the narrative itself names no spot."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουλίου — «Άγιος Μιχαήλ Πακνανάς ο κηπουρός»",
+        "url": "https://www.saint.gr/07/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no Michael of Athens and no Paknanas of any name, and the surname, the trade, the city and the year 1771 leave nothing to confuse him with. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints three apolytikia, a kontakion, a megalynarion, an oikos and four kathismata, all of them naming him; the first apolytikion and the kontakion are taken here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "text": "Τοῦ δολίου πατήσας εὐθαρσῶς τὰ φρυάγματα ἐν ἐσχάτοις ἔτεσι, μάκαρ, Ἰησοῦν ὡμολόγησας, αἱμάτων σου δὲ ῥείθροις, Μιχαήλ, ἡγίασας τὴν γῆν τῶν Ἀθηνῶν καί ὑπόδειγμα ἐδείχθης ἅπασιν εὐσεβέσι, πίστει κράζουσι· Δόξᾳ τῷ ποιητῇ σου καί Θεῷ, δόξα τῷ σέ στεφανώσαντι, δόξα τῷ ποδηγέτην σέ στεῤῥόν ἡμῖν δωρήσαντι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α' — the first of three apolytikia on the page of «Άγιος Μιχαήλ Πακνανάς ο κηπουρός», and it names him and the land of Athens",
+        "url": "https://www.saint.gr/644/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Treading down with good courage the arrogance of the deceiver in these last years, blessed one, you confessed Jesus; and with the streams of your blood, Michael, you sanctified the land of Athens, and were shown an example to all the pious who cry out in faith: Glory to your maker and God, glory to him who crowned you, glory to him who gave you to us as a firm guide.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ἐπέφανεν σήμερον.",
+      "text": "Εὐσεβείας ἤθεσι κεκοσμημένος, μαρτυρίου ἤνυσας, τὸ θεῖον σκάμμα Μιχαήλ, καὶ ἐκ χειρὸς τοῦ Παντάνακτος, τὸν τῆς ἀθλήσεως στέφανον εἴληφας.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ'. Ἐπέφανεν σήμερον — the only kontakion on the page of «Άγιος Μιχαήλ Πακνανάς ο κηπουρός», and it names him",
+        "url": "https://www.saint.gr/644/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the ways of piety, you finished the divine contest of martyrdom, Michael, and from the hand of the King of all you received the crown of the struggle.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

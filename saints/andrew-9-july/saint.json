@@ -6,6 +6,11 @@
       "form": "Andrei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 iulie, «Sfântul Mucenic Andrei», with the rank words left off."
+    },
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουλίου, «Άγιοι Ανδρέας και Πρόβος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουλίου — «Άγιοι Ανδρέας και Πρόβος»",
+        "url": "https://www.saint.gr/07/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line pairs the same two names the Romanian one does — «Sfântul Mucenic Andrei» and «Sfântul Mucenic Prov» against «Άγιοι Ανδρέας και Πρόβος». The pairing on the one day is what settles him against the corpus's many other men named Andrew: this entry has no country, no century and no story beyond the manner of his death, and neither does the folder. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under their line."
     },
     {
       "church": "serbian",
@@ -46,5 +61,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "probus-9-july"
+  ]
 }

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φωτιοσ photius-companion-of-cyril photius-of-akapniou photius-of-constantinople photius-of-kyiv photius-of-yuriev':
+    'Five now. The new one is Photius of Akapniou on 9 July; the others are read in the el-03-05 entry for this name form, with Photius of Kyiv, whom the Russian keeps on 16 September and the Greek on 2 July.',
   'σαββασ sabbas-companion-of-jonah sabbas-martyr-8-july sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
     'Fifteen now. The new one is the Sabbas of 8 July; the others are read in the el-06-14 entry for this name form.',
   'προκοπιοσ procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-the-martyr-25-june':

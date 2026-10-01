@@ -1,0 +1,50 @@
+{
+  "slug": "photius-of-akapniou",
+  "display_name": "Photius, founder of the Akapniou monastery",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Φώτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Ιουλίου, «Όσιος Φώτιος κτήτορας της Μονής Ακαπνίου στη Θεσσαλονίκη», with the rank word and the description of his foundation left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Ιουλίου — «Όσιος Φώτιος κτήτορας της Μονής Ακαπνίου στη Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/07/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's five other men of the name — of Constantinople, of Kyiv, of Nicomedia, of Yuriev, and the companion of Cyril — all of whom carry a century and a story; this one has neither, and the Akapniou foundation at Thessalonica is what the calendar names him by. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn: it reports that an idiomelon poem by Demetrius Beaskos stands beside his memory in the Lavriotic codex, and does not print its text."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

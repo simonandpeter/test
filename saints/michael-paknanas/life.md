@@ -1,0 +1,11 @@
+# Michael Paknanas the Gardener
+
+saint.gr says that Michael Paknanas — the page gives the surname as Paknanas or Baknanas — was born at Athens of virtuous parents about the year 1750, and lived in the quarter of Vlassarou, which lay below the Acropolis on the ground that is now the Ancient Agora. Because his parents were poor he was left unlettered, and he became a gardener.
+
+Coming back to Athens one day from a village where he had gone for work, he was seized by the Turkish guards and falsely accused of carrying gunpowder in secret for the Greek insurgents. He was brought before the judge, and protested at the injustice done him, but was condemned to death unless he would deny his faith and embrace Mohammedanism and so save his life. To the threats that kept coming, the page says, that pious and honourable Athenian answered in a haughty manner with the phrase that has stayed with him: «Δεν τουρκεύω» — I do not turn Turk.
+
+He was condemned and led to the place of execution rejoicing and giving thanks to the Lord, who had counted him worthy of the honour of martyrdom. The executioner first struck him on the neck with the sword turned about, to frighten him, expecting him to change his mind; but the brave martyr urged him on with courage, saying «Χτύπα για την πίστη» — strike, for the faith. And when the executioner laid his knife on the saint's neck and wounded him a little, he heard the same words from his mouth. At last the man cut off his venerable head.
+
+On the first column of the Olympian Zeus at Athens an inscription could once be made out: «1771 Ιουλίου 9 απεκεφαλίσθη ο Πακνανάς Μιχάλης». The page adds that the only chapel in the whole capital dedicated to him is in the church of the Ascension of the Lord at Neos Kosmos, where tradition puts his gardens; that in 2003 he was proclaimed patron of dietitians and nutritionists; and that one of the main streets of that quarter, and the tram stop beside it, carry his name. It notes finally that some synaxarists, Nicodemus the Hagiorite among them, place the martyrdom in 1770.
+
+*After saint.gr's calendar for 9 Ιουλίου — [the day](https://www.saint.gr/07/09/index.aspx) and [the life](https://www.saint.gr/644/saint.aspx); read 1 October 2026.*
