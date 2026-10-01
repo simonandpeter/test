@@ -6,6 +6,11 @@
       "form": "Iacob Persul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 noiembrie, «Sfântul Mare Mucenic Iacob Persul», with the rank words left off."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Ιάκωβος ο Πέρσης ο Μεγαλομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Νοεμβρίου — «Άγιος Ιάκωβος ο Πέρσης ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/11/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man the folder already keeps on the Romanian 27 November: the great-martyr cut apart limb by limb under the Persian king Isdegerd. saint.gr puts him in the fourth century, under the emperor Arcadius, about 395, and gives his home as Bethlada of Persia where doxologia.ro gave Elani. Its apolytikion and kontakion, which both name him, are taken here; the Οἶκος it also prints is neither troparion nor kontakion and is not drafted."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
         "text": "By your strange and fearful martyrdom and by the courage of your patience you amazed all men, much-suffering one: at the cutting off of every part of your body you offered wonderful prayers of thanksgiving to God. Therefore in your suffering you received a crown and went up to the throne of the heavenly King, Christ God, holy James. Pray to him to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὁ Μάρτυς Ἰάκωβος, ὁ τῆς Περσίδας βλαστός, τὸν δόλιον δράκοντα, τοὶς τῶν αἱμάτων κρουνοίς, ἀθλήσας ἀπέπνιξε, πίστει γὰρ ἀληθείας, μεληδὸν τετμημένος, ὤφθη τροπαιοφόρος, τοῦ Σωτῆρος ὁπλίτης, πρεσβεύων ἀδιαλείπτως, ὑπὲρ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Ιάκωβος ο Πέρσης ο Μεγαλομάρτυρας», and it names him and Persia.",
+        "url": "https://www.saint.gr/2729/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The martyr James, the shoot of Persia, contended and drowned the crafty dragon in the streams of his own blood; for by faith in the truth, cut apart limb by limb, he was shown to be a trophy-bearer and a soldier of the Saviour, interceding without ceasing for our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Πεισθεὶς τῇ καλῇ, συζύγῳ καρτερόψυχε, καὶ τὸ φοβερόν, κριτήριον φοβούμενος, τῶν Περσῶν τὸ φρόνημα, καὶ τὸν φόβον Ἰάκωβε κατέπτυσας, καὶ ἀνεδείχθης Μάρτυς θαυμαστός, τὸ σῶμα ὡς κλῆμα συντεμνόμενος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the second hymn on the page of «Άγιος Ιάκωβος ο Πέρσης ο Μεγαλομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/2729/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Persuaded by your good wife, O stout-hearted one, and fearing the dread judgement, you spat upon the mind of the Persians and upon fear, O James, and were shown a wonderful martyr, your body cut down like a vine-branch.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {

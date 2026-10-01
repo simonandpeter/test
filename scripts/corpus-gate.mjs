@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodore-of-ostrog theodosios-the-new-of-argos theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-oroboi theodosius-of-tarnovo theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
+    'Fifteen now. The new one is Theodosius of Tarnovo on 27 November, whose folder relates Gregory of Sinai, Euthymius of Tarnovo and Cyprian of Kyiv; the others are read in the el-08-07 entry for this name form.',
+  'μωυσησ moses-28-june moses-disciple-of-polychronius moses-of-novgorod moses-of-phara moses-of-ramas moses-of-the-white-lake':
+    'Six men. The new one is Moses of Phara on 27 November, an ascetic; the others are read in the el-02-23 entry for this name form, with the Moses of 28 June.',
+  'ιακωβοσ jacob-netsvetov jacob-of-nimouzan jacob-the-anchorite jacob-the-hermit jacob-tsalikis james-13-june james-companion-of-emilian james-companion-of-john-the-bishop james-matynenko james-of-bathys-ryax james-of-borovichi james-of-bryleyevo james-of-chamatoura james-of-cyrrhus james-of-kastoria james-of-nisibis james-of-pharatha james-of-rostov james-of-samosata james-of-serbia james-of-stromyn james-of-the-brazen-gate james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-redozubov james-son-of-zebedee james-the-brother-of-the-lord james-the-confessor james-the-deacon-of-kastoria james-the-persian':
+    'Thirty-one now, and two stand on 27 November: James the Persian, whose day the Romanian calendar keeps too and whose Greek row this batch adds, and James of Rostov, new here. Two entries, two men. The others are read in the el-11-26 entry for this name form.',
+  'δαμασκηνοσ damascene-13-november damascene-of-gabrovo damascene-the-sinaite damascene-the-studite':
+    'Four men. The new one is Damascene the Studite on 27 November, bishop of Lete and Rentina and afterwards metropolitan of Naupaktos and Arta; the others are read in the el-02-06 entry for this name form, with the Damascene of 13 November whose identity is the author’s.',
   'προκοπιοσ procopius-24-november procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian procopius-the-persian':
     'Nine men. The new one is Procopius the Persian on 26 November; the others are read in the el-11-24 entry for this name form.',
   'νικων nikon-companion-of-mark-the-shepherd nikon-disciple-of-sergius nikon-of-the-kyiv-caves nikon-the-metanoeite':

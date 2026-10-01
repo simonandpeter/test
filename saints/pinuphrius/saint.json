@@ -6,11 +6,19 @@
       "form": "Pinufrie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 noiembrie, «Sfântul Cuvios Pinufrie», with the rank words left off."
+    },
+    {
+      "form": "Πινούφριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Όσιος Πινούφριος», with the rank word left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "ascetic",
+    "abbot",
+    "presbyter"
   ],
   "attestations": [
     {
@@ -34,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 27 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Νοεμβρίου — «Όσιος Πινούφριος»",
+        "url": "https://www.saint.gr/11/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn. Where doxologia.ro gave only the name, saint.gr gives a life of six sentences, which the paragraph added to the folder's life reports; it is the first thing this folder knows about him beyond the bare commemoration."
     },
     {
       "church": "serbian",

@@ -1,0 +1,66 @@
+{
+  "slug": "theodosius-of-tarnovo",
+  "display_name": "Theodosius of Tarnovo",
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Θεοδόσιος του Τυρνόβου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monastic",
+    "confessor"
+  ],
+  "related": [
+    "gregory-of-sinai",
+    "euthymius-of-tarnovo",
+    "cyprian-of-kyiv"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1362,
+      "latest": 1363,
+      "display": "1362/3",
+      "basis": "traditional",
+      "note": "saint.gr: «Ανεπαύθη στις 27 Νοεμβρίου 1362/3 μ.Χ., την ίδια ημερομηνία που εκοιμήθη και ο διδάσκαλός του όσιος Γρηγόριος ο Σιναΐτης»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Νοεμβρίου — «Άγιος Θεοδόσιος του Τυρνόβου»",
+        "url": "https://www.saint.gr/11/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn for him. The page also sends the reader to 6 Απριλίου for his teacher Gregory of Sinai, to 20 Ιανουαρίου for Euthymius of Tarnovo, to 16 Σεπτεμβρίου for Cyprian of Kyiv and to 16 Ιανουαρίου for his friend Romylos; those are its cross-references, not days kept for Theodosius."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

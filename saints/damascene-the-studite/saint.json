@@ -1,0 +1,82 @@
+{
+  "slug": "damascene-the-studite",
+  "display_name": "Damascene the Studite",
+  "names": [
+    {
+      "form": "Δαμασκηνός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Δαμασκηνός ο Στουδίτης Επίσκοπος Λητής και Ρεντίνης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "metropolitan",
+    "hierarch",
+    "monk"
+  ],
+  "office": "Bishop of Lete and Rentina, afterwards Metropolitan of Naupaktos and Arta",
+  "dates": {
+    "death": {
+      "earliest": 1577,
+      "latest": 1577,
+      "display": "1577",
+      "basis": "traditional",
+      "note": "saint.gr: «Λίγο αργότερα, το σωτήριον έτος 1577 μ.Χ., εκοιμήθη εν Κυρίω», and its head line gives «(; - 1577)». The same page puts his birth at «Γεννημένος περί το 1520 μ.Χ. στη Θεσσαλονίκη»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Νοεμβρίου — «Άγιος Δαμασκηνός ο Στουδίτης Επίσκοπος Λητής και Ρεντίνης»",
+        "url": "https://www.saint.gr/11/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page. It prints one Ἀπολυτίκιον, which names him and both his sees, and that hymn is taken here; it prints no kontakion. Its cross-references to 14 Φεβρουαρίου for the neomartyr Nicholas and to 9 Ἰουλίου for Dionysius the Rhetor are its own links and not days kept for Damascene."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν Λητῆς καὶ Ρεντίνης χρυσολόγον ἐπίσκοπον, εἴτα δὲ Ναυπάκτου καὶ Ἄρτης θεοφόρητον πρόεδρον, τὸν θεῖον καὶ σοφὸν Δαμασκηνὸν, τιμήσωμεν ἐν ὕμνοις ἱεροῖς, τὸν διδάξαντα τῇ βίβλῳ αὐτοῦ λαούς, πρὸς ὅν καὶ ἀνακράζουσι· δόξα τῷ σὲ σοφίσαντι Χριστῷ, δόξα τῷ σὲ ἁγιάσαντι, δόξα τῷ ταμιεύσαντι ἐν σοί, χαρίτων θησαυρῶν Αὐτοῦ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the only hymn on the page of «Άγιος Δαμασκηνός ο Στουδίτης Επίσκοπος Λητής και Ρεντίνης», and it names him and both his sees.",
+        "url": "https://www.saint.gr/4349/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour with sacred hymns the golden-tongued bishop of Lete and Rentina, afterwards the God-bearing president of Naupaktos and Arta, the divine and wise Damascene, who taught the peoples by his book; to whom they cry out: glory to Christ who made you wise, glory to him who sanctified you, glory to him who stored up in you the treasures of his graces.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
