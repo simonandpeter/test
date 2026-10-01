@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μεθοδιοσ methodius-hieromartyr-1-march methodius-of-constantinople methodius-of-moravia methodius-of-nivritos methodius-of-patara methodius-of-peshnosha':
+    'Six now. The new one is Methodius of Nivritos on 25 June; the others are read in the el-06-04 entry for this name form.',
+  'θεοδοσιοσ theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':
+    'Ten now. The new one is on 25 June; the others are read in the el-03-26 entry for this name form.',
+  'σιμων simon-25-june simon-of-moscow simon-of-suzdal simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':
+    'Seven now. The new one is on 25 June; the others are read in the el-05-23 entry for this name form.',
+  'μαρτυριοσ martyrius-25-june martyrius-companion-of-sisinnius martyrius-of-novgorod martyrius-of-zelenets':
+    'Four now. The new one is on 25 June; the others are read in the el-05-29 entry for this name form.',
+  'λογγινοσ longinus-24-april longinus-brother-of-orentius longinus-of-koryazhemka':
+    'Three men. The new one is Longinus, one of the seven brothers of Satala whose company stands on 25 June, each on his own line and each with the shared life; the others are read in the el-10-16 entry for this name form.',
+  'γεωργιοσ george-bozic george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-krene george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-persian george-the-sinaite george-the-trophy-bearer':
+    'Thirty now. The new one is George of Krene on 25 June; the others are read in the el-06-04 entry for this name form.',
+  'φιρμοσ firmus-1-june firmus-brother-of-orentius':
+    'Two men: the Firmus of 1 June and Firmus, one of the seven brothers of Satala whose company stands on 25 June, each on his own line and each with the shared life. His brother Φιρμίνος is a folder of his own and does not fold here, the two Greek forms being distinct.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-eurychou cyriacus-son-of-hesperus cyriacus-the-infant':
+    'Five now. The new one is Cyriacus, one of the seven brothers of Satala whose company stands on 25 June, each on his own line and each with the shared life; the others are read in the el-05-24 entry for this name form.',
   'παναγιωτησ panagiotis-of-caesarea panagiotis-of-jerusalem':
     'Two men: the Panagiotis martyred at Jerusalem on 5 April and Panagiotis of Caesarea on 24 June.',
   'γερασιμοσ gerasimus-1-june gerasimus-of-astrakhan gerasimus-of-boltinsk gerasimus-of-crete gerasimus-of-great-perm gerasimus-of-kantara gerasimus-of-rethymno gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':

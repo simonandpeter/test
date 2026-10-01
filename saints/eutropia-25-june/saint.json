@@ -1,0 +1,55 @@
+{
+  "slug": "eutropia-25-june",
+  "display_name": "Eutropia",
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευτροπία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Αγίες Λεωνίδα, Λιβύη και Ευτροπία οι Οσιομάρτυρες», with the rank words left off."
+    }
+  ],
+  "related": [
+    "fevronia-of-sivapol",
+    "leonis-25-june",
+    "livia-the-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Αγίες Λεωνίδα, Λιβύη και Ευτροπία οι Οσιομάρτυρες»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day as the listing. The day's line enumerates all three women by name, so it is one folder each. Livia the corpus already keeps from the Romanian calendar of the same day; Leonis and Eutropia arrive here. The page prints no narrative, only a couplet for each and the one sentence «Μαρτύρησαν, η μεν πρώτη δια πυρός, η δε δύο άλλες δια ξίφους». No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

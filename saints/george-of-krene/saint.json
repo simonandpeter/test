@@ -1,0 +1,59 @@
+{
+  "slug": "george-of-krene",
+  "display_name": "George of Krene",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιος Γεώργιος ο εν Κρήνη», with the rank word and the place left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1823,
+      "latest": 1823,
+      "display": "1823",
+      "basis": "attested",
+      "note": "saint.gr: «Τελικά στις 25 Ιουνίου 1823 μ.Χ., τον κρέμασαν στον τοίχο του σπιτιού του επισήμου Παντελάκη Φαρμάκη και τον απαγχόνισαν.» The page's heading reads «Αγιος Γεωργιος ο Εν Κρηνη (; - 1823)», and the year of birth is left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιος Γεώργιος ο εν Κρήνη»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading reads «Αγιος Γεωργιος ο Εν Κρηνη (; - 1823)». None of the corpus's Georges is of Krene or was hanged in 1823, and the narrative is particular enough to tell him apart: born in the parts of Attaleia, snatched as an infant by an Aga called Prousalis and named Mehmet, undeceived by a Christian servant called Maria, married at Krene to Helen Mavrogianne. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

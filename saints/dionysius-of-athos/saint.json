@@ -6,6 +6,11 @@
       "form": "Dionisie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Cuvios Dionisie»; the epithet in the English form is from his life, which sets his whole labour on the Holy Mountain."
+    },
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Όσιος Διονύσιος κτήτορας της Μονής Τιμίου Προδρόμου Αγίου Όρους», with the rank word and the foundation left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Όσιος Διονύσιος κτήτορας της Μονής Τιμίου Προδρόμου Αγίου Όρους»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and the birthplace settles the identity: saint.gr makes him born «στο χωριό Κορησσό της Καστοριάς», the Korison of Kastoria the folder's life already names. The page adds the dating the Romanian source leaves out — his brother Theodosius made metropolitan of Trebizond under Alexius III Comnenus (1350–1390), the monastery approved in 1375 — so no `dates` object is proposed, because those years come from this second source alone. Two of the three hymns on the page are a mis-hang and are not taken: the second apolytikion, Ἦχος δ’ Ταχύ προκατάλαβε, and the kontakion, Ἦχος γ’ Ἡ Παρθένος σήμερον, both address «Προφῆτα καὶ Πρόδρομε» and are the Forerunner's, the monastery's patron, not his. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -49,5 +64,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Φῶς οὐράνιον, ἐν σοῖ σκηνώσαν, λύχνον ἄσβεστον, τοὶς ἐν τῷ Ἄθῳ, Διονύσιε σαφῶς σὲ ἀνέδειξε, σὺ γὰρ Προδρόμου τὸν βίον μιμούμενος, Μονὴν αὐτῶ ἀνεγείρεις περίβλεπτον. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, the first of two apolytikia on his own page, Ἦχος γ’, Θείας πίστεως — it names him, «Διονύσιε», and names his monastery; the second apolytikion and the kontakion on the same page are the Forerunner's and are not taken",
+        "url": "https://www.saint.gr/1979/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The heavenly light that made its dwelling in you showed you plainly as an unquenchable lamp to those on Athos, Dionysius; for imitating the life of the Forerunner you raised him a monastery to be gazed upon. Venerable father, entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

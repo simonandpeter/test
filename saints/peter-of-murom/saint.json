@@ -11,6 +11,11 @@
       "form": "Petru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Petru, Cneaz de Murom»; the form is the bare name, the rest of the line being rank and principality."
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιοι Πέτρος και Φεβρωνία οι θαυματουργοί», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιοι Πέτρος και Φεβρωνία οι θαυματουργοί»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and its heading reads «Αγιος Πετρος ο Θαυματουργος (; - 1228)» — the year of death the folder already keeps, which with the pairing to Fevronia settles the identity. The page gives no life of its own: «Δεν έχουμε πληροφορίες για τους βίους των Ρώσων Αγίων». The folder's Russian row keeps 31 August for the translation of their relics, and this Greek row is the same principal feast as the Romanian one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

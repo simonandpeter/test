@@ -1,0 +1,59 @@
+{
+  "slug": "firminus-brother-of-orentius",
+  "display_name": "Firminus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Φιρμίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιοι Ορέντιος, Φαρνάκιος, Έρωτας, Φίρμος, Φιρμίνος, Κυριάκος, και Λογγίνος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "cyriacus-brother-of-orentius",
+    "eros-brother-of-orentius",
+    "firmus-brother-of-orentius",
+    "longinus-brother-of-orentius",
+    "orentius-the-martyr",
+    "pharnacius-brother-of-orentius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιοι Ορέντιος, Φαρνάκιος, Έρωτας, Φίρμος, Φιρμίνος, Κυριάκος, και Λογγίνος»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day as the listing. The day's line enumerates all seven brothers by name, so it is one folder each, and the page gives each of them a couplet of his own besides. Orentius the corpus already keeps from the Romanian calendar of the same day, where doxologia.ro printed his name and no life; the six others arrive here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

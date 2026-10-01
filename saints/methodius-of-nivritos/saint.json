@@ -1,0 +1,90 @@
+{
+  "slug": "methodius-of-nivritos",
+  "display_name": "Methodius of Nivritos",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Μεθόδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιος Μεθόδιος ο εν Νυβρίτω», with the rank word and the place left off."
+    }
+  ],
+  "related": [
+    "nicholas-kourtaliotis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιος Μεθόδιος ο εν Νυβρίτω»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day as the listing, and adds «Η μνήμη του τιμάται στις 25 Ιουνίου, στο χωριό Νίβρυτο». No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page does carry a doubt of its own, and it is about identity rather than about the feast: it says that some confuse him with Nicholas Kourtaliotis and present the two as one and the same person — «κάποιοι συγχέουν τους δυο Αγίους και τους εμφανίζουν ένα και το αυτό πρόσωπο» — and that all of it needs much research by specialists. saint.gr itself keeps them as two entries on two days, Nicholas on 1 Σεπτεμβρίου, and that is what is recorded here; the doubt is noted and not resolved."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἐκ Νηβρύτου ὡς ἄστρον, πολιτείας τῆς κρείτονος, δι’ ἀσκητικῆς συντονίας, μυστικῶς ἐξανέτειλας, φαιδρύνων τᾶς χορείας τῶν Κρητῶν, αὐγαίς θεουργικῶν σού ἀρετῶν, καί θαυμάτων ἀγλαϊαις, ἠγιασμένε Μεθόδιε. Δόξα τῷ σέ ἰσχύσαντι Χριστῷ, δόξα τῷ σέ ἁγιάσαντι, δόξα τῷ χορηγούντι διά σου, χάριν ἀέναον.",
+      "source": {
+        "text": "saint.gr, the first of two apolytikia on his own page, Ἦχος α, Τῆς ἐρήμου πολίτης — it names him, «ἠγιασμένε Μεθόδιε», and names Nivritos and the Cretans",
+        "url": "https://www.saint.gr/1985/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of Nivritos you rose up mystically as a star of the better citizenship, by the strain of the ascetic life, gladdening the companies of the Cretans with the rays of your God-working virtues and the splendours of your wonders, hallowed Methodius. Glory to Christ who gave you strength, glory to him who hallowed you, glory to him who through you bestows unfailing grace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ α.",
+      "model": "Μιμητὴς ὑπάρχων.",
+      "text": "Τὰ τῆς γῆς ἡδέα ἀπαρνησάμενος, τοῦ Κυρίου ὀπίσω κατηκολούθησας, καὶ ἀσκήσας ἐν κόσμῳ καθάπερ ἄσαρκος, τοῖς χοροῖς τῶν Ἀγγέλων συνήφθης Ὅσιε, ἐνεργῶν ξενοτρόπως, ἡμῖν νῦν ἐν θαύμασι· διὸ πάντες Μεθόδιε, ὕμνοις σε γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, the first of two kontakia on his own page, Ἦχος πλ α, Μιμητὴς ὑπάρχων — it names him, «διὸ πάντες Μεθόδιε»",
+        "url": "https://www.saint.gr/1985/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having renounced the sweet things of earth, you followed after the Lord, and living as an ascetic in the world as though without flesh you were joined to the choirs of the angels, venerable one, working strangely among us now in wonders; and therefore we all honour you, Methodius, with hymns.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

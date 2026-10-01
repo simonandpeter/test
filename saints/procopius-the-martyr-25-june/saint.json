@@ -6,6 +6,11 @@
       "form": "Procopie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Mucenic Procopie»."
+    },
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιος Προκόπιος που μαρτύρησε στη Σμύρνη», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιος Προκόπιος που μαρτύρησε στη Σμύρνη»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the only Procopius saint.gr prints on that day. The identification rests on the day, the name and the rank of martyr alone: the folder's Romanian source, doxologia.ro, printed «Sfântul Mucenic Procopie» and no life whatever — no country, no century, no manner of death — so there is nothing in it to check against the Greek page's new martyr of Smyrna, and nothing in it that contradicts him either. The corpus's other Procopii are kept on other days. Recorded as one man on that ground and flagged in the reader's report; the Greek page's own particulars are given to the Greek page in the life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

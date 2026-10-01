@@ -1,0 +1,59 @@
+{
+  "slug": "theodosius-25-june",
+  "display_name": "Theodosius (25 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιος Θεοδόσιος ο μάρτυρας», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1419,
+      "latest": 1419,
+      "display": "1419",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Θεοδόσιος μαρτύρησε το 1419 μ.Χ.» The page's heading reads «Αγιος Θεοδοσιος ο Μαρτυρας (; - 1419)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιος Θεοδόσιος ο μάρτυρας»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading reads «Αγιος Θεοδοσιος ο Μαρτυρας (; - 1419)». The year of death and the day are the only things that tell him from the corpus's other Theodosii, none of which is a martyr of 1419 or is kept on 25 June in any calendar. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

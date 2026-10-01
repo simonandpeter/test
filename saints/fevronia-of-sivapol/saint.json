@@ -6,6 +6,11 @@
       "form": "Fevronia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfânta Mare Muceniță Fevronia»; the epithet in the English form is the city her life names, «cetatea Sivapol, care se afla în hotarele asirienilor»."
+    },
+    {
+      "form": "Φεβρωνία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Αγία Φεβρωνία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Αγία Φεβρωνία»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. The story settles the identity against the corpus's other Fevronia, the princess of Murom: the same persecutor Selinos, the same nephew Lysimachus offered her in marriage, the same abbess Bryene her aunt, the same monastery in Mesopotamia. saint.gr sets the soldiers' coming in 288 and names the city — «στην πόλη της Νισίβεως, που λέγεται Αντιόχεια της Μυγδονίας» — neither of which the folder's Romanian source gives; no `dates` object is proposed, because that year comes from this second source alone. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,6 +74,23 @@
       },
       "english": {
         "text": "Thy lamb Fevronia, O Jesus, cries out with a loud voice: Thee, my Bridegroom, do I love, and seeking Thee I am in torment; with Thee I am crucified and with Thee I am buried in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Accept me, then, as a spotless offering, who sacrifice myself to Thee in love. At her prayers, O merciful One, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Ὡς τῆς ἀσκήσεως ῥόδον ἡδύπνευστον, ὀσμὴν ἀθλήσεως τῷ κόσμῳ ἔπνευσας, εἰς ὀσμὴν μύρων τοῦ Χριστοῦ δραμοῦσα ἀσχέτῳ πόθῳ· ὅθεν ὡς παρθένον σὲ καὶ ὁσίαν καὶ μάρτυρα, θαυμαστῶς ἐδόξασε Φεβρωνία ὁ Κύριος, ᾧ πρέσβευε ὑπὲρ τῶν βοώντων· χαῖρε σεμνὴ ὁσιομάρτυς.",
+      "source": {
+        "text": "saint.gr, the apolytikion on her own page, Ἦχος γ’, Τὴν ὡραιότητα — it names her, «Φεβρωνία», and calls her virgin, venerable and martyr",
+        "url": "https://www.saint.gr/1973/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a sweet-breathing rose of the ascetic life you breathed upon the world the fragrance of your contest, running with unchecked longing after the fragrance of the myrrh of Christ. Therefore the Lord gave you wonderful glory as virgin and venerable and martyr, Fevronia; intercede with him for those who cry to you: rejoice, honoured venerable-martyr.",
         "rendered": "site"
       }
     }

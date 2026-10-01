@@ -6,6 +6,11 @@
       "form": "Orentie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Mucenic Orentie»."
+    },
+    {
+      "form": "Ορέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Άγιοι Ορέντιος, Φαρνάκιος, Έρωτας, Φίρμος, Φιρμίνος, Κυριάκος, και Λογγίνος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Άγιοι Ορέντιος, Φαρνάκιος, Έρωτας, Φίρμος, Φιρμίνος, Κυριάκος, και Λογγίνος»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek entry puts him at the head of six named brothers the Romanian line did not print. doxologia.ro gave «Sfântul Mucenic Orentie» and no life at all, so the day, the name and the rank of martyr are what tie the two lines together; nothing in the Romanian line contradicts the Greek page. The entry enumerates all seven brothers by name, so it is one folder each, and the six others are new folders in this batch. saint.gr dates the soldiering to the years of Diocletian, «(301 μ.Χ.)», and gives no year of death, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -45,5 +60,13 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "cyriacus-brother-of-orentius",
+    "eros-brother-of-orentius",
+    "firminus-brother-of-orentius",
+    "firmus-brother-of-orentius",
+    "longinus-brother-of-orentius",
+    "pharnacius-brother-of-orentius"
+  ]
 }

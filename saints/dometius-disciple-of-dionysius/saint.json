@@ -6,6 +6,11 @@
       "form": "Dometie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iunie, «Sfântul Cuvios Dometie»."
+    },
+    {
+      "form": "Δομέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουνίου, «Όσιος Δομέτιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουνίου — «Όσιος Δομέτιος»",
+        "url": "https://www.saint.gr/06/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and it ties him to the same man the folder already ties him to: «ήταν φίλος και συνασκητής του Όσιου Διονυσίου, κτήτορα της Μονής Τιμίου Προδρόμου». That settles him against the corpus's six other Dometii, none of whom is kept on 25 June in any calendar. The Greek page says he became the monastery's abbot afterwards and that he died in peace, and gives no year. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
