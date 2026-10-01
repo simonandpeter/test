@@ -1,0 +1,91 @@
+{
+  "slug": "cyril-of-thessalonica",
+  "display_name": "Cyril of Thessalonica",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιος Κύριλλος ο οσιομάρτυρας από τη θεσσαλονίκη», with the rank word left off."
+    },
+    {
+      "form": "Κυριακός",
+      "lang": "el",
+      "note": "His name in the world, read out of the life page: «ο Κύριλλος, το κοσμικό όνομα του οποίου ήταν Κυριακός»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1544,
+      "latest": 1544,
+      "display": "1544",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Θεσσαλονίκη το έτος 1544 μ.Χ., κατά την περίοδο της βασιλείας του σουλτάνου Σουλεϊμάν», and the page is headed «(1544 - 1566)»."
+    },
+    "death": {
+      "earliest": 1566,
+      "latest": 1566,
+      "display": "6 July 1566",
+      "basis": "traditional",
+      "note": "saint.gr: the fire «αποτέφρωσε το σώμα του στις 6 Ιουλίου του 1566 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιος Κύριλλος ο οσιομάρτυρας από τη θεσσαλονίκη»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day as the listing, and the day is the day of his burning in 1566. The page names its single source for him — «το αθωνικό χειρόγραφο 347 της μονής Διονυσίου», dated by it between the end of the seventeenth and the beginning of the eighteenth century — which is a statement about the source and not a doubt about the man; there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence. The corpus keeps no Cyril of Thessalonica: `cyril-the-philosopher` is the brother of Methodius on 11 May, and none of its other twenty Cyril folders is a sixteenth-century martyr burned at the Hippodrome."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "'Ηχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείον βλάστηµα, Θεσσαλονίκης, ώφθης Κύριλλε Όσιοµάρτυς, δια πυρός τον αγώνα τελέσας σου· όθεν εύρέσει των θείων λειψάνων σου, καθαγιάζεις τους πόθω τιµώντας σε. Αλλά πρέσβευε, Χριστώ τω Θεώ µακάριε, δωρήσασθαι ηµίν το µέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, 'Ηχος γ', Θείας πίστεως — the only hymn on the page of «Άγιος Κύριλλος ο οσιομάρτυρας από τη θεσσαλονίκη», and it names him",
+        "url": "https://www.saint.gr/675/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A divine shoot of Thessalonica you were shown to be, Cyril, venerable martyr, finishing your contest by fire; and so by the finding of your divine relics you sanctify those who honour you with longing. But intercede, blessed one, with Christ our God, that great mercy be given us.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

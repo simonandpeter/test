@@ -6,6 +6,11 @@
       "form": "Filimon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Mucenic Filimon», with the rank words left off."
+    },
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιοι Φιλήμων, Άρχιππος και Ονήσιμος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιοι Φιλήμων, Άρχιππος και Ονήσιμος»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and keeps him in a line of three exactly as doxologia does. The page gives no year. It closes with a remark of its own: «Η μνήμη του Αγίου Φιλήμονος, περιττώς επαναλαμβάνεται, από ορισμένους Συναξαριστές και την 6η Ιουνίου» — certain synaxarists needlessly repeat his memory on 6 June as well. That is saint.gr reporting other books and not keeping a second day of its own, so nothing is moved and the second day is recorded here. The third man of the line has no folder and is drafted as `onesimus-6-july`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -46,5 +61,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "archippus-6-july",
+    "onesimus-6-july"
+  ]
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "apollonius-of-the-twenty-four-martyrs",
+  "display_name": "Apollonius, one of the Twenty-four Martyrs",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Απολλώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own list of the Twenty-four Martyrs on the life page behind the line for 6 Ιουλίου, «Άγιοι Εικοσιτέσσερις Μάρτυρες», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 301,
+      "display": "301",
+      "basis": "traditional",
+      "note": "saint.gr heads every one of the fifteen «(; - 301)» and says «Αυτοί ήταν μεταξύ των πολλών, που μαρτύρησαν το 301 μ.Χ. δια αποκεφαλισμού»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιοι Εικοσιτέσσερις Μάρτυρες»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day as the listing, and dates the company «(; - 301)» throughout and «μαρτύρησαν το 301 μ.Χ.» in its text. The company is one folder per member because saint.gr enumerates them: it prints fifteen names — «Ανατολίας, Αντωνίνος, Λυκίας, Νέας, Σερίνος, Διόδωρος, Δίων, Απολλώνιος, Άπαμος, Παππιανός. Κοττύιος. Όρωνος, Παπικός, Σάτυρος, Βίκτωρ» — and then «και άλλοι εννέα», nine others it does not name, who therefore get no folder. The corpus keeps nobody of this name on this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The same day's listing carries a separate entry «Άγιος Απολλώνιος» with its own page and its own death — put in a ship, taken out to sea and burned in it — so that is another man, and the settled rule that two entries on one calendar are two commemorations is what tells them apart."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "lucia-of-rome-companion-of-rix",
+    "rix-the-vicar"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

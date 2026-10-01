@@ -1,0 +1,50 @@
+{
+  "slug": "basil-martyr-6-july",
+  "display_name": "Basil (6 July)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιος Βασίλειος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιος Βασίλειος»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. Its whole account is «Ο Άγιος Βασίλειος μαρτύρησε στη Σκυθούπολη μαζί με άλλους 69 χριστιανούς (βλέπε 28 Ιουνίου)» — the cross-reference is to another day of the site's own calendar, which this reader did not open, and the row therefore records the day page it quotes. The corpus's four men of Scythopolis — Antoninus, Aphrodisius, Leontius and Macrobius — all stand on 4 May, and it keeps no Basil of Scythopolis and nobody at all on 6 July of this name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

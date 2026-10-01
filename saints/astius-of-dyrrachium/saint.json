@@ -7,6 +7,11 @@
       "form": "Astie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Sfințit Mucenic Astie, episcopul Dirahiei», with the rank words left off."
+    },
+    {
+      "form": "Αστείος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιος Αστείος επίσκοπος Δυρραχίου», with the rank word and the see left off; the life page gives «Αστείος (ή Αστίος)»."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιος Αστείος επίσκοπος Δυρραχίου»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives the same man and the same see. It puts him «επί βασιλέως Τραϊανού και ηγεμόνος Αγρικόλα το έτος 98 μ.Χ.» and heads him «(; - 98)»; the year is reported rather than written. The page writes the name both «Αστείος» and «(ή Αστίος)». No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

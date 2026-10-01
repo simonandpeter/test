@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'βικτωρ victor-20-april victor-26-february victor-of-glazov victor-of-the-twenty-four-martyrs victor-of-thessalonica victor-yavorsky':
+    'Six now. The new one is Victor of the Twenty-four Martyrs on 6 July; the others are read in the el-05-19 entry for this name form.',
+  'σισωησ sisoes-the-great sisoes-the-russian':
+    'Two men on one day, which is why they are two: Sisoes the Great, whom the corpus already kept and this batch upgraded on 6 July, and Sisoes the Russian, new on the same page and the same line.',
+  'σατυροσ satyrus-companion-of-perpetua satyrus-of-the-twenty-four-martyrs':
+    'Two men: Satyrus the companion of Perpetua on 1 February and Satyrus of the Twenty-four Martyrs on 6 July.',
+  'ονησιμοσ onesimus-10-may onesimus-6-july onesimus-of-soissons onesimus-the-apostle':
+    'Four now. The new one is the Onesimus of 6 July; the others are read in the el-05-13 entry for this name form.',
+  'επιμαχοσ epimachus-9-may epimachus-martyr-6-july':
+    'Two men: the Epimachus of 9 May and the Epimachus of 6 July.',
+  'κυριλλοσ cyril-alfanov cyril-bishop-in-africa cyril-companion-of-photius cyril-ii-of-rostov cyril-of-alexandria cyril-of-astrakhan cyril-of-gortyna cyril-of-heliopolis cyril-of-jerusalem cyril-of-kantara cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-thessalonica cyril-of-turov cyril-of-zographou cyril-the-philosopher cyril-vi-of-constantinople':
+    'Eighteen now. The new one is Cyril of Thessalonica on 6 July; the others are read in the el-05-20 entry for this name form.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-eurychou cyriacus-son-of-hesperus cyriacus-the-infant cyril-of-thessalonica':
+    'Six now, and the new member is not a Cyriacus at all: Cyril of Thessalonica folds here because the folded form of his name meets theirs. The five Cyriaci are read in the el-06-25 entry for this name form.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-thessalonica basil-of-yaroslavl basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Twenty-four now. The new one is the Basil of 6 July; the others are read in the el-07-03 entry for this name form.',
+  'διων dion dion-of-the-twenty-four-martyrs':
+    'Two men: the Dion of 8 March and Dion of the Twenty-four Martyrs on 6 July.',
+  'διοδωροσ diodorus-martyr-3-may diodorus-of-corinth diodorus-of-emesa diodorus-of-the-twenty-four-martyrs diodorus-the-presbyter':
+    'Five now. The new one is Diodorus of the Twenty-four Martyrs on 6 July; the others are read in the el-06-12 entry for this name form.',
+  'απολλωνιοσ apollonius-companion-of-proclus apollonius-martyr-6-july apollonius-of-the-twenty-four-martyrs apollonius-the-anchorite':
+    'Four now, and two are new on 6 July: the Apollonius the day page names on his own line and Apollonius of the Twenty-four Martyrs, who is in the enumerated company — two entries on one day, so two men. The others are read in the el-02-14 entry for this name form.',
+  'αντωνινοσ antoninus-20-april antoninus-of-ramas antoninus-of-scythopolis antoninus-of-the-twenty-four-martyrs':
+    'Four now. The new one is Antoninus, one of the Twenty-four Martyrs the 6 July page enumerates; the others are read in the el-05-03 entry for this name form.',
   'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-great stephen-the-presbyter-7-june stephen-xylinites':
     'Twenty now. The new one is Stephen of Rhegium on 5 July; the others are read in the el-06-30 entry for this name form.',
   'θεοφιλοσ theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-the-deacon-of-libya theophilus-the-new':

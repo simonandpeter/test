@@ -6,6 +6,11 @@
       "form": "Lucia din Roma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfânta Muceniță Lucia din Roma», with the rank words left off."
+    },
+    {
+      "form": "Λουκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία», with the rank word left off; the page's own text writes it «Λούκια»."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same woman — seized by Rix the vicar, bringing him to the faith, martyred with him in Campania. It heads them both «(; - 301)», a year the folder has no `dates` for and which is therefore reported and not written. The man the folder is named after has no folder of his own and is drafted as `rix-the-vicar`, and the «πολλοί άλλοι» of the line are the Twenty-four Martyrs of the same day's separate entry. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "rix-the-vicar"
+  ]
 }

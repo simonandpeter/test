@@ -1,0 +1,65 @@
+{
+  "slug": "palladius-of-scotland",
+  "display_name": "Palladius of Scotland",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Palladius",
+      "lang": "la",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιος Palladius απόστολος της Σκωτίας», with the rank word and the epithet left off; the site prints his name in Latin letters there and glosses it once on the life page as «ο Άγιος Palladius (Παλλάδιος)»."
+    },
+    {
+      "form": "Παλλάδιος",
+      "lang": "el",
+      "note": "The Greek form, read out of the life page's own gloss «Ο Άγιος Palladius (Παλλάδιος)» and used thereafter throughout its text."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 450,
+      "latest": 450,
+      "display": "450",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Παλλάδιος απεβίωσε ειρηνικά το 450 μ.Χ.», and the page is headed «(; - 450)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιος Palladius απόστολος της Σκωτίας»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day as the listing. The corpus's `palladius-of-helenopolis` is the historian of the Lausiac History on 28 January and `palladius-popov` a Russian of 1937; neither is this Celtic deacon of Rome sent to Ireland in 431. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

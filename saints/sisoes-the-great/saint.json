@@ -6,6 +6,11 @@
       "form": "Sisoe cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfântul Cuvios Sisoe cel Mare», with the rank words left off."
+    },
+    {
+      "form": "Σισώης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Όσιος Σισώης ο μεγάλος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Όσιος Σισώης ο μεγάλος»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and heads him «Οσιος Σισωης ο Μεγαλος (; - 429)»; the folder carries no `dates` object and that year is reported rather than written, because it is the first the corpus has seen for him. The same day's listing carries a second, bare «Όσιος Σισώης», a Russian monk of the eighteenth century with a page of his own; two entries on one calendar are two commemorations, so that is another man and he is drafted separately as `sisoes-the-russian`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints an apolytikion and more besides, but the extractor cut the page in the middle and no hymn was read whole, so none is taken; that is named in the report."
     },
     {
       "church": "serbian",

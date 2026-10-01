@@ -1,0 +1,9 @@
+# Onesimus (6 July)
+
+saint.gr's calendar for 6 Ιουλίου keeps three men in one line, «Άγιοι Φιλήμων, Άρχιππος και Ονήσιμος», and tells them together. The page says they had a warm love for our Lord Jesus Christ and a perfect devotion to his Gospel; and so, when they were ordered to deny Christ and to sacrifice to the idols, all three answered with one voice in the God-inspired words of the Apostle Paul: «Ουδείς γαρ ημών εαυτώ ζη και ουδείς εαυτώ αποθνήσκει· εάν τε γαρ ζώμεν, τω Κυρίω ζώμεν, εάν τε αποθνήσκωμεν, τω Κυρίω αποθνήσκομεν· εάν τε ούν ζώμεν, εάν τε αποθνήσκωμεν, του Κυρίου εσμέν» — none of us lives to himself and none dies to himself; whether we live or die, we are the Lord's.
+
+Putting their own words into practice, the page says, all three died a martyr's death, and each differently: [Philemon](/saints/philemon-6-july) by crucifixion; [Archippus](/saints/archippus-6-july) of the wounds he suffered being dragged behind a wild horse through stones and thorns; and Onesimus beheaded with the sword. The page gives no country, no city, no century and no year for any of the three, and names neither the judge nor the emperor who gave the order.
+
+It prints no hymn under their line, only a synaxarion couplet for each man. For Onesimus: «Όνησιν εύρεν Oνήσιμος εκ ξίφους, / Λαβών το λαμπρόν της αθλήσεως στέφος» — Onesimus found profit from the sword, taking the bright crown of the contest, a play on his name. The page closes with a remark of its own about his companion: «Η μνήμη του Αγίου Φιλήμονος, περιττώς επαναλαμβάνεται, από ορισμένους Συναξαριστές και την 6η Ιουνίου» — the memory of Saint Philemon is needlessly repeated by certain synaxarists on 6 June as well.
+
+*After saint.gr's calendar for 6 Ιουλίου — [the day](https://www.saint.gr/07/06/index.aspx) and [the life](https://www.saint.gr/681/saint.aspx); read 1 October 2026.*

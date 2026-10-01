@@ -1,0 +1,62 @@
+{
+  "slug": "rix-the-vicar",
+  "display_name": "Rix the Vicar",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ρήξος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία», with the rank word and the office left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 301,
+      "display": "301",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ρηξος Βικαριος Που Μαρτυρησε Στην Κομπανια (; - 301)», and the page of the Twenty-four Martyrs beheaded with him says «μαρτύρησαν το 301 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Ιουλίου — «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία»",
+        "url": "https://www.saint.gr/07/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Ιουλίου εκάστου έτους», the same day as the listing, and heads him «(; - 301)». The corpus already keeps the woman of this line as `lucia-of-rome-companion-of-rix`, named for him, but has no folder for him: he is a new folder and she is an upgrade. The corpus keeps nobody else of this name under any spelling. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "lucia-of-rome-companion-of-rix"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
