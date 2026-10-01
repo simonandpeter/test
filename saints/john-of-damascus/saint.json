@@ -6,6 +6,11 @@
       "form": "Ioan Damaschin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 decembrie, «Sfântul Cuvios Ioan Damaschin», with the rank words left off."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Όσιος Ιωάννης ο Δαμασκηνός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Δεκεμβρίου — «Όσιος Ιωάννης ο Δαμασκηνός»",
+        "url": "https://www.saint.gr/12/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: its heading reads «(; - 749)» and it names Damascus, his father Sergios, the monastery of Saint Sabbas and the three orations for the holy icons. Of the page's hymns the first Ἀπολυτίκιον and the Κοντάκιον, both of which name him, are taken here; the «Έτερον Ἀπολυτίκιον», the Μεγαλυνάριον and the Κάθισμα are not drafted. Its long catalogue of his writings was read and is reported in summary rather than copied."
     },
     {
       "church": "serbian",
@@ -63,9 +78,62 @@
         "text": "Guide of Orthodoxy, teacher of the right worship of God and of purity, light of the world, God-inspired adornment of monks, wise father John: by your teachings you have enlightened all. Spiritual harp, pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὴν καλλικέλαδον, καὶ λιγυραῖς μολπαῖς, κατακηλοῦσάν τε, καὶ ἀγλαΐζουσαν, τὴν Ἐκκλησίαν τοῦ Χριστοῦ, εὔλαλον ἀηδόνα, δεῦτε εὐφημήσωμεν, Ἰωάννην τὸν πάνσοφον, τὸν Δαμασκηνὸν πιστοί, ὑμνογράφων τὸν πρύτανιν· τὸν ἔμπλεων, ἁπάσης γενόμενον, θείας καὶ κοσμικῆς σοφίας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Τὴν ὡραιότητα — the first of the two apolytikia on the page of «Όσιος Ιωάννης ο Δαμασκηνός», and it names him.",
+        "url": "https://www.saint.gr/3148/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, faithful, let us praise the sweet-singing and clear-voiced nightingale, who with melodious songs charms and adorns the Church of Christ — John the all-wise, the Damascene, the chief of the hymnographers, who became filled with all wisdom, divine and worldly.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Δαμάσας πολλοῖς, ἱδρῶσι τῆς ἀσκήσεως, τὸ σῶμα τὸ σόν, εἰς ὕψος οὐράνιον, εὐπετῶς ἀνέδραμες, ὅπου μέλη θεῖά σοι δίδονται, ἃ τρανῶς ἐμελῴδησας, τοῖς φίλοις Κυρίου Πάτερ Ὅσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the kontakion on the page of «Όσιος Ιωάννης ο Δαμασκηνός». It plays on his name, Δαμάσας for Δαμασκηνός, and so names him.",
+        "url": "https://www.saint.gr/3148/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having subdued your body with many sweats of asceticism, you ran up lightly to the heavenly height, where divine songs are given you — those which you sang out plainly to the friends of the Lord, venerable father.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 675,
+      "latest": 700,
+      "display": "late 7th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε στη Δαμασκό στα τέλη του 7ου αιώνα μ.Χ.». The page gives no year, only the end of that century."
+    },
+    "death": {
+      "earliest": 749,
+      "latest": 749,
+      "display": "749",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε με οσιότητα πάνω από εκατό χρόνια και κοιμήθηκε ειρηνικά το 749 μ.Χ.», and its heading reads «(; - 749)»."
+    }
+  },
+  "related": [
+    "cosmas-of-maiuma"
+  ]
 }

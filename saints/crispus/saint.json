@@ -1,0 +1,50 @@
+{
+  "slug": "crispus",
+  "display_name": "Crispus",
+  "names": [
+    {
+      "form": "Κρίσπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Άγιος Κρίσπος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Δεκεμβρίου — «Άγιος Κρίσπος»",
+        "url": "https://www.saint.gr/12/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn, no distich and no year. Two hedged claims are on it and both are kept as hedges in the life: that he is «λέγεται» the founder of the church of Aegina, and that according to Chrysostom he is the apostle Sosthenes. The corpus keeps a `sosthenes-of-chalcedon`, a martyr on a venerated Russian 16 September, who is not the Sosthenes of the Seventy that identification is about; no row or link is made between them. The page also notes that some hagiologies keep him on 8 Δεκεμβρίου with others of the Seventy, which is a synaxarists' day and not one saint.gr itself keeps."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "john-of-polybotus",
+  "display_name": "John of Polybotus",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Όσιος Ιωάννης επίσκοπος Πολυβότου, ο Θαυματουργός», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop",
+    "wonderworker",
+    "confessor"
+  ],
+  "office": "Bishop of Polybotus",
+  "dates": {
+    "floruit": {
+      "earliest": 680,
+      "latest": 730,
+      "display": "late 7th to early 8th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωάννης έζησε στα τέλη του 7ου και στις αρχές του 8ου αιώνα μετά Χριστόν», and it places his episcopate in the reign of Leo the Isaurian. The page gives no year of birth and none of death; the bounds here are the page's two centuries and nothing finer."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Δεκεμβρίου — «Όσιος Ιωάννης επίσκοπος Πολυβότου, ο Θαυματουργός»",
+        "url": "https://www.saint.gr/12/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn. It locates the see for the reader itself: Polybotus, an ancient city of Asia Minor in Phrygia Salutaria near Synnada, whose ruins survive at the modern Bolvadin near Afyonkarahisar. No location is recorded in this folder, because the page's own identification is enough said in the life and a coordinate is not its to give."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

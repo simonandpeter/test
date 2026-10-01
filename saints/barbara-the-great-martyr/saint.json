@@ -14,6 +14,11 @@
       "form": "Varvara",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 decembrie, «Sfânta Mare Muceniță Varvara», with the rank words left off."
+    },
+    {
+      "form": "Βαρβάρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Αγία Βαρβάρα η Μεγαλομάρτυς», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -64,8 +69,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Δεκεμβρίου — «Αγία Βαρβάρα η Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/12/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same woman, the daughter of Dioscorus of Heliopolis killed by her own father's hand. It places her «κατά τους χρόνους του αυτοκράτορος Μαξιμιανού (286 - 305 μ.Χ.)». Of the page's hymns the first Ἀπολυτίκιον and the Κοντάκιον, both of which name her, are taken here; the «Έτερον Ἀπολυτίκιον», the two Καθίσματα and the Μεγαλυνάρια are not drafted. Its long account of the travels of the relics was read and is reported in one added paragraph rather than retold."
     },
     {
       "church": "serbian",
@@ -93,6 +108,39 @@
         "text": "Let us honour the holy great martyr Barbara, for she broke the snares of the enemy and was delivered out of them like a sparrow, by the help of the weapon of the Cross, the all-honoured one.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Βαρβάραν τὴν Ἁγίαν τιμήσωμεν· ἐχθροῦ γὰρ τὰς παγίδας συνέτριψε, καὶ ὡς στρουθίον ἐῤῥύσθη ἐξ αὐτῶν, βοηθείᾳ καὶ ὅπλῳ τοῦ Σταυροῦ ἡ πάνσεμνος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’ — the first of the two apolytikia on the page of «Αγία Βαρβάρα η Μεγαλομάρτυς», and it names her. The page gives it a tone and no automelon.",
+        "url": "https://www.saint.gr/3149/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the holy Barbara; for she broke the snares of the enemy, and like a sparrow was delivered out of them, the all-revered one, by the help and the weapon of the Cross.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῷ ἐν Τριάδι εὐσεβῶς ὑμνουμένῳ, ἀκολουθήσασα σεμνὴ Ἀθληφόρε, τὰ τῶν εἰδωλων ἔλιπες σεβάσματα· μέσον δὲ τοῦ σκάμματος, ἐναθλοῦσα Βάρβαρα, τυράννων οὐ κατέπτηξας, ἀπειλὰς ἀνδρειόφρον, μεγαλοφώνως μέλπουσα ἀεί, Τριάδα σέβω τὴν μίαν θεότητα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — the kontakion on the page of «Αγία Βαρβάρα η Μεγαλομάρτυς», and it names her and the three windows' Trinity.",
+        "url": "https://www.saint.gr/3149/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having followed him who is devoutly hymned in Trinity, O revered prize-bearer, you left the objects of the idols' worship; and contending in the midst of the arena, Barbara, you did not flinch at the tyrants' threats, O brave-minded one, but sang always with a great voice: I worship the Trinity, the one Godhead.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
     }
   ]
 }

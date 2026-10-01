@@ -1,0 +1,11 @@
+# Seraphim of Phanarion
+
+Seraphim was born in the village of Bezoulia in the province of Agrapha, saint.gr says, and was brought up in Christ by his godly parents Sophronios and Maria. He loved the monastic life and went to the monastery of the Most Holy Mother of God called Korona or Krya Vrysi, and gave himself to the practice of virtue; he was distinguished for his asceticism and became abbot of the house, and was afterwards ordained archbishop of Phanarion and Neochori.
+
+He was accused of having taken part in the rising of [Dionysius the Philosopher](/saints/dionysius-the-philosopher) and was arrested by the Turks, who tried in vain to make him a Muslim. Made savage by the steadiness of the hieromartyr's faith, they put him to dreadful tortures, which grew as Seraphim went on refusing to betray his faith. They cut off his nose and brought him repeatedly before the judge; and when he would not change his religion they executed him on the fourth of December 1601, by impaling, or by other accounts by hanging — the page gives both and settles neither.
+
+The most learned teacher Christophoros Prodromites composed for Saint Seraphim canons in the eight tones, prosomoia and idiomela, which were printed together with his service. His honoured head was laid in the monastery of Krya Vrysi, where he had been a monk, and the page calls it a continuing wonder of God: it is wrapped in its skin, which in some places the faithful have taken away for amulets, and it carries the marks of the martyrdom; the left eye is peacefully closed, while the right bears plain traces of violence, and the cutting away of the nose is plainest of all. The page cites for that an archimandrite's book on the monastery of the Panagia Korona and the service printed with it at Kastoria in 2001.
+
+He is city-keeper of Karditsa, and the page links beside him the service of the hieromartyr Seraphim, the synaxis of the saints of Eurytania and the synaxis of the saints of Thessaliotis; those are feasts and services and none of them was read for this folder.
+
+*After saint.gr's calendar for 4 Δεκεμβρίου — [the day](https://www.saint.gr/12/04/index.aspx) and [the life](https://www.saint.gr/3143/saint.aspx); read 2 October 2026.*
