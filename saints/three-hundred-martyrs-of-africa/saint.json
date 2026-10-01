@@ -1,0 +1,59 @@
+{
+  "slug": "three-hundred-martyrs-of-africa",
+  "display_name": "The Three Hundred Martyrs of Africa",
+  "names": [
+    {
+      "form": "Τριακόσιοι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Τριακόσιοι Μάρτυρες που μαρτύρησαν στην Αφρική», with the rank word left off."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 474,
+      "latest": 491,
+      "display": "under Zeno",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Τριακόσιοι Μάρτυρες μαρτύρησαν στην Αφρική τον 5ο αιώνα μετά Χριστόν στα χρόνια του βασιλιά Ζήνωνα.» The page gives no year; the interval here is Zeno's reign, which the same day's entry for the two priests dates «(474 - 476 μ.Χ.)» and which is given on this page only as «στα χρόνια του βασιλιά Ζήνωνα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιοι Τριακόσιοι Μάρτυρες που μαρτύρησαν στην Αφρική»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. The company enumerates nobody — the page names only the two bishops who stirred up the persecution and the ruler who carried it out — so by the settled rule a company the page does not name is one folder. This page calls Kyrillos and Valinardis and the ruler Honorichos Monophysites, while the same day's entries for the two priests and the sixty priests call Honorichos an Arian; the disagreement is the source's own and is recorded rather than resolved. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "two-priests-of-carthage",
+  "display_name": "The Two Priests of Carthage",
+  "names": [
+    {
+      "form": "Δύο Ιερείς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Δύο Ιερείς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 474,
+      "latest": 476,
+      "display": "474 - 476",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησαν στην Καρχηδόνα στα χρόνια του βασιλιά Ζήνωνα (474 - 476 μ.Χ.) και όταν άρχοντας εκεί ήταν ο Ονώριχος ο Αρειανός». The interval is the page's own parenthesis for Zeno's reign and not a year it gives for the martyrdom."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιοι Δύο Ιερείς»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. The company enumerates nobody — the two priests are counted and not named — so by the settled rule it is one folder. This page calls Honorichos an Arian, where the same day's three hundred martyrs of Africa call him and the two bishops Monophysites; the disagreement is the source's own. The page's couplet is printed with a broken tag in its second line, «δύω,,br />Eίλοντο», which is the site's markup and not a reading. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

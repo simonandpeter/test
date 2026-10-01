@@ -1,0 +1,53 @@
+{
+  "slug": "gaianus-martyr-7-december",
+  "display_name": "Gaianus (7 December)",
+  "names": [
+    {
+      "form": "Γαϊανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Γάιος και Γαϊανός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "gaius-martyr-7-december"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιοι Γάιος και Γαϊανός»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members, so it is one folder per named member and each relates the other. The corpus keeps a `gaianos-martyr-11-august` and a `gaianus-5-may`; those are other entries on the same calendar and therefore other commemorations, and nothing on either page joins them to this one. No year, so no `dates` object. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

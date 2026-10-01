@@ -1,0 +1,64 @@
+{
+  "slug": "gerasimos-of-euripos",
+  "display_name": "Gerasimos of Euripos",
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Όσιος Γεράσιμος ο εξ Ευρίπου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher"
+  ],
+  "related": [
+    "gregory-of-sinai"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1250,
+      "latest": 1350,
+      "display": "the time of the Frankish rule, about 1320",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Γεράσιμος ήταν Ιεραπόστολος της Ελλάδας κατά τους χρόνους της φραγκοκρατίας (περί το 1320 μ.Χ.)», with the same page's «Κατά το δεύτερο μισό του 13ου αιώνα, ο Γεράσιμος ήλθε στο Σινά». The page gives no year of birth and none of death, and the interval here is only the span those two sentences allow."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Όσιος Γεράσιμος ο εξ Ευρίπου»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. He is a disciple of Gregory of Sinai, whom the corpus already keeps and whom the same day's calendar also keeps in another entry, Gregory the Peaceful; the page joins this Gerasimos to the teacher and not to that other disciple, and the `related` row follows the page. The same day also keeps the hymnographer Gerasimos Mikragiannanites in a separate entry; nothing on either page joins them and they are two men. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

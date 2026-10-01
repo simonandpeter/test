@@ -1,0 +1,50 @@
+{
+  "slug": "orthodox-woman-martyred-at-rome",
+  "display_name": "The Orthodox Woman Martyred at Rome",
+  "names": [
+    {
+      "form": "Ορθόδοξη Γυναίκα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Αγία Ορθόδοξη Γυναίκα που μαρτύρησε στη Ρώμη», with the rank word left off. The page gives her no personal name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Αγία Ορθόδοξη Γυναίκα που μαρτύρησε στη Ρώμη»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole life is «Κάηκε ζωντανή στη Ρώμη, επειδή δεν θέλησε να δεχτεί τον Αρειανισμό και προτίμησε την Ορθοδοξία». She is one person and not a company, and the page gives her no name, so the entry is recorded under the words the calendar itself uses. No year, so no `dates` object. The corpus already keeps a `holy-woman-and-her-infant` on the same pattern of a nameless entry. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

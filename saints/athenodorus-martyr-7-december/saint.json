@@ -1,0 +1,59 @@
+{
+  "slug": "athenodorus-martyr-7-december",
+  "display_name": "Athenodorus (7 December)",
+  "names": [
+    {
+      "form": "Αθηνόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιος Αθηνόδωρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από τη Μεσοποταμία και έζησε την εποχή του αυτοκράτορα Διοκλητιανού (290 μ.Χ.)». The page's parenthesis is a year inside the reign rather than a dated event, so the interval here is the reign and the page's own words are kept."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιος Αθηνόδωρος»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. The corpus already keeps an `athenodorus` with a venerated Greek row on 7 November, the companion of Gregory the Wonderworker of Neocaesarea; that is another entry on the same calendar and therefore another commemoration, the man here is of Mesopotamia and under Diocletian, and nothing on either page joins them. The site's gloss under the name — sculptors, a citharode, two Stoics — is its standing note on the name and not on the saint. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

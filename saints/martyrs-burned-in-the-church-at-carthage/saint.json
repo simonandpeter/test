@@ -1,0 +1,50 @@
+{
+  "slug": "martyrs-burned-in-the-church-at-carthage",
+  "display_name": "The Martyrs Burned in the Church at Carthage",
+  "names": [
+    {
+      "form": "Ορθόδοξοι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιοι Ορθόδοξοι Μάρτυρες που κάηκαν μέσα σε Ναό», with the rank word left off."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιοι Ορθόδοξοι Μάρτυρες που κάηκαν μέσα σε Ναό»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing. The company enumerates nobody and the page gives it no number at all, only «το πλήθος»; by the settled rule a company the page does not name is one folder. The page gives no year and names no emperor, so no `dates` object, although the same day's neighbouring entries put the Arian persecution at Carthage in the reign of Zeno. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,6 +7,11 @@
       "form": "Ambrozie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 decembrie, «Sfântul Ierarh Ambrozie, Episcopul Mediolanului», with the rank word and the see left off."
+    },
+    {
+      "form": "Αμβρόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», with the rank and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Roman who judged at Milan, was made its bishop under Valentinian I, and shut the emperor Theodosius out of the church until he repented of the killings in the hippodrome at Thessalonica. Its head line gives «(340 - 397)», which the folder did not hold, and the same page adds that he died at the age of fifty-seven. It prints two apolytikia, two kontakia, an oikos and a kathisma; the four hymns of those two kinds are taken and name him, and the other two are not kinds the schema holds. The page also lists where parts of his relics are kept — the skete of Xenophontos and the monastery of Pantokrator on Athos, and Kykkos in Cyprus — which is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,9 +76,92 @@
         "text": "The truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence. Therefore you gained the heights by humility and riches by poverty. Father and hierarch Ambrose, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς θεῖος διδάσκαλος καὶ ἱεράρχης σοφός, δογμάτων ἀκρίβειαν μυσταγωγεῖς τοὺς πιστούς, Ἀμβρόσιε ὅσιε· λύεις αἱρετιζόντων τὴν ἀχλὺν τοῖς σοῖς λόγοις· φαίνεις τῆς εὐσεβείας τὴν θεόσδοτον χάριν· ἐν ᾗ τούς σὲ γεραίροντας συντήρει ἀπήμονας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», and it names him.",
+        "url": "https://www.saint.gr/3182/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a divine teacher and a wise hierarch you initiate the faithful into the exactness of the doctrines, venerable Ambrose; you dissolve the mist of the heretics by your words; you make plain the God-given grace of true religion. Keep unharmed in it those who honour you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν τῆς ἀμβροσίας ἐπώνυμον, καὶ τῆς Ἰταλίας διδάσκαλον, τὸν προστάτην τῆς Χριστοῦ Ἐκκλησίας, καὶ Μεδιολάνων τὸν πρόεδρον, τὸν τοῦ ἐπάρχου υἱόν, καὶ τῶν πτωχῶν ἀντιλήπτορα μέγιστον, Ἀμβρόσιον τὸν ἔνδοξον Ἱεράρχην πάντες τιμήσωμεν, πρεσβεύει γὰρ Κυρίῳ ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α' — the second hymn on the page of «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», and it names him and his see.",
+        "url": "https://www.saint.gr/3182/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Him who is named after sweetness, the teacher of Italy, the champion of the Church of Christ and the president of Milan, the son of the prefect and the greatest helper of the poor — Ambrose the glorious hierarch — let us all honour, for he intercedes with the Lord that our souls find mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α'."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἑορτάζει σήμερον, ἡ οἰκουμένη, τὴν σὴν μνήμην πάνσοφε, ὡς Ἱεράρχην τοῦ Χριστοῦ, μεγαλοφώνως τιμῶσά σε, Πάτερ Πατέρων, Ἀμβρόσιε ἔνδοξε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ΄, Ἐπεφάνης σήμερον — on the page of «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», and it names him.",
+        "url": "https://www.saint.gr/3182/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the inhabited world keeps your memory, all-wise one, honouring you with a loud voice as a hierarch of Christ: father of fathers, glorious Ambrose.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Θείοις δόγμασι περιαστράπτων, ἀπημαύρωσας Ἀρείου πλάνην, Ἱερομύστα καὶ ποιμὴν Ἀμβρόσιε· θαυματουργῶν δὲ δυνάμει τοῦ Πνεύματος, πάθη ποικίλα σαφῶς ἐθεράπευσας. Πάτερ Ὅσιε, Xριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος γ’, Θείας πίστεως — on the page of «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», and it names him.",
+        "url": "https://www.saint.gr/3182/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Flashing all about with divine doctrines, you darkened the error of Arius, initiate of holy things and shepherd Ambrose; and working wonders by the power of the Spirit you plainly healed all kinds of sufferings. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "340",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αμβρόσιος ήταν διακεκριμένος Ρωμαίος πολίτης και γεννήθηκε το 340 μ.Χ.», with the page's own head «(340 - 397)»."
+    },
+    "death": {
+      "earliest": 397,
+      "latest": 397,
+      "display": "397",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Αμβρόσιος πέθανε ειρηνικά το έτος 397 μ.Χ., σε ηλικία 57 χρονών», with the page's own head «(340 - 397)»."
+    }
   }
 }

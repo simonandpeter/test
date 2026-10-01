@@ -1,0 +1,82 @@
+{
+  "slug": "gregory-the-peaceful",
+  "display_name": "Gregory the Peaceful",
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Όσιος Γρηγόριος ο Σιναΐτης ο Ειρηνικός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "gregory-of-sinai"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ασκήτεψε στο Άγιον Όρος και ίδρυσε τη μονή του Οσίου Γρηγορίου (Πρώην Μονή Αγίου Νικολάου) το 14ο αιώνα μ.Χ.» The page gives no year of birth and none of death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Δεκεμβρίου — «Όσιος Γρηγόριος ο Σιναΐτης ο Ειρηνικός»",
+        "url": "https://www.saint.gr/12/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Δεκεμβρίου εκάστου έτους», the same day as the listing, and adds «Η Εκκλησία τιμά την μνήμη του Οσίου Γρηγορίου, επίσης, στις 19 Μαΐου» — a second Greek commemoration on 19 May, recorded here as a note because one attestation row per church is the schema, and the row records the day page read. The page itself separates him from the Gregory the corpus keeps as `gregory-of-sinai`: he is called «Ειρηνικός» and «Νέος» «για να διακρίνεται από τον μεγάλο διδάσκαλό του Όσιο Γρηγόριο τον Σιναΐτη». It prints an apolytikion that names him, taken here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἐγρήγορσιν ἀεί, πρὸς ζωῆς ἀναβάσεις, ποιούμενος σοφέ, τοὺς ὁσίους σου πόνους, εἰς ὕψος ἀνέδραμες, ἀπαθείας Γρηγόριε, ὅθεν ἔλαμψας, τῶν ἀρετῶν ταὶς ἀκτίσι, καὶ κατηύγασας, τῶν Μοναστῶν τᾶς χορείας, πιστῶς ἐπομένας σοι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Χορὸς Ἀγγελικός — the one hymn on the page of «Όσιος Γρηγόριος ο Σιναΐτης ο Ειρηνικός», and it names him.",
+        "url": "https://www.saint.gr/1650/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Making your holy labours a perpetual watchfulness towards the ascents of life, wise one, you ran up to the height of dispassion, Gregory; and from there you shone with the rays of the virtues and lit up the companies of monks who faithfully follow you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
