@@ -6,6 +6,11 @@
       "form": "Olga",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iulie, «Sfânta Olga, Împărăteasa Rusiei», with the rank word and the title left off."
+    },
+    {
+      "form": "Όλγα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Αγία Ισαπόστολος Όλγα (μετονομασθείσα Ελένη) η βασίλισσα», with the rank word, the title and the parenthesis left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Αγία Ισαπόστολος Όλγα (μετονομασθείσα Ελένη) η βασίλισσα»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same woman: the queen of Russia, equal to the apostles, who was renamed Helen at her baptism and died on 11 July 969. The Romanian line reads «Sfânta Olga, Împărăteasa Rusiei». She is none of the corpus's three other women of the name — of Alaska, the daughter of Nicholas II, and no other is a ruler of Rus'. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia, both naming her, and both are taken."
     },
     {
       "church": "serbian",
@@ -60,9 +75,52 @@
         "text": "Giving your mind wings with the wings of the knowledge of God, you flew above all visible creation, seeking God, the Maker of all; and having found Him you were born again by baptism, and took your delight in the tree of life. Incorrupt you abide for ever, Olga, for ever glorified.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τὸ φέγγος τῆς πίστεως, εἰσδεδεγμένη λαμπρῶς, πρὸς γνῶσιν σωτήριον, τὸν σὸν λαὸν ἀσφαλῶς, ὠδήγησας ἔνδοξε. Ὅθεν ὡς ἀπαρχὴ σέ, τῷ σῷ ἔθνει ἁγίαν, μέλπομεν εὐσέβειας, Ἰσαπόστολε Ὄλγα",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first of two apolytikia on the page of «Αγία Ισαπόστολος Όλγα», and it names her. The reading breaks off mid-sentence at «Ἰσαπόστολε Ὄλγα» in the page's own text, which continues «Χριστὸς γὰρ ὃν ἠγάπησ…» and is cut there; only what the page prints whole is copied",
+        "url": "https://www.saint.gr/2127/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the radiance of the faith in splendour, you led your people surely to saving knowledge, glorious one; and so we sing of you as the holy first-fruits of piety for your nation, Olga equal to the apostles.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείας πίστεως, αρχή αγία,αναδέδειξαι, εν τη Ρωσία, προσελθούσα του Σωτήρος τη χάριτι, και εν αυτή τον λαόν σου προσήγαγες, ως αληθής βασιλίς και θεόληπτος. Όλγα ένδοξε, Χριστόν τον Θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ', Θείας πίστεως — the second apolytikion on the page of «Αγία Ισαπόστολος Όλγα», and it names her; the page prints it in monotonic Greek, and it is copied as it stands",
+        "url": "https://www.saint.gr/2127/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown the holy beginning of the divine faith in Russia, having come to the grace of the Saviour and brought your people into it, a true queen and one seized by God. Glorious Olga, entreat Christ our God that great mercy may be given us.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 969,
+      "latest": 969,
+      "display": "969",
+      "basis": "traditional",
+      "note": "saint.gr heads her «Αγια Ολγα η Ισαποστολος (μετονομασθεισα Ελενη) η Βασιλισσα (; - 969)» and its narrative: «παρέδωσε την τελευταία της πνοή την 11η Ιουλίου 969 μ.Χ.». The same page dates her baptism, at which she was renamed Helen, to «το έτος 957 μ.Χ.». The Romanian source the folder was built from gave no year."
+    }
   }
 }

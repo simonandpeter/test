@@ -6,6 +6,11 @@
       "form": "Nectarie Aghioritul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iulie, «Sfântul Mucenic Nectarie Aghioritul», with the rank word left off."
+    },
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Νεκτάριος από τα Βρύουλλα ο Νέος οσιομάρτυρας», with the rank words and the place left off. The page gives his baptismal name as Νικόλαος."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Άγιος Νεκτάριος από τα Βρύουλλα ο Νέος οσιομάρτυρας»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the place, the year and the manner agree with it exactly: Vryoula — Vourla — of Ephesus, beheaded 11 July 1820, which the Romanian source gave as «Nectarie cămilarul din Vriulla, Efes, Asia Mică… la 11 iulie 1820». He is none of the corpus's eight other men of the name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints a full service of kathismata and verses; the kathisma taken here is the one that names him and his story, and no apolytikion stands on the page under his line."
     },
     {
       "church": "serbian",

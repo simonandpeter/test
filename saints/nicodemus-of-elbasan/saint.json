@@ -1,0 +1,63 @@
+{
+  "slug": "nicodemus-of-elbasan",
+  "display_name": "Nicodemus of Elbasan",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Νικόδημος από το Ελβασάν ο Νέος οσιομάρτυρας», with the rank words and the place left off. Νικόδημος is the name he took as a monk; the page does not print the name he was baptised with."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1722,
+      "latest": 1722,
+      "display": "1722",
+      "basis": "attested",
+      "note": "saint.gr heads him «Αγιος Νικοδημος Απο Το Ελβασαν ο Νεος Οσιομαρτυρας (; - 1722)» and its narrative: «αποκεφαλίστηκε στις 11 Ιουλίου 1722 μ.Χ.»."
+    }
+  },
+  "related": [
+    "acacius-the-kausokalyvite"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Άγιος Νικόδημος από το Ελβασάν ο Νέος οσιομάρτυρας»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day as the listing and the day of his beheading. He is none of the corpus's five other men of the name, and he is not the Nicodemus of Vatopedi whom the same day's listing keeps beside him: this is the man of Elbasan in Epirus who apostatised, repented on the Holy Mountain, was tonsured at the skete of Saint Anna, and was beheaded at home in 1722. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn, reporting instead a manuscript service kept at the skete of Saint Anna and a newer one composed by the hieromonk John Danielides and others."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

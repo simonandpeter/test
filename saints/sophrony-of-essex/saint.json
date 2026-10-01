@@ -6,6 +6,11 @@
       "form": "Sofronie de la Essex",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iulie, «Sfântul Cuvios Sofronie de la Essex», with the rank word left off."
+    },
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Όσιος Σωφρόνιος του Έσσεξ», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Όσιος Σωφρόνιος του Έσσεξ»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the dates and the name in the world agree with it exactly: «Οσιος Σωφρονιος Του Εσσεξ (1896 - 1993)», Sergei Semyonovich Sakharov, born at Moscow 22 September 1896 and reposed 11 July 1993. He is none of the corpus's many men named Sophronius. The Greek page differs from the Romanian in one detail of the date of birth — it prints 22 September where doxologia printed 23 September — and the folder's `dates` carry only the year, which both agree on, so no change to `dates` is proposed and the disagreement is recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page prints verses to him but no apolytikion, so no hymn is taken."
     },
     {
       "church": "serbian",

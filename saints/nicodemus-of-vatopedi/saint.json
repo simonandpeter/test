@@ -1,0 +1,63 @@
+{
+  "slug": "nicodemus-of-vatopedi",
+  "display_name": "Nicodemus of Vatopedi",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Όσιος Νικόδημος ο Βατοπεδινός», with the rank word and the byname left off. The page gives his name in the world as Νικηφόρος."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1322,
+      "latest": 1322,
+      "display": "1322",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Οσιος Νικοδημος ο Βατοπεδινος (; - 1322)» and reaches the year through Philotheos Kokkinos: Gregory Palamas was in his third year under him when the elder departed to the Lord, and the page sets that discipleship at «(1319 - 1322 μ.Χ.)»."
+    }
+  },
+  "related": [
+    "gregory-palamas"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Όσιος Νικόδημος ο Βατοπεδινός»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day as the listing, and closes «Η μνήμη του οσίου Νικοδήμου τιμάται στις 11 Ιουλίου». He is none of the corpus's five other men of the name, and he is not the Nicodemus of Elbasan whom the same day's listing keeps beside him: this is the hesychast of the hill of Auxentius who came to Athos before the Turkish raids, lived in a cell near Vatopedi, and was the elder who tonsured Gregory Palamas; his skull is at Vatopedi. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints an oikos and a kathisma by the hymnographer Charalampis Bousias, whose service for him it names; no apolytikion stands under his line, so no hymn is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

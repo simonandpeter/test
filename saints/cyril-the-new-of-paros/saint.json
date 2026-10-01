@@ -1,0 +1,71 @@
+{
+  "slug": "cyril-the-new-of-paros",
+  "display_name": "Cyril the New of Paros",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Όσιος Κύριλλος ο Νέος ο εν Πάρω», with the rank word and the bynames left off. The page gives his surname as Παπαδόπουλος."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1748,
+      "latest": 1748,
+      "display": "1748",
+      "basis": "attested",
+      "note": "saint.gr heads him «Οσιος Κυριλλος ο Νεος ο Εν Παρω (1748 - 1833)» and its narrative: «γεννήθηκε στην Μάρπησσα της Πάρου το 1748 μ.Χ. και είχε το επώνυμο Παπαδόπουλος»."
+    },
+    "death": {
+      "earliest": 1833,
+      "latest": 1833,
+      "display": "1833",
+      "basis": "attested",
+      "note": "saint.gr: «Ανεπαύθη εν Κυρίω στις 11 Ιουλίου 1833 μ.Χ. στη μονή του Αγίου Γεωργίου», and the page's heading closes the bracket at 1833."
+    }
+  },
+  "related": [
+    "athanasius-of-paros",
+    "athanasius-koulakiotis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Όσιος Κύριλλος ο Νέος ο εν Πάρω»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day as the listing and the day of his repose, and closes «Η μνήμη του τελείται στις 11 Ιουλίου». He is none of the corpus's many men named Cyril: this is Cyril Papadopoulos of Marpissa on Paros, 1748 to 1833, pupil of Athanasius the Parian at the Athonias school, of the Kollyvades movement, founder of the monastery of the Great Tree on Paros and renovator and abbot of Saint George of Langada, where his skull is kept. The page cites its source for the notice: Monk Moses of the Holy Mountain, *Βατοπαιδινό Συναξάρι*, Vatopedi, 2007. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

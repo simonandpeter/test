@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικοδημοσ nicodemus-of-elbasan nicodemus-of-lake-kozha nicodemus-of-serbia nicodemus-of-the-cave nicodemus-of-vatopedi':
+    'Five now, and two are new on 11 July: Nicodemus of Vatopedi and Nicodemus of Elbasan. The others are read in the el-07-03 entry for this name form.',
+  'μαρκιανοσ marcian-11-july marcian-companion-of-peter marcian-of-constantinople marcian-of-cyrrhus marcian-of-durostorum marcian-of-egypt marcian-the-emperor':
+    'Seven now. The new one is the Marcian of 11 July; the others are read in the el-03-26 entry for this name form.',
+  'κινδεοσ kindeos-of-pamphylia kindeos-of-pisidia':
+    'Two men, and the pair is close enough to be worth the sentence: Kindeos of Pisidia, a bishop the Greek keeps on 20 February, and Kindeos of Pamphylia, a presbyter on 11 July. Two days, two ranks, two entries.',
+  'κυριλλοσ cyril-alfanov cyril-bishop-in-africa cyril-companion-of-photius cyril-ii-of-rostov cyril-of-alexandria cyril-of-astrakhan cyril-of-gortyna cyril-of-heliopolis cyril-of-jerusalem cyril-of-kantara cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-thessalonica cyril-of-turov cyril-of-zographou cyril-the-new-of-paros cyril-the-philosopher cyril-vi-of-constantinople':
+    'Nineteen now. The new one is Cyril the New of Paros on 11 July; the others are read in the el-07-06 entry for this name form.',
   'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':
     'Six now. The new one is Parthenius of Koudoumas on 10 July, who stands with Eumenius of Koudoumas; the others are read in the el-04-01 entry for this name form.',
   'ευμενιοσ eumenios-saridakis eumenius-of-koudoumas eumenius-of-murmansk':

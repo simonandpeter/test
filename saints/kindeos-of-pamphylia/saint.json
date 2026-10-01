@@ -1,0 +1,60 @@
+{
+  "slug": "kindeos-of-pamphylia",
+  "display_name": "Kindeos of Pamphylia",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Κινδέος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Κινδέος ο Πρεσβύτερος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 290,
+      "latest": 290,
+      "display": "290",
+      "basis": "traditional",
+      "note": "saint.gr prints the only year on the page inside the sentence that gives his origin: «Ο Άγιος Κινδέος kαταγόταν από την κωμόπολη Ταλμενία της Παμφυλίας Σίδης (290 μ.Χ.)». The page does not say in words what the year dates, and this is the single bracket it offers."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Άγιος Κινδέος ο Πρεσβύτερος»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day as the listing. **This is not the corpus's `kindeos-of-pisidia`**, whose Greek row is already venerated on 20 Φεβρουαρίου off saint.gr's own «Όσιος Κινδέος Επίσκοπος Πισιδίας» and whose folder makes him a venerable bishop: that row is left where it is. This entry is a presbyter, from the town of Talmenia in the Pamphylia of Side, denounced to the eparch Stratonikos and burned alive. saint.gr keeps the two on two days with two ranks, two provinces and two deaths, and the corpus's settled rule is that two entries on one calendar are two commemorations; the identity is named as an open question in the reader's report all the same. He is likewise neither Canides of Cappadocia nor Kendeas. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

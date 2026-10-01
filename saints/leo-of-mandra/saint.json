@@ -6,6 +6,11 @@
       "form": "Leon din Mandra",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 iulie, «Sfântul Cuvios Leon din Mandra», with the rank word left off."
+    },
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Ιουλίου, «Όσιος Λέων ο εν τη Μάνδρα», with the rank word and the byname left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Ιουλίου — «Όσιος Λέων ο εν τη Μάνδρα»",
+        "url": "https://www.saint.gr/07/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the byname is the folder's own: the Romanian line reads «Sfântul Cuvios Leon din Mandra» and the Greek «Όσιος Λέων ο εν τη Μάνδρα». He is the corpus's only Leo of Mandra, and the Greek notice is as short as the Romanian one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
     },
     {
       "church": "serbian",
