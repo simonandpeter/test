@@ -1,0 +1,59 @@
+{
+  "slug": "habakkuk-of-thessalonica",
+  "display_name": "Habakkuk of Thessalonica",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Αββακούμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Αυγούστου, «Άγιος Αββακούμ ο Νεομάρτυρας», with the rank word and the epithet left off. The page glosses the name, a Hebrew word, as the beloved one and the father of rising."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Αυγούστου — «Άγιος Αββακούμ ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/08/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Αββακουμ ο Νεομαρτυρας (; - 1628)». The page says openly where its day and year come from and that nothing else survives: his name stands neither in the Synaxaristes of the Neomartyrs nor in the known printed synaxaria, because no account of his martyrdom was preserved, and he is known only from a memorandum in codex Ω 89 of the Great Lavra, folio 155, of the seventeenth century, which it quotes whole. That is a citation and not a self-doubt: the page carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence, which was grepped for on the life page itself. But it does make one supposition of its own, and that supposition is not recorded as a fact here: «Από τον χαρακτηρισμό του ως «οσίου» είναι δυνατό να υποθέσουμε ότι ο Αββακοὺμ ήταν μοναχός, πιθανότατα αγιορείτης» — from his being called venerable it is possible to suppose he was a monk, most probably of the Holy Mountain. `types` therefore carries `new-martyr` alone and not `monk`, and the supposition is reported in the life as the page's own. He is not the corpus's `habakkuk`, the prophet, whom the Romanian calendar keeps on 2 December. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1628,
+      "latest": 1628,
+      "display": "1628",
+      "basis": "attested",
+      "note": "saint.gr quotes the seventeenth-century memorandum of codex Ω 89 of the Great Lavra, folio 155: «Κατὰ τὸ ζρλς' ἐν μηνὶ Αὐγούστῳ εἰς τὰς ς' ἐμαρτύρησεν ὁ ὅσιος καὶ νέος μάρτυς ᾿Αββακοὺμ ἐν τῇ μεγαλουπόλει Θεσσαλονίκῃ», and reads that year as 1628. The page gives no year of birth; its head line leaves it as a question mark."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
