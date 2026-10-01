@@ -6,6 +6,11 @@
       "form": "Epimah",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 octombrie, «Sfântul Mucenic Epimah»."
+    },
+    {
+      "form": "Επίμαχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιος Επίμαχος ο Αιγύπτιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιος Επίμαχος ο Αιγύπτιος»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: of the city of Pelusium in Egypt, who gave his goods to the poor and withdrew to the desert before going to Alexandria to suffer. A `dates` object is proposed from the page's heading where the folder had none. The same day's listing keeps a second Epimachus, paired with Gordian, whose biography that page puts at 9 May; the corpus keeps those two as epimachus-9-may and gordian-9-may with venerated Greek rows on that day, so nothing is owed there and the report says so. The apolytikion and the kontakion both name this Epimachus and are taken; the Μεγαλυνάριον is neither and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -61,9 +76,52 @@
         "text": "Thy martyr Epimachus, O Lord, in his contest received an incorruptible crown from Thee our God; for possessing Thy strength he overthrew his torturers, and broke the feeble daring of the demons. By his prayers save Thou our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς γενναῖος ὁπλίτης τοῦ Σωτῆρος Ἐπίμαχε, τῷ ἐχθρῷ στερρῶς συνεπλάκης, συμμαχίᾳ τῆς πίστεως, καὶ τοῦτον ἐτροπώσω Ἀθλητά, βασάνους πολυτρόπους ὑποστάς· διὰ τοῦτο ὡς τοῦ Λόγου σε κοινωνόν, τιμῶμεν ἀνακράζοντες· δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Άγιος Επίμαχος ο Αιγύπτιος». It names him and no other saint, and plays on his name as a fellow-fighter.",
+        "url": "https://www.saint.gr/1047/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a brave soldier of the Saviour, Epimachus, you closed with the enemy stoutly, with faith for your ally, and put him to flight, contender, having borne torments of many kinds; and so we honour you as a sharer in the Word, crying out: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Αὐτοκλήτως ὥρμησας, πρὸς εὐσεβείας τοὺς ἄθλους, ἀκβοῶν Ἐπίμαχε, τοῖς παρανόμοις ἀνδρείως· Πάρειμι, ὑπεραθλῆσαι τῆς ἀληθείας, ξόανα, ἐκμυστηρίσαι τῆς ἀπωλείας· καὶ τμηθεὶς τὸν σὸν αὐχένα, δικαιοσύνης στέφανον εἴληφας.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιος Επίμαχος ο Αιγύπτιος». It names him and no other saint. The reading «ἀκβοῶν» is the page's own and is copied as it stands; so is the beheading, which the prose of the same page does not mention.",
+        "url": "https://www.saint.gr/1047/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Uncalled you rushed to the contests of godliness, Epimachus, crying out manfully to the lawless: I am here to contend for the truth and to expose the idols of destruction; and having had your neck cut through, you received the crown of righteousness.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Επιμαχος ο Αιγυπτιος (; - 250)». The notice itself gives no year, only that he lived when Appellianos, the governor of Alexandria, was persecuting the Christians."
+    }
   }
 }

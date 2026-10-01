@@ -1,0 +1,60 @@
+{
+  "slug": "abramius-31-october",
+  "display_name": "Abramius (31 October)",
+  "names": [
+    {
+      "form": "Αβράμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στέφανος, Bαρνάβας, Tρόφιμος, Δορυμέδων, Kοσμάς, Δαμιανός, Σάββας, Bάσης, Αβράμιος «και της συνοδίας αυτών»», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιοι Στέφανος, Bαρνάβας, Tρόφιμος, Δορυμέδων, Kοσμάς, Δαμιανός, Σάββας, Bάσης, Αβράμιος «και της συνοδίας αυτών»»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates nine men, each with his own heading, so it is nine folders, and the unnamed «συνοδία» gets none. The whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων». The corpus keeps nine Abrahams and Abramii on other days, and this reading adds two more within four days — Abramius of Ephesus on 28 October and Abramius of Rostov on 29 October — so the day is doing real work in the name. The display name takes it. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "stephen-31-october",
+    "barnabas-31-october",
+    "trophimus-31-october",
+    "dorymedon-31-october",
+    "cosmas-31-october",
+    "damian-31-october",
+    "sabbas-31-october",
+    "vases-31-october"
+  ]
+}

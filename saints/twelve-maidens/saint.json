@@ -1,0 +1,51 @@
+{
+  "slug": "twelve-maidens",
+  "display_name": "The Twelve Maidens",
+  "names": [
+    {
+      "form": "Δώδεκα κόρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιες Δώδεκα κόρες», with the rank word left off, in the shape the corpus already uses for a company whose members it cannot name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιες Δώδεκα κόρες»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day as the listing, and the whole notice is «Οι Άγιες Δώδεκα κόρες μαρτύρησαν, αφού τις κρέμασαν στη μέση μιας στοάς». The entry names none of the twelve and numbers them only, so it is one folder for the company and not twelve, which is the shape the corpus already uses for the Five Maidens of Lesbos and the Three Martyrs in Melitene. No year, so no `dates` object; no city, so no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

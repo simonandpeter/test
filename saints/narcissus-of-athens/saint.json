@@ -7,6 +7,11 @@
       "form": "Narcis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 octombrie, «Sfântul Apostol Narcis»."
+    },
+    {
+      "form": "Νάρκισσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: ordained bishop of Athens, tortured by the idolaters whom his preaching roused, and dying a martyr — which the folder's `bishop` and office already have, while its types do not carry `hieromartyr` and this reading does not add one. No year, so the folder's dateless state is unchanged. Both hymns name all six of the company and are taken into all six folders. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -61,6 +76,40 @@
         "text": "Holy Apostles, entreat the merciful God that he may grant our souls forgiveness of our offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὴν κιθάραν τοῦ Πνεύματος τὴν ἑξάχορδον, τὴν μελῳδήσασαν κόσμῳ τὰς ὑπὲρ νοῦν δωρεάς, ὡς ἐκφάντορας Χριστοῦ ἀνευφημήσωμεν, Στάχυν Ἀμπλίαν Ἀπελλῆν σὺν Ναρκίσσῳ Οὐρβανόν, καὶ Ἀριστόβουλον ἅμα· ὡς γὰρ Ἀπόστολοι θεῖοι, χάριν αἰτοῦνται ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the second hymn on the page of the six. It names all six of them and no other saint.",
+        "url": "https://www.saint.gr/1048/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the six-stringed lyre of the Spirit, which sang to the world the gifts that are past understanding, as the revealers of Christ — Stachys, Amplias, Apelles with Narcissus, Urban, and Aristobulus together; for as divine Apostles they ask grace for our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς ἱερὰ κειμήλια, τοῦ Παναγίου Πνεύματος, καὶ τοῦ Ἡλίου τῆς δόξης αὐγάσματα, χρεωστικῶς ὑμνήσωμεν, τοὺς σοφοὺς Ἀποστόλους, Ἀπελλῆν Οὐρβανόν τε καὶ Ἀριστόβουλον, Ἀμπλίαν Νάρκισσον καὶ Στάχυν, οὓς ἡ χάρις συνήγαγε τοῦ Θεοῦ ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς τῆς φύσεως — on the page of the six. It names all six of them and no other saint.",
+        "url": "https://www.saint.gr/1048/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sacred treasures of the All-Holy Spirit and rays of the Sun of glory, let us hymn as we are bound the wise Apostles — Apelles and Urban and Aristobulus, Amplias, Narcissus and Stachys — whom the grace of our God gathered together.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
     }
   ],
   "text": {

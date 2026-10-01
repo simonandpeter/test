@@ -1,0 +1,53 @@
+{
+  "slug": "stratonice-wife-of-seleucus",
+  "display_name": "Stratonice, wife of Seleucus",
+  "names": [
+    {
+      "form": "Στρατονίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Σέλευκος και Στρατονίκη οι σύζυγοι», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "seleucus-husband-of-stratonice"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιοι Σέλευκος και Στρατονίκη οι σύζυγοι»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates two people, husband and wife, each with a heading, so it is two folders. The corpus holds no Stratonice at all, and the namesweep returned nothing for the name. The page gives no year, no city and no persecutor, so no `dates` object and no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

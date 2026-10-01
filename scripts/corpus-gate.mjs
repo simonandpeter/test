@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τροφιμοσ trophimus-31-october trophimus-companion-of-paul trophimus-companion-of-theophilus trophimus-companion-of-tryphon trophimus-of-antioch trophimus-of-laodicea trophimus-of-nicomedia':
+    'Seven men. The new one is the Trophimus of 31 October, of that day’s company of nine; the six before him stand on other Greek days and are read in the entries recorded for this name form before this one.',
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Twenty-nine now. The new one is the Stephen of 31 October, who heads that day’s company of nine unsurnamed martyrs; the others are read in the el-08-20 entry for this name form.',
+  'σελευκοσ seleucus-23-may seleucus-husband-of-stratonice seleucus-of-cappadocia seleucus-of-tomis':
+    'Four men. The new one is the Seleucus of 31 October, martyred with his wife Stratonice; the others are the Seleucus of 23 May, Seleucus of Cappadocia on 16 February and Seleucus of Tomis on 13 September.',
+  'σαββασ sabbas-31-october sabbas-companion-of-jonah sabbas-martyr-8-july sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Sixteen now. The new one is the Sabbas of 31 October, of that day’s company of nine; the others are read in the el-06-14 entry for this name form.',
+  'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-migulin nicholas-of-chios nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-melambes nicholas-of-metsovo nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-simple nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
+    'Twenty-six now. The new one is Nicholas of Chios on 31 October, a new martyr; the others are read in the el-07-27 entry for this name form.',
+  'δορυμεδων dorymedon-31-october dorymedon-companion-of-tryphon dorymedon-the-senator':
+    'Three men. The new one is the Dorymedon of 31 October, of that day’s company of nine; the others are Dorymedon the senator on 19 September, whom four calendars keep, and Dorymedon the companion of Tryphon on 29 September.',
+  'δαμιανοσ damian-31-october damian-disciple-of-polychronius damian-of-agrafa damian-of-arabia damian-of-esphigmenou damian-of-georgia damian-of-pavia damian-of-rome damian-sent-to-britain':
+    'Nine now. The new one is the Damian of 31 October, of that day’s company of nine, and not Damian of Arabia on 17 October; the others are read in the el-05-26 entry for this name form.',
+  'κοσμασ cosmas-31-october cosmas-companion-of-thomas-of-zographou cosmas-i-of-constantinople cosmas-martyred-in-georgia cosmas-of-arabia cosmas-of-maiuma cosmas-of-rome cosmas-of-yakhroma':
+    'Eight now. The new one is the Cosmas of 31 October, of that day’s company of nine, and not the Cosmas of Arabia nor the one martyred in Georgia a fortnight before; the others are read in the el-02-18 entry for this name form.',
+  'βαρναβασ barnabas-31-october barnabas-of-gethsemane barnabas-of-kantara barnabas-of-peristerona barnabas-of-soumela barnabas-of-the-alamanoi barnabas-of-the-vetluga barnabas-the-apostle':
+    'Eight now. The new one is the Barnabas of 31 October, of that day’s company of nine unsurnamed martyrs; the others are read in the el-10-12 entry for this name form.',
+  'αβραμιοσ abraham-of-smolensk abraham-the-recluse abramius-31-october abramius-of-arbela abramius-of-ephesus abramius-of-rostov abramius-of-spassk':
+    'Seven men. The new one is the Abramius of 31 October, the last name in the company of nine the page keeps unsurnamed and knows nothing else about; the others are read in the el-10-29 entry for this name form.',
   'alexander companion cronion alexander-companion-of-cronion cronion-companion-of-alexander':
     'Two men of one company, not one man twice: saint.gr’s line for 30 Οκτωβρίου names Alexander and Cronion together, and each is surnamed by the other because the page gives neither a see nor a city of his own.',
   'θεραπων therapon-of-cyprus therapon-of-lythrodontas therapon-of-the-white-lake':

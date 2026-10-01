@@ -6,6 +6,11 @@
       "form": "Ioan Kochurov",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 octombrie, «Sfântul Preot Mărturisitor Ioan Kochurov»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιος Ιωάννης Κοτσούρωφ ο πρωτομάρτυρας της νεότερης Ρωσίας», with the rank words left off; the page's own transliteration of the surname is «Κοτσούρωφ», which it glosses «(Kochurov)»."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 31 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Οκτωβρίου — «Άγιος Ιωάννης Κοτσούρωφ ο πρωτομάρτυρας της νεότερης Ρωσίας»",
+        "url": "https://www.saint.gr/10/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Αγιος Ιωαννης Κοτσουρωφ ο Πρωτομαρτυρας Της Νεοτερης Ρωσιας (; - 1917)», the archpriest killed by the Bolsheviks at Tsarskoe Selo. The folder's existing dates are left untouched. The page adds three things the folder may not have: that he was the first cleric to be a victim of the October Revolution, that he was appointed priest of the Russian community of Chicago in 1901 after graduating from the Theological Academy of Saint Petersburg, and that Patriarch Tikhon commemorated his name second, after that of Vladimir metropolitan of Kyiv, at the Liturgy of 31 March 1918. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
