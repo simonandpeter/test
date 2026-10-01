@@ -779,6 +779,7 @@ export const el = {
     'Archbishop of Rostov': 'Αρχιεπίσκοπος Ροστόβ',
     'Archbishop of Seville': 'Αρχιεπίσκοπος Σεβίλλης',
     'Archbishop of Serbia': 'Αρχιεπίσκοπος Σερβίας',
+    'Archbishop of Sourozh': 'Αρχιεπίσκοπος Σουρόζ',
     'Archbishop of Thessalonica': 'Αρχιεπίσκοπος Θεσσαλονίκης',
     'Archbishop of Voronezh': 'Αρχιεπίσκοπος Βορονέζ',
     'Archbishop of York': 'Αρχιεπίσκοπος Υόρκης',

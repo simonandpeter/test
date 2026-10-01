@@ -1,0 +1,53 @@
+{
+  "slug": "gurias-companion-of-barsanuphius",
+  "display_name": "Gurias, companion of Barsanuphius",
+  "names": [
+    {
+      "form": "Γουρίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Αγίος Γουρίας», with the rank word left off — the page spells the rank «Αγίος» there, and the form is copied as printed."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "preacher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Αγίος Γουρίας»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The whole of the page's text is one sentence: «Ο Αγίος Γουρίας μαζί με τον Άγιο Βαρσανούφιο (τιμάται 11 Απριλίου) προσπαθούσαν να διαδώσουν την Χριστιανική πίστη στους Μουσουλμάνους.» The Barsanuphius it refers the reader to on 11 Απριλίου is the man this corpus keeps as `barsanuphius-of-tver-and-kazan`, whose `greek` row is already `venerated` on that day — matched on the day and the companionship the page states, not on the name alone. The page gives no year, no country, no city, no office and no monastery, so no `dates` and no coordinate; `types` carries only `preacher`, which is the one thing the sentence says he did. It prints no hymn. The corpus also keeps `gurias-of-edessa`, a martyr of another day, who is not this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "barsanuphius-of-tver-and-kazan"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

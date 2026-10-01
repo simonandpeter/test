@@ -1,0 +1,62 @@
+{
+  "slug": "coremmon-the-eparch",
+  "display_name": "Coremmon the Eparch",
+  "names": [
+    {
+      "form": "Κορέμμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Κορέμμων ο έπαρχος», with the rank word and the office left off. The page's text gives an alternative in passing, «Ο Άγιος Κορέμμων (ή Κοράμων)», which is recorded in the attestation and not stored as a second form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "117 to 138",
+      "basis": "attested",
+      "note": "saint.gr dates his office, not his life: «ήταν έπαρχος Ρώμης στα χρόνια του βασιλιά Αδριανού (117 - 138 μ.Χ.)». It gives no year of birth and no year for his beheading, so the reign is recorded as a floruit."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Άγιος Κορέμμων ο έπαρχος»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page is one sentence long: «Ο Άγιος Κορέμμων (ή Κοράμων) ήταν έπαρχος Ρώμης στα χρόνια του βασιλιά Αδριανού (117 - 138 μ.Χ.). Ήταν παρών στο μαρτυρικό θάνατο του Αγίου Ελευθερίου (βλέπε ίδια ημέρα) και από τα θαύματα του Αγίου πίστεψε στον Χριστό, τον ομολόγησε και στη συνέχεια τον αποκεφάλισαν.» It names Rome and no coordinate is proposed. It prints no hymn; the hymns of 15 Δεκεμβρίου stand on Eleutherius's page and name him. **The reign the page gives for his office, Hadrian's, disagrees with the reigns saint.gr gives on Eleutherius's own page, Commodus's and Septimius Severus's — a disagreement inside the one day's calendar, recorded here and not resolved.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "eleutherius-of-illyricum"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

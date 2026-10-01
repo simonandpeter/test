@@ -6,6 +6,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfântul Cuvios Pavel», with the rank words left off. The mountain is «muntele Latru» in the life and «din Latro» in the troparion's title; the English form of the place is chosen, not copied."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Όσιος Παύλος ο νέος που ασκήτευε στο Λάτριο όρος», with the rank word, the by-name and the clause naming the mountain left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Όσιος Παύλος ο νέος που ασκήτευε στο Λάτριο όρος»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: Paul the New of Mount Latros, from Elea near Pergamum, younger brother of Basil, who refused the abbacy of the monastery and built a church of the Holy Trinity lower down the mountain. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The two sources disagree about his childhood and the disagreement is left standing.** doxologia has his father Antiochus killed in a war near Chios and his mother Eudocia take the children into Phrygia, to the village of Joannicius the Great, and put both sons into the monastery of Saint Stephen; saint.gr has both parents die early and Paul left an unprotected orphan herding pigs for a living until his elder brother Basil, already an ascetic on Latros, sent a monk to fetch him, the villagers at first refusing to give the orphan up, and Basil entrusting him to the ascetic Peter as an apprentice. saint.gr's year is added to the folder, which held none: «Μερικοί Συναξαριστές αναφέρουν ότι πέθανε σε βαθιά γεράματα το 896 μ.Χ.», with the page head «(; - 896)». The page attributes it to some synaxaristes, so the basis is `traditional`. It names Elea near Pergamum and Mount Latros in western Asia Minor near ancient Miletus; no coordinate is proposed. It prints no hymn. **The same day page also keeps nothing else of Latros, but 13 Δεκεμβρίου keeps «Όσιος Αρσένιος που ασκήτευσε στο Λάτριο όρος», drafted in that day's batch as `arsenios-of-latros`.**"
     },
     {
       "church": "serbian",
@@ -63,5 +78,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 896,
+      "latest": 896,
+      "display": "896",
+      "basis": "traditional",
+      "note": "saint.gr: «Μερικοί Συναξαριστές αναφέρουν ότι πέθανε σε βαθιά γεράματα το 896 μ.Χ.», with the page head «(; - 896)». The page attributes the year to some synaxaristes rather than stating it itself, so the basis is traditional. No year of birth is given."
+    }
+  },
+  "related": [
+    "basil-the-new-of-latros"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Antia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfânta Muceniță Antia», with the rank words left off."
+    },
+    {
+      "form": "Ανθία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Αγία Ανθία», with the rank word left off. The page glosses the name itself, «(από την λέξη άνθος) = η ωραία όπως το λουλούδι, η λουλουδένια», and gives «Ανθή» as an alternative, which is recorded in the attestation and not stored as a second form."
     }
   ],
   "sex": "female",
@@ -13,7 +18,8 @@
     "martyr"
   ],
   "related": [
-    "eleutherius-of-illyricum"
+    "eleutherius-of-illyricum",
+    "the-two-executioners"
   ],
   "attestations": [
     {
@@ -37,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Αγία Ανθία»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: the mother of the hieromartyr Eleutherius. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. Her page is one sentence long — «Η Αγία Ανθία (Ανθή) ήταν η μητέρα του Αγίου Ελευθερίου (βλέπε ίδια ημέρα), που όταν αγκάλιασε το νεκρό σώμα του γιου της, οι δήμιοι αποκεφάλισαν και αυτή» — and gives the alternative form «Ανθή», which is recorded here and stored as nothing. **Her son's page on the same day disagrees with the folder about her baptism:** doxologia has the Apostle Paul baptise her, saint.gr has her become a Christian «ακούοντας το κήρυγμα από μαθητές του Απ. Παύλου», by hearing the preaching of Paul's disciples. That is for the author to rule on and nothing in the folder is altered for it. No year, no place, no coordinate, and no hymn: the day's hymns stand on her son's page and name him. Her page also carries the epigram «Δίδωσι μήτηρ νεκρικὸν κόσμον τέκνῳ, Αὐτὴ ἑαυτὴν συγκεκομμένην σπάθαις»."
     },
     {
       "church": "serbian",

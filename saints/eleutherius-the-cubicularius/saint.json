@@ -1,0 +1,50 @@
+{
+  "slug": "eleutherius-the-cubicularius",
+  "display_name": "Eleutherius the Cubicularius",
+  "names": [
+    {
+      "form": "Ελευθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Ελευθέριος ο Κουβικουλάριος», with the rank word and the by-name left off. The page glosses the name itself, «Ο εραστής, κήρυκας και πρόμαχος της ελευθερίας»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Άγιος Ελευθέριος ο Κουβικουλάριος»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page doubts in its own voice the only dating it reports, and no `dates` object is therefore drafted: «Μερικοί από τους Συναξαριστές αναφέρουν, ότι το αποκορύφωμα της δόξας του Ελευθερίου ήταν στην εποχή του Μαξιμιανού (286 - 305 μ.Χ.), με τον οποίο είχε φιλία, αλλά αυτό δεν φαίνεται πιθανό.»** That is a doubt about the period and not about the man or his day: the page carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», and its feast type is plainly «Σταθερή» on 15 Δεκεμβρίου. The entry is drafted on that reading and the sentence is quoted in the life as well, so that an author can rule on it. **He is a different man from the day's hieromartyr Eleutherius, whom the corpus keeps as `eleutherius-of-illyricum`: two entries on one calendar day are two commemorations, and the two pages agree on nothing but the name — this one a senator of Constantinople beheaded by an emperor at the river Sangarios, the other a bishop of Illyricum beheaded in the arena at Rome with his mother.** The page names Constantinople and a village near the river Sangarios, and no coordinate is proposed. It prints no hymn; the hymns of 15 Δεκεμβρίου stand on the hieromartyr's page and name him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

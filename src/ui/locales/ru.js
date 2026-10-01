@@ -797,6 +797,7 @@ export const ru = {
     'Archbishop of Rostov': 'Архиепископ Ростовский',
     'Archbishop of Seville': 'Архиепископ Севильский',
     'Archbishop of Serbia': 'Архиепископ Сербский',
+    'Archbishop of Sourozh': 'Архиепископ Сурожский',
     'Archbishop of Thessalonica': 'Архиепископ Фессалоникийский',
     'Archbishop of Voronezh': 'Архиепископ Воронежский',
     'Archbishop of York': 'Архиепископ Йоркский',

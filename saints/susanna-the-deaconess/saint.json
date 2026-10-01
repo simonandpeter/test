@@ -6,6 +6,11 @@
       "form": "Suzana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfânta Muceniță Suzana», with the rank words left off."
+    },
+    {
+      "form": "Σωσάννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Αγία Σωσάννα η Οσιομάρτυς», with the rank words left off. The page glosses the name itself, «(εβραϊκή λέξη) = η αγνή όπως το κρίνο», and spells it «Σωσάννη» once in the body; the nominative of the calendar line is the form stored."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Αγία Σωσάννα η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: of Palestine, a pagan priest's daughter and a Jewess's, baptised by the bishop Silvanus, twenty years in a monastery of men under the name John. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. saint.gr adds the parents' names, «είχε πατέρα τον Αρτέμιο, εθνικό και ιερέα των ειδώλων και μητέρα Ιουδαία τη Μάρθα»; it places her «στα τέλη του τρίτου αιώνα μ.Χ.»; and it has her go afterwards to Eleutheropolis in her woman's dress again, and die in the fire under Diocletian's persecution, condemned with others. **It also reports a second day for her: «Η μνήμη της, από ορισμένους Συναξαριστές, τοποθετείται περιτώς την 19η Σεπτεμβρίου.»** One attestation row per church is the schema, so that day is noted here and is not a second row; the row records the day page that was read, 15 Δεκεμβρίου. The century the page gives is recorded in `dates` as a floruit, because the page dates her life and not her death; the Silvanus who baptised her the page does not identify, and the corpus holds eleven folders of that name, so no `related` row is made for him. It names Palestine, Jerusalem and Eleutheropolis and no coordinate is proposed. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -46,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 266,
+      "latest": 300,
+      "display": "end of the 3rd century",
+      "basis": "attested",
+      "note": "saint.gr: «Η Αγία Σωσάννα έζησε στα τέλη του τρίτου αιώνα μ.Χ.», and it puts her death in Diocletian's persecution. The bounds are the end of that century as the page states it; it gives no year of birth and no year of death."
+    }
   }
 }

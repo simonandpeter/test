@@ -7,6 +7,11 @@
       "form": "Elefterie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 decembrie, «Sfântul Sfințit Mucenic Elefterie, Episcopul Iliriei», with the rank words left off."
+    },
+    {
+      "form": "Ελευθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Ελευθέριος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name itself, «Ο εραστής, κήρυκας και πρόμαχος της ελευθερίας»."
     }
   ],
   "sex": "male",
@@ -15,7 +20,11 @@
     "bishop"
   ],
   "related": [
-    "anthia-mother-of-eleutherius"
+    "anthia-mother-of-eleutherius",
+    "anicetus-of-rome",
+    "eleutherius-the-cubicularius",
+    "coremmon-the-eparch",
+    "the-two-executioners"
   ],
   "attestations": [
     {
@@ -39,8 +48,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Άγιος Ελευθέριος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the son of Anthia, ordained by Anicetus of Rome, bishop of Illyricum, beheaded with his mother. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The two sources disagree about the reign and about the birthplace, and the folder's `dates` — which it does not have — are therefore not supplied.** doxologia has him born at Rome under Aelius Hadrian; saint.gr has him «γεννήθηκε τον 2o αιώνα μ. Χ. στην Ελλάδα (κατά άλλους στην Ρώμη)» with «Τότε αυτοκράτορας ήταν ο Κόμμοδος και ο Σεπτίνος Σεβήρος», and has Septimius Severus order his arrest. That is a century's difference and it is for the author to rule on. **They disagree about Anthia's baptism too:** doxologia says the Apostle Paul baptised her, saint.gr that «έγινε χριστιανή ακούοντας το κήρυγμα από μαθητές του Απ. Παύλου», hearing the preaching of Paul's disciples. saint.gr adds his ages at ordination, fifteen for the deaconate and twenty for the episcopate, with Nicodemus the Hagiorite's own footnote explaining that he lived before the canons of the Sixth Council and of Neocaesarea; the see at Aulona in what the page calls today's Albania; the letter of Lucius king of Britain and the two men Eleutherius sent to catechise and baptise him and his people; the synaxis kept at his martyrion near the Xerolophos; and that he is held the helper of pregnant women. No coordinate is proposed for Aulona or the Xerolophos. **The same day page also keeps a second «Άγιος Ελευθέριος ο Κουβικουλάριος», a senator of Constantinople; two entries on one calendar day are two commemorations, and he is drafted as a new folder, `eleutherius-the-cubicularius`.** The page prints three apolytikia and a kontakion, all four naming him, which are taken; and a megalynarion, an oikos and a kathisma, which are kinds the schema does not hold."
     },
     {
       "church": "serbian",
@@ -62,6 +81,73 @@
       },
       "english": {
         "text": "Adorned with the robe of a priest and streaming with your own blood, blessed one, you ran to Christ your Master, wise Eleutherius, undoer of Satan. Therefore do not cease to pray for those who with faith honour your blessed contests.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον λόγον.",
+      "text": "Φερωνύμῳ σου κλήσει καλλωπιζόμενος, ἐλευθερίαν παρέχεις καὶ ἀπολύτρωσιν, τοῖς προσκάμνουσι δεινῶς, ποικίλας θλίψεσιν, Ἐλευθέριε σοφέ, ἱερῶν καλλονή, Μαρτύρων ἡ ὡραιότης· διὸ μὴ παύσῃ βραβεύων, ἀναψυχὴν τοῖς σὲ γαιρέρουσι.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον λόγον — the first of the three the page prints. Its closing «τοῖς σὲ γαιρέρουσι» is the reading the site publishes and is copied unchanged, on the page of Άγιος Ελευθέριος ο Ιερομάρτυρας. It names him.",
+        "url": "https://www.saint.gr/3272/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the name that is your own meaning, you grant freedom and release to those who labour grievously under manifold afflictions, O wise Eleutherius, beauty of priests, comeliness of the martyrs; therefore do not cease to award refreshment to those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τὴν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν· διὰ τοῦτο τὸν λόγον τῆς ἀληθείας ὀρθοτομῶν, καὶ τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Ἐλευθέριε· Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος δ’, printed without a model. This is the common of a hierarch and martyr; the page prints it under his name and it names him, so it is his service and is copied whole, on the page of Άγιος Ελευθέριος ο Ιερομάρτυρας. It names him.",
+        "url": "https://www.saint.gr/3272/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Partaker of their ways and successor of the thrones of the Apostles, you found the active life a way up to contemplation, O God-inspired one; therefore, rightly dividing the word of truth, you contended for the faith even unto blood, O hieromartyr Eleutherius. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἱερέων ποδήρει κατακοσμούμενος, καὶ αἱμάτων τοῖς ῥείθροις ἐπισταζόμενος, τῷ Δεσπότῃ σου Χριστῷ μάκαρ ἀνέδραμες, Ἐλευθέριε σοφέ, καθαιρέτα τοῦ Σατᾶν. Διὸ μὴ παύσῃ πρεσβεύων, ὑπὲρ τῶν πίστει τιμώντων, τὴν μακαρίαν σου ἄθλησιν.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the third of the three the page prints, on the page of Άγιος Ελευθέριος ο Ιερομάρτυρας. It names him.",
+        "url": "https://www.saint.gr/3272/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Arrayed in the long vesture of the priests and sprinkled with the streams of your own blood, you ran up to Christ your Master, O blessed and wise Eleutherius, destroyer of Satan. Therefore do not cease to intercede for those who honour your blessed contest in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "text": "Ὡς καλλονὴν τῶν ἱερέων Ὅσιε, καὶ προτροπὴν τῶν Ἀθλοφόρων ἅπαντες, εὐφημοῦμεν καὶ αἰτοῦμέν σε, Ἱερομάρτυς Ἐλευθέριε· Τοὺς πόθῳ σου τὴν μνὴμην ἑορτάζοντας, κινδύνων πολυτρόπων ἐλευθέρωσον, πρεσβεύων ἀπαύστως, ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς, on the page of Άγιος Ελευθέριος ο Ιερομάρτυρας. It names him.",
+        "url": "https://www.saint.gr/3272/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the beauty of priests, O venerable one, and the spur of the prize-winners, we all acclaim you and ask of you, O hieromartyr Eleutherius: set free from manifold dangers those who keep your memory with longing, interceding unceasingly for us all.",
         "rendered": "site"
       }
     }

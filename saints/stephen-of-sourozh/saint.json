@@ -1,0 +1,52 @@
+{
+  "slug": "stephen-of-sourozh",
+  "display_name": "Stephen of Sourozh",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιος Στέφανος Αρχιεπίσκοπος Σουρόζας», with the rank word and the see left off. The page glosses the name itself, «(από το στέφανος) = ο αθλοφόρος, ο άξιος στεφάνου νίκης»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Sourozh",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Άγιος Στέφανος Αρχιεπίσκοπος Σουρόζας»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence and it is a refusal to tell the life, not a refusal to vouch for the man: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.»** There is no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», which is the mark this corpus refuses on. No year, no place beyond the see, no relic, no hymn. The corpus already keeps `sabbas-of-sourozh` for the same see, on 2 Απριλίου; nothing in this line joins the two men and nothing is drafted from the coincidence of the see. The `russian` row is left `undocumented` although the page calls him a Russian saint, because days.pravoslavie.ru was not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

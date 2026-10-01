@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-sourozh stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-new stephen-the-newly-shining stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Thirty-three now. The new one is Stephen archbishop of Sourozh on 15 December; the others are read in the el-08-20 entry for this name form.',
+  'γουριασ gurias-companion-of-barsanuphius gurias-of-edessa':
+    'Two men. The new one is Gurias the companion of Barsanuphius on 15 December; the other is Gurias of Edessa on 15 November.',
+  'ελευθεριοσ eleutherius-disciple-of-dionysius eleutherius-martyr-8-august eleutherius-of-illyricum eleutherius-the-cubicularius eleutherius-the-persian':
+    'Five men, and two stand on 15 December: Eleutherius of Illyricum, whose day the Romanian calendar keeps too and whose Greek row this batch adds, and Eleutherius the Cubicularius, new here. Two entries, two men, and the second is drafted although his page doubts the only reign it reports — a reading in ro-run/FINDINGS.md. The others are read in the el-08-08 entry for this name form.',
   'υπατιοσ hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra hypatius-of-the-thebaid hypatius-the-healer hypatius-the-tribune':
     'Six men. The new one is Hypatius of the Thebaid on 14 December, of the company around Arianus; the others are read in the el-03-31 entry for this name form.',
   'προκοπιοσ procopius-24-november procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian procopius-the-persian prokopios-of-machairas':

@@ -1,0 +1,62 @@
+{
+  "slug": "the-two-executioners",
+  "display_name": "The Two Executioners",
+  "names": [
+    {
+      "form": "Δύο Δήμιοι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Άγιοι Δύο Δήμιοι», with the rank word left off. This is the only form the page gives: it names neither man, so there is no personal name to store."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "between 117 and 138",
+      "basis": "attested",
+      "note": "saint.gr: «Οι Άγιοι Δύο Δήμιοι μαρτύρησαν και στη Ρώμη επί Αδριανού (117 - 138 μ.Χ.)». The reign is the only dating the page gives, and it gives it for the martyrdom itself."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Δεκεμβρίου — «Άγιοι Δύο Δήμιοι»",
+        "url": "https://www.saint.gr/12/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page is one sentence long: «Οι Άγιοι Δύο Δήμιοι μαρτύρησαν και στη Ρώμη επί Αδριανού (117 - 138 μ.Χ.). Πίστεψαν στο Χριστό από τα θαύματα του Άγιου Ελευθερίου (βλέπε ίδια ημέρα) και αποκεφαλίστηκαν.» **It is a company of two that the page does not name, so it is one folder and not two: there is no name to make a second folder from.** It names Rome and no coordinate is proposed. It prints no hymn. **The reign it gives, Hadrian's, disagrees with the reigns saint.gr gives on Eleutherius's own page, Commodus's and Septimius Severus's, and the disagreement is left standing.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "eleutherius-of-illyricum"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
