@@ -6,6 +6,11 @@
       "form": "Faust",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Mucenic Faust», with the rank word left off."
+    },
+    {
+      "form": "Φαύστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιος Φαύστος», with the rank word left off. The summary verse over the notice has the dative «Φαύστω»."
     }
   ],
   "sex": "male",
@@ -14,11 +19,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 249,
-      "latest": 251,
-      "display": "249–251",
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
       "basis": "attested",
-      "note": "doxologia.ro: «Sfântul Mucenic Faust (sec. III) a pătimit în timpul împăratului Deciu (249-251)». The interval is the reign the page prints; the page gives no year of its own."
+      "note": "saint.gr heads him «Αγιος Φαυστος (; - 250)» and dates his arrest in the narrative, «Οι διώκτες τον συνέλαβαν (250 μ.Χ.) και τον καταδίκασαν σε σταύρωση», with the torment lasting five days after it. doxologia.ro, the folder's other source, gave only the reign: «Sfântul Mucenic Faust (sec. III) a pătimit în timpul împăratului Deciu (249-251)», which saint.gr prints too as «του αυτοκράτορα Δεκίου (249 - 251 μ.Χ.)». The narrower year is the one the Greek page states twice, and the reign is recorded here."
     }
   },
   "attestations": [
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιος Φαύστος»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the martyr of the reign of Decius whose torment lasted five days, which is the one circumstance doxologia gave. The Greek page adds the emperor's reign in the same bracket, 249-251, the year of his arrest, «Οι διώκτες τον συνέλαβαν (250 μ.Χ.)», the manner of his death — he was condemned to crucifixion, and the heading reads «Αγιος Φαυστος (; - 250)» — and that he died blessing and thanking God. The folder's `dates` hold the Decius reign read off doxologia as 249-251; saint.gr is narrower, putting the arrest and the heading's year of death at 250, so a `dates` object is proposed with the death at 250 and the reign kept in the note. He is none of the corpus's eight other men of the name: no other stands on 16 Ιουλίου, and the nearest in kind, `faustus-the-martyr` and `faustus-companion-of-januarius`, stand on other days with other companies. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",

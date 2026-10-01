@@ -7,6 +7,11 @@
       "form": "Atinoghen",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Sfințit Mucenic Atinoghen cu cei 10 ucenici ai săi», with the rank words left off."
+    },
+    {
+      "form": "Αθηνογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιος Αθηνογένης επίσκοπος Πηδαχθόης και οι Δέκα Μαθητές του», with the rank word, the see and the company left off. One of his ten disciples bears the same name on the same page, and the two are headed separately there."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιος Αθηνογένης επίσκοπος Πηδαχθόης και οι Δέκα Μαθητές του»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own — bishop of Pedachthoe, taken with ten disciples in the persecution under Diocletian, beheaded. The Greek page adds three things. It gives his homeland as Sebastia in Cappadocia, where doxologia's life had the governor come to Sebaste without saying the bishop was from there. It gives the governor's name as Φηλίμαρχος, which doxologia's Romanian life writes Filomarh. And it names the ten disciples, whom doxologia's life leaves unnamed throughout — Ριγίνος, Μαξιμίνος, Πατρόφιλος, Αθηνογένης, Αντίοχος, Άμμων, Θεόφραστος, Κλεόνικος, Πέτρος, Ησύχιος — so the synaxis enumerates its members and the ten are drafted as ten folders in batch el-07-16-1. The page also heads him and each of the ten «(; - 311)», a year doxologia gave nowhere, and a `dates` object is proposed from it. It credits Athenogenes with the vesper hymn «Φῶς ἱλαρόν» and prints its text. There is a separate 16 Ιουλίου entry, «Άγιος Αθηνογένης *» at /2103/, which carries the asterisk and the «Δεν είναι διασταυρωμένη» sentence and says of itself «Μάλλον συγχέεται με τον Άγιο Αθηνογένη επίσκοπο Πηδαχθόης»: it is refused, and nothing from it is on this folder. This page itself carries no asterisk and no such sentence. It prints two apolytikia, both of which name him, and both are taken; the second is the common of a hierarch, «Κανόνα πίστεως, καὶ εἰκόνα πραότητος», printed under his name with his name sung into it, and is taken as a common and said here to be one."
     },
     {
       "church": "serbian",
@@ -62,9 +77,63 @@
         "text": "A sharer in their ways and a successor to the apostles' thrones, you found in action, God-inspired one, a way up to the vision of the things on high. Therefore, rightly teaching the word of truth and enduring in faith even to blood, hieromartyr Athenogenes, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Χρῖσμα ἀγιόν, εἰσδεδεγμένος, Μάρτυς ἔνθεος, τοῦ Λόγου ὤφθης, Ἀθηνόγενες ἀθλήσας στερρότατα, καὶ ὡς θυσίαν αὐτῶ προσενήνοχας τῶν φοιτητῶν σου δεκάδα τὴν πάνσεπτον μεθ' ὧν πρέσβευε, δοθήναι τοὶς σὲ γεραίρουσι, πταισμάτων ἱλασμὸν καὶ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ', Θείας πίστεως — the first of two hymns on the page of «Άγιος Αθηνογένης επίσκοπος Πηδαχθόης και οι Δέκα Μαθητές του», and it names him and his decad of students",
+        "url": "https://www.saint.gr/2098/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the holy chrism, you were shown forth as a martyr filled with God, a martyr of the Word, Athenogenes, having contended most stoutly; and you offered Him as a sacrifice the all-venerable decad of your students. With them, intercede that forgiveness of sins and great mercy be given to those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Κανόνα πίστεως, καὶ εἰκόνα πραότητος, ἐγκρατείας διδάσκαλον, ἀνέδειξε σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Ἀθηνογένη, πρέσβευε Χριστῷ τῷ θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ' — the second of two hymns on the page of «Άγιος Αθηνογένης επίσκοπος Πηδαχθόης», printed under his name with his name sung into it; it is the common of a hierarch and is taken as a common",
+        "url": "https://www.saint.gr/2098/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown you to your flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore you have gained the heights by humility and riches by poverty. Father and hierarch Athenogenes, intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 311,
+      "display": "311",
+      "basis": "attested",
+      "note": "saint.gr heads him «Αγιος Αθηνογενης Επισκοπος Πηδαχθοης (; - 311)», with no year of birth, and gives the same year to each of the ten disciples in their own headings. Its narrative states no year; the heading is where the year is. doxologia.ro, the folder's other source, gave no year at all and only the reign of Diocletian."
+    }
+  },
+  "related": [
+    "reginus-disciple-of-athenogenes",
+    "maximinus-disciple-of-athenogenes",
+    "patrophilus-disciple-of-athenogenes",
+    "athenogenes-disciple-of-athenogenes",
+    "antiochus-disciple-of-athenogenes",
+    "ammon-disciple-of-athenogenes",
+    "theophrastus-disciple-of-athenogenes",
+    "cleonicus-disciple-of-athenogenes",
+    "peter-disciple-of-athenogenes",
+    "hesychius-disciple-of-athenogenes"
+  ]
 }

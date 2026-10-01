@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-eurychou cyriacus-son-of-hesperus cyriacus-the-executioner cyriacus-the-infant cyril-of-thessalonica':
+    'Seven now. The new one is Cyriacus the Executioner on 16 July; the others are read in the el-07-06 entry for this name form, where the fold gained a member who is not a Cyriacus at all.',
+  'αναστασιοσ anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-of-thessalonica anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':
+    'Eight now. The new one is Anastasius of Thessalonica on 16 July; the others are read in the el-07-08 entry for this name form.',
+  'θεοφραστοσ theophrastus-companion-of-terentius theophrastus-disciple-of-athenogenes':
+    'Two men: Theophrastus the companion of Terentius on 10 April and Theophrastus, one of the ten disciples of Athenogenes, on 16 July.',
+  'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-athenogenes peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-martyr-2-june peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-sebaste peter-of-sinope peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':
+    'The new one is Peter, one of the ten disciples of Athenogenes on 16 July; the rest of the fold is read in the el-07-14 entry for this name form.',
+  'μαξιμινοσ maximinus-disciple-of-athenogenes maximinus-of-trier':
+    'Two men: Maximinus of Trier on 29 May and Maximinus, one of the ten disciples of Athenogenes, on 16 July.',
+  'ησυχιοσ hesychius-companion-of-asklepiodote hesychius-companion-of-peregrinus hesychius-confessor-10-may hesychius-disciple-of-athenogenes hesychius-of-jerusalem hesychius-of-the-forty-martyrs hesychius-the-senator hesychius-the-sinaite':
+    'Eight now. The new one is Hesychius, one of the ten disciples of Athenogenes on 16 July; the others are read in the el-07-07 entry for this name form.',
+  'κλεονικοσ cleonicus-disciple-of-athenogenes cleonicus-of-cappadocia':
+    'Two men: Cleonicus of Cappadocia on 3 March and Cleonicus, one of the ten disciples of Athenogenes, on 16 July.',
+  'αθηνογενησ athenogenes-disciple-of-athenogenes athenogenes-of-pedachthoe':
+    'Two men of one name on one day, which the page itself makes plain: Athenogenes of Pedachthoe, upgraded here, and the Athenogenes among the ten disciples it names after him.',
+  'αντιοχοσ antiochus-disciple-of-athenogenes antiochus-of-ramas antiochus-the-physician antiochus-the-tribune':
+    'Four now, and two stand on 16 July: Antiochus the physician, whom this batch upgraded, and Antiochus one of the ten disciples Athenogenes leads. Two entries on one day, so two men. The others are read in the el-07-08 entry for this name form.',
   'στεφανοσ stefan-brancoveanu stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Twenty-two now. The new one is Stephen of Makhrishche on 14 July; the others are read in the el-07-05 entry for this name form.',
   'πετροσ peter-abesalamites peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-martyr-2-june peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-sebaste peter-of-sinope peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':

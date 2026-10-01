@@ -1,0 +1,65 @@
+{
+  "slug": "anastasius-of-thessalonica",
+  "display_name": "Anastasius of Thessalonica",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Thessalonica",
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Αναστάσιος και Ευξίθεος Επίσκοποι Θεσσαλονίκης», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 451,
+      "latest": 451,
+      "display": "451",
+      "basis": "inferred",
+      "note": "saint.gr heads him «Αγιος Αναστασιος Επισκοπος Θεσσαλονικης (; - 451)», with no year of birth, and its narrative reasons the year rather than attesting it: «Εικάζεται ότι ο θάνατος του Αναστασίου είχε επέλθει ήδη περί τα τέλη Σεπτεμβρίου του 451 μ.Χ.» — it is surmised that his death had already come about towards the end of September 451 — on the ground that at the third session of Chalcedon, on 13 October 451, the bishop of Thessalonica mentioned is no longer he but Euxitheos. The basis is inferred because the page says «εικάζεται»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιοι Αναστάσιος και Ευξίθεος Επίσκοποι Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day as the listing, which pairs him with Euxitheos; both get folders because the page heads them separately and makes them two men in succession, Euxitheos following him in the see. He is none of the corpus's twenty-odd other men of this name: no folder of it carries Thessalonica, and the one closest in date, `anastasius-of-antioch`, stands on 20 Απριλίου. The predecessor the page names, Rufus, is the corpus's `rufus-of-thessalonica`, whose Greek row stands on 9 Σεπτεμβρίου — the page itself sends the reader there, «βλέπε 9 Σεπτεμβρίου». The other men it names are not identified with any folder and are not linked in the life: Pope Sixtus III, Pope Leo I, Perigenes bishop of Corinth, Atticus metropolitan of Old Epirus, Quintillus bishop of Heraclea and the presbyter Andrew — the corpus's three Atticus folders stand on other days and nothing on this page joins them to this one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn and credits the metropolis of Thessalonica; Thessalonica is his see and not a place of life it states, so there is no `locations`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "rufus-of-thessalonica",
+    "euxitheos-of-thessalonica"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

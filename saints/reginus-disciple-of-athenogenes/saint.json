@@ -1,0 +1,62 @@
+{
+  "slug": "reginus-disciple-of-athenogenes",
+  "display_name": "Reginus, disciple of Athenogenes",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ριγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page heading for 16 Ιουλίου, «Αγιος Ριγινος Μαθητης Του Αγιου Αθηνογενη», with the rank word and the kinship clause left off; its narrative has the accusative «Ριγίνο». The day listing itself names only the bishop and «οι Δέκα Μαθητές του», his ten disciples."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 311,
+      "display": "311",
+      "basis": "attested",
+      "note": "saint.gr heads him «Αγιος Ριγινος Μαθητης Του Αγιου Αθηνογενη (; - 311)», with no year of birth, and gives the same year to the bishop and to each of the other nine. The page states no year anywhere in its narrative; the heading is where the year is."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026). doxologia.ro does keep «Sfântul Sfințit Mucenic Atinoghen cu cei 10 ucenici ai săi» on 16 iulie — the corpus's `athenogenes-of-pedachthoe` was built from it — but that life names none of the ten, so it is not a source for this folder and has not been re-read for him."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιος Αθηνογένης επίσκοπος Πηδαχθόης και οι Δέκα Μαθητές του»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day as the listing. It is a synaxis that enumerates its members: the page gives each of the ten a heading of his own — his is «Αγιος Ριγινος Μαθητης Του Αγιου Αθηνογενη (; - 311)» — and its narrative names all ten in a row, «ο Αθηνογένης με δέκα μαθητές του, τον Ριγίνο, τον Μαξιμίνο, τον Πατρόφιλο, τον Αθηνογένη, τον Αντίοχο, τον Άμμων, τον Θεόφραστο, τον Κλεόνικο, τον Πέτρο και τον Ησύχιο», so this is one folder per man and not one folder for the company. He is not the corpus's `reginus-of-skopelos`, the bishop of Skopelos whose Greek row stands on 25 Φεβρουαρίου. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page (the separate 16 Ιουλίου entry «Άγιος Αθηνογένης *», /2103/, does carry it and is refused). The page gives him no birthplace, no rank and no age of his own; the only thing it dates is his death, and the two apolytikia it prints address the bishop, so no hymn is taken for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "athenogenes-of-pedachthoe"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Antioh",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iulie, «Sfântul Mucenic Antioh, doctorul din Antiohia», with the rank word left off."
+    },
+    {
+      "form": "Αντίοχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Αντίοχος και Κυριάκος ο δήμιος», with the rank word left off. The summary verse over the notice has the vocative «Aντίοχε»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιοι Αντίοχος και Κυριάκος ο δήμιος»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own — the martyr physician of 16 iulie, for whom doxologia printed only its day line. The Greek page gives him a life, and one point in it disagrees with the Romanian line and is not resolved here: doxologia called him «doctorul din Antiohia», the physician of Antioch, while saint.gr says «καταγόταν από την Σεβάστεια της Καππαδοκίας», he came from Sebastia in Cappadocia. Both readings are recorded, the folder takes neither as a `locations` entry, and the disagreement is named in the reader's report. The page also makes him the brother of Plato, sending the reader to 18 Νοεμβρίου — the corpus's `plato-of-ancyra`, whose own Romanian life already calls him «a brother of the Martyr Antiochus» and stands on that day. It names the governor Hadrian, the torments, the breaking of the idols and the beheading, and it adds the executioner Cyriacus, who saw milk run from the neck instead of blood, confessed Christ and was beheaded on the spot; he is drafted as a new folder in batch el-07-16-2. No year is printed anywhere, so nothing is proposed for `dates`. He is not `antiochus-disciple-of-athenogenes`, the disciple of the same name drafted for this same day out of /2098/: two entries on one calendar are two commemorations, and nothing on either page joins them. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
     },
     {
       "church": "serbian",
@@ -46,5 +61,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "plato-of-ancyra",
+    "cyriacus-the-executioner"
+  ]
 }

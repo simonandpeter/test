@@ -1,0 +1,55 @@
+{
+  "slug": "euxitheos-of-thessalonica",
+  "display_name": "Euxitheos of Thessalonica",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Thessalonica",
+  "names": [
+    {
+      "form": "Ευξίθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Αναστάσιος και Ευξίθεος Επίσκοποι Θεσσαλονίκης», with the rank word and the see left off. The page's narrative gives a variant beside it, «ο Ευξίθεος (ή Ευδόξιος)», Euxitheos or Eudoxius; that second form is recorded here only in this note, because the page offers it as an alternative and does not settle on it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιοι Αναστάσιος και Ευξίθεος Επίσκοποι Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day as the listing, and heads him «Αγιος Ευξιθεος Επισκοπος Θεσσαλονικης» with no years at all beside his name — alone among the men on this day's pages, who all carry a bracket. So there is no `dates` object: the only years the page gives in his vicinity, 451 and the October sessions of Chalcedon, are said of his predecessor's death and of the council, not of his birth or his repose. The corpus holds no other saint of this name under either of the page's two spellings. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn, no birthplace and no account of his episcopate; Thessalonica is his see and not a place of life it states, so there is no `locations`. It credits the metropolis of Thessalonica."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "anastasius-of-thessalonica"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

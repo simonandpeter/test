@@ -1,0 +1,11 @@
+# Anastasius of Thessalonica
+
+saint.gr's calendar for 16 July keeps two bishops of Thessalonica on one line, Anastasius and [Euxitheos](/saints/euxitheos-of-thessalonica), and the page behind the line is almost all about the first of them. It says that Anastasius succeeded [Rufus](/saints/rufus-of-thessalonica) on the episcopal throne of Thessalonica in 434, and it heads him «(; - 451)», with no year of birth and nothing at all about where he came from or how he lived before the see.
+
+What it records of him instead is a correspondence. In 435 Pope Sixtus III sent a letter to Perigenes, bishop of Corinth, reminding him that he must obey the bishop of Thessalonica and papal vicar Anastasius, who had succeeded Rufus; in the same year he sent a second letter to the synod that was to meet at Thessalonica, to repeat the rights his predecessors had granted to the vicar of the papal throne, the bishop of Thessalonica. Several years later, in 446, Pope Leo I wrote to Anastasius over his dispute with Atticus, metropolitan of Old Epirus, and confirmed those rights to him.
+
+Why he was not able to take part in person in the Fourth Ecumenical Council, convened at Chalcedon in 451, the page says is not known. At the council's first session, on 8 October 451, Quintillus, bishop of Heraclea, signed as his locum tenens — «Κυντίλλου ἐπίσκοπου ῾Ηρακλείας ἐπέχοντος τὸν τόπον τοῦ ἁγιωτάτου ἐπισκόπου Θεσσαλονικέων ᾿Αναστασίου». At the third session, on 13 October, the bishop of Thessalonica was represented by the presbyter Andrew; and from that point, the page notes, it is no longer Anastasius who is mentioned as bishop but Euxitheos, who succeeded him, evidently after his death.
+
+So the page ends by surmising that Anastasius had already died towards the end of September 451. That is the whole of its notice. It gives no account of his birth, his character or his end, no hymn for him and nothing of a martyrdom; what it keeps is the record of his years as bishop and papal vicar, and it credits the metropolis of Thessalonica as its source.
+
+*After saint.gr's calendar for 16 Ιουλίου — [the day](https://www.saint.gr/07/16/index.aspx) and [the life](https://www.saint.gr/2104/saint.aspx), which he shares with Euxitheos; read 1 October 2026.*

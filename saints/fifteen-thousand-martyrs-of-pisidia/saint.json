@@ -1,0 +1,50 @@
+{
+  "slug": "fifteen-thousand-martyrs-of-pisidia",
+  "display_name": "The Fifteen Thousand Martyrs of Pisidia",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία», with the rank word left off. The page heading repeats it as «Αγιοι Δεκαπεντε Χιλιαδες Μαρτυρες Οι Εν Πισιδια»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Ιουλίου — «Άγιοι Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία»",
+        "url": "https://www.saint.gr/07/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is one sentence: «Οι Άγιοι Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία μαρτύρησαν δια ξίφους» — they were martyred by the sword. A company that is numbered and not named, so it is one folder and not fifteen thousand, on the same footing as the corpus's `ten-thousand-martyrs-of-antioch` and `ten-thousand-of-nitria`. It is not `fifteen-martyrs-27-september`, «Άγιοι Δεκαπέντε Μάρτυρες», which stands on 27 Σεπτεμβρίου and is a company of fifteen rather than of fifteen thousand; nor `thousand-martyrs`, «Άγιοι Χίλιοι Μάρτυρες», a thousand on 30 Σεπτεμβρίου. The duplicate scan raised both and both are answered on the number and the day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. No year, no emperor, no governor and no town of Pisidia is printed, so there is no `dates` object and no `locations` — Pisidia alone is a province and the page names nothing inside it — and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
