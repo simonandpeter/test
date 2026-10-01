@@ -1,0 +1,9 @@
+# Fortunatus, companion of Achaicus
+
+Fortunatus, [Achaicus](/saints/achaicus-the-apostle) and [Stephanas](/saints/stephanas-the-apostle) were fellow workers of the Apostle Paul, and saint.gr says that they helped with all their soul in the spreading of the Gospel among the nations. Paul names all three together in his first letter to the Corinthians, at the sixteenth chapter and the seventeenth verse: they went to him at Ephesus from Corinth, and relieved his spirit by their presence and by the help they gave him in his struggles for the Church, and for that he commends them to the Christians of Corinth, that these should hold them in honour.
+
+Of the household of Stephanas in particular the page says that it was the first Christian house of the province of Achaia, to which Corinth then belonged; that Paul himself baptised Stephanas's family; and that the Apostle tells us all its members devoted themselves to the service of the saints. Of Fortunatus it says that his is perhaps the Latin name of Tychicus, whom the Acts of the Apostles report to have come from Asia and to have accompanied Paul, together with others, when he returned from Greece proper by way of Macedonia.
+
+saint.gr gives no year for any of the three and no account of a death, and it prints a short epigram for each: that Fortunatus is a boast to the Apostles and to the contenders, his head having been cut off; that the Master who said «I thirst» upon the tree looses hunger and thirst for Achaicus; and that Stephanas is to be understood as a Stephanas in deed as well as in name, wearing the crown for which his labours were the prize. The page carries no hymn for them.
+
+*After saint.gr's calendar for 15 Ιουνίου — [the day](https://www.saint.gr/06/15/index.aspx) and [the life](https://www.saint.gr/1858/saint.aspx); read 1 October 2026.*

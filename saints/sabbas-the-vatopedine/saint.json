@@ -1,0 +1,71 @@
+{
+  "slug": "sabbas-the-vatopedine",
+  "display_name": "Sabbas the Vatopedine",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουνίου, «Όσιος Σάββας ο Βατοπεδινός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1280,
+      "latest": 1280,
+      "display": "about 1280",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Σάββας γεννήθηκε στη Θεσσαλονίκη περί το 1280 μ.Χ.» — the page's own year, and the bracket is that one year because it is the only one the page gives for his birth."
+    },
+    "death": {
+      "earliest": 1349,
+      "latest": 1349,
+      "display": "about 1349",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη ειρηνικά περί το 1349 μ.Χ.», with the page head «(; - 1349)»."
+    }
+  },
+  "related": [
+    "philotheus-kokkinos"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουνίου — «Όσιος Σάββας ο Βατοπεδινός»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουνίου εκάστου έτους», the same day as the listing. He is not the corpus's `sava-of-vatopedi`, the hierodeacon and sacristan who hid the Vimatarissa icon in the well and was carried off to Crete and whom doxologia keeps on 10 July: that man was ordained deacon, and saint.gr's Sabbas refused the priesthood outright and hid on the day of his ordination. This is the Thessalonican born about 1280, called Stephen in the world, the fool for Christ whose Life was written by Philotheus Kokkinos, who died about 1349. His own page adds «Η μνήμη του τιμάται στις 11 Οκτωβρίου και στις 15 Ιουνίου, την Τετάρτη της Διακαινησίμου μετά των Σιναϊτών Αγίων και στις 10 Ιουλίου μετά των Βατοπαιδινών Αγίων», so four commemorations; the day recorded is the day page read. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

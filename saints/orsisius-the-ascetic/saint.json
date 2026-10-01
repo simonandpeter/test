@@ -1,0 +1,51 @@
+{
+  "slug": "orsisius-the-ascetic",
+  "display_name": "Orsisius",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ορτίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουνίου, «Όσιος Ορτίσιος», with the rank word left off. The life page writes the name «Ορτίσιος (ή Ορσίσιος)»; the form above is the one the day's line prints."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουνίου — «Όσιος Ορτίσιος»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουνίου εκάστου έτους», the same day as the listing. The corpus keeps no Orsisius or Horsiesios. The page gives no monastery and no year, only that he was one of the famous ascetics of the desert and that his sayings are in Palladius's Paradise of the Fathers. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "nerses-the-martyr",
+  "display_name": "Nerses",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Νερσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουνίου, «Άγιος Νερσής», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουνίου — «Άγιος Νερσής»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουνίου εκάστου έτους», the same day as the listing. The life page says «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου Νερσή» and prints only a two-line epigram naming martyrdom. The corpus keeps no Nerses; no identification with any Armenian Nerses is asserted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

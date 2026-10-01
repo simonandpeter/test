@@ -1,0 +1,54 @@
+{
+  "slug": "fortunatus-the-apostle",
+  "display_name": "Fortunatus, companion of Achaicus",
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "names": [
+    {
+      "form": "Φουρτουνάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Ιουνίου, «Άγιοι Φουρτουνάτος, Αχαϊκός και Στεφανάς οι Απόστολοι», with the rank words left off."
+    }
+  ],
+  "related": [
+    "achaicus-the-apostle",
+    "stephanas-the-apostle"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Ιουνίου — «Άγιοι Φουρτουνάτος, Αχαϊκός και Στεφανάς οι Απόστολοι»",
+        "url": "https://www.saint.gr/06/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The three are one entry on the day listing and one life page, https://www.saint.gr/1858/saint.aspx, which names each of them and gives each his own epigram, so the company is taken as one folder per member. The page head reads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Ιουνίου εκάστου έτους». This Fortunatus is not the corpus's `fortunatus-of-africa` (Greek 21 February) nor `fortunatus-the-martyr` (Greek 30 August): he is Paul's fellow worker of 1 Corinthians 16:17. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
