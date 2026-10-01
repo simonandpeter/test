@@ -6,6 +6,11 @@
       "form": "Olga",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfânta Olga din Alaska»."
+    },
+    {
+      "form": "Όλγα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Νοεμβρίου, «Αγία Όλγα της Αλάσκας, η Μαία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -50,8 +55,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Νοεμβρίου — «Αγία Όλγα της Αλάσκας, η Μαία»",
+        "url": "https://www.saint.gr/11/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Νοεμβρίου εκάστου έτους», the same day as the listing, and it is the day of her repose: «Η Matushka Όλγα αναπαύτηκε στις 8 Νοεμβρίου του 1979 μ.Χ.». The entry is the same woman the folder already keeps — the Yup'ik midwife of Kwethluk, born 3 February 1916, wife of the village postmaster who was later ordained — but the Greek calendar keeps her on her repose, 8 November, where doxologia keeps her on 27 October; the Romanian row is left exactly as it stands. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn."
     },
     {
       "church": "serbian",

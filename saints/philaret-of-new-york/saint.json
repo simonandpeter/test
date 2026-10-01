@@ -1,0 +1,75 @@
+{
+  "slug": "philaret-of-new-york",
+  "display_name": "Philaret of New York",
+  "names": [
+    {
+      "form": "Φιλάρετος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Νοεμβρίου, «Άγιος Φιλάρετος Μητροπολίτης Νέας Υόρκης και Ανατολικής Αμερικής», with the rank words left off. The page gives his name in the world as «Γεώργιος Νικολάγεβιτς Βοζνεσένσκυ (George Nicolaevich Voznesensky)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of New York and Eastern America",
+  "types": [
+    "hierarch",
+    "metropolitan"
+  ],
+  "related": [
+    "john-maximovitch",
+    "john-of-kronstadt",
+    "herman-of-alaska",
+    "xenia-of-saint-petersburg",
+    "paisius-of-neamt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Κουρσκ στις 22 Μαρτίου του 1903 μ.Χ.», with the page's own head «(1903 - 1985)»."
+    },
+    "death": {
+      "earliest": 1985,
+      "latest": 1985,
+      "display": "1985",
+      "basis": "attested",
+      "note": "saint.gr: «στέφθηκε από την ευλογημένη κοίμησή του στις 8 Νοεμβρίου 1985 μ.Χ., κατά την ημέρα εορτής του Αρχαγγέλου Μιχαήλ και όλων των ασωμάτων Δυνάμεων»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). He was primate of the Russian Church Abroad, so his own church's calendar is the source a later reader will want."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Νοεμβρίου — «Άγιος Φιλάρετος Μητροπολίτης Νέας Υόρκης και Ανατολικής Αμερικής»",
+        "url": "https://www.saint.gr/11/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Νοεμβρίου εκάστου έτους», the same day as the listing, and it is the day of his repose. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
