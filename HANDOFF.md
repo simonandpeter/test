@@ -339,6 +339,14 @@ Playwright's trace, not a width.
 payload"** failed once at mobile-360 and passes 6 of 6 on `--repeat-each=3`. It
 hovers and waits 300 ms for one request; that is a budget, not a bug.
 
+**`daily-stage.spec.js`'s "the page comes back to the line it was left on,
+without a jump"** is the third, and it is old too: **1 failure in 6 at
+mobile-360 on this tree, and 1 in 6 on a worktree of `bf181d2f`**. It fails the
+same way both times — the saint it scrolled to never reappears inside the 4 s
+poll, so `toBeCloseTo` is handed `null` — which is a race in the restore, not a
+count. A bigger corpus plausibly widens the window it loses in; it did not open
+it.
+
 Everything else that went red was a fixture whose premise the wave killed, and
 all of those are fixed: `EMPTY`, `dayOneChurchKeeps('russian', 'greek')` in
 three tests, and `dayKeptOnlyElsewhere`. The pattern is worth knowing before the
