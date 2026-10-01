@@ -19,6 +19,12 @@
     "bishop"
   ],
   "office": "Bishop of Tauromenium",
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "marcellus-of-sicily",
     "philagrius-of-cyprus"

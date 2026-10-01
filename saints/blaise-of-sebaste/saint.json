@@ -140,6 +140,12 @@
       "note": "saint.gr: «Εξοργισθέντες τότε οι εχθροί της πίστεως τον αποκεφάλισαν το 316 μ.Χ.», and its heading «(; - 316)». It places his life under the emperor Licinius (308–323)."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "two-youths-of-sebaste",
     "seven-women-of-sebaste"

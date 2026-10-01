@@ -79,6 +79,12 @@
       "note": "saint.gr: «Όταν το έτος 198 μ.Χ. ο Σέβηρος εξαπέλυσε απηνή διωγμό κατά των Χριστιανών», and its heading «(85 - 198)». It places him under Septimius Severus (193–211) and gives his age at death as 113."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "baptos-companion-of-porphyrius",
     "porphyrius-companion-of-baptos",

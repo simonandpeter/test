@@ -71,6 +71,12 @@
       "note": "saint.gr: «Επί αυτοκράτορα Λέοντος του Ισαύρου (813 - 820 μ.Χ.) καταδιώχθηκε και αυτός μαζί με άλλους Ομολογητές της πίστεως υπέρ των αγίων εικόνων και εξορίσθηκε.» The interval is the reign the page prints. Those years are Leo V the Armenian's and not Leo III the Isaurian's; the mismatch is recorded and not corrected, because the source's reading is the fact. The page gives no year for his repose."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "theodore-the-studite"
   ]

@@ -120,5 +120,11 @@
       "basis": "traditional",
       "note": "saint.gr heads his page «Άγιος Θεόδωρος ο Τήρων (; - 307)» and gives no year in the life itself, only the reigns of Maximian, Galerius and Maximinus."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
