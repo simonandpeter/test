@@ -1,0 +1,51 @@
+{
+  "slug": "diokles",
+  "display_name": "Diokles",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Διοκλής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Διοκλής», with the rank word left off. Its life calls him «ο Όσιος αββάς Διοκλής»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουλίου — «Όσιος Διοκλής»",
+        "url": "https://www.saint.gr/07/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουλίου εκάστου έτους», the same day as the listing. The corpus holds no Diokles and nothing that folds onto the name: the namesweep's nearest rows were Eudocia and the Ten Martyrs, neither of them his. The page gives no year and no century — only that he became an anchorite at twenty-eight — so there is no `dates` object. The page names Ηρακλείδης as the writer of the Lausiac History that records the meeting; the Lausiac History is Palladius's, and the attribution is reported as the page has it and not corrected. Above the life the site prints its own gloss on the name and a list of five pagan bearers of it, which is site furniture and not part of his life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

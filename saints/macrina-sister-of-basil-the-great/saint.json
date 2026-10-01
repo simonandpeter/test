@@ -6,6 +6,11 @@
       "form": "Macrina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 iulie, «Sfânta Cuvioasă Macrina, sora Sfântului Vasile cel Mare», with the rank words left off."
+    },
+    {
+      "form": "Μακρίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουλίου, «Οσία Μακρίνα αδελφή του Μεγάλου Βασιλείου», with the rank word and the kinship clause left off."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουλίου — «Οσία Μακρίνα αδελφή του Μεγάλου Βασιλείου»",
+        "url": "https://www.saint.gr/07/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and «Οσια Μακρινα Αδελφη Του Μεγαλου Βασιλειου (324 - 379)» is the folder's own woman: the elder sister of Basil the Great and Gregory of Nyssa, raised by her mother Emmelia, betrothed to a man who died, withdrawn with her mother to a women's monastery in Pontus by the river Iris. She is not `macrina-the-elder`, her grandmother, whom the corpus keeps on 30 May. The page's heading gives the years the Romanian source did not and they are taken into `dates`. It also lists her relics: part of the right foot at the Monastery of Iviron on Athos, part of the left hand at the Monastery of Panachrantou on Andros, a part at Stavronikita on Athos, and a portion at Kykkos in Cyprus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia and both are taken: the first names her, and the second is the common of a venerable woman, «Ἐν σοὶ Μῆτερ ἀκριβῶς διεσώθη τὸ κατ᾽ εἰκόνα», printed under her name with her name in its closing line, so it is her service and not a mis-hang."
     },
     {
       "church": "serbian",
@@ -65,9 +80,58 @@
         "text": "In you, mother, what was made in God's image was saved with diligence; for taking up the cross you followed Christ, and by your works you taught us to overlook the body, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, venerable mother Macrina.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Σοφίας ἔρωτι, τὸν νοῦν πτερώσασα, κόσμου εὐπάθειαν, ἔμφρονως ἔλιπες, καὶ ἐνδιαίτημα τερπνὸν ἔγενου θείας ἀγάπης· σὺ γὰρ δι' ἀσκήσεως, καὶ ἠθῶν τελειότητας, νύμφη ἔχρηματισας, τοῦ Σωτῆρος περίδοξος· ὦ πρέσβευε ὑπὲρ τῶν βοώντων χαίροις Μακρίνα θεοφόρε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — the first of the two hymns on the page of «Οσία Μακρίνα αδελφή του Μεγάλου Βασιλείου», and it names her",
+        "url": "https://www.saint.gr/728/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having given your mind wings by the love of wisdom, you wisely left the comfort of the world and became a delightful dwelling of divine love; for by ascetic labour and by perfection of manners you were made the Saviour's bride and were greatly glorified. Intercede, then, for those who cry: rejoice, God-bearing Macrina.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἐν σοὶ Μῆτερ ἀκριβῶς διεσώθη τὸ κατ᾽ εἰκόνα· λαβοῦσα γὰρ τὸν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καὶ πράττουσα ἐδίδασκες, ὑπερορᾷν μὲν σαρκός, παρέρχεται γάρ· ἐπιμελεῖσθαι δὲ ψυχῆς, πράγματος ἀθανάτoυ· διὸ καὶ μετὰ Ἀγγέλων συναγάλλεται, Ὁσία Μακρίνα τὸ πνεῦμά σου.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος πλ. δ’ — the second of the two hymns on the page of «Οσία Μακρίνα αδελφή του Μεγάλου Βασιλείου». It is the common of a venerable woman, printed under her name and naming her in its closing line",
+        "url": "https://www.saint.gr/728/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, mother, the image of God was kept exactly; for you took up the cross and followed Christ, and by your deeds you taught that the flesh is to be overlooked, since it passes away, and that the soul is to be cared for, being a thing immortal. Therefore your spirit rejoices with the angels, venerable Macrina.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 324,
+      "latest": 324,
+      "display": "324",
+      "basis": "traditional",
+      "note": "saint.gr prints the years in its heading for her, «Οσια Μακρινα Αδελφη Του Μεγαλου Βασιλειου (324 - 379)». The Romanian source the folder was built from, Gregory of Nyssa's letter to Olympius as doxologia.ro prints it, gave no year of birth or death."
+    },
+    "death": {
+      "earliest": 379,
+      "latest": 379,
+      "display": "379",
+      "basis": "traditional",
+      "note": "saint.gr prints the years in its heading for her, «Οσια Μακρινα Αδελφη Του Μεγαλου Βασιλειου (324 - 379)». The Romanian source the folder was built from, Gregory of Nyssa's letter to Olympius as doxologia.ro prints it, gave no year of birth or death."
+    }
   }
 }

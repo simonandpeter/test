@@ -6,6 +6,11 @@
       "form": "Die",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 iulie, «Sfântul Cuvios Die», with the rank words left off. The same site's troparion page for him spells the name «Dias»."
+    },
+    {
+      "form": "Δίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Δίος», with the rank word left off. The apolytikion addresses him in the vocative, «Δίε μακάριε»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουλίου — «Όσιος Δίος»",
+        "url": "https://www.saint.gr/07/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Ο Όσιος Δίος καταγόταν από την Αντιόχεια της Συρίας», and in Constantinople «ίδρυσε και μοναστήρι», which is the Antioch and the monastery doxologia's life of «Sfântul Cuvios Die» tells. The Greek page adds the ordination — «τον προσκάλεσε ο Πατριάρχης Αττικός (406 - 425 μ.Χ.) στην Κωνσταντινούπολη και τον χειροτόνησε ιερέα» — and that his fame had spread by the age of thirty-five, and that he once fell ill to the point of death and was saved by a miracle. The page's two time anchors do not agree with each other: it sets him «στα χρόνια του μεγάλου Θεοδοσίου», whose reign ended in 395, and then has him ordained by Atticus, whose patriarchate it dates 406–425. Neither is a year of his own, so no `dates` are proposed and the disagreement is recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints an apolytikion and a kontakion, both of which name him, and both are taken."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
       },
       "english": {
         "text": "A dweller of the desert and an angel in the body and a worker of wonders you were shown to be, God-bearing father Dias; by fasting, by vigil and by prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to Him who gave you strength; glory to Him who crowned you; glory to Him who works through you healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὁ βίον ἐφάμιλλον, τὴ κλήσει πολιτευθεῖς, τῆς δόξης τοῦ Πνεύματος, πυξίον ὤφθης σεπτόν, Πατὴρ ἠμῶν Ὅσιε, σὺ γὰρ θαυματουργίαις, ἱεραὶς διαπρεπῶν, ἔνδοξος ἐν Ὀσίοις, φερωνύμως ἐδείχθης. Διὸ σὲ ἀνευφημοῦμεν, Δίε μακάριε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first of the two hymns on the page of «Όσιος Δίος», and it names him in its last line",
+        "url": "https://www.saint.gr/729/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived a life that matched your calling, you were shown to be a venerable tablet of the Spirit's glory, our venerable father; for excelling in holy wonderworking you were shown glorious among the venerable, true to the name you bear. Therefore we sing your praise, blessed Dios.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ἁγνείᾳ ψυχῆς, ἐνθέως ὁπλισάμενος, καὶ ἄπαυστον εὐχήν, ὡς λόγχην χειρισάμενος, κραταιῶς διέκοψας, τῶν δαιμόνων Δίε τὰς φάλαγγας, θαυματουργὲ Πατὴρ ἡμῶν, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the second of the two hymns on the page of «Όσιος Δίος», and it names him",
+        "url": "https://www.saint.gr/729/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed by God with purity of soul, and handling unceasing prayer as a spear, you cut mightily through the phalanxes of the demons, Dios, our wonderworking father, interceding without ceasing for us all.",
         "rendered": "site"
       }
     }

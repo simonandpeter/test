@@ -1,0 +1,53 @@
+{
+  "slug": "theodore-the-sabbaite-of-edessa",
+  "display_name": "Theodore of Edessa",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop",
+    "ascetic"
+  ],
+  "office": "Bishop of Edessa",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Θεόδωρος ο Σαββαΐτης επίσκοπος Εδέσσης», with the rank words and the bynames left off. The page gives his father's name as Συμεών and his mother's as Μαρία."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουλίου — «Όσιος Θεόδωρος ο Σαββαΐτης επίσκοπος Εδέσσης»",
+        "url": "https://www.saint.gr/07/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no Theodore of Edessa and no Sabbaite Theodore: the only Edessene folders are Barses, Barsimaeus, Bassa, Callinicus, Eulogius, Gurias, Samonas, Abibus and John, and the only Sabbaite is Stephen the Sabbaite of 13 July, John of Damascus's nephew, who is a different man with a different life. So this is a new folder and not an upgrade. The page gives no year and no century anywhere, so there is no `dates` object; it says the life was written by Basil bishop of Emesa and that a Greek life survives at the Monastery of Iviron. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn, so the folder has none. The `office` is the see the listing itself gives him; the page glosses Edessa as being in the Middle East and says nothing more precise."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
