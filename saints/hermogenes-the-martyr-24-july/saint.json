@@ -6,6 +6,11 @@
       "form": "Ermoghen",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 iulie, «Sfântul Mucenic Ermoghen», with the rank word left off."
+    },
+    {
+      "form": "Ερμογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουλίου, «Άγιος Ερμογένης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουλίου — «Άγιος Ερμογένης»",
+        "url": "https://www.saint.gr/07/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line is as bare as the Romanian one — «Άγιος Ερμογένης» against «Sfântul Mucenic Ermoghen» — with the same rank and no byname on either. He is none of the corpus's other men of the name, all of whom are kept on other days: of Nicomedia, of Alexandria, of Samos, the companion of Mamas, the bare one of 19 April, and the two Russian hierarchs of Moscow and Tobolsk. The Greek page adds the one thing the Romanian line did not, how he died. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year, no place and no emperor, so no `dates` object is proposed, and it prints no hymn."
     },
     {
       "church": "serbian",

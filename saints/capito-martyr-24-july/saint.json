@@ -1,0 +1,50 @@
+{
+  "slug": "capito-martyr-24-july",
+  "display_name": "Capito (24 July)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Καπίτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουλίου, «Άγιος Καπίτων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουλίου — «Άγιος Καπίτων»",
+        "url": "https://www.saint.gr/07/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουλίου εκάστου έτους», the same day as the listing. The corpus holds two other men of the name and this is neither. `capito-of-cherson` is a hieromartyr and bishop kept on 7 March, and his Greek row is already venerated for that day off saint.gr's own 7 Μαρτίου page. `capito-the-martyr` is the martyr of the third century kept with Pamphilus on 12 August in both the Russian and the Romanian calendars — and saint.gr keeps that pair too, on its own 12 Αυγούστου page, «Άγιοι Πάμφιλος και Καπίτων», checked 1 October 2026. One calendar printing a Καπίτων on two different days is two commemorations by the corpus's settled rule, so the bare 24 July martyr is his own entry. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, no year, no place and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

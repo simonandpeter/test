@@ -6,6 +6,11 @@
       "form": "Hristina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 iulie, «Sfânta Mare Muceniță Hristina», with the rank words left off."
+    },
+    {
+      "form": "Χριστίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουλίου, «Αγία Χριστίνα η μεγαλομάρτυς», with the rank words left off. The page glosses the name as «Η αφωσιωμένη στον Χριστό», she who is devoted to Christ."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουλίου — «Αγία Χριστίνα η μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/07/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man — the woman — is the folder's own: «καταγόταν από την Τύρο της Συρίας και ήταν κόρη του στρατηγού Ουρβανού (περί το 200 μ.Χ.)», Christina of Tyre, great martyr, as the Romanian «Sfânta Mare Muceniță Hristina» has her. The Greek page adds the year the Romanian source did not give, «περί το 200 μ.Χ.», which is why this upgrade proposes a `dates` object where the folder had none; and it adds the history of her incorrupt relics, from Syria to Constantinople, then to Venice under the Frankish rule, to Torcello in 1252, to Murano in 1340, back to Torcello in 1435 by order of Pope Eugene IV, to the monastery of Saint Justina of Venice in 1793 and in 1810 to the church of San Francesco della Vigna, where the page says they lie now in a crystal reliquary. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints three hymns and all three are taken: a proper apolytikion that names her, a second apolytikion which is the common of a woman martyr, «Ἡ ἀμνάς σου Ἰησοῦ», printed under her name as «Έτερον Ἀπολυτίκιον» and therefore her service, and a kontakion that names her."
     },
     {
       "church": "serbian",
@@ -60,9 +75,68 @@
         "text": "Your lamb, Jesus, Christina, cries out with a great voice: You, my Bridegroom, I love, and seeking You I am tormented, and I am crucified with You and buried with You in Your baptism; and I suffer for You, that I may reign in You; and I die for You, that I may live for You. But receive me, as a spotless sacrifice, offering myself to You in love. By her prayers, as You are merciful, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τοῦ πατρός σου τὴν πλάνην λιποῦσα πάνσεμνε, τῆς εὐσεβείας ἐδέξω τὴν θείαν ἔλλαμψιν, καὶ νενύμφευσαι Χριστῷ ὡς καλλιπάρθενος- ὅθεν ἠγώνισαι στερρῶς, καὶ καθεῖλες τὸν ἐχθρόν, Χριστίνα Μεγαλομάρτυς. Καὶ νῦν ἀπαύστως δυσώπει, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first of three hymns on the page of «Αγία Χριστίνα η μεγαλομάρτυς». It names her and names her father's error, so it is her own proper. Its «ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν» is the page's reading and is copied as it stands",
+        "url": "https://www.saint.gr/2064/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind your father's error, all-revered one, you received the divine radiance of true religion and were betrothed to Christ as a fair virgin; whence you contended steadfastly and cast down the enemy, Christina, great martyr. And now entreat him unceasingly, that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἡ ἀμνάς σου Ἰησοῦ, κράζει μεγάλη τῇ φωνῇ. Σὲ Νυμφίε μου ποθῶ, καὶ σὲ ζητοῦσα ἀθλῶ, καὶ συσταυροῦμαι καὶ συνθάπτομαι τῷ βαπτισμῷ σου· καὶ πάσχω διὰ σέ, ὡς βασιλεύσω σὺν σοί, καὶ θνήσκω ὑπὲρ σοῦ, ἵνα καὶ ζήσω ἐν σοί· ἀλλ᾽ ὡς θυσίαν ἄμωμον προσδέχου τὴν μετὰ πόθου τυθεῖσάν σοι. Αὐτῆς πρεσβείαις, ὡς ἐλεήμων, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’ — the second hymn on the page of «Αγία Χριστίνα η μεγαλομάρτυς». It is the common of a woman martyr and names nobody, but the page prints it under her name, so by the corpus's rule it is her service and is copied whole",
+        "url": "https://www.saint.gr/2064/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, O Jesus, cries out with a loud voice: you, my Bridegroom, I long for, and seeking you I contend, and I am crucified and buried with you in your baptism; I suffer for your sake that I may reign with you, and I die for you that I may also live in you. But receive me as a spotless sacrifice, slain for you out of longing. By her intercessions, as you are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς.",
+      "text": "Φωτοειδὴς περιστερὰ ἐγνωρίσθης, ἔχουσα πτέρυγας χρυσᾶς, καὶ πρὸς ὕψος, τῶν οὐρανῶν κατέπαυσας Χριστίνα σεμνή· ὅθεν σου τὴν ἔνδοξον, ἑορτὴν ἐκτελοῦμεν, πίστει προσκυνοῦντές σου, τῶν λειψάνων τὴν θήκην, ἐξ ἧς πηγάζει πᾶσιν ἀληθῶς, ἴαμα θεῖον, ψυχῆς τε καὶ σώματος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεῖς — the third hymn on the page of «Αγία Χριστίνα η μεγαλομάρτυς», and it names her and her reliquary",
+        "url": "https://www.saint.gr/2064/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were made known as a dove shining with light, having wings of gold, and you came to rest in the height of the heavens, revered Christina; and so we keep your glorious feast, venerating in faith the casket of your relics, out of which there truly springs for all a divine healing of soul and body.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 190,
+      "latest": 210,
+      "display": "c. 200",
+      "basis": "traditional",
+      "note": "saint.gr: «καταγόταν από την Τύρο της Συρίας και ήταν κόρη του στρατηγού Ουρβανού (περί το 200 μ.Χ.)» — the page's own «about 200», set against her father's generalship; it gives no year of her martyrdom. The folder's Romanian source gave no year at all."
+    }
   }
 }

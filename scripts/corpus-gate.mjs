@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφιλοσ theophilus-companion-of-trophimus theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-the-forty-martyrs theophilus-of-zakynthos theophilus-the-deacon-of-libya theophilus-the-myrrh-streamer theophilus-the-new':
+    'Twelve now. The new one is Theophilus of Zakynthos on 24 July; the others are read in the el-07-04 entry for this name form.',
+  'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-kinsman-of-the-lord symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Sixteen now. The new one is Symeon the Newly-Appeared on 24 July; the others are read in the el-01-04 entry for this name form.',
+  'καπιτων capito-martyr-24-july capito-of-cherson':
+    'Two men: Capito of Cherson on 7 March and the Capito of 24 July.',
+  'ρωμανοσ boris-son-of-vladimir romanus-30-may romanus-martyr-16-march romanus-of-karpenisi romanus-of-lacedaemon romanus-of-samosata romanus-of-tarnovo romanus-of-uglich romanus-the-cilician':
+    'Nine now, and the new member is not a Romanus by his common name: Boris son of Vladimir, baptised Romanus, folds here, and his brother Gleb — Davíd — takes a row on the same day. The others are read in the el-05-29 entry for this name form.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-kios athanasius-of-meteora athanasius-of-murom athanasius-of-paros athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-athonite athanasius-the-confessor athanasius-the-pentaschoinites athanasius-the-reader athanasius-the-roman-senator athanasius-the-wonderworker':
+    'Nineteen now. The new one is Athanasius of Kios on 24 July; the others are read in the el-07-18 entry for this name form.',
   'θυρσοσ thyrsus-20-january thyrsus-of-karpasia':
     'Two men: the Thyrsus of 20 January and Thyrsus of Karpasia on 23 July.',
   'απολλωνιοσ apollonius-23-july apollonius-companion-of-proclus apollonius-martyr-6-july apollonius-of-brescia apollonius-of-sardis apollonius-of-the-twenty-four-martyrs apollonius-the-anchorite':

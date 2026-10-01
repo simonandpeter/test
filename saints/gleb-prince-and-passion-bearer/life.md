@@ -32,6 +32,8 @@ calendar keeps Gleb alone on 5 September (Julian), the day of his death,
 with a troparion and kontakion, and the brothers together on 2 May, the
 translation, and 24 July.
 
+The Greek calendar keeps him on 24 July, and keeps him with his brother. saint.gr's line for the day reads «Άγιοι Μπορίσος και Γλιέβος οι Μάρτυρες», transcribing both Slavonic names into Greek, and its whole notice says that they were sons of Saint [Vladimir](/saints/vladimir-the-great), whom it sends the reader to look up on 15 July, and that by holy baptism they were renamed Romanos and David — the second being the baptismal name this folder already carries from the Russian calendar. We have no further information about the life of these saints, the page adds, and it gives no year, no place, no manner of death and no hymn; it calls the two of them martyrs and not princes. His brother [Boris](/saints/boris-son-of-vladimir) comes into the corpus from this same Greek line, the Russian calendar having kept Gleb alone on 5 September.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life1454.htm), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; and saint.gr's calendar for 24 Ιουλίου — [the day](https://www.saint.gr/07/24/index.aspx) and [the life](https://www.saint.gr/2071/saint.aspx), read 1 October 2026.*

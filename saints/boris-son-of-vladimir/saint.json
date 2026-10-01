@@ -1,0 +1,59 @@
+{
+  "slug": "boris-son-of-vladimir",
+  "display_name": "Boris, son of Vladimir",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μπορίσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουλίου, «Άγιοι Μπορίσος και Γλιέβος οι Μάρτυρες», with the rank word left off — the Greek page's own transcription of the Slavonic name."
+    },
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "The baptismal name, as the same page prints it: «δια του αγίου Βαπτίσματος μετονομάσθηκαν Ρωμανός και Δαβίδ», Romanos being the elder brother's."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουλίου — «Άγιοι Μπορίσος και Γλιέβος οι Μάρτυρες»",
+        "url": "https://www.saint.gr/07/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουλίου εκάστου έτους», the same day as the listing, and the page's own heading names the two brothers as two saints, so this is one folder of the two. The corpus already keeps the younger brother as `gleb-prince-and-passion-bearer`, from days.pravoslavie.ru's 5 September, where the Russian calendar keeps him alone; it keeps no folder for Boris, and this Greek line is where he arrives. He is none of the corpus's three other Borises — Boris-Michael of Bulgaria, Boris Bogolepov and Boris son of Philosophos Ornatsky. The page calls the two «Μάρτυρες» and nothing else, so `martyr` is the only type taken from it; the corpus's Gleb is `passion-bearer` and `prince` off the Russian source, which is not the source read here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, no year, no place and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "gleb-prince-and-passion-bearer",
+    "vladimir-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

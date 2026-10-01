@@ -1,0 +1,50 @@
+{
+  "slug": "hymenaeus-the-martyr",
+  "display_name": "Hymenaeus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Υμέναιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουλίου, «Άγιος Υμέναιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουλίου — «Άγιος Υμέναιος»",
+        "url": "https://www.saint.gr/07/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no saint of this name on any day — a grep of every `saint.json` for «Υμέναι» and for Hymenaeus returns nothing — and the names the per-day sweep offered against it were Eumenius and Menas, which are other names and other men. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, no year, no place and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
