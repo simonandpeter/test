@@ -7,12 +7,19 @@
       "form": "Frumențiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 noiembrie, «Sfântul Ierarh Frumențiu, Episcopul Etiopiei», with the rank word and the see left off."
+    },
+    {
+      "form": "Φρουμέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Νοεμβρίου, «Άγιος Φρουμέντιος αρχιεπίσκοπος Αβησσυνίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "archbishop",
+    "preacher"
   ],
   "attestations": [
     {
@@ -36,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ής Νοεμβρίου — «Άγιος Φρουμέντιος αρχιεπίσκοπος Αβησσυνίας»",
+        "url": "https://www.saint.gr/11/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man, the apostle of Ethiopia whom the Romanian line gave a rank and a see and nothing else. It answers the three things that folder said were not said: how he came to Ethiopia, who consecrated him, and when. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -47,5 +64,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 330,
+      "latest": 341,
+      "display": "330–341",
+      "basis": "traditional",
+      "note": "saint.gr: «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.), κάποιος φιλόσοφος από την Τύρο, που ονομαζόταν Φρουμέντιος, πήγε στην Αβησσυνία», and «αφού τον χειροτόνησε επίσκοπο (το έτος 341 μ.Χ.) με τον τίτλο “Ἀξώμης”». The page gives no year of birth and none of death."
+    }
+  },
+  "related": [
+    "athanasius-of-alexandria"
+  ]
 }

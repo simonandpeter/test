@@ -1,0 +1,80 @@
+{
+  "slug": "alexander-of-methymna",
+  "display_name": "Alexander of Methymna",
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Νοεμβρίου, «Άγιος Αλέξανδρος Επίσκοπος Μηθύμνης», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monastic"
+  ],
+  "office": "Bishop of Methymna",
+  "dates": {
+    "floruit": {
+      "earliest": 325,
+      "latest": 325,
+      "display": "325",
+      "basis": "traditional",
+      "note": "saint.gr: «σύμφωνα με την παράδοση, ήταν επίσκοπος Μηθύμνης, ο πρώτος ίσως επίσκοπος αυτής της Μητροπόλεως, και μάλιστα έλαβε μέρος στην Α’ Οικουμενική Σύνοδο το έτος 325 μ.Χ.» The page attributes this to tradition, hedges the primacy with «ίσως», and says plainly that of his work it has no other information; so only the year of the council is recorded, and no birth and no death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Νοεμβρίου — «Άγιος Αλέξανδρος Επίσκοπος Μηθύμνης»",
+        "url": "https://www.saint.gr/11/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page. The page is careful about its own ground and this folder follows it: «σύμφωνα με την παράδοση» for the see and the council, «λέγεται» for the monastery, «υποτίθεται» for the ruins, «πιστεύεται» for the burial, and of the inscription on the sarcophagus it says «Για την ορθή ανάγνωση της επιγραφής υπάρχουν πολλές αντιρρήσεις» — there are many objections to the correct reading. It says outright that apart from the service sung on his day there is no other information about his work. Its one Ἀπολυτίκιον names him and his see and is taken here; the passages it quotes from the service are not hymns in the sense this corpus records and are not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τριάδα ἐκήρυξας τὴν παναγίαν σοφέ, φυλάξας ἁγνότητα καὶ παρθενίαν καλῶς, Πατέρων ἐκλόγιον ὅθεν καὶ τοῦ Κυρίου φίλος γνήσιος ὤφθης ὦ καὶ θερμῶς πρεσβεύεις, ποιμενάρχα Μηθύμνης, Ἀλέξανδρε θεοφόρε, Λεσβίων τὸ καύχημα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the only hymn on the page of «Άγιος Αλέξανδρος Επίσκοπος Μηθύμνης», and it names him, his see and the island.",
+        "url": "https://www.saint.gr/2787/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You preached the all-holy Trinity, O wise one, keeping purity and virginity well, chosen one of the Fathers; and so you were shown a true friend of the Lord, for whom you also intercede fervently, O shepherd-chief of Methymna, God-bearing Alexander, boast of the people of Lesbos.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

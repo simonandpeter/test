@@ -4,4 +4,8 @@ doxologia.ro's calendar names him and gives no life. Its line for 30 noiembrie r
 
 Nothing is said there of how he came to Ethiopia, of who consecrated him or of when he lived, and nothing of the kind is written here.
 
-*After doxologia.ro's calendar for 30 noiembrie — [the day](https://doxologia.ro/30-noiembrie) and [his page](https://doxologia.ro/sfantul-ierarh-frumentiu-episcopul-etiopiei); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 30 November, and saint.gr answers all three of the questions this folder said the Romanian line left open. In the years of Constantine the Great, about 330, a philosopher from Tyre named Frumentius went to Abyssinia — Ethiopia — in order to collect historical material about the country. He became known at the royal court for his learning and was appointed to a high administrative post, and he used that place and that influence to begin the spread of Christianity.
+
+Afterwards he returned to Alexandria, where he told [Athanasius the Great](/saints/athanasius-of-alexandria), then archbishop, that more systematic Christian work in that country would bear fruit. Athanasius agreed and gave him that mission, having first consecrated him bishop, in the year 341, with the title of Axum; and the mission, with Aedesius for Frumentius's helper, did indeed bring a good deal of fruit. The page prints no hymn for him, and his couplets play on the name: guarded by the grace of the holy Trinity, Frumentius showed error to be fled away.
+
+*After doxologia.ro's calendar for 30 noiembrie — [the day](https://doxologia.ro/30-noiembrie) and [his page](https://doxologia.ro/sfantul-ierarh-frumentiu-episcopul-etiopiei); read 25 September 2026; and after saint.gr's calendar for 30 Νοεμβρίου — [the Greek day](https://www.saint.gr/11/30/index.aspx) and [its life](https://www.saint.gr/2786/saint.aspx), read 2 October 2026.*

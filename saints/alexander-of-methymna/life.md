@@ -1,0 +1,11 @@
+# Alexander of Methymna
+
+Alexander, according to tradition, was bishop of Methymna — perhaps the first bishop of that metropolis, saint.gr says, hedging the claim — and he took part in the First Ecumenical Council in the year 325. It is also said of him that he founded a monastery in the district of the community of Lafiona, on Lesbos, and that he passed the last years of his life there.
+
+Some distance from that village, near ruins supposed to have been the saint's monastery, there stands a large stone sarcophagus in which he is believed to have been buried. On it is an inscription: the herald of the Trinity, and the guardian of virginity, and the friend of Christ, lies here, praying for us. There are many objections to the correct reading of it, the page says, and it does not settle them. According to tradition the Turkish inhabitants of Lafiona, under the Turkish rule, took the sarcophagus for the grave of «Ἰσκεντέρ Μπαμπά», which is to say of father Alexander.
+
+Of the saint's work, the page says, we have no other information than what the service sung on his feast, the thirtieth of November, gives us. There he is praised as a sleepless luminary, the gentlest of shepherds, who held his flock together in godliness, who guided and shepherded it in grace and routed the wolves that were grievously heretical; and in another place as a many-lighted star of monastics; and in another that the coffin of his holy relics has shown itself a hospital of passions.
+
+Although we have no biographical or other historical information, the page concludes, we have the tradition of the Church and the witness of the coffin, which at any rate testifies that there was buried in it the herald of the Trinity, that is to say somebody, assuredly a bishop, who preached Christ; and the chapels still standing in the province of Methymna under the name of Saint Alexander, and the service composed and sung on his day — all of these testify that the saint Alexander lived and worked and impressed himself on the conscience of the people.
+
+*After saint.gr's calendar for 30 Νοεμβρίου — [the day](https://www.saint.gr/11/30/index.aspx) and [the life](https://www.saint.gr/2787/saint.aspx); read 2 October 2026.*
