@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-beyond-the-anaplous symeon-kinsman-of-the-lord symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-goldsmith-of-trebizond symeon-the-new-of-mytilene symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Eighteen now. The new one is Symeon the Goldsmith of Trebizond on 14 August; the others are read in the el-07-26 entry for this name form.',
+  'λουκιοσ lucius-of-africa lucius-the-soldier-14-august':
+    'Two men: Lucius of Africa on 23 May and the Lucius of 14 August, a soldier.',
   'ευδοκια eudocia-of-heliopolis eudocia-the-empress':
     'Two women: Eudocia of Heliopolis on 1 March and Eudocia the Empress on 13 August.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':

@@ -1,0 +1,59 @@
+{
+  "slug": "symeon-the-goldsmith-of-trebizond",
+  "display_name": "Symeon the Goldsmith of Trebizond",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Αυγούστου, «Άγιος Συμεών ο Τραπεζούντιος, ο χρυσοχόος», with the rank word and the two epithets left off. The page glosses the name as a Hebrew word, the lover of men."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Αυγούστου — «Άγιος Συμεών ο Τραπεζούντιος, ο χρυσοχόος»",
+        "url": "https://www.saint.gr/08/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Συμεων ο Τραπεζουντιος, ο Χρυσοχοος (; - 1653)», and the notice gives the day and the year of his death outright: «Τότε στις 14 Αυγούστου 1653 μ.Χ. τον κρέμασαν κάτω από έναν πλάτανο στην Κωνσταντινούπολη». It names the writer of his martyrdom, Ιωάννης Καρυοφύλλης, and sets beside him the synaxis of the new martyrs who suffered after the fall of Constantinople, which is a separate entry and no folder. The twenty-three Symeons the corpus already keeps are other men on other days; none of them is of Trebizond or a goldsmith. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1653,
+      "latest": 1653,
+      "display": "1653",
+      "basis": "attested",
+      "note": "saint.gr: «Τότε στις 14 Αυγούστου 1653 μ.Χ. τον κρέμασαν κάτω από έναν πλάτανο στην Κωνσταντινούπολη», and its head line «(; - 1653)». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

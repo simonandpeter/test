@@ -1,0 +1,51 @@
+{
+  "slug": "lucius-the-soldier-14-august",
+  "display_name": "Lucius (14 August)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Λούκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Αυγούστου, «Άγιος Λούκιος ο στρατιώτης», with the rank word and the epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Αυγούστου — «Άγιος Λούκιος ο στρατιώτης»",
+        "url": "https://www.saint.gr/08/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is one sentence — «Ο Άγιος Λούκιος ο στρατιώτης μαρτύρησε δια πυρός», Saint Lucius the soldier was martyred by fire — above the couplet «Φυγών παλαιάν Λούκιε ζύμην πλάνης, / Kαυθείς επώφθης ένζυμον Θεώ νέον». There is no country, no century, no emperor, no year and no hymn, and the `soldier` type is the line's own «ο στρατιώτης». **The corpus keeps a Lucius whose `greek` row is already venerated on 23 Μαΐου, slug `lucius-of-africa`, martyred in Africa in 430 by the Arians with Quintianus and Julian; that is another day and another manner of death, and by the settled rule two entries on one calendar are two commemorations, so this is a second man.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "slug": "ursicius-the-tribune",
+  "display_name": "Ursicius the Tribune",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Ουρσίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Αυγούστου, «Άγιος Ουρσίκιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Αυγούστου — «Άγιος Ουρσίκιος»",
+        "url": "https://www.saint.gr/08/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is one paragraph: he lived in the years of the king Maximian, «(286 - 305 μ.Χ.)» as the page dates that reign, and came of the city Σιβεντού of Upper Illyria; he was a soldier and had reached the rank of tribune; he was denounced to Maximian by a certain Ualens as a Christian and referred to the eparch Aristeides for examination; he confessed with courage, was tortured hard and in many ways, and because he persisted in confessing Christ was beheaded. The corpus keeps no other saint of this name. The `soldier` type is the page's own «ήταν στρατιωτικός»; his tribune's rank is in the display name and no `office` is recorded for it, there being no locale pack entry for a Roman military rank. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ουρσίκιος έζησε στα χρόνια του βασιλιά Μαξιμιανού (286 - 305 μ.Χ.)». The page gives no year of its own for his death; the interval is the reign it prints, within which the notice places both his life and his beheading."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

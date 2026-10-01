@@ -10,6 +10,11 @@
     {
       "form": "Маркел Апамејски",
       "lang": "sr"
+    },
+    {
+      "form": "Μάρκελλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Αυγούστου, «Άγιος Μάρκελλος Ιερομάρτυρας επίσκοπος Απαμείας», with the rank words and the see left off. The page glosses the name from the Latin marceo, to wither: the one inert towards material things and active towards spiritual ones."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Αυγούστου — «Άγιος Μάρκελλος Ιερομάρτυρας επίσκοπος Απαμείας»",
+        "url": "https://www.saint.gr/08/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Αυγούστου εκάστου έτους», the same day as the listing. The Russian and Serbian rows already keep him on this menologion day, and the Greek entry is the same bishop of Apamea in Syria, with the see in the line itself. It adds what those rows do not: he lived in the time of the emperor Theodosius I the Great; he came of Cyprus and held a civil office there, the governance of the island, in which he tried always to be just, to everyone's surprise; later he became a priest and then bishop of Apamea; as a shepherd he was correct and just and kept close to his flock's troubles; he showed himself a warm zealot of the faith, raising many churches and pulling down many idol temples; one of them would not come down by any means, so he threw holy water on it, and the temple, which was dedicated to Zeus, at once caught fire and vanished; on that occasion he was seized and thrown into the furnace, and so gave up his spirit to the Lord. The folder's «c. 389» stands: the page gives no year, only the reign. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

@@ -14,6 +14,11 @@
       "form": "Miheia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 august, «Sfântul Proroc Miheia», with the rank word left off."
+    },
+    {
+      "form": "Μιχαίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Αυγούστου, «Προφήτης Μιχαίας», with the rank word left off. The page glosses it as a Hebrew word, the one like God."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Αυγούστου — «Προφήτης Μιχαίας»",
+        "url": "https://www.saint.gr/08/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Αυγούστου εκάστου έτους», the same day as the listing. The Russian, Romanian and Serbian rows already keep him on this menologion day, and the Greek entry is the same minor prophet: «ο προφήτης Μιχαίας έζησε στην Ιερουσαλήμ το 748 - 696 π.Χ., επί των βασιλέων Ιωάθαμ, Άχαζ και Εζεκίου», of the tribe of Judah, born at Morasthi and so called the Morasthite, nearly contemporary with Isaiah, sixth of the minor prophets, his prophecy in seven chapters. The folder's 8th-century-BC date stands; the page's 748–696 is an interval for his life in Jerusalem and not a birth or a death, so no `dates` is proposed from it. **The page then gives him the death of the other prophet of the name: it says he was a severe critic of the lawlessness of Ahab, king of Judah, was hunted by him into the mountains, and under Ahab's son Joram was arrested and hanged, his kinsmen burying his body at Morasthi near the burial ground of Enakeim. The folder's Romanian source is careful that there were two prophets called Micah and says which one the day's service is for; saint.gr is not, and its account is recorded as the page's own in the life rather than adopted. Named in the reader's report.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one hymn, an apolytikion in the fourth tone to the model Ταχὺ προκατάλαβε, which names him; it is added."
     },
     {
       "church": "serbian",
@@ -116,6 +131,23 @@
       },
       "english": {
         "text": "Keeping the memorial of your prophet Micah, O Lord, through him we entreat you: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς ὀρὸς περίοπτον, καὶ ἐμφανὲς ἀληθῶς, προεῖδες ἐν Πνεύματι, τὴν Ἐκκλησίαν Χριστοῦ, Μιχαία θεόπνευστε, ὅθεν οἱ εὐρηκότες, ἐν αὕτῃ σωτηρίαν, βαίνουσιν ὡς προέφης, ἐν ταὶς τρίβοις Κυρίου, γεραίροντες προφῆτα, τὴν πάνσεπτον μνήμην σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the only hymn on the page of «Προφήτης Μιχαίας», and it addresses him by name, «Μιχαία θεόπνευστε», as the prophet who foresaw the Church",
+        "url": "https://www.saint.gr/2265/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a mountain conspicuous and truly manifest, you foresaw in the Spirit the Church of Christ, God-inspired Micah; wherefore those who have found salvation in her walk, as you foretold, in the paths of the Lord, honouring, O prophet, your all-venerable memory.",
         "rendered": "site"
       }
     }
