@@ -1,0 +1,89 @@
+{
+  "slug": "onuphrius-of-koronisia",
+  "display_name": "Onuphrius of Koronisia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ονούφριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Άγιος Ονούφριος ο εν Κορωνησία», with the rank word and the place-phrase left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Άγιος Ονούφριος ο εν Κορωνησία»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years; it says outright «Δεν είναι ακριβής ο χρόνος της κοίμησής του», that the time of his repose is not exact, so no `dates` object is recorded. The page says his memory is kept on 12 June together with his namesake Onuphrius of Egypt, whom the corpus holds as `onuphrius-the-great`; the two are two men and two entries on the same Greek day. The page names its source, extracts from Konstantinos Ir. Despotis's «ΑΓΙΟΙ ΤΗΣ ΗΠΕΙΡΟΥ», Parakatatheke, Thessalonica 2009, second edition. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Θείας πίστεως.",
+      "text": "Ὥσπερ ἄκατον, τὸν σὸν χιτῶνα, ἐν τῷ ὕδατι, ποιήσας πίστει, τῆς θαλάσσης σὺ διέπλεσας πέλαγος, ἀσκητικοῖς δὲ καμάτοις Ὀνούφριε, Κορωνησίας τὴν χθόνα ἡγίασας, Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ΄, Θείας πίστεως, on the page of «Άγιος Ονούφριος ο εν Κορωνησία»; it names him and Koronisia and recounts the wonder of the tunic",
+        "url": "https://www.saint.gr/446/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Making your tunic into a little boat upon the water by faith, you sailed across the open sea; and by your ascetic labours, O Onuphrius, you sanctified the soil of Koronisia. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "text": "Εὐωδίαν ἄῤῥητον, ἀσκητικῶν σου καμάτων, τοῖς πιστοῖς ἐξέπεμψας, Ὀνούφριε θεηγόρε· ὅθεν, καὶ τὴν ἱεράν σου μνήμην τελοῦντες μέλψωμεν, Κορωνησίας κλέϊσμα μέγα, παλαισμάτων σου τὸ πλῆθος, δι’ ὧν παρεῖδες, τὸ τῆς σαρκὸς ἀσθενές.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ΄, on the page of «Άγιος Ονούφριος ο εν Κορωνησία», and it names him and Koronisia",
+        "url": "https://www.saint.gr/446/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You sent out to the faithful the unspeakable fragrance of your ascetic labours, O God-proclaiming Onuphrius; wherefore, as we keep your sacred memory, let us sing of the multitude of your wrestlings, great glory of Koronisia, by which you overlooked the weakness of the flesh.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "onuphrius-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "john-the-soldier-12-june",
+  "display_name": "John (12 June)",
+  "sex": "male",
+  "types": [
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Άγιος Ιωάννης ο Στρατιώτης», with the rank word and the epithet «ο Στρατιώτης» left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Άγιος Ιωάννης ο Στρατιώτης»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The page has no asterisk and no «Δεν είναι διασταυρωμένη» sentence, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

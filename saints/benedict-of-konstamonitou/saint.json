@@ -1,0 +1,66 @@
+{
+  "slug": "benedict-of-konstamonitou",
+  "display_name": "Benedict of Konstamonitou",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Βενέδικτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Άγιος Βενέδικτος ο νέος Οσιομάρτυρας που μαρτύρησε στη Θεσσαλονίκη», with the rank words and the place of martyrdom left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "12 June 1821",
+      "basis": "traditional",
+      "note": "saint.gr: «Στις 12 Ιουνίου 1821 μ.Χ., έπειτα από φρικτά βασανιστήρια αποκεφαλίσθηκε μαζί με πολλούς μοναχούς και προεστούς των γύρω χωριών της Θεσσαλονίκης», and the head line reads «(; - 1821)». The page's sentence on his birth cannot be read with the rest of it — «γεννήθηκε λίγο πριν την Επανάσταση του 1821», born shortly before the Revolution of 1821, of a man who had been years in the monastery and was ordained presbyter in old age — so no birth interval is recorded and the sentence is quoted here as the page has it."
+    }
+  },
+  "related": [
+    "synesius-of-triglia",
+    "timothy-of-konstamonitou",
+    "paul-of-ioannina"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Άγιος Βενέδικτος ο νέος Οσιομάρτυρας που μαρτύρησε στη Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day as the listing, and dates him «(; - 1821)». The day's line calls him Οσιομάρτυρας and the page's own text «Ο Άγιος Ιερομάρτυς Βενέδικτος»; he was ordained presbyter in the monastery, and the `types` follow that. The page is uncertain of his birthplace and says so — Eziova, now Daphni in the eparchy of Visaltia of Serres, or Amourmei, now Kastanochori — and explains the confusion by a dependency of Konstamonitou standing between the two villages. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

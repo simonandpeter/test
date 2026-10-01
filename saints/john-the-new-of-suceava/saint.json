@@ -6,6 +6,11 @@
       "form": "Ioan cel Nou de la Suceava",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 iunie, «Sfântul Mare Mucenic Ioan cel Nou de la Suceava»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Άγιος Ιωάννης ο Τραπεζούντιος ο εν Ασπροκάστρω αθλήσας, ο Νεομάρτυρας», with the rank words and the epithets left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Άγιος Ιωάννης ο Τραπεζούντιος ο εν Ασπροκάστρω αθλήσας, ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους» and dates him «(; - 1492)». The Greek calendar keeps him on 12 June where the folder's Romanian row is on 2 June; one attestation row per church is the schema, and the Romanian row is untouched. It is plainly the same man: the learned notable and merchant of Trebizond martyred at Akkerman — Asprokastro, the Romanian Cetatea Albă — whose relics worked wonders where they lay, were buried in a church for seventy years, were then translated with royal honours to Suceava in Moldavia by the voievod Alexander the Good, were carried off to Zhovkva in Poland in 1686 during John Sobieski's campaign against the Turks, and were brought back to Suceava in 1783 by order of the emperor Joseph II. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn on the page."
     },
     {
       "church": "serbian",

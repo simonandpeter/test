@@ -1,0 +1,50 @@
+{
+  "slug": "zenon-12-june",
+  "display_name": "Zenon (12 June)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Όσιος Ζήνων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Όσιος Ζήνων»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The page argues with itself about who he is, and its doubt is recorded rather than resolved: it says he is counted among the saints of the Church of Cyprus by Hippolyte Delehaye and by Machairas and is even thought to have been bishop of Kyrenia, that the Synaxarion of Constantinople commemorates on 12 June «των Οσίων Ζήνωνος και Τριφυλλίου επισκόπου» without a memoir, and then that «δεν είναι, όμως, βέβαιον κατά πόσον ο μετ' αυτού συνεορταζόμενος Όσιος Ζήνων δύναται να ταυτισθεί με τον Ζήνωνα Κυρηνείας» — it is not certain how far the Zenon kept with Triphyllios can be identified with the Zenon of Kyrenia. No see is recorded here on that account. The page has no asterisk and no «Δεν είναι διασταυρωμένη» sentence, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

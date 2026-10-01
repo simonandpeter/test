@@ -6,6 +6,11 @@
       "form": "Petru Athonitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 iunie, «Sfântul Cuvios Petru Athonitul»."
+    },
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Όσιος Πέτρος ο Θεοφόρος ο εν Άθω ασκήσας», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Όσιος Πέτρος ο Θεοφόρος ο εν Άθω ασκήσας»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. It is plainly the same man: the Constantinopolitan soldier taken captive and imprisoned at Samara in Mesopotamia, freed by a wonder, tonsured at Rome, who lived fifty-three years on Athos and died in a cave, his relics found by a hunter. The page contradicts itself on the date and no `dates` are recorded from it: its head line brackets him «(; - 734)» while the narrative says «έζησε κατά τον 9ο αιώνα μ.Χ.» and has him tonsured by Pope Gregory IV, who was pope from 827. The page records portions of his relics at the monasteries of Saint Dionysiou and Docheiariou on Athos and at Leimonos on Lesbos. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,9 +75,63 @@
         "text": "O God of our fathers, who dealest with us always according to Thy gentleness, take not Thy mercy from us; but at their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῶν Ἀγγέλων τὸν βίον ἐν σαρκὶ μιμησάμενοι, ὤφθητε ἐρήμου πολίται, καὶ χαρίτων κειμήλια, Ὀνούφριε Αἰγύπτου καλλονή, καὶ Πέτρε τῶν ἐν Ἄθῳ ὁ φωστήρ· διὰ τοῦτο τοὺς ἀγῶνας ὑμῶν ἀεί, τιμῶμεν ἀναμέλποντες· δόξα τῷ ἐνισχύσαντι ὑμᾶς, δόξα τῷ στεφανώσαντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης — the one apolytikion on the page of «Όσιος Πέτρος ο Θεοφόρος ο εν Άθω ασκήσας», and it names him with Onuphrius of Egypt",
+        "url": "https://www.saint.gr/470/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having imitated in the flesh the life of the angels, you were shown to be citizens of the desert and treasuries of graces — Onuphrius, the beauty of Egypt, and Peter, the luminary of those on Athos. Therefore we honour your contests always, singing: Glory to him who gave you strength, glory to him who crowned you, glory to him who through you works healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Ὡς τῆς ἐρήμου πολιστὰς οὐρανοβάμονας Καὶ δωρεῶν τῶν ὑπὲρ φύσιν καταγώγια, Τὸν Ὀνούφριον ὑμνήσωμεν σὺν τῷ Πέτρῳ· Ὁ μὲν ὤφθη ἐν Αἰγύπτῳ φοῖνιξ εὔκαρπος, Ὁ δὲ ἔλαμψεν ἐν Ἄθῳ ὡς ἰσάγγελος· Τούτοις λέγοντες, θεοφόρητοι χαίρετε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — the one kontakion on the page of «Όσιος Πέτρος ο Θεοφόρος ο εν Άθω ασκήσας», and it names him with Onuphrius",
+        "url": "https://www.saint.gr/470/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As settlers of the desert who walked in heaven, and as lodgings of gifts beyond nature, let us hymn Onuphrius together with Peter: the one appeared in Egypt as a fruitful palm, the other shone on Athos as an equal of the angels; and let us say to them: Rejoice, you who are borne by God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Πίστιν Χριστοῦ.",
+      "text": "Φῶς νοητὸν καὶ οὐράνιον, Πέτρε λαβὼν ἐν καρδίᾳ σου, τῆς ἀκηράτου Τριάδος δοχεῖον ὤφθης λαμπρότατον, καὶ χάριν τῶν θαυμάτων ἀπείληφας, κραυγάζων, Ἀλληλούϊα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Πίστιν Χριστοῦ — printed on the page of «Όσιος Ονούφριος ο Αιγύπτιος», although it names Peter and not Onuphrius; it is taken here as Peter's own and is not taken on Onuphrius's folder",
+        "url": "https://www.saint.gr/471/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the noetic and heavenly light in your heart, O Peter, you were shown to be a most radiant vessel of the undefiled Trinity, and you received the grace of wonders, crying: Alleluia.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "onuphrius-the-great"
+  ]
 }

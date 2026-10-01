@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαρτυρεσ μυριοι ten-thousand-martyrs ten-thousand-martyrs-13-june':
+    'Two companies the corpus counts rather than names, which is what folds their display names together: the Ten Thousand Martyrs of 18 March and the Ten Thousand of 13 June. Two days, two entries, two folders.',
+  'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-of-samosata philotheus-of-sklataina philotheus-of-tobolsk philotheus-the-presbyter':
+    'Six now. The new one is on 13 June; the others are read in the el-05-31 entry for this name form.',
+  'ιακωβοσ jacob-of-nimouzan jacob-the-hermit james-13-june james-companion-of-emilian james-matynenko james-of-borovichi james-of-bryleyevo james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-stromyn james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-redozubov james-son-of-zebedee james-the-confessor':
+    'Nineteen now. The new one is on 13 June; the others are read in the el-05-22 entry for this name form.',
+  'διοδωροσ diodorus-martyr-3-may diodorus-of-corinth diodorus-of-emesa diodorus-the-presbyter':
+    'Three men: the Diodorus of 3 May, the Diodorus of 13 June and the Diodorus of the el-09-11 entry.',
+  'αντιπατροσ antipater-of-bostra antipater-of-cyzicus':
+    'Two men: Antipater of Cyzicus, upgraded on 28 April, and the Antipater of 13 June.',
+  'αννα anna-martyr-20-january anna-of-larissa anna-of-novgorod anna-the-princess':
+    'Three women. The new one is on 13 June; the others are read in the el-02-03 entry for this name form.',
+  'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-of-corfu zeno-of-diospolis zeno-of-ikalto zeno-the-courier zeno-the-faster-of-kiev zenon-12-june':
+    'Eight now. The new one is the Zenon of 12 June, whose page doubts its own identification and whom the reader drafted bare for that reason; the others are read in the el-04-29 entry for this name form.',
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-konstamonitou timothy-of-prusa timothy-of-pskov timothy-of-symbola':
+    'Eleven now. The new one is on 12 June; the others are read in the el-05-21 entry for this name form.',
+  'συνεσιοσ synesius-of-carpasia synesius-of-irkutsk synesius-of-lysi synesius-of-triglia':
+    'Four men: Lysi on 1 March, the Synesius of 10 May, the Synesius of 26 May and the Synesius of 12 June.',
+  'παυλοσ paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-lucillian paul-companion-of-quadratus paul-companion-of-reverianus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-ioannina paul-of-jamnia paul-of-kaiouma paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Twenty-seven now. The new one is on 12 June; the others are read in the el-06-08 entry for this name form.',
+  'ονουφριοσ onuphrius-of-koronisia onuphrius-of-kursk onuphrius-the-great':
+    'Three men: Onuphrius Maksimovich of Kursk on 19 May, Onuphrius the Great on 12 June, and the Onuphrius the corpus keeps besides. The 12 June page carries Peter’s kontakion under Onuphrius’s name, which the reader read as a mis-hang: the hymn was taken for Peter and refused for Onuphrius, per the mis-hang rule of ro-run/BRIEF.md.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-chaldia john-of-edessa john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-nea-moni john-of-peking john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-tobolsk john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-anna-of-larissa john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-new-of-suceava john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-soldier-12-june john-the-wallachian john-timonov john-with-minas-and-david':
+    'Sixty-one now. The new ones are on 12 and 13 June; the others are read in the el-06-10 entry for this name form.',
+  'ιουλιανοσ helianus-of-the-forty-martyrs julian-companion-of-euboulos julian-companion-of-modestus julian-companion-of-pamphilus julian-of-africa julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-of-the-dogazou julian-the-deacon-of-aegina julian-the-martyr-18-may':
+    'Twelve now. The new one is on 12 June; the others are read in the el-05-23 entry for this name form.',
+  'βενεδικτοσ benedict-biscop benedict-of-konstamonitou benedict-of-nursia':
+    'Two men: Benedict of Nursia, whom this wave upgraded on 14 March, and the Benedict of 12 June.',
+  'αρσενιοσ arsenios-of-paros arsenius-bishop-of-tver arsenius-companion-of-elias-speleotes arsenius-of-corfu arsenius-of-elassona arsenius-of-georgia arsenius-of-ikalto arsenius-of-konevits arsenius-of-novgorod arsenius-of-rostov arsenius-of-the-kyiv-caves arsenius-of-varnakova arsenius-of-veroia arsenius-the-great':
+    'Fourteen now. The new one is on 12 June; the others are read in the el-05-28 entry for this name form.',
   'θεοπεμπτοσ theopemptus-11-june theopemptus-2-january theopemptus-7-february theopemptus-of-nicomedia':
     'Two men: the Theopemptus of 11 June and the Theopemptus of the el-01-05 entry.',
   'τατιανη tatiana-5-january tatiana-of-peking tatiana-of-rome':

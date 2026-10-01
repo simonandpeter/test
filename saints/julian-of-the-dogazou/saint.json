@@ -1,0 +1,50 @@
+{
+  "slug": "julian-of-the-dogazou",
+  "display_name": "Julian of the Dogazou",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιουλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουνίου, «Όσιος Ιουλιανός εν τοις Δογάζου», with the rank word and the place-phrase left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Όσιος Ιουλιανός εν τοις Δογάζου»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. «Εν τοις Δογάζου» is left as the page has it: the site says nothing about where or what the Dogazou was. The page has no asterisk and no «Δεν είναι διασταυρωμένη» sentence, and prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
