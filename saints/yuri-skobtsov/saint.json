@@ -1,0 +1,53 @@
+{
+  "slug": "yuri-skobtsov",
+  "display_name": "Yuri (Skobtsov), son of Maria",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "related": [
+    "maria-skobtsova"
+  ],
+  "names": [
+    {
+      "form": "Γιούρι",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the synaxis of 20 Ιουλίου, «Άγιος Γιούρι (Σκόμπτσωφ), υιός της Αγίας Μαρίας», with the rank word and the kinship clause left off. The page spells the surname «Σκόμπτσωφ» for him and «Σκόμπτσοβα» for his mother."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Σύναξη των Ρώσων αγίων των εν Γαλλία τελειωθέντων», whose page names «Άγιος Γιούρι (Σκόμπτσωφ), υιός της Αγίας Μαρίας»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's listing prints the synaxis of the Russian saints who ended their lives in France, whose page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους» and enumerates five members, each with a notice: so one folder per member and the heading is not a folder. His notice is one sentence — «Ο Άγιος Γιούρι πέθανε σε στρατόπεδο συγκέντρωσης, όπως και η μητέρα του» — and the kinship is the only thing that distinguishes him, so the display name carries it. The page gives him no year, so there is no `dates` object; it names no camp either. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

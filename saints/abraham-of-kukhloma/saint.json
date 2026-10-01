@@ -1,0 +1,60 @@
+{
+  "slug": "abraham-of-kukhloma",
+  "display_name": "Abraham of Kukhloma",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Αβραάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουλίου, «Όσιος Αβραάμ του Κουκχλόμα», with the rank word and the byname left off. The byname is the page's own Greek spelling of a Russian place and the display name's «Kukhloma» is that spelling carried into English letters; the page itself says nothing about the place."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1375,
+      "latest": 1375,
+      "display": "1375",
+      "basis": "traditional",
+      "note": "saint.gr prints the year in its heading for him, «Οσιος Αβρααμ Του Κουκχλομα (; - 1375)», the year of birth left as a question mark. Its whole text is that there are no details of the Russian monk's life, so the heading is the only date it gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The page calls him a Russian monk, so this is the row a later reader will most want."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Όσιος Αβραάμ του Κουκχλόμα»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους», the same day as the listing, and «Οσιος Αβρααμ Του Κουκχλομα (; - 1375)». Its whole text is «Δεν έχουμε λεπτομέριες για τον βίο του Ρώσου μοναχού» — no details of the Russian monk's life — the misspelling the page's own. The corpus holds nine Abrahams and none of them Russian of 1375: Abraham of Pechenga and Abraham of Smolensk are the Russians and they are other men on other days, and Abraham the Industrious of the Kyiv Caves is another again. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn. Above the notice the site prints its own gloss on the name Abraham and a line about the patriarch of the Hebrew nation, which is site furniture and not about this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

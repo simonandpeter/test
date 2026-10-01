@@ -6,6 +6,11 @@
       "form": "Ilie Tesviteanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 iulie, «Sfântul Slăvitul Proroc Ilie Tesviteanul», with the rank words left off."
+    },
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Ιουλίου, «Προφήτης Ηλίας ο Θεσβίτης», with the rank word and the byname left off. The page's hymns also address him in the older form «Ἠλιού», as in «ὦ Ἠλιοὺ Προφῆτα»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Προφήτης Ηλίας ο Θεσβίτης»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own Tishbite: «ήταν γιος του Σωβάκ και καταγόταν από τη Θέσβη (γι' αυτό και ονομάστηκε Θεσβίτης), το σημερινό El Istib, της περιοχής Γαλαάδ». The Greek page gives the years the Romanian source did not and they are taken into `dates`. It also says he belonged to the tribe of Aaron, which the Romanian life does not, and it adds that eight or ten years after his ascent he sent a letter — perhaps by an angel — to king Joram foretelling his death, quoting 2 Chronicles 21:12. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints six hymn texts and only two are taken: the Ἀπολυτίκιον and the Κοντάκιον, both of which name him. The two Μεγαλυνάρια, the Οἶκος and the Κάθισμα are left out because the schema holds a troparion or a kontakion and nothing else, not because there is anything wrong with them."
     },
     {
       "church": "serbian",
@@ -60,9 +75,52 @@
         "text": "You who were an angel in the flesh, the foundation of the prophets, the second Forerunner of the coming of Christ, glorious Elijah, who sent down grace from on high to Elisha: drive away sicknesses and cleanse the lepers. And so for those who honour him he pours out healings.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ὁ ἔνσαρκος Ἄγγελος, τῶν Προφητῶν ἡ κρηπίς, ὁ δεύτερος Πρόδρομος, τῆς παρουσίας Χριστοῦ, Ἠλίας ὁ ἔνδοξος, ἄνωθεν καταπέμψας, Ἐλισαίῳ τὴν χάριν, νόσους ἀποδιώκει, καὶ λεπροὺς καθαρίζει, διὸ καὶ τοῖς τιμῶσιν αὐτόν, βρύει ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the first of the six hymn texts on the page of «Προφήτης Ηλίας ο Θεσβίτης», and it names him",
+        "url": "https://www.saint.gr/732/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The angel in the flesh, the foundation of the prophets, the second forerunner of the coming of Christ, the glorious Elijah, who sent down his grace from above upon Elisha, drives away sicknesses and cleanses lepers; and so he pours out healings upon those who honour him.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Αὐτόμελον.",
+      "text": "Προφῆτα καὶ προόπτα τῶν μεγαλουργιῶν τοῦ Θεοῦ, Ἠλία μεγαλώνυμε, ὁ τῷ φθέγματί σου στήσας τὰ ὑδατόῤῥυτα νέφη, πρέσβευε ὑπὲρ ἡμῶν, πρὸς τὸν μόνον φιλάνθρωπον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Αὐτόμελον — the second of the six hymn texts on the page of «Προφήτης Ηλίας ο Θεσβίτης», and it names him",
+        "url": "https://www.saint.gr/732/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Prophet and foreseer of the great works of God, Elijah of the great name, who by your word stayed the rain-pouring clouds, intercede for us before the only lover of mankind.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -873,
+      "latest": -854,
+      "display": "reign of Ahab, 873–854 BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Προφήτης Ηλίας άσκησε το προφητικό του χάρισμα επί 25 έτη στα χρόνια του βασιλέα Αχαάβ, που βασίλεψε στα 873 - 854 π.Χ.» The interval is that reign, which is the only one the page prints; it also sets him more broadly, «ο προφήτης Ηλίας έζησε τον 9 π.Χ. αιώνα». The twenty-five years of his prophesying are longer than the nineteen the reign allows, and the page does not reconcile them. The Romanian source the folder was built from gave no year for anything."
+    }
   }
 }

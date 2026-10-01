@@ -1,0 +1,67 @@
+{
+  "slug": "alexius-medvedkov",
+  "display_name": "Alexius (Medvedkov)",
+  "sex": "male",
+  "types": [
+    "presbyter",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the synaxis of 20 Ιουλίου, «Άγιος Αλέξιος (Medvedkov) ο Πρωθιερέας εν Υζίν Σαβοΐας (1867 - 1934)», with the rank word and the see-like clause left off. The page leaves the surname in Latin letters, as «Medvedkov»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Αλεξιος (medvedkov) ο Πρωθιερεας Εν Υζιν Σαβοϊας (1867 - 1934)» and its narrative repeats the year: «Ο Άγιος Αλέξιος (γενν. 1867 μ.Χ.)»."
+    },
+    "death": {
+      "earliest": 1934,
+      "latest": 1934,
+      "display": "1934",
+      "basis": "attested",
+      "note": "saint.gr heads him «(1867 - 1934)» and its narrative: at Ugine he served his people with self-denial «και κοιμήθηκε, ασθενής από καρκίνο, το 1934 μ.Χ.». The same page distinguishes him from the other four of the synaxis as the one «που κοιμήθηκε πριν τον πόλεμο (1934 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Σύναξη των Ρώσων αγίων των εν Γαλλία τελειωθέντων», whose page names «Άγιος Αλέξιος (Medvedkov), πρωθιερέας εν Υζίν Σαβοΐας»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's listing prints the synaxis of the Russian saints who ended their lives in France, whose page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους» and enumerates five members, each with a notice: so one folder per member and the heading is not a folder. He is the one the page sets apart from the others, «εκτός από τον άγιο Αλέξιο του Υζίν, που κοιμήθηκε πριν τον πόλεμο», so he is not a martyr and `types` does not say he was; the page calls him «ένας πραγματικός ησυχαστής, βαθύς εργάτης της προσευχής», which is why `ascetic` stands beside `presbyter`. No `office` is stored: πρωθιερέας is a rank and Ugine a parish, not a see. The corpus holds no Medvedkov and none of its many Alexii is a Russian priest of Savoy. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

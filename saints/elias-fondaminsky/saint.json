@@ -1,0 +1,66 @@
+{
+  "slug": "elias-fondaminsky",
+  "display_name": "Elias (Fondaminsky)",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the synaxis of 20 Ιουλίου, «Άγιος Ηλίας (Φονταμίνσκυ) (1882 - 1942)», with the rank word left off. The surname is the page's own Greek spelling, «Φονταμίνσκυ»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ηλιας (φονταμινσκυ) (1882 - 1942)». Its narrative does not repeat the year of birth but gives his age at death: «βρήκε το θάνατο στις 19 Νοεμβρίου 1942 μ.Χ., σε ηλικία 62 ετών», which would put the birth in 1879 or 1880 rather than 1882. The heading is taken and the discrepancy is the page's own."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "saint.gr heads him «(1882 - 1942)» and its narrative gives the day: he was baptised Orthodox shortly before the Nazis sent him to Auschwitz, «όπου και βρήκε το θάνατο στις 19 Νοεμβρίου 1942 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Σύναξη των Ρώσων αγίων των εν Γαλλία τελειωθέντων», whose page names «Άγιος Ηλίας (Φονταμίνσκυ)»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's listing prints the synaxis of the Russian saints who ended their lives in France, whose page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους» and enumerates five members, each with a notice: so one folder per member and the heading is not a folder. He is none of the corpus's many men named Elias — Elias Ardounis, Elias of Calabria, Elias (Nikolayevich) and the rest are other men on other days — and he is not the prophet of this same 20 July, whose folder is `elijah-the-tishbite`. The page gives him a day of death in November and keeps him in a July synaxis, which is what a synaxis does; one row per church is the schema and the row records the day page read. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

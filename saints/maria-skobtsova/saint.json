@@ -1,0 +1,70 @@
+{
+  "slug": "maria-skobtsova",
+  "display_name": "Maria (Skobtsova)",
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "monastic"
+  ],
+  "related": [
+    "yuri-skobtsov"
+  ],
+  "names": [
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the synaxis of 20 Ιουλίου, «Αγία Μαρία (Σκόμπτσοβα) η Μοναχή (1891 - 1945)», with the rank word left off. The page gives her name before her marriage as Ελισαβέτα Πιλένκο and says Μαρία was the name given her at her tonsure."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "saint.gr heads her «Αγια Μαρια (σκομπτσοβα) η Μοναχη (1891 - 1945)» and its narrative repeats it: «Η Αγία Μαρία γεννήθηκε το 1891 μ.Χ. στην Ρίγα της Λετονίας»."
+    },
+    "death": {
+      "earliest": 1945,
+      "latest": 1945,
+      "display": "1945",
+      "basis": "attested",
+      "note": "saint.gr heads her «(1891 - 1945)» and its narrative gives the month and the day of the week: «Ο θάνατος θα βρει την Μαρία τον Μάρτιο του 1945 μ.Χ., την Μεγάλη Παρασκευή». It adds that the manner of her death is disputed — the camp's hardships, or selection for execution, or taking the place of another, Jewish prisoner."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Σύναξη των Ρώσων αγίων των εν Γαλλία τελειωθέντων», whose page names «Αγία Μαρία (Σκόμπτσοβα), μοναχή»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's listing prints the synaxis of the Russian saints who ended their lives in France, whose page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους» and enumerates five members, each with a notice: so one folder per member, by the standing ruling, and the heading is not a folder. Of the five her notice is by far the longest and is the page's own narrative, which is what this life paraphrases. The corpus holds twenty-odd Marias and no Skobtsova: Maria of Gatchina, Maria Rykova, Maria Korepova and Maria (Mamontova-Shashina) are the twentieth-century Russians among them and all are other women. `types` takes `monastic` because the page's word for her is μοναχή and «μοναχισμός μέσα στον κόσμο», monasticism within the world, is how it reports her own description of her calling. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

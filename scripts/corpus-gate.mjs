@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μαρια golinduhia-of-persia maria-6-january maria-methymopoula maria-of-caesarea maria-of-olonets maria-of-peking maria-of-vladimir maria-skobtsova mary-called-marinos mary-of-aza mary-of-cleopas mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
+    'Fourteen now. The new one is Maria Skobtsova, who heads the five Russian saints in France on 20 July and whose son Yuri stands with her; the others are read in the el-06-10 entry for this name form.',
+  'ηλιασ elias-companion-of-jonah elias-companion-of-terentius elias-fondaminsky elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-cordoba elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian elijah-the-tishbite iorest-of-transylvania':
+    'Twelve now, and two of them stand on 20 July: Elijah the Tishbite, whose day it is and whom this batch upgraded, and Elias Fondaminsky of the Russian saints in France. The others are read in the el-04-29 entry for this name form.',
+  'δημητριοσ demetrius-24-april demetrius-donskoi demetrius-ivanov demetrius-klepinin demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-philadelphia demetrius-of-prilutsk demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Fourteen now. The new one is Demetrius Klepinin of the Russian saints in France on 20 July; the others are read in the el-06-02 entry for this name form.',
+  'αλεξιοσ alexios-the-recluse-of-kyiv alexis-of-goloseevo alexis-of-moscow alexis-of-voronezh alexis-tatarinov alexis-the-man-of-god alexis-toth alexius-medvedkov alexius-of-bithynia':
+    'Nine now. The new one is Alexius Medvedkov, one of the five Russian saints in France the 20 July synaxis names; the others are read in the el-06-10 entry for this name form.',
+  'αβρααμ abraham-of-kukhloma abraham-of-latros abraham-of-pechenga':
+    'Three men: Abraham of Latros on 24 March, Abraham of Pechenga on 4 February, and Abraham of Kukhloma on 20 July.',
   'μιχαηλ boris-michael-of-bulgaria macarius-notaras methodius-of-moravia michael-companion-of-platon-of-reval michael-maleinos michael-mavroeidis michael-nephew-of-theodore-of-edessa michael-of-cyprus-of-samothrace michael-of-georgia michael-of-klops michael-of-murom michael-of-synada michael-of-ulumbo michael-of-vourla michael-parekheli michael-the-russian-1-april michael-the-wonderworker':
     'Seventeen now. The new one is Michael, the nephew of Theodore of Edessa, on 19 July, whom the dupscan raised against the folder of Theodore himself — an uncle and a nephew the same page names, not one man drafted twice. The others are read in the el-05-27 entry for this name form.',
   'παισιοσ paisius-8-january paisius-fool-for-christ-of-kyiv paisius-moskot paisius-of-galich paisius-of-the-caves-lavra paisius-the-great':

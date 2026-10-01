@@ -1,0 +1,51 @@
+{
+  "slug": "demetrius-klepinin",
+  "display_name": "Demetrius (Klepinin)",
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the synaxis of 20 Ιουλίου, «Άγιος Δημήτριος (Κλεπινίν) ο Πρεσβύτερος», with the rank word left off. The surname is the page's own Greek spelling, «Κλεπινίν»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιουλίου — «Σύναξη των Ρώσων αγίων των εν Γαλλία τελειωθέντων», whose page names «Άγιος Δημήτριος (Κλεπινίν), πρεσβύτερος»",
+        "url": "https://www.saint.gr/07/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The day's listing prints the synaxis of the Russian saints who ended their lives in France, and its page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Ιουλίου εκάστου έτους». The synaxis enumerates its members — five of them, each with a notice of his or her own: Demetrius (Klepinin) the presbyter, the nun Maria (Skobtsova), her son Yuri (Skobtsov), Elias (Fondaminsky) and the archpriest Alexius (Medvedkov) — so by the standing ruling it is one folder per member and the heading itself is not a folder. The page says the Ecumenical Patriarchate appointed 20 July for the synaxis, and that the members are in the main new martyrs of the Nazi concentration camps, except Alexius of Ugine who died before the war. The corpus holds no Klepinin and nothing that folds onto him. The page gives him no year at all, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn for the synaxis or for any of its members."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
