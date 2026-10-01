@@ -1,0 +1,50 @@
+{
+  "slug": "magnus-28-june",
+  "display_name": "Magnus (28 June)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Μάγνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Όσιος Μάγνος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Όσιος Μάγνος»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The page says only that the venerable Magnus died in peace at prayer, with no country, no century and no year, so he is told from the corpus's Magnus of Cyzicus by the day alone, which is why the slug and the display name carry it; that one is kept on another day and is a martyr, not a venerable one who died at prayer. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

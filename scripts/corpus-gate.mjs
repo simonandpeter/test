@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σεργιοσ sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-valaam sergius-of-zographou sergius-the-confessor sergius-the-magistros sergius-zipulin':
+    'Two new on 28 June: Sergius the Magistros and Sergius of Valaam, whose life Germanus of Valaam shares. The rest of the fold is read in the el-05-24 entry for this name form.',
+  'παυλοσ paul-28-june paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-lucillian paul-companion-of-quadratus paul-companion-of-reverianus paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-ioannina paul-of-jamnia paul-of-kaiouma paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-zographou paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'The new one is the Paul of 28 June; the others are read in the el-06-12 entry for this name form.',
+  'μωυσησ moses-28-june moses-disciple-of-polychronius moses-of-novgorod moses-of-ramas moses-of-the-white-lake':
+    'Five now. The new one is the Moses of 28 June; the others, three of them sharing 23 February, are read in the el-02-23 entry for this name form.',
+  'μαγνοσ magnus-28-june magnus-of-cyzicus':
+    'Two men: Magnus of Cyzicus, whom the Greek keeps on 28 April and the Romanian on the 29th, and the Magnus of 28 June. One day apart on two calendars is one man; a month apart on the same calendar is two.',
+  'μακεδονιοσ macedonius-28-june macedonius-ii-of-constantinople macedonius-of-myropolis macedonius-the-barley-eater':
+    'Four now. The new one is the Macedonius of 28 June; the others are the patriarch on 25 April and the two read in the el-01-24 entry for this name form.',
+  'γερμανοσ germanos-of-stolobnoe germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam':
+    'Seven now. The new one is Germanus of Valaam on 28 June, who stands with Sergius of Valaam and shares his life; the others are read in the el-05-19 entry for this name form.',
   'μαρκια marcia-companion-of-marcius marcia-of-caesarea':
     'Two women: Marcia of Caesarea on 6 June and Marcia, the companion of Marcius, on 27 June.',
   'λουκασ luke-27-june luke-companion-of-terentius luke-of-corleone luke-of-crimea luke-of-emesa luke-of-hellas luke-of-novgorod':

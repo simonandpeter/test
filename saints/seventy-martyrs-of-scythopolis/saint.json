@@ -1,0 +1,50 @@
+{
+  "slug": "seventy-martyrs-of-scythopolis",
+  "display_name": "The Seventy Martyrs of Scythopolis",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εβδομήντα Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Άγιοι Εβδομήντα Μάρτυρες οι εν Σκυθοπόλει», with the rank word of sanctity and the place left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Άγιοι Εβδομήντα Μάρτυρες οι εν Σκυθοπόλει»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The entry enumerates nobody: it is a company of seventy and the page names one of them only, saying that «Ένας από αυτούς, ο Άγιος Βασίλειος τιμάται και στις 6 Ιουλίου» — one of them, Saint Basil, is honoured on 6 July as well. A heading that names nobody is one entry, so this is one folder and not seventy, and the Basil of 6 Ιουλίου is named in the reader's report and not drafted, that day not having been read. The corpus keeps four other saints of Scythopolis, none of them a company and none on 28 June. No year and no persecutor are given. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

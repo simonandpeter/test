@@ -1,0 +1,50 @@
+{
+  "slug": "macedonius-28-june",
+  "display_name": "Macedonius (28 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μακεδόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Άγιος Μακεδόνιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Άγιος Μακεδόνιος»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The page gives him one sentence and no country, no century and no persecutor, so he is told from the corpus's three other Macedonii by the day alone, which is why the slug and the display name carry it; none of them is kept on 28 June in any calendar, and none was martyred by having the fingers cut off. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

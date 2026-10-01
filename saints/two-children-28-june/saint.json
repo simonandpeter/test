@@ -1,0 +1,50 @@
+{
+  "slug": "two-children-28-june",
+  "display_name": "The Two Children",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δύο Παιδιά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Άγια Δύο Παιδιά», with the rank word left off. The page gives the two no names at all."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Άγια Δύο Παιδιά»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The entry names nobody: it is two children and no names, so it cannot be one folder each and is kept as one entry, in the way the corpus already keeps its numbered companies. The page says only «Τα Άγια Δύο Παιδιά μαρτύρησαν δια σταυρικού θανάτου», that they were martyred by death on a cross, and gives no country, no century and no year. They are not the corpus's «Άγιος Θεΐων και Δύο παιδιά» of 1 Φεβρουαρίου: that entry has a named adult with the two boys and makes them perfect by the sword, where this one is two children alone and crucified, and two entries on one calendar are two commemorations. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

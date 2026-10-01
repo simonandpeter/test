@@ -1,0 +1,63 @@
+{
+  "slug": "sergius-of-valaam",
+  "display_name": "Sergius of Valaam",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Όσιοι Σέργιος και Γερμανός οι θαυματουργοί οι εν Βαλάμη», with the rank word, the epithet and the island left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1353,
+      "latest": 1353,
+      "display": "about 1353",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Σέργιος και Γερμανός κοιμήθηκαν περί το 1353 μ.Χ.» The page's own heading for Germanus reads «(; - 1553)», which the narrative contradicts; the narrative's year is recorded for both, and the page also puts their settling on Valaam in 1329."
+    }
+  },
+  "related": [
+    "germanus-of-valaam"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes them founders on Lake Ladoga, so a Russian row is likely to exist, but nothing was read for it here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Όσιοι Σέργιος και Γερμανός οι θαυματουργοί οι εν Βαλάμη»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The entry names both saints, so it is one folder each. The page's narrative dates them together — «Οι Όσιοι Σέργιος και Γερμανός εγκαταστάθηκαν στη νήσο Βαλάμη το 1329 μ.Χ.» and «Οι Όσιοι Σέργιος και Γερμανός κοιμήθηκαν περί το 1353 μ.Χ.» — and then says there are no other particulars of their lives. Its two headings disagree with each other over Germanus: Sergius is headed «(; - 1353)» and Germanus «(; - 1553)», which the narrative's «περί το 1353» contradicts. The narrative's year is what is recorded for both and the discrepancy is named in the reader's report. The corpus keeps no other saint of Valaam, and none of its Sergii or Germani is dated there. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

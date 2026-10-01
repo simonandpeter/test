@@ -1,0 +1,51 @@
+{
+  "slug": "sergius-the-magistros",
+  "display_name": "Sergius the Magistros",
+  "sex": "male",
+  "types": [
+    "righteous",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουνίου, «Άγιος Σέργιος ο δίκαιος ο Μάγιστρος», with the rank words and the office left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουνίου — «Άγιος Σέργιος ο δίκαιος ο Μάγιστρος»",
+        "url": "https://www.saint.gr/06/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουνίου εκάστου έτους», the same day as the listing. The page gives him a full career and it tells him from the corpus's other Sergii: a man of Niketia near Amastris on the Black Sea, of an aristocratic family related to the empress Theodora, who kept the Orthodox faith under the iconoclast Theophilus and worked for the restoration of the icons. None of the corpus's Sergii is a magistros or is kept on 28 June in any calendar. The page gives no year, so no `dates` object is proposed, though the reigns it names put him in the ninth century; the office «ο Μάγιστρος» is left out of the stored name form and out of `office`, which the source does not give as a see. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
