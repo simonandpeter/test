@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 iulie, «Sfântul Cuvios Ioan Pustnicul», with the rank words left off; «Pustnicul» is the hermit."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek calendar names him in one line with Simeon exactly as the Romanian does. The man is the folder's own: Edessa of Syria, the monastery of Saint Gerasimus, forty years in the desert with Simeon, and his own death a little after he learned of Simeon's at Emesa. The page dates them both, «έζησαν στα χρόνια του βασιλιά Ιουστίνου του νέου (περί το 518 μ.Χ.)», and that is taken into `dates`. Its verse for him is «Ἔρημον εἵλου, ὦ Ἰωάννη μάκαρ, Δι' ἧς ἔρημα εἰργάσω σαρκὸς πάθη». No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The three hymns are the pair's joint service and all three are taken, the «Έτερον Ἀπολυτίκιον» being the common of venerable fathers, which names nobody."
     },
     {
       "church": "serbian",
@@ -63,9 +78,68 @@
         "text": "God of our fathers, who always deal with us according to Your gentleness: do not take Your mercy from us, but at their prayers direct our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς ἡνωμένοι δι' ἐνθέου ἀγάπης, σύμψυχοι ὤφθητε ἐν πᾶσι τοῖς τρόποις, ὦ Ἰωάννη ὅσιε, καὶ θεῖε Συμεών, ὁ μὲν βίον ἔνθεον διελθῶν ἐν ἐρήμῳ, ὁ δὲ σοφοῖς σκώμμασι τὸν Βελιὰρ μωράνας· καὶ νῦν τῶν θείων ἄμφω ἀμοιβὴν καταρτυφῶντες, ἡμᾶς ἐποπτεύετε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the first of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», and it names them both",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "United by love for God, you were shown to be of one soul in all your ways, venerable John and divine Simeon: the one passing a godly life in the desert, the other making a fool of Belial with wise mockery. And now, both of you enjoying the recompense of the things of God, watch over us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ Θεὸς τῶν Πατέρων ἡμῶν ὁ ποιὼν ἀεὶ μεθ᾽ ἡμῶν κατὰ τὴν σὴν ἐπιείκειαν, μὴ ἀποστήσῃς τὸ ἔλεός σου ἀφ᾽ ἡμῶν· ἀλλὰ ταῖς αὐτῶν ἱκεσίαις, ἐν εἰρήνῃ κυβέρνησον τὴν ζωὴν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’ — the second of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης». It is the common of venerable fathers and names nobody, printed under their names and taken as their service",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "God of our fathers, who always deal with us according to your forbearance, do not take your mercy from us, but at their entreaties govern our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Τὸν βίον εὐσεβῶς, ἐκτελέσαντες πίστει, δοχεῖα καθαρά, τῆς Τριάδος δειχθέντες, Συμεὼν Ἰωάννη τε, θεοφόροι Πανεύφημοι, νῦν αἰτήσασθε, τὸν ἱλασμὸν καὶ εἰρήνην, ταῖς ψυχαῖς ἡμῶν, καταπεμφθῆναι πλουσίως, Πατέρες πανόλβιοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α', Χορὸς Ἀγγελικός — the third of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», and it names them both",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished your life in piety and in faith, and been shown pure vessels of the Trinity, Simeon and John, God-bearers of all praise, ask now that forgiveness and peace be sent down richly upon our souls, all-blessed fathers.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 518,
+      "latest": 518,
+      "display": "c. 518",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι όσιοι πατέρες Συμεών και Ιωάννης, καταγόταν από την Έδεσσα της Συρίας και έζησαν στα χρόνια του βασιλιά Ιουστίνου του νέου (περί το 518 μ.Χ.)». The year is the page's own «περί το», about 518, and the only one it gives; the Romanian source the folder was built from gave none. The two of them spent forty years in the desert afterwards, so the year marks when they were living and not when they died."
+    }
   }
 }

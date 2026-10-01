@@ -1,0 +1,60 @@
+{
+  "slug": "onuphrius-the-silent-of-the-caves",
+  "display_name": "Onuphrius the Silent of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ονούφριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Όσιος Ονούφριος ο σιωπηλός εν τω Σπηλαίω», with the rank word and the bynames left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Ρώσος ασκητής Όσιος Ονούφριος ο σιωπηλός εν τω Σπηλαίω, έζησε τον 12ο αιώνα μ.Χ.» The century is the page's and it gives nothing closer."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The page calls him a Russian ascetic, so this is the row a later reader will most want."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Όσιος Ονούφριος ο σιωπηλός εν τω Σπηλαίω»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing, and its whole text is that the Russian ascetic Onuphrius the silent one in the Cave lived in the twelfth century and that there are no other details of his life. The corpus's five other men of the name are Onuphrius the Great of Egypt, Onuphrius of Koronisia, Onuphrius of Vorona, Onuphrius of Gabrovo and Onuphrius (Maksimovich) of Kursk, all on other days and none of them this Russian cave-dweller. The page writes «εν τω Σπηλαίω», in the Cave, and names no city, so the display name says the Caves and not Kyiv. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

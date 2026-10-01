@@ -1,0 +1,61 @@
+{
+  "slug": "manuel-emperor-of-constantinople",
+  "display_name": "Manuel (21 July)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Μανουήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Όσιος Μανουήλ αυτοκράτωρ Κωνσταντινουπόλεως», with the rank word left off. The page adds that by the monastic habit he was renamed Ματθαίος."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1425,
+      "latest": 1425,
+      "display": "1425",
+      "basis": "attested",
+      "note": "The only year saint.gr prints for him is the year of his renaming at his tonsure: «Αυτός δια του αγγελικού (μοναχικού) σχήματος μετονομάστηκε Ματθαίος (1425 μ.Χ.)». The page gives no year of birth and none of death, so neither is claimed here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Όσιος Μανουήλ αυτοκράτωρ Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing. The page then says something about its own sources which a reader should weigh: «Η μνήμη του αγνοείται υπό των Συναξαριστών» — his memory is unknown to the Synaxaristae — and that an Akolouthia for him was composed by somebody unknown and published by Lambros in the Neos Hellenomnemon vol. 14 (1917) pp. 318–341, with two canons but without a synaxarion note. That is not the site's own disclaimer: there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page does not doubt the man or the day, only report that the synaxaria do not carry the memory and that a service does. The folder is drafted on that footing and the sentence is recorded here. He is not `manuel-the-venerable-27-july`, the bare «Sfântul Cuvios Manuel» of the Romanian 27 iulie, whose page gives no century, no country and nothing by which he could be identified with an emperor; nor is he any of the corpus's five other men of the name. The title the listing gives him, «αυτοκράτωρ Κωνσταντινουπόλεως», is stored in `office` and not in the display name, because `emperor` is a rank word and `lib/honorific.js` composes ranks itself; the display name carries the day instead, as the corpus does for a bare name. The page prints no hymn, only the notice of one published elsewhere."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "office": "Emperor of Constantinople",
+  "text": {
+    "life": "life.md"
+  }
+}

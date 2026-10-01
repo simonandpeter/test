@@ -1,0 +1,112 @@
+{
+  "slug": "parthenius-of-radovisdi",
+  "display_name": "Parthenius of Radovisdi",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Radovisdi",
+  "names": [
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιος Παρθένιος επίσκοπος Ραδοβυσδίου», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1777,
+      "latest": 1777,
+      "display": "1777",
+      "basis": "attested",
+      "note": "saint.gr heads him «Αγιος Παρθενιος Επισκοπος Ραδοβυσδιου (; - 1777)», the year of birth left as a question mark, and its narrative gives the day as well: «παρέδωσε τη μακαριά ψυχή του στον Θεό την 21 Ιουλίου 1777 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιος Παρθένιος επίσκοπος Ραδοβυσδίου»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing, and calls him «ο νεοφανής αυτός Άγιος της Εκκλησίας». He is not `parthenius-of-agapia-veche`, the Romanian whom the corpus keeps on this same menologion day: that is a monk of Moldavia and this is a bishop of Radovisdi in the prefecture of Arta who came from the Thessalian village of Vatsounia and died in 1777. Nor is he any of the corpus's other nine Parthenii. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints three hymns and all three name him; the κοντάκιον is printed without an ἦχος, so the hymn carries no tone."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἀμέμπτως ἐβίωσας, ἐν ταπεινώσει πολλή, Παρθένιε Ὅσιε καὶ θεϊκῶν δωρεῶν, ἀξίως μετέσχηκας. Ὅθεν σου τὴν ἁγίαν, προσπτυσσόμενοι Κάραν, λαμβάνομεν θεραπείας, καὶ ψυχῶν σωτηρίαν διὸ σὲ Ἱεράρχα, ὕμνοις γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first of the three hymns on the page of «Άγιος Παρθένιος επίσκοπος Ραδοβυσδίου», and it names him",
+        "url": "https://www.saint.gr/2028/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You lived blamelessly, in much humility, venerable Parthenius, and worthily shared in the gifts of God. And so, embracing your holy head, we receive healings and the salvation of our souls; therefore, hierarch, we honour you with hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Νέον καύχημα, της εκκλησίας, ως του πνεύματος, λαμπρόν δοχείον, ανεδείχθης Ιεράρχα Παρθένιε` των αρετών γαρ εργάτης γενόμενος της δωρεάς των Αγίων ηξίωσαι. Πάτερ Όσιε, Χριστόν τον θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ήχος γ', Θείας πίστεως — the second of the three hymns on the page of «Άγιος Παρθένιος επίσκοπος Ραδοβυσδίου», and it names him",
+        "url": "https://www.saint.gr/2028/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A new boast of the Church, you were shown to be a bright vessel of the Spirit, hierarch Parthenius; for having become a worker of the virtues you were counted worthy of the gift of the saints. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ως Ιεράρχην του Σωτήρος ενθεώτατον και των Αγίων μιμητήν και ισοστάσιον ανυμνούμεν σε οι δούλοι σου θεοφόρε. Αλλ' ως πρέσβης και μεσίτης προς τον Κύριον, καθικέτευε λυτρούσθαι πάσης θλίψεως.Τους βοώντας σοι, χαίροις Πάτερ Παρθένιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον — the third of the three hymns on the page of «Άγιος Παρθένιος επίσκοπος Ραδοβυσδίου», and it names him. The page prints it with no ἦχος",
+        "url": "https://www.saint.gr/2028/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most godly hierarch of the Saviour, and an imitator of the saints and their equal, we your servants sing your praise, God-bearer. But as an ambassador and mediator before the Lord, entreat him to deliver from every affliction those who cry to you: rejoice, father Parthenius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

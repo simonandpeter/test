@@ -6,6 +6,11 @@
       "form": "Simeon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 iulie, «Sfântul Cuvios Simeon», with the rank words left off. The site's troparion page names him «Simeon cel nebun pentru Hristos»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and its own verse names the day: «Ψευδαέφρων περίφρων Συμεὼν θάνεν εἰκάδι πρώτῃ». The man is the folder's own: the page pairs him with John exactly as the Romanian calendar does, sets them both at Edessa in Syria, and has Simeon feigning folly at Emesa. Two things the Greek page adds, and both are recorded rather than acted on. It dates them, «έζησαν στα χρόνια του βασιλιά Ιουστίνου του νέου (περί το 518 μ.Χ.)», and that is taken into `dates`. And the same site keeps a second entry on 23 Ιουλίου, «Άγιος Συμεών της Εμμέσας», whose page says there are no details of the life of «του Ρώσου Αγίου Συμεών της Εμμέσας» except that he was a fool for Christ — a notice that calls a man of Emesa Russian and so cannot be squared with this one; one row per church is the schema, the row records the day page read, and that second entry is left to the report and not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page. It prints three hymns: an apolytikion and a kontakion that name both Simeon and John, and an «Έτερον Ἀπολυτίκιον» which is the common of venerable fathers, «Ὁ Θεὸς τῶν Πατέρων ἡμῶν», naming nobody. All three are taken, the common as the saint's own service by the standing ruling."
     },
     {
       "church": "serbian",
@@ -63,9 +78,68 @@
         "text": "God of our fathers, who always deal with us according to Your gentleness: do not take Your mercy from us, but at their prayers direct our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς ἡνωμένοι δι' ἐνθέου ἀγάπης, σύμψυχοι ὤφθητε ἐν πᾶσι τοῖς τρόποις, ὦ Ἰωάννη ὅσιε, καὶ θεῖε Συμεών, ὁ μὲν βίον ἔνθεον διελθῶν ἐν ἐρήμῳ, ὁ δὲ σοφοῖς σκώμμασι τὸν Βελιὰρ μωράνας· καὶ νῦν τῶν θείων ἄμφω ἀμοιβὴν καταρτυφῶντες, ἡμᾶς ἐποπτεύετε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the first of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», and it names them both",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "United by love for God, you were shown to be of one soul in all your ways, venerable John and divine Simeon: the one passing a godly life in the desert, the other making a fool of Belial with wise mockery. And now, both of you enjoying the recompense of the things of God, watch over us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ὁ Θεὸς τῶν Πατέρων ἡμῶν ὁ ποιὼν ἀεὶ μεθ᾽ ἡμῶν κατὰ τὴν σὴν ἐπιείκειαν, μὴ ἀποστήσῃς τὸ ἔλεός σου ἀφ᾽ ἡμῶν· ἀλλὰ ταῖς αὐτῶν ἱκεσίαις, ἐν εἰρήνῃ κυβέρνησον τὴν ζωὴν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’ — the second of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης». It is the common of venerable fathers and names nobody, printed under their names and taken as their service",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "God of our fathers, who always deal with us according to your forbearance, do not take your mercy from us, but at their entreaties govern our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α'.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Τὸν βίον εὐσεβῶς, ἐκτελέσαντες πίστει, δοχεῖα καθαρά, τῆς Τριάδος δειχθέντες, Συμεὼν Ἰωάννη τε, θεοφόροι Πανεύφημοι, νῦν αἰτήσασθε, τὸν ἱλασμὸν καὶ εἰρήνην, ταῖς ψυχαῖς ἡμῶν, καταπεμφθῆναι πλουσίως, Πατέρες πανόλβιοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α', Χορὸς Ἀγγελικός — the third of the three hymns on the page of «Άγιοι Συμεών ο δια Χριστόν σαλός και Ιωάννης», and it names them both",
+        "url": "https://www.saint.gr/2019/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished your life in piety and in faith, and been shown pure vessels of the Trinity, Simeon and John, God-bearers of all praise, ask now that forgiveness and peace be sent down richly upon our souls, all-blessed fathers.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 518,
+      "latest": 518,
+      "display": "c. 518",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι όσιοι πατέρες Συμεών και Ιωάννης, καταγόταν από την Έδεσσα της Συρίας και έζησαν στα χρόνια του βασιλιά Ιουστίνου του νέου (περί το 518 μ.Χ.)». The year is the page's own «περί το», about 518, and it is the only one it gives; the Romanian source the folder was built from gave none. The same page has the two of them forty years in the desert afterwards, so the year marks when they were living and not when they died."
+    }
   }
 }

@@ -1,0 +1,50 @@
+{
+  "slug": "victor-21-july",
+  "display_name": "Victor (21 July)",
+  "sex": "male",
+  "types": [
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Βίκτωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιος Βίκτωρ ο Στρατιώτης», with the rank word and the soldier's title left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιος Βίκτωρ ο Στρατιώτης»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing, and its whole text is «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου Βίκτωρ». The display name carries the day and not the epithet, because `types` already holds `soldier` and `lib/honorific.js` composes the rank itself. The page does not call him a martyr and `types` does not either. The corpus holds nine other men of the name — Victor of Chalcedon, of Corinth, of Damascus, of Marseille, of Thessalonica, of Glazov, the one of the Twenty-four Martyrs, the presbyter of 1918, and the two bare entries of 20 April and 26 February — all on other days. No year, no century, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

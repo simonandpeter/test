@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'βικτωρ victor-20-april victor-21-july victor-26-february victor-of-glazov victor-of-the-twenty-four-martyrs victor-of-thessalonica victor-yavorsky':
+    'Seven now. The new one is the Victor of 21 July; the others are read in the el-07-06 entry for this name form.',
+  'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-radovisdi parthenius-of-zographou parthenius-the-third':
+    'Seven now. The new one is Parthenius of Radovisdi on 21 July; the others are read in the el-07-10 entry for this name form.',
+  'ονουφριοσ onuphrius-of-koronisia onuphrius-of-kursk onuphrius-the-great onuphrius-the-new onuphrius-the-silent-of-the-caves':
+    'Five now. The new one is Onuphrius the Silent of the Caves on 21 July; the others are read in the el-01-04 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-companion-of-george theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-cyrene theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-rostov-and-suzdal theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-sabbaite-of-edessa theodore-the-silent theodore-trichinas theodore-yaroslavich':
+    'Thirty-two now. The new one is Theodore, the companion of George on 21 July, whose `types` are empty because the page calls the pair Άγιοι and nothing more; the others are read in the el-07-19 entry for this name form.',
+  'μελετιοσ meletius-of-antioch meletius-of-kharkov meletius-of-kitros meletius-of-lardos meletius-of-ryazan meletius-of-the-twelve-tribunes meletius-the-stratelates':
+    'Seven now. The new one is Meletius of Kitros on 21 July; the others are read in the el-05-24 entry for this name form.',
+  'ματθαιοσ matei-brancoveanu matthew-companion-of-justus matthew-helper-of-athanasia matthew-monk-martyr-1918 matthew-of-yaransk matthew-the-apostle':
+    'Six now. The new one is Matthew, the companion of Justus on 21 July; the others are read in the el-05-27 entry for this name form.',
+  'μανουηλ manuel-emperor-of-constantinople manuel-of-adrianople manuel-of-persia manuel-of-samothrace manuel-of-sphakia manuel-of-the-east':
+    'Seven now. The new one is Manuel emperor of Constantinople on 21 July; the others are read in the el-04-06 entry for this name form, with Manuel of Persia on 17 June.',
+  'companion justus matthew justus-companion-of-matthew matthew-companion-of-justus':
+    'The same shape as the pair above: Justus and Matthew are named together on 21 July and each folder carries the other.',
+  'ιουστοσ justus-1-june justus-companion-of-matthew justus-of-rome justus-the-soldier':
+    'Four now. The new one is Justus, the companion of Matthew on 21 July; the others are Justus of Rome on 28 February, the Justus of 1 June and Justus the soldier, upgraded on 14 July.',
+  'companion george theodore george-companion-of-theodore theodore-companion-of-george':
+    'Not one man drafted twice: Theodore and George are the pair the 21 July page names together, each folder surnamed for the other, which is what folds their display names.',
+  'γεωργιοσ george-bozic george-companion-of-theodore george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-krene george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-thessalonica george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-persian george-the-sinaite george-the-trophy-bearer gerasimos-of-karpenisi':
+    'The new one is George, the companion of Theodore on 21 July; the rest is read in the el-07-03 entry for this name form.',
+  'ευγενιοσ eugene-of-cherson eugene-of-trebizond eugene-son-of-paul-and-tatta eugenius-21-july eugenius-father-of-mary-called-marinos eugenius-of-rome eugenius-the-confessor':
+    'Seven now. The new one is the Eugenius of 21 July; the others are read in the el-06-02 entry for this name form.',
   'μαρια golinduhia-of-persia maria-6-january maria-methymopoula maria-of-caesarea maria-of-olonets maria-of-peking maria-of-vladimir maria-skobtsova mary-called-marinos mary-of-aza mary-of-cleopas mary-sister-of-lazarus mary-sister-of-lykarion mary-wife-of-xenophon':
     'Fourteen now. The new one is Maria Skobtsova, who heads the five Russian saints in France on 20 July and whose son Yuri stands with her; the others are read in the el-06-10 entry for this name form.',
   'ηλιασ elias-companion-of-jonah elias-companion-of-terentius elias-fondaminsky elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-cordoba elias-of-heliopolis elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian elijah-the-tishbite iorest-of-transylvania':

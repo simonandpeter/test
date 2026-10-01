@@ -1,0 +1,51 @@
+{
+  "slug": "george-companion-of-theodore",
+  "display_name": "George, companion of Theodore",
+  "sex": "male",
+  "types": [],
+  "related": [
+    "theodore-companion-of-george"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιοι Θεόδωρος και Γεώργιος», with the rank word left off. The page gives him no byname; the companionship in the display name is the one thing that distinguishes him."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιοι Θεόδωρος και Γεώργιος»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing, and says «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων». `types` is empty on purpose: the page calls them Άγιοι and nothing more, and its distich's «εξ άθλων» reads like martyrdom without stating it, so no rank is asserted. He is none of the corpus's many Georges, who all have lives, days or places of their own. No year, no century, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

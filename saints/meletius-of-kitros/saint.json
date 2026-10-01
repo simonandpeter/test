@@ -1,0 +1,62 @@
+{
+  "slug": "meletius-of-kitros",
+  "display_name": "Meletius of Kitros",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "office": "Bishop of Kitros",
+  "names": [
+    {
+      "form": "Μελέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιος Μελέτιος», with the rank word left off. The byname in the display name is the see his own page gives him, «επίσκοπος Κίτρους»; the day's listing gives him no byname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "attested",
+      "note": "saint.gr heads him «Αγιος Μελετιος (; - 1821)», the year of birth left as a question mark, and its notice repeats it: «μααρτύρησε το 1821 μ.Χ.», the misspelling the page's own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιουλίου — «Άγιος Μελέτιος»",
+        "url": "https://www.saint.gr/07/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Ιουλίου εκάστου έτους», the same day as the listing, and «Αγιος Μελετιος (; - 1821)». Its whole notice is «Ο Άγιος Μελέτιος. ήταν επίσκοπος Κίτρους, στη Θεσσαλονίκη, Ιερομάρτυρας και Εθνομάρτυρας και μααρτύρησε το 1821 μ.Χ.» The corpus holds ten men of the name and no bishop of Kitros: Meletius of Antioch, Meletius of Kharkov, Meletius of Ryazan, Meletius of Lardos, Meletius of Stânișoara, the bishop Meletius of Cyprus, Meletius the founder of the monastery of Sergius, Meletius one of the twelve tribunes, and the two twentieth-century Russians are all other men. Εθνομάρτυρας, ethnomartyr, has no slug in the corpus's closed `types` list and is recorded here instead; `new-martyr` stands for a martyr of 1821 under the Turks. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
