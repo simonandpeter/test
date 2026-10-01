@@ -1,0 +1,59 @@
+{
+  "slug": "kenneth-of-aghaboe",
+  "display_name": "Kenneth of Aghaboe",
+  "names": [],
+  "sex": "male",
+  "types": [
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 525,
+      "latest": 525,
+      "display": "525",
+      "basis": "traditional",
+      "note": "saint.gr: «σύμφωνα με έναν μύθο, γεννήθηκε το 525 μ.Χ. στο Glengiven στην βόρεια Ιρλανδία» — the page's own qualification, according to a legend; its head line gives «(525 - 599)»"
+    },
+    "death": {
+      "earliest": 599,
+      "latest": 599,
+      "display": "599",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε ειρηνικά το 599 μ.Χ. στο Aghaboe στην Ιρλανδία»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Άγιος Kenneth»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

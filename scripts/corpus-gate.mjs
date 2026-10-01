@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σισινιοσ sisinius-of-the-forty-martyrs sisinnius-of-constantinople':
+    'Two men: Sisinius of the Forty Martyrs on 9 March and Sisinnius patriarch of Constantinople on 11 October, who stands with Nectarius and Arsacius in that see.',
+  'νεκταριοσ nectarios-of-optina nectarius-of-bezhetsk nectarius-of-constantinople nectarius-of-vryoula nectarius-venerable-17-may':
+    'Five now. The new one is Nectarius patriarch of Constantinople on 11 October; the others are Nectarios of Optina, Nectarius of Bezhetsk, Nectarius of Vryoula, whose kathisma this wave could not store, and the venerable of 17 May.',
+  'ιωνασ jonah-bishop-6-june jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-odessa jonah-of-pesonsa jonah-of-the-lavra-of-pskov jonah-the-athonite jonas-of-great-perm jonas-of-pergamos jonas-the-lerian':
+    'Eleven now. The new one is Jonas of Pergamos on 11 October; the others are read in the el-07-04 entry for this name form.',
+  'γερμανοσ germanos-of-stolobnoe germanus-companion-of-peregrinus germanus-maroules germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam herman-of-alaska':
+    'Ten now. The new one is Germanus Maroules on 11 October; the others are read in the el-07-07 entry for this name form.',
   'θεοφιλοσ theophilus-companion-of-trophimus theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-rome theophilus-of-selention theophilus-of-the-forty-martyrs theophilus-of-zakynthos theophilus-the-deacon-of-libya theophilus-the-myrrh-streamer theophilus-the-new':
     'Thirteen now, and the new one is deliberate: Theophilus of Selention on 10 October is a **second** Theophilus the Confessor beside the folder venerated on 2 October, on the reader grounds set out in the 10-06--10-13 report. The others are read in the el-07-24 entry for this name form.',
   'παυλινοσ paulinus-of-athens paulinus-of-todi paulinus-of-york':

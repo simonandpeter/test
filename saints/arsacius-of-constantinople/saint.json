@@ -1,0 +1,64 @@
+{
+  "slug": "arsacius-of-constantinople",
+  "display_name": "Arsacius of Constantinople",
+  "names": [
+    {
+      "form": "Αρσάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Άγιοι Νεκτάριος, Αρσάκιος και Σισίνιος Πατριάρχες Κωνσταντινούπολης», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "patriarch"
+  ],
+  "related": [
+    "nectarius-of-constantinople",
+    "sisinnius-of-constantinople",
+    "john-chrysostom"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 405,
+      "latest": 405,
+      "display": "405",
+      "basis": "traditional",
+      "note": "saint.gr's head line: «Αγιος Αρσακιος Πατριαρχης Κωνσταντινουπολης (; - 405)», with the patriarchate given as «(404 - 405 μ.Χ.)»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Άγιοι Νεκτάριος, Αρσάκιος και Σισίνιος Πατριάρχες Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "ethelburga-of-east-anglia",
+  "display_name": "Ethelburga of East Anglia",
+  "names": [],
+  "sex": "female",
+  "types": [],
+  "dates": {
+    "floruit": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε τον 7ο αιώνα μ.Χ. και ήταν κόρη του βασιλιά της Ανατολικής Αγγλίας»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Αγία Ethelburga»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

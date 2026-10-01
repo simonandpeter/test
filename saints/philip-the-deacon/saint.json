@@ -6,6 +6,11 @@
       "form": "Filip",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 octombrie, «Sfântul Apostol Filip, unul din cei 7 diaconi»."
+    },
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Άγιος Φίλιππος ο Απόστολος ένας από τους επτά Διακόνους», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Άγιος Φίλιππος ο Απόστολος ένας από τους επτά Διακόνους»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the deacon of Caesarea in Palestine, one of the seven of Acts 6, married with four prophesying daughters of Acts 21.8–9, who preached in Samaria. The page gives no year, so no `dates` object is proposed. It records part of his skull at the monastery of Saint John the Theologian on Patmos. It prints a proper apolytikion naming him and a kontakion addressed to him as Ἀπόστολε, both taken here; it also prints an «Έτερον Ἀπολυτίκιον», the short common «Ἀπόστολε Ἅγιε Φίλιππε», and a Κάθισμα, neither of which is drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -61,6 +76,40 @@
         "text": "O holy Apostle Philip, entreat the merciful God to grant our souls forgiveness of sins.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείας χάριτος, πλήρης ὑπάρχων, διηκόνησας, τὴ Ἐκκλησία, ὡς Διάκονος Τοῦ Λόγου Ἀπόστολε, θεοσημείαις δὲ θείαις χρησάμενος, τῆς Σαμαρείας τὰ πλήθη κατηύγασας. Μάκαρ Φίλιππε, Χριστὸν τὸν θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιος Φίλιππος ο Απόστολος ένας από τους επτά Διακόνους», and it names him.",
+        "url": "https://www.saint.gr/2082/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being full of divine grace, you served the Church as a deacon of the Word, Apostle; and using divine signs from God you lit up the multitudes of Samaria. Blessed Philip, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Μιμητὴς γενόμενος, τοῦ Διδασκάλου, δι' αὐτὸν Ἀπόστολε, ταὶς τῶν Ἁγίων τῶν αὐτοῦ, χρείαις πιστῶς διηκόνησας, ὅθεν σὲ πάντες, πιστοὶ μακαρίζομεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ', Ἐπεφάνης σήμερον — on the page of «Άγιος Φίλιππος ο Απόστολος ένας από τους επτά Διακόνους». It addresses him as Ἀπόστολε and names no other saint.",
+        "url": "https://www.saint.gr/2082/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become an imitator of the Teacher, for his sake, Apostle, you served faithfully the needs of his saints; and so all we faithful call you blessed.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ'.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {

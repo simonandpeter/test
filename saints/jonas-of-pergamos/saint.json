@@ -1,0 +1,80 @@
+{
+  "slug": "jonas-of-pergamos",
+  "display_name": "Jonas of Pergamos in Cyprus",
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Άγιος Ιωνάς ο εν Περγάμω της Κύπρου», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hermit",
+    "wonderworker"
+  ],
+  "related": [
+    "kendeas"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1147,
+      "latest": 1150,
+      "display": "1147–1150",
+      "basis": "traditional",
+      "note": "saint.gr sets his enlistment in «δεύτερη Σταυροφορία 1147 - 1149 μ.Χ.» and the coming of the three hundred to Cyprus «γύρω στο 1150 μ.Χ. ή και αργότερα»; it gives no year of death"
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Της ερήμου πολίτης και εν σώματι άγγελος και θαυματουργός ανεδείχθης, Θεοφόρε Ιωνά πατήρ ημών νηστεία, αγρυπνία, προσευχή, ουράνια χαρίσματα λαβών, θεραπεύεις τους νοσούντας, και τας ψυχάς των πίστει προστρεχόντων σοι. Δόξα τω δεδωκότι σοι ισχύν, δόξα τω σε στεφανώσαντι, δόξα τω ενεργούντι δια σου πάσιν ιάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος α' — the one hymn on the page of «Άγιος Ιωνάς ο εν Περγάμω της Κύπρου». It is the common of a venerable father, «Της ερήμου πολίτης», printed with his name in it, «Θεοφόρε Ιωνά πατήρ ημών», and it names no other saint.",
+        "url": "https://www.saint.gr/2088/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a citizen of the desert, an angel in the body and a wonderworker, our God-bearing father Jonas; by fasting, vigil and prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος α'."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Άγιος Ιωνάς ο εν Περγάμω της Κύπρου»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

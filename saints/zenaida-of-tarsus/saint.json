@@ -6,6 +6,11 @@
       "form": "Zenaida",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 octombrie."
+    },
+    {
+      "form": "Ζηναΐδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Αγίες Ζηναΐδα και Φιλονίλλα οι αδελφές», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Οκτωβρίου — «Αγίες Ζηναΐδα και Φιλονίλλα οι αδελφές»",
+        "url": "https://www.saint.gr/10/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same pair of sisters of Tarsus in Cilicia. The page argues against one piece of the tradition itself: some synaxaria say they were kinswomen of the Apostle Paul, but their names have nothing Hebrew about them and so, it says, that claim has no basis. It gives no year at all, so no `dates` object is proposed, and it adds the place of their death, a cave at Demetrias. It prints one apolytikion, which names them both and is taken here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -48,5 +63,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τήν πολυθαύμαστον Ταρσόν τιμήσωμεν τήν ἐξανθήσασαν ἄνθη τά τίμια, τήν Ζηναΐδα τήν σοφήν καί Φιλονίλλαν. ἅμα δέ ἔχουσαι τῆς πίστεως τήν κρηπῖδα ἀσάλευτον, πᾶσαν τήν μυρίδα τῶν δαιμόνων κατήσχυναν. Διό καί σύν Ἀγγέλοις χορεύουσαι, ὑπέρ ἡμῶν ἀεί πρεσβεύουσιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’ — the one hymn on the page of «Αγίες Ζηναΐδα και Φιλονίλλα οι αδελφές», and it names them both.",
+        "url": "https://www.saint.gr/2083/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour much-wondered Tarsus, which brought to flower those precious blossoms, the wise Zenaida and Philonilla; for having together the foundation of the faith unshaken, they put to shame all the host of the demons. And so, dancing with the angels, they intercede for us always.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’."
+    }
+  ]
 }
