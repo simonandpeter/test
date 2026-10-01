@@ -6,6 +6,11 @@
       "form": "Terentie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 octombrie."
+    },
+    {
+      "form": "Τερέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιοι Λεόντιος, Δομέτιος, Τερέντιος και Δομνίνος», with the rank word left off; the page's own heading for this one is «Αγιος Τερεντιος»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Οκτωβρίου — «Άγιοι Λεόντιος, Δομέτιος, Τερέντιος και Δομνίνος»",
+        "url": "https://www.saint.gr/10/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, gives the four of them one page with a heading each, and prints one sentence for all four: «Οι Άγιοι Λεόντιος, Δομέτιος, Τερέντιος και Δομνίνος μαρτύρησαν δια πυρός» — they were martyred by fire. The four folders already relate to one another. No year, no place, no hymn, so no `dates` and no `locations`. The «ΔΟΜΝΑ (απο το λατινικό dominus)» line under Domninus's heading is saint.gr's note on the name and not a statement about him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

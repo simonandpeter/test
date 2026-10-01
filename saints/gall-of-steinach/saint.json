@@ -1,0 +1,62 @@
+{
+  "slug": "gall-of-steinach",
+  "display_name": "Gall of Steinach",
+  "sex": "male",
+  "types": [
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Γάλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιος Γάλλος», with the rank word left off. The page prints the Latin form beside it in its first sentence, «Ο Άγιος Γάλλος (Gall)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Οκτωβρίου — «Άγιος Γάλλος»",
+        "url": "https://www.saint.gr/10/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Οκτωβρίου εκάστου έτους» and «Αγιος Γαλλος (; - 646)», and the life states the death year again, «Κοιμήθηκε το 646 μ.Χ.», so `dates` carries a `death` of 646. **It does not carry a birth**: the page says «Γεννήθηκε λίγο μετά το 550 μ.Χ. στην Ιρλανδία», a little after 550, and there is no `display` shape in this corpus for that which `tests/dates-display.test.mjs` already recognises, so the statement is in the life and in this note instead of being rounded into one. The display name is built on the valley the page settles him in, «στην κοιλάδα του Στάιναχ», where the cells became the monastery of Saint Gall; the page's own «ο απόστολος της Ελβετίας» is a judgement it passes and not a title, and `types` is `[\"monk\"]` because the only rank the page gives him is μοναχός — it says outright that he **refused** the bishopric of Constantia and put forward his disciple, the deacon John, for it, so there is no `office`. `locations` is left out as elsewhere on this reader's days. The page prints his name in both scripts, «Ο Άγιος Γάλλος (Gall)». Its «Κογγάλλος» at Bangor is the corpus's `comgall-of-bangor` and is in `related`; its Columbanus, «βλέπε 23 Νοεμβρίου», has no folder, so he is named in the life and not linked. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 646,
+      "latest": 646,
+      "display": "646",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε το 646 μ.Χ.», and its page head gives him as «Αγιος Γαλλος (; - 646)». For his birth the page says only «Γεννήθηκε λίγο μετά το 550 μ.Χ. στην Ιρλανδία», which is not recorded as an interval here."
+    }
+  },
+  "related": [
+    "comgall-of-bangor"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

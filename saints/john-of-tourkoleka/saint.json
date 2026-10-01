@@ -1,0 +1,66 @@
+{
+  "slug": "john-of-tourkoleka",
+  "display_name": "John of Tourkoleka",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιος Ιωάννης ο Τουρκολέκας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Οκτωβρίου — «Άγιος Ιωάννης ο Τουρκολέκας»",
+        "url": "https://www.saint.gr/10/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Οκτωβρίου εκάστου έτους» and «Αγιος Ιωαννης ο Τουρκολεκας (1805 - 1816)», and the life repeats both years — born 1805 in the village of Tourkoleka in Arcadia, killed «στις 16 Όκτωβρίου 1816 μ.Χ.» at eleven years old — so a `dates` object carries them. The page calls him «νεομάρτυρας και παιδομάρτυρας», a new martyr and a child martyr; the corpus's `types` vocabulary has the first and not the second, so `types` is `[\"new-martyr\"]` and the child is in the life, where the page's own word for it can be quoted. `locations` is left out as elsewhere on this reader's days, although the page names Tourkoleka, Neapolis in Laconia, Monemvasia and Mystras. The men it names around him — his father Stamatelos Stamatelopoulos-Tourkolekas, his brothers Nikitaras and Nicholas, Theodoros Kolokotronis his uncle by marriage, Anagnostis son of Zacharias who was beheaded with him — are not saints in this corpus and none is in `related`. The four «ΙΩΑΝΝΗΣ» notes above the life are saint.gr's remarks on who else has borne the name. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1805,
+      "latest": 1805,
+      "display": "1805",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το 1805 μ.Χ. στο χωριό Τουρκολέκα Αρκαδίας», and its page head gives him as «(1805 - 1816)»."
+    },
+    "death": {
+      "earliest": 1816,
+      "latest": 1816,
+      "display": "1816",
+      "basis": "attested",
+      "note": "saint.gr: «Η σφαγή και των τριών έγινε στις 16 Όκτωβρίου 1816 μ.Χ., έξω από τον Ιερό Ναό του «Ελκομένου Χριστού» στην πάλαια Μονεμβασία»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

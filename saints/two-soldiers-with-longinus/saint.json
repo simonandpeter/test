@@ -1,0 +1,54 @@
+{
+  "slug": "two-soldiers-with-longinus",
+  "display_name": "The Two Soldiers with Longinus",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Δύο Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιοι Δύο Στρατιώτες», with the rank word left off. The form recorded is the company's whole designation as the line prints it, because the page gives no personal name for either of them."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Οκτωβρίου — «Άγιοι Δύο Στρατιώτες»",
+        "url": "https://www.saint.gr/10/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Οκτωβρίου εκάστου έτους». Its whole notice is one sentence: «Οι Άγιοι Δύο Στρατιώτες μαρτύρησαν μαζί με τον Άγιο Λογγίνο βλέπε την ίδια ημέρα)» — they were martyred together with Saint Longinus, see the same day, and the stray bracket is the page's. **A company that names neither of its two members**, so it is one entry and one folder, on `BRIEF.md` §4's test. `longinus-the-centurion`, which is an upgrade on this same day, is in `related`, and his own page is where the two have any story at all: two of his soldiers who believed at the earthquake, withdrew with him to his country to preach the Resurrection, and for whom he prepared the grave before all three were beheaded. No year — his page dates only the reign, «επί βασιλείας Τιβερίου Καίσαρος (14 - 37 μ.Χ.)» — so no `dates`; no place named for them, so no `locations`; no hymn on their own page. The English display name says with whom, because the Greek line is «the two soldiers» and nothing else. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "longinus-the-centurion"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

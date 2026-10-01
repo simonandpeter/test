@@ -1,0 +1,11 @@
+# John of Tourkoleka
+
+saint.gr's calendar for 16 October keeps «Άγιος Ιωάννης ο Τουρκολέκας», whom it calls a new martyr and a child martyr. He was born in 1805 in the village of Tourkoleka in Arcadia, into a family marked out, the page says, for its reverence towards God, its love of country and its heroism: his father was Stamatelos Stamatelopoulos-Tourkolekas, a noted fighter of the Leontari country, and his mother Sophia was the sister of the wife of Theodoros Kolokotronis. Among his four brothers were the well-known chieftain Nikitas, called Nikitaras, and the well-schooled captain Nicholas, a teacher of the tactics of war.
+
+In 1816 John, eleven years old then, was travelling with his father and with Anagnostis, son of Zacharias the fighter of Parnon, towards Kythera, when rough seas put them at Neapolis in Laconia. Hussein, the Agha of the district, took them by a trick and sent them to the higher Turkish authority at Monemvasia, where they were shut in the castle; the lord of Monemvasia asked the Voivode of Mystras for instructions and was ordered to behead all three. Anagnostis was beheaded first, and then the saint's father.
+
+For the confession and the end the page quotes the boy's own brother Nikitaras: they proposed to my brother that he change his faith; they show him his killed father and say to him, sit down and we shall make you a Turk. Then the child makes the sign of the cross and answers them: I too shall go where my father goes. They say to him again, become a Turk; but the child makes the sign of the cross once more. A cross was made out of his blood. They took their heads to Tripolitsa.
+
+The killing of all three was on 16 October 1816, outside the church of Christ Led to Crucifixion in old Monemvasia; and there, on the paving of the church's courtyard, the blood of the boy formed a cross. The heads were sent to the Pasha of Tripoli and the bodies were buried at Monemvasia, and the place of both the heads and the bodies remains unknown to this day. The mark of the cross on that paving became a place of pilgrimage, and there is a church of the saint in the village where he was born and grew up.
+
+*After saint.gr's calendar for 16 Οκτωβρίου — [the day](https://www.saint.gr/10/16/index.aspx) and [the life](https://www.saint.gr/6350/saint.aspx); read 1 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Longhin Sutașul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 octombrie, «Sfântul Mucenic Longhin Sutașul»."
+    },
+    {
+      "form": "Λογγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιος Λογγίνος ο Εκατόνταρχος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Οκτωβρίου — «Άγιος Λογγίνος ο Εκατόνταρχος»",
+        "url": "https://www.saint.gr/10/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man: the centurion under Pontius Pilate who stood by at the Passion, the burial and the sealing of the tomb, believed at the earthquake, resigned his rank and went home with two of his soldiers to preach the Resurrection, and was beheaded on Tiberius's order. The page dates the reign and not the man — «επί βασιλείας Τιβερίου Καίσαρος (14 - 37 μ.Χ.)» — so no `dates` object is proposed. An apolytikion and a kontakion are taken and both name him; the Οἶκος, which also names him, is neither and is not drafted. **The two soldiers of the last sentence are the same day's «Άγιοι Δύο Στρατιώτες», `/2755/`, which is the new folder `two-soldiers-with-longinus` in batch `el-10-16`**, and it is in `related_add`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -60,9 +75,46 @@
         "text": "Thy martyr Longinus, O Lord, in his struggle received the crown of incorruption from Thee, our God; for having Thy power he overcame his tormentors, and broke the feeble insolence of the demons also. By his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν Ἥλιον τῆς δόξης Σταυρῶ προσηλωθέντα, καὶ τοὶς ἐν σκιᾷ τοῦ θανάτου ἐκλάμποντα ὡς εἶδες, ηὐνάσθης αὐτοῦ ταὶς ἀστραπαίς, καὶ ἤθλησας Λογγίνε εὐσεβῶς, διὰ τοῦτο νοσημάτων παντοδαπῶν, λυτρούσαι τοὺς ἐκβοώντας, δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντος — the first hymn on the page of «Άγιος Λογγίνος ο Εκατόνταρχος», and it names him.",
+        "url": "https://www.saint.gr/2754/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "When you saw the Sun of glory nailed to the Cross and shining on those in the shadow of death, you were enlightened by his lightnings and contended piously, Longinus; and therefore you deliver from sicknesses of every kind those who cry out: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Εὐφροσύvως γέγηθεν ἡ Ἐκκλησία, ἐν τῇ μνὴμη σήμεροv, τοῦ ἀοιδίμου ἀθλητοῦ, Λογγίvου ἀνακραυγάζουσα. Σὺ μου τὸ κράτος, Χριστὲ καὶ στερέωμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the same page, and it names him and no other saint.",
+        "url": "https://www.saint.gr/2754/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church rejoices with gladness today at the memory of the far-famed champion Longinus, crying aloud: you are my strength, Christ, and my firm ground.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "two-soldiers-with-longinus"
+  ]
 }
