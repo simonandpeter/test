@@ -6,11 +6,17 @@
       "form": "Tadeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 decembrie, «Sfântul Cuvios Tadeu», with the rank words left off."
+    },
+    {
+      "form": "Θαδδαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Θαδδαίος ο Ομολογητής», with the rank and the by-name left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "confessor"
   ],
   "attestations": [
     {
@@ -34,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Δεκεμβρίου — «Όσιος Θαδδαίος ο Ομολογητής»",
+        "url": "https://www.saint.gr/12/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, where the line gave his name, his rank and nothing else. This page gives him the whole life the folder lacked, and it is a monastic of the Studion in the second iconoclasm, which agrees with the Romanian Cuvios: hence the row, and hence `confessor` added to his types for the page's own «ο Ομολογητής». **No `dates` object is proposed, because the page gives two reigns and not one.** It puts his rebuke before «τον εικονομάχο βασιλιά Μιχαήλ (820 - 829 μ.Χ.)» and then adds «(ο Μ. Γαλανός αναφέρει τον Λέοντα τον Ε')» — M. Galanos names Leo V, whose reign is 813 to 820 — and it gives no year for the death that followed three days after. Which emperor it was, and therefore whether he died before or after 820, is for the author. It names Theodore the Studite as the abbot he served and accompanied to the palace, which is what makes the `related` row. It names no place but Constantinople and the City's streets, and no coordinate is proposed. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -45,5 +61,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodore-the-studite"
+  ]
 }

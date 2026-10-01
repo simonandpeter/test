@@ -1,0 +1,54 @@
+{
+  "slug": "athenodorus-29-december",
+  "display_name": "Athenodorus (29 December)",
+  "names": [
+    {
+      "form": "Αθηνόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Αθηνόδωρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Δεκεμβρίου — «Όσιος Αθηνόδωρος»",
+        "url": "https://www.saint.gr/12/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Δεκεμβρίου εκάστου έτους», the same day as the listing. **This is not the corpus's `athenodorus`.** That folder is saint.gr's entry for 7 Νοεμβρίου, where the page's whole argument is whether he was the brother of Gregory the Wonderworker; this entry is an ascetic, of a place the page says is unknown, who died in peace, and the settled rule is that two entries on one calendar are two commemorations and so two men. Each of the two pages says something the other does not, and neither sends the reader to the other. The page names the Paris Codex 1578, where Athenodorus is accompanied by the other venerable fathers Babylas and Benjamin: the Benjamin is the Όσιος Βενιαμίν of this same 29 Δεκεμβρίου, drafted in this batch, which is what makes that `related` row. The Babylas is not identified by the page, and although 28 Δεκεμβρίου has an Όσιος Βαβύλας who likewise died in peace, nothing on either page joins them, so no row is made for him and the question is left in the report. The page gives no year, no country, no monastery and no hymn; «άγνωστο που», it says of where he lived."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "benjamin-29-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

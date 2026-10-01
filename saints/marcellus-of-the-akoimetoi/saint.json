@@ -6,6 +6,11 @@
       "form": "Marcel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 decembrie, «Sfântul Cuvios Marcel», with the rank words left off; the page it keeps for his troparion names him «Sfântul Cuvios Marcel, egumenul Mănăstirii Achimiților»."
+    },
+    {
+      "form": "Μάρκελλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Μάρκελλος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Δεκεμβρίου — «Όσιος Μάρκελλος»",
+        "url": "https://www.saint.gr/12/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same man: born at Apamea in Syria of well-off and lettered parents, a monk at Ephesus, then of the monastery of the Akoimetoi at Constantinople under the abbot Alexander, and abbot there himself. The page gives the century the Romanian life left open — «Ο Μάρκελλος έζησε τον 5ο αιώνα μ.Χ., επί πατριαρχείας Γενναδίου του Α' (458 - 471 μ.Χ.) και βασιλέως του Λέοντα Α' του Μακέλλη» — and the `dates` object here is that century and nothing narrower. It names the patriarch Gennadius I, whom the corpus holds as `gennadius-patriarch-of-constantinople`, and the emperor Leo I; both are named as the years he lived in and not as men he dealt with, so no `related` row is proposed for either, and whether a dating reference of that kind earns one is for the author. It names Jacob, Alexander's successor in the abbacy, who died before Marcellus was raised to it; the corpus holds no folder this reading could attach to him. It adds an alternative the Romanian life does not carry: «Σύμφωνα με άλλη γνώμη, τη μονή Ακοιμήτων, είχε κτίσει αυτός ο όσιος Μάρκελλος, πιθανός στη θέση του σημερινού Τσιμπουκλί» — by another opinion Marcellus himself built the monastery of the Akoimetoi, probably on the site of today's Tsimbukli. That is the page's own hedge and is recorded here rather than in the life as a fact. It prints an apolytikion which names him and is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,9 +75,38 @@
         "text": "In you, father, what is according to the image was saved with diligence; for taking up the cross you followed Christ, and by your work you taught that the flesh is not to be regarded, since it passes away, but that care is to be taken for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Marcellus.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Ύμνον άληκτον, Θεώ προσφέρων, νουν ακοίμητον, προσφόρως έσχες, προς εκπλήρωσιν των θείων προστάξεων όθεν κανών αρετής εχρημάτισας και Μοναστών ποδηγέτης θεόσοφος. Πάτερ Μάρκελλε, Χριστόν τον Θεόν ικέτευε, διαρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ', Θείας πίστεως — the only hymn on the page of «Όσιος Μάρκελλος», and it names him.",
+        "url": "https://www.saint.gr/1066/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Offering God a hymn that never ceases, you fittingly kept an unsleeping mind for the fulfilling of the divine commands; and so you became a rule of virtue and a God-wise guide of monks. Father Marcellus, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Μάρκελλος έζησε τον 5ο αιώνα μ.Χ., επί πατριαρχείας Γενναδίου του Α' (458 - 471 μ.Χ.) και βασιλέως του Λέοντα Α' του Μακέλλη». The page gives no year of birth and no year of death, and doxologia.ro's life, which the folder follows, gives neither either; so the century is recorded and nothing is narrowed to the patriarch's dates, which the page gives as the setting of his life and not as the span of it."
+    }
+  },
+  "related": [
+    "alexander-the-sleepless"
+  ]
 }

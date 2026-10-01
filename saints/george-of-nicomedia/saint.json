@@ -1,0 +1,57 @@
+{
+  "slug": "george-of-nicomedia",
+  "display_name": "George of Nicomedia",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Γεώργιος επίσκοπος Νικομηδείας ποιητής ασματικών Κανόνων και Τροπαρίων», with the rank, the see and the description of his work left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Nicomedia",
+  "types": [
+    "venerable",
+    "bishop",
+    "hymnographer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Δεκεμβρίου — «Όσιος Γεώργιος επίσκοπος Νικομηδείας ποιητής ασματικών Κανόνων και Τροπαρίων»",
+        "url": "https://www.saint.gr/12/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Δεκεμβρίου εκάστου έτους», the same day as the listing. **The page warns about his identity itself and the warning is the reason the folder is separate:** «Στοιχεία της βιογραφίας του, συγχέονται μ' αυτά του Αγίου Γεωργίου Επισκόπου Αμάστριδος, κυρίως όσον αφορά την ποίηση των ασματικών Κανόνων. Ίσως βέβαια, να συμβαίνει και το αντίθετο» — elements of his biography are confused with those of Saint George bishop of Amastris, chiefly as regards the composition of the sung canons, though perhaps the opposite happens. The corpus holds `george-of-amastris` on a Greek 21 Φεβρουαρίου; two entries on one calendar are two commemorations and so two men, and the page keeps them apart while saying their lives have been mixed. Which of them wrote which canons is for the author and is not decided here; the `related` row records that the page names the other. It also names the patriarch Photius, with whom it says he kept up a correspondence, and the corpus holds him as `photius-of-constantinople` on a Greek 6 Φεβρουαρίου, which is the second `related` row. **No `dates` object is proposed:** the page gives no year for him at all and dates only Photius's time, «(857 - 891 μ.Χ.)». It names no place but the see, and no coordinate is proposed. It prints no hymn of his own, though it lists the services he set to music. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "george-of-amastris",
+    "photius-of-constantinople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

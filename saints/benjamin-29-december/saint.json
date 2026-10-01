@@ -1,0 +1,50 @@
+{
+  "slug": "benjamin-29-december",
+  "display_name": "Benjamin (29 December)",
+  "names": [
+    {
+      "form": "Βενιαμίν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Δεκεμβρίου, «Όσιος Βενιαμίν», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Δεκεμβρίου — «Όσιος Βενιαμίν»",
+        "url": "https://www.saint.gr/12/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Δεκεμβρίου εκάστου έτους», the same day as the listing. The corpus holds five other folders for a Benjamin — the deacon, the recluse, the martyr of 29 July, and two Russian new martyrs — and this is none of them; none is kept on this day and none died of dropsy. The page's own content is three things and no more: that he died in peace, that Saint Nikodemos says he died of dropsy, and that the Evergetinos carries his saying, which it cites to page 622. It gives no century, no country, no monastery and no hymn, and it proposes no author for the saying beyond Benjamin himself. Its distich joins him to those who left this life well in old age, «Tοις εν καλώ λιπούσι γήρα τον βίον, / Kαι Bενιαμίν τον καλόν συναπτέον», which is the only hint of his age and is not a date. The page for Όσιος Αθηνόδωρος on this same day names him as one of the fathers who accompany Athenodorus in Paris Codex 1578; this page does not name Athenodorus, so the `related` row is made there and not here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
