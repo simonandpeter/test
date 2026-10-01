@@ -6,6 +6,11 @@
       "form": "Gherontie Athonitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Cuvios Gherontie Athonitul», with the rank word left off."
+    },
+    {
+      "form": "Γερόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Όσιος Γερόντιος ο Αγιορείτης», with the rank word and the byname left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Όσιος Γερόντιος ο Αγιορείτης»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line matches the Romanian one word for word in substance — «Όσιος Γερόντιος ο Αγιορείτης» against «Sfântul Cuvios Gherontie Athonitul». The corpus keeps no other Gerontius of the Holy Mountain. The Greek page adds the whole of his story: the abbacy of the old Monastery of the Bouleuteria, its abandonment under barbarian raids, the hermitage he built above the Skete of Saint Anna with a church in the name of Saint Panteleimon, his being the first founder of that skete, the spring he found by a revelation of the Mother of God in a waterless place which the monks still use as holy water, his spiritual friendship with Maximus of Kapsokalyvia, the fifteen known saints the skete has produced, and the service composed for him by the monk Gerasimos Mikragiannanitis. It gives no year of birth and none of death — only that he died at a great age — so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints an apolytikion and a kontakion, both of which name him and both of which are taken, and a μεγαλυνάριον, which the schema's `kind` enum cannot hold and which is therefore not drafted."
     },
     {
       "church": "serbian",
@@ -45,5 +60,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "maximus-of-kapsokalyvia"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Γέρας πέφηνας τῆς ἐγκράτειας, γέρας εἴληφας, τῆς ἀφθαρσίας, φερωνύμως θεοφόρε Γερόντιε, ἀσκητικαὶς ἀρεταὶς γὰρ κοσμούμενος, Βουλευτηρίων Μονῆς ὤφθης πρότυπον. Πάτερ Ὅσιε Χριστὸν τὸν θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — on the page of «Όσιος Γερόντιος ο Αγιορείτης». It names him and names the Monastery of the Bouleuteria, so it is his own proper",
+        "url": "https://www.saint.gr/2170/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a prize of self-control, and you received the prize of incorruption, true to your name, God-bearing Gerontius; for adorned with the virtues of the ascetic you were seen as the pattern of the Monastery of the Bouleuteria. Venerable father, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Μοναστῶν ὑπόδειγμα ὤφθης ἐν Ἄθῳ, ὡς θεράπων ἔνθεος, τοῦ σὲ δοξάσαντος Χριστοῦ, ᾧ καὶ προσάγοις ἑκάστοτε, τοὺς σὲ τιμῶντας, Γερόντιε Ὅσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the second hymn on the page of «Όσιος Γερόντιος ο Αγιορείτης», and it names him and names Athos",
+        "url": "https://www.saint.gr/2170/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown on Athos to be a pattern for monks, as a God-filled servant of Christ, who glorified you; and may you bring to him at every hour those who honour you, venerable Gerontius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

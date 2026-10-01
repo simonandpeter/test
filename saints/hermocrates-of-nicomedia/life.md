@@ -1,0 +1,9 @@
+# Hermocrates of Nicomedia
+
+All three belonged to the sacred clergy of the church at Nicomedia. When Saint [Panteleimon](/saints/panteleimon-the-healer) was under examination, saint.gr says, and was asked by whom he had been taught the Christian faith, he answered that he had been taught it by the priest [Hermolaus](/saints/hermolaus-of-nicomedia). That was enough: soldiers were sent at once to arrest Hermolaus, and his friends and fellow workers, the priests [Hermippus](/saints/hermippus-of-nicomedia) and Hermocrates, followed him of their own will before the judge of Nicomedia.
+
+The judge examined Hermolaus first, and then asked the other two what they wanted and why they had come to him. They answered that they were soldiers of Hermolaus under the banner of Christ, and that they begged him they might all have a death in common, as they had had a brotherly life in common. That answer, instead of moving the judge to admiration, inflamed his anger the more, and he condemned all three to death; and so, by the sacrifice of their heads, they won the immortal prizes of the contenders for the faith and the love of Christ.
+
+The page sets the year 305 against each of the three names and tells nothing else of Hermocrates. It glosses his name from Hermes and κράτος — one who has strength like that of Hermes — and adds that part of his relics is in the Roman Catholic church of Saint Simeon the God-receiver at Venice. Above the notice it prints a distich that names all three: «Ἕρμιππος, Ἑρμόλαος ἠδ' Ἑρμοκράτης Ἑρμῆν σέβοντας ᾔσχυναν παρρησίᾳ» — Hermippus, Hermolaus and Hermocrates shamed by their boldness those who revered Hermes.
+
+*After saint.gr's calendar for 26 Ιουλίου — [the day](https://www.saint.gr/07/26/index.aspx) and [the life](https://www.saint.gr/2160/saint.aspx); read 1 October 2026.*

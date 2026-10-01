@@ -6,6 +6,11 @@
       "form": "Iacob Netsvetov din Alaska",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Iacob Netsvetov din Alaska», with the rank word left off."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Όσιος Ιάκωβος ο εν Αλάσκα», with the rank word and the byname left off. The page glosses the name as a Hebrew word, the victor."
     }
   ],
   "sex": "male",
@@ -21,7 +26,14 @@
       "latest": 1802,
       "display": "1802",
       "basis": "attested",
-      "note": "doxologia.ro: «S-a născut în 1802, în Insula Atka din Alaska, fiind fiul unui tată rus și al unei mame aleute.» The page gives no year for his death."
+      "note": "doxologia.ro: «S-a născut în 1802, în Insula Atka din Alaska, fiind fiul unui tată rus și al unei mame aleute.» The page gives no year for his death. saint.gr's head line agrees: «Οσιος Ιακωβος ο Εν Αλασκα (1802 - 1864)»."
+    },
+    "death": {
+      "earliest": 1864,
+      "latest": 1864,
+      "display": "1864",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Οσιος Ιακωβος ο Εν Αλασκα (1802 - 1864)». The head line is the whole of the year's warrant: the body of the notice says «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου», and doxologia, from which the folder was first written, gave no year of death at all."
     }
   },
   "attestations": [
@@ -46,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Όσιος Ιάκωβος ο εν Αλάσκα»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it heads him «Οσιος Ιακωβος ο Εν Αλασκα (1802 - 1864)» — the same birth year the folder holds off doxologia, and the same Alaska. The corpus keeps no other Jacob of Alaska. The Greek notice has no life to give — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — but its head line carries the year of death that the Romanian page did not give, so this upgrade proposes a `dates` object repeating the folder's existing `birth` verbatim and adding a `death` of 1864. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn and no distich."
     },
     {
       "church": "serbian",

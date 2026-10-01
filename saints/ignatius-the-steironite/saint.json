@@ -1,0 +1,50 @@
+{
+  "slug": "ignatius-the-steironite",
+  "display_name": "Ignatius the Steironite",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Όσιος Ιγνάτιος ο Στειρωνίτης», with the rank word and the byname left off. The page glosses the name from γηγενής, the earth-born, the native."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Όσιος Ιγνάτιος ο Στειρωνίτης»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's many men of the name — of Antioch, of Constantinople, of Rostov, of Mariupol, of Methymna, of Stara Zagora, of Bathys Ryax, the Sinaite, Brianchaninov, Biryukov, the bare one of 19 May and the two monk-martyrs of 1938 and 1942: none of them is kept on 26 July and none carries the byname Στειρωνίτης. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year, no place and no life beyond one sentence, and prints no hymn. Under the name gloss it carries the words «Βυζαντινός συγγραφέας», a Byzantine writer, which belongs to its dictionary note on the name and not to this saint, and nothing is taken from it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "jerusalem-companion-of-horaiozele",
+  "display_name": "Jerusalem, companion of Horaiozele",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Ιερουσαλήμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Αγία Ιερουσαλήμ», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Αγία Ιερουσαλήμ»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day as the listing. **She is not the corpus's `jerusalem-of-beroea`, and this is the identity question of the day.** That folder stands on saint.gr's own 4 Σεπτεμβρίου line, «Άγιοι Κέγουρος, Σεκενδίνος, Σέκενδος και η μητέρα τους Ιερουσαλήμ», and its `greek` row is already venerated there; its life is a widow from Alexandria who preached as far as Rome, became a nun at Beroea, saw her three sons killed before her and was beheaded between 276 and 282. This woman is a virgin of Byzantium, the friend and housemate of Ωραιοζήλη, offered marriage to a handsome pagan officer by the judge and beheaded for refusing, in the first-century persecution under Domitian in which her companion died. Widow and virgin, mother of three and childless, Alexandria and Byzantium, the third century and the first: the two notices cannot be one woman, and two entries on one calendar are two commemorations. The one coincidence between them is the relic — the head of this woman «βρίσκεται στη Μητρόπολη Βεροίας», and the other's skull is at the church of Saint Anthony in the same town; that is said here because it is the reason somebody might take them for one, and it is named in the reader's report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year on her own page, so there is no `dates` object, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "horaiozele-of-byzantium"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

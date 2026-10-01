@@ -1,0 +1,52 @@
+{
+  "slug": "symeon-beyond-the-anaplous",
+  "display_name": "Symeon beyond the Anaplous",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite"
+  ],
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Όσιος Συμεών ο αρχιμανδρίτης και στυλίτης «ο επέκεινα του Ανάπλου»», with the rank word and the two titles left off. The page glosses the name as a Hebrew word, the one who loves his fellow men."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Όσιος Συμεών ο αρχιμανδρίτης και στυλίτης «ο επέκεινα του Ανάπλου»»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day as the listing. He is not the corpus's `symeon-the-stylite` or `symeon-the-lesbian-stylite`, nor any of its other men of the name: none is kept on 26 July and none carries the byname «ο επέκεινα του Ανάπλου». The page carries **no asterisk and not the «Δεν είναι διασταυρωμένη» sentence**, but it does say where he comes from and what it does not have: «Άγνωστος στον Συναξαριστή του Άγιου Νικόδημου. Η μνήμη του αναφέρεται στον Πατμιακό Κώδικα 266 και στον Βιέννης Theol. gr. 300, αλλά και στον Συναξαριστή Delehaye χωρίς βιογραφικό υπόμνημα.» That is a statement of the manuscript authority for the commemoration and of the absence of a life, not a doubt cast on his existence or on his date, which is why he is drafted and the asterisked entries of other days are not; it is named in the reader's report all the same. No year, no place, no relics and no hymn, so no `dates` object and no `locations`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Paraschevi din Roma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iulie, «Sfânta Cuvioasă Muceniță Paraschevi din Roma», with the rank words left off."
+    },
+    {
+      "form": "Παρασκευή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Αγία Παρασκευή η Οσιομάρτυς», with the rank words left off. The page glosses the name as «Η πρόθυμος παραστάτις», the willing helper at one's side, and says she was given it because she was born on a Friday."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Αγία Παρασκευή η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: «Η Αγία Παρασκευή γεννήθηκε στη Ρώμη στα χρόνια του αυτοκράτορα Αντωνίνου», born at Rome, daughter of Agathon and Politeia, named for the day of her birth, blinding and then healing the emperor, beheaded at Tempe — against the Romanian «Sfânta Cuvioasă Muceniță Parascheva din Roma» of the same day and the same rank, venerable-martyr. The corpus's other Paraskevi, of Epivates, is kept on 14 October and is a different woman. The Greek page adds the reign, «(138 - 160 μ.Χ.)», which is why this upgrade proposes a `birth` interval where the folder had no `dates`; it gives no year of her martyrdom. It also names the three towns that keep her as patron — Komotini, Chalkida, Lavrio — and prints two hymns, both taken: an apolytikion that names her and plays on her name, and a kontakion that names her and her church. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,9 +75,51 @@
         "text": "Making your zeal answer to your calling, you who are named with that name, you have inherited a dwelling that matches your name by your faith, holy Paraskevi, bearer of torments. Therefore you pour out healings and pray for our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Τὴν σπουδήν σου τῇ κλήσει κατάλληλον, ἐργασαμένη φερώνυμε, τὴν ὁμώνυμόν σου πίστιν εἰς κατοικίαν κεκλήρωσαι, Παρασκευὴ ἀθλοφόρε· ὅθεν προχέεις ἰάματα, καὶ πρεσβεύεις ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’ — on the page of «Αγία Παρασκευή η Οσιομάρτυς». It names her and turns on her name, so it is her own proper; the page names no automelon for it",
+        "url": "https://www.saint.gr/2161/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made your zeal to match your calling, O rightly named one, you have been allotted for your dwelling the faith that bears your name, Paraskevi, prize-winner; and so you pour out healings and intercede for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Τὸν ναόν σου πάνσεμνε, ὡς ἱατρεῖον ψυχικὸν εὑράμενοι, ἐν τούτῳ πάντες οἱ πιστοί, μεγαλοφώνως τιμῶμέν σε, Ὁσιομάρτυς Παρασκευὴ ἀοίδιμε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the second hymn on the page of «Αγία Παρασκευή η Οσιομάρτυς», and it names her with her rank of venerable-martyr",
+        "url": "https://www.saint.gr/2161/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having found your church, all-revered one, to be a hospital for the soul, in it all we the faithful honour you with a loud voice, venerable martyr Paraskevi, ever sung.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 138,
+      "latest": 160,
+      "display": "between 138 and 160",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στη Ρώμη στα χρόνια του αυτοκράτορα Αντωνίνου (138 - 160 μ.Χ.)» — the reign is the page's own and is taken as the interval of her birth, the page giving no year of its own. It gives no year for her martyrdom at Tempe, so no death interval is recorded. The folder's Romanian source gave no year at all."
+    }
   }
 }

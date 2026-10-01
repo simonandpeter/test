@@ -1,0 +1,63 @@
+{
+  "slug": "horaiozele-of-byzantium",
+  "display_name": "Horaiozele of Byzantium",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ωραιοζήλη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Αγία Ωραιοζήλη», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Ωραιοζήλη έζησε τον 1ο αιώνα μ.Χ.» The same page sets her arrest under the emperor Domitian and gives no year of its own for it, so the century the page states is the whole of the interval."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Αγία Ωραιοζήλη»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no saint of this name on any day, and the per-day sweep offered nothing closer than Jerusalem of Beroea, who is another woman. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn. Byzantium is named as her country and `locations` is left out all the same. Her page links the page of «Αγία Ιερουσαλήμ», whom it calls her friend and housemate and whom the same day keeps, and that woman arrives in the corpus from this day as `jerusalem-companion-of-horaiozele`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "andrew-the-first-called",
+    "jerusalem-companion-of-horaiozele"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

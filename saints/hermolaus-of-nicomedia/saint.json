@@ -6,6 +6,11 @@
       "form": "Ermolae",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iulie, «Sfântul Sfințit Mucenic Ermolae», with the rank words left off."
+    },
+    {
+      "form": "Ερμόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης», with the rank word left off. The page glosses the name as «Ο Ερμής του λαού»."
     }
   ],
   "sex": "male",
@@ -14,7 +19,9 @@
     "presbyter"
   ],
   "related": [
-    "panteleimon-the-healer"
+    "panteleimon-the-healer",
+    "hermippus-of-nicomedia",
+    "hermocrates-of-nicomedia"
   ],
   "attestations": [
     {
@@ -38,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the priest of Nicomedia who taught Saint Panteleimon the faith and was arrested on Panteleimon's own answer under examination, which is the connection the folder's existing `related` row to `panteleimon-the-healer` already records. The Greek page carries him with his two fellow priests, «Αγιος Ερμολαος (; - 305)», «Αγιος Ερμοκρατης (; - 305)», «Αγιος Ερμιππος (; - 305)», each with a head line of his own; the enumeration is why the two companions arrive as folders of their own in the same batch, `hermippus-of-nicomedia` and `hermocrates-of-nicomedia`. The page gives the year 305, which the folder's Romanian source did not, and this upgrade proposes a `death` interval where the folder had no `dates`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. It prints two apolytikia and both are taken: a proper naming all three, and the common of martyrs printed under their names as «Έτερον Ἀπολυτίκιον»."
     },
     {
       "church": "serbian",
@@ -63,9 +80,52 @@
         "text": "Your martyrs, Lord, in their struggles received from You, our God, the crowns of incorruption. For having Your strength they overthrew the tormentors, and they broke also the powerless daring of the demons. By their prayers, Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Ἱερατεύσαντες, γνησίως Ἅγιοι, τῷ πρυτανεύσαντι, ἡμῖν τὰ κρείττονα, τοῦ μαρτυρίου τὴν ὁδόν, ἠνύσατε γηθοσύνως, Ἱερὲ Ἑρμόλαε, σὺν Ἑρμίππω Ἑρμόκρατες, τρίστυλον ἑδραίωμα, Ἐκκλησίας γενόμενοι, διὸ ἐκδυσωπεῖτε ἀπαύστως, σώζεσθαι πάντας πάσης βλάβης.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — on the shared page of «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης». It names all three and names him first, so it is the proper of the three and no mis-hang",
+        "url": "https://www.saint.gr/2160/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served as true priests to him who bestows better things upon us, O holy ones, you accomplished the road of martyrdom with gladness, sacred Hermolaus, with Hermippus and Hermocrates, and became a three-pillared foundation of the Church. Therefore entreat him unceasingly, that all may be kept safe from every harm.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Οἱ Μάρτυρές σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε — the second hymn on the shared page of «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης». It is the common of martyrs and names nobody, but the page prints it under their names, so by the corpus's rule it is their service and is copied whole",
+        "url": "https://www.saint.gr/2160/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, received from you our God the crown of incorruption in their contest; for having your strength they cast down the tyrants, and they broke the powerless insolence of the demons as well. By their supplications, O Christ God, save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ερμολαος (; - 305)», and gives the same year to each of the three priests on the page. It gives no year of birth, and the folder's Romanian source gave no year at all."
+    }
   }
 }

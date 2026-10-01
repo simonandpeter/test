@@ -1,0 +1,101 @@
+{
+  "slug": "hermocrates-of-nicomedia",
+  "display_name": "Hermocrates of Nicomedia",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ερμοκράτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουλίου, «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης», with the rank word left off; his own head line on the shared page is «Αγιος Ερμοκρατης (; - 305)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Ερμοκρατης (; - 305)», and gives the same year to each of the three priests on the page. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026). The corpus's `hermolaus-of-nicomedia` carries a Romanian row for 26 iulie, and whether that calendar also prints his two companions is a reading nobody has done."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουλίου — «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης»",
+        "url": "https://www.saint.gr/07/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουλίου εκάστου έτους», the same day as the listing, and carries the three priests on one page with a head line each; the enumeration is why this is three folders and not one. The corpus keeps no other Hermocrates on any day — the names the per-day sweep offered against it were Hermolaus himself and Hermippus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia and both are taken: a proper that names all three, and the common of martyrs printed under their names as «Έτερον Ἀπολυτίκιον». Nicomedia is named and `locations` is left out. Under his name the page sets a dictionary note — a Greek vase-painter of the fifth century before Christ and a general of Syracuse — which belongs to the name and not to the saint, and nothing is taken from it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "hermolaus-of-nicomedia",
+    "hermippus-of-nicomedia",
+    "panteleimon-the-healer"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Ἱερατεύσαντες, γνησίως Ἅγιοι, τῷ πρυτανεύσαντι, ἡμῖν τὰ κρείττονα, τοῦ μαρτυρίου τὴν ὁδόν, ἠνύσατε γηθοσύνως, Ἱερὲ Ἑρμόλαε, σὺν Ἑρμίππω Ἑρμόκρατες, τρίστυλον ἑδραίωμα, Ἐκκλησίας γενόμενοι, διὸ ἐκδυσωπεῖτε ἀπαύστως, σώζεσθαι πάντας πάσης βλάβης.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — on the shared page of «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης». It names all three, so it is the proper of the three and no mis-hang",
+        "url": "https://www.saint.gr/2160/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served as true priests to him who bestows better things upon us, O holy ones, you accomplished the road of martyrdom with gladness, sacred Hermolaus, with Hermippus and Hermocrates, and became a three-pillared foundation of the Church. Therefore entreat him unceasingly, that all may be kept safe from every harm.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Οἱ Μάρτυρές σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε — the second hymn on the shared page of «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης». It is the common of martyrs and names nobody, but the page prints it under their names, so by the corpus's rule it is their service and is copied whole",
+        "url": "https://www.saint.gr/2160/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, received from you our God the crown of incorruption in their contest; for having your strength they cast down the tyrants, and they broke the powerless insolence of the demons as well. By their supplications, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
