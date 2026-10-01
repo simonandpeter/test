@@ -1,0 +1,57 @@
+{
+  "slug": "gaius-martyr-11-august",
+  "display_name": "Gaius (11 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Νεόφυτος, Ζήνων, Γάιος, Μάρκος, Μακάριος και Γαϊανός», with the rank word left off. The page gives him a head line of his own, «Αγιος Γαϊος», and no gloss on the name."
+    }
+  ],
+  "related": [
+    "neophytos-martyr-11-august",
+    "zenon-martyr-11-august",
+    "mark-martyr-11-august",
+    "macarius-martyr-11-august",
+    "gaianos-martyr-11-august"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Νεόφυτος, Ζήνων, Γάιος, Μάρκος, Μακάριος και Γαϊανός»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The third of the six the one listing line names, with his own head line on the shared page. The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day as the listing. This folder closes a refusal the first reader of this day made: he drafted only Zenon, Mark and Macarius, and refused Neophytos, Gaius and Gaianos because the corpus already keeps `neophytus-5-may`, `gaius-5-may` and `gaianus-5-may` with `greek` rows venerated on 5 Μαΐου, saint.gr's «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες». That refusal was against the corpus's settled rule: two entries on one calendar are two commemorations, and so two men. The 5 May three are therefore other men, their rows are not touched, and this folder is surnamed with its own day so that it cannot be read as the 5 May man; the corpus also keeps a Pope Gaius of Rome on this menologion day, who is a third man and is left alone. saint.gr gives no year, no country and no relics, so there is no `dates` object. The page prints two distichs and no hymn, and this Gaius belongs to the first of them. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
