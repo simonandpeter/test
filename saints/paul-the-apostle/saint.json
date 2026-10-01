@@ -6,6 +6,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 iunie, «Sfinții Apostoli Petru și Pavel»."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουνίου, «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουνίου — «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι»",
+        "url": "https://www.saint.gr/06/29/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -64,6 +78,39 @@
         "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Οἱ τῶν Ἀποστόλων πρωτόθρονοι, καὶ τῆς Οἰκουμένης διδάσκαλοι, τῷ Δεσπότῃ τῶν ὅλων πρεσβεύσατε, εἰρήνην τῆ οἰκουμένῃ δωρήσασθαι, καὶ ταῖς ψυχαῖς ἡμῶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, on the page of «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι»",
+        "url": "https://www.saint.gr/642/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "First-enthroned of the Apostles and teachers of the whole world, intercede with the Master of all things that He grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τοὺς ἀσφαλεῖς καὶ θεοφθόγγους κήρυκας, τὴν κορυφὴν τῶν Μαθητῶν σου Κύριε, προσελάβου εἰς ἀπόλαυσιν, τῶν ἀγαθῶν σου καὶ ἀνάπαυσιν, τοὺς πόνους γὰρ ἐκείνων καὶ τὸν θάνατον, ἐδέξω ὑπὲρ πᾶσαν ὁλοκάρπωσιν, ὁ μόνος γινώσκων τὰ ἐγκάρδια.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς, on the page of «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι»",
+        "url": "https://www.saint.gr/642/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sure and God-inspired heralds, the chief of Thy disciples, Thou hast taken to Thyself, O Lord, into the enjoyment of Thy good things and into rest; for Thou didst accept their labours and their death above every whole burnt offering, O Thou who alone knowest the secrets of the heart.",
+        "rendered": "site"
+      },
+      "model": "Τοὺς ἀσφαλεῖς."
     }
   ],
   "text": {

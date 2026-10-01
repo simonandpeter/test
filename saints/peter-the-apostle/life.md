@@ -14,4 +14,6 @@ His love made him want no harm to come to Christ, so that when he learned before
 
 The life sets out at length the disagreement among the church historians over the year in which the two suffered, and settles on none, so no year is recorded here.
 
-*After doxologia.ro's calendar for 29 iunie — [the day](https://doxologia.ro/29-iunie) and [the life](https://doxologia.ro/viata-sfintilor-apostoli-petru-pavel); read 24 September 2026.*
+The Greek calendar keeps the two chief apostles together on the same 29 June, and saint.gr's shared page for them tells Peter's beginnings in fuller detail than the Romanian life does. He came from Bethsaida in Galilee, son of Jonah and brother of [Andrew the First-Called](/saints/andrew-the-first-called), and the two were fishermen on the lake of Gennesaret; he had married at Capernaum and kept house there with his wife's mother. After the Ascension, the page says, he taught in Judaea, Antioch, Pontus, Galatia, Cappadocia, Asia and Bithynia, and by a tradition it is careful to call not fully corroborated he reached Rome and was crucified head downward under Nero.
+
+*After doxologia.ro's calendar for 29 iunie — [the day](https://doxologia.ro/29-iunie) and [the life](https://doxologia.ro/viata-sfintilor-apostoli-petru-pavel); read 24 September 2026; and saint.gr's calendar for 29 Ιουνίου — [the Greek day](https://www.saint.gr/06/29/index.aspx) and [the Greek life](https://www.saint.gr/642/saint.aspx), read 1 October 2026.*
