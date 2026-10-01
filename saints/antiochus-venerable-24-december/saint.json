@@ -1,0 +1,50 @@
+{
+  "slug": "antiochus-venerable-24-december",
+  "display_name": "Antiochus (24 December)",
+  "names": [
+    {
+      "form": "Αντίοχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Αντίοχος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Όσιος Αντίοχος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3228/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and in place of a life it prints a supposition and a bibliography. **The page marks it as a supposition and so does this folder**: «Ο Άγιος Νικόδημος ο Αγιορείτης υποθέτει ότι ο Όσιος αυτός είναι ο λεγόμενος Πάνδεκτος», the author of the Pandektes, who lived in the middle of the 7th century, came from Galatia and was a monk at the monastery of Saint Sabbas in Jerusalem, who described the sack of Jerusalem by the Arabs and lamented the killing of the monks of the Lavra. **No `dates` object and no second `types` entry are drafted**, because the century and the monastic life both belong to the identification Nikodemos only supposes; `venerable` is from the calendar's own «Όσιος». The page's closing bibliography — Archimandrite Kallistos's study of 1910 and I. Phokylides's «Ἡ Ἱερὰ Λαύρα Σάββα τοῦ ἡγιασμένου» — is recorded in the life. He is none of the corpus's four other Antiochuses, who are kept on other days. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

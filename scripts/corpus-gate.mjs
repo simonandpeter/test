@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'αγαπιοσ agapius-2-november agapius-22-november agapius-disciple-of-babylas agapius-disciple-of-passarion agapius-martyr-1-march agapius-metaxas agapius-of-apamea agapius-of-colciu agapius-of-dimitsana agapius-of-galatista agapius-of-gaza agapius-of-numidia agapius-son-of-bassa agapius-the-younger':
+    'Fourteen now. The new one is Agapius the Younger on 24 December — and the reading would not swear he is not the teacher of Agapius of Dimitsana, one town, one surname and one monastic name between them, so no relation is recorded and it is in ro-run/FINDINGS.md. The others are read in the el-11-22 entry for this name form.',
+  'φιλιπποσ philip-father-of-eugenia philip-of-gortyna philip-of-moscow philip-of-nicomedia philip-of-sicily philip-of-worms philip-ordinets philip-the-apostle philip-the-deacon philip-the-first-of-moscow philippus-of-niculitel':
+    'Eleven now. The new one is Philip the father of Eugenia on 24 December; the others are read in the el-05-27 entry for this name form.',
+  'νικολαοσ nicholas-chrysoberges nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-from-the-soldiers nicholas-katopinos nicholas-kedrov nicholas-martyr-7-december nicholas-migulin nicholas-of-chios nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-melambes nicholas-of-metsovo nicholas-of-myra nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-thessalonica nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-simple nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
+    'Thirty-one now. The new one is the Nicholas the page calls from the Soldiers on 24 December, a soldier who died a monk; the others are read in the el-12-16 entry for this name form.',
+  'υακινθοσ hyacinth-companion-of-eugenia hyacinth-son-of-theoclitus hyacinth-the-chamberlain':
+    'Three men. The new one is Hyacinth the companion of Eugenia on 24 December, who stands with Protas; the others are Hyacinth the chamberlain on 3 July and Hyacinth the son of Theoclitus on 18 July.',
+  'καστουλοσ castulus-18-december castulus-martyr-24-december':
+    'Two men. The new one is the Castulus of 24 December; the other is the Castulus of 18 December, of the household around Sebastian of Rome — six days apart, two entries, two men.',
+  'αφροδισιοσ aphrodisius aphrodisius-ascetic-24-december aphrodisius-companion-of-peter aphrodisius-of-alexandria aphrodisius-of-scythopolis':
+    'Five men. The new one is the Aphrodisius of 24 December, an ascetic; the others are read in the el-05-03 entry for this name form, with the Aphrodisius of 21 June.',
+  'αντιοχοσ antiochus-disciple-of-athenogenes antiochus-of-ramas antiochus-the-physician antiochus-the-tribune antiochus-venerable-24-december':
+    'Five men. The new one is the Antiochus of 24 December, a venerable; the others are read in the el-07-16 entry for this name form.',
+  'αχαικοσ achaicus-martyr-24-december achaicus-the-apostle':
+    'Two men. The new one is the Achaicus of 24 December; the other is Achaicus of the Seventy on 15 June.',
   'χρυσογονοσ chrysogonus chrysogonus-eparch-of-thessalonica':
     'Two men. The new one is Chrysogonus, eparch of the city of Thessalonica, on 23 December, who carries no `types` because the vocabulary has no word for a civil governor; the other is the Chrysogonus whom the Romanian keeps on 22 December and the Greek on 24 November.',
   'ζωιλοσ zoilus-companion-of-zeno zoilus-martyr-22-december zoilus-the-roman':

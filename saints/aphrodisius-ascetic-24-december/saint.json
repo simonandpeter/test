@@ -1,0 +1,50 @@
+{
+  "slug": "aphrodisius-ascetic-24-december",
+  "display_name": "Aphrodisius (24 December)",
+  "names": [
+    {
+      "form": "Αφροδίσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Αφροδίσιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Όσιος Αφροδίσιος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3230/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is one hedged sentence: «Ο Όσιος Αφροδίσιος ήταν μάλλον ασκητής της ερήμου που απεβίωσε ειρηνικά» — he was **probably** an ascetic of the desert, who died in peace. **The hedge is why `ascetic` is not in `types`**: `venerable` is the calendar's own «Όσιος», and the manner of life is only what the page guesses. No year, no place and no hymn, so no `dates` object and no `locations`. **He is not the corpus's `aphrodisius`**, a martyr whom both the Greek and the Romanian keep on 21 June, nor any of the three other Aphrodisius folders; two entries on one calendar are two commemorations. The page prints the mythological gloss the site gives every Aphrodisius, about the goddess, which is page furniture. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "slug": "achmet-kalfas",
+  "display_name": "Achmet Kalfas",
+  "names": [
+    {
+      "form": "Αχμέτ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Άγιος Αχμέτ ο Κάλφας ο Νεομάρτυρας», with the rank words left off; the by-name Κάλφας is the page's own, and the corpus already keeps `john-kalfas` under the same by-name. The page gives the name twice over, «Ο Άγιος Αχμέτ (ή Αχμέδ)», so Αχμέδ is an alternative it records and not a second form to store. It says expressly that the Christian name he was given at baptism has not survived — «δε διασώθηκε ποιο χριστιανικό όνομα του δόθηκε» — so none is invented here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1682,
+      "latest": 1682,
+      "display": "3 May 1682",
+      "basis": "attested",
+      "note": "saint.gr: «τον βασάνισαν και τον αποκεφάλισαν στις 3 Μάιου του έτους 1682 μ.Χ., στην τοποθεσία που ονομαζόταν Κεαπχανέ - Μπαξέ», with the page's head «(; - 1682)». No year of birth is given. The day of death the page gives is not the day of the feast it is printed under, which is 24 December; both are recorded and neither is reconciled here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιος Αχμέτ ο Κάλφας ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/870/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and «Αγιος Αχμετ ο Καλφας ο Νεομαρτυρας (; - 1682)». **The page's own date of death is not the day it is kept on**: it says he was beheaded «στις 3 Μάιου του έτους 1682 μ.Χ., στην τοποθεσία που ονομαζόταν Κεαπχανέ - Μπαξέ». The row records 24 Δεκεμβρίου, which is the day page read and the day the life itself heads as his fixed feast, and the 3 May is kept here and named in the report; it is a day of death and not a second feast, and one attestation row per church is the schema. The year 1682 is drafted as the death. He was of Constantinople, a Turk and a Muslim by birth, and a clerk to the chief accountant; the page credits the Μέγας Συναξαριστής for the household of the two Russian Orthodox slave women through whom he came to the faith, and tells at length the vision in the church of the Patriarchate and his confession before the Muslim grandees of the city, «Μεγαλωτάτη από όλα είναι η πίστη των Χριστιανών». The patriarch and the priest who baptised him are unnamed and no `related` row follows. No coordinate is proposed for Constantinople or for the place of execution. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

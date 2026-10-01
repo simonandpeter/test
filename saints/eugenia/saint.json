@@ -6,6 +6,11 @@
       "form": "Eugenia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 decembrie, «Sfânta Muceniță Eugenia», with the rank words left off."
+    },
+    {
+      "form": "Ευγενία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Αγία Ευγενία η Οσιοπαρθενομάρτυς», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Αγία Ευγενία η Οσιοπαρθενομάρτυς»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3222/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps for the Romanian, and it is the same woman: the virgin martyr of Rome who fled her parents' match in man's clothes and was beheaded. The Greek gives her the compound rank Οσιοπαρθενομάρτυς, venerable virgin martyr, which the folder's `types` already cover with martyr and virgin. Its head gives «(; - 262)» while its first sentence says she «έζησε στο δεύτερο μισό του 3ου αιώνα μ.Χ.», and **a `dates` object is drafted on the stated century and not on the head's year**, because the two do not sit together and the sentence is the page's own prose. The page names her father Philip, her mother Claudia, her brothers Avitas and Sergios, and the Roman official Aquilinas her parents meant her for; her father is this day's new folder `philip-father-of-eugenia`, and the mother and the brothers are not on the calendar and get none. Alexandria and Rome are named and no coordinate is proposed; a portion of her relic is at the monastery of Boura of Megalopolis, which is not drafted. An apolytikion and a kontakion are printed with their ἦχος and their automela, both naming her, and both are taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -46,5 +61,56 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 300,
+      "display": "second half of the 3rd century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Ευγενία η Οσιοπαρθενομάρτυς έζησε στο δεύτερο μισό του 3ου αιώνα μ.Χ.» The same page's head gives «(; - 262)», which the stated half-century contains but does not confirm; the sentence is followed and the head's year is recorded here rather than drafted. The folder held no `dates` before this."
+    }
+  },
+  "related": [
+    "philip-father-of-eugenia",
+    "basilla-martyr-24-december",
+    "protas-companion-of-eugenia",
+    "hyacinth-companion-of-eugenia"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείου Πνεύματος τῇ ὑμνωδίᾳ, φῶς προσέλαβες θεογνωσίας, Εὐγενία Χριστοῦ καλλιπάρθενε· καὶ ἐν ὁσίων χορείᾳ ἐκλάμψασα, ἀθλητικῶς τὸν ἐχθρὸν ἐθριάμβευσας. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Αγία Ευγενία η Οσιοπαρθενομάρτυς», and it names her.",
+        "url": "https://www.saint.gr/3222/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the hymnody of the divine Spirit you took to yourself the light of the knowledge of God, Eugenia, fair virgin of Christ; and shining out in the choir of the venerable, you triumphed over the enemy as a contender. Glorious martyr, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν τοῦ κόσμου πρόσκαιρον, φυγοῦσα δόξαν, τὸν Χριστὸν ἐπόθησας, τὸ εὐγενές σου τῆς ψυχῆς, ἀδιαλώβητον σῴζουσα, Μάρτυς θεόφρον, Εὐγενία πανεύφημε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Αγία Ευγενία η Οσιοπαρθενομάρτυς», printed as hers and naming her; it plays on her name, εὐγενές against Εὐγενία.",
+        "url": "https://www.saint.gr/3222/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fleeing the passing glory of the world, you longed for Christ, keeping the nobility of your soul unmarred, God-minded martyr, all-praised Eugenia.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ]
 }

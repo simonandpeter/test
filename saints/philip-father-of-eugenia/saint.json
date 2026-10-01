@@ -1,0 +1,53 @@
+{
+  "slug": "philip-father-of-eugenia",
+  "display_name": "Philip, father of Eugenia",
+  "names": [
+    {
+      "form": "Φίλιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Άγιος Φίλιππος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιος Φίλιππος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3224/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is one sentence: «Ο Άγιος Φίλιππος ήταν πατέρας της Αγίας Ευγενίας και μαρτύρησε, αφού θανατώθηκε με μαχαίρι.» The relation to Eugenia is the page's own and is the `related` row; the corpus keeps her as `eugenia` and the same calendar keeps her on this day, so this is plainly her father and not one of the seventeen other Philips the corpus holds, none of whom is kept on 24 December. Her own page `/3222/` names him and her mother Claudia, makes him prefect at Alexandria, and says the idolaters wounded him mortally out of hatred after the whole household had become Christian; that is reported in the life and no `locations` is drafted from it. No year and no hymn, so no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "eugenia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

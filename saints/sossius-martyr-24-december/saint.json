@@ -1,0 +1,62 @@
+{
+  "slug": "sossius-martyr-24-december",
+  "display_name": "Sossius (24 December)",
+  "names": [
+    {
+      "form": "Σόσσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's head line for this man on the page of «Άγιοι Σόσσιος και Θεόκλειος», 24 Δεκεμβρίου, with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "under Maximian",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησαν επί Μαξιμιανού (286 - 305 μ.Χ.) και Μαγνεντίου». The years are the page's own for the reign; no year of birth and no closer year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιοι Σόσσιος και Θεόκλειος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3231/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and gives each of the two men a head line of his own — «Αγιος Θεοκλειος» and «Αγιος Σοσσιος» — so **the company is enumerated** and each keeps a folder and relates the other. The page is explicit about its source: «Άγνωστοι στον Συναξαριστή του Αγίου Νικόδημου. Αναφέρονται στον Παρισινό Κώδικα 1621, με λίγα βιογραφικά στοιχεία.» The `dates` are the page's own statement of their martyrdom, «Μαρτύρησαν επί Μαξιμιανού (286 - 305 μ.Χ.) και Μαγνεντίου», with the reign's years printed on the page and not supplied here; no year of birth. The governor it names, Βαύδος of Adrianople of Macedonia, and the Μαγνέντιος beside Maximian have no folders and are not `related` rows. No coordinate is proposed for Adrianople. No hymn. The entry is unknown to Nikodemos but the page vouches for it with a named codex, and it carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "theocleius-martyr-24-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "slug": "hyacinth-companion-of-eugenia",
+  "display_name": "Hyacinth, companion of Eugenia",
+  "names": [
+    {
+      "form": "Υάκινθος",
+      "lang": "el",
+      "note": "Read out of saint.gr's head line for this man on the page of «Άγιοι Πρωτάς και Υάκινθος», 24 Δεκεμβρίου, with the rank word and the clause about Eugenia left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιοι Πρωτάς και Υάκινθος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3225/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and gives each of the two men a head line of his own — «Αγιος Υακινθος ο Συν Τη Αγια Ευγενια» and «Αγιος Πρωτας ο Συν Τη Αγια Ευγενια» — before the one sentence they share: «Οι Άγιοι Πρωτάς και Υάκινθος ήταν υπηρέτες και αργότερα συνασκητές της Αγίας Ευγενίας (βλέπε ίδια ημέρα), οι οποίοι μαρτύρησαν δια ξίφους στη Ρώμη.» **The company is enumerated**, so each man keeps a folder and each relates the other and Eugenia. No year and no hymn, so no `dates` object; Rome is named and no coordinate is proposed. He is none of the corpus's three other Hyacinths — the chamberlain of the Greek 3 July, the son of Theoclitus, and Hyacinth of Vicina — all of whom are kept on other days; two entries on one calendar are two commemorations. The page prints the mythological gloss the site gives every Hyacinth, about Apollo and the flower, which is page furniture and not a reading. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "protas-companion-of-eugenia",
+    "eugenia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

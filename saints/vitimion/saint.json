@@ -1,0 +1,51 @@
+{
+  "slug": "vitimion",
+  "display_name": "Vitimion",
+  "names": [
+    {
+      "form": "Βιτιμίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Βιτιμίων», with the rank word left off. The Nikodemos passage the same page quotes says that in the Paradise of the Fathers he is named Βιτίμιος, which is recorded and not stored as a second form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Όσιος Βιτιμίων»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3229/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its own sentence is «Ο Όσιος Βιτιμίων ήταν ασκητής της ερήμου που απεβίωσε ειρηνικά», and after it the page quotes whole the passage Nikodemos the Hagiorite gives in his Synaxaristes: the apples he was given to take to the elders in the Skete, Abba Achillas's answer at the cell door, and his taking the apples to the church instead and withdrawing to his own cell. **No `related` row is made to the corpus's `achillas`**, the bare venerable of the Greek and Romanian 17 January about whom doxologia prints no life at all: that folder says nothing that would identify him with the Abba Achillas of this apophthegm, and the identification is not a reader's to make. No year, no place but the Skete and the desert, and no hymn, so no `dates` object and no `locations`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

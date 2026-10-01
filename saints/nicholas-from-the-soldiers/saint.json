@@ -1,0 +1,61 @@
+{
+  "slug": "nicholas-from-the-soldiers",
+  "display_name": "Nicholas from the Soldiers",
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Νικόλαος «ὁ ἀπὸ στρατιωτῶν»», with the rank word left off; the epithet «ὁ ἀπὸ στρατιωτῶν» is the page's own, and the corpus already follows it for `peter-from-the-soldiers` of the Greek 9 October."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "soldier"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 802,
+      "latest": 811,
+      "display": "802 to 811",
+      "basis": "attested",
+      "note": "saint.gr: «επί Νικηφόρου του Λογοθέτου (802 - 811 μ.Χ.)», and in the Nikodemos passage the same page quotes, «κατά τους χρόνους Nικηφόρου του βασιλέως, του Πατρικίου και Σταυρακίου επικαλουμένου, εν έτει ωβ΄ [802]». Those are the years of the campaign he went out on; the page gives no year of birth and no year of death, and says only that he died in peace in a monastery afterwards."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Όσιος Νικόλαος «ὁ ἀπὸ στρατιωτῶν»»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3226/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and the listing adds «και διήγησις ωφέλιμος», a profitable narrative, which is what the page is: a short account followed by the whole of Nikodemos the Hagiorite's longer telling, quoted at length. **The years are the page's own**: «επί Νικηφόρου του Λογοθέτου (802 - 811 μ.Χ.)» in the short account, and «εν έτει ωβ΄ [802]» in Nikodemos, which is when he went out with the army; so a `floruit` is drafted on those years and no birth or death is. The campaign is the Bulgarian war in which the emperor Nikephoros was killed, which the page narrates and does not date beyond the reign. The judge of the vision is not named and no `related` row follows from the narrative. No place is given but the inn, the mountain and the passes of Bulgaria, so no `locations`. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

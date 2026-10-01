@@ -1,0 +1,67 @@
+{
+  "slug": "agapius-the-younger",
+  "display_name": "Agapius the Younger",
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Όσιος Αγάπιος ο νεώτερος», with the rank word left off. The page gives his name in the world as Αντώνιος Αντωνόπουλος and says he was known also as Αγάπιος Παπαντωνόπουλος; neither is drafted as a second form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1753,
+      "latest": 1753,
+      "display": "1753",
+      "basis": "attested",
+      "note": "saint.gr's head «Οσιος Αγαπιος ο Νεωτερος (1753 - 1812)» and its text «(Δημητσάνα, 1753 - 1812 μ.Χ.)»."
+    },
+    "death": {
+      "earliest": 1812,
+      "latest": 1812,
+      "display": "1812",
+      "basis": "attested",
+      "note": "saint.gr's head «Οσιος Αγαπιος ο Νεωτερος (1753 - 1812)» and its text «(Δημητσάνα, 1753 - 1812 μ.Χ.)». The page does not say where he died or how."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Όσιος Αγάπιος ο νεώτερος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3233/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and «Οσιος Αγαπιος ο Νεωτερος (1753 - 1812)». The years are drafted from that head and from the text's «(Δημητσάνα, 1753 - 1812 μ.Χ.)». **This is not the corpus's `agapius-of-dimitsana`**, and an author should look at the pair: that folder is «Όσιος Αγάπιος ο πρεσβύτερος» of the Greek 6 November, whose name in the world it gives as Ασημάκης Λεονάρδος — and this page names, among this Agapius's own teachers at the school of Dimitsana, an **Αγάπιος Λεονάρδος**. The two may well be teacher and pupil of one town and one monastic name. **No `related` row is drafted on that reading**, because it rests on a surname and a town and not on anything either page states; the teacher is named in the life without a link, and the question is in the report. The page is a schoolmaster's life and names Γεράσιμος Γούνας, Ιερόθεος Δενδρινός and Άνθιμος Καράκαλλος, none of whom has a folder. Dimitsana, Smyrna and Chios are named and no coordinate is proposed. The page says plainly «Συγγραφικό έργο του Αγάπιου δεν έχουμε», that no writings of his survive. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

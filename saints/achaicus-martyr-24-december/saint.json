@@ -1,0 +1,50 @@
+{
+  "slug": "achaicus-martyr-24-december",
+  "display_name": "Achaicus (24 December)",
+  "names": [
+    {
+      "form": "Αχαϊκός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Άγιος Αχαϊκός», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιος Αχαϊκός»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3227/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole account is one sentence: «Ο Άγιος Αχαϊκός μαρτύρησε δια ξίφους.» No year, no place, no emperor and no hymn, so no `dates` object and no `locations`. **He is not the corpus's `achaicus-the-apostle`**, who is one of the three the Greek keeps on 15 Ιουνίου, «Άγιοι Φουρτουνάτος, Αχαϊκός και Στεφανάς οι Απόστολοι», and whose rank the same site gives as apostle; two entries on one calendar are two commemorations, and nothing on either page joins them. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

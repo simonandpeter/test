@@ -1,0 +1,59 @@
+{
+  "slug": "castulus-martyr-24-december",
+  "display_name": "Castulus (24 December)",
+  "names": [
+    {
+      "form": "Καστούλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Δεκεμβρίου, «Άγιος Καστούλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 323,
+      "display": "under Licinius",
+      "basis": "traditional",
+      "note": "saint.gr: «ο Άγιος αυτός μαρτύρησε στα χρόνια του βασιλιά Λικινίου (307 - 323 μ.Χ.)». The years are the page's own for the reign; no year of birth and no closer year of death is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Δεκεμβρίου — «Άγιος Καστούλος»",
+        "url": "https://www.saint.gr/12/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3232/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Δεκεμβρίου εκάστου έτους», the same day as the listing, and names its source: «Ο Άγιος Καστούλος είναι άγνωστος στον Συναξαριστή του Αγίου Νικόδημου και τα έντυπα Μηναία. Αναφέρεται στον Παρισινό Κώδικα 1621 με σύντομο βιογραφικό υπόμνημα.» The `dates` are the page's own statement, «ο Άγιος αυτός μαρτύρησε στα χρόνια του βασιλιά Λικινίου (307 - 323 μ.Χ.)», with the reign's years printed on the page; no year of birth. The governor Ζηλικίνθιος has no folder and is not a `related` row. No place is named at all, so no `locations`. **He is not the corpus's `castulus-companion-of-zoticus`**, who is Καστούλιος, one of the four the Greek keeps on 12 Ιανουαρίου: another form of the name and another day. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
