@@ -1,0 +1,96 @@
+{
+  "slug": "thyrsus-of-karpasia",
+  "display_name": "Thyrsus of Karpasia",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "ascetic",
+    "wonderworker"
+  ],
+  "office": "Bishop of Karpasia",
+  "names": [
+    {
+      "form": "Θύρσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Άγιος Θύρσος», with the rank word left off. The page says he is better known in the popular form «Άης Θέρισσος» and that the see in the display name is his, Karpasia in Cyprus."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 965,
+      "latest": 965,
+      "display": "c. 965",
+      "basis": "traditional",
+      "note": "The one year saint.gr prints for him is the year he left his see: «Όταν ο Νικηφόρος Φωκάς κατά το 965 μ.Χ. ελευθέρωσε την Κύπρο από την εξουσία των Αράβων… ο Άγιος Θύρσος βρήκε κατάλληλο διάδοχο για την επισκοπή του και αποσύρετε σε μια σπηλιά στη βόρεια ακτή της Καρπασίας.» The page says plainly of his birth, «Πότε και που γεννήθηκε δεν γνωρίζουμε», and gives no year for his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Άγιος Θύρσος»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day as the listing, and calls him one of the three hierarchs of Karpasia. Two kinds of thinness on the page are worth recording and neither is the site's own disclaimer — there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence. First, it says the synaxarion and the service give very poor and limited information, that it does not know when or where he was born, and that much of what it then says is read out of the service's own troparia, «θρέμμα κάλλιστον των Καρπασέων» and «εκ Βρέφους», with the page itself marking where it is inferring. Second: «Μερικοί μάλιστα αμφισβητούν, αν υπήρξε ιεράρχης ή όσιος ή μάρτυρας, γιατί με το ίδιο όνομα είναι κι ένας άλλος άγιος, που έζησε στα χρόνια της βασιλείας του αυτοκράτορα Δεκίου και που μαρτύρησε στον Ελλήσποντο» — some doubt whether he was a hierarch or a venerable or a martyr, because of another saint of the same name who suffered in the Hellespont under Decius. That other man is in the corpus: `thyrsus-of-caesarea`, with `thyrsus-20-january` beside him, and neither is this bishop of Cyprus. `types` takes only what this page's own narrative gives, a bishop who became an ascetic in a cave and whose holy water heals; it does not say martyr. The page prints two apolytikia and both name him, and both are taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Τοὶς πίστει προστρέχουσι, Θύρσε τρισόλβιε, σορῶ τῶν λειψάνων σου, καὶ προσκυνοῦσα πιστῶς, τοῦ εἴδους ἐμφέρειαν, ἄφεσιν τῶν πταισμάτων, καὶ σωμάτων τὴν ρώσιν, δώρησε ἱεράρχα, ἐκ παντοίων κινδύνων, καὶ παθῶν ἀρρώστιας, πάντας ἐκλύτρωσε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’ — the first of the two hymns on the page of «Άγιος Θύρσος», and it names him. The page prints it with several forms out of agreement, «προσκυνοῦσα» and «δώρησε» and «ἐκλύτρωσε», and that is its own reading",
+        "url": "https://www.saint.gr/2045/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "To those who run in faith to the casket of your relics, thrice-blessed Thyrsus, and venerate faithfully the likeness of your face, grant forgiveness of offences and health of body, hierarch; and deliver all from dangers of every kind and from the sicknesses of the passions.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "text": "Καρπασέων τὸ κλέος καὶ Κυπρίων ἀγλάϊσμα, καὶ θαυματουργὸς ἀνεδείχθης, Θύρσε ἱεράρχα ἀοίδιμε, νηστεία, ἀγρυπνία, προσευχή, οὐράνια χαρίσματα λαβῶν, θεραπεύεις τοὺς νοσοῦντας, καὶ τᾶς ψυχᾶς τῶν πίστει προστρεχόντων σοί. Δόξα τῷ δεδωκότι σοὶ ἰσχὺ ν, δόξα τῷ σὲ στεφάνωσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α’ — the second of the two hymns on the page of «Άγιος Θύρσος», and it names him. The split word «ἰσχὺ ν» is the page's own",
+        "url": "https://www.saint.gr/2045/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glory of the people of Karpasia and the adornment of the Cypriots, you were shown to be a wonderworker also, renowned hierarch Thyrsus; for by fasting, by vigil and by prayer you received heavenly gifts, and you heal the sick and the souls of those who run to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

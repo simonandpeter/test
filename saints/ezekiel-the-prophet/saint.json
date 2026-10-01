@@ -6,6 +6,11 @@
       "form": "Iezechiel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 iulie, «Sfântul Proroc Iezechiel», with the rank words left off."
+    },
+    {
+      "form": "Ιεζεκιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Προφήτης Ιεζεκιήλ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Προφήτης Ιεζεκιήλ»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους». The Greek calendar keeps the prophet on 23 Ιουλίου and the folder's Romanian row keeps him on 21 iulie — a different day on a different calendar, which is what the two rows are for, and the Greek listing for 21 Ιουλίου does not name him. The man is the folder's own: the son of the priest Buzi, carried captive to Babylon, killed by the tribe of Gad for rebuking their leaning to idols. The page adds what the Romanian life did not and it is taken into `dates`: the sixth century before Christ, in the days of Nebuchadnezzar, with «κατ' άλλους το 477 π.Χ.» offered as another reckoning, and 598 BC for the first capture of Jerusalem. It adds that he was buried in what is today Baghdad in Iraq, and that the vision of the dry bones is read at the vespers of Great Saturday because it foretells the resurrection of the dead. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints three hymn texts and two are taken, the Ἀπολυτίκιον and the Κοντάκιον, both of which name him; the μεγαλυνάριον is left out because the schema holds a troparion or a kontakion and nothing else."
     },
     {
       "church": "serbian",
@@ -60,9 +75,52 @@
         "text": "Keeping the memory of Your prophet Ezekiel, O Lord, through him we entreat You: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "θείας πίστεως.",
+      "text": "Θείου Πνεύματος, τὴ ἐπιπνοία, προκατήγγειλας, Θεοῦ Προφῆτα, ἐσομένων μυστηρίων τὴν ἔκβασιν τὴν τοῦ Σωτῆρος ἀπόρρητον κένωσιν, καὶ αἰωνίων νεκρῶν τὴν ἀνάστασιν Ἰεζεκιὴλ ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, θείας πίστεως — the first of the three hymn texts on the page of «Προφήτης Ιεζεκιήλ», and it names him",
+        "url": "https://www.saint.gr/2034/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the inspiration of the divine Spirit you foretold, prophet of God, the outcome of the mysteries that were to be — the Saviour's unutterable self-emptying, and the resurrection of the dead of all the ages. Glorious Ezekiel, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Καταυγασθεὶς τῇ θεϊκῇ ἐπιλάμψει, τῆς προφητείας, ὑπεδέξω τὴν χάριν, προζωγραφῶν τὰ μέλλοντα τῷ κόσμῳ τυπικῶς, πύλην ἀδιόδευτον, προϊδὼν τὴν Παρθένον, ἐξ ἧς ὁ Λόγος ἔλαμψεν, ὡς ποιμὴν ἐν τῷ κόσμῳ, Ἰεζεκιὴλ Προφῆτα τοῦ Θεοῦ, καὶ τῆς κατάρας ἡμᾶς ἐλυτρώσατο.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Θείας πίστεως — the second of the three hymn texts on the page of «Προφήτης Ιεζεκιήλ», and it names him",
+        "url": "https://www.saint.gr/2034/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lit up by the shining of God, you received the grace of prophecy, painting beforehand in figures what was to come upon the world, having foreseen the Virgin as the gate no man passes through, out of whom the Word shone as a shepherd in the world, Ezekiel, prophet of God, and redeemed us from the curse.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -600,
+      "latest": -501,
+      "display": "6th century BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Προφήτης Ιεζεκιήλ έζησε στα χρόνια του Ναβουχοδονόσορα, κατά τον έκτο αιώνα π.Χ. (κατ' άλλους το 477π.Χ.)». The century is the page's own and the interval is that century; the «κατ' άλλους το 477 π.Χ.» is the page's other reckoning and is not taken, since the page itself puts it second and in brackets. The same page dates his father's captivity: «οδηγήθηκε αιχμάλωτος στην Βαβυλώνα μετά την πρώτη κατάληψη της Ιερουσαλήμ, το 598 π.Χ.» The Romanian source the folder was built from gave no year."
+    }
   }
 }

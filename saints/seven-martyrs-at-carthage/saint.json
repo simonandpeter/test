@@ -1,0 +1,50 @@
+{
+  "slug": "seven-martyrs-at-carthage",
+  "display_name": "The Seven Martyrs at Carthage",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Επτά Μάρτυρες που μαρτύρησαν στην Καρθαγένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Άγιοι Επτά Μάρτυρες που μαρτύρησαν στην Καρθαγένη», with the rank word left off. The page names none of the seven."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Άγιοι Επτά Μάρτυρες που μαρτύρησαν στην Καρθαγένη»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is «Οι Άγιοι Επτά Μάρτυρες μαρτύρησαν στην Καρθαγένη ή κατ' άλλους στη Χαλδία (Χαλκηδόνα). Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων Μαρτύρων.» The place is therefore unsettled on the page itself, Carthage or, by others, Chaldia — which the page then glosses as Chalcedon — and the display name keeps the listing's Carthage with the alternative in the life. The entry enumerates nobody, so it is one entry and one folder. `sex` is left unknown: the distich's «ἀθληταί ἑπτά» is a masculine plural that need not be a statement about them. The corpus's Carthage folders are Cyprian, Perpetua, Felicitas, Caecilius, Celerinus, Heracles and Zosimas, seven separate saints of that city on other days and not this company; its seven-companies are the Seven Soldiers of 26 January, the Seven Virgins of Gaza and the Seven Women of Sebaste. No year, no century, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

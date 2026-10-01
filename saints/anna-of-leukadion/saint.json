@@ -1,0 +1,60 @@
+{
+  "slug": "anna-of-leukadion",
+  "display_name": "Anna of Leukadion",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Οσία Άννα η εν τω Λευκαδίω», with the rank word and the byname left off. The page gives the place in two forms, «η εν τω Λευκαδίω (ή Λευκάτη)»."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 829,
+      "latest": 842,
+      "display": "reign of Theophilus, 829–842",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Άννα η εν τω Λευκαδίω (ή Λευκάτη) έζησε στα χρόνια του βασιλιά Θεοφίλου του εικονομάχου (829 - 842 μ.Χ.)». The interval is that reign, which is the only one the page prints with years, and it marks when she was living and not when she died: the same page has her fifty years a nun afterwards. The page then says her suitor asked for her «με την συγκατάθεση του βασιλιά Βασιλείου», with the consent of the emperor Basil, who reigned long after Theophilus; that disagreement is the page's own and no year is drawn from it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Οσία Άννα η εν τω Λευκαδίω»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day as the listing. The page dates her twice and the two do not agree: the reign of Theophilus the iconoclast, which it gives as 829–842, and then the consent of «ο βασιλιάς Βασίλειος» to her suitor's request. The reign with years is taken into `dates` and the other is recorded here; nothing is reconciled. The corpus holds a dozen women named Anna and none of them hers — Anna of Adrianople, of Larissa, of Novgorod, the Princess, the mother of Samuel, the two bare martyr entries and the twentieth-century Russians are all other women. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

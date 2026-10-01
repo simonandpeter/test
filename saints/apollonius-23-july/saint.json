@@ -1,0 +1,50 @@
+{
+  "slug": "apollonius-23-july",
+  "display_name": "Apollonius (23 July)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Απολλώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Άγιος Απολλώνιος Ιερομάρτυρας επίσκοπος Ρώμης», with the rank words and the see left off. The see is left out of the display name as well, because the page denies it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Άγιος Απολλώνιος Ιερομάρτυρας επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day as the listing. The page contradicts its own listing on one point and it is recorded rather than resolved: «Ο Άγιος Απολλώνιος μαρτύρησε, αφού τον θανάτωσαν με εκτοξευόμενα βέλη και κατόπιν τον έριξαν στη φωτιά. Επίσκοπος Ρώμης όμως με τέτοιο όνομα δεν υπήρξε. Ο δε Παρισινός Κωδ. 223 Coislin καλεί τον Άγιο αυτόν απλά Ιερομάρτυρα.» So no `office` is stored and the display name carries the day instead of the see; `types` keeps only what the Paris codex gives him, hieromartyr. The doubt is about the title and not about the man or the day, and there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence, so the folder is drafted on that footing. He is none of the corpus's seven other men of the name — Apollonius of Sardis, of Brescia, the Anchorite, the Reader, the companion of Proclus, the one of the Twenty-four Martyrs and the bare entry of 6 July — all on other days. No year, no century, so there is no `dates` object. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

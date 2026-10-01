@@ -6,6 +6,11 @@
       "form": "Pelaghia din insula Tinos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 iulie, «Sfânta Cuvioasă Pelaghia din insula Tinos», with the rank words left off."
+    },
+    {
+      "form": "Πελαγία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Οσία Πελαγία η Τηνία», with the rank word and the byname left off. The page gives her worldly name as Λούκια and says Πελαγία was the name she took as a nun, after the aunt who was her elder in the monastery."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Οσία Πελαγία η Τηνία»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and «Οσια Πελαγια η Τηνια (1752 - 1834)». The woman is the folder's own, the nun of Kechrovouni on Tinos to whom the Mother of God appeared about the finding of her icon; the page says the memory was appointed for 23 July because that was the day of the third vision, «την ήμερα δηλαδή του οράματος της», and that she was declared a saint by a synodical patriarchal act on 11 September 1970. Its heading gives the years the Romanian source did not and they are taken into `dates`. It also gives her father as the priest Nikephoros Negrepontis, her mother's family as the Phrangoulis of Tripotamos, her birth village as Kampos on Tinos and her worldly name as Loukia; the finding of the icon on 30 January 1823 in the field of Doxaras; her death on 28 April 1834 and her burial in the monastery's church of the Taxiarchai; and the church built for her in 1973 where her head is kept. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names her, and it is taken."
     },
     {
       "church": "serbian",
@@ -45,5 +60,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1752,
+      "latest": 1752,
+      "display": "1752",
+      "basis": "attested",
+      "note": "saint.gr heads her «Οσια Πελαγια η Τηνια (1752 - 1834)» and its narrative repeats it: «Γεννήθηκε το 1752 μ.Χ. στο χωριό Κάμπο της Τήνου και το κοσμικό της όνομα ήταν Λούκια.»"
+    },
+    "death": {
+      "earliest": 1834,
+      "latest": 1834,
+      "display": "1834",
+      "basis": "attested",
+      "note": "saint.gr heads her «(1752 - 1834)» and its narrative gives the day: her death «ήλθε στις 28 Απριλίου 1834 μ.Χ. και τάφηκε στο ναό των Ταξιαρχών του μοναστηριού»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Ἀμέμτπως ἐβίωσας ἐν ἐγκράτειᾳ πολλὴ καὶ πόνοις ἀσκήσεως καὶ ἐν ἀγάπῃ θερμή, Πελαγία Θεόληπτε. Ὅθεν τὴν Θεοτόκον ἐπαλλήλως κατεῖδες, μηνύουσαν σοὶ Εἰκόνος τὴν ἀνεύρεσιν ταύτης. Ἣν πρέσβευε, Ἁγία Μῆτερ, ὑπὲρ τῶν τιμώντων σέ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the only hymn on the page of «Οσία Πελαγία η Τηνία», and it names her. Its first word is printed «Ἀμέμτπως» for Ἀμέμπτως, which is the page's own reading",
+        "url": "https://www.saint.gr/2044/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You lived blamelessly, in much self-restraint and in the labours of ascesis and in fervent love, God-possessed Pelagia; and so you saw the Theotokos again and again, telling you of the finding of her icon. Entreat her, holy mother, for those who honour you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

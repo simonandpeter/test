@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θυρσοσ thyrsus-20-january thyrsus-of-karpasia':
+    'Two men: the Thyrsus of 20 January and Thyrsus of Karpasia on 23 July.',
+  'απολλωνιοσ apollonius-23-july apollonius-companion-of-proclus apollonius-martyr-6-july apollonius-of-brescia apollonius-of-sardis apollonius-of-the-twenty-four-martyrs apollonius-the-anchorite':
+    'Seven now. The new one is the Apollonius of 23 July, whom the dupscan proposed against the Apollonius of 6 July — two days, two entries, two men; the others are read in the el-07-07 entry for this name form.',
+  'αννα anna-martyr-20-january anna-of-larissa anna-of-leukadion anna-of-novgorod anna-the-princess':
+    'Five women. The new one is Anna of Leukadion on 23 July, dated by the reign of Theophilus; the others are read in the el-06-12 entry for this name form.',
   'βικτωρ victor-20-april victor-21-july victor-26-february victor-of-glazov victor-of-the-twenty-four-martyrs victor-of-thessalonica victor-yavorsky':
     'Seven now. The new one is the Victor of 21 July; the others are read in the el-07-06 entry for this name form.',
   'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-radovisdi parthenius-of-zographou parthenius-the-third':

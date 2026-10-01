@@ -1,0 +1,59 @@
+{
+  "slug": "martyrs-slain-by-the-bulgars",
+  "display_name": "The Martyrs slain by the Bulgars",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μάρτυρες που θανατώθηκαν από τους Βουλγάρους",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουλίου, «Άγιοι Μάρτυρες που θανατώθηκαν από τους Βουλγάρους», with the rank word left off. The page names none of them."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 811,
+      "latest": 811,
+      "display": "811",
+      "basis": "traditional",
+      "note": "saint.gr dates the campaign in which they were taken: «Ο βασιλιάς του Βυζαντίου Νικηφόρος ο Πατρίκιος, το 811 μ.Χ., βγήκε από την Κωνσταντινούπολη με όλα του τα στρατεύματα… για να πολεμήσει τους Βούλγαρους», and the killings follow in the same night's rout. The page gives no later date for them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουλίου — «Άγιοι Μάρτυρες που θανατώθηκαν από τους Βουλγάρους»",
+        "url": "https://www.saint.gr/07/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουλίου εκάστου έτους», the same day as the listing. The entry enumerates nobody: the three men it names — the emperor Nikephoros the Patrician, his son Staurakios and his son-in-law Michael — are the army's commanders and not the martyrs, and the martyrs are «όσοι στρατιώτες συνελήφθηκαν», the soldiers who were taken prisoner, pressed to deny Christ, and beheaded or hanged when they would not. So it is one entry and one folder, and the emperor killed in the battle by Krum is not part of it. `sex` is male because the page's martyrs are soldiers. The corpus holds no folder for them: its Bulgarian folders are Boris-Michael, Peter of Bulgaria, Sophronius, John the Bulgarian, Nicholas the Bulgarian and Abrahamios of Bulgar, none of them this company and none of them killed by Bulgars. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
