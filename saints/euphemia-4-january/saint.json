@@ -1,0 +1,53 @@
+{
+  "slug": "euphemia-4-january",
+  "display_name": "Euphemia (4 January)",
+  "names": [
+    {
+      "form": "Ευφημία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Αγία Ευφημία», with the rank word left off. The page marks the line with an asterisk of its own."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Αγία Ευφημία»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The page marks her name with an asterisk and explains it: «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου, ή τα βιογραφικά στοιχεία του ή η ημερομηνία εορτής του» — the saint's existence, or the biographical particulars, or the date of the feast, is not cross-checked. The row records what the page prints and carries its own caveat with it."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "chrysanthus-4-january"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

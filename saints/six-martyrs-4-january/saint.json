@@ -1,0 +1,50 @@
+{
+  "slug": "six-martyrs-4-january",
+  "display_name": "The Six Martyrs (4 January)",
+  "names": [
+    {
+      "form": "Έξι Μάρτυρες",
+      "lang": "el",
+      "note": "saint.gr gives them no names at all. Its line for 4 Ιανουαρίου is «Άγιοι Έξι Μάρτυρες», and the form recorded here is that phrase with the rank word left off."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Άγιοι Έξι Μάρτυρες»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      },
+      "note": "Their notice (https://www.saint.gr/479/saint.aspx) adds a second Greek day: «Η μνήμη τους επαναλαμβάνεται στις 15 Ιανουαρίου». The row records the day page read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

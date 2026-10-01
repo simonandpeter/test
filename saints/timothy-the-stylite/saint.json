@@ -1,0 +1,59 @@
+{
+  "slug": "timothy-the-stylite",
+  "display_name": "Timothy the Stylite",
+  "names": [
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιος Τιμόθεος ο Στυλίτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 872,
+      "latest": 872,
+      "display": "872",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Τιμόθεος έζησε θεοφιλώς και κοιμήθηκε εν ειρήνη το 872 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Όσιος Τιμόθεος ο Στυλίτης»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

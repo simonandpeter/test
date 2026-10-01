@@ -1,0 +1,11 @@
+# Onuphrius of Gabrovo
+
+saint.gr says Onuphrius was born in the village of Gabrovo, in the region of Veliko Tarnovo, in 1787 — though the heading over the same notice gives 1786. His father was called Detzio and later became a monk with the name Daniel; his mother was called Anna. The new martyr's first name was Matthew, and his devout and well-off parents brought him up as Christians should. Once, when he was eight, his parents scolded him for some piece of mischief, and in his anger he said in front of Turks that he would turn Turk.
+
+With a thousand troubles his parents managed then to prevent his circumcision. When Matthew grew up he went to the Holy Mountain, to the monastery of Chilandari, where he was ordained deacon with the name Manasses. But the remorse for that childhood incident made him strive with strict fasting and prayer to make it good before God, and later he resolved to confess Christ before the unbelieving and to suffer a martyr's death.
+
+So he went to the skete of the Honourable Forerunner, where the spiritual father Nicephorus tested him for four months, and then he was made a monk of the great habit with the name Onuphrius. With his spiritual father's blessing, and taking as his companion one Gregory the Peloponnesian, he went to Chios. There, having prepared himself again, he put on the clothes of the Hagarenes and went into the court, where before many aghas he confessed Christ with courage, anathematised Islam and threw down the green turban he was wearing.
+
+The tortures that followed, the page says, were merciless and dreadful. In the end his torturers knifed him, and he died on 4 January 1818, a Friday, at three in the afternoon; the Turks threw his holy relic into the sea. A service and a life of him were written by Onuphrius the Iberite and published at Athens in 1862. saint.gr counts him among the new martyrs who bore witness after the fall of Constantinople.
+
+*After saint.gr's calendar for 4 Ιανουαρίου — [the day](https://www.saint.gr/01/04/index.aspx) and [the life](https://www.saint.gr/475/saint.aspx); read 30 September 2026.*

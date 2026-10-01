@@ -1,0 +1,60 @@
+{
+  "slug": "theoprobus-of-karpasia",
+  "display_name": "Theoprobus of Karpasia",
+  "names": [
+    {
+      "form": "Θεοπρόβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιος Θεοπρόβος επίσκοπος Καρπασίας Κύπρου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Karpasia",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θεοπρόβος έζησε κατά τον 4ο μ.Χ. αιώνα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Όσιος Θεοπρόβος επίσκοπος Καρπασίας Κύπρου»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

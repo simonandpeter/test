@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-konstamonitou timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
+    'Twelve now. The new one is Timothy the Stylite on 4 January; the others are read in the el-06-12 entry for this name form.',
+  'εξι μαρτυρεσ six-martyrs-4-january six-martyrs-of-egypt':
+    'Two companies the corpus counts rather than names: the Six Martyrs of One Family on 9 March and the Six Martyrs of 4 January. Two days, two entries, two folders.',
+  'συμεων simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-myrrh-streaming symeon-4-january symeon-kinsman-of-the-lord symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-new-of-mytilene symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Fourteen now. The new one is on 4 January; the others are read in the el-05-01 entry for this name form.',
+  'ονουφριοσ onuphrius-of-koronisia onuphrius-of-kursk onuphrius-the-great onuphrius-the-new':
+    'Four men. The new one is Onuphrius the New on 4 January; the others are read in the el-06-12 entry for this name form.',
+  'ευαγριοσ evagrius-companion-of-theodoula evagrius-of-georgia evagrius-of-iberia evagrius-of-shio-mgvime':
+    'Four men. The new one is Evagrius of Shio-Mgvime on 4 January; the others are read in the entries recorded for this name form before it.',
+  'ευθυμιοσ euthymius-4-january euthymius-kereselidze euthymius-of-dimitsana euthymius-of-jerusalem euthymius-of-karelia euthymius-of-madytos euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-iberian euthymius-the-man-of-god euthymius-the-wonderworker':
+    'Fourteen now. The new one is on 4 January; the others are read in the el-06-12 entry for this name form.',
+  'ευσταθιοσ eustathius-i-archbishop-of-serbia eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':
+    'Five men. The new one is Eustathius I archbishop of Serbia on 4 January; the others are read in the el-05-18 entry for this name form.',
+  'ευφημια euphemia-4-january euphemia-of-amisos':
+    'Two women. The new one is on 4 January; the other is read in the entry recorded for this name form before it.',
+  'χρυσανθοσ chrysanthus chrysanthus-4-january':
+    'Two men: Chrysanthus whom the Greek keeps with Daria on 19 March and the Chrysanthus of 4 January.',
   'ουρβανοσ urbanus-8-march urbanus-son-of-gaius':
     'Three men: the Urbanus of 20 February, Urbanus of the Forty of Sebaste on 9 March, and the Urbanus of 23 June.',
   'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-chalcedon nicetas-of-epirus nicetas-of-medikion nicetas-of-nisyros nicetas-of-novgorod nicetas-of-pythia nicetas-of-thebes nicetas-the-sinaite nicetas-the-stylite-of-pereslavl nikitas-of-nea-moni':

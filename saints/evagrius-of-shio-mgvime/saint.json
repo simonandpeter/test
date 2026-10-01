@@ -1,0 +1,64 @@
+{
+  "slug": "evagrius-of-shio-mgvime",
+  "display_name": "Evagrius, disciple of Shio of Mgvime",
+  "names": [
+    {
+      "form": "Ευάγριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιοι Ευάγριος και Σίος εκ Γεωργίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Ευάγριος και Σίος του Μγκβιμέλι έζησαν στη Γεωργία τον 6ο μ.Χ. αιώνα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Όσιοι Ευάγριος και Σίος εκ Γεωργίας»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      },
+      "note": "Their notice (https://www.saint.gr/1280/saint.aspx) adds a second Greek day for the pair: «Η μνήμη των Οσίων τελείται και στις 4 Φεβρουαρίου». The row records the day page read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "related": [
+    "shio-of-mgvime"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

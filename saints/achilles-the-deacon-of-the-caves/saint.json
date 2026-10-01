@@ -1,0 +1,60 @@
+{
+  "slug": "achilles-the-deacon-of-the-caves",
+  "display_name": "Achilles the Deacon of the Caves",
+  "names": [
+    {
+      "form": "Αχιλλέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιος Αχιλλέας ο Διάκονος της Λαύρας Κιέβου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "deacon",
+    "monk"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Αχιλλέας μόνασε τον 14ο μ.Χ. αιώνα στη Λαύρα του Κιέβου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (30 September 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Ιανουαρίου — «Όσιος Αχιλλέας ο Διάκονος της Λαύρας Κιέβου»",
+        "url": "https://www.saint.gr/01/04/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
