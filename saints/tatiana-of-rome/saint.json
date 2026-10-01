@@ -1,6 +1,7 @@
 {
   "slug": "tatiana-of-rome",
   "display_name": "Tatiana of Rome",
+  "office": "Deaconess of the Church of Rome",
   "names": [
     {
       "form": "Tatiana",
@@ -19,7 +20,6 @@
     "deaconess",
     "virgin"
   ],
-  "office": "Deaconess of the Church of Rome",
   "dates": {
     "death": {
       "earliest": 222,
@@ -29,17 +29,6 @@
       "note": "doxologia.ro's life places her passion in the reign it dates «Alexandru Sever (222-235)», under Ulpian, prefect of the city; the page gives no year of her own."
     }
   },
-  "locations": [
-    {
-      "kind": "death",
-      "historical_name": "Rome",
-      "modern_name": "Rome, Italy",
-      "lat": 41.8931,
-      "lon": 12.4828,
-      "uncertainty_km": 15,
-      "note": "doxologia.ro's life: born «în Roma cea veche», «diaconița Bisericii Romei», tried and beheaded in the city."
-    }
-  ],
   "attestations": [
     {
       "church": "russian",
@@ -80,6 +69,9 @@
       "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -131,7 +123,21 @@
       }
     }
   ],
-  "text": {
-    "life": "life.md"
-  }
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "Rome",
+      "modern_name": "Rome, Italy",
+      "lat": 41.8931,
+      "lon": 12.4828,
+      "uncertainty_km": 15,
+      "note": "doxologia.ro's life: born «în Roma cea veche», «diaconița Bisericii Romei», tried and beheaded in the city."
+    }
+  ]
 }

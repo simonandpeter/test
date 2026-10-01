@@ -67,6 +67,9 @@
       "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -119,7 +122,10 @@
       }
     }
   ],
-  "text": {
-    "life": "life.md"
-  }
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
