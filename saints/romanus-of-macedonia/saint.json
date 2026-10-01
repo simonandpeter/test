@@ -1,0 +1,51 @@
+{
+  "slug": "romanus-of-macedonia",
+  "display_name": "Romanus of Macedonia",
+  "names": [
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Ρωμανός επίσκοπος Μακεδονίας», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop in Macedonia",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιος Ρωμανός επίσκοπος Μακεδονίας»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page. It prints no hymn, no distich and no year, and it says itself that the memory is in neither of the two synaxaria it names; the folder is made on the strength of the day listing and the manuscript the page cites, and on nothing else. The page carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence, so this is not the refusal of §10 but a thin entry the site does vouch for."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

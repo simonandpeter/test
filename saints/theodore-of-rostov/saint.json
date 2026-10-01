@@ -7,6 +7,11 @@
       "form": "Teodor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Teodor, Arhiepiscop de Rostov», with the rank word and the see left off."
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Θεόδωρος Αρχιεπίσκοπος Ροστώβ», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιος Θεόδωρος Αρχιεπίσκοπος Ροστώβ»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: its heading reads «Αγιος Θεοδωρος Αρχιεπισκοπος Ροστωβ (; - 1394)» and it says the relics are in the church of the Dormition of the Mother of God at Rostov — the year and the resting place the folder already holds from doxologia.ro. Of his life it says only «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου», and it prints no hymn."
     },
     {
       "church": "serbian",

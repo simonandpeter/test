@@ -1,0 +1,55 @@
+{
+  "slug": "basil-companion-of-stephen-the-new",
+  "display_name": "Basil, companion of Stephen the New",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of the body of saint.gr's page «Άγιοι Μάρτυρες που συμμαρτύρησαν με τον Άγιο Στέφανο τον νέο για τις άγιες εικόνες» for 28 Νοεμβρίου: «ένας από αυτούς, ο Βασίλειος, τυφλώθηκε από τους δήμιους». The page gives him no heading of his own and no rank word."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "related": [
+    "stephen-the-new",
+    "john-of-the-legatarioi"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιοι Μάρτυρες που συμμαρτύρησαν με τον Άγιο Στέφανο τον νέο για τις άγιες εικόνες»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. The entry is a company, «Άγιοι Μάρτυρες που συμμαρτύρησαν με τον Άγιο Στέφανο τον νέο για τις άγιες εικόνες», and it names two of its members and leaves the rest unnamed: «Άλλοι δε πάλι με άλλο βάρβαρο τρόπο θανατώθηκαν ή εξορίστηκαν». A folder is made for each named man and none for the unnamed remainder, which is reported rather than drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -10,4 +10,6 @@ He travelled to Constantinople several times on the business of the Russian Chur
 
 He worked at the painting of icons, and with them adorned the Simonov monastery and many churches in Moscow. At Rostov he founded the monastery of the Nativity of the Mother of God. His blessed death came on 28 November 1394, and his relics lie in the cathedral of the Dormition of the Mother of God at Rostov.
 
-*After doxologia.ro's calendar for 28 noiembrie — [the day](https://doxologia.ro/28-noiembrie) and [the life](https://doxologia.ro/sfantul-teodor-arhiepiscop-de-rostov); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 28 November, and adds nothing to the story: of his life saint.gr says «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — we have no details of the saint's life. What it does confirm is the two facts that close this one. Its heading for him gives «(; - 1394)», and it says under «Ιερά Λείψανα» that the relics of the saint are in the church of the Dormition of the Mother of God at Rostov in Russia.
+
+*After doxologia.ro's calendar for 28 noiembrie — [the day](https://doxologia.ro/28-noiembrie) and [the life](https://doxologia.ro/sfantul-teodor-arhiepiscop-de-rostov); read 25 September 2026; and after saint.gr's calendar for 28 Νοεμβρίου — [the Greek day](https://www.saint.gr/11/28/index.aspx) and [its life](https://www.saint.gr/4028/saint.aspx), read 2 October 2026.*

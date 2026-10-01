@@ -1,0 +1,54 @@
+{
+  "slug": "peter-of-olympus",
+  "display_name": "Peter of Olympus",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Πέτρος», with the rank word left off. The page gives him no epithet; the one in this folder's name is the mountain it puts him on."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "ascetic"
+  ],
+  "related": [
+    "stephen-the-new"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιος Πέτρος»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. The corpus already holds a `peter-companion-of-stephen` from the Greek 21 Οκτωβρίου, one of four martyrs under Copronymus whose Stephen is the Protomartyr's namesake of that day; this Peter is an ascetic of Olympus imprisoned with Stephen the New, so two entries on two days are read here as two men."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

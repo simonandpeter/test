@@ -1,0 +1,106 @@
+{
+  "slug": "theodore-of-tiberiopolis-the-first",
+  "display_name": "Theodore of Tiberiopolis (the first)",
+  "names": [
+    {
+      "form": "Θεοδώρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's own heading «Αγιος Θεοδώρος ο Επίσκοπος» in the «Άγιοι που εορτάζουν» block of the page of «Άγιοι Πεντεκαίδεκα Ιερομάρτυρες» for 28 Νοεμβρίου, with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "timothy-of-tiberiopolis",
+    "peter-of-tiberiopolis",
+    "john-of-tiberiopolis",
+    "sergios-of-tiberiopolis",
+    "theodore-of-tiberiopolis-the-second",
+    "nikephoros-of-tiberiopolis",
+    "basil-of-tiberiopolis",
+    "thomas-of-tiberiopolis"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 363,
+      "display": "362",
+      "basis": "traditional",
+      "note": "saint.gr: «Ήταν 28 Νοεμβρίου του 362 μ. Χ.» of the day the faithful of Tiberiopolis laid the relics in their coffins; its own heading for each of the fifteen reads «(; - 363)», and it places them under «ο Ιουλιανός ο Παραβάτης (361 - 363 μ.Χ.)». The two years are the page's own and both are recorded here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιοι Πεντεκαίδεκα Ιερομάρτυρες»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page. The page's two lists of the company do not agree: the «Άγιοι που εορτάζουν» block heads sixteen men, the fifteen named in the narrative and one «Άγιος Ετιμάσιος» besides, while the narrative's own list «Τα ονόματα των αγίων είναι…» names fifteen and the kontakion counts five by name plus «τῇ δεκάδι τῶν συναθλητῶν», ten more. This folder is one of the fifteen the narrative names; Etimasios is left undrafted and reported. Both hymns on the page are the company's own service and are copied into each of the fifteen folders."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῇ ἀσκήσει τὴν σάρκα νεκρώσαντες, εὐσεβείας τὸν λόγον κηρύξαντες, καταφρονήσαντες τῶν ἐπιγείων, καὶ Χριστὸν ποθοῦντες σοφοὶ Ἀθληταί, τοῖς τυράννοις γενναιοφρόνως ἀντικατέστητε, καὶ στεφάνοις ἀθλητικοῖς κατεστέφθητε, ἰάσεις τοῖς προσιοῦσιν ἀναπηγάζετε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ΄, Τῶν ἐν ὅλῳ τῷ κόσμῳ — the apolytikion printed on the page of «Άγιοι Πεντεκαίδεκα Ιερομάρτυρες». It is the company's own service, sung to all fifteen together, and it names none of them singly.",
+        "url": "https://www.saint.gr/3104/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put the flesh to death by ascetic labour, having preached the word of godliness, having despised the things of earth and longing for Christ, O wise contenders, you stood up against the tyrants with a noble mind, and were crowned with the crowns of the contest; and you pour out healings on those who come to you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Τῶν ἐν ὅλῳ τῷ κόσμῳ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Οἱ πεντεκαίδεκα Χριστοῦ Ἀθλοφόροι, τῆς Τιβερίου οἱ στεῤῥοὶ πολιοῦχοι, ὥσπερ ἀστέρες σήμερον ἀνίσχουσι φαιδροί, Τιμόθεος Θεόδωρος, οἱ κλεινοὶ Ἱεράρχαι, Εὐσέβιος Κομάσιος, καὶ ὁ θεῖος Σωκράτης, σὺν τῇ δεκάδι τῶν συναθλητῶν, πᾶσι θαυμάτων, ἀκτίνας πυρσεύοντες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ΄, Ὁ ὑψωθείς — the kontakion printed on the page of «Άγιοι Πεντεκαίδεκα Ιερομάρτυρες». It names five of the fifteen and reckons the rest as «τῇ δεκάδι τῶν συναθλητῶν», the ten fellow-contestants, which is how the page counts them to fifteen.",
+        "url": "https://www.saint.gr/3104/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The fifteen trophy-bearers of Christ, the steadfast guardians of Tiberios' city, rise bright as stars today — Timothy and Theodore, the renowned hierarchs, Eusebios and Komasios, and the divine Socrates, with the ten who contended beside them — kindling for all the rays of their wonders.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Ὁ ὑψωθείς."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Irinarh",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Mucenic Irinarh», with the rank word left off."
+    },
+    {
+      "form": "Ειρήναρχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Ειρήναρχος και οι Επτά Άγιες Γυναίκες», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Άγιος Ειρήναρχος και οι Επτά Άγιες Γυναίκες»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it gives the life the Romanian page had none of: a martyr of Sebastia under Diocletian, beheaded in 303. Its heading dates him «(; - 303)». The listing joins him to «οι Επτά Άγιες Γυναίκες», whom the page does not name; the corpus already keeps a `seven-women-of-sebaste` on a venerated Greek 11 Φεβρουαρίου, so that company is reported and not touched. Of the page's two hymns the Ἀπολυτίκιον, which names him, is taken here; the Κάθισμα is neither troparion nor kontakion and is not drafted."
     },
     {
       "church": "serbian",
@@ -59,9 +74,35 @@
         "text": "Your martyr Irenarchus, O Lord, in his contest received the crown of incorruption from you, our God; for having your strength he overcame the torturers, and broke also the feeble daring of the demons. By his prayers save our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Εἰρήνης τὸν πρύτανιν, ὁμολογήσας πιστῶς, τῆς πλάνης τὸν τάραχον, κατέλιπες νουνεχῶς, θεόφρον Εἰρήναρχε, ὅθεν δι’ ὕδατος τέ, καὶ πυρὸς ὡς διῆλθες, ἔβης τροπαιοφόρος, πρὸς οὐράνιον λῆξιν, εἰρήνην καὶ σωτηρίαν, πάσιν αἰτούμενος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Ειρήναρχος και οι Επτά Άγιες Γυναίκες», and it names him and plays on his name as a ruler of peace.",
+        "url": "https://www.saint.gr/3103/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having faithfully confessed the Lord of peace, you wisely left behind the tumult of error, O godly-minded Irenarchus; and so, as one who had passed through water and fire, you went as a trophy-bearer to your heavenly end, asking peace and salvation for all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr: «τον οποίο υπέστη με πλήρη αγαλλίαση το 303 μ.Χ.», and its own heading for him reads «(; - 303)»."
+    }
   }
 }

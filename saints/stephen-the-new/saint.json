@@ -6,6 +6,11 @@
       "form": "Ștefan cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 noiembrie, «Sfântul Cuvios Mucenic Ștefan cel Nou», with the rank words left off."
+    },
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Όσιος Στέφανος ο Ομολογητής, ο Νέος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -20,7 +25,14 @@
       "latest": 714,
       "display": "714",
       "basis": "traditional",
-      "note": "doxologia.ro: «zic în primul an al împărăției lui, iar de la zidirea lumii, șase mii două sute douăzeci și doi (714), era în Constantinopol un bărbat cunoscut» — the first year of the Emperor Anastasius. The page gives no year for the martyrdom."
+      "note": "doxologia.ro: «zic în primul an al împărăției lui, iar de la zidirea lumii, șase mii două sute douăzeci și doi (714), era în Constantinopol un bărbat cunoscut» — the first year of the Emperor Anastasius."
+    },
+    "death": {
+      "earliest": 767,
+      "latest": 767,
+      "display": "767",
+      "basis": "traditional",
+      "note": "saint.gr: «Ένα ισχυρό κτύπημα στο κεφάλι έδωσε τέλος στη ζωή του Στεφάνου (το 767 μ.Χ.)», and its own heading for him reads «(; - 767)». doxologia.ro gave no year for the martyrdom."
     }
   },
   "attestations": [
@@ -45,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Νοεμβρίου — «Όσιος Στέφανος ο Ομολογητής, ο Νέος»",
+        "url": "https://www.saint.gr/11/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: the abbot of the famous mount of Saint Auxentios who called the iconoclast emperors heretics, reproved Constantine Copronymus to his face, and was stoned and clubbed to death. Its heading gives «(; - 767)» and its narrative «(το 767 μ.Χ.)», the year the Romanian page broke off without. A piece of his relic, it adds, is at the monastery of Dionysiou on the Holy Mountain. Of its four hymns the first Ἀπολυτίκιον and the Κοντάκιον are taken here; the «Έτερον Ἀπολυτίκιον», the Οἶκος and the Κάθισμα are not drafted."
     },
     {
       "church": "serbian",
@@ -73,6 +95,40 @@
         "text": "Preparing yourself beforehand in the mountain as a hermit, with the whole armour of the Cross you destroyed the camps of the bodiless enemies, all-blessed one. And again you clothed yourself manfully for the contest, slaying Copronymus with the sword of faith. For both you were crowned by God, most venerable martyr Stephen, ever remembered.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείαν ἄσκησιν ἐνδεδειγμένος, σκεῦος γέγονας δικαιοσύνης διαπρέπων ταῖς σεπταῖς ἀναβάσεσι· καὶ τοῦ Χριστοῦ τὴν εἰκόνα σεβόμενος, μαρτυρικῆς ἠξιώθης φαιδρότητος. Θεῖε Στέφανε, ἐν ὅπλῳ ἡμᾶς στεφάνωσον τῆς θείας εὐδοκίας τοὺς ὑμνοῦντας σε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first of the two apolytikia on the page of «Όσιος Στέφανος ο Ομολογητής, ο Νέος», and it names him.",
+        "url": "https://www.saint.gr/3098/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shown forth a divine asceticism, you became a vessel of righteousness, excelling in the holy ascents; and revering the image of Christ you were counted worthy of a martyr's brightness. Divine Stephen, crown us who sing of you with the armour of the divine good pleasure.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἑορτάζει σήμερον, ἡ Ἐκκλησία, ἑορτὴν εὐφρόσυνον, ἐν τῇ σῇ μνήμη· καὶ πιστῶς, ἀνευφημοῦσα κραυγάζει σοι, Στέφανε θεῖε, ὁσίων τὸ καύχημα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the kontakion on the page of «Όσιος Στέφανος ο Ομολογητής, ο Νέος», and it names him.",
+        "url": "https://www.saint.gr/3098/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church keeps today a joyful feast in your memory, and faithfully praising you cries out to you: divine Stephen, boast of the venerable.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
