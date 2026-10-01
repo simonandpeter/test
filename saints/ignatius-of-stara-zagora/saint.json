@@ -6,6 +6,11 @@
       "form": "Ignatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 octombrie."
+    },
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Άγιος Ιγνάτιος ο νέος Οσιομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Οκτωβρίου — «Άγιος Ιγνάτιος ο νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/10/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: John of Zagora in the eparchy the page calls Τύρναβος, whose parents were George and Maria, who was tonsured Ignatius at the skete of the Forerunner on Athos, and who was hanged at Constantinople on 8 October 1814 at the sixth hour. The page states that date, so a `dates` object is proposed from its own words. **A second feast: the same page says «Ο Ιγνάτιος, μαζί με τους συνασκητές του μάρτυρες, Ευθύμιο και Ακάκιο, γιορτάζουν μαζί την 1η Μαΐου» — that Ignatius keeps 1 May together with his fellow ascetics the martyrs Euthymios and Akakios.** One attestation row per church is the schema, so that day is recorded here as a note and the row stays on 8 October, which is the day page that was read and quoted; the 1 May page was not fetched. The page prints no hymn for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1814,
+      "latest": 1814,
+      "display": "8 October 1814",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελικά τον απαγχόνισαν στις 8 Οκτωβρίου 1814 μ.Χ. ώρα έκτη», and its head line gives «(; - 1814)»"
+    }
   }
 }

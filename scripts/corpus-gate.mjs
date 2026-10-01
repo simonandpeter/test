@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πελαγια pelagia-of-antioch pelagia-of-caesarea-in-palestine pelagia-of-diveyevo pelagia-of-tarsus pelagia-of-tinos pelagia-the-virgin-of-antioch':
+    'Six now, and **two Pelagias of Antioch stand on 8 October**, which is the distinction the page itself draws and not a duplicate: Pelagia the penitent, whom the Romanian keeps there too and whose Greek row this batch adds, and Pelagia the virgin martyr of the same city, new here. Two entries, two women. The others are read in the el-03-25 entry for this name form, with Tarsus on 4 May and Tinos on 23 July.',
+  'τρυφων tryphon-companion-of-trophimus tryphon-of-campsada tryphon-of-constantinople tryphon-of-vyatka':
+    'Four now. The new one is Tryphon of Vyatka on 8 October; the others are read in the el-09-29 entry for this name form.',
+  'φιλιπποσ philip-of-gortyna philip-of-moscow philip-of-nicomedia philip-of-sicily philip-of-worms philip-ordinets philip-the-apostle philip-the-first-of-moscow philippus-of-niculitel':
+    'Nine now. The new one is Philip of Gortyna on 8 October; the others are read in the el-05-27 entry for this name form.',
+  'ιγνατιοσ ignatius-brianchaninov ignatius-of-kios ignatius-of-mariupol ignatius-of-rostov ignatius-of-stara-zagora ignatius-the-sinaite ignatius-the-steironite ignatius-venerable-19-may':
+    'Eight now, and two stand on 8 October: Ignatius of Stara Zagora, whom the Romanian keeps there too and whose Greek row this batch adds, and Ignatius of Kios, new here. The others are read in the el-07-26 entry for this name form.',
   'σεργιοσ sergius-12-august sergius-companion-of-bacchus sergius-in-the-cave sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-valaam sergius-of-zographou sergius-the-confessor sergius-the-magistros sergius-zipulin':
     'Twelve now, and two stand on 7 October: Sergius the companion of Bacchus, whose day it is and whom this batch upgraded, and Sergius in the Cave, new here. The rest is read in the el-08-12 entry for this name form.',
   'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-shepherd':

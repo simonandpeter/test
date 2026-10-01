@@ -6,6 +6,11 @@
       "form": "Pelaghia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 octombrie."
+    },
+    {
+      "form": "Πελαγία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Οσία Πελαγία», with the rank word left off. The page glosses the name from πέλαγος, the open sea."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Οκτωβρίου — «Οσία Πελαγία»",
+        "url": "https://www.saint.gr/10/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: the harlot of Antioch converted by the preaching of the bishop Nonnus, baptised, and gone eight days later to Jerusalem. saint.gr gives no year, so no `dates` object is proposed. The same day page carries a second and different Pelagia, «Αγία Πελαγία η Παρθένος», who is drafted as a new folder in this batch. The page prints a proper apolytikion in the fourth tone and a kontakion, both taken here; it also prints an «Έτερον Ἀπολυτίκιον», the common «Ἐν σοὶ Μῆτερ» for a venerable woman, and an Οἶκος and a Κάθισμα, none of which is drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page refers the reader to Nonnus at 10 Νοεμβρίου; the corpus holds no Nonnus folder, so nothing is linked."
     },
     {
       "church": "serbian",
@@ -59,9 +74,46 @@
         "text": "In thee, O mother, was that which is according to the image kept safe with diligence; for taking up the cross thou didst follow Christ, and in thy labour thou didst teach us to overlook the flesh, since it passeth away, and to care for the soul, a thing immortal. Wherefore thy spirit, O venerable mother Pelagia, rejoiceth together with the angels.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἐξ ἀκανθῶν καθάπερ ρόδον εὐῶδες, τὴ Ἐκκλησία Πελαγία ἐδείχθης, ταὶς ἐναρέτοις πράξεσιν εὐφραίνουσα ἠμᾶς, ὅθεν καὶ προσήγαγες, ὡς ὀσμὴν εὐωδίας, τῷ σὲ θαυμαστώσαντι, τὸν σὸν βίον Ὁσία. Ὂν ἐκδυσώπει σώζεσθαι ἠμᾶς, παθῶν παντοίων, ψυχῆς τὲ καὶ σώματος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — the first hymn on the page of «Οσία Πελαγία», and it names her. The «Έτερον Ἀπολυτίκιον» printed under it is the common «Ἐν σοὶ Μῆτερ» for a venerable woman and is not drafted.",
+        "url": "https://www.saint.gr/1423/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a sweet-smelling rose out of thorns you were shown to the Church, Pelagia, gladdening us by your virtuous deeds; and so you brought your life, as a scent of sweetness, to him who made you wonderful. Entreat him that we be saved from every passion of soul and body.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸ σῶμα τὸ σὸν νηστείαις κατατήξασα, ἀγρύπνοις εὐχαῖς, τὸv Κτίστην καθικέτευες, τοῦ λαβεῖν σῶν πράξεων, τὴv τελείαν Μῆτερ συγχώρησιv, ἢν καὶ ἔλαβες ἀληθῶς, ὁδὸν μετανοίας ὑποδείξασα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Οσία Πελαγία». It is addressed to her as Μῆτερ and names no other saint. The Οἶκος printed under it, which does name her, and the Κάθισμα below it are not kinds the schema holds and are not drafted.",
+        "url": "https://www.saint.gr/1423/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wasted your body with fasting, you besought the Creator with sleepless prayers to receive the perfect forgiveness of your deeds, mother; and you truly received it, having shown us the road of repentance.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "pelagia-the-virgin-of-antioch"
+  ]
 }
