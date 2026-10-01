@@ -1,0 +1,51 @@
+{
+  "slug": "gregory-the-painter-of-the-caves",
+  "display_name": "Gregory the Painter of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "iconographer"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Όσιος Γρηγόριος ο ζωγράφος ο εν τω σπηλαίω», with the rank word left off and the two epithets, the painter and the one in the cave, left in the English form of the name instead. The page glosses the name: «ο άγρυπνος, άρα ενήμερος και φωτιομένος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian venerable, so this is the row a later reader will most want to fill."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Όσιος Γρηγόριος ο ζωγράφος ο εν τω σπηλαίω»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on it. The page prints no life at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου» — no year, no house named beyond «ο εν τω σπηλαίω», and no hymn of any kind. The corpus already keeps two men of the Caves named Gregory, `gregory-the-recluse-of-the-caves` and `gregory-the-wonderworker-of-the-caves`, and the Greek row of both is 8 January, not 8 August; neither is called a painter. This is drafted as its own folder on that ground and the three are named together in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

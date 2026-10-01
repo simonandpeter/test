@@ -1,0 +1,51 @@
+{
+  "slug": "theodosius-of-oroboi",
+  "display_name": "Theodosius of Oroboi",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Όσιος Θεοδόσιος ηγούμενος Ορόβων», with the rank word and the office left off. The page glosses the name: «Ο θεόδοτος, το θεϊκό δώρο»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Όσιος Θεοδόσιος ηγούμενος Ορόβων»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page gives no year, no place beyond the name of the house he governed, and no hymn of any kind. The listing calls him «ηγούμενος Ορόβων» and that is all the corpus has for the house; the see or house is left out of `office` because the English form of it is not read anywhere, and the distinguisher is carried in the name instead."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

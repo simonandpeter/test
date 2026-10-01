@@ -5,6 +5,11 @@
     {
       "form": "Св. муч. Анастасије",
       "lang": "sr"
+    },
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Αναστάσιος από τη Βουλγαρία», with the rank word and the clause about his country left off. The page glosses the name: «(από την λέξη ανάσταση) = ο αιώνιος, όπως ο αναστάς Ιησούς»."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 29 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιος Αναστάσιος από τη Βουλγαρία»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους» and its head line reads «Αγιος Αναστασιος Απο Τη Βουλγαρια (; - 1794)». It is the same man as this folder: «Η πατρίδα του Αγίου Αναστασίου ήταν η πόλη Ροδοβίσι της επαρχίας Στρούμιτζα της Βουλγαρίας. Είκοσι χρονών ήλθε στη Θεσσαλονίκη και δούλευε σαν υπάλληλος σε κάποιο εμπορικό κατάστημα» — Radovishte in the diocese of Strumica, Thessalonica at twenty, the master's smuggled clothes, the Turkish dress at the gate, the demand for the «σαλαβάτι», the refusal, the torture, and death on the road to the gallows in 1794, which is this folder's story from the Ohrid Prologue and the OCA life. **The two calendars give two different days for the death itself**, and this reader does not reconcile them: the Serbian row and the folder's own life say 29 August 1794, while saint.gr says «στις 8 Αυγούστου 1794 μ.Χ.», outside Thessalonica near the «καινούρια πόρτα», the new gate. The difference is not the thirteen days of the style conversion, so the `dates` object is left exactly as it stands and the disagreement is recorded here and in the life rather than resolved. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, and no hymn of any kind on it. The page lists him under the synaxis of the new martyrs after the fall of Constantinople."
     },
     {
       "church": "serbian",

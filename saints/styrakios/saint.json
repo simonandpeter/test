@@ -1,0 +1,50 @@
+{
+  "slug": "styrakios",
+  "display_name": "Styrakios",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Στυράκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Στυράκιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιος Στυράκιος»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on it. The page prints no year, no place and no hymn of any kind. It adds that some menologia set a martyr Hermolaus beside him on this day, «Ορισμένα αγιολόγια μαζί με τη μνήμη του Aγίου Στυρακίου, αναφέρουν και αυτή κάποιου μάρτυρα Ερμολάου» — that Hermolaus is not a line of the day listing and no folder is proposed for him here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

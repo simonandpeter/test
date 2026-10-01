@@ -6,6 +6,11 @@
       "form": "Miron",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 august, «Sfântul Ierarh Miron, Episcopul Cretei», with the rank word and the office left off."
+    },
+    {
+      "form": "Μύρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Μύρων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιος Μύρων»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same man: «Ο Άγιος Μύρων, ο οποίος καταγόταν από την Κρήτη, από την πόλη Aυρακία (κοντά στην Κνωσσό)», a farmer who gave to the poor, who carried the thieves' sacks for them, who was ordained priest and then made bishop of Crete, who stopped the river Triton and who died at a hundred years old. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. saint.gr prints no year for him and no hymn of any kind, so no `dates` object and no hymn are proposed here; it adds one relic, «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μονή Μεγ. Σπηλαίου Καλαβρύτων», a portion at the monastery of the Great Cave at Kalavryta, and it lists him under the synaxis of all the saints who shone in Gortyn and Arcadia of Crete. The page's name gloss is «(από την λέξη μύρο) = ο ευχάριστος, όπως το μύρο»."
     },
     {
       "church": "serbian",

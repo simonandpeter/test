@@ -1,0 +1,54 @@
+{
+  "slug": "eleutherius-martyr-8-august",
+  "display_name": "Eleutherius (8 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ελευθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιοι Ελευθέριος, Λεωνίδης και τα Άγια Νήπια», with the rank word left off. The page glosses the name: «Ο εραστής, κήρυκας και πρόμαχος της ελευθερίας»."
+    }
+  ],
+  "related": [
+    "leonides-companion-of-eleutherius",
+    "holy-infants-with-eleutherius-and-leonides"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιοι Ελευθέριος, Λεωνίδης και τα Άγια Νήπια»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "One listing line carries three parties — Eleutherius, Leonides and the Holy Infants — and the one life page behind it names the two men and enumerates nobody among the infants, so by the synaxis rule the two named men are two folders and the unenumerated company is a third. The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on it. It prints no year, no country, no hymn of any kind, and nothing of the two men's own story beyond the manner of their death and the place of the synaxis."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

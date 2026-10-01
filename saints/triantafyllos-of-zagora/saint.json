@@ -1,0 +1,102 @@
+{
+  "slug": "triantafyllos-of-zagora",
+  "display_name": "Triantafyllos of Zagora",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Τριαντάφυλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Τριαντάφυλλος από τη Ζαγορά», with the rank word and the clause about his country left off. The page glosses the name from the flower: «(από το άνθος τριαντάφυλλο = τριάντα + φύλλα) = ο ωραίος σαν το ριαντάφυλλο»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιος Τριαντάφυλλος από τη Ζαγορά»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Τριανταφυλλος Απο Τη Ζαγορα (1663 - 1680)». The page says the day is kept both at Zagora and at Alykes of Volos: «Την ημέρα αυτή τιμάται και η μνήμη του τόσο στη Ζαγορά, όσο και στις Αλυκές Βόλου». It records a portion of his relic treasured at the monastery of Saint Nicholas on the island of Andros together with his icon, and it lists him under the synaxis of the saints of Demetrias and under the synaxis of the new martyrs after the fall of Constantinople. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both taken here, and a megalynarion, which is not a kind the schema holds and is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1663,
+      "latest": 1663,
+      "display": "1663",
+      "basis": "attested",
+      "note": "saint.gr: «Ο ένδοξος νεομάρτυρας του Χρίστου Τριαντάφυλλος γεννήθηκε στην Ζαγορά της Μαγνησίας το 1663 μ.Χ.», and its head line «(1663 - 1680)»."
+    },
+    "death": {
+      "earliest": 1680,
+      "latest": 1680,
+      "display": "1680",
+      "basis": "attested",
+      "note": "saint.gr: «έλαβε το στεφάνι του μαρτυρίου την 8η Αυγούστου του 1680 μ.Χ. στον Ιππόδρομο της Κωνσταντινουπόλεως, σε ηλικία 18 ετών», and its head line «(1663 - 1680)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείας πίστεως, ἔχων τὴν χάριν, χαίρων ἤθλησας, ἀνδρειοφρόνως, Νεομάρτυς Χριστοῦ Τριαντάφυλλε· ὅθεν ὡς ῥόδον εὐφραίνεις ἡδύπνευστον, τὴν Ἐκκλησίαν τῇ θείᾳ ἀθλήσει σου. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — on the page of «Άγιος Τριαντάφυλλος από τη Ζαγορά», and it names him",
+        "url": "https://www.saint.gr/2242/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having the grace of the divine faith, you contended with joy and with a manly mind, Triantafyllos, new martyr of Christ; and so, like a sweet-breathing rose, you gladden the Church by your divine contest. Glorious martyr, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἀθλητὴς ἀήττητος τῆς εὐσεβείας, ἀνεδείχθης Ἅγιε, καταβαλὼν τὸν δυσμενῆ· ὅθεν Χριστὸς Τριαντάφυλλε, μαρτυρικῇ σε ἐδόξασε χάριτι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Άγιος Τριαντάφυλλος από τη Ζαγορά», and it names him",
+        "url": "https://www.saint.gr/2242/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An unconquered contender of piety you were shown forth, O holy one, casting down the enemy; wherefore Christ has glorified you, O Triantafyllos, with the grace of martyrdom.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

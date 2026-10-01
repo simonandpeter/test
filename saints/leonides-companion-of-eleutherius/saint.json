@@ -1,0 +1,54 @@
+{
+  "slug": "leonides-companion-of-eleutherius",
+  "display_name": "Leonides, companion of Eleutherius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Λεωνίδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιοι Ελευθέριος, Λεωνίδης και τα Άγια Νήπια», with the rank word left off. The page glosses the name: «το παιδί του λιονταριού»."
+    }
+  ],
+  "related": [
+    "eleutherius-martyr-8-august",
+    "holy-infants-with-eleutherius-and-leonides"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιοι Ελευθέριος, Λεωνίδης και τα Άγια Νήπια»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The second of the two men the one listing line names, with the Holy Infants as the third, unenumerated party. The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on it. It prints no year, no country and no hymn, and its gloss on the name is a list of six men of antiquity who bore it — two Spartan kings, an epigrammatist of Tarentum, an architect of Naxos, a general of Ptolemy I, a four-time Olympic victor of Rhodes and a physician of Alexandria — none of whom is this martyr. The corpus already keeps several men named Leonides, none of them on 8 August and none of them a companion of an Eleutherius; the distinguisher is taken from the listing line itself."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

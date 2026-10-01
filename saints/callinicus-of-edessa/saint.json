@@ -6,6 +6,11 @@
       "form": "Calinic al Edessei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 august, «Sfântul Ierarh Calinic al Edessei», with the rank word left off."
+    },
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Καλλίνικος Μητροπολίτης Εδέσσης, Πέλλης και Αλμωπίας», with the rank word and the see left off. The page gives his name in the world as «(κατά κόσμον Δημήτριος) Πούλος»."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Αυγούστου (24 September 2026). He is a hierarch of the Church of Greece canonised by the Ecumenical Patriarchate, so a Greek commemoration is to be expected; it was not looked for."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Αυγούστου — «Άγιος Καλλίνικος Μητροπολίτης Εδέσσης, Πέλλης και Αλμωπίας»",
+        "url": "https://www.saint.gr/08/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and its head line «(1919 - 1984)» agrees with the folder's dates. It is the same man: «Ο εν αγίοις Μητροπολίτης Εδέσσης, Πέλλης και Αλμωπίας Καλλίνικος (κατά κόσμον Δημήτριος) Πούλος», born at Sitaralona of Agrinio on 26 January 1919, elected Metropolitan of Edessa and Pella on 24 June 1967, who «Εκοιμἡθη την 8η Αὐγούστου 1984 μ.Χ. μετά από επτάμηνη ασθένεια». The page prints the synodal communiqué of 23 June 2020 by which the Ecumenical Patriarchate numbered him among the saints. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both proper to him and both taken here; it also prints a megalynarion, an oikos, four kathismata and four idiomela of the litany, which are not kinds the schema holds and are not drafted."
     },
     {
       "church": "serbian",
@@ -79,6 +94,40 @@
       },
       "english": {
         "text": "Let us honour the shepherd of Edessa, the praised hierarch and shining morning star of the whole Church, Saint Callinicus, the guide of all; for he prays without ceasing for all who cry out to him always: Glory to Christ who glorified you, glory to him who made you manifest, glory to him who through your intercession gives healing to us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Ἐδέσσης ποιμένα, Ἀρχιθύτην πανεύφημον, καὶ τῆς Ἐκκλησίας ἁπάσης, τὸ λαμπρὸν σεμνολόγημα, Καλλίνικον τιμήσωμεν πιστοί, τοῦ κλήρου καὶ λαοῦ τὸν ποδηγόν, ὡς πρεσβεύοντα ἀπαύστως ὑπὲρ αὐτῶν, τῶν ἐκβοώντων πάντοτε. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ ἀναδείξαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α΄, Τῆς ἐρήμου πολίτης — on the page of «Άγιος Καλλίνικος Μητροπολίτης Εδέσσης, Πέλλης και Αλμωπίας», and it names him and his see",
+        "url": "https://www.saint.gr/4485/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour Callinicus, the shepherd of Edessa, the all-lauded high priest and the bright boast of the whole Church, the guide of clergy and of people, as one who intercedes unceasingly for them who cry out always: glory to Christ who glorified you, glory to him who showed you forth, glory to him who through you works healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β΄.",
+      "model": "Τοῖς τῶν αἱμάτων σου.",
+      "text": "Τὸν μιμητὴν τοῦ Σωτῆρος Καλλίνικον, καὶ τῆς Ἐδέσσης ποιμένα τὸν ἄριστον, καὶ Ἐκκλησίας ἁπάσης τὸ σέμνωμα, ὑμνολογήσωμεν πάντες φιλάγιοι, ἡμῶν γὰρ ἐδείχθη τὸ στήριγμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β΄, Τοῖς τῶν αἱμάτων σου — on the page of «Άγιος Καλλίνικος Μητροπολίτης Εδέσσης, Πέλλης και Αλμωπίας», and it names him and his see",
+        "url": "https://www.saint.gr/4485/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let all we who love the saints hymn Callinicus, the imitator of the Saviour, the excellent shepherd of Edessa and the honour of the whole Church, for he has been shown to be our support.",
         "rendered": "site"
       }
     }

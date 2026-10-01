@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosios-the-new-of-argos theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-oroboi theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
+    'Thirteen now. The new one is Theodosius of Oroboi on 8 August, who carries no office because the page states none; the others are read in the el-08-07 entry for this name form.',
+  'λεωνιδησ leonidas-of-egypt leonides-companion-of-eleutherius leonides-of-athens leonides-of-epidaurus':
+    'Four now. The new one is Leonides, the companion of Eleutherius on 8 August; the others are read in the el-04-15 entry for this name form.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-derkoi gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-panidos gregory-of-rostov gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-hesychast-of-athos gregory-the-painter-of-the-caves gregory-the-recluse-of-the-caves gregory-the-teacher gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius gregory-v-of-constantinople':
+    'Twenty now. The new one is Gregory the Painter of the Caves on 8 August; the others are read in the el-07-19 entry for this name form.',
+  'αιμιλιανοσ emilian-of-cyzicus emilian-of-durostorum emilian-the-roman':
+    'Three men: Emilian the Roman on 7 March, Emilian of Durostorum on 18 July and Emilian of Cyzicus on 8 August, whose dates are a floruit between 787 and 815 because the page dates only his episcopate.',
+  'ελευθεριοσ eleutherius-disciple-of-dionysius eleutherius-martyr-8-august eleutherius-the-persian':
+    'Three men: Eleutherius the disciple of Dionysius on 3 October, Eleutherius the Persian on 13 April, and the Eleutherius of 8 August who stands with Leonides and the infants.',
   'θεοδοσιοσ theodosios-the-new-of-argos theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
     'Twelve now. The new one is Theodosios the New of Argos on 7 August; the others are read in the el-07-29 entry for this name form.',
   'ποιμην pimen-the-faster-of-the-caves pimen-the-much-ailing-of-the-caves poimen-of-georgia poimen-of-novgorod':

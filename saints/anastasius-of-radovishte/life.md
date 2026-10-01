@@ -24,9 +24,11 @@ The Serbian calendar keeps him on 29 August (Julian), and the Ohrid
 Prologue for the day tells the same story — the trade at Thessalonica, the
 pressure to turn Turk, the refusal, the torture.
 
+The Greek calendar keeps him too, on 8 August, and tells the same story in the same order — Rodovisi in the province of Strumica, Thessalonica at twenty as a clerk in a trading house, the master's attempt to carry clothes out of the castle without paying duty, the Turkish dress at the gate, the tax-collectors' demand for papers, the answer that he was a Turk, the demand for the «σαλαβάτι» and the silence that followed it, the agha's flatteries and threats, the judge, the prison and the torture. saint.gr ends it outside Thessalonica, near what it calls the new gate: he sank under his wounds on the road to the gallows and gave up his spirit to God. The two calendars do not agree on the day of that death. The Serbian row and this life give 29 August 1794; saint.gr gives 8 August 1794, and the difference is not the thirteen days that separate the two styles. Both readings are left standing here, because neither page gives ground to correct the other.
+
 *After the life printed by the Orthodox Church in America for 29 August —
 [the day’s lives](https://www.oca.org/saints/all-lives/2026/08/29); the
 Охридски пролог for 11 September 2026 (29. август ст. ст.), as printed by the
 Православни подсетник (pravoslavno.rs) —
 [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-11&prolog=1);
-read 5 September 2026.*
+read 5 September 2026; saint.gr's calendar for 8 Αυγούστου — [the day](https://www.saint.gr/08/08/index.aspx) and [the life](https://www.saint.gr/2243/saint.aspx), read 1 October 2026.*
