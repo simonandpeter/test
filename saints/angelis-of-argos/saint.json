@@ -1,0 +1,96 @@
+{
+  "slug": "angelis-of-argos",
+  "display_name": "Angelis of Argos",
+  "names": [
+    {
+      "form": "Αγγελής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Άγιος Αγγελής ο Νεομάρτυρας γιατρός από το Άργος», with the rank word left off. The corpus already keeps an `angelis-the-neomartyr` whose folder is named Angelis of Constantinople, on a venerated Greek 1 Σεπτεμβρίου, and an `angelis-of-melambes` on 28 Οκτωβρίου; this folder's name takes the town the page gives this man."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "martyr",
+    "physician"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1813,
+      "latest": 1813,
+      "display": "1813",
+      "basis": "traditional",
+      "note": "saint.gr: «Την άλλη μέρα, 3 Δεκεμβρίου του 1813 μ.Χ. μη καταφέρνοντας να του αλλάξουν γνώμη, τον οδήγησαν στη θέση Βουνάκι, όπου τον απεκεφάλισαν», and its heading reads «(; - 1813)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Άγιος Αγγελής ο Νεομάρτυρας γιατρός από το Άργος»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and its narrative dates the beheading to the very day the calendar keeps him, 3 December 1813. Of the hymns on its page the Ἀπολυτίκιον and the Κοντάκιον, both of which name him, are taken here; the four Μεγαλυνάρια, the Οἶκος and the Κάθισμα are not drafted. He is neither of the two other folders whose personal name is Angelis: this one is a practical physician of Argos beheaded at Chios in 1813."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Χορός αγγελικός Αγγελή Νεομάρτυς, και δήμος Αθλητών, επεκρότησαν άνω, την σην υπέρ της πίστεως, καρτερίαν και ένστασιν, και το πνεύμα σου μετ` ευφροσύνης λαβόντες, ανεβίβασαν, εις ουρανού μετά δόξης, Χριστώ τω Θεώ ημών.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος α', Χορός αγγελικός — the first hymn on the page of «Άγιος Αγγελής ο Νεομάρτυρας γιατρός από το Άργος», and it names him and plays on his name as the angelic choir.",
+        "url": "https://www.saint.gr/247/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The angelic choir, new martyr Angelis, and the host of the contenders applauded on high your endurance and your steadfastness for the faith; and taking your spirit with gladness they carried it up with glory into heaven, to Christ our God.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος α'.",
+      "model": "Χορός αγγελικός."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ιεράν προσθήκην σε, η των Μαρτύρων χορεία, Αγγελή εδέξατο, εν ουρανώ γηθομένη, ηθλήσας και νυν νομίμως γενναιόφρον, ήσχυνας το των τυράννων άθεον θράσος, και το στέφος εκομίσω, της αφθαρσίας, ξίφει την κάραν τμηθείς.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος γ' — the kontakion on the page of «Άγιος Αγγελής ο Νεομάρτυρας γιατρός από το Άργος», and it names him and his beheading. The page gives it a tone and no automelon.",
+        "url": "https://www.saint.gr/247/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The company of the martyrs received you, Angelis, as a sacred addition, rejoicing in heaven; for having now contended lawfully, O brave-minded one, you shamed the godless insolence of the tyrants and carried off the crown of incorruption, your head cut off by the sword.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος γ'."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

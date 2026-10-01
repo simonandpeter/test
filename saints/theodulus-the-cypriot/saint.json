@@ -1,0 +1,53 @@
+{
+  "slug": "theodulus-the-cypriot",
+  "display_name": "Theodulus the Cypriot",
+  "names": [
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Θεόδουλος ο Κύπριος, ο σαλός», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "fool-for-christ",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Όσιος Θεόδουλος ο Κύπριος, ο σαλός»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and says in so many words that his period is unknown — «Κύπριος ασκητής άγνωστης εποχής» — so this folder carries no dates. The corpus keeps fifteen other folders whose personal name is Theodulus and none of them is a Cypriot or a fool for Christ. A second Theodulus is kept on this same day, «ο από επάρχων», and is drafted as his own folder."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

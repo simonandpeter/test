@@ -1,0 +1,61 @@
+{
+  "slug": "theodulus-of-edessa",
+  "display_name": "Theodulus of Edessa",
+  "names": [
+    {
+      "form": "Θεόδουλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Θεόδουλος “ο από επάρχων”», with the rank word left off. The page's own epithet is «ὁ ἀπὸ ἐπάρχων», the one from among the eparchs; the city in this folder's name is the Edessa it says he went to."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "stylite",
+    "ascetic"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 379,
+      "latest": 395,
+      "display": "379–395",
+      "basis": "traditional",
+      "note": "saint.gr: «Υπήρξε πατρίκιος στα χρόνια του Θεοδοσίου του Μεγάλου (379-395)». The page gives no year of birth and none of death; the forty years on the pillar and the age of forty-two at which he climbed it are its own figures and are left in the life rather than turned into a date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Όσιος Θεόδουλος “ο από επάρχων”»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and no year of death. The same day keeps a second Theodulus, the Cypriot fool for Christ, who is drafted as his own folder; the two are distinguished on the page by their epithets and by their whole story."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

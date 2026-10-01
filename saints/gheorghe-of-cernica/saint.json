@@ -6,6 +6,11 @@
       "form": "Gheorghe de la Cernica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 decembrie, «Sfântul Cuvios Gheorghe de la Cernica», with the rank words left off."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Γεώργιος της Τσερνίκα», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Όσιος Γεώργιος της Τσερνίκα»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: its heading reads «Οσιος Γεωργιος Της Τσερνικα (1730 - 1806)», the two years the folder already holds, and it names Săliște near Sibiu, Paisius Velichkovsky and the skete of Cernica. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -62,7 +77,8 @@
     }
   ],
   "related": [
-    "calinic-of-cernica"
+    "calinic-of-cernica",
+    "paisius-of-neamt"
   ],
   "text": {
     "life": "life.md"

@@ -1,0 +1,73 @@
+{
+  "slug": "john-the-hesychast",
+  "display_name": "John the Hesychast",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Ιωάννης ο ησυχαστής, επίσκοπος Κολωνίας», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop",
+    "ascetic",
+    "hermit"
+  ],
+  "office": "Bishop of Colonia",
+  "related": [
+    "sabbas-the-sanctified"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 454,
+      "latest": 454,
+      "display": "454",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε στη Νικόπολη της Αρμενίας το 454 από τον Εγκράτιο και την Ευφημία και επί βασιλέως Μαρκιανού (450-457)», and its heading reads «(454 - 558)»."
+    },
+    "death": {
+      "earliest": 558,
+      "latest": 558,
+      "display": "558",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him reads «Οσιος Ιωαννης ο Ησυχαστης, Επισκοπος Κολωνιας (454 - 558)», and its narrative says he «απεβίωσε ειρηνικά 104 χρονών»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Όσιος Ιωάννης ο ησυχαστής, επίσκοπος Κολωνίας»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn. His right hand, it says under «Ιερά Λείψανα», is at the monastery of Dionysiou on the Holy Mountain. Among the names in his life, Sabbas is the Sabbas the Sanctified the corpus already keeps and is linked; Elias, bishop of Jerusalem, and his own parents have no folders and are named without links."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

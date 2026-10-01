@@ -1,0 +1,62 @@
+{
+  "slug": "gabriel-patriarch-of-constantinople",
+  "display_name": "Gabriel of Prusa",
+  "names": [
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Άγιος Γαβριήλ Ιερομάρτυρας Πατριάρχης Κωνσταντινούπολης», with the rank words and the see left off. This folder's name takes the city he was martyred in, because the patriarchate he held for twelve days is the thing his slug already records."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople, afterwards Metropolitan of Prusa",
+  "dates": {
+    "death": {
+      "earliest": 1659,
+      "latest": 1659,
+      "display": "1659",
+      "basis": "traditional",
+      "note": "saint.gr: «Τελικά τον απαγχόνισαν στην Προύσα στις 3 Δεκεμβρίου 1659», and its heading reads «(; - 1659)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Άγιος Γαβριήλ Ιερομάρτυρας Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and no year of birth. Its narrative dates the hanging to the very day the calendar keeps him, 3 December 1659. The corpus keeps no other folder for a patriarch Gabriel of Constantinople."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

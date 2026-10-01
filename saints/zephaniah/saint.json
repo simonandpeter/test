@@ -6,6 +6,11 @@
       "form": "Sofonie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 decembrie, «Sfântul Proroc Sofonie», with the rank word left off."
+    },
+    {
+      "form": "Σοφονίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Προφήτης Σοφονίας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Δεκεμβρίου — «Προφήτης Σοφονίας»",
+        "url": "https://www.saint.gr/12/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same prophet, the ninth of the twelve minor prophets. Of the two Ἀπολυτίκια on its page the first, which names him, is taken here; the «Έτερον Ἀπολυτίκιον» is not drafted. The page differs from the folder's Romanian source about his tribe, saying «καταγόταν από τη φυλή του Συμεών ή κατ' άλλους του Λευΐ», of Simeon or by others of Levi, and that uncertainty is what the added paragraph records."
     },
     {
       "church": "serbian",
@@ -59,9 +74,35 @@
         "text": "Keeping the memory of your prophet Zephaniah, O Lord, through him we entreat you: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Συνιείς φερωνύμως των μελλόντων την πρόγνωσιν, εκφαντορικώς προεκφαίνεις, την αιώνιον λύτρωσιν. Σιών γαρ βασιλέα τον Χριστόν, κηρύττεις Σοφονία εμφανώς· παρ' αυτού γαρ ελυτρώθημεν της αράς, Προφήτα οι βοώντες σοι· δόξα τω σε δοξάσαντι Θεώ, δόξα τω σε στεφανώσαντι, δόξα τω δωρουμένω διά σου, πάσι συγχώρησιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος α', Της ερήμου πολίτης — the first of the two apolytikia on the page of «Προφήτης Σοφονίας», and it names him.",
+        "url": "https://www.saint.gr/254/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Understanding, as your name declares, the foreknowledge of things to come, you declare beforehand and openly the eternal redemption; for you plainly preach Christ as the king of Zion, Zephaniah, since by him we were redeemed from the curse, O prophet, we who cry to you: glory to God who glorified you, glory to him who crowned you, glory to him who gives pardon to all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος α'.",
+      "model": "Της ερήμου πολίτης."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -700,
+      "latest": -601,
+      "display": "7th century BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε τον 7ο αιώνα π.Χ., επί βασιλέως Ιωσίου». The page gives no year."
+    }
   }
 }
