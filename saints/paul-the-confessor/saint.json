@@ -7,6 +7,11 @@
       "form": "Pavel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 noiembrie."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Άγιος Παύλος Α' ο Ομολογητής και Ιερομάρτυρας Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Νοεμβρίου — «Άγιος Παύλος Α' ο Ομολογητής και Ιερομάρτυρας Αρχιεπίσκοπος Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the secretary of the patriarch Alexander, elected in his place, thrown out by Constantius for the Arians, exiled to Koukousos of Armenia and strangled with his own omophorion. It prints a proper apolytikion and a kontakion that name him, both taken here; the Οἶκος and the Κάθισμα on the same page are not kinds the schema holds and are not drafted. The page's dates do not agree with each other — its head line gives «(; - 351)» while its text puts the death of Alexander, after which Paul was elected, at 377 — and only the head line's year is recorded. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,9 +80,52 @@
         "text": "For the confession of the divine faith the Church has shown thee forth as another Paul, zealous among priests. Abel cries out together with thee to the Lord, and the righteous blood of Zacharias. Venerable father, entreat Christ God to grant us great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείας πίστεως ὁμολογία, ἄλλον Παῦλόν σε τῇ Ἐκκλησίᾳ, ζηλωτὴν ἐν ἱερεῦσιν ἀνέδειξε· συνεκβοᾷ σοι καὶ Ἄβελ πρὸς Κύριον, καὶ Ζαχαρίου τὸ αἷμα τὸ δίκαιον. Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Αὐτόμελον — the first hymn on the page of «Άγιος Παύλος Α' ο Ομολογητής και Ιερομάρτυρας Αρχιεπίσκοπος Κωνσταντινούπολης», and it names him.",
+        "url": "https://www.saint.gr/2922/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The confession of the divine faith showed you to the Church as another Paul, a zealot among priests; and Abel cries out to the Lord together with you, and the righteous blood of Zacharias. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Αὐτόμελον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἀστράψας ἐν γῇ, ὡς ἄστρον οὐρανόφωτον, τὴν καθολικήν, φωτίζεις Ἐκκλησίαν νῦν, ὑπὲρ ἧς καὶ ἤθλησας, τὴν ψυχήν σου Παῦλε προθέμενος, καὶ ὡς Ζαχαρίου καὶ Ἀβελ τρανῶς, βοᾷ σου τὸ αἷμα πρὸς Κύριον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιος Παύλος Α' ο Ομολογητής και Ιερομάρτυρας Αρχιεπίσκοπος Κωνσταντινούπολης», and it names him.",
+        "url": "https://www.saint.gr/2922/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having flashed upon the earth like a star lit from heaven, you now give light to the catholic Church, for which you contended, setting down your own soul, Paul; and like the blood of Zacharias and of Abel, your blood cries aloud to the Lord.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 351,
+      "latest": 351,
+      "display": "351",
+      "basis": "traditional",
+      "note": "saint.gr's own head line for him: «Αγιος Παυλος Α' ο Ομολογητης Και Ιερομαρτυρας Αρχιεπισκοπος Κωνσταντινουπολης (; - 351)». The same page's text says Alexander died «το 377 μ.Χ.» and that Paul was elected then, which cannot stand with 351; the head line's year is taken and the disagreement is left as the page's own."
+    }
   }
 }

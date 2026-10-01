@@ -6,6 +6,11 @@
       "form": "Luca",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 noiembrie."
+    },
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Όσιος Λουκάς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Νοεμβρίου — «Όσιος Λουκάς»",
+        "url": "https://www.saint.gr/11/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: Luke of Tauromenium in Sicily, whose parents wished to marry him and who refused. The same day's calendar keeps a second Luke, «ὁ ἐν Σπηλαίῳ», whom it calls Russian and gives no life; that is a separate entry and another man. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page."
     },
     {
       "church": "serbian",

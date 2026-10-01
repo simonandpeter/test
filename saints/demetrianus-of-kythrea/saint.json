@@ -1,0 +1,61 @@
+{
+  "slug": "demetrianus-of-kythrea",
+  "display_name": "Demetrianus of Kythrea",
+  "names": [
+    {
+      "form": "Δημητριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Άγιος Δημητριανός επίσκοπος Κηθηρίας Κύπρου», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Kythrea in Cyprus",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 829,
+      "latest": 843,
+      "display": "829–843",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε στα χρόνια του βασιλιά Θεοφίλου του εικονομάχου (829 - 843 μ.Χ.)» — the page gives the emperor's reign and no year of his own, and says he died in deep old age, so the interval is the reign it prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Νοεμβρίου — «Άγιος Δημητριανός επίσκοπος Κηθηρίας Κύπρου»",
+        "url": "https://www.saint.gr/11/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Νοεμβρίου εκάστου έτους», the same day as the listing. The page says he is unknown to the synaxarists but known in the church of Cyprus as bishop of Kythrea; it carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου». saint.gr keeps a different Demetrianus, the bishop of Tamassos, on 27 Ιανουαρίου, whom the corpus holds as `demetrianus-of-tamassos`."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

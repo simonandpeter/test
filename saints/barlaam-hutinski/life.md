@@ -6,4 +6,6 @@ The one sentence of prose the page itself prints is its own description: «Curâ
 
 The epithet «Hutinski» is kept here as the calendar prints it, because the page nowhere writes out the place it stands for.
 
-*After doxologia.ro's calendar for 6 noiembrie — [the day](https://doxologia.ro/6-noiembrie) and [his page](https://doxologia.ro/sfantul-varlaam-hutinski); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 6 November, under the same epithet — «ὁ ἐν Χουτινῇ», he of Khutyn — and says as plainly as doxologia did that it has no life for him: «Δεν έχουμε λεπτομέρειες για τον βίο του Οσίου». What its page does carry, and the Romanian one did not, is the year of his death in the head line, «(; - 1192)», with no year of birth. It prints no couplet, no hymn and nothing of his monastery.
+
+*After doxologia.ro's calendar for 6 noiembrie — [the day](https://doxologia.ro/6-noiembrie) and [his page](https://doxologia.ro/sfantul-varlaam-hutinski); read 25 September 2026; and saint.gr's calendar for 6 Νοεμβρίου — [the day](https://www.saint.gr/11/06/index.aspx) and [the life](https://www.saint.gr/2929/saint.aspx), read 1 October 2026.*

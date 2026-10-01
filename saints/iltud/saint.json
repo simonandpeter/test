@@ -1,0 +1,47 @@
+{
+  "slug": "iltud",
+  "display_name": "Iltud",
+  "names": [
+    {
+      "form": "Iltud",
+      "lang": "en",
+      "note": "saint.gr prints his name in Latin letters and gives no Greek form of it: the line for 6 Νοεμβρίου reads «Άγιος Iltud» and the notice's heading is «Αγιος Iltud»."
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Νοεμβρίου — «Άγιος Iltud»",
+        "url": "https://www.saint.gr/11/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Νοεμβρίου εκάστου έτους», the same day as the listing. The page calls him a Welsh saint and gives no life, no rank and no year, so this folder carries no `types`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

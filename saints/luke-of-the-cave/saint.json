@@ -1,0 +1,50 @@
+{
+  "slug": "luke-of-the-cave",
+  "display_name": "Luke of the Cave",
+  "names": [
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Όσιος Λουκάς «ὁ ἐν Σπηλαίῳ»», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint and gives no life, so his own church's calendar is the source a later reader will want."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Νοεμβρίου — «Όσιος Λουκάς «ὁ ἐν Σπηλαίῳ»»",
+        "url": "https://www.saint.gr/11/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Νοεμβρίου εκάστου έτους», the same day as the listing. The same day's calendar keeps a second Luke, the Sicilian of Tauromenium, in a separate entry with a life of his own, whom the corpus holds as `luke-of-sicily`; this entry is the Russian one, «ὁ ἐν Σπηλαίῳ», and the page joins the two nowhere. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
