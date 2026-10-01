@@ -47,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στη Χάλκη»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and saint.gr serves one page for the whole company, enumerating it: «Τα δε ονόματά τους ήταν τα έξης: Ιουλιανός, Μαρκιανός, Ιωάννης, Ιάκωβος, Αλέξιος, Δημήτριος, Φώτιος, Πέτρος, Λεόντιος και Μαρία η Πατρικία». The corpus already keeps the ten as ten folders from the Romanian pass, so each takes its own greek row and no folder is split or merged here. The page sets the occasion under Leo the Third and his edict of 728 and gives no year of death, so no `dates` object is proposed; it prints no hymn of any kind. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The Greek form is not this folder's name.** saint.gr's head line for the seventh of the ten is «Αγιος Φωτιος Που Μαρτυρησε Στη Χαλκη» and its enumeration reads «Φώτιος», Photius, where doxologia.ro printed «Foca» and the folder is therefore called Phocas of the Brazen Gate. The two calendars name the same seventh man of one company by two different names, and that is a reading for the writer and not a thing a reader fixes: **no `el` name form is added to this folder here**, because adding «Φώτιος» to a folder named Phocas would assert the identification in the manifest. The question is named in the reader's report."
     },
     {
       "church": "serbian",

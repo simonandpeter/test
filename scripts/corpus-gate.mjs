@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευθυμιοσ euthymius-4-january euthymius-kereselidze euthymius-of-constantinople euthymius-of-dimitsana euthymius-of-jerusalem euthymius-of-karelia euthymius-of-madytos euthymius-of-novgorod euthymius-of-rhodes euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-iberian euthymius-the-man-of-god euthymius-the-wonderworker':
+    'Sixteen now. The new one is Euthymius metropolitan of Rhodes on 9 August; the others are read in the el-08-05 entry for this name form.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-i-of-constantinople constantine-leichoudes constantine-of-cornwall constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':
+    'Eleven now. The new one is Constantine I of Constantinople on 9 August; the others are read in the el-07-29 entry for this name form.',
   'θεοδοσιοσ theodosios-the-new-of-argos theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-oroboi theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
     'Thirteen now. The new one is Theodosius of Oroboi on 8 August, who carries no office because the page states none; the others are read in the el-08-07 entry for this name form.',
   'λεωνιδησ leonidas-of-egypt leonides-companion-of-eleutherius leonides-of-athens leonides-of-epidaurus':

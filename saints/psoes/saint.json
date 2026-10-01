@@ -1,0 +1,50 @@
+{
+  "slug": "psoes",
+  "display_name": "Psoes",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ψόης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Αυγούστου, «Όσιος Ψόης», with the rank word left off. The page offers no gloss on the name, as it does for most others."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Όσιος Ψόης»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The whole of the page is a distich and one sentence: he reposed in peace at prayer. No year, no place, no hymn of any kind. The name begins with a digraph the name sweeps fold badly, `ps-`, so the corpus was grepped for the Latin stem as well as read off the sweep before he was called new; the folders it returns are Kapsokalyvia and the like and none of them is a Psoes."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

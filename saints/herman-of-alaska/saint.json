@@ -6,6 +6,11 @@
       "form": "Gherman de Alaska",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 noiembrie, «Sfântul Cuvios Gherman de Alaska»."
+    },
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Αυγούστου, «Όσιος Γερμανός ο εν Αλάσκα», with the rank word and the clause about Alaska left off. The page glosses the name from the Latin germanus, «ο αδελφός, ο αληθής, ο τέλειος»."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Όσιος Γερμανός ο εν Αλάσκα»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and its head line reads «Οσιος Γερμανος ο Εν Αλασκα (1756 - 1836)». The page prints no life — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — and no hymn of any kind, and it lists him under the synaxis of all the saints of Siberia. **Its head line disagrees with the folder's own birth year**, which doxologia.ro gives as «în jurul anului 1757», around 1757; saint.gr prints 1756, and the folder carries no year of death at all while saint.gr's head line gives 1836. A head line in parenthesis is not a stated year in prose, so the `dates` object is left exactly as it stands and the disagreement is recorded here and named in the reader's report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

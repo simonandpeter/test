@@ -6,6 +6,11 @@
       "form": "Antonin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 august, «Sfântul Mucenic Antonin», with the rank word left off."
+    },
+    {
+      "form": "Αντωνίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Αυγούστου, «Άγιος Αντωνίνος από την Αλεξάνδρεια», with the rank word and the clause about his country left off. The life page adds a variant in parenthesis, «(ή Αντώνιος)», which is not recorded as a second form here because the page offers it as an alternative and not as a form of its own."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Άγιος Αντωνίνος από την Αλεξάνδρεια»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same martyr: «Πατρίδα του Αγίου Αντωνίνου (ή Αντώνιος) ήταν η Αλεξάνδρεια», hung up and his flesh torn, then thrown into a burning furnace, and his relic found in the furnace untouched. The page gives no year and no emperor, so no `dates` object is proposed, and it prints no hymn of any kind. It notes that the name is also given as Αντώνιος. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

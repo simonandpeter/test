@@ -12,4 +12,6 @@ As he grew in age and in holiness he was granted the sight of angels and of evil
 
 He left the Aleuts no buildings, the page ends, no churches, schools or hospitals, but built living churches and faith in their souls; and today all the Aleuts of Alaska are Orthodox and have priests from among themselves. The page gives no year for his death.
 
-*After doxologia.ro's calendar for 15 noiembrie — [the day](https://doxologia.ro/15-noiembrie) and [the life](https://doxologia.ro/viata-cuviosului-gherman-de-alaska); read 25 September 2026.*
+The Greek calendar keeps him too, on 9 August, and adds nothing to the life. saint.gr's whole notice is a disclaimer, «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — we have no details of the life of the Russian saint — with a head line giving his years as 1756 to 1836 and a note that he is counted among all the saints of Siberia. The 1756 of that head line is a year earlier than the «în jurul anului 1757» the Romanian page gives above, and neither page argues for its figure, so both are left standing.
+
+*After doxologia.ro's calendar for 15 noiembrie — [the day](https://doxologia.ro/15-noiembrie) and [the life](https://doxologia.ro/viata-cuviosului-gherman-de-alaska); read 25 September 2026; saint.gr's calendar for 9 Αυγούστου — [the day](https://www.saint.gr/08/09/index.aspx) and [the life](https://www.saint.gr/2298/saint.aspx), read 1 October 2026.*

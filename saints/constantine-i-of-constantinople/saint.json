@@ -1,0 +1,52 @@
+{
+  "slug": "constantine-i-of-constantinople",
+  "display_name": "Constantine I of Constantinople",
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Αυγούστου, «Άγιος Κωνσταντίνος Α' Πατριάρχης Κωνσταντινούπολης», with the rank word, the numeral and the see left off. The page glosses the name from the Latin: «ο έχων σταθερό και ισχυρό χαρακτήρα»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Άγιος Κωνσταντίνος Α' Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page's only years are not his.** It reads «Ο Άγιος Κωνσταντίνος Α', διαδέχθηκε στον πατριαρχικό θρόνο της Κωνσταντινούπολης τον Ιωάννη τον Ε´ (668 - 674 μ.Χ.)» — the figures in that parenthesis stand beside John the Fifth, whom he succeeded, and whether they are John's years or the years of this Constantine's own patriarchate the sentence does not say. So no `dates` object is proposed, and the reader's report names the question. The page prints no hymn of any kind, and it lists him under the synaxis of all the archbishops and patriarchs of Constantinople. The corpus already keeps more than twenty patriarchs of Constantinople, among them `constantine-leichoudes`, an eleventh-century Constantine; this is the seventh-century Constantine the First, and no folder for him was found."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

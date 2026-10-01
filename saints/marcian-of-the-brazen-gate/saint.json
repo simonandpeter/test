@@ -6,6 +6,11 @@
       "form": "Marchian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's life for the ten martyrs of 9 august, which names the company's members: «Iulian, Marchian, Ioan, Iacov, Alexie, Dimitrie, Foca, Petru și Leontie» and «Maria patriciana»."
+    },
+    {
+      "form": "Μαρκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the ten who suffered at the Chalke Gate, whose head line for this one is «Αγιος Μαρκιανος Που Μαρτυρησε Στη Χαλκη» and whose enumeration reads «Μαρκιανός»; the rank word and the clause about the martyrdom are left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Αυγούστου — «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στη Χάλκη»",
+        "url": "https://www.saint.gr/08/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and saint.gr serves one page for the whole company, enumerating it: «Τα δε ονόματά τους ήταν τα έξης: Ιουλιανός, Μαρκιανός, Ιωάννης, Ιάκωβος, Αλέξιος, Δημήτριος, Φώτιος, Πέτρος, Λεόντιος και Μαρία η Πατρικία». The corpus already keeps the ten as ten folders from the Romanian pass, so each takes its own greek row and no folder is split or merged here. The page sets the occasion under Leo the Third and his edict of 728 and gives no year of death, so no `dates` object is proposed; it prints no hymn of any kind. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. "
     },
     {
       "church": "serbian",
