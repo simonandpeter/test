@@ -1,0 +1,51 @@
+{
+  "slug": "theostericus-of-symbola",
+  "display_name": "Theostericus of Symbola",
+  "names": [
+    {
+      "form": "Θεοστήρικτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Όσιος Θεοστήρικτος «ὁ ἐν Συμβόλοις»», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Όσιος Θεοστήρικτος «ὁ ἐν Συμβόλοις»»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day as the listing, and adds «Η μνήμη του γιορτάζεται και την 17η Φεβρουαρίου» — his memory is kept on 17 February as well. One attestation row per church is the schema, so that second day is recorded here as a note and not as a second row. The page gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

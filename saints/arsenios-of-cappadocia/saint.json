@@ -6,6 +6,11 @@
       "form": "Arsenie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 noiembrie, «Sfântul Cuvios Arsenie Capadocianul»; the bare personal name, without the epithet."
+    },
+    {
+      "form": "Αρσένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Όσιος Αρσένιος ο Καππαδόκης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026) — the life says the Ecumenical Patriarchate canonised him in 1986 and that his commemoration is on 10 November, but the Greek calendar page itself was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Όσιος Αρσένιος ο Καππαδόκης»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and its head line «(1840 - 1924)» agrees with the years the folder holds from doxologia. The page is very long — some 25,000 characters — and the paragraph added to the life takes only its opening and its note of where his relics are; the rest has not been read. Its first apolytikion, which names him, is taken here; the «Έτερον Ἀπολυτίκιον» in Ἦχος γ’ is not drafted, and the page prints no kontakion. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -81,6 +96,23 @@
         "text": "Having led a life pleasing to God, and having become an honoured vessel of the Comforter, God-bearing Arsenios, thou wast shown to be a receiver of the gift of wonderworking, giving swift help to all; venerable father, entreat Christ God to grant us great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῶν Ὁσίων τὸν βίον ἐκμιμησάμενος, ἐν ἐσχάτοις τοὶς χρόνοις, Πάτερ Ἀρσένιε, ἐπληρώθης δωρεῶν τοῦ θείου Πνεύματος, καὶ θαυμάτων γεγονός, θεοφόρε αὐτουργός, παρέχεις ἐνὶ ἐκάστω, τᾶς ἐκ Θεοῦ χορηγίας, ταὶς ἰκεσίαις σου πρὸς Κύριον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Όσιος Αρσένιος ο Καππαδόκης», and it names him.",
+        "url": "https://www.saint.gr/2973/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having imitated the life of the venerable fathers in these last times, father Arsenios, you were filled with the gifts of the divine Spirit; and having become, God-bearer, a worker of wonders yourself, you grant to each one the supplies that come from God, by your entreaties to the Lord.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
     }
   ],
   "text": {

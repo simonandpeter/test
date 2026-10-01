@@ -1,0 +1,54 @@
+{
+  "slug": "nonnus-the-bishop",
+  "display_name": "Nonnus",
+  "names": [
+    {
+      "form": "Νόννος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Νόννος ο κατηχητής της Οσίας Πελαγίας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher"
+  ],
+  "related": [
+    "pelagia-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Άγιος Νόννος ο κατηχητής της Οσίας Πελαγίας»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day as the listing. The page calls him a bishop who preached at Antioch but names no see, so no `office` is recorded; it gives no year either, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

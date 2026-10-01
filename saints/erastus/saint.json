@@ -7,6 +7,11 @@
       "form": "Erast",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 noiembrie."
+    },
+    {
+      "form": "Έραστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιοι Ολυμπάς, Ηρωδίων, Έραστος, Σωσίπατρος και Κουάρτος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Άγιοι Ολυμπάς, Ηρωδίων, Έραστος, Σωσίπατρος και Κουάρτος οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man, one of the Seventy named in Romans 16. One thing on it does not agree with the folder: the page says «Ο Έραστος κυβέρνησε με παρόμοιο τρόπο την επισκοπή Νεάδος» — he governed the bishopric of Neas — where the folder's `office` reads Bishop of Paneas. The office is left exactly as it stands and the page's word is recorded here. The page's first apolytikion and its kontakion are commons of the apostles printed under the entry's name and are taken; the «Έτερον Ἀπολυτίκιον», which names him with five others, is not drafted. No year is given, so no `dates` object is proposed."
     },
     {
       "church": "serbian",
@@ -64,6 +79,39 @@
         "text": "Holy Apostles, pray to the merciful God that He grant our souls forgiveness of our offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀπόστολοι Ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’ — the first hymn on the page of the five apostles of the Seventy kept on 10 Νοεμβρίου. It is the common of the apostles, naming none of them, printed under this entry's name.",
+        "url": "https://www.saint.gr/2963/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, intercede with the merciful God, that he grant our souls forgiveness of our offences.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τριάδος τῆς σεπτῆς, ἐκηρύξατε πίστιν, πολύθεον σοφοί, τῶν εἰδώλων ἀπάτην, ἐκ μέσου ποιήσαντες, ταῖς σεπταῖς διδαχαῖς ὑμῶν, ὅθεν εὕρατε, τὴν ἀμοιβὴν τῶν καμάτων, αἰωνίζουσαν, ἐν οὐρανοῖς τοὺς στεφάνους, λαβόντες Ἀπόστολοι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α’, Χορὸς Ἀγγελικὸς — on the page of the five apostles of the Seventy kept on 10 Νοεμβρίου. It addresses them as Ἀπόστολοι and names none of them: a common printed under this entry's name.",
+        "url": "https://www.saint.gr/2963/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You preached the faith of the holy Trinity, wise ones, and by your venerable teachings put the many-godded deceit of the idols out of the way; and so you found the everlasting reward of your labours, receiving your crowns in the heavens, O apostles.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικὸς."
     }
   ],
   "text": {

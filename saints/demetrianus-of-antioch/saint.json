@@ -1,0 +1,61 @@
+{
+  "slug": "demetrianus-of-antioch",
+  "display_name": "Demetrianus of Antioch",
+  "names": [
+    {
+      "form": "Δημητριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Δημητριανός ο επίσκοπος Αντιοχείας, Ιερομάρτυρας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Antioch",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 256,
+      "latest": 262,
+      "display": "256–262",
+      "basis": "traditional",
+      "note": "saint.gr: «υπήρξε επίσκοπος Αντιοχείας από το 253 μ.Χ. μέχρι το 256 μ.Χ. (κατα άλλους από το 256 μ.Χ. μέχρι το 262 μ.Χ.) Οδηγήθηκε αιχμάλωτος στην Περσία το 256 μ.Χ., όπου και πέθανε», with the page's own head «(; - 262)». The two readings the page sets side by side put his death at 256 or at 262, so the interval is both."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Άγιος Δημητριανός ο επίσκοπος Αντιοχείας, Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day as the listing. saint.gr keeps two other men of this name on other days — the bishop of Kythrea on 6 Νοεμβρίου and the bishop of Tamassos on 27 Ιανουαρίου — and this entry is the bishop of Antioch. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn and no couplet."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

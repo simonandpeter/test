@@ -1,0 +1,52 @@
+{
+  "slug": "milos-the-wonderworker",
+  "display_name": "Milos the Wonderworker",
+  "names": [
+    {
+      "form": "Μίλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Μίλος ο Θαυματουργός Επίσκοπος Ιερομάρτυρας και οι δύο μαθητές του», with the rank words left off. The page gives the variant Μίλης in its own text."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Άγιος Μίλος ο Θαυματουργός Επίσκοπος Ιερομάρτυρας και οι δύο μαθητές του»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day as the listing, and quotes Nikodemos of the Holy Mountain at length for him. The two disciples kept with him in the same entry are not drafted: the page's own note says that some hagiological sources give three and name them Εβόρης, Πάπας and Σενόει (or Σεβόρης) the deacon, so the number and the names it prints disagree with each other and nothing can be recorded of them honestly. He was ordained by the bishop Gedios, whom the page names, and no see of his own is given, so no `office` is recorded; it gives no year, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

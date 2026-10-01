@@ -1,0 +1,47 @@
+{
+  "slug": "justus-10-november",
+  "display_name": "Justus (10 November)",
+  "names": [
+    {
+      "form": "Justus",
+      "lang": "en",
+      "note": "saint.gr prints his name in Latin letters and gives no Greek form of it: the line for 10 Νοεμβρίου reads «Άγιος Justus» and the notice's heading is «Αγιος Justus»."
+    }
+  ],
+  "sex": "male",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Νοεμβρίου — «Άγιος Justus»",
+        "url": "https://www.saint.gr/11/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Νοεμβρίου εκάστου έτους», the same day as the listing. The page calls him an English saint and gives no life, no rank and no year, so this folder carries no `types` and no `dates`; the corpus's other men of this name are kept on other days and nothing on this page joins them. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

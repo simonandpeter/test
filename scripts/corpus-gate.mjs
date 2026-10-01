@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοστηρικτοσ theostericus-of-symbola theosteriktos-the-hymnographer':
+    'Two men. The new one is Theostericus of Symbola on 10 November, a confessor; the other is Theosteriktos the hymnographer on 17 March.',
+  'νοννοσ nonnos nonnus-the-bishop':
+    'Two men. The new one is Nonnus the bishop on 10 November, who brought Pelagia of Antioch to the faith; the other is the Nonnos of 5 June.',
+  'μαρτινοσ martin-bishop-10-november martin-of-the-thebaid martin-the-martyr-22-september':
+    'Three men. The new one is the Martin of 10 November, whom the page makes a bishop without naming his see; the others are Martin of the Thebaid on 24 March and the Martin of 22 September.',
+  'δημητριανοσ demetrianus-of-antioch demetrianus-of-kythrea demetrianus-of-tamassos demetrianus-of-the-alamanoi demetrianus-son-of-demetrius demetrianus-the-deacon':
+    'Six men. The new one is Demetrianus bishop of Antioch on 10 November, four days after Demetrianus of Kythrea — two entries, two men; the others are read in the el-11-06 entry for this name form.',
+  'καλλιοπιοσ calliopius-10-november calliopius-the-martyr':
+    'Two men. The new one is the Calliopius of 10 November; the other is Calliopius the martyr on 7 April, whose day the Romanian calendar keeps too.',
   'νικηφοροσ nicephorus-13-may nicephorus-23-october nicephorus-alfanov nicephorus-companion-of-zebinas nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-cave nicephorus-of-the-svir-desert nikephoros-of-chios nikephoros-patriarch-of-constantinople':
     'Thirteen now. The new one is Nicephorus of the Cave on 9 November; the others are read in the el-10-20 entry for this name form.',
   'ναρσησ narses-9-november narses-companion-of-jonah':
