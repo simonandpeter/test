@@ -1,0 +1,60 @@
+{
+  "slug": "constantine-leichoudes",
+  "display_name": "Constantine Leichoudes",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Κωνσταντίνος, Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off. The surname is the page's own: it prints «Κωνσταντίνον τον Γ' τον Λειχούδην» in the passage it quotes from S. Eustratiades and «Άγιο Κωνσταντίνο Γ' τον Λειχούδη» in its closing sentence."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Άγιος Κωνσταντίνος, Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Κωνσταντινος Πατριαρχης Κωνσταντινουπολης (; - 1063)». The page carries an identity dispute and settles it. It opens by saying the saint is Constantine I, who succeeded John V in 674 and held the see two years and three months; it then quotes S. Eustratiades at length against that, who reads Delehaye's «μνήμη Κωνσταντίνου του νέου πατριάρχου Κωνσταντινουπόλεως» as distinguishing a younger patriarch of the name from an older one and takes it for Constantine III Leichoudes, 1059–1063; and it closes «Σύμφωνα με την επίσημη ιστοσελίδα του Οικουμενικού Πατριαρχείου, πρόκειται για τον Άγιο Κωνσταντίνο Γ' τον Λειχούδη. Ο Άγιος Κωνσταντίνος ο Α' εορτάζεται στις 9 Αυγούστου». So the day is Leichoudes's, the head line's 1063 is his, and Constantine I is a different man whom saint.gr keeps on 9 Αυγούστου. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1063,
+      "latest": 1063,
+      "display": "1063",
+      "basis": "traditional",
+      "note": "saint.gr's head line: «Αγιος Κωνσταντινος Πατριαρχης Κωνσταντινουπολης (; - 1063)», with no year of birth; and in the passage it quotes from S. Eustratiades, «Ιερατεύσαντα από του 1059-1063»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

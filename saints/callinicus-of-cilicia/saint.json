@@ -6,6 +6,11 @@
       "form": "Calinic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 iulie, «Sfântul Mucenic Calinic», with the rank word left off."
+    },
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Καλλίνικος», with the rank word left off. The page glosses it: κάλλος + νίκη, the fair and glorious victor."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Άγιος Καλλίνικος»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Ο Άγιος Καλλίνικος κατάγονταν από την Κιλικία», taken before the governor Σακέρδων — the Sacerdon of the Romanian life — and thrown at the last into a furnace. The two accounts differ on where he was seized: doxologia has it at Ancyra in Galatia, saint.gr «Όταν έφθασε στην Αίγυπτο», when he had reached Egypt, and it adds the nailed shoes, the eighty stadia to Gangra, the iron claws and the wild horse, and the synaxis near the bridge of Justinian by a place called Petrion. The difference is recorded here and in the life; neither page is corrected by the other. The page gives no year or century anywhere, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints an apolytikion and a kontakion, both of which name him, and both are taken."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
       },
       "english": {
         "text": "Your martyr Callinicus, Lord, in his struggle received from You, our God, the crown of incorruption. For having Your power he overthrew the tormentors, and he broke also the powerless daring of the demons. By his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Κλῆσιν σύνδρομον, ἔχων τῷ βίῳ, νίκος καλλίστον, ἤρας ἐν ἄθλοις, καταλλήλως γεγονῶς ὁ προκέκλησαι, σὺ γὰρ καλῶς τὸν ἀγῶνα τελέσας σου, ὡς νικητὴς ἐδοξάσθης Καλλίνικε. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — on the page of «Άγιος Καλλίνικος», and it names him",
+        "url": "https://www.saint.gr/744/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having a calling that ran together with your life, you bore away the fairest victory in your contests, becoming in fact what you had been called beforehand; for you finished your struggle well and were glorified as a victor, Callinicus. Glorious martyr, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Τὰ ἄνω τερπνά, ἀξίως νῦν κεκλήρωσαι· Χριστοῦ γὰρ σφοδρῶς, τῷ πόθῳ πυρακτούμενος, τοῦ πυρὸς Καλλίνικε, δι᾽ αὐτοῦ ἀνδρείως κατετόλμησας· ᾧ καὶ νῦν παριστάμενος, μὴ παύσῃ πρεσβεύων, ὑπὲρ τῶν πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the second hymn on the page of «Άγιος Καλλίνικος», and it names him",
+        "url": "https://www.saint.gr/744/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The delights above you have now worthily inherited; for being set ablaze with a fierce longing for Christ, Callinicus, you bravely dared the fire for his sake. Standing now before him, do not cease to intercede for us all.",
         "rendered": "site"
       }
     }

@@ -1,0 +1,49 @@
+{
+  "slug": "father-mother-and-their-two-children",
+  "display_name": "The Father, Mother and their two Children",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πατέρας, Μητέρα και τα δύο Παιδιά τους",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιοι Πατέρας, Μητέρα και τα δύο Παιδιά τους», with the rank word Άγιοι left off. The page names none of the four; the life page's sub-headings are «Αγιος Πατερας», «Αγια Μητερα», «Αγια Δυο Παιδια»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Άγιοι Πατέρας, Μητέρα και τα δύο Παιδιά τους»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day as the listing. This is a company of four that the page enumerates by relation and names not at all, so it is one folder and not four: there is no name to make a folder out of. Its whole notice is one sentence, that they were martyred by fire, and there is no country, no century, no emperor and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

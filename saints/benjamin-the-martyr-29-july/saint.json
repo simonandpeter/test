@@ -6,6 +6,11 @@
       "form": "Veniamin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 iulie, «Sfântul Mucenic Veniamin», with the rank word left off."
+    },
+    {
+      "form": "Βενιαμίν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιοι Βενιαμίν και Βήριος», with the rank word left off. The page glosses the name as a Hebrew word, a showing of the divine power, the very able one."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Άγιοι Βενιαμίν και Βήριος»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries. The Greek entry names him with a companion the Romanian line does not, Βήριος, and the whole notice is two sentences: «Η σύναξη τους γινόταν κοντά στα παλάτια του «Έβδομου». Δεν έχουμε άλλες λεπτομέρειες για τον βίο τους». Since the entry enumerates its two members, Berius is drafted as his own folder in the same batch. The Greek page adds no country, no century, no manner of death, no year and no hymn, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -45,5 +60,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "berius"
+  ]
 }

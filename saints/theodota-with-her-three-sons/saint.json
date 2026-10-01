@@ -6,6 +6,11 @@
       "form": "Teodota",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 iulie, «Sfânta Muceniță Teodota cu fiii săi», with the rank word left off."
+    },
+    {
+      "form": "Θεοδότη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Αγία Θεοδότη και τα τρία παιδιά της», with the rank word and the children's clause left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Αγία Θεοδότη και τα τρία παιδιά της»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: the ruler Λευκάδιος who had asked her in marriage and was refused, and Νικήτιος the ruler of Bithynia who threw her and her three children into a white-hot furnace, are the Leucadius and Nicetius of the Romanian life. The two accounts differ on where she came from: doxologia says Cilicia, saint.gr «Η Αγία Θεοδότη καταγόταν από τη Νίκαια της Βιθυνίας», from Nicaea in Bithynia. The difference is recorded and neither page is corrected by the other. saint.gr adds that her memory with her three children is repeated on 22 Δεκεμβρίου «με παρόμοια βιογραφικά στοιχεία», with similar biographical data; one row per church is the schema, so that second Greek day is recorded here and is not a second row or a second folder. The page names none of the three children and gives no year, so they still have no folders and no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one apolytikion, which names her, and it is taken."
     },
     {
       "church": "serbian",
@@ -58,6 +73,23 @@
       },
       "english": {
         "text": "Your lamb, Jesus, Theodota, cries out with a great voice: You, my Bridegroom, I love, and seeking You I am tormented, and I am crucified with You and buried with You in Your baptism; and I suffer for You, that I may reign in You; and I die for You, that I may live for You. But receive me, as a spotless sacrifice, offering myself to You in love. By her prayers, as You are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ.",
+      "text": "Ὡς δῶρον ἐκλεκτόν, Θεοδότη θεόφρον, προσήγαγες Θεῷ, τοὺς ἐνθέους βλαστούς σου, σὺν τούτοις γὰρ ἠγώνισαι, ἱερῶς ἐναθλήσασα, μεθ’ ὧν πρέσβευε, ὑπὲρ ἡμῶν τῷ Κυρίῳ, δοῦναι ἄφεσιν, ἁμαρτιῶν ἡμῖν πᾶσι, καὶ βίου διόρθωσιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τὸν τάφον σου Σωτὴρ — the only hymn on the page of «Αγία Θεοδότη», and it names her and her offspring",
+        "url": "https://www.saint.gr/743/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a chosen gift you brought to God your godly offshoots, Theodota of godly mind; for with them you struggled and contended in holiness. With them intercede to the Lord for us, that he grant to us all the forgiveness of sins and the setting right of our life.",
         "rendered": "site"
       }
     }

@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
+    'Eleven now. The new one is Theodosius the Younger on 29 July; the others are read in the el-06-25 entry for this name form.',
+  'μαμασ mamas-29-july mamas-6-may mamas-companion-of-hermogenes mamas-of-georgia':
+    'Four now. The new one is the Mamas of 29 July; the others are read in the el-05-03 entry for this name form, where the 6 Μαΐου trio is noted.',
+  'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-simeon john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-chalcedon john-of-chaldia john-of-edessa john-of-gothia john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-moscow john-of-nea-moni john-of-peking john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-tobolsk john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-anna-of-larissa john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hut-dweller john-the-iberian john-the-new-of-suceava john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-soldier-12-june john-the-soldier-29-july john-the-wallachian john-timonov john-with-minas-and-david':
+    'Sixty-nine now. The new one is John the Soldier on 29 July; the others are read in the el-07-18 entry for this name form.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-leichoudes constantine-of-cornwall constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':
+    'Ten now. The new one is Constantine Leichoudes on 29 July; the others are read in the el-06-02 entry for this name form.',
+  'βασιλισκοσ basiliscus-of-amasea basiliscus-the-elder':
+    'Two men: Basiliscus of Amasea on 3 March and Basiliscus the Elder on 29 July.',
   'ευσταθιοσ eustathius-hieromartyr-7-july eustathius-i-archbishop-of-serbia eustathius-of-ancyra eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':
     'Seven now. The new one is Eustathius of Ancyra on 28 July; the others are read in the el-07-07 entry for this name form.',
   'αυξεντιοσ auxentius-of-bithynia auxentius-of-kartilio auxentius-of-laodicea auxentius-of-vella':

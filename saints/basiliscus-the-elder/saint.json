@@ -1,0 +1,50 @@
+{
+  "slug": "basiliscus-the-elder",
+  "display_name": "Basiliscus the Elder",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βασιλίσκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Βασιλίσκος ο γέρων», with the rank word left off. The byname «ο γέρων», the old man, is the only thing the page offers to tell him apart, and the display name keeps it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Ιουλίου — «Άγιος Βασιλίσκος ο γέρων»",
+        "url": "https://www.saint.gr/07/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice of him is one sentence: he was martyred by the sword. No country, no century, no emperor, no judge, no hymn. The Basiliscus the corpus already keeps is the martyr of Amasea, whose feast is another day, and the page says nothing that would join the two. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
