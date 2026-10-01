@@ -1,0 +1,66 @@
+{
+  "slug": "anysios-of-thessalonica",
+  "display_name": "Anysios of Thessalonica",
+  "names": [
+    {
+      "form": "Ανύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιος Ανύσιος Επίσκοπος Θεσσαλονίκης», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Thessalonica",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 406,
+      "latest": 407,
+      "display": "406 or 407",
+      "basis": "attested",
+      "note": "saint.gr: «Η αρχιερατεία του Ανυσίου έληξε με το θάνατό του περί τα τέλη του έτους 406 μ.Χ. ή τις αρχές του 407 μ.Χ.» — his episcopate ended with his death about the end of 406 or the beginning of 407. The page gives no year of birth; it puts his accession to the throne of Thessalonica at «το 383/4 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Άγιος Ανύσιος Επίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day as the listing, and the page itself says why that day: «Η μνήμη του επισκόπου Θεσσαλονίκης Ανυσίου αναγράφεται στο Ρωμαϊκό Μαρτυρολόγιο στις 30 Δεκεμβρίου, ημέρα κατά την οποία τιμάται και η μνήμη της μάρτυρος Ανυσίας» — his memory is written in the Roman Martyrology on 30 December, the day on which the martyr Anysia is honoured too. **He is not that Anysia and this is not her folder**: she is the woman of Thessalonica run through by a soldier under Diocletian, whose folder the corpus already keeps and whose Greek row this wave adds on the same day; the two share a day and the first three letters of a name and nothing else. The page's three cross-references all land on folders the corpus holds: his teacher and predecessor «Αγίου Αχολίου ή Ασχολίου (βλέπε 23 Ιανουαρίου)» on a Greek 23 January, «τον Άγιο Αμβρόσιο (βλέπε 07 Δεκεμβρίου)» of Milan, and John Chrysostom, whose innocence he defended and who wrote him two letters from exile; those are the three `related` rows. It names many westerners the corpus holds no folder for — the popes Damasus, Siricius, Anastasius and Innocent I, the bishop Bonosus of Sardica whose denial of the perpetual virginity of the Theotokos the synod of Capua gave him to examine in December 391, and Eulysius bishop of Apamea in Bithynia who carried his letter to Rome. It names Thessalonica, Illyricum, Rome, Sardica and Apamea, and no coordinate is proposed. It prints no hymn, and no distich. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "acholius-of-thessalonica",
+    "ambrose-of-milan",
+    "john-chrysostom"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

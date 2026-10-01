@@ -1,0 +1,53 @@
+{
+  "slug": "philetairos",
+  "display_name": "Philetairos of Nicomedia",
+  "names": [
+    {
+      "form": "Φιλέταιρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιος Φιλέταιρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Άγιος Φιλέταιρος»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day as the listing. `types` carries `confessor` and not `martyr`, on the page's own distich: «Φιλεταίρος πέπονθεν αθλητών νόμω, / Kαν ουκ απήλθεν ως αθλητής εκ βίου» — Philetairos suffered by the law of the athletes, although he did not depart this life as an athlete. He was imprisoned under Diocletian, released, hunted and tortured under Maximian, escaped, and the page's account ends with him living in the mountains; it tells no death at all and gives no year, so there is no `dates` object. The page names the saint Eubiotos, «βλέπε 18 Δεκεμβρίου», whom he met in the parts of Sigriane and lived with in brotherly love, shared study and shared prayer; the corpus holds no folder for a Eubiotos, so no `related` row is made. The seven martyrs of this same day, drafted in this batch, are the count and six soldiers whom saint.gr says believed in Christ through him, and that is the one `related` row here. It names Nicomedia and a mountain in the parts of Sigriane, and no coordinate is proposed. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "seven-martyrs-30-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

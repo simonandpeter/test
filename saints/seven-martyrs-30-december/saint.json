@@ -1,0 +1,53 @@
+{
+  "slug": "seven-martyrs-30-december",
+  "display_name": "The Seven Martyrs (30 December)",
+  "names": [
+    {
+      "form": "Επτά Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιοι Επτά Μάρτυρες», with the rank word Άγιοι left off. The page names not one of the seven, so this is the company's name and not a man's."
+    }
+  ],
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Άγιοι Επτά Μάρτυρες»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day as the listing. **The page names none of the seven**, so this folder stands for the company and not for seven men: «Οι Άγιοι αυτοί Επτά μάρτυρες ήταν ένας Κόμης και έξι Στρατιώτες οι οποίοι πίστεψαν στον Χριστό, δια του Αγίου Φιλεταίρου και απεβίωσαν ειρηνικά.» The corpus holds no other folder for a company of seven on this day; those it holds — the seven soldiers of 26 January, the seven virgins of Gaza, the seven women of Sebaste, the seven martyrs at Carthage, the seven Maccabee brothers — are other companies on other days. The page calls them Μάρτυρες in its own line and then says they died peacefully, «απεβίωσαν ειρηνικά»; the title is kept because it is the page's, and the contradiction is the page's own and is recorded here. `types` carries `soldier` for the count and the six soldiers. It gives no year, no emperor, no place and no hymn. The one `related` row is Philetairos, through whom it says they believed, drafted in this batch. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "philetairos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "slug": "gedeon-the-new",
+  "display_name": "Gedeon of Tyrnavos",
+  "names": [
+    {
+      "form": "Γεδεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Άγιος Γεδεών ο Νέος Οσιομάρτυρας», with the rank and the by-name left off. The page also gives his name in the world, «κατά κόσμον ονομαζόταν Νικόλαος», and the Muslim name he was given under duress, Ιμπραήμ; both are recorded in the life and neither is stored as a form of his monastic name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1818,
+      "latest": 1818,
+      "display": "1818",
+      "basis": "attested",
+      "note": "saint.gr: «παρέδωσε το πνεύμα του στις 30 Δεκεμβρίου 1818 μ.Χ.», with the page's own head «(; - 1818)». No year of birth is given; the page dates one episode of his life, his appointment to the metochion, to 6 June 1797."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Άγιος Γεδεών ο Νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day as the listing, and that day is also the day of his death, which the page dates to the year. The corpus holds only `gideon-the-righteous` for this name, who is the judge of Israel, so there is nothing here for this man to be confused with. `types` carries `venerable-martyr` for the page's own Οσιομάρτυρας, `new-martyr` for its Νέος and for the date, and `monk` for the tonsure at Karakallou. It names his village Κάπουρνα of Demetrias in the prefecture of Magnesia, his parents Αυγερινός and Κυράτζα, three brothers and four sisters, the villages Γιερμή, Βελεστίνο and Κεραμίδι, Crete, the monastery of Karakallou on the Holy Mountain, the metochion of the Transfiguration in the region of Rethymno, the former abbot Γαβριήλ with whom he was appointed to it on 6 June 1797, Αγιά where he was arrested, and Τύρναβος where he died; the corpus holds no folder this reading could attach to any of the persons, and no coordinate is proposed for any of the places. It names Tyrnavos as the town that holds him patron and two places of his relic, his skull in the metropolitan church of the Panagia Phaneromeni at Tyrnavos and a part at Karakallou. It prints two apolytikia, both of which name him and both of which are taken; the second is marked «Έτερον Ἀπολυτίκιον». No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἐναθλήσας νομίμως τὸν ἐχθρὸν καταβέβληκας, καὶ Ὁσιομάρτυς ἐδείχθης, του Σωτῆρος περίδοξος· χειρῶν γὰρ καὶ ποδῶν τὴν ἐκτομήν, ὑπέστης Γεδεὼν καρτερικῶς, διὰ τοῦτο θείαν χάριν νέμεις ἀεί, τοῖς πίστει ἐκβοῶσί σοι· δόξα τῷ παρασχόντι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α´, Τῆς ἐρήμου πολίτης — the first of two apolytikia on the page of «Άγιος Γεδεών ο Νέος Οσιομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/1070/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Contending lawfully, you threw down the enemy and were shown to be a venerable martyr, greatly renowned, of the Saviour; for you endured the cutting off of your hands and your feet, Gedeon, with patience, and therefore you deal out divine grace always to those who cry to you in faith: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὁσίων ἰσότιμος, καὶ Ἀθλητῶν κοινωνός, καὶ θεῖον ἀγλάϊσμα, τῆς Καρακάλλου Μονῆς, ἐδείχθης μακάριε· σὺ γὰρ στερρῶς ἀθλήσας, τὸν ἐχθρὸν ἐτροπώσω· ἔνθεν Ὁσιομάρτυς, Γεδεὼν ἐδοξάσθης, πρεσβεύων ὑπὲρ πάντων, ἡμῶν τῶν εὐφημούντων σε.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the second of two apolytikia on the page of «Άγιος Γεδεών ο Νέος Οσιομάρτυρας», and it names him and his monastery.",
+        "url": "https://www.saint.gr/1070/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown, blessed one, to be of equal honour with the venerable, a partner of the contenders, and a divine adornment of the monastery of Karakallou; for contending steadfastly you routed the enemy, and from that, venerable martyr Gedeon, you were glorified, interceding for all of us who praise you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

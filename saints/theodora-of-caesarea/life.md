@@ -12,4 +12,8 @@ She punished her body so much that the joints of her bones could be seen through
 
 doxologia.ro's line for the day names her «Sfânta Cuvioasă Teodora din Cezareea» and gives no year for her birth or her death, and the page it links for her prints no hymn.
 
-*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-teodora-din-cezareea); read 28 September 2026.*
+The Greek calendar keeps her on the same day, 30 December, and sets her in a reign: saint.gr says she lived in the years of the emperor Leo the Isaurian, which it dates 717 to 741. She was of a bright and distinguished family; her father, Theophilos, was a patrician, and her mother was called Theodora like herself. The mother was barren, and had her daughter after much prayer to God.
+
+When the girl came to a suitable age she was dedicated to the monastery of Saint Anna, the one called Rigidiou. There she lived in the exercise of virtue until the moment when the emperor Leo snatched her out of the house to give her as wife to his son Christopher. On the very day of the wedding, however, Christopher went out on campaign with his father against the Scythians and was killed in the fighting. So Theodora took whatever precious things she had and went back to her monastery, where she was tonsured a nun; and there she lived with great self-restraint and hardness of life, and died in the manner of the venerable.
+
+*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-teodora-din-cezareea); read 28 September 2026; and saint.gr's calendar for 30 Δεκεμβρίου — [the day](https://www.saint.gr/12/30/index.aspx) and [the life](https://www.saint.gr/1074/saint.aspx), read 2 October 2026.*

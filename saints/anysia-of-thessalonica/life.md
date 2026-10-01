@@ -14,4 +14,8 @@ The people who saw her dead passed by and wept, on the one hand for the sacrific
 
 doxologia.ro's line for the day names her «Sfânta Muceniță Anisia fecioara» and gives no year, and the page the site keeps for her troparion is an audio recording of the hymn in Greek and prints no text.
 
-*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-anisia); read 28 September 2026.*
+The Greek calendar keeps her on the same day, 30 December, and gives the year the Romanian line withheld: saint.gr puts her in the reign of Diocletian and heads her entry «(; - 298)». She was of Thessalonica, it says, the daughter of devout and very rich parents; and when they died she was left mistress of herself. Neither the wealth she inherited went to her head nor her orphanhood carried her away, but with prudence and self-restraint she tried always to learn «τι εστίν ευάρεστον τω Κυρίω» — what is well-pleasing to the Lord.
+
+That piety of hers made her known to the idolaters. Once, as she was going to church, a pagan soldier met her, seized her violently, dragged her to the altars of the idols and pressed her to sacrifice to the gods. Anysia confessed that she believed in the one true God, Jesus Christ, and that it was he she strove to please every day. The soldier, enraged, began to blaspheme God; and then Anysia spat in his face. Shamed, he drew his sword and ran it through her side, and so she took the unfading crown of martyrdom.
+
+*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-anisia); read 28 September 2026; and saint.gr's calendar for 30 Δεκεμβρίου — [the day](https://www.saint.gr/12/30/index.aspx) and [the life](https://www.saint.gr/1075/saint.aspx), read 2 October 2026.*

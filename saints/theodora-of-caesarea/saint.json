@@ -6,6 +6,11 @@
       "form": "Teodora",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 decembrie, «Sfânta Cuvioasă Teodora din Cezareea», with the rank words left off."
+    },
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Οσία Θεοδώρα «η από Καισαρείδος»», with the rank and the by-name left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Οσία Θεοδώρα «η από Καισαρείδος»»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same woman: the nun of the monastery of Saint Anna called Rigidiou whom the emperor Leo took out of it to marry his son. The page gives the reign the folder had no date from, «έζησε στα χρόνια του βασιλιά Λέοντα του Ισαύρου (717 - 741 μ.Χ.)», and the `dates` object here is a floruit over those years and nothing narrower; the page gives no year of birth, no year of death and no age. It names her father Theophilos, a patrician, her mother Theodora, who was barren and bore her after much prayer, and the emperor's son Christopher, killed in the fighting against the Scythians on the day of the wedding; the corpus holds no folder this reading could attach to any of the three. It names the monastery and the place-name of her by-name, Καισαρείδος, and no coordinate is proposed. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 717,
+      "latest": 741,
+      "display": "8th century",
+      "basis": "attested",
+      "note": "saint.gr: «Η Οσία Θεοδώρα έζησε στα χρόνια του βασιλιά Λέοντα του Ισαύρου (717 - 741 μ.Χ.)». The years are the reign the page names and the page's own dating of it; no year of birth, no year of death and no age is given, and doxologia.ro, which the folder follows, gave no year at all."
+    }
   }
 }

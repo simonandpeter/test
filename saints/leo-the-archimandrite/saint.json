@@ -6,6 +6,11 @@
       "form": "Leon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 decembrie, «Sfântul Cuvios Leon, arhimandritul», with the rank word left off."
+    },
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Δεκεμβρίου, «Όσιος Λέων ο Αρχιμανδρίτης», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Δεκεμβρίου — «Όσιος Λέων ο Αρχιμανδρίτης»",
+        "url": "https://www.saint.gr/12/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same man, named the same way, with the same rank and the same absence of a life: «Ο Όσιος Λέων ο Αρχιμανδρίτης απεβίωσε ειρηνικά. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Οσίου.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. It gives no year, no country, no monastery and no hymn, so nothing of the folder but this row and the Greek name form changes. Its distich is the one thing it adds: «Pευστού μεταστάς Xριστέ Λέων εκ βίου, / Σκύμνον λέοντος εξ Iούδα σε βλέπει» — Leo, having passed over from this fleeting life, sees you, Christ, the lion's whelp out of Judah."
     },
     {
       "church": "serbian",

@@ -1,0 +1,13 @@
+# Anysios of Thessalonica
+
+saint.gr's calendar for 30 December keeps Anysios, bishop of Thessalonica, and tells his life out of his correspondence. He was the disciple, the fellow worker and the successor of [Acholius](/saints/acholius-of-thessalonica), or Ascholius, bishop of Thessalonica, on the archiepiscopal throne of that city in 383 or 384; and by a letter to Anysios of 11 December 384 pope Damasus installed him as his vicar in Illyricum.
+
+The title of papal vicar is given him by pope Siricius too, in the oldest letter of the «Collection of Thessalonica», where he maintains that no episcopal ordinations ought to be performed in the province of Illyricum without the consent of Anysios; and the popes Anastasius and Innocent I confirmed the institution of the vicariate in letters of their own to him, the second of them, in 402, giving the bishop of Thessalonica the right to oversee all the ecclesiastical affairs of Illyricum and not the ordinations only.
+
+In December 391 the synod of Capua committed to a synod of the bishops of Illyricum, under his presidency, the examination of the heresy of Bonosus, bishop of Sardica, who denied the perpetual virginity of the Theotokos. He kept up a correspondence with [Ambrose](/saints/ambrose-of-milan), bishop of Milan, from which, the page says, a good deal of what is known of his teacher Acholius is drawn.
+
+Anysios defended the innocence of [John Chrysostom](/saints/john-chrysostom) stoutly, as several of the Lives of Chrysostom witness. After the deposition, he sent a letter to pope Innocent I which Eulysius, bishop of Apamea in Bithynia, carried to Rome with the letters of fifteen bishops of John's synod; and the pope's answering letter never reached him, because the bishops carrying it were deliberately prevented by an officer from putting in at Thessalonica to deliver it. Two letters of Chrysostom himself are the more important, the page says: one addressed to Anysios personally about 406, from exile, thanking him for the great part he had played towards his vindication and urging him not to tire of what he was doing for the common setting-right of the Churches; the other, of the same year, thanking Anysios and all the Orthodox bishops of Macedonia together.
+
+His episcopate ended with his death about the end of 406 or the beginning of 407. His memory, the page adds, is written in the Roman Martyrology on 30 December, the day on which the martyr Anysia is honoured as well.
+
+*After saint.gr's calendar for 30 Δεκεμβρίου — [the day](https://www.saint.gr/12/30/index.aspx) and [the life](https://www.saint.gr/1069/saint.aspx); read 2 October 2026.*
