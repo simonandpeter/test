@@ -130,11 +130,17 @@ function readCentury(text) {
   return century(Number(m[2]), m[1] ? PHRASE[m[1]] : 'century');
 }
 
-/** A bare ordinal, which only ever appears as the left half of `4th or 5th century`. */
+/**
+ * A bare ordinal: the half of a pair that leaves the word `century` to its
+ * partner, as `4th or 5th century` does — and, since the 3 July drafts, as
+ * `the mid-17th century, or the end of the 16th` does in the other direction.
+ * It takes the same modifiers a whole century phrase takes, prose included.
+ */
 function readOrdinal(text, which = 'century') {
-  const m = /^(early |late |mid-)?(\d+)(?:st|nd|rd|th)$/.exec(text);
+  const said = text.replace(/^(the )?mid-/, '$1mid ');
+  const m = new RegExp(`^(?:the )?(?:(${PHRASES}) (?:the )?)?(\\d+)(?:st|nd|rd|th)$`).exec(said);
   if (!m) return null;
-  return { n: Number(m[2]), modifier: m[1] ? MODIFIER[m[1].trim() === 'mid-' ? 'mid-' : m[1].trim()] : which };
+  return { n: Number(m[2]), modifier: m[1] ? PHRASE[m[1]] : which };
 }
 
 /**
@@ -327,7 +333,10 @@ export function translateDisplay(display) {
    */
   const window = /^between (.+) and (.+)$/.exec(body);
   if (window) {
-    const a = readTerm(window[1], null);
+    // `between the 13th and the 14th century` says the word once, on the end
+    // that carries it, and means it at both ends.
+    const shared = /centur(?:y|ies)$/.test(window[2]) ? 'century' : null;
+    const a = readTerm(window[1], shared);
     const b = readTerm(window[2], null);
     if (a !== null && b !== null) return dress(fill(STRINGS.dates.between, { a, b }));
     return display;
@@ -381,11 +390,16 @@ export function translateDisplay(display) {
    */
   const parts = body.split(/,\s*or\s+|,\s*|\s+or\s+/);
   const said = [];
-  let carry = null;
+  /*
+   * The word `century` is written once for the whole list, and **not always on
+   * the last part**: `the mid-17th century, or the end of the 16th` puts it
+   * first. So the list is asked whether any part carries it before any part is
+   * read, rather than the previous reading's trailing part alone.
+   */
+  const carry = parts.some((part) => /centur(?:y|ies)$/.test(part)) ? 'century' : null;
   for (let i = parts.length - 1; i >= 0; i -= 1) {
     const term = readTerm(parts[i], carry);
     if (term === null) return display;
-    if (i === parts.length - 1 && /century$/.test(parts[i])) carry = 'century';
     said.unshift(term);
   }
   return dress(said.length > 1 ? said.join(STRINGS.dates.or) : said[0]);

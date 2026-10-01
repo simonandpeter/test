@@ -6,6 +6,11 @@
       "form": "Iachint",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 iulie, «Sfântul Mucenic Iachint»."
+    },
+    {
+      "form": "Υάκινθος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Υάκινθος ο κουβικουλάριος (θαλαμηπόλος)», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "saint.gr closes its life with a remark of its own on a second day: «Η μνήμη του Αγίου αυτού, μαζί μ' αυτή του Αγίου Διομήδη, από ορισμένους Συναξαριστές, επαναλαμβάνεται περιττώς και την 3η Ιουνίου» — the memory of this saint, together with that of Saint Diomedes, is repeated superfluously by certain synaxaria on 3 June as well. The page calls that repetition needless rather than keeping it, so 3 Ιουλίου is what is recorded; its own 3 Ιουνίου page has not been read (1 October 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιος Υάκινθος ο κουβικουλάριος (θαλαμηπόλος) (; - 98)»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
         "text": "Your martyr Hyacinth, O Lord, in his contest received the crown of incorruption from You our God; for having Your strength he overcame the tormentors and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ταχὺ προκατάλαβε.",
+      "text": "Ὡς Λίθος ὑάκινθος, τῆς Ἐκκλησίας Χριστοῦ, ἀστράπτεις τοὶς πέρασι, ταὶς τῶν χαρίτων αὐγαίς, παμμάκαρ Ὑάκινθε, σὺ γὰρ ὁμολογία, πυρσωθεῖς εὐσέβειας, ἔλαμψας ἐν ἀθλήσει, τὴ τοῦ Λόγου μιμήσει, ἐντεῦθεν καταφαιδρύνεις, τοὺς σὲ γεραίροντας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε, on the page of «Άγιος Υάκινθος ο κουβικουλάριος»",
+        "url": "https://www.saint.gr/670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like the jacinth stone of the Church of Christ you flash to the ends of the earth with the beams of grace, all-blessed Hyacinth; for kindled by the confession of piety you shone out in your contest, in imitation of the Word, and from there you make bright those who honour you.",
+        "rendered": "site"
+      },
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ἐπεφάνης σήμερον.",
+      "text": "Ὑακίνθῳ σήμερον, ἐξ ὑακίνθων, ἀμαράντων πλέξωμεν, στέφανον πάντες οἱ πιστοί, μεγαλοφώνως κραυγάζοντες, Χαίροις μαρτύρων, τὸ κλέος Ὑάκινθε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Άγιος Υάκινθος ο κουβικουλάριος»",
+        "url": "https://www.saint.gr/670/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "For Hyacinth today let all we faithful weave a crown out of unfading hyacinths, crying out with a loud voice: Rejoice, Hyacinth, glory of the martyrs.",
+        "rendered": "site"
+      },
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {

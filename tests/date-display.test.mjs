@@ -81,6 +81,18 @@ test('a century, a range, an era and a full date each read as their language wri
   // A window rather than a bound, and the join is `and`, not `or`: doxologia
   // gives Xenia of Saint Petersburg's repose as «între 1794 și 1806».
   assert.equal(translateDisplay('between 1794 and 1806'), 'между 1794 и 1806');
+  /*
+   * **And the word is not always on the end the reader reached last.** The 3
+   * July drafts wrote both directions: a window whose second end carries it,
+   * and a reckoning tail whose *first* part does, leaving the alternative a
+   * bare prose-modified ordinal. The previous reading took the unit from the
+   * last part of the list alone, so the second of these came back in English.
+   */
+  assert.equal(translateDisplay('between the 13th and the 14th century'), 'между XIII в. и XIV в.');
+  assert.equal(
+    translateDisplay('the mid-17th century, or the end of the 16th'),
+    'середина XVII в. или конец XVI в.',
+  );
   // The month through Intl, so it is the reader's own word and its own order.
   assert.match(translateDisplay('14 September 407'), /сентября 407/);
 

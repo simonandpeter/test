@@ -1,0 +1,11 @@
+# Joachim the New of Notena
+
+He was born in the village of Skiada, on the south-western foot of Mount Erymanthos in what is now the district of Tritaia, in the province of Old Patras in Achaia; saint.gr puts his birth in the middle of the seventeenth century, or by other sources at the end of the sixteenth, and does not decide between them. Young, and against his own will, he was betrothed to a devout girl of the same village.
+
+Burning for the monastic life, he left parents and betrothed and became a monk at the monastery of Chrysopigi above the village of Divri in Elis. There he came to such heights of virtue that the abbot judged him worthy of the priesthood, and when the abbot died the brotherhood elected Joachim in his place. He went on to the monastery of Notena near his birthplace, which is kept in the name of the Dormition of the Theotokos, and became its abbot too; but within a few years, burning now for stillness, he resigned and withdrew to a cave near the monastery.
+
+In that small cave he gave himself to hard asceticism with unceasing prayer, fasting and vigil. His food was gruel of flour boiled with honey, or wild greens boiled. He hid his struggles, saying that open virtue is lost as an open treasure is stolen, and so he slept every night standing, hung by ropes under his arms with a gospel book open before him. Though he was wholly unlettered he understood the Scriptures and the writings of the Fathers so well that the metropolitan of Old Patras, Parthenios V, a very learned man, took note of him.
+
+A few years after his death, in the great raid of the Turkalbanians on the Morea that followed the failed Orlov rising of 1770, «κρίμασιν οἷς οἶδεν ὁ Κύριος» — by judgements the Lord knows — his relics were broken up and his skull was stolen along with other treasures of the monastery. A few relics of him survive at Notena today, which the page says give off fragrance and work cures; and before the cave where he practised asceticism a church has been built in his name, where his memory is kept with splendour on 3 July.
+
+*After saint.gr's calendar for 3 Ιουλίου — [the day](https://www.saint.gr/07/03/index.aspx) and [the life](https://www.saint.gr/664/saint.aspx); read 1 October 2026.*

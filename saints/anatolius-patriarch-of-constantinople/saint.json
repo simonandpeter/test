@@ -7,6 +7,11 @@
       "form": "Anatolie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 iulie, «Sfântul Ierarh Anatolie, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Ανατόλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Ανατόλιος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιος Ανατόλιος Πατριάρχης Κωνσταντινούπολης (; - 458)»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -59,5 +73,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’. Τὴν ὡραιότητα.",
+      "text": "Ἔργω τὴν κλῆσιν σου σφραγίζων Ὅσιε, λόγοις καὶ πράξεσι, τῷ κόσμῳ, ἔφανας, τῆς ὑπὲρ νοῦν Ἀνατολῆς, τὴν ἔλλαμψιν Ἱεράρχα, σὺ γὰρ Ἀνατόλιε, τὸν Χριστὸν ἀνεκήρυξας, διπλοῦν ταὶς θελήσεσιν, ἀσυγχύτως καὶ φύσεσιν, ὑπόστασιν δὲ φέροντα μίαν, πρὸς σωτηρίαν τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα, on the page of «Άγιος Ανατόλιος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/669/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sealing your name by your work, holy one, you showed the world in words and deeds the shining of the Dawn that is beyond understanding, O hierarch; for you, Anatolius, proclaimed Christ double in His wills and in His natures, without confusion, yet bearing one hypostasis, for the salvation of our souls.",
+        "rendered": "site"
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. β’. Τὴν ὑπὲρ ἡμῶν.",
+      "text": "Τὴν ἀνατολήν, τῆς θείας φωτοφανείας, φέρων ἐν ψυχῇ, ὡς λύχνον Ὀρθοδοξίας, διαλύεις τὴν νύκτα, τῶν αἰρέσεων Ὅσιε, καὶ πρὸς ὄρθρον θείας πίστεως, κατευθύνεις Ἀνατόλιε, τοὺς ἐκ πόθου ἀκβοῶντάς σοι· Αὐτὸς ἡμῶν φωτισμός, ὤφθης μύστα Χριστοῦ.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. β’, Τὴν ὑπὲρ ἡμῶν, on the page of «Άγιος Ανατόλιος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/669/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing in your soul the dawn of the divine shining forth, as a lamp of Orthodoxy you dissolve the night of the heresies, holy one, and guide towards the morning of the divine faith, Anatolius, those who cry out to you with longing: you were shown to be our illumination, initiate of Christ.",
+        "rendered": "site"
+      },
+      "model": "Τὴν ὑπὲρ ἡμῶν."
+    }
+  ]
 }

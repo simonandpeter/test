@@ -1,0 +1,59 @@
+{
+  "slug": "basil-of-ryazan",
+  "display_name": "Basil of Ryazan",
+  "office": "Bishop of Ryazan and Murom",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Βασίλειος Επίσκοπος Ριαζάν και Μουρώμ», with the rank word and the see left off."
+    }
+  ],
+  "types": [
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "between the 13th and the 14th century",
+      "basis": "traditional",
+      "note": "saint.gr gives no year, only «έζησε στη Ρωσία μεταξύ του 13ου και του 14ου αιώνα μ.Χ.»; the bounds here are the two centuries the page names and nothing narrower."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "saint.gr adds at the end of its notice that «Η Εκκλησία εορτάζει, επίσης, τη μνήμη του στις 10 Ιουνίου» — the Church also keeps his memory on 10 June. One row to a church is the schema, so the second day is noted here and he is not rendered on it; the 10 Ιουνίου page has not been read (1 October 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιος Βασίλειος Επίσκοπος Ριαζάν και Μουρώμ»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "theodotus-3-july",
+  "display_name": "Theodotus (3 July)",
+  "names": [
+    {
+      "form": "Θεόδοτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιοι Θεόδοτος, Θεοδότη, Δολινδούχ, Διομήδης, Ευλάμπιος και Ασκληπιάδης», with the rank word left off."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 98,
+      "display": "98",
+      "basis": "traditional",
+      "note": "saint.gr heads each of the six «(; - 98)» and says they were taken by «τον βασιλιά Τραϊανό (98 μ.Χ.)» — the first year of Trajan's reign, which is the only year the page prints."
+    }
+  },
+  "related": [
+    "theodote-companion-of-theodotus",
+    "dolindouch",
+    "diomedes-martyr-3-july",
+    "eulampius-martyr-3-july",
+    "asclepiades-the-martyr",
+    "hyacinth-the-chamberlain"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιοι Θεόδοτος, Θεοδότη, Δολινδούχ, Διομήδης, Ευλάμπιος και Ασκληπιάδης»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

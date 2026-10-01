@@ -10,4 +10,10 @@ The martyr of Christ, Hyacinth, ended his life at Rome on the third day of July,
 
 The life names the emperor Trajan and prints no year, so none is recorded here.
 
-*After doxologia.ro's calendar for 3 iulie — [the day](https://doxologia.ro/3-iulie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-iachint); read 24 September 2026.*
+The Greek calendar keeps him on the same 3 July and puts his origin and his office more plainly than the Romanian life does. saint.gr says he came from Caesarea in Cappadocia and lived in the years of the emperor Trajan, whose reign it dates 98 to 117; that he was a man of exceptional conduct and served as the emperor's κουβικουλάριος, his chamberlain, discharging his duties in the palace in the best way, careful, and not defiled by the luxury of the court, because his whole soul was given to Christ the Saviour.
+
+So when Trajan ordered the persecution of the Christians he did not hesitate to confess before the emperor that he was one. Trajan was astonished and told him he was ungrateful for the trust and the standing the palace had given him; and Hyacinth answered with ease of soul that if gratitude is a virtue, what defence could he make if he denied the Saviour who had shed His blood for him and had given him faith, hope and love. The emperor then had him imprisoned and given no food at all unless he would eat what had been offered to the idols. Forty days Hyacinth passed so, and never touched it; on the forty-first he gave up his spirit to the Lord.
+
+Its kontakion plays on the stone and the flower his name carries: «Ὑακίνθῳ σήμερον, ἐξ ὑακίνθων, ἀμαράντων πλέξωμεν, στέφανον» — for Hyacinth today let us all weave a crown out of unfading hyacinths.
+
+*After doxologia.ro's calendar for 3 iulie — [the day](https://doxologia.ro/3-iulie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-iachint); read 24 September 2026; and saint.gr's calendar for 3 Ιουλίου — [the Greek day](https://www.saint.gr/07/03/index.aspx) and [the Greek life](https://www.saint.gr/670/saint.aspx), read 1 October 2026.*

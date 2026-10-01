@@ -1,0 +1,89 @@
+{
+  "slug": "gerasimos-of-karpenisi",
+  "display_name": "Gerasimos the New of Karpenisi",
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Γεράσιμος ο νέος ο Καρπενησιώτης», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "His baptismal name, as saint.gr's life prints it: «καταγόταν από το Μεγάλο Χωριό του Καρπενησίου και ονομαζόταν Γεώργιος»."
+    }
+  ],
+  "types": [
+    "new-martyr",
+    "venerable-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1787,
+      "latest": 1787,
+      "display": "1787",
+      "basis": "traditional",
+      "note": "saint.gr's heading is «Άγιος Γεράσιμος ο νέος ο Καρπενησιώτης (1787 - 1812)», and its life says he was twenty-five when he was beheaded on 3 July 1812."
+    },
+    "death": {
+      "earliest": 1812,
+      "latest": 1812,
+      "display": "3 July 1812",
+      "basis": "attested",
+      "note": "saint.gr: «στις 3 Ιουλίου 1812 μ.Χ. τον αποκεφάλισαν στο Μπαμπά Χουμάϊ της Κωνσταντινούπολης. Τότε ήταν 25 χρονών»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιος Γεράσιμος ο νέος ο Καρπενησιώτης (1787 - 1812)»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’. Μέγαν εὔρατο ὲν τοῖς κινδύνοις.",
+      "text": "Γέρας τίμιον τῆς ᾿Εκκλησίας, σέλας ἔνθεον Εὐρυτανίας, νεομαρτύρων νεώτερον καύχημα, ἐν τῇ ἀσκήσει Χριστὸν ἐπεπόθησας καὶ μαρτυρίῳ Θεὸν ὡμολόγησας. Αὐτόν, ἅγιε ὁσιομάρτυς Γεράσιμε, πρεσβείαις τῆς Θεομήτορος, ἱκέτευε σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Μέγαν εὔρατο ἐν τοῖς κινδύνοις, on the page of «Άγιος Γεράσιμος ο νέος ο Καρπενησιώτης»",
+        "url": "https://www.saint.gr/4298/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honoured prize of the Church, divine brightness of Eurytania, youngest boast of the neomartyrs: in the ascetic life you longed for Christ, and in martyrdom you confessed God. Entreat Him, holy venerable-martyr Gerasimos, by the intercessions of the Mother of God, that our souls be saved.",
+        "rendered": "site"
+      },
+      "model": "Μέγαν εὔρατο ἐν τοῖς κινδύνοις."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

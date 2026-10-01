@@ -1,0 +1,57 @@
+{
+  "slug": "basil-of-yaroslavl",
+  "display_name": "Basil of Yaroslavl",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Βασίλειος του Γιαροσλάβλ ο πρίγκιπας», with the rank word and the title left off."
+    }
+  ],
+  "types": [
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1249,
+      "latest": 1249,
+      "display": "1249",
+      "basis": "traditional",
+      "note": "saint.gr prints the year of death alone in its heading, «Άγιος Βασίλειος του Γιαροσλάβλ ο πρίγκιπας (; - 1249)», the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγιος Βασίλειος του Γιαροσλάβλ ο πρίγκιπας (; - 1249)»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

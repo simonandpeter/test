@@ -1,0 +1,57 @@
+{
+  "slug": "theodote-martyr-712",
+  "display_name": "Theodote (3 July)",
+  "names": [
+    {
+      "form": "Θεοδότη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγια Θεοδότη η μάρτυρας», with the rank word left off."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 712,
+      "latest": 712,
+      "display": "712",
+      "basis": "traditional",
+      "note": "saint.gr prints the year and nothing else: «Η Άγια Θεοδότη μαρτύρησε το 712 μ.Χ. Δεν έχουμε άλλες λεπτομέρειες για τον βίο της», and its heading repeats «(; - 712)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Άγια Θεοδότη η μάρτυρας (; - 712)»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

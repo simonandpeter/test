@@ -1,0 +1,59 @@
+{
+  "slug": "joachim-the-new-of-notena",
+  "display_name": "Joachim the New of Notena",
+  "names": [
+    {
+      "form": "Ιωακείμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Ιουλίου, «Όσιος Ιωακείμ ο νέος ο θεοφόρος», with the rank word and the epithets left off."
+    }
+  ],
+  "types": [
+    "venerable",
+    "abbot",
+    "ascetic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1580,
+      "latest": 1660,
+      "display": "the mid-17th century, or the end of the 16th",
+      "basis": "traditional",
+      "note": "saint.gr records the disagreement rather than settling it: «γεννήθηκε στα μέσα του 17ου αιώνα μ.Χ. (ή σύμφωνα με άλλες πηγές στα τέλη του 16ου αιώνα μ.Χ)». The bounds here are the widest the two readings allow; the page gives no year of death at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Ιουλίου — «Όσιος Ιωακείμ ο νέος ο θεοφόρος»",
+        "url": "https://www.saint.gr/07/03/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
