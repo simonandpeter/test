@@ -1,0 +1,62 @@
+{
+  "slug": "porphyrius-the-mime-4-november",
+  "display_name": "Porphyrius the Mime (4 November)",
+  "names": [
+    {
+      "form": "Πορφύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Άγιος Πορφύριος ο Μίμος», with the rank word left off; «ο Μίμος» is the page's own epithet and is kept in the English form, as the corpus already keeps it for the other man of that trade."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "porphyrius-the-mime-15-september"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "about 270",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Πορφύριος έζησε στα χρόνια του αυτοκράτορα Αυρηλιανού (περί το 270 μ.Χ.)» — the page's own year, written «περί», about, for the reign it sets him in, and the beheading follows in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Άγιος Πορφύριος ο Μίμος»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day as the listing. **The page itself refuses the identification this folder would otherwise be an upgrade of**, and says so in its own closing sentence: «Ο Άγιος Πορφύριος ο μίμος που εορτάζει στις 4 Νοεμβρίου δεν πρέπει να συγχέετε με τον Άγιο Πορφύριο τον μίμο που εορτάζει στις 15 Σεπτεμβρίου. Οι δύο Άγιοι είναι διαφορετικοί αφού και διαφορετικό δίστιχο έχουν και έζησαν σε διαφορετικές εποχές.» The corpus's folder for that other man carries venerated Russian, Greek and Serbian rows on 15 September, and is not touched. The display name takes the day for the same reason the other folder's does. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1022,6 +1022,7 @@ export const ru = {
     'Elder of Moscow': 'Старец Московский',
     'Emperor': 'Император',
     'Emperor of Constantinople': 'Император Константинопольский',
+    'Emperor of Nicaea': 'Император Никейский',
     'Emperor of Russia': 'Император Российский',
     'Emperor of Trebizond': 'Император Трапезундский',
     'Emperor of the East': 'Император Востока',

@@ -1005,6 +1005,7 @@ export const sr = {
     'Elder of Moscow': 'Старац московски',
     'Emperor': 'Цар',
     'Emperor of Constantinople': 'Цар цариградски',
+    'Emperor of Nicaea': 'Цар никејски',
     'Emperor of Russia': 'Цар Русије',
     'Emperor of Trebizond': 'Цар трапезунтски',
     'Emperor of the East': 'Цар истока',

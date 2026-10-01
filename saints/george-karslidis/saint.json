@@ -1,0 +1,87 @@
+{
+  "slug": "george-karslidis",
+  "display_name": "George Karslidis",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Γεώργιος Καρσλίδης ο Ομολογητής», with the rank words left off; the page's own form of the surname is «Καρσλίδης», and it gives his baptismal name as «Αθανάσιος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1901,
+      "latest": 1901,
+      "display": "1901",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το 1901 μ.Χ. στην Αργυρούπολη του Πόντου», and the heading «(1901 - 1959)»."
+    },
+    "death": {
+      "earliest": 1959,
+      "latest": 1959,
+      "display": "1959",
+      "basis": "attested",
+      "note": "saint.gr: «μέχρι την ημέρα της κοίμησης του, στις 4 Νοεμβρίου 1959 μ.Χ.», and the heading «(1901 - 1959)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Όσιος Γεώργιος Καρσλίδης ο Ομολογητής»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day as the listing, and it is the day of his repose. The corpus keeps a George of Drama with a Romanian feast on this same day and an undocumented Greek row, and **this is not that man and that folder is not touched**: the day's listing does not carry him, and this George is a twentieth-century hieromonk of Pontic birth who founded a monastery at Drama. `confessor` is the day line's own word. The first apolytikion names him and is taken; the page prints a second, «Έτερον Ἀπολυτίκιον», which also names him and is not drafted, and a Μεγαλυνάριον, which is neither a troparion nor a kontakion. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Αναλήψεως μάνδρας σεπτόν δομήτορα, χαροποιού πένθους μύστην, καρδιακής προσευχής, ταπεινώσεως και νήψεως το έσοπτρον, ύμνοις, Γεώργιον, πιστοί, ώσπερ ομολογητών, τιμήσωμεν νέον εύχος, βοώντες, φρούρει θεόθεν, σημειοφόρε, τους ικέτας σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος πλ. α', Τον συνάναρχον Λόγον — the first hymn on the page of «Όσιος Γεώργιος Καρσλίδης ο Ομολογητής». It names him and his monastery of the Ascension and no other saint. The page prints it without breathings and accents and it is copied as it stands.",
+        "url": "https://www.saint.gr/2887/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour George in hymns as the revered builder of the fold of the Ascension, an initiate of joy-bringing mourning, a mirror of prayer of the heart, of humility and of watchfulness, and a new boast of the confessors, crying out: guard your suppliants from God, you who bear the signs.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος πλ. α'.",
+      "model": "Τον συνάναρχον Λόγον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

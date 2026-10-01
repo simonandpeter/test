@@ -6,6 +6,11 @@
       "form": "Ioanichie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 noiembrie."
+    },
+    {
+      "form": "Ιωαννίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Ιωαννίκιος ο Μεγάλος «ὁ ἐν Ὀλύμπῳ»», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Όσιος Ιωαννίκιος ο Μεγάλος «ὁ ἐν Ὀλύμπῳ»»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: born in Bithynia, a soldier under the iconoclast emperor, afterwards a monk on Olympus — which is what the folder's `soldier` and `monk` already say. A `birth` interval is proposed from the page's own year where the folder had none; **no death interval is proposed**, because the page gives his age at death and not a year, and the arithmetic is not this reader's to do. The proper apolytikion and the kontakion both name him and are taken; the page's «Έτερον Ἀπολυτίκιον» is the common of a venerable father, «Ταῖς τῶν δακρύων σου ῥοαίς», and the Οἶκος and the Κάθισμα are neither a troparion nor a kontakion, and none of the three is drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -64,9 +79,52 @@
         "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Joannicius our father. Pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tὴν ἐπίγειον δόξαν, πάτερ, κατέλειπες καταυγασθεὶς τῇ ἐλλάμψει τῆς ἐπινοίας Θεοῦ, ὅθεν ἔφανας ἐν γῇ ὡς ἄστρον ἄδυτον· θείας φωνῆς γὰρ ὡς Μωσῆς μυστικῶς ἀξιωθείς, ἰσάγγελος ἀνεδείχθης καὶ δωρημάτων ταμεῖον, Ἰωαννίκιε μακάριε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Όσιος Ιωαννίκιος ο Μεγάλος «ὁ ἐν Ὀλύμπῳ»». It names him and no other saint; the page's second apolytikion is the common of a venerable father and is not taken. The initial Latin T of «Tὴν» is the page's own.",
+        "url": "https://www.saint.gr/2881/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left behind the glory of earth, father, lit up by the shining of God's purpose; and so you appeared on earth as a star that never sets. For being counted worthy of a divine voice, mystically, as Moses was, you were shown equal to the angels and a treasury of gifts, blessed Joannicius.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἀστὴρ ἐφάνης παμφαὴς ἐπὶ γῆς λαμπῶν, καὶ τοὺς ἐν ζόφῳ τῶν παθῶν περιαυγάζων, ἰατρὸς δὲ ἀρωγότατος τῶν νοσούντων, ἀλλ' ὡς χάριν εἰληφώς, τὴν τῶν ἰάσεων, τοῖς αἰτοῦσι σε παράσχου πᾶσαν ἴασιν, ἵνα κράζωμεν. Χαίροις Πάτερ, Ἰωαννίκιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — on the page of «Όσιος Ιωαννίκιος ο Μεγάλος «ὁ ἐν Ὀλύμπῳ»». It names him and no other saint; the Οἶκος that follows it on the page is not a kontakion and is not taken.",
+        "url": "https://www.saint.gr/2881/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You appeared as an all-shining star, giving light upon the earth and lighting up those in the gloom of the passions, and a most helpful physician of the sick; and since you have received the grace of healings, grant every healing to those who ask you, that we may cry: hail, father Joannicius.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 740,
+      "latest": 740,
+      "display": "740",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιωαννίκιος γεννήθηκε στη Βιθυνία το 740 μ.Χ.» The page gives no year for his death, only «πέθανε 94 χρονών στη Μονή Αντιδίου», so no death interval is recorded from it."
+    }
   }
 }

@@ -7,6 +7,11 @@
       "form": "Nicandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 noiembrie."
+    },
+    {
+      "form": "Νίκανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Άγιοι Νίκανδρος επίσκοπος Μύρων και Ερμαίος ο πρεσβύτερος», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Άγιοι Νίκανδρος επίσκοπος Μύρων και Ερμαίος ο πρεσβύτερος»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the bishop of Myra martyred with the presbyter Hermaeus, which is what the folder's office and its companion's folder already say. The page adds what the folder may not have: that the two were disciples of the apostle Titus, that they were denounced to Libanios the governor of the city, that their torn flesh was healed by grace, and that they were buried alive. No year, so the folder's dateless state is unchanged. The apolytikion names both men and is taken into both folders; the page's «Έτερον Ἀπολυτίκιον» is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -65,6 +80,23 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Γνῶσιν ἔνθεον, καρποφόρησαν, ὡς ὁμότροπος, τῶν Ἀποστόλων, ἐν ἱερεύσι πιστὸς ἐχρημάτισας καὶ μαρτυρίου τοὶς σκάμμασι Νίκανδρε, συγκοινωνὸν τὸν Ἑρμαῖον ἐκέκτησο, μεθ' οὐ πρέσβευε, Κυρίω τῷ σὲ δοξάσαντι, δωρήσασθαι ἠμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Νίκανδρος επίσκοπος Μύρων και Ερμαίος ο πρεσβύτερος». It names both of them and no other saint. The readings «τοὶς», «μεθ' οὐ» and «ἠμιν» are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/2882/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing the fruit of godly knowledge, as one of the Apostles' own manner of life, you were accounted faithful among priests and in the lists of martyrdom, Nicander; and you had Hermaeus for your partner. With him, intercede with the Lord who glorified you, that he may grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

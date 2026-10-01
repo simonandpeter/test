@@ -1,0 +1,104 @@
+{
+  "slug": "john-vatatzes",
+  "display_name": "John Vatatzes",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Άγιος Ιωάννης ο Βατατζής ο ελεήμονας βασιλιάς», with the rank words left off; the page's own family name is «Βατάτζης» in the body and «Βατατζής» in the day's line."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king",
+    "righteous"
+  ],
+  "office": "Emperor of Nicaea",
+  "dates": {
+    "birth": {
+      "earliest": 1193,
+      "latest": 1193,
+      "display": "1193",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε στα 1193 μ.Χ. στο Διδυμότειχο», and the heading «(1193 - 1254)»."
+    },
+    "death": {
+      "earliest": 1254,
+      "latest": 1254,
+      "display": "1254",
+      "basis": "traditional",
+      "note": "saint.gr's heading «(1193 - 1254)», and in the body «και το 1254 μ.Χ. όταν πέθανε, η αυτοκρατορία της Νικαίας περιελάμβανε στην πραγματικότητα τα εδάφη της βυζαντινής αυτοκρατορίας πριν τη φραγκική κατάκτηση»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Άγιος Ιωάννης ο Βατατζής ο ελεήμονας βασιλιάς»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus holds no emperor of Nicaea. `king` is the nearest rank this corpus carries for an emperor and `righteous` is for the epithet the page's own line gives him, «ο ελεήμονας βασιλιάς»; no monastic or martyric rank is recorded, because the page gives none. No location is recorded although the page names Didymoteicho for his birth, Nicaea for his throne and Adrianople among his conquests. Of the page's many hymns only the two the corpus takes are drafted: the Ἀπολυτίκιον, Ἦχος δ’, and the Κοντάκιον, Ἦχος δ΄, both of which name him; the four Καθίσματα are neither a troparion nor a kontakion and are not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ταχὺς εἰς παράκλησιν τῶν προστρεχόντων εἰς σέ, ἀνάκτων ὑπέρτατε καὶ πενομένων τροφεῦ, Ἰωάννη ἀοίδιμε, εἴλκυσας σύ πρὸς πίστιν τῶν βαρβάρων τὰ πλήθη· ἔλαβες παραδόξως τοῦ ἰᾶσθαι τὰς νόσους τῶν πίστει προστρεχόντων σε. διὸ καὶ οἱ ἐv πίστει προστρέχουσί σε ἀφθόνως λαμβάνουσι τὴν ἴασιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — on the page of «Άγιος Ιωάννης ο Βατατζής ο ελεήμονας βασιλιάς». It names him, calls him the highest of sovereigns and the feeder of the poor, and names no other saint. The reading «ἐv» with a Latin letter is the page's own and is copied as it stands.",
+        "url": "https://www.saint.gr/2885/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Swift to comfort those who run to you, highest of sovereigns and feeder of the poor, famed John, you drew the multitudes of the barbarians to the faith; and you received, beyond all expectation, the healing of the sicknesses of those who run to you in faith. And so those who come to you in faith receive their healing ungrudgingly.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἰωάννης σήμερον, ὁ θεῖος Ἄναξ, βασιλείαν πρόσκαιρον, καταλιπὼν τὴν ἐπὶ γῆς, πρὸς Βασιλείαν Οὐράνιον, καὶ αἰωνίαν, ἀπῆρε γηθόμενος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ΄, Ἐπεφάνης σήμερον — on the page of «Άγιος Ιωάννης ο Βατατζής ο ελεήμονας βασιλιάς». It names him and no other saint.",
+        "url": "https://www.saint.gr/2885/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today John, the godly sovereign, leaving behind the passing kingdom on earth, departed rejoicing for the Kingdom of Heaven and of eternity.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

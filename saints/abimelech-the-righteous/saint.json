@@ -1,0 +1,50 @@
+{
+  "slug": "abimelech-the-righteous",
+  "display_name": "Abimelech",
+  "names": [
+    {
+      "form": "Αβιμέλεχ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Δίκαιος Αβιμέλεχ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Δίκαιος Αβιμέλεχ»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day as the listing. `righteous` is the day line's own word, «Δίκαιος», which is how the corpus prints the holy ones of the Old Testament. The whole of the page is the Genesis episode and a reference to it: «Φιλοξένησε τον Αβραάμ… Το περιστατικό αυτό, υπάρχει στο βιβλίο της Γένεσης της Παλαιάς Διαθήκης στα κεφάλαια 20 και 21». No year, so no `dates` object; no location, because Gerar is the kingdom the page gives him and not a point. The same day's listing carries a separate entry, «Διήγησις εις τον θρήνον του Προφήτου Iερεμίου περί της Iερουσαλήμ… και περί της εκστάσεως Aβιμέλεχ», which is a reading and not a person and gets no folder; the two are linked on the site and the report says so. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

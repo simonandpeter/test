@@ -1,0 +1,50 @@
+{
+  "slug": "mercurius-the-faster",
+  "display_name": "Mercurius the Faster",
+  "names": [
+    {
+      "form": "Μερκούριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Μερκούριος ο νηστευτής», with the rank word left off; «ο νηστευτής», the faster, is the page's own epithet and is kept in the English form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Νοεμβρίου — «Όσιος Μερκούριος ο νηστευτής»",
+        "url": "https://www.saint.gr/11/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Νοεμβρίου εκάστου έτους», the same day as the listing, and its whole content is a cross-reference: «Για τον Όσιο Μερκούριο τον νηστευτή βλέπε στις 24 Νοεμβρίου». **So the row records this day, which is the day the page itself keeps him on, and the 24 Νοεμβρίου page is named here and in the report**: a reader of that day will find his life there and should upgrade this folder rather than make a second one. The corpus's two other men of the name are neither of them this one: Mercurius the great martyr and soldier, kept on the Romanian 25 November, and Mercurius one of the twelve tribunes, with a venerated Greek row on 24 May. No year, so no `dates` object; no place, so no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

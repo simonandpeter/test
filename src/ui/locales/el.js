@@ -1004,6 +1004,7 @@ export const el = {
     'Elder of Moscow': 'Γέροντας Μόσχας',
     'Emperor': 'Αυτοκράτορας',
     'Emperor of Constantinople': 'Αυτοκράτορας της Κωνσταντινούπολης',
+    'Emperor of Nicaea': 'Αυτοκράτορας της Νίκαιας',
     'Emperor of Russia': 'Αυτοκράτορας της Ρωσίας',
     'Emperor of Trebizond': 'Αυτοκράτορας της Τραπεζούντας',
     'Emperor of the East': 'Αυτοκράτορας της Ανατολής',
