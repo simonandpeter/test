@@ -6,6 +6,11 @@
       "form": "Elisei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Proroc Elisei»."
+    },
+    {
+      "form": "Ελισσαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουνίου, «Προφήτης Ελισσαίος», with the rank word left off. The page's hymns spell the name «Ἐλισαῖε» as well as «Ἐλισσαῖε»; the form above is the one the day's line prints."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουνίου — «Προφήτης Ελισσαίος»",
+        "url": "https://www.saint.gr/06/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives no years. It is plainly the same prophet: the son of Shaphat, servant and successor of Elijah, who received a double portion of his grace. The page also lists a separate commemoration, the deposition of the relics of the apostles Luke, Andrew and Thomas, of the prophet Elisha and of the martyr Lazarus, which is not this day's entry and is not recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -45,5 +60,44 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "elijah-the-tishbite"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Ὡς ὑποφήτην ἀληθῆ τοῦ Σωτῆρος, καὶ τῶν ἐν νόμῳ παιδευτὴν καὶ φωστῆρα, τοὶς πόρρω σὲ ἐδήλωσεν ὁ τόκος σου σοφὲ σὺ γὰρ κληρωσάμενος, τοῦ Θεσβίτου τὴν χάριν, θαύμασι διέπρεψας, καὶ δυνάμεσι πλείσταις. Καὶ νῦν ἀπαύστως φύλαττε ἠμᾶς, ὢ Ἐλισαῖε, Προφῆτα θεσπέσιε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the first of two apolytikia on the page of «Προφήτης Ελισσαίος», and it names him",
+        "url": "https://www.saint.gr/590/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your own birth made you known to those far off, O wise one, as a true interpreter of the Saviour and as a teacher and luminary of those under the law; for having inherited the Tishbite's grace, you excelled in wonders and in very many mighty works. And now guard us unceasingly, O Elisha, divinely-speaking prophet.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Προφήτης Θεοῦ, ἐδείχθεις διπλασίονα, τὴν χάριν λαβών, τὴν ὄντως ἐπαξίαν σοι, Ἐλισσαῖε μακάριε. Ἠλιοῦ γὰρ γέγονας σύσκηνος, σὺν αὐτῷ Χριστῷ τῷ Θεῷ, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the first of two kontakia on the page of «Προφήτης Ελισσαίος», and it names him",
+        "url": "https://www.saint.gr/590/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown a prophet of God, having received the double grace that was truly worthy of you, O blessed Elisha; for you became Elijah's tent-fellow, interceding with him unceasingly before Christ our God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Chiril",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 iulie, «Sfântul Sfințit Mucenic Chiril», with the rank words left off."
+    },
+    {
+      "form": "Κύριλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουνίου, «Άγιος Κύριλλος Ιερομάρτυρας επίσκοπος Γορτύνης Κρήτης», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 6 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουνίου — «Άγιος Κύριλλος Ιερομάρτυρας επίσκοπος Γορτύνης Κρήτης»",
+        "url": "https://www.saint.gr/06/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουνίου εκάστου έτους». The Greek calendar keeps him on 14 June where the folder's Romanian row is on 9 July and its Russian row on the Julian 6 September; one attestation row per church is the schema, and those rows are untouched. It is plainly the same man: the bishop of Gortyna in Crete, consecrated at sixty-eight, who governed his flock twenty-five years, was thrown into a fire and left unharmed, and was beheaded in extreme old age. The page dates him «(206 - 299)» and puts the martyrdom under Diocletian and Maximian at the age of ninety-three, where the folder's `dates` note, from days.pravoslavie.ru, has him beheaded at the beginning of the fourth century aged ninety-five; the existing `dates` are left as they are and the page's own figures are recorded here. The page adds that according to Dositheos of Jerusalem there is another Cyril, hieromartyr of Gortyna, who was martyred by the Saracens in 780 and from whose wounds myrrh ran instead of blood — a second man, not this one, and no folder is proposed for him here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
     },
     {
       "church": "serbian",

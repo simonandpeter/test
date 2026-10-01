@@ -7,6 +7,11 @@
       "form": "Metodie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 iunie, «Sfântul Ierarh Metodie, Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Μεθόδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουνίου, «Άγιος Μεθόδιος ο ομολογητής Πατριάρχης Κωνσταντινούπολης», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουνίου — «Άγιος Μεθόδιος ο ομολογητής Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/06/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and dates him «(; - 846)». It is plainly the same man: the confessor of the icons born at Syracuse in Sicily, imprisoned by Theophilos on the island of Antigonos, who became patriarch of Constantinople after Theophilos's death on 12 February 842, under the empress Theodora. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,6 +75,40 @@
       },
       "english": {
         "text": "Guide of Orthodoxy, teacher of true worship and of purity, light of the world, God-inspired adornment of monks, O wise hierarch Methodius, by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Εὐσέβειας τὴν μέθοδον προβαλλόμενος, αἱρετικῶν διαλύεις τᾶς ἐπινοίας στερρῶς, Ὀρθοδόξων ἡ κρηπὶς Πάτερ Μεθόδιε τὴν γὰρ Εἰκόνα τοῦ Χριστοῦ, ἀνεστήλωσας τιμᾶν, ὡς θεῖος ἱεροφάντωρ· καὶ νῦν ἀεὶ ἐκδυσώπει, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first of two apolytikia on the page of «Άγιος Μεθόδιος ο ομολογητής Πατριάρχης Κωνσταντινούπολης», and the one proper to him, playing on his name; the second, «Κανόνα πίστεως», is the common of a hierarch",
+        "url": "https://www.saint.gr/589/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Putting forward the method of true religion, you break up firmly the devices of the heretics, O father Methodius, foundation of the Orthodox; for as a divine hierophant you set up again the icon of Christ to be honoured. And now entreat him always, that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Εὐσεβείας δόγμασι τὴν Ἐκκλησίαν, καταυγάσας ἤλασας, τὴν τῶν αἱρέσεων ἀχλύν, ἱεροφάντα Μεθόδιε, πάσι κηρύττων Χριστὸν εἰκονίζεσθαι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the one kontakion on the page of «Άγιος Μεθόδιος ο ομολογητής Πατριάρχης Κωνσταντινούπολης», and it names him",
+        "url": "https://www.saint.gr/589/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lit up the Church with the dogmas of true religion, you drove off the mist of the heresies, O hierophant Methodius, preaching to all that Christ is to be depicted.",
         "rendered": "site"
       }
     }

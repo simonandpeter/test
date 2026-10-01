@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σαββασ sabbas-companion-of-jonah sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Fourteen now. The new one is on 15 June; the others are read in the el-06-10 entry for this name form.',
+  'ιωνασ jonah-bishop-6-june jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-odessa jonah-of-pesonsa jonah-of-the-lavra-of-pskov jonas-of-great-perm jonas-the-lerian':
+    'Nine now. The new one is on 15 June; the others are read in the el-06-06 entry for this name form.',
+  'φουρτουνατοσ fortunatus-of-africa fortunatus-the-apostle':
+    'Three men of the two Greek forms the corpus now holds: Fortunatus of Africa on 21 February, the Fortunatus of 1 June, and the Fourtounatos of 14 June.',
+  'νηφων niphon-of-novgorod niphon-the-athonite':
+    'Two men: Niphon of Novgorod on 8 April and the Niphon of 14 June.',
   'μαρτυρεσ μυριοι ten-thousand-martyrs ten-thousand-martyrs-13-june':
     'Two companies the corpus counts rather than names, which is what folds their display names together: the Ten Thousand Martyrs of 18 March and the Ten Thousand of 13 June. Two days, two entries, two folders.',
   'φιλοθεοσ philotheus-of-antioch philotheus-of-meteora philotheus-of-samosata philotheus-of-sklataina philotheus-of-tobolsk philotheus-the-presbyter':

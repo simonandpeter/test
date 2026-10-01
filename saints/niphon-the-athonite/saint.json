@@ -1,0 +1,83 @@
+{
+  "slug": "niphon-the-athonite",
+  "display_name": "Niphon the Athonite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Νήφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Ιουνίου, «Όσιος Νήφων ο Αθωνίτης», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1330,
+      "latest": 1330,
+      "display": "about 1330",
+      "basis": "traditional",
+      "note": "saint.gr: «κατέληξε στα Βουλευτήρια και εκεί ασκήτευε περί το 1330 μ.Χ.» — the year is the page's own, and the bracket is that one year because it is the only date the page gives. It adds «Έζησε συνολικά 96 χρόνια», that he lived ninety-six years in all, and gives no year of birth or death."
+    }
+  },
+  "related": [
+    "maximus-of-kapsokalyvia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Ιουνίου — «Όσιος Νήφων ο Αθωνίτης»",
+        "url": "https://www.saint.gr/06/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Ιουνίου εκάστου έτους», the same day as the listing. He is not the corpus's `niphon-of-prodromou`, the Romanian hieromonk who died in 1901 and is kept on 13 July, nor `niphon-patriarch-of-constantinople` nor `niphon-of-constantia`: this is the fourteenth-century ascetic of Kapsokalyvia, disciple of Maximus, who was at the Vouleuteria about 1330. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Ἠπείρου τὸν γόνον καὶ τοῦ Ἄθωνος ὄρπηκα, καὶ τῶν ἱερέων τὴν δόξαν, τὸν θεόληπτον Νήφωνα, τιμήσωμεν ἐν ὕμνοις ἱεροὶς ἀσκήσει γὰρ ὅσιων ἀρετῶν, οὐρανίων χαρισμάτων ἀξιωθεῖς, λαμπρύνει τοὺς κραυγάζοντας δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐκπληρούντι διὰ σου, πάντων τὰ αἰτήματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first of two apolytikia on the page of «Όσιος Νήφων ο Αθωνίτης», and it names him and Epirus",
+        "url": "https://www.saint.gr/586/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour with sacred hymns the offspring of Epirus and the young shoot of Athos, the glory of priests, the God-possessed Niphon; for having been counted worthy of heavenly gifts by the practice of holy virtues, he makes bright those who cry aloud: Glory to him who gave you strength, glory to him who crowned you, glory to him who through you fulfils the requests of all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
