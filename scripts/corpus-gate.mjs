@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σεραπιων serapion-disciple-of-cronides serapion-martyr-24-may serapion-of-alexandria serapion-of-pentapolis serapion-the-new serapion-venerable-21-march':
+    'Six now. The new one is Serapion the New on 12 July; the others are read in the el-03-26 entry for this name form, with the martyr of 24 May.',
   'νικοδημοσ nicodemus-of-elbasan nicodemus-of-lake-kozha nicodemus-of-serbia nicodemus-of-the-cave nicodemus-of-vatopedi':
     'Five now, and two are new on 11 July: Nicodemus of Vatopedi and Nicodemus of Elbasan. The others are read in the el-07-03 entry for this name form.',
   'μαρκιανοσ marcian-11-july marcian-companion-of-peter marcian-of-constantinople marcian-of-cyrrhus marcian-of-durostorum marcian-of-egypt marcian-the-emperor':

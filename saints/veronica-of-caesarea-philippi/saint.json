@@ -6,6 +6,11 @@
       "form": "Veronica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 iulie, «Sfânta Veronica», with the rank word left off."
+    },
+    {
+      "form": "Βερονίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουλίου, «Αγία Βερονίκη η αιμορροούσα», with the rank word and the description left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουλίου — «Αγία Βερονίκη η αιμορροούσα»",
+        "url": "https://www.saint.gr/07/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same woman: the woman with the issue of blood of the three Gospels, whom tradition names Veronica, and whom Nicodemus the Hagiorite's synaxarion brings from the city of Paneas — which is Caesarea Philippi, the folder's own byname. She is not the corpus's Berenice, daughter of Domnina. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
     },
     {
       "church": "serbian",

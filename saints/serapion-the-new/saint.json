@@ -1,0 +1,50 @@
+{
+  "slug": "serapion-the-new",
+  "display_name": "Serapion the New",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σεραπίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουλίου, «Άγιος Σεραπίων ο νέος», with the rank word left off. The byname «ο νέος» the page gives him is kept in the English display name and not in the stored Greek form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουλίου — «Άγιος Σεραπίων ο νέος»",
+        "url": "https://www.saint.gr/07/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's eight other men of the name — the disciple of Cronides, of Alexandria, of Corinth, of Pentapolis, of Pskov, of Rome, and the two bare ones of 24 May and 21 March: none of those is kept on 12 July, none is burned alive, and none is taken by a ruler named Aquila. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn. The page names the emperor Severus and no year, so there is no `dates` object."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

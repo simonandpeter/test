@@ -6,6 +6,11 @@
       "form": "Mihail Maleinul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 iulie, «Sfântul Cuvios Mihail Maleinul», with the rank word left off."
+    },
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Ιουλίου, «Όσιος Μιχαήλ ο Μαλείνος πνευματικός πατέρας του Αγίου Αθανασίου του Αθωνίτη», with the rank word, the surname and the description left off. The page gives his name in the world as Μανουήλ."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουλίου — «Όσιος Μιχαήλ ο Μαλείνος πνευματικός πατέρας του Αγίου Αθανασίου του Αθωνίτη»",
+        "url": "https://www.saint.gr/07/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the surname is the folder's own: the Romanian line reads «Sfântul Cuvios Mihail Maleinul» and the Greek «Όσιος Μιχαήλ ο Μαλείνος». He is the corpus's only Maleinos. The Greek page gives the family and the reigns the Romanian did not, but no year of birth or death, so no `dates` object is proposed: it places him from the reign of Constantine VII to the years of Basil II the Bulgar-slayer, which is a stretch of about eighty years and not a bracket for his life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
     },
     {
       "church": "serbian",
@@ -64,5 +79,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "athanasius-the-athonite"
+  ]
 }
