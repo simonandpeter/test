@@ -1,0 +1,57 @@
+{
+  "slug": "maglorious-of-sark",
+  "display_name": "Maglorious of Sark",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Maglorious",
+      "lang": "la",
+      "note": "saint.gr prints the name in Latin letters in both the listing and the page heading, «Άγιος Maglorious του Sark», and gives no Greek form of it; the form is copied as printed, with the rank word and the island left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 575,
+      "latest": 575,
+      "display": "575",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Maglorious καταγόταν από την Ιρλανδία και κοιμήθηκε το 575 μ.Χ.»; its heading prints «(; - 575)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Οκτωβρίου — «Άγιος Maglorious του Sark»",
+        "url": "https://www.saint.gr/10/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2704/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives «Ο Άγιος Maglorious καταγόταν από την Ιρλανδία και κοιμήθηκε το 575 μ.Χ. Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου». The name is recorded as the page prints it, in Latin letters, because the page prints no Greek form — nothing here transliterates. No rank word, so no `types`, which `docs/CORPUS.md` prefers to a guess; no coordinate for Sark or for Ireland. Nothing in the corpus answers to the name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

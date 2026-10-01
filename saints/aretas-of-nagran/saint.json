@@ -6,6 +6,11 @@
       "form": "Areta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 octombrie, «Sfântul Mare Mucenic Areta»."
+    },
+    {
+      "form": "Αρέθας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Οκτωβρίου, «Άγιος Αρέθας ο Μεγαλομάρτυρας και οι «σὺν αὐτῶ»», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Οκτωβρίου — «Άγιος Αρέθας ο Μεγαλομάρτυρας και οι «σὺν αὐτῶ»»",
+        "url": "https://www.saint.gr/10/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2528/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man: one of the leading men of the city of Negra in Ethiopia, killed when the Jewish king Dounaan took the city. **The companions of the line, οἱ «σὺν αὐτῷ», are named nowhere on the page**, so they are one entry and not folders — `docs/CORPUS.md` §10.1 as the brief applies it. The page dates the events by three reigns rather than by a year — «επί εποχής Ιουστίνου (518 - 527 μ.Χ.), Ελεσβάαν του Χριστιανού βασιλιά της Αιθιοπίας και Δουναάν του Εβραίου βασιλιά της Ομηρίτιδος» — and a `dates` object is proposed from that reign alone. Relics are listed at Dionysiou and the skete of Koutloumousiou on Athos and at Agathon in Phthiotis, the Taxiarchs in Aigialeia and Phaneromeni on Salamis; no coordinate is proposed. Its Ἀπολυτίκιον, Ἦχος α’, is a proper naming him and is taken. **Its Κοντάκιον, Ἦχος δ’, is a common** — «Εὐφροσύνης πρόξενος ἡμῖν ἐπέστη, ἡ φωσφόρος σήμερον, τῶν Ἀθλοφόρων ἑορτή» names no saint at all — and is taken as his service under his own name, after BRIEF.md §4's ruling on commons; the Οἶκος, which does name him, is not a kind the schema holds. The same day's listing also carries «Αγία Γυναίκα και το Άγιο Βρέφος της», whose page says they were martyred with him; that pair is drafted as the new folder `holy-woman-and-her-infant` in batch el-10-24. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,9 +74,55 @@
         "text": "For the sufferings of the saints who suffered for Thee, be merciful, O Lord, and heal all our sufferings, O Lover of mankind: this we ask of Thee.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "model": "Τῆς ἐρήμου πολίτης",
+      "text": "Εὐσεβεῖα ἐμπρέπων τὴ ἀθλήσει δεδόξασαι, τὴν τῶν Χριστοκτόνων κακίαν καθελῶν τὴ ἐνστάσει σου, διὸ καὶ προσενήνοχας Χριστῷ, Μαρτύρων ἀρραγῆ συνασπισμῶν, ὥσπερ θεῖος παιδοτρίβης καὶ ὁδηγός, Ἀρέθα παμμακάριστε. Δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν Ἰάματα.",
+      "source": {
+        "text": "saint.gr, «Άγιος Αρέθας ο Μεγαλομάρτυρας» — Ἀπολυτίκιον, Ἦχος α’. Τῆς ἐρήμου πολίτης",
+        "url": "https://www.saint.gr/2528/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Comely in godliness, you were glorified in the contest, pulling down by your firm stand the malice of those who killed Christ; and so you brought to Christ an unbreakable shield-wall of martyrs, like a divine trainer and guide, all-blessed Arethas. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ἐπεφάνης σήμερον",
+      "text": "Εὐφροσύvης πρόξεvος ἡμῖν ἐπέστη, ἡ φωσφόρος σήμερον, τῶν Ἀθλοφόρων ἑορτή, ἢv ἀvυμvοῦvτες δοξάζομεv, τὸν ἐv ὑψίστοις ὑπάρχοντα Κύριον.",
+      "source": {
+        "text": "saint.gr, «Άγιος Αρέθας ο Μεγαλομάρτυρας» — Κοντάκιον, Ἦχος δ’. Ἐπεφάνης σήμερον; a common of martyrs, naming no saint, printed under his name (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2528/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The light-bearing feast of the prize-winners has come to us today as the bringer of gladness; and hymning it we glorify the Lord who is in the highest.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 518,
+      "latest": 527,
+      "display": "between 518 and 527",
+      "basis": "traditional",
+      "note": "saint.gr: «Ήταν ένας από τους προύχοντες της πόλεως Νεγράς στην Αιθιοπία επί εποχής Ιουστίνου (518 - 527 μ.Χ.)» — the page gives the reign and no year."
+    }
+  },
+  "related": [
+    "holy-woman-and-her-infant"
+  ]
 }

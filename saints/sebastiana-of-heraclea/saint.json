@@ -11,6 +11,11 @@
       "form": "Sebastiana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 octombrie; its life spells the name «Sevastiana (Sebastiana)»."
+    },
+    {
+      "form": "Σεβαστιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Οκτωβρίου, «Αγία Σεβαστιανή», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -58,8 +63,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Οκτωβρίου — «Αγία Σεβαστιανή»",
+        "url": "https://www.saint.gr/10/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2531/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same woman — and this row **replaces an `undocumented` note that said saint.gr did not keep her at all**: that note recorded 16 and 29 Σεπτεμβρίου as checked and found wanting, which was true of those two days and not of 24 Οκτωβρίου. The page makes her a native of Sebaste in Phrygia, taught the faith by the apostle Paul, living in the first century at Marcianopolis in Thrace, arrested under the emperor Domitian and the governor Sergius, driven out, arrested again at Heraclea in Thrace by the governor Pompeianus, beheaded, and buried at Rhaidestos. It gives the century and the reign but no year, so the folder's existing `dates` are left untouched. No hymn; no asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -69,5 +84,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "paul-the-apostle"
+  ]
 }

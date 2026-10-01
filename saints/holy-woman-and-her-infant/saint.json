@@ -1,0 +1,53 @@
+{
+  "slug": "holy-woman-and-her-infant",
+  "display_name": "The Holy Woman and her Holy Infant",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αγία Γυναίκα και το Άγιο Βρέφος της",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Οκτωβρίου, «Αγία Γυναίκα και το Άγιο Βρέφος της». The page names neither of them at all, so the form is the line itself."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Οκτωβρίου — «Αγία Γυναίκα και το Άγιο Βρέφος της»",
+        "url": "https://www.saint.gr/10/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2529/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Οκτωβρίου εκάστου έτους», the same day as the listing. **Neither of the two is named on the page**, so no name form can be read for either and the entry is kept as one folder for the pair, after the pattern of `thirty-three-martyrs-of-heraclea`; `sex` is `unknown` for the same reason. The page ties them to Arethas of Nagran — «μαρτύρησαν μαζί με τον Άγιο Αρέθα» — whose folder exists and is upgraded on this day, so the `related` row goes there. It gives no year and no city; the reign of Justin (518–527) and the kings Elesbaan and Dounaan stand on Arethas's page and not on this one, so no `dates` object is proposed here. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "aretas-of-nagran"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

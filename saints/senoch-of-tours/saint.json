@@ -1,0 +1,61 @@
+{
+  "slug": "senoch-of-tours",
+  "display_name": "Senoch of Tours",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Σενώχ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Οκτωβρίου, «Άγιος Σενώχ της Τουρώνης ο Ιαματικός», with the rank word, the place and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 576,
+      "latest": 576,
+      "display": "576",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο όσιος Σενώχ (†24 Οκτωβρίου 576 μ.Χ.) ήταν Θεϊφαλός στην καταγωγή»; its heading prints «(; - 576)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Οκτωβρίου — «Άγιος Σενώχ της Τουρώνης ο Ιαματικός»",
+        "url": "https://www.saint.gr/10/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/4093/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Οκτωβρίου εκάστου έτους», the same day as the listing, and dates his repose in its own text, «Ο όσιος Σενώχ (†24 Οκτωβρίου 576 μ.Χ.)», with the heading «(; - 576)». The line's epithet «ο Ιαματικός», the healer, has no counterpart in the corpus's `types` vocabulary and is said in the life instead of being guessed into `types`; he was ordained deacon by Euphronios and is called a presbyter later in the page, which is where `presbyter` comes from. Martin of Tours is named — «ο επιφανής άγιός μας Μαρτίνος (βλέπε 12 Νοεμβρίου)» — and has no folder in the corpus, so he is named in the life without a link. Pictavium, Theiphalia and Tours are named without coordinates. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
