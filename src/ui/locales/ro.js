@@ -1131,6 +1131,7 @@ export const ro = {
     'reign of Asa': 'domnia lui Asa',
     'second half of the 6th century': 'a doua jumătate a sec. al VI-lea',
     'the 1720s': 'anii 1720',
+    'the reign of Constantine Porphyrogennetos': 'vremea domniei lui Constantin Porfirogenetul',
     'to the mid-12th century': 'până la mijlocul sec. al XII-lea',
     'under Alexander Severus': 'sub Alexandru Sever',
     'under Antoninus Pius': 'sub Antoninus Pius',

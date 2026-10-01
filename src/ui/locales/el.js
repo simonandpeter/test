@@ -1132,6 +1132,7 @@ export const el = {
     'reign of Asa': 'βασιλεία του Ασά',
     'second half of the 6th century': 'δεύτερο μισό του 6ου αι.',
     'the 1720s': 'η δεκαετία του 1720',
+    'the reign of Constantine Porphyrogennetos': 'η βασιλεία Κωνσταντίνου του Πορφυρογέννητου',
     'to the mid-12th century': 'έως τα μέσα του 12ου αι.',
     'under Alexander Severus': 'επί Αλεξάνδρου Σεβήρου',
     'under Antoninus Pius': 'επί Αντωνίνου Πίου',

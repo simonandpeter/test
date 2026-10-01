@@ -1,0 +1,50 @@
+{
+  "slug": "leo-the-hermit",
+  "display_name": "Leo (1 July)",
+  "names": [
+    {
+      "form": "Λέων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουλίου, «Όσιος Λέων ο ερημίτης», with the rank word left off."
+    }
+  ],
+  "types": [
+    "venerable",
+    "hermit",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Όσιος Λέων ο ερημίτης»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

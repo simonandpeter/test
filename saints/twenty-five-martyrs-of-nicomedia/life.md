@@ -1,0 +1,7 @@
+# The Twenty-five Martyrs of Nicomedia
+
+Twenty-five martyrs at Nicomedia stand on the Greek 1 Ιουλίου with one sentence to their name: «Οι Άγιοι Εικοσιπέντε Μάρτυρες οι εν Νικομηδεία μαρτύρησαν δια πυρός» — the twenty-five holy martyrs at Nicomedia were martyred by fire. The page gives no name, no reign and no year, so none is recorded here. Nicomedia, the number and the fire are the whole of what the calendar keeps of them.
+
+What the page does at length is gloss their distich: «Aριθμός ανδρών ηνθρακωμένων κύκλος, / Tο πεντάκις γαρ πέντε, δήλον ως κύκλος» — the number of the men burnt to coals is a circle, for five times five is plainly a circle. Nikodemos the Hagiorite, the page says, explains in his Synaxaristes that among the numbers two are called circles, five and six, because as a circle begins at its centre and ends again at the same centre, so these two multiplied by themselves begin from a number and end in that same number, in the tens, the hundreds, the thousands and the millions alike: five fives are twenty-five, five twenty-fives are a hundred and twenty-five, five of those are six hundred and twenty-five, and so on; and six goes the same way, six sixes thirty-six, six thirty-sixes two hundred and sixteen.
+
+*After saint.gr's calendar for 1 Ιουλίου — [the day](https://www.saint.gr/07/01/index.aspx) and [the life](https://www.saint.gr/1961/saint.aspx); read 1 October 2026.*

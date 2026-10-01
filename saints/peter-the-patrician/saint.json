@@ -1,0 +1,62 @@
+{
+  "slug": "peter-the-patrician",
+  "display_name": "Peter the Patrician",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουλίου, «Όσιος Πέτρος του Πατρικίου εν τοις Ευάνδρου», with the rank word and the title left off."
+    }
+  ],
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 854,
+      "latest": 854,
+      "display": "854",
+      "basis": "traditional",
+      "note": "saint.gr closes his life with the year: «Ο Όσιος Πέτρος πέθανε ειρηνικά το έτος 854 μ.Χ.», and its heading repeats it as «(; - 854)»."
+    }
+  },
+  "related": [
+    "john-the-theologian",
+    "joannicius-the-great"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Όσιος Πέτρος του Πατρικίου εν τοις Ευάνδρου (; - 854)»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1133,6 +1133,7 @@ export const sr = {
     'reign of Asa': 'владавина Асе',
     'second half of the 6th century': 'друга половина VI в.',
     'the 1720s': '1720-е',
+    'the reign of Constantine Porphyrogennetos': 'време владавине Константина Порфирогенита',
     'to the mid-12th century': 'до средине XII в.',
     'under Alexander Severus': 'за Александра Севера',
     'under Antoninus Pius': 'за Антонина Пија',

@@ -1,0 +1,57 @@
+{
+  "slug": "basil-of-bathys-ryax",
+  "display_name": "Basil of Bathys Ryax",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουλίου, «Όσιος Βασίλειος κτήτορας της Μονής Βαθέος Ρύακος», with the rank word left off."
+    }
+  ],
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 901,
+      "latest": 959,
+      "display": "the reign of Constantine Porphyrogennetos",
+      "basis": "traditional",
+      "note": "saint.gr sets him in a reign and prints its years: «έζησε στα χρόνια του βασιλιά Κωνσταντίνου του Πορφυρογέννητου (901 - 959 μ.Χ.), γιου του Λέοντα του Φιλοσόφου και της Ζωής»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Όσιος Βασίλειος κτήτορας της Μονής Βαθέος Ρύακος»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

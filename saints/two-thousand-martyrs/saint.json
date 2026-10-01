@@ -1,0 +1,48 @@
+{
+  "slug": "two-thousand-martyrs",
+  "display_name": "The Two Thousand Martyrs",
+  "names": [
+    {
+      "form": "Άγιοι Δύο Χιλιάδες Μάρτυρες",
+      "lang": "el",
+      "note": "The whole of saint.gr's line for 1 Ιουλίου; the company has no personal names on the page."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Άγιοι Δύο Χιλιάδες Μάρτυρες»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

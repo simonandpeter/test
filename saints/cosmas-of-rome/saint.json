@@ -6,6 +6,11 @@
       "form": "Cosma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 iulie, «Sfinții Mucenici Doctori fără de arginți Cosma și Damian, cei din Roma»."
+    },
+    {
+      "form": "Κοσμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουλίου, «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -64,9 +78,67 @@
         "text": "O holy unmercenaries and workers of wonders, visit our infirmities; freely you have received, freely give to us.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "text": "Ἅγιοι Ἀνάργυροι καὶ θαυματουργοί, ἐπισκέψασθε τὰς ἀσθενείας ἡμῶν, δωρεὰν ἐλάβετε, δωρεὰν δότε ἡμῖν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the common of the Unmercenaries, naming nobody, on the page of «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι»",
+        "url": "https://www.saint.gr/1956/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Unmercenaries and wonderworkers, visit our infirmities; freely you have received, freely give to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’. Ταχύ προκατάλαβε.",
+      "text": "Ὡς θεῖοι θεράποντες, καὶ ἰατῆρες βροτῶν, ἀνάργυρον βλύζετε, τὴν θεραπείαν ἠμίν, Ἀνάργυροι ἔνδοξοι, ὅθεν τοὺς προσιόντας, τὴ σεπτὴ ὑμῶν σκέπη, ρύσασθε νοσημάτων, καὶ παθῶν ἀνιάτων, Κοσμᾶ καὶ Δαμιανέ, Ρώμης βλαστήματα.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε — their own, which names them both and calls them offshoots of Rome, on the page of «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι»",
+        "url": "https://www.saint.gr/1956/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As divine attendants and healers of mortals, you pour out healing upon us without silver, glorious Unmercenaries; therefore deliver those who come beneath your venerable shelter from sicknesses and from incurable passions, Cosmas and Damian, offshoots of Rome.",
+        "rendered": "site"
+      },
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Οἱ τὴν χάριν λαβόντες τῶν ἰαμάτων, ἐφαπλοῦτε τὴν ῥῶσιν τοῖς ἐν ἀνάγκαις, Ἰατροὶ θαυματουργοὶ ἔνδοξοι· ἀλλὰ τῇ ἡμῶν ἐπισκέψει, καὶ τῶν πολεμίων τὰ θράση καταβάλλετε, τὸν κόσμον ἰώμενοι ἐν τοῖς θαύμασι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, on the page of «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι»",
+        "url": "https://www.saint.gr/1956/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who received the grace of healings spread health abroad upon those in need, glorious wonderworking physicians; and by your visitation cast down also the insolence of our enemies, healing the world by your wonders.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
+      "basis": "traditional",
+      "note": "saint.gr prints the year of death in its heading for each brother, «Αγιος Κοσμας ο Αναργυρος (; - 287)» and «Αγιος Δαμιανος ο Αναργυρος (; - 287)», the year of birth left as a question mark; its life sets them in the reign of the Roman emperor Carinus."
+    }
   }
 }

@@ -6,6 +6,11 @@
       "form": "Mavrichie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 februarie, «Sfântul Mucenic Mavrichie»."
+    },
+    {
+      "form": "Μαυρίκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Ιουλίου, «Άγιος Μαυρίκιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Φεβρουαρίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "saint.gr's page for this entry carries no life of its own: it prints the distich and then «Βλέπε στις 27 Δεκεμβρίου όπου και η βιογραφία του», sending the reader to its day page for 27 Δεκεμβρίου for the biography. That page has not been read in this wave, so 1 Ιουλίου — the day page actually read — is what is recorded, and whether the Greek calendar's proper day for him is 27 Δεκεμβρίου is a question left open (1 October 2026). The Romanian row keeps him on 21 februarie."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Ιουλίου — «Άγιος Μαυρίκιος»",
+        "url": "https://www.saint.gr/07/01/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

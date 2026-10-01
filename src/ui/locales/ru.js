@@ -1150,6 +1150,7 @@ export const ru = {
     'reign of Asa': 'царствование Асы',
     'second half of the 6th century': 'вторая половина VI в.',
     'the 1720s': '1720-е годы',
+    'the reign of Constantine Porphyrogennetos': 'царствование Константина Порфирородного',
     'to the mid-12th century': 'до середины XII в.',
     'under Alexander Severus': 'при Александре Севере',
     'under Antoninus Pius': 'при Антонине Пии',
