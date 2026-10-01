@@ -1,0 +1,59 @@
+{
+  "slug": "paulinus-of-york",
+  "display_name": "Paulinus of York",
+  "names": [
+    {
+      "form": "Παυλίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's gloss on its line for 10 Οκτωβρίου, «Άγιος Paulinus Αρχιεπίσκοπος Υόρκης», where the name itself is printed in Latin letters as «Paulinus» and glossed «ΠΑΥΛΙΝΟΣ»; the rank words are left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of York",
+  "types": [
+    "archbishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 644,
+      "latest": 644,
+      "display": "644",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε στο Rochester του Kent το 644 μ.Χ.», and its head line gives «(; - 644)»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Οκτωβρίου — «Άγιος Paulinus Αρχιεπίσκοπος Υόρκης»",
+        "url": "https://www.saint.gr/10/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

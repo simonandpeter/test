@@ -1,0 +1,53 @@
+{
+  "slug": "longinus-the-stylite",
+  "display_name": "Longinus the Stylite",
+  "names": [
+    {
+      "form": "Λογγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Όσιοι Θεόφιλος ο Ομολογητής και Λογγίνος ο Στυλίτης», with the rank word left off; the epithet «ο Στυλίτης» is the page's own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "stylite",
+    "confessor"
+  ],
+  "related": [
+    "theophilus-of-selention"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Οκτωβρίου — «Όσιοι Θεόφιλος ο Ομολογητής και Λογγίνος ο Στυλίτης»",
+        "url": "https://www.saint.gr/10/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

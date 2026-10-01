@@ -6,6 +6,11 @@
       "form": "Evlampie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 octombrie."
+    },
+    {
+      "form": "Ευλάμπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια», with the rank word left off. The page glosses the name from ευ and λάμπω — the radiant."
     }
   ],
   "sex": "male",
@@ -13,7 +18,8 @@
     "martyr"
   ],
   "related": [
-    "eulampia-sister-of-eulampius"
+    "eulampia-sister-of-eulampius",
+    "two-hundred-martyrs-of-nicomedia"
   ],
   "attestations": [
     {
@@ -37,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Οκτωβρίου — «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια»",
+        "url": "https://www.saint.gr/10/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same brother and sister of Nicomedia under Maximian. The page states «έζησαν στα χρόνια του αυτοκράτορα Μαξιμιανού (296 μ.Χ.)», a single year for the reign rather than for their death, so no `dates` object is proposed from it; the companion entry of the two hundred martyrs dates the persecution 286 to 305. It records portions of the relics of Eulampius at the monastery of Panteleimon on the Holy Mountain and at the Alexander Nevsky Lavra. The page prints a proper apolytikion naming them both, a kontakion naming them both, an «Έτερον Ἀπολυτίκιον» which is the plain common of martyrs «Οἱ Μάρτυρες σου Κύριε» and is not drafted, and a Μεγαλυνάριον and an Οἶκος, which are not kinds the schema holds. The two hundred pagans who believed at the miracle of the cauldron are the day's own «Άγιοι Διακόσιοι Μάρτυρες» and are drafted as one new folder in this batch. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,6 +78,40 @@
         "text": "Thy martyrs, O Lord, in their contest won from thee, our God, the crowns of incorruption; for having thy strength they overthrew their torturers and broke the powerless presumption of the demons. At their prayers, O Christ our God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς φύσεως θεσμῶ, συνημμένοι ἐνθέως, ὁμόψυχοι στερρῶς, ὡς ὀμαίμονες θεῖοι, αὐτάδελφοι Μάρτυρες, ἐν ἀθλήσει ὠράθητε, ὦ Εὐλάμπιε, σὺν τὴ σεμνὴ Εὐλαμπία, ὅθεν στέφανον, νικητικὸν δεδεγμένοι, ἠμᾶς διασῴζετε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τὸν τάφον σου Σωτὴρ — the first hymn on the page of «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια», and it names them both. The «Έτερον Ἀπολυτίκιον» printed under it is the plain common of martyrs and is not drafted.",
+        "url": "https://www.saint.gr/2705/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Joined divinely by the law of nature, firmly of one soul as divine kinsfolk, you were seen in your contest as martyrs who were brother and sister, Eulampius, with the modest Eulampia; and so, having received the crown of victory, keep us safe.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τοὺς γενναίους Μάρτυρας, καὶ ἀδελφοὺς κατὰ σάρκα, τὸν σοφὸν Εὐλάμπιον, καὶ Εὐλαμπίαν τιμῶμεν, οὗτοι γὰρ τῶν τυραννούντων μηχανουργίας, ᾔσχυναν τῇ δυναστείᾳ τοῦ σταυρωθέντος· ἀνεδείχθησαν διόπερ, Μαρτύρων δόξα, ὁμοῦ καὶ καύχημα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια», and it names them both. The Μεγαλυνάριον and the Οἶκος printed below it are not kinds the schema holds and are not drafted.",
+        "url": "https://www.saint.gr/2705/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the brave martyrs, brother and sister in the flesh, the wise Eulampius and Eulampia; for they shamed the contrivances of the tyrants by the power of him who was crucified, and were shown therefore to be the glory of the martyrs and their boast.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

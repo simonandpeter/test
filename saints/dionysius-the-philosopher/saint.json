@@ -1,0 +1,60 @@
+{
+  "slug": "dionysius-the-philosopher",
+  "display_name": "Dionysius the Philosopher",
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιος Διονύσιος ο φιλόσοφος», with the rank word left off; the page's quoted lexicon entry also calls him «ο Σκυλόσοφος»."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan of Larissa",
+  "types": [
+    "new-martyr",
+    "metropolitan"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1611,
+      "latest": 1611,
+      "display": "1611",
+      "basis": "traditional",
+      "note": "saint.gr's head line: «Αγιος Διονυσιος ο Φιλοσοφος (; - 1611)», with the lexicon entry putting his seizure at Ioannina in 1611"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Οκτωβρίου — «Άγιος Διονύσιος ο φιλόσοφος»",
+        "url": "https://www.saint.gr/10/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
