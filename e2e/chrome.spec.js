@@ -2,7 +2,6 @@ import { devices } from '@playwright/test';
 import { coldFace, test, expect } from './fixtures.js';
 import {
   DETAIL,
-  EMPTY,
   INDEX,
   POPULATED,
   aDayThatIsNotToday,

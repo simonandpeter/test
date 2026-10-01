@@ -3,6 +3,7 @@ import { STRINGS } from '../src/ui/strings.js';
 import { test, expect } from './fixtures.js';
 import {
   EMPTY,
+  EMPTY_ISO,
   dayKeptOnlyElsewhere,
   dayWithoutHymns,
   POPULATED,
@@ -103,7 +104,11 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
 });
 
 
+test.describe('a day made bare: the designed state', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('an empty day is a designed state, not a hole', async ({ page }) => {
+  const bare = await withoutSaintsOn(page, EMPTY_ISO);
   await ready(page);
   await phone(page);
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
@@ -114,6 +119,8 @@ test('an empty day is a designed state, not a hole', async ({ page }) => {
   // is there and populated.
   expect(await page.locator('.week-strip button').count()).toBeGreaterThan(7);
   await expect(page.locator('.week-strip')).toBeVisible();
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
+});
 });
 
 
@@ -469,12 +476,16 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
 });
 
 
+test.describe('a day made bare: which silence', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('an empty day says which of the two silences it is', async ({ page }) => {
   // Two different facts (redrawn 2026-08-22 for one church of three), and a
   // reader is owed the difference between them. The corpus having nothing for
   // a day is a statement about our sourcing; this church's calendar having
   // nothing while another of the three does is a fact about the choice above,
   // and names the way to the others. Prose in ink in either case.
+  const bare = await withoutSaintsOn(page, EMPTY_ISO);
   await ready(page);
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
@@ -501,6 +512,8 @@ test('an empty day says which of the two silences it is', async ({ page }) => {
   // A day with nothing on it is still about the sourcing, whichever is kept.
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
+});
 });
 
 

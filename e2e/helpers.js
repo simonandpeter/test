@@ -5,6 +5,7 @@ import { monthsBySlugFor } from '../src/views/index/search.js';
 import { saintName } from '../src/lib/honorific.js';
 import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
 import { greatFeast } from '../src/lib/liturgy.js';
+import { RECORDS_REACH } from '../src/data/liturgical-days.js';
 import { chooseLanguage, ensureAllPacks } from '../src/lib/i18n.js';
 
 /**
@@ -326,24 +327,32 @@ const HYMNED_ON = (church, iso) => kept(church, iso).filter((s) => HYMNED.has(s)
 /**
  * A day of total silence — as against the silence of one calendar while another
  * speaks. `panel.js`'s `emptyDayNote` writes that sentence only when three
- * things are true at once: no church keeps a saint whose folder exists, the
- * day is no great feast in the chosen calendar, and no day record carries its
- * readings. So all three are cleared here.
+ * things are true at once: no church keeps a saint whose folder exists, the day
+ * is no great feast in the chosen calendar, and no day record carries its
+ * readings.
  *
- * **The year is 2027**, because the readings are recorded to the end of 2026
- * and the six remaining saintless days of 2026 all carry them; a 2027 date is
- * past that horizon while its saints, which are kept by day and month, are the
- * same absence. Throws rather than returning a date of the wrong shape: a test
- * that has lost its premise must not pass.
+ * **Only two of the three can be found any more.** This fixture used to search
+ * for a day the corpus kept nobody on; the Greek wave took the last of them, so
+ * every day of the year now has a folder in some calendar and the search threw.
+ * The saints are therefore withheld by the test (`withoutSaintsOn`), exactly as
+ * three other tests in `daily-panel.spec.js` already withhold them, and what is
+ * chosen here is the pair the corpus cannot hand back: no great feast in any of
+ * the four calendars, and a 2027 date, which is past the horizon the readings
+ * are recorded to — past `RECORDS_REACH` itself, since the records now run a
+ * fortnight into 2027.
+ *
+ * `EMPTY_ISO` is the day to withhold on; `EMPTY` is its route. Throws rather
+ * than returning a date of the wrong shape: a test that has lost its premise
+ * must not pass.
  */
-export const EMPTY = (() => {
-  const iso = CIVIL_2026.find(
-    (d) => CHURCH_IDS.every((c) => kept(c, d).length === 0)
-      && CHURCH_IDS.every((c) => !greatFeast(`2027${d.slice(4)}`, c)),
+export const EMPTY_ISO = (() => {
+  const iso = CIVIL_2026.map((d) => `2027${d.slice(4)}`).find(
+    (d) => d > RECORDS_REACH && CHURCH_IDS.every((c) => !greatFeast(d, c)),
   );
-  if (!iso) throw new Error('no day of the year is empty of saints and of feasts any more');
-  return `/calendar/2027${iso.slice(4)}`;
+  if (!iso) throw new Error('no day past the records is free of a great feast in every calendar');
+  return iso;
 })();
+export const EMPTY = `/calendar/${EMPTY_ISO}`;
 
 /**
  * A civil day one church answers for alone: `keeper` keeps exactly one saint
