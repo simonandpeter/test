@@ -6,6 +6,11 @@
       "form": "Atanasie din Paros",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 iunie, «Sfântul Atanasie din Paros»."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουνίου, «Όσιος Αθανάσιος ο Πάριος», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουνίου — «Όσιος Αθανάσιος ο Πάριος»",
+        "url": "https://www.saint.gr/06/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and its own heading reads «Οσιος Αθανασιος ο Παριος (1722 - 1813)». The island in the name settles the identity: the page makes him born at Kostos on Paros, whose real surname was Toulios and who exchanged it for Πάριος out of love for his birthplace, and it says the island of Paros boasts in his glory. No `dates` object is proposed, because the years come from this second source alone and the folder's own source gives none; the page's own words are «Γεννήθηκε στο Κώστο της Πάρου το 1722 μ.Χ.» and «πέθανε στις 24 Ιουνίου 1813 μ.Χ.», and it dates his numbering among the saints to 1995. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -42,5 +57,22 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σοφία κοσμούμενος, παντοδαπεί ευσεβώς, διδάσκαλος ένθεος, της Εκκλησίας Χριστού, και βίου ορθότητος, στήλη λαμπρά ωράθης, Αθανάσιε Πάτερ. Όθεν η νήσος Πάρος, τη ση δόξη καυχάται, και πάντες σου τα θεία, τιμώμεν προτερήματα.",
+      "source": {
+        "text": "saint.gr, the apolytikion on his own page — it names him, «Αθανάσιε Πάτερ», and names his island; the page prints no ἦχος for it, so none is recorded",
+        "url": "https://www.saint.gr/625/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned in all ways with wisdom, in piety, you were seen as a God-inspired teacher of the Church of Christ and a shining pillar of uprightness of life, Father Athanasius. Therefore the island of Paros boasts in your glory, and we all honour your divine excellences.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

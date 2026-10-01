@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παναγιωτησ panagiotis-of-caesarea panagiotis-of-jerusalem':
+    'Two men: the Panagiotis martyred at Jerusalem on 5 April and Panagiotis of Caesarea on 24 June.',
+  'γερασιμοσ gerasimus-1-june gerasimus-of-astrakhan gerasimus-of-boltinsk gerasimus-of-crete gerasimus-of-great-perm gerasimus-of-kantara gerasimus-of-rethymno gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':
+    'Ten now. The new one is Gerasimus bishop of Astrakhan on 24 June; the others are read in the el-06-23 entry for this name form.',
   'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-konstamonitou timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
     'Twelve now. The new one is Timothy the Stylite on 4 January; the others are read in the el-06-12 entry for this name form.',
   'εξι μαρτυρεσ six-martyrs-4-january six-martyrs-of-egypt':

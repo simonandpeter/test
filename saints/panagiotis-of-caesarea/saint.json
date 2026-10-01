@@ -1,0 +1,95 @@
+{
+  "slug": "panagiotis-of-caesarea",
+  "display_name": "Panagiotis of Caesarea",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Παναγιώτης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουνίου, «Άγιος Παναγιώτης ο Καισαρεύς», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1765,
+      "latest": 1767,
+      "display": "1765 or 1767",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Νεομάρτυρας αυτός μαρτύρησε στην Κωνσταντινούπολη για τη χριστιανική του πίστη, στις 24 Ιουνίου 1765 μ.Χ.» The page's heading reads «Αγιος Παναγιωτης ο Καισαρευς (; - 1765)», and the same notice adds «(Σύμφωνα με άλλες πληροφορίες, ο μάρτυρας αυτός μαρτύρησε το έτος 1767 μ.Χ. και σε ηλικία 20 χρονών)», so the range carries the page's own alternative."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουνίου — «Άγιος Παναγιώτης ο Καισαρεύς»",
+        "url": "https://www.saint.gr/06/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading reads «Αγιος Παναγιωτης ο Καισαρευς (; - 1765)». He is not the corpus's existing Panagiotis martyred at Jerusalem, whose saint.gr page keeps him on 5 Απριλίου and makes him a Peloponnesian who suffered at Jerusalem in 1820; this man is called ο Καισαρεύς and suffered at Constantinople, and two entries on one calendar are two commemorations. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ´.",
+      "model": "Θείας πίστεως.",
+      "text": "Θεῖον βλάστημα τῆς Καισαρείας, καὶ ὁμότροπος τῶν ἀθλοφόρων ἀνεδείχθης, Παναγιώτη μακάριε· τοῦ γὰρ Σωτῆρος κηρύξας τὸ ὄνομα ,ὑπὲρ αὔτοῦ τὸ σὸν αἷμα ἐξέχεας. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν το μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, the apolytikion on his own page, Ἦχος γ´, Θείας πίστεως — it names him, «Παναγιώτη μακάριε», and calls him a shoot of Caesarea; copied with the page's own punctuation and spelling",
+        "url": "https://www.saint.gr/624/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A divine shoot of Caesarea, you were shown to be a fellow in manner of the prize-winning martyrs, blessed Panagiotis; for having proclaimed the name of the Saviour, you poured out your own blood for him. Glorious martyr, entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ´.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Τῶν Μαρτύρων σύναθλος τῇ σῇ ἀθλήσει ἀνεδείχθης, ἔνδοξε ὑπὲρ Χριστοῦ σφαγιασθείς· διὸ στεφάνῳ τῆς δόξης σε ὦ Παναγιώτη, Χριστὸς ἐστεφάνωσε.",
+      "source": {
+        "text": "saint.gr, the kontakion on his own page, Ἦχος δ´, Ἐπεφάνης σήμερον — it names him, «ὦ Παναγιώτη»",
+        "url": "https://www.saint.gr/624/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By your contest you were shown a fellow contender of the martyrs, glorious one, slain for Christ; and therefore Christ has crowned you, O Panagiotis, with the crown of glory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

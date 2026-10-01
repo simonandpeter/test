@@ -1,0 +1,59 @@
+{
+  "slug": "gerasimus-of-astrakhan",
+  "display_name": "Gerasimus of Astrakhan",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Γεράσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Ιουνίου, «Άγιος Γεράσιμος Επίσκοπος του Αστραχάν», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him: «Αγιος Γερασιμος Επισκοπος Του Αστραχαν (; - 1880)». The page gives no other year, and the year of birth is left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint, so a Russian row is likely to exist, but nothing was read for it here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιουνίου — «Άγιος Γεράσιμος Επίσκοπος του Αστραχάν»",
+        "url": "https://www.saint.gr/06/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Ιουνίου εκάστου έτους», the same day as the listing, and then says in one sentence that there are no details of this Russian saint's life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. None of the corpus's fourteen other Gerasimi is of Astrakhan, and neither of the two Astrakhan folders the corpus keeps, Cyril and Joseph, is a Gerasimus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
