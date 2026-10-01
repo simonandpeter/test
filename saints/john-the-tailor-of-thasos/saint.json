@@ -1,0 +1,59 @@
+{
+  "slug": "john-the-tailor-of-thasos",
+  "display_name": "John the Tailor of Thasos",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Άγιος Ιωάννης ο ράφτης Νεομάρτυρας από τη Θάσο», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1652,
+      "latest": 1652,
+      "display": "20 December 1652",
+      "basis": "attested",
+      "note": "saint.gr: «ο δήμιος έκοψε μαρτυρικά λίγο-λίγο το κεφάλι του ηρωικού παιδιού στις 20 Δεκεμβρίου 1652 μ.Χ.», and the page's head «(; - 1652)». No year of birth is given; the page says only that he came to Constantinople at fourteen."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Δεκεμβρίου — «Άγιος Ιωάννης ο ράφτης Νεομάρτυρας από τη Θάσο»",
+        "url": "https://www.saint.gr/12/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3179/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Δεκεμβρίου εκάστου έτους», the same day as the listing, and that day is the day of his beheading. The page names his birthplace, «στο χωριό Μαρίαις του νησιού Θάσου», his trade learned at Galata, and the place of his death, «στην τοποθεσία \"Τσαρσί των γουναράδων\"»; no coordinate is proposed for any of them, and the corpus's `daniel-of-thasos` is a different man whom nothing on this page touches. It closes by naming the writers of his life, «Τον βίο του Αγίου συνέγραψε ο Ιωάννης Καρυοφύλλης και ο Μελέτιος Συρίγου». The accusation is laid at a named merchant's door in the page's own terms and is reported in the life as the page reports it. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

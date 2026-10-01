@@ -7,6 +7,11 @@
       "form": "Ignatie Teoforul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 decembrie, «Sfântul Sfințit Mucenic Ignatie Teoforul, Episcopul Antiohiei»."
+    },
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Δεκεμβρίου — «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/12/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3181/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps for the Romanian, and the entry is plainly the same man: bishop of Antioch, thrown to the beasts at Rome under Trajan, called Θεοφόρος. The page's head gives «(; - 107)» and its text the date of the martyrdom, so a `dates` object is drafted where the folder had none. It names the places of his relics — the skull at the Metropolis of Veroia, portions at the Great Lavra of Athos, at Varnakova in Nafpaktia, at Daou Penteli, at the Alexander Nevsky Lavra and at Saint George of the Greeks in Venice — which is not drafted, and a second translation in 540 to the church of Saint Clement at Rome, which is. It prints two apolytikia and a kontakion, all three taken; the second apolytikion is the common of a hieromartyr, «Καὶ τρόπων μέτοχος», whose Romanian twin the folder already holds from doxologia, and the two are stored as the two texts they are. The Οἶκος and the Κάθισμα it also prints are kinds the schema does not hold and are left out. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,9 +80,69 @@
         "text": "Sharer in the ways of the apostles and successor to their thrones, thou didst find in action, O God-inspired one, the way of ascent to contemplation. Therefore, rightly teaching the word of truth and enduring in faith even unto blood, O hieromartyr Ignatius, pray to Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείῳ ἔρωτι ἐπτερωμένος, τοῦ σὲ ψαύσαντος χερσὶν ἀχράντοις θεοφόρος ἀνεδείχθης, Ἰγνάτιε· καὶ ἐν τῇ Δύσει τελέσας τὸν δρόμον σου, πρὸς τὴν ἀνέσπερον λῆξιν ἐσκήνωσας. Πάτερ ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/3181/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Given wings by divine love for him who touched you with undefiled hands, you were shown to be a God-bearer, Ignatius; and having finished your course in the West, you pitched your tent in the rest that knows no evening. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Καὶ τρόπων μέτοχος, καὶ θρόνων διάδοχος, τῶν Ἀποστόλων γενόμενος, τὴν πρᾶξιν εὗρες θεόπνευστε, εἰς θεωρίας ἐπίβασιν, διὰ τοῦτο τὸν λόγον τῆς ἀληθείας ὀρθοτομών, καὶ τῇ πίστει ἐνήθλησας μέχρις αἵματος, Ἱερομάρτυς Ἰγνάτιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Κατεπλάγη Ἰωσήφ — the second hymn on the page of «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας». It is the common of a hieromartyr, printed under his name and naming him, and the folder already holds its Romanian twin from doxologia.",
+        "url": "https://www.saint.gr/3181/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharer in the ways of the Apostles and successor to their thrones, you found action a stepping-stone to contemplation, God-inspired one; and so, rightly dividing the word of truth, you contended for the faith as far as blood, hieromartyr Ignatius. Intercede with Christ our God that our souls may be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Κατεπλάγη Ἰωσήφ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Tῶν λαμπρῶν ἀγώνων σου, ἡ φωτοφόρος ἡμέρα, προκηρύττει ἅπασι, τὸν ἐκ Παρθένου τεχθέντα· τούτου γὰρ διψῶν ἐκ πόθου κατατρυφῆσαι, ἔσπευσας, ὑπὸ θηρίων ἀναλωθῆναι· διὰ τοῦτο Θεοφόρος, προσηγορεύθης Ἰγνάτιε ἔνδοξε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας», printed as his and naming him. Copied as printed: the site sets the first letter as a Latin capital T, which is its markup and not a reading.",
+        "url": "https://www.saint.gr/3181/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The light-bearing day of your shining contests heralds to all him who was born of the Virgin; for thirsting with longing to have your fill of him, you hastened to be devoured by beasts, and for this you were named the God-bearer, glorious Ignatius.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 107,
+      "latest": 107,
+      "display": "107",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι, την 20ή Δεκεμβρίου του έτους 107 μ.Χ., τον έριξαν στο αμφιθέατρο, όπου πεινασμένα θηρία τον κατασπάραξαν», with the page's head «(; - 107)». The same page says his time of birth and his nationality are unclear — «Ο χρόνος γέννησης και η εθνικότητα του Άγιου Ιγνατίου είναι ασαφή» — and that he came to the throne of Antioch between 68 and 70, so no birth and no floruit is drafted. The folder held no `dates` before this."
+    }
   }
 }

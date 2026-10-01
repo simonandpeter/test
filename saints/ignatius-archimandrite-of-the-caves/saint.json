@@ -1,0 +1,51 @@
+{
+  "slug": "ignatius-archimandrite-of-the-caves",
+  "display_name": "Ignatius of the Caves",
+  "names": [
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Όσιος Ιγνάτιος ο αρχιμανδρίτης της Λαύρας των Σπηλαίων», with the rank word and the house left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archimandrite of the Lavra of the Caves",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). The by-name points at a Russian house, and the Russian wave may well find him there; nothing of that is decided from this page."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Δεκεμβρίου — «Όσιος Ιγνάτιος ο αρχιμανδρίτης της Λαύρας των Σπηλαίων»",
+        "url": "https://www.saint.gr/12/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/2613/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole content besides the lexicon gloss of the name is «Δεν έχουμε λεπτομέρειες για τον βίο του Οσίου». **The page does not say which Lavra of the Caves it means** and does not name Kyiv, so the English form keeps the page's own words and locates nothing; no `dates` object and no `locations`. He is none of the fifteen Ignatius folders the corpus holds: not `ignatius-of-antioch`, who is the other Ignatius of this same day, and not `ignatius-the-sinaite`, whose Greek feast is 29 January. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

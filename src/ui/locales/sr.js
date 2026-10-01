@@ -790,6 +790,7 @@ export const sr = {
     'Archimandrite of Rostov': 'Архимандрит ростовски',
     'Archimandrite of Zilantov': 'Архимандрит зилантовски',
     'Archimandrite of the monastery of the Saviour at Suzdal': 'Архимандрит Спасовог манастира у Суздалу',
+    'Archimandrite of the Lavra of the Caves': 'Архимандрит Лавре печерске',
     'Archpriest': 'Протојереј',
     'Archpriest of Zaraysk': 'Протојереј зарајски',
     'Bishop': 'Епископ',

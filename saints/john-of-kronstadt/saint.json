@@ -10,6 +10,11 @@
       "form": "Ioan de Kronstadt",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 decembrie, «Sfântul Ioan de Kronstadt»."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Άγιος Ιωάννης της Κρονστάνδης», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Δεκεμβρίου — «Άγιος Ιωάννης της Κρονστάνδης»",
+        "url": "https://www.saint.gr/12/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3178/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Δεκεμβρίου εκάστου έτους», the same civil day the folder already keeps for the Romanian, and the entry is the same man: Ivan Ilyich Sergiev, priest of the cathedral of Saint Andrew the First-Called at Kronstadt on the island of Kotlin, with the same wife, the same refusal of mission in China and the same works of charity. **The folder's `dates` are left untouched and no `dates` key is drafted**: it holds the birth as 19 October 1829 from the Orthodox Church in America's life, and saint.gr gives «γεννήθηκε στις 18 Οκτωβρίου του 1829 μ.Χ.» — the same year and a day earlier, which is the two styles and is not a reader's to reconcile. The Greek page is where the dates round the repose are plain: the last liturgy on 10 December 1908, the loss of consciousness on the 19th, and the repose at 07:40 on 20 December 1908 in his eightieth year. It dates the Russian Synod's recognition to 8 June 1990 and quotes it, names his relics at the monastery of Saint John of Rila at Saint Petersburg and his grave in the lower church of the Ioannovsky convent, and sets aside as an urban myth the story that he esteemed Rasputin, naming the confusion with the protopresbyter Ioann Ianyshev. One apolytikion is printed with its ἦχος and is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -100,6 +115,22 @@
         "text": "Casting off all worldly care, let us praise with one voice the guiding light of the Russian land and of the whole world, the priest John, the good shepherd, who showed us the shining image of life in Christ; who, while yet on earth, was kindled with the spirit of prayer and received from the Lord a twofold gift of healing. By his holy prayers may Christ strengthen us in the faith and show us to be unshaken children of the Church, unto the salvation of our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Φερωνύμως δοχείον της θείας χάριτος, από νεότητας ώφθης τη καθαρά σου ζωή, Ιωάννη θαυμαστέ, Κρονστάνδης καύχημα. Συ γαρ αγάπης θησαυρός και θαυμάτων αυτουργός, εδείχθης Πνεύματι Θείω. Ευαγγελίου τον Λόγον, ως φως εκλάμπων πάσιν Άγιε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος πλ. α’ — the one hymn on the page of «Άγιος Ιωάννης της Κρονστάνδης», and it names him and his city. The page names no automelon.",
+        "url": "https://www.saint.gr/3178/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "True to your name, a vessel of divine grace, from your youth you were shown such by the purity of your life, wondrous John, boast of Kronstadt; for by the Divine Spirit you were shown to be a treasury of love and a worker of wonders, shining out the Word of the Gospel upon all as light, O holy one.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος πλ. α’."
     }
   ]
 }

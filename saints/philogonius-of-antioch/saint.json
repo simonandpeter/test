@@ -1,0 +1,61 @@
+{
+  "slug": "philogonius-of-antioch",
+  "display_name": "Philogonius of Antioch",
+  "names": [
+    {
+      "form": "Φιλογόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Όσιος Φιλογόνιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Antioch",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 323,
+      "latest": 324,
+      "display": "324",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Φιλογόνιος παρέδωσε το πνεύμα του στον Κύριο εν ειρήνη το 324 μ.Χ. (ή 323 μ.Χ.)», and the page's own head «(; - 324)». The page gives no year of birth, only that he lived in the years of Constantine the Great."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Δεκεμβρίου — «Όσιος Φιλογόνιος»",
+        "url": "https://www.saint.gr/12/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `/3180/` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Δεκεμβρίου εκάστου έτους», the same day as the listing, and «Οσιος Φιλογονιος (; - 324)». It makes him bishop of Antioch, raised there by the Christians of the city for his eloquence and his piety, and an advocate by profession before that. It cites John Chrysostom for the statement that he was a married man with a daughter when he was ordained; Chrysostom is the page's informant and no `related` row is made for him, on the corpus's practice of naming a witness or a reigning emperor in the life without a link. No place is given a coordinate: Antioch is named only as his see. No hymn is printed — the page carries a distich above the life and nothing else. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
