@@ -6,6 +6,11 @@
       "form": "Luchian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 octombrie, «Sfântul Mucenic Luchian preotul»; the life on the same site spells it Lucian."
+    },
+    {
+      "form": "Λουκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος της Εκκλησίας της Αντιοχείας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Οκτωβρίου — «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος της Εκκλησίας της Αντιοχείας»",
+        "url": "https://www.saint.gr/10/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man: of Samosata in Syria, who divided his inheritance among the poor at twelve, corrected and completed the versions of the Septuagint, Aquila and Symmachus against the original, was ordained presbyter at Antioch and died of starvation in prison at Nicomedia under Diocletian. The page gives no year and the folder has no `dates`, and none is proposed. **The «Σοφιστής και συγγραφέας της αρχαιότητας (120 - 200 μ.Χ.)» line above the life is saint.gr's note on the name Lucian** — the pagan sophist Lucian of Samosata — and it is a near-collision with the saint, who really is of Samosata, so it is named here to be sure that nothing in this row came from it. An apolytikion and a kontakion are taken and both name him; the «Έτερον Ἀπολυτίκιον», Ἦχος πλ. α' «Τὸν συνάναρχον Λόγον», also names him and is not drafted. Note that the page attributes one of the versions he corrected to «του Διοκλητιανού», where the usual name is Theodotion; it is quoted and not corrected. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -63,6 +78,40 @@
         "text": "Sharer of the apostles’ ways and successor to their thrones, thou didst find in action, O God-inspired one, an ascent to contemplation. Therefore, rightly teaching the word of truth and enduring in the faith unto blood, O holy martyr Lucian, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείω Πνεύματι, λελαμπρυσμένος, γνῶσιν ἔνθεον, ἐταμιεύσω, καὶ τῆς πίστεως τὸν λόγον ἐτράνωσας, ὅθεν Μαρτύρων ἀλείπτης γενόμενος, Λουκιανὲ ἐν ἀθλήσει ἠρίστευσας. Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first of three hymns on the page of «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος της Εκκλησίας της Αντιοχείας», and it names him.",
+        "url": "https://www.saint.gr/2595/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made bright by the divine Spirit, you stored up godly knowledge and made plain the word of the faith; and so, having become a trainer of martyrs, Lucian, you proved best in the contest. Glorious Martyr, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸv ἐν ἀσκήσει τὸ πρότεροv λαμπρυνθέντα, καὶ ἐν ἀθλήσει τὸ δεύτερον φαιδρυvθέντα, πάντες ὡς φωστῆρά σε φαιδρότατον, Λουκιανὲ τοῖς ὕμvοις, ἐνδόξως σε γεραίρομεν. Πρεσβεύων μὴ παύσῃ ὑπὲρ πάντων ἠμῶv.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὴν ἐν πρεσβείαις — on the same page, and it names him and no other saint.",
+        "url": "https://www.saint.gr/2595/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who were made bright first in ascesis and then made radiant in the contest — we all honour you gloriously with hymns, Lucian, as a most radiant luminary. Do not cease interceding for us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὴν ἐν πρεσβείαις."
     }
   ],
   "text": {

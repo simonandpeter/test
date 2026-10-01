@@ -1,0 +1,54 @@
+{
+  "slug": "lucian-of-the-kyiv-caves",
+  "display_name": "Lucian of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Λουκιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος των Σπηλαίων του Κιέβου», with the rank word and the see left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Οκτωβρίου — «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος των Σπηλαίων του Κιέβου»",
+        "url": "https://www.saint.gr/10/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Οκτωβρίου εκάστου έτους» and «Αγιος Λουκιανος ο Ιερομαρτυρας Πρεσβυτερος Των Σπηλαιων Του Κιεβου». **Its whole notice is one sentence and it is a refusal**: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — we have no details of the saint's life. So everything here comes out of the line: the ranks ιερομάρτυς and πρεσβύτερος, which are the two `types`, and the Caves of Kyiv, which the line names outright and which is therefore in the display name. No year, so no `dates`; no place recorded beyond that name, so no `locations`; no hymn and no verse. **The same day's other Lucian is a different man and is an upgrade, not this folder**: «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος της Εκκλησίας της Αντιοχείας», `/2595/`, is the corpus's `lucian-of-antioch`, of Samosata, who died of hunger at Nicomedia under Diocletian, and saint.gr prints the two as two entries with two pages on one day. The corpus's other men of the name — `lucian-of-tomis`, `lucian-fedotov`, `lucianus-companion-of-peregrinus` — stand on other days. The «Σοφιστής και συγγραφέας της αρχαιότητας (120 - 200 μ.Χ.)» line is saint.gr's note on the name Lucian and not a statement about this saint. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "lucian-of-antioch"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

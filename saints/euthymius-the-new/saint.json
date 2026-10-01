@@ -6,6 +6,11 @@
       "form": "Eftimie cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 octombrie."
+    },
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Ευθύμιος ο Νέος», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 15 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Οκτωβρίου — «Άγιος Ευθύμιος ο Νέος»",
+        "url": "https://www.saint.gr/10/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Οκτωβρίου εκάστου έτους» and «Αγιος Ευθυμιος ο Νεος (; - 894)», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man beyond doubt: born near Ancyra under Leo V the Armenian, first named Nikitas, married to Euphrosyne with a daughter Anastaso, tonsured in 842 on Olympus in Bithynia under Ioannikios, and whose life was written by Basil bishop of Thessalonica, his own disciple. **saint.gr lists him on two consecutive days and this is the one with the life.** Its 14 Οκτωβρίου listing carries «Άγιος Ευθύμιος ο Νέος ο εν Θεσσαλονίκη», `/2746/`, whose whole text is that we have no details of his life except that it survives at Vatopedi and the Great Lavra and was written by Basil, bishop of Thessalonica — the same biographer — and which adds «Ορισμένοι συναξαριστές τοποθετούν την εορτή του Αγίου στις 15 Νοεμβρίου». So the Greek calendar keeps him on 14 and 15 October and some synaxarists on 15 November; one attestation row per church is the schema, the row records the day page that holds the life and that agrees with the folder's own Romanian day, and the other two days are set down here. **No `dates` are proposed**: the folder's death year is 898 on doxologia's word and this page says «απεβίωσε ειρηνικά την 15η Οκτωβρίου 894 μ.Χ.», a four-year disagreement that is a reading for somebody with both sources open and not a thing to overwrite in an upgrade. The one thing the page adds outright is the relic, «Μέρος των Ιερών Λειψάνων του Αγίου βρίσκονται στη Μονή Περιστεράς Θεσσαλονίκης», and the founding of that monastery in 871. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

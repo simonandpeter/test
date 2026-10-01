@@ -15,6 +15,11 @@
       "form": "Vars",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 octombrie, «Sfântul Ierarh Vars, Episcopul Edesei»."
+    },
+    {
+      "form": "Βάρσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Όσιος Βάρσος», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 25 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Οκτωβρίου — «Όσιος Βάρσος»",
+        "url": "https://www.saint.gr/10/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man: the bishop of Edessa who lived after the middle of the fourth century when the Arian heresy was troubling the Church, defended her by his teaching, and was exiled by the emperor Valens. **Two things on this page disagree with what the folder already holds, and neither is written in.** The folder's `dates` give his death as 378 on the Sretensky calendar's word that he died in exile at Phaeno; this page says he was moved from the island of Arandos to Oxyrrhynchus — «(ή Ολορόγγο)» — in Egypt and finally shut in a fortress near Algiers, «τον έκλεισε σ' ένα φρούριο κοντά στο Αλγέρι», and there breathed his last, and it gives no year at all. So no `dates` are proposed and the folder's stand; the Greek page's account of where he died is recorded in the paragraph in its own terms and the disagreement is named in the reader's report. The folder already carries `office: \"Bishop of Edessa\"`, which this page confirms. The one thing it adds outright is the relic: «Η δε σωζόμενη κλίνη του Αγίου στην Άρανδο, τιμάται από τους εντοπίους για τα εκτελούμενα δι' αυτής θαύματα». No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
