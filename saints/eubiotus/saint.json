@@ -1,0 +1,59 @@
+{
+  "slug": "eubiotus",
+  "display_name": "Eubiotus",
+  "names": [
+    {
+      "form": "Ευβίοτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Ευβίοτος», with the rank word left off. The page spells it «Ευβίωτος» in its last sentence and «Ευβίοτος» elsewhere; the form of the calendar line is the one stored."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 320,
+      "latest": 320,
+      "display": "320",
+      "basis": "attested",
+      "note": "saint.gr's own last sentence: «Ο Άγιος Ευβίωτος πέθανε το 320 μ.Χ.» It says he lived in the third century after Christ and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιος Ευβίοτος»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **`types` carries `confessor` and not `martyr`, on the page's own showing:** it has him survive stoning, beating, scourging and the tearing of his flesh, be found still in chains at Constantine's triumph, be set free and die in 320; and its epigram says «Ἤθλησεν Εὐβίοτος ἄχρις αἱμάτων, Βίου δὲ τέρμα εὗρε χωρὶς αἱμάτων» — he contended as far as blood, but found the end of his life without blood. It names the village Πτωκετό or Πωκετός in the province of Opsikion as his birthplace and gives the name two forms itself; no coordinate is proposed. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

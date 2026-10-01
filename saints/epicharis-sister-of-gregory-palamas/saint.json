@@ -35,8 +35,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Μνήμη Οικογένειας Αγίου Γρηγορίου του Παλαμά»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους». No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The whole of the page's text is the canonisation and the day: «Το 2009 μ.Χ., ύστερα από πρόταση της Μητρόπολης Βέροιας, Ναούσης και Καμπανίας, το Οικουμενικό Πατριαρχείο αποφάσισε την αγιοκατάταξη και των μελών της οικογένειας του Αγίου Γρηγορίου του Παλαμά. Ημέρα μνήμης τους ορίστηκε η 18η Δεκεμβρίου.»** **The entry names no member of the family individually — it is the family as a company — and this corpus already keeps the six members as folders from the Romanian calendar, which names each of them on 14 noiembrie: the parents Constantius and Kalloni, the brothers Theodosius and Macarius, the sisters Epicharis and Theodota. The identification is the family named in both lines and nothing else, and a row is written on each of the six folders rather than a new company folder.** The page gives no year of birth or death for any of them, names no place but the metropolis of Veroia, Naousa and Kampania which proposed the canonisation, lists no relic and prints no hymn. **It names 18 Δεκεμβρίου where the corpus's six folders are kept on the Romanian 14 noiembrie, Gregory Palamas's own day; one attestation row per church is the schema, and these two days are two churches', so there is no conflict here — but the Greek calendar's keeping of the family apart from Gregory is worth an author's eye.**"
     },
     {
       "church": "serbian",

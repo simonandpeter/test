@@ -6,6 +6,11 @@
       "form": "Sebastian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfântul Mucenic Sebastian», with the rank words left off."
+    },
+    {
+      "form": "Σεβαστιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Σεβαστιανός», with the rank word left off. The page glosses the name itself, «(από την λέξη σεβαστός) = ο αξιοσέβαστος»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιος Σεβαστιανός»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the commander of the praetorians under Diocletian who declared himself a Christian to hearten the Christians on trial. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The two sources disagree about where he was born and the folder's life is left standing:** doxologia has him born at Narbonne and brought up and schooled at Milan; saint.gr has him «γεννήθηκε στα Μεδιόλανα της Ιταλίας, το 250 με 256 μ.Χ.», born at Mediolanum itself. That is for the author to rule on. **The years are added to a folder that held none:** the birth from «το 250 με 256 μ.Χ.» and the death from the page head «(; - 287)». saint.gr adds the emperor Carinus's favour, Diocletian's making him head of the first regiment of the praetorians, the title of defender of the Church given him by pope Gaius, the arrow in the chest, the pious widow Lucina who took the body and found him still breathing and nursed him back, and his going again to Diocletian to rebuke him for his cruelty, for which he was scourged to death. No coordinate is proposed. **The same day page keeps the ten of his company by name, «Άγιοι Νικόστρατος, Ζωή η σύζυγός του, Τραγκυλίνος και η σύζυγός του Μαρκία, Κλαύδιος, Τιβούρτιος, Κάστωρ, Καστούλος, Μάρκος και Μαρκελλίνος», who are drafted as nine new folders in `el-12-18-1` with Zoe's row in this file.** It prints one apolytikion, which names him, and that is taken."
     },
     {
       "church": "serbian",
@@ -46,5 +61,52 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 250,
+      "latest": 256,
+      "display": "between 250 and 256",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Σεβαστιανός γεννήθηκε στα Μεδιόλανα της Ιταλίας, το 250 με 256 μ.Χ.» The folder held no dates before this reading; **the same sentence puts his birth at Mediolanum, where doxologia's life puts it at Narbonne and only his schooling at Milan, and that disagreement is recorded in the Greek attestation and not resolved.**"
+    },
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
+      "basis": "attested",
+      "note": "saint.gr's page head, «Αγιος Σεβαστιανος (; - 287)». Its narrative dates nothing: it has Carinus favour him, Diocletian make him head of the praetorians and order his death, and after Lucina nursed him back it has him scourged to death, with no year for any of it."
+    }
+  },
+  "related": [
+    "nicostratus-18-december",
+    "zoe-18-december",
+    "tranquillinus",
+    "marcia-wife-of-tranquillinus",
+    "claudius-18-december",
+    "tiburtius-18-december",
+    "castor-18-december",
+    "castulus-18-december",
+    "marcus-son-of-tranquillinus",
+    "marcellinus-son-of-tranquillinus"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Συγκλήτου σφαλλομένης παριδῶν τὰ συνέδρια, Σεβαστιανὲ πανολβίαν, συναγείρεις συνέλευσιν, Μαρτύρων ἀληθῶς πανευκλεῶν, σὺν σοῖ καταβαλόντων τὸν ἐχθρόν, μεθ' ὧν θείας συναυλίας ἀξιωθεῖς, φαιδρύνεις τοὺς βοώντας σοι, δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης, on the page of Άγιος Σεβαστιανός. It names him, and the assembly of martyrs it says he gathered is the company the same day keeps with him.",
+        "url": "https://www.saint.gr/3288/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Overlooking the councils of a Senate that went astray, O Sebastian, you gather an all-blessed assembly of martyrs truly most glorious, who cast down the enemy together with you; counted worthy of the divine fellowship with them, you gladden those who cry to you: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

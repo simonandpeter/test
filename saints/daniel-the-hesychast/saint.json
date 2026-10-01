@@ -6,6 +6,11 @@
       "form": "Daniil Sihastrul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfântul Cuvios Daniil Sihastrul», with the rank words left off. The life gives his baptismal name as Dumitru, his first monastic name as David and his great-schema name as Daniil."
+    },
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Δανιήλ ο Ησυχαστής», with the rank word and the by-name left off. The page glosses the name itself, «(εβραϊκή λέξη) = η θεία δίκη»."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιος Δανιήλ ο Ησυχαστής»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: born in Moldavia, fallen asleep in 1496. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The whole of the page's text is two sentences: «Ο Άγιος Δανιήλ γεννήθηκε στην Μολδαβία στις αρχές του 15ου μ.Χ. αιώνα. Κοιμήθηκε το 1496 μ.Χ. και η Ορθόδοξη εκκλησία της Ρουμανίας τον αγιοκατέταξε το 1992 μ.Χ.»**, with «(; - 1496)» in the page head. It adds nothing to the long Romanian life the folder already carries except the year of the canonisation. The folder's `dates` are from doxologia and agree with saint.gr's century and year, so they are left untouched. **The folder's Romanian row already notes doxologia's own statement that in Moldavia his memory was kept on two days, 23 aprilie at Voroneț and 18 decembrie; saint.gr knows only the December day.** It names Moldavia and no coordinate is proposed; it prints no hymn."
     },
     {
       "church": "serbian",

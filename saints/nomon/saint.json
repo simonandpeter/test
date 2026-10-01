@@ -1,0 +1,48 @@
+{
+  "slug": "nomon",
+  "display_name": "Nomon",
+  "names": [
+    {
+      "form": "Νόμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Όσιος Νόμων», with the rank word left off. The page gives this name no gloss."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Όσιος Νόμων»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is a citation and a guess, and both are quoted here because they are the entry: «Η μνήμη του Οσίου Νόμων αναφέρεται επιγραμματικά στο “Μικρὸν Εὐχολόγιον ἢ Ἁγιασματάριον” έκδοση “Αποστολικής Διακονίας” 1956, χωρίς άλλες πληροφορίες. Πιθανώς να είναι Άγιος της Κυπριακής Εκκλησίας.»** The guess about Cyprus is the page's own, marked «πιθανώς», and nothing is drafted from it — no place, no `locations`. It is a statement about where the memory is recorded and not a refusal to vouch for the man: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», and the feast type is plainly «Σταθερή». **`types` is empty: the calendar line's «Όσιος» would give `venerable`, but the page says it has no information at all about him, and this reading does not assert a rank on a rank word alone. That is a question for the author.** No year, no relic, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "slug": "hermylus-18-december",
+  "display_name": "Hermylus (18 December)",
+  "names": [
+    {
+      "form": "Ερμύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιοι Φωκάς και Ερμύλος», with the rank word left off. The page gives this name no gloss."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιοι Φωκάς και Ερμύλος»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence and it enumerates two men: «Οι Άγιοι Φωκάς και Ερμύλος μαρτύρησαν δια ξίφους.» A folder each, and each relates the other.** It gives no year, no reign, no place and no circumstance beyond the sword, lists no relic and prints no hymn. Its epigram has the two argue over who shall go first — I shall be cut first, says Hermylus; no, says Phocas, but Phocas, Hermylus — and nothing is drafted from it. **The corpus keeps a `hermylus` with a `stratonicus-companion-of-hermylus` on 13 Ιανουαρίου, drowned in the Danube, and several folders of Phocas; two entries on one calendar are two commemorations, and this pair is the 18 Δεκεμβρίου one, which the page gives no circumstance to join to any other.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "phocas-18-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

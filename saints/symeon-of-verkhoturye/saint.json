@@ -1,0 +1,64 @@
+{
+  "slug": "symeon-of-verkhoturye",
+  "display_name": "Symeon of Verkhoturye",
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Συμεών του Βερχοτούρε», with the rank word and the place left off. The page glosses the name itself, «(εβραϊκή λέξη) = ο φιλάνθρωπος»."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "dates": {
+    "birth": {
+      "earliest": 1607,
+      "latest": 1607,
+      "display": "1607",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only place either year appears: «Αγιος Συμεων Του Βερχοτουρε (1607 - 1642)». The page's text gives no year at all."
+    },
+    "death": {
+      "earliest": 1642,
+      "latest": 1642,
+      "display": "1642",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only place either year appears: «Αγιος Συμεων Του Βερχοτουρε (1607 - 1642)». The page's text gives no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιος Συμεών του Βερχοτούρε»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου.»** That is a refusal to tell the life and not a refusal to vouch for the man: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…». The years are in the head and are recorded. **`types` is empty: the page gives him no rank beyond «Άγιος» and says it knows nothing of his life.** Its related link names the synaxis of all the saints of Siberia, which was not read. It names Verkhoturye and no coordinate is proposed; it prints no hymn. The `russian` row is left `undocumented` although the page calls him a Russian saint, because days.pravoslavie.ru was not read. The corpus keeps a `john-of-verkhoturye` on 16 Απριλίου, who is not this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

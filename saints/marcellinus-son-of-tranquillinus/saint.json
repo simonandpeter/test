@@ -1,0 +1,72 @@
+{
+  "slug": "marcellinus-son-of-tranquillinus",
+  "display_name": "Marcellinus, son of Tranquillinus",
+  "names": [
+    {
+      "form": "Μαρκελλίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιοι Νικόστρατος, Ζωή η σύζυγός του, Τραγκυλίνος και η σύζυγός του Μαρκία, Κλαύδιος, Τιβούρτιος, Κάστωρ, Καστούλος, Μάρκος και Μαρκελλίνος», with the rank word and the kinship clauses left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 304,
+      "display": "between 284 and 304",
+      "basis": "attested",
+      "note": "saint.gr dates the whole company by the persecution: «Όλοι μαρτύρησαν κατά τον διωγμό που κίνησε ο Διοκλητιανός (284 - 304 μ.Χ.) εναντίον των χριστιανών». No year of birth is given and no year within the reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιοι Νικόστρατος, Ζωή η σύζυγός του, Τραγκυλίνος και η σύζυγός του Μαρκία, Κλαύδιος, Τιβούρτιος, Κάστωρ, Καστούλος, Μάρκος και Μαρκελλίνος»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The entry enumerates its company — ten named people — so it is a folder each. Zoe the corpus already keeps as `zoe-18-december` from the Romanian calendar, and her `greek` row is written in this day's upgrade file; the other nine are new folders here, and each relates the rest.** The page dates them all together: «Όλοι μαρτύρησαν κατά τον διωγμό που κίνησε ο Διοκλητιανός (284 - 304 μ.Χ.) εναντίον των χριστιανών, μαζί με τον Άγιο Σεβαστιανό (βλέπε ίδια ημέρα)» — with Sebastian, whom the same day keeps and whom the corpus keeps as `sebastian-of-rome`. It gives each of them a manner of death, and **it is explicit that it has no evidence for Marcia's: «Για δε τη σύζυγο του Τραγκυλίνου, Μαρκία, δεν βρίσκουμε κανένα στοιχείο ότι μαρτύρησε, παρά μόνο ότι έγινε χριστιανή.»** Marcia's folder therefore carries no `martyr` type and her dating is a floruit. It names no city — Rome is Sebastian's page's, not this one's — so no coordinate is proposed, and it prints no hymn; the day's apolytikion stands on Sebastian's page and names him. **An open identity question, named and not decided here: the corpus already keeps a `nicostratus`, a `claudius-martyr-9-november` and a `castor-martyr-9-november` from the Romanian 9 noiembrie, where their companion is Sempronian — the Pannonian company, not Sebastian's. Those three names recur in both companies and the two traditions are known to cross. These folders are the Greek 18 Δεκεμβρίου company as saint.gr prints it, with Sebastian; nothing is merged and nothing is removed.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "sebastian-of-rome",
+    "nicostratus-18-december",
+    "tranquillinus",
+    "marcia-wife-of-tranquillinus",
+    "claudius-18-december",
+    "tiburtius-18-december",
+    "castor-18-december",
+    "castulus-18-december",
+    "marcus-son-of-tranquillinus",
+    "zoe-18-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

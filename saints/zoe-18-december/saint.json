@@ -6,6 +6,11 @@
       "form": "Zoe",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfânta Muceniță Zoe», with the rank words left off."
+    },
+    {
+      "form": "Ζωή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιοι Νικόστρατος, Ζωή η σύζυγός του, Τραγκυλίνος και η σύζυγός του Μαρκία, Κλαύδιος, Τιβούρτιος, Κάστωρ, Καστούλος, Μάρκος και Μαρκελλίνος», with the rank word and the kinship clause left off. The page glosses the name itself, «(από το ζω) = η έχουσα και δίδουσα ζωή και υγεία»."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Άγιοι Νικόστρατος, Ζωή η σύζυγός του, Τραγκυλίνος και η σύζυγός του Μαρκία, Κλαύδιος, Τιβούρτιος, Κάστωρ, Καστούλος, Μάρκος και Μαρκελλίνος»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps from doxologia's bare line, and the Greek entry gives her what the Romanian did not: a husband, a company and a death. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The entry enumerates ten named people and she is the second of them; the other nine are drafted as new folders in `el-12-18-1`, and she relates them and Sebastian.** saint.gr dates the company by the persecution, «κατά τον διωγμό που κίνησε ο Διοκλητιανός (284 - 304 μ.Χ.)», which is recorded in `dates` for a folder that held none, and gives her end exactly: she and her husband Nikostratos died of suffocation, hung upside down with a hearth of fire built below them so that the smoke should go into their faces. It names no city, so no coordinate is proposed, and it prints no hymn; the day's apolytikion stands on Sebastian's page and names him."
     },
     {
       "church": "serbian",
@@ -45,5 +60,26 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 304,
+      "display": "between 284 and 304",
+      "basis": "attested",
+      "note": "saint.gr dates the whole company by the persecution: «Όλοι μαρτύρησαν κατά τον διωγμό που κίνησε ο Διοκλητιανός (284 - 304 μ.Χ.) εναντίον των χριστιανών». No year of birth is given and no year within the reign. The folder held no dates before this reading."
+    }
+  },
+  "related": [
+    "sebastian-of-rome",
+    "nicostratus-18-december",
+    "tranquillinus",
+    "marcia-wife-of-tranquillinus",
+    "claudius-18-december",
+    "tiburtius-18-december",
+    "castor-18-december",
+    "castulus-18-december",
+    "marcus-son-of-tranquillinus",
+    "marcellinus-son-of-tranquillinus"
+  ]
 }

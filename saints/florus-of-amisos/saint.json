@@ -1,0 +1,61 @@
+{
+  "slug": "florus-of-amisos",
+  "display_name": "Florus of Amisos",
+  "names": [
+    {
+      "form": "Φλώρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Όσιος Φλώρος επίσκοπος Αμινσού ή Αμισού», with the rank word and the see left off. The page glosses the name itself, «(από το λατινικό flos - floris = άνθος) = ο ωραίος σαν το λουλούδι», and gives the see's name two forms, «Αμινσού ή Αμισού»."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Amisos",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 565,
+      "latest": 602,
+      "display": "565 to 602",
+      "basis": "attested",
+      "note": "saint.gr dates him by the reigns and the patriarchates: «έζησε την εποχή που βασίλεψαν οι Ιουστίνος Β' (565 - 578 μ.Χ.), Τιβέριος (578 - 582 μ.Χ.) και Μαυρίκιος (582 - 602 μ.Χ.) και επί των πατριαρχών Κωνσταντινουπόλεως Ευτυχίου και Ιωάννου του Γ'». No year of birth and no year of death is given; it says only that he died in deep old age."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Όσιος Φλώρος επίσκοπος Αμινσού ή Αμισού»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page calls Amisos a city of Cappadocia — «έγινε επίσκοπος Αμισού που είναι πόλη της Καππαδοκίας» — and gives the see two names; no coordinate is proposed.** It names his father Φλώρος and his mother Ευφυΐα, his wife and child whom he saw die, the small estate at the place called Ανάπλουν where he withdrew, and the patriarchs Eutychius and John III; none of them is a folder this reading could attach to and no `related` row is made. It prints no hymn. The corpus keeps a `florus-of-illyricum` on 18 Αυγούστου, the stonemason martyred with Laurus, who is not this bishop."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

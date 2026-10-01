@@ -1,0 +1,50 @@
+{
+  "slug": "sophia-18-december",
+  "display_name": "Sophia (18 December)",
+  "names": [
+    {
+      "form": "Σοφία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Αγία Σοφία η θαυματουργή», with the rank word and the by-name left off. The page glosses the name itself, «Η προσωποποίηση της σοφίας, η σοφή»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Αγία Σοφία η θαυματουργή»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο της Αγίας.»** That is a refusal to tell the life and not a refusal to vouch for her: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…». No year, no place, no relic, no hymn. `types` carries only `wonderworker`, which is what the calendar line's by-name «η θαυματουργή» says, and the epigram repeats — «Θεού σοφίαν ηγάπησε Σοφία, Όθεν χάριν δέδεκτο και των θαυμάτων». **The display name is the day and not the by-name, because `lib/honorific.js` composes the rank from `types`.** The corpus keeps six other folders of this name, among them a `sophia-the-physician` on the Romanian 22 mai and a `sophia-martyr-18-september`; none of them is this woman and the page offers nothing that would join them."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

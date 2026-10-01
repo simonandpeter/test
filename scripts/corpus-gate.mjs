@@ -115,6 +115,36 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θαδδαιοσ thaddeus-22-november thaddeus-apostle-of-the-seventy thaddeus-of-stepantsminda thaddeus-of-tver':
+    'Four men. The new one is Thaddeus archbishop of Tver on 18 December, a new martyr; the others are read in the el-11-22 entry for this name form.',
+  'σοφια sophia-18-december sophia-martyr-18-september sophia-of-aenus sophia-of-kleisoura sophia-of-kyiv':
+    'Five women. The new one is the Sophia of 18 December, a wonderworker; the others are read in the el-03-22 entry for this name form, with Sophia of Aenus and Sophia of Kleisoura.',
+  'συμεων simeon-metaphrastes simeon-of-mega-spileo simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-beyond-the-anaplous symeon-kinsman-of-the-lord symeon-of-antioch symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-of-verkhoturye symeon-the-barefoot symeon-the-god-receiver symeon-the-goldsmith-of-trebizond symeon-the-new-of-mytilene symeon-the-new-theologian symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Twenty-three now. The new one is Symeon of Verkhoturye on 18 December; the others are read in the el-12-16 entry for this name form.',
+  'φωκασ phocas-18-december phocas-2-august':
+    'Two men. The new one is the Phocas of 18 December, martyred with Hermylus; the other is the Phocas of 2 August.',
+  'νομων nomon nomon-of-tamassos':
+    'Two men. The new one is the Nomon of 18 December; the other is Nomon of Tamassos, a week earlier on 11 December — two entries, two men.',
+  'ερμυλοσ hermylus hermylus-18-december':
+    'Two men. The new one is the Hermylus of 18 December, martyred with Phocas; the other is the Hermylus of 13 January.',
+  'φλωροσ florus-of-amisos florus-of-illyricum':
+    'Two men. The new one is Florus bishop of Amisos on 18 December; the other is Florus of Illyricum on 18 August, whom four calendars keep.',
+  'μιχαηλ boris-michael-of-bulgaria macarius-notaras methodius-of-moravia michael-companion-of-platon-of-reval michael-maleinos michael-mavroeidis michael-nephew-of-theodore-of-edessa michael-of-cyprus-of-samothrace michael-of-georgia michael-of-klops michael-of-murom michael-of-synada michael-of-ulumbo michael-of-vourla michael-parekheli michael-the-russian-1-april michael-the-syncellus michael-the-wonderworker':
+    'Eighteen now. The new one is Michael the Syncellus on 18 December, a confessor; the others are read in the el-07-19 entry for this name form.',
+  'τιβουρτιοσ tiburtius-18-december tiburtius-brother-of-valerian':
+    'Two men. The new one is the Tiburtius of 18 December, of the Sebastian company; the other is Tiburtius the brother of Valerian on 22 November.',
+  'νικοστρατοσ nicostratus-18-december nicostratus-the-tribune':
+    'Two men. The new one is the Nicostratus of 18 December, of the Sebastian company; the other is Nicostratus the tribune on 8 July. Whether that company is the Pannonian one the Romanian keeps on 9 November is the author’s, and is in ro-run/FINDINGS.md.',
+  'μαρκοσ marcus-son-of-tranquillinus mark-22-november mark-22-november-second mark-29-november mark-companion-of-mokianos mark-companion-of-soterichus mark-martyr-11-august mark-martyr-8-june mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd mark-the-triglinos':
+    'Twenty-one now. The new one is Marcus the son of Tranquillinus on 18 December, a deacon; the others are read in the el-11-29 entry for this name form.',
+  'μαρκια marcia-companion-of-marcius marcia-of-caesarea marcia-wife-of-tranquillinus':
+    'Three women. The new one is Marcia the wife of Tranquillinus on 18 December; the others are Marcia of Caesarea on 6 June and Marcia the companion of Marcius on 27 June.',
+  'μαρκελλινοσ marcellinus-of-the-twelve-tribunes marcellinus-son-of-tranquillinus':
+    'Two men. The new one is Marcellinus the son of Tranquillinus on 18 December, a deacon; the other is Marcellinus of the twelve tribunes on 24 May.',
+  'κλαυδιοσ claudius-18-december claudius-companion-of-lucillian claudius-husband-of-hilaria claudius-of-corinth claudius-of-laranda claudius-of-the-forty-martyrs claudius-venerable-3-february':
+    'Seven men. The new one is the Claudius of 18 December, of the Sebastian company; the others are read in the el-02-03 entry for this name form.',
+  'καστωρ castor-12-august castor-18-december':
+    'Two men. The new one is the Castor of 18 December, of the household around Sebastian of Rome; the other is the Castor of 12 August.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-dounale stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-sourozh stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-new stephen-the-newly-shining stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Thirty-four now. The new one is Stephen Dounale on 17 December, a confessor; the others are read in the el-08-20 entry for this name form.',
   'πατερμουθιοσ patermuthius-17-december patermuthius-the-martyr':

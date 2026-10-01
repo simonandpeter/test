@@ -1,0 +1,73 @@
+{
+  "slug": "michael-the-syncellus",
+  "display_name": "Michael the Syncellus",
+  "names": [
+    {
+      "form": "Μιχαήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Όσιος Μιχαήλ ο Σύγκελος και Ομολογητής», with the rank words and the office left off. The page glosses the name itself, «(λέξη εβραϊκή) = ο όμοιος με τον Θεό»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 761,
+      "latest": 763,
+      "display": "761 or 763",
+      "basis": "attested",
+      "note": "saint.gr gives both and says so: «Ο Όσιος Μιχαήλ γεννήθηκε στην Παλαιστίνη το 761 μ.Χ (ή κατ' άλλους, το 763 μ.Χ.)», with «(761 - 846)» in the page head."
+    },
+    "death": {
+      "earliest": 846,
+      "latest": 846,
+      "display": "846",
+      "basis": "attested",
+      "note": "saint.gr, in its last sentence and in the page head: he passed the rest of his life at the monastery of Chora and was buried near the graves of the confessors «(846 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Δεκεμβρίου — «Όσιος Μιχαήλ ο Σύγκελος και Ομολογητής»",
+        "url": "https://www.saint.gr/12/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page names Palestine as his birthplace and says his forebears were Persians; the church of the Resurrection where Theodore patriarch of Jerusalem made him a reader; the monastery of Saint Sabbas, where he was tonsured at twenty-five and ordained presbyter by the patriarch Thomas twelve years later; Rome, where Thomas sent him; the prisons of Leo the Iconoclast, of Michael the Stammerer from 820 and of Theophilus; and the monastery of Chora, which he asked for instead of the patriarchal throne when he was eighty and ill. No coordinate is proposed. It says he was buried near the graves of the confessors Germanus the Patriarch and Theodore the Graptos; **those two and Theophanes the Graptos it refers the reader to on other days — 27 Δεκεμβρίου for Theodore and 11 Οκτωβρίου for Theophanes — and all three have folders here, so they are linked in the life and carry `related` rows.** It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "theodore-brother-of-theophanes",
+    "theophanes-of-nicaea",
+    "germanus-of-constantinople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
