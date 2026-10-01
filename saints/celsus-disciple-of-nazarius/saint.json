@@ -6,6 +6,11 @@
       "form": "Chelsie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 octombrie."
+    },
+    {
+      "form": "Κέλσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιοι Ναζάριος, Προτάσιος, Γερβάσιος και Κέλσιος», with the rank word left off; the page's own heading for this one is «Αγιος Κελσιος»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Άγιοι Ναζάριος, Προτάσιος, Γερβάσιος και Κέλσιος»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same four: Nazarius, whose parents Africanus and Perpetua are said to have been disciples of the Apostle Peter, who met Protasius and Gervasius at Mediolanum and gained Celsus in Gaul, and all four beheaded by the eparch Anoulinos. The page gives no year at all, so no `dates` object is proposed. It records relics: «Τα Λείψανα του Αγίου Προτασίου βρίσκονται στη Ρωμαιοκαθολική Αμβροσιανή Βασιλική του Μιλάνου» and, for Gervasius, «Η Κάρα και τα λοιπά Λείψανα». An apolytikion and a kontakion are taken, both of which name the four together; the Οἶκος and the Κάθισμα are neither a troparion nor a kontakion and are not drafted. **The apolytikion is copied as the page prints it, and the page prints «Λαζάριον» where the sense and the kontakion both have Ναζάριον** — a reading that looks wrong is the source's and is not corrected here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
         "text": "Thy martyrs, O Lord, in their struggles received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the feeble insolence of the demons also. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τετράριθμον σύνταγμα, τῶν Ἀθλητῶν τοῦ Χριστοῦ, Λαζάριον μέλψωμεν, σὺν Γερβασίω ὁμού, Προτάσιον Κέλσιον οὗτοι γὰρ τὴν Τριάδα, ἀνεκήρυξαν πάσι, λύσαντες δι' ἀγώνων, τὴν πολύθεον πλάνην. Αὐτῶν Χριστὲ ἰκεσίαις, πάντας ἐλέησαν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page the four share. It names the company of four and Gervasius, Protasius and Celsus outright; the first name is printed «Λαζάριον» and is copied as printed.",
+        "url": "https://www.saint.gr/2744/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing the fourfold company of the champions of Christ — Nazarius with Gervasius together, Protasius and Celsus; for these proclaimed the Trinity to all and undid by their struggles the error of many gods. Christ, at their prayers have mercy on us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Μαρτύρωv τοῦ Xριστοῦ, τὴv τετράριθμον δόξαv, ὑμνήσωμεν πιστοί, εὐφημίαις ἀσμάτωv, Ναζάριοv Προτάσιον, καὶ Γερβάσιον Κέλσιον, οὗτοι ἤθλησαν μέχρι τομῆς καὶ θανάτου, οὗτοι στέφαvον, τῆς ἀφθαρσίας λαβόντες, αἰτοῦσι σωθῆναι ἡμᾶς.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α’, Χορός Ἀγγελικὸς — on the page the four share, and it names all four of them.",
+        "url": "https://www.saint.gr/2744/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Faithful, let us hymn with the praises of songs the fourfold glory of the Martyrs of Christ — Nazarius, Protasius, Gervasius and Celsus. These contended to the sword and to death; these, having received the crown of incorruption, ask that we be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορός Ἀγγελικὸς."
     }
   ],
   "text": {

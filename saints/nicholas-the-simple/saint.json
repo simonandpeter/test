@@ -1,0 +1,52 @@
+{
+  "slug": "nicholas-the-simple",
+  "display_name": "Nicholas the Simple",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Όσιος Νικόλαος ο απλός και θαυματουργός δούκας Τζερνηγοβιγίας «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Όσιος Νικόλαος ο απλός και θαυματουργός δούκας Τζερνηγοβιγίας «ὁ ἐν τῷ Σπηλαίῳ»»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους» and «Οσιος Νικολαος ο Απλος Και Θαυματουργος Δουκας Τζερνηγοβιγιας «ο Εν Τω Σπηλαιω»». **Its whole notice is one sentence and it is a refusal**: «Δεν έχουμε περισσότερες λεπτομέρειες για τον βίο του Οσίου» — we have no further details of his life. So everything in this folder comes out of the line itself: the rank Όσιος, the epithets simple and wonderworker, the title δούκας Τζερνηγοβιγίας, and the cave. **Nothing is inferred beyond it**: the page does not say which caves «ὁ ἐν τῷ Σπηλαίῳ» means and does not mention Kyiv, so no monastery and no `locations` are recorded, and he is not written as a Kyiv Caves father. The title is recorded as the `office`, transliterated from the line and nothing more. No year, so no `dates`; no hymn; no verse. The corpus's many men called Nicholas stand on other days and none of them is a duke. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "office": "Duke of Tzernigovia",
+  "text": {
+    "life": "life.md"
+  }
+}

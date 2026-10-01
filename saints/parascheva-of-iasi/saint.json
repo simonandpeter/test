@@ -6,6 +6,11 @@
       "form": "Parascheva de la Iași",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 octombrie."
+    },
+    {
+      "form": "Παρασκευή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Οσία Παρασκευή η Νέα η «Επιβατηνή»», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Οσία Παρασκευή η Νέα η «Επιβατηνή»»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same woman: of Epivatai near Selymbria in Thrace, who kept a church at Herakleia of Pontus for five years, lived in a women's monastery in the Holy Land, and died at Kallikrateia in south-eastern Thrace in the church of the Holy Apostles. The folder's own life, from doxologia, names Epivata and the same course. The page gives no year and no century, so no `dates` object is proposed and the folder's own `death` is left alone. It prints no hymn; what it does add is who wrote her service and her life — «Την ακολουθία της συνέγραψε ο Συρίγος Μελέτιος, τον δε βιο της ο Eυθύμιος ο Aρχιεπίσκοπος Tορνόβου». **Not to be confused with the Οσιομάρτυς Παρασκευή of the same day's «Ανάμνηση θαύματος … εν Xίω» (/2751/), which is a commemoration of a miracle of 1442 and belongs to the other Paraskeve.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

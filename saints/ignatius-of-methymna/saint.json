@@ -6,6 +6,11 @@
       "form": "Ignatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 octombrie, «Sfântul Ierarh Ignatie, Mitropolit de Mitimna»."
+    },
+    {
+      "form": "Ιγνάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιος Ιγνάτιος ο Αγαλλιανός, Αρχιεπίσκοπος Μηθύμνης, ο Θαυματουργός», with the rank word left off. The page adds that his name before the monastic life was Ιωάννης and his family name Αγαλλιανός; neither is drafted as a separate form here, because the line prints neither bare."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Άγιος Ιγνάτιος ο Αγαλλιανός, Αρχιεπίσκοπος Μηθύμνης, ο Θαυματουργός»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους» and «Αγιος Ιγνατιος ο Αγαλλιανος, Αρχιεπισκοπος Μηθυμνης, ο Θαυματουργος (1492 - 1566)», the same menologion day the folder already keeps and the same two years the folder already records, so its `dates` are left exactly as they stand. The entry is the same man: born 1492 at Pharanga near Kalloni on Mytilene, son of the priest Emmanuel Agallianos, first named John, married and ordained, withdrawn to the Taxiarch of Leimon after plague took his wife and all his children but Methodios, and made metropolitan of Methymna in 1531 under Jeremiah II. One apolytikion is taken and it names him. The long passage the page adds about his two icons — the oldest, inscribed «ο κτύτωρ» rather than with his name, and an 1858 lithograph — is about the pictures and not about him, and is not drafted. **For the writer: the page gives his see, «Μητροπολίτης Μηθύμνης», and `upgrade.py` has no key for `office`.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,5 +77,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν ποιμενάρχην Μηθύμνης Ἰγνάτιον ἄσμασι, τὸν μετὰ πάντων ἁγίων δοξασθέντα ἐν θαύμασιν, ὑμνήσωμεν ἀπαύστως οἱ πιστοί, συμφώνως ἐν τὴ τούτου ἑορτή, καὶ ὡς πλεῖστα κατιδόντες ὑπ' αὐτοῦ, θεραπευθέντα πάθη ἐκβοήσωμεν Δόξα τῷ σὲ δοξάσαντι, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ πάσιν Ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the only hymn on the page of «Άγιος Ιγνάτιος ο Αγαλλιανός, Αρχιεπίσκοπος Μηθύμνης, ο Θαυματουργός», and it names him and his see.",
+        "url": "https://www.saint.gr/2752/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Faithful, let us hymn unceasingly and with one voice, at his feast, Ignatius the chief shepherd of Methymna, glorified in wonders with all the saints; and having seen how many sufferings have been healed by him, let us cry out: glory to him who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
+  ]
 }

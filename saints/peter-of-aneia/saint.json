@@ -1,0 +1,59 @@
+{
+  "slug": "peter-of-aneia",
+  "display_name": "Peter of Aneia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιος Πέτρος ο Αυσελάμου», with the rank word left off. The page's epithet for him is «ο Αυσελάμου», a genitive it does not explain; it is recorded here and not carried into the English name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Άγιος Πέτρος ο Αυσελάμου»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους» and «Αγιος Πετρος ο Αυσελαμου (; - 292)», and the life repeats the year — «τελικά το έτος 292 μ.Χ., επί βασιλείας Διοκλητιανού … κάηκε ζωντανός» — so a `dates` object carries it. **The display name is taken from his birthplace and not from the epithet**: «ο Αυσελάμου» is a genitive and the page does not say whose it is, while «καταγόταν από την Ανία (ή Ανέα) της Ελευθερούπολης» is plain, and Peter is a name the corpus holds forty times over and needs telling apart. The epithet is kept in the `names` note, where it belongs. `locations` is left out as elsewhere on this reader's days. The «ΠΕΤΡΟΣ (εκ πέτρα = βράχος)» line is the site's note on the name. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 292,
+      "latest": 292,
+      "display": "292",
+      "basis": "traditional",
+      "note": "saint.gr: «τελικά το έτος 292 μ.Χ., επί βασιλείας Διοκλητιανού, μετά από πολλά βασανιστήρια, κάηκε ζωντανός», and its page head gives him as «Αγιος Πετρος ο Αυσελαμου (; - 292)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

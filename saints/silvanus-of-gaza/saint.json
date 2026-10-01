@@ -6,6 +6,11 @@
       "form": "Silvan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 octombrie, «Sfântul Silvan, Episcopul Gazei»."
+    },
+    {
+      "form": "Σιλβανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Όσιος Σιλβανός ο Γέρων Ιερομάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Όσιος Σιλβανός ο Γέρων Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man: of Gaza in Palestine, gentle and harmless and old, a soldier before, made a presbyter for the purity of his life, beaten by the crowd at Caesarea, sent to the mines at Zoora and beheaded in old age and sickness. **A difference worth naming, and not a contradiction of the row**: the folder carries `types: [\"martyr\", \"bishop\"]` on doxologia's word that he was counted worthy to be made a bishop after the faithful got him away from the mines, and this page gives him no bishopric — it says «έγινε Πρεσβύτερος στην Εκκλησία της Γάζας», and at the mines «με παρότρηση του λαού, γίνεται επίτροπος», a steward. It adds that he had been a soldier. Nothing is changed on the strength of it; the paragraph says what this page says. The page gives no year, only «επί Διοκλητιανού (284 - 304 μ.Χ.)», so no `dates` object, and it prints no hymn. Its last sentence is the ground of the new folder `forty-martyrs-of-egypt-and-palestine` in batch `el-10-14`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

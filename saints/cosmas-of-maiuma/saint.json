@@ -6,6 +6,11 @@
       "form": "Cosma",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 octombrie, «Sfântul Ierarh Cosma, Episcopul Maiumei»; the life on the same site spells it Cozma."
+    },
+    {
+      "form": "Κοσμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιος Κοσμάς ο Μελωδός επίσκοπος Μαϊουμά», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Άγιος Κοσμάς ο Μελωδός επίσκοπος Μαϊουμά»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους» and «Αγιος Κοσμας ο Μελωδος Επισκοπος Μαϊουμα (; - 787)». **The folder's Romanian row stands on 12 October and the Greek calendar keeps him on 14 October**, which is two churches and not two men: the entry is unmistakably the melodist brought up by Sergius the father of John of Damascus, taught with John by the monk Cosmas of Calabria, received at the monastery of Saint Sabbas, and made bishop of Maiouma. He is **not** on saint.gr's 12 Οκτωβρίου listing, which was checked when that day was read. The page gives 787 for his repose in its head and 743 for his consecration in its text, and a `dates` object carries the first of those, because the folder had none; the second is a date of office and the schema has no field for it, so it is in the paragraph instead. The page prints two apolytikia; the first, Ἦχος πλ. δ’, which names him and gives no model, is taken, and the «Έτερον Ἀπολυτίκιον», Ἦχος δ’ «Ταχὺ προκατάλαβε», which also names him, is not drafted. **For the writer: the page gives a see, «επίσκοπος Μαϊουμά», and `upgrade.py` has no key for `office`.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -61,9 +76,34 @@
         "text": "O guide of Orthodoxy, teacher of true reverence for God and of purity, luminary of the world, God-inspired adornment of monks: O wise father Cosmas, by thy teachings thou hast enlightened all. O spiritual harp, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὀρθοδοξίας ὁδηγέ, εὐσεβείας Διδάσκαλε καὶ σεμνότητος, τῆς Οἰκουμένης ὁ φωστήρ, τῶν Μοναζόντων θεόπνευστον ἐγκαλλώπισμα, Κοσμᾶ σοφέ, ταῖς διδαχαῖς σου πάντας ἐφώτισας, λύρα τοῦ Πνεύματος. Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first of the two hymns on the page of «Άγιος Κοσμάς ο Μελωδός επίσκοπος Μαϊουμά», and it names him. The page gives no model for it.",
+        "url": "https://www.saint.gr/2745/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of piety and of reverence, luminary of the whole world, God-inspired adornment of monastics, wise Cosmas: by your teachings you enlightened all, lyre of the Spirit. Intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 787,
+      "latest": 787,
+      "display": "787",
+      "basis": "traditional",
+      "note": "saint.gr's page head: «Αγιος Κοσμας ο Μελωδος Επισκοπος Μαϊουμα (; - 787)». The page gives no year for his birth."
+    }
   }
 }

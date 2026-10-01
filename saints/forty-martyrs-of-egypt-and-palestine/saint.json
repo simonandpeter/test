@@ -1,0 +1,53 @@
+{
+  "slug": "forty-martyrs-of-egypt-and-palestine",
+  "display_name": "The Forty Martyrs of Egypt and Palestine",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σαράντα Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιοι Σαράντα Μάρτυρες από την Αίγυπτο και Παλαιστίνη», with the rank word left off. The form recorded is the company's own designation as the line gives it, without the countries, because the page prints no personal name for any of the forty."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Οκτωβρίου — «Άγιοι Σαράντα Μάρτυρες από την Αίγυπτο και Παλαιστίνη»",
+        "url": "https://www.saint.gr/10/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Οκτωβρίου εκάστου έτους». Its whole notice is one sentence: «Οι Άγιοι Σαράντα Μάρτυρες από την Αίγυπτο και Παλαιστίνη μαρτύρησαν δια ξίφους, μαζί με τον Άγιο Σιλβανό (βλέπε την ίδια ημέρα)» — martyred by the sword together with Saint Silvanus, whom it sends the reader to on the same day. **A company that enumerates nobody**, so it is one entry and one folder and not forty, which is the ruling `BRIEF.md` §4 makes for a heading that names no member. The corpus's `silvanus-of-gaza` is that Silvanus and is in `related`; his own page repeats the company in its last sentence, «Μαζί με τον Άγιο Σιλβανό, αποκεφαλίστηκαν και άλλοι Σαράντα Μάρτυρες, από τους οποίους άλλοι ήταν από την Αίγυπτο και άλλοι από την Παλαιστίνη». No year on either page, only «επί Διοκλητιανού (284 - 304 μ.Χ.)» on Silvanus's, so there is no `dates` object; Egypt and Palestine are the countries the forty came from and not a place the page puts them in, so no `locations`. No hymn. The corpus's `forty-martyrs-of-the-east` (26 March) and the forty of Sebaste (9 March, forty folders) are other companies. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "silvanus-of-gaza"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
