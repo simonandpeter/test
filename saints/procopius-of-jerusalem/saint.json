@@ -6,6 +6,11 @@
       "form": "Procopie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iulie, «Sfântul Mare Mucenic Procopie», with the rank words left off."
+    },
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Άγιος Προκόπιος ο Μεγαλομάρτυς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Άγιος Προκόπιος ο Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives the same man: raised at Jerusalem under Diocletian, son of the devout Christopher and of the idolatrous Theodosia, whom the folder already keeps beside him. It heads him «(; - 303)». The same day's listing carries three further men of the name — the fool for Christ of Ustyug, the saint of Usya in Vologda, and «Άγιος Προκόπιος ο εφορκιστής», which carries the site's own asterisk and says in its own words that he is «άλλος συνώνυμος του μεγαλομάρτυρα Προκοπίου»; that one is refused and the first two are drafted as new folders. The page prints hymns, but the extractor cut it in the middle and no hymn was read whole, so none is taken."
     },
     {
       "church": "serbian",

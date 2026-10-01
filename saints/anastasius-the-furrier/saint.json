@@ -1,0 +1,61 @@
+{
+  "slug": "anastasius-the-furrier",
+  "display_name": "Anastasius the Furrier",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Άγιος Αναστάσιος ο εξ Αγίου Βλασίου, ο Γουναράς», with the rank word, the village and the trade-name left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1743,
+      "latest": 1743,
+      "display": "8 July 1743",
+      "basis": "traditional",
+      "note": "saint.gr: «Ήταν η 8η Ιουλίου του 1743 μ.Χ.», and the page is headed «(; - 1743)». For his birth it says only «περί τα τέλη του 17ου με αρχές του 18ου αιώνος μ.Χ.», which is a bracket the page itself leaves open, so no birth interval is written."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Άγιος Αναστάσιος ο εξ Αγίου Βλασίου, ο Γουναράς»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day as the listing. The page names its one source, the Life preserved in «Ο Μέγας Συναξαριστής της Ορθοδόξου Εκκλησίας», and says plainly what it does not know: nothing of his childhood and youth, and after his death neither the place of his burial nor anything else. The corpus holds thirteen other men of this name — among them `anastasius-of-nauplion` and `anastasius-of-brescia` — and not one of them is a priest of Thesprotia beheaded at the Yeni Cami in 1743. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

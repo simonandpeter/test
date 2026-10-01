@@ -6,6 +6,11 @@
       "form": "Teofil, Izvorâtorul de mir",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iulie, «Sfântul Cuvios Teofil, Izvorâtorul de mir», with the rank words left off."
+    },
+    {
+      "form": "Θεόφιλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Όσιος Θεόφιλος ο Αγιορείτης», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Όσιος Θεόφιλος ο Αγιορείτης»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and is plainly the same man: an Athonite of the monastery of Pantokrator whose verses on the page call him Μυροβλύτα, the myrrh-gusher, which is the folder's own epithet. It heads him «(1460 - 1548)» and says he was born at Zichne in Macedonia about 1460; those years are reported rather than written, because the folder's `dates` come from doxologia and this reader did not compare them. His right hand, it says, is incorrupt and in the shape of a blessing at the monastery of Pantokrator on the Holy Mountain. The page prints hymns, but the extractor cut it in the middle and no hymn was read whole, so none is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

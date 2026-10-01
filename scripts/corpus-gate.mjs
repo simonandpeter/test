@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σαββασ sabbas-companion-of-jonah sabbas-martyr-8-july sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':
+    'Fifteen now. The new one is the Sabbas of 8 July; the others are read in the el-06-14 entry for this name form.',
+  'προκοπιοσ procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-the-martyr-25-june':
+    'Five now, and three of them stand on 8 July: Procopius of Jerusalem, whose day this is and whom this batch upgraded, and Procopius of Ustyug and Procopius of Usya, two Russian fools for Christ the Greek page names on the same day. Three entries, three men. Decapolis on 27 February and the martyr of 25 June are the others.',
+  'αντιοχοσ antiochus-of-ramas antiochus-the-tribune':
+    'Two men: Antiochus of Ramas on 23 February and Antiochus the Tribune on 8 July.',
+  'αναστασιοσ anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':
+    'Seven now. The new one is Anastasius the Furrier on 8 July; the others are read in the el-05-20 entry for this name form.',
   'σατορνινοσ satorninus-7-may satorninus-companion-of-peregrinus saturninus-companion-of-plotinus saturninus-of-corfu saturninus-son-of-juliana':
     'Five now. The new one is Satorninus, one of the seven of Peregrinus on 7 July; the others are read in the el-06-21 entry for this name form.',
   'πομπηιοσ pompeius-companion-of-peregrinus pompeius-companion-of-terentius':

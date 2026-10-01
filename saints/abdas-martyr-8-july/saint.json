@@ -1,0 +1,62 @@
+{
+  "slug": "abdas-martyr-8-july",
+  "display_name": "Abdas (8 July)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αβδάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Άγιος Αβδάς», with the rank word left off; the life page gives «Αβδάς (ή Αυδάς)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «(; - 303)»; it gives no year in its text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Άγιος Αβδάς»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day as the listing. The page heads him «(; - 303)» and says he was martyred by the sword «μάλλον μαζί με τον Άγιο Προκόπιο» — probably together with Procopius, and that «μάλλον» is the page's own hedge, kept as a hedge here. The corpus's `abda-bishop-of-persia` is a bishop of Persia on 5 September and 31 March and is another man. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "procopius-of-jerusalem"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

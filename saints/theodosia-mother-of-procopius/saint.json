@@ -6,6 +6,11 @@
       "form": "Teodosia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iulie, «Sfânta Teodosia», with the rank word left off."
+    },
+    {
+      "form": "Θεοδοσία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Αγία Θεοδοσία μητέρα του Αγίου Προκοπίου», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Αγία Θεοδοσία μητέρα του Αγίου Προκοπίου»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and identifies her exactly as the folder does, mother of the Procopius of the same day. It heads her «(; - 303)» and gives no year in its text. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

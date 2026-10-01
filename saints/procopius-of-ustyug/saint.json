@@ -1,0 +1,63 @@
+{
+  "slug": "procopius-of-ustyug",
+  "display_name": "Procopius of Ustyug",
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Ιουλίου, «Όσιος Προκόπιος ο δια Χριστόν σαλός ο εν Ουστούζη, ο θαυματουργός», with the rank word, the epithets and the place left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1303,
+      "latest": 1303,
+      "display": "1303",
+      "basis": "traditional",
+      "note": "saint.gr: he «κοιμήθηκε το 1303 μ.Χ. και η Αγιοκατάταξη του από την Ρώσικη Εκκλησία έγινε το 1818 μ.Χ.», and the page is headed «(; - 1303)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Ιουλίου — «Όσιος Προκόπιος ο δια Χριστόν σαλός ο εν Ουστούζη, ο θαυματουργός»",
+        "url": "https://www.saint.gr/07/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no Procopius of Ustyug: `procopius-of-jerusalem`, `procopius-of-iconium`, `procopius-of-decapolis` and `procopius-of-sazava` are other men on other days. The same day's listing carries two further entries of the name — «Άγιος Προκόπιος του Ούσια Βόλογκντα», also a Russian fool for Christ, and «Άγιος Προκόπιος ο εφορκιστής», which carries the site's own asterisk and is refused — and two entries on one calendar are two commemorations, so this folder is the one of Ustyug alone. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "procopius-of-usya"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
