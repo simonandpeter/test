@@ -19,6 +19,7 @@ import {
   swipe,
   tokenColours,
   dayOneChurchKeeps,
+  feastWithoutFolders,
 } from './helpers.js';
 
 /**
@@ -2563,14 +2564,22 @@ test('a Great Feast is what the day is, and the page stops saying there is nothi
   await expect(note).toContainText('Today is The Annunciation in the Russian calendar');
   await expect(note).not.toContainText('readings and hymns below');
 
-  // The Greek keeps the same feast on the civil 15 August, and reads the same.
+  /*
+   * And the same in the Greek calendar, on a feast of its own whose day has no
+   * folder. The civil 15 August was written here until `el-08-15` gave the
+   * Greek Dormition its first folder, which is a thing a batch is free to do
+   * and a fixture is not free to assume.
+   */
   await page.evaluate(() => {
     const key = 'gos-settings';
     const now = JSON.parse(localStorage.getItem(key) ?? '{}');
     localStorage.setItem(key, JSON.stringify({ ...now, church: 'greek' }));
   });
-  await page.goto('/calendar/2026-08-15', { waitUntil: 'networkidle' });
-  await expect(note).toContainText('Today is The Dormition of the Theotokos in the Greek calendar');
+  const feast = feastWithoutFolders('greek');
+  await page.goto(feast.route, { waitUntil: 'networkidle' });
+  await expect(note).toContainText(
+    `Today is ${STRINGS.calendar.feasts.names[feast.key]} in the Greek calendar`,
+  );
 
   // A day that is not a feast and has no folders still reads exactly as it did.
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });

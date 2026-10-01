@@ -375,14 +375,43 @@ export const dayOneChurchKeeps = (keeper, empty) => {
 };
 
 /**
+ * A fixed great feast in `church`'s own calendar whose day the corpus has no
+ * folder for — the shape `emptyDayNote` writes its feast sentence on, which is
+ * a note about the folders and not about the day.
+ *
+ * **Written as 15 August 2026 until 2026-10-01**, when `el-08-15` gave the
+ * Greek Dormition its first folder and the note went away. The feast key comes
+ * back with the route so the test can name the feast from `STRINGS` rather
+ * than spell it twice.
+ *
+ * @param church the church whose calendar is read
+ * @returns `{ route, iso, key }`, `key` being `greatFeast`'s own
+ */
+export const feastWithoutFolders = (church) => {
+  const iso = CIVIL_2026.find((d) => greatFeast(d, church) && kept(church, d).length === 0);
+  if (!iso) throw new Error(`every great feast of 2026 in the ${church} calendar now has a folder`);
+  return { route: `/calendar/${iso}`, iso, key: greatFeast(iso, church) };
+};
+
+/**
  * A civil day `church` keeps nobody on while **exactly one** commemoration
  * falls in another calendar — the singular of the empty-day prose, "One
  * commemoration falls today in another church's calendar". The count decides
  * which sentence the page writes, so the day has to hold one and not two.
+ *
+ * **And the day may not be a great feast in any calendar**, which the first
+ * matching day became on 2026-10-01 as the Greek wave filled August: the panel
+ * then opens "Today is The Transfiguration in the Russian calendar" and the
+ * sentence under test is never written at all. Every church is checked rather
+ * than the one named, because the feast the panel prints is read through the
+ * reader's own calendar setting, which this cannot see: 6 August is the
+ * Transfiguration on the new calendar and 19 August on the old, and a day that
+ * is either is no use here.
  */
 export const dayKeptOnlyElsewhere = (church) => {
   const iso = CIVIL_2026.find(
     (d) => kept(church, d).length === 0
+      && CHURCH_IDS.every((c) => !greatFeast(d, c))
       && CHURCH_IDS.reduce((n, c) => n + kept(c, d).length, 0) === 1,
   );
   if (!iso) throw new Error(`no civil day of 2026 is empty for ${church} with exactly one elsewhere`);
