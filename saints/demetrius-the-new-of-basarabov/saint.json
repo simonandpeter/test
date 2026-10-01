@@ -6,6 +6,11 @@
       "form": "Dimitrie cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfântul Cuvios Dimitrie cel Nou, Ocrotitorul Bucureștilor»."
+    },
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Όσιος Δημήτριος ο Νέος (Μπασαράμπης)», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Όσιος Δημήτριος ο Νέος (Μπασαράμπης)»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/4094/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man — saint.gr calls him «ο προστάτης της ρουμανικής πρωτευούσης», the protector of the Romanian capital, which is what doxologia's «Ocrotitorul Bucureștilor» says. It dates him by the century and the reign — «Έζησε τον 13ο αιώνα μ.Χ. στην περίοδο της βασιλείας των Πέτρου και Ιωάννου Ασάν» — and gives no year, so the `dates` object is that century. Basarabovo is placed twenty kilometres from the Danube on Bulgarian soil, the monastery he was tonsured in near the river Lom, and the relics in the metropolitan church of Saints Constantine and Helen at Bucharest since 1774; no coordinate is proposed from any of it. No hymn is printed, and the page's long section of wonders is not retold here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε τον 13ο αιώνα μ.Χ. στην περίοδο της βασιλείας των Πέτρου και Ιωάννου Ασάν» — the page gives the century and the reign and no year."
+    }
   }
 }

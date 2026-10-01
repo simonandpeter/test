@@ -1,0 +1,51 @@
+{
+  "slug": "mavrianos",
+  "display_name": "Mavrianos",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Μαβριανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Άγιοι Μαβριανός και Βαλεντίνος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Άγιοι Μαβριανός και Βαλεντίνος»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2665/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day as the listing, and is a citation and nothing else: «Η μνήμη τους σύμφωνα με το Ιεροσολυμιτικό Κανονάριο (σελ. 116), τιμάται σήμερα χωρίς άλλες πληροφορίες για τη ζωή τους». No year, so no `dates` object; no place, so no coordinate; no couplet and no hymn. The page gives no rank word beyond Άγιοι and says nothing of how either of them died, so neither folder carries `types`, which `docs/CORPUS.md` prefers to a guess. The corpus's four Valentine folders are other men on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "valentine-companion-of-mavrianos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

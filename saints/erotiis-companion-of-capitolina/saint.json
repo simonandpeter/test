@@ -1,0 +1,62 @@
+{
+  "slug": "erotiis-companion-of-capitolina",
+  "display_name": "Erotiis, companion of Capitolina",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ερωτηΐδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Αγίες Καπετωλίνα και Ερωτηΐδα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 294,
+      "display": "c. 289",
+      "basis": "traditional",
+      "note": "saint.gr: «ζούσαν στην εποχή του αυτοκράτορα Διοκληριανού, όταν άρχοντας στην Καππαδοκία ήταν ο Ζιλικίνθιος (περί το 289 μ.Χ.)» — the page says about 289 and names no exact year; the interval is the five years either side that «περί» allows."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Αγίες Καπετωλίνα και Ερωτηΐδα»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2661/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day as the listing, and tells one story for the two. It dates them by the reign and by the governor — «ζούσαν στην εποχή του αυτοκράτορα Διοκληριανού, όταν άρχοντας στην Καππαδοκία ήταν ο Ζιλικίνθιος (περί το 289 μ.Χ.)» — and the «περί», about, is why the `dates` interval is a decade and not a year. Cappadocia is named without a city and no coordinate is proposed. The corpus's `erotiis` is another woman: her Greek row is already venerated on 6 Οκτωβρίου, where the entry says only that she was martyred by fire and calls her a virgin, while this Erotiis is Capitolina's slave, beaten with rods and beheaded; two entries on one calendar are two commemorations. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "capitolina"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

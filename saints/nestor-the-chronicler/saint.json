@@ -1,0 +1,67 @@
+{
+  "slug": "nestor-the-chronicler",
+  "display_name": "Nestor the Chronicler",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Όσιος Νέστωρ ο Χρονογράφος «ὃ ἐν τῷ Σπηλαίῳ»», with the rank word and the epithets left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1050,
+      "latest": 1050,
+      "display": "1050",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στο Κίεβο το 1050 μ.Χ.»; its heading prints «(1050 - 1114)»."
+    },
+    "death": {
+      "earliest": 1109,
+      "latest": 1119,
+      "display": "c. 1114",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε περί το 1114 μ.Χ.» — the page says about 1114; the interval is the five years either side that «περί» allows, and its heading prints 1114 flat."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Όσιος Νέστωρ ο Χρονογράφος «ὃ ἐν τῷ Σπηλαίῳ»»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2666/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives both years in its one sentence as well as in its heading, the second of them hedged with «περί», about. The corpus's eight Nestor folders are other men: the martyr of Thessalonica of this same day, who is upgraded in `up-10-27.json`, and seven others. Kyiv is named without a coordinate. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νεστωρ nestor-26-april nestor-father-of-conon nestor-of-maghid nestor-of-thessalonica nestor-the-chronicler nestor-the-martyr-2-march':
+    'Six now, and two stand on 27 October: Nestor of Thessalonica, whose day it is on both calendars and whose Greek row this batch adds, and Nestor the Chronicler, new here. Two entries, two men. The others are read in the entries recorded for this name form before it.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-constantinople cyriacus-of-eurychou cyriacus-of-perge cyriacus-son-of-hesperus cyriacus-the-executioner cyriacus-the-infant cyril-of-thessalonica':
+    'Nine now. The new one is Cyriacus of Constantinople on 27 October; the others are read in the el-10-07 entry for this name form.',
   'θεοφιλοσ theophilus-companion-of-trophimus theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-novgorod theophilus-of-rome theophilus-of-selention theophilus-of-the-forty-martyrs theophilus-of-zakynthos theophilus-the-deacon-of-libya theophilus-the-myrrh-streamer theophilus-the-new':
     'Fourteen now. The new one is Theophilus of Novgorod on 26 October; the others are read in the el-10-10 entry for this name form.',
   'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-shepherd two-leontii-of-athos':

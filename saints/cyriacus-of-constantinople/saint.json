@@ -1,0 +1,51 @@
+{
+  "slug": "cyriacus-of-constantinople",
+  "display_name": "Cyriacus of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "names": [
+    {
+      "form": "Κυριάκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Άγιος Κυριάκος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    }
+  ],
+  "office": "Patriarch of Constantinople",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Άγιος Κυριάκος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2662/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day as the listing. **No `dates` object is proposed, because the page prints two identifications three centuries apart and settles neither**: the Patriarchate's Cyriacus who succeeded John the Faster in 595 and died in 606, and Nicodemus the Hagiorite's Cyriacus I, «σε κάποιους πατριαρχικούς καταλόγους εμφανίζεται και ως Κυριλλιανός», of the third century. It also records that «πριν τον 12ο αιώνα μ.Χ. η μνήμη του Αγίου Κυριάκου εορταζόταν στις 30 Οκτωβρίου», which is a history of the feast and not a second day the schema would hold. The folder is drafted because the page vouches for the saint and the see without reserve, and carries neither the asterisk nor the «Δεν είναι διασταυρωμένη» sentence; the writer who would rather have no folder than an undated one should drop it and will lose nothing but the name. No coordinate, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

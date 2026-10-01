@@ -6,6 +6,11 @@
       "form": "Nestor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 octombrie, «Sfântul Mucenic Nestor»."
+    },
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Άγιος Νέστωρ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 27 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 27ης Οκτωβρίου — «Άγιος Νέστωρ»",
+        "url": "https://www.saint.gr/10/27/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2660/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 27 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man: the very young friend of Demetrius who killed the gladiator Lyaios in the stadium at Thessalonica and was run through with a spear for it. Its heading prints «(; - 306)», so a `dates` object with the death year alone is proposed; the narrative names Diocletian and no year. Demetrius is cross-referenced to 26 Οκτωβρίου and has a folder, so he is linked and gets a `related` row. Relics are listed at Iviron and Zographou on Athos, at Agia Lavra of Kalavryta, Zavorda in Grevena and Kykkos in Cyprus, and at the Alexander Nevsky Lavra in Saint Petersburg; no coordinate is proposed. Its Ἀπολυτίκιον, Ἦχος πλ. α’, and its Κοντάκιον, Ἦχος β’, both name him and are taken; the Οἶκος, which also names him, is not a kind the schema holds. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,9 +74,55 @@
         "text": "Thy martyr Nestor, O Lord, in his contest received an incorruptible crown from Thee our God; for possessing Thy strength he overthrew his torturers, and broke the feeble daring of the demons. By his prayers save Thou our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Ἀθλητὴς εὐσεβείας ἀκαταγώνιστος, ὡς κοινωνὸς καὶ συνήθης τοῦ Δημητρίου ὀφθεῖς, ἠγωνίσω ἀνδρικῶς Νέστωρ μακάριε, τὴ θεϊκὴ γὰρ ἀρωγή, τὸν Λυαῖον καθελῶν, ὡς ἄμωμον ἱερεῖον, σφαγιασθεὶς προσηνέχθης, τῷ Ἀθλοθέτῃ καὶ Θεῶ ἠμῶν.",
+      "source": {
+        "text": "saint.gr, «Άγιος Νέστωρ» — Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/2660/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An unconquered contestant of godliness, shown to be the companion and familiar friend of Demetrius, you struggled manfully, blessed Nestor; for by divine help you pulled down Lyaios, and being slaughtered you were offered up like a spotless victim to the Giver of the prize and our God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’",
+      "model": "Τὰ ἄνω ζητῶν",
+      "text": "Ἀθλήσας καλῶς, ἀθάνατον τὴν εὔκλειαν, κεκλήρωσαι νῦν· καὶ στρατιώτης ἄριστος, τοῦ Δεσπότου γέγονας, ταῖς εὐχαῖς Δημητρίου τοῦ Μάρτυρος. Σὺν αὐτῷ οὖν Νέστορ σοφέ, πρεσβεύων μὴ παύσῃ ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, «Άγιος Νέστωρ» — Κοντάκιον, Ἦχος β’. Τὰ ἄνω ζητῶν",
+        "url": "https://www.saint.gr/2660/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having contended well, you have now inherited immortal renown, and have become the Master's best soldier by the prayers of Demetrius the martyr. With him, then, wise Nestor, do not cease to intercede for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 306,
+      "display": "306",
+      "basis": "traditional",
+      "note": "saint.gr heads him «Αγιος Νεστωρ (; - 306)»; the narrative gives no year and names only the emperor Diocletian."
+    }
+  },
+  "related": [
+    "demetrius-the-myrrhstreamer"
+  ]
 }
