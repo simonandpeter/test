@@ -7,6 +7,11 @@
       "form": "Nicolae",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 decembrie, «Sfântul Ierarh Nicolae, Arhiepiscopul Mirelor Lichiei», with the rank word and the see left off."
+    },
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός», with the rank and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 6 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Δεκεμβρίου — «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός»",
+        "url": "https://www.saint.gr/12/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the archbishop of Myra in Lycia, born at Patara, who sat at the First Ecumenical Council. Its head line gives «(; - 330)», the year of his repose, which the folder did not hold. The page prints an apolytikion, a kontakion, an oikos and a kathisma; the apolytikion and the kontakion are taken and the other two are not kinds the schema holds. The apolytikion «Κανόνα πίστεως καὶ εἰκόνα πραότητος» is the common of a hierarch with his name set into it, printed under his name as his own service, so it is copied as the house rule for a common requires. The page also lists the many towns that hold him patron and the places that hold parts of his relics; none of that is drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -48,5 +63,49 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «Αγιος Νικολαος Αρχιεπισκοπος Μυρων Της Λυκιας, ο Θαυματουργος (; - 330)», and the same page's «μετά την κοίμησή του το 330 μ.Χ.». The page gives no birth year and puts his birth in the third century: «Ο Άγιος Νικόλαος γεννήθηκε τον 3ο αιώνα μ.Χ. στα Πάταρα της Λυκίας»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Κανόνα πίστεως καὶ εἰκόνα πραότητος, ἐγκρατείας Διδάσκαλον, ἀνέδειξέ σε τῇ ποίμνῃ σου, ἡ τῶν πραγμάτων ἀλήθεια· διὰ τοῦτο ἐκτήσω τῇ ταπεινώσει τὰ ὑψηλά, τῇ πτωχείᾳ τὰ πλούσια. Πάτερ Ἱεράρχα Νικόλαε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’ — the first hymn on the page of «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός»; it is the common of a hierarch, printed under his name with his name in it.",
+        "url": "https://www.saint.gr/3134/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things showed you to your flock a rule of faith, an image of meekness and a teacher of continence; and so by humility you gained the heights, by poverty the riches. Father and hierarch Nicholas, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἐν τοῖς Μύροις Ἅγιε, ἱερουργὸς ἀνεδείχθης· τοῦ Χριστοῦ γὰρ Ὅσιε, τὸ Εὐαγγέλιον πληρώσας, ἔθηκας τὴν ψυχήν σου ὑπὲρ λαοῦ σου, ἔσωσας τοὺς ἀθώους ἐκ τοῦ θανάτου· διὰ τοῦτο ἡγιάσθης, ὡς μέγας μύστης Θεοῦ τῆς χάριτος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός», and it names his see.",
+        "url": "https://www.saint.gr/3134/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "At Myra, holy one, you were shown forth as a priest; for having fulfilled the Gospel of Christ, venerable father, you laid down your soul for your people and saved the innocent from death. Therefore you were sanctified, as a great initiate of the grace of God.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
+    }
+  ]
 }

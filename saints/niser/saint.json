@@ -1,0 +1,59 @@
+{
+  "slug": "niser",
+  "display_name": "Niser",
+  "names": [
+    {
+      "form": "Νίσερ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Άγιος Νίσερ», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "under Maximian",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε στα χρόνια του Μαξιμιανού (286 - 305 μ.Χ.)», the reign being the page's own dating."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Δεκεμβρίου — «Άγιος Νίσερ»",
+        "url": "https://www.saint.gr/12/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page says plainly where its account comes from: he was a martyr unknown to the Synaxaristes of Saint Nicodemus and to the printed Menaia, and is written in the Parisian Codex 1621, where there is also a short biographical notice of him. That is a statement of a single manuscript witness and not the site's own mark of doubt: there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page. The names Ἰούλιος and Αἰλιανός are the magistrates he was brought before, not companions, and no `related` row is made for them. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

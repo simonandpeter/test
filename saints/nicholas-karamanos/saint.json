@@ -1,0 +1,66 @@
+{
+  "slug": "nicholas-karamanos",
+  "display_name": "Nicholas Karamanos",
+  "names": [
+    {
+      "form": "Νικόλαος Καραμάνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Άγιος Νικόλαος Καραμάνος ο Νεομάρτυρας», with the rank words left off. The same page gives «Νικόλαος Καραμάνος ή Κασσέτης», so the second surname Κασσέτης is an alternative the page records and is not drafted as a separate form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1623,
+      "latest": 1623,
+      "display": "1623",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Νεομάρτυς Νικόλαος Καραμάνος ή Κασσέτης, γεννήθηκε το έτος 1623 μ.Χ.», with the page's own head «(1623 - 1657)»."
+    },
+    "death": {
+      "earliest": 1657,
+      "latest": 1657,
+      "display": "1657",
+      "basis": "attested",
+      "note": "saint.gr: «Έτσι τελειώθηκε μαρτυρικά στις 19 Μαρτίου του έτους 1657 μ.Χ., (Μεγάλη Πέμπτη) και ώρα 9 το πρωί.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Δεκεμβρίου — «Άγιος Νικόλαος Καραμάνος ο Νεομάρτυρας»",
+        "url": "https://www.saint.gr/12/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Δεκεμβρίου εκάστου έτους», the same day as the listing. The 19 March in the page's text is the day of his martyrdom and not a second feast: the page gives it as «στις 19 Μαρτίου του έτους 1657 μ.Χ., (Μεγάλη Πέμπτη) και ώρα 9 το πρωί», names no commemoration on it, and heads the entry as fixed on 6 December. The page prints no hymn. The corpus's other new martyrs of this name are other men: Nicholas the Grocer of Karpenisi is 1657 - 1672 and kept on 23 September, and nothing here joins this one to any of them. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

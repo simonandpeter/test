@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νειλοσ nilus-bishop-and-hieromartyr nilus-of-athos nilus-of-sora nilus-of-stolobnoe nilus-the-hermit-of-sinai nilus-the-sanctified':
+    'Six men. The new one is Nilus of Stolobnoe on 6 December; the others are read in the el-01-02 entry for this name form, with the two of 12 November.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-martkopi anthony-of-novgorod anthony-of-radonezh anthony-of-the-caves anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great anthony-the-new-1-december anthony-the-roman-of-novgorod antonius-9-november antonius-brother-of-hieron antonius-son-of-melasippus antonius-the-presbyter antony-companion-of-bassus antony-gorban antony-of-korel antony-of-novgorod antony-of-siesko antony-of-thessalonica antony-of-valaam antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Thirty now. The new one is Antony of Siesko on 6 December; the others are read in the el-12-01 entry for this name form.',
   'φιλοθεοσ philotheus-kokkinos philotheus-of-antioch philotheus-of-dionysiou philotheus-of-karyes philotheus-of-meteora philotheus-of-samosata philotheus-of-sklataina philotheus-of-tobolsk philotheus-the-presbyter':
     'Nine now. The new one is Philotheus of Karyes on 5 December, whose folder relates Nectarios of Bitola; the others are read in the el-05-31 entry for this name form.',
   'νοννοσ nonnos nonnus-5-december nonnus-the-bishop':

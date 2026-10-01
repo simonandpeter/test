@@ -1,0 +1,51 @@
+{
+  "slug": "antony-of-siesko",
+  "display_name": "Antony of Siesko",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Όσιος Αντώνιος ο Νέος και θαυματουργός «ἐν Σιήσκῳ»», with the rank words left off. The by-names «ο Νέος» and «θαυματουργός» and the place «ἐν Σιήσκῳ» are left off the stored form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian venerable, so the Russian calendar is the one that would say most about him, and it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 6ης Δεκεμβρίου — «Όσιος Αντώνιος ο Νέος και θαυματουργός «ἐν Σιήσκῳ»»",
+        "url": "https://www.saint.gr/12/06/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 6 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole content is «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου» — we have no details of the Russian venerable's life. No year, so no `dates` object; no place beyond the Greek «ἐν Σιήσκῳ» of the day's line, so no `locations`. The English display name transliterates that Greek place form and nothing else, on the pattern the corpus already uses for `germanos-of-stolobnoe`; which Russian house «Σιήσκος» renders is a question for the author and is not decided here. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
