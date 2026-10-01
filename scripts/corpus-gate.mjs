@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζεβινασ zebinas zebinas-20-october':
+    'Two men: the Zebinas the corpus already keeps and the Zebinas of 20 October, who heads the company of four that day names.',
+  'νικηφοροσ nicephorus-13-may nicephorus-alfanov nicephorus-companion-of-zebinas nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios nikephoros-patriarch-of-constantinople':
+    'Eleven now. The new one is Nicephorus, of the same company of 20 October; the others are read in the el-05-13 entry for this name form, where the open pair of 4 and 13 May still stands.',
+  'γερμανοσ germanos-of-stolobnoe germanus-companion-of-peregrinus germanus-companion-of-zebinas germanus-maroules germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam herman-of-alaska':
+    'Eleven now. The new one is Germanus, of the same company of 20 October; the others are read in the el-10-11 entry for this name form.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-moscow basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-the-alamanoi basil-of-the-kyiv-caves basil-of-thessalonica basil-of-trebizond basil-of-yaroslavl basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Twenty-eight now. The new one is Basil of Trebizond on 20 October; the others are read in the el-10-12 entry for this name form.',
+  'αντωνινοσ antoninus-20-april antoninus-companion-of-zebinas antoninus-martyr-9-august antoninus-of-ephesus antoninus-of-ramas antoninus-of-scythopolis antoninus-of-the-twenty-four-martyrs':
+    'Seven now. The new one is Antoninus, one of the company Zebinas heads on 20 October; the others are read in the el-07-16 entry for this name form.',
   'θεοφανησ theophan-the-recluse theophanes-17-october theophanes-of-antioch theophanes-of-naousa theophanes-of-nicaea theophanes-of-peritheorion theophanes-of-sigriane theophanes-the-merciful-of-gaza theophanes-the-myrrh-streamer-of-cyprus theophanes-the-neomartyr theophanes-venerable-17-may':
     'Eleven now. The new one is the Theophanes of 17 October; the others are read in the el-06-08 entry for this name form.',
   'τερεντιοσ terentius-17-october terentius-companion-of-publius terentius-of-africa terentius-the-martyr-16-october':

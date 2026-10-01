@@ -6,6 +6,11 @@
       "form": "Artemie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 20 octombrie."
+    },
+    {
+      "form": "Αρτέμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Άγιος Αρτέμιος ο Μεγαλομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 20 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Οκτωβρίου — «Άγιος Αρτέμιος ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/10/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/814/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man: the Byzantine official whom Constantine the Great made patrikios and Dux and Augustalis of Alexandria, who was beheaded by Julian the Apostate at Antioch. The page's own heading gives «(; - 363)» and its narrative dates the martyrdom «το 363 μ.Χ.», so a `dates` object is proposed. It names Mykonos as the city he patronises and lists relics at Konstamonitou on Athos and at Prousos, the Forty Martyrs of Sparta, Zavorda and the Athens church of the Greek police; no coordinate is proposed from that. Of the hymns it prints, the first Ἀπολυτίκιον and the first Κοντάκιον are taken, both naming him; the «Έτερον» doublet of each, two Μεγαλυνάρια, an Οἶκος and a Κάθισμα are not drafted — the schema holds only a troparion and a kontakion. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -63,9 +78,52 @@
         "text": "Thy martyr Artemius, O Lord, in his contest received from Thee our God the crown of incorruption; for having Thy strength he brought the torturers low, and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Εὐσέβειας τοῖς τρόποις καλλωπιζόμενος, ἀθλητικῆς ἀγλαΐας ὤφθης σοφὲ κοινωνός, πρὸς ἀγῶνας ἀνδρικοὺς παραταξάμενος· ὅθεν ὡς λύχνος φωταυγής, τῶν θαυμάτων τὰς βολάς, ἐκλάμπεις τῇ οἰκουμένῃ, Ἀρτέμιε Ἀθλοφόρε, πρὸς σωτηρίαν τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, «Άγιος Αρτέμιος ο Μεγαλομάρτυρας» — Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/814/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the ways of godliness, wise one, you were seen to share in the splendour of the martyr's contest, drawing yourself up for manly struggles; and so, like a lamp full of light, you shine out upon the whole world with the rays of your wonders, Artemius, bearer of the prize, for the salvation of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’",
+      "model": "Τῇ ὑπερμάχῳ",
+      "text": "Ὡς ἀριστέα τοῦ Σωτῆρος πολυθαύμαστον Καὶ παροχέα ἰαμάτων πλουσιόδωρον Ἀνυμνοῦμέν σε προφρόνως Μεγαλομάρτυς. Ἀλλ’ ὡς πέλων ἰατὴρ τῆς κήλης ἄριστος, Ἀσινῆ με ἐκ τῆς βλάβης ταύτης φύλαττε, Ἵνα κράζω σοι, χαίροις Μάρτυς Ἀρτέμιε.",
+      "source": {
+        "text": "saint.gr, «Άγιος Αρτέμιος ο Μεγαλομάρτυρας» — Κοντάκιον, Ἦχος πλ. δ’. Τῇ ὑπερμάχῳ",
+        "url": "https://www.saint.gr/814/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the Saviour's champion, marvellous in many things, and as a rich-handed dispenser of healings, we hymn you gladly, great martyr. And since you are the best of physicians for rupture, keep me unharmed from that affliction, that I may cry out to you: Rejoice, Martyr Artemius.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν, το 363 μ.Χ., ο Αρτέμιος άκουσε ότι ο Ιουλιανός ο Παραβάτης βασάνιζε τους χριστιανούς στην Αντιόχεια… τελικά τον αποκεφάλισε»; the page's heading prints «(; - 363)»."
+    }
   }
 }

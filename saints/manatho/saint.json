@@ -1,0 +1,60 @@
+{
+  "slug": "manatho",
+  "display_name": "Manatho",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Μαναθώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Αγία Μαναθώ η παρθένος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Μαναθώ μαρτύρησε στα χρόνια του Μαξιμιανού (286 - 305 μ.Χ.)» — the page gives the reign and no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Οκτωβρίου — «Αγία Μαναθώ η παρθένος»",
+        "url": "https://www.saint.gr/10/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/809/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Οκτωβρίου εκάστου έτους», the same day as the listing. It names Scythopolis in Palestine as the place of her arrest but gives no year, and no coordinate is proposed here. It adds «Η μνήμη της επαναλαμβάνεται και την 12η Νοεμβρίου» — a second Greek day, recorded here as a note because one attestation row per church is the schema; the four martyrs of `https://www.saint.gr/810/saint.aspx` say she is called Μαραθώ in error on that day. No hymn, no asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

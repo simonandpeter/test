@@ -1,0 +1,64 @@
+{
+  "slug": "germanus-companion-of-zebinas",
+  "display_name": "Germanus, companion of Zebinas",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γερμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Άγιοι Ζεβινάς, Γερμανός, Νικηφόρος και Αντωνίνος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "between 286 and 305",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν επί Μαξιμιανού (286-305)» — the page gives the reign and no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ης Οκτωβρίου — «Άγιοι Ζεβινάς, Γερμανός, Νικηφόρος και Αντωνίνος»",
+        "url": "https://www.saint.gr/10/20/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/810/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 20 Οκτωβρίου εκάστου έτους», the same day as the listing, and tells one story for the four of them: they suffered under Maximian, whose reign the page dates 286–305; Antoninus was an old man and the other three were young; they were arrested at Caesarea by one Mazos because they were Christians, and beheaded. The page adds «Η μνήμη τους επαναλαμβάνεται και την 12η Νοεμβρίου, μαζί με την Αγία Μαναθώ, που εσφαλμένα εκεί αναφέρεται ως Μαραθώ» — a second Greek day, recorded here as a note because one attestation row per church is the schema. No hymn is printed for them, and neither the listing nor the life page carries the asterisk or the «Δεν είναι διασταυρωμένη» sentence. The corpus holds no martyr of this name in this company; the nearest same-name folders belong to other days and other companies."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "zebinas-20-october",
+    "nicephorus-companion-of-zebinas",
+    "antoninus-companion-of-zebinas"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
