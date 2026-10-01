@@ -6,6 +6,11 @@
       "form": "Macarie Romanul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 octombrie."
+    },
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Οκτωβρίου, «Όσιος Μακάριος ο Ρωμαίος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Οκτωβρίου — «Όσιος Μακάριος ο Ρωμαίος»",
+        "url": "https://www.saint.gr/10/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2789/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is plainly the same man: a Roman, son of a senatorial lord named John, married by his parents' force and gone on the wedding night. **The page opens by distrusting its own material** — «Η βιογραφία του Οσίου Μακαρίου από τους Συναξαριστές είναι πολύ μυθώδης και παράδοξη», the life of the venerable Macarius in the Synaxaristes is very mythical and strange — which is not the asterisk and not a doubt about the man, but is said here because it governs how much of the page is repeated. It gives no year at all, so the folder's existing `dates`, read from doxologia, are left untouched. The three monks it names, Sergius, Hyginus and Theophilus of the monastery of Saint Asklepios in Mesopotamia of Syria, answer to nothing in the corpus and get no `related` rows. No hymn, no asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

@@ -1,0 +1,50 @@
+{
+  "slug": "two-holy-children",
+  "display_name": "The Two Holy Children",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Άγια Δύο Παιδιά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Οκτωβρίου, «Άγια Δύο Παιδιά». The page gives the two no names at all, so the form is the line itself."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Οκτωβρίου — «Άγια Δύο Παιδιά»",
+        "url": "https://www.saint.gr/10/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2742/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Οκτωβρίου εκάστου έτους», the same day as the listing. **The two are anonymous on the page**, so no name form can be read for either and the entry is kept as one folder for the pair, after the pattern of `thirty-three-martyrs-of-heraclea`; `sex` is `unknown` for the same reason. No year, no place, no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικηφοροσ nicephorus-13-may nicephorus-23-october nicephorus-alfanov nicephorus-companion-of-zebinas nicephorus-martyr-1-march nicephorus-martyr-8-february nicephorus-of-antioch nicephorus-of-corinth nicephorus-of-crete nicephorus-of-the-svir-desert nikephoros-of-chios nikephoros-patriarch-of-constantinople':
+    'Twelve now. The new one is the Nicephorus of 23 October; the others are read in the el-10-20 entry for this name form.',
   'ζαχαριασ zacharias-21-october zacharias-22-october zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-of-siteia zacharias-of-vienne zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
     'Twelve now. The new one is the Zacharias of 22 October, a day after the Zacharias of the 21st — two days, two entries, two men; the others are read in the el-10-21 entry for this name form.',
   'ρουφοσ rufus-19-april rufus-22-october rufus-apostle-of-thebes rufus-of-cyzicus rufus-of-the-kyiv-caves rufus-son-of-paul-and-tatta rufus-the-martyr-8-september':

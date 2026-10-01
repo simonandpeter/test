@@ -7,6 +7,11 @@
       "form": "Iacob",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 octombrie, «Sfântul Apostol Iacob, ruda Domnului, primul episcop al Ierusalimului»."
+    },
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Οκτωβρίου, «Άγιος Ιάκωβος ο Απόστολος και Αδελφόθεος πρώτος επίσκοπος Ιεροσολύμων», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 23 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Οκτωβρίου — «Άγιος Ιάκωβος ο Απόστολος και Αδελφόθεος πρώτος επίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/10/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2792/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man. Its heading prints «(; - 62)», so a `dates` object with the death year alone is proposed. The page is careful about the kinship — «Η συγγενική του, όμως, σχέση με τον Κύριο δεν είναι ομόφωνα καθορισμένη», the relationship is not unanimously settled — and that caution is carried into the life rather than resolved. It names two further commemorations, neither of them a second fixed day this schema could hold: the Sunday after the Nativity, kept with David the Prophet and Joseph the Betrothed, and a synaxis at his church inside the Theotokos of the Chalkoprateia. The same day's listing also carries «Ανακομιδή Ιερών λειψάνων του Αγίου Ιακώβου του Δίκαιου» (`https://www.saint.gr/1750/saint.aspx`), whose whole text is «Βλέπε 22 Μαΐου» — a translation of relics, which is not a folder, and which this reader did not follow to 22 Μαΐου. Its Ἀπολυτίκιον, Ἦχος δ’, and its Κοντάκιον, Ἦχος δ’, are taken, both naming him; the Οἶκος is not a kind the schema holds. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,9 +80,51 @@
         "text": "As a disciple of the Lord thou didst receive the Gospel, O righteous one; as a martyr thou art unbending; as a brother of God thou hast boldness; as a hierarch thou canst intercede. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "text": "Ὡς τοῦ Κυρίου Μαθητής, ἀνεδέξω δίκαιε τὸ Εὐαγγέλιον ὡς Μάρτυς ἔχεις τὸ ἀπαράτρεπτον τὴν παρρησίαν ὡς Ἀδελφόθεος τὸ πρεσβεύειν ὡς Ἱεράρχης. Ἱκέτευε Χριστὸν τὸν Θεόν, σωθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, «Άγιος Ιάκωβος ο Απόστολος και Αδελφόθεος» — Ἀπολυτίκιον, Ἦχος δ’ (the page prints no model)",
+        "url": "https://www.saint.gr/2792/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a disciple of the Lord, just one, you received the Gospel; as a martyr you have what cannot be turned aside; as the Brother of God, boldness; as a hierarch, the office of intercession. Entreat Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὁ ὑψωθεὶς",
+      "text": "Ὁ τοῦ Πατρὸς μονογενὴς Θεὸς Λόγος, ἐπιδημήσας πρὸς ἡμᾶς ἐπ' ἐσχάτων, τῶv ἡμερῶν Ἰάκωβε θεσπέσιε, πρῶτον σε ἀνέδειξε τῶν Ἱεροσολύμων, Ποιμένα καὶ Διδάσκαλον, καὶ πιστὸν οἰκονόμον, τῶν μυστηρίων τῶv πνευματικῶν, ὄθεv σε πάντες τιμῶμεν Ἀπόστολε.",
+      "source": {
+        "text": "saint.gr, «Άγιος Ιάκωβος ο Απόστολος και Αδελφόθεος» — Κοντάκιον, Ἦχος δ’. Ὁ ὑψωθεὶς (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2792/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The only-begotten God the Word of the Father, having come to dwell among us in the last of the days, declared you, divinely-spoken James, the first shepherd and teacher of Jerusalem, and a faithful steward of the spiritual mysteries; and so we all honour you, apostle.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 62,
+      "latest": 62,
+      "display": "62",
+      "basis": "traditional",
+      "note": "saint.gr heads his page «Αγιος Ιακωβος ο Αποστολος Και Αδελφοθεος Πρωτος Επισκοπος Ιεροσολυμων (; - 62)»; the narrative gives no year, only the manner of his death."
+    }
   }
 }
