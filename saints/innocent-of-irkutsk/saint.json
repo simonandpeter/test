@@ -1,0 +1,62 @@
+{
+  "slug": "innocent-of-irkutsk",
+  "display_name": "Innocent of Irkutsk",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιννοκεντίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Άγιος Ιννοκεντίος ο Θαυματουργός πρώτος επίσκοπος Ιρκούτας», with the rank words left off."
+    }
+  ],
+  "office": "Bishop of Irkutsk",
+  "dates": {
+    "death": {
+      "earliest": 1731,
+      "latest": 1731,
+      "display": "1731",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Ιννοκεντιος ο Θαυματουργος Πρωτος Επισκοπος Ιρκουτας (; - 1731)». The page has no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — so that heading is the whole of its dating, and it gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Άγιος Ιννοκεντίος ο Θαυματουργός πρώτος επίσκοπος Ιρκούτας»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3088/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's six Innocent folders is this man: `innocent-of-moscow` and the rest are kept on other days and none is the first bishop of Irkutsk. The see and the epithet are the page's own; `wonderworker` carries «ο Θαυματουργός». The page's whole notice is one sentence — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — so the year in its heading is the whole of its dating. The same day's listing carries a separate entry for the finding of the relics of an Innocent of Russia, which is not a person and is not drafted here. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

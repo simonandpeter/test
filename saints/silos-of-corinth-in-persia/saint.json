@@ -1,0 +1,52 @@
+{
+  "slug": "silos-of-corinth-in-persia",
+  "display_name": "Silos of Corinth in Persia",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Σίλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Σίλος επίσκοπος Κορίνθου της Περσίας», with the rank words left off."
+    }
+  ],
+  "office": "Bishop of Corinth in Persia",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Σίλος επίσκοπος Κορίνθου της Περσίας»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3092/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to this name; `silas-the-apostle` and `silas-of-sihastria-putnei` are another name on other days. The see is the page's own, oddly worded — «επίσκοπος Κορίνθου της Περσίας», bishop of Corinth in Persia — and is recorded in `office` exactly as the page has it, with no attempt here to say what place it means; no `locations` are proposed for the same reason. The page gives no year, so there is no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

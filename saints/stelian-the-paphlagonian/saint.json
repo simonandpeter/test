@@ -6,6 +6,11 @@
       "form": "Stelian Paflagonul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 noiembrie, «Sfântul Cuvios Stelian Paflagonul», with the rank words left off."
+    },
+    {
+      "form": "Στυλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Στυλιανός ο Παφλαγόνας», with the rank word left off; the epithet «ο Παφλαγόνας» is the folder's own distinguishing word already and is not repeated in the stored form."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Στυλιανός ο Παφλαγόνας»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3096/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own. **The page hedges the Paphlagonia of his name** — «που μάλλον γεννήθηκε στην Παφλαγονία, χωρίς αυτό να είναι σίγουρο, διότι εκεί φυλασσόταν και ιερό λείψανο του», probably born there, without that being certain, because a relic of his was kept there — and the hedge stands in the life. It gives no year at all, so no `dates` object is proposed. **The page was read in its opening and closing stretches only**, some four hundred and seventy characters of the middle unread, which is where its account of the children is; the reader's report names the limit. The hymn taken is the page's Ἀπολυτίκιον (Κατέβασμα), which names him and no other saint and carries both an ἦχος and a model; its «Έτερον Ἀπολυτίκιον», which names him too and makes him the protector of infants, is printed with neither an ἦχος nor a model and is not drafted. The page adds his head at the metropolis of Thessaliotis and portions at Damasta in Phthiotis, Leimonos on Lesbos, Dadi in Phthiotis and Kato Xenia at Almyros in Magnesia. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -47,5 +62,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Στήλη ἔμψυχος τῆς ἐγκρατείας, στῦλος ἄσειστος τῆς Ἐκκλησίας Στυλιανὲ ἀνεδείχθης μακάριε· ἀνατεθεὶς γὰρ Θεῷ ἐκ νεότητος κατοικητήριον ὤφθης τοῦ Πνεύματος. Πάτερ ὅσιε Χριστὸν τὸν Θεὸν ἱκέτευε δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Όσιος Στυλιανός ο Παφλαγόνας». It names him and no other saint, and plays on his name — στήλη and στῦλος, the pillar. The reading «δωρίσασθαι» is the page's own.",
+        "url": "https://www.saint.gr/3096/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A living column of self-restraint, an unshaken pillar of the Church, you were shown to be, blessed Stylianos; for being dedicated to God from your youth you appeared a dwelling-place of the Spirit. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    }
+  ]
 }

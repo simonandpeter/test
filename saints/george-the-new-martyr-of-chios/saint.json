@@ -1,0 +1,78 @@
+{
+  "slug": "george-the-new-martyr-of-chios",
+  "display_name": "George of Chios",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Άγιος Γεώργιος ο Νεομάρτυρας από τη Χίο», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1807,
+      "latest": 1807,
+      "display": "1807",
+      "basis": "traditional",
+      "note": "saint.gr: «το πρωί της 26ης Νοεμβρίου 1807 μ.Χ. του έκοψαν - με μαρτυρικό τρόπο - το κεφάλι λίγο-λίγο», and the page's heading carries «(; - 1807)». It gives no year of birth; the ages it gives — eighteen months, ten years, twenty-two — are not arithmetic for a reader to do."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς φίλον σε Χριστοῦ, καὶ Μάρτυρα δοξάζομεν, αἰτούμενοι θερμῶς, τὴν θείαν σου ἀντίληψιν, Ἀθλητὰ Γεώργιε, ἥν παράσχοις ἡμῖν τοῖς οἰκέταις σου, τοῖς καταφεύγουσι πρὸς σέ, ῥυόμενος δεινῶς τῶν συνεχόντων ἡμᾶς.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β΄, Τὰ ἄνω ζητῶν — on the page of «Άγιος Γεώργιος ο Νεομάρτυρας από τη Χίο». It names him and no other saint; the page's apolytikion names him too but is given no model.",
+        "url": "https://www.saint.gr/3089/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "We glorify you as Christ's friend and as a martyr, asking warmly for your divine support, athlete George — grant it to us your household, who take refuge with you, delivering us from the hardships that press us.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β΄.",
+      "model": "Τὰ ἄνω ζητῶν."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Άγιος Γεώργιος ο Νεομάρτυρας από τη Χίο»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3089/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's George folders is this man, and none is kept on this day. The place in the display name is the page's own Chios; the rank word «Νεομάρτυρας» is left to `types`, so the display name does not repeat it, and the slug keeps it. The hymn taken is the page's Κοντάκιον, which names him and no other saint and carries both an ἦχος and a model; its Ἀπολυτίκιον in Ἦχος δ΄ names him too but gives no model, the two Μεγαλυνάρια and the Οἶκος and the Κάθισμα are neither a troparion nor a kontakion, and none of those is drafted. The page puts his head in the Benaki Museum at Athens. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

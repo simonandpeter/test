@@ -1,0 +1,105 @@
+{
+  "slug": "nikon-the-metanoeite",
+  "display_name": "Nikon the Metanoeite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νίκων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Νίκων ο «Μετανοεῖτε»», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 920,
+      "latest": 925,
+      "display": "between 920 and 925",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Νίκων γεννήθηκε μεταξύ των ετών 920 - 925 μ.Χ.» — the page's own interval."
+    },
+    "death": {
+      "earliest": 998,
+      "latest": 998,
+      "display": "998",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Οσιος Νικων ο «μετανοειτε» (; - 998)» and the narrative repeats it: «άφησε την τελευταία του πνοή το έτος 998 μ.Χ.»"
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Χαίρει ἔχουσα ἡ Λακεδαίμων, θείαν λάρνακα, τῶν σῶν λειψάνων, ἀναβρύουσαν πηγὰς τῶν ἰάσεων, καὶ διασώζουσαν πάντας ἐκ θλίψεων, τοὺς σοὶ προστρέχοντας Πάτερ ἐκ πίστεως. Νίκων Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Θείας πίστεως — the first hymn on the page of «Όσιος Νίκων ο «Μετανοεῖτε»». It names him and no other saint.",
+        "url": "https://www.saint.gr/3093/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lakedaimon rejoices in having the divine casket of your relics, which wells up springs of healings and saves from afflictions all who run to you, father, in faith. Venerable Nikon, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν Ἀγγελικὴν μιμούμενος πολιτείαν, κόσμου τὰ τερπνὰ ὡς σκύβαλα ἐλογίσω, μετανοίας τὴν τρίβον δεικνύων ἡμῖν, θεοφόρε Νίκων Ὅσιε· διὰ τοῦτό σε γεραίρομεν, ἐκτελοῦντες νῦν τὴν μνήμην σου· ὑπάρχεις γὰρ ἀληθῶς, ἰαμάτων πηγή.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. β’, Τὴν ὑπὲρ ἡμῶν πληρώσας — on the page of «Όσιος Νίκων ο «Μετανοεῖτε»». It names him and no other saint.",
+        "url": "https://www.saint.gr/3093/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Imitating the life of the Angels, you reckoned the world's delights as refuse, showing us the path of repentance, God-bearing and venerable Nikon. For this we honour you as we keep your memory now; for you are truly a spring of healings.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. β’.",
+      "model": "Τὴν ὑπὲρ ἡμῶν πληρώσας."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Νίκων ο «Μετανοεῖτε»»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3093/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's five Nikon folders is this man: they are kept on other days and none is the preacher of Lakedaimon. The epithet in the display name is the page's own «ο «Μετανοεῖτε»», after the one word he went about repeating, and it is not a rank, so nothing is put in `types` from it; `preacher` and `wonderworker` are the page's own account of what he did. The page makes him patron of Sparta. No `locations` are proposed: the page names Pontus, Crete, Gortyna, the Peloponnese, Euboea and Chalkis, and a life of that reach cannot be put on one point. Both hymns name him and no other saint and both carry an ἦχος and a model, so both are taken. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

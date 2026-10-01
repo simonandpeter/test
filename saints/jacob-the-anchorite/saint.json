@@ -1,0 +1,52 @@
+{
+  "slug": "jacob-the-anchorite",
+  "display_name": "Jacob the Anchorite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Ιάκωβος ο Αναχωρητής», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Ιάκωβος ο Αναχωρητής»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3094/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's Jacob folders is this man, and the `jacob-tsalikis` of 22 November is a Greek of the twentieth century. The page's authority is named and is a first-hand one: Theodoret of Cyrus, who it says knew the venerable man personally, in the Philotheos Historia, number 21. It gives no year and no century, so no `dates` object is proposed; the city of Cyrus is named but no `locations` are proposed from it. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

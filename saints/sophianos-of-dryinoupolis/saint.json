@@ -1,0 +1,65 @@
+{
+  "slug": "sophianos-of-dryinoupolis",
+  "display_name": "Sophianos of Dryinoupolis",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "preacher"
+  ],
+  "names": [
+    {
+      "form": "Σοφιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Άγιος Σοφιανός επίσκοπος Δρυϊνουπόλεως καί Αργυροκάστρου», with the rank words left off."
+    }
+  ],
+  "office": "Bishop of Dryinoupolis and Argyrokastro",
+  "related": [
+    "kosmas-of-aetolia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1711,
+      "latest": 1711,
+      "display": "1711",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Σοφιανος Επισκοπος Δρυϊνουπολεως Και Αργυροκαστρου (; - 1711)» and the narrative puts his resignation a few months before his death in that year: «Το 1711 μ.Χ., λίγους μήνες πριν τον θάνατό του, παραιτείται από τα ιερατικά καθήκοντα». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Άγιος Σοφιανός επίσκοπος Δρυϊνουπόλεως καί Αργυροκάστρου»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3723/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. Nothing in the corpus answers to this name. The see is the page's own and goes in `office`; the page calls him the forerunner of Kosmas of Aetolia, whom the corpus keeps as `kosmas-of-aetolia`, so the two are related. **The page hedges his birthplace** — «Γεννήθηκε πιθανότατα στο χωριό Πολύτσιανη», most probably at the village of Polytsiani — so no `locations` are proposed and the hedge stands in the life. **The page is long and was read in its opening and closing stretches only**, some two thousand characters of the middle unread; the reader's report names the limit. The page's Ἀπολυτίκιον names him but is printed with neither an ἦχος nor a model, and the Μεγαλυνάριον is neither a troparion nor a kontakion, so no hymn is drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

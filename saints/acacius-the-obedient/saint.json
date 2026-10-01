@@ -6,6 +6,11 @@
       "form": "Acachie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 iulie, «Sfântul Cuvios Acachie», with the rank words left off."
+    },
+    {
+      "form": "Ακάκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Ακάκιος «ὁ ἐν τῇ Κλίμακι»», with the rank word left off; the epithet «ὁ ἐν τῇ Κλίμακι», the one in the Ladder, is left out of the stored form and said in the life."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Ακάκιος «ὁ ἐν τῇ Κλίμακι»»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3095/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», and the man is the folder's own: the monk whom John of the Ladder tells of, which is exactly what the folder's life is made out of, and whose mark is an inexhaustible patience under a very difficult superior. **The folder's Romanian row keeps him on 7 July with a note for doxologia's second Romanian day, 29 November, and this Greek row keeps him on 26 November; that is one row per church and not a second commemoration invented.** The page places him more exactly than doxologia does — «Μόνασε στη Μικρά Ασία (στο Μοναστήρι Κελλιβάρα του όρους Λάτρου)» — and that is not made an `office` or a `location`, because the corpus keeps a separate `acacius-of-latros`, founder of a lavra on that same mountain, on the Greek 3 January, and whether the two pages mean one mountain's two men or one man is not a reader's to decide; the reader's report names it. The page gives no year, so no `dates` object is proposed. The hymn taken is the page's Ἀπολυτίκιον, which names him and no other saint and carries both an ἦχος and a model. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -47,5 +62,27 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-of-the-ladder"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἑώας ἐξήστραψας, ὥσπερ ἀστὴρ φαεινός, καὶ πάντας ἐφαίδρυνας τῶν μονοτρόπων χορούς, Ἀκάκιε ὅσιε, αἴγλη τῶν ἀρετῶν σου, καὶ διήγειρας τούτους, ἄνθεσιν ἐγκωμίων, καταστέφειν σὺν πόθῳ, τὴν σὴν φαιδρὰν καὶ σεπτήν, καὶ πάντιμον μνήμην.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ΄, Ταχὺ προκατάλαβε — on the page of «Όσιος Ακάκιος «ὁ ἐν τῇ Κλίμακι»». It names him and no other saint.",
+        "url": "https://www.saint.gr/3095/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You flashed out of the East like a shining star, and gladdened all the choirs of the monastics, venerable Acacius, by the brightness of your virtues; and you roused them to crown with the flowers of praise, and with longing, your bright and venerable and all-honoured memory.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Alipie Stâlpnicul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 noiembrie, «Sfântul Cuvios Alipie Stâlpnicul», with the rank word left off."
+    },
+    {
+      "form": "Αλύπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Αλύπιος ο Κιονίτης», with the rank word left off; «ο Κιονίτης», the pillar-man, is the page's own epithet and is left out of the stored form because the folder's `types` carry it."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Αλύπιος ο Κιονίτης»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3097/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους» and «Οσιος Αλυπιος ο Κιονιτης (; - 608)», the same day the folder's Romanian row already carries, and the man is the folder's own stylite. A death interval is proposed from the page's own year where the folder had none; **no birth interval is proposed**, because the page gives his age at death hedged three ways — «αφού έζησε 100 χρόνια, κατ' άλλους 120» — and the arithmetic is not this reader's to do. The hymn taken is the page's Κοντάκιον, which names him and no other saint and carries both an ἦχος and a model; its first Ἀπολυτίκιον in Ἦχος α’ names him but has no model, and the Κάθισμα is neither a troparion nor a kontakion, so neither is drafted, and the page's «Έτερον Ἀπολυτίκιον» was read only in part and is not drafted either. The page adds his head at Koutloumousiou on Athos and a portion at the Kyriakon of the Skete of Kausokalyvia, and a synaxis «ἐν τῇ μονῇ αὐτοῦ τῇ οὔσῃ πλησίον τοῦ Ἱπποδρομίου» on the authority of the Paris Codex 1594. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -64,9 +79,35 @@
         "text": "You were a pillar of patience, venerable father, emulating the fathers of old — Saint Job in his sufferings, Saint Joseph in his temptations, and the life of the bodiless powers while yet in the body, holy Alypius our father. Pray to Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς ἀρετῶν ὑπόθεσιν, καὶ Ἀσκητῶν καλλώπισμα, ἡ Ἐκκλησία δοξάζει σε σήμερον, καὶ ἀνυμνεῖ σε Ἀλύπιε· ταῖς εὐχαῖς σου παράσχου, τοῖς τιμῶσιν ἐκ πόθου τὰς ἀριστείας σου, καὶ τὰ παλαίσματα, τῶν δεινῶν ἐγκλημάτων ἐκλύτρωσιν, ὡς ἐπώνυμος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς τῆς φύσεως — on the page of «Όσιος Αλύπιος ο Κιονίτης». It names him and no other saint, and plays at the end on his name, ἐπώνυμος, the one true to it — Alypius meaning the man who never grieves.",
+        "url": "https://www.saint.gr/3097/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a ground of the virtues and an adornment of ascetics, the Church glorifies you today and sings your praise, Alypius. By your prayers grant to those who honour with longing your excellences and your wrestlings a deliverance from grievous offences, as one true to your name.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 608,
+      "latest": 608,
+      "display": "608",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Οσιος Αλυπιος ο Κιονιτης (; - 608)» and the narrative repeats it: «Πέθανε ειρηνικά το έτος 608 μ.Χ., αφού έζησε 100 χρόνια, κατ' άλλους 120». The page gives no year of birth, and its two readings of his age are not turned into one here."
+    }
   }
 }

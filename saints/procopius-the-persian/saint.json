@@ -1,0 +1,50 @@
+{
+  "slug": "procopius-the-persian",
+  "display_name": "Procopius the Persian",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Προκόπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Άγιος Προκόπιος ο Πέρσης», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Άγιος Προκόπιος ο Πέρσης»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3087/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's Procopius folders is this man, and this run has added three more on 21, 22 and 24 November, none of them Persian. **The page says where the commemoration comes from and does not overstate it**: unknown to the synaxaristae and the Menaia, with everything it has drawn from his service in the Paris Codex 259, folio 229a. That is a statement about the entry's sources and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», which is not on the page, and there is no asterisk; the reader's report names it. The page's own name-gloss names the historian Procopius under Justinian as a bearer of the name; that is the site's gloss and nothing of it is recorded. No year, no couplet, no hymn. "
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

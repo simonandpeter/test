@@ -1,0 +1,51 @@
+{
+  "slug": "chaeremon-the-ascetic",
+  "display_name": "Chaeremon the Ascetic",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Χαιρέμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Χαιρέμων», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Νοεμβρίου — «Όσιος Χαιρέμων»",
+        "url": "https://www.saint.gr/11/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3090/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Νοεμβρίου εκάστου έτους», the same day as the listing. **This is not the corpus's `chaeremon-disciple-of-dionysius-of-alexandria`**, who carries a venerated Greek row on 3 October and is a deacon martyred in the persecution under Valerian; this one is a desert ascetic who died in peace. Two entries on one calendar are two commemorations, so two men, and the 3 October row is left exactly where it is. **The page says where the commemoration comes from and does not overstate it**: unknown to the Menaia and to Nikodemos's Synaxaristes, recorded for this day by the Paris Codex 1621 with a short notice. That is a statement about the entry's sources and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», which is not on the page, and there is no asterisk; the reader's report names it. No year, no couplet, no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
