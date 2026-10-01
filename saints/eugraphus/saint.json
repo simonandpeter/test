@@ -6,6 +6,11 @@
       "form": "Evgraf",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 decembrie, «Sfântul Mucenic Evgraf», with the rank word left off."
+    },
+    {
+      "form": "Εύγραφος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Δεκεμβρίου — «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος»",
+        "url": "https://www.saint.gr/12/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the secretary of Menas who was made a Christian by his answer and beheaded with the other two. **The page will not settle the reign** — Maximinus, 311 to 313, or, it allows, Maximian, 286 to 305 — so no `dates` object is proposed. Its relics block stands under his heading — the incorrupt tongue at the monastery of Leimonos on Lesbos, and portions at Docheiariou on Athos and at the Benaki Museum in Athens — but it says «του Αγίου», of the saint, without naming which of the three, so it is recorded here and not drafted. Of the four hymns only the first apolytikion speaks of the three in the plural and is their common; it is copied here, and the two that address Menas by name are taken in his folder only. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -62,6 +77,23 @@
         "text": "Having put to death by abstinence the burning stirrings and promptings of the passions, the disciples of Christ received the grace to drive away the effects of the sicknesses of the infirm and to work wonders, both in life and after death. A marvel indeed: that bare bones pour out healings. Glory to you, the only God and Maker.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δι' ἐγκρατείας, τῶν παθῶν τὰς πυριφλέκτους, ἀπονεκρώσαντες ὁρμὰς καὶ τὰς κινήσεις, τοῦ Χριστοῦ οἱ Μάρτυρες ἔλαβον τὴν χάριν, τὰς νόσους ἀποδιώκειν τῶν ἀσθενῶν, καὶ ζῶντες καὶ μετὰ τέλος θαυματουργεῖν· ὄντως θαῦμα παράδοξον! ὅτι ὀστέα γυμνά, ἐκβλύζουσιν ἰάματα. Δόξα τῷ μόνῳ Θεῷ ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’, Τὸ προσταχθὲν — the first hymn on the page of «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος»; it is the common of the three martyrs, in the plural, printed as their service.",
+        "url": "https://www.saint.gr/3214/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put to death by abstinence the fire-burning rushes and motions of the passions, the martyrs of Christ received the grace to drive away the diseases of the sick and to work wonders both while they lived and after their end. Truly a strange wonder, that bare bones should pour out healings! Glory to our only God.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τὸ προσταχθὲν."
     }
   ],
   "text": {

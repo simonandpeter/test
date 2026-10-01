@@ -6,6 +6,11 @@
       "form": "Mina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 decembrie, «Sfântul Mucenic Mina», with the rank word left off."
+    },
+    {
+      "form": "Μηνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος», with the rank word and the by-name left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Δεκεμβρίου — «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος»",
+        "url": "https://www.saint.gr/12/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Athenian of pagan family who was made eparch of Alexandria, refused to carry out the persecution, and was beheaded with the two who were converted by his answer. The entry names all three of its members, each with his own couplet, and the corpus already keeps all three, so this day is three upgrades and no new folder. **The page will not settle the reign**: «ο βασιλιάς Μαξιμίνος (311 - 313 μ.Χ.) (κατ' άλλους ο Μαξιμιανός [286 - 305 μ.Χ])», Maximinus or, according to others, Maximian — two reigns a generation apart, so no `dates` object is proposed and the folder's dateless state stands. The page prints two apolytikia, a kontakion and a kathisma. The first apolytikion, «Δι' ἐγκρατείας», speaks of the martyrs of Christ in the plural and is the common of their service, so it is copied into each of the three folders; the second, «Ἡ καλλικέλαδος», and the kontakion both address Menas by name and are taken here only. The kathisma is not a kind the schema holds. The page's relics block — the incorrupt tongue at the monastery of Leimonos on Lesbos, and portions at Docheiariou and at the Benaki Museum — stands under the heading of Eugraphus and does not say whose it is, so it is recorded here and not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -62,6 +77,57 @@
         "text": "Having put to death by abstinence the burning stirrings and promptings of the passions, the disciples of Christ received the grace to drive away the effects of the sicknesses of the infirm and to work wonders, both in life and after death. A marvel indeed: that bare bones pour out healings. Glory to you, the only God and Maker.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δι' ἐγκρατείας, τῶν παθῶν τὰς πυριφλέκτους, ἀπονεκρώσαντες ὁρμὰς καὶ τὰς κινήσεις, τοῦ Χριστοῦ οἱ Μάρτυρες ἔλαβον τὴν χάριν, τὰς νόσους ἀποδιώκειν τῶν ἀσθενῶν, καὶ ζῶντες καὶ μετὰ τέλος θαυματουργεῖν· ὄντως θαῦμα παράδοξον! ὅτι ὀστέα γυμνά, ἐκβλύζουσιν ἰάματα. Δόξα τῷ μόνῳ Θεῷ ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’, Τὸ προσταχθὲν — the first hymn on the page of «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος»; it is the common of the three martyrs, in the plural, printed as their service.",
+        "url": "https://www.saint.gr/3214/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put to death by abstinence the fire-burning rushes and motions of the passions, the martyrs of Christ received the grace to drive away the diseases of the sick and to work wonders both while they lived and after their end. Truly a strange wonder, that bare bones should pour out healings! Glory to our only God.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τὸ προσταχθὲν."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἡ καλλικέλαδος, θεόφρον γλῶσσα σου, λαμπρῶς κηρύξασα, Χριστοῦ τὴν σάρκωσιν, συναθλητᾶς σοὶ εὐκλεεῖς, εἰλκύσατο ἐν σταδίῳ, Μηνᾷ παμμακάριστε, Ἐρμογένην τὸν ἔνδοξον, καὶ τὸν θεῖον Εὔγραφον, μεθ' ὧν χαίρων ἠγώνισαι. Καὶ νῦν τὴν Παναγίαν Τριάδα, ὑπὲρ ἠμῶν ἐκδυσωπεῖτε.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα — the second hymn on the page of the three martyrs of 10 Δεκεμβρίου; it addresses Menas by name and names the other two as his fellow contestants.",
+        "url": "https://www.saint.gr/3214/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your sweet-sounding, God-minded tongue, splendidly proclaiming the incarnation of Christ, drew to you in the stadium illustrious fellow contestants, all-blessed Menas — the glorious Hermogenes and the divine Eugraphus, with whom you rejoicing contended. And now entreat the all-holy Trinity on our behalf.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῆς στρατείας ἥρπασε, σὲ τῆς προσκαίρου, καὶ ἀφθάρτου ἔδειξε, συγκληρονόμον ὦ Μηνᾶ, σὺν τοῖς συνάθλοις σου Κύριος, ὁ παρασχών σοι τὸν ἄφθαρτον στέφανον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of the three martyrs of 10 Δεκεμβρίου, and it addresses Menas by name.",
+        "url": "https://www.saint.gr/3214/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord snatched you from the temporary service and showed you a fellow heir of the incorruptible one, Menas, together with your fellow contestants — he who gave you the incorruptible crown.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {

@@ -1,0 +1,69 @@
+{
+  "slug": "athanasius-of-methone",
+  "display_name": "Athanasius of Methone",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιος Αθανάσιος Επίσκοπος Μεθώνης», with the rank and the see left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Methone",
+  "types": [
+    "hierarch",
+    "bishop",
+    "abbot"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 814,
+      "latest": 818,
+      "display": "probably between 814 and 818",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αθανάσιος γεννήθηκε στην Κατάνη της Σικελίας μάλλον μεταξύ των ετών 814 - 818 μ.Χ.» — the page's own «μάλλον», probably, is kept in the display."
+    },
+    "death": {
+      "earliest": 880,
+      "latest": 880,
+      "display": "about 880",
+      "basis": "traditional",
+      "note": "saint.gr: «Μετά την μακαρία του κοίμηση (περί το 880 μ.Χ.), ο τάφος του έγινε πηγή θαυμάτων» — about the year 880."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Δεκεμβρίου — «Άγιος Αθανάσιος Επίσκοπος Μεθώνης»",
+        "url": "https://www.saint.gr/12/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page names Arethas of Patras, the future hierarch of Caesarea, only as a man of his own age who was still living at Patras when his family arrived there; that is neither a relation nor a meeting the page asserts, so he is not named in the life and no `related` row is made. The corpus keeps a `gregory-of-methone` and a `leo-of-methone`, other bishops of the same small see on other days, and nothing joins them to this man. Catane in Sicily, Old Patras and Methone are named but no coordinate is proposed. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -914,6 +914,7 @@ export const sr = {
     'Bishop of Manglisi': 'Епископ манглиски',
     'Bishop of Maiouma': 'Епископ мајумски',
     'Bishop of Melitene': 'Епископ мелитински',
+    'Bishop of Methone': 'Епископ метонски',
     'Bishop of Methone, Navarino and Neokastro': 'Епископ метонски, наварински и неокастарски',
     'Bishop of Methymna': 'Епископ митимнски',
     'Bishop of Milan': 'Епископ милански',

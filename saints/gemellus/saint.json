@@ -1,0 +1,59 @@
+{
+  "slug": "gemellus",
+  "display_name": "Gemellus",
+  "names": [
+    {
+      "form": "Γέμελλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιος Γέμελλος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "under Julian the Apostate",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γέμελλος έζησε στα χρόνια του βασιλιά Ιουλιανού του παραβάτη (361 - 363 μ.Χ.)», and the Nicodemus passage the same page quotes adds «εν έτει τξα΄ [361]». The interval is that reign, which is as close as the page comes to a year for the martyrdom."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Δεκεμβρίου — «Άγιος Γέμελλος»",
+        "url": "https://www.saint.gr/12/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Δεκεμβρίου εκάστου έτους», the same day as the listing. It prints a short modern notice and then a long quotation from the Synaxaristes of Saint Nicodemus the Hagiorite, and the two do not tell the same torments: the notice has pointed wooden splinters driven under his nails, red-hot iron laid on him and iron barbed rods, while Nicodemus's account has a red-hot iron belt, a march behind the apostate to Edessa, nails driven into his head, a flaying, and a baptism he received only then, at the hands of a priest he met on the way. Both end in his crucifixion. The life written here follows the page's own short notice and names the second account as the page's quotation. Ancyra and the parish called Klimaxine are named, but the page gives no coordinate and none is proposed. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

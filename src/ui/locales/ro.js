@@ -912,6 +912,7 @@ export const ro = {
     'Bishop of Manglisi': 'Episcop de Manglisi',
     'Bishop of Maiouma': 'Episcop de Maiuma',
     'Bishop of Melitene': 'Episcop de Melitene',
+    'Bishop of Methone': 'Episcop de Methoni',
     'Bishop of Methone, Navarino and Neokastro': 'Episcop de Methoni, Navarino și Neokastro',
     'Bishop of Methymna': 'Episcop de Methymna',
     'Bishop of Milan': 'Episcop al Milanului',

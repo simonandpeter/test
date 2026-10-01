@@ -913,6 +913,7 @@ export const el = {
     'Bishop of Manglisi': 'Επίσκοπος Μαγγλίσι',
     'Bishop of Maiouma': 'Επίσκοπος Μαϊουμά',
     'Bishop of Melitene': 'Επίσκοπος Μελιτηνής',
+    'Bishop of Methone': 'Επίσκοπος Μεθώνης',
     'Bishop of Methone, Navarino and Neokastro': 'Επίσκοπος Μεθώνης, Ναβαρίνου και Νεοκάστρου',
     'Bishop of Methymna': 'Επίσκοπος Μηθύμνης',
     'Bishop of Milan': 'Επίσκοπος Μεδιολάνων',

@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θωμασ thomas-companion-of-terentius thomas-defourkinos thomas-ii-of-constantinople thomas-of-constantinople thomas-of-maleon thomas-of-tiberiopolis thomas-of-zographou thomas-the-apostle thomas-the-fool-for-christ thomas-the-infant':
+    'Ten now. The new one is Thomas Defourkinos on 10 December, an abbot; the others are read in the el-11-28 entry for this name form.',
+  'θεοτεκνοσ theotecnus-the-martyr theoteknos':
+    'Two men. The new one is the Theoteknos of 10 December; the other is the Theotecnus of 3 October.',
+  'μαριανοσ marianus-companion-of-emilian marianus-martyr-10-december marianus-the-deacon':
+    'Three men. The new one is the Marianus of 10 December; the others are Marianus the companion of Emilian on 7 March and Marianus the deacon on 19 March.',
+  'ευγενιοσ eugene-24-november eugene-of-cherson eugene-of-trebizond eugene-son-of-paul-and-tatta eugenios-of-aetolia eugenius-21-july eugenius-father-of-mary-called-marinos eugenius-martyr-10-december eugenius-of-rome eugenius-the-confessor':
+    'Ten now. The new one is the Eugenius of 10 December; the others are read in the el-11-24 entry for this name form.',
+  'αθανασιοσ athanasius-i-of-constantinople athanasius-iii-patelarios athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-kios athanasius-of-meteora athanasius-of-methone athanasius-of-murom athanasius-of-paros athanasius-of-sparte-in-attaleia athanasius-of-tarsus athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-athonite athanasius-the-confessor athanasius-the-pentaschoinites athanasius-the-reader athanasius-the-recluse-of-the-caves athanasius-the-roman-senator athanasius-the-wonderworker':
+    'Twenty-five now. The new one is Athanasius bishop of Methone on 10 December; the others are read in the el-12-02 entry for this name form.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-new stephen-the-newly-shining stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Thirty-two now. The new one is Stephen the Newly Shining on 9 December, a presbyter and confessor; the others are read in the el-08-20 entry for this name form.',
   'βασσα bassa-of-edessa bassa-of-jerusalem':

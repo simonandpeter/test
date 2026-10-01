@@ -1,0 +1,61 @@
+{
+  "slug": "thomas-defourkinos",
+  "display_name": "Thomas Defourkinos",
+  "names": [
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Όσιος Θωμάς ο Δεφουρκινός», with the rank word left off. The by-name Δεφουρκινός is kept in the slug and the English form and not in the stored Greek form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Θωμάς έζησε τον 9ο μ. Χ. αιώνα». The same page has him answering a letter of the emperor Leo the Wise, whose reign ran 886 to 912 and whom it does not date; the century is the page's own and no year is taken from the reign."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Δεκεμβρίου — «Όσιος Θωμάς ο Δεφουρκινός»",
+        "url": "https://www.saint.gr/12/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Δεκεμβρίου εκάστου έτους», the same day as the listing. It prints a short modern notice and then a long quotation from the Synaxaristes of Saint Nicodemus the Hagiorite; the life written here follows the short notice, which is the page's own, and does not retell the quotation. The corpus keeps no Thomas on this day. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
