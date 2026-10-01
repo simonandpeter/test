@@ -6,6 +6,11 @@
       "form": "Teoctista",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 noiembrie."
+    },
+    {
+      "form": "Θεοκτίστη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Οσία Θεοκτίστη η Λέσβια», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Οσία Θεοκτίστη η Λέσβια»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman of Methymna on Lesbos who was taken by Cretan pirates and lived thirty-five years alone on Paros. Two cautions of the page's own are worth the writer's eye and are not resolved here: it dates her both «στα χρόνια του βασιλιά του Λέοντα του Σοφού (816 μ.Χ.)» and «(; - 889)» in its head line, and it says of the narrative written about her by the monk Symeon of Paros that it closely resembles the life of Mary of Egypt and «είναι εντελώς φανταστική», is entirely fictitious. The year recorded here is the head line's. It prints an apolytikion that names her, taken here; the «Έτερον Ἀπολυτίκιον» it also prints is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -50,5 +65,33 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 889,
+      "latest": 889,
+      "display": "889",
+      "basis": "traditional",
+      "note": "saint.gr's own head line for her, «Οσια Θεοκτιστη η Λεσβια (; - 889)». The same page's text says instead that she lived «στα χρόνια του βασιλιά του Λέοντα του Σοφού (816 μ.Χ.)», which does not agree with it; the head line's year is taken and the disagreement is the page's own."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς Μηθύμνης τόν γόνον καί θεῖον βλάστημα καί Παρίων τό κλέος καί τό ἐντρύφημα, Θεοκτίστην τήν Ἁγίαν εὐφημήσωμεν. Χαίροις βοῶντες πρός Αὐτήν, καλλιπάρθενε ἀμνάς καί Νύμφη τοῦ Θεοῦ Λόγου, ὧ καί πρεσβεύεις ἀδιαλείπτως τοῦ σωθῆναι τάς ψυχάς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Οσία Θεοκτίστη η Λέσβια», and it names her, Methymna and the people of Paros.",
+        "url": "https://www.saint.gr/2951/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the holy Theoctista, the offspring and divine shoot of Methymna, the glory and the delight of the people of Paros, crying to her: Rejoice, fair virgin lamb and bride of God the Word, to whom you intercede unceasingly that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    }
+  ]
 }

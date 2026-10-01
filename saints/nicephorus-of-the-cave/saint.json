@@ -1,0 +1,50 @@
+{
+  "slug": "nicephorus-of-the-cave",
+  "display_name": "Nicephorus of the Cave",
+  "names": [
+    {
+      "form": "Νικηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιος Νικηφόρος «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint and gives no life, so his own church's calendar is the source a later reader will want."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Όσιος Νικηφόρος «ὁ ἐν τῷ Σπηλαίῳ»»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day as the listing. The page gives no year and no life, so there is no `dates` object. The same calendar keeps a Luke «ὁ ἐν Σπηλαίῳ», also called Russian and also without a life, on 6 Νοεμβρίου. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "slug": "sopatra",
+  "display_name": "Sopatra",
+  "names": [
+    {
+      "form": "Σωπάτρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Αγίες Ευσταλία και Σωπάτρα», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "related": [
+    "eustalia"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 584,
+      "latest": 584,
+      "display": "c. 584",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι άγιες Ευσταλία και Σωπάτρα έζησαν την εποχή του αυτοκράτορα Μαυρίκιου (περί το 584 μ.Χ.)», and she is the daughter of that emperor on the same page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Αγίες Ευσταλία και Σωπάτρα»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Porfirie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 noiembrie."
+    },
+    {
+      "form": "Πορφύριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Άγιοι Ονησιφόρος και Πορφύριος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Άγιοι Ονησιφόρος και Πορφύριος»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the pairing with Onesiphorus is the same. The page's apolytikion and kontakion name them both and are taken here; the «Έτερον Ἀπολυτίκιον» and the Κάθισμα are not drafted. It gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -62,6 +77,40 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "θείαν ὄνησιν, Ἰχνηλατοῦντες, πορφυρίζοντα, ὤφθητε κρίνα, Ὀνησιφόρε κλεινὲ καὶ Πορφύριε ὅθεν ὡς ἅρμα τοῦ Λόγου χρυσήλατον, πρὸς τὴν οὐράνιον νύσσαν ἠλάσατε. Θεῖοι Μάρτυρες, Χριστῷ τῷ Θεῷ πρεσβεύσατε, δωρήσασθε ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Ονησιφόρος και Πορφύριος», and it names them both and plays on both names.",
+        "url": "https://www.saint.gr/2949/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Tracking out the divine profit, you appeared as lilies flushed with purple, renowned Onesiphorus and Porphyrius; and so, like a gold-wrought chariot of the Word, you drove towards the heavenly goal. Divine martyrs, intercede with Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Μαρτύρων δυάς, ἀθλήσαντες στερρότατα, ἐχθροῦ τὴν ὀφρύν, εἰς γῆν κατηδάφισαν, ἐλλαμφθέντες χάριτι, τῆς ἀκτίστου Τριάδος οἱ ἔνδοξοι· καὶ νῦν μέτ' Ἀγγέλων αὐτῇ, πρεσβεύουσιν ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιοι Ονησιφόρος και Πορφύριος». It calls them a pair of martyrs and names no other saint.",
+        "url": "https://www.saint.gr/2949/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A pair of martyrs, having contended most steadfastly, brought the enemy's pride down to the ground; and being enlightened by the grace of the uncreated Trinity, the glorious ones now intercede with it unceasingly, together with the angels, for us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {

@@ -6,6 +6,11 @@
       "form": "Neofit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 noiembrie, «Cuviosul Neofit Dohiaritul»; the bare personal name, without the epithet."
+    },
+    {
+      "form": "Νεόφυτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιοι Ευθύμιος και Νεόφυτος κτήτορες της Μονής Δοχειαρίου Αγίου Όρους», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Όσιοι Ευθύμιος και Νεόφυτος κτήτορες της Μονής Δοχειαρίου Αγίου Όρους»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man and the same house, with Euthymius his uncle beside him. The page puts him in the reigns of Nikephoros Phokas and John Tzimiskes, 963 to 976, and gives no year of his own; the reigns are recorded as a floruit. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and it prints no hymn."
     },
     {
       "church": "serbian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 963,
+      "latest": 976,
+      "display": "963–976",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν γιος δούκα στα χρόνια των βασιλέων Νικηφόρου Φωκά και Ιωάννη Τσιμισκή (963 - 976 μ.Χ.)» — the reigns the page names; it gives him no year of his own."
+    }
   }
 }

@@ -1,0 +1,53 @@
+{
+  "slug": "narses-9-november",
+  "display_name": "Narses (9 November)",
+  "names": [
+    {
+      "form": "Ναρσής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Άγιοι Ναρσής και Αρτέμωνας», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "artemon-9-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Άγιοι Ναρσής και Αρτέμωνας»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page says of him «Ο Ναρσής ήταν Πέρσης και ίσως να είναι ο ίδιος με αυτόν της 9ης Δεκεμβρίου» — he was a Persian and may perhaps be the same as the one of 9 December. That doubt is the page's own and is left as it stands: this folder records the 9 Νοεμβρίου entry, which is the day page read, and proposes nothing about the December one. The page gives no year, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

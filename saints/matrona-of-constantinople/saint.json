@@ -6,6 +6,11 @@
       "form": "Matrona",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 noiembrie."
+    },
+    {
+      "form": "Ματρώνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Οσία Ματρώνα», with the rank word left off. The page gives the name she took in the men's monastery as Βαβύλας."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Οσία Ματρώνα»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: of Perge in Pamphylia, who left her husband, entered Bassianus's monastery disguised as a man under the name Babylas, and ended as foundress of a monastery at Constantinople. It prints an apolytikion and a kontakion that name her, taken here; the «Έτερον Ἀπολυτίκιον» — the common «Ἐν σοὶ Μῆτερ» — and the Οἶκος are not drafted. The page gives the reigns it places her in but no year of her own, so the interval recorded is those reigns."
     },
     {
       "church": "serbian",
@@ -60,9 +75,52 @@
         "text": "In thee, O mother, that which was made in God's image was saved with diligence; for taking up the cross thou didst follow Christ, and working thou didst teach that the flesh is not to be regarded, for it passes away, but that care is to be taken for the soul, a thing immortal. Therefore thy spirit rejoices together with the angels, most venerable mother Matrona.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Χριστὸν ἀγαπήσασα, τῶν ἀγαθῶν τὴν πηγήν, Ἀγγέλων ἐζήλωσας, μετὰ σαρκὸς τὴν ζωήν, Ματρώνα θεόπνευστε, σὺ γὰρ συνεύνου φίλτρον, παραδίδουσα ἐμφρόνως, ἤσχυνας τὸν Βελίαρ, τῷ πανσόφῳ σου τρόπω, διὸ τῆς ἀκατάλυτου δόξης ἠξίωσαι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Οσία Ματρώνα», and it names her.",
+        "url": "https://www.saint.gr/2950/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ, the fountain of good things, you were zealous for the life of the angels while still in the flesh, God-inspired Matrona; for giving up your husband's love with good sense, you shamed Belial by your all-wise manner of life, and so were counted worthy of indestructible glory.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸ σῶμα τὸ σόν, νηστείαις κατατήξασα, ἐν μέσῳ ἀνδρῶν, Ματρῶνα κατοικήσασα, προσευχαῖς σχολάζουσα, τὸν Δεσπότην ἐνθέως ἐθεράπευσας, δι' ὃν πάντα κατέλιπες, ὁσίως τὸν βίον διανύσασα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Οσία Ματρώνα», and it names her and her dwelling among men.",
+        "url": "https://www.saint.gr/2950/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having wasted your body with fasting and dwelt in the midst of men, Matrona, and given your leisure to prayer, you served the Master in a godly way, for whose sake you left all things behind, running your course in holiness.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 450,
+      "latest": 474,
+      "display": "450–474",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ματρώνα έζησε στα χρόνια των βασιλέων Μαρκιανού (450 - 457 μ.Χ.) και Λέοντα Θρακός ή Μακέλλη (457 - 474 μ.Χ.)» — the two reigns the page names, and it gives no year of her own; it says she died at a hundred."
+    }
   }
 }

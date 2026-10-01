@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 noiembrie, «Sfântul Cuvios Ioan Colov»; the bare personal name, without the epithet."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιος Ιωάννης ο Βραχύσωμος ή Κολοβός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 9 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Όσιος Ιωάννης ο Βραχύσωμος ή Κολοβός»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the short-bodied ascetic of the Egyptian desert, called Kolobos for his stature. The page gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and it prints no hymn."
     },
     {
       "church": "serbian",
