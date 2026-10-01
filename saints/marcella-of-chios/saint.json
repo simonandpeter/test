@@ -6,6 +6,11 @@
       "form": "Marcela",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 iulie, «Sfânta Muceniță Marcela», with the rank word left off."
+    },
+    {
+      "form": "Μαρκέλλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιουλίου, «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», with the rank word and the bynames left off. The site's own gloss above the life is on the masculine ΜΑΡΚΕΛΛΟΣ."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιουλίου — «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα»",
+        "url": "https://www.saint.gr/07/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and says so again in its own words: «Η μνήμη της Αγίας παρθενομάρτυρος Μαρκέλλας εορτάζεται κάθε χρόνο στις 22 Ιουλίου». The woman is the folder's own — Volissos in north-western Chios, the pagan father, the Christian mother dead young, the flight to the mountains, the bush, the arrow, the rock that opened to her breast, the breasts cut off and the head thrown into the sea — and she is the only Marcella the corpus holds. The page names her as patron of Chios and gives a portion of her relics at the Monastery of Daou Pentelis. On the date it is openly unsure: «Για τον χρόνο της γέννησης, της ζωής και του μαρτυρίου της Αγίας υπάρχει σύγχυση και ασάφεια μεταξύ των βιογράφων», and then follows her biographer, the venerable Nikephoros of Chios, for whom «η Αγία Μαρκέλλα έζησε και ήκμασε περί το 1500 μ.Χ.». The folder's `dates` read the fifteenth century off doxologia and nothing is proposed against them: about 1500 sits at that century's edge, the page says the biographers disagree, and that is recorded here rather than resolved. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints seven hymn texts: three apolytikia and a kontakion, all four naming her, are taken; the three μεγαλυνάρια are left out because the schema holds a troparion or a kontakion and nothing else."
     },
     {
       "church": "serbian",
@@ -55,5 +70,79 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "macarius-notaras",
+    "nektarios-of-aegina"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς ἁγνείας τὸ ρόδον καὶ τῆς Χίου τὸ βλάστημα, τὴν Ἁγίαν Μαρκέλλαν ἐν ὠδαὶς εὐφημήσωμεν τμηθεῖσα γὰρ χειρὶ τὴ πατρική, ὡς φύλαξ ἐντολῶν τῶν τοῦ Χριστοῦ, ρώσιν νέμει καὶ κινδύνων ἀπαλλαγήν, τοὶς πρὸς αὐτὴν κραυγάζουσι, δόξα τῷ δεδοκότι σοὶ ἰσχύν, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης — the first of the seven hymn texts on the page of «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», and it names her",
+        "url": "https://www.saint.gr/733/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in songs the rose of purity and the shoot of Chios, Saint Marcella; for having been cut down by her father's hand, as a keeper of the commandments of Christ she grants strength and deliverance from dangers to those who cry out to her: glory to him who gave you power, glory to him who made you wonderful, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α´.",
+      "model": "Τοῦ λίθου σφαγισθέντος.",
+      "text": "Τοῦ Κυρίου τοῖς νόμοις, καὶ τοῖς θείοις διδάγμασι, πειθομένη Μαρκέλλα, καὶ ἀμέμπτως φυλάττουσα, τὴν βίαν πτοηθεῖσα τοῦ πατρὸς, ὦ Νύμφη ἀκήρατε Χριστοῦ, ἐν τοῖς ὄρεσιν ηὐλίζου, ἐν οἷς διώκων εὑρίσκει καὶ ἐκτείνει σε· δόξα τῷ δεδωκότι σοι ἰσχὺν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α´, Τοῦ λίθου σφαγισθέντος — the second of the seven hymn texts on the page of «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», and it names her. The model is printed «σφαγισθέντος» for σφραγισθέντος, which is the page's own reading",
+        "url": "https://www.saint.gr/733/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Obeying the laws of the Lord and his divine teachings, Marcella, and keeping them blamelessly, you took fright at your father's violence, undefiled bride of Christ, and lodged in the mountains, where he hunting you finds you and lays you low. Glory to him who gave you power, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Παρθὲνῡς ἀκήρατος, καί ἀθληφώρος σεμνή, ἑδεὶχθῇς ἀθλήσασα, ὑπέρ τοῦ νόμου Χριστοῦ, Μαρκέλλα πανεύφημε· ὅθεν τῶν ἱαμάτων, ἀναβλύζεις τήν χάριν, πᾶσι τοῖς προσιοῦσι, τῇ θερμῇ σου πρεσβείᾳ, πρεσβεύουσα Κυρίῳ, ὑπὲρ τῶν τιμώντων σε.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχύ προκατάλαβε — the third of the seven hymn texts on the page of «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», and it names her. Its first words are printed with stray accents and a Greek upsilon for the omicron-upsilon of παρθένος, and that is the page's own reading",
+        "url": "https://www.saint.gr/733/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An undefiled virgin and an honourable victor you were shown to be, having contended for the law of Christ, all-praised Marcella; and so you pour out the grace of healings on all who come to your fervent intercession, as you intercede with the Lord for those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Ἡ λαμπρά σου ἄθλησις, ὦ καλλιμάρτυς Μαρκέλλα, τῶν πιστῶν ἐφαίδρυνε, τὰς διανοίας ἐνθέως· θάνατον, τοῦ ζῆν ἀνόμως προκρίνειν πάντας, πείθουσα· καὶ γὰρ ἐτμήθης ξίφει τὴν κάραν, σὺν μαστοῖς ὑπὸ πατρῴας, χειρός· ὢ δρᾶμα! ὑπὲρ τοῦ νόμου Χριστοῦ.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — the fourth of the seven hymn texts on the page of «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», and it names her",
+        "url": "https://www.saint.gr/733/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your bright contest, fair martyr Marcella, has gladdened the minds of the faithful in a godly way, persuading all to prefer death to living lawlessly; for your head was cut off with the sword, and your breasts with it, by a father's hand — what a drama! — for the law of Christ.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

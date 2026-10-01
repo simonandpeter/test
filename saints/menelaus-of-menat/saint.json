@@ -1,0 +1,79 @@
+{
+  "slug": "menelaus-of-menat",
+  "display_name": "Menelaus of Menat",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Μενέλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιουλίου, «Όσιος Μενέλαος», with the rank word left off. The page gives him no byname; the one in the display name is the monastery it names, which it spells ΜΕΝΑΤ in Latin letters."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 700,
+      "latest": 700,
+      "display": "c. 700",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Μενέλαος γεννήθηκε στην Πρεσινιέ της Γαλλίας περί το 700 μ.Χ. και καταγόταν από πολύ επιφανή αριστοκρατική οικογένεια.» The «περί το», about, is the page's own, and it is the only year the page gives: it does not date his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιουλίου — «Όσιος Μενέλαος»",
+        "url": "https://www.saint.gr/07/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Ιουλίου εκάστου έτους», the same day as the listing. The corpus holds no Menelaus at all and nothing that folds onto the name. The page's byname for the abbey is «το μικρό και ερειπωμένο Μοναστήρι του ΜΕΝΑΤ», which it says was restored and renamed after him, he being reckoned its second founder, and the display name takes that. Its first sentence puts his birth at «Πρεσινιέ της Γαλλίας», a Greek transcription of a French place name, which is left out of the display name rather than guessed back into French. Two people the page names are deliberately not linked and get no `related` row, because the page does not say which man it means: the ruined monastery it calls «του Μενά ή του Αγίου Μηνά», where the corpus holds three men named Menas, and «ο θαυμαστός πνευματικός του προστάτης, Όσιος Βενέδικτος», where it holds three named Benedict. His companions Savvininos, Konstas, Theophritos and his elder Eudus have no folders. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names him; its text reads «εχθρού θριαμβεύουσα την δύναμιν», with a feminine participle for a man, and that is the page's own reading and is copied unchanged."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ηχος πλ. δ΄.",
+      "text": "Των μοναστών τα πλήθη, τον καθηγητήν σε τιμώμεν Μενέλαε, δια σου γαρ την τρίβον, την όντως ευθείαν πορεύεσθαι έγνωμεν. Μακάριος ει, τω Χριστώ δουλεύσας, και εχθρού θριαμβεύουσα την δύναμιν, αγγέλων συνόμιλε, και ασκητών συμμέτοχε των μεγάλων. Μεθ ων πρέσβευε τω Κυρίω, ελεηθηναι τας ψυχας ημών.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ηχος πλ. δ΄ — the only hymn on the page of «Όσιος Μενέλαος». It is the common of a venerable monastic founder, printed under his name and naming him in the vocative, «Μενέλαε»",
+        "url": "https://www.saint.gr/4079/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "We, the multitudes of monastics, honour you as our teacher, Menelaus, for through you we have learned to walk the truly straight path. Blessed are you, who served Christ and triumphed over the power of the enemy, companion of angels and sharer with the great ascetics. With them, intercede with the Lord that our souls may find mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

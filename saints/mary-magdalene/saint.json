@@ -6,6 +6,11 @@
       "form": "Maria Magdalena",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 iulie, «Sfânta Mironosiță și întocmai cu Apostolii Maria Magdalena», with the rank words left off."
+    },
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιουλίου, «Αγία Μαρία η Μαγδαληνή η Μυροφόρος και Ισαπόστολος», with the rank word and the titles left off. The page's own hymn spells the byname «Μανδαληνή» in its text and «Μαγδαληνή» in its heading."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιουλίου — «Αγία Μαρία η Μαγδαληνή η Μυροφόρος και Ισαπόστολος»",
+        "url": "https://www.saint.gr/07/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and its verse names the day too: «Δευτερίῃ Μαρίη μύσεν εἰκάδι Μαγδαληνή». The woman is the folder's own, and the Greek listing gives her the same two titles the Romanian does, myrrh-bearer and equal to the apostles. The page adds what the Romanian life did not: her town, «καταγόταν από τα Μάγδαλα, πόλη που βρίσκεται δυτικά της θάλασσας της Γαλιλαίας»; her burial «στην είσοδο της σπηλιάς, όπου αργότερα εκοιμήθησαν οι επτά παίδες εν Εφέσω», the seven youths having no folder in the corpus and so no link; and a list of relics — the right hand at Dionysiou, the left incorrupt at Simonopetra, part of the left foot at Esphigmenou, portions at Saint George Pheneos in Corinthia and the Forty Martyrs of Sparta, at the Lateran in Rome, at the basilica of Saint Maximin at Marseille and at the church of the same name the page spells «Vezelau» in France. It gives no year anywhere, so no `dates` are proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints three hymn texts and two are taken, the Ἀπολυτίκιον and the Κοντάκιον, both of which name her; the Οἶκος is left out because the schema holds a troparion or a kontakion and nothing else. The apolytikion's text reads «Σεμνὴ Μανδαληνή» for Μαγδαληνή, and that is the page's own reading, copied unchanged."
     },
     {
       "church": "serbian",
@@ -60,6 +75,40 @@
       },
       "english": {
         "text": "Christ, who for our sake was born of the Virgin, you followed, honoured Mary Magdalene, and you kept His ordinances and His laws. Therefore, keeping today your most holy memory, we praise you in faith and honour you with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ.",
+      "text": "Χριστῷ τῷ δι᾽ ἡμᾶς, ἐκ Παρθένου τεχθέντι, Σεμνὴ Μανδαληνή, ἠκολούθεις Μαρία, αὐτοῦ τὰ δικαιώματα, καὶ τοὺς νόμους φυλάττουσα, ὅθεν σήμερον, τὴν παναγίαν σου μνήμην, ἑορτάζοντες, ἀνευφημοῦμέν σε πίστει, καὶ πόθῳ γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τὸν τάφον σου Σωτὴρ — the first of the three hymn texts on the page of «Αγία Μαρία η Μαγδαληνή η Μυροφόρος και Ισαπόστολος», and it names her. Its «Μανδαληνή» for Μαγδαληνή is the page's own reading",
+        "url": "https://www.saint.gr/734/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ, who was born of the Virgin for our sake — him you followed, honourable Mary of Magdala, keeping his ordinances and his laws; and so today, keeping your all-holy memory, we praise you in faith and honour you with longing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθείς.",
+      "text": "Ὁ ὑπερούσιος Θεὸς ἐν τῷ κόσμῳ, μετὰ σαρκὸς ἐπιφοιτῶν Μυροφόρε, σὲ ἀληθῆ Μαθήτριαν προσήκατο, ὅλην σου τὴν ἔφεσιν, πρὸς αὐτὸν κεκτημένην, ὅθεν καὶ ἰάματα, ἀπετέλεσας πλεῖστα· καὶ μεταστάσα νῦν ἐν οὐρανοῖς, ὑπὲρ τοῦ κόσμου πρεσβεύεις ἑκάστοτε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθείς — the second of the three hymn texts on the page of «Αγία Μαρία η Μαγδαληνή η Μυροφόρος και Ισαπόστολος», and it addresses her as myrrh-bearer",
+        "url": "https://www.saint.gr/734/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "God who is above all being, coming into the world in the flesh, received you, myrrh-bearer, as a true disciple, since you had set all your desire upon him; and so you worked very many healings. And now, having passed over into the heavens, you intercede at every hour for the world.",
         "rendered": "site"
       }
     }
