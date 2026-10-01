@@ -15,6 +15,11 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's life for 21 august, which names Bassa's three sons «Teognie, Agapie și Pist»; the calendar's own line for the day names only «Vasa, cu fiii ei»."
+    },
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Αυγούστου, «Αγία Βάσσα και τα παιδιά της Θεόγνιος, Αγάπιος και Πιστός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Αυγούστου — «Αγία Βάσσα και τα παιδιά της Θεόγνιος, Αγάπιος και Πιστός»",
+        "url": "https://www.saint.gr/08/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the Russian and Serbian rows on the Julian calendar, and the entry is the same family: Bassa, wife of the idol-priest Valerius, and her three sons Theognius, Agapius and Pistus. saint.gr dates the household's conversion, «Όταν πληροφορήθηκε αυτό το πράγμα ο Ουαλέριος (περί το 290 μ.Χ.)», about 290, and sets the whole under Diocletian; that is compatible with but not the same as the 305–311 these folders already carry, so no `dates` object is proposed here and the page's own figure is recorded in the paragraph as the page's. The page also hedges the city: «κατοικούσε στην Έδεσσα (το πιθανότερο της Μακεδονίας)» — Edessa, most probably the Macedonian one — which the English display names of these four folders do not distinguish, and which is reported rather than acted on. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion, which names the mother and all three sons and is therefore taken for all four folders."
     },
     {
       "church": "serbian",
@@ -86,5 +101,24 @@
     "bassa-of-edessa",
     "pistus-son-of-bassa",
     "theognius-son-of-bassa"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς καλλίτεκνος μήτηρ τὴ Τριάδι προσήγαγες, Βάσσα Ἀθληφόρε θεόφρον, τοὺς καρποὺς τῆς κοιλίας σου, Θέογνιον Ἀγάπιον Πιστόν, ἀθλήσαντας τῷ λόγῳ σου στερρῶς, μεθ' ὧν θείας ἀπολαύουσα χαρμονῆς, σῷζε τοὺς ἐκβοώντας σοὶ· δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the one hymn on the page of «Αγία Βάσσα και τα παιδιά της Θεόγνιος, Αγάπιος και Πιστός». It names the mother and each of the three sons, so it is the family's joint service and is taken for all four folders.",
+        "url": "https://www.saint.gr/826/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a mother of fair children you brought to the Trinity, prize-bearing and God-minded Bassa, the fruits of your womb — Theognius, Agapius and Pistus — who contended steadfastly at your word; and enjoying the divine gladness with them, save those who cry out to you: Glory to Christ who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    }
   ]
 }

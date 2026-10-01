@@ -53,9 +53,11 @@ calendar, tells it more shortly — the monastery of the Holy Cross, the
 temptations borne with patience and thanksgiving, the rain brought down by
 his prayer, and repose about 1220 after fifty years in the habit.
 
+The Greek calendar keeps Abraham on the same day, 21 August, and says of him only that it knows nothing: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου» — we have no details of the Russian saint's life. What the Greek listing does add is how it names him, «Όσιος Αβράμιος ο Αρχιμανδρίτης Σμολένσκης ο Θαυματουργός», the venerable Abramios, archimandrite of Smolensk, the wonderworker. It prints no hymn, no distich, no year and no relics.
+
 *After the life printed by the Sretensky calendar (days.pravoslavie.ru) —
 [the entry](https://days.pravoslavie.ru/Life/life4490.htm), read 5 September 2026 — this
 time whole; the earlier reading had stopped partway. The Ohrid Prologue
 for 3 September 2026 (21. август ст. ст.), as printed by the Православни
 подсетник (pravoslavno.rs), tells it for the Serbian calendar —
-[the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-03&prolog=1).*
+[the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-09-03&prolog=1); and saint.gr's calendar for 21 Αυγούστου — [the day](https://www.saint.gr/08/21/index.aspx) and [the life](https://www.saint.gr/2307/saint.aspx), read 1 October 2026.*

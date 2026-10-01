@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-antonina alexander-companion-of-barbarus alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-in-iconium alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-perge alexander-of-prusa alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-five now. The new one is the Alexander martyred in Iconium on 21 August; the others are read in the el-08-01 entry for this name form.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Twenty-six now. The new one is Stephen of Hungary on 20 August; the others are read in the el-08-12 entry for this name form.',
   'ρηγινοσ reginus-in-cyprus reginus-of-skopelos':

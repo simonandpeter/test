@@ -217,6 +217,12 @@ Theotokos at the Seraphim-Diveyevo monastery; the Russian calendar keeps
 her on 21 August (Julian) and in the synaxes of the saints of Diveyevo and
 Nizhny Novgorod.
 
+The Greek calendar keeps Martha on the same day, 21 August, and tells her story as a story about obedience. saint.gr gives her name in the world, Maria Semyonovna Milyukova, and says she had a close spiritual relation with [Seraphim of Sarov](/saints/seraphim-of-sarov); that she entered the monastery in 1823, and that from the age of thirteen one of her disciplines was silence; that she was always in deep and unceasing prayer; and that her ascetic life surpassed in hardness and strictness the ascetic life of many monks, while her obedience to Seraphim was perfect.
+
+Such was that relation, the page says, that he revealed to her much of what was going to happen in the monastery, and much of what the Mother of God told him during her visits to him. After her repose on 21 August 1829, Seraphim revealed to the other nuns that he had given her the great monastic schema, and «ότι τώρα η ψυχή της βρίσκεται στη Βασιλεία των ουρανών, κοντά στην Αγία Τριάδα, στο θρόνο του Θεού και όλοι θα βοηθηθούν απ' αυτήν» — that her soul was now in the Kingdom of heaven, near the Holy Trinity, at the throne of God, and that everyone would be helped by her.
+
+At her funeral, the page continues, her sister Praskovia Semyonovna saw plainly at the holy doors the Mother of God, and the nun Martha standing in the air; and Praskovia then began to play the fool, to prophesy and to tear her clothes, and everyone heard voices and the grinding of the demons going out of her. Seraphim used to tell how many people received healing during that funeral, and some time later he said he had received confirmation that the nun Martha is near the throne of God and near the Mother of God, beside the holy virgins, and he urged everyone to pray to her. Her relics, the page ends, are at the monastery of Diveyevo in Russia.
+
 *After the life printed by the Russian church calendar at azbyka.ru —
 [the entry](https://azbyka.ru/days/sv-marfa-diveevskaja-miljukova), read 5 September 2026 — this
-time whole; the earlier reading had stopped partway.*
+time whole; the earlier reading had stopped partway; and saint.gr's calendar for 21 Αυγούστου — [the day](https://www.saint.gr/08/21/index.aspx) and [the life](https://www.saint.gr/1311/saint.aspx), read 1 October 2026.*

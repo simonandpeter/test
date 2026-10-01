@@ -6,6 +6,11 @@
       "form": "Atanasie al III-lea (Patelarie)",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 mai, «Sfântul Ierarh Atanasie al III-lea (Patelarie), Patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Αυγούστου, «Άγιος Αθανάσιος ο Πατελλάρος, ο Καθήμενος, Πατριάρχης Κωνσταντινουπόλεως», with the rank word, the epithets and the see left off. The page gives his name in the world as «Αλέξιος Πατελάρος»."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Μαΐου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Αυγούστου — «Άγιος Αθανάσιος ο Πατελλάρος, ο Καθήμενος, Πατριάρχης Κωνσταντινουπόλεως»",
+        "url": "https://www.saint.gr/08/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Αυγούστου εκάστου έτους», and the page explains the day rather than leaving it to be guessed: the Russian Church recognised his sanctity on 1 February 1662 and set his feast on 2 May, which is the day the folder's Romanian row already carries, and «Στις 21 Αυγούστου 1993 μ.Χ., η Αξός ως γενέτειρα του Αγίου Αθανασίου υπεδέχθη μικρό τεμάχιο του ιερού λειψάνου του … Από τότε η μνήμη του Αγίου Αθανασίου Πατελάρου εορτάζεται την 21η Αυγούστου κάθε έτους» — since that reception of a portion of the relic at his birthplace in Crete, his memory is kept on 21 August every year. So this is one man with two days on two calendars and the Greek one is this one, by the page's own account. Its death date, «Απεβίωσε στις 5 Απριλίου 1654 μ.Χ.», agrees with the 1654 the folder already carries from doxologia.ro, so no `dates` object is proposed. The page gives a birth window the folder may not have, «Γεννήθηκε στο χωριό Αξός Μυλοποτάμου του Ρεθύμνου μεταξύ των ετών 1580 μ.Χ. και 1597 μ.Χ.», which is recorded in the paragraph and not in `dates`, a reader not replacing a folder's dates object from one page. It records the relics: incorrupt at the cathedral of the Annunciation at Kharkov, a portion in the parish church at Axos, and that the Axos portion was stolen in a break-in in February 2010. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
     },
     {
       "church": "serbian",

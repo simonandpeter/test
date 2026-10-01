@@ -1,0 +1,50 @@
+{
+  "slug": "alexander-in-iconium",
+  "display_name": "Alexander in Iconium",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Αυγούστου, «Όσιος Αλέξανδρος «ο εν Ικονίω»», with the rank word left off and the page's own epithet «ο εν Ικονίω» kept in the display name only."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Αυγούστου — «Όσιος Αλέξανδρος «ο εν Ικονίω»»",
+        "url": "https://www.saint.gr/08/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the entry is one sentence and a citation: «Η μνήμη του Οσίου Αλέξανδρου αναγράφεται στο Σιναϊτικό κώδικα 631. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του» — his memory is written in the Sinai codex 631, and we have no other details of his life. He is Όσιος and not a martyr, so `types` is `venerable` alone. The page gives no year and so there is no `dates` object, and it gives no place beyond the epithet, so there is no `locations` entry either. The corpus's other men of Iconium — Amphilochius, Cornutus, Procopius, Sosipater — are other days and other men, and none of them is an Alexander. Notably the page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence, although the entry is as bare as entries that do: it names its manuscript, and that is the difference."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -20,6 +20,11 @@
       "form": "Tadeu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 august, «Sfântul Apostol Tadeu», with the rank word left off."
+    },
+    {
+      "form": "Θαδδαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Αυγούστου, «Άγιος Θαδδαίος ο Απόστολος», with the rank words left off. The page's quotation of M. Galanos gives «Λεββαίος» and «Ιούδας» as other names of the man it identifies with him; neither is recorded as a name form here, because the page offers them inside an argument it does not settle."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 21 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Αυγούστου — «Άγιος Θαδδαίος ο Απόστολος»",
+        "url": "https://www.saint.gr/08/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Αυγούστου εκάστου έτους», the same day the folder's Russian and Serbian rows already carry on the Julian calendar, and the main narrative is the same man the folder holds: the Hebrew of Edessa who was baptised by John the Baptist, followed the Lord to the Passion, returned to Edessa after the Ascension, cleansed the toparch Abgar of leprosy and baptised him, founded churches in the cities of Syria, and reposed in peace at Beirut. saint.gr gives no year, so no `dates` object is proposed and the folder keeps the c. 44 it already has. **The page then argues against its own identification.** It quotes M. Galanos: some suppose this is one of the Seventy, a Jew of Edessa, «ἀλλὰ βέβαιο μπορεί να θεωρηθεί, ότι ο απόστολος Θαδδαίος είναι ο υπό το όνομα αυτό φερόμενος μεταξύ των 12» — but it may be held certain that the apostle Thaddaeus is the one borne under that name among the Twelve, otherwise called Lebbaeus, brother of James the Less, author of the epistle of Jude, who preached in Mesopotamia and died a martyr's death there. That is a disagreement about who the man was and about how he died, not about the day, and it sits inside one page; the row records the day page read, the quarrel is written into the life in the page's own words, and the reader moves nobody and merges nobody on the strength of it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints two apolytikia and a kontakion, all three taken here, and an Οἶκος and a Κάθισμα besides, neither of which is a kind the schema holds and neither of which is drafted."
     },
     {
       "church": "serbian",
@@ -172,6 +187,56 @@
         "text": "Holy Apostle Thaddeus, entreat the merciful God to grant our souls forgiveness of sins.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θεοῦ τοῦ ἐν σώματι, ἐπιφανέντος ἠμίν, αὐτόπτης γενόμενος, καὶ ἱερὸς μαθητής, Θαδδαῖε Ἀπόστολε, ἔλαμψας τοὶς ἐν σκότει, τὴν σωτήριον χάριν ὤφθης τῶν ἐν Ἐδέσσῃ, ἰατὴρ λαμπαδοῦχος, διὸ τοὺς προσιόντας σοί, σκέπε ἑκάστοτε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first of the two apolytikia on the page of «Άγιος Θαδδαίος ο Απόστολος», and it names him and Edessa, «Θαδδαῖε Ἀπόστολε … τῶν ἐν Ἐδέσσῃ».",
+        "url": "https://www.saint.gr/827/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having become an eyewitness and a sacred disciple of God who appeared to us in the body, Thaddaeus the apostle, you shone the saving grace upon those in darkness; you were seen as a torch-bearing physician of those in Edessa; therefore shelter at every hour those who come to you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀπόστολε ἅγιε Θαδδαῖε, πρέσβευε τῷ ἐλεήμονι Θεῷ ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, printed with no model named — the second apolytikion on the page of «Άγιος Θαδδαίος ο Απόστολος». It is the common of an apostle, printed under his name with his name in it, and is taken whole as the page has it.",
+        "url": "https://www.saint.gr/827/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Thaddaeus, intercede with the merciful God, that he grant our souls the forgiveness of our offences.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἑορτὴ χαρμόσυνος, τοῦ Ἀποστόλου ἐπέστη, εὐφροσύνως σήμερον, ἐπιτελέσωμεν ταύτην· νέμει γάρ, τοῖς αὐτὸν πίστει ἀεὶ τιμῶσι, λύτρωσιν ἁμαρτημάτων, καὶ ῥῶσιν θείαν· καὶ γὰρ ἔχει παρρησίαν, ὡς θεῖος μύστης Χριστοῦ τῆς χάριτος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — the kontakion on the page of «Άγιος Θαδδαίος ο Απόστολος». It names no saint but «τοῦ Ἀποστόλου», so it is a common printed under his name and is copied whole as the page has it. The page also prints an Οἶκος and a Κάθισμα, neither of which is a kind the schema holds; neither is drafted.",
+        "url": "https://www.saint.gr/827/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The joyful feast of the apostle is upon us; let us keep it today with gladness, for he dispenses to those who ever honour him in faith the release of their sins and divine strength; for he has boldness, as a divine initiate of the grace of Christ.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "images": [
