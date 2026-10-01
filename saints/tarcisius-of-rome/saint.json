@@ -1,0 +1,78 @@
+{
+  "slug": "tarcisius-of-rome",
+  "display_name": "Tarcisius of Rome",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ταρσίζιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 15 Αυγούστου, «Άγιος Ταρσίζιος», with the rank word left off. The English display name is the Latin form an English reader looks the boy up under; saint.gr prints only the Greek."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 15ης Αυγούστου — «Άγιος Ταρσίζιος»",
+        "url": "https://www.saint.gr/08/15/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 15 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Ταρσιζιος (; - 257)», and the notice dates the martyrdom by the emperors: «μαρτύρησε στη Ρώμη, σε πολύ νεαρή ηλικία, τον καιρό που ήταν αυτοκράτορες, ο Ουαλεριανός και Γαλιηνός (257 μ.Χ.)». It makes him the disciple of the hieromartyr Stephen, bishop of Rome, whose memory it says the Church keeps on 3 Αυγούστου — the corpus holds no folder for that Stephen, so he is named in the life and not linked. It says the martyrologies call the boy «Ακόλουθος», an acolyte and helper of the priests, which is no `types` slug this corpus has and is left out of `types` rather than forced; and it names its own source, «το Ρωμαϊκό μαρτυρολόγιο: ACTASANCTORUM. AUGUSTITOMUS III». Relics: «Τα Ιερά Λείψανα του Αγίου βρίσκονται στον Ρωμαιοκαθολικό Ναό του Αγίου Σιλβέστρου in Capite Ρώμης». **The page also records a local commemoration the schema cannot hold: a panegyric synaxis in his honour at the church of the Holy Unmercenaries at Karavas in the metropolis of Piraeus, «το πρώτο Σάββατο μετά τη γιορτή της Υπαπαντής» — the first Saturday after the feast of the Meeting — which is a named weekday reckoned from a feast and is not a fixed day; it is named in the reader's report and is not a row.** He is the only person saint.gr's 15 Αυγούστου names at all: the other 107 entries are the Dormition, a remembrance of a miracle of the Theotokos, and 105 synaxes of her icons. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints one hymn, an apolytikion in the third tone to the model Θείας πίστεως, which names him; it is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 257,
+      "latest": 257,
+      "display": "257",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στη Ρώμη, σε πολύ νεαρή ηλικία, τον καιρό που ήταν αυτοκράτορες, ο Ουαλεριανός και Γαλιηνός (257 μ.Χ.)», and its head line «(; - 257)». The page gives no year of birth, only that he was very young."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείω έρωτι εμπεπλησμένος, Δώρα τίμια εν κόλποις φέρων, το θανείν υπέρ τούτων αιρούμενος, και ανόμοις μη προδώσας τον Κύριον, ανεδείχθης μαρτύρων το καύχημα, ω Ταρσίζιε, της Ρώμης το βλάστημα, και νέων παίδων χριστιανών αγαλλίαμα, ικέτευε Χριστόν τον Θεόν, σωθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ', Θείας πίστεως — the only hymn on the page of «Άγιος Ταρσίζιος», and it names him, «ω Ταρσίζιε, της Ρώμης το βλάστημα», and the Precious Gifts he carried in his bosom",
+        "url": "https://www.saint.gr/769/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Filled with divine love, carrying the Precious Gifts in your bosom, choosing to die for them rather than betray the Lord to lawless men, you were shown forth as the boast of the martyrs, O Tarsizios, offshoot of Rome and gladness of young Christian children. Entreat Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
