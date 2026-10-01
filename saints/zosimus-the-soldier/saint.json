@@ -1,0 +1,96 @@
+{
+  "slug": "zosimus-the-soldier",
+  "display_name": "Zosimus the Soldier",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Ζώσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ζώσιμος», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 98,
+      "display": "98",
+      "basis": "traditional",
+      "note": "saint.gr: «ἀλλὰ το 98 μ.Χ. ο έπαρχος στην Αντιόχεια της Πισιδίας Δομιτιανός ... διέταξε το θάνατό του», with the page head «(; - 98)». The page also dates Trajan 89–117, which does not fit the usual reckoning of that reign and is left as the page has it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Άγιος Ζώσιμος»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. The corpus keeps only `zosimus-of-syracuse`, a bishop of Sicily on another day; this Zosimus is the soldier of Apollonias of Sozopolis beheaded at Antioch of Pisidia under the eparch Domitian in 98. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος δ´.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Στολαῖς ταῖς ἐξ αἵματος ὠραϊζόμενος, Κυρίῳ παρίστασαι τῷ Βασιλεῖ οὐρανῶν, ἀοίδιμε Ζώσιμε· ὅθεν σὺν ἀσωμάτων καὶ μαρτύρων χορείαις, ᾽δεις τῇ τρισαγίῳ καὶ φρικτῇ μελῳδία· διὸ ταῖς ἱκεσίαις ταῖς σαῖς σῴζε τοὺς δούλους σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, ᾌχος δ´, Ταχὺ προκατάλαβε — on the page of «Άγιος Ζώσιμος», and it names him",
+        "url": "https://www.saint.gr/603/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the robes that come of blood, thou standest before the Lord, the King of heaven, O Zosimus of much song; and therefore with the choirs of the bodiless ones and of the martyrs thou singest the thrice-holy and awesome melody. By thy supplications, then, save thy servants.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος β´.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Τῆς πλάνης τεμὼν τὸ κράτος τῇ ἐνστάσει σου καὶ νίκης λαβὼν τὸ στέφος τῇ ἀθλήσει σου, τοῖς Ἀγγέλοις ἔνδοξε, συναγάλλει Ζώσιμε πολύαθλε, σὺν αὐτοῖς Χριστῷ τῷ Θεῷ, πρεσβεύων ἀπαύστως ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος β´, Τὰ ἄνω ζητῶν — on the same page, and it names him",
+        "url": "https://www.saint.gr/603/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having cut down the power of error by thy steadfastness and taken the crown of victory by thy contest, much-contending Zosimus, thou rejoicest with the angels, glorious one, and with them intercedest unceasingly with Christ our God for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

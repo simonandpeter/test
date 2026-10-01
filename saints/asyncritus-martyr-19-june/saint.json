@@ -1,0 +1,50 @@
+{
+  "slug": "asyncritus-martyr-19-june",
+  "display_name": "Asyncritus (19 June)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Ασύγκριτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ασύγκριτος ο Ιερομάρτυρας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Άγιος Ασύγκριτος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. saint.gr keeps an Asyncritus twice: the Apostle of the Seventy on 8 April, which is the corpus's `asyncritus-the-apostle` and already has its own Greek row from that day's listing, and this hieromartyr on 19 June, who is given no see, no company and no year and is said only to have been killed with a knife, with his synaxis at the martyr church of Saint Isidore within Hagia Eirene by the sea on the authority of Nikodemos the Hagiorite. Two entries on one calendar are two commemorations, so these are two men and this is a folder of its own; nothing here identifies him with the Apostle. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

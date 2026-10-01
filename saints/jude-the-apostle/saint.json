@@ -6,6 +6,11 @@
       "form": "Iuda",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 iunie, «Sfântul Apostol Iuda, ruda Domnului»; the line's «ruda Domnului» is the kinship, not part of the name."
+    },
+    {
+      "form": "Ιούδας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ιούδας ο Απόστολος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Άγιος Ιούδας ο Απόστολος»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. It is the same apostle the folder's Romanian row keeps on 19 June: saint.gr's first authority, S. Eustratiades, has him the brother of Christ and of James the brother of God, children of Joseph by another marriage, which is the identification the folder's display name carries. The page itself warns that the data are confused with those of the Apostle Thaddaeus of 21 August and gives a second account, from Michael Galanos, making him one of the Twelve, son of Alphaeus and brother of James the Less; both are recorded in the life and neither is decided here. It gives no year. The page further reports, out of the Lavriotic codex I 78, a second Apostle Jude called the Zealot commemorated on this same day, who reposed in peace; that is a manuscript notice and not a line of the day's listing, and no folder is made for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
       },
       "english": {
         "text": "Knowing thee to be the brother of Christ and a strong martyr, O holy Jude, we praise thee with holiness, who didst trample down deceit and keep the faith. Wherefore, keeping today thy most holy memory, by thy prayers we receive release from sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος α’.",
+      "model": "Τὸν τάφον σου Σωτήρ.",
+      "text": "Χριστοῦ σὲ συγγενῆ, ὦ Ἰούδα εἰδότες, καὶ μάρτυρα στερρόν, ἱερῶς εὐφημοῦμεν, τὴν πλάνην πατήσαντα, καὶ τὴν πίστιν τηρήσαντα, ὅθεν σήμερον, τὴν παναγίαν σου μνήμην, ἑορτάζοντες, ἁμαρτημάτων τὴν λύσιν, εὐχαίς σου λαμβάνομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), ᾌχος α’, Τὸν τάφον σου Σωτήρ — the first of two apolytikia on the page of «Άγιος Ιούδας ο Απόστολος», and it names him and his kinship",
+        "url": "https://www.saint.gr/604/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Knowing thee, O Jude, to be a kinsman of Christ and a steadfast martyr, we praise thee sacredly, who didst trample down error and keep the faith; and therefore, keeping today thy all-holy memory, we receive by thy prayers the loosing of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος α’.",
+      "model": "Χορὸς Ἀγγελικός.",
+      "text": "Ἐκ ῥίζης εὐκλεοῦς, θεοδώρητον κλῆμα, ἀνέτειλας ἡμῖν, τοῦ Κυρίου αὐτόπτα, Ἀπόστολε θεάδελφε, τοῦ Χριστοῦ κῆρυξ πάνσοφε, τρέφων ἅπαντα, κόσμον καρποῖς σου τῶν λόγων, τὴν ὀρθόδοξον, πίστιν Κυρίου διδάσκων, ὡς μύστης τῆς χάριτος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος α’, Χορὸς Ἀγγελικός — on the same page, and it calls him θεάδελφος, brother of God",
+        "url": "https://www.saint.gr/604/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of a glorious root thou didst rise for us, a branch given of God, eyewitness of the Lord, apostle and brother of God, all-wise herald of Christ, feeding the whole world with the fruits of thy words and teaching the Orthodox faith of the Lord as one initiated into grace.",
         "rendered": "site"
       }
     }

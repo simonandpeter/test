@@ -6,6 +6,11 @@
       "form": "Paisie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 iunie, «Sfântul Cuvios Paisie cel Mare»."
+    },
+    {
+      "form": "Παΐσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Όσιος Παΐσιος ο Μέγας και θεοφόρος», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Όσιος Παΐσιος ο Μέγας και θεοφόρος»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same ascetic the folder's Romanian row keeps on 19 June: the Egyptian, youngest of seven, disciple of Abba Pambo, who withdrew to the western desert and was buried there, and whose relics father Isidore later carried to Pisidia. saint.gr adds the birth year 300, which the folder did not have, and the page head «(300 - ;)» gives no year of death. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -64,9 +79,35 @@
         "text": "The angel in the flesh, the crown of monks, the man without a body, the dweller of the heavens, the divine Paisius rejoices, keeping the feast of his memory together with us, and giving divine grace to those who labour for his sake; wherefore let us glorify him with much zeal.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὁ ἔνσαρκος ἄγγελος, τῶν Μοναστῶν κορωνίς, ὁ ἄσαρκος ἄνθρωπος, τῶν οὐρανῶν οἰκιστής, ὁ θεῖος Παΐσιος, χαίρει τῇ αὐτοῦ μνήμῃ, σὺν ἡμῖν ἑορτάζων, νέμει τοῖς κοπιῶσι, δι’ αὐτὸν θεῖον χάριν· διὸ ἐν προθυμίᾳ πολλῇ τοῦτον τιμήσωμεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), ᾌχος δ’, Ταχὺ προκατάλαβε — the only hymn on the page of «Όσιος Παΐσιος ο Μέγας και θεοφόρος», and it names him",
+        "url": "https://www.saint.gr/601/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The angel in the flesh, the crown of monastics, the fleshless man, the dweller of the heavens, the divine Paisius rejoices in his own memory, keeping the feast with us, and gives divine grace to those who labour for his sake; therefore let us honour him with much eagerness.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "300",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο όσιος Παΐσιος καταγόταν από την Αίγυπτο και γεννήθηκε το έτος 300 μ.Χ.», with its page head «(300 - ;)». The page gives no year of death, saying only that he died at a very advanced age, and doxologia gave no year at all."
+    }
   }
 }

@@ -1,0 +1,68 @@
+{
+  "slug": "job-patriarch-of-moscow",
+  "display_name": "Job of Moscow",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Moscow",
+  "names": [
+    {
+      "form": "Ιώβ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ιώβ Μητροπολίτης Μόσχας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1530,
+      "latest": 1530,
+      "display": "about 1530",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε περί το 1530 μ.Χ. στην Στάριτσα» — the page's own year, with its «περί»."
+    },
+    "death": {
+      "earliest": 1607,
+      "latest": 1607,
+      "display": "1607",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε το 1607 μ.Χ.», with the page head «(; - 1607)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Άγιος Ιώβ Μητροπολίτης Μόσχας»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the corpus's other men of the name — `job-of-pochaev`, `job-of-zographou`, `job-the-hermit-6-march` or `job-the-long-suffering`. The day's line calls him metropolitan of Moscow and the page's own sentence calls him the first patriarch of Moscow, born about 1530 at Staritsa and dead in 1607, with his relics in the Dormition cathedral of the Kremlin; it adds that it has no other details. The page also links a separate commemoration of the translation of his relics, which belongs to another day and is not recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

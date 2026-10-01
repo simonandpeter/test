@@ -1,0 +1,59 @@
+{
+  "slug": "barlaam-of-vazsky",
+  "display_name": "Barlaam of Vazsky",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Βαρλαάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Όσιος Βαρλαάμ ο Βάζσκυ», with the rank word and the epithet left off. The epithet the page prints is «ο Βάζσκυ»; the English form of it in the display name is a rendering of that spelling and of nothing else."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1462,
+      "latest": 1462,
+      "display": "1462",
+      "basis": "traditional",
+      "note": "saint.gr's page head for him reads «Όσιος Βαρλαάμ ο Βάζσκυ (; - 1462)», and the year there is the only date the page gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Όσιος Βαρλαάμ ο Βάζσκυ»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the corpus's other men of the name — `barlaam-hutinski`, `barlaam-of-sikisk`, `barlaam-of-antioch`, `barlaam-30-may` or `varlaam-of-moldavia`: the page calls him a Russian venerable «ο Βάζσκυ», dead in 1462, and says in so many words that it has no details of his life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

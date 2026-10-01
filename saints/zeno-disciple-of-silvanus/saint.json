@@ -1,0 +1,52 @@
+{
+  "slug": "zeno-disciple-of-silvanus",
+  "display_name": "Zeno, disciple of Silvanus",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Ιουνίου, «Όσιος Ζήνων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιουνίου — «Όσιος Ζήνων»",
+        "url": "https://www.saint.gr/06/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the corpus's other men of the name — `zeno-of-diospolis`, `zeno-of-gaza`, `zeno-of-ikalto`, `zeno-of-nicomedia`, `zeno-the-courier`, `zeno-the-faster-of-kiev`, the three companions of Eudoxius, Peleus and Zoilus, or the martyrs of 22 June, 22 August and 3 September: this Zeno is the disciple of the great elder Silvanus who drove out demons and died at sixty-two. Which Silvanus the page means it does not say, and no folder is asserted for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
