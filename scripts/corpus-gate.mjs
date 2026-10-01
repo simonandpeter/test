@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'αττικοσ atticus-29-april atticus-of-constantinople atticus-of-sebasteia':
+    'Three men. The new one is Atticus of Sebasteia on 2 November, one of the ten soldiers that day’s line enumerates; the others are Atticus the martyr, kept with Sisinius on 26 August, and Atticus of Constantinople. Three entries on the Greek calendar, so three men.',
+  'μαρινοσ marinos-vaanes marinus-martyr-17-march marinus-of-sebasteia':
+    'Three men. The new one is Marinus of Sebasteia on 2 November, of the ten soldiers; the others are Marinos Vaanes on 2 June and the Marinus of 17 March.',
+  'κυριακη kyriake-daughter-of-dorotheus kyriake-martyr-19-may kyriake-martyr-2-november kyriake-sister-of-photini':
+    'Four women. The new one is the Kyriake of 2 November, martyred with Domnina and Domna; the others are Kyriake the daughter of Dorotheus on 7 July, the Kyriake of 19 May and Kyriake the sister of Photini on 26 February.',
+  'ευστρατιοσ eustratius-of-mount-olympus eustratius-of-sebasteia eustratius-the-faster':
+    'Three men. The new one is Eustratius of Sebasteia on 2 November, of the ten soldiers; the others are Eustratius of Mount Olympus on 9 January and Eustratius the Faster on 28 March.',
+  'ευδοξιοσ eudoxius-of-melitene eudoxius-of-sebasteia':
+    'Two men. The new one is Eudoxius of Sebasteia on 2 November, who heads the ten soldiers of that day; the other is Eudoxius of Melitene on 6 September, whom four calendars keep.',
+  'δομνινα domnina-5-january domnina-martyr-2-november domnina-the-ascetic':
+    'Three women. The new one is the Domnina of 2 November, martyred with Kyriake and Domna; the others are the Domnina of 5 January and Domnina the ascetic on 1 March.',
+  'δομνα domna-martyr-2-november domnina-5-january':
+    'Two women. The new one is the Domna of 2 November, martyred with Kyriake and Domnina; the other is the Domnina of 5 January, whose name folds onto hers.',
+  'καρτεριοσ carterius-of-caesarea carterius-of-sebasteia':
+    'Two men. The new one is Carterius of Sebasteia on 2 November, of the ten soldiers; the other is Carterius of Caesarea on 8 January.',
+  'αντωνιοσ anthony-meskhi anthony-of-constantinople anthony-of-georgia anthony-of-krasnokholmsk anthony-of-martkopi anthony-of-novgorod anthony-of-radonezh anthony-of-the-caves anthony-of-tobolsk anthony-of-vologda anthony-of-zadonsk anthony-of-zographou anthony-the-great anthony-the-roman-of-novgorod antonius-the-presbyter antony-companion-of-bassus antony-gorban antony-of-korel antony-of-novgorod antony-of-thessalonica antony-of-valaam antony-of-vilnius antony-son-of-john-of-syracuse antony-the-athenian antony-the-martyr-1-march':
+    'Twenty-five now. The new one is Antony the confessor, archbishop of Thessalonica, on 2 November; the others are read in the el-06-06 entry for this name form.',
   'μανουηλ manuel-emperor-of-constantinople manuel-of-adrianople manuel-of-melambes manuel-of-persia manuel-of-samothrace manuel-of-sphakia manuel-of-the-east manuel-son-of-david-komnenos manuel-the-venerable-27-july':
     'Nine now. The new one is Manuel the son of David the Great Komnenos on 1 November; the others are read in the el-04-06 entry for this name form.',
   'γεωργιοσ george-bozic george-companion-of-theodore george-i-patriarch-of-constantinople george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-krene george-of-maleon george-of-megara george-of-melambes george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-thessalonica george-of-vladimir george-paizanos-of-mytilene george-son-of-david-komnenos george-the-chozebite george-the-cypriot george-the-epitideiotis george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-perachoritis george-the-persian george-the-pilgrim george-the-salamanis george-the-sinaite george-the-trophy-bearer george-the-vavatsiniotis gerasimos-of-karpenisi':

@@ -1,0 +1,59 @@
+{
+  "slug": "senators-of-sebasteia",
+  "display_name": "The Senators of Sebasteia",
+  "names": [
+    {
+      "form": "Συγκλητικοί",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Συγκλητικοί», with the rank word left off, in the shape the corpus already uses for a company whose members it cannot name."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 315,
+      "latest": 315,
+      "display": "315",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν ο Λικίνιος, το 315 μ.Χ., αντιμαχόμενος τον Μέγα Κωνσταντίνο κήρυξε βαρύ διωγμό κατά της χριστιανικής πίστης…» — the page's own year, and the burning follows in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιοι Συγκλητικοί»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry names nobody and numbers nobody, and says so itself: «Τα ονόματά τους δεν διασώθηκαν στη γη, λάμπουν όμως αθάνατα στον ουρανό». So it is one folder for the company, in the shape the corpus already uses for the Thirty-eight Fathers slain at Sinai. `sex` is `unknown` because the page does not say the company was only men, as the corpus does for the Three Martyrs in Melitene. The same day's listing keeps ten soldiers of the same city, examined by the same three officials in the same year, who are ten folders because the page names them. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

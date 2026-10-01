@@ -6,6 +6,11 @@
       "form": "Gavriil Georgianul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Cuvios Mărturisitor Gavriil Georgianul»."
+    },
+    {
+      "form": "Γαβριήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Όσιος Γαβριήλ ο Ομολογητής - Σαλός», with the rank words left off. The page's own transliteration of the surname is «Ουργκεμπάτζε»."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Όσιος Γαβριήλ ο Ομολογητής - Σαλός»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Οσιος Γαβριηλ ο Ομολογητης - Σαλος (1929 - 1995)», the archimandrite Gabriel Urgebadze. The folder's existing dates are left untouched: the heading gives the same years. The whole of the page's prose is the canonisation: «Στις 20 Δεκεμβρίου του 2012 μ.Χ., σύμφωνα με την απόφαση της Συνόδου της Αποστολικής Αυτοκέφαλης Ορθόδοξης Εκκλησίας της Γεωργίας ανακηρύχθηκε Άγιος ο αρχιμανδρίτης Γαβριήλ (Ουργκεμπάτζε) με το εξής όνομα: Όσιος Πατήρ Γαβριήλ, ο Ομολογητής – Σάλος. Η μνήμη του θα τιμάται στις 2 Νοεμβρίου.» No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

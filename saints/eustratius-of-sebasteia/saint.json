@@ -1,0 +1,71 @@
+{
+  "slug": "eustratius-of-sebasteia",
+  "display_name": "Eustratius of Sebasteia",
+  "names": [
+    {
+      "form": "Ευστράτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Εύδοξιος, Αγάπιος και άλλοι οκτώ μάρτυρες, Αττικός, Μαρίνος, Ωκεανός, Ευστράτιος, Καρτέριος, Νικοπολιτιανός, Στύραξ και Τωβίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 315,
+      "latest": 315,
+      "display": "315",
+      "basis": "traditional",
+      "note": "saint.gr's heading for each of the ten, «(; - 315)», and in the notice «Όταν, το 315 μ.Χ., εξετάστηκαν από τον άρχοντα της Σεβάστειας Αυξάνιο…». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιοι Εύδοξιος, Αγάπιος και άλλοι οκτώ μάρτυρες, Αττικός, Μαρίνος, Ωκεανός, Ευστράτιος, Καρτέριος, Νικοπολιτιανός, Στύραξ και Τωβίας»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates all ten of its members, so it is ten folders. The corpus keeps four other Eustratiuses — of Arabraca, of Mount Olympus, the Faster, and the one whose companions Auxentius and Orestes have folders of their own — and none of them is a soldier of Sebasteia under Licinius. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "eudoxius-of-sebasteia",
+    "agapius-2-november",
+    "atticus-of-sebasteia",
+    "marinus-of-sebasteia",
+    "oceanus-of-sebasteia",
+    "carterius-of-sebasteia",
+    "nicopolitianus-of-sebasteia",
+    "styrax-of-sebasteia",
+    "tobias-of-sebasteia"
+  ]
+}

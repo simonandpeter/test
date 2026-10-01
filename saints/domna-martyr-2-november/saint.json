@@ -1,0 +1,54 @@
+{
+  "slug": "domna-martyr-2-november",
+  "display_name": "Domna (2 November)",
+  "names": [
+    {
+      "form": "Δόμνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιες Κυριακή, Δομνίνα και Δόμνα», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "kyriake-martyr-2-november",
+    "domnina-martyr-2-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιες Κυριακή, Δομνίνα και Δόμνα»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day as the listing, and the whole notice is one sentence. The entry enumerates three women, so it is three folders; the page's own headings keep Δόμνα and Δομνίνα apart, which is why this reading does too. The display name takes the day because the page gives her no epithet, no city and no year, and the corpus already keeps a Domna of Nicomedia. No `dates` object, no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

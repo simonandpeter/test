@@ -6,6 +6,11 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Mucenic Agapie»."
+    },
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Εύδοξιος, Αγάπιος και άλλοι οκτώ μάρτυρες, Αττικός, Μαρίνος, Ωκεανός, Ευστράτιος, Καρτέριος, Νικοπολιτιανός, Στύραξ και Τωβίας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιοι Εύδοξιος, Αγάπιος και άλλοι οκτώ μάρτυρες, Αττικός, Μαρίνος, Ωκεανός, Ευστράτιος, Καρτέριος, Νικοπολιτιανός, Στύραξ και Τωβίας»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the folder's display name already takes that day, so the man is this entry's. A `dates` object is proposed from the page's heading, «(; - 315)», where the folder had none. The entry enumerates ten men: seven of them are new folders of this day's batch, and Atticus and Oceanus are refused and reported because their folders already carry venerated Greek rows on 26 August and 12 September. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -45,5 +60,25 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 315,
+      "latest": 315,
+      "display": "315",
+      "basis": "traditional",
+      "note": "saint.gr's heading for each of the ten, «(; - 315)», and in the notice «Όταν, το 315 μ.Χ., εξετάστηκαν από τον άρχοντα της Σεβάστειας Αυξάνιο…». No year of birth is given."
+    }
+  },
+  "related": [
+    "eudoxius-of-sebasteia",
+    "atticus-of-sebasteia",
+    "marinus-of-sebasteia",
+    "oceanus-of-sebasteia",
+    "eustratius-of-sebasteia",
+    "carterius-of-sebasteia",
+    "nicopolitianus-of-sebasteia",
+    "styrax-of-sebasteia",
+    "tobias-of-sebasteia"
+  ]
 }

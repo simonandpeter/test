@@ -6,6 +6,11 @@
       "form": "Elpidifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 noiembrie, «Sfântul Mucenic Elpidifor»."
+    },
+    {
+      "form": "Ελπιδηφόρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Ακίνδυνος, Αφθόνιος, Πηγάσιος, Ελπιδηφόρος και Ανεμπόδιστος», with the rank word left off. The same page's prose and hymn write «Ελπιδοφόρος»; the day line's form is the one taken here. The page glosses the name «ο δίδων ελπίδα», the giver of hope."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιοι Ακίνδυνος, Αφθόνιος, Πηγάσιος, Ελπιδηφόρος και Ανεμπόδιστος»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry enumerates the same five men the corpus already keeps. A `dates` object is proposed from the page's heading. He is the one of the five to whom the page gives words: a lettered man, beheaded second. The page spells him «Ελπιδηφόρος» in the heading and «Ελπιδοφόρος» in the prose and the hymn; the folder's form is left as it is and the variant is recorded in the hymn's source note. The two hymns name the five and are taken into all five folders. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -65,9 +80,52 @@
         "text": "Champions of the Lord: blessed is the earth that was watered with your blood, and holy are the shrines that received your bodies. For in the arena you overcame the enemy and preached Christ with boldness. Entreat him, as the Good One, to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ακίνδυνον μέλψωμεν, συν Αφθονίω ομού, κλεινόν Ανεμπόδιστον, Ελπιδοφόρον στερρόν, Πηγάσιον ένδοξον ούτοι γαρ ακινδύνως, εξαφθόνου κρατήρας, πηγάζουσι τοις ελπίδι, αρραγεί προσιούσι, χαρίτων ανεμποδίστων, κρήνην θεόβρυτον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ήχος δ’, Ταχύ προκατάλαβε — the first hymn on the page of the five. It names all five and no other saint, and writes his name «Ελπιδοφόρον» where the day line has «Ελπιδηφόρος»; both are copied as they stand.",
+        "url": "https://www.saint.gr/1053/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing of Acindynus together with Aphthonius, of famed Anempodistus, steadfast Elpidephoros and glorious Pegasius; for these, without danger, pour out ungrudging bowls, a God-given spring of unhindered graces, for those who come to them with unbroken hope.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος δ’.",
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τη της Τριάδος καλλονή λαμπρυνθείσα, η πενταυγής των Αθλητών θεία φάλαγξ, τας των τυράννων ήμβλυνε δεινάς προσβολάς, άφθονον ακίνδυνον, ανεμπόδιστον χάριν, άπασι πηγάζουσα, τοις ελπίδι και πόθω, ενθέως προσιούσι δι' αυτών, τω πάντων Κτίστη, Χριστώ τω Θεώ ημών.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος δ’, Ο υψωθείς — on the page of the five. It calls them the five-rayed divine phalanx of the contenders and names no other saint.",
+        "url": "https://www.saint.gr/1053/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made bright by the beauty of the Trinity, the five-rayed divine phalanx of the contenders blunted the dreadful assaults of the tyrants, pouring out for all an ungrudging, danger-free and unhindered grace — for those who through them come with hope and longing, in godly fashion, to the Maker of all, Christ our God.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος δ’.",
+      "model": "Ο υψωθείς."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "traditional",
+      "note": "saint.gr's heading for each of the five, «(; - 330)», and in the notice «Το 330 μ.Χ., επειδή, ομολόγησαν ότι, είναι χριστιανοί, συνελήφθησαν…». No year of birth is given."
+    }
   }
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "antony-of-thessalonica",
+  "display_name": "Antony of Thessalonica",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιος Αντώνιος ο ομολογητής, επίσκοπος Θεσσαλονίκης», with the rank words and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "confessor",
+    "monk"
+  ],
+  "office": "Archbishop of Thessalonica",
+  "dates": {
+    "death": {
+      "earliest": 844,
+      "latest": 844,
+      "display": "844",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Αντωνιος ο Ομολογητης, Επισκοπος Θεσσαλονικης (; - 844)». The page's own body quotes a 1933 study giving 843 for the burial, and a note that the relic was found incorrupt forty-six years after it; the heading's year is the one recorded here and the disagreement is named in the report. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Νοεμβρίου — «Άγιος Αντώνιος ο ομολογητής, επίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/11/02/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 2 Νοεμβρίου εκάστου έτους», the same day as the listing, and is one of the longest and most scholarly on the site: it builds the whole life out of nine paragraphs of the Life of Theodora of Thessalonica written by the cleric Gregory, out of two letters of Theodore the Studite, and out of the excavations under the basilica of Saint Demetrius. The corpus holds no archbishop of Thessalonica of this name. `office` takes the body's «ἀρχιεπίσκοπος» rather than the day line's «επίσκοπος», because the body uses it throughout and the see of Thessalonica is an archbishopric in the same sentences. The page says plainly that his name was never entered in the Synaxarion of the Church of Constantinople nor in the Typikon of the Great Church, and that it stands instead in later lists of the saints of Thessalonica and in an office by the hymnographer Gerasimos Mikragiannanitis for all the saints of that city. No hymn text is printed, so none is drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
