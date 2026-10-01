@@ -6,6 +6,11 @@
       "form": "Chiriachi",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 iulie, «Sfânta Mare Muceniță Chiriachi», with the rank words left off."
+    },
+    {
+      "form": "Κυριακή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Αγία Κυριακή η Μεγαλομάρτυς», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Αγία Κυριακή η Μεγαλομάρτυς»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives the same woman — daughter of Dorotheus and Eusebia, born on a Sunday and named for it. It heads her «(; - 282)» and puts the persecution «Κατά το διωγμό του Διοκλητιανού, το έτος 282 μ.Χ.»; the year is reported rather than written. It also names her patroness of Servia in Kozani. The page prints at least one hymn, but the extractor cut the page at that point and no hymn was read whole, so none is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

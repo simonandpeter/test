@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σατορνινοσ satorninus-7-may satorninus-companion-of-peregrinus saturninus-companion-of-plotinus saturninus-of-corfu saturninus-son-of-juliana':
+    'Five now. The new one is Satorninus, one of the seven of Peregrinus on 7 July; the others are read in the el-06-21 entry for this name form.',
+  'πομπηιοσ pompeius-companion-of-peregrinus pompeius-companion-of-terentius':
+    'Two men: Pompeius the companion of Terentius on 10 April and Pompeius, one of the seven of Peregrinus on 7 July.',
+  'πολυκαρποσ polycarp-of-alexandria polycarp-of-bryansk polycarp-of-smyrna polycarp-the-new polycarp-venerable-8-february':
+    'Five now. The new one is Polycarp the New on 7 July; the others are read in the el-04-02 entry for this name form.',
+  'περεγρινοσ peregrinus-of-apollonia peregrinus-of-dyrrachium':
+    'Two men: Peregrinus of Apollonia on 17 June and Peregrinus of Dyrrachium, who heads the company of seven on 7 July.',
+  'παππιασ papias pappias-companion-of-peregrinus':
+    'Two men: Papias, whom the Greek and Romanian keep on 28 June, and Pappias, one of the seven of Peregrinus on 7 July.',
+  'λουκιανοσ lucian-fedotov lucian-of-tomis lucianus-companion-of-peregrinus':
+    'Three men. The new one is Lucianus, one of the seven of Peregrinus on 7 July; the others are read in the el-05-19 entry for this name form.',
+  'ησυχιοσ hesychius-companion-of-asklepiodote hesychius-companion-of-peregrinus hesychius-confessor-10-may hesychius-of-jerusalem hesychius-of-the-forty-martyrs hesychius-the-senator hesychius-the-sinaite':
+    'Seven now. The new one is Hesychius, one of the seven of Peregrinus on 7 July; the others are read in the el-03-28 entry for this name form.',
+  'γερμανοσ germanos-of-stolobnoe germanus-companion-of-peregrinus germanus-of-constantinople germanus-of-dobrogea germanus-of-kantara germanus-of-novgorod germanus-of-sagmata germanus-of-valaam':
+    'Eight now. The new one is Germanus, one of the seven Peregrinus leads on 7 July; the others are read in the el-06-28 entry for this name form.',
+  'ευσταθιοσ eustathius-hieromartyr-7-july eustathius-i-archbishop-of-serbia eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':
+    'Six now. The new one is the hieromartyr Eustathius of 7 July; the others are read in the el-01-04 entry for this name form.',
+  'βλασιοσ blaise-of-amorion blaise-of-sebaste blaise-the-cowherd blasios-of-akarnania blasius-22-february':
+    'Five now. The new one is Blasios of Akarnania on 7 July; the others are read in the el-02-22 entry for this name form.',
+  'απολλωνιοσ apollonius-companion-of-proclus apollonius-martyr-6-july apollonius-of-brescia apollonius-of-the-twenty-four-martyrs apollonius-the-anchorite':
+    'Five now. The new one is Apollonius of Brescia on 7 July; the others are read in the el-07-06 entry for this name form.',
   'βικτωρ victor-20-april victor-26-february victor-of-glazov victor-of-the-twenty-four-martyrs victor-of-thessalonica victor-yavorsky':
     'Six now. The new one is Victor of the Twenty-four Martyrs on 6 July; the others are read in the el-05-19 entry for this name form.',
   'σισωησ sisoes-the-great sisoes-the-russian':

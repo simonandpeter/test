@@ -7,6 +7,11 @@
       "form": "Evanghel",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 iulie, «Sfântul Mucenic Evanghel, Episcopul Tomisului», with the rank words left off."
+    },
+    {
+      "form": "Ευάγγελος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιος Ευάγγελος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Άγιος Ευάγγελος»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and its whole account is one sentence: «Ο Άγιος Ευάγγελος μαρτύρησε δια ξίφους». The identification rests on the day and the name alone, because saint.gr gives him no see and does not repeat the folder's Tomis; the corpus keeps no other Evangelus of any spelling, and a second folder for one man is the worse of the two errors, so the row is taken as his and this is said plainly. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

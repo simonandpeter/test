@@ -1,0 +1,9 @@
+# Blasios of Akarnania
+
+saint.gr's calendar for 7 Ιουλίου keeps him with companions it does not name: «Άγιος Βλάσιος ο ιερομάρτυρας εξ Ακαρνανίας και οι συν αυτώ». The page says he was abbot, or a bishop living in retirement, at the monastery of the Entry of the Mother of God in the district of Sklavaina — Zaverda, now Palairos in Aitoloakarnania. He was brought to a martyr's end by Agarene pirates, together with five of his fellow monks and a multitude of lay Christians, men, women and children, who were his flock, for their faith in Christ.
+
+They beheaded him, the page says, after first driving five nails slowly into his body; and afterwards his executioners tried to burn his body, and it would not burn. The Christians who survived and came to the place buried Blasios apart from the five fellow ascetics who were martyred with him, whom they laid together in a common grave, and the rest of the Christians they buried all mixed together in a larger one. The martyrdom took place, it says, on 19 December, a Sunday; a stone inscription found where his grave was carried the year 1006, which probably fixes the time of the martyrdom.
+
+The page then says that the martyrdom and the historicity of Blasios and of those with him, and of everything that happened there, is being slowly lost and covered over by the forgetfulness of time, and that the standing of this great saint is altogether unknown, surviving chiefly in the accounts of oral tradition. It carries a much longer account of his later veneration than is retold here — including his appearance to the elder Paisios the Athonite and the building of his church — which this reading did not take in whole, and it prints verses in his honour of which no hymn was read entire, so none is copied.
+
+*After saint.gr's calendar for 7 Ιουλίου — [the day](https://www.saint.gr/07/07/index.aspx) and [the life](https://www.saint.gr/3641/saint.aspx); read 1 October 2026.*

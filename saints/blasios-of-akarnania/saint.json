@@ -1,0 +1,60 @@
+{
+  "slug": "blasios-of-akarnania",
+  "display_name": "Blasios of Akarnania",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Βλάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιος Βλάσιος ο ιερομάρτυρας εξ Ακαρνανίας και οι συν αυτώ», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1006,
+      "latest": 1006,
+      "display": "1006",
+      "basis": "traditional",
+      "note": "saint.gr: a stone inscription found at the place of his grave carried «το έτος 1006 μ.Χ. η οποία πιθανώς να προσδιορίζει και τον χρόνο του μαρτυρίου του» — probably, the page says, the time of his martyrdom; the page is headed «(; - 1006)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Άγιος Βλάσιος ο ιερομάρτυρας εξ Ακαρνανίας και οι συν αυτώ»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day as the listing, so the feast is fixed here; the 19 December its narrative gives is the day of the martyrdom itself («Το μαρτύριο τους έλαβε χώρα την 19η Δεκεμβρίου ημέρα Κυριακή»), not a second feast, and no page repeats it as one. The «οι συν αυτώ» of the line get no folder because the page enumerates none of them: five fellow ascetics and a multitude of lay men, women and children, not one named. The corpus's four men of this name — Blaise of Sebaste, Blaise of Amorion, Blaise the Cowherd and Blasius (22 February) — are all on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page does say in its own voice that his martyrdom and historicity are being lost to the forgetfulness of time and that his standing is altogether unknown, surviving chiefly in oral tradition, which is a statement about the record and not the site's refusal to vouch for the entry."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

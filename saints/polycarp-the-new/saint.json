@@ -1,0 +1,50 @@
+{
+  "slug": "polycarp-the-new",
+  "display_name": "Polycarp the New",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πολύκαρπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιος Πολύκαρπος ο νέος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Άγιος Πολύκαρπος ο νέος»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. The epithet «ο νέος» is the source's own and is what tells him from Polycarp of Smyrna; the corpus's four other men of the name — of Smyrna, of Alexandria, of Bryansk and Polycarp (8 February) — are all on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "slug": "pappias-companion-of-peregrinus",
+  "display_name": "Pappias, companion of Peregrinus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Παππίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιοι Περεγρίνος, Λουκιανός, Πομπηίος, Ησύχιος, Παππίας, Σατορνίνος και Γερμανός», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 98,
+      "display": "98",
+      "basis": "traditional",
+      "note": "saint.gr heads every one of the seven «(; - 98)» and says «έζησαν στα χρόνια του βασιλιά Τραϊανού (98 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Άγιοι Περεγρίνος, Λουκιανός, Πομπηίος, Ησύχιος, Παππίας, Σατορνίνος και Γερμανός»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day as the listing, and heads every one of the seven «(; - 98)». The company is one folder per member because saint.gr names all seven and the line names all seven. Its narrative ties them to the martyrdom of Astius of Dyrrachium «(βλέπε 6 Ιουλίου)», which the corpus keeps as `astius-of-dyrrachium`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The corpus's `papias` is on the Romanian 28 June and `papias-of-corinth` on another day; neither is at Dyrrachium."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "astius-of-dyrrachium"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

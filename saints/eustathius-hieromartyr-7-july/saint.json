@@ -1,0 +1,50 @@
+{
+  "slug": "eustathius-hieromartyr-7-july",
+  "display_name": "Eustathius (7 July)",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Άγιος Ευστάθιος Ιερομάρτυρας», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Άγιος Ευστάθιος Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day as the listing, and gives no year. The corpus holds nine other men of this name — the Great Martyr, of Antioch, of Kios, of Mtskheta, of Vilnius, the Roman, Kataphloros of Thessalonica and the two archbishops of Serbia — and not one of them is on 7 July or burned alive without a place. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

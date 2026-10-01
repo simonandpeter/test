@@ -6,6 +6,11 @@
       "form": "Toma din Maleon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 iulie, «Sfântul Cuvios Toma din Maleon», with the rank words left off."
+    },
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Ιουλίου, «Όσιος Θωμάς ο εν Μαλεώ», with the rank word and the place left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Ιουλίου — «Όσιος Θωμάς ο εν Μαλεώ»",
+        "url": "https://www.saint.gr/07/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and gives the same man and the same mountain. The page carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence, but it doubts itself in its own words — «Οι πληροφορίες που έχουμε για τον Όσιο Θωμά είναι λίγες και μη επιβεβαιωμένες», and it offers two versions of his century: the thirteenth or fourteenth, because a soldier of such glory could not have acted after the fall of Constantinople, or the tenth, according to the diptychs of the Church of Greece. No `dates` are written for that reason and the two versions are reported instead. Part of his relics, it says, is in the metropolis of Monemvasia and Sparta."
     },
     {
       "church": "serbian",
