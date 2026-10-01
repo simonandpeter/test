@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζωσιμοσ zosimas-brother-of-alexander zosimus-of-syracuse zosimus-the-soldier':
+    'Two men whose Greek forms differ by a letter from the Ζωσιμᾶς fold: the Zosimus of 19 June and the Zosimus read beside him there.',
+  'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-disciple-of-silvanus zeno-of-corfu zeno-of-diospolis zeno-of-ikalto zeno-the-courier zeno-the-faster-of-kiev zenon-12-june':
+    'Nine now. The new one is on 19 June; the others are read in the el-06-12 entry for this name form.',
+  'βαρλααμ barlaam-30-may barlaam-of-sikisk barlaam-of-vazsky':
+    'Three men: the Barlaam of 30 May, the Barlaam of 19 June and the Barlaam the corpus keeps besides.',
+  'ασυγκριτοσ asyncritus-martyr-19-june asyncritus-the-apostle':
+    'Two men: Asyncritus the Apostle, upgraded on 8 April, and the Asyncritus of 19 June.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-scythopolis leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-shepherd':
+    'Five now. The new one is on 18 June; the others are read in the el-05-04 entry for this name form, and the canonarch of this month is read in the el-04-01 entry for Γερόντιος.',
+  'αιθεριοσ aetherius-martyr-18-june aetherius-of-cherson':
+    'Two men: Aetherius of Cherson, upgraded on 7 March, and the Aetherius of 18 June.',
   'ιωσηφ joseph-of-alaverdi joseph-of-aleppo joseph-of-astrakhan joseph-of-bisericani joseph-of-kantara joseph-of-lythrodontas joseph-of-nea-moni joseph-of-optina joseph-of-thessalonica-1821 joseph-the-anchorite joseph-the-hymnographer':
     'Eleven now. The new one is on 17 June; the others are read in the el-06-03 entry for this name form.',
   'ερμειασ hermias-companion-of-isaurus hermias-of-comana':

@@ -1,0 +1,60 @@
+{
+  "slug": "leontius-the-canonarch",
+  "display_name": "Leontius the Canonarch",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Κοιμήθηκε σε νεαρή ηλικία τον 14ο αιώνα μ.Χ.» — the century is the page's own and the only dating it gives."
+    }
+  },
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουνίου, «Όσιος Λεόντιος ο Κανονάρχης», with the rank word and the office left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουνίου — «Όσιος Λεόντιος ο Κανονάρχης»",
+        "url": "https://www.saint.gr/06/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουνίου εκάστου έτους», the same day as the listing. One of four separate entries named Leontius on this day's listing; this one is the canonarch of the Lavra of the Caves who died young in the fourteenth century. He is not `leontius-of-tripoli`, `leontios-dionysiatis` or the shepherd, all of which the same day keeps separately, nor any other Leontius in the corpus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

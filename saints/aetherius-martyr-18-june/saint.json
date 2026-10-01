@@ -1,0 +1,50 @@
+{
+  "slug": "aetherius-martyr-18-june",
+  "display_name": "Aetherius (18 June)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αιθέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουνίου, «Άγιος Αιθέριος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουνίου — «Άγιος Αιθέριος»",
+        "url": "https://www.saint.gr/06/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουνίου εκάστου έτους», the same day as the listing. He is not `aetherius-of-cherson`, the bishop of Cherson kept on 7 March: this Aetherius is a martyr of Diocletian's persecution, and the page gives him no see, no city and no year. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

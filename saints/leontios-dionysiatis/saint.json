@@ -6,6 +6,11 @@
       "form": "Leontie Dionisiatul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 iunie, «Sfântul Cuvios Leontie Dionisiatul, Izvorâtorul de mir»."
+    },
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουνίου, «Όσιος Λεόντιος ο Αθωνίτης ο Μυροβλήτης», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -15,12 +20,19 @@
     "wonderworker"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1520,
+      "latest": 1520,
+      "display": "1520",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε το 1520 μ.Χ. στο Άργος της Πελοποννήσου σύμφωνα με τον Άγιο Νικόδημο τον Αγιορείτη και την παράδοση των πατέρων της Ιεράς Μονής Διονυσίου», with its page head «(1520 - 1605)». doxologia gave no birth year."
+    },
     "death": {
       "earliest": 1605,
       "latest": 1605,
       "display": "1605",
       "basis": "attested",
-      "note": "doxologia.ro: «Cuviosul Leontie și-a cunoscut dinainte sfârșitul și a adormit cu pace, după o scurtă boală, în ziua de 16 martie 1605»; the same page has him entering Dionysiou «în 1537» and struggling there sixty-eight years. It gives no birth year."
+      "note": "doxologia.ro: «Cuviosul Leontie și-a cunoscut dinainte sfârșitul și a adormit cu pace, după o scurtă boală, în ziua de 16 martie 1605»; the same page has him entering Dionysiou «în 1537» and struggling there sixty-eight years. saint.gr agrees on the year: «Ο όσιος Λεόντιος απεβίωσε το 1605 μ.Χ. σε ηλικία 85 ετών», but has him sixty years in the monastery, not sixty-eight."
     }
   },
   "attestations": [
@@ -45,8 +57,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουνίου — «Όσιος Λεόντιος ο Αθωνίτης ο Μυροβλήτης»",
+        "url": "https://www.saint.gr/06/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουνίου εκάστου έτους», the same day as the listing. It is plainly the same monk: the myrrh-gushing Leontius of the monastery of Saint Dionysius on Athos, born at Argos, dead in 1605, whom the folder's Romanian row already keeps on 18 June. saint.gr adds the birth year 1520, the age of eighty-five, the manuscript its Life survives in, the prophecy about Nauplion, and a relic at the monastery of Zerbitsa near Sparta; it has him sixty years in the monastery where doxologia has sixty-eight, which is recorded in the life and not resolved here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -56,5 +78,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος δ´.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τοῦ Ἄργους ἀγλάισμα, οἷά περ γόνος κλεινὸς καὶ θεῖον γεώργιον τῆς τοῦ Προδρόμου Μονῆς ἐδείχθης Λεόντιε. Σὺ γὰρ δι᾽ ἐνάρετου πολιτείας ἐκλάμψας, ὤφθης Χριστοῦ θεράπων καὶ σεπτὸς μυροβλύτης, διὸ σὲ Πάτερ συμφώνως πάντες γεραίρομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, ᾌχος δ´, Ταχὺ προκατάλαβε — on the page of «Όσιος Λεόντιος ο Αθωνίτης ο Μυροβλήτης», and it names him and Argos",
+        "url": "https://www.saint.gr/1899/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Splendour of Argos, as her renowned offspring and as a divine husbandry of the monastery of the Forerunner wast thou shown to be, Leontius. For having shone by a virtuous life, thou wast seen to be a servant of Christ and a venerable gusher of myrrh; therefore we all with one voice honour thee, father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος γ´.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Τῷ Σωτῆρι Ὄσιε ἀκολουθήσας ὁσίως, σεαυτὸν καθήγνισας δι᾽ ἀρετῶν ἐμμελείας· ὅθεν σε ὁ Ζωοδότης Λόγος δοξάσας, ἔδειξε πηγὴν τὸ σκῆνός σου θείου μύρου· διὰ τοῦτο σοὶ βοῶμεν· χαῖροις θεόφρον πάτερ Λεόντιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος γ´, Ἡ Παρθένος σήμερον — on the same page, and it names him and the myrrh",
+        "url": "https://www.saint.gr/1899/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having followed the Saviour in holiness, venerable one, thou didst purify thyself by the harmony of the virtues; wherefore the Word, the Giver of life, glorifying thee, made thy body a fountain of divine myrrh. Therefore we cry to thee: rejoice, God-minded father Leontius.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

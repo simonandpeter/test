@@ -6,6 +6,11 @@
       "form": "Leontie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 iunie, «Sfântul Mucenic Leontie»."
+    },
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουνίου, «Άγιος Λεόντιος και οι συν αυτώ Υπάτιος και Θεόδουλος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουνίου — «Άγιος Λεόντιος και οι συν αυτώ Υπάτιος και Θεόδουλος»",
+        "url": "https://www.saint.gr/06/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουνίου εκάστου έτους», the same day as the listing. The entry is the company the folder's Romanian row already keeps on 18 June — Leontius with Hypatius and Theodulus — and saint.gr sets their martyrdom in the reign of the emperor Vespasian, names the African governor Hadrian who condemned them, and gives no year. It adds that Hypatius is also called «Υπάτος». Its two hymns name Leontius alone, so they are recorded on his folder and not on the other two. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -62,6 +77,40 @@
       },
       "english": {
         "text": "Thy martyr Leontius, O Lord, in his contest received from Thee, our God, the crown of incorruption; for having Thy power, he overthrew the tormentors and broke also the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "ᾌχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ῥώμην ἔνθεον διεζωσμένος, ἐθριάμβευσας ἐν τοῖς ἀγῶσιν, ἀθλοφόρε τοῦ Σωτῆρος Λεόντιε· σὺ γὰρ ὡς λέων πρὸς ἄθλησιν ὥρμησας καὶ πολεμίων τὸ κράτος κατέβαλες. Μάρτυς ἔνδοξε Χριστὸν τὸν Θεὸν ἱκέτευε, δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), ᾌχος γ’, Θείας πίστεως — on the page of «Άγιος Λεόντιος και οι συν αυτώ Υπάτιος και Θεόδουλος», and it names Leontius alone",
+        "url": "https://www.saint.gr/1894/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Girded with strength from God, thou didst triumph in the contests, Leontius, prize-winner of the Saviour; for like a lion thou didst rush to the struggle and cast down the might of the enemy. Glorious martyr, entreat Christ our God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "ᾌχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Τῶν τυράννων ᾽σχυνας, τὰς πονηρὰς ἐπινοίας, καὶ Ἑλλήνων ᾽λεγξας, τὸ ἀθέατον σέβας, ἔλαμψας, θεογνωσίαν πᾶσιν ἀνθρώποις, δόγμασι, τῆς εὐσεβείας, θεόφρον Μάρτυς· διὰ τοῦτό σου τὴν μνήμην, τιμῶμεν πόθῳ, σοφὲ Λεόντιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, ᾌχος γ’, Ἡ Παρθένος σήμερον — on the same page, and it names Leontius alone",
+        "url": "https://www.saint.gr/1894/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst put to shame the wicked devices of the tyrants and refuted the invisible worship of the Greeks; thou didst shine the knowledge of God upon all men by the teachings of piety, God-minded martyr. Therefore we honour thy memory with longing, wise Leontius.",
         "rendered": "site"
       }
     }

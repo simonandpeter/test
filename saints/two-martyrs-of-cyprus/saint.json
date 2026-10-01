@@ -1,0 +1,50 @@
+{
+  "slug": "two-martyrs-of-cyprus",
+  "display_name": "The Two Martyrs from Cyprus",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δύο Μάρτυρες από την Κύπρο",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Ιουνίου, «Άγιοι Δύο Μάρτυρες από την Κύπρο», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Ιουνίου — «Άγιοι Δύο Μάρτυρες από την Κύπρο»",
+        "url": "https://www.saint.gr/06/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Ιουνίου εκάστου έτους», the same day as the listing. The entry names neither member, so it is one folder for the pair. They are not `two-martyrs-in-phrygia`, `two-martyrs-of-parium` or `two-martyrs-mother-and-daughter`: these two are from Cyprus and died by the burning of their feet. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
