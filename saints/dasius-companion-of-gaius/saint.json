@@ -1,0 +1,54 @@
+{
+  "slug": "dasius-companion-of-gaius",
+  "display_name": "Dasius, companion of Gaius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Άγιοι Γάιος, Δάσιος και Ζωτικός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Άγιοι Γάιος, Δάσιος και Ζωτικός»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2562/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day as the listing, and tells one story for the three. Nicomedia is named as the place and no year at all is given, so this folder carries no `dates` object and no coordinate. The corpus's `zoticus-of-nicomedia` is a different man: his Greek row is already venerated on 22 Αυγούστου in the company of Agathonicus, and two entries on one calendar are two commemorations. The same holds for `dasius-of-axiopolis` and `dasius-companion-of-maron`, and for the seven folders that keep a Gaius on other days. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "gaius-21-october",
+    "zoticus-companion-of-gaius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

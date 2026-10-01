@@ -6,6 +6,11 @@
       "form": "Ilarion cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 octombrie."
+    },
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Ιλαρίων ο Μέγας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Όσιος Ιλαρίων ο Μέγας»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2563/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man: born at Thabatha five miles from Gaza to wealthy pagan parents, sent to Alexandria to study, baptised there, an imitator of Anthony the Great, dead at eighty. The page's heading prints «(333 - 413)» and its narrative gives the birth year, «γεννήθηκε το 333 μ.Χ., στα χρόνια του Μεγάλου Κωνσταντίνου», and the age at death, so a `dates` object with both is proposed. It adds what the Romanian life does not: his last five years in the bishopric of Paphos, and the theft of his relics back to Palestine by his disciple Hesychius, who laid them in the monastery of Maïouma. Relics are listed at Prousos in Eurytania and at Kykkos in Cyprus; no coordinate is proposed. Its first Ἀπολυτίκιον, Ἦχος α’, and its Κοντάκιον, Ἦχος γ’, are taken; the «Έτερον Ἀπολυτίκιον», Ἦχος πλ. δ’, is the common of a venerable father, «Ταῖς τῶν δακρύων σου ῥοαῖς», and is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -65,9 +80,59 @@
         "text": "With the streams of thy tears thou didst make the barren desert bear, and with sighs from the depths thou didst make thy labours bring forth a hundredfold; and thou wast made a light to the world, shining with wonders, Hilarion our father. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "model": "Τῆς ἐρήμου πολίτης",
+      "text": "Ἐγκρατείας τὴ αἴγλη λαμπρυνθεὶς τὴν διάνοιαν, ἤστραψας θαυμάτων ἀκτῖνας Ἰλαρίων Πατὴρ ἠμῶν, καὶ γεγονὸς φωστὴρ περιφανής, καὶ στῦλος εὐσέβειας θεαυγῆς, καταυγάζων τὴ ἐνθέω σου βιοτῆ, τοὺς πίστει προσιόντας σοί. Δόξα τῷ δεδωκότι σοὶ ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, «Όσιος Ιλαρίων ο Μέγας» — Ἀπολυτίκιον, Ἦχος α’. Τῆς ἐρήμου πολίτης",
+        "url": "https://www.saint.gr/2563/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your mind made bright with the radiance of self-control, you flashed out rays of wonders, Hilarion our father, and became a shining lamp and a God-lit pillar of godliness, lighting up by your divine manner of life those who come to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’",
+      "model": "Ἡ Παρθένος σήμερον",
+      "text": "Ὡς φωστῆρα ἄδυτον, τοῦ νοητοῦ σε Ἡλίου, συvελθόvτες σήμεροv, ἀνευφημοῦμεν ἐν ὕμvοις. Ἔλαμψας τοῖς ἐν τῷ σκότει τῆς ἀγνωσίας, ἅπαντας ἀναβιβάζων πρὸς θεῖοv ὕψος, Ἱλαρίων τοὺς βοώντας. Χαίροις ὢ Πάτερ, τῶν Ἀσκητῶv ἡ κρηπίς.",
+      "source": {
+        "text": "saint.gr, «Όσιος Ιλαρίων ο Μέγας» — Κοντάκιον, Ἦχος γ’. Ἡ Παρθένος σήμερον (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2563/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gathered together today we praise you in hymns as an unsetting lamp of the Sun that the mind beholds. You shone upon those in the darkness of ignorance, raising up to the divine height all who cry: Rejoice, O father, foundation of the ascetics.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 333,
+      "latest": 333,
+      "display": "333",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Ιλαρίων ο Μέγας γεννήθηκε το 333 μ.Χ., στα χρόνια του Μεγάλου Κωνσταντίνου»."
+    },
+    "death": {
+      "earliest": 413,
+      "latest": 413,
+      "display": "413",
+      "basis": "traditional",
+      "note": "saint.gr heads his page «(333 - 413)» and says «παρέδωσε στο Θεό την ψυχή του, ογδόντα χρονών» — eighty years old."
+    }
   }
 }

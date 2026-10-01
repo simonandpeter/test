@@ -1,0 +1,51 @@
+{
+  "slug": "james-of-bathys-ryax",
+  "display_name": "James of Bathys Ryax",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Ιάκωβος», with the rank word left off."
+    }
+  ],
+  "office": "Steward of the monastery of Christ the Saviour of Bathys Ryax",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Όσιος Ιάκωβος»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2553/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day as the listing. It is a citation and not a life: «Άγνωστος στον Συναξαριστή του Αγίου Νικόδημου. Η μνήμη του φέρεται στον Συναξαριστή του Delehaye, χωρίς βιογραφικά στοιχεία, παρά μόνο με την εξής φράση: “Μνήμη τοῦ ὁσίου Ἰακώβου τοῦ γενομένου οἰκονόμου τῆς Μονῆς τοῦ σωτῆρος Χριστοῦ τοῦ Βαθέος Ρύακος, ὃς ὤρμητο ἐκ τῆς δευτέρας τῶν Καππαδόκων ἐπαρχίας”». The corpus's `basil-of-bathys-ryax` shares the house and nothing else. No year, so no `dates` object; no coordinate, no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

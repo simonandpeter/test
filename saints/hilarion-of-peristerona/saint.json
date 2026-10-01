@@ -1,0 +1,72 @@
+{
+  "slug": "hilarion-of-peristerona",
+  "display_name": "Hilarion of Peristerona",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιοι Βαρνάβας και Ιλαρίων οι θαυματουργοί», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Όσιοι Βαρνάβας και Ιλαρίων οι θαυματουργοί»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2547/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day as the listing. **No `dates` object is proposed, because the page prints two datings and says they conflict**: Leontios Machairas in his chronicle and Kyprianos in his history put the two among the three hundred so-called Alamanoi who came to Cyprus after the Second Crusade, while «τόσο από την παράδοση, όσο κι από το συναξάρι των αγίων» they came from Cappadocia and lived «στα χρόνια της βασιλείας του Θεοδοσίου του Μικρού (408 - 456 μ.Χ.)», and the page states outright that the first opinion collides with this information. Of the time and the reason for the relics' arrival in Cyprus it says «Πότε έγινε αυτός ο ερχομός και γιατί, δεν γνωρίζουμε». Peristerona and the Solea are named without coordinates. Its Ἀπολυτίκιον, Ἦχος α’, names both men and is taken for both folders. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "barnabas-of-peristerona"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’",
+      "text": "Τῆς ἐρήμου πολίται καὶ ἐν σώματι ἄγγελοι καὶ θαυματουργοὶ γεγονότες θεοφόροι Βαρνάβα καὶ Ἰλαρίων ὅσιοι- νηστεία, ἀγρυπνία, προσευχή, οὐρανίων χαρισμάτων αὐτουργοί- ὅθεν χάριν ἰαμάτων, ἐξ οὐρανοῦ πλουσίως ἐδέξασθε. δόξα τῷ ἐνδυναμώσαντι ὑμᾶς, δόξα τῷ στεφανώσαντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, «Όσιοι Βαρνάβας και Ιλαρίων οι θαυματουργοί» — Ἀπολυτίκιον, Ἦχος α’",
+        "url": "https://www.saint.gr/2547/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Citizens of the desert and angels in the body and workers of wonders you became, God-bearing Barnabas and Hilarion, venerable ones; by fasting, by vigil and by prayer you wrought heavenly gifts for yourselves, and so you received the grace of healings richly out of heaven. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

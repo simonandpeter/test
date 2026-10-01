@@ -1,0 +1,53 @@
+{
+  "slug": "irene-companion-of-plantinos",
+  "display_name": "Irene, companion of Plantinos",
+  "sex": "female",
+  "types": [],
+  "names": [
+    {
+      "form": "Ειρήνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Άγιοι Πλαντίνος, Ειρήνη και Μαρίνα της Ραϊθού», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Άγιοι Πλαντίνος, Ειρήνη και Μαρίνα της Ραϊθού»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2554/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day as the listing, and is almost entirely a citation: «Η μνήμη του Αγίου Πλαντίνου αναφέρεται στο Ιεροσολυμιτικό Κανονάριο σελ. 115, συνοδευμένη με αυτή της Αγίας Ειρήνης και Αγίας Μαρίνας της Ραϊθού». For Marina it then quotes a sticheron from the office of Philotheus the Athonite composed by the monk Gerasimos Mikragiannanites, which says her reliquary is kept at the dependency where the Sinaite fathers now live, at the monastery of the Most Holy Theotokos near the sea. No year is given anywhere and no coordinate is proposed. Nothing in the corpus answers to this company. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "plantinos",
+    "marina-of-raithou",
+    "philotheus-of-dionysiou"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

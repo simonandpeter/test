@@ -6,6 +6,11 @@
       "form": "Filothei Dionisiatul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 21 octombrie."
+    },
+    {
+      "form": "Φιλόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Φιλόθεος ο Αγιορείτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 21 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Όσιος Φιλόθεος ο Αγιορείτης»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2561/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man as doxologia's «Sfântul Cuvios Filothei Dionisiatul»: born 1526 at Chrysoupolis in Macedonia near Kavala, first named Theophilos, tonsured Philotheos, and from 1551 a monk of the coenobium of Dionysiou on the Holy Mountain. The page heads him «(1526 - 1610)» and its narrative gives both years, so a `dates` object with birth and death is proposed. It names the manuscript history of the life itself — written by the monk Daniel of Dionysiou from an older codex, put into the vernacular by the monk Agapios Landos in 1802 and published at Venice in 1872 — and puts his skull at the monastery of Petra in Thessaliotis and part of his relics at Dionysiou since 1972. No coordinate is proposed. Its first Ἀπολυτίκιον, Ἦχος γ΄, and its Κοντάκιον, Ἦχος πλ. δ΄, are taken; the «Έτερον Ἀπολυτίκιον», Ἦχος δ΄, a Μεγαλυνάριον and an Οἶκος are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -48,5 +63,57 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1526,
+      "latest": 1526,
+      "display": "1526",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Φιλόθεος γεννήθηκε το 1526 μ.Χ. στη Χρυσούπολη της Μακεδονίας (κοντά στην Καβάλα)»."
+    },
+    "death": {
+      "earliest": 1610,
+      "latest": 1610,
+      "display": "1610",
+      "basis": "traditional",
+      "note": "saint.gr: «Πέθανε ειρηνικά σε ηλικία 84 χρονών (1610 μ.Χ.)»; the page's heading prints «(1526 - 1610)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄",
+      "model": "Θείας πίστεως",
+      "text": "Θείᾳ χάριτι, τῆς Θεοτόκου, ὡς λελύτρωσαι, χειρῶν ἀπίστων, ἐν Νεαπόλει ὁσίως ἐμόνασας, καὶ ἐν τῷ Ἄθῳ ἀσκήσας Φιλόθεε, φίλος Θεοῦ φερωνύμως γεγένησαι, Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, «Όσιος Φιλόθεος ο Αγιορείτης» — Ἀπολυτίκιον, Ἦχος γ΄. Θείας πίστεως",
+        "url": "https://www.saint.gr/2561/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ransomed by the divine grace of the Theotokos from the hands of unbelievers, you lived the monastic life in holiness at Neapolis, and having struggled as an ascetic on Athos, Philotheos, you became a friend of God as your name says. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄",
+      "model": "Τῇ Ὑπερμάχῳ",
+      "text": "Ὡς τῆς φιλίας τῆς ἐν κόσμῳ ξένον πέλοντα, καὶ τῆς ἐνθέου οἰκειώσεως μετέχοντα, ὁ Θεός σε ἐμεγάλυνε θεοφόρε. Ἀλλ’ ὡς φίλος τοῦ Σωτῆρος γνησιώτατος, τῆς φιλίας τῶν χειρόνων ἀπολύτρωσαι, τοὺς βοῶντάς σοι· χαίροις Πάτερ Φιλόθεε.",
+      "source": {
+        "text": "saint.gr, «Όσιος Φιλόθεος ο Αγιορείτης» — Κοντάκιον, Ἦχος πλ. δ΄. Τῇ Ὑπερμάχῳ",
+        "url": "https://www.saint.gr/2561/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Because you were a stranger to the friendship that is in the world, and a sharer in intimacy with God, God magnified you, bearer of God. But as the truest friend of the Saviour, deliver from the friendship of worse things those who cry to you: Rejoice, father Philotheos.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

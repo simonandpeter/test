@@ -1,0 +1,59 @@
+{
+  "slug": "ursula",
+  "display_name": "Ursula",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ούρσουλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Αγία Ούρσουλα», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 383,
+      "latest": 383,
+      "display": "383",
+      "basis": "traditional",
+      "note": "saint.gr heads her page «Αγια Ουρσουλα (; - 383)»; the narrative gives no year and the page says it has no details of her life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Αγία Ούρσουλα»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2546/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 21 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives no life at all — only that she was British, the year 383 in its heading, and part of her relics at the church of her name in Cologne. The year comes from the heading alone, which is why `basis` is `traditional`; no coordinate is proposed. Nothing in the corpus answers to the name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
