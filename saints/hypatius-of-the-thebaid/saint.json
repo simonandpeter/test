@@ -1,0 +1,56 @@
+{
+  "slug": "hypatius-of-the-thebaid",
+  "display_name": "Hypatius of the Thebaid",
+  "names": [
+    {
+      "form": "Υπάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιος Υπάτιος και οι μαζί μ' αυτόν μαρτυρήσαντες Τριανταέξι Μάρτυρες», with the rank word and the company left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Δεκεμβρίου — «Άγιος Υπάτιος και οι μαζί μ' αυτόν μαρτυρήσαντες Τριανταέξι Μάρτυρες»",
+        "url": "https://www.saint.gr/12/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Δεκεμβρίου εκάστου έτους», the same day as the listing. **The page says of its own accord that he is not in the usual books: «Ο Άγιος Υπάτιος είναι άγνωστος στον Συναξαριστή του Αγίου Νικόδημου και τα έντυπα Μηναία. Η μνήμη του βρίσκεται στον Παρισινό Κώδικα 1590 μαζί με αυτή του Φιλήμονα και Απολλώνιου».** That is a statement about where the memory is recorded, and it is not saint.gr's own refusal mark: the page carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», which is the mark this corpus refuses on. The entry is drafted on that reading, and the sentence is quoted here and in the life so that a reader can see the ground. **The entry names one man and leaves its company unnamed — «οι μαζί μ' αυτόν μαρτυρήσαντες Τριανταέξι Μάρτυρες» — so Hypatius gets a folder and the thirty-six do not.** The page gives no year: it places him among the thirty-six martyrs of the Thebaid under the governor Arrianus and refers to the same day's entries for Philemon, Apollonius and Arrianus, where «(290 μ.Χ.)» is printed; that year is on another entry's page and no `dates` object is drafted from it. It names the Thebaid of Egypt and no settlement, so no coordinate is proposed. It prints no hymn: the apolytikion of 14 Δεκεμβρίου names a company of six, Thyrsus, Philemon, Apollonius, Arrianus, Callinicus and Leucius, and not Hypatius."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "nicodemus-the-hagiorite",
+    "philemon-the-flute-player",
+    "apollonius-the-reader",
+    "arianus-of-the-thebaid"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

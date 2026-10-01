@@ -6,6 +6,11 @@
       "form": "Calinic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 decembrie, «Sfântul Mucenic Calinic», with the rank words left off."
+    },
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος», with the rank word left off. The page glosses the name itself, «(κάλλος + νίκη) = ο ωραίος και ένδοξος νικητής». The alternative «Κορωνάτος» the page reports is recorded in the attestation and not stored as a second form."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
   ],
   "related": [
     "thyrsus-of-caesarea",
-    "leucius-of-caesarea"
+    "leucius-of-caesarea",
+    "coronatus-of-caesarea"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Δεκεμβρίου — «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος»",
+        "url": "https://www.saint.gr/12/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Δεκεμβρίου εκάστου έτους», the same day the folder's Romanian row already keeps, and the entry is the same company: the three of Bithynian stock living at Caesarea under the eparch Koumbrikios. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The two companions' own `greek` rows are already `venerated` and they sit on 17 Αυγούστου**, taken from saint.gr's «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους»; this folder's `greek` row was `undocumented`, so only it is written here, and the second Greek day of Thyrsus and Leucius is left exactly where it is. **The page also gives this man a second name: «Οι Άγιοι Θύρσος, Λεύκιος και Καλλίνικος (κατ' άλλους Κορωνάτος)» — called Coronatus by others — and this corpus keeps a separate folder, `coronatus-of-caesarea`, for a Coronatus of the same company. Whether those are one man is an identity question for the author; nothing here is merged and no folder is removed.** The page names Bithynia and Caesarea and no coordinate is proposed. It prints the six-named apolytikion of the day and a kontakion in Ἦχος δ’ that names no one but calls the day's martyrs the luminaries of the Church — a common printed under this company's name, which is taken as theirs."
     },
     {
       "church": "serbian",
@@ -63,9 +79,52 @@
         "text": "Your martyrs, O Lord, in their contest received from you, our God, the crowns of incorruption; for having your strength they overthrew the tormentors, and broke also the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Tὴν ἑξαστέλεχον μαρτύρων φάλαγγα, ᾀσμάτων ἄνθεσιν ἀνευφημήσωμεν, ὡς καθαιρέτας τοῦ ἐχθροῦ καὶ στύλους τῆς εὐσεβείας· Θύρσον καὶ Φιλήμονα καὶ στερρὸν Ἀπολλώνιον, Ἀρριανόν Καλλίνικον καὶ τὸν ἔνδοξον Λεύκιον· αὐτοὶ γὰρ οὐρανίων χαρίτων κόσμῳ πυρσεύουσι τὴν αἴγλην.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ', Τὴν ὡραιότητα. The same apolytikion is printed on both of the day's company pages, «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος» and «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», and it names six men across the two entries — Thyrsus, Philemon, Apollonius, Arrianus, Callinicus and Leucius — so it is the service of both companies together and is taken into the folder of each man it names whose Greek row this batch writes.",
+        "url": "https://www.saint.gr/3262/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us acclaim with the flowers of our songs the six-stemmed phalanx of the martyrs, as destroyers of the enemy and pillars of piety: Thyrsus and Philemon and the steadfast Apollonius, Arrianus, Callinicus and the glorious Leucius; for they kindle for the world the radiance of the graces of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Τοὺς φωστῆρας ἅπαντες, τῆς Ἐκκλησίας, συνελθόντες σήμερον, ἐν ἐγκωμίοις ἱεροῖς, ἀνευφημοῦντες ὑμνήσωμεν, ὡς ἀθλοφόρους Χριστοῦ τοῦ Θεοῦ ἡμῶν.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον, on the page of «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος». It names nobody, which makes it a common printed under this company's name and so this company's own service; it names no other saint, so the mis-hang rule does not touch it.",
+        "url": "https://www.saint.gr/3262/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Coming together today, let us all acclaim and hymn the luminaries of the Church with sacred praises, as prize-winners of Christ our God.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 225,
+      "latest": 275,
+      "display": "middle of the 3rd century",
+      "basis": "attested",
+      "note": "saint.gr: «Οι Άγιοι Θύρσος, Λεύκιος και Καλλίνικος (κατ' άλλους Κορωνάτος) έζησαν στα μέσα του 3ου αιώνα μ.Χ.» The bounds are the middle of that century as the page states it; it gives no year of birth and no year of death."
+    }
   }
 }

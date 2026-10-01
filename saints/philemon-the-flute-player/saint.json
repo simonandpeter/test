@@ -6,6 +6,11 @@
       "form": "Filimon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 decembrie, «Sfântul Mucenic Filimon», with the rank words left off. The epithet is off the life, which calls him «comedian» by trade and has the governor send for «Filimon comedianul» to pipe («să fluiere»)."
+    },
+    {
+      "form": "Φιλήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», with the rank word left off. The page glosses the name itself, «(από το φίλημα) = ο αγαπών και αγαπώμενος»."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Δεκεμβρίου — «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι»",
+        "url": "https://www.saint.gr/12/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Δεκεμβρίου εκάστου έτους», the same day the folder's Romanian row already keeps, and the entry is the same company: the thirty-seven Christians taken by Arrianus, governor of Thebes in Egypt. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The entry names three of its company and leaves four unnamed — «και οι τέσσερις Προτεκτοράτοι», the four Protectors who were Arrianus's bodyguards — so the three named men get a row each and the four do not get a folder.** The page states a year for the company, «έζησαν στα χρόνια του βασιλιά Διοκλητιανού (290 μ.Χ.)», which is recorded in `dates` as a floruit because it is the only year the page gives and it is not a year of birth or of death. It names Thebes in Egypt and no coordinate is proposed. It prints the day's six-named apolytikion, which is taken. **The same day page also keeps «Άγιος Υπάτιος και οι μαζί μ' αυτόν μαρτυρήσαντες Τριανταέξι Μάρτυρες», whose own page makes Hypatius one of the thirty-six martyrs of the Thebaid under this same Arrianus and puts his memory beside Philemon's and Apollonius's in the Parisian Codex 1590; he is drafted as a new folder, `hypatius-of-the-thebaid`.**"
     },
     {
       "church": "serbian",
@@ -63,9 +78,35 @@
         "text": "Your martyrs, O Lord, in their contest received from you, our God, the crowns of incorruption; for having your strength they overthrew the tormentors, and broke also the feeble insolence of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Τὴν ὡραιότητα.",
+      "text": "Tὴν ἑξαστέλεχον μαρτύρων φάλαγγα, ᾀσμάτων ἄνθεσιν ἀνευφημήσωμεν, ὡς καθαιρέτας τοῦ ἐχθροῦ καὶ στύλους τῆς εὐσεβείας· Θύρσον καὶ Φιλήμονα καὶ στερρὸν Ἀπολλώνιον, Ἀρριανόν Καλλίνικον καὶ τὸν ἔνδοξον Λεύκιον· αὐτοὶ γὰρ οὐρανίων χαρίτων κόσμῳ πυρσεύουσι τὴν αἴγλην.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος γ', Τὴν ὡραιότητα. The same apolytikion is printed on both of the day's company pages, «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος» and «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», and it names six men across the two entries — Thyrsus, Philemon, Apollonius, Arrianus, Callinicus and Leucius — so it is the service of both companies together and is taken into the folder of each man it names whose Greek row this batch writes.",
+        "url": "https://www.saint.gr/3261/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us acclaim with the flowers of our songs the six-stemmed phalanx of the martyrs, as destroyers of the enemy and pillars of piety: Thyrsus and Philemon and the steadfast Apollonius, Arrianus, Callinicus and the glorious Leucius; for they kindle for the world the radiance of the graces of heaven.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 290,
+      "latest": 290,
+      "display": "290",
+      "basis": "attested",
+      "note": "saint.gr, the one year the page gives for the company: «Οι Άγιοι αυτοί, έζησαν στα χρόνια του βασιλιά Διοκλητιανού (290 μ.Χ.)». The page gives no year of birth and no year of death, and the martyrdom itself it does not date, so the year is recorded as a floruit."
+    }
   }
 }

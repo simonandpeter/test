@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'υπατιοσ hypatius-companion-of-lucillian hypatius-of-chalcedon hypatius-of-gangra hypatius-of-the-thebaid hypatius-the-healer hypatius-the-tribune':
+    'Six men. The new one is Hypatius of the Thebaid on 14 December, of the company around Arianus; the others are read in the el-03-31 entry for this name form.',
   'προκοπιοσ procopius-24-november procopius-of-decapolis procopius-of-jerusalem procopius-of-ustyug procopius-of-usya procopius-of-vyatka procopius-the-martyr-25-june procopius-the-palestinian procopius-the-persian prokopios-of-machairas':
     'Ten men. The new one is Prokopios of Machairas on 13 December, one of the four of that monastery; the others are read in the el-11-26 entry for this name form.',
   'νεοφυτοσ neophytos-martyr-11-august neophytos-of-docheiariou neophytos-of-machairas neophytus-5-may neophytus-martyr-7-december neophytus-of-knossos neophytus-of-nicaea neophytus-servant-of-anthousa':
