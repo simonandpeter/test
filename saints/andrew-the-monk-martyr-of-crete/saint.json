@@ -6,6 +6,11 @@
       "form": "Andrei din Creta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 octombrie, «Sfântul Cuvios Mucenic Andrei din Creta»."
+    },
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Άγιος Ανδρέας ο Οσιομάρτυρας «Ὁ ἐν τὴ Κρίσει»», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Οκτωβρίου — «Άγιος Ανδρέας ο Οσιομάρτυρας «Ὁ ἐν τὴ Κρίσει»»",
+        "url": "https://www.saint.gr/10/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same man: of Crete, in the eighth century, who came to Constantinople over the war on the icons, asked the emperor to his face «ἄρα χριστιανὸς εἰ, βασιλεῦ;», answered the guardsman who struck him «οὐδεὶς ἁμαρτάνει βασιλέα ἐλέγχων παρανομοῦντα», was scourged, dragged over sharp stones and had his foot cut off with an axe, and was buried in the place called «τῆς Κρίσεως», which is his epithet. **Two things on this page are named here and not written in.** First, **the page head and the life disagree about the reign**: the head is «Αγιος Ανδρεας ο Οσιομαρτυρας «ο Εν Τη Κρισει» (; - 741)» while the life puts him «επί αυτοκράτορας Κωνσταντίνου Ε' του Κοπρώνυμου», whose reign began in 741 and ran to 775, and the apolytikion has him contend against Kopronymos; so no `dates` object is proposed, the folder keeps none, and the 741 is quoted here rather than recorded. Second, **a second day**: «Η μνήμη του Αγίου Ανδρέα επαναλαμβάνεται και την 21η Οκτωβρίου, μετά των Άγιων Στεφάνου, Παύλου και Πέτρου» — one attestation row per church is the schema, this row records the day page read, and the 21 October repetition is set down here for whoever reads that day. An apolytikion and a kontakion are taken and both name him; the Οἶκος is neither and is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
         "text": "Having first disciplined thyself as an ascetic on the mountain, thou didst destroy the bodiless armies of the enemy with the weapon of the Cross, O all-blessed one; and again thou didst array thyself manfully for the contest, slaying Copronymus with the sword of faith. For both of these thou hast been crowned by God, O most venerable father Andrew, ever praised.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀσκητικῶς προγυμνασθεῖς ἐν τῷ ὄρει, τᾶς νοητᾶς τῶν δυσμενῶν παρατάξεις, τὴ πανοπλία ὤλεσας παμμάκαρ τοῦ Σταυροῦ, αὔθις δὲ πρὸς ἄθλησιν, ἀνδρικῶς ἀπεδύσω, κτείνας τὸν Κοπρώνυμον, τῷ τῆς πίστεως ξίφει, καὶ δι' ἀμφοὶν ἐστέφθης ἐκ Θεοῦ, Ὁσιομάρτυς, Ἀνδρέα ἀοίδιμε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the first hymn on the page of «Άγιος Ανδρέας ο Οσιομάρτυρας «Ὁ ἐν τὴ Κρίσει»», and it names him.",
+        "url": "https://www.saint.gr/2537/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Trained beforehand in ascesis on the mountain, you destroyed the unseen ranks of the enemy with the whole armour of the Cross, all-blessed one; and then you stripped manfully for the contest, slaying Kopronymos with the sword of the faith, and for both you were crowned by God, far-famed Andrew, martyr among monks.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἑορτάζει σήμερον, ἡ Βασιλεύουσα πόλις, ἑορτὴν ὑπέρλαμπρον, τῆς φωτοφόρου σου Μνήμης, ἅπασαν προσκαλουμένη πόλιν καὶ χώραν· χαίρει γάρ, ὡς κτησαμένη θησαυρόν μέγαν, τὸ πολύαθλόν σου σῶμα, Ἀνδρέα Μάρτυς, ὀρθοδοξίας φωστήρ.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the same page, and it names him and no other saint.",
+        "url": "https://www.saint.gr/2537/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the Reigning City keeps a most radiant feast, the feast of your light-bearing memory, and calls every city and country to it; for it rejoices as having gained a great treasure, your much-contending body, Andrew the Martyr, luminary of Orthodoxy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

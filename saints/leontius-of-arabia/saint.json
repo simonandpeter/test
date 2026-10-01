@@ -1,0 +1,62 @@
+{
+  "slug": "leontius-of-arabia",
+  "display_name": "Leontius of Arabia",
+  "sex": "male",
+  "types": [
+    "unmercenary",
+    "martyr",
+    "physician"
+  ],
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Άγιοι Κοσμάς, Δαμιανός, Λεόντιος, Άνθιμος και Ευπρέπιος οι Ανάργυροι», with the rank word left off; the page's own heading for this one is «Αγιος Λεοντιος ο Αναργυρος». The company's own name as the page gives it is «οι Ανάργυροι», the Unmercenaries, and «από την Αραβία», from Arabia; the English display name carries the province because the rank is in `types`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Οκτωβρίου — «Άγιοι Κοσμάς, Δαμιανός, Λεόντιος, Άνθιμος και Ευπρέπιος οι Ανάργυροι»",
+        "url": "https://www.saint.gr/10/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives each of the five a heading of its own — his is «Αγιος Λεοντιος ο Αναργυρος» — with a separate epigram for Cosmas and Damian, for Leontius and for Anthimus and Euprepius, so this is a synaxis that enumerates its members and is five folders and not one. What it says it says once, under all five names: they were brothers of one another in the flesh and in the spirit, from **Arabia**; devout, all five, moved by the same divine zeal and the same love of man, who did many good works by their physician's art and drew many to the Christian faith; denounced for it and arrested in the persecution under Diocletian, **in Lycia, by Lysias the governor at Aegae**; and beheaded after many tortures. **This is the Arabian pair, and the corpus does not hold them.** It holds `cosmas-of-rome` and `damian-of-rome` on 1 July and `cosmas-of-asia` and `damian-of-asia` on 1 November — the Roman pair and the Asian pair — and the tradition keeps three pairs of unmercenary physicians of these names on three days. Checked folder by folder against every Cosmas and every Damian in `saints/`: none of them is of Arabia and none stands on 17/10 in any calendar. The page gives no year, only «κατά τον επί Διοκλητιανού διωγμό», so there is no `dates` object; Arabia, Lycia and Aegae are named and `locations` is left out as elsewhere on this reader's days. No hymn on the page. **Display names take Arabia and not «ο Ανάργυρος»**, because `unmercenary` is in `types` and `lib/honorific.js` would compose the rank twice. The corpus keeps fourteen other men called Leontius, and one of them — `leontius-the-martyr-16-october` — is on the very day before this one and is a different entry on a different page, martyred by fire with Dometius, Terentius and Domninus. None of the fourteen is a physician of Arabia. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cosmas-of-arabia",
+    "damian-of-arabia",
+    "anthimus-of-arabia",
+    "euprepius-of-arabia",
+    "cosmas-of-rome",
+    "damian-of-rome",
+    "cosmas-of-asia",
+    "damian-of-asia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

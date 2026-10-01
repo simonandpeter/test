@@ -1,0 +1,54 @@
+{
+  "slug": "antigonus-17-october",
+  "display_name": "Antigonus (17 October)",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Αντίγονος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Άγιοι Αντίγονος, Λουκιανός, Τερέντιος, Νικομήδης και Θεοφάνης», with the rank word left off; the page's own heading for this one is «Αγιος Αντιγονος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Οκτωβρίου — «Άγιοι Αντίγονος, Λουκιανός, Τερέντιος, Νικομήδης και Θεοφάνης»",
+        "url": "https://www.saint.gr/10/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Οκτωβρίου εκάστου έτους», gives each of the five a heading of its own — his is «Αγιος Αντιγονος» — and prints one sentence for all five: «Οι Άγιοι Αντίγονος, Λουκιανός, Τερέντιος, Νικομήδης και Θεοφάνης είναι άγνωστοι στα Συναξάρια και τα Μηναία, μνημονεύονται στον Παρισινό Κώδικα 1578 χωρίς βιογραφικά του στοιχεία» — unknown to the Synaxaria and the Menaia, mentioned in the Paris Codex 1578 without biographical details. **A judgement the reader's report names and the writer may reverse by dropping this whole batch.** The page carries **no** asterisk and **not** the «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου» sentence, which is the mark BRIEF-GREEK §10 refuses on, and which the same reader did refuse on twice four days earlier («Άγιος Μαρτύροχος» and «Άγιος Διοκλητιανός», 13 Οκτωβρίου). What this page does instead is cite a manuscript by number and say what it does not contain, which is a statement of provenance and not a refusal to vouch. The qualification is carried whole into the life in the page's own terms, so that a reader opening the citation finds exactly what the folder says. An enumerated company, so five folders and not one. No year, no place, no rank beyond Άγιος, no hymn: no `dates`, no `locations`. **saint.gr keeps another Άγιος Αντίγονος four days earlier**, on 13 Οκτωβρίου, `/2740/`, whose whole notice is that he was martyred by fire; that one is drafted as `antigonus-13-october` in batch `el-10-13`. Two entries on one calendar are two commemorations, so the two are kept apart and each display name carries its day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "lucian-17-october",
+    "terentius-17-october",
+    "nicomedes-17-october",
+    "theophanes-17-october"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

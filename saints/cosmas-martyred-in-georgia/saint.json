@@ -1,0 +1,53 @@
+{
+  "slug": "cosmas-martyred-in-georgia",
+  "display_name": "Cosmas martyred in Georgia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κοσμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Άγιος Κοσμάς «ὁ ἐν Γεωργίᾳ»», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Οκτωβρίου — «Άγιος Κοσμάς «ὁ ἐν Γεωργίᾳ»»",
+        "url": "https://www.saint.gr/10/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Οκτωβρίου εκάστου έτους» and «Αγιος Κοσμας «ο Εν Γεωργια»». Its whole notice is one sentence: «Ο Άγιος Κοσμάς “ὁ ἐν Γεωργίᾳ” είναι άγνωστος στους Συναξαριστές. Μνημονεύεται στο Ιεροσολυμιτικό Κανονάριο ως έξης: «Μνήμη Κοσμᾶ μαρτυρήσαντος ἐν Γεωργίᾳ» (Βλ. Καλλίστου Αρχιμανδρίτου, Ιεροσολ. Κανονάριον σελ. 114)» — unknown to the synaxarists, and mentioned in the Jerusalem Kanonarion as *the memory of Cosmas who was martyred in Georgia*, with Archimandrite Kallistos's edition cited by page. **The same judgement as the other seven folders of this batch**: no asterisk, no «Δεν είναι διασταυρωμένη» sentence, and a service book named with a page reference behind it. The one thing the quoted entry does assert is that he was martyred, which is the whole of `types`, and that it was in Georgia, which is the whole of the display name; `locations` is left out, as elsewhere on this reader's days, and the more so here because Georgia is a country and the entry gives nothing within it. No year, so no `dates`; no hymn and no verse. **The same day's other Cosmas is a different man and is a new folder, not this one**: «Άγιος Κοσμάς ο Ανάργυρος» of `/2540/` is the physician of Arabia, drafted as `cosmas-of-arabia` in batch `el-10-17-1`, and saint.gr prints the two as two entries with two pages on one day. No other Cosmas in the corpus is of Georgia. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "cosmas-of-arabia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

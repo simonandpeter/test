@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοφανησ theophan-the-recluse theophanes-17-october theophanes-of-antioch theophanes-of-naousa theophanes-of-nicaea theophanes-of-peritheorion theophanes-of-sigriane theophanes-the-merciful-of-gaza theophanes-the-myrrh-streamer-of-cyprus theophanes-the-neomartyr theophanes-venerable-17-may':
+    'Eleven now. The new one is the Theophanes of 17 October; the others are read in the el-06-08 entry for this name form.',
+  'τερεντιοσ terentius-17-october terentius-companion-of-publius terentius-of-africa terentius-the-martyr-16-october':
+    'Four now. The new one is the Terentius of 17 October; the others are read in the entries recorded for this name form before it.',
+  'λουκιανοσ lucian-17-october lucian-fedotov lucian-of-antioch lucian-of-the-kyiv-caves lucian-of-tomis lucianus-companion-of-peregrinus':
+    'Six now. The new one is the Lucian of 17 October; the others are read in the el-10-15 entry for this name form.',
+  'ισιδωρα isidora-17-october isidora-of-tabennisi':
+    'Two women: Isidora of Tabennisi on 1 May and the Isidora of 17 October.',
+  'αντιγονοσ antigonus-13-october antigonus-17-october':
+    'Two men four days apart: the Antigonus of 13 October and the Antigonus of 17 October.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-shepherd':
+    'Thirteen now. The new one is Leontius of Arabia on 17 October; the others are read in the el-10-07 entry for this name form.',
+  'ευτροπιοσ euprepius-of-arabia eutropius-companion-of-tigrius eutropius-of-cappadocia':
+    'Three men whose Greek forms fold together: the companion of Tigrius on 12 January, Eutropius of Cappadocia on 3 March, and Euprepius of Arabia on 17 October.',
+  'δαμιανοσ damian-disciple-of-polychronius damian-of-agrafa damian-of-arabia damian-of-esphigmenou damian-of-georgia damian-of-pavia damian-of-rome damian-sent-to-britain':
+    'Eight now. The new one is Damian of Arabia on 17 October; the others are read in the el-05-26 entry for this name form.',
+  'κοσμασ cosmas-companion-of-thomas-of-zographou cosmas-i-of-constantinople cosmas-martyred-in-georgia cosmas-of-arabia cosmas-of-maiuma cosmas-of-rome cosmas-of-yakhroma':
+    'Seven now, and two are new on 17 October: Cosmas of Arabia, of the company the day names, and Cosmas martyred in Georgia. Two entries on one day, so two men. The others are read in the el-02-18 entry for this name form.',
+  'ανθιμοσ anthimus-of-arabia anthimus-the-elder':
+    'Two men: Anthimus the Elder on 2 July and Anthimus of Arabia on 17 October, one of the company that day names.',
   'λογγινοσ longinus-24-april longinus-brother-of-orentius longinus-of-koryazhemka longinus-the-centurion longinus-the-gatekeeper longinus-the-stylite':
     'Six now, and two stand on 16 October: Longinus the Centurion, whose day it is on both calendars and whose Greek row this batch adds, and Longinus the Gatekeeper, new here with the two soldiers who suffer with the centurion. The others are read in the el-10-10 entry for this name form.',
   'ιωαννησ john-arnaoutogiannis john-companion-of-barouchius john-companion-of-basilides john-companion-of-hilarion-the-new john-companion-of-manuel john-companion-of-meletius john-companion-of-peter john-companion-of-simeon john-companion-of-tarasius john-disciple-of-limnaeus john-fedorov-of-krasnokutsk john-feodorov-of-tambov john-iii-scholasticus john-jacob-of-neamt john-kalfas john-kalita john-kaloktenes john-kononenko john-koulakiotis john-mauropous john-nannos-of-thessalonica john-of-beverley john-of-chalcedon john-of-chaldia john-of-edessa john-of-gothia john-of-irenopolis john-of-jerusalem john-of-kantara john-of-kazan john-of-lycopolis john-of-manglisi john-of-monagria john-of-moscow john-of-nea-moni john-of-pateleria john-of-peking john-of-rouphinianai john-of-santa-cruz john-of-serres john-of-spetses john-of-syracuse john-of-the-brazen-gate john-of-the-forty-martyrs john-of-the-ladder john-of-the-old-lavra john-of-the-well john-of-tobolsk john-of-tourkoleka john-of-ustyug john-of-verkhoturye john-of-vilnius john-of-yuryevets john-of-zedazeni john-philosopher-of-georgia john-psychaites john-son-of-anna-of-larissa john-son-of-xenophon john-the-bulgarian john-the-confessor-of-kathara john-the-goldsmith-of-shumen john-the-hermit-of-crete john-the-hut-dweller john-the-iberian john-the-monk-of-ephesus john-the-new-of-ephesus john-the-new-of-suceava john-the-philosopher-of-georgia john-the-prophet-of-gaza john-the-shipmaster-of-kos john-the-sinaite-venerable-martyr john-the-soldier-12-june john-the-soldier-29-july john-the-wallachian john-timonov john-v-patriarch-of-constantinople john-with-minas-and-david':
