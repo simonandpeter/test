@@ -1,0 +1,69 @@
+{
+  "slug": "nicetas-the-patrician",
+  "display_name": "Nicetas the Patrician",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Όσιος Νικήτας ο Ομολογητής και Πατρίκιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Όσιος Νικήτας ο Ομολογητής και Πατρίκιος»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους» and «Οσιος Νικητας ο Ομολογητης Και Πατρικιος (763 - 838)», and both years are repeated in the life — born 763, died at the age of 75 in 838 — so a `dates` object carries them. The office is the life's own: «ανέβηκε με την αρετή και την ικανότητά του στο αξίωμα του πατρικίου και στρατηγού της Σικελίας». **The «Στρατηγός του Βυζαντίου του 7ου μ.Χ. αιώνα» line above the life is saint.gr's note on the name Nicetas and not a statement about this saint** — a seventh-century general of Byzantium — and it is a near-miss with his real office, so it is named here to be sure it was not the source of it. The page's own uncertainty about his kinswoman is kept in the life in its own words: «η συγγένισσά του βασίλισσα Ειρήνη (άλλοι αναφέρουν Θεοδώρα)». The corpus keeps sixteen other men called Nicetas — of Pythia, of Medikion, of Chalcedon, the Goth, the Chartularius and the rest — and none of them is a patrician and general of Sicily or stands on this day. `locations` is left out: the page names Paphlagonia and Sicily but places him in neither for long. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "office": "Patrician and general of Sicily",
+  "dates": {
+    "birth": {
+      "earliest": 763,
+      "latest": 763,
+      "display": "763",
+      "basis": "attested",
+      "note": "saint.gr: «καταγόταν από την Παφλαγονία και γεννήθηκε το έτος 763 μ.Χ.»"
+    },
+    "death": {
+      "earliest": 838,
+      "latest": 838,
+      "display": "838",
+      "basis": "attested",
+      "note": "saint.gr: «σε ηλικία 75 χρονών απεβίωσε ειρηνικά το έτος 838 μ.Χ.», and its page head gives him as «(763 - 838)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

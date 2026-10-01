@@ -1,0 +1,96 @@
+{
+  "slug": "chryse-of-slatena",
+  "display_name": "Chryse of Slatena",
+  "sex": "female",
+  "types": [
+    "new-martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Χρυσή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Αγία Χρυσή η Νεομάρτυς», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Αγία Χρυσή η Νεομάρτυς»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους» and «Αγια Χρυση η Νεομαρτυς (; - 1795)». The year of her death is stated outright in the life as well — «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια» — and a `dates` object carries it. The village is named twice over, «στο χωριό Σλάτενα (σημερινή Χρυσή) της επαρχίας Αλμωπίας Νομού Πέλλης», and the display name takes the older of the two forms because the newer one is her own name and would read as no epithet at all. `locations` is left out all the same, in keeping with the rest of this reader's days. The corpus's `chryse-the-martyr`, kept on the Greek 30 January with her servant `sabainos-the-martyr`, is an ancient martyr and not this woman. Two hymns are taken, an apolytikion and a kontakion, both of which name her; the Μεγαλυνάριον, which also names her, is neither a troparion nor a kontakion and is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1795,
+      "latest": 1795,
+      "display": "1795",
+      "basis": "attested",
+      "note": "saint.gr: «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια», and its page head gives her as «Αγια Χρυση η Νεομαρτυς (; - 1795)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σκεῦος χρύσεον, τῆς παρθενίας, καὶ ἀκήρατος, νύμφη Κυρίου, ἐχρημάτισας Χρυσῆ καλλιπάρθενε· τὴν γὰρ ἁγνείαν ἀμέμπτως φυλάττουσα, ὐπὲρ Χριστοῦ θεοφρόνως ἐνήθλησας· Μάρτυς ἔνδοξε, ἱκέτευε τὸν Νυμφίον σου, δωρήσασθε ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας Πίστεως — the first hymn on the page of «Αγία Χρυσή η Νεομάρτυς», and it names her.",
+        "url": "https://www.saint.gr/2743/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were made a golden vessel of virginity and an undefiled bride of the Lord, Chryse, fair virgin; for keeping your purity blamelessly you contended for Christ with a God-minded heart. Glorious Martyr, entreat your Bridegroom to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας Πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Χρυσωθεῖσα Πνεύματι, Τῷ Παναγίῳ, τὴν ἁγνείαν ἔφθορον, τὴν σὴν ἐτήρησας Χριστῷ, καὶ ὑπὲρ φύσιν ἠγώνισαι, παρθενομάρτυς, Χρυσῆ ἀξιάγαστε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Αγία Χρυσή η Νεομάρτυς». It names her and no other saint.",
+        "url": "https://www.saint.gr/2743/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gilded by the All-Holy Spirit, you kept your purity incorrupt for Christ and contended beyond nature, virgin-martyr Chryse, worthy of all wonder.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

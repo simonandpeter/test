@@ -1,0 +1,60 @@
+{
+  "slug": "james-of-chamatoura",
+  "display_name": "James of Chamatoura",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Άγιος Ιάκωβος o Χαματουρίτης», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Άγιος Ιάκωβος o Χαματουρίτης»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους». The page gives no year for his death and only «Κατά τα τέλη του 13ου μ.Χ. αιώνα» for when he began his ascetic life at the monastery of the Theotokos of Hamatoura, so the `dates` object is a `floruit` on that sentence and nothing else; the 2002 in the page is the first keeping of his memory at the monastery in our own time and not a date of his. `locations` is left out although Mount Hamatoura at Kousba in Lebanon is named throughout, for the same reason as elsewhere on this reader's days. **The page prints no hymn**: it says that those present at the all-night vigil of 13 October 2002 chanted a troparion and an office for him «που προετοιμάστηκε και συντάχθηκε από τους μοναχούς του μοναστηριού», but it does not give the text, so this folder has none. The corpus holds no saint of this name with this epithet. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1275,
+      "latest": 1300,
+      "display": "late 13th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά τα τέλη του 13ου μ.Χ. αιώνα, στη Μονή της Θεοτόκου της Χαματούρας, ο Άγιος Ιάκωβος άρχισε την ασκητή του ζωή». The page gives no year for his death."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

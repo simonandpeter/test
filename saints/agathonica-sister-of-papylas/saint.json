@@ -6,6 +6,11 @@
       "form": "Agatonica",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 octombrie."
+    },
+    {
+      "form": "Αγαθονίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Άγιοι Κάρπος, Πάπυλος, Αγαθόδωρος και Αγαθονίκη», with the rank word left off; the page's own heading for this one is «Αγια Αγαθονικη»."
     }
   ],
   "sex": "female",
@@ -14,7 +19,8 @@
   ],
   "related": [
     "papylas-the-deacon",
-    "carpus-of-thyatira"
+    "carpus-of-thyatira",
+    "agathodorus-servant-of-carpus-and-papylas"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Άγιοι Κάρπος, Πάπυλος, Αγαθόδωρος και Αγαθονίκη»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same company: all four of Pergamon, martyred when Decius was emperor, «(249 - 251 μ.Χ.), σκληρότατος διώκτης των χριστιανών», under the proconsul Valerius, and all four beheaded. saint.gr gives the four one page with a heading each, and a separate epigram for Carpus and Papylus together, for Agathodorus and for Agathonica. The page gives no year of death, only that reign, so no `dates` object is proposed. It records relics: «Αποτμήματα του Ιερού Λειψάνου του Αγίου Πάπυλου βρίσκονται στις Μονές Σταυρονικήτα Αγίου Όρους και Τιμίου Σταυρού Σάμου», and the same for Carpus. The apolytikion names all four and is taken for all four; **the kontakion names only Καρπέ and Πάπυλε and is taken only for those two**, although it stands on the page of all four — it is the company's own service and not a mis-hang, but it is not drafted onto a saint it does not name. The Μεγαλυνάριον, which does name all four, and the Οἶκος are neither a troparion nor a kontakion and are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **For the writer: the page gives Carpus a see — «είχε γίνει επίσκοπος Θυατείρων» — and `upgrade.py` has no key for `office`, so it is left to be placed by hand."
     },
     {
       "church": "serbian",
@@ -63,6 +79,23 @@
         "text": "Thy martyrs, O Lord, in their struggles received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the feeble insolence of the demons also. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Βίον ἔνθεον, διαδραμόντες, Χριστοῦ ὤφθητε, συγκληρονόμοι, δι' ἀθλήσεως ἐχθρὸν τροπωσάμενοι, Καρπὲ σοφὲ καὶ κλεινὲ Ἀγαθόδωρε, Ἀγαθονίκη καὶ Πάπυλε ἔνδοξε. Θεῖοι Μάρτυρες, Χριστῷ τῷ Θεῷ πρεσβεύσατε, δωρήσασθαι ἤμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page the four share, and it names all four of them.",
+        "url": "https://www.saint.gr/2734/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having run through a godly life, you were shown to be co-heirs of Christ, having routed the enemy by your contest: wise Carpus and renowned Agathodorus, Agathonica and glorious Papylus. Divine Martyrs, intercede with Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

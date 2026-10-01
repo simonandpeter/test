@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-chalcedon nicetas-of-epirus nicetas-of-medikion nicetas-of-nisyros nicetas-of-novgorod nicetas-of-pythia nicetas-of-thebes nicetas-the-patrician nicetas-the-sinaite nicetas-the-stylite-of-pereslavl nikitas-of-nea-moni':
+    'Thirteen now. The new one is Nicetas the Patrician on 13 October; the others are read in the el-06-23 entry for this name form.',
+  'ιακωβοσ jacob-netsvetov jacob-of-nimouzan jacob-the-hermit james-13-june james-companion-of-emilian james-matynenko james-of-borovichi james-of-bryleyevo james-of-chamatoura james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-stromyn james-of-the-brazen-gate james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-redozubov james-son-of-zebedee james-the-confessor':
+    'Twenty-two now. The new one is James of Chamatoura on 13 October; the others are read in the el-06-13 entry for this name form.',
+  'διοσκοροσ dioscorus-13-october dioscorus-19-april dioscorus-of-11-may':
+    'Three men: the Dioscorus of 19 April, the Dioscorus of 11 May and the Dioscorus of 13 October.',
+  'χρυση chryse-of-slatena chryse-the-martyr':
+    'Two women: Chryse the martyr on 30 January and Chryse of Slatena on 13 October.',
+  'βενιαμιν benjamin-the-deacon benjamin-the-martyr-29-july benjamin-the-recluse':
+    'Three men: Benjamin the deacon on 31 March, the Benjamin of 29 July and Benjamin the Recluse on 13 October.',
   'θεοδοτοσ theodotus-1-january theodotus-3-july theodotus-companion-of-asklepiodote theodotus-martyr-4-july theodotus-of-ancyra theodotus-of-cyzicus theodotus-of-ephesus theodotus-of-kyrenia theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
     'Ten now. The new one is Theodotus of Ephesus on 12 October; the others are read in the el-07-04 entry for this name form.',
   'ιασων jason-of-damascus jason-of-tarsus jason-son-of-claudius':

@@ -1,0 +1,59 @@
+{
+  "slug": "dioscorus-13-october",
+  "display_name": "Dioscorus (13 October)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Διόσκορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Άγιος Διόσκορος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Άγιος Διόσκορος»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους» and «Αγιος Διοσκορος (; - 288)», and the life repeats the year — «μαρτύρησε στα χρόνια του βασιλιά Διοκλητιανού το έτος 288 μ.Χ.» — so a `dates` object carries it. The corpus's two other men of the name are neither of them this one: `dioscorus-19-april` was a priest of the idols under Antoninus who came to the faith through the wonders of Theodore of Perga, and `dioscorus-of-11-may` is Dioscorus the New of Smyrna. The display name follows the corpus's own habit for a bare name on a distinct day, as in `dioscorus-19-april` itself. `locations` is left out: «τους ονομαζόμενους Σκηνοπολίτες» is a people the page names and not a place it puts him in. The rank the page gives him is the secular βουλευτής, a councillor, which is no `office` in this corpus's sense and is left in the life. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 288,
+      "display": "288",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Διόσκορος μαρτύρησε στα χρόνια του βασιλιά Διοκλητιανού το έτος 288 μ.Χ.», and its page head gives him as «Αγιος Διοσκορος (; - 288)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

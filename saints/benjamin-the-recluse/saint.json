@@ -1,0 +1,60 @@
+{
+  "slug": "benjamin-the-recluse",
+  "display_name": "Benjamin the Recluse",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Βενιαμίν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Όσιος Βενιαμίν ο Έγκλειστος ο «εν τω Σπηλαίω»», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Οκτωβρίου — «Όσιος Βενιαμίν ο Έγκλειστος ο «εν τω Σπηλαίω»»",
+        "url": "https://www.saint.gr/10/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Οκτωβρίου εκάστου έτους» and «Οσιος Βενιαμιν ο Εγκλειστος ο «εν Τω Σπηλαιω»». Its whole notice is three sentences: he lived in the fourteenth century, was a considerable merchant before he became a monk, and on taking to heart the Lord's words that a rich man will hardly enter the Kingdom of Heaven he repented, gave what he had to the poor and became a monk, begging the Lord to forgive him. The century is stated and a `floruit` carries it. **«εν τω Σπηλαίω» is left untranslated and unplaced**: the page says nothing about which cave or which country, and the corpus's Kyiv Caves fathers are not named on it, so nothing is inferred and there is no `locations`. The corpus keeps four other men called Benjamin — the deacon of Persia, the one of 29 July, and two twentieth-century Russians — and none of them is a fourteenth-century merchant. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Βενιαμίν έζησε τον 14ο αιώνα μ.Χ.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
