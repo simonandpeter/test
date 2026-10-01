@@ -1,0 +1,62 @@
+{
+  "slug": "parthenius-of-chios",
+  "display_name": "Parthenius of Chios",
+  "names": [
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Όσιος Παρθένιος ο εν Χίω», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1883,
+      "latest": 1883,
+      "display": "1883",
+      "basis": "attested",
+      "note": "saint.gr: «Εκοιμήθη εν ειρήνη την 8η Δεκεμβρίου 1883 μ.Χ.», with the page's own head «(; - 1883)». The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Όσιος Παρθένιος ο εν Χίω»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day as the listing, and that day is also the day of his death, 8 December 1883. The page prints an apolytikion that names him, his island, Penthodos and the monastery of Saint Mark — but **it prints no ἦχος and no automelon for it**, so by the house rule a hymn whose key the page does not give is left out rather than recorded with a null, and it is not drafted. It names the place of his relics, the monastery of Saint Mark on Chios, and it names Professor Lazaros Zanaras as the man who wrote down his wonders against the saint's will; neither is drafted. The corpus keeps many men called Parthenius on other days, none on this one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

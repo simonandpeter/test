@@ -8,4 +8,10 @@ After that many came. A well-known man of Constantinople, swollen with dropsy an
 
 These and many other wonders he did; and in deep old age he came to his blessed end and passed over to God, and was buried with honour in the church of the Forerunner.
 
-*After doxologia.ro's calendar for 8 decembrie — [the day](https://doxologia.ro/8-decembrie) and [the life](https://doxologia.ro/sfantul-cuvios-patapie); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 8 December, and reads his childhood through a verse of Paul. saint.gr has him born in Egypt and possessed from a small child of a spirit of love and of sober-mindedness — the words of the second letter to Timothy — so that he governed himself prudently and sensibly, avoiding every moral straying and keeping his purity, and at the same time set an example to those about him; and this, the page says, he proved still more when he grew up.
+
+Having shared out his inheritance among the poor he withdrew to the desert, where he filled his time with prayer, with study and with works of mercy. To every tired traveller who passed his cell he offered rest and hospitality, and taking the occasion he gave him, with discernment, spiritual directions and counsels useful for the saving of his soul; so his fame spread quickly and every day many came to his cell to hear profitable teaching from his lips.
+
+After a time Patapius went to Constantinople, and wishing to stay unknown there he chose a hesychasterion at the Blachernae. But his humble and clean life, the page says, made him worthy to work wonders, and so he became known again; and he died healing the sick. His relic lies incorrupt at the monastery of his name at Loutraki in Corinthia.
+
+*After doxologia.ro's calendar for 8 decembrie — [the day](https://doxologia.ro/8-decembrie) and [the life](https://doxologia.ro/sfantul-cuvios-patapie); read 25 September 2026; and saint.gr's calendar for 8 Δεκεμβρίου — [the day](https://www.saint.gr/12/08/index.aspx) and [the life](https://www.saint.gr/3204/saint.aspx), read 2 October 2026.*

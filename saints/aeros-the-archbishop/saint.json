@@ -1,0 +1,50 @@
+{
+  "slug": "aeros-the-archbishop",
+  "display_name": "Aeros",
+  "names": [
+    {
+      "form": "Αέρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιος Αέρος ο αρχιεπίσκοπος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Άγιος Αέρος ο αρχιεπίσκοπος»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page says he is unknown to the synaxaria and that his memory is recorded in the Jerusalem Kanonarion of the archimandrite Kallistos as «Μνήμη τοῦ ἀρχιεπισκόπου Ἀέρου», and that he belongs in any case to the saints of the Sionitis, that is of the Jerusalem, church. That is a single manuscript witness plainly named and not the site's own mark of doubt: this page carries no asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The 6 December «Άγιος Αέρος ο επίσκοπος» does carry both**, and that entry is refused for this run; its page adds «Ίσως να είναι ο ίδιος μ' αυτόν της 8ης Δεκεμβρίου» — perhaps he is the same as the one of 8 December — which is the refused page's own guess about this one, and no merge is drafted from it. The archbishop here is drafted because his own page vouches for him; the bishop there is not. No year, so no `dates` object. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

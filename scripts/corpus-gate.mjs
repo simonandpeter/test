@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παρθενιοσ parthenius-martyr-1-april parthenius-of-chios parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-radovisdi parthenius-of-zographou parthenius-the-third':
+    'Eight now. The new one is Parthenius of Chios on 8 December; the others are read in the el-07-10 entry for this name form.',
+  'επαφροδιτοσ epaphroditus-of-the-alamanoi epaphroditus-the-apostle':
+    'Two men. The new one is Epaphroditus of Philippi on 8 December, one of the Seventy; the other is Epaphroditus of the Alamanoi on 12 October.',
+  'απολλωσ apollos-bishop-10-june apollos-companion-of-alexandra apollos-the-apostle apollos-under-julian':
+    'Four men. The new one is Apollos of Caesarea on 8 December, one of the Seventy, drafted against the Apollos of 10 June rather than merged with him — the identity is the author’s and is in ro-run/FINDINGS.md. The others are the companion of Alexandra on 21 April and the Apollos of 25 January.',
   'πρισκοσ priscus-martyr-7-december priscus-martyr-at-besancon priscus-of-the-forty-martyrs':
     'Four now with the Priscus of 7 December, who is kept with Martin and Nicholas. The others are Priscus of the Forty of Sebaste on 9 March, the Priscus the Greek keeps on 21 September and Priscus martyred at Besançon on 26 May; the el-05-25 entry reads them.',
   'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-martyr-7-december nicholas-migulin nicholas-of-chios nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-melambes nicholas-of-metsovo nicholas-of-myra nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-thessalonica nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-simple nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':

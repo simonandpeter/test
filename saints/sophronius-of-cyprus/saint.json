@@ -7,6 +7,11 @@
       "form": "Sofronie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 decembrie, «Sfântul Ierarh Sofronie, Episcopul Ciprului», with the rank word and the see left off."
+    },
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Όσιος Σωφρόνιος επίσκοπος Κύπρου», with the rank and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Όσιος Σωφρόνιος επίσκοπος Κύπρου»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Cypriot of devout Christian parents who was chosen for the see after the death of the bishop Damianos. The day's line calls him «επίσκοπος Κύπρου» while the text says he became «Αρχιεπίσκοπος Κύπρου»; the folder's existing office, Bishop of Cyprus, is left as it stands and the page's own second word is recorded here rather than written into the field. It gives no year, so the folder's dateless state stands. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Tihic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 decembrie, «Sfântul Apostol Tihic», with the rank word left off."
+    },
+    {
+      "form": "Τυχικός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man, the apostle of the Seventy whom Paul calls a beloved brother and deacon in the Lord. The entry names all six of its members and gives each his own couplet and paragraph, so each is a folder and each relates the others; five of the six are drafted in this batch and this one is the upgrade. The page gives him two traditions of a see — the first bishop of Neapolis-Lemesos in Cyprus, and after Paul's martyrdom bishop of Chalcedon in Bithynia — and marks both as «κατά μια παράδοση», so neither is written into `office`. It prints the day's one hymn, an apolytikion that names Tychicus and therefore belongs to him and not to the other five, and it attributes that hymn to a named modern composer, «Ποιηθέν υπό του αειμνήστου διδασκάλου Χ. Παπαδοπούλλου»; the attribution is carried in the hymn's own source line so that the licence question is visible, and it is named in the report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -45,5 +60,31 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "sosthenes-the-apostle",
+    "cephas-the-apostle",
+    "apollos-the-apostle",
+    "epaphroditus-the-apostle",
+    "caesar-the-apostle"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τοῦ Παύλου μαθητὴς καὶ ἀκόλουθος ὑπάρχων, τὸν καλὸν ἀγῶνα τῆς πίστεως χαίρων ἠγωνίσω, ὑψῶν ἀληθείας τὸν πυρσὸν καὶ ἔθνεσι παρέχων φωτισμῶν. Διὰ τοῦτο, Πανσεβάσμιε Τυχικέ, τιμῶντες σὲ νῦν βοῶμεν. Χαῖρε Χριστοῦ, ὦ σκεῦος ἐκλεκτῶν, χαῖρε Θεοῦ ἀπόστολε, ὦ καὶ πρέσβευε δωρήσασθαι πάσι τὴν λύτρωσιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντος — the one hymn on the page of the six apostles of 8 Δεκεμβρίου, and it names Tychicus. The page attributes it to a named modern author: «Ποιηθέν υπό του αειμνήστου διδασκάλου Χ. Παπαδοπούλλου».",
+        "url": "https://www.saint.gr/3203/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being a disciple of Paul and his follower, you fought the good fight of the faith with joy, lifting up the torch of truth and giving light to the nations. And so, all-venerable Tychicus, honouring you we now cry: Rejoice, chosen vessel of Christ; rejoice, apostle of God; and intercede that redemption be granted to all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    }
+  ]
 }

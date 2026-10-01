@@ -6,6 +6,11 @@
       "form": "Patapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 decembrie, «Sfântul Cuvios Patapie», with the rank words left off."
+    },
+    {
+      "form": "Πατάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Όσιος Πατάπιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 8 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Όσιος Πατάπιος»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Egyptian who gave away his inheritance, withdrew to the desert and then hid himself in a hesychasterion at the Blachernae in Constantinople, where he died healing the sick. saint.gr calls him simply «Όσιος Πατάπιος» and does not use the by-name of Thebes which the folder's English carries, and it gives no year, so the folder's dateless state stands. It prints two apolytikia, a kontakion, an oikos and a kathisma. Both apolytikia are taken: the first, «Ἔν σοι Πάτερ ἀκριβῶς», is the common of a venerable father with his name set into it and printed under his name as his own service, and the second, «Θείας κλήσεως», names him too. **The kontakion is not taken**: the page prints it with no ἦχος and no automelon, and a hymn whose key the page does not give is left out rather than recorded with a null. The oikos and the kathisma are not kinds the schema holds. The page names the place of his relic, the monastery of his name at Loutraki in Corinthia. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,6 +76,39 @@
         "text": "You were shown to be the praise of Christians and the defender of monks, Patapius our father. By your ascetic labour, your sufferings and your prayers you have boldness now before God to intercede unceasingly for us Christians, sinners and worthy of condemnation. Glory to him who was glorified in you, glory to him who gave you strength, glory to him who enlightened us through your labour.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἔν σοι Πάτερ ἀκριβῶς, διεσώθη τὸ κατ᾽ εἰκόνα· λαβὼν γὰρ τὸν σταυρόν, ἠκολούθησας τῷ Χριστῷ, καὶ πράττων ἐδίδασκες, ὑπερορᾷν μὲν σαρκός, παρέρχεται γὰρ ἐπιμελεῖσθαι δὲ ψυχῆς, πράγματος ἀθανάτου· διὸ καὶ μετὰ Ἀγγέλων συναγάλλεται, Ὅσιε Πατάπιε τὸ πνεῦμά σου.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first hymn on the page of «Όσιος Πατάπιος»; it is the common of a venerable father, printed under his name with his name in it.",
+        "url": "https://www.saint.gr/3204/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, what is according to the image was kept exactly; for taking up the cross you followed Christ, and by your doing you taught us to overlook the flesh, since it passes away, and to take care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, venerable Patapius.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείας κλήσεως, ἰχνηλατήσας, ἐκ νεότητος, τᾶς ἐπιδόσεις, δι' ἀσκήσεως τῷ κόσμῳ ἐξέλαμψας, καὶ δοξασθεῖς ἀπαθείας ταὶς χάρισι, πάθη ποικίλα ἴασαι Πατάπιε, Πάτερ Ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the second hymn on the page of «Όσιος Πατάπιος», and it names him.",
+        "url": "https://www.saint.gr/3204/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having tracked out from your youth the givings of the divine calling, you shone upon the world by ascesis; and glorified with the graces of dispassion you heal all kinds of sufferings, Patapius. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

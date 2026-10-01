@@ -1,0 +1,61 @@
+{
+  "slug": "apollos-the-apostle",
+  "display_name": "Apollos of Caesarea",
+  "names": [
+    {
+      "form": "Απολλώς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Apostle of the Seventy, Bishop of Caesarea",
+  "types": [
+    "apostle",
+    "bishop"
+  ],
+  "related": [
+    "sosthenes-the-apostle",
+    "cephas-the-apostle",
+    "epaphroditus-the-apostle",
+    "tychicus-the-apostle",
+    "caesar-the-apostle",
+    "aquila",
+    "priscilla"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 8ης Δεκεμβρίου — «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα»",
+        "url": "https://www.saint.gr/12/08/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names all six of its members, so it is one folder per named member and each relates the others. **An open identity question:** the corpus keeps `apollos-bishop-10-june`, «Απολλώς», with a venerated Greek row on 10 June and the bare office Bishop, and that folder's own source says nothing that would join or part the two. Two entries on one calendar are two commemorations by the settled rule, so this day is drafted as its own folder and the question is named in the report rather than decided in a draft. The page names Aquila and Priscilla, referring them to 13 Φεβρουαρίου, as those who instructed him; the corpus holds both on the Greek 13 February, they are named in the life as the page names them, and each gets a `related` row because the page makes them his instructors. The one hymn on the page names Tychicus and is his. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

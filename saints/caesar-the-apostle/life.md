@@ -6,4 +6,6 @@ What the page prints beside the name are the readings appointed for the commemor
 
 Nothing further is set down here because nothing further was read. Other calendars carry more of him; none was consulted for this page, and the three other churches' rows say so.
 
-*After doxologia.ro's calendar for 8 decembrie — [the day](https://doxologia.ro/8-decembrie) and [his page there](https://doxologia.ro/sfantul-apostol-cezar); read 25 September 2026.*
+The Greek calendar keeps him on 8 December with five other apostles of the Seventy in one entry, and names all six: [Sosthenes](/saints/sosthenes-the-apostle), [Cephas](/saints/cephas-the-apostle), [Apollos](/saints/apollos-the-apostle), [Tychicus](/saints/tychicus-the-apostle), Caesar and [Epaphroditus](/saints/epaphroditus-the-apostle). Of Caesar saint.gr says two things only: that he is mentioned, with his household, in the apostle Paul's letter to the Philippians, and that he is reported to have held the see of Korone in the Peloponnese — a report the page marks as such, and which is therefore not written down here as his office. His couplet plays on his name: Caesar truly reigned, and reigned prudently, bringing souls in with him to Christ the King.
+
+*After doxologia.ro's calendar for 8 decembrie — [the day](https://doxologia.ro/8-decembrie) and [his page there](https://doxologia.ro/sfantul-apostol-cezar); read 25 September 2026; and saint.gr's calendar for 8 Δεκεμβρίου — [the day](https://www.saint.gr/12/08/index.aspx) and [the life](https://www.saint.gr/3203/saint.aspx), read 2 October 2026.*
