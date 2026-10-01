@@ -6,6 +6,11 @@
       "form": "Elena din Sinope",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfânta Muceniță Elena din Sinope»."
+    },
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Αγία Ελένη η Παρθενομάρτυς από τη Σινώπη», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Αγία Ελένη η Παρθενομάρτυς από τη Σινώπη»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: of Sinope in Pontos, of the Bekiaris family, fifteen years old, killed by Oukouzoglou pasha. The folder's existing dates are left untouched; the page says only «μαρτύρησε τον 18ο αιώνα μ.Χ.». The apolytikion and the kontakion both name her and are taken; the third hymn the page prints, «Χαίροις τῆς Σινώπης ἄνθος τερπνόν», is a Μεγαλυνάριον and is not drafted. The page's account of her relics is long and is written into the life: the head in the church of Saint Marina at Ano Toumba in Thessalonica since the exchange of populations before 1924, and the Agiasmata spring where the body sank. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -55,5 +70,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς ἁγνείας τὸ ἄνθος τὸ εὐωδέστατον, καὶ Σινώπης τὸ κλέος καὶ θεῖον βλάστημα, Παρθενομάρτυς τοῦ Χριστοῦ ῾Ελένη πάνσεμνε, ἡ ἀθλήσασα στερρῶς, καὶ καθελοῦσα τὸν ἐχθρόν, τῆς πίστεως τῇ δυνάμει, διὰ παντὸς ἐκδυσώπει, ἐλεηθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Αγία Ελένη η Παρθενομάρτυς από τη Σινώπη». It names her and her city and no other saint.",
+        "url": "https://www.saint.gr/2868/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sweetest flower of purity, glory and godly offspring of Sinope, virgin martyr of Christ, all-modest Helen, who contended stoutly and pulled down the enemy by the power of faith: entreat without ceasing that our souls may find mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ως παρθένος ἄμωμος ἐν τῇ δυνάμει, τοῦ Χριστοῦ κατέβαλες, τὸν πολυμήχανον ἐχθρόν, καὶ μαρτυρίῳ κεκόσμησαι, Παρθενομάρτυς ῾Ελένη πανεύφημε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Αγία Ελένη η Παρθενομάρτυς από τη Σινώπη». It names her and no other saint.",
+        "url": "https://www.saint.gr/2868/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a spotless virgin you threw down, in the power of Christ, the enemy of many devices, and you were adorned with martyrdom, all-praised virgin martyr Helen.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ]
 }

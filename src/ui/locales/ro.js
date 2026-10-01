@@ -1004,6 +1004,7 @@ export const ro = {
     'Emperor': 'Împărat',
     'Emperor of Constantinople': 'Împărat al Constantinopolului',
     'Emperor of Russia': 'Împărat al Rusiei',
+    'Emperor of Trebizond': 'Împărat al Trapezuntului',
     'Emperor of the East': 'Împărat al Răsăritului',
     'Empress': 'Împărăteasă',
     'Empress of the Romans, regent for her son Constantine VI': 'Împărăteasă a romanilor, regentă pentru fiul ei Constantin VI',

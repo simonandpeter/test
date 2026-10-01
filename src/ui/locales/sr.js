@@ -1006,6 +1006,7 @@ export const sr = {
     'Emperor': 'Цар',
     'Emperor of Constantinople': 'Цар цариградски',
     'Emperor of Russia': 'Цар Русије',
+    'Emperor of Trebizond': 'Цар трапезунтски',
     'Emperor of the East': 'Цар истока',
     'Empress': 'Царица',
     'Empress of the Romans, regent for her son Constantine VI': 'Царица Ромеја, намесница за свога сина Константина VI',

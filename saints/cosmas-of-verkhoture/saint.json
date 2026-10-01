@@ -1,0 +1,59 @@
+{
+  "slug": "cosmas-of-verkhoture",
+  "display_name": "Cosmas of Verkhoture",
+  "names": [
+    {
+      "form": "Κοσμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιος Κοσμάς του Βερχοτούρε», with the rank word left off; «του Βερχοτούρε» is the page's own transliteration of the Russian place and is what the English form keeps."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1706,
+      "latest": 1706,
+      "display": "1706",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Κοσμας Του Βερχοτουρε (; - 1706)». The notice itself gives no year and no other fact."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a saint of Verkhoture, and it has not been read here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιος Κοσμάς του Βερχοτούρε»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing, and its whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου». So the place and the year of death are all it gives. `righteous` is recorded because the page gives him no rank word at all beyond Άγιος, and that is the rank this corpus prints for a saint with no distinctive one; a writer who finds the Russian calendar calling him a fool for Christ or a layman should change it. The same day's listing keeps two other men named Cosmas, the unmercenary of Asia and this one, and nothing connects them. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "james-the-deacon-of-kastoria",
+  "display_name": "James the Deacon, disciple of James of Kastoria",
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "deacon"
+  ],
+  "related": [
+    "james-of-kastoria",
+    "dionysius-the-monk-of-kastoria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1520,
+      "latest": 1520,
+      "display": "1520",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Ιακωβος ο Διακονος Μαθητης Του Αγιου Ιακωβου Του Νεου Οσιομαρτυρα Απο Την Καστορια (; - 1520)», and in the notice «τους απαγχόνισαν στις 1 Νοεμβρίου του 1520 μ.Χ.». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates three men, so it is three folders, and this one's heading on the page identifies him only as the deacon disciple of the elder, which is what the English form keeps. The same day's listing keeps a different James, the presbyter martyred under Shapur, who is a new folder of this batch and not this man. The page records fragments of his relics at the metropolis of Didymoteicho and at the monastery of Saint Anastasia at Vasilika near Thessalonica. Both hymns on the page name the elder James and not his disciples, so none is taken here. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

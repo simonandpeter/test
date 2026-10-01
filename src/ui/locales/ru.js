@@ -1023,6 +1023,7 @@ export const ru = {
     'Emperor': 'Император',
     'Emperor of Constantinople': 'Император Константинопольский',
     'Emperor of Russia': 'Император Российский',
+    'Emperor of Trebizond': 'Император Трапезундский',
     'Emperor of the East': 'Император Востока',
     'Empress': 'Императрица',
     'Empress of the Romans, regent for her son Constantine VI': 'Императрица римлян, регент при сыне своём Константине VI',

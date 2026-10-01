@@ -1,0 +1,60 @@
+{
+  "slug": "hermenegild",
+  "display_name": "Hermenegild",
+  "names": [
+    {
+      "form": "Ερμινίγγελδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιος Ερμινίγγελδος», with the rank word left off. The notice gives a second spelling of its own, «(ή Ερμηνιγγίλδος)», and the epigram a third, «Ἑρμηνίγγελδος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 585,
+      "latest": 585,
+      "display": "about 585",
+      "basis": "traditional",
+      "note": "saint.gr: «Στρατιώτες μπήκαν στο κελί του και τον θανάτωσαν γονατιστό όπως προσευχόταν περί το 585 μ.Χ.» — the page's own year, written «περί», about. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιος Ερμινίγγελδος»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus holds no saint of this name and the namesweep returned nothing for it. `prince` is recorded because the page makes him the son of Leovigild, king of the Visigoths, and gives him no rule of his own. No location is recorded: the page names no city, only the nation. The English form is the one an English reader looks the name up under, and the page's own three spellings are all in the `names` note. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

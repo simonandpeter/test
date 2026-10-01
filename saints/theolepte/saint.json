@@ -1,0 +1,50 @@
+{
+  "slug": "theolepte",
+  "display_name": "Theolepte",
+  "names": [
+    {
+      "form": "Θεολήπτη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Αγία Θεολήπτη», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Αγία Θεολήπτη»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The page says plainly that she is unknown to the synaxaria and that everything it has comes from one manuscript: «Για την Αγία αυτή γίνεται λόγος στον Παρισινό Κώδικα 259 φ. 2α, όπου υπάρχει και Στιχηρό τροπάριο της». That is a thin source but not the site's own refusal to vouch for the entry: the page carries no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», which the 1 Νοεμβρίου entry for Cyprian and Juliana does carry and for which that entry is refused. **`martyr` is the page's own guess and is recorded as such**: «κατά πάσα πιθανότητα πέθανε μαρτυρικά», in all probability she died a martyr. The στιχηρό of the Paris codex is a sticheron and not a troparion or a kontakion, and its text is not printed, so no hymn is drafted. No year, so no `dates` object."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

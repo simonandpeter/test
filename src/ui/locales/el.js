@@ -1005,6 +1005,7 @@ export const el = {
     'Emperor': 'Αυτοκράτορας',
     'Emperor of Constantinople': 'Αυτοκράτορας της Κωνσταντινούπολης',
     'Emperor of Russia': 'Αυτοκράτορας της Ρωσίας',
+    'Emperor of Trebizond': 'Αυτοκράτορας της Τραπεζούντας',
     'Emperor of the East': 'Αυτοκράτορας της Ανατολής',
     'Empress': 'Αυτοκράτειρα',
     'Empress of the Romans, regent for her son Constantine VI': 'Αυτοκράτειρα των Ρωμαίων, αντιβασίλισσα για τον γιο της Κωνσταντίνο ΣΤ΄',

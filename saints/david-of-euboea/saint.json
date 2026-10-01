@@ -6,6 +6,11 @@
       "form": "David din Evia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfântul Cuvios David din Evia»."
+    },
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Όσιος Δαβίδ που ασκήτευε στην Εύβοια», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Όσιος Δαβίδ που ασκήτευε στην Εύβοια»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: of Gardinitsa near Talanti, son of the priest Christodoulos and of Theodora, who reposed on 1 November and has a monastery of his own in Euboea. The folder's existing dates are left untouched; the page's own chronology is the patriarchate of Jeremias, «περί το 1519 μ.Χ.», which is an anchor and not a year of his. The apolytikion names him and Euboea and is taken; the page prints it without breathings and accents, and it is copied as it stands. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -71,6 +86,23 @@
         "text": "With the streams of your tears you made the barren desert fruitful, and with your sighs out of the depths you made your labours bear a hundredfold; and you became a light to the world, shining with wonders, David our father. Pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Μέγαν εύρατο, Εύβοια κλέος, τον πανένδοξον, Δαβίδ τον θείον, ως ιεράς αρετής καταγώγιον, και του Χρίστου οπαδόν αληθέστατον, και των Όσίων απάντων εφάμιλλον. Διό Πάτερ Όσιε, Χριστόν τον Θεόν ικέτευε, δωρήσασθε ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ήχος γ', Θείας πίστεως — the one hymn on the page of «Όσιος Δαβίδ που ασκήτευε στην Εύβοια». It names him and the island and no other saint. The page prints it without breathings and with «Χρίστου» and «Όσίων» as they stand here.",
+        "url": "https://www.saint.gr/2867/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Euboea has found a great glory, the all-glorious and godly David, as a dwelling-place of sacred virtue, a most true follower of Christ, and a match for all the venerable fathers. Therefore, holy father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος γ'.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

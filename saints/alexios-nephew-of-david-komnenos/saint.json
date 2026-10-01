@@ -1,0 +1,66 @@
+{
+  "slug": "alexios-nephew-of-david-komnenos",
+  "display_name": "Alexios, nephew of David the Great Komnenos",
+  "names": [
+    {
+      "form": "Αλέξιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιος Δαβίδ ο Μέγας Κομνηνός ο νεομάρτυρας και η συνοδεία του Βασίλειος, Γεώργιος, Μανουήλ οι υιοί του και Αλέξιος ο ανεψιός του», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "prince"
+  ],
+  "related": [
+    "david-the-great-komnenos",
+    "basil-son-of-david-komnenos",
+    "george-son-of-david-komnenos",
+    "manuel-son-of-david-komnenos"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1463,
+      "latest": 1463,
+      "display": "1463",
+      "basis": "attested",
+      "note": "saint.gr's heading for him, «Αγιος Αλεξιος ο Ανεψιος Του Αγιου Δαβιδ Του Μεγα Κομνηνου (; - 1463)», and the synaxarial note it quotes for the execution at Constantinople on the first of November 1463. No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιος Δαβίδ ο Μέγας Κομνηνός ο νεομάρτυρας και η συνοδεία του Βασίλειος, Γεώργιος, Μανουήλ οι υιοί του και Αλέξιος ο ανεψιός του»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates all five of its members, so it is five folders. This is the only one of the four besides the emperor of whom the prose says anything: it calls him «τον ανεψιό του και διάδοχο Αλέξιο τον Ε», his nephew and heir, Alexios the Fifth. The ordinal is the page's and is not written into the English form, because the page states it once and in passing and the corpus has no other Alexios of Trebizond to number against. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

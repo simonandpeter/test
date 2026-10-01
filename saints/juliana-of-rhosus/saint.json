@@ -1,0 +1,62 @@
+{
+  "slug": "juliana-of-rhosus",
+  "display_name": "Juliana of Rhosus",
+  "names": [
+    {
+      "form": "Ιουλιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Αγίες Κυριαίνα και Ιουλιανή», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "kyriaina-of-tarsus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "about 298",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησαν στα χρόνια του αυτοκράτορα Μαξιμιανού (298 μ.Χ.)» — the page's own year, attached to the reign it sets the two women in, and the burning follows in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Αγίες Κυριαίνα και Ιουλιανή»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates two women, each with her own heading and her own city, so it is two folders. The corpus keeps five other Julianas — of Amisos, of Nicomedia, of Ptolemais, of Lazarevo, and the mother of Saturninus — and none of them is of Rhosus or kept on this day. The English form takes her city because the page gives it: «την πόλη Ρώσο επίσης της Κιλικίας». No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

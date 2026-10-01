@@ -1,0 +1,100 @@
+{
+  "slug": "james-of-kastoria",
+  "display_name": "James of Kastoria",
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "related": [
+    "james-the-deacon-of-kastoria",
+    "dionysius-the-monk-of-kastoria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1520,
+      "latest": 1520,
+      "display": "1520",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Ιακωβος ο Νεος Οσιομαρτυρας Απο Την Καστορια (; - 1520)», and in the notice «τους απαγχόνισαν στις 1 Νοεμβρίου του 1520 μ.Χ.». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates three men, each with his own heading and his own year, so it is three folders. The corpus holds no James of Kastoria. No location is recorded although the page names Korisos, Constantinople, Docheiariou, Meteora, Nafpaktos, Trikala, Didymoteicho and Adrianople: they are the stations of a life and not a seat. It records fragments of his relics at the metropolis of Didymoteicho, at the monastery of Saint Anastasia at Vasilika near Thessalonica, and in the metropolitan church of the Dormition at Kastoria. The apolytikion and the kontakion both name him and are taken into this folder only, because neither names his disciples; the Μεγαλυνάριον is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀγγελικῶς ἐπὶ τῆς γῆς διαπρέψας, τῶν Ἀποστόλων ἀνεδέξω τὴν χάριν, καὶ μετανοίας κήρυξ καὶ διδάσκαλος πεμφθείς, ἔδειξας τοῖς θέλουσι, σωτηρίας τὴν τρίβον, ὅθεν καὶ πρὸς ἄθλησιν, παρετάξω γενναίως, σὺν τοῖς στεῤῥοῖς συνάθλοις σου σοφέ, Ὁσιομάρτυς Ἰάκωβε μέγιστε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ΄, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — the first hymn on the page of «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του». It names him and calls his companions only «τοῖς στεῤῥοῖς συνάθλοις σου», so it is taken into his folder and not into theirs.",
+        "url": "https://www.saint.gr/2866/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out on earth like an angel, you received the grace of the Apostles; and being sent as a herald and teacher of repentance, you showed the path of salvation to those who would have it. From there you drew up boldly for the contest, with your steadfast fellow contenders, wise one, greatest venerable martyr James.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ΄.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῆς μετανοίας τὴν λαμπρὰν καὶ θείαν σάλπιγγα, φιλανθρωπίας τοῦ Θεοῦ τὸν νέον Κήρυκα, ἀνυμνήσωμεν Ἰάκωβον ἐπαξίως. Τοῦ Κυρίου, τὸν βαστάσαντα τὰ στίγματα, καὶ πληρώσαντα Ἁγίων τὸ ὑστέρημα. Ὅθεν εἴπωμεν· Χαίροις, Πάτερ Ἰάκωβε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ´, Τῇ ὑπερμάχῳ — on the page of «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του». It names him and no other saint.",
+        "url": "https://www.saint.gr/2866/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us worthily sing the praise of James, the bright and divine trumpet of repentance, the new herald of God's love for mankind, who bore the marks of the Lord and filled up what was lacking of the saints. And so let us say: hail, father James.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ´.",
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

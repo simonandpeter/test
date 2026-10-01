@@ -1,0 +1,63 @@
+{
+  "slug": "james-companion-of-john-the-bishop",
+  "display_name": "James, companion of John the Bishop",
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιωάννης ο Επίσκοπος και Ιάκωβος ο Πρεσβύτερος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "related": [
+    "john-companion-of-james-the-presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 332,
+      "latest": 332,
+      "display": "about 332",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν στα χρόνια του βασιλιά των Περσών Σαβωρίου (332 μ.Χ.)» — the page's own year, attached to the reign it sets the two men in, and the beheading follows in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιοι Ιωάννης ο Επίσκοπος και Ιάκωβος ο Πρεσβύτερος»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates two men, each with his own heading and his own rank, so it is two folders. The same day's listing keeps two other men named James, the venerable-martyr of Kastoria and his deacon, who are new folders of this batch and not this man; nothing on either page connects them. The English form hangs on his companion because the page gives him neither city nor epithet. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

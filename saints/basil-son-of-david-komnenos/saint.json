@@ -1,0 +1,66 @@
+{
+  "slug": "basil-son-of-david-komnenos",
+  "display_name": "Basil, son of David the Great Komnenos",
+  "names": [
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιος Δαβίδ ο Μέγας Κομνηνός ο νεομάρτυρας και η συνοδεία του Βασίλειος, Γεώργιος, Μανουήλ οι υιοί του και Αλέξιος ο ανεψιός του», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "prince"
+  ],
+  "related": [
+    "david-the-great-komnenos",
+    "george-son-of-david-komnenos",
+    "manuel-son-of-david-komnenos",
+    "alexios-nephew-of-david-komnenos"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1463,
+      "latest": 1463,
+      "display": "1463",
+      "basis": "attested",
+      "note": "saint.gr's heading for him, «Αγιος Βασιλειος ο Υιος Του Αγιου Δαβιδ Του Μεγα Κομνηνου (; - 1463)», and the synaxarial note it quotes: «Ἐν δέ τῇ πρώτῃ Νοεμβρίου… ἐτελειώθη τῷ ξίφει ὁ αὐτός σύν ἅμα τοῖς τρισίν αὐτοῦ υἱοῖς καί τῷ ἀνεψιῷ, τῷ 1463… ἐν Κωνσταντινουπόλει». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιος Δαβίδ ο Μέγας Κομνηνός ο νεομάρτυρας και η συνοδεία του Βασίλειος, Γεώργιος, Μανουήλ οι υιοί του και Αλέξιος ο ανεψιός του»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates all five of its members, each with his own heading and his own year, so it is five folders; of this one the page says nothing except that he was a son of the emperor and that he was killed with him. `prince` is recorded for that kinship and for nothing else. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

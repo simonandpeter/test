@@ -1,0 +1,58 @@
+{
+  "slug": "thomas-the-infant",
+  "display_name": "Thomas the infant",
+  "names": [
+    {
+      "form": "Θωμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Καισάριος, Δάσιος, και άλλοι πέντε Μάρτυρες, Σάββας, Σαβινιανός, Αγρίππας, Αδριανός και Θωμάς το νήπιο», with the rank words left off; the page's own epithet for him is «το νήπιο», the infant."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "caesarius-of-damascus",
+    "dasius-companion-of-caesarius",
+    "sabbas-companion-of-caesarius",
+    "sabinianus-companion-of-caesarius",
+    "agrippa-companion-of-caesarius",
+    "adrian-companion-of-caesarius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιοι Καισάριος, Δάσιος, και άλλοι πέντε Μάρτυρες, Σάββας, Σαβινιανός, Αγρίππας, Αδριανός και Θωμάς το νήπιο»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day as the listing. The entry enumerates all seven of its members, so it is seven folders; this one keeps the page's own epithet rather than the companion's name, because «το νήπιο» is the one thing the calendar says about any single member of the company. No year, so no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

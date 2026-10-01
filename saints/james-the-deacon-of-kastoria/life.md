@@ -1,0 +1,9 @@
+# James the Deacon, disciple of James of Kastoria
+
+saint.gr's calendar for 1 Νοεμβρίου keeps «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός», and the whole of what it says about this James is that he was the deacon among the elder's disciples and that he died with him. His own heading on the page gives him no birthplace, no parents and no year but the year of his death.
+
+His teacher, [James of Kastoria](/saints/james-of-kastoria), had gathered disciples on the Holy Mountain and then taken them through the Castle of Petra, Meteora and the monastery of the Forerunner at Deverkista near Nafpaktos. There the elder was slandered to the Turks as stirring up the Christians against the authorities; and when he was arrested, two of his disciples were arrested with him — this deacon and [Dionysius the Monk](/saints/dionysius-the-monk-of-kastoria).
+
+After forty days in the prison of the Bey of Trikala the three were taken in irons to Didymoteicho in Thrace, where Sultan Selim was, frightfully tortured there, and sent on to Adrianople. Pressed to change their faith, they answered with one voice that God forbid they should ever deny their Lord Jesus Christ, though they were punished with ten thousand torments. The two disciples were whipped cruelly with whips of ox sinew while the elder's jaws were beaten and the skin stripped from his chest; and because all three were immovable in the faith, they were hanged on 1 November 1520. Fragments of this James's relics, the page says, are at the metropolis of Didymoteicho and at the monastery of Saint Anastasia at Vasilika near Thessalonica.
+
+*After saint.gr's calendar for 1 Νοεμβρίου — [the day](https://www.saint.gr/11/01/index.aspx) and [the life of the three](https://www.saint.gr/2866/saint.aspx); read 1 October 2026.*

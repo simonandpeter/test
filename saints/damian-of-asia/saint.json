@@ -6,6 +6,11 @@
       "form": "Damian din Asia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 noiembrie, «Sfântul Doctor fără de arginți Damian din Asia»."
+    },
+    {
+      "form": "Δαμιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι και θαυματουργοί», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Νοεμβρίου — «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι και θαυματουργοί»",
+        "url": "https://www.saint.gr/11/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own — the page's own kontakion settles it, «Ἐκ τῆς Ἀσίας ὥσπερ δύο ἀστέρες». The page prints no biography at all, only relics, two epigrams and five hymns, so no `dates` object is proposed. It records fragments of his relics at the monasteries of Dionysiou and Pantokrator on the Holy Mountain and in the Roman Catholic church of his name at Rome. The two hymns that name the brothers are taken; the common «Ἅγιοι Ἀνάργυροι» and the unnamed first Κοντάκιον are not, nor the Κάθισμα and the Μεγαλυνάριον. The same day's listing keeps another Damian in the corpus's sense only: this reading also drafts a Damian of 31 October from a different page, and the two are not connected. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
         "text": "Holy unmercenaries and workers of wonders, visit our infirmities; freely you have received, freely give to us.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείου Πνεύματος, τὴ χειρουργία, θεραπεύετε, παντοίας νόσους, σὺν Κοσμᾶ Δαμιανὲ οἱ Ἀνάργυροι, ὁ γὰρ Σωτὴρ ἰατροὺς ὑμᾶς ἔδειξεν, εἰς περιποίησιν πάντων καὶ ἴασιν ὅθεν ρύσασθε, παθῶν δυσαλθῶν καὶ θλίψεων, τοὺς ποθῶ τῷ ναῷ ὑμῶν προστρέχοντας.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the second hymn on the page of «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι και θαυματουργοί». It names both of them and no other saint.",
+        "url": "https://www.saint.gr/2859/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the surgery of the divine Spirit you heal sicknesses of every kind, Damian with Cosmas, unmercenaries; for the Saviour showed you to be physicians, for the care and the healing of all. Deliver, then, from grievous passions and afflictions those who run with longing to your church.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἐκ τῆς Ἀσίας ὥσπερ δύο ἀστέρες, ἐξανατείλαντες Ἀνάργυροι θεῖοι, τῇ οἰκουμένῃ λάμπετε θαυμάτων ταῖς αὐγαῖς, νόσους μὲν ἰώμενοι, καὶ δεινὰς καχεξίας, χάριν δὲ παρέχοντες, τοῖς πιστοῖς εὐρωστίας, Δαμιανὲ θεόφρον καὶ Κοσμᾶ, χειμαζομένων, λιμένες πανεύδιοι.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — on the page of «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι και θαυματουργοί». It names both of them and Asia, and no other saint.",
+        "url": "https://www.saint.gr/2859/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Risen out of Asia like two stars, divine unmercenaries, you light the whole world with the rays of your wonders, healing sicknesses and dreadful wastings, and giving the faithful the grace of health — God-minded Damian and Cosmas, fair havens for the storm-tossed.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
     }
   ],
   "text": {
