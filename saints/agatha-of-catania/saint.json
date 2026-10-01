@@ -18,6 +18,59 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "saint.gr: «Παρέδωσε το πνεύμα της το 251 μ.Χ. μετά από φρικτά βασανιστήρια και ενώ βρισκόταν στη φυλακή», with the page's own head «(; - 251)» and «Έζησε και μεγαλούργησε στο χρόνια του αυτοκράτορα Δέκιου (249 - 251 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 februarie — «Sfânta Muceniță Agata»",
+        "url": "https://doxologia.ro/5-februarie",
+        "year": 2026
+      },
+      "note": "The life closes by saying that the wonder at Catania happened «în luna februarie, în cinci zile, în care sfânta a pătimit», the day on which she suffered. The troparion the site prints for her is the common of one woman martyr."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Αγία Αγάθη»",
+        "url": "https://www.saint.gr/02/05/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -70,57 +123,10 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 5,
-        "month": 2,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 5 februarie — «Sfânta Muceniță Agata»",
-        "url": "https://doxologia.ro/5-februarie",
-        "year": 2026
-      },
-      "note": "The life closes by saying that the wonder at Catania happened «în luna februarie, în cinci zile, în care sfânta a pătimit», the day on which she suffered. The troparion the site prints for her is the common of one woman martyr."
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 5,
-        "month": 2,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 5ης Φεβρουαρίου — «Αγία Αγάθη»",
-        "url": "https://www.saint.gr/02/05/index.aspx",
-        "year": 2026
-      }
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 251,
-      "latest": 251,
-      "display": "251",
-      "basis": "traditional",
-      "note": "saint.gr: «Παρέδωσε το πνεύμα της το 251 μ.Χ. μετά από φρικτά βασανιστήρια και ενώ βρισκόταν στη φυλακή», with the page's own head «(; - 251)» and «Έζησε και μεγαλούργησε στο χρόνια του αυτοκράτορα Δέκιου (249 - 251 μ.Χ.)»."
-    }
-  }
+  ]
 }

@@ -17,11 +17,49 @@
   "types": [
     "venerable"
   ],
-  "related": [
-    "xenophon-of-constantinople",
-    "john-son-of-xenophon",
-    "arcadius-son-of-xenophon"
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfânta Cuvioasă Maria, soţia Sfântului Cuvios Xenofont»",
+        "url": "https://doxologia.ro/26-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη»",
+        "url": "https://www.saint.gr/01/26/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -91,47 +129,15 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 26,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 26 ianuarie — «Sfânta Cuvioasă Maria, soţia Sfântului Cuvios Xenofont»",
-        "url": "https://doxologia.ro/26-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 26,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 26 Ιανουαρίου — «Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη»",
-        "url": "https://www.saint.gr/01/26/index.aspx",
-        "year": 2026
-      }
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
-  "text": {
-    "life": "life.md"
-  }
+  "related": [
+    "xenophon-of-constantinople",
+    "john-son-of-xenophon",
+    "arcadius-son-of-xenophon"
+  ]
 }

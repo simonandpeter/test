@@ -90,7 +90,6 @@
       "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
     }
   ],
-  "historicity": "attested",
   "text": {
     "life": "life.md"
   },
@@ -162,9 +161,16 @@
       }
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "nonna-mother-of-gregory-the-theologian",
     "gorgonia",
     "basil-the-great"
-  ]
+  ],
+  "historicity": "attested"
 }

@@ -17,6 +17,50 @@
   "types": [
     "venerable-martyr"
   ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 ianuarie — «Sfântul Cuvios Mucenic Anastasie Persul»",
+        "url": "https://doxologia.ro/22-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/01/22/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's own heading for him gives the year 628 — «Αγιος Αναστασιος ο Περσης ο Οσιομαρτυρας (; - 628)» (https://www.saint.gr/1149/saint.aspx). The kontakion it prints for the day is sung to him together with the Apostle Timothy, and its related links include a separate commemoration of the translation of his relics."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -84,50 +128,12 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 22,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 22 ianuarie — «Sfântul Cuvios Mucenic Anastasie Persul»",
-        "url": "https://doxologia.ro/22-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 22,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 22ας Ιανουαρίου — «Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας»",
-        "url": "https://www.saint.gr/01/22/index.aspx",
-        "year": 2026
-      },
-      "note": "saint.gr's own heading for him gives the year 628 — «Αγιος Αναστασιος ο Περσης ο Οσιομαρτυρας (; - 628)» (https://www.saint.gr/1149/saint.aspx). The kontakion it prints for the day is sung to him together with the Apostle Timothy, and its related links include a separate commemoration of the translation of his relics."
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "timothy-of-ephesus"
   ]

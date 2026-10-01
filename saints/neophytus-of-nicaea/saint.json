@@ -26,6 +26,49 @@
       "note": "doxologia.ro's life gives no year for the martyrdom but dates the reign it fell in: «Într-acea vreme împărăţeau la Răsărit şi la Apus tiranii Dioclețian (284-305) și Maximian (286-305)». The day it gives is 21 January."
     }
   },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfântul Mucenic Neofit»",
+        "url": "https://doxologia.ro/21-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιος Νεόφυτος ο Μάρτυρας»",
+        "url": "https://www.saint.gr/01/21/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -76,47 +119,10 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 21,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 21 ianuarie — «Sfântul Mucenic Neofit»",
-        "url": "https://doxologia.ro/21-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 21,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 21ης Ιανουαρίου — «Άγιος Νεόφυτος ο Μάρτυρας»",
-        "url": "https://www.saint.gr/01/21/index.aspx",
-        "year": 2026
-      }
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

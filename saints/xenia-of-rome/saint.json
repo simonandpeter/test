@@ -18,6 +18,59 @@
     "venerable",
     "deaconess"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Οσία Ξένη έζησε τον 5ο μ.Χ. αιώνα». The page states the century she lived in and no year of birth or repose; doxologia.ro, cited on this folder's Romanian row, gave no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Sfânta Cuvioasă Xenia din Roma»",
+        "url": "https://doxologia.ro/24-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Οσίες Ξένη και οι δύο θεραπαινίδες της»",
+        "url": "https://www.saint.gr/01/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The line commemorates her two maidservants with her. saint.gr heads them «Οσιες Δυο Θεραπαινιδες Της Οσιας Ξενης» and prints a distich for them, but never names either of them, so they have no folder of their own."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -103,57 +156,10 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 24,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 24 ianuarie — «Sfânta Cuvioasă Xenia din Roma»",
-        "url": "https://doxologia.ro/24-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 24,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 24ης Ιανουαρίου — «Οσίες Ξένη και οι δύο θεραπαινίδες της»",
-        "url": "https://www.saint.gr/01/24/index.aspx",
-        "year": 2026
-      },
-      "note": "The line commemorates her two maidservants with her. saint.gr heads them «Οσιες Δυο Θεραπαινιδες Της Οσιας Ξενης» and prints a distich for them, but never names either of them, so they have no folder of their own."
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "dates": {
-    "floruit": {
-      "earliest": 401,
-      "latest": 500,
-      "display": "5th century",
-      "basis": "traditional",
-      "note": "saint.gr: «Η Οσία Ξένη έζησε τον 5ο μ.Χ. αιώνα». The page states the century she lived in and no year of birth or repose; doxologia.ro, cited on this folder's Romanian row, gave no year at all."
-    }
-  }
+  ]
 }

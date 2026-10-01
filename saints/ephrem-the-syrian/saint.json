@@ -17,9 +17,65 @@
   "types": [
     "venerable"
   ],
-  "related": [
-    "basil-the-great"
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": 308,
+      "display": "308 or earlier",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην πόλη Νίσιβη της Μεσοποταμίας πιθανώς το 308 μ.Χ. ή και ενωρίτερα». The page's heading dates him «(308 - 373)», but its own sentence leaves the earlier bound open."
+    },
+    "death": {
+      "earliest": 373,
+      "latest": 373,
+      "display": "373",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Εφραίμ κοιμήθηκε με ειρήνη το έτος 373 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Efrem Sirul»",
+        "url": "https://doxologia.ro/28-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Εφραίμ ο Σύρος»",
+        "url": "https://www.saint.gr/01/28/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -105,63 +161,13 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 28,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 28 ianuarie — «Sfântul Cuvios Efrem Sirul»",
-        "url": "https://doxologia.ro/28-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 28,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 28 Ιανουαρίου — «Όσιος Εφραίμ ο Σύρος»",
-        "url": "https://www.saint.gr/01/28/index.aspx",
-        "year": 2026
-      }
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
-  "dates": {
-    "birth": {
-      "earliest": null,
-      "latest": 308,
-      "display": "308 or earlier",
-      "basis": "traditional",
-      "note": "saint.gr: «γεννήθηκε στην πόλη Νίσιβη της Μεσοποταμίας πιθανώς το 308 μ.Χ. ή και ενωρίτερα». The page's heading dates him «(308 - 373)», but its own sentence leaves the earlier bound open."
-    },
-    "death": {
-      "earliest": 373,
-      "latest": 373,
-      "display": "373",
-      "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Εφραίμ κοιμήθηκε με ειρήνη το έτος 373 μ.Χ.»"
-    }
-  }
+  "related": [
+    "basil-the-great"
+  ]
 }

@@ -17,11 +17,6 @@
   "types": [
     "martyr"
   ],
-  "related": [
-    "speusippus",
-    "meleusippus",
-    "neonilla"
-  ],
   "dates": {
     "death": {
       "earliest": 161,
@@ -73,5 +68,16 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "speusippus",
+    "meleusippus",
+    "neonilla"
+  ]
 }

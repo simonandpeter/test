@@ -35,24 +35,6 @@
       "note": "doxologia.ro's life: «Sfântul Ansgar (Oscar) a murit la 3 februarie 865 în Bremen, după o viaţă dăruită cu totul vestirii Sfintei Evanghelii. A trăit 64 de ani, între care, 34 de ani ca misionar.»"
     }
   },
-  "hymns": [
-    {
-      "church": "romanian",
-      "kind": "troparion",
-      "lang": "ro",
-      "tone": "Glasul 4",
-      "text": "În întregime fiind cuprins de dragostea pentru Dumnezeu şi pentru oameni, la fel ca Apostolii, Sfinte Mucenice Ansgar, ai călătorit în depărtări ca să duci mântuire celor aflaţi în întuneric, jertfind durerea ta pe altarul inimii tale, iar prin truda şi osteneala ta aducând mărturie despre Mântuitorul ca un mucenic şi îndurând pericolele uscatului şi mării de dragul Său, fără să fii descurajat de ispite şi necazuri. Pentru acestea, roagă-te cu îndrăzneală să fie mântuite sufletele noastre.",
-      "source": {
-        "text": "Doxologia — Troparul Sfântului Ansgar, luminătorul Danemarcei și al Suediei, Glasul 4",
-        "url": "https://doxologia.ro/troparul-sfantului-ansgar-luminatorul-danemarcei-al-suediei",
-        "year": 2026
-      },
-      "english": {
-        "text": "Wholly taken up with love for God and for men, like the Apostles, O holy martyr Ansgar, thou didst journey into far countries to carry salvation to those who sat in darkness, offering up thy pain upon the altar of thine heart; and by thy toil and thy labour thou didst bear witness to the Saviour as a martyr, enduring for His sake the perils of land and sea, undismayed by temptations and afflictions. Wherefore pray with boldness that our souls may be saved.",
-        "rendered": "site"
-      }
-    }
-  ],
   "attestations": [
     {
       "church": "russian",
@@ -96,5 +78,29 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 4",
+      "text": "În întregime fiind cuprins de dragostea pentru Dumnezeu şi pentru oameni, la fel ca Apostolii, Sfinte Mucenice Ansgar, ai călătorit în depărtări ca să duci mântuire celor aflaţi în întuneric, jertfind durerea ta pe altarul inimii tale, iar prin truda şi osteneala ta aducând mărturie despre Mântuitorul ca un mucenic şi îndurând pericolele uscatului şi mării de dragul Său, fără să fii descurajat de ispite şi necazuri. Pentru acestea, roagă-te cu îndrăzneală să fie mântuite sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Ansgar, luminătorul Danemarcei și al Suediei, Glasul 4",
+        "url": "https://doxologia.ro/troparul-sfantului-ansgar-luminatorul-danemarcei-al-suediei",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wholly taken up with love for God and for men, like the Apostles, O holy martyr Ansgar, thou didst journey into far countries to carry salvation to those who sat in darkness, offering up thy pain upon the altar of thine heart; and by thy toil and thy labour thou didst bear witness to the Saviour as a martyr, enduring for His sake the perils of land and sea, undismayed by temptations and afflictions. Wherefore pray with boldness that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

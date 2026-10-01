@@ -19,10 +19,6 @@
     "martyr",
     "deacon"
   ],
-  "related": [
-    "silvanus-of-emesa",
-    "mocius-of-emesa"
-  ],
   "dates": {
     "death": {
       "earliest": 284,
@@ -74,5 +70,15 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "silvanus-of-emesa",
+    "mocius-of-emesa"
+  ]
 }

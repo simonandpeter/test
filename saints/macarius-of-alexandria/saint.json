@@ -18,10 +18,59 @@
     "monk",
     "presbyter"
   ],
-  "related": [
-    "anthony-the-great",
-    "macarius-the-egyptian"
+  "dates": {
+    "death": {
+      "earliest": 395,
+      "latest": 395,
+      "display": "395",
+      "basis": "traditional",
+      "note": "saint.gr's own heading for him on the joint page, «Οσιος Μακαριος ο Αλεξανδρευς (; - 395)». The page's narrative gives him no year, and doxologia.ro, cited on this folder's Romanian row, gave none either."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Cuvios Macarie Alexandrinul»",
+        "url": "https://doxologia.ro/19-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς»",
+        "url": "https://www.saint.gr/01/19/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Macarius the Egyptian on one page and under one pair of hymns."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -89,57 +138,14 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 19,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 19 ianuarie — «Sfântul Cuvios Macarie Alexandrinul»",
-        "url": "https://doxologia.ro/19-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 19,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 19ης Ιανουαρίου — «Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς»",
-        "url": "https://www.saint.gr/01/19/index.aspx",
-        "year": 2026
-      },
-      "note": "Commemorated with Macarius the Egyptian on one page and under one pair of hymns."
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
-  "dates": {
-    "death": {
-      "earliest": 395,
-      "latest": 395,
-      "display": "395",
-      "basis": "traditional",
-      "note": "saint.gr's own heading for him on the joint page, «Οσιος Μακαριος ο Αλεξανδρευς (; - 395)». The page's narrative gives him no year, and doxologia.ro, cited on this folder's Romanian row, gave none either."
-    }
-  }
+  "related": [
+    "anthony-the-great",
+    "macarius-the-egyptian"
+  ]
 }

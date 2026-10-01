@@ -28,6 +28,50 @@
       "note": "doxologia.ro's life: «El s-a născut, precum am aflat, în luna august, în anul al patrulea al stăpânirii lui Grațian (367-383).» The page gives the reign and not a year; the interval is the reign as it prints it."
     }
   },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfântul Cuvios Eftimie cel Mare»",
+        "url": "https://doxologia.ro/20-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Όσιος Ευθύμιος ο Μέγας»",
+        "url": "https://www.saint.gr/01/20/index.aspx",
+        "year": 2026
+      },
+      "note": "saint.gr's heading and life give his years as 377 and 473 — «Οσιος Ευθυμιος ο Μεγας (377 - 473)», «γεννήθηκε στη Μελιτηνή της Αρμενίας το έτος 377 μ.Χ.» (https://www.saint.gr/3322/saint.aspx) — which falls inside the interval this folder's Romanian row supports; the folder's dates are not changed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -95,48 +139,10 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 20,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 20 ianuarie — «Sfântul Cuvios Eftimie cel Mare»",
-        "url": "https://doxologia.ro/20-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 20,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 20ής Ιανουαρίου — «Όσιος Ευθύμιος ο Μέγας»",
-        "url": "https://www.saint.gr/01/20/index.aspx",
-        "year": 2026
-      },
-      "note": "saint.gr's heading and life give his years as 377 and 473 — «Οσιος Ευθυμιος ο Μεγας (377 - 473)», «γεννήθηκε στη Μελιτηνή της Αρμενίας το έτος 377 μ.Χ.» (https://www.saint.gr/3322/saint.aspx) — which falls inside the interval this folder's Romanian row supports; the folder's dates are not changed."
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

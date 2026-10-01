@@ -1,6 +1,7 @@
 {
   "slug": "clement-of-ancyra",
   "display_name": "Clement of Ancyra",
+  "office": "Bishop of Ancyra",
   "names": [
     {
       "form": "Clement",
@@ -14,13 +15,9 @@
     }
   ],
   "sex": "male",
-  "office": "Bishop of Ancyra",
   "types": [
     "hieromartyr",
     "bishop"
-  ],
-  "related": [
-    "agathangelus"
   ],
   "dates": {
     "birth": {
@@ -30,6 +27,50 @@
       "basis": "traditional",
       "note": "doxologia.ro's life opens: «După ce au trecut de la naşterea Domnului nostru Iisus Hristos 250 de ani - în vremea împărăţiei lui Valerian (253-259) -, cetatea de scaun a Ancirei, din părţile Galatiei, a odrăslit pe acest Sfânt Mucenic Clement». The two readings the page gives do not agree exactly, so the interval is the one that holds both."
     }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 ianuarie — «Sfântul Sfinţit Mucenic Clement, Episcopul Ancirei»",
+        "url": "https://doxologia.ro/23-ianuarie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος»",
+        "url": "https://www.saint.gr/01/23/index.aspx",
+        "year": 2026
+      },
+      "note": "Commemorated with Agathangelus on one page, whose heading gives Agathangelus the year 312."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
   },
   "hymns": [
     {
@@ -82,48 +123,13 @@
       }
     }
   ],
-  "attestations": [
+  "images": [
     {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 23,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 23 ianuarie — «Sfântul Sfinţit Mucenic Clement, Episcopul Ancirei»",
-        "url": "https://doxologia.ro/23-ianuarie",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 23,
-        "month": 1,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "saint.gr, το εορτολόγιο της 23ης Ιανουαρίου — «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος»",
-        "url": "https://www.saint.gr/01/23/index.aspx",
-        "year": 2026
-      },
-      "note": "Commemorated with Agathangelus on one page, whose heading gives Agathangelus the year 312."
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
-  "text": {
-    "life": "life.md"
-  }
+  "related": [
+    "agathangelus"
+  ]
 }

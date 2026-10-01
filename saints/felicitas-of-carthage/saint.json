@@ -17,13 +17,6 @@
   "types": [
     "martyr"
   ],
-  "related": [
-    "perpetua-of-carthage",
-    "satyrus-companion-of-perpetua",
-    "revocatus-companion-of-perpetua",
-    "saturninus-companion-of-perpetua",
-    "secundus-companion-of-perpetua"
-  ],
   "dates": {
     "death": {
       "earliest": 203,
@@ -33,24 +26,6 @@
       "note": "doxologia.ro's life: the procurator Hilarianus condemned them to the beasts «în ziua de naştere a cezarului, (Geta, fiul împăratului Septimiu Sever), care corespunde datei de şapte martie anul 203»."
     }
   },
-  "hymns": [
-    {
-      "church": "romanian",
-      "kind": "troparion",
-      "lang": "ro",
-      "tone": "Glas 3",
-      "text": "Să cinstim pe Sfinții mucenici: pe Perpetua și Saturnin, dimpreună cu Secund și Felicitas, ce al lor sânge l-au vărsat pentru Domnul ca și slăviții Revocat și Satirie. Drept aceea mijlocesc pentru noi toți mare milă de la Dumnezeu.",
-      "source": {
-        "text": "Doxologia — Troparul Sfintelor Mucenițe Perpetua și Felicitas, Glas 3",
-        "url": "https://doxologia.ro/troparul-sfintelor-mucenite-perpetua-felicitas",
-        "year": 2026
-      },
-      "english": {
-        "text": "Let us honour the holy martyrs: Perpetua and Saturninus, together with Secundus and Felicitas, who poured out their blood for the Lord, and the glorious Revocatus and Saturus with them. Therefore do they intercede for us all, for great mercy from God.",
-        "rendered": "site"
-      }
-    }
-  ],
   "attestations": [
     {
       "church": "russian",
@@ -94,5 +69,36 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glas 3",
+      "text": "Să cinstim pe Sfinții mucenici: pe Perpetua și Saturnin, dimpreună cu Secund și Felicitas, ce al lor sânge l-au vărsat pentru Domnul ca și slăviții Revocat și Satirie. Drept aceea mijlocesc pentru noi toți mare milă de la Dumnezeu.",
+      "source": {
+        "text": "Doxologia — Troparul Sfintelor Mucenițe Perpetua și Felicitas, Glas 3",
+        "url": "https://doxologia.ro/troparul-sfintelor-mucenite-perpetua-felicitas",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the holy martyrs: Perpetua and Saturninus, together with Secundus and Felicitas, who poured out their blood for the Lord, and the glorious Revocatus and Saturus with them. Therefore do they intercede for us all, for great mercy from God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "perpetua-of-carthage",
+    "satyrus-companion-of-perpetua",
+    "revocatus-companion-of-perpetua",
+    "saturninus-companion-of-perpetua",
+    "secundus-companion-of-perpetua"
+  ]
 }

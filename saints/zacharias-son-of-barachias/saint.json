@@ -17,41 +17,6 @@
   "types": [
     "prophet"
   ],
-  "hymns": [
-    {
-      "church": "romanian",
-      "kind": "troparion",
-      "lang": "ro",
-      "tone": "Glasul 2",
-      "text": "A prorocului Tău, Doamne, Zaharia pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
-      "source": {
-        "text": "Doxologia — Troparul Sfântului Proroc Zaharia, Glasul 2",
-        "url": "https://doxologia.ro/troparul-sfantului-proroc-zaharia-0",
-        "year": 2026
-      },
-      "english": {
-        "text": "Keeping the memorial of Thy prophet Zacharias, O Lord, through him we entreat Thee: save our souls.",
-        "rendered": "site"
-      }
-    },
-    {
-      "church": "greek",
-      "kind": "troparion",
-      "lang": "el",
-      "tone": "Ἦχος δ’.",
-      "model": "Ταχὺ προκατάλαβε.",
-      "text": "Τὴν κλῆσιν κατάλληλον, δείξας τοὶς ἔργοις σοφέ, ταμεῖον ἐπάξιον, τῆς ἐπιπνοίας Θεοῦ, Ζαχαρία γεγένησαι, ἔχων γὰρ ἐν τῷ βίῳ, συλλαλούντας Ἀγγέλους, ὤφθης τῶν ἐσομένων, θεηγόρος Προφήτης. Καὶ νῦν ἠμῶν τᾶς αἰτήσεις, ἄνωθεν πλήρωσαν.",
-      "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ζαχαρίας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
-        "url": "https://www.saint.gr/535/saint.aspx",
-        "year": 2026
-      },
-      "english": {
-        "text": "Having shown your name to fit your works, wise Zacharias, you became a treasury worthy of the inbreathing of God; for having angels to talk with you in your life, you were shown a God-speaking prophet of the things to come. And now fulfil our askings from above.",
-        "rendered": "site"
-      }
-    }
-  ],
   "attestations": [
     {
       "church": "russian",
@@ -95,6 +60,47 @@
   "text": {
     "life": "life.md"
   },
+  "hymns": [
+    {
+      "church": "romanian",
+      "kind": "troparion",
+      "lang": "ro",
+      "tone": "Glasul 2",
+      "text": "A prorocului Tău, Doamne, Zaharia pomenire prăznuind, printr-însul Te rugăm, mântuieşte sufletele noastre.",
+      "source": {
+        "text": "Doxologia — Troparul Sfântului Proroc Zaharia, Glasul 2",
+        "url": "https://doxologia.ro/troparul-sfantului-proroc-zaharia-0",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memorial of Thy prophet Zacharias, O Lord, through him we entreat Thee: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Τὴν κλῆσιν κατάλληλον, δείξας τοὶς ἔργοις σοφέ, ταμεῖον ἐπάξιον, τῆς ἐπιπνοίας Θεοῦ, Ζαχαρία γεγένησαι, ἔχων γὰρ ἐν τῷ βίῳ, συλλαλούντας Ἀγγέλους, ὤφθης τῶν ἐσομένων, θεηγόρος Προφήτης. Καὶ νῦν ἠμῶν τᾶς αἰτήσεις, ἄνωθεν πλήρωσαν.",
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr) — Προφήτης Ζαχαρίας, Λειτουργικά κείμενα: Ἀπολυτίκιον",
+        "url": "https://www.saint.gr/535/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having shown your name to fit your works, wise Zacharias, you became a treasury worthy of the inbreathing of God; for having angels to talk with you in your life, you were shown a God-speaking prophet of the things to come. And now fulfil our askings from above.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "haggai-the-prophet"
   ]

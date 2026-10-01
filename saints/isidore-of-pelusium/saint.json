@@ -19,10 +19,22 @@
     "abbot",
     "presbyter"
   ],
-  "related": [
-    "john-chrysostom",
-    "cyril-of-alexandria"
-  ],
+  "dates": {
+    "birth": {
+      "earliest": 360,
+      "latest": 360,
+      "display": "about 360",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Αίγυπτο περί το 360 μ.Χ. από γονείς θεοφιλείς», with the page's own head «(360 - 440)»."
+    },
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "saint.gr: «Εκοιμήθη ειρηνικά το 440 μ.Χ.»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
@@ -66,22 +78,6 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "birth": {
-      "earliest": 360,
-      "latest": 360,
-      "display": "about 360",
-      "basis": "traditional",
-      "note": "saint.gr: «γεννήθηκε στην Αίγυπτο περί το 360 μ.Χ. από γονείς θεοφιλείς», with the page's own head «(360 - 440)»."
-    },
-    "death": {
-      "earliest": 440,
-      "latest": 440,
-      "display": "440",
-      "basis": "traditional",
-      "note": "saint.gr: «Εκοιμήθη ειρηνικά το 440 μ.Χ.»."
-    }
   },
   "hymns": [
     {
@@ -133,5 +129,15 @@
         "rendered": "site"
       }
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "john-chrysostom",
+    "cyril-of-alexandria"
   ]
 }
