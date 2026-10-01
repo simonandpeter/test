@@ -420,24 +420,28 @@ test('a real drag past the threshold changes the day, not only a flick', async (
 
 
 test('changing the calendar changes the day everywhere it is counted', async ({ page }) => {
-  // A day the Russian calendar answers for alone, which is what makes this a
-  // test of the choice rather than of a coincidence. Computed, because the day
-  // that used to be written here stopped being one.
-  const day = dayOneChurchKeeps('russian', 'greek');
-  await answered(page);
+  /*
+   * A day one calendar answers for alone, which is what makes this a test of
+   * the choice rather than of a coincidence. Computed, and the pair itself is
+   * computed too: it was Russian-keeps-one against Greek-keeps-none until the
+   * Greek year was finished, and the Greek now keeps somebody on every day of
+   * it.
+   */
+  const day = dayOneChurchKeeps('romanian', 'russian');
+  await ready(page, { church: 'romanian', language: 'en' });
   await phone(page);
   await page.goto(day.route, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText(day.name);
-  await expect(page.locator('#church-open')).toHaveText('Russian');
+  await expect(page.locator('#church-open')).toHaveText('Romanian');
 
   await openChooser(page);
-  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.locator('#church-panel [data-church="russian"]').click();
   // The day, the hero, and the density dots under that date in the strip: one
   // choice, read everywhere, rather than in the one place someone remembered.
-  await expect(page.locator('#church-open')).toHaveText('Greek');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('.hero')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(1);
-  await expect(page.locator('.empty-day')).toContainText('Nothing in the Greek calendar today');
+  await expect(page.locator('.empty-day')).toContainText('Nothing in the Russian calendar today');
   await expect(page.locator('.empty-day')).toContainText('change calendar in the header');
   /*
    * The dots under that date went with the author's instruction of 2026-08-25
@@ -469,10 +473,6 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   await page.waitForTimeout(600);
   await expect(page.locator('.density')).toHaveCount(0);
 
-  // Where the Greek calendar does keep him: the same menologion date, on the
-  // civil day of that name.
-  await page.goto('/calendar/2026-06-15', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
 });
 
 

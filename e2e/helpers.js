@@ -375,9 +375,13 @@ export const dayOneChurchKeeps = (keeper, empty) => {
   const iso = CIVIL_2026.find((d) => {
     const one = kept(keeper, d);
     if (one.length !== 1 || kept(empty, d).length !== 0) return false;
+    // A great feast in `empty`'s own calendar is not the silence this finds:
+    // `emptyDayNote` writes the feast's sentence instead, and the Greek 25
+    // December began doing exactly that when the corpus reached it.
+    if (greatFeast(d, keeper) || greatFeast(d, empty)) return false;
     return CHURCH_IDS.every((c) => c === keeper || !kept(c, d).includes(one[0]));
   });
-  if (!iso) throw new Error(`no civil day of 2026 has one ${keeper} saint, none for ${empty} and no third keeper`);
+  if (!iso) throw new Error(`no civil day of 2026 has one ${keeper} saint, none for ${empty}, no third keeper and no great feast in either`);
   const slug = kept(keeper, iso)[0];
   const card = FOLDERS.find((f) => f.slug === slug);
   return { route: `/calendar/${iso}`, iso, name: saintName(card) };
