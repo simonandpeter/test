@@ -1,0 +1,61 @@
+{
+  "slug": "jonah-of-novgorod",
+  "display_name": "Jonah of Novgorod",
+  "names": [
+    {
+      "form": "Ιωνάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιος Ιωνάς ο θαυματουργός Αρχιεπίσκοπος Νοβογορδίας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Novgorod",
+  "types": [
+    "archbishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1470,
+      "latest": 1470,
+      "display": "1470",
+      "basis": "traditional",
+      "note": "saint.gr's own head line for him: «Αγιος Ιωνας ο Θαυματουργος Αρχιεπισκοπος Νοβογορδιας (; - 1470)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιος Ιωνάς ο θαυματουργός Αρχιεπίσκοπος Νοβογορδίας»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day as the listing. A Russian saint on the Greek calendar: his own church reckons in the Julian calendar and that row is left undocumented here, because days.pravoslavie.ru was not read for him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

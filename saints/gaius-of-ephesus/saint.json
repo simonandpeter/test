@@ -1,0 +1,58 @@
+{
+  "slug": "gaius-of-ephesus",
+  "display_name": "Gaius of Ephesus",
+  "names": [
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Ερμάς, Πατρόβας, Λίνος, Γάιος και Φιλόλογος, Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Ephesus",
+  "types": [
+    "apostle",
+    "bishop"
+  ],
+  "related": [
+    "hermas-5-november",
+    "patrobas",
+    "linus-of-rome",
+    "philologus-of-sinope"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιοι Ερμάς, Πατρόβας, Λίνος, Γάιος και Φιλόλογος, Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day as the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

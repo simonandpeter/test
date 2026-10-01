@@ -1,0 +1,53 @@
+{
+  "slug": "paul-5-november",
+  "display_name": "Paul (5 November)",
+  "names": [
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Δομέντιος και Παύλος ο επίσκοπος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "related": [
+    "domentius-5-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιοι Δομέντιος και Παύλος ο επίσκοπος»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day as the listing. The page says the two are unknown to the synaxarists and are mentioned, without biographical details, in the Jerusalem Kanonarion. The rank «ο επίσκοπος» is the day line's and no see is named anywhere on the page, so none is recorded."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

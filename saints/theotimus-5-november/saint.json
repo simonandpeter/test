@@ -1,0 +1,54 @@
+{
+  "slug": "theotimus-5-november",
+  "display_name": "Theotimus (5 November)",
+  "names": [
+    {
+      "form": "Θεότιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Τιμόθεος, Θεόφιλος, Θεότιμος», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "timothy-5-november",
+    "theophilus-5-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιοι Τιμόθεος, Θεόφιλος, Θεότιμος»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day as the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

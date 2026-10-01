@@ -6,6 +6,11 @@
       "form": "Galaction",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 noiembrie."
+    },
+    {
+      "form": "Γαλακτίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Γαλακτίων και Επιστήμη», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιοι Γαλακτίων και Επιστήμη»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same pair: the son of Cleitophon and Leucippe of Emesa, brought to the faith by the monk Onuphrius, and his wife Episteme, both beheaded under the governor Ursus. It prints an apolytikion and a kontakion that name them both, taken here; the Οἶκος and the Κάθισμα on the same page are not kinds the schema holds and are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -64,9 +79,52 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tὴν λαμπρὰν ξυνωρίδα τῶν μαρτύρων τιμήσωμεν ὥσπερ συζυγίαν ἀρίστην καὶ κλειτὴν καὶ θεόφρονα· τὸν θεῖον Γαλακτίωνα πιστοί, ὁμοῦ σὺν Ἐπιστήμῃ τῇ σεμνῇ. Δι' ἀσκήσεως γὰρ πόνων ἀθλητικὴν ἐξήνθησαν φαιδρότητα. Δόξα τῷ ἐνισχύσαντι ὑμᾶς, δόξα τῷ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι δι' ὑμῶν πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Άγιοι Γαλακτίων και Επιστήμη», and it names them both.",
+        "url": "https://www.saint.gr/2888/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the bright pair of martyrs as a wedded couple most excellent, renowned and godly-minded: the divine Galaction, O faithful, together with the modest Episteme. For through the labours of ascetic struggle they brought to flower the radiance of the contest. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Μαρτύρων Χριστοῦ, τοῖς δήμοις ἠριθμήθητε, ἀγῶσι στεῤῥοῖς, φαιδρῶς ἀγωνισάμενοι, Γαλακτίων ἔνδοξε, σῦν συζύγῳ σεπτῇ καὶ συνάθλῳ σου, Ἐπιστήμη, τῷ μόνῳ Θεῷ, πρεσβεύοντες ἄμφω ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιοι Γαλακτίων και Επιστήμη», and it names them both.",
+        "url": "https://www.saint.gr/2888/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were numbered among the companies of the martyrs of Christ, having contended brightly in steadfast struggles — glorious Galaction, with your honoured wife and fellow-contender Episteme — both of you interceding with the only God for us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "c. 250",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Γαλακτίων και Επιστήμη έζησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος», and of the beheading «(περί το 250 μ.Χ.)»."
+    }
   }
 }

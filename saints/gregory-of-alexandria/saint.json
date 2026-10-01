@@ -7,6 +7,11 @@
       "form": "Grigorie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 noiembrie."
+    },
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Όσιος Γρηγόριος ο Ομολογητής Πάπας Αλεξανδρείας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Όσιος Γρηγόριος ο Ομολογητής Πάπας Αλεξανδρείας»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: ordained to Alexandria by the bishops gathered after the death of its patriarch, and exiled for resisting the emperor Leo's revival of iconoclasm. The page ends with a caution of its own: «Σημείωση: Δυστυχώς στους πατριαρχικούς καταλόγους δεν καταφέραμε να βρούμε κάποιον Γρηγόριο που να έζησε την εποχή του Λέοντα Ε' (813 - 820 μ.Χ.)» — it could not find in the patriarchal lists a Gregory living in the time of Leo V. That doubt is the page's own and is quoted rather than resolved here; no `dates` object is proposed on the strength of a century the page itself cannot place. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page."
     },
     {
       "church": "serbian",

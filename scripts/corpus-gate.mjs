@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παυλοσ paul-28-june paul-5-november paul-brother-of-pausirius paul-companion-of-andrew paul-companion-of-anthimus paul-companion-of-lucillian paul-companion-of-quadratus paul-companion-of-reverianus paul-companion-of-stephen paul-disciple-of-dionysius-of-alexandria paul-krasnokutsky paul-martyr-28-may paul-of-cordoba paul-of-corinth paul-of-crete paul-of-damascus paul-of-ioannina paul-of-jamnia paul-of-kaiouma paul-of-obnora paul-of-plousias paul-of-ptolemais paul-of-russia paul-of-simonov paul-of-vilnius paul-of-xeropotamou paul-of-zographou paul-the-apostle paul-the-martyr-3-february paul-the-peloponnesian paul-the-russian paul-the-simple paul-venerable-martyr-1-march paul-with-valentina-and-ennatha':
+    'Thirty-four now. The new one is the Paul of 5 November, a bishop the page reports with Domentius as unknown to the synaxarists; the rest of the fold is read in the el-07-02 entry for this name form.',
+  'παμφιλοσ pamphilus-5-november pamphilus-of-caesarea pamphilus-the-martyr':
+    'Three men. The new one is the Pamphilus of 5 November; the others are Pamphilus of Caesarea on 16 February and Pamphilus the martyr on 12 August, whom three calendars keep.',
+  'ιωνασ jonah-bishop-6-june jonah-martyr-29-march jonah-of-kyiv jonah-of-moscow jonah-of-novgorod jonah-of-odessa jonah-of-pesonsa jonah-of-the-lavra-of-pskov jonah-the-athonite jonas-of-great-perm jonas-of-pergamos jonas-the-lerian':
+    'Twelve now. The new one is Jonah archbishop of Novgorod on 5 November; the others are read in the el-07-04 entry for this name form.',
+  'αγαθαγγελοσ agathangelus agathangelus-5-november agathangelus-of-esphigmenou agathangelus-of-florina':
+    'Four men. The new one is the Agathangelus of 5 November, martyred with Castor; the others are the martyr with Clement of Ancyra on 23 January, the new martyr of Florina on 17 February and Agathangelus of Esphigmenou on 19 April.',
+  'τιμοθεοσ timothy-1-february timothy-5-november timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-esphigmenou timothy-of-euripos timothy-of-gaza timothy-of-konstamonitou timothy-of-prokonnesos timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
+    'Eighteen now. The new one is the Timothy of 5 November, who heads that company of three; the others are read in the el-08-01 entry for this name form.',
+  'θεοτιμοσ theotimus-5-november theotimus-of-tomis theotimus-the-executioner':
+    'Three men. The new one is the Theotimus of 5 November, of that company; the others are Theotimus of Tomis on 20 April and Theotimus the executioner on 4 September.',
+  'θεοφιλοσ theophilus-5-november theophilus-companion-of-trophimus theophilus-hieromartyr-4-july theophilus-martyr-6-february theophilus-of-brescia theophilus-of-caesarea theophilus-of-crete theophilus-of-novgorod theophilus-of-rome theophilus-of-selention theophilus-of-the-forty-martyrs theophilus-of-zakynthos theophilus-the-deacon-of-libya theophilus-the-fool-for-christ-of-kyiv theophilus-the-myrrh-streamer theophilus-the-new':
+    'Sixteen now. The new one is the Theophilus of 5 November, martyred with Timothy and Theotimus; the others are read in the el-10-10 entry for this name form.',
+  'γαιοσ gaius-21-october gaius-5-may gaius-disciple-of-dionysius-of-alexandria gaius-martyr-11-august gaius-nephew-of-eustochius gaius-of-alexandria gaius-of-ephesus gaius-of-the-forty-martyrs gaius-pope-of-rome':
+    'Nine now. The new one is Gaius bishop of Ephesus on 5 November, one of the Seventy; the others are read in the el-08-11-2 entry for this name form.',
+  'ευψυχιοσ eupsychius-5-november eupsychius-of-caesarea-under-julian':
+    'Two men. The new one is the Eupsychius of 5 November, martyred with Carterius; the other is Eupsychius of Caesarea, who suffered under Julian, on 9 April.',
+  'δωροθεοσ dorotheos-of-adrianople dorotheus-5-november dorotheus-companion-of-agapitus dorotheus-of-chiliokomion dorotheus-of-gaza dorotheus-of-tyre':
+    'Six men. The new one is the Dorotheus of 5 November, a presbyter and hieromartyr; the others are the companion of Agapitus on 18 February, Dorotheus of Chiliokomion on 5 January, Dorotheos of Adrianople on 3 June, Dorotheus of Gaza on 13 August and Dorotheus of Tyre on 5 June.',
+  'δομνινοσ domninus-5-november domninus-companion-of-philemon domninus-the-martyr-16-october':
+    'Three men. The new one is the Domninus of 5 November; the others are Domninus the companion of Philemon on 21 March and the Domninus of 16 October, whom the Romanian calendar keeps too.',
+  'καρτεριοσ carterius-5-november carterius-of-caesarea carterius-of-sebasteia':
+    'Three men. The new one is the Carterius of 5 November, martyred with Eupsychius, and not the Carterius of Sebasteia three days before; the third is Carterius of Caesarea on 8 January.',
   'πορφυριοσ porphyrius-companion-of-baptos porphyrius-mindrinos porphyrius-of-gaza porphyrius-servant-of-pamphilus porphyrius-the-mime-4-november':
     'Five now. The new one is the Porphyrius the page calls a mime on 4 November, and the page itself refuses the identification: «Οι δύο Άγιοι είναι διαφορετικοί», the mime of 4 Νοεμβρίου and the mime of 15 Σεπτεμβρίου having different couplets and different ages. The others are read in the el-02-16 entry for this name form.',
   'μερκουριοσ mercurius-of-the-twelve-tribunes mercurius-the-faster':

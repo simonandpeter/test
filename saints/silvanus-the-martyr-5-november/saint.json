@@ -6,6 +6,11 @@
       "form": "Silvan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 noiembrie."
+    },
+    {
+      "form": "Σιλβάνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιος Σιλβάνος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Νοεμβρίου — «Άγιος Σιλβάνος»",
+        "url": "https://www.saint.gr/11/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Νοεμβρίου εκάστου έτους», the same day the folder already keeps. Where doxologia gave only the name and the rank, the Greek page gives a manner of death and a place, and sets him among the martyrs of Palestine under the governor Urbanus whom the same day's calendar keeps in several separate entries. No year is given for the man himself, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page."
     },
     {
       "church": "serbian",
