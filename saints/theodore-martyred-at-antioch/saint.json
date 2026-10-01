@@ -1,0 +1,62 @@
+{
+  "slug": "theodore-martyred-at-antioch",
+  "display_name": "Theodore, martyred at Antioch",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Θεόδωρος που μαρτύρησε στην Αντιόχεια», with the rank words left off."
+    }
+  ],
+  "related": [
+    "babylas-of-antioch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόδωρος μαρτύρησε στα χρόνια του αυτοκράτορα Ιουλιανού του Παραβάτη (361 μ.Χ.) και έπαρχου Σαλουστίου.» The year is the page's own for the reign it names; it gives no year of birth, and the second arrest and the beheading follow in the same notice with no further date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Θεόδωρος που μαρτύρησε στην Αντιόχεια»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2987/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps very many folders of this name, none of them this man and none on this day; the clause in the display name is the page's own city, as the line itself puts it. The page places him exactly: at the translation of the relics of Babylas of Antioch, whom the corpus keeps as `babylas-of-antioch`, under Julian the Apostate and the eparch Sallustius. The page's own name-gloss lists the Samian architect, a Neoplatonist philosopher, two ancient doctors and many rulers and hierarchs as bearers of the name; that is the site's gloss and nothing of it is recorded. The folder is given no `locations`. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

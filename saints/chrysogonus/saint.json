@@ -6,6 +6,11 @@
       "form": "Hrisogon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 decembrie, «Sfântul Mucenic Hrisogon», with the rank words left off."
+    },
+    {
+      "form": "Χρυσόγονος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Χρυσόγονος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Χρυσόγονος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2989/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», and the man is the folder's own: a Christian of Rome of noble birth and higher education, imprisoned under Diocletian, who sustained many of the faithful from his prison and was killed and thrown into the sea. **The folder's Romanian row keeps him on 22 December and this Greek row keeps him on 24 November, and that is one row per church and not a second commemoration invented.** The Greek page tells the part the Romanian life does not: the offer of honours, the axe, and the priest Zoilos who found the body in the sea and buried it secretly in his own house. It does not name Anastasia, whom the Romanian life makes his pupil; the two accounts agree in the city, the rank, the imprisonment under Diocletian and the sea. **No `dates` object is proposed**, because the page names Diocletian and prints no year at all. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

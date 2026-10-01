@@ -1,0 +1,52 @@
+{
+  "slug": "hermogenes-of-akragas",
+  "display_name": "Hermogenes of Akragas",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ερμογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Ερμογένης επίσκοπος Ακραγαντίνων», with the rank words left off."
+    }
+  ],
+  "office": "Bishop of Akragas",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Ερμογένης επίσκοπος Ακραγαντίνων»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2995/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's eight Hermogenes folders is this man: they are kept on other days and none is of Akragas. The see is the page's own and unhedged and is recorded in `office`; the day before, 23 November, the same calendar keeps `gregory-of-akragas` in the same see, and the page says nothing about how the two stand to each other. The page's own name-gloss lists an Athenian philosopher, a painter and an architect of Caria as bearers of the name; that is the site's gloss on any name and nothing of it is recorded. No year, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "mercurius-of-smolensk",
+  "display_name": "Mercurius of Smolensk",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μερκούριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Μερκούριος «ὁ ἐν Σμολένσκῃ»», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Μερκούριος «ὁ ἐν Σμολένσκῃ»»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2996/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. He is not the corpus's `mercurius`, the great-martyr and soldier the Romanian keeps on 25 November, nor `mercurius-the-faster`, whose own Greek row the corpus already keeps on 4 November and who is the other Mercurius of this same listing; the place in the display name is the page's own «ὁ ἐν Σμολένσκῃ». The page's whole content is its name-gloss and the sentence that there are no details, so there is no `dates` object, no `office` and no `locations`, and `types: [\"martyr\"]` rests on the rank word «Άγιος» in the line and on nothing else the page says. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

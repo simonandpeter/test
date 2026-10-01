@@ -1,0 +1,50 @@
+{
+  "slug": "eugene-24-november",
+  "display_name": "Eugene (24 November)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευγένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Ευγένιος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Ευγένιος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2993/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps eight folders of this name, all on other days, so the display name takes the day. The page's whole notice is one sentence and it gives no year, no country and no emperor, so there is no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

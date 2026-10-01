@@ -7,6 +7,11 @@
       "form": "Clement",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 24 noiembrie, «Sfântul Sfințit Mucenic Clement, Episcopul Romei», with the rank words and the see left off."
+    },
+    {
+      "form": "Κλήμης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Κλήμης Ιερομάρτυρας, επίσκοπος Ρώμης», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 24 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Κλήμης Ιερομάρτυρας, επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/3000/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους» and «Αγιος Κλημης Ιερομαρτυρας, Επισκοπος Ρωμης (; - 101)», the same day the folder's Romanian row already carries, and the man is the folder's own: the third bishop of Rome, drowned with an anchor at his neck near Cherson. A death interval is proposed from the page's own year where the folder had none. The two hymns taken are shared with `peter-of-alexandria`, the other hierarch of this day: both name Clement and Peter and no other saint, and both carry an ἦχος and a model, so both are drafted onto both folders. The page's first Ἀπολυτίκιον, «Ὁ Θεὸς τῶν Πατέρων ἠμῶν», is the common of fathers and carries neither tone nor model on this page, and the Οἶκος and the Κάθισμα are neither a troparion nor a kontakion, so none of the three is drafted. The page adds relics at the Lavra of the Caves at Kyiv, at Inkerman near Sevastopol, at the Roman Catholic basilica of Saint Peter in Rome and at the Petraki monastery in Athens. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -48,7 +63,8 @@
   "related": [
     "peter-the-apostle",
     "cyril-the-philosopher",
-    "methodius-of-moravia"
+    "methodius-of-moravia",
+    "peter-of-alexandria"
   ],
   "hymns": [
     {
@@ -66,9 +82,52 @@
         "text": "O God of our fathers, who deal with us always according to your gentleness, take not your mercy from us; but by their prayers guide our life in peace.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tῆς θείας γνώσεως εὔσημοι σάλπιγγες καὶ τῶν τῆς πίστεως θεσμῶν ἐκφάντωρες ἱερομάρτυρες Χριστοῦ ἐδείχθητε τοῖς ἐν κόσμῳ, Κλήμη παναοίδιμε, τῆς ζωῆς κλῆμα εὔκαρπον καὶ Πέτρε θεόσοφε, εὐσεβῶν πέτρα ἄρρηκτε· διὸ ὡς τῶν ἀρρήτων ἐπόπται, ῥύσασθαι πάσης ἡμᾶς βλάβης.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Τὴν ὡραιότητα — on the page of «Άγιος Κλήμης Ιερομάρτυρας, επίσκοπος Ρώμης», and the same text stands on the page of «Άγιος Πέτρος Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας». It names the two of them and no other saint, playing on both names — Clement the fruitful vine-branch, κλῆμα, and Peter the unbroken rock, πέτρα. The initial Latin T of «Tῆς» is the page's own.",
+        "url": "https://www.saint.gr/3000/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clear-sounding trumpets of the knowledge of God and declarers of the ordinances of the faith, you were shown to those in the world as hieromartyrs of Christ — Clement of all renown, the fruitful vine-branch of life, and Peter of God's wisdom, the unbroken rock of the godly. Therefore, as beholders of things unspeakable, deliver us from every harm.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἐκκλησίας ἄσειστοι, καὶ θεῖοι πύργοι, εὐσεβείας ἔνθεοι, στῦλοι ὡς ὄντες κραταιοί, Κλήμη σὺν Πέτρω πανεύφημοι, ὑμῶν πρεσβείαις, φρουρεῖτε τοὺς ἅπαντας.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Άγιος Κλήμης Ιερομάρτυρας, επίσκοπος Ρώμης», and the same text stands on the page of «Άγιος Πέτρος Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας». It names the two of them and no other saint.",
+        "url": "https://www.saint.gr/3000/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Unshaken and divine towers of the Church, godly pillars of piety, being strong as you are — Clement with Peter, all-praised — guard us all by your intercessions.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 101,
+      "display": "101",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Κλημης Ιερομαρτυρας, Επισκοπος Ρωμης (; - 101)» and the narrative closes with it: «έδεσαν στο λαιμό του μια σιδερένεια άγκυρα και τον έριξαν στη θάλασσα, όπου παρέδωσε την αγία ψυχή του (101 μ.Χ)». The page gives no year of birth; the year 92 it gives for his accession to Rome is not a date of his life and is not recorded as one."
+    }
   }
 }

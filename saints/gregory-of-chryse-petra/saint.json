@@ -1,0 +1,51 @@
+{
+  "slug": "gregory-of-chryse-petra",
+  "display_name": "Gregory of Chryse Petra",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Όσιος Γρηγόριος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Όσιος Γρηγόριος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2990/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps very many folders of this name, all on other days, and none of them is of Chryse Petra; the place in the display name is the page's own «Χρυσή Πέτρα». **He is not `gregory-of-akragas`**, whom the same calendar keeps on 23 November and whom this run upgrades there. The page's own name-gloss names Gregory the Theologian and the patriarch Gregory V as bearers of the name; that is the site's gloss on any name and nothing of it is recorded. The page gives no year, so there is no `dates` object, and no `locations`, because «τα μέρη της Ανατολής» and a rock's name are not a place a coordinate can be hung on. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "nicodemus-of-veroia",
+  "display_name": "Nicodemus of Veroia",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Νικόδημος ο Οσιομάρτυρας από την Βέροια», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Νικόδημος ο Οσιομάρτυρας από την Βέροια»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/4097/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's nine Nicodemus folders is this man: they are kept on other days and none is of Veroia. **The page says outright that the day is a modern appointment** — «Η μνήμη του Αγίου μετά την ανάσυρση από τη λήθη των αγώνων του τοποθετήθηκε από τον Μητροπολίτη Βεροίας κ. Παύλο Γιαννικόπουλο στις 24 Νοεμβρίου, επέτειο χειροτονίας εις αρχιερέα του μακαριστού επισκόπου» — placed on 24 November by the metropolitan of Veroia, Pavlos Giannikopoulos, on the anniversary of that bishop's own consecration. The row records the day the calendar keeps and the page's reason for it stands in this note and in the life. The page gives no year, only the reign of Andronicus II Palaiologos, which it does not date, so there is no `dates` object; it says the relics did not survive and the site of the monastery of Philokalles is not known, so there are no `locations`. The biographer it names, Philotheos Kokkinos, has no folder and is not linked. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

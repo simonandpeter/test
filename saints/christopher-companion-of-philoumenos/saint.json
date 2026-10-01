@@ -1,0 +1,53 @@
+{
+  "slug": "christopher-companion-of-philoumenos",
+  "display_name": "Christopher, companion of Philoumenos",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιοι Φιλούμενος και Χριστόφορος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "philoumenos-24-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιοι Φιλούμενος και Χριστόφορος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2994/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates both men by name, so there is a folder for each, and the two share one life. The corpus keeps thirteen folders of this name on other days, and this batch adds two more of this single day; the companionship clause in the display name is how the page itself names him, beside Philoumenos. The same day's listing carries a second pair, «Άγιοι Προκόπιος και Χριστόφορος», whose own page dates them to 274 and who are two more folders of this batch; the two Christophers are kept apart because they are two lines and two pages on one calendar, and two entries on one calendar are two commemorations. No year, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

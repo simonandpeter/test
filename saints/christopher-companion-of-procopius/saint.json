@@ -1,0 +1,62 @@
+{
+  "slug": "christopher-companion-of-procopius",
+  "display_name": "Christopher, companion of Procopius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιοι Προκόπιος και Χριστόφορος», with the rank words left off."
+    }
+  ],
+  "related": [
+    "procopius-24-november"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 274,
+      "latest": 274,
+      "display": "274",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Άγιοι Προκόπιος και Χριστόφορος μαρτύρησαν δια ξίφους το 274 μ.Χ.», and the page's heading carries «(; - 274)» against each of the two names. It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιοι Προκόπιος και Χριστόφορος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2992/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates both men by name, so there is a folder for each, and the two share one life. The companionship clause in the display name is how the page itself names him, beside Procopius, and is what keeps him apart from the Christophoros of the other pair of the same day. The same day's listing carries another pair, «Άγιοι Φιλούμενος και Χριστόφορος», on their own page and with no year; the two Christophers of this one day are kept apart because they are two lines and two pages on one calendar, and two entries on one calendar are two commemorations. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

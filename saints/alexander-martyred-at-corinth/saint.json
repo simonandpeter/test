@@ -1,0 +1,59 @@
+{
+  "slug": "alexander-martyred-at-corinth",
+  "display_name": "Alexander, martyred at Corinth",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Άγιος Αλέξανδρος», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 360,
+      "latest": 360,
+      "display": "360",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Αλέξανδρος μαρτύρησε στην Κόρινθο το 360 μ.Χ.», and the page's heading carries «(; - 360)». It gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 24ης Νοεμβρίου — «Άγιος Αλέξανδρος»",
+        "url": "https://www.saint.gr/11/24/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2991/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 24 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps very many folders of this name, all on other days, and none of them is set at Corinth; the clause in the display name is the page's own city, on the corpus's pattern for `maximus-martyred-at-evreux`. **He is not `alexander-nevsky`**, whom the same calendar's 23 November listing keeps and whose own Greek row is already venerated on 30 August. The page's own name-gloss on ΑΛΕΞΑΝΔΡΟΣ lists emperors, kings and Alexander the Great as bearers of the name; that is the site's gloss and nothing of it is recorded. The folder is given no `locations`: the page names the city and nothing else, and the corpus's gazetteer is not a source. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
