@@ -1,0 +1,67 @@
+{
+  "slug": "oswald-of-northumbria",
+  "display_name": "Oswald of Northumbria",
+  "sex": "male",
+  "types": [
+    "king",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Οσβάλδος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Οσβάλδος», with the rank word left off. The page itself prints the English form beside the Greek one, «Ο Άγιος Οσβάλδος (Oswald)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Άγιος Οσβάλδος»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Οσβαλδος (604 - 642)». The feast is the day of his fall in battle: «Στις 5 Αυγούστου του έτους 642 μ.Χ. έπεσε σε μάχη εναντίον του ειδωλάτρου βασιλέως των Μερκιανών Πέντα (Penda)». The page's own authority throughout is Bede, «η Ιστορία του Αγγλικού λαού και της Εκκλησίας του του οσίου Βέδα». No `locations` object is proposed, though the page names Northumbria, Heavenfield, Lindisfarne, Bamburgh and Bardney, because a reign and three reliquaries are not one dot. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn; it ends instead with the number of churches raised in his honour, «τουλάχιστον 67 ναοί». The page cross-references four saints by day — Edwin on 4 Οκτωβρίου, Aidan on 31 Αυγούστου, Augustine on 26 Μαΐου and Willibrord on 7 Νοεμβρίου — and none of them is linked from the life here, because none was read on this day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 604,
+      "latest": 604,
+      "display": "604",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «Αγιος Οσβαλδος (604 - 642)». The page adds that he was only thirty-eight when he fell, «Ήταν μόλις 38 ετών», which agrees with those two years."
+    },
+    "death": {
+      "earliest": 642,
+      "latest": 642,
+      "display": "642",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 5 Αυγούστου του έτους 642 μ.Χ. έπεσε σε μάχη εναντίον του ειδωλάτρου βασιλέως των Μερκιανών Πέντα (Penda) αμυνόμενος της πίστεως και της πατρίδος του»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

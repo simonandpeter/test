@@ -1,0 +1,60 @@
+{
+  "slug": "euthymius-of-constantinople",
+  "display_name": "Euthymius of Constantinople",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Ευθύμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Ευθύμιος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off. The page glosses the name from εύθυμος as the one who is always cheerful."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Άγιος Ευθύμιος Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day as the listing, and names where the memory is recorded: «Τη μνήμη του Αγίου Ευθυμίου, αναγράφει ο Γεδεών στο Εορτολόγιό του σελ. 149». It identifies him as the patriarch of 907 to 912 and dates his repose, «πέθανε στις 5 Αυγούστου 917 μ.Χ.», which is the feast day the listing keeps. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn; what it prints instead is a bibliography of the editions of his Vita and a note of two surviving homilies on the Mother of God and an unpublished canon to the Theotokos in codex Xenophontos 69 on the Holy Mountain."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 917,
+      "latest": 917,
+      "display": "917",
+      "basis": "attested",
+      "note": "saint.gr: «εξορίστηκε στη Μονή του Αγαθού, όπου και πέθανε στις 5 Αυγούστου 917 μ.Χ.». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

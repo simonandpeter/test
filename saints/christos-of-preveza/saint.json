@@ -1,0 +1,59 @@
+{
+  "slug": "christos-of-preveza",
+  "display_name": "Christos of Preveza",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Χρήστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Χρήστος από την Πρέβεζα», with the rank word and the clause naming his town left off. The spelling is the page's own, Χρήστος with eta, where the corpus's `christos-of-andravida` carries Χρίστος with iota from the same site."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Άγιος Χρήστος από την Πρέβεζα»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day as the listing, and the feast is the day of his martyrdom: «Όλα αυτά έγιναν στις 5 Αυγούστου 1668 μ.Χ.». Its head line reads «Αγιος Χρηστος Απο Την Πρεβεζα (; - 1668)», so there is no year of birth. He is not the corpus's `christos-of-andravida`, whom the same site keeps on 9 Μαρτίου, dates to 1716 and makes a presbyter of Andravida; this man is a sailor of Preveza burnt at Kos in 1668, and nothing of that folder is touched. The page names two places, Preveza for his birth and Kos for his death, and no `locations` object is proposed from a pair. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion and no kontakion, and the apolytikion names him and both places, so it is taken here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1668,
+      "latest": 1668,
+      "display": "1668",
+      "basis": "attested",
+      "note": "saint.gr: «Όλα αυτά έγιναν στις 5 Αυγούστου 1668 μ.Χ.», and its head line «(; - 1668)». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "eugenios-of-aetolia",
+  "display_name": "Eugenios of Aetolia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Ευγένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Όσιος Ευγένιος ο Αιτωλός», with the rank word and the epithet left off. The page's own text gives his family name twice over, «Ευγένιος Ιωαννούλιος ή Γιαννούλης ο Αιτωλός», and glosses the name from εὖ and γένος as the one of good birth and good feeling."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Όσιος Ευγένιος ο Αιτωλός»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day as the listing, and it explains the day in its own words: «(Η μνήμη του αναφέρεται την 6η Αυγούστου, αλλά επειδή συμπίπτει με την μεγάλη εορτή της Μεταμορφώσεως του Σωτήρος εορτάζεται την 5η Αυγούστου)» — his memory is put on 6 August, but because it falls together with the great feast of the Transfiguration it is kept on 5 August. Both the day page and the life page therefore stand on 5 Αυγούστου, and that is the row; the 6 August reading is this note. The page also gives the date of his canonisation, «αγιοκατατάχθηκε την 1η Ιουλίου 1982 μ.Χ.», which is not a feast and takes no field. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints two apolytikia, the second headed «Έτερον Ἀπολυτίκιον», and both are taken here; it also prints a μεγαλυνάριον and an οἶκος, from the Χαιρετισμοί to the new martyrs and venerable fathers of Eurytania, and neither is a kind this schema holds, so neither is drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1595,
+      "latest": 1596,
+      "display": "c. 1595",
+      "basis": "attested",
+      "note": "saint.gr: «γεννήθηκε το 1595 μ.Χ (ή 1596 μ.Χ.) στο Μέγα Δένδρο Αποκούρου από πτωχούς γονείς». The page gives 1595 with 1596 as its own variant, so the interval holds both and the display carries the first with `c.`."
+    },
+    "death": {
+      "earliest": 1682,
+      "latest": 1682,
+      "display": "1682",
+      "basis": "attested",
+      "note": "saint.gr: «Εκοιμήθη προσευχόμενος το 1682 μ.Χ. στη μονή Βραγγιανών, περιστοιχισμένος από αγαπητούς του μαθητές», and its head line «(1595 - 1682)»."
+    }
+  },
+  "related": [
+    "cyril-loukaris"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

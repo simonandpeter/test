@@ -6,6 +6,11 @@
       "form": "Nona",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 august, «Sfânta Nona, mama Sfântului Grigorie Teologul», with the rank word left off."
+    },
+    {
+      "form": "Νόννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Αγία Νόννα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Αγία Νόννα»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same woman: wife of Gregory, whom the page cross-references to 1 Ιανουαρίου, and mother of Gregory the Theologian (25 Ιανουαρίου), of Caesarius (9 Μαρτίου) and of a daughter Gorgonia. saint.gr gives her repose as «πιθανώς το 374 μ.Χ.» — probably 374 — where the folder's `dates`, from the Romanian pass, read `after 374` with no upper bound; the two are compatible and the row changes nothing about them, but the Greek page's «probably» is worth the writer's eye and is in the report. The page says her husband had fallen into the heresy of the Hypsistarians, who received the Most High as of one person and did not believe in His being Trinity, and that she brought him back by her prayers and her patience. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

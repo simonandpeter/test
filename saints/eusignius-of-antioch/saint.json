@@ -6,6 +6,11 @@
       "form": "Evsignie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Mucenic Evsignie», with the rank words left off."
+    },
+    {
+      "form": "Ευσίγνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Ευσίγνιος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Άγιος Ευσίγνιος»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same man: born at Antioch, a soldier for sixty whole years, enlisted under Constans Chlorus the father of Constantine the Great, and beheaded under Julian the Apostate. saint.gr is more definite about the year than doxologia was — its head line reads «Αγιος Ευσιγνιος (252 - 362)» and its last sentence «Έτσι ο Ευσίγνιος έλαβε τον τίμιο θάνατο του μαρτυρίου με αποκεφαλισμό το 362 μ.Χ.» — and it gives his age as 110, «κάποιος γέροντας στρατιώτης 110 χρονών». The folder's `dates` are left as the Romanian pass set them, `under Julian`, 361 to 363, which the Greek year falls inside; the Greek figures are recorded in the life instead, and whether the firmer 252 and 362 should replace that interval is a question for the writer and is in the report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name him, and both are taken."
     },
     {
       "church": "serbian",
@@ -67,6 +82,40 @@
       },
       "english": {
         "text": "Your martyr Eusignius, O Lord, in his struggle received from You, our God, the crown of incorruption; for having Your strength he overthrew the torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς ἔμπλεως πίστεως, τῆς πρὸς Χριστὸν εὐσεβῶς, νεάζον τὸ φρόνημα, ἔσχες ἐν γήρᾳ καλῶς, Εὐσίγνιε ἔνδοξε, ὅθεν ὁμολογήσας, τὸν Ὑπέρθεον Λόγον, ἤλεγξας θαρσαλέως, Παραβάτου τὸ θράσος, ἐντεῦθεν μετὰ Μαρτύρων, ὡς Μάρτυς δεδόξασαι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Ευσίγνιος», and it names him, «Εὐσίγνιε ἔνδοξε»",
+        "url": "https://www.saint.gr/2225/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Filled full of faith towards Christ in piety, you kept a young mind nobly in your old age, glorious Eusignios; and so, confessing the Word who is above God's own naming, you rebuked with courage the insolence of the Apostate, and from that hour you are glorified with the martyrs, a martyr yourself.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχᾶς.",
+      "text": "Ὡς εὐσεβείας μάρτυρα, καὶ ἀληθῆ θεόφρονα, ἡ Ἐκκλησία γεραίρει δοξάζουσα, τοὺς θείους ἄθλους σήμερον, τοῦ σοφοῦ Εὐσιγνίου, ἀκαταπαύστως βοώσα, Ταὶς αὐτοῦ ἰκεσίαις, τοὺς δούλους σου συντήρησον Πολυέλεε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχᾶς — the second hymn on the page of «Άγιος Ευσίγνιος», and it too names him, «τοῦ σοφοῦ Εὐσιγνίου»",
+        "url": "https://www.saint.gr/2225/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a martyr of piety and a true man of God's mind, the Church honours and glorifies today the divine contests of the wise Eusignios, crying out unceasingly: by his entreaties keep Your servants, O Lord rich in mercy.",
         "rendered": "site"
       }
     }

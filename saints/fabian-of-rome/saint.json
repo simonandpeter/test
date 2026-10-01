@@ -7,6 +7,11 @@
       "form": "Fabian",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Ierarh Fabian, episcopul Romei», with the rank word left off."
+    },
+    {
+      "form": "Φάβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Φάβιος ο Ιερομάρτυρας επίσκοπος Ρώμης», with the rank word and the see left off. The page's own text calls the form a mistake and gives Φαβιανός as the correct one, «ή σωστότερα Φαβιανός», so both stand in this note and the listing's form is the one recorded."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Άγιος Φάβιος ο Ιερομάρτυρας επίσκοπος Ρώμης»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the listing's words are the folder's own reading: hieromartyr, bishop of Rome. The page then argues with its own day, and that is worth recording rather than resolving. It corrects the name — «Ο Άγιος Φάβιος (ή σωστότερα Φαβιανός) μαρτύρησε δια ξίφους», Fabius, or more correctly Fabianus, was martyred by the sword — and adds: «Στους καταλόγους των πάπων μεταξύ των μαρτύρων συγκαταλέγεται ο πάπας Φαβιανός (236 - 350 m.X.), που μαρτύρησαν επί Δεκίου την 20ή Ιανουαρίου (Ευσεβίου Εκκλ. Ιστορία κεφ. κθ')» — in the lists of the popes, pope Fabianus is counted among the martyrs, martyred under Decius on 20 January, citing Eusebius. The second of the page's two years is plainly a slip for 250, since the folder's `dates` already hold the death at 250 under Decius out of doxologia. So saint.gr keeps him on 5 August while naming 20 January as the day of the papal lists; one row per church is the schema, so the row is the day page read and the January reading is this note, and the question of whether the Greek 5 August and the Roman 20 January are one commemoration is in the report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

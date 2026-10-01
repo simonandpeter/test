@@ -6,6 +6,11 @@
       "form": "Ioan Iacob de la Neamț",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 august, «Sfântul Cuvios Ioan Iacob de la Neamț», with the rank words left off. His own life says he was given the name Ilie at baptism and the name Ioan at his tonsure."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Αυγούστου, «Όσιος Ιωάννης ο νέος Χοζεβίτης», with the rank word and the epithets left off. The page glosses the name as the grace and favour of God towards men, and gives his birth name as Ηλίας Ιακώβ."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Αυγούστου — «Όσιος Ιωάννης ο νέος Χοζεβίτης»",
+        "url": "https://www.saint.gr/08/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same man: its head line reads «Οσιος Ιωαννης ο Νεος Χοζεβιτης (1913 - 1960)» and its first sentence «Ο Άγιος Ιωάννης, γεννημένος ως Ηλίας Ιακώβ, ήρθε στον κόσμο στις 23 Ιουλίου», which is the birth name, the birth date and the birth year the folder already holds out of doxologia. The page gives no life beyond that sentence; what it prints instead, under the heading ΘΑΥΜΑΤΑ, is three wonders — the Greek archimandrite from America who saw him in a dream in 1980 and at whose insistence the abbot opened the tomb, so that the relics were found incorrupt; the three hairs a man took and was ordered in a dream to give back; and the woman from Crete, speechless and unable to move, to whom he appeared in vestments holding the chalice and said «Εγώ είμαι ο Άγιος Ιωάννης ο Χοζεβίτης», who sent a gold spoon to the monastery in 1986 out of gratitude. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion, which names him and his cave, and credits its author — Charalampos M. Bousias, great hymnographer of the Church of Alexandria; it is taken here."
     },
     {
       "church": "serbian",
@@ -79,6 +94,23 @@
       },
       "english": {
         "text": "In you, Father, what is according to the image was saved with diligence; for you left the world and your homeland, took up the Cross of Christ, and settled in the valley of the Jordan to struggle. Therefore your spirit now rejoices with the angels, venerable Father John. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τόν συνάναρχον Λόγον.",
+      "text": "Ἀσκητήν τῶν σπηλαίων Χορράθ τιμήσωμεν, θαυματουργόν Ἰωάννην, νεολαμπῆ Χοζεβᾶ, τῆς Μονῆς φωστῆρα ἄρτι ἀνατείλαντα ἐκ ῾Ρουμανίας καί αὐγαῖς ταπεινώσεως, εὐχῆς, νηστείας καί ἀπαθείας, καταφωτίσαντα πάντας αὐτοῦ λιτάς ἀπεκδεχόμενοι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τόν συνάναρχον Λόγον — the one hymn on the page of «Όσιος Ιωάννης ο νέος Χοζεβίτης», credited on the page to Χαραλάμπους Μ. Μπούσια, Μεγάλου Υμνογράφου της των Αλεξανδρέων Εκκλησίας, and it names him and his place, «θαυματουργόν Ἰωάννην, νεολαμπῆ Χοζεβᾶ»",
+        "url": "https://www.saint.gr/4491/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the ascetic of the caves of Chorrath, the wonderworking John, newly shining of Hozeva, the lamp of the monastery lately risen out of Romania, who has lit up all men with the beams of his humility, his prayer, his fasting and his freedom from passion — we who look for his intercessions.",
         "rendered": "site"
       }
     }
