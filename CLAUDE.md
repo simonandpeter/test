@@ -542,6 +542,13 @@ The codebase already holds this line. The rule is to keep it there.
   number for cross-references: how many saints have a link in either direction,
   and the work list of those that have none. Quote the number from the script;
   PLAN carried a stale one for a day.
+- **`node scripts/heroless.mjs [church …] [--counts]`** — the image work list,
+  stated the way the instruction behind it is ("all main saint cards for each
+  day and each calendar has an image in its profile", 2026-08-28): the
+  day-and-church combinations whose **hero** carries no icon, and the hero's
+  slug. It reads `pickHero` and the manifest, so it says what the page would
+  show today rather than counting imageless folders, of which there are
+  thousands and which no reader meets.
 - `node scripts/language-audit.mjs`, `date-audit.mjs`, `place-candidates.mjs`,
   `track-candidates.mjs`, `related-from-links.mjs` — all **propose, never
   write**; every row needs a reading.
