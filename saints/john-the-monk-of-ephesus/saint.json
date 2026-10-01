@@ -1,0 +1,51 @@
+{
+  "slug": "john-the-monk-of-ephesus",
+  "display_name": "John the Monk of Ephesus",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "office": "Archbishop of Ephesus",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Αυγούστου, «Άγιοι Ιωάννης και Ιωάννης ο Νέος Επίσκοποι Εφέσου», with the rank word and the see left off. The codex the page quotes distinguishes this one as «Ἰωάννου τοῦ μονάχου», John the monk."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Αυγούστου — «Άγιοι Ιωάννης και Ιωάννης ο Νέος Επίσκοποι Εφέσου»",
+        "url": "https://www.saint.gr/08/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Αυγούστου εκάστου έτους», the same day as the listing. The listing names two men of one name in one line and the page's own text enumerates them, so they are two folders and not one: «Τῶν ἐν ἁγίοις πατέρων ἠμῶν καὶ ἀρχιεπισκόπων γενομένων Ἐφέσου Ἰωάννου τοῦ μονάχου καὶ Ἰωάννου τοῦ νέου», from the Patmian codex 266 and the Parisian 152 Sap. This folder is the first of the two, the monk. The listing calls them bishops and the codex the page quotes calls them archbishops; the codex's word is the one recorded in `types` and `office`, because it is the text the page is citing. The page adds a second day, «Σε Παρισινό Κώδικα η μνήμη τους επαναλαμβάνεται και την 4η Αυγούστου» — in a Parisian codex their memory is repeated on 4 August as well; one row per church is the schema, so that is this note and not a second row, and the saint.gr listing for 4 Αυγούστου does not carry them. There is no story, no year and no place beyond the see, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

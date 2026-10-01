@@ -1,0 +1,60 @@
+{
+  "slug": "olympios-the-eparch",
+  "display_name": "Olympios the Eparch",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "office": "Eparch",
+  "names": [
+    {
+      "form": "Ολύμπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Αυγούστου, «Άγιος Ολύμπιος ο έπαρχος, μάρτυρας», with the rank word and the office left off. The page glosses the name from λάμπω as the one who shines, the blessed one."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Αυγούστου — «Άγιος Ολύμπιος ο έπαρχος, μάρτυρας»",
+        "url": "https://www.saint.gr/08/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the entry is one sentence: «Ο Άγιος Ολύμπιος ήταν Βυζαντινός άρχοντας επί της Βασιλείας του αυτοκράτορα Ηρακλείου (610 - 641 μ.Χ.), που θανατώθηκε στη φυλακή από τον Πέρση βασιλιά Χοσρόη για την ομολογία του στην χριστιανική πίστη». No place is named, so there is no `locations` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 610,
+      "latest": 641,
+      "display": "between 610 and 641",
+      "basis": "traditional",
+      "note": "saint.gr gives no year, only the reign, with its own gloss on the reign's span: «επί της Βασιλείας του αυτοκράτορα Ηρακλείου (610 - 641 μ.Χ.)». The interval is that span. The display is written as a window rather than as «under Heraclius» because no locale pack carries that era phrase, and a window needs no new translation."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

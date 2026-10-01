@@ -6,6 +6,11 @@
       "form": "Salomeea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 august, «Sfânta Salomeea, mironosița», with the rank word left off."
+    },
+    {
+      "form": "Σαλώμη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Αυγούστου, «Αγία Σαλώμη η Μυροφόρος», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Αυγούστου — «Αγία Σαλώμη η Μυροφόρος»",
+        "url": "https://www.saint.gr/08/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries. The page gives no year, so no `dates` object is proposed. It makes her «πρώτη εξαδέλφη της Παναγίας», first cousin of the Theotokos, with Zebedee for husband and James and John for sons; the same site, glossing the name Ιωάννης on its page for 3 Αυγούστου at https://www.saint.gr/2201/saint.aspx, calls her instead «Σαλώμης, αδελφής της Θεοτόκου», the Theotokos's sister. saint.gr says both things on one day and this reader does not choose between them: the cousin is what her own page says and is what the life paragraph follows, and the discrepancy is recorded here and in the report. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

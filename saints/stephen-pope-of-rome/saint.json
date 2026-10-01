@@ -1,0 +1,54 @@
+{
+  "slug": "stephen-pope-of-rome",
+  "display_name": "Stephen of Rome",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "office": "Pope of Rome",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Αυγούστου, «Άγιος Στέφανος Ιερομάρτυρας Πάπας Ρώμης και οι συν αυτώ», with the rank word, the see and the clause about his companions left off. The page glosses the name from στέφανος, the one who bears the prize, the one worthy of the crown of victory."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Αυγούστου — «Άγιος Στέφανος Ιερομάρτυρας Πάπας Ρώμης και οι συν αυτώ»",
+        "url": "https://www.saint.gr/08/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Αυγούστου εκάστου έτους», the same day as the listing. It gives 253 as the year he came up to the throne of Rome, «ανέβηκε στο θρόνο της Ρώμης κατά το έτος 253 μ.Χ.», and no year of birth and no year of death, so no `dates` object is written: an accession is not an interval of a life and the schema has no field for it, and the year is recorded in the life instead. The page's second head line is «Αγιοι Μαρτυρες Που Μαρτυρησαν Μαζι Με Τον Στεφανο Παπας Ρωμης», the companions of the listing's «και οι συν αυτώ», but it names none of them and gives them no story, so they are one unenumerated company and take no folder. The page's text also ends with a bare line «Άγιος Ταρσίζιος», a name with no sentence attached to it and no entry of its own in the 3 Αυγούστου listing; nothing is drafted from it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "lucia-of-rome-companion-of-rix"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

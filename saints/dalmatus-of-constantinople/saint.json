@@ -6,6 +6,11 @@
       "form": "Dalmat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 august, «Sfântul Cuvios Dalmat», with the rank words left off."
+    },
+    {
+      "form": "Δαλμάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 3 Αυγούστου, «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος», with the rank word and the two companions left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 3 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 3ης Αυγούστου — «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος»",
+        "url": "https://www.saint.gr/08/03/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 3 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company of three the Romanian line keeps: «Οσιος Φαυστος, Οσιος Ισαακιος, Οσιος Δαλματιος». saint.gr dates the honour and not the man — «τιμήθηκε και από τη Γ' Οικουμενική Σύνοδο που συνήλθε το 431 μ.Χ. στην Έφεσο, στην οποία οι Πατέρες ανέδειξαν τον όσιο αρχιμανδρίτη» — and gives no year of birth and no year of death, so no `dates` object is proposed and the year of the Council is recorded in the life instead. The third of the three, `isaac-of-constantinople`, already carries a venerated Greek row on 30 Μαΐου, and this page cross-references it itself, «βλέπε 30 Μαΐου»; that row is left exactly where it is and nothing is drafted for him. The page adds two relics: a portion of Dalmatios's at Νέα Θηβαΐδα on the Holy Mountain, and a portion of Isaac's at the monastery of Κύκκος in Cyprus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The apolytikion and the kontakion the page prints are both the company's and name all three; they are taken here and on `faustus-son-of-dalmatus`, and not on Isaac, whose row is not this reader's to touch."
     },
     {
       "church": "serbian",
@@ -63,6 +78,40 @@
       },
       "english": {
         "text": "God of our fathers, who ever deal with us according to Your gentleness, do not take Your mercy from us, but by the prayers of our fathers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τὴν τρίστιχον χορείαν τῶν Ὅσιων τιμήσωμεν, Φαῦστον Ἰσαάκιον ἅμα, καὶ Δαλμάτιον τὸν ἔνδοξον ὡς τρίφωτος λαμπὰς γὰρ ἀρετῶν, σκεδάζουσι τὴν νύκτα τῶν παθῶν, καὶ ταὶς θείαις καταυγάζουσι δωρεαίς, τοὺς πόθω ἀνακράζοντας, δόξα τῷ θαυμαστώσαντι ὑμᾶς, δόξα τῷ μεγαλύναντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος», and it names all three of the company, «Φαῦστον Ἰσαάκιον ἅμα, καὶ Δαλμάτιον τὸν ἔνδοξον»",
+        "url": "https://www.saint.gr/2199/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the threefold choir of the venerable ones — Faustus and Isaac together, and Dalmatus the glorious; for as a triple lamp of the virtues they scatter the night of the passions, and they shine with divine gifts upon those who cry out in longing: glory to Him who has made you wondrous, glory to Him who has magnified you, glory to Him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὴν ἐν πρεσβείαις.",
+      "text": "Τοὺς ἐν ἀσκήσει ἐκλάμψαντας ἐν τῶ κόσμῳ, καὶ τὰς αἰρέσεις ἀνατρέψαντας τῇ πίστει, ὕμνοις, Ἰσαάκιον εὐφημήσωμεν, σὺν τῷ Δαλμάτῳ Φαῦστον, ὡς τοῦ Χριστοῦ θεράποντας, αὐτὸν δυσωποῦντας ὑπὲρ πάντων ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὴν ἐν πρεσβείαις — the second hymn on the page of «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος», and it too names all three, «Ἰσαάκιον εὐφημήσωμεν, σὺν τῷ Δαλμάτῳ Φαῦστον»",
+        "url": "https://www.saint.gr/2199/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Those who shone out in the world by ascetic labour and overturned the heresies by faith, let us praise with hymns — Isaac, with Dalmatus and Faustus — as servants of Christ, entreating Him on behalf of us all.",
         "rendered": "site"
       }
     }
