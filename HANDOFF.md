@@ -26,15 +26,10 @@ here, because a PAT push never updates `origin/main`.
   alone says otherwise — that comparison is what separated three real defects
   from the noise on 2026-09-15. The shelf-swipe flake is the known one and is
   the test's fault, not the page's (`STRUCTURE.md` §6).
-- **The PAT is dead and nothing has been pushed since `bf181d2f`.** It is at
-  `C:\Users\matei\Documents\Agios Website Ex\update git.txt`, it answers
-  `401 Bad credentials` on `api.github.com/user`, and `bash scripts/push.sh`
-  fails on it with "Invalid username or token. Password authentication is not
-  supported for Git operations." Only the author can replace it: a classic PAT
-  with `repo`, or a fine-grained one with Contents write on
-  `simonandpeter/test`. Commits queue locally and lose nothing;
-  `bash scripts/state.sh` says how many. `push.sh` pushes and reads the CI run
-  in one step once there is a token.
+- **The PAT at `C:\Users\matei\Documents\Agios Website Ex\update git.txt`
+  works**, replaced by the author and used all day on 2026-10-01; the 391
+  commits that had queued behind the dead one are pushed. `push.sh` pushes and
+  reads the CI run in one step.
 
 - **Do not test that token with a read** — `CLAUDE.md`'s protocol section has
   why, and it cost an announcement on 2026-09-29.
@@ -42,6 +37,12 @@ here, because a PAT push never updates `origin/main`.
 ---
 
 ## In flight
+
+**The Greek calendar wave.** `../ro-run/ORCHESTRATION.md` is the whole
+protocol and its state block is what has been written; `../ro-run/FINDINGS.md`
+holds what is settled and what is the author's. One writer, readers out five
+days each. Queued behind it, authorised: images for the Romanian calendar
+first, then the Greek.
 
 **Daily/Prayer design fixes against the mockup** (`../mockup-review/BRIEF.md`,
 stages in `REVIEW.md` §3): stages A (Daily's full header), B (the four
