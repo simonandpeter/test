@@ -1,0 +1,63 @@
+{
+  "slug": "athanasius-the-reader",
+  "display_name": "Athanasius the Reader",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, «Άγιοι Αριστοκλής ο πρεσβύτερος, Δημητριανός διάκονος και Αθανάσιος αναγνώστης», which prints him as «Αθανάσιος αναγνώστης»; the rank word is left off the stored form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 302,
+      "latest": 302,
+      "display": "302",
+      "basis": "traditional",
+      "note": "saint.gr's heading for each of the three: «(; - 302)», and its narrative «Το 302 μ.Χ.» for the year of the martyrdom."
+    }
+  },
+  "related": [
+    "aristocleus-of-tamassos",
+    "demetrianus-the-deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Άγιοι Αριστοκλής ο πρεσβύτερος, Δημητριανός διάκονος και Αθανάσιος αναγνώστης»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading for him reads «(; - 302)». The entry names all three members, so it is one folder each, and the corpus already keeps the presbyter Aristocleus of Tamassos from the Romanian calendar on this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. He is none of the corpus's twenty other men of the name; the page identifies him only as the reader who was at prayer in the church of Salamis with the deacon and the presbyter."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

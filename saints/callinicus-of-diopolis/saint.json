@@ -1,0 +1,107 @@
+{
+  "slug": "callinicus-of-diopolis",
+  "display_name": "Callinicus of Diopolis",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Καλλίνικος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, which prints him as «Καλλίνικος Διοπόλεως» inside the company's line; the see is left off the stored form, and the rank word «ο Ιερομάρτυρας» that the life page adds is left off too."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1821,
+      "latest": 1821,
+      "display": "1821",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him: «Άγιος Καλλίνικος Διοπόλεως ο Ιερομάρτυρας (; - 1821)»."
+    }
+  },
+  "related": [
+    "gerasimus-of-crete",
+    "neophytus-of-knossos",
+    "joachim-of-chersonesos",
+    "hierotheus-of-lampe",
+    "zacharias-of-siteia",
+    "joachim-of-petra",
+    "gerasimus-of-rethymno",
+    "callinicus-of-kydonia",
+    "melchizedek-of-kissamos"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Άγιοι Γεράσιμος Κρήτης, Νεόφυτος Κνωσσού, Ιωακείμ Χερσονήσου, Ιερόθεος Λάμπης, Ζαχαρίας Σητείας, Ιωακείμ Πέτρας, Γεράσιμος Ρεθύμνης, Καλλίνικος Κυδωνίας, Μελχισεδέκ Κισάμου, Καλλίνικος Διοπόλεως και των συν αυτοίς αθλησάντων κληρικών και λαΐκών εν έτεσιν 1821 και 1822»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading for him reads «Άγιος Καλλίνικος Διοπόλεως ο Ιερομάρτυρας (; - 1821)». The entry enumerates ten hierarchs by name and see, so it is one folder each, and the clergy and laity it adds are named by nobody and get none. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ´.",
+      "model": "Θείας Πίστεως.",
+      "text": "Δῆμος ὤφθητε, τροπαιοφόρος, ἔχων πρόκριτον, δεδοξασμένον, τὸν τῆς Κρήτης ποιμένα Γεράσιμον, ὁμονοοῦντες γὰρ πίστει ἠθλήσατε, καὶ τῶν τυράννων τὸ θράσος ἐλύσατε. Ὅθεν πάντοτε, Χριστῷ τῷ Θεῷ πρεσβεύετε, δωρήσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, the third of three apolytikia on the page of the clergy and laity martyred in Crete in 1821 and 1822, Ἦχος γ´, Θείας Πίστεως — it addresses the whole company in the plural, with Gerasimus of Crete named as its head",
+        "url": "https://www.saint.gr/616/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown a company bearing the trophy, having as your chosen and glorified head Gerasimus the shepherd of Crete; for being of one mind in the faith you contended, and undid the insolence of the tyrants. Therefore intercede always with Christ our God, that great mercy may be given us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α´.",
+      "model": "Τὸν τάφον σου.",
+      "text": "Ὡς φίλους τοῦ Χριστοῦ, καὶ θεράποντας θείους, γεραίρομεν ὑμᾶς, τοὺς ἐν χρόνοις δουλείας, ἀστέρας ἐκλάμψαντας, παμφαεὶς Νεομάρτυρας, Ἐπισκόπων γάρ, καὶ Ἱερέων τὰ πλήθη, σὺν Ἀζύγοις τε, ταῖς ἀλκιφρόνων πορείαις, φωτίζετε ἔκτοτε.",
+      "source": {
+        "text": "saint.gr, the first kontakion on the page of the clergy and laity martyred in Crete in 1821 and 1822, Ἦχος α´, Τὸν τάφον σου — it addresses the company in the plural and names none of them singly",
+        "url": "https://www.saint.gr/616/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As friends of Christ and divine servants we honour you, all-radiant new martyrs who shone out as stars in the years of slavery; for from that time you have been lighting up, by your brave-minded courses, the multitudes of bishops and of priests, and the unmarried with them.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

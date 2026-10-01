@@ -1,0 +1,63 @@
+{
+  "slug": "etheldreda",
+  "display_name": "Etheldreda",
+  "sex": "female",
+  "names": [
+    {
+      "form": "Etheldreda",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, «Αγία Etheldreda», with the rank word left off. The page prints the name in Latin letters inside its Greek line, and its one sentence adds two further forms, «ή Audrey, AEthelthryth»; no Greek form of the name is printed anywhere on it."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 636,
+      "latest": 636,
+      "display": "636",
+      "basis": "traditional",
+      "note": "saint.gr's heading for her: «Αγία Etheldreda (636 - 679)»."
+    },
+    "death": {
+      "earliest": 679,
+      "latest": 679,
+      "display": "679",
+      "basis": "traditional",
+      "note": "saint.gr's heading for her: «Αγία Etheldreda (636 - 679)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Αγία Etheldreda»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing, and its heading gives her «(636 - 679)». The corpus keeps nobody of this name. No `types` are proposed: the page calls her only Αγία and says nothing of a rank or a way of life, so nothing in the vocabulary can be read off it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, although the page does say it has no details of her life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "slug": "gaius-nephew-of-eustochius",
+  "display_name": "Gaius, nephew of Eustochius",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γάϊος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, which prints the company as «Άγιοι Ευστόχιος ο Πρεσβύτερος, Γάϊος ο ανεψιός του, και τα παιδιά αυτού Λολλία, Πρόβη και Ουρβανός»; the form above is this member's bare name, with the rank word and the relationship left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "300",
+      "basis": "traditional",
+      "note": "saint.gr's heading for each of the five in this company: «(; - 300)», and its narrative «υπήρξαν στα χρόνια των βασιλέων Μαξιμιανού και Αγρίππα κατά το έτος 300 μ.Χ.»."
+    }
+  },
+  "related": [
+    "eustochius-the-presbyter",
+    "lollia-daughter-of-gaius",
+    "proba-daughter-of-gaius",
+    "urbanus-son-of-gaius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Άγιοι Ευστόχιος ο Πρεσβύτερος, Γάϊος ο ανεψιός του, και τα παιδιά αυτού Λολλία, Πρόβη και Ουρβανός»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading for him or her reads «(; - 300)». The entry names all five members, so it is one folder each. The page's own narrative gives second forms for four of the five names — Γάϊος ή Γαϊανός, Λολλία ή Λουλώ, Ουρβανός ή Ουρβάσιος — and those variants are not stored, only the form the day's line prints. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

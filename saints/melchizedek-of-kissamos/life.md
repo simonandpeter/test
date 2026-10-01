@@ -1,0 +1,11 @@
+# Melchizedek of Kissamos
+
+saint.gr says that on 23 June 1821 a synod was held in the metropolis of Crete, in the church of Saint Menas, at which the bishop of Crete began to read out a letter sent by the vizier. The enemy, lying in wait, rushed into the church and killed the hierarchs, seventeen priests and five Athonite fathers of the monastery of Vatopedi, who had brought holy relics and the Holy Belt of the Most Holy Theotokos to the Great Fortress for veneration against the epidemic of plague. They killed as well some three hundred Christians who were present.
+
+Scattering from there through the city, they hunted the remaining Christians and killed without mercy whomever they met in the streets. There they came upon Hierotheus the bishop of Lampe, whom they killed together with his deacon; and the next day, in the village of Epano Fourni, the seat of the bishopric of Petra, its hierarch Joachim was shot outside the church of the Most Holy Theotokos. The page adds that the first official celebration of the feast was held on 11 November 2000 in the cathedral church of Saint Menas at Heraklion.
+
+The day's line names ten of them — [Gerasimus of Crete](/saints/gerasimus-of-crete), [Neophytus of Knossos](/saints/neophytus-of-knossos), [Joachim of Chersonesos](/saints/joachim-of-chersonesos), [Hierotheus of Lampe](/saints/hierotheus-of-lampe), [Zacharias of Siteia](/saints/zacharias-of-siteia), [Joachim of Petra](/saints/joachim-of-petra), [Gerasimus of Rethymno](/saints/gerasimus-of-rethymno), [Callinicus of Kydonia](/saints/callinicus-of-kydonia), Melchizedek of Kissamos and [Callinicus of Diopolis](/saints/callinicus-of-diopolis) — and then «των συν αυτοίς αθλησάντων κληρικών και λαΐκών εν έτεσιν 1821 και 1822», the clergy and laity who contended with them in the years 1821 and 1822.
+
+The page gives each of the ten the year 1821 and no year of birth, and it names nobody among the clergy and the laity. Its verses count them as ten shepherds who lately contended and brought down the high-necked malice of the enemy, with priests and others beside them who obtained the eternal kingdom.
+
+*After saint.gr's calendar for 23 Ιουνίου — [the day](https://www.saint.gr/06/23/index.aspx) and [the life](https://www.saint.gr/616/saint.aspx); read 1 October 2026.*

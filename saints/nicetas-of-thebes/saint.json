@@ -1,0 +1,74 @@
+{
+  "slug": "nicetas-of-thebes",
+  "display_name": "Nicetas of Thebes",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νικήτας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, «Όσιος Νικήτας ο Θηβαίος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "daniel-of-the-castle-of-patras"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Όσιος Νικήτας ο Θηβαίος»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing, and gives no year at all; there is therefore no `dates` object, although the page of Daniel of the Castle of Patras, whom his own life has him meet, puts that man in the eleventh century. He is none of the corpus's eleven other men of the name, and he is not the new martyr of Nisyros kept two days earlier. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Ἑκ παιδός τῷ Κυρίῳ ῆκολούθησας Ὃσιε, διά προσευχῆς, ἀγρυπνίας καί παντοίας ἀσκῆσεως, τηρῶν αὐτοῦ προθῦμως ἐντολάς, διό καὶ θεῖον Σχῆμα εἰληφώς, τῷ φωτί περιελούεσο αισθητῶς, Θεόδωρός σε ὡς εἶδε. Δόξα τῷ σε δοξάσαντι Χριστῷ, δόκα τῷ τε θαυμαστώσαντι, δόκα Νικήτα ἐκ Θηβῶν, τῷ σε πρέσβυν θεῖον δείξαντι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the only apolytikion on the page of «Όσιος Νικήτας ο Θηβαίος», and it names him as Nicetas of Thebes",
+        "url": "https://www.saint.gr/4072/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "From childhood you followed the Lord, venerable one, by prayer and vigil and ascesis of every kind, keeping his commandments eagerly; and so, having received the divine habit, you were visibly bathed in the light, as Theodore saw you. Glory to Christ who glorified you, glory to him who made you wonderful, glory to him who showed you, Nicetas of Thebes, a divine intercessor.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

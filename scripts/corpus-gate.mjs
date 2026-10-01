@@ -115,6 +115,30 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ουρβανοσ urbanus-8-march urbanus-son-of-gaius':
+    'Three men: the Urbanus of 20 February, Urbanus of the Forty of Sebaste on 9 March, and the Urbanus of 23 June.',
+  'νικητασ nicetas-alfanov nicetas-of-apollonias nicetas-of-chalcedon nicetas-of-epirus nicetas-of-medikion nicetas-of-nisyros nicetas-of-novgorod nicetas-of-pythia nicetas-of-thebes nicetas-the-sinaite nicetas-the-stylite-of-pereslavl nikitas-of-nea-moni':
+    'Eleven now. The new one is on 23 June; the others are read in the el-06-21 entry for this name form.',
+  'δημητριανοσ demetrianus-of-tamassos demetrianus-son-of-demetrius demetrianus-the-deacon':
+    'Two men: the Demetrian of 23 June and the Demetrian of the el-11-10 entry.',
+  'δανιηλ daniel-of-achinsk daniel-of-moscow daniel-of-pereslavl daniel-of-the-castle-of-patras daniel-the-egyptian':
+    'Five men. The new one is on 23 June; the others are read in the el-05-04 entry for this name form.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-confessor athanasius-the-reader athanasius-the-wonderworker':
+    'Fourteen now. The new one is on 23 June; the others are read in the el-06-03 entry for this name form.',
+  'ζαχαριασ zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-of-siteia zacharias-of-vienne zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
+    'Ten now. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-05-26 entry for this name form.',
+  'νεοφυτοσ neophytus-5-may neophytus-of-knossos neophytus-of-nicaea':
+    'Three men. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-05-05 entry for this name form.',
+  'ιωακειμ joachim-of-chersonesos joachim-of-novgorod joachim-of-petra joachim-of-tarnovo joachim-papoulakis joachim-the-righteous':
+    'Three men. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-05-28 entry for this name form.',
+  'ιεροθεοσ hierotheus-of-athens hierotheus-of-lampe hierotheus-of-nikolsk':
+    'Three men. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-05-31 entry for this name form.',
+  'γερασιμοσ gerasimus-1-june gerasimus-of-boltinsk gerasimus-of-crete gerasimus-of-great-perm gerasimus-of-kantara gerasimus-of-rethymno gerasimus-of-the-jordan gerasimus-of-vologda gerasimus-the-byzantine':
+    'Eight now. The new one is Gerasimus of Crete, the head of that company, whose plural apolytikion the other nine carry; the others are read in the el-06-01 entry for this name form.',
+  'γαιοσ gaius-5-may gaius-disciple-of-dionysius-of-alexandria gaius-nephew-of-eustochius gaius-of-alexandria gaius-of-the-forty-martyrs gaius-pope-of-rome':
+    'Four men. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-04-29 entry for this name form.',
+  'καλλινικοσ calinic-of-cernica callinicus-companion-of-eustathius callinicus-of-diopolis callinicus-of-kydonia callinicus-the-magus':
+    'Six now. The new one is one of the ten Cretan hierarchs of 1821 the 23 June page names; the others are read in the el-05-24 entry for this name form.',
   'σατορνινοσ satorninus-7-may saturninus-companion-of-plotinus saturninus-of-corfu saturninus-son-of-juliana':
     'Four men of this Greek form. The new one is on 22 June; the others are read in the el-04-29 entry for this name form.',
   'ιουλιανη juliana-mother-of-saturninus juliana-of-amisos juliana-of-lazarevo juliana-of-ptolemais':

@@ -1,0 +1,63 @@
+{
+  "slug": "daniel-of-the-castle-of-patras",
+  "display_name": "Daniel of the Castle of Patras",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 23 Ιουνίου, «Όσιος Δανιήλ ὁ ἐν τῷ κάστρῳ τῶν Πατρῶν», with the rank word left off. The life page shortens the byname to «τον ἐν Κάστρῳ»."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ἔζησε τον ΙΑ' αιώνα μ.Χ.» — the page gives the century and no year."
+    }
+  },
+  "related": [
+    "nicetas-of-thebes"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 23ης Ιουνίου — «Όσιος Δανιήλ ὁ ἐν τῷ κάστρῳ τῶν Πατρῶν»",
+        "url": "https://www.saint.gr/06/23/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 23 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the corpus's nine other men of the name: this is the eleventh-century ascetic of Patras whom the life of Nicetas of Thebes — the entry beside him on the same day — met in that city. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
