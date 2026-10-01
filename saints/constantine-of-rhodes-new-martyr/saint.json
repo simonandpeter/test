@@ -6,6 +6,11 @@
       "form": "Constantin din Rodos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 noiembrie, «Sfântul Noul Mucenic Constantin din Rodos»."
+    },
+    {
+      "form": "Κωνσταντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Νοεμβρίου, «Άγιος Κωνσταντίνος ο Υδραίος Νεομάρτυρας», with the rank words left off. The epithet «ο Υδραίος» is left out of the bare form and recorded in the row."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 14 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Νοεμβρίου — «Άγιος Κωνσταντίνος ο Υδραίος Νεομάρτυρας»",
+        "url": "https://www.saint.gr/11/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 1800)», the same year of death the folder already carries, so **no `dates` are proposed**. The entry is plainly him, and the Greek epithet is **ο Υδραίος**, of Hydra, where the folder's display name says Rhodes: the page has him born on Hydra of Michael and Marina, gone at eighteen to Rhodes to the Turkish governor Hasan Kapetan, apostatising there under the name Hasan for three years, repenting, refused a blessing for martyrdom by a confessor who feared his youth, obedient, away to Krimi and Constantinople and the Holy Mountain, prepared at the monastery of Iviron, back to Rhodes to confess Christ before the governor, and hanged on 14 November 1800; it names him patron of the city of Rhodes and of Hydra, with a splendid church and his relic on Hydra. **The name is left alone** and the page's word is recorded here, per `BRIEF.md` §5: the display name is not a reader's to change. The Ἀπολυτίκιον and the Κοντάκιον are taken and both name him; the Μεγαλυνάριον is not. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -55,5 +70,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν λαμπρὸν γόνον Ὕδρας καὶ τῆς Ῥόδου τὸ καύχημα, καὶ Νεομαρτύρων τὸ κλέος, Κωνσταντῖνoν τιμήσωμεν, ἐν ὕμνοις καὶ ᾠδαῖς πνευματικαῖς, τὴν μνήμην ἐκτελοῦντες τὴν αὐτοῦ, ἵνα λάβωμεν πλουσίαν τὴν ἀμοιβήν, παρὰ Θεοῦ κραυγάζοντες· δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ ἐνισχύσαντι, καὶ ἐν ὑστέροις καιροῖς σε στεφανώσαντι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’. Τῆς ἐρήμου πολίτης — on the page of «Άγιος Κωνσταντίνος ο Υδραίος Νεομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/169/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour Constantine, the bright offspring of Hydra, the boast of Rhodes and the glory of the New Martyrs, with hymns and spiritual songs, keeping his memory, that we may receive a rich reward from God, crying: glory to Christ who glorified you, glory to him who strengthened you, glory to him who crowned you in these latter times.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὁμολογήσας τὸν Χριστὸν εὐτόλμῳ στόματι Τῶν ἐκ τῆς Ἄγαρ τὴ ἀπάτην ἐθριάμβευσας Νεομάρτυς Κωνσταντῖνε στερρῶς ἀθλήσας. Ἀλλ’ ὡς μέτοχος ἐπάθλων ὑπὲρ ἔννοιαν Πάσης βλάβης ἀπολύτρωσαι καὶ θλίψεως Τοὺς βοῶντάς σοι, χαίροις Μάρτυς ἀήττητε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’. Τῇ ὑπερμάχῳ — on the page of «Άγιος Κωνσταντίνος ο Υδραίος Νεομάρτυρας», and it names him.",
+        "url": "https://www.saint.gr/169/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Confessing Christ with a bold mouth, you triumphed over the deceit of the sons of Hagar, new martyr Constantine, contending steadfastly. Sharing now in prizes beyond understanding, deliver from every hurt and affliction those who cry to you: rejoice, unconquered Martyr.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ]
 }

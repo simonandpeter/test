@@ -1,0 +1,59 @@
+{
+  "slug": "panteleimon-of-spetses",
+  "display_name": "Panteleimon of Spetses",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Παντελεήμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Νοεμβρίου, «Άγιος Παντελεήμων ο Νεομάρτυρας, εν Κρήτη», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Νοεμβρίου — «Άγιος Παντελεήμων ο Νεομάρτυρας, εν Κρήτη»",
+        "url": "https://www.saint.gr/11/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 1848)» and the whole notice is one sentence: «Ο Άγιος Παντελεήμων καταγόταν από τις Σπέτσες και μαρτύρησε στην Κρήτη το 1848 μ.Χ.» — he came from Spetses and was martyred in Crete in 1848. `dates` carry the `death` the page states twice over, in the head line and in the sentence, and nothing else: there is no birth year, no manner of death, no reign. No `locations`, no `related` and no hymn: the page gives none. The display name takes Spetses because that is where the page says he came from and because the corpus already holds other folders named Panteleimon. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1848,
+      "latest": 1848,
+      "display": "1848",
+      "basis": "traditional",
+      "note": "saint.gr: «μαρτύρησε στην Κρήτη το 1848 μ.Χ.», and the head line «Αγιος Παντελεημων ο Νεομαρτυρας, Εν Κρητη (; - 1848)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -72,8 +72,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Νοεμβρίου — «Άγιος Γρηγόριος ο Παλαμάς Αρχιεπίσκοπος Θεσσαλονίκης, ο Θαυματουργός»",
+        "url": "https://www.saint.gr/11/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(1296 - 1360)», the same interval the folder already carries, so **no `dates` are proposed**; and the page's own body hedges the birth, «Δεν γνωρίζουμε το χρόνο και τον τόπο της γέννησής του», crediting the 1296 and Constantinople, and the parents Constantine the Senator and Kalloni, to S. Eustratiades's hagiology — which is worth the writer's eye, since the corpus holds `kalloni-mother-of-gregory-palamas` and `constantius-father-of-gregory-palamas` and the Greek page names the father **Κωνσταντίνος**, not Constantius. The entry is plainly him: at the imperial court in the first half of the fourteenth century, withdrawn to the Holy Mountain, the two demonstrative treatises on the procession of the Holy Spirit in 1335 against Barlaam the Calabrian, the struggle at Thessalonica «ὑπέρ τῶν Ἱερῶς ἡσυχαζόντων», the distinction between the unparticipable divine essence and the participable divine energy, four councils confirming it with him present at the last in Constantinople in 1351, some sixty theological works, election to Thessalonica by the patriarch Isidore, a temporary withdrawal to Lemnos, death in 1360 and immediate veneration. The page also records that the patriarch Philotheos wrote his encomium and his service in 1376 and set his church memory on the **second Sunday of Great Lent** — a paschal reckoning, not a fixed day, and nothing is proposed about it. The first Ἀπολυτίκιον and the first Κοντάκιον are taken and both name him; the «Έτερον» of each and the Μεγαλυνάριον are not. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -92,5 +102,40 @@
     "macarius-brother-of-gregory-palamas",
     "epicharis-sister-of-gregory-palamas",
     "theodota-sister-of-gregory-palamas"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὀρθοδοξίας ὁ φωστήρ, Ἐκκλησίας τὸ στήριγμα καὶ διδάσκαλε, τῶν Μοναστῶν ἡ καλλονή, τῶν θεολόγων ὑπέρμαχος ἀπροσμάχητος, Γρηγόριε θαυματουργέ, Θεσσαλονίκης τὸ καύχημα, κῆρυξ τῆς χάριτος, ἱκέτευε διὰ παντός, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first of two apolytikia on the page of «Άγιος Γρηγόριος ο Παλαμάς», and it names him.",
+        "url": "https://www.saint.gr/167/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Light of Orthodoxy, support and teacher of the Church, beauty of monastics, unassailable champion of theologians, Gregory the wonderworker, boast of Thessalonica, herald of grace: entreat without ceasing for the salvation of our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸ τῆς σοφίας ἱερὸν καὶ θεῖον ὄργανον Θεολογίας τὴν λαμπρὰν συμφώνως σάλπιγγα Ἀνυμνοῦμέν σε Γρηγόριε θεορρῆμον. Ἀλλ’ ὡς νοῦς νοΐ τῷ πρώτῳ παριστάμενος, Πρὸς αὐτὸν τὸν νοῦν ἡμῶν Πάτερ ὁδήγησον, Ἵνα κράζωμεν, χαῖρε κῆρυξ τῆς χάριτος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’. Τῇ ὑπερμάχῳ — the first of two kontakia on the page of «Άγιος Γρηγόριος ο Παλαμάς», and it names him.",
+        "url": "https://www.saint.gr/167/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sacred and divine instrument of wisdom, the bright and concordant trumpet of theology — so we sing of you, Gregory who speak of God. As a mind standing before the first Mind, guide our own mind to him, Father, that we may cry: rejoice, herald of grace.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
+    }
   ]
 }

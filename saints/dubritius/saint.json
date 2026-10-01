@@ -1,0 +1,47 @@
+{
+  "slug": "dubritius",
+  "display_name": "Dubritius",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Dubritius",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and in no Greek form at all, «Άγιος Dubritius», on 14 Νοεμβρίου; the form is recorded exactly as the page has it, as `lang: \"en\"` on the `cedd-the-bishop` precedent, because the page gives nothing to transliterate from."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Νοεμβρίου — «Άγιος Dubritius»",
+        "url": "https://www.saint.gr/11/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is one sentence — «Δεν έχουμε λεπτομέρειες για τον βίο του Ουαλού Αγίου» — we have no details of the Welsh saint's life. **No `types`**: the page gives him no rank, not even the «Όσιος» or «Ιερομάρτυς» its own lines usually carry, and the field is left out rather than guessed; the precedents in this wave are `iltud` and `justus-10-november`, two other western saints saint.gr keeps with no life. **No `dates`, no `locations`, no `related`, no hymn.** The entry carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence — the page's silence here is about the life, not about the saint, and that is the distinction §10 of the Greek brief turns on."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "slug": "euphemianos-of-lysi",
+  "display_name": "Euphemianos of Lysi",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ευφημιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 14 Νοεμβρίου, «Άγιος Ευφημιανός ο θαυματουργός», with the rank words left off. The page is explicit that this is the true form: Machairas's list of sixty-seven of the Alamanoi has «Ευφημιανός», and the «Θεμονιανός» of his church's inscription and the local «Φηνιανός, Θυμιανός, Θωμιανός» are, in its words, «παραμόρφωση του πραγματικού ονόματος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 14ης Νοεμβρίου — «Άγιος Ευφημιανός ο θαυματουργός»",
+        "url": "https://www.saint.gr/11/14/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 14 Νοεμβρίου εκάστου έτους», the same day as the listing. A long life, and the man is **one of the three hundred Alamanoi**, the company the corpus already holds in part — `jonas-of-pergamos`, `barlaam-of-the-alamanoi` and the rest — though no folder for Euphemianos exists under any calendar. The page: stirred by the preaching of the Pope's men about the middle of the twelfth century, he enlisted with many other Greeks in what we know as the Second Crusade of 1147 to 1149, which broke up before reaching Palestine; the Greeks under a leader called Auxentios went on alone to Jerusalem, worshipped at the holy places, scattered to live as ascetics in the desert of the Jordan, were harried by Muslims and Latins alike, took ship for Cyprus, were wrecked at Paphos and came ashore on wreckage, and scattered over the island; Euphemianos went on with Jonas, who stopped at Pergamos, and settled a little further on in a cave between the villages of Lysi and Trouloi, where he passed his days in fasting, vigil and prayer and grace made him a healer. **No `dates` proposed**: the page gives him no year of his own, only the crusade's 1147–1149 and «στα μέσα περί που του 12ου αιώνα», so the `floruit` records that century and nothing narrower. No `locations`. The Ἀπολυτίκιον is taken and it names him and Lysi; the Μεγαλυνάριον is not. **Auxentios is named in the life and carries no link**: the page says only «κάποιο Αυξέντιο, τον γνωστό άγιο Αυξέντιο», and which of the corpus's many folders of that name he is was not established, so no `related` row is proposed for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "saint.gr puts the preaching that stirred him «στα μέσα περί που του 12ου αιώνα μ.Χ.» and the campaign he joined as «Β' Σταυροφορία 1147 - 1149 μ.Χ.»; it gives him no year of birth or of death."
+    }
+  },
+  "related": [
+    "jonas-of-pergamos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

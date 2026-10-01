@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παντελεημων panteleimon-3-january panteleimon-of-spetses panteleimon-the-healer':
+    'Three now. The new one is Panteleimon of Spetses on 14 November, a new martyr; the others are Panteleimon the Healer on 27 July, whom four calendars keep, and the Panteleimon of 3 January, read in the el-01-03 entry for this name form.',
+  'ευφημιανοσ anna-renamed-euphemianos euphemianos-of-lysi':
+    'Two entries, and they are not the same kind of thing: the new one is Euphemianos of Lysi on 14 November, a hermit and one of the three hundred Alamanoi the corpus had been missing, and the other is the Anna of 29 October who lived her monastic life under that man’s name.',
   'μνασων mnason-of-cyprus mnason-the-disciple':
     'Two entries on two days, and the page is the reason they are two folders rather than one man: Mnason bishop of Cyprus on 18 October and Mnason the Ancient Disciple, bishop of Tamasos, on 19 October. The 19 October reading relates Heraclides of Tamasos, as his own page does. Whether the two lines are one man is the author’s, and the report of this reading says so.',
   'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-philosopher leontius-the-shepherd two-leontii-of-athos':
