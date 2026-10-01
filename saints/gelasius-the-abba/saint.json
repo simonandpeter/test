@@ -1,0 +1,51 @@
+{
+  "slug": "gelasius-the-abba",
+  "display_name": "Gelasius the Abba",
+  "names": [
+    {
+      "form": "Γελάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Όσιος Γελάσιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Όσιος Γελάσιος»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole account is one sentence: «Ο Όσιος Γελάσιος ήταν Αβάς της ερήμου, του οποίου διήγημα περί κλοπής κάποιου βιβλίου βρίσκεται στον Ευεργετινό. Απεβίωσε ειρηνικά.» The corpus holds six other folders for a Gelasius — the mime, the martyr, one of the Ten of Crete, the martyr of 6 June, Gelasius of Râmeţ and `gelasius-the-martyr` — and none of them is an abba of the desert kept on this day. `types` carries `ascetic` for «Αβάς της ερήμου» and not `abbot`: the page's Αβάς is the desert elder's title and it names no monastery he governed. It gives no century, no country, no desert by name, no year and no hymn, and it does not tell the story it points to; the Evergetinos is where the page sends the reader for it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

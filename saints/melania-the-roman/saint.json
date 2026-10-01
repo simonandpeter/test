@@ -6,6 +6,11 @@
       "form": "Melania",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 decembrie, «Sfânta Cuvioasă Melania Romana», with the rank words left off."
+    },
+    {
+      "form": "Μελάνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Οσία Μελάνη η Ρωμαία», with the rank and the by-name left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Οσία Μελάνη η Ρωμαία»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps on the Romanian calendar, and the entry is the same woman: the rich Roman married young, bereaved of her two children and her husband, who sold everything and died at Jerusalem. The page gives the reign the folder had no date from — «έζησε στα χρόνια πού βασιλιάς ήταν ο Ονώριος, δεύτερος γιος του Μεγάλου Θεοδοσίου», and in the long quotation it takes from S. Eustratiades, «επί της βασιλείας Ονωρίου (395 - 423)» — and the `dates` object here is a floruit over those years and nothing narrower; no year of birth and no year of death is given. Eustratiades's paragraph, quoted whole on the page, adds that she was married against her will, that she withdrew to a suburb of Rome after the deaths, that she went by way of Africa and Alexandria to Jerusalem, shut herself in a poor cell, built a monastery there and gathered ninety virgins in it whom she fed at her own charge, and that falling a little ill of pleurisy she received the undefiled Mysteries from the hands of the bishop of Eleutheropolis and rested in the Lord. The page names no kin of hers, so the elder Melania of her Romanian life gets no `related` row from this reading. **It prints an apolytikion and a kontakion.** Of the first it says «ΣΗΜΕΙΩΣΗ: Το Απολυτίκιο της είναι το ίδιο με αυτό της Αγίας Ανυσίας (30 Δεκεμβρίου)», and the text names both women and ends by asking them together, so it is a hymn the two share and not another saint's proper; both hymns are taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -47,5 +62,50 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 395,
+      "latest": 423,
+      "display": "late 4th to early 5th century",
+      "basis": "attested",
+      "note": "saint.gr: «Η Οσία Μελάνη η Ρωμαία έζησε στα χρόνια πού βασιλιάς ήταν ο Ονώριος, δεύτερος γιος του Μεγάλου Θεοδοσίου», and the S. Eustratiades paragraph it quotes, «Αυτή ην επί της βασιλείας Ονωρίου (395 - 423)». The years are the reign the page names and the page's own dating of it; no year of birth and no year of death is given, and doxologia.ro, which the folder follows, gave none either."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Ταχύ προκατάλαβε.",
+      "text": "Οσίως ανύσασα, των αρετών την οδόν, τω Λόγω νενύμφευσαι, ω Ανυσία σεμνή, και χαίρουσα ήθλησας, αίγλη δε απαθείας, λαμπρυνθείσα Μελάνη, ήστραψας εν τω κόσμω, αρετών λαμπηδόνας, και νυν ημίν ιλεούσθε, Χριστόν τον Κύριον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος δ', Ταχύ προκατάλαβε — the first hymn on the page of «Οσία Μελάνη η Ρωμαία». The page adds «ΣΗΜΕΙΩΣΗ: Το Απολυτίκιο της είναι το ίδιο με αυτό της Αγίας Ανυσίας (30 Δεκεμβρίου)», and the text itself names both women and ends by asking them both together, so it is a hymn the two share and not another saint's proper.",
+        "url": "https://www.saint.gr/1504/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having holily accomplished the road of the virtues, you were betrothed to the Word, honoured Anysia, and you contended rejoicing; and you, Melania, made bright with the radiance of dispassion, flashed out upon the world the brilliance of the virtues. And now entreat Christ the Lord to be merciful to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ’.",
+      "model": "Ο υψωθείς εν τω Σταυρώ.",
+      "text": "Καταυγασθείσα την ψυχήν φρυκτωρίαις, του αναλάμψαντος ημίν εκ Παρθένου, εν αρεταίς διέλαμψας Πανεύφημε, πλούτον γάρ σκορπίσασα, επί γην εφθαρμένον, εναπεθησαύρισας, τον ουράνιον πλούτον, και εν ασκήσει έλαμψας φαιδρώς, Όθεν Μελάνη, σε πόθω.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος δ’, Ο υψωθείς εν τω Σταυρώ — printed under «Οσία Μελάνη η Ρωμαία», and it names her. The page's text breaks off at «σε πόθω» and is copied as it stands.",
+        "url": "https://www.saint.gr/1504/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your soul lit up by the beacon-fires of him who shone out for us from the Virgin, you shone in the virtues, all-praised one; for scattering your perishable wealth upon the earth you laid up the wealth of heaven instead, and in the ascetic life you shone brightly. And so, Melania, with longing we…",
+        "rendered": "site"
+      }
+    }
+  ]
 }

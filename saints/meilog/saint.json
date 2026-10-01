@@ -1,0 +1,69 @@
+{
+  "slug": "meilog",
+  "display_name": "Meilog",
+  "names": [
+    {
+      "form": "Μέιλογκ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Μέιλογκ», with the rank word left off. The form is saint.gr's own transcription of a western name into Greek letters; the page offers «ή Μελέκ», or Melek, as an alternative, which is recorded in the attestation and not stored as a second form, and it prints no Latin spelling for either."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Ploumelek",
+  "types": [
+    "abbot",
+    "bishop",
+    "archbishop"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 500,
+      "latest": 500,
+      "display": "500",
+      "basis": "attested",
+      "note": "saint.gr's head for the entry gives «Αγιος Μειλογκ (500 - 596)». The page has no text about his life beyond one sentence of offices, so the head is the whole of its dating."
+    },
+    "death": {
+      "earliest": 596,
+      "latest": 596,
+      "display": "596",
+      "basis": "attested",
+      "note": "saint.gr's head for the entry gives «Αγιος Μειλογκ (500 - 596)». The page has no text about his life beyond one sentence of offices, so the head is the whole of its dating."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιος Μέιλογκ»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole account is one sentence: «Ο Άγιος Μέιλογκ ή Μελέκ ήταν ο πρώτος Ηγούμενος Χλούες, Επίσκοπος Πλουμέλεκ Γαλλίας και Αρχιεπίσκοπος Κέλτικα ή Γαλικίας βόρειας Ισπανίας» — the first abbot of Chloues, bishop of Ploumelek in France, and archbishop of Celtica, or Galicia, of northern Spain. The three offices are the whole of the life, and `types` is those three and nothing more; `office` keeps the one see the page names a place for plainly. **Every proper name here is saint.gr's own transcription into Greek letters and no Latin form is printed**, so none is reconstructed: Χλούες, Πλουμέλεκ and Κέλτικα stand as the page has them, the page itself is unsure whether the last means Celtica or Galicia, and the English display form is the day line's Μέιλογκ and not a western spelling this reading went looking for. No place is drafted as a location and no coordinate is proposed. It gives the years in its head, «(500 - 596)», and prints no hymn and no distich. Its one closing link is to Porphyrios of Kafsokalyvia, which is another entry and not a statement about him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

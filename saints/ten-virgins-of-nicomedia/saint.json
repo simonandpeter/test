@@ -1,0 +1,50 @@
+{
+  "slug": "ten-virgins-of-nicomedia",
+  "display_name": "The Ten Virgins of Nicomedia",
+  "names": [
+    {
+      "form": "Δέκα Παρθένες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιες Δέκα Παρθένες», with the rank word Άγιες left off. The page names not one of the ten, so this is the company's name and not a woman's; the city is added to the English form from the page's own text and is not part of the Greek line."
+    }
+  ],
+  "types": [
+    "martyr",
+    "virgin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιες Δέκα Παρθένες»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. **The page names not one of the ten**, so this folder stands for the company and not for ten women. Its whole account is one sentence: «Οι Άγιες Δέκα Παρθένες μαρτύρησαν στη Νικομήδεια (ίσως επί Μαξιμιανού (286 - 305 μ.Χ.), τότε που πλήθος χριστιανών μαρτύρησε σ' αυτή την πόλη). Αυτές λοιπόν, αφού τις έβγαλαν τα μάτια, κατόπιν έγδαραν το σώμα τους και έτσι παρέδωσαν το πνεύμα τους στον Θεό.» **No `dates` object is proposed**, because the page's own word for the reign is «ίσως», perhaps, and a perhaps is not a date. The multitude of Christians martyred at Nicomedia which it points to is the company the corpus keeps as `twenty-thousand-martyrs-of-nicomedia` on 28 December; the page does not join the ten to them in so many words, so no `related` row is made and the question is left in the report. It names Nicomedia and no coordinate is proposed. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

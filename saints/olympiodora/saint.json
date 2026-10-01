@@ -1,0 +1,50 @@
+{
+  "slug": "olympiodora",
+  "display_name": "Olympiodora",
+  "names": [
+    {
+      "form": "Ολυμπιοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Αγία Ολυμπιοδώρα», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Αγία Ολυμπιοδώρα»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole account is two sentences: «Η Αγία Ολυμπιοδώρα μαρτύρησε δια πυρός. Δεν έχουμε άλλες λεπτομέριες για τον βίο της Αγίας.» The manner of death is the one fact, and `types` rests on it and on the page's own Αγία. That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. The corpus holds no other folder for this name. The page gives no year, no city, no judge and no hymn; its distich sets her contest against fire and says that the gift owed her is a hymn and not the pine-wreath of the Olympians."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

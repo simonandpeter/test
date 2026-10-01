@@ -1,0 +1,50 @@
+{
+  "slug": "bousiris-31-december",
+  "display_name": "Bousiris (31 December)",
+  "names": [
+    {
+      "form": "Βούσιρις",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Βούσιρις», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιος Βούσιρις»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole account is one sentence: «Ο Άγιος Βούσιρις μαρτύρησε, αφού τον θανάτωσαν γυναίκες με σαΐτες που υφαίνουν» — he was martyred, women having killed him with weaving shuttles. The manner of death is the one fact, and the distich says it over again as a weaving: «Bουσίριδος σαρξ, ιστός ένθα κερκίσιν, / Ύφασμα καινόν εξυφάνθη Kυρίω» — the flesh of Bousiris was the loom, where with the shuttles a new web was woven for the Lord. **The corpus does hold a `busiris`**, and he is not this man: that folder is saint.gr's Βούσιρις of 21 Σεπτεμβρίου, named in one entry with the brothers Eusebius, Nestabus and Zeno of Gaza and with Nestor, whose notice tells only of the three brothers and says nothing of him at all. Two entries on one calendar are two commemorations and so two men; nothing on either page joins them, and the English form here carries the day to keep them apart. That the two might be one is named in the report and acted on nowhere. The page gives no year, no city, no judge and no hymn, and no reason why the women did it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

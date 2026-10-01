@@ -1,0 +1,50 @@
+{
+  "slug": "nemi",
+  "display_name": "Nemi",
+  "names": [
+    {
+      "form": "Νέμη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Αγία Νέμη», with the rank word left off. The page's text adds «(Κατ' άλλους, πρόκειται για Άγιο, τον Άγιο Νέμη)» — by others this is a man — and gives the name in the same letters either way, so one form is stored and the alternative is recorded in the attestation."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Αγία Νέμη»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole account is one sentence and a parenthesis: «Η Αγία Νέμη μαρτύρησε δια ξίφους. (Κατ' άλλους, πρόκειται για Άγιο, τον Άγιο Νέμη).» **The page is in two minds about the sex and not about the person:** its own line and its own sentence make Nemi a woman, and it reports that others make Nemi a man. `sex` therefore follows the page's own statement, and the alternative is recorded here and named in the report rather than acted on; the distich is of no help, because «Ανήρ ξιφήρης ου δεδίττεται Nέμην» — the sword-bearing man does not frighten Nemi — puts the man on the other side of the sword. This is a hedge about one entry and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. The corpus holds no other folder for this name. The page gives no year, no city, no judge and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

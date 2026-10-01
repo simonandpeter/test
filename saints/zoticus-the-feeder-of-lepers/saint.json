@@ -6,6 +6,11 @@
       "form": "Zotic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 decembrie, «Sfântul Cuvios Zotic», with the rank words left off; the page it links for his life is titled for «Sfântul Cuvios Zotic, hrănitorul de leproși», which is where the English epithet comes from."
+    },
+    {
+      "form": "Ζωτικός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Ζωτικός ο Ορφανοτρόφος», with the rank and the by-name left off. The by-name the Greek gives him, Ορφανοτρόφος, the feeder of orphans, is not the one the Romanian calendar gives him, and neither is stored as part of the name."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιος Ζωτικός ο Ορφανοτρόφος»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», which is **one day later than the 30 decembrie the folder keeps on the Romanian calendar** — and that is two churches' own days and not a disagreement to be resolved, so each row carries its own. The entry is the same man beyond doubt: born and brought up at Rome of a noble family, called to the new capital by Constantine the Great, distinguished above all in the care of lepers, ill-used after Constantine's death by his son Constantius, and dead of the hardships. The folder's Romanian life tells the same story from doxologia.ro, down to the emperor's order that lepers be thrown into the sea and the gold Zoticus asked for to buy pearls. The Greek page adds what came after: that his death moved Constantius to repentance, that the emperor honoured his memory by building a leprosarium and endowing it with many estates and revenues, and that later emperors — «ο Κωνσταντίνος Ζ' ο Πορφυρογέννητος (945 μ.Χ.), ο Ιωάννης ο Τσιμισκής (963 - 976 μ.Χ.), ο Ρωμανός ο Γ' (1028 - 1034 μ.Χ.)» — saw to its working, so that it served a multitude of lepers through the saint's first act of mercy. It dates Constantine's call to Constantinople «(330 μ.Χ.)» but gives no year for Zoticus's own birth or death, so no `dates` object is proposed. The `related` row is Constantine the Great, whom the page makes the occasion of his whole work. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -46,5 +61,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "constantine-the-great"
+  ]
 }

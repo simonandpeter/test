@@ -1,0 +1,50 @@
+{
+  "slug": "gaius-31-december",
+  "display_name": "Gaius (31 December)",
+  "names": [
+    {
+      "form": "Γάιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Όσιος Γάιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Όσιος Γάιος»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing, and gives no life: «Ο Όσιος Γάιος απεβίωσε ειρηνικά. Δεν έχουμε άλλες πληροφορίες για τον βίο του Αγίου.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. The corpus holds ten other folders for a Gaius and this is none of them: all are kept on other days, and all but the pope of Rome are either martyrs or disciples named in another man's company, while this one is Όσιος and died in peace. The page gives no year, no place and no hymn; its distich says only that the divine Gaius bore many labours and now has their bright rewards, which is the venerable's end in verse and not a fact."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

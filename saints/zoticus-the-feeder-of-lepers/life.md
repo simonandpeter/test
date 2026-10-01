@@ -14,4 +14,10 @@ When the emperor saw and heard this he was filled with amazement, and prayed to 
 
 doxologia.ro's line for the day names him «Sfântul Cuvios Zotic» and gives no year for his birth or his death, and its page for him prints no hymn.
 
-*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-zotic-hranitorul-de-leprosi); read 28 September 2026.*
+The Greek calendar keeps him on 31 December, a day later than the Romanian, and calls him Ορφανοτρόφος, the feeder of orphans. saint.gr tells the same man's life in short: born and brought up at Rome of a noble family, with much reverence and much education, adorned with great love for mankind and marked out by a sincere effort to serve Christ by doing his commands. For those gifts, it says, Zoticus was very dear to [Constantine the Great](/saints/constantine-the-great), who, having built Constantinople and made it the capital of his state, invited him there with other devout men, to have them as precious workmen of Christian love.
+
+He was distinguished above all in the care of lepers, whom he approached without fear, giving them help and comforting their misery with a brotherly devotion. After Constantine's death his son Constantius followed other roads and ill-used Zoticus, so that this lover of mankind died of the hardships and the sufferings laid on him.
+
+His death, the page says, moved Constantius to repentance; and having repented, the emperor honoured his memory by building a leprosarium for the care of lepers and endowing it with many estates and revenues. From then on many emperors — Constantine VII the Porphyrogennetos, John Tzimiskes, Romanos III — saw to its good working, and it served a multitude of lepers, thanks to the first act of mercy of the holy Zoticus.
+
+*After doxologia.ro's calendar for 30 decembrie — [the day](https://doxologia.ro/30-decembrie) and [the life](https://doxologia.ro/viata-sfantului-cuvios-zotic-hranitorul-de-leprosi); read 28 September 2026; and saint.gr's calendar for 31 Δεκεμβρίου — [the day](https://www.saint.gr/12/31/index.aspx) and [the life](https://www.saint.gr/1505/saint.aspx), read 2 October 2026.*

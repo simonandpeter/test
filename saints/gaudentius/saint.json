@@ -1,0 +1,48 @@
+{
+  "slug": "gaudentius",
+  "display_name": "Gaudentius",
+  "names": [
+    {
+      "form": "Γαυδέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Γαυδέντιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιος Γαυδέντιος»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing, and gives no life: «Δεν έχουμε λεπτομέρειες για τον Βίο του Αγίου.» That is a refusal of detail and not the sentence by which saint.gr marks an entry it cannot vouch for; there is no asterisk here and no «Δεν είναι διασταυρωμένη» sentence. `types` is left empty on purpose. The page gives him no rank beyond Άγιος, and its distich argues the one thing a reader would want to settle both ways: «Aθλητικής άπειρος ου πάντη πάλης, / Kαν ουκ επ’ αυτή Γαυδέντιος εκπνέη» — not altogether untried in the athlete's wrestling, although Gaudentius does not breathe his last in it. So the page will not call him a martyr and will not deny him the contest either, and neither will this folder. It gives no year, no place and no hymn. The corpus holds no other folder for this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

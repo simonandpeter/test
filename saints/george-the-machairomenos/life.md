@@ -1,0 +1,9 @@
+# George the Machairomenos
+
+saint.gr's calendar for 31 December keeps George the Wonderworker, called the Machairomenos, and begins by saying that he is a Cypriot saint unknown today to most people. The one old witness it has for him is the Chronicle of Leontios Machairas, which names him in a line: «Εις τον Αχλίοντα ο Άγιος Γεώργιος ο Μαχαιρωμένος τοπικός και θαυματουργός» — at Achliontas, Saint George the Machairomenos, local and wonderworking. His memory, the page adds at the end, is written in Patmos Codex 266 as well.
+
+The rest of the entry is his place. Kataliontas was a small settlement a kilometre south-east of the village of Analiontas, in the district of Nicosia; and about halfway along the road that leads from Analiontas to Lythrodontas, near that abandoned settlement, stand the ruins of the ancient church of Saint George the Machairomenos. The Cypriot ethnologist and folklorist Nearchos Klerides reports that in the years of the Frankish rule, and in the Byzantine period too, the village of Analiontas and that church were famous for the many wonders of this George. The church's fame is bound up with his wonderworking icon, which for a good many years adorned the main church of Analiontas, Saint Marina; today the icon is kept in the Archbishopric.
+
+Of the man himself the page will say only what it can guess. It is very probable, it writes, that he was an ascetic of the district, because beside his ruined church, to the south-east, there rises a hill with two caves on its eastern side, one small and one large, in one of which he very probably practised the ascetic life. It gives him no century, no year, no manner of death and no hymn.
+
+*After saint.gr's calendar for 31 Δεκεμβρίου — [the day](https://www.saint.gr/12/31/index.aspx) and [the life](https://www.saint.gr/1513/saint.aspx); read 2 October 2026.*

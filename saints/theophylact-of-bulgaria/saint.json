@@ -1,0 +1,61 @@
+{
+  "slug": "theophylact-of-bulgaria",
+  "display_name": "Theophylact of Bulgaria",
+  "names": [
+    {
+      "form": "Θεοφύλακτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Όσιος Θεοφύλακτος Βουλγαρίας ο Χαλκιδεύς», with the rank, the see and the by-name of his birthplace left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Ohrid and Bulgaria",
+  "types": [
+    "venerable",
+    "archbishop"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1001,
+      "latest": 1100,
+      "display": "11th century",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Όσιος Θεοφύλακτος γεννήθηκε στη Χαλκίδα και έζησε κατά τον 11ο αι. μ.Χ.» The page gives no year of birth and no year of death, and the century is the whole of what it dates him by."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Όσιος Θεοφύλακτος Βουλγαρίας ο Χαλκιδεύς»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. The corpus holds two other folders for this name and this is neither: `theophylact-of-nicomedia`, the confessor bishop kept on 8 March in both the Romanian and the Greek calendars, and `theophylact-of-stavropol`. This one is of Chalkis, of the eleventh century, and archbishop of Ohrid and of Bulgaria. The page's whole account is three sentences; it calls him «σημαντικός εκκλησιαστικός συγγραφέας, που ασχολήθηκε ιδιαιτέρως με την ερμηνεία της Αγίας Γραφής», an important ecclesiastical writer who worked particularly on the interpretation of Holy Scripture, and names not one of his works. It gives no year of birth and no year of death, no account of his rule of the see, no relics and no hymn. Its closing links send the reader to the synaxis of the saints of Euboea and to the Fifteen Hieromartyrs; those are headings and other entries and neither is drafted or related. It names Chalkis, Ohrid and Bulgaria, and no coordinate is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

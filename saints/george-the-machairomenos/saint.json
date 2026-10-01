@@ -1,0 +1,50 @@
+{
+  "slug": "george-the-machairomenos",
+  "display_name": "George the Machairomenos",
+  "names": [
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Δεκεμβρίου, «Άγιος Γεώργιος ο Θαυματουργός ο λεγόμενος μαχαιρωμένος», with the rank and the two by-names left off. The by-name Μαχαιρωμένος is kept in the English form, because it is the whole of what distinguishes him from the other Georges of this corpus."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Δεκεμβρίου — «Άγιος Γεώργιος ο Θαυματουργός ο λεγόμενος μαχαιρωμένος»",
+        "url": "https://www.saint.gr/12/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page says at once that he is a Cypriot saint unknown today to most people, and it builds the entry out of three witnesses instead of a life: Leontios Machairas's Chronicle, «Εις τον Αχλίοντα ο Άγιος Γεώργιος ο Μαχαιρωμένος τοπικός και θαυματουργός»; the Cypriot ethnologist and folklorist Nearchos Klerides, who reports that in the years of the Frankish rule and in the Byzantine period the village of Analiontas and this church of his were famous for his many wonders; and Patmos Codex 266, where his memory is also written. `types` carries `wonderworker` for the page's own Θαυματουργός, which is both the Chronicle's word and the day line's, and nothing else: **that he was an ascetic is the page's guess and not its statement** — «είναι πολύ πιθανό να ήταν ασκητής της περιοχής», it is very probable he was an ascetic of the district, because of the two caves in the hill beside his ruined church. It gives no century of his own, no year, no manner of death and no hymn, so there is no `dates` object. It names places and no coordinate is proposed: the abandoned settlement of Kataliontas, a kilometre south-east of the village of Analiontas in the district of Nicosia, where the ruins of his ancient church stand, the road from Analiontas to Lythrodontas, the village church of Saint Marina which his wonderworking icon adorned for some years, and the Archbishopric, where the icon is kept today. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
