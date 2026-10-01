@@ -1,0 +1,49 @@
+{
+  "slug": "twelve-roman-martyrs",
+  "display_name": "The Twelve Roman Martyrs",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δώδεκα Μάρτυρες οι Ρωμαίοι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Ιουλίου, «Άγιοι Δώδεκα Μάρτυρες οι Ρωμαίοι», with the rank word Άγιοι left off. The page names none of the twelve."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Ιουλίου — «Άγιοι Δώδεκα Μάρτυρες οι Ρωμαίοι»",
+        "url": "https://www.saint.gr/07/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Ιουλίου εκάστου έτους», the same day as the listing. The company is counted and not enumerated — the page names none of the twelve — so it is one folder and not twelve. Its whole notice is one sentence, that they were martyred by the sword, and there is no country beyond old Rome, no century, no emperor and no hymn. The corpus's `forty-roman-martyrs` is a different and larger company on another day and nothing here is claimed about the two. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

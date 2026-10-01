@@ -6,6 +6,11 @@
       "form": "Iosif din Arimateea",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 iulie, «Sfântul și Dreptul Iosif din Arimateea», with the rank words left off."
+    },
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 31 Ιουλίου, «Άγιος Ιωσήφ ο από Αριμαθαίας», with the rank word and the place clause left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 31 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Ιουλίου — «Άγιος Ιωσήφ ο από Αριμαθαίας»",
+        "url": "https://www.saint.gr/07/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own, the secret disciple who asked Pilate for the body and buried it with Nicodemus. saint.gr adds three things the Romanian account does not: that he was a member of the Jewish council at Jerusalem, a βουλευτής; that Arimathea was a small town north-west of Jerusalem; and that he «απεβίωσε ειρηνικά (κατά πάσα πιθανότητα στην Αγγλία)», reposed in peace, most probably in England — which the page marks as a probability and not a fact. Where the Romanian life makes him of the tribe of Ephraim the Greek page says nothing of his tribe. It gives no year, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints no hymn."
     },
     {
       "church": "serbian",

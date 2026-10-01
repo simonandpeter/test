@@ -1,0 +1,59 @@
+{
+  "slug": "anonymous-cretan-new-martyr",
+  "display_name": "The Anonymous Cretan",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Ανώνυμος Κρητικός",
+      "lang": "el",
+      "note": "saint.gr prints no personal name for him at all: its line for 31 Ιουλίου is «Άγιος Ανώνυμος Κρητικός Νεομάρτυρας», the holy anonymous Cretan new martyr, and this form is that line with the rank words left off. It is the page's own description and not a name, and it is recorded here because the page has nothing else to call him by."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 31ης Ιουλίου — «Άγιος Ανώνυμος Κρητικός Νεομάρτυρας»",
+        "url": "https://www.saint.gr/07/31/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 31 Ιουλίου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Ανωνυμος Κρητικος Νεομαρτυρας (; - 1811)». The page gives him a full account and no name: a Cretan of pious parents, at twenty in the service of a Turk at Alexandria in Egypt, hanged on one of the days of July 1811. The display name is the page's own «Ανώνυμος Κρητικός» and is not a personal name; nothing in the corpus matches him and the corpus keeps no other anonymous entry of this shape. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1811,
+      "latest": 1811,
+      "display": "1811",
+      "basis": "traditional",
+      "note": "saint.gr: «Τότε μια από τις μέρες του Ιουλίου το 1811 μ.Χ., τον θανάτωσαν με απαγχονισμό», and the page's head line «(; - 1811)». The page gives no year of birth, only that he was twenty years old when he came to Alexandria."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
