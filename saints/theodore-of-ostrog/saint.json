@@ -6,6 +6,11 @@
     {
       "form": "Феодор Острожский",
       "lang": "ru"
+    },
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Όσιος Θεοδόσιος ο «εν τω Σπηλαίω»», with the rank word left off. This is the monastic name, not the princely one: the same page says he was called Θεόδωρος while he was a prince, which is the name the Russian calendar and this folder use."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Όσιος Θεοδόσιος ο «εν τω Σπηλαίω»»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day the folder's Russian row already carries, and **the page itself makes the identification this folder needs**: «Ο Όσιος Θεοδόσιος πριν γίνει μοναχός στην Λαύρα των Σπηλαίων του Κιέβου ήταν Πρίγκιπας και ονομαζόταν Θεόδωρος» — before he became a monk in the Lavra of the Caves of Kyiv he was a prince and was called Theodore. That is this folder, the prince of Ostrog in the Caves, under his monastic name; the Greek listing names him Θεοδόσιος where the Russian calendar names him Феодор, and the page's own sentence is what joins the two. The page adds nothing else — «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Οσίου» — no year and no hymn of any kind, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

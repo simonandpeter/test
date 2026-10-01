@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-disciple-of-silvanus zeno-of-corfu zeno-of-diospolis zeno-of-ikalto zeno-the-courier zeno-the-faster-of-kiev zeno-the-martyr-22-june zenon-12-june zenon-martyr-11-august':
+    'Twelve now. The new one is the Zenon of 11 August, one of the six; the others are read in the el-06-18 entry for this name form.',
+  'μαρκοσ mark-companion-of-mokianos mark-martyr-11-august mark-martyr-8-june mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':
+    'Fifteen now. The new one is the Mark of 11 August, one of the six; the others are read in the el-07-03 entry for this name form.',
+  'μακαριοσ macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-martyr-11-august macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-of-zheltovodsk macarius-the-confessor':
+    'Twenty-two now. The new one is the Macarius of 11 August, one of the six that day names; the others are read in the el-07-25 entry for this name form.',
   'ευθυμιοσ euthymius-4-january euthymius-kereselidze euthymius-of-constantinople euthymius-of-dimitsana euthymius-of-jerusalem euthymius-of-karelia euthymius-of-madytos euthymius-of-novgorod euthymius-of-rhodes euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-iberian euthymius-the-man-of-god euthymius-the-wonderworker':
     'Sixteen now. The new one is Euthymius metropolitan of Rhodes on 9 August; the others are read in the el-08-05 entry for this name form.',
   'κωνσταντινοσ constantine-brancoveanu constantine-i-of-constantinople constantine-leichoudes constantine-of-cornwall constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':

@@ -1,0 +1,62 @@
+{
+  "slug": "demetrios-begiazis",
+  "display_name": "Demetrios Begiazis",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος Μπεγιάζης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Αναστάσιος Πανεράς και Δημήτριος ο Μπεγιάζης», with the rank word and the article before the surname left off. The page's own head line for him is «Αγιος Δημητριος ο Μπεγιαζης (; - 1816)»."
+    }
+  ],
+  "related": [
+    "anastasios-paneras"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Αναστάσιος Πανεράς και Δημήτριος ο Μπεγιάζης»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The second of the two men the one listing line names, with his own head line «Αγιος Δημητριος ο Μπεγιαζης (; - 1816)» and his own name gloss on the shared page. The page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, and no hymn of any kind on it. The page gives two years for the martyrdom and chooses neither, «το έτος 1816 ή 1819», so the interval below records the disagreement; and it is only probable, by its own word «πιθανώς», that the two men were kin, so the `related` row rests on the shared martyrdom. It lists both under the synaxis of all the saints of Lesbos and under the synaxis of the new martyrs after the fall of Constantinople."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1816,
+      "latest": 1819,
+      "display": "between 1816 and 1819",
+      "basis": "traditional",
+      "note": "saint.gr gives two years and chooses neither: «Μαρτύρησαν και οι δύο για την Αγία Πίστη του Χριστού στον Κασαμπά της Μικράς Ασίας, το έτος 1816 ή 1819» — in the year 1816 or 1819. Its own head line prints «(; - 1816)». The interval records the disagreement. The page gives no year of birth, only that he was eighteen years old."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

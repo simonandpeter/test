@@ -11,6 +11,11 @@
       "form": "Nifon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 august, «Sfântul Ierarh Nifon, Patriarhul Constantinopolului», with the rank word and the office left off."
+    },
+    {
+      "form": "Νήφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιος Νήφων Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off. The page gives his name in the world as «Το κοσμικό του όνομα ήταν Νικόλαος» and says the name Niphon was given him at his tonsure at Epidaurus."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not found among the names read off saint.gr for 24 Αυγούστου 2026 (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιος Νήφων Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same man: «Πρόκειται για τον Πατριάρχη Νήφωνα τον Β', που πατριάρχευσε τρεις φορές: α) 1486-1488. β) 1497-1498 και γ) 1502», from the Peloponnese, son of Manuel and Maria, named Nikolaos in the world, who ended his life at the monastery of Dionysiou. Its head line reads «(; - 1508)». **That 1508 is in the head line only and nowhere in the page's prose, and the folder carries no year of death**, so no `dates` object is proposed and the figure is recorded here and named in the reader's report; the folder's birth interval, which comes from elsewhere, is left untouched. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both proper to him and both taken here; it also prints an oikos and a further hymn in Ἦχος πλ. α΄, which are not kinds the schema holds and are not drafted. It lists him under the synaxis of all the archbishops and patriarchs of Constantinople and under the synaxis of the saints of Messenia."
     }
   ],
   "locations": [
@@ -111,6 +126,40 @@
       },
       "english": {
         "text": "Shining with the works of the true faith you gave light to the whole Church, joining to them the humility that lifts a man up, O glorious hierarch Niphon, honour of the two holy houses, adornment and beauty of patriarchs. And now fill with divine gifts those who magnify you in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Ἔργοις ἔλαμψας, τῆς εὐσέβειας, πᾶσαν ηὔγασας, τὴν Ἐκκλησίαν, τῆς ταπεινώσεως τρόποις ὑψούμενος, ἀσκητικῶς δοξασθεῖς γὰρ ἐν Ἄθωνι, Πατριαρχῶν καλλονὴ ἐχρημάτισας. Νήφων ἔνδοξε, θείων χαρίτων ἔμπλησον, τοὺς πίστει καὶ πόθω σὲ μεγαλώνοντας.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — on the page of «Άγιος Νήφων Πατριάρχης Κωνσταντινούπολης», and it names him",
+        "url": "https://www.saint.gr/780/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You shone with works of piety and gave light to the whole Church, raised high by the ways of humility; for having been glorified in ascetic labour on Athos, you proved to be the beauty of patriarchs. Glorious Niphon, fill with divine graces those who magnify you with faith and longing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Τῆς Ἐκκλησίας λύχνος ὤφθης παμφαέστατος, τῇ καθαρότητι σοφὲ τῆς πολιτείας σου, τὰς τοῦ Πνεύματος ἐλλάμψεις καταπλουτήσας. Ἀλλ’ ὡς σκεῦος ἀρετῶν καὶ ὑποτύπωσις, καθοδήγησον ἡμᾶς πρὸς βίον κρείττονα, τοὺς βοῶντάς σοι: Χαίροις Νήφων Πατὴρ ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ — on the page of «Άγιος Νήφων Πατριάρχης Κωνσταντινούπολης», and it names him",
+        "url": "https://www.saint.gr/780/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be the most radiant lamp of the Church, O wise one, by the purity of your manner of life, having grown rich in the illuminations of the Spirit. But as a vessel of the virtues and a pattern of them, guide us towards a better life, who cry to you: rejoice, Niphon our father.",
         "rendered": "site"
       }
     }

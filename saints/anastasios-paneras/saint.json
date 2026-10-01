@@ -1,0 +1,62 @@
+{
+  "slug": "anastasios-paneras",
+  "display_name": "Anastasios Paneras",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Αναστάσιος Πανεράς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Αναστάσιος Πανεράς και Δημήτριος ο Μπεγιάζης», with the rank word left off. The surname is part of the form the page prints, in the listing and in its own head line, «Αγιος Αναστασιος Πανερας (; - 1816)». The page glosses the forename: «(από την λέξη ανάσταση) = ο αιώνιος, όπως ο αναστάς Ιησούς»."
+    }
+  ],
+  "related": [
+    "demetrios-begiazis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Αναστάσιος Πανεράς και Δημήτριος ο Μπεγιάζης»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Αναστασιος Πανερας (; - 1816)». One listing line names two men, each with his own head line and his own name gloss, so it is two folders. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, and no hymn of any kind on it. **The page is not sure of the year** — «Μαρτύρησαν και οι δύο για την Αγία Πίστη του Χριστού στον Κασαμπά της Μικράς Ασίας, το έτος 1816 ή 1819», in the year 1816 or 1819 — so the date interval below records the disagreement rather than choosing, which is the corpus's own instruction for two readings. The page is also not sure that they were kin: «πιθανώς μάλιστα να ήταν και συγγενείς», probably they were even relatives, and that word probably is why the life says it as the page says it and the `related` row rests on the shared martyrdom and not on the kinship. It lists both under the synaxis of all the saints of Lesbos and under the synaxis of the new martyrs after the fall of Constantinople."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1816,
+      "latest": 1819,
+      "display": "between 1816 and 1819",
+      "basis": "traditional",
+      "note": "saint.gr gives two years and chooses neither: «Μαρτύρησαν και οι δύο για την Αγία Πίστη του Χριστού στον Κασαμπά της Μικράς Ασίας, το έτος 1816 ή 1819» — in the year 1816 or 1819. Its own head line prints «(; - 1816)». The interval records the disagreement. The page gives no year of birth, only that he was twenty years old."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

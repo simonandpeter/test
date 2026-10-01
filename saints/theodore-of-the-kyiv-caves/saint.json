@@ -9,6 +9,11 @@
     {
       "form": "Теодор Печерски",
       "lang": "sr"
+    },
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Βασίλειος και Θεόδωρος οι Οσιομάρτυρες εν τω Σπηλαίω», with the rank words and the place left off. The page glosses the name as «το δώρο του Θεού»."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Βασίλειος και Θεόδωρος οι Οσιομάρτυρες εν τω Σπηλαίω»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The second of the pair the one listing line names, with his own head line on the shared page, «Αγιος Θεοδωρος ο Οσιομαρτυρας Εν Τω Σπηλαιω». The page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry. **He is not the Θεοδόσιος of the same day**, who is the prince of Ostrog under his monastic name and has his own page and his own row; the two Greek entries are separate lines of the listing, as the Russian calendar's two entries are separate. The page prints no life — «Δεν έχουμε λεπτομέρειες για τον βίο των Ρώσων Αγίων» — no year and no hymn of any kind, so no `dates` object is proposed. Its name gloss, which lists a Samian architect, a Neoplatonist philosopher, two ancient physicians and many rulers and hierarchs, is gloss and not biography. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

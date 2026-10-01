@@ -1,0 +1,54 @@
+{
+  "slug": "zenon-martyr-11-august",
+  "display_name": "Zenon (11 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ζήνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Νεόφυτος, Ζήνων, Γάιος, Μάρκος, Μακάριος και Γαϊανός», with the rank word left off. The page gives him a head line of his own, «Αγιος Ζηνων», and glosses the name from Zeus, «ο θείος»."
+    }
+  ],
+  "related": [
+    "mark-martyr-11-august",
+    "macarius-martyr-11-august"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Νεόφυτος, Ζήνων, Γάιος, Μάρκος, Μακάριος και Γαϊανός»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "One listing line names six men, each with his own head line on the shared page, so it is a synaxis that enumerates its members and the members are folders. **Three of the six are not drafted.** saint.gr's own 5 Μαΐου listing is «Άγιοι Νεόφυτος, Γάιος και Γαϊανός οι Μάρτυρες», and the corpus already keeps those three as `neophytus-5-may`, `gaius-5-may` and `gaianus-5-may` with `greek` rows already venerated on 5 May. Three of the six names on this day are exactly those three. The settled rule is that two entries on one calendar are two commemorations and so two men, which would make them new; but nothing on either page makes that sure, and the brief's instruction where nothing makes it sure is to draft neither. So Neophytos, Gaius and Gaianos are refused here and the question is named in the reader's report, and only the three the 5 May entry does not carry — Zenon, Mark and Macarius — are drafted. For the same reason the `related` rows of these three run among themselves only, and the life names the other three in the page's own Greek without a link, which would assert the identity. The page prints two distichs, one «Eις τον Nεόφυτον, Ζήνωνα, και Γάιον» and one «Eις τον Mάρκον, Mακάριον, και Γαϊανόν», so the Greek books themselves divide the six into two threes — but not into the same three. No year, no hymn, no asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

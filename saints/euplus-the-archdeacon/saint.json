@@ -14,6 +14,11 @@
       "form": "Evplu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 august, «Sfântul Mare Mucenic Evplu, Arhidiaconul», with the rank words and the office left off."
+    },
+    {
+      "form": "Εύπλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιος Εύπλος ο Διάκονος, ο Μεγαλομάρτυρας», with the rank words and the office left off. The page's own apolytikion plays on the name as εὔπλοος, of fair sailing."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιος Εύπλος ο Διάκονος, ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry, and its head line «(; - 304)» agrees with the folder's year. It is the same deacon: born at Catania in Sicily and deacon of the church there, denounced to the eparch Calvisianus, his flesh torn with iron claws, his shins broken with hammers, and beheaded. **The listing calls him a great martyr**, «ο Μεγαλομάρτυρας», which the corpus holds as the type great-martyr and which this folder does not carry; the reader does not add a type on a listing epithet alone and the question is named in the report. A third distich on the page fixes the day, «Πλήγη ἑνδεκάτῃ ξίφει Εὖπλος κοπήεντι». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion and no kontakion, and it is taken here. It records relics: part of the skull and one shin at the metropolis of Polyani and Kilkis, portions at the monasteries of Docheiariou and Pantokrator on the Holy Mountain, and part of the right hand at the church of the Dormition of the Theotokos at Nea Mesimvria."
     },
     {
       "church": "serbian",
@@ -140,6 +155,23 @@
       },
       "english": {
         "text": "Your martyr Euplus, O Lord, in his struggle received from you, our God, the crown of incorruption; for having your strength he overthrew his torturers and broke the powerless insolence of the demons. At his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάβαλε.",
+      "text": "Ὡς θεῖος διάκονος, τῆς Ἐκκλησίας Χριστοῦ, ὁσίως διήγαγες, τὰ πρὸς Θεὸν καὶ πιστῶς, καὶ ἤθλησας ἄριστα, σὺ γὰρ ἐν τῷ πελάγει, τῶν ποικίλων ἀγώνων, εὔπλοος ἀνεδείχθης, παμμακάριστε Εὖπλε. Καὶ νῦν πρὸς λιμένας ἠμᾶς, θείους κυβέρνησαν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάβαλε — the one hymn on the page of «Άγιος Εύπλος ο Διάκονος, ο Μεγαλομάρτυρας», and it names him",
+        "url": "https://www.saint.gr/785/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a divine deacon of the Church of Christ you conducted the things of God in holiness and in faith, and you contended excellently; for in the open sea of your many struggles you were shown to be of fair sailing, all-blessed Euplus. And now steer us also to the harbours of God.",
         "rendered": "site"
       }
     }

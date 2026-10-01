@@ -9,6 +9,11 @@
     {
       "form": "Василије Печерски",
       "lang": "sr"
+    },
+    {
+      "form": "Βασίλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Αυγούστου, «Άγιοι Βασίλειος και Θεόδωρος οι Οσιομάρτυρες εν τω Σπηλαίω», with the rank words and the place left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Αυγούστου — «Άγιοι Βασίλειος και Θεόδωρος οι Οσιομάρτυρες εν τω Σπηλαίω»",
+        "url": "https://www.saint.gr/08/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry, and saint.gr serves one page for the pair, with a head line for each: «Αγιος Βασιλειος ο Οσιομαρτυρας Εν Τω Σπηλαιω» and «Αγιος Θεοδωρος ο Οσιομαρτυρας Εν Τω Σπηλαιω». The two names, the pairing, the Caves and the rank venerable-martyr are all this folder's, so the identification needs nothing further. The page prints no life — «Δεν έχουμε λεπτομέρειες για τον βίο των Ρώσων Αγίων» — no year and no hymn of any kind, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
