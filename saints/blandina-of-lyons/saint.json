@@ -1,0 +1,55 @@
+{
+  "slug": "blandina-of-lyons",
+  "display_name": "Blandina of Lyons",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βλανδίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Άγιοι Σάκτος, Ματούρος, Άτταλος και Βλανδίνα», with the rank word left off; her own head line on the life page is «Αγια Βλανδινα»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Άγιοι Σάκτος, Ματούρος, Άτταλος και Βλανδίνα»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day as the listing, and gives the four of them one notice with a head line each. Her three companions are already in the corpus from saint.gr's own 2 Ιουνίου page — `sanctius-of-lyons`, `maturus-of-lyons` and `attalus-of-lyons` — where the same calendar lists nine martyrs of Lyons by name and their `greek` rows are already venerated for that day; those rows are not touched, and the second Greek day is a reading recorded in the report. Blandina is **not** in that list of nine, and this 25 July page is the only place the Greek calendar names her, so she is a folder here and not an upgrade. She is not the corpus's `blandina-of-iasi`, a Romanian saint of another age. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page names the emperor Marcus Antoninus and no year, so there is no `dates` object, and it prints no hymn. Pergamum is named as her country and Lyons is not named at all on this page — the Rhone is — so `locations` is left out."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "sanctius-of-lyons",
+    "maturus-of-lyons",
+    "attalus-of-lyons"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "theodore-of-gortyna",
+  "display_name": "Theodore of Gortyna",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "office": "Bishop of Gortyna",
+  "names": [
+    {
+      "form": "Θεόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Άγιος Θεόδωρος επίσκοπος Γορτύνης», with the rank word and the see left off. The page glosses the name as the gift of God."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 536,
+      "latest": 553,
+      "display": "between 536 and 553",
+      "basis": "attested",
+      "note": "saint.gr gives him two councils and no other years: «έλαβε μέρος στην Ε´ Οικουμενική Σύνοδο της Κωνσταντινουπόλεως το 553 μ.Χ.» and «είχε λάβει μέρος και στην Ενδημούσα Σύνοδο Κωνσταντινουπόλεως το 536 μ.Χ.». It gives no year of his birth and none of his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Άγιος Θεόδωρος επίσκοπος Γορτύνης»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day as the listing, and credits the Holy Metropolis of Gortyna and Arcadia. The corpus keeps four other saints of that see — Basil, Cyril, Eumenius and Iconius of Gortyna — and this is none of them: he is the sixth-century bishop of the two councils of Constantinople, 536 and 553, and no Theodore of Gortyna stands in the corpus on any day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page prints no hymn, no distich, no account of his death and no relics. Gortyna is named, and `locations` is left out all the same, since the page places him there by office and by two inscriptions and not by a life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

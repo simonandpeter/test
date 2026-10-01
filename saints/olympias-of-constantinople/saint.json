@@ -6,12 +6,18 @@
       "form": "Olimpiada",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iulie, «Sfânta Cuvioasă Olimpiada», with the rank words left off."
+    },
+    {
+      "form": "Ολυμπιάδα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Οσία Ολυμπιάδα η Διακόνισσα», with the rank word and the title left off."
     }
   ],
   "sex": "female",
   "types": [
     "venerable",
-    "monastic"
+    "monastic",
+    "deaconess"
   ],
   "related": [
     "john-chrysostom"
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Οσία Ολυμπιάδα η Διακόνισσα»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: «Η Ολυμπιάδα έζησε στα χρόνια των Πατριαρχών Νεκταρίου και Αγίου Ιωάννου του Χρυσοστόμου (395 μ.Χ.)», the deaconess of Constantinople who gave her wealth to Chrysostom's archdiocese and died in exile at Nicomedia, against the Romanian «Sfânta Cuvioasă Olimpiada» of the same day. The Greek page adds the year «(395 μ.Χ.)» for the years she lived, which is why this upgrade proposes a `floruit` where the folder had no `dates` at all; it gives no year of her death, only that she was fifty and died a little after Chrysostom, so no `death` interval is proposed. It adds the title the day's line carries, Διακόνισσα, which the page repeats in the body — «Μέσα στην Εκκλησία είχε τον τίτλο της Διακόνισσας» — and that is the warrant for `types_add: [\"deaconess\"]`. It also adds her father's two names, Akoundos or by others Seleucus, her husband the prefect Nevridius, the suitor Elpidius whom Theodosius pressed on her, the monastery she founded by the church of Saint Irene, the seventeen surviving letters Chrysostom sent her in her mourning, and portions of her relics at the monasteries of Agathonos in Phthiotis and Ntaou Penteli. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn. Its name gloss is headed ΟΛΥΜΠΙΟΣ, the masculine form, and glosses that; the gloss is not taken as a name form."
     },
     {
       "church": "serbian",
@@ -49,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 395,
+      "latest": 395,
+      "display": "395",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Ολυμπιάδα έζησε στα χρόνια των Πατριαρχών Νεκταρίου και Αγίου Ιωάννου του Χρυσοστόμου (395 μ.Χ.)» — the one year the page prints for her. The same page says she died at Nicomedia «μόλις 50 ετών, λίγο μετά από το θάνατο του ιερού Χρυσοστόμου» and gives no year for it, so no death interval is recorded. The folder's Romanian source gave no year at all."
+    }
   }
 }

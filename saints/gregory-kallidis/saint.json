@@ -7,6 +7,11 @@
       "form": "Grigorie Kallidis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iulie, «Sfântul Grigorie Kallidis, Arhiepiscopul Irakliei și Redestului», with the rank and the see left off."
+    },
+    {
+      "form": "Γρηγόριος Καλλίδης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Όσιος Γρηγόριος Καλλίδης», with the rank word left off; the page's body writes the surname in brackets, «ο Καλλίδης»."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουλίου (24 September 2026). doxologia.ro says he was recognised as a saint of the Church of Greece by an act of the Patriarchate and the Holy Synod of 22 May 2003, and that he is kept on 25 July and on 20 October, but that page is not the Greek calendar and the Greek row is left as not read."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Όσιος Γρηγόριος Καλλίδης»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own, with the same surname and the same years: «Οσιος Γρηγοριος Καλλιδης (1844 - 1925)», born at Koumvao in the province of Heraclea in Eastern Thrace, metropolitan of Trebizond and then of Thessalonica, archbishop of Heraclea and Rhaidestos. The Greek page independently confirms the folder's existing Romanian note about the two days, and says who fixed them: by the patriarchal and synodal act of 22 May 2003 «ορίστηκε ημέρα μνήμης του η 25η Ιουλίου (ημέρα κοιμήσεώς του) και η 20η Οκτωβρίου (επέτειος της ανακομιδής του) ως δεύτερη εορτή του». One row per church is the schema, so the Greek row is the day page read, 25 July, and the 20 October translation is recorded here and not as a second row. **The page contradicts itself about the day of his death**: it says he gave up his last breath «τα μεσάνυχτα της Πέμπτης 23 Ιουλίου του 1925 μ.Χ.», and then calls 25 July «ημέρα κοιμήσεώς του». The year, 1925, is the same either way, so the folder's `dates` are left untouched and the disagreement is recorded here rather than acted on; the folder's death note already quotes doxologia's «adormit pe data de 25 iulie 1925». It also adds his exact birth date, 24 January 1844, his parents John and Euphrosyne, and the uncovering of his relics on 20 October 1979, found fragrant. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
     },
     {
       "church": "serbian",

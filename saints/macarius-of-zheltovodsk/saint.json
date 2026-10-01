@@ -1,0 +1,67 @@
+{
+  "slug": "macarius-of-zheltovodsk",
+  "display_name": "Macarius of Zheltovodsk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Όσιος Μακάριος Ζελτοβόδας ο Θαυματουργός», with the rank word and the two bynames left off. The page glosses the name as the happy one."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1349,
+      "latest": 1349,
+      "display": "1349",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Οσιος Μακαριος Ζελτοβοδας ο Θαυματουργος (1349 - 1444)». The two years are the whole of what it gives; its notice says «Δεν έχουμε λεπτομέρειες από τον βίο του Ρώσου Αγίου»."
+    },
+    "death": {
+      "earliest": 1444,
+      "latest": 1444,
+      "display": "1444",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Οσιος Μακαριος Ζελτοβοδας ο Θαυματουργος (1349 - 1444)», and gives no account of his repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). The Greek page itself calls him a Russian saint, so the Russian calendar is very likely to keep him; that is a reading somebody must do, not an absence this row asserts."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Όσιος Μακάριος Ζελτοβόδας ο Θαυματουργός»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day as the listing. He is not the corpus's `macarius-of-zhabyn`, the Russian venerable of 1539 to 1623, nor any of the other men of the name it holds — Makres, Kalogeras, the brother of Gregory Palamas, the companions of Eudoxius, of Terentius and of Theodoula, the disciple of Patriarch Niphon, the Magistrate of Alexandria: none of those is dated 1349 to 1444 and none carries the byname Ζελτοβόδας. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn, no distich and no relics. The English display name renders the Greek byname by the Russian place it stands for; the only stored name form is the Greek one the page prints."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

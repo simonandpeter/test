@@ -1,0 +1,64 @@
+{
+  "slug": "elias-of-thessalonica",
+  "display_name": "Elias of Thessalonica",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "office": "Archbishop of Thessalonica",
+  "names": [
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Άγιος Ηλίας Αρχιεπίσκοπος Θεσσαλονίκης», with the rank word and the see left off. The page glosses the name as a Hebrew word, the one who has divine power."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 553,
+      "latest": 553,
+      "display": "553",
+      "basis": "attested",
+      "note": "saint.gr gives him only the one year: he co-signs the patriarch Eutychius's letter to Pope Vigilius «Στις 6 Ιανουαρίου του 553 μ.Χ.», and he is absent from the council «που συνήλθε το ίδιο έτος (5 Μαΐου - 2 Ιουνίου 553 μ.Χ.)». The page gives no year of his birth and none of his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Άγιος Ηλίας Αρχιεπίσκοπος Θεσσαλονίκης»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day as the listing, and credits the Holy Metropolis of Thessalonica. He is none of the corpus's other men of the name — Elias of Calabria, Elias Ardounis, the companions of Jonah and of Terentius, the one martyred with Patermuthius, Elias (Nikolayevich) — none of whom is a sixth-century archbishop of Thessalonica; and he is not `acholius-of-thessalonica` or `symeon-of-thessalonica`, who are other bishops of that see on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page prints no hymn, no distich, no account of his death and no relics. It is placed on this day with the hundred and sixty-five fathers of the Fifth Ecumenical Council, whom the same calendar keeps here as a company, and that company is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "eutychius-of-constantinople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

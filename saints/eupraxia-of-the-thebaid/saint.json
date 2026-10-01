@@ -6,6 +6,11 @@
       "form": "Eupraxia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 iulie, «Sfânta Cuvioasă Eupraxia», with the rank words left off."
+    },
+    {
+      "form": "Ευπραξία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Ιουλίου, «Οσία Ευπραξία», with the rank word left off. The page gives her mother the same name."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Ιουλίου — «Οσία Ευπραξία»",
+        "url": "https://www.saint.gr/07/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line is as bare as the Romanian one — «Οσία Ευπραξία» against «Sfânta Cuvioasă Eupraxia» — while the notice behind it is the folder's own woman: the daughter of the senator Antigonus who went into a women's monastery at Thebes in Upper Egypt, which is the Thebaid of the folder's display name. The corpus keeps no other Eupraxia. The Greek page adds her mother's name, which was her own, the kinship with Theodosius the Great whose reign it dates 379 to 395, the betrothal arranged by that emperor, the abbess Marina, the forty-five years of ascesis, and the relics: her right hand at the monastery of Iviron on the Holy Mountain and portions at the monasteries of Agathonos in Phthiotis, Phaneromeni on Salamis and Leimonos on Lesbos. It gives no year for her own birth or death — the reign it dates is her mother's kinsman's — so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn. The abbess Marina is named in the notice and not linked: the corpus holds several women of that name and nothing on this page settles which, if any, she is."
     },
     {
       "church": "serbian",
