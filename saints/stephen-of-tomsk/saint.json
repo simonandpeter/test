@@ -1,0 +1,55 @@
+{
+  "slug": "stephen-of-tomsk",
+  "display_name": "Stephen of Tomsk",
+  "names": [
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιουνίου, «Άγιος Στέφανος του Τόμσκ», with the rank word left off."
+    }
+  ],
+  "types": [],
+  "dates": {
+    "death": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "traditional",
+      "note": "saint.gr prints the year of death alone in its heading: «Άγιος Στέφανος του Τόμσκ (; - 1876)», the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr itself calls him a Russian saint, so the Russian calendar is where his life will be."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Ιουνίου — «Άγιος Στέφανος του Τόμσκ (; - 1876)»",
+        "url": "https://www.saint.gr/06/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

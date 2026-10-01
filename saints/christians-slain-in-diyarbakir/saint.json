@@ -1,0 +1,57 @@
+{
+  "slug": "christians-slain-in-diyarbakir",
+  "display_name": "The Orthodox Christians slain in Diyarbakır",
+  "names": [
+    {
+      "form": "Μνήμη των αγρίως σφαγιασθέντων υπό Κουρδικών ορδών εν τω νομώ Διαρβεκίρ της Μικράς Ασίας",
+      "lang": "el",
+      "note": "The whole of saint.gr's line for 30 Ιουνίου; the company has no personal names on the page and no shorter designation."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1896,
+      "latest": 1896,
+      "display": "1896",
+      "basis": "attested",
+      "note": "saint.gr states the year of the killing: «…που έλαβε χώρα το έτος 1896 μ.Χ.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Ιουνίου — «Μνήμη των αγρίως σφαγιασθέντων υπό Κουρδικών ορδών εν τω νομώ Διαρβεκίρ της Μικράς Ασίας»",
+        "url": "https://www.saint.gr/06/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "slug": "peter-ordynsky-of-rostov",
+  "display_name": "Peter Ordynsky of Rostov",
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Ιουνίου, «Άγιος Πέτρος ο πρίγκιπας του Ορντύνσκϊυ, Ροστώβ», with the rank word left off."
+    }
+  ],
+  "types": [
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1290,
+      "latest": 1290,
+      "display": "1290",
+      "basis": "traditional",
+      "note": "saint.gr prints the year of death alone in its heading: «Άγιος Πέτρος ο πρίγκιπας του Ορντύνσκϊυ, Ροστώβ (; - 1290)», the year of birth left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). He is a Russian saint and the Russian calendar is the source that will have his life; saint.gr has only the line."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Ιουνίου — «Άγιος Πέτρος ο πρίγκιπας του Ορντύνσκϊυ, Ροστώβ (; - 1290)»",
+        "url": "https://www.saint.gr/06/30/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

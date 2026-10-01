@@ -6,6 +6,11 @@
       "form": "Andrei",
       "lang": "ro",
       "note": "Read out of «Sfântul Apostol Andrei, cel întâi chemat» in doxologia.ro's account of the Synaxis of the Twelve Apostles for 30 iunie."
+    },
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Ανδρέας», with no rank word attached."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 30 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "revised-julian",
+        "note": "saint.gr keeps 30 Ιουνίου as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and its page names each apostle in turn, this one among them. His own Greek day has not been read in this wave, and saint.gr will have a page for it; the corpus keeps one feast to a church, so the synaxis day is what is recorded here and whether the proper day should replace it is a question left to the writer (1 October 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Ιουνίου — «Σύναξη των Αγίων Δώδεκα Αποστόλων», whose page names him among the twelve",
+        "url": "https://www.saint.gr/06/30/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -65,6 +80,72 @@
         "text": "O ye who are first enthroned among the Apostles and teachers of the world, pray to the Master of all that He grant peace to the world and to our souls great mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ὡς δωδεκάπυρσος, λυχνία ἔλαμψαν, οἱ Δωδεκάριθμοι, Χριστοῦ Ἀπόστολοι, Πέτρος καὶ Παῦλος σὺν Λουκᾶ, Ἀνδρέας καὶ Ἰωάννης, Βαρθολομαῖος Φίλιππος, σὺν Ματθαίω καὶ Σίμωνι, Μᾶρκος καὶ Ἰάκωβος, καὶ Θωμὰς ὁ μακάριος, καὶ ηὔγασαν τοὺς πίστει βοώντας χαίρετε Λόγου οἱ αὐτόπται.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα — the first of the three the page prints, which names him among the twelve, on the page of «Σύναξη των Αγίων Δώδεκα Αποστόλων»",
+        "url": "https://www.saint.gr/649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a lamp-stand of twelve flames the Apostles of Christ, twelve in number, shone out — Peter and Paul with Luke, Andrew and John, Bartholomew, Philip, with Matthew and Simon, Mark and James, and the blessed Thomas — and they gave light to those who cry out in faith: Rejoice, you who beheld the Word with your own eyes.",
+        "rendered": "site"
+      },
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Οἱ τῶν Ἀποστόλων πρωτόθρονοι, καὶ τῆς Οἰκουμένης διδάσκαλοι, τῷ Δεσπότῃ τῶν ὅλων πρεσβεύσατε, εἰρήνην τῆ οἰκουμένῃ δωρήσασθαι, καὶ ταῖς ψυχαῖς ἡμῶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, on the page of «Σύναξη των Αγίων Δώδεκα Αποστόλων»",
+        "url": "https://www.saint.gr/649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "First-enthroned of the Apostles and teachers of the whole world, intercede with the Master of all things that He grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ´.",
+      "text": "Ἀπόστολοι Ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ , ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ´ — the common of the apostles, naming nobody, on the page of «Σύναξη των Αγίων Δώδεκα Αποστόλων»",
+        "url": "https://www.saint.gr/649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostles, intercede with the merciful God, that He grant to our souls the forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "text": "Τοὺς ἀσφαλεῖς καὶ θεοφθόγγους κήρυκας, τὴν κορυφὴν τῶν Μαθητῶν σου Κύριε, προσελάβου εἰς ἀπόλαυσιν, τῶν ἀγαθῶν σου καὶ ἀνάπαυσιν, τοὺς πόνους γὰρ ἐκείνων καὶ τὸν θάνατον, ἐδέξω ὑπὲρ πᾶσαν ὁλοκάρπωσιν, ὁ μόνος γινώσκων τὰ ἐγκάρδια.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τοὺς ἀσφαλεῖς, on the page of «Σύναξη των Αγίων Δώδεκα Αποστόλων»",
+        "url": "https://www.saint.gr/649/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sure and God-inspired heralds, the chief of Thy disciples, Thou hast taken to Thyself, O Lord, into the enjoyment of Thy good things and into rest; for Thou didst accept their labours and their death above every whole burnt offering, O Thou who alone knowest the secrets of the heart.",
+        "rendered": "site"
+      },
+      "model": "Τοὺς ἀσφαλεῖς."
     }
   ],
   "text": {
