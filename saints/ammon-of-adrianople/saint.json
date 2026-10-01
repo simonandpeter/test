@@ -1,0 +1,49 @@
+{
+  "slug": "ammon-of-adrianople",
+  "display_name": "Ammon of Adrianople",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αμών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Σεπτεμβρίου, «Άγιοι Αειθαλάς και Αμών», with the rank word left off; his own page adds the variants «Αμμών» and «Αμμούν»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 9,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ης Σεπτεμβρίου — «Άγιοι Αειθαλάς και Αμών»",
+        "url": "https://www.saint.gr/09/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
