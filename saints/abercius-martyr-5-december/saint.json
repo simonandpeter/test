@@ -1,0 +1,50 @@
+{
+  "slug": "abercius-martyr-5-december",
+  "display_name": "Abercius (5 December)",
+  "names": [
+    {
+      "form": "Αβέρκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Άγιος Αβέρκιος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Άγιος Αβέρκιος»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole life is «Ο Άγιος Αβέρκιος μαρτύρησε δια ξίφους». No year, so no `dates` object. The corpus keeps an Abercius of Hierapolis and an Abercius on 26 May; this entry is on another day and nothing on the page joins it to either, so it is kept as its own commemoration. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

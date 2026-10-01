@@ -115,6 +115,14 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'φιλοθεοσ philotheus-kokkinos philotheus-of-antioch philotheus-of-dionysiou philotheus-of-karyes philotheus-of-meteora philotheus-of-samosata philotheus-of-sklataina philotheus-of-tobolsk philotheus-the-presbyter':
+    'Nine now. The new one is Philotheus of Karyes on 5 December, whose folder relates Nectarios of Bitola; the others are read in the el-05-31 entry for this name form.',
+  'νοννοσ nonnos nonnus-5-december nonnus-the-bishop':
+    'Three men. The new one is the Nonnus of 5 December, kept with Gratus; the others are the Nonnos of 5 June and Nonnus the bishop on 10 November.',
+  'διογενησ diogenes-companion-of-timothy diogenes-martyr-5-december':
+    'Two men. The new one is the Diogenes of 5 December; the other is Diogenes the companion of Timothy on 6 April.',
+  'αβερκιοσ abercius-kedrov abercius-martyr-26-may abercius-martyr-5-december abercius-of-hierapolis':
+    'Four men. The new one is the Abercius of 5 December; the others are Abercius Kedrov on 15 May, the Abercius of 26 May and Abercius of Hierapolis on 22 October.',
   'σεραφειμ seraphim-of-dombou seraphim-of-phanarion seraphim-of-sarov seraphim-of-vyritsa':
     'Four men. The new one is Seraphim of Phanarion on 4 December, archbishop of Phanarion and Neochori, whose folder relates Dionysius the Philosopher; the others are Seraphim of Dombou on 6 May and the two read in the el-03-21 entry for this name form.',
   'ιουλιανη juliana-4-december juliana-mother-of-saturninus juliana-of-amisos juliana-of-lazarevo juliana-of-ptolemais juliana-of-rhosus':

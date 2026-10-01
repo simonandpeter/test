@@ -1,0 +1,53 @@
+{
+  "slug": "gratus-5-december",
+  "display_name": "Gratus (5 December)",
+  "names": [
+    {
+      "form": "Γράτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Όσιος Γράτος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "nonnus-5-december"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Όσιος Γράτος»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing. The whole of its life is «Ο Όσιος Γράτος απεβίωσε ειρηνικά. Σε ορισμένους Συναξαριστές αναφέρεται σαν επίσκοπος Εφέσου και μαζί με τον Όσιο Νόννο (βλέπε ίδια ημέρα)» — the see of Ephesus is attributed to some synaxaria and not asserted by the page, so no `office` and no `bishop` type are recorded, only the page's own words. No year, so no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

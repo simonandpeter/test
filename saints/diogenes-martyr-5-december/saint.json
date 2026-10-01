@@ -1,0 +1,86 @@
+{
+  "slug": "diogenes-martyr-5-december",
+  "display_name": "Diogenes (5 December)",
+  "names": [
+    {
+      "form": "Διογένης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Άγιος Διογένης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Άγιος Διογένης»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing. It gives no year, no country and no persecutor, so no `dates` object is proposed. The corpus already keeps a Διογένης on the Greek 6 April, the companion of Timothy; that is a different entry on the same calendar and therefore a different commemoration, and nothing on either page joins the two. The site's gloss under the name — the cynic philosopher, Diogenes Laertius, an Athenian sculptor — is its standing note on the name itself and not on the saint. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὸν λιθόλευστον πάντες Κυρίου μάρτυρα, πανευσθενῆ Διογένη, ἰσχύϊ θείᾳ βολὰς τὰς τῶν λίθων ὑπομείναντα καὶ λάϊνον ἀμφιεσάμενον λαμπρῶς δι’ ἀγώνων ἀνδρικῶν ἱμάτιον ἐν σταδίῳ ἐγκωμιάσωμεν πόθῳ αὐτοῦ πρεσβείας ἐξαιτούμενοι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α ́, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Άγιος Διογένης», and it names him.",
+        "url": "https://www.saint.gr/3157/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all praise with longing the stone-pelted martyr of the Lord, the all-strong Diogenes, who by divine strength endured the hurling of the stones and put on splendidly, through manly contests in the stadium, a garment of stone; and let us ask for his intercessions.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α ́.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸν ἐν σταδίῳ Ἰησοῦν ὁμολογήσαντα καὶ δι’ Αὐτὸν καρτεροψύχως ὑπομείναντα τὰς βολὰς τῶν λίθων δρόσον ὡς οὐρανόθεν πεμπομένην πρὸς πιστῶν ψυχῶν ἀνάψυξιν καλλιμάρτυρα στεῤῥὸν ἐγκωμιάσωμεν πόθῳ κράζοντες· Χαίροις, μάρτυς Διόγενες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ ́, Τῇ Ὑπερμάχῳ — on the page of «Άγιος Διογένης», and it names him.",
+        "url": "https://www.saint.gr/3157/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Him who confessed Jesus in the stadium and for his sake endured with a steadfast soul the hurling of the stones as dew sent down from heaven for the refreshing of the souls of the faithful — that firm and goodly martyr let us praise with longing, crying: Rejoice, martyr Diogenes.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ ́.",
+      "model": "Τῇ Ὑπερμάχῳ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

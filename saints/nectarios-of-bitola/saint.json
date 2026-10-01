@@ -6,6 +6,11 @@
       "form": "Nectarie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 decembrie, «Sfântul Cuvios Nectarie», with the rank words left off; his life there gives Bitolia as his birthplace and Nicolae as his name in the world."
+    },
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Όσιος Νεκτάριος ο Αθωνίτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,12 +19,19 @@
     "monk"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "attested",
+      "note": "saint.gr: «Πατρίδα του Οσίου Νεκταρίου ήταν το Μοναστήρι της Μακεδονίας και γεννήθηκε το 1406 μ.Χ.», with the page's own head «(1406 - 1500)»."
+    },
     "death": {
       "earliest": 1500,
       "latest": 1500,
       "display": "1500",
       "basis": "attested",
-      "note": "doxologia.ro: «şi-a dat fericitul său suflet, cu sfârşit paşnic, în mâinile lui Dumnezeu, în anii de la Hristos o mie cinci sute, în luna decembrie, ziua a cincea.»"
+      "note": "doxologia.ro: «şi-a dat fericitul său suflet, cu sfârşit paşnic, în mâinile lui Dumnezeu, în anii de la Hristos o mie cinci sute, în luna decembrie, ziua a cincea.» saint.gr says the same: «Ο Όσιος Νεκτάριος απεβίωσε ειρηνικά στις 5 Δεκεμβρίου του 1500 μ.Χ.»"
     }
   },
   "attestations": [
@@ -44,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Όσιος Νεκτάριος ο Αθωνίτης»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man although saint.gr calls him the Athonite rather than of Bitola: it gives his homeland as «το Μοναστήρι της Μακεδονίας», which is the Greek name of Bitola, and its date of death, 5 December 1500, is the folder's own. Its head gives «(1406 - 1500)», so the birth year is added here. The page also gives his baptismal name as Νικόλαος, his father's monastic name as Παχώμιος, and his elder as Φιλόθεος of the cell of the Archangels at Karyes, whom the same calendar keeps on the same day and who is drafted in this batch. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -55,5 +77,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "philotheus-of-karyes"
+  ]
 }

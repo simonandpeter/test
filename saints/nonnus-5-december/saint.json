@@ -1,0 +1,53 @@
+{
+  "slug": "nonnus-5-december",
+  "display_name": "Nonnus (5 December)",
+  "names": [
+    {
+      "form": "Νόννος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Όσιος Νόννος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "gratus-5-december"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Όσιος Νόννος»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole life is «Ο Όσιος Νόννος απεβίωσε ειρηνικά». No year, so no `dates` object. The corpus already keeps two other Greek entries of this name — `nonnos` on 5 June and `nonnus-the-bishop`, the catechist of Saint Pelagia, on 10 November — and the settled rule is that two entries on one calendar are two commemorations; neither of those pages and neither this one joins them, so this day is kept as its own man. The same day's «Όσιος Γράτος» page is the only link between the two, and it is that page's claim, not this one's. The site's gloss under the name belongs to the fifth-century epic poet of the Dionysiaca and not to the saint. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

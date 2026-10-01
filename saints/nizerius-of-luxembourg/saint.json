@@ -1,0 +1,48 @@
+{
+  "slug": "nizerius-of-luxembourg",
+  "display_name": "Nizerius of Luxembourg",
+  "names": [
+    {
+      "form": "Νιζέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Άγιος Νιζέριος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Άγιος Νιζέριος»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole content is «Ο Άγιος Νιζέριος έδρασε στο Λουξεμβούργιο. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Αγίου». No year, so no `dates` object; no rank word beyond «Άγιος», so no type from the corpus's vocabulary fits and none is recorded; and no place precise enough for a coordinate, so no `locations`. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

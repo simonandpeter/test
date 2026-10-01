@@ -6,6 +6,11 @@
       "form": "Sava cel Sfințit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 decembrie, «Sfântul Cuvios Sava cel Sfințit», with the rank words left off."
+    },
+    {
+      "form": "Σάββας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Άγιος Σάββας ο Ηγιασμένος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 5 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Άγιος Σάββας ο Ηγιασμένος»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Cappadocian of Mutalaska, son of John and Sophia, who went to Euthymius the Great and to the cenobium of Theoktistos and died at ninety-four. Its head line gives «(440 - 534)», which the folder did not hold. The page prints two apolytikia, a kontakion, a megalynarion, an oikos and a kathisma; the two apolytikia and the kontakion are taken, the other three are not kinds the schema holds. The second apolytikion, «Ταῖς τῶν δακρύων σου ῥοαῖς», is the common of a venerable father with his name set into it, and it is printed under his name as his own service, so it is copied as the house rule for a common requires. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -67,9 +82,75 @@
         "text": "With the streams of your tears you tilled the barren wilderness, and with sighs out of the depths you made your labours bear fruit a hundredfold, and you became a light to the world, shining with wonders, holy Sabbas our venerable father. Pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Tῶν ὁσίων ἀκρότης καὶ ἀγγέλοις ἐφάμιλλος ὡς γὰρ ἡγιασμένος ἐδείχθης ἐκ παιδός, Σάββα ὅσιε. Οὐράνιον γὰρ βίον ἀπελθῶν, πρὸς ἔνθεον ζωὴν χειραγωγεῖς διὰ λόγου τε καὶ πράξεως ἀληθοῦς, τοὺς πίστει ἐκβοῶντας σοι. Δόξα τῷ δεδοκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Άγιος Σάββας ο Ηγιασμένος», and it names him.",
+        "url": "https://www.saint.gr/3154/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Summit of the venerable and rival of the angels, for you were shown to be sanctified from childhood, venerable Sabbas. Having gone away to a heavenly manner of life, you lead by the hand into a godly life, by word and by true deed, those who cry out to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ταῖς τῶν δακρύων σου ῥοαῖς, τῆς ἐρήμου τὸ ἄγονον ἐγεώργησας· καὶ τοῖς ἐκ βάθους στεναγμοῖς, εἰς ἑκατὸν τοὺς πόνους ἐκαρποφόρησας· καὶ γέγονας φωστήρ, τῇ οἰκουμένῃ λάμπων τοῖς θαύμασι, Σάββα Πατὴρ ἡμῶν Ὅσιε, Πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος πλ. δ’ — the second hymn on the page of «Άγιος Σάββας ο Ηγιασμένος»; it is the common of a venerable father, printed under his name with his name in it.",
+        "url": "https://www.saint.gr/3154/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with your groanings from the depths you made your labours bear fruit a hundredfold; and you became a beacon, shining upon the inhabited world with wonders, Sabbas our venerable father. Intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς ἀπὸ βρέφους τῷ Θεῷ θυσία ἄμωμος, προσενεχθεὶς δι᾽ ἀρετῆς, Σάββα μακάριε, τῷ σε πρὶν γεννηθῆναι ἐπισταμένῳ· ἐχρημάτισας Ὁσίων ἐγκαλλώπισμα, πολιστής τε τῆς ἐρήμου ἀξιέπαινος· διὸ κράζω σοι, Χαίροις Πάτερ ἀοίδιμε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — on the page of «Άγιος Σάββας ο Ηγιασμένος», and it names him.",
+        "url": "https://www.saint.gr/3154/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Offered as from infancy to God through virtue, a spotless sacrifice to him who knew you before you were born, blessed Sabbas, you proved the adornment of the venerable and the praiseworthy settler of the desert; and so I cry to you: Rejoice, father of famous memory.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «Αγιος Σαββας ο Ηγιασμενος (440 - 534)», read with the same page's «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη»."
+    },
+    "death": {
+      "earliest": 534,
+      "latest": 534,
+      "display": "534",
+      "basis": "traditional",
+      "note": "saint.gr: «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη», with the page's own head «(440 - 534)»."
+    }
   }
 }

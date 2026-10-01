@@ -1,0 +1,54 @@
+{
+  "slug": "philotheus-of-karyes",
+  "display_name": "Philotheus of Karyes",
+  "names": [
+    {
+      "form": "Φιλόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Όσιος Φιλόθεος ο Καρεώτης», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "related": [
+    "nectarios-of-bitola"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 5ης Δεκεμβρίου — «Όσιος Φιλόθεος ο Καρεώτης»",
+        "url": "https://www.saint.gr/12/05/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 5 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page gives him as elder of the Lavriote cell of the Holy Archangels, of Iagaris, at Karyes of the Holy Mountain, «που μέχρι σήμερα σώζεται», and as the elder of the venerable Nektarios of Karyes, whom the same calendar keeps on the same day and whom the corpus holds as `nectarios-of-bitola`. It gives no year — «Απέθανεν εν γήρει βαθεί» — so no `dates` object. It adds that a service in his honour was composed by the hymnographer Saint Gerasimos Mikragiannanites, whom the corpus keeps as `gerasimos-of-little-st-annes`; that is the composition of an office and not a relation, and no `related` row is made for it. No hymn of his own is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
