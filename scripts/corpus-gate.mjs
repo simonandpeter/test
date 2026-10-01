@@ -115,6 +115,16 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ζαχαριασ zacharias-21-october zacharias-22-october zacharias-father-of-the-forerunner zacharias-of-arta zacharias-of-corinth zacharias-of-jerusalem zacharias-of-prusa zacharias-of-siteia zacharias-of-vienne zacharias-son-of-barachias zacharias-son-of-carion zacharias-the-faster':
+    'Twelve now. The new one is the Zacharias of 22 October, a day after the Zacharias of the 21st — two days, two entries, two men; the others are read in the el-10-21 entry for this name form.',
+  'ρουφοσ rufus-19-april rufus-22-october rufus-apostle-of-thebes rufus-of-cyzicus rufus-of-the-kyiv-caves rufus-son-of-paul-and-tatta rufus-the-martyr-8-september':
+    'Seven now. The new one is the Rufus of 22 October; the others are read in the el-04-19 entry for this name form.',
+  'ηρακλειοσ heraclius-14-july heraclius-companion-of-alexander heraclius-of-athens heraclius-of-the-forty-martyrs':
+    'Four now. The new one is Heraclius, the companion of Alexander on 22 October; the others are read in the el-07-14 entry for this name form.',
+  'γρηγοριοσ gregory-of-akritas gregory-of-assos gregory-of-constantia gregory-of-derkoi gregory-of-methone gregory-of-moesia gregory-of-nicomedia gregory-of-novgorod gregory-of-nyssa gregory-of-panidos gregory-of-rostov gregory-of-sinai gregory-the-dialogist gregory-the-elder gregory-the-hesychast-of-athos gregory-the-painter-of-the-caves gregory-the-recluse-of-the-caves gregory-the-teacher gregory-the-wonderworker-of-the-caves gregory-uncle-of-eustratius gregory-v-of-constantinople':
+    'Twenty-one now. The new one is Gregory of Methone on 22 October, bishop of Methone, Navarino and Neokastro; the others are read in the el-10-10 entry for this name form.',
+  'αλεξανδροσ alexander-22-october alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-antonina alexander-companion-of-barbarus alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-in-iconium alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-perge alexander-of-prusa alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-six now. The new one is the Alexander of 22 October, whose companion is Heraclius; the others are read in the el-10-12 entry for this name form.',
   'μαρινα marina-of-antioch-in-pisidia marina-of-raithou':
     'Two women: Marina of Antioch in Pisidia on 17 July and Marina of Raithou on 21 October.',
   'ιακωβοσ jacob-netsvetov jacob-of-nimouzan jacob-the-hermit james-13-june james-companion-of-emilian james-matynenko james-of-bathys-ryax james-of-borovichi james-of-bryleyevo james-of-chamatoura james-of-cyrrhus james-of-nisibis james-of-pharatha james-of-samosata james-of-serbia james-of-stromyn james-of-the-brazen-gate james-of-zheleznyi-borok james-of-zographou-the-first james-of-zographou-the-second james-redozubov james-son-of-zebedee james-the-confessor':

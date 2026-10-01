@@ -1,0 +1,9 @@
+# Gregory of Methone
+
+saint.gr's calendar for 22 Οκτωβρίου names Gregory, bishop of Methone, and heads his page «(1770 - 1825)». He was born in 1770 in the village of Alvaina in Olympia, the page says, and was bishop of Methone, Navarino and Neokastro from 1816 to 1825, ordained under Cyril VI, patriarch of Constantinople. In 1817 he travelled to Russia and stood before the tsar, setting out with rare eloquence the crimes of the Turkish conquerors and the pitiable condition of the Greeks under them, and asking his support and help for the enslaved nation.
+
+He came back to Methone in 1818 on a Russian warship, and was then initiated into the Philiki Etaireia by Anagnostaras Papageorgiou — the first of the hierarchs of the Peloponnese to join it, the page says, and his entry was greeted with enthusiasm by Alexandros Ypsilantis. From the start of the rising of 1821 he took a soldier's part, and with the captains Papatsoras, Grigoriadis, Papatsonis, Doufas, Papazafeiropoulos and Konstantinos Mavromichalis among others he was foremost in the siege of the castles of Methone and Neokastro; after six months Neokastro surrendered, and it was Gregory who signed the agreement, on 7 August 1821.
+
+Ibrahim's landing at Methone and Koroni found him in the front line, defending the Palaiokastro. After Sphakteria fell, at dawn on 30 April 1825, Gregory and the defenders of the Palaiokastro resolved on a heroic sortie; he was wounded and taken prisoner. He refused to be made a Muslim and to do homage, and was shut up in the Bourtzi of Methone, where he was put to frightful torments and died of them on 22 October 1825. The page prints no hymn for him.
+
+*After saint.gr's calendar for 22 Οκτωβρίου — [the day](https://www.saint.gr/10/22/index.aspx) and [the life](https://www.saint.gr/2780/saint.aspx); read 1 October 2026.*

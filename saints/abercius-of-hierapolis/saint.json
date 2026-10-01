@@ -7,6 +7,11 @@
       "form": "Averchie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 octombrie, «Sfântul Ierarh, întocmai cu apostolii, Averchie, Episcopul Ierapolei»."
+    },
+    {
+      "form": "Αβέρκιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Όσιος Αβέρκιος ο Ισαπόστολος και θαυματουργός επίσκοπος Ιεράπολης», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Οκτωβρίου — «Όσιος Αβέρκιος ο Ισαπόστολος και θαυματουργός επίσκοπος Ιεράπολης»",
+        "url": "https://www.saint.gr/10/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2777/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the entry is the same man: bishop of Hierapolis in Phrygia, called equal to the apostles because he travelled and preached as the chief apostles did, who healed the daughter of the king of Rome of an evil spirit, brought hot springs out of the ground, preached through the cities of Syria and Mesopotamia and then in Lycaonia, Pisidia and the province of the Phrygians, and died in peace at seventy-two. **No `dates` object is proposed, because the page contradicts itself**: its heading prints «(95 - 167)» while its narrative opens «Ο Όσιος Αβέρκιος έζησε στα τέλη του 2ου αιώνα μ.Χ.», and the folder's Romanian life already places him in the reign of Marcus Aurelius. Relics are listed at the monastery of Panachrantou on Andros (his skull) and at Karakallou on Athos, Prousos in Eurytania and Phaneromeni on Salamis; no coordinate is proposed from that. Its first Ἀπολυτίκιον, Ἦχος πλ. α’, and its Κοντάκιον, Ἦχος δ’, are taken, both naming him; the «Έτερον Ἀπολυτίκιον», Ἦχος δ’, is the common of a hierarch «Κανόνα πίστεως», and an Οἶκος and a Κάθισμα are also printed — none of the three is drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -61,6 +76,40 @@
       },
       "english": {
         "text": "A rule of faith and a model of meekness, a teacher of abstinence, the truth of things showed thee to thy flock. Therefore thou didst gain by humility the things on high, and by poverty the things that are rich; O Father and Hierarch Abercius, pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’",
+      "model": "Τὸν συνάναρχον Λόγον",
+      "text": "Ἀποστόλων τὸν ζῆλον ἐκμιμησάμενος, τὴ Ἐκκλησία ἐκλάμπεις ὡς ἑωσφόρος ἀστήρ, τὴν θεόσδοτον ἰσχὺν φαίνων τοὶς ἔργοις σοί, σὺ γὰρ θαυμάτων ἱερῶν, τᾶς δυνάμεις ἐνεργῶν, Ἀβέρκιε Ἱεράρχα, πρὸς εὐσέβειας εἰσόδους, τοὺς πλανωμένους καθωδήγησας.",
+      "source": {
+        "text": "saint.gr, «Όσιος Αβέρκιος ο Ισαπόστολος και θαυματουργός επίσκοπος Ιεράπολης» — Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον",
+        "url": "https://www.saint.gr/2777/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having imitated the zeal of the apostles, you shine out in the Church like the morning star, showing forth in your works the strength God gave you; for working the powers of sacred wonders, Abercius the hierarch, you led those who had gone astray to the gates of godliness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’",
+      "model": "Ὡς ἀπαρχὰς",
+      "text": "Ὡς Ἱερέα μέγιστον, καὶ Ἀποστόλωv σύσκηvοv, ἡ Ἐκκλησία γεραίρει σε ἅπασα, ἡ τῶν πιστὼv Ἀβέρκιε, ἢv ταῖς σαῖς ἰκεσίαις περιφύλαττε μάκαρ, ἀκαταγώvιστον, ἐξ αἱρέσεως πάσης, καὶ ἄσειστοv πολυθαύμαστε.",
+      "source": {
+        "text": "saint.gr, «Όσιος Αβέρκιος ο Ισαπόστολος και θαυματουργός επίσκοπος Ιεράπολης» — Κοντάκιον, Ἦχος δ’. Ὡς ἀπαρχὰς (copied as the page prints it, Latin v for ν and all)",
+        "url": "https://www.saint.gr/2777/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The whole Church of the faithful honours you, Abercius, as a greatest priest and a companion of the apostles; guard her by your entreaties, blessed one, unconquered by every heresy and unshaken, you of the many wonders.",
         "rendered": "site"
       }
     }

@@ -6,6 +6,11 @@
       "form": "Anna",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 octombrie, «Sfânta Muceniță Anna»."
+    },
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Άγιοι Αλέξανδρος ο Επίσκοπος, Ηράκλειος, Άννα, Ελισάβετ, Θεοδότη και Γλυκερία», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -15,7 +20,9 @@
   "related": [
     "theodota-of-adrianople",
     "glyceria-of-adrianople",
-    "elizabeth-of-adrianople"
+    "elizabeth-of-adrianople",
+    "alexander-22-october",
+    "heraclius-companion-of-alexander"
   ],
   "attestations": [
     {
@@ -40,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 22 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Οκτωβρίου — «Άγιοι Αλέξανδρος ο Επίσκοπος, Ηράκλειος, Άννα, Ελισάβετ, Θεοδότη και Γλυκερία»",
+        "url": "https://www.saint.gr/10/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2778/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Οκτωβρίου εκάστου έτους», the same day the folder already keeps for the Romanian church, and the company is the same: a bishop Alexander, a soldier Heraclius who believed on seeing him tortured, and four women — Theodote, Glyceria, Anna and Elizabeth — whom Alexander drew to the faith by a wonder and who were beheaded before him. **The Greek page names no city**, so nothing here confirms or contradicts the Adrianople of the folder's English name; it gives no year, no emperor and no see, so no `dates` object is proposed and no coordinate. Alexander and Heraclius are drafted as new folders in batch el-10-22. No hymn is printed for any of the six. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

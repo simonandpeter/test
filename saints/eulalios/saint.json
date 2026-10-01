@@ -1,0 +1,50 @@
+{
+  "slug": "eulalios",
+  "display_name": "Eulalios",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ευλάλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Άγιος Ευλάλιος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Οκτωβρίου — «Άγιος Ευλάλιος»",
+        "url": "https://www.saint.gr/10/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2783/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Οκτωβρίου εκάστου έτους», the same day as the listing. It carries neither the asterisk nor the «Δεν είναι διασταυρωμένη» sentence, but it is explicit about what it does not know: «Για τον βίο και τη δράση του ως επισκόπου δεν μας αναφέρεται τίποτα. Άγνωστα μας είναι και τα χρόνια που ήκμασε» — so there is no `dates` object. **It also prints two traditions that contradict each other about who he was**: one makes him the bishop of Edessa who carried the Mandylion to Cyprus, the other says «ο Ευλάλιος ο επίσκοπος της Λάμπουσας δεν έχει καμιά σχέση με τον ιερό Ευλάλιο τον επίσκοπο της Έδεσσας». Because the two traditions disagree about the see and not about the existence of the saint the day keeps, the folder is drafted with `types: [\"bishop\"]`, no `office` and no coordinate, and both traditions are told in the life. A reader who wants only one of them should refuse the folder rather than choose. No hymn is printed, only the existence of an office published by Hatzipsaltis."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

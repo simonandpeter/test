@@ -1,0 +1,58 @@
+{
+  "slug": "heraclius-companion-of-alexander",
+  "display_name": "Heraclius, companion of Alexander",
+  "sex": "male",
+  "types": [
+    "soldier",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ηράκλειος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Άγιοι Αλέξανδρος ο Επίσκοπος, Ηράκλειος, Άννα, Ελισάβετ, Θεοδότη και Γλυκερία», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Οκτωβρίου — «Άγιοι Αλέξανδρος ο Επίσκοπος, Ηράκλειος, Άννα, Ελισάβετ, Θεοδότη και Γλυκερία»",
+        "url": "https://www.saint.gr/10/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2778/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Οκτωβρίου εκάστου έτους», the same day as the listing, and tells one story for the six. The four women of the company are already in the corpus from the Romanian pass as `theodota-of-adrianople`, `glyceria-of-adrianople`, `anna-of-adrianople` and `elizabeth-of-adrianople`, all keeping the Romanian 22 October, and they are upgraded rather than redrafted. **The Greek page names no city at all** — not Adrianople and not any other — so nothing here adds a place, and the English form is a bare disambiguator. It also gives no year, no emperor and no see, so there is no `dates` object, no `office` and no coordinate. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "alexander-22-october",
+    "theodota-of-adrianople",
+    "glyceria-of-adrianople",
+    "anna-of-adrianople",
+    "elizabeth-of-adrianople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

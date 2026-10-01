@@ -1,0 +1,68 @@
+{
+  "slug": "gregory-of-methone",
+  "display_name": "Gregory of Methone",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Γρηγόριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Άγιος Γρηγόριος Επίσκοπος Μεθώνης, εθνοιερομάρτυρας», with the rank words and the see left off."
+    }
+  ],
+  "office": "Bishop of Methone, Navarino and Neokastro",
+  "dates": {
+    "birth": {
+      "earliest": 1770,
+      "latest": 1770,
+      "display": "1770",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Γρηγόριος γεννήθηκε το 1770 μ.Χ. στο χωριό Άλβαινα της Ολυμπίας»."
+    },
+    "death": {
+      "earliest": 1825,
+      "latest": 1825,
+      "display": "1825",
+      "basis": "traditional",
+      "note": "saint.gr: «υποβλήθηκε σε φρικτά μαρτύρια με αποτέλεσμα να πεθάνει στις 22 Οκτωβρίου 1825 μ.Χ.»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Οκτωβρίου — «Άγιος Γρηγόριος Επίσκοπος Μεθώνης, εθνοιερομάρτυρας»",
+        "url": "https://www.saint.gr/10/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2780/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives both years in its narrative as well as in the heading, with the date of death in full. The line's own rank word for him is εθνοιερομάρτυρας, a national hieromartyr, for which the corpus's vocabulary has only `hieromartyr`; the national part of it is said here and not in `types`. The corpus holds `leo-of-methone` and no other saint of that see. No coordinate is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
