@@ -6,6 +6,11 @@
       "form": "Naum",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 decembrie, «Sfântul Proroc Naum», with the rank word left off."
+    },
+    {
+      "form": "Ναούμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Προφήτης Ναούμ», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Δεκεμβρίου — «Προφήτης Ναούμ»",
+        "url": "https://www.saint.gr/12/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same prophet, the Elkesite of the twelve minor prophets whose book is against Nineveh. Of its five hymns the first Ἀπολυτίκιον and the Κοντάκιον are taken here; the «Έτερον Ἀπολυτίκιον», the Μεγαλυνάριον and the Κάθισμα are not drafted. A piece of his relic, the page says, is at the monastery of Simonopetra on the Holy Mountain."
     },
     {
       "church": "serbian",
@@ -62,9 +77,51 @@
         "text": "Keeping the memory of your prophet Nahum, O Lord, through him we entreat you: save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τοῦ Προφήτου σου Ναοὺμ τὴν μνὴμην, Κύριε ἑορτάζοντες, δι᾽ αὐτοῦ σε δυσωποῦμεν· Σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος β’ — the first of the two apolytikia on the page of «Προφήτης Ναούμ», and it names him. The page gives it a tone and no automelon.",
+        "url": "https://www.saint.gr/3001/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As we keep the memory of your prophet Nahum, O Lord, we entreat you through him: save our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς πυρσὸς ἀκοίμητος Ναοὺμ Προφῆτα, φρυκτωρεῖς ἐν πέρασι, δι’ αἰνιγμάτων ἱερῶν, τὴν τῶν μελλόντων ἀλήθειαν, ὧν τὰς ἐκβάσεις ὁρῶντες τιμῶμέν σε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the kontakion on the page of «Προφήτης Ναούμ», and it names him.",
+        "url": "https://www.saint.gr/3001/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a beacon that never sleeps, O prophet Nahum, you signal to the ends of the earth, through sacred riddles, the truth of things to come; and seeing their outcomes we honour you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -460,
+      "latest": -460,
+      "display": "c. 460 BC",
+      "basis": "traditional",
+      "note": "saint.gr: «Έζησε τον 5ο αιώνα προ Χριστού (άκμασε περί το 460 π.Χ.) και ήταν από τη φυλή του Συμεών»."
+    }
   }
 }

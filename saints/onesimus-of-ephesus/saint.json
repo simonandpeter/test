@@ -1,0 +1,54 @@
+{
+  "slug": "onesimus-of-ephesus",
+  "display_name": "Onesimus of Ephesus",
+  "names": [
+    {
+      "form": "Ονήσιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Άγιος Ονήσιμος Αρχιεπίσκοπος Εφέσου», with the rank word and the see left off. The same page says that in certain sources he is called Ονησίφορος instead."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "office": "Archbishop of Ephesus",
+  "related": [
+    "solomon-of-ephesus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Δεκεμβρίου — «Άγιος Ονήσιμος Αρχιεπίσκοπος Εφέσου»",
+        "url": "https://www.saint.gr/12/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. The corpus keeps five other folders whose personal name is Onesimus — the apostle, the wonderworker of 14 Ιουλίου, and three martyrs — and none of them is an archbishop of Ephesus. The page's own second sentence is a variant and not a second man: in certain sources this Onesimus is reported as Onesiphoros, together with Solomon, who was also bishop of Ephesus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

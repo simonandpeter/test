@@ -6,4 +6,8 @@ Their destruction came in this way. Beside Nineveh was a great lake of water tha
 
 He prophesied other things also that were to come, and fell asleep in peace forty-five years from his birth, and was buried with honour in his own land.
 
-*After doxologia.ro's calendar for 1 decembrie — [the day](https://doxologia.ro/1-decembrie) and [the life](https://doxologia.ro/sfantul-proroc-naum); read 25 September 2026.*
+The Greek calendar keeps him on the same day, and saint.gr sets him in a tribe, a village and a century. He is one of the twelve so-called minor prophets; he lived in the fifth century before Christ, flourishing about 460, and he was of the tribe of Simeon. His homeland was Elkesem, and from it he was called Nahum the Elkesite.
+
+The book of his prophecy, the page says, is of three short chapters and concerns the fate of the city of Nineveh: in the first he hymns God, in the second he foretells the ruin of Nineveh with her chariots, her horsemen and her treasures, and in the third he characterises her as a city of blood, of lying, of great injustice and of fornication. It quotes his first chapter on the two sorts of men — «Χρηστὸς Κύριος τοῖς ὑπομένουσιν αὐτὸν ἐν ἡμέρᾳ θλίψεως» — and says that the prophet Nahum died in peace and was buried in the place of his fathers. A piece of his relic is at the monastery of Simonopetra on the Holy Mountain.
+
+*After doxologia.ro's calendar for 1 decembrie — [the day](https://doxologia.ro/1-decembrie) and [the life](https://doxologia.ro/sfantul-proroc-naum); read 25 September 2026; and after saint.gr's calendar for 1 Δεκεμβρίου — [the Greek day](https://www.saint.gr/12/01/index.aspx) and [its life](https://www.saint.gr/3001/saint.aspx), read 2 October 2026.*

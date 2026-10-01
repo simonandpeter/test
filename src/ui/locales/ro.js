@@ -761,6 +761,7 @@ export const ro = {
     'Archbishop of Jerusalem': 'Arhiepiscop al Ierusalimului',
     'Archbishop of Kharkov': 'Arhiepiscop de Harkov',
     'Archbishop of Larissa': 'Arhiepiscop de Larisa',
+    'Archbishop of Lacedaemonia': 'Arhiepiscop de Lacedemonia',
     'Archbishop of Myra in Lycia': 'Arhiepiscop al Mirelor Liciei',
     'Archbishop of Neocaesarea': 'Arhiepiscop de Neocezareea',
     'Archbishop of Novgorod': 'Arhiepiscop de Novgorod',

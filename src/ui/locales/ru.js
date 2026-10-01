@@ -780,6 +780,7 @@ export const ru = {
     'Archbishop of Jerusalem': 'Архиепископ Иерусалимский',
     'Archbishop of Kharkov': 'Архиепископ Харьковский',
     'Archbishop of Larissa': 'Архиепископ Ларисский',
+    'Archbishop of Lacedaemonia': 'Архиепископ Лакедемонийский',
     'Archbishop of Myra in Lycia': 'Архиепископ Мир Ликийских',
     'Archbishop of Neocaesarea': 'Архиепископ Неокесарийский',
     'Archbishop of Novgorod': 'Архиепископ Новгородский',

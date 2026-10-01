@@ -1,0 +1,65 @@
+{
+  "slug": "theocletus-of-lacedaemonia",
+  "display_name": "Theocletus of Lacedaemonia",
+  "names": [
+    {
+      "form": "Θεόκλητος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Άγιος Θεόκλητος Αρχιεπίσκοπος Λακεδαιμόνιας ο θαυματουργός», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "archbishop",
+    "wonderworker",
+    "ascetic"
+  ],
+  "office": "Archbishop of Lacedaemonia",
+  "related": [
+    "ignatius-of-constantinople"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 869,
+      "latest": 870,
+      "basis": "traditional",
+      "display": "869–870",
+      "note": "saint.gr: «Κάποιες πηγές μας πληροφορούν ότι έζησε ασκητικότατο βίο, τον 9ο αιώνα μ.Χ.» and «πήρε μέρος στην κατά του Φωτίου συγκληθείσα Σύνοδο (869 - 870 μ.Χ.)». Only the council's years are recorded, because they are the only years the page gives; it says of the icon at Monemvasia that the worn lettering makes his period unknowable."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Δεκεμβρίου — «Άγιος Θεόκλητος Αρχιεπίσκοπος Λακεδαιμόνιας ο θαυματουργός»",
+        "url": "https://www.saint.gr/12/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and no distich. It hedges its own information twice — «από τα φθαρμένα στοιχεία δεν γίνεται γνωστή η εποχή του» of the Monemvasia icon, and «Κάποιες πηγές μας πληροφορούν ότι» of the ninth century and the council — and it says his biography was composed by somebody anonymous. The ninth-century dating rests on the council alone and the folder records nothing else."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

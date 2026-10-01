@@ -1,0 +1,52 @@
+{
+  "slug": "anthony-the-new-1-december",
+  "display_name": "Anthony the New (1 December)",
+  "names": [
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Όσιος Αντώνιος ο Νέος», with the rank word left off. The corpus already keeps an `anthony-the-new-of-veria` on 17 Ιανουαρίου, a different man on a different day, so this folder's name carries the day instead of the epithet."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Δεκεμβρίου — «Όσιος Αντώνιος ο Νέος»",
+        "url": "https://www.saint.gr/12/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. It names its authority twice: the Evergetinos, page 199, which Nikodemos the Hagiorite quotes at length on the page, and that quotation is the whole of what is known of him. The Greek calendar also keeps an Anthony the New of Veria on 17 Ιανουαρίου, which the corpus already holds; that man is a hermit of Macedonia and this one a coenobite of Bithynia, so two entries on two days are read here as two men."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
