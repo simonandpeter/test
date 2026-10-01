@@ -1,0 +1,60 @@
+{
+  "slug": "david-of-kydonies",
+  "display_name": "David of Kydonies",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουνίου, «Άγιος Δαβίδ ο νέος Οσιομάρτυρας», with the rank words left off. The page's narrative also calls him «ο Όσιος Δαβίδ ο Κυδωνιεύς»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1813,
+      "latest": 1813,
+      "display": "1813",
+      "basis": "attested",
+      "note": "saint.gr: «Την ίδια νύχτα λοιπόν, στις 26 Ιουνίου του 1813 μ.Χ., ο Όσιος Δαβίδ ο Κυδωνιεύς ευρήκε μαρτυρικό θάνατο δι’ απαγχονισμού.» The page's heading reads «Αγιος Δαβιδ ο Νεος Οσιομαρτυρας (; - 1813)», and the year of birth is left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουνίου — «Άγιος Δαβίδ ο νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/06/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουνίου εκάστου έτους», the same day as the listing, and its own heading reads «Αγιος Δαβιδ ο Νεος Οσιομαρτυρας (; - 1813)». He is the second David saint.gr prints on this day and not the first: the other is the dendrite of Thessalonica, whom the corpus already keeps, and two entries on one day are two commemorations. None of the corpus's ten Davids is of Kydonies or was hanged in 1813, and the narrative is particular enough to tell him apart — the Skete of Saint Anne on the Holy Mountain, the rebuilding of the churches of the Transfiguration and the Theotokos, the bishop Pankratios formerly of Christoupolis who blessed him for martyrdom. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "anthion",
+  "display_name": "Anthion",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ανθίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουνίου, «Όσιος Ανθίων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουνίου — «Όσιος Ανθίων»",
+        "url": "https://www.saint.gr/06/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουνίου εκάστου έτους», the same day as the listing. The page carries one sentence of life and a couplet and nothing else, so there is nothing to tell him apart by except the name and the day; the corpus holds no other Anthion in any spelling. No asterisk and no «Δεν είναι διασταυρωμένη» sentence — the four entries that carry it on this day are refused and named in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

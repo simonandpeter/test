@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'διονυσιοσ dionysius-8-may dionysius-companion-of-agapius dionysius-companion-of-agapius-second dionysius-companion-of-lucillian dionysius-companion-of-quadratus dionysius-companion-of-socrates dionysius-companion-of-terentius dionysius-kagovets dionysius-martyr-1-april dionysius-of-alexandria dionysius-of-athos dionysius-of-glushitsa dionysius-of-lampsacus dionysius-of-milan dionysius-of-pereyaslavl dionysius-of-radonezh dionysius-of-suzdal dionysius-reader-of-alexandria dionysius-the-merciful':
+    'Nineteen now. The new one is Dionysius of Suzdal on 26 June, whose page also prints him on 15 Οκτωβρίου — that day is unread and the second feast is a note on his row, not a row of its own. The others are read in the el-06-01 entry for this name form.',
+  'δαβιδ david-brother-of-tarichan david-of-gareji david-of-kydonies david-of-mytilene david-of-thessalonica david-of-wales david-son-of-prince-theodore david-with-minas-and-john':
+    'Eight now, and two of them stand on 26 June: David of Kydonies, new here, and David of Thessalonica, whom this batch upgraded to a venerated Greek row on the day the Romanian already kept him. The others are read in the el-05-18 entry for this name form.',
   'μεθοδιοσ methodius-hieromartyr-1-march methodius-of-constantinople methodius-of-moravia methodius-of-nivritos methodius-of-patara methodius-of-peshnosha':
     'Six now. The new one is Methodius of Nivritos on 25 June; the others are read in the el-06-04 entry for this name form.',
   'θεοδοσιοσ theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch':

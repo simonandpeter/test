@@ -1,0 +1,59 @@
+{
+  "slug": "dionysius-of-suzdal",
+  "display_name": "Dionysius of Suzdal",
+  "sex": "male",
+  "types": [
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουνίου, «Άγιος Διονύσιος Αρχιεπίσκοπος Σουζδαλίας», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1385,
+      "latest": 1385,
+      "display": "1385",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him: «Αγιος Διονυσιος Αρχιεπισκοπος Σουζδαλιας (; - 1385)». The page gives no other year and no narrative, and the year of birth is left as a question mark."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes him a Russian hierarch, so a Russian row is likely to exist, but nothing was read for it here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουνίου — «Άγιος Διονύσιος Αρχιεπίσκοπος Σουζδαλίας»",
+        "url": "https://www.saint.gr/06/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουνίου εκάστου έτους», the same day as the listing — and then holds no life, only a pointer to a second day: «Για τον Άγιο Διονύσιο βλέπε στις 15 Οκτωβρίου». The row records the day page that was read, which is 26 June, and the pointer is recorded here; the Greek calendar evidently keeps him twice and the page itself treats the two as one man, so no second row and no second folder. 15 Οκτωβρίου has not been read, and none of the corpus's twenty-nine Dionysii is of Suzdal or is kept on either day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

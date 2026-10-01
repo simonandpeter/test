@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iunie, «Sfântul Ierarh Ioan, Episcopul Goției»; the form is the bare name, the rest of the line being rank and see."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουνίου, «Όσιος Ιωάννης επίσκοπος Γοτθίας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουνίου — «Όσιος Ιωάννης επίσκοπος Γοτθίας»",
+        "url": "https://www.saint.gr/06/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and the see and the iconoclasm settle the identity: a bishop of Gothia in the eighth century who died in exile. Its heading reads «Οσιος Ιωαννης Επισκοπος Γοτθιας (; - 780)», and the narrative adds the parents' names, Leo and Photine, the reign of Leo the Isaurian, the flight to Amastris and the year 780 — none of which the folder's Romanian source gives, which is why no `dates` object is proposed. The Romanian life has his consecration from the bishop of Iberia; the Greek page says only that in the years of the iconoclasm he kept church communion rather with Rome. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",

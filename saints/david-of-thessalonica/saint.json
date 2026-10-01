@@ -6,6 +6,11 @@
       "form": "David din Tesalonic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 iunie, «Sfântul Cuvios David din Tesalonic»."
+    },
+    {
+      "form": "Δαβίδ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 26 Ιουνίου, «Όσιος Δαβίδ από τη Θεσσαλονίκη», with the rank word and the city left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 26ης Ιουνίου — «Όσιος Δαβίδ από τη Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/06/26/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 26 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and the almond tree settles the identity — the dendrite of Thessalonica, with the archbishop Aristides, the embassy to Justinian and the monastery of the Aproïtai. The two sources disagree about his birth: the folder's Romanian life has him born and brought up in Thessalonica, while saint.gr says «καταγόταν από τη βόρεια Μεσοποταμία … και γεννήθηκε περί το 450 μ.Χ.» and has him come to the city with a monk called Adolas. Both readings are set down in the life and neither is preferred here. No `dates` object is proposed, because the years — about 450, and a death between 535 and 541 — come from this second source alone. He is the first of two Davids saint.gr prints on this day; the other, the new venerable-martyr of Kydonies, is a new folder in this batch. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -59,6 +74,40 @@
       },
       "english": {
         "text": "In thee, O father, was the image restored with care; for taking up the cross thou didst follow Christ, and by thy works thou didst teach us to overlook the flesh, which passes away, and to care for the soul, a thing immortal. Wherefore thy spirit, O most venerable father David, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς φοῖνιξ ἐξήνθησας, τῶν ἀρετῶν τοὺς καρπούς, ἀσκήσας ὡς ἄσαρκος, ἀμυγδαλῆς ἐν φυτῷ, Δαβὶδ Πάτερ Ὅσιε. Ὅθεν Θεσσαλονίκη, τοὶς ὀσίοις σου πόνοις, χάριν παρὰ Κυρίου, δαψιλῆ καρπουμένη, γεραίρει ὡς μεσίτην σέ, θερμὸν πρὸς τὸν Κύριον.",
+      "source": {
+        "text": "saint.gr, the first of three apolytikia on his own page, Ἦχος δ’, Ταχὺ προκατάλαβε — it names him, «Δαβὶδ Πάτερ Ὅσιε», and names the almond tree and Thessalonica; the second is the common of a venerable one and the third another proper, and only the first is taken",
+        "url": "https://www.saint.gr/630/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a palm you flowered with the fruits of the virtues, living as an ascetic in an almond tree as though without flesh, venerable father David. Therefore Thessalonica, reaping abundant grace from the Lord through your holy labours, honours you as a fervent mediator with him.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τοὺς ἀσφαλεῖς.",
+      "text": "Ὡς μιμητήν, τῶν οὐρανίων τάξεων, καὶ ἀγαθῶν, τῶν ἐπιγείων πάροικον, ἀπαξίως μακαρίζομεν, σὲ ὦ Δαβὶδ θεομακάριστε· τὸν βίον γὰρ ὡς ἄγγελος ἐτέλεσας, καὶ θείων δωρημάτων κατετρύφησας, ἐξ ὧν καὶ ἡμῖν μετάδος Ὅσιε.",
+      "source": {
+        "text": "saint.gr, the kontakion on his own page, Ἦχος β’, Τοὺς ἀσφαλεῖς — it names him, «σὲ ὦ Δαβὶδ θεομακάριστε»",
+        "url": "https://www.saint.gr/630/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an imitator of the heavenly orders, and a sojourner among the good things of earth, we call you blessed all unworthily, David blessed of God; for you finished your life as an angel and took your delight in divine gifts, and of these give us a share also, venerable one.",
         "rendered": "site"
       }
     }

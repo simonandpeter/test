@@ -1,0 +1,11 @@
+# David of Kydonies
+
+saint.gr's calendar for 26 Ιουνίου keeps him as a new venerable-martyr and tells his story at length. He came from Kydonies, the Aivali of Asia Minor, whose people had a particular bond with the Holy Mountain, there being two Athonite dependencies in their town, one of the monastery of Iviron and one of the Pantokrator. So when David left his birthplace he visited the Holy Mountain and lodged with a fellow townsman, a brother of the Skete of Saint Anne, where in time he was tonsured a monk himself.
+
+In the course of his monastic life, moved by divine zeal and having first taken his elder's blessing, he undertook to go to Smyrna and gather money for rebuilding the ruined churches of the Transfiguration of the Saviour and of the Theotokos on the Holy Mountain. When the work on the two churches was finished he built two water cisterns besides, and a row of cells for pilgrims. He did not stay on there, but burning with longing for martyrdom went to Magnesia in Asia Minor, where he provoked the Turks by reproaching them for their religion; they seized him, beat him savagely and drove him out of their town.
+
+So he came back to the Skete of Saint Anne without having had his wish, and confessed his burning desire to his elder, who feared the outcome of such an act and tried to turn him from it, and did not succeed. David went to Karyes to the bishop Pankratios, formerly of Christoupolis, from whom he took the blessing to go on to martyrdom, and then came to Thessalonica. There he learned of a monk from the Vatopedi Skete of Saint Demetrius who had apostatised, and visited him and tried to win him back; but in vain, for the renegade held to his delusion.
+
+The Turks who were guarding the apostate seized David, beat him, and handed him to the judge to be tried. The judge, fearing that he might succeed in winning the apostate back, ordered him put to death at once; and so that same night, on 26 June 1813, David of Kydonies met a martyr's death by hanging. He is honoured particularly, the page says, in the Skete of Saint Anne on the Holy Mountain, and a modern wall-painting of him is at the monastery of Xeropotamou. No hymn is printed for him.
+
+*After saint.gr's calendar for 26 Ιουνίου — [the day](https://www.saint.gr/06/26/index.aspx) and [the life](https://www.saint.gr/627/saint.aspx); read 1 October 2026.*
