@@ -8,4 +8,8 @@ The separate Lithuanian metropolia, set up at Prince Vytautas’s insistence, wa
 
 On 20 April 1430 an angel told him of his coming death, and he died at the time foretold, on the feast of the Placing of the Robe of the Theotokos, 2 July 1431. His relics were found in 1471, and two of his sakkoi are kept in the Armoury of the Moscow Kremlin.
 
-*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4139.htm); read 17 September 2026.*
+The Greek calendar keeps him too, on 2 Ιουλίου, and claims him as one of its own: «Ο Άγιος Φώτιος Μητροπολίτης Μόσχας, ήταν Έλληνας και καταγόταν από την Μονεμβασία της Πελοποννήσου» — Photius, metropolitan of Moscow, was a Greek and came from Monemvasia in the Peloponnese. saint.gr gives his tenure as metropolitan of Moscow from 1408 to his death in 1431, and titles him of Moscow rather than of Kyiv.
+
+It adds one thing the Russian notice does not: that his relics lie incorrupt in the cathedral of the Dormition of the Theotokos in the Kremlin. The page prints no hymn for him and nothing else of his life.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4139.htm); read 17 September 2026; and saint.gr's calendar for 2 Ιουλίου — [the Greek day](https://www.saint.gr/07/02/index.aspx) and [the Greek life](https://www.saint.gr/1782/saint.aspx), read 1 October 2026.*

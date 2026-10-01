@@ -7,6 +7,11 @@
       "form": "Фотий",
       "lang": "ru",
       "note": "Read out of the life’s heading «Святитель Фотий, митрополит Киевский и всея Руси»."
+    },
+    {
+      "form": "Φώτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουλίου, «Άγιος Φώτιος Μητροπολίτης Μόσχας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not on saint.gr’s lists for 16 Σεπτεμβρίου or 29 Σεπτεμβρίου (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "revised-julian",
+        "note": "saint.gr titles him Metropolitan of Moscow, not of Kyiv as his Russian source does, and keeps him on 2 Ιουλίου, while the Russian row above keeps him on 16 September. Two calendars, two days, and the Greek page is the one quoted here (1 October 2026)."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Ιουλίου — «Άγιος Φώτιος Μητροπολίτης Μόσχας (; - 1431)»",
+        "url": "https://www.saint.gr/07/02/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",

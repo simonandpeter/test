@@ -1,0 +1,93 @@
+{
+  "slug": "lambros-of-samothrace",
+  "display_name": "Lambros of Samothrace",
+  "names": [
+    {
+      "form": "Λάμπρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουλίου, «Άγιος Λάμπρος ο νεομάρτυρας εκ Σαμοθράκης», with the rank word and the epithet left off."
+    }
+  ],
+  "types": [
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1835,
+      "latest": 1835,
+      "display": "2 July 1835",
+      "basis": "attested",
+      "note": "saint.gr gives the day and the year: «Ο Άγιος Λάμπρος μαρτύρησε στη Μάκρη του Νομού Έβρου στις 2 Ιουλίου του 1835 μ.Χ.», and its heading repeats «(; - 1835)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Ιουλίου — «Άγιος Λάμπρος ο νεομάρτυρας εκ Σαμοθράκης (; - 1835)»",
+        "url": "https://www.saint.gr/07/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'. Θείας πίστεως.",
+      "text": "Γόνος ἔντιμος τῆς Σαμοθράκης καί τῆς Μάκρης δέ ὁ νεομάρτυς, ὁ λαμπρῶς λαβῶν τῆς νίκης τόν στέφανον. Τῶν μέν Πεντάθλων σύ ἔγνως τό μαρτύριον, τῶν ἐκ τῆς Ἄγαρ δέ τήν πίστιν ἐξέβαλες. Λάμπρε ἔνδοξε Χριστόν τόν Θεόν ἱκέτευε, ἐκ πάσης περιστάσεως τοῦς ὑμνοῦντας σέ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ', Θείας πίστεως, on the page of «Άγιος Λάμπρος ο νεομάρτυρας εκ Σαμοθράκης»",
+        "url": "https://www.saint.gr/652/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honoured offspring of Samothrace and neomartyr of Makri, who brilliantly received the crown of victory: you knew the martyrdom of the Five Contenders, and you cast out the faith of the sons of Hagar. Glorious Lambros, entreat Christ our God to deliver from every trial those who sing your praise.",
+        "rendered": "site"
+      },
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ'. Ἐπεφάνης σήμερον.",
+      "text": "Ἐπεφάνη σήμερον τοίς ὀρθοδόξοις, τοῦ ἐνδόξου μάρτυρος Λάμπρου ἡ θεία ἑορτή, ἐν παρρησίαις αἰτούμενοι, αὐτόν τιμῶμεν, Χριστόν ἱκετεύοντες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ', Ἐπεφάνης σήμερον, on the page of «Άγιος Λάμπρος ο νεομάρτυρας εκ Σαμοθράκης»",
+        "url": "https://www.saint.gr/652/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today there has shone upon the Orthodox the divine feast of the glorious martyr Lambros; asking of him with boldness, we honour him, and entreat Christ.",
+        "rendered": "site"
+      },
+      "model": "Ἐπεφάνης σήμερον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

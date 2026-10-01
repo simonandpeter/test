@@ -12,6 +12,11 @@
       "form": "Mihail",
       "lang": "ro",
       "note": "His baptismal name, read out of the life: «La sfântul botez a primit numele de Mihail – în cinstea sfântului arhanghel al Domnului»."
+    },
+    {
+      "form": "Ιωάννης Μαξίμοβιτς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουλίου, «Άγιος Ιωάννης Μαξίμοβιτς», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,17 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 2 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Ιουλίου — «Άγιος Ιωάννης Μαξίμοβιτς (1896 - 1966)»",
+        "url": "https://www.saint.gr/07/02/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -83,9 +97,46 @@
         "text": "Behold, your care for the flock given you on its earthly journey showed forth in the Spirit the offerings you were to make for the whole world. So we also believe steadfastly, having come to know your love, holy hierarch and wonderworker John. Wholly sanctified by the serving of the most pure Mysteries and always strengthened thereby, you ran in haste to those in suffering, most blessed healer. Hasten now also to come to the help of us who glorify you with our whole heart.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος πλ. α'. Τον συνάναρχον Λόγον.",
+      "text": "Ιωάννη Μαξίμοβιτς, αγγελόμορφε, ιεραρχών θεοφόρων και διδασκάλων σοφών εκλαμψάντων άρτι σάπφειρε πολύτιμε, ως Ορθόδοξων ασκητών καλλονήν και ποταμόν αστείρευτον θαυμασίων, σε ανυμνούντες ευχάς σου θερμάς προς Κύριον αιτούμεθα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος πλ. α', Τον συνάναρχον Λόγον, on the page of «Άγιος Ιωάννης Μαξίμοβιτς»",
+        "url": "https://www.saint.gr/4109/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "John Maximovitch, of angelic form, precious sapphire among the God-bearing hierarchs and wise teachers who have lately shone out: hymning you as the beauty of the Orthodox ascetics and an unfailing river of wonders, we ask for your fervent prayers to the Lord.",
+        "rendered": "site"
+      },
+      "model": "Τον συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος πλ. δ'. Τη Υπερμάχω.",
+      "text": "Τον ταπεινόν, απλούν, φιλόθεον, φιλάρετον, σεμνόν, μακρόθυμον, πραυν και ευμπάθητον, ευφημήσωμεν Ορθόδοξον ιεράρχην, Ιωάννην τον Μαξίμοβιτς, μελίσμασιν ως θαυμάτων φρέαρ όντως ακεσώδυνον, πόθω κράζοντες, Χαίροις, χάριτος σκήνωμα.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ήχος πλ. δ', Τη Υπερμάχω, on the page of «Άγιος Ιωάννης Μαξίμοβιτς»",
+        "url": "https://www.saint.gr/4109/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in song the humble, simple, God-loving and virtue-loving, modest, long-suffering, meek and compassionate Orthodox hierarch, John Maximovitch, as a well of wonders that truly stills pain, crying out with longing: Rejoice, tabernacle of grace.",
+        "rendered": "site"
+      },
+      "model": "Τη Υπερμάχω."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-of-tobolsk"
+  ]
 }

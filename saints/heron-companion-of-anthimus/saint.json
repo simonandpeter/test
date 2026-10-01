@@ -1,0 +1,64 @@
+{
+  "slug": "heron-companion-of-anthimus",
+  "display_name": "Heron, companion of Anthimus the Elder",
+  "names": [
+    {
+      "form": "Ήρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 2 Ιουλίου, «Άγιοι Άνθιμος ο γέρων, Παύλος, Βήλων, Θέων, Ήρων και άλλοι Τριάντα Έξι Αιγύπτιοι», with the rank word left off."
+    }
+  ],
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 310,
+      "display": "305–310",
+      "basis": "traditional",
+      "note": "saint.gr dates the whole company: «Όλοι οι Άγιοι αυτοί μαρτύρηαν κατά τα έτη 305 με 310 μ.Χ.», and sets them in the years of Maximian."
+    }
+  },
+  "related": [
+    "anthimus-the-elder",
+    "paul-companion-of-anthimus",
+    "bilon-the-martyr",
+    "theon-companion-of-anthimus",
+    "thirty-six-martyrs-of-egypt"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 2ας Ιουλίου — «Άγιοι Άνθιμος ο γέρων, Παύλος, Βήλων, Θέων, Ήρων και άλλοι Τριάντα Έξι Αιγύπτιοι»",
+        "url": "https://www.saint.gr/07/02/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
