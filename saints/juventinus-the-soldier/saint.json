@@ -14,6 +14,11 @@
       "form": "Јувентин",
       "lang": "sr",
       "note": "His own name, read out of «Св. муч. Јувентин и Максимин» — the line already recorded here, which names more than this saint (or joins two of the titles with “and”), so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Ιουβεντίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιοι Ιουβεντίνος και Μάξιμος», with the rank word left off; the page's own heading for him is «Αγιος Ιουβεντινος»."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 5 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιοι Ιουβεντίνος και Μάξιμος»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and gives the pair one page between them. The folder's Russian and Serbian rows stand on 5 September; the Greek calendar keeps them on 12 October, and the entry is the same pair — «έζησαν επί Ιουλιανού του Παραβάτου (361 μ.Χ.) και ο Ιερός Χρυσόστομος πλέκει ιδιαίτερο εγκώμιο στους δύο αυτούς μάρτυρες», soldiers who at a soldiers' banquet protested at what the emperor was doing to the Christians, had their property confiscated, were imprisoned and were beheaded secretly by night, which is the life the folder already carries from the Sretensky calendar and the Ohrid Prologue. The page adds «(ή Μαξιμίνος)» for the second of them, which is why the Serbian form the folder holds reads Максимин. The page gives no year of death beyond that reign, so no `dates` object is proposed, and it prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

@@ -1,0 +1,50 @@
+{
+  "slug": "malphetha",
+  "display_name": "Malphetha",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μαλφεθά",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Αγία Μαλφεθά», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Αγία Μαλφεθά»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Αγια Μαλφεθα». Its whole notice is one sentence: «Η Αγία Μαλφεθά μαρτύρησε, αφού τη θανάτωσαν με τοξευόμενα βέλη» — she was martyred, put to death with shot arrows. No year, no place, no rank beyond Αγία, no hymn and no name-note, so there is no `dates` object and no `locations`. The corpus holds no saint of this name under any spelling, and the name-sweep for the day returned nothing that folds onto it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

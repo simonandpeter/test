@@ -1,0 +1,50 @@
+{
+  "slug": "anthia-12-october",
+  "display_name": "Anthia (12 October)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ανθία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Αγία Ανθία», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Αγία Ανθία»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Αγια Ανθια». Its whole notice is one sentence: «Η Αγία Ανθία βρήκε μαρτυρικό θάνατο μέσα σε χάλκινο πυρακτωμένο βόδι» — she found a martyr's death inside a red-hot brazen ox. **An identity question, and it is named in the reader's report.** The corpus keeps `anthia-mother-of-eleutherius` on the Romanian 15 December, whose folder is tied to her son at every line: she was baptised by the Apostle Paul under Hadrian, watched Eleutherius's contest, and was killed embracing his body. Nothing of that is here — no son, no emperor, no Rome — and the manner of death is a different one, so this entry is drafted as a woman of the same name on another day, the way the corpus already carries `domnina-5-january` and `domninus-the-martyr-16-october`. If the writer reads the two as one woman, this folder should be dropped and the Greek row written on the existing one instead. No year, so no `dates`; no place, so no `locations`; no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

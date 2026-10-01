@@ -1,0 +1,53 @@
+{
+  "slug": "diodorus-companion-of-andromachus",
+  "display_name": "Diodorus, companion of Andromachus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Διόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιοι Ανδρομάχος και Διόδωρος», with the rank word left off; the page's own heading for him is «Αγιος Διοδωρος»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιοι Ανδρομάχος και Διόδωρος»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους», gives the two of them one page between them with a heading each, and prints one sentence for both: «Οι Άγιοι Ανδρομάχος και Διόδωρος μαρτύρησαν δια πυρός» — they were martyred by fire. Two named men on one line, so two folders. No year, so no `dates`; no place, so no `locations`; no hymn. The two name-notes above the life — a physician under Nero and a general of Alexander the Great for Andromachus, a historiographer from Sicily for Diodorus — are saint.gr's remarks on who else has borne the names and say nothing about the saints. The corpus keeps seven other men called Diodorus, of Laodicea, of Corinth, of Emesa, the Presbyter and the rest, and no Andromachus at all; none of the seven stands on this day or beside an Andromachus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "andromachus-companion-of-diodorus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

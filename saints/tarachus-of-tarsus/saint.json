@@ -6,6 +6,11 @@
       "form": "Tarah",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 octombrie."
+    },
+    {
+      "form": "Τάραχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιοι Πρόβος, Τάραχος και Ανδρόνικος», with the rank word left off; the page's own heading for him is «Αγιος Ταραχος»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιοι Πρόβος, Τάραχος και Ανδρόνικος»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους», the same menologion day the folder already keeps for the Romanian church, and the entry is the same three men: soldiers taken in the desert by Maxentius the eparch of Tarsus and beheaded in the persecution under Diocletian, with Flavian governor of Cilicia. saint.gr gives the three one page and one life between them and names each of them in its own heading, so this is the folder's own man and not a company to be split again. The page prints no year of death, only «επί Διοκλητιανού (284 - 304 μ.Χ.)», so no `dates` object is proposed. It prints a proper apolytikion and a proper kontakion that name all three, both taken here; its «Έτερον Ἀπολυτίκιον» is the common of martyrs «Τῶν Ἁγίωv Μαρτύρωv τὰ κατορθώματα» and its Οἶκος is neither a troparion nor a kontakion, and neither is drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
         "text": "At the deeds of the holy martyrs the angelic Powers marvelled greatly; for being of mortal flesh, and contending mightily by the power of the Cross, they overcame unseen the bodiless enemy. And now they pray the Lord that our souls may be shown mercy.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἰσχὺν τὴν ἄμαχον, περιζωσάμενοι, κατεπαλαίσατε, ἐχθρῶν τᾶς φάλαγγας, καὶ ἐδοξάσατε Χριστόν, ἀθλήσεως τοὶς ἀγώσι, Πρόβε παναοίδιμε, ὁ πρόβας πρὸς τὰ κρείττονα, ἔνδοξε Ἀνδρόνικε, Ἐκκλησίας ἐκνίκημα, καὶ Τάραχε πιστῶν ἡ γαλήνη, ὁ τρισαυγὴς Μαρτύρων δῆμος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Τὴν ὡραιότητα — the first hymn on the page the three share, and it names all three of them.",
+        "url": "https://www.saint.gr/2713/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Girded about with unconquerable strength, you threw down the battalions of the enemy and glorified Christ by the struggles of your contest: Probus all-renowned, who stepped forward to the better things; glorious Andronicus, the Church's victory; and Tarachus, the calm of the faithful — the thrice-shining company of the Martyrs.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Τὴν ὡραιότητα."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τριάδος ἡμῖv, τὴν δόξαν ἐμφανίσαντες, γενναῖοι Χριστοῦ, ὁπλῖται θεῖοι Μάρτυρες, σὺν Ταράχῳ Πρόβος τε καὶ Ἀνδρόvικος, ἤλεγξαν ἄπασαv, τῶν τυράννων ἀθεότητα, τῇ πίστει γενναίως ἐναθλήσαντες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page the three share. It names all three and no other saint.",
+        "url": "https://www.saint.gr/2713/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You made the glory of the Trinity plain to us, brave soldiers of Christ, divine Martyrs — Probus with Tarachus and Andronicus — and you convicted the whole godlessness of the tyrants, contending bravely in the faith.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {

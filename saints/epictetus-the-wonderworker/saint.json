@@ -1,0 +1,69 @@
+{
+  "slug": "epictetus-the-wonderworker",
+  "display_name": "Epictetus the Wonderworker",
+  "sex": "male",
+  "types": [
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Επίκτητος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιος Επίκτητος ο θαυματουργός», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιος Επίκτητος ο θαυματουργός»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους», the same day as the listing. The page makes him one of the three hundred holy Alamanoi of Cyprus and cites Leontios Machairas, the chronicler of Cyprus, for his coming to Kazafani near Kyrenia; it gives no year at all, so there is no `dates` object, and the «Στωικός φιλόσοφος (50 - 120 μ.Χ.)» line above the life is saint.gr's own note on the name Epictetus and not a date for the saint. `locations` is left out although the page names Kazafani, because the page gives no date to bound it with. The corpus's `epictetus-of-almyris`, the teacher of Astion kept on 8 July, is a different man: a presbyter martyred in Scythia Minor, not a Cypriot ascetic who fell asleep in peace. It prints one apolytikion, which names him, and that is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείαν ἄσκησιν, στερρῶς ἀνύσας, επηρέστησας, Χριστῷ ὁσίως, Θεοφόρε παμμάκαρ Ἐπίκτητε. καὶ δοξασθεῖς τὴ τοῦ Πνεύματος χάριτι, ἠμᾶς λύτρωσε κινδύνων καὶ θλίψεων. Πάτερ ὅσιε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the only hymn on the page of «Άγιος Επίκτητος ο θαυματουργός», and it names him.",
+        "url": "https://www.saint.gr/2727/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having accomplished a divine ascesis steadfastly, you pleased Christ in holiness, God-bearing and all-blessed Epictetus; and being glorified by the grace of the Spirit, deliver us from dangers and afflictions. Venerable Father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

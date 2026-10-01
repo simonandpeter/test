@@ -1,0 +1,59 @@
+{
+  "slug": "domnina-12-october",
+  "display_name": "Domnina (12 October)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Δομνίνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Αγία Δομνίνη», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Αγία Δομνίνη»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Αγια Δομνινη (; - 286)». She is a martyr under Diocletian, taken by the eparch Lysias, scourged, her bones and joints broken; the corpus's three other women of the name are none of them this one — `domnina-of-antioch` on 4 October drowned herself in a river with her daughters Berenice and Prosdoce, `domnina-the-ascetic` on 1 March fell asleep in peace in a hut in her mother's garden, and `domnina-5-january` is a bare one-line Όσια who lived according to God and fell asleep in peace. The display name follows the corpus's own habit for a name the source leaves bare, as in `domnina-5-january` and `domninus-the-martyr-16-october`. The page names no place, so there is no `locations`. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 286,
+      "display": "286",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Δομνίνα αξιώθηκε τον μαρτυρικό θάνατο επί Διοκλητιανού (286 μ.Χ.)», and its page head gives her as «Αγια Δομνινη (; - 286)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

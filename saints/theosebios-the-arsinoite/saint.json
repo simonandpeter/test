@@ -1,0 +1,72 @@
+{
+  "slug": "theosebios-the-arsinoite",
+  "display_name": "Theosebios the Arsinoite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Θεοσέβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Όσιος Θεοσέβιος ο Αρσινοΐτης», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Όσιος Θεοσέβιος ο Αρσινοΐτης»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους», the same day as the listing, and its life ends «Ήταν 12 Οκτωβρίου», which is the day of his repose. **No `dates` object**, because the page refuses the year itself: «Η ακριβής χρονολογία της γέννησής του µας είναι άγνωστη», the exact date of his birth is unknown to us, and what follows is the page's own conditional — it should be placed at the end of the fourth century *if* we accept from the episcopal lists of the region that his brother Arcadius was bishop of Arsinoe at the beginning of the fifth. That is a reasoning and not a statement, so nothing is recorded from it. `locations` is left out for the same reason, although the page names Melandra, twelve kilometres south-east of ancient Arsinoe, the Polis Chrysochous of today in the district of Paphos. The brother the page sends the reader to with «βλέπε 29 Αυγούστου» is the corpus's `arcadius-of-arsinoe`, and he is in `related`. The «Νεοπλατωνικός φιλόσοφος της Αλεξάνδρειας» line above the life is saint.gr's note on the name and not a statement about the saint. The page prints two apolytikia; the first, Ήχος γ', which names him, is taken, and the «Έτερον Ἀπολυτίκιον», Ήχος α' «Της ερήµου πολίτης», which also names him and Arsinoe, is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "arcadius-of-arsinoe"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείον φρόνημα, έχων παμμάκαρ, εκ νεότητος, εν τη ψυχή σου, θεοφρόνως τω Θεώ ευηρέστησας. Και αρεταίς λαμπρυνθείς Θεοσέβιε, θαυμάτων χάριν θεόθεν απέλαβες. Πάτερ ’Οσιε, Χριστόν τον Θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ' — the first of the two hymns on the page of «Όσιος Θεοσέβιος ο Αρσινοΐτης», and it names him. The page gives no model for this one.",
+        "url": "https://www.saint.gr/2724/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having a divine mind in your soul from your youth, all-blessed one, you pleased God with a God-minded heart; and made bright with virtues, Theosebios, you received from God the grace of wonders. Venerable Father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος γ'."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,28 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοτοσ theodotus-1-january theodotus-3-july theodotus-companion-of-asklepiodote theodotus-martyr-4-july theodotus-of-ancyra theodotus-of-cyzicus theodotus-of-ephesus theodotus-of-kyrenia theodotus-of-marcianopolis theodotus-of-the-monastery-of-publius':
+    'Ten now. The new one is Theodotus of Ephesus on 12 October; the others are read in the el-07-04 entry for this name form.',
+  'ιασων jason-of-damascus jason-of-tarsus jason-son-of-claudius':
+    'Three men: Jason of Tarsus, Jason the son of Claudius on 19 March, and Jason of Damascus on 12 October.',
+  'δομνινη domnina-12-october domnina-of-antioch':
+    'Two women: Domnina of Antioch on 4 October and the Domnina of 12 October.',
+  'διοδωροσ diodorus-companion-of-andromachus diodorus-martyr-3-may diodorus-of-corinth diodorus-of-emesa diodorus-of-the-twenty-four-martyrs diodorus-the-presbyter':
+    'Six now. The new one is Diodorus, the companion of Andromachus on 12 October; the others are read in the el-07-06 entry for this name form.',
+  'andromachus companion diodorus andromachus-companion-of-diodorus diodorus-companion-of-andromachus':
+    'Not one man drafted twice: Andromachus and Diodorus are the pair the 12 October page names together, each folder surnamed for the other.',
+  'γεωργιοσ george-bozic george-companion-of-theodore george-i-patriarch-of-constantinople george-konissky george-of-alikianos george-of-amastris george-of-azkuri george-of-develtos george-of-diipion george-of-kratovo george-of-krene george-of-maleon george-of-megara george-of-mytilene george-of-nea-ephesus george-of-pisidian-antioch george-of-rapsani george-of-samothrace-a george-of-samothrace-b george-of-shenkursk george-of-sofia george-of-thessalonica george-of-vladimir george-paizanos-of-mytilene george-the-chozebite george-the-cypriot george-the-epitideiotis george-the-hungarian george-the-iberian george-the-iberian-2-january george-the-new-martyr-of-sofia george-the-perachoritis george-the-persian george-the-pilgrim george-the-salamanis george-the-sinaite george-the-trophy-bearer george-the-vavatsiniotis gerasimos-of-karpenisi':
+    'Thirty-nine now, and four are new on 12 October: the Vavatsiniotis, the Epitideiotis, the Perachoritis and the Salamanis, four Georges of Cyprus the page names by the villages they are kept in. The rest is read in the el-07-21 entry for this name form.',
+  'ελπιδιοσ elpidius-of-cherson elpidius-of-the-alamanoi':
+    'Two men: Elpidius of Cherson on 7 March and Elpidius of the Alamanoi on 12 October.',
+  'δημητριανοσ demetrianus-of-tamassos demetrianus-of-the-alamanoi demetrianus-son-of-demetrius demetrianus-the-deacon':
+    'Four now. The new one is Demetrianus of the Alamanoi on 12 October; the others are Demetrianus of Tamassos on 27 January and the son of Demetrius on 11 September.',
+  'βασιλειοσ basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-moscow basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-the-alamanoi basil-of-the-kyiv-caves basil-of-thessalonica basil-of-yaroslavl basil-ratishvili basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Twenty-seven now. The new one is Basil of the Alamanoi on 12 October; the others are read in the el-08-02 entry for this name form.',
+  'βαρναβασ barnabas-of-gethsemane barnabas-of-kantara barnabas-of-soumela barnabas-of-the-alamanoi barnabas-of-the-vetluga barnabas-the-apostle':
+    'Six now. The new one is Barnabas of the Alamanoi on 12 October; the others are read in the el-06-10 entry for this name form, with Soumela on 18 August.',
+  'βαρλααμ barlaam-30-may barlaam-of-sikisk barlaam-of-the-alamanoi barlaam-of-vazsky barlaam-the-anchorite':
+    'Five now. The new one is Barlaam, one of the three hundred Alamanoi of Cyprus whom the 12 October page names in part; the others are read in the el-07-18 entry for this name form.',
   'σισινιοσ sisinius-of-the-forty-martyrs sisinnius-of-constantinople':
     'Two men: Sisinius of the Forty Martyrs on 9 March and Sisinnius patriarch of Constantinople on 11 October, who stands with Nectarius and Arsacius in that see.',
   'νεκταριοσ nectarios-of-optina nectarius-of-bezhetsk nectarius-of-constantinople nectarius-of-vryoula nectarius-venerable-17-may':

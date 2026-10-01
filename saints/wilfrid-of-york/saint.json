@@ -1,0 +1,64 @@
+{
+  "slug": "wilfrid-of-york",
+  "display_name": "Wilfrid of York",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Wilfrid",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιος Wilfrid της Υόρκης», with the rank word and the epithet left off. saint.gr prints the personal name in Latin letters, exactly so, and sets only the epithet in Greek; the form is copied as printed and nothing is transliterated into Greek that the page does not print."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιος Wilfrid της Υόρκης»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Αγιος Wilfrid Της Υορκης (634 - 709)». Its whole notice is two sentences: «Ο Άγιος Wilfrid γεννήθηκε το 634 μ.Χ. στο Northumberland και κοιμήθηκε το 709 μ.Χ. Δεν έχουμε άλλες λεπτομέρειες για τον βίο του» — born in 634 in Northumberland, fell asleep in 709, and we have no other details of his life. The two years are stated outright and a `dates` object is recorded from them; `locations` is left out because Northumberland is a region and the page gives nothing to place him within it. **The page gives him no rank at all** — not even Όσιος or επίσκοπος — so `types` is empty and there is no `office`, although the English reader will know the see in the epithet; the display name keeps «της Υόρκης» as the page prints it and claims nothing beyond it. saint.gr prints his personal name in Latin letters and only the epithet in Greek, which is why the `names` row carries a Latin-letter form under `lang: el`. The corpus holds no Wilfrid, and the three names in the strip at the foot of the page — Willibrord, Hilda, and the Synaxis of the saints who shone in Scotland — are its navigation and not entries of this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 634,
+      "latest": 634,
+      "display": "634",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Άγιος Wilfrid γεννήθηκε το 634 μ.Χ. στο Northumberland και κοιμήθηκε το 709 μ.Χ.», and its page head gives him as «Αγιος Wilfrid Της Υορκης (634 - 709)»."
+    },
+    "death": {
+      "earliest": 709,
+      "latest": 709,
+      "display": "709",
+      "basis": "attested",
+      "note": "saint.gr: «κοιμήθηκε το 709 μ.Χ.», and its page head gives him as «Αγιος Wilfrid Της Υορκης (634 - 709)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

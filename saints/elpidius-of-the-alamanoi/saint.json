@@ -1,0 +1,48 @@
+{
+  "slug": "elpidius-of-the-alamanoi",
+  "display_name": "Elpidius, one of the Three Hundred Alamanoi",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Ελπίδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιοι Βαλάντιος, Βαρλαάμ, Βαρνάβας ο μοναχός, Βασίλειος ο επίσκοπος, Γεώργιος ο Βαβατσινιώτης, Γεώργιος ο επιτηδειώτης, Γεώργιος ο περαχωρίτης, Γεώργιος ο Σαλαμάνης, Δημητριανός ο επίσκοπος, Ειρηνικός, Ελπίδιος, Επαφρόδιτος», with the rank word and the company left off; the page's own heading for him is «Αγιος Ελπιδιος Εκ Των Αλαμανων». The company's own name as the page gives it is «οι 300 Αλαμανοί Κύπριοι Άγιοι», and the page is the authority for it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιοι Βαλάντιος, Βαρλαάμ, Βαρνάβας ο μοναχός, Βασίλειος ο επίσκοπος, Γεώργιος ο Βαβατσινιώτης, Γεώργιος ο επιτηδειώτης, Γεώργιος ο περαχωρίτης, Γεώργιος ο Σαλαμάνης, Δημητριανός ο επίσκοπος, Ειρηνικός, Ελπίδιος, Επαφρόδιτος»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους», the same day as the listing, and gives each of the twelve a heading of its own — his is «Αγιος Ελπιδιος Εκ Των Αλαμανων» — so this is a synaxis that enumerates its members and is twelve folders and not one. What the page says about them it says once, under all twelve names: «είναι από τους 300 Αλαμανούς Κυπρίους Αγίους. Δεν έχουμε λεπτομέρειες για τον βίο τους» — they are of the three hundred holy Alamanoi of Cyprus, and we have no details of their lives. That is the whole of it: no year, no birthplace, no manner of death, no hymn and no rank beyond what each heading carries, so there is no `dates` object and no `locations`. The corpus already keeps nine other men of the same three hundred from saint.gr's 18 Ιουλίου listing — Onesiphorus, Pammegistus, Pamphodites, Paphnutius, Pegon, Polemius, Sozomenus, Soterichus and Photius — and none of the twelve is among them; the two lines are different lines on different days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on this page. The corpus's `elpidius-of-cherson`, kept on 7 March, is a different man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Simeon Noul Teolog",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 martie, «Sfântul Cuvios Simeon Noul Teolog»."
+    },
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Όσιος Συμεών ο Νέος Θεολόγος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -20,15 +25,15 @@
       "earliest": 949,
       "latest": 949,
       "display": "949",
-      "basis": "traditional",
-      "note": "doxologia.ro: «Sfântul Simeon Noul Teolog s-a născut în anul 949 în Galteea (Paflagonia)»."
+      "basis": "attested",
+      "note": "saint.gr: «Οσιος Συμεων ο Νεος Θεολογος (949 - 1022)», and in the life «γεννήθηκε το έτος 949 μ.Χ. στη Γαλάτη της Παφλαγονίας» and «Κοιμήθηκε με ειρήνη το έτος 1022 μ.Χ.»."
     },
     "death": {
-      "earliest": 1021,
-      "latest": 1021,
-      "display": "1021",
-      "basis": "traditional",
-      "note": "doxologia.ro: «În anul 1021 sfântul a adormit în pace întru Domnul»."
+      "earliest": 1022,
+      "latest": 1022,
+      "display": "1022",
+      "basis": "attested",
+      "note": "saint.gr: «Οσιος Συμεων ο Νεος Θεολογος (949 - 1022)», and in the life «γεννήθηκε το έτος 949 μ.Χ. στη Γαλάτη της Παφλαγονίας» and «Κοιμήθηκε με ειρήνη το έτος 1022 μ.Χ.»."
     }
   },
   "attestations": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Μαρτίου (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Όσιος Συμεών ο Νέος Θεολόγος»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Οσιος Συμεων ο Νεος Θεολογος (949 - 1022)». The folder's Romanian row stands on 12 March, which is the day doxologia.ro keeps him on; the Greek calendar keeps him on 12 October, and the two rows are two churches and not two men — the entry is unmistakably the same abbot of Saint Mamas, disciple of Symeon the Pious of the Studion, who was called the New Theologian. The page gives 949 for his birth at Galate in Paphlagonia and 1022 for his repose in both its head and its text, and a `dates` object is proposed from those two statements. It prints one apolytikion, which names him, and that is taken. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -94,6 +109,23 @@
         "text": "Shone upon by the light of the three suns, O wise in God, you became a theologian of the most divine Trinity; enriched from on high with wisdom of words, you poured out divine streams of the wisdom of God, and drinking of them we cry: rejoice, thrice-blessed Symeon, wise in God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείαν ἔλλαμψιν, Συμεὼν Πάτερ, εἰσδεξάμενος, ἐν τὴ ψυχή σου, φωστὴρ ἐν κόσμῳ ἐδείχθης λαμπρότατος, διασκεδάζων αὐτοῦ τὴν σκοτόμαιναν, καὶ πάντας πείθων ζητείν, ἣν ἀπώλεσαν, χάριν Πνεύματος. Αὐτὸν ἐκτενῶς ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the only hymn on the page of «Όσιος Συμεών ο Νέος Θεολόγος», and it names him.",
+        "url": "https://www.saint.gr/2723/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received divine illumination in your soul, Father Symeon, you were shown in the world as a most radiant luminary, scattering its thick darkness and persuading all to seek the grace of the Spirit which they had lost. Entreat him earnestly to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "text": {

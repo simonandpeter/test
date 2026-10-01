@@ -1,0 +1,51 @@
+{
+  "slug": "jason-of-damascus",
+  "display_name": "Jason of Damascus",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Ιάσων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιος Ιάσων επίσκοπος Δαμασκού», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Οκτωβρίου — «Άγιος Ιάσων επίσκοπος Δαμασκού»",
+        "url": "https://www.saint.gr/10/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Οκτωβρίου εκάστου έτους» and «Αγιος Ιασων Επισκοπος Δαμασκου». Its whole notice is one sentence: «Ο Άγιος Ιάσων ήταν επίσκοπος Δαμασκού και απεβίωσε ειρηνικά». The see is the only thing the page adds to the name and is recorded as the `office`; there is no year, so no `dates`, and no hymn. The corpus's `jason-of-tarsus`, one of the Seventy and a bishop of Tarsus kept on 28 April, and `jason-son-of-claudius` are other men: neither is a bishop of Damascus and neither stands on this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "office": "Bishop of Damascus",
+  "text": {
+    "life": "life.md"
+  }
+}
