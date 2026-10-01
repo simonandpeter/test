@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'βασιλειοσ basil-18-november basil-companion-of-artemidorus basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-moscow basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-the-alamanoi basil-of-the-kyiv-caves basil-of-thessalonica basil-of-trebizond basil-of-yaroslavl basil-ratishvili basil-son-of-david-komnenos basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
+    'Thirty-one now. The new one is the Basil of 18 November, whom the page keeps as a venerable without a surname; the others are read in the el-10-20 entry for this name form.',
+  'αναστασιοσ anastasius-25-october anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-of-paramythia anastasius-of-radovishte anastasius-of-thessalonica anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':
+    'Eleven now. The new one is Anastasius of Paramythia on 18 November, a new martyr; the others are read in the el-08-08 entry for this name form.',
+  'αλφαιοσ alphaeus-companion-of-zacchaeus alphaeus-the-apostle':
+    'Two men. The new one is the Alphaeus of 18 November, martyred with Zacchaeus the deacon; the other is Alphaeus the apostle on 26 May, whose day the Romanian calendar keeps too.',
   'νικων nikon-companion-of-mark-the-shepherd nikon-disciple-of-sergius nikon-of-the-kyiv-caves':
     'Three men. The new one is Nikon the disciple of Sergius of Radonezh on 17 November; the others are the companion of Mark the Shepherd on 28 September and Nikon of the Kyiv Caves on 23 March.',
   'μαξιμοσ maximus-30-april maximus-7-may maximus-brother-of-dometius maximus-companion-of-asklepiodote maximus-companion-of-fausta maximus-companion-of-olympias maximus-companion-of-polychronius maximus-companion-of-terentius maximus-martyred-at-evreux maximus-of-jerusalem maximus-of-kantara maximus-of-kapsokalyvia maximus-of-marcianopolis maximus-of-moscow maximus-of-ozovia maximus-of-totma maximus-of-ungrovlachia maximus-patriarch-17-november maximus-son-of-paul-and-tatta maximus-the-soldier maximus-venerable-martyr-6-march':

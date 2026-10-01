@@ -1,43 +1,27 @@
 {
-  "slug": "zacchaeus-the-deacon-martyr",
-  "display_name": "Zacchaeus the Deacon",
-  "names": [
-    {
-      "form": "Zaheu",
-      "lang": "ro",
-      "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Mucenic Zaheu diaconul»."
-    },
-    {
-      "form": "Ζακχαίος",
-      "lang": "el",
-      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιοι Ζακχαίος ο Διάκονος και Αλφαίος», with the rank words left off. The line keeps the two together; the bare personal name is taken out of it and the rank left to `types`."
-    }
-  ],
+  "slug": "alphaeus-companion-of-zacchaeus",
+  "display_name": "Alphaeus, companion of Zacchaeus",
   "sex": "male",
   "types": [
-    "martyr",
-    "deacon"
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Αλφαίος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιοι Ζακχαίος ο Διάκονος και Αλφαίος», with the rank words left off. The line enumerates the two; the bare personal name is taken out of it."
+    }
   ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
     },
     {
       "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 18,
-        "month": 11,
-        "calendar": "revised-julian",
-        "note": "The day's Tropar tab for him is a video recording headed «Troparul Sfinților Mucenici Platon, Roman diaconul și Zaheu diaconul (18 noiembrie)» whose only printed text is one line of invocation, so no hymn is taken from it."
-      },
-      "source": {
-        "text": "doxologia.ro, calendarul pentru 18 noiembrie — «Sfântul Mucenic Zaheu diaconul»",
-        "url": "https://doxologia.ro/18-noiembrie",
-        "year": 2026
-      }
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
     },
     {
       "church": "greek",
@@ -57,22 +41,22 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "dates": {
     "death": {
       "earliest": 307,
       "latest": 307,
       "display": "307",
       "basis": "traditional",
-      "note": "saint.gr: «Την επομένη τους αποκεφάλισαν (307 μ.Χ.)», and the head line «Αγιος Ζακχαιος ο Διακονος (; - 307)»."
+      "note": "saint.gr: «Την επομένη τους αποκεφάλισαν (307 μ.Χ.)», and his own head line «Αγιος Αλφαιος (; - 307)»."
     }
   },
   "related": [
-    "alphaeus-companion-of-zacchaeus"
-  ]
+    "zacchaeus-the-deacon-martyr"
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

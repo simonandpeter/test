@@ -6,6 +6,11 @@
       "form": "Roman",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Mucenic Roman diaconul»."
+    },
+    {
+      "form": "Ρωμανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιος Ρωμανός», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Νοεμβρίου — «Άγιος Ρωμανός»",
+        "url": "https://www.saint.gr/11/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 304)» and the body states the year of his death, so a `death` is proposed, the folder carrying no `dates`. The entry: he lived at the beginning of the fourth century; because Asklepiades, the eparch of Antioch, was shouting and blaspheming against Jesus Christ, Romanos's faithful heart took fire, and he waited for the moment the eparch was entering the temple of the idols and told him to his face that the idols are not gods; the angry ruler had his tongue cut out, God by a miracle kept his speech without it, he preached Christ to his jailers, and the idolaters, unable to bear the wonders, drowned him in 304. **The day's open question, and it is saint.gr's own.** The same day carries a second entry, `/3038/` «Άγιος Ρωμανός από την Παλαιστίνη (; - 298)», deacon of the Church at Caesarea in Palestine, martyred at Antioch under Diocletian, tongue cut out, miraculously speaking, strangled in prison — and that page closes «Διαπιστώνουμε εδώ, ότι το μαρτύριο του Αγίου αυτού συγχέεται με αυτό του προηγουμένου, κατά την ήμερα αυτή, Αγίου Ρωμανού και πολύ πιθανόν να πρόκειται για το ίδιο πρόσωπο» — very probably the same person. **That second page is asterisked and carries «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», so it is refused**, and the row here is read from the unasterisked entry. This folder's own epithet, the Deacon of Caesarea, comes from the tradition the *refused* page describes and not from the page quoted here, which gives him no rank at all; the writer may want to look at both. The Ἀπολυτίκιον names him with Plato and is copied onto both. The Κοντάκιον names him and is taken **exactly as the page prints it**, including its closing words, which repeat the end of the apolytikion and read as the site's own transcription error — `docs/CORPUS.md` §3's rule is that a reading which looks wrong is the source's and not the scrape's. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -45,7 +60,8 @@
     }
   ],
   "related": [
-    "plato-of-ancyra"
+    "plato-of-ancyra",
+    "holy-infant-18-november"
   ],
   "hymns": [
     {
@@ -63,9 +79,52 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δυὰς ἡ εὐκλεής, τῶν κλεινῶν Ἀθλοφόρων, ἐδόξασε λαμπρῶς, τὴν Ἁγίαν Τριάδα, ὁ Πλάτων ὁ ἔνδοξος, Ρωμανὸς τε ὁ ἔνθεος, ἐναθλήσαντες, καὶ τὸν ἐχθρὸν καθελόντες, ὅθεν πάντοτε, ὑπὲρ ἠμῶν δυσωπούσι, τὸν μόνον Φιλάνθρωπον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’. Χορὸς Ἀγγελικός — printed on both men's pages for 18 Νοεμβρίου, and it names them both, so it is copied onto both folders.",
+        "url": "https://www.saint.gr/3035/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glorious pair of the renowned prize-winners — Plato the illustrious and Romanos filled with God — gloriously glorified the Holy Trinity by their contest, and pulled the enemy down; and so they entreat for ever on our behalf the only Lover of mankind.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὡς ἀστέρα μέγιστον, ἡ Ἐκκλησία, Ῥωμανὲ πανεύφημε, σὲ κεκτημένη ἀληθῶς, φωταγωγεῖται τοῖς ἄθλοις σου, τὴν φωτοφόρον δοξάζουσα μνὴμην σου. τὸν ἐχθρὸν καθελόντες, ὅθεν πάντοτε, ὑπὲρ ἠμῶν δυσωπούσι, τὸν μόνον Φιλάνθρωπον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’. Ἐπεφάνης σήμερον — on the page of «Άγιος Ρωμανός», and it names him. Copied whole, as the page prints it: its last three clauses repeat the ending of the apolytikion above it on the same page and do not belong to this kontakion's sense, and that is the source's reading and not the scrape's.",
+        "url": "https://www.saint.gr/3036/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Possessing you truly as a very great star, all-praised Romanos, the Church is lit by your contests and glorifies your light-bearing memory. — having pulled the enemy down, and so they entreat for ever on our behalf the only Lover of mankind.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr: «έπνιξαν τον γενναίο μάρτυρα (το 304 μ.Χ.)», and the head line «Αγιος Ρωμανος (; - 304)». The page puts his life «στις αρχές του 4ου αιώνα μ.Χ.» and gives no year of birth. The site's other, asterisked entry for a Romanos of Palestine on this same day gives 298, and says the two martyrdoms are confused and very probably one person."
+    }
   }
 }

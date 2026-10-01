@@ -1,0 +1,62 @@
+{
+  "slug": "holy-infant-18-november",
+  "display_name": "The Holy Infant (18 November)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Άγιο Νήπιο",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιο Νήπιο», with the rank words left off. The form recorded is the line's whole designation, because the page gives the child no name, no sex and no parents."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Νοεμβρίου — «Άγιο Νήπιο»",
+        "url": "https://www.saint.gr/11/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives «(; - 304)», the year the same day's Romanos carries, and the whole notice is three sentences: when Saint Romanos told the governor Asklepiades that even the children know the idols are not gods, the governor asked an infant which god it believed in; the holy infant answered miraculously, with clear articulation of voice, «τον Χριστόν»; and it was beheaded on the spot. A `death` is proposed from the head line, the page attaching the year to the entry itself. The page gives the child **no name**, so the display name is the designation the line prints and the slug carries the day; `sex` is `unknown` for the same reason — the Greek «Νήπιο» is neuter and the page never says boy or girl. `romanus-the-deacon-of-caesarea` is in `related`, is linked in the life, and is an upgrade on this same day. No `locations` and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr's head line: «Αγιο Νηπιο (; - 304)», the same year its page for «Άγιος Ρωμανός» gives for his drowning, the scene the infant's notice belongs to. The page gives the child no other year and no age."
+    }
+  },
+  "related": [
+    "romanus-the-deacon-of-caesarea"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

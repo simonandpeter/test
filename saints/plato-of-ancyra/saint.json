@@ -6,6 +6,11 @@
       "form": "Platon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 noiembrie, «Sfântul Mucenic Platon»."
+    },
+    {
+      "form": "Πλάτωνας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιος Πλάτωνας», with the rank words left off. The form recorded is the day line's own, which is the modern nominative; the page's hymns and verses use «Πλάτων»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Νοεμβρίου — «Άγιος Πλάτωνας»",
+        "url": "https://www.saint.gr/11/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 306)» and the body states the year of the beheading, so a `death` is proposed, the folder carrying no `dates`. The entry is plainly him: he lived at the end of the third century, came from Ancyra of Galatia in Asia Minor and was the brother of the martyr Antiochus; taken young by the idolaters for proclaiming his faith and brought before the governor Agrippinus, who saw the beauty of the young man and knew he had property and tried flattery first, then threats, then had him flogged without mercy and tortured with red-hot rods, and finally ordered his beheading in 306. The page records fragments of his relics at the monasteries of Mega Spileo of Kalavryta, the Life-giving Spring on Poros and the Phaneromene on Salamis. The Ἀπολυτίκιον names him with Romanos and is copied onto both; the Κοντάκιον names him alone and is taken; the Οἶκος and the Κάθισμα are not drafted. **The brother Antiochus is named in the life without a link**: the corpus holds folders of that name but none of them was identified with this man, and no `related` row is proposed for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -59,9 +74,52 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δυὰς ἡ εὐκλεής, τῶν κλεινῶν Ἀθλοφόρων, ἐδόξασε λαμπρῶς, τὴν Ἁγίαν Τριάδα, ὁ Πλάτων ὁ ἔνδοξος, Ρωμανὸς τε ὁ ἔνθεος, ἐναθλήσαντες, καὶ τὸν ἐχθρὸν καθελόντες, ὅθεν πάντοτε, ὑπὲρ ἠμῶν δυσωπούσι, τὸν μόνον Φιλάνθρωπον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’. Χορὸς Ἀγγελικός — printed on both men's pages for 18 Νοεμβρίου, and it names them both, so it is copied onto both folders.",
+        "url": "https://www.saint.gr/3035/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The glorious pair of the renowned prize-winners — Plato the illustrious and Romanos filled with God — gloriously glorified the Holy Trinity by their contest, and pulled the enemy down; and so they entreat for ever on our behalf the only Lover of mankind.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Χορὸς Ἀγγελικός."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἡ ἁγία μνήμη σου, τὴν οἰκουμένην εὐφραίνει, συγκαλοῦσα ἅπαντας, ἐν τῷ πανσέπτῳ ναῷ σου, ἔνθα νῦν, μέτ' εὐφροσύνης συναθροισθέντες, ᾄσμασι, σὰς ἀριστείας Πλάτων ὑμνοῦμεν, καὶ ἐν πίστει ἐκβοῶμεν· Βαρβάρων ῥῦσαι τὴν πόλιν σου Ἅγιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’. Ἡ Παρθένος σήμερον — on the page of «Άγιος Πλάτωνας», and it names him.",
+        "url": "https://www.saint.gr/3035/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your holy memory gladdens the whole world, calling all together into your most venerable church, where, gathered now in joy, we sing your feats of valour, Plato, and cry out in faith: deliver your city from the barbarians, O Saint.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 306,
+      "display": "306",
+      "basis": "traditional",
+      "note": "saint.gr: «διατάχθηκε ο αποκεφαλισμός του (306 μ.Χ.)», and the head line «Αγιος Πλατωνας (; - 306)». The page puts his life «στα τέλη του 3ου αιώνα μ.Χ.» and gives no year of birth."
+    }
   }
 }

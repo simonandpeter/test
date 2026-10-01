@@ -1,0 +1,59 @@
+{
+  "slug": "anastasius-of-paramythia",
+  "display_name": "Anastasius of Paramythia",
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Αναστάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιος Αναστάσιος ο Νεομάρτυρας από την Παραμυθιά της Ηπείρου», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Νοεμβρίου — «Άγιος Αναστάσιος ο Νεομάρτυρας από την Παραμυθιά της Ηπείρου»",
+        "url": "https://www.saint.gr/11/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 1750)» and the body states the day and the year of the beheading, so a `death` is proposed. The page: of Paramythia in Epirus; at harvest time he was in the fields with his sister and other Christians and came to blows with some Turks who attacked his sister with evil intent; stung by the fight, they slandered him to the pasha, saying he had given his word to change his faith; the pasha arrested him and pressed him, and he answered that he had never given such a word — «Χριστιανός γεννήθηκα, χριστιανός και θα πεθάνω με τη βοήθεια του Χριστού μου» — and that he cared nothing for the goods offered him, having many eternal goods in the heavens; by those words he made a Christian of the pasha's son, named Musa, of whom the page says that «κάποιες πληροφορίες αναφέρουν ότι μετονομάστηκε Δημήτριος και μάλιστα μαρτύρησε για τον Χριστό»; and he himself, after the most dreadful torture in prison, was beheaded outside Paramythia near a monastery on 18 November 1750, and the monks of that monastery buried his relic with honours. **The son is named in the life and carries no link and no `related` row**: what the page says of his renaming and his own martyrdom it marks as «κάποιες πληροφορίες», and no folder of the corpus was identified with him. No `locations`, following this wave's practice. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1750,
+      "latest": 1750,
+      "display": "1750",
+      "basis": "traditional",
+      "note": "saint.gr: «τελικά αποκεφαλίστηκε έξω από την Παραμυθιά κοντά σ' ένα Μοναστήρι στις 18 Νοεμβρίου 1750 μ.Χ.», and the head line «(; - 1750)». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
