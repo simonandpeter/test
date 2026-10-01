@@ -1036,6 +1036,7 @@ export const ru = {
     'Hieromonk of Solovki': 'Иеромонах Соловецкий',
     'Hieromonk of Zilantov': 'Иеромонах Зилантовский',
     'Hieroschemamonk': 'Иеросхимонах',
+    'Hypatikos': 'Ипатик',
     'Iconographer': 'Иконописец',
     'King': 'Царь',
     'King of Georgia': 'Царь Грузии',

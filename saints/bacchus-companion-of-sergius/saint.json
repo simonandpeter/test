@@ -6,6 +6,11 @@
       "form": "Vah",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 octombrie."
+    },
+    {
+      "form": "Βάκχος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Άγιοι Σέργιος και Βάκχος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Οκτωβρίου — «Άγιοι Σέργιος και Βάκχος»",
+        "url": "https://www.saint.gr/10/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Οκτωβρίου εκάστου έτους», the same day the folder already keeps, and the entry is plainly the same pair: the two soldiers of Maximian, the duke Antiochus of the East who had Bacchus scourged to death and Sergius beheaded. saint.gr gives no year, so no `dates` object is proposed. It records relics at length — the skulls of both at the monastery of Curtea de Argeș in Romania, portions at Vatopedi and at the Alexander Nevsky Lavra, and Western claims at Venice, Pavia, Heiligenstadt, Wiessenburg and Prague — and says that in 547 Justinian raised the church called «Μικρή Αγία Σοφία» in Constantinople in their honour and laid their relics there. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which belong to the pair; it also prints an Οἶκος and a Κάθισμα, which are not kinds the schema holds and are not drafted."
     },
     {
       "church": "serbian",
@@ -62,6 +77,40 @@
         "text": "Thy martyrs, O Lord, in their contest won from thee, our God, the crowns of incorruption; for having thy strength they overthrew their torturers and broke the powerless presumption of the demons. At their prayers, O Christ our God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τριάδος τῆς Ἁγίας ὀπλίται τροπαιοῦχοι, ἡ λαμπρὰ δυὰς τῶν Μαρτύρων, ὠράθητε ἐν ἄθλοις, Σέργιος ὁ θεῖος ἀριστεύς, καὶ Βάκχος ὁ γενναῖος ἀθλητής, διὰ τοῦτο δοξασθέντες περιφανῶς, προΐστασθε τῶν βοώντων Δόξα τῷ ἐνισχύσαντι ὑμᾶς, δόξα τῷ στεφανώσαντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντος — the first hymn on the page of «Άγιοι Σέργιος και Βάκχος», and it names both of them.",
+        "url": "https://www.saint.gr/2692/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Trophy-bearing soldiers of the Holy Trinity, you were seen in your contests as the shining pair of the martyrs, Sergius the divine champion and Bacchus the noble contender; and therefore, being gloriously glorified, stand before those who cry out: Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὸν νοῦν πρὸς ἐχθροὺς ἀνδρείως παρατάξαντες, τὴν πᾶσαν αὐτῶv ἀπάτην κατελύσατε, καὶ τὴν νίκην ἄνωθεv, εἰληφότες Μάρτυρες πανεύφημοι, ὁμοφρόνως ἐκράζετε. Καλὸν καὶ τερπνὸν τὸ συνεῖναι Χριστῷ.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the second hymn on the page of «Άγιοι Σέργιος και Βάκχος». It is the pair's own kontakion, addressed to them as «Μάρτυρες πανεύφημοι», and names no other saint. The Οἶκος printed under it, which does name them, is not a kind the schema holds and is not drafted.",
+        "url": "https://www.saint.gr/2692/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having drawn up your minds bravely against the enemies, you undid the whole of their deceit; and having received the victory from above, all-praised martyrs, with one mind you cried out: Good and delightful it is to be with Christ.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ],
   "text": {

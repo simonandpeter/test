@@ -1018,6 +1018,7 @@ export const el = {
     'Hieromonk of Solovki': 'Ιερομόναχος Σολόβκι',
     'Hieromonk of Zilantov': 'Ιερομόναχος Ζιλάντοφ',
     'Hieroschemamonk': 'Ιεροσχημόναχος',
+    'Hypatikos': 'Υπατικός',
     'Iconographer': 'Αγιογράφος',
     'King': 'Βασιλιάς',
     'King of Georgia': 'Βασιλιάς της Γεωργίας',

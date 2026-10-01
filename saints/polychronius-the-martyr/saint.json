@@ -6,6 +6,11 @@
       "form": "Polihronie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 octombrie."
+    },
+    {
+      "form": "Πολυχρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Άγιος Πολυχρόνιος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name as ο μακρόβιος, the long-lived."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for the corresponding day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Οκτωβρίου — «Άγιος Πολυχρόνιος ο Ιερομάρτυρας»",
+        "url": "https://www.saint.gr/10/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Οκτωβρίου εκάστου έτους», the same day the folder already keeps. saint.gr calls him «ο Ιερομάρτυρας» and makes him a presbyter of Constantinople killed by Arians at the altar under the emperor Constantius; the corpus's `types` for him are `martyr` and `presbyter`, and the hieromartyr rank the page gives is left for the writer to decide rather than added here. The page states the fourth century, so a `dates` object is proposed from its own words. It prints no hymn for him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. A second entry on the same day, «Άγιοι Δέκα συναθλητές του Αγίου Πολυχρονίου», names his ten fellow contenders, who are drafted as ten new folders in batch el-10-07-1."
     },
     {
       "church": "serbian",
@@ -46,5 +61,26 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν ένας δυναμικός κληρικός του 4ου μ.Χ. αιώνα (εκ της επαρχίας Γαμφανήτιδος)»"
+    }
+  },
+  "related": [
+    "parmenias-companion-of-polychronius",
+    "polyteleios-companion-of-polychronius",
+    "elymas-companion-of-polychronius",
+    "mokios-companion-of-polychronius",
+    "chrysotelis-companion-of-polychronius",
+    "maximus-companion-of-polychronius",
+    "luke-companion-of-polychronius",
+    "abdias-companion-of-polychronius",
+    "semnios-companion-of-polychronius",
+    "olympiadas-companion-of-polychronius"
+  ]
 }

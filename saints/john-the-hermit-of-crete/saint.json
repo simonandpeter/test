@@ -1,0 +1,68 @@
+{
+  "slug": "john-the-hermit-of-crete",
+  "display_name": "John the Hermit of Crete",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Όσιος Ιωάννης ο Ερημίτης και οι συν αυτώ Eνενήντα Oκτώ Θεοφόροι Πατέρες που ασκήτευσαν στην Κρήτη», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hermit"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Χορὸς πολυάριθμος, τῶν Ἀσκητῶν τοῦ Χριστοῦ, λαμπρῶς συγκροτούμενος, τῷ τῆς ἀγάπης δεσμῶ, ἐν Κρήτῃ ἐξέλαμψεν ἔνθα καὶ ὁμοφρόνως, ἐνασκήσαντες πίστει, πάντες μία ἡμέρα, μετετέθησαν ἄνω, πρεσβεύοντες Χριστῷ τῷ Θεῷ, δοῦναι πάσιν ἠμὶν συγχώρησιν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the one hymn on the page of «Όσιος Ιωάννης ο Ερημίτης και οι συν αυτώ Eνενήντα Oκτώ Θεοφόροι Πατέρες…». It names no person, and sings the company the entry is kept for.",
+        "url": "https://www.saint.gr/2698/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A numerous choir of the ascetics of Christ, splendidly gathered together by the bond of love, shone out in Crete; and there, having lived in asceticism with one mind and in faith, they were all taken up on a single day, interceding with Christ our God to grant forgiveness to us all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Οκτωβρίου — «Όσιος Ιωάννης ο Ερημίτης και οι συν αυτώ Eνενήντα Oκτώ Θεοφόροι Πατέρες που ασκήτευσαν στην Κρήτη»",
+        "url": "https://www.saint.gr/10/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

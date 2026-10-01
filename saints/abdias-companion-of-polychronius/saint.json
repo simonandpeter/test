@@ -1,0 +1,61 @@
+{
+  "slug": "abdias-companion-of-polychronius",
+  "display_name": "Abdias, companion of Polychronius",
+  "names": [
+    {
+      "form": "Αβδίας",
+      "lang": "el",
+      "note": "Read out of the page saint.gr's calendar for 7 Οκτωβρίου links for «Άγιος Αβδίας Συναθλητής Του Αγίου Πολυχρονίου», which names the ten: «Οι Άγιοι Δέκα συναθλητές του Αγίου Πολυχρονίου ήταν οι Παρμενίας, Πολυτέλειος, Ελυμάς, Μώκιος, Χρυσοτέλης, Μάξιμος, Λουκάς, Αβδίας, Σέμνιος και Ολυμπιάδας», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "polychronius-the-martyr",
+    "parmenias-companion-of-polychronius",
+    "polyteleios-companion-of-polychronius",
+    "elymas-companion-of-polychronius",
+    "mokios-companion-of-polychronius",
+    "chrysotelis-companion-of-polychronius",
+    "maximus-companion-of-polychronius",
+    "luke-companion-of-polychronius",
+    "semnios-companion-of-polychronius",
+    "olympiadas-companion-of-polychronius"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Οκτωβρίου — «Άγιοι Δέκα συναθλητές του Αγίου Πολυχρονίου»",
+        "url": "https://www.saint.gr/10/07/index.aspx",
+        "year": 2026
+      }
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
