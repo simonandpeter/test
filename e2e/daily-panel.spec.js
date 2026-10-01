@@ -18,6 +18,7 @@ import {
   searchMode,
   swipe,
   tokenColours,
+  dayOneChurchKeeps,
 } from './helpers.js';
 
 /**
@@ -411,14 +412,14 @@ test('a real drag past the threshold changes the day, not only a flick', async (
 
 
 test('changing the calendar changes the day everywhere it is counted', async ({ page }) => {
-  // 28 June 2026 is Augustine in the Russian calendar — 15 June Julian — and
-  // in no other: the New Calendar churches keep him on the civil 15th. So the
-  // one church answers for the whole day, which is what makes this a test of
-  // the choice rather than of a coincidence.
+  // A day the Russian calendar answers for alone, which is what makes this a
+  // test of the choice rather than of a coincidence. Computed, because the day
+  // that used to be written here stopped being one.
+  const day = dayOneChurchKeeps('russian', 'greek');
   await answered(page);
   await phone(page);
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await page.goto(day.route, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText(day.name);
   await expect(page.locator('#church-open')).toHaveText('Russian');
 
   await openChooser(page);
@@ -438,13 +439,22 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
    * not. Same reading, same one calendar answering for the whole day.
    */
   await expect(page.locator('.density')).toHaveCount(0);
-  // The label carries the day's own marks since 2026-08-26 — a fast, a fish
-  // day, a feast — because a dot says nothing to a screen reader. 28 June is a
-  // Sunday inside the Apostles' Fast in the Greek calendar, so it keeps that
-  // clause after the count goes.
-  await expect(
-    page.locator('.week-strip [data-iso="2026-06-28"]'),
-  ).toHaveAttribute('aria-label', 'Sunday, 28 June 2026 - a fast');
+  /*
+   * The label carries the day's own marks since 2026-08-26 — a fast, a fish
+   * day, a feast — because a dot says nothing to a screen reader. What is
+   * asserted is that the **count** went with the saints and the date did not:
+   * the marks depend on which day the corpus hands us, so naming one would be
+   * writing the fixture down again.
+   */
+  const label = await page.locator(`.week-strip [data-iso="${day.iso}"]`).getAttribute('aria-label');
+  const date = new Intl.DateTimeFormat('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(new Date(`${day.iso}T00:00:00Z`));
+  expect(label).toContain(date);
+  expect(label).not.toMatch(/\d+ (saint|commemoration)/);
 
   // And in the month, which counts the same entries.
   await page.locator('[data-month]').click();
@@ -662,17 +672,18 @@ test('a calendar change repaints the day in place rather than rolling it', async
   // The movement decides, not the gesture (STRUCTURE.md). A change of
   // calendar has not travelled anywhere in time, so the panel repaints where
   // it stands — it used to roll upward as if the reader had stepped forward a
-  // day. 28 June is Augustine's in the Russian calendar and nobody's in the
-  // other two, so the change empties the day rather than taking it elsewhere.
+  // day. The day is one the Russian calendar keeps alone, so the change
+  // empties it rather than taking it elsewhere.
+  const day = dayOneChurchKeeps('russian', 'greek');
   await ready(page);
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await page.goto(day.route, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText(day.name);
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   await expect(page.locator('.empty-day')).toContainText('change calendar in the header');
   await openChooser(page);
   await page.locator('#church-panel [data-church="russian"]').click();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('.hero-name')).toContainText(day.name);
 
   // Read synchronously after the click, inside the window a roll would occupy.
   await openChooser(page);
@@ -685,10 +696,10 @@ test('a calendar change repaints the day in place rather than rolling it', async
     };
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
-  // The repaint itself still happened: Augustine is not in the Romanian
-  // calendar on this civil day, which keeps Papias instead. It read the day as
-  // empty until 2026-09-30, when the Romanian year reached 28 June.
-  await expect(page.locator('[data-slot="main"]')).not.toContainText('Augustine');
+  // The repaint itself still happened: the day's one saint is the Russian
+  // calendar's and no other keeps him, which is what `dayOneChurchKeeps`
+  // guarantees, so the Romanian panel cannot be showing his name.
+  await expect(page.locator('[data-slot="main"]')).not.toContainText(day.name);
 });
 
 

@@ -346,6 +346,35 @@ export const EMPTY = (() => {
 })();
 
 /**
+ * A civil day one church answers for alone: `keeper` keeps exactly one saint
+ * there, `empty` keeps none, and no third calendar keeps that same saint — so
+ * changing the calendar in the header empties the day rather than moving it,
+ * and the one saint's name is the thing to look for before and after.
+ *
+ * **Typed as 28 June 2026 until 2026-10-01**, where the Russian calendar kept
+ * Augustine and the Greek nobody; the Greek wave reached that day and put
+ * twelve folders on it, and three tests failed on a premise rather than on a
+ * fault. Computed now, and it throws rather than returning a day of the wrong
+ * shape, because a test that has lost its premise must not pass.
+ *
+ * @param keeper the church whose single saint the day shows
+ * @param empty the church that keeps nobody there
+ * @returns `{ route, iso, name }` — the name as the hero prints it, through
+ *   `saintName`, so a rank in front of it is the page's own
+ */
+export const dayOneChurchKeeps = (keeper, empty) => {
+  const iso = CIVIL_2026.find((d) => {
+    const one = kept(keeper, d);
+    if (one.length !== 1 || kept(empty, d).length !== 0) return false;
+    return CHURCH_IDS.every((c) => c === keeper || !kept(c, d).includes(one[0]));
+  });
+  if (!iso) throw new Error(`no civil day of 2026 has one ${keeper} saint, none for ${empty} and no third keeper`);
+  const slug = kept(keeper, iso)[0];
+  const card = FOLDERS.find((f) => f.slug === slug);
+  return { route: `/calendar/${iso}`, iso, name: saintName(card) };
+};
+
+/**
  * A civil day `church` keeps nobody on while **exactly one** commemoration
  * falls in another calendar — the singular of the empty-day prose, "One
  * commemoration falls today in another church's calendar". The count decides

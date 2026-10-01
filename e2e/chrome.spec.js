@@ -14,6 +14,7 @@ import {
   ready,
   searchMode,
   swipe,
+  dayOneChurchKeeps,
 } from './helpers.js';
 
 /**
@@ -448,9 +449,10 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   // One choice, written once and read everywhere (author, 2026-08-22). The
   // header's button names it, opens the three, and a press closes the panel
   // and hands the focus back.
+  const day = dayOneChurchKeeps('russian', 'greek');
   await answered(page);
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await page.goto(day.route, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-name')).toContainText(day.name);
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Russian');
   await open.click();
