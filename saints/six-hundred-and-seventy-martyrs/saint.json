@@ -1,0 +1,50 @@
+{
+  "slug": "six-hundred-and-seventy-martyrs",
+  "display_name": "The Six Hundred and Seventy Martyrs",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εξακόσιοι Εβδομήκοντα Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Άγιοι Εξακόσιοι Εβδομήκοντα Mάρτυρες», with the rank word left off. The page names none of them. The Latin M the page prints at the head of «Mάρτυρες» is its own."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Νοεμβρίου — «Άγιοι Εξακόσιοι Εβδομήκοντα Mάρτυρες»",
+        "url": "https://www.saint.gr/11/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/1054/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Νοεμβρίου εκάστου έτους», the same day as the listing. The company is not enumerated — the page names not one of them — so it is one folder, and nothing in the corpus answers to this number. `sex` is recorded as unknown: the couplet speaks of ἄνδρες, men, and the day's line does not, and the corpus's own pattern for an unenumerated company of a round number, `seventy-soldiers`, does the same. No year, no place, no emperor, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

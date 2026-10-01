@@ -1,0 +1,54 @@
+{
+  "slug": "basilissa-wife-of-maxentius",
+  "display_name": "Basilissa, wife of Maxentius",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βασίλισσα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Αγία Βασίλισσα», with the rank word left off."
+    }
+  ],
+  "related": [
+    "catherine-of-alexandria",
+    "hundred-and-fifty-rhetors"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Νοεμβρίου — «Αγία Βασίλισσα»",
+        "url": "https://www.saint.gr/11/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/1058/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's six Basilissa folders is this woman: they are kept on other days and none is set at Maxentius's court. The kinship clause in the display name is how the page itself places her, «σύζυγος του βασιλιά Μαξεντίου», and is the only thing besides the name that it gives her; no `types` beyond `martyr` are read off it, and `empress` is not proposed, because the page calls her the king's wife and not a reigning woman. No year, no place, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

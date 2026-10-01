@@ -1,0 +1,52 @@
+{
+  "slug": "peter-the-hesychast",
+  "display_name": "Peter the Hesychast",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Πέτρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Όσιος Πέτρος ο Ησυχαστής», with the rank word left off; the epithet «ο Ησυχαστής» is the page's own and is kept in the English form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Νοεμβρίου — «Όσιος Πέτρος ο Ησυχαστής»",
+        "url": "https://www.saint.gr/11/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/1055/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Νοεμβρίου εκάστου έτους», the same day as the listing. The corpus keeps `daniel-the-hesychast` and a good many other Peters, none of them this man and none on this day; the epithet in the display name is the page's own and `hesychast` is not a type the corpus holds, so `ascetic` and `hermit` carry it. The page gives no year and no century, so no `dates` object is proposed, and the age at death it gives is hedged — «σε ηλικία 95 (ή κατά άλλους 99) χρονών» — and is not arithmetic for a reader to do. The Daniel it names, whom he freed of demons and then made his fellow ascetic, is not identified with any of the corpus's Daniel folders and is not related to one. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

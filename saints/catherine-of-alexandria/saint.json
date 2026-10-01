@@ -22,12 +22,19 @@
     "virgin"
   ],
   "dates": {
-    "death": {
-      "earliest": 305,
-      "latest": 313,
-      "display": "305–313",
+    "birth": {
+      "earliest": 282,
+      "latest": 282,
+      "display": "282",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru prints the reign «305-313» rather than a year for 24 November (old style); the bounds are that reign."
+      "note": "saint.gr heads the page «Αγια Αικατερινη (282 - 304)». The year is that page's and the corpus has had none before; days.pravoslavie.ru, which the folder's death interval comes from, gives no year of birth."
+    },
+    "death": {
+      "earliest": 304,
+      "latest": 313,
+      "display": "304–313",
+      "basis": "traditional",
+      "note": "The two sources disagree and the interval records the disagreement. saint.gr: «μαρτύρησε στις αρχές του 4ου αιώνα μ.Χ. (304 μ.Χ.)», and it heads the page «(282 - 304)». days.pravoslavie.ru prints the reign «305-313» rather than a year, which is where the folder's earlier interval came from. Neither has been preferred here."
     }
   },
   "attestations": [
@@ -64,8 +71,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Νοεμβρίου — «Αγία Αικατερίνη»",
+        "url": "https://www.saint.gr/11/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/1060/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Νοεμβρίου εκάστου έτους» and «Αγια Αικατερινη (282 - 304)», the same day the folder's Romanian row already carries, and the woman is the folder's own: the noblewoman of Alexandria who silenced the rhetors and was beheaded. **The page's years do not agree with the folder's existing death interval**, which comes from days.pravoslavie.ru's reign «305-313»: saint.gr heads her 282 to 304 and says «μαρτύρησε στις αρχές του 4ου αιώνα μ.Χ. (304 μ.Χ.)». The disagreement is recorded as a widened interval with both sources quoted in the note, which is what `docs/CORPUS.md` §3 asks for, and the reader's report names it as a thing an author may want to rule on. No `names` row is added: the folder already stores the Greek form «Αἰκατερίνη». The hymns taken are the page's Έτερον Ἀπολυτίκιον (Κατέβασμα) and its first Κοντάκιον, both of which name her and no other saint and both of which carry an ἦχος and a model; its first Ἀπολυτίκιον, «Ἡ ἀμνάς σου Ἰησοῦ», is the common of a woman martyr, names nobody and has no model, the Κάθισμα is neither a troparion nor a kontakion, and the page's «Έτερον Κοντάκιον» was not read, so none of the three is drafted. The page adds relics incorrupt at Sinai, a finger in the Buckingham Palace collection in London, and portions at Chilandari on Athos, at a church of her name in Nea Liosia in Attica, at Kykkos in Cyprus and at the Lavra of Saint Alexander Nevsky in Saint Petersburg. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -93,6 +110,44 @@
         "text": "With wisdom, as with the rays of the sun, you enlightened the pagan philosophers; and like a most radiant moon shining in the night of unbelief you drove the darkness away. You brought the empress to faith and rebuked the persecutor as well, Catherine called of God and blessed. With joy you ran to the heavenly bridal chamber, to Christ the most beautiful Bridegroom, and from him you were crowned with a royal crown; standing before him with the angels, pray for us who honour your holy memory.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τὴν πανεύφημον νύμφην Χριστοῦ ὑμνήσωμεν, Αἰκατερίναν τὴν θείαν καὶ πολιοῦχον Σινᾶ, τὴν βοήθειαν ἡμῶν καὶ ἀντίληψιν· ὅτι ἐφίμωσε λαμπρῶς, τοὺς κομψοὺς τῶν ἀσεβῶν, τοῦ Πνεύματος τῇ δυνάμει, καὶ νῦν ὡς Μάρτυς στεφθεῖσα, αἰτεῖται πᾶσι τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — on the page of «Αγία Αικατερίνη». It names her and no other saint. The page's first apolytikion is the common of a woman martyr and names nobody.",
+        "url": "https://www.saint.gr/1060/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us sing of the all-praised bride of Christ, the divine Catherine, patroness of Sinai, our help and our support; for she splendidly silenced the clever men of the impious by the power of the Spirit, and now, crowned as a martyr, she asks great mercy for all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τὴν σοφίαν ἄνωθεν, κομισαμένη τοῦ λόγου, τῶν ῥητόρων ἤλεγξας, τὰς φληναφίας εὐτόνως· κάλλεσι, τῆς παρθενίας ὡραϊσμένη, αἵμασι, τῆς μαρτυρίας πεποικιλμένη· διὰ τοῦτό σε ὡς νύμφην, Αἰκατερίνα Χριστὸς προσήκατο.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Αγία Αικατερίνη». It names her and no other saint. The page prints a second kontakion in Ἦχος β’, Τὰ ἄνω ζητῶν, whose text was not read and which is therefore not drafted.",
+        "url": "https://www.saint.gr/1060/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the wisdom of the word from above, you refuted the rhetors' idle talk with vigour; adorned with the beauties of virginity and embroidered with the blood of martyrdom. For this Christ received you, Catherine, as his bride.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
+  ],
+  "related": [
+    "hundred-and-fifty-rhetors",
+    "basilissa-wife-of-maxentius"
   ]
 }

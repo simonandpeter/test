@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πορφυριοσ porphyrius-companion-of-baptos porphyrius-martyr-9-november porphyrius-mindrinos porphyrius-of-gaza porphyrius-servant-of-pamphilus porphyrius-the-mime-4-november porphyrius-the-stratelates':
+    'Seven now. The new one is Porphyrius the Stratelates on 25 November, of Catherine’s company; the others are read in the el-11-04 entry for this name form.',
+  'πετροσ peter-abesalamites peter-bishop-of-jerusalem peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-companion-of-stephen peter-disciple-of-athenogenes peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-from-the-soldiers peter-martyr-2-june peter-of-alexandria peter-of-aneia peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-sebaste peter-of-sinope peter-of-the-brazen-gate peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-hesychast peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':
+    'Thirty-seven now. The new one is Peter the Hesychast on 25 November; the rest of the fold is read in the el-10-14 entry for this name form.',
+  'βασιλισσα basilissa-companion-of-leonides basilissa-of-antinoopolis basilissa-of-galatia basilissa-of-rome basilissa-wife-of-maxentius':
+    'Five women. The new one is Basilissa the wife of Maxentius on 25 November, martyred with Catherine of Alexandria; the others are read in the el-03-22 entry for this name form, with the companion of Leonides on 16 April.',
   'νικοδημοσ nicodemus-of-elbasan nicodemus-of-lake-kozha nicodemus-of-serbia nicodemus-of-the-cave nicodemus-of-tismana nicodemus-of-vatopedi nicodemus-of-veroia nikodemos-of-meteora':
     'Eight now. The new one is Nicodemus of Veroia on 24 November; the others are read in the el-07-11 entry for this name form.',
   'μερκουριοσ mercurius-of-smolensk mercurius-of-the-twelve-tribunes mercurius-the-faster':

@@ -6,6 +6,11 @@
       "form": "Mercurie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 noiembrie, «Sfântul Mare Mucenic Mercurie», with the rank words left off."
+    },
+    {
+      "form": "Μερκούριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Άγιος Μερκούριος ο Μεγαλομάρτυρας», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 25 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 25ης Νοεμβρίου — «Άγιος Μερκούριος ο Μεγαλομάρτυρας»",
+        "url": "https://www.saint.gr/11/25/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/1056/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 25 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the great-martyr soldier of Decius's army, which is what the folder's `great-martyr` and `soldier` already say. A death interval is proposed from the page's own years where the folder had none. He is not the `mercurius-of-smolensk` of 24 November, nor `mercurius-the-faster`, both of which that day's listing keeps. The hymn taken is the page's Ἀπολυτίκιον (Κατέβασμα), which names him and no other saint and carries both an ἦχος and a model; the Μεγαλυναριον beside it, which also names him, is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -63,9 +78,35 @@
         "text": "To the model melody: Come quickly to meet us. Having endured the contests of martyrdom as an unconquered soldier, you stood before the immortal King, great martyr Mercurius; and having boldness there with the ranks of the sufferers, hasten with your prayers to the help of those who faithfully honour your memory.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Οὐράνιον Ἄγγελον, χειραγωγὸν ἀσφαλῆ, πρὸς δόξαν ἀρίδηλον, ὡς τοῦ φωτὸς κοινωνός, Μερκούριε ἔσχηκας· ὅθεν τῷ ἀθανάτῳ, Βασιλεῖ πειθαρχήσας, ἤθλησας ὑπὲρ φύσιν, ὡς γενναῖος ὁπλίτης· διὸ τοὺς σοὶ προσιόντας, μάκαρ περίσωζε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Μερκούριος ο Μεγαλομάρτυρας». It names him and no other saint.",
+        "url": "https://www.saint.gr/1056/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You had a heavenly Angel for a sure guide by the hand towards a glory plain to see, Mercurius, as a sharer of the light; and so, obeying the immortal King, you contended beyond nature, like a brave man-at-arms. Therefore, blessed one, keep safe those who come to you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 253,
+      "latest": 259,
+      "display": "between 253 and 259",
+      "basis": "traditional",
+      "note": "saint.gr: «τον αποκεφάλισαν στην Καισαρεία της Καππαδοκίας, μεταξύ των ετών 253 και 259 μ.Χ.» — the page's own interval, and it is the interval for the beheading and not a reign. It gives no year of birth."
+    }
   }
 }
