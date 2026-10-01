@@ -448,27 +448,29 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   // One choice, written once and read everywhere (author, 2026-08-22). The
   // header's button names it, opens the three, and a press closes the panel
   // and hands the focus back.
-  const day = dayOneChurchKeeps('russian', 'greek');
-  await answered(page);
+  // The pair was Russian-keeps-one against Greek-keeps-none until the Greek
+  // year was written; the Greek keeps somebody on every day of it now.
+  const day = dayOneChurchKeeps('romanian', 'russian');
+  await ready(page, { church: 'romanian', language: 'en' });
   await page.goto(day.route, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText(day.name);
   const open = page.locator('#church-open');
-  await expect(open).toHaveText('Russian');
+  await expect(open).toHaveText('Romanian');
   await open.click();
   await expect(open).toHaveAttribute('aria-expanded', 'true');
   await expect(page.locator('#church-panel [data-church]')).toHaveCount(4);
-  await expect(page.locator('#church-panel [data-church="russian"]')).toHaveAttribute('aria-pressed', 'true');
-  expect(await page.evaluate(() => document.activeElement?.dataset?.church)).toBe('russian');
+  await expect(page.locator('#church-panel [data-church="romanian"]')).toHaveAttribute('aria-pressed', 'true');
+  expect(await page.evaluate(() => document.activeElement?.dataset?.church)).toBe('romanian');
 
-  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.locator('#church-panel [data-church="russian"]').click();
   await expect(page.locator('#church-panel')).toBeHidden();
   expect(await page.evaluate(() => document.activeElement?.id)).toBe('church-open');
-  await expect(open).toHaveText('Greek');
+  await expect(open).toHaveText('Russian');
   await expect(page.locator('.empty-day')).toBeVisible();
 
   await page.reload({ waitUntil: 'networkidle' });
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('greek');
-  await expect(page.locator('#church-open')).toHaveText('Greek');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('russian');
+  await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('[data-ask]')).toHaveCount(0);
 });
 

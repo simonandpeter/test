@@ -432,6 +432,34 @@ export const dayKeptOnlyElsewhere = (church) => {
 };
 
 /**
+ * The same silence, for a corpus too full to have one lying about: a day, and
+ * **one** saint on it that `church` does not keep. Everything else kept that
+ * day is the caller's to withhold (`withoutSaintsOn`'s `keep`), and then the
+ * page counts one commemoration elsewhere and writes the singular sentence.
+ *
+ * `dayKeptOnlyElsewhere` found such a day until the Greek year was finished;
+ * the Greek keeps several saints on all 366 days now, so the count can only be
+ * made, not found. No great feast in any calendar, for the same reason `EMPTY`
+ * excludes them: a feast writes its own sentence instead.
+ *
+ * @param church the reader's church, which must keep nobody once the rest is withheld
+ * @returns `{ route, iso, slug }` — `slug` the one commemoration to keep
+ */
+export const dayOneElsewhereMade = (church, spare) => {
+  // A saint kept on `spare` too would survive the same withholding and leave
+  // that day un-bare: Basil the Great is 1 January in three calendars and 14
+  // January in the Russian, which is exactly how this was found.
+  const alsoOn = new Set(spare ? CHURCH_IDS.flatMap((c) => kept(c, spare)) : []);
+  for (const iso of CIVIL_2026) {
+    if (kept(church, iso).length > 0) continue;
+    if (CHURCH_IDS.some((c) => greatFeast(iso, c))) continue;
+    const slug = CHURCH_IDS.flatMap((c) => kept(c, iso)).find((s) => !alsoOn.has(s));
+    if (slug) return { route: `/calendar/${iso}`, iso, slug };
+  }
+  throw new Error(`no civil day of 2026 has a saint ${church} does not keep and no great feast`);
+};
+
+/**
  * A day of a year past the readings' horizon where `church` keeps saints and
  * none of them carries a hymn: what the corpus not reaching a day looks like
  * now that the Romanian year is complete and the Greek wave is filling the

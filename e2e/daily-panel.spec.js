@@ -4,6 +4,7 @@ import { test, expect } from './fixtures.js';
 import {
   EMPTY,
   EMPTY_ISO,
+  dayOneElsewhereMade,
   dayKeptOnlyElsewhere,
   dayWithoutHymns,
   POPULATED,
@@ -485,7 +486,10 @@ test('an empty day says which of the two silences it is', async ({ page }) => {
   // a day is a statement about our sourcing; this church's calendar having
   // nothing while another of the three does is a fact about the choice above,
   // and names the way to the others. Prose in ink in either case.
-  const bare = await withoutSaintsOn(page, EMPTY_ISO);
+  // One route for both days: a second `page.route` on the same URL would
+  // shadow the first, so the bare day and the made one are withheld together.
+  const one = dayOneElsewhereMade('russian', EMPTY_ISO);
+  const bare = await withoutSaintsOn(page, EMPTY_ISO, one.iso, { keep: one.slug });
   await ready(page);
   await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('The corpus grows folder by folder');
@@ -495,11 +499,11 @@ test('an empty day says which of the two silences it is', async ({ page }) => {
    * **exactly one** commemoration falls in another, because the count decides
    * which of the two sentences the page writes. 15 June was that day — Augustine
    * in the Romanian and Greek calendars, nothing in the Russian, which keeps him
-   * on the 28th — until the Greek wave put four commemorations there and the
-   * page rightly turned plural. `dayKeptOnlyElsewhere` finds the shape instead.
+   * on the 28th — until the Greek wave put four commemorations there; and with
+   * the Greek year finished no day is left with a count of one, so the day is
+   * made, like the bare one above: one saint kept, the rest withheld.
    */
-  const onlyElsewhere = dayKeptOnlyElsewhere('russian');
-  await page.goto(onlyElsewhere, { waitUntil: 'networkidle' });
+  await page.goto(one.route, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toContainText('Nothing in the Russian calendar today');
   await expect(page.locator('.empty-day')).toContainText('another church’s calendar');
   await expect(page.locator('.empty-day')).not.toContainText('The corpus grows folder by folder');
@@ -683,26 +687,29 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
 
 
 test('a calendar change repaints the day in place rather than rolling it', async ({ page }) => {
-  // The movement decides, not the gesture (STRUCTURE.md). A change of
-  // calendar has not travelled anywhere in time, so the panel repaints where
-  // it stands — it used to roll upward as if the reader had stepped forward a
-  // day. The day is one the Russian calendar keeps alone, so the change
-  // empties it rather than taking it elsewhere.
-  const day = dayOneChurchKeeps('russian', 'greek');
-  await ready(page);
+  /*
+   * The movement decides, not the gesture (STRUCTURE.md). A change of calendar
+   * has not travelled anywhere in time, so the panel repaints where it stands
+   * — it used to roll upward as if the reader had stepped forward a day. The
+   * day is one calendar's alone, so the change empties it rather than taking
+   * it elsewhere; the pair was Russian against Greek until the Greek year was
+   * finished and the Greek began keeping somebody on every day of it.
+   */
+  const day = dayOneChurchKeeps('romanian', 'russian');
+  await ready(page, { church: 'romanian', language: 'en' });
   await page.goto(day.route, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name')).toContainText(day.name);
   await openChooser(page);
-  await page.locator('#church-panel [data-church="greek"]').click();
+  await page.locator('#church-panel [data-church="russian"]').click();
   await expect(page.locator('.empty-day')).toContainText('change calendar in the header');
   await openChooser(page);
-  await page.locator('#church-panel [data-church="russian"]').click();
+  await page.locator('#church-panel [data-church="romanian"]').click();
   await expect(page.locator('.hero-name')).toContainText(day.name);
 
   // Read synchronously after the click, inside the window a roll would occupy.
   await openChooser(page);
   const after = await page.evaluate(() => {
-    document.querySelector('#church-panel [data-church="romanian"]').click();
+    document.querySelector('#church-panel [data-church="serbian"]').click();
     return {
       leaving: document.querySelectorAll('[data-slot="main"] .day-panel.slot-leaving').length,
       entering: document.querySelectorAll('[data-slot="main"] .day-panel.slot-entering').length,
@@ -710,9 +717,9 @@ test('a calendar change repaints the day in place rather than rolling it', async
     };
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
-  // The repaint itself still happened: the day's one saint is the Russian
+  // The repaint itself still happened: the day's one saint is the Romanian
   // calendar's and no other keeps him, which is what `dayOneChurchKeeps`
-  // guarantees, so the Romanian panel cannot be showing his name.
+  // guarantees, so the Serbian panel cannot be showing his name.
   await expect(page.locator('[data-slot="main"]')).not.toContainText(day.name);
 });
 
@@ -1980,7 +1987,11 @@ test('a great feast months past the corpus keeps its readings, its fast and its 
  * and `served()` is asserted so a route that matched nothing fails shut.
  */
 async function withoutSaintsOn(page, ...isos) {
+  // A trailing `{ keep }` spares one slug, which is how a day is given exactly
+  // one commemoration: see `dayOneElsewhereMade`.
+  const keep = typeof isos.at(-1) === 'object' ? isos.pop().keep : null;
   const withheld = new Set(isos.flatMap((iso) => CHURCHES.flatMap((c) => keptOn(c.id, iso))));
+  if (keep) withheld.delete(keep);
   let served = 0;
   await page.route('**/data/manifest.json', async (route) => {
     const response = await route.fetch();
