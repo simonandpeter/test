@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-bulgaria sophronius-of-irkutsk sophronius-of-jerusalem sophronius-of-soumela sophronius-of-vratsa sophronius-the-athonite sophronius-the-recluse sophrony-of-essex':
+    'Ten now, and two stand on 18 August: Sophronius of Soumela, whom the Romanian keeps there too and whose Greek row this batch adds, and Sophronius the Athonite, new here. Two entries, two men.',
+  'πορφυριοσ porphyrius-companion-of-baptos porphyrius-mindrinos porphyrius-of-gaza porphyrius-servant-of-pamphilus':
+    'Four now. The new one is Porphyrius Mindrinos on 18 August; the others are read in the el-02-16 entry for this name form.',
+  'ματθαιοσ matei-brancoveanu matthew-companion-of-justus matthew-helper-of-athanasia matthew-monk-martyr-1918 matthew-of-gerakari matthew-of-yaransk matthew-the-apostle':
+    'Seven now. The new one is Matthew of Gerakari on 18 August; the others are read in the el-07-21 entry for this name form.',
+  'κωνσταντινοσ constantine-brancoveanu constantine-i-of-constantinople constantine-leichoudes constantine-of-cornwall constantine-of-kappoua constantine-of-murom constantine-of-novotorzhanin constantine-of-strathclyde constantine-of-the-scots constantine-the-great constantine-the-hagarene cyril-the-philosopher':
+    'Twelve now. The new one is Constantine of Kappoua on 18 August; the others are read in the el-08-09 entry for this name form.',
+  'χριστοφοροσ christopher christopher-20-april christopher-24-april christopher-martyr-5-june christopher-of-adrianople christopher-of-antioch christopher-of-georgia christopher-of-saint-sabbas christopher-of-soumela':
+    'Nine now. The new one is Christopher of Soumela on 18 August, one of the three of that monastery; the others are read in the el-06-04 entry for this name form.',
+  'αγαπιοσ agapius-disciple-of-babylas agapius-disciple-of-passarion agapius-martyr-1-march agapius-metaxas agapius-of-apamea agapius-of-colciu agapius-of-galatista agapius-of-numidia':
+    'Eight now, and two are new on 18 August: Agapius of Galatista and Agapius Metaxas — two entries on one day, so two men. The others are read in the el-05-09 entry for this name form.',
   'μακαριοσ macarius-archbishop-16-august macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-martyr-11-august macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-of-zheltovodsk macarius-the-confessor makarios-of-mount-auxentios':
     'Twenty-four now. The new one is Makarios of Mount Auxentios on 17 August, a day after the Macarius of 16 August — two days, two entries, two men; the others are read in the el-08-16 entry for this name form.',
   'δημητριοσ demetrios-of-samarina demetrius-24-april demetrius-donskoi demetrius-ivanov demetrius-klepinin demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-philadelphia demetrius-of-prilutsk demetrius-of-the-brazen-gate demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':

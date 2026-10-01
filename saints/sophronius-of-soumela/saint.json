@@ -6,6 +6,11 @@
       "form": "Sofronie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 august, «Sfinții Cuvioși Barnaba și Sofronie», with the rank words left off; its life says his name in the world was Sotirihos."
+    },
+    {
+      "form": "Σωφρόνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "hieromonk"
   ],
   "related": [
-    "barnabas-of-soumela"
+    "barnabas-of-soumela",
+    "christopher-of-soumela"
   ],
   "dates": {
     "birth": {
@@ -48,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Αυγούστου — «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος»",
+        "url": "https://www.saint.gr/08/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company — «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος» — with a third father the corpus did not keep, Christopher of Trebizond, the new founder of Soumela, who is a new folder in the same batch and is linked from the life. saint.gr says of all three «Δεν έχουμε σαφή βιογραφικά τους στοιχεία. Μόνο από το «Νέον Λειμωνάριον» μαθαίνουμε ότι απεβίωσαν ειρηνικά κατά το έτος 412 μ.Χ.», that Barnabas was the founder of the monastery of Soumela and Sophronius his nephew, and that both were Athenians by descent. **That 412 contradicts the tenth century this folder already carries from doxologia.ro**; no `dates` object is proposed here, the page's year is recorded in the paragraph as the page's own, and the conflict is left in the reader's report rather than settled in a draft. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name all three fathers and are therefore taken for all three folders, and an Οἶκος besides, which is not a kind the schema holds and is not drafted."
     },
     {
       "church": "serbian",
@@ -59,5 +75,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῶ τῆς Θεόπαιδος χρησμῷ, τοῖς τοῦ βίου ἀποταξάμενοι, καὶ τοῖς ἑκάστοτε αὐτῆς, φωτοφανίαις ξένω ς μυσταγωγούμενοι, ὡς φοίνιξ ἐν αὐλαῖς ταῖς τοῦ Κυρίου ὄντως ἠνθήσατε, Βαρνάβα, Σωφρόνιε καὶ Χριστοφόρε, πρεσβεύσατε Χριστῷ τῷ Θεῷ, Πατέρες ἡμῶν τρισόλβιοι, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ΄, Ταῖς τῶν δακρύων σου ῥοαῖς — the first hymn on the page of «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος». It names all three fathers and is their joint service, so it is taken for all three folders.",
+        "url": "https://www.saint.gr/2280/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "At the word of the Maiden of God you renounced the things of this life, and being strangely initiated by her shinings of light at every turn, you truly flowered like a palm tree in the courts of the Lord: Barnabas, Sophronius and Christopher, thrice-blessed fathers of ours, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Ταῖς τῶν δακρύων σου ῥοαῖς."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὁ Βαρνάβας σήμερον, καὶ ὁ Σωφρόνιος ἅμα, οἱ Χριστοῦ θεράποντες, σὺν τῷ κλεινῷ Χριστοφόρῳ, ἅπαντας συγκαλοῦσιν εύσεβοφρόνως, αἴνεσιν ἀναπέμπεψαι, Θεῷ τῷ ζῶντι, τῷ ἐν θαύμασι τοὺς τοῦτον, ἐν γῇ δοξάσαντας μεγαλύναντι.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον — the second hymn on the page of «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος», printed without an ἦχος. It names all three fathers and is taken for all three folders. The page also prints an Οἶκος, which is not a kind the schema holds and is not drafted.",
+        "url": "https://www.saint.gr/2280/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Barnabas today, and Sophronius with him, the servants of Christ, together with the renowned Christopher, call upon us all to send up praise, in a mind of piety, to the living God, who in wonders has magnified those who glorified him upon earth.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

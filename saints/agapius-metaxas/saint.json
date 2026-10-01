@@ -1,0 +1,63 @@
+{
+  "slug": "agapius-metaxas",
+  "display_name": "Agapius Metaxas",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Όσιοι Αγάπιος και Πορφύριος οι Κολλυβάδες οι ασκητές», with the rank words left off. The page's body gives his surname, «όσιος Αγάπιος Μεταξάς», which the display name keeps because the corpus holds many another Agapius."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Αυγούστου — «Όσιοι Αγάπιος και Πορφύριος οι Κολλυβάδες οι ασκητές»",
+        "url": "https://www.saint.gr/08/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Οσιος Αγαπιος ο Ασκητης (; - 1844)». The entry is a pair and it enumerates both, so it is two folders: this one and Porphyrius Mindrinos, who is in the same batch and linked from the life. The page closes «Και οι δύο κολλυβάδες Όσιοι, Αγάπιος και Πορφύριος, τιμώνται μαζί στις 18 Αυγούστου». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1844,
+      "latest": 1844,
+      "display": "1844",
+      "basis": "attested",
+      "note": "saint.gr: «Το έτος του 1844 μ.Χ. κοιμήθηκε ο όσιος Αγάπιος, ο οποίος αναπαύεται στο Ασκητήριο», and the page's head line «Οσιος Αγαπιος ο Ασκητης (; - 1844)». No year of birth is given."
+    }
+  },
+  "related": [
+    "porphyrius-mindrinos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

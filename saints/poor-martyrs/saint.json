@@ -1,0 +1,54 @@
+{
+  "slug": "poor-martyrs",
+  "display_name": "The Poor Martyrs",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Πένητες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Άγιοι Πένητες Μάρτυρες», with the rank words left off. The page names none of them individually and gives no number; «πένητες» is the only name it has for them."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Αυγούστου — «Άγιοι Πένητες Μάρτυρες»",
+        "url": "https://www.saint.gr/08/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day as the listing. The entry enumerates nobody — no name, no number, no city — so by the standing ruling it is one entry and one folder. The page gives no year: it says only that they were put to death by fire by Licinius, and no year is inferred from that reign. It tells their story through the two stonemasons Florus and Laurus, whose folders the corpus already keeps on this day and who are linked from the life. saint.gr's account here differs from the one the corpus holds from doxologia.ro and days.pravoslavie.ru, which put Florus and Laurus under an eparch Lykon in Illyricum rather than under Licinius; the difference is the sources' and is reported, not reconciled. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "florus-of-illyricum",
+    "laurus-of-illyricum"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

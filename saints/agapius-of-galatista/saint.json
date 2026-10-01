@@ -1,0 +1,67 @@
+{
+  "slug": "agapius-of-galatista",
+  "display_name": "Agapius of Galatista",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "office": "Archimandrite",
+  "names": [
+    {
+      "form": "Αγάπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Άγιος Αγάπιος ο εκ Γαλατίστης o Ιερομάρτυς», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 18ης Αυγούστου — «Άγιος Αγάπιος ο εκ Γαλατίστης o Ιερομάρτυς»",
+        "url": "https://www.saint.gr/08/18/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day as the listing, and its head line reads «Αγιος Αγαπιος ο Εκ Γαλατιστης O Ιερομαρτυς (; - 1752)». He is the archimandrite of the Holy Sepulchre and principal of the Athonias, killed by Janissaries near Therme outside Thessalonica on 18 August 1752. The page is candid that the commemoration is modern: «Η μνήμη του είναι άγνωστη στους συναξαριστές. Τιμάται στις 18 Αυγούστου», his memory is unknown to the synaxarists; the first observance was at Galatista in 1977, his icon was painted in 1997 and his service composed by the hymnographer Charalambes Mpousias. That is a statement about the tradition, not the self-doubt sentence of §10: there is no asterisk on the entry and no «Δεν είναι διασταυρωμένη» sentence on the page. The page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1710,
+      "latest": 1710,
+      "display": "c. 1710",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην κωμόπολη Γαλάτιστα της Χαλκιδικής περί το 1710 μ.Χ.» The «περί» is the page's own."
+    },
+    "death": {
+      "earliest": 1752,
+      "latest": 1752,
+      "display": "1752",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 18 Αυγούστου 1752 μ.Χ. ο ενάρετος και σοφός Αρχιμανδρίτης τού Παναγίου Τάφου … φονεύεται μαρτυρικώς έξω από την Θεσσαλονίκη, πλησίον της Θέρμης, από κακοποιούς Γενιτσάρους»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

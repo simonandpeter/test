@@ -1,56 +1,27 @@
 {
-  "slug": "barnabas-of-soumela",
-  "display_name": "Barnabas of Soumela",
-  "names": [
-    {
-      "form": "Barnaba",
-      "lang": "ro",
-      "note": "Read out of doxologia.ro's line for 18 august, «Sfinții Cuvioși Barnaba și Sofronie», with the rank words left off; its life prints the form «Barnabas» and says his name in the world was Vasile."
-    },
-    {
-      "form": "Βαρνάβας",
-      "lang": "el",
-      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος», with the rank word left off."
-    }
-  ],
+  "slug": "christopher-of-soumela",
+  "display_name": "Christopher of Soumela",
   "sex": "male",
   "types": [
-    "venerable",
-    "hieromonk"
+    "venerable"
   ],
-  "related": [
-    "sophronius-of-soumela",
-    "christopher-of-soumela"
-  ],
-  "dates": {
-    "birth": {
-      "earliest": 901,
-      "latest": 1000,
-      "display": "10th century",
-      "basis": "traditional",
-      "note": "doxologia.ro: «s-au născut la Athena în secolul al 10-lea»; the page's own title for the life reads «sec. X-XI». No year of death is given."
+  "names": [
+    {
+      "form": "Χριστόφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 18 Αυγούστου, «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος», with the rank word left off. The page's own head line for him reads «Οσιος Χριστοφορος (; - 412)»."
     }
-  },
+  ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
     },
     {
       "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 18,
-        "month": 8,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Calendarul zilei, Doxologia (doxologia.ro), 18 august — «Sfinții Cuvioși Barnaba și Sofronie»",
-        "url": "https://doxologia.ro/18-august",
-        "year": 2026
-      },
-      "note": "The life says the two fell asleep on the same day, «pe 18 August, care este și ziua lor de pomenire»."
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
     },
     {
       "church": "greek",
@@ -65,17 +36,27 @@
         "url": "https://www.saint.gr/08/18/index.aspx",
         "year": 2026
       },
-      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company — «Όσιοι Βαρνάβας, Σωφρόνιος και Χριστόφορος» — with a third father the corpus did not keep, Christopher of Trebizond, the new founder of Soumela, who is a new folder in the same batch and is linked from the life. saint.gr says of all three «Δεν έχουμε σαφή βιογραφικά τους στοιχεία. Μόνο από το «Νέον Λειμωνάριον» μαθαίνουμε ότι απεβίωσαν ειρηνικά κατά το έτος 412 μ.Χ.», that Barnabas was the founder of the monastery of Soumela and Sophronius his nephew, and that both were Athenians by descent. **That 412 contradicts the tenth century this folder already carries from doxologia.ro**; no `dates` object is proposed here, the page's year is recorded in the paragraph as the page's own, and the conflict is left in the reader's report rather than settled in a draft. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name all three fathers and are therefore taken for all three folders, and an Οἶκος besides, which is not a kind the schema holds and is not drafted."
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 18 Αυγούστου εκάστου έτους», the same day as the listing. The corpus already keeps Barnabas and Sophronius of Soumela from the Romanian pass; Christopher it did not, which is why this is a new folder and not a third upgrade. saint.gr says of all three «Δεν έχουμε σαφή βιογραφικά τους στοιχεία. Μόνο από το «Νέον Λειμωνάριον» μαθαίνουμε ότι απεβίωσαν ειρηνικά κατά το έτος 412 μ.Χ.» and that Christopher came from Trebizond and was the new founder of the monastery of Soumela after its desolation. The 412 is the page's, on the authority it names, and it is in tension with the tenth century that doxologia.ro gives Barnabas and Sophronius and that their folders already carry; the reader records the page's year here and leaves the conflict in the report rather than reconciling it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name all three fathers, and an Οἶκος besides, which is not a kind the schema holds and is not drafted."
     },
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
+  "dates": {
+    "death": {
+      "earliest": 412,
+      "latest": 412,
+      "display": "412",
+      "basis": "traditional",
+      "note": "saint.gr: «Μόνο από το «Νέον Λειμωνάριον» μαθαίνουμε ότι απεβίωσαν ειρηνικά κατά το έτος 412 μ.Χ.», and the page's own head line «Οσιος Χριστοφορος (; - 412)». No year of birth is given."
+    }
   },
+  "related": [
+    "barnabas-of-soumela",
+    "sophronius-of-soumela"
+  ],
   "hymns": [
     {
       "church": "greek",
@@ -109,5 +90,8 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }
