@@ -6,6 +6,11 @@
       "form": "Nicanor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Cuvios Nicanor», with the rank words left off. The page gives him no epithet; \"of Zavorda\" is the English form chosen here, from the monastery his life says he founded."
+    },
+    {
+      "form": "Νικάνωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Νικάνωρ ο θαυματουργός», with the rank words and the epithets left off. The page glosses the name as the victor, and gives his baptismal name as Νικόλαος."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026). He is a Greek saint of Thessalonica and Grevena and a Greek commemoration is to be expected; it was not looked for."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Νικάνωρ ο θαυματουργός»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries. It is the same man: born at Thessalonica in 1491 as Νικόλαος, son of Ιωάννης and Μαρία of the quarter of Saint Menas, monk under the name Νικάνωρ, ordained deacon and presbyter by the metropolitan of Thessalonica, sent by a voice in prayer to the mountain of Καλλίστρατον, founder after sixteen years there of the monastery of the Transfiguration of the Saviour, called Zavorda, and reposed on 7 Αυγούστου 1549 — which is the day the listing keeps. Its head line reads «Οσιος Νικανωρ ο Θαυματουργος (1491 - 1549)». The folder's `dates` are left as the Romanian pass set them and the Greek figures are recorded in the life; the page says his skull and part of his relics are in the monastery named after him, and no `locations` object is proposed from that. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there. The page prints one apolytikion and no kontakion, and it names him, so it is taken."
     },
     {
       "church": "serbian",
@@ -66,5 +81,24 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Νίκης εἴληφας, ἄφθαρτον στέφος, πάτερ ὅσιε, παρὰ τοῦ Κτίστου, τῶν σῶν ἀγώνων ἀντάξιον ἔπαθλον· τὴν γὰρ πατρίδα λιπὼν τὴν ἐπίγειον, τῆς οὐρανίου οἰκήτωρ γεγένησαι· ὅθεν πάντες σὲ πίστει καὶ πόθῳ γεραίρομεν· χαίροις Νικάνορ, Ὁσίων ὁμόσκηνε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the one hymn on the page of «Όσιος Νικάνωρ ο θαυματουργός», and it names him, «χαίροις Νικάνορ»",
+        "url": "https://www.saint.gr/758/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You have received the incorruptible crown of victory, venerable father, from the Creator, a prize worthy of your contests; for leaving your earthly homeland you became a dweller of the heavenly one. Therefore we all honour you with faith and longing: rejoice, Nicanor, sharer of the tent of the venerable ones.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

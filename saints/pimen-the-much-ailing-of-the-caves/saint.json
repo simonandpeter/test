@@ -1,0 +1,60 @@
+{
+  "slug": "pimen-the-much-ailing-of-the-caves",
+  "display_name": "Pimen the Much-Ailing of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ποίμην",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ποίμην ο εν τω σπηλαίω ο Πολύπαθης», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Ποίμην ο εν τω σπηλαίω ο Πολύπαθης»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Ποιμην ο Εν Τω Σπηλαιω ο Πολυπαθης (; - 1110)», and the whole of its prose is one sentence: «Δεν έχουμε λεπτομέρειες για τον Βίο του Οσίου παρά μόνο ότι ήταν Ρώσος μοναχός που κοιμήθηκε το 1110 μ.Χ.» — no details, except that he was a Russian monk who fell asleep in 1110. He is a separate man from `pimen-the-faster-of-the-caves`, whom the same listing carries as its own entry on this day and whom saint.gr dates to the fourteenth century: that one it calls ο Νηστευτής, the faster, and this one ο εν τω σπηλαίω ο Πολύπαθης, the one in the cave, the much-suffering. Nothing of the other folder is touched by this one. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1110,
+      "latest": 1110,
+      "display": "1110",
+      "basis": "traditional",
+      "note": "saint.gr: «ήταν Ρώσος μοναχός που κοιμήθηκε το 1110 μ.Χ.», and its head line «(; - 1110)». The page gives no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

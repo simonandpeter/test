@@ -1,0 +1,67 @@
+{
+  "slug": "joseph-gerontogiannis",
+  "display_name": "Joseph Gerontogiannis",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιωσήφ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ιωσήφ ο Γεροντογιάννης», with the rank words and the epithets left off. The page glosses the name, a Hebrew word, as the one whom God made perfect, and gives his baptismal name as Ιωάννης Βιτσέντζος, called Γεροντογιάννης."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Ιωσήφ ο Γεροντογιάννης»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Ιωσηφ ο Γεροντογιαννης (1799 - 1874)», and the page dates both ends in its prose: born in 1799 at the half-ruined small monastery of the Honourable Forerunner of Kapsa, and reposed on 6 Αυγούστου 1874 after communicating, buried on 9 Αυγούστου in the church of the Honourable Forerunner. **The day the listing keeps is therefore not the day of his repose**: saint.gr puts the feast on 7 Αυγούστου, its own life page agrees («Εορτάζει στις 7 Αυγούστου»), and the death it records is 6 August. One row per church is the schema, so the row is the day page read, and the one-day difference is this note. The page also records a separate commemoration which the schema cannot hold and which is not drafted: the translation of his relics on 7 Μαΐου 1982, «η μνήμη της γιορτάζεται την Τρίτη προς Τετάρτη της Διακαινησίμου» — kept on the Tuesday into the Wednesday of Renewal Week, which is reckoned from Pascha. A portion of his relic is at the monastery of Dionysiou on the Holy Mountain; no `locations` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints one apolytikion, which names him, and no kontakion; it names besides a service by the monk Gerasimos Mikragiannanitis, which is not a hymn text."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1799,
+      "latest": 1799,
+      "display": "1799",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Ιωάννης Βιτσέντζος ή Γεροντογιάννης γεννήθηκε στο ημιερειπωμένο Μονύδριο του Τιμίου Προδρόμου Καψά το 1799 μ.Χ.», and its head line «(1799 - 1874)»."
+    },
+    "death": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "saint.gr: «Στις 6 Αυγούστου του έτους 1874 μ.Χ., αφού κοινώνησε… παρέδωσε την μεταμορφωμένη ψυχή του στον μεταμορφωθέντα Κύριο», and that he was buried on 9 August 1874."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

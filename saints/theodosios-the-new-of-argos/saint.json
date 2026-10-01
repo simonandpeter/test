@@ -1,0 +1,63 @@
+{
+  "slug": "theodosios-the-new-of-argos",
+  "display_name": "Theodosios the New of Argos",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Θεοδόσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Θεοδόσιος ο νέος, ο ιαματικός», with the rank words and the epithets left off. The page glosses the name as the God-given, the divine gift."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Θεοδόσιος ο νέος, ο ιαματικός»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Θεοδοσιος ο Νεος, ο Ιαματικος (862 - ;)», so there is a year of birth and none of death. The page says his skull and part of his relics are in the monastery named after him at Argos, and that his tomb became an unfailing spring of healings; no `locations` object is proposed from Athens, Argos and Panariti together. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints an apolytikion and a kontakion, both of which name him, and both are taken; it also prints a μεγαλυνάριον, which is not a kind this schema holds and is not drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 862,
+      "latest": 862,
+      "display": "862",
+      "basis": "traditional",
+      "note": "saint.gr: «γεννήθηκε στην Αθήνα το 862 μ.Χ. από ευσεβείς χριστιανούς», and its head line «(862 - ;)». The page gives no year of death, only that he reached deep old age."
+    }
+  },
+  "related": [
+    "peter-of-argos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

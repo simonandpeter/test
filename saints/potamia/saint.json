@@ -1,0 +1,51 @@
+{
+  "slug": "potamia",
+  "display_name": "Potamia",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ποταμία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσια Ποταμία η Θαυματουργή», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσια Ποταμία η Θαυματουργή»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the entry is one sentence, «Η Όσια Ποταμία η Θαυματουργή μαρτύρησε δια ξίφους», with a couplet above it that plays on her name: slain by the sword for Christ, Potamia pours out rivers of wonders. There is no year, no place and no judge, so there is no `dates` object and no `locations` object. She is not the corpus's `potamiaena`, whom the sources keep elsewhere. The listing calls her Όσια and the sentence says she was martyred, so `types` carries both readings. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

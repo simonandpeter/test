@@ -1,0 +1,51 @@
+{
+  "slug": "mikallos-of-akanthou",
+  "display_name": "Mikallos of Akanthou",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Μίκαλλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Μίκαλλος», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Άγιος Μίκαλλος»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The page sets him among the three hundred saints who came to Cyprus about the middle of the twelfth century after the Second Crusade, which it dates 1147 to 1149, and says of his childhood, his parents and his own homeland that there is unfortunately no information at all; what it gives besides is openly inference, «Εκείνο που συμπεραίνουμε γι' αυτόν είναι…», and inference is not recorded here as fact. There is therefore no `dates` object: the twelfth century is the company's date and the crusade's, and the page gives this man no year of his own. No `locations` object is proposed either, though it names Germany, the Jordan, Paphos and Akanthou in turn. The page prints two apolytikia, the second headed «Έτερον Ἀπολυτίκιον» and credited to Χαραλάμπους Μ. Μπούσια, and both are taken; it also prints a μεγαλυνάριον, which is not a kind this schema holds and is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

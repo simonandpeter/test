@@ -6,6 +6,11 @@
       "form": "Dometie Persul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Cuvios Mucenic Dometie Persul», with the rank words left off."
+    },
+    {
+      "form": "Δομέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Δομέτιος ο Πέρσης και οι δύο μαθητές του», with the rank words and the epithets left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Άγιος Δομέτιος ο Πέρσης και οι δύο μαθητές του»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries. It is the same man: a Persian of the years of Constantine the Great, taught the faith by a Christian named Αβαρος, who fled his household, shut himself up in a monastery at Nisibis, went on to Theodosioupolis and the monastery of Sergius and Bacchus, refused the presbyterate the superior Ουρβέλ wished to give him, and was stoned with two disciples in a cave by order of Julian the Apostate. The two disciples are named by no word of the page — «δύο μαθητές του» and nothing further — so they are an unenumerated pair and take no folder of their own. The page gives no year, so the folder's `dates` are untouched; it places the man by three houses rather than one, so no `locations` object is proposed. He is a separate man from `dometios-of-philotheou`, the sign-bearer, whom this same listing carries as its own entry on this same day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there. The page prints one apolytikion and no kontakion, and that apolytikion names him and his pair of disciples, «σὺν φοιτητῶν σου τὴ δυάδι», so it is taken here and not split."
     },
     {
       "church": "serbian",
@@ -59,6 +74,23 @@
       },
       "english": {
         "text": "Having first schooled yourself by the desert life on the mountain, you destroyed the bodiless camps of the enemy with the weapon of the Cross, all-blessed one; and you armed yourself manfully again for the contest, slaying Copronymus with the sword of faith. For this you were crowned by God, venerable martyr Dometius, ever-glorified.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Τὸν τῆς χάριτος λόγον εἰσποιησάμενος, πυρσολατρῶν τᾶς τερθρείας ἀπεποιήσω σοφῶς, τῷ Χριστῷ ἀνατεθεῖς Πάτερ Δομέτιε, καὶ ἐν ἀθλήσει ἀκλινής, ὡς ὁσίων μιμητής, ἐδείχθης Ὁσιομάρτυς, διὸ σὲ ὕμνοις τιμῶμεν, σὺν φοιτητῶν σου τὴ δυάδι σοφέ.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the one hymn on the page of «Άγιος Δομέτιος ο Πέρσης και οι δύο μαθητές του», and it names him and the pair of disciples with him",
+        "url": "https://www.saint.gr/768/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having made the word of grace your own, you wisely put away the mummery of the fire-worshippers and were offered up to Christ, father Dometios; and unbending in the contest, as an imitator of the venerable ones, you were shown a venerable martyr. Therefore we honour you with hymns, wise one, together with the pair of your disciples.",
         "rendered": "site"
       }
     }

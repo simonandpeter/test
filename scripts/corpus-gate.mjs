@@ -115,6 +115,18 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θεοδοσιοσ theodosios-the-new-of-argos theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
+    'Twelve now. The new one is Theodosios the New of Argos on 7 August; the others are read in the el-07-29 entry for this name form.',
+  'ποιμην pimen-the-faster-of-the-caves pimen-the-much-ailing-of-the-caves poimen-of-georgia poimen-of-novgorod':
+    'Four now, and two of them stand on 7 August in the Greek reckoning: Pimen the Faster of the Caves, whom the Russian and Serbian keep on 27 August and whose Greek row this batch adds, and Pimen the Much-Ailing, new here. The others are Poimen of Georgia on 16 March and Poimen of Novgorod on 10 February.',
+  'ιωσηφ joseph-archbishop-of-thessalonica joseph-gerontogiannis joseph-of-alaverdi joseph-of-aleppo joseph-of-arimathea joseph-of-astrakhan joseph-of-bisericani joseph-of-kantara joseph-of-lythrodontas joseph-of-nea-moni joseph-of-optina joseph-of-thessalonica-1821 joseph-the-anchorite joseph-the-hymnographer':
+    'Fourteen now. The new one is Joseph Gerontogiannis on 7 August; the others are read in the el-06-17 entry for this name form.',
+  'δομετιοσ dometios-of-philotheou dometius-8-march dometius-brother-of-maximus dometius-disciple-of-dionysius dometius-of-phrygia dometius-of-zographou dometius-the-persian':
+    'Seven now, and two of them stand on 7 August: Dometius the Persian, whose day it is and whom this batch upgraded, and Dometios of Philotheou, new here. The others are read in the el-03-23 entry for this name form.',
+  'αστεριοσ asterios-7-august asterius-companion-of-thalaleus':
+    'Two men: Asterius the companion of Thalaleus on 20 May and the Asterios of 7 August.',
+  'αγαθων agathon-confessor-of-thessalonica agathon-of-aleppo agathon-of-alexandria agathon-of-phthiotis agathon-of-rome agathon-of-the-desert agathon-of-the-kiev-caves':
+    'Seven now. The new one is Agathon of Phthiotis on 7 August; the others are read in the el-04-15 entry for this name form.',
   'ευθυμιοσ euthymius-4-january euthymius-kereselidze euthymius-of-constantinople euthymius-of-dimitsana euthymius-of-jerusalem euthymius-of-karelia euthymius-of-madytos euthymius-of-novgorod euthymius-of-suzdal euthymius-of-syanzhema euthymius-of-tarnovo euthymius-of-zographou euthymius-the-iberian euthymius-the-man-of-god euthymius-the-wonderworker':
     'Fifteen now. The new one is Euthymius of Constantinople on 5 August; the others are read in the el-01-04 entry for this name form.',
   'ευγενιοσ eugene-of-cherson eugene-of-trebizond eugene-son-of-paul-and-tatta eugenios-of-aetolia eugenius-21-july eugenius-father-of-mary-called-marinos eugenius-of-rome eugenius-the-confessor':

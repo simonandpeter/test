@@ -1,0 +1,9 @@
+# Agathon of Phthiotis
+
+saint.gr says that for the founder of the holy monastery of Agathon — honoured both to the Panagia, because of the wonderworking icon of the Mother of God there, and to the Transfiguration of the Saviour — many biographical details are missing. After a neighbouring monastery subsided, and after the venerable one found the icon of the Mother of God, the present monastery was built by him, and it took from his disciples the name of its founder and first abbot.
+
+By more recent research, the page goes on, the life of the venerable Agathon is connected with the life of Athanasios the Meteorite, of Ypati, whom Agathon followed to the Holy Mountain; so Agathon is numbered and honoured together with the venerable fathers of Athos, and the time of his flourishing is set at the fourteenth century. It is worth noting, the page adds, that both on the Holy Mountain and in the first great monastery of the Meteora, which Athanasios founded, the Mother of God and the Transfiguration of the Saviour are the two dedications.
+
+In 1959, after excavations on the south side of the monastery's handsome Katholikon, the tomb of the venerable one was found, and his grace-flowing honourable relics. The oldest icon of him is a wall painting of the sixteenth century in the chapel of the monastery of Saint John the Forerunner, and an unpublished sung service to him, composed on the Holy Mountain by the late monk Gerasimos Mikragiannanitis, hymnographer of the Great Church of Christ, is kept in his monastery. His memory, the page ends, is honoured on 7 August; and the venerable Agathon is a central figure of the monasticism of Phthiotis, whose famous monastery gave much to the struggles of the nation and is today a place of pilgrimage to the Mother of God for the whole of Roumeli.
+
+*After saint.gr's calendar for 7 Αυγούστου — [the day](https://www.saint.gr/08/07/index.aspx) and [the life](https://www.saint.gr/4194/saint.aspx); read 1 October 2026.*

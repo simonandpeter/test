@@ -1,0 +1,52 @@
+{
+  "slug": "or-of-nitria",
+  "display_name": "Or of Nitria",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Ωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ωρ», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Ωρ»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the entry is one paragraph and it gives no year, so there is no `dates` object; it does give his age at repose, ninety. He is not the corpus's `or-the-martyr-22-august`, a martyr whom the Romanian calendar keeps on 22 August; this is the ascetic of the mountain of Nitria who founded monasteries and reposed in peace. No `locations` object is proposed from the name of a mountain. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

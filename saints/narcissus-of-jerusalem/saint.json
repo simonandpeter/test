@@ -6,6 +6,11 @@
       "form": "Narcis",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 august, «Sfântul Sfinţit Mucenic Narcis, Patriarhul Ierusalimului», with the rank words and the office left off."
+    },
+    {
+      "form": "Νάρκισσος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Νάρκισσος ο Ιερομάρτυρας Πατριάρχης Ιεροσολύμων», with the rank words and the epithets left off. The page glosses the name from the flower and retells the myth beside it."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Άγιος Νάρκισσος ο Ιερομάρτυρας Πατριάρχης Ιεροσολύμων»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries. It is the same man, and the page is fuller than the Romanian line on two points. Its head line reads «Αγιος Ναρκισσος ο Ιερομαρτυρας Πατριαρχης Ιεροσολυμων (95 - 211)», and its last sentence says he came up to the throne twice, held the patriarchate twenty-six years in all, and died peacefully at a hundred and sixteen — so the page makes his end a repose while both the listing and the folder's `types` call him hieromartyr, and that disagreement is the page's own and is left as it stands, with the question in the report. The folder's `dates` are untouched: the head line's 95 and 211 are the page's figures, not a sentence of its text, and an interval of a hundred and sixteen years is the writer's to weigh rather than a reader's to install. The page gives him as the thirtieth, or by others the thirty-first, bishop of Jerusalem from the first, who was James the brother of God. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

@@ -9,6 +9,11 @@
     {
       "form": "Пимен посник",
       "lang": "sr"
+    },
+    {
+      "form": "Ποίμην",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ποίμην ο Νηστευτής», with the rank words and the epithets left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 27 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Ποίμην ο Νηστευτής»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», which is **not** the day the folder's Russian and Serbian rows carry: those keep him on 27 August in the julian calendar, out of days.pravoslavie.ru and the Ohrid Prologue. The Greek row was `undocumented`, so this is the row it has been waiting for and nothing of the other two is touched; the difference of days between the Greek calendar and the Slavic ones is recorded here and in the report. The whole of the page's prose is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Οσίου Ποίμην παρά μόνο ότι ήταν Ρώσος μοναχός που πέθανε τον 14ο αιώνα μ.Χ.» — no details, except that he was a Russian monk who died in the fourteenth century. No `dates` are proposed from that. He is a separate man from `pimen-the-much-ailing-of-the-caves`, whom this same listing carries as its own entry on this same day and dates to 1110. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

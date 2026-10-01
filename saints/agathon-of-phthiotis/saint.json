@@ -1,0 +1,61 @@
+{
+  "slug": "agathon-of-phthiotis",
+  "display_name": "Agathon of Phthiotis",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Αγάθων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Αγάθων», with the rank words and the epithets left off. The page glosses the name from ἀγαθός as the one who is very good in soul and in character."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Αγάθων»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. and the page says so again in its own words at the end, «Η μνήμη του τιμάται στις 7 Αυγούστου». It says plainly that much of his biography is missing, and that what date he has is a conclusion of research and not a record: «Κατά νεώτερες έρευνες ο βίος του οσίου Αγάθωνος σχετίζεται με τον βίο του εξ Υπάτης οσίου Αθανασίου του Μετεωρίτη (βλέπε 20 Απριλίου), τον οποίο ο Αγάθων ακολούθησε στο Άγιο Όρος… και ο χρόνος της ακμής του ορίζεται ο 14ος αιώνας μ.Χ.» — by more recent research his life is connected with that of Athanasios the Meteorite, whom he followed to the Holy Mountain, and the time of his flourishing is set at the fourteenth century. That is recorded as a floruit on the page's own basis and nothing is inferred beyond it. He is none of the Agathon folders the corpus already keeps: `agathon-of-the-desert` carries a venerated Greek row on 8 Ιανουαρίου and `agathon-of-the-kiev-caves` on 20 Φεβρουαρίου, and neither is touched. The page says his skull is in the monastery named after him, and that his tomb and relics were found in 1959 under the Katholikon's south side; no `locations` object is proposed. The page prints no apolytikion and no kontakion — what it names instead is an unpublished Ἀσματική Ἀκολουθία by the monk Gerasimos Mikragiannanitis, held in his monastery, which is a service and not a hymn text, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ο χρόνος της ακμής του ορίζεται ο 14ος αιώνας μ.Χ.», which the page reaches by connecting his life with that of Athanasios the Meteorite, whom he followed to the Holy Mountain. The page gives no year of birth and no year of death, and says outright that much of his biography is missing."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

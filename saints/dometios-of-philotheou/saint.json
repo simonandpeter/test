@@ -1,0 +1,50 @@
+{
+  "slug": "dometios-of-philotheou",
+  "display_name": "Dometios of Philotheou",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Δομέτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Δομέτιος ο σημειοφόρος», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Όσιος Δομέτιος ο σημειοφόρος»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The entry is short and its one anchor is another man's biographer: Dometios kept the ascetic life within the bounds of the monastery of Philotheou on the Holy Mountain and was perfected in peace, and with him lived the venerable martyr Damian the New (+1568), kept on 14 Φεβρουαρίου, whose biographer writes that Damian «κατέλιπε την μονήν και προς τινα των κατά μόνας ασκουμένων σημειοφόρον άνδρα, ω Δομέτιος τούνομα, αφίκετο, μεθ' ου χρόνους τρεις μικρού δέοντας… διετέλεσε» — left the monastery and came to a sign-bearing man living alone, Dometios by name, with whom he spent nearly three years. The page gives Dometios himself no year, so there is no `dates` object; the 1568 belongs to Damian. The corpus has no folder for that Damian, so he is named in the life without a link. He is none of the Dometios folders the corpus already keeps, and in particular not `dometius-the-persian`, who stands on this same Greek day as a separate entry of this same listing. The page's own epithet, σημειοφόρος, the sign-bearer, is not a type this schema holds and is recorded in the life; the display name carries his house instead. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

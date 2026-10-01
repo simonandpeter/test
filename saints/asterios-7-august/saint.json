@@ -1,0 +1,51 @@
+{
+  "slug": "asterios-7-august",
+  "display_name": "Asterios (7 August)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Αστέριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Αστέριος ο οσιομάρτυρας και θαυματουργός», with the rank words and the epithets left off. The page glosses the name from ἀστήρ as the one who shines like a star."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Άγιος Αστέριος ο οσιομάρτυρας και θαυματουργός»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The page says plainly that it does not know when or where he was martyred, «Πότε και που μαρτύρησε δεν αναφέρουν οι Συναξαρισταί», so there is no `dates` object and no `locations` object. It also records two different readings of what he was, and both are kept here: in most of the codices he is written as «μάρτυς και συγκλητικός, δια ξίφους τελειωθείς», a martyr and a senator, finished by the sword, while in the Synaxaristes of Saint Nikodemos he is «Oσιομάρτυς και θαυματουργός», venerable martyr and wonderworker. `types` follows the listing, which follows Nikodemos; the senator of the codices is recorded in the life and no `office` is written from it, because the two readings are not one man's résumé. The display name carries the day rather than an epithet, because the page gives him nothing to be distinguished by. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

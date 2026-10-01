@@ -8,4 +8,12 @@ At only twenty-seven he set out with [Dionysius of Olympus](/saints/dionysius-of
 
 Praying one night he heard the voice again, telling him to go to the summit and find an icon of the Saviour hidden there since the days of the iconoclasts, and to build a monastery on that place. He found the icon, and built there a church and a monastery dedicated to the Transfiguration of the Lord, known today as the monastery of Zavorda. He died on 7 August 1549, at fifty-eight, and his relics are kept in the chapel of Saint John the Baptist within his monastery.
 
-*After doxologia.ro's calendar for 7 august — [the day](https://doxologia.ro/7-august) and [the life](https://doxologia.ro/viata-sfantului-cuvios-nicanor); read 24 September 2026.*
+The Greek calendar keeps him on the same day, 7 August, which it makes the day of his repose, and gives his life from the beginning. He was born at Thessalonica in 1491 to pious and well-off parents, John and Maria, of the quarter of Saint Menas, who had been barren and were given him after prayer in the church of Saint Menas; his baptismal name was Nicholas.
+
+His father died while he was young, and when his mother, not knowing his longing, wished to marry him to a virtuous girl, he kept putting off his own desire rather than grieve her. After her death he shared out the family property among the poor and the orphans, refused the offices his parents' standing would have opened to him, and became a monk under the name Nicanor.
+
+The metropolitan of Thessalonica, hearing his fame, ordained him deacon and presbyter meaning to make him his successor. But in one of his night prayers he heard a voice from heaven telling him to go out from his land and his kindred to the mountain of Kallistratos and to struggle well there. So at about twenty-seven he left Thessalonica, teaching the despairing Christians in the villages on his road to keep their faith; and reaching that quiet mountain he knew inwardly that this was to be his wrestling ground.
+
+Sixteen whole years of hard labour followed, and then he founded, by a revelation of Christ Himself and after finding an icon of the Saviour hidden since the days of the iconoclasts, the monastery of the Transfiguration of the Saviour, or Zavorda. His hermitage survives to this day. He foreknew his death, called monks and laymen about him, blessed and counselled them, and gave up his spirit on 7 August 1549.
+
+*After doxologia.ro's calendar for 7 august — [the day](https://doxologia.ro/7-august) and [the life](https://doxologia.ro/viata-sfantului-cuvios-nicanor); read 24 September 2026; and saint.gr's calendar for 7 Αυγούστου — [the day](https://www.saint.gr/08/07/index.aspx) and [the life](https://www.saint.gr/758/saint.aspx), read 1 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Teodora de la Sihla",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 august, «Sfânta Cuvioasă Teodora de la Sihla», with the rank words left off."
+    },
+    {
+      "form": "Θεοδώρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Οσία Θεοδώρα της Σύχλας», with the rank words and the epithets left off. The page glosses the name as the gift of God, and records the inscription her relics carry at Kyiv, «Η αγία Θεοδώρα των Καρπαθίων»."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Οσία Θεοδώρα της Σύχλας»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries. It is the same woman, and saint.gr tells her Romanian life at length and in Greek: born at the village of Βινατόρι in the district of Νεάμτς in the first half of the seventeenth century, daughter of Στέφανος Γιόλντεα, guard of the fortress of Neamț; tonsured at the skete of Βαρζαρέστ after her sister Margarita's death and her childless marriage to Ελευθέριος, who went to the skete of Μάρε Ποϊάνα; a hesychast in the mountains of Buzău, then of Sihla for about thirty years under the spiritual fathers Βαρσανούφιος and Παύλος. The page adds one thing the folder will want: «Ιερά Λείψανα: Τα Λείψανα της Αγίας βρίσκονται στη Λαύρα των Σπηλαίων του Κιέβου», and in its text that between 1828 and 1834 they were carried to Kyiv and laid in the catacombs of the Pechersk monastery under the inscription «Η αγία Θεοδώρα των Καρπαθίων», the holy Theodora of the Carpathians. The page gives her no year of birth or of death, only the century and the window 1670 to 1675 for her spiritual mother's repose, so the folder's `dates` are untouched. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

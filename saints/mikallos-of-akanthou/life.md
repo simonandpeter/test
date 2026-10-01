@@ -1,0 +1,15 @@
+# Mikallos of Akanthou
+
+saint.gr says Mikallos is one of the three hundred saints who came to Cyprus about the middle of the twelfth century, after the Second Crusade of 1147 to 1149. Of his childhood, his parents and his own homeland, the page says, there is unfortunately no information whatever. What it offers instead it marks as its own inference: that as a young man he was forced to go abroad for a better life, that he went to Germany and worked there as a labourer with other Greeks, and that while he was there he heard one day a shattering sermon on the freeing of the Holy Places from the Mohammedans.
+
+In a short time, the page goes on, enough men gathered to make a great host, which set out one morning and broke up in what is now Yugoslavia. Among its various bodies of troops were three hundred Greeks under a certain Auxentios, the saint of that name. When the host dissolved, the Greeks gathered, and after an ardent speech from their leader they resolved to make for the parts about the Jordan and to live there an ascetic life, wholly given to God.
+
+The proposal was received with enthusiasm. They prayed, went up first and venerated together at Jerusalem, and then went on into the deserts of the Jordan, to fasting, prayer, vigil, the study of Scripture and a practical love towards all who had need of them.
+
+The enemies of the faith of Christ watched their progress with an envious eye and began to harass them, and to escape it they gathered one day on the shore meaning to leave that place. There they found a ship, went aboard and came to Cyprus, which was then renowned for its godliness. The ship put in at Paphos — and one tradition, the page adds, says that it was broken on the rocks there in a heavy storm, and that the men were all saved on its wreckage and came out onto dry land. From there they scattered into various parts of the island and each lived the blessed life in his own way.
+
+So did Mikallos. In the parts about Akanthou he found two caves, which stand there still, and began his life of virtue. His wonderworking power, the page says, continued: those who went with faith to his little church beside the caves, up to the barbarian invasion of 1974, and washed with its holy water, received healing of their sickness and comfort in their trial, and his grace was spoken of especially for the cure of malaria and of leprosy.
+
+Mothers nursing children, when they had no milk, would go to him in faith, suck at the stalactites in the caves and call on his help, and received it richly. The old people say that an unspeakable fragrance poured out of the two caves until lately, reaching the fields the farmers of Akanthou worked; and beside the caves there was and still is a flourishing myrtle, the myrtle of the venerable Mikallos, to which rich wonderworking properties were ascribed.
+
+*After saint.gr's calendar for 7 Αυγούστου — [the day](https://www.saint.gr/08/07/index.aspx) and [the life](https://www.saint.gr/750/saint.aspx); read 1 October 2026.*

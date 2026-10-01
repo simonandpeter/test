@@ -1,0 +1,50 @@
+{
+  "slug": "vartan-of-armenia",
+  "display_name": "Vartan of Armenia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βάρταν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Βάρταν ο εξ Αρμενίας μάρτυρας», with the rank words and the epithets left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Αυγούστου — «Άγιος Βάρταν ο εξ Αρμενίας μάρτυρας»",
+        "url": "https://www.saint.gr/08/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the entry is one sentence, and it is a refusal to say anything: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — we have no details of the saint's life. The rank word martyr and the country Armenia come from the listing's own line and are all the entry carries; there is no year, so there is no `dates` object, and no `locations` object is proposed from the name of a country. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, which was grepped for there and not on the listing. The page prints no apolytikion and no kontakion, so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
