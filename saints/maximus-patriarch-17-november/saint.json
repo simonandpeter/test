@@ -1,0 +1,55 @@
+{
+  "slug": "maximus-patriarch-17-november",
+  "display_name": "Maximus (17 November)",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "office": "Patriarch of Constantinople",
+  "names": [
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Άγιοι Γεννάδιος και Μάξιμος Πατριάρχες Κωνσταντινούπολης», with the rank words left off. The line keeps him with Gennadius; the bare personal name is taken out of it and the see left to `office`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Άγιοι Γεννάδιος και Μάξιμος Πατριάρχες Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. **The page cannot say which patriarch Maximus this is, and that is the whole of the entry's difficulty**: «Τώρα ως προς τον Πατριάρχη Μάξιμο, δεν είναι επαρκώς καθορισμένο ποιος από τους Πατριάρχες Κωνσταντινούπολης, που φέρουν το όνομα αυτό είναι ο Άγιος. Κατά πάσα πιθανότητα όμως, πρόκειται για τον Μάξιμο Γ' (1476 - 1482 μ.Χ.)» — it is not sufficiently determined which of the patriarchs of that name is the saint, though in all probability it is Maximus III, of 1476 to 1482, who came from the Peloponnese, worked in many ways for the betterment of manners, and taught the divine word to the people tirelessly every Sunday. A folder is proposed because the calendar names him in an enumerated line and the corpus holds the precedent of `damascene-13-november`, a folder for a man his own calendar left unidentified; the slug and the display name carry the day for the same reason. **No `dates`**: the 1476–1482 are the years of a patriarchate the page offers as a probability and not as this saint's own, and no year is recorded on a hedge. No `locations` and no hymn: the page's one hymn names Gennadius alone and is not copied here. **This is the day's question for the writer.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "gennadius-patriarch-of-constantinople"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

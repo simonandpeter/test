@@ -1,0 +1,50 @@
+{
+  "slug": "sak-the-persian",
+  "display_name": "Sak the Persian",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Σακ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Άγιος Σακ ο Πέρσης», with the rank words left off. The epithet «ο Πέρσης» is left to the display name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Άγιος Σακ ο Πέρσης»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is two sentences: «Ο Άγιος αυτός, άγνωστος στους Συναξαριστές, βρίσκεται στον Παρισινό Κώδικα 1578 χωρίς υπόμνημα» and «Ίσως να είναι ο ίδιος με τον μάρτυρα Σάκτο που γιορτάζεται την 25η Ιουλίου» — this saint, unknown to the synaxarists, is found in the Paris codex 1578 without a notice, and perhaps he is the same as the martyr Saktos kept on 25 July. **The page's own guess is recorded and not acted on**: the corpus's settled rule makes two entries on one calendar two commemorations, the corpus holds no folder for a Saktos of 25 Ιουλίου at all, and nothing is proposed about that day; it is a line in the reader's report. The rank `martyr` is the line's own «Άγιος… ο Πέρσης» read with the page's «μάρτυρα» in the second sentence. **No `dates`, no `locations`, no `related` and no hymn**: the codex carries no notice, so the page has nothing else. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

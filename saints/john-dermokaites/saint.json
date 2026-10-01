@@ -1,0 +1,51 @@
+{
+  "slug": "john-dermokaites",
+  "display_name": "John Dermokaites",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Ιωάννης ο Δερμοκαΐτης», with the rank words left off. The surname «ο Δερμοκαΐτης» is left to the display name, which is what tells him from the corpus's other folders of this name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Ιωάννης ο Δερμοκαΐτης»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is two sentences: his memory is recorded in Delehaye's synaxarion with the note that he practised asceticism on Olympus of Bithynia, and he is «ο Ιωάννη τον μοναχό (919 - 944 μ.Χ.) που υπήρξε γνωστός για την αγιότητα της ζωής του επί Ρωμανού του Λεκαπηνού» — the monk John, 919 to 944, known for the holiness of his life in the days of Romanos Lekapenos, to whom that emperor, after his fall, sent a sealed letter confessing his sins. **No `dates` proposed**: the 919–944 the page prints beside his name is the reign of Romanos Lekapenos and not years of his life — the reign is exactly that span — and this corpus refuses a reign-hung year, on the `carterius-of-caesarea` precedent; the reign is in the life instead. No `locations`, the folder being undated, though Olympus of Bithynia is named in the prose. No hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

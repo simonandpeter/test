@@ -1,0 +1,63 @@
+{
+  "slug": "nikon-disciple-of-sergius",
+  "display_name": "Nikon, disciple of Sergius",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Νίκων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Νίκων ο θαυματουργός μαθητής του Αγίου Σεργίου», with the rank words left off. The relation and the epithet are left to the display name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Νίκων ο θαυματουργός μαθητής του Αγίου Σεργίου»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 1427)» and the notice is two sentences: he was a disciple of Saint Sergius, to whom the page sends the reader on 25 Σεπτεμβρίου, and «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Ρώσου Οσίου παρά μόνο ότι κοιμήθηκε το 1427 μ.Χ.» — we have no other details of the Russian venerable's life except that he fell asleep in 1427. A `death` is proposed because the page states the year twice, in the head line and in the sentence. The page records his relics at the Lavra of the Holy Trinity and Saint Sergius at Moscow. No `locations` and no hymn. The corpus holds `sergius-of-radonezh`, who is the Sergius meant, and he is in `related` with a link in the life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1427,
+      "latest": 1427,
+      "display": "1427",
+      "basis": "traditional",
+      "note": "saint.gr: «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Ρώσου Οσίου παρά μόνο ότι κοιμήθηκε το 1427 μ.Χ.», and the head line «(; - 1427)»."
+    }
+  },
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "slug": "gennadius-of-vatopedi",
+  "display_name": "Gennadius of Vatopedi",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Γεννάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Γεννάδιος ο Βατοπαιδινός», with the rank words left off. The epithet «ο Βατοπαιδινός» is left to the display name; he is not the patriarch Gennadius kept in another line of the same day."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Γεννάδιος ο Βατοπαιδινός»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is three sentences: he was **δοχειάρης** of the monastery of Vatopedi on the Holy Mountain — the page glosses the word itself, the monk responsible for filling the monastery's vessels with oil — he was counted worthy to see an empty jar well up with oil by a miracle of the Mother of God, and he died in peace. **He is not the patriarch Gennadius** whom the same day keeps in another line, and the two are deliberately kept apart: one is a fifth-century patriarch of Constantinople with a folder already, the other an Athonite cellarer, and the page gives them separate entries. **No `dates`, no `locations`, no `related` and no hymn**: the page gives none of them, and does not say in whose time the miracle happened. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

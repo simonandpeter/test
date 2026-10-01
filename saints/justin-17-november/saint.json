@@ -1,0 +1,51 @@
+{
+  "slug": "justin-17-november",
+  "display_name": "Justin (17 November)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιουστίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Ιουστίνος», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Ιουστίνος»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The whole notice is one sentence — «Ο Όσιος Ιουστίνος απεβίωσε ειρηνικά» — he died in peace. The `types` are read off the two-line verse, which is the only other content on the page and which calls him «Ἀσκητικὸς ἄγρυπνος ὀφθαλμὸς… τὸ θαῦμα τῶν ἠσκηκότων», an ascetic sleepless eye and the wonder of those who have practised asceticism; «Όσιος» in the line gives `venerable`. **No `dates`, no `locations`, no `related` and no hymn.** The corpus holds other folders named Justin — `justin-the-philosopher`, `justin-popovich`, `justin-companion-of-chariton` — and none of them is kept on 17 November in any calendar; the `justin-of-thrace` drafted for the Greek 15 Νοεμβρίου is an emperor and a different entry two days earlier, which is why the slug carries the day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

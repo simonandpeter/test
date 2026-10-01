@@ -1,0 +1,51 @@
+{
+  "slug": "longinus-the-ascetic",
+  "display_name": "Longinus the Ascetic",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Λογγίνος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Λογγίνος», with the rank words left off. The corpus holds eight other folders of this name; the epithet in the display name is the page's own «ασκητὴν μέγαν»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Λογγίνος»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The page makes him one of the learned and wise ascetics of the desert, says that some of his wise sayings are in the Euergetinon, where Longinus questions Abba Lucius on various matters, and that he died in peace; then it quotes Nikodemos the Hagiorite's synaxarion at length for the sayings themselves. **No `dates`, no `locations`**: the page gives no year and no place but the desert. No hymn — what stands under the page's hymn heading is a two-line verse and a page of apophthegms, not an apolytikion. **He is none of the corpus's eight other folders named Longinus**: `longinus-the-gatekeeper`, the nearest of them, is the Russian «φύλακας της θύρα»ς of saint.gr's 16 Οκτωβρίου, with no life at all, and none of the eight is kept on 17 November in any calendar. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

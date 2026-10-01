@@ -714,6 +714,7 @@ export const sr = {
     'Abbess of Minster': 'Игуманија минстерска',
     'Abbess of Oxford': 'Игуманија оксфордска',
     'Abbess of a monastery in Kyiv': 'Игуманија манастира у Кијеву',
+    'Abbess of Whitby': 'Игуманија витбијска',
     'Abbot': 'Игуман',
     'Abbot of Bathys Ryax': 'Игуман Ватис Ријака',
     'Abbot of Kiziltash': 'Игуман кизилташки',

@@ -1,42 +1,28 @@
 {
-  "slug": "zacharias-the-cobbler",
-  "display_name": "Zacharias the Cobbler",
-  "names": [
-    {
-      "form": "Zaharia",
-      "lang": "ro",
-      "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Cuvios Zaharia»; the account the calendar links is headed «Cizmarul care descuia ușile cu rugăciunea» and names him in its last paragraph."
-    },
-    {
-      "form": "Ζαχαρίας",
-      "lang": "el",
-      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Άγιοι Ζαχαρίας ο Σκυτοτόμος και Ιωάννης», with the rank words left off. The line keeps him with John; the bare personal name is taken out of it and the trade left to the display name."
-    }
-  ],
+  "slug": "john-companion-of-zacharias",
+  "display_name": "John, companion of Zacharias",
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Άγιοι Ζαχαρίας ο Σκυτοτόμος και Ιωάννης», with the rank words left off. The line enumerates the two; the bare personal name is taken out of it."
+    }
   ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
     },
     {
       "church": "romanian",
-      "status": "venerated",
-      "feast": {
-        "day": 17,
-        "month": 11,
-        "calendar": "revised-julian",
-        "note": "The calendar's line is bare, «Sfântul Cuvios Zaharia»; what identifies him is the account it links, of the cobbler of Constantinople who opened the doors of Hagia Sophia with his prayer."
-      },
-      "source": {
-        "text": "doxologia.ro, calendarul pentru 17 noiembrie — «Sfântul Cuvios Zaharia»",
-        "url": "https://doxologia.ro/17-noiembrie",
-        "year": 2026
-      }
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
     },
     {
       "church": "greek",
@@ -56,13 +42,13 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
     }
+  ],
+  "related": [
+    "zacharias-the-cobbler"
   ],
   "text": {
     "life": "life.md"
-  },
-  "related": [
-    "john-companion-of-zacharias"
-  ]
+  }
 }

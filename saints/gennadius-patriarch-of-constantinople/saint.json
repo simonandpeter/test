@@ -15,6 +15,11 @@
       "form": "Ghenadie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Ierarh Ghenadie, patriarhul Constantinopolului»."
+    },
+    {
+      "form": "Γεννάδιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Άγιοι Γεννάδιος και Μάξιμος Πατριάρχες Κωνσταντινούπολης», with the rank words left off. The line keeps him with Maximus; the bare personal name is taken out of it and the see left to `office`."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 31 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Άγιοι Γεννάδιος και Μάξιμος Πατριάρχες Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The line keeps two patriarchs and the page treats them very differently. **Gennadius I** it describes fully: head line «(; - 471)», successor of the patriarch Anatolius in 458, before that a presbyter of the same Church, fruitful in bringing heretics back to Orthodoxy — among them Marcianus, who had embraced the errors of the Novatians and whom he made steward of the Great Church — the man who persuaded the emperor Leo the Thracian to exile the heretic Peter the Fuller when he seized the throne of Antioch from the Orthodox patriarch Martyrius, in whose time the emperor Leo Makelles legislated the hallowing of Sunday, who ordained no man priest unless he knew the interpretation of the Psalms well, and who called a synod at Constantinople which issued an encyclical «κατὰ τῆς χρηματολογίας πρὸς χειροτονίαν», against payment for ordination; he died in 471. **No `dates` proposed for him**: the folder already carries that `death`. **Maximus the page cannot identify**, and that is recorded in his own folder rather than here. The Ἀπολυτίκιον names Gennadius and him only, so it is his and is not copied to Maximus. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -101,5 +116,27 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "maximus-patriarch-17-november"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀρετῶν ταὶς ἰδέαις κατακοσμούμενος, τῆς Ἐκκλησίας ἐδείχθης Ἀρχιεράρχης σοφός, καὶ ποιμὴν ἀληθινός, πάτερ Γεννάδιε, ὡς θεράπων τοῦ Χριστοῦ, καὶ ὁσίων κοινωνός, ἐν πάσῃ δικαιοσύνη. Καὶ νῦν δυσώπει ἀπαύστως, ἐλεηθήναι τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον — the only hymn on the page of «Άγιοι Γεννάδιος και Μάξιμος Πατριάρχες Κωνσταντινούπολης». It names Gennadius and not Maximus, so it is taken for this folder only.",
+        "url": "https://www.saint.gr/3028/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the forms of the virtues, you were shown a wise high priest of the Church and a true shepherd, Father Gennadius, as a servant of Christ and a sharer with the venerable in all righteousness. And now entreat without ceasing that our souls may find mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    }
+  ]
 }

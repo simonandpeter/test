@@ -6,6 +6,11 @@
       "form": "Lazăr Zugravul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 noiembrie, «Sfântul Cuvios Lazăr Zugravul»."
+    },
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Λάζαρος ο Ζωγράφος», with the rank words left off. The epithet «ο Ζωγράφος» is left to the display name."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Όσιος Λάζαρος ο Ζωγράφος»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives him «(; - 867)» and the body repeats it — «απεβίωσε εν ειρήνη το 867 μ.Χ.» — so a `death` is proposed, the folder carrying no `dates`. The entry is plainly him: a monk from childhood who learned the painter's art and practised it as a trade, hard on himself and self-controlled from his youth, merciful to the poor, honoured with the priesthood, a hard contender against all the heresies who suffered persecutions from the followers of Eutyches, Nestorius and Dioscorus and from the godless iconoclasts, sent to Rome to fight for the apostolic and patristic dogmas, back to Constantinople with great successes, taken ill on the road on a second journey to Rome, dead in peace in 867, his body translated and buried in the monastery of Euandros. No `locations` and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -49,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 867,
+      "latest": 867,
+      "display": "867",
+      "basis": "traditional",
+      "note": "saint.gr: «Έτσι απεβίωσε εν ειρήνη το 867 μ.Χ.», and the head line «(; - 867)». The page gives no year of birth."
+    }
   }
 }

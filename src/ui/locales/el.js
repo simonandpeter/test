@@ -713,6 +713,7 @@ export const el = {
     'Abbess of Minster': 'Ηγουμένη Μίνστερ',
     'Abbess of Oxford': 'Ηγουμένη Οξφόρδης',
     'Abbess of a monastery in Kyiv': 'Ηγουμένη μονής στο Κίεβο',
+    'Abbess of Whitby': 'Ηγουμένη Γουίτμπι',
     'Abbot': 'Ηγούμενος',
     'Abbot of Bathys Ryax': 'Ηγούμενος Βαθέος Ρύακος',
     'Abbot of Kiziltash': 'Ηγούμενος Κιζιλτάς',

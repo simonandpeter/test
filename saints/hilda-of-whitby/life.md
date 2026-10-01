@@ -1,0 +1,9 @@
+# Hilda of Whitby
+
+saint.gr's calendar for 17 November keeps «Αγία Hilda», printing her name in Latin letters and glossing it in Greek as Χίλντα, and makes her abbess of the great monastery of Whitby in southern England. She was born in 614 in Northumbria and fell asleep in 680. She was the daughter of Hereric, nephew of king Edwin of Northumbria, and became a Christian at thirteen, following the preaching of Saint [Paulinus](/saints/paulinus-of-york) of York. Her canonical name, the page adds, was Hild, and it means battle.
+
+At twenty she went to the monastery of Chelles in France, where her sister Saint Hereswitha also was, and became a nun. In 649 Saint [Aidan](/saints/aidan-of-lindisfarne) called her back to Northumbria and she was made abbess of the double monastery at Hartlepool. After some years she became abbess of the double monastery of Whitby at Streaneshalch, and stayed there until her repose.
+
+Her monastery knew particular success, and many monks and nobles came running to take her counsel. Several of her monks later became bishops, among them Saint John of Beverly and Saint [Wilfrid](/saints/wilfrid-of-york) of York. At the end she was struck by a fever which did not leave her until she died; yet she neglected nothing of her duties towards God and towards her spiritual children. She fell asleep in peace having communicated of the undefiled Mysteries of Christ, and the sound of the monastery's bell was heard miraculously at Hackness, thirteen miles away, where a devoted nun named Begu saw the saint's soul carried up to the heavens by angels. Her life, the page ends, was written by Saint [Bede](/saints/bede-of-jarrow).
+
+*After saint.gr's calendar for 17 Νοεμβρίου — [the day](https://www.saint.gr/11/17/index.aspx) and [the life](https://www.saint.gr/3033/saint.aspx); read 2 October 2026.*

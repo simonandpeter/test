@@ -1,0 +1,78 @@
+{
+  "slug": "hilda-of-whitby",
+  "display_name": "Hilda of Whitby",
+  "sex": "female",
+  "types": [
+    "abbess"
+  ],
+  "office": "Abbess of Whitby",
+  "names": [
+    {
+      "form": "Hilda",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters in its own line for 17 Νοεμβρίου, «Αγία Hilda», and gives the Greek beside it only as a gloss, «Η Αγία Hilda (Χίλντα)»; the Latin form is recorded as the page has it, on the `cedd-the-bishop` precedent, and the page adds that «Το κανονικό της όνομα ήταν Hild και σημαίνει «μάχη»»."
+    },
+    {
+      "form": "Χίλντα",
+      "lang": "el",
+      "note": "The page's own Greek gloss of the name, printed in a parenthesis after the Latin form: «Η Αγία Hilda (Χίλντα) ήταν ηγουμένη του μεγάλου μοναστηριού του Whitby»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Νοεμβρίου — «Αγία Hilda»",
+        "url": "https://www.saint.gr/11/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Νοεμβρίου εκάστου έτους», the same day as the listing. The head line gives her «(614 - 680)» and the body repeats both years, so a `birth` and a `death` are proposed. A full life: abbess of the great monastery of Whitby in southern England, born 614 in Northumbria, daughter of Hereric the nephew of king Edwin of Northumbria, a Christian at thirteen under the preaching of Paulinus of York; at twenty a nun at Chelles in France, where her sister Saint Hereswitha was; recalled to Northumbria by Aidan in 649 and made abbess of the double monastery at Hartlepool, then of the double monastery of Whitby at Streaneshalch until her repose; monks and nobles came to consult her and several of her monks became bishops, John of Beverly and Wilfrid of York among them; struck by a fever that did not leave her until she died, she neglected none of her duties, communicated and fell asleep in peace, and the monastery's bell was heard miraculously at Hackness thirteen miles away, where a nun named Begu saw her soul carried up by angels. Bede wrote her life. Four of the people the page names have folders here — `paulinus-of-york`, `aidan-of-lindisfarne`, `wilfrid-of-york`, `bede-of-jarrow` — and each is linked and carries a `related` row; **Hereswitha, John of Beverly and Begu have no folders**, so they are named in the life without links. **No `locations`**, following this wave's practice. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 614,
+      "latest": 614,
+      "display": "614",
+      "basis": "traditional",
+      "note": "saint.gr: «Γεννήθηκε το 614 μ.Χ. στην Northumbria», and the head line «Αγια Hilda (614 - 680)»."
+    },
+    "death": {
+      "earliest": 680,
+      "latest": 680,
+      "display": "680",
+      "basis": "traditional",
+      "note": "saint.gr: «κοιμήθηκε το 680 μ.Χ.», and the head line «(614 - 680)»."
+    }
+  },
+  "related": [
+    "paulinus-of-york",
+    "aidan-of-lindisfarne",
+    "wilfrid-of-york",
+    "bede-of-jarrow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
