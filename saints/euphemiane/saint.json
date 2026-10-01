@@ -1,0 +1,51 @@
+{
+  "slug": "euphemiane",
+  "display_name": "Euphemiane",
+  "names": [
+    {
+      "form": "Ευφημιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Αγίες Ευφημιανή και Φοίβη», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [],
+  "related": [
+    "phoebe-12-december"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Αγίες Ευφημιανή και Φοίβη»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members, so it is one folder per named member and each relates the other. The page says that Euphemiane is unknown to the synaxaria and that her memory is recorded in the Jerusalem Kanonarion at page 120, together with that of Saint Phoebe, likewise unknown; that is a single witness named and not the site's own mark of doubt, and there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence. No year and no rank word beyond «Αγία», so no `dates` object and no type from the corpus's vocabulary fits; none is recorded. No hymn is printed."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

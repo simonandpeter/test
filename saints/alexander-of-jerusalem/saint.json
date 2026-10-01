@@ -7,6 +7,11 @@
       "form": "Alexandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Alexandru, Arhiepiscopul Ierusalimului», with the rank word and the see left off."
+    },
+    {
+      "form": "Αλέξανδρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Αλέξανδρος Ιερομάρτυρας Αρχιεπίσκοπος Ιεροσολύμων», with the rank and the see left off."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Άγιος Αλέξανδρος Ιερομάρτυρας Αρχιεπίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the pupil of Clement of Alexandria who was coadjutor and successor to Narcissus of Jerusalem and died in prison in the persecution of Decius. Its head gives «(; - 251)», the year the folder already holds. The page adds «Η μνήμη του Αγίου Αλέξανδρου επαναλαμβάνεται και την 16η Μαΐου» — a second Greek commemoration on 16 May, recorded here as a note because one attestation row per church is the schema, and the row records the day page read. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -57,5 +72,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "narcissus-of-jerusalem"
+  ]
 }

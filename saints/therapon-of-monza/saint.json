@@ -1,0 +1,60 @@
+{
+  "slug": "therapon-of-monza",
+  "display_name": "Therapon of Monza",
+  "names": [
+    {
+      "form": "Θεράπων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Όσιος Θεράπων του Μονζέσκιϋ», with the rank word left off. The page gives the place in brackets as «(Monza)», and the English display name follows that."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1597,
+      "latest": 1597,
+      "display": "1597",
+      "basis": "attested",
+      "note": "saint.gr: «Δεν έχουμε λεπτομέριες για τον βίο του Ρώσου μοναχού Θεράπων του Μονζέσκιϋ (Monza), παρα μόνο ότι κοιμήθηκε το 1597 μ.Χ.», with the page's own head «(; - 1597)». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026). saint.gr calls him a Russian monk, so the Russian calendar is the one that would say most about him, and it has not been read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Όσιος Θεράπων του Μονζέσκιϋ»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing, and its whole content is that there are no details of the life of the Russian monk Therapon of Monza, only that he fell asleep in 1597. The corpus keeps an `adrian-of-monza` and four men called Therapon, all on other days; none of them is joined to this man by anything on this page. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

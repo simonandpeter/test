@@ -1,0 +1,69 @@
+{
+  "slug": "finnian-of-clonard",
+  "display_name": "Finnian of Clonard",
+  "names": [
+    {
+      "form": "Φίννιαν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Φίννιαν του Κλονάρτ, ο θαυματουργός», with the rank word and the by-name left off. The same page gives the western forms in brackets, «Finnian» and «Clonard», and the English display name follows those rather than a transliteration of the Greek."
+    }
+  ],
+  "sex": "male",
+  "office": "Abbot of Clonard",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 472,
+      "latest": 472,
+      "display": "472",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «Αγιος Φιννιαν Του Κλοναρτ, ο Θαυματουργος (472 - 549)». The page's body gives no year at all."
+    },
+    "death": {
+      "earliest": 549,
+      "latest": 549,
+      "display": "549",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «(472 - 549)». The page's body gives no year at all and no account of his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Άγιος Φίννιαν του Κλονάρτ, ο θαυματουργός»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing. Its whole content is one sentence, that he was the founder, abbot and head of the school of the celebrated monastery-school of Clonard in Ireland, plus the years in its head. The page gives both his name and the house's in Latin letters, so the English form is copied rather than transliterated. The corpus holds nobody of this name. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

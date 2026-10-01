@@ -1,0 +1,62 @@
+{
+  "slug": "abra-daughter-of-hilary",
+  "display_name": "Abra, daughter of Hilary of Poitiers",
+  "names": [
+    {
+      "form": "Abra",
+      "lang": "la",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Αγία Abra κόρη του Αγίου Ιλάριου Επισκόπου Πικτώνων», with the rank word and the description left off. The calendar prints her name in Latin letters and gives no Greek form of it, so the form is copied as the page has it."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "monastic"
+  ],
+  "related": [
+    "hilary-of-poitiers"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 343,
+      "latest": 360,
+      "display": "about 343 to 360",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Abra έζησε τον 4ο αιώνα μ.Χ. (περί το 343 - 360 μ.Χ.)» — the page's own parenthesis, which it marks «περί», about."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Αγία Abra κόρη του Αγίου Ιλάριου Επισκόπου Πικτώνων»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing. The calendar names her only in Latin letters and gives no Greek form, so the stored form carries `lang: \"la\"` rather than `el`; that is the one departure from the wave's rule of copying the Greek, and it is made because there is no Greek to copy. Her father, Hilary of Poitiers, whom the page refers to 13 Ιανουαρίου, is the corpus's `hilary-of-poitiers`, and the relation is the whole of what the entry says of her, so he is linked and related. The page gives no manner of death and no relic. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

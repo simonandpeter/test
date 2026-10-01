@@ -1,0 +1,51 @@
+{
+  "slug": "phoebe-12-december",
+  "display_name": "Phoebe (12 December)",
+  "names": [
+    {
+      "form": "Φοίβη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Αγίες Ευφημιανή και Φοίβη», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [],
+  "related": [
+    "euphemiane"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Αγίες Ευφημιανή και Φοίβη»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members, so it is one folder per named member and each relates the other. The page calls her «επίσης άγνωστης Αγίας», likewise an unknown saint, recorded with Euphemiane in the Jerusalem Kanonarion at page 120. The corpus keeps `phoebe-the-deaconess`, the deaconess of Romans 16, with a venerated Greek row on 3 September; that is another entry on the same calendar and therefore another commemoration, and this page says nothing that would join them — it says the opposite, that this woman is unknown. The site's gloss under the entry belongs to the masculine Φοῖβος and to Apollo, and is its standing note on the name. No year and no rank word, so no `dates` object and no type. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

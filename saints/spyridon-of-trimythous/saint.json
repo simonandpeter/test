@@ -14,6 +14,11 @@
       "form": "Spiridon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Spiridon, Episcopul Trimitundei», with the rank word and the see left off."
+    },
+    {
+      "form": "Σπυρίδων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου», with the rank, the by-name and the see left off."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the Cypriot shepherd who became bishop of Trimythous and confuted the Arians at Nicaea. **The two sources disagree about the years and the folder's `dates` are therefore left untouched.** The folder holds a birth inferred as late third century and a death in 348; saint.gr's head gives «(270 - 350)», its text «γεννήθηκε το 270 μ.Χ.» and «κοιμήθηκε στις 12 Δεκεμβρίου του 350 μ.Χ.» — a stated birth year where the folder has a range, and a death two years later than the folder's. That is for the author to rule on. The page also corrects a common statement of his birthplace, «στο τώρα κατεχόμενο χωριό Άσσια (Άσκια) της Κύπρου (και όχι στην Τριμυθούντα - σημερινή Τρεμετουσιά - όπως γράφουν πολλοί)». It prints an apolytikion, a kontakion and two megalynaria; the first two are taken and name him, the megalynaria are not kinds the schema holds. It names the towns that hold him patron and the places of his relic — incorrupt in his church on Corfu, with portions at the Alexander Nevsky Lavra and at Saint George of the Greeks in Venice — which is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -102,6 +117,40 @@
         "text": "You were shown to be a defender of the first council and a worker of wonders, God-bearing Saint Spyridon our father. Therefore you spoke with the dead woman in her grave and turned the serpent into gold; and when you sang the holy prayers you had angels serving with you, most holy one. Glory to him who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῆς Συνόδου τῆς πρώτης ἀνεδείχθης ὑπέρμαχος, καὶ θαυματουργὸς θεοφόρε, Σπυρίδων Πατὴρ ἡμῶν· διὸ νεκρᾷ σὺ ἐν τάφῳ προσφωνεῖς, καὶ ὄφιν εἰς χρυσοῦν μετέβαλες· καὶ ἐν τῷ μέλπειν τὰς ἁγίας σου εὐχάς, Ἀγγέλους ἔσχες συλλειτουργούντάς σοι Ἱερώτατε. Δόξα τῷ σὲ δοξάσαντι Χριστῷ· δόξα τῷ σὲ στεφανώσαντι· δόξα τῷ ἐνεργοῦντι διὰ σοῦ, πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντος — the first hymn on the page of «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου», and it names him.",
+        "url": "https://www.saint.gr/3247/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be the champion of the First Council and a wonderworker, God-bearing Spyridon our father; and so you spoke to a dead woman in the grave and changed a serpent into gold, and while you were chanting your holy prayers you had angels concelebrating with you, most holy one. Glory to Christ who glorified you; glory to him who crowned you; glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῷ πόθῳ Χριστοῦ τρωθεὶς, Ἱερώτατε, τὸν νοῦν πτερωθείς, τῇ αἴγλῃ τοῦ Πνεύματος, πρακτικὴ θεωρία, τὴν πρᾶξιν εὗρες θεόπνευστε, θυσιαστήριον θεῖον γενόμενος, αἰτούμενος πᾶσι θείαν ἕλλαμψιν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — on the page of «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου», printed as his.",
+        "url": "https://www.saint.gr/3247/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wounded with longing for Christ, most holy one, your mind given wings by the radiance of the Spirit, you found your action in practical contemplation, God-inspired father, and became a divine altar, asking divine illumination for all.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν."
     }
   ]
 }

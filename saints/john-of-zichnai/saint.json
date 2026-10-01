@@ -1,0 +1,61 @@
+{
+  "slug": "john-of-zichnai",
+  "display_name": "John of Zichnai",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Όσιος Ιωάννης επίσκοπος Ζιχνών», with the rank and the see left off. The same page's text offers an alternative, «Ο Όσιος Ιωάννης (ή Ιωακείμ)», which is recorded in the attestation and not drafted as a second form."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Zichnai",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1333,
+      "latest": 1333,
+      "display": "1333",
+      "basis": "attested",
+      "note": "saint.gr: «απεβίωσε ειρηνικά την 12η Δεκεμβρίου 1333 μ.Χ.», with the page's own head «(; - 1333)». No year of birth is given; the page places his life under Andronikos II Palaiologos, 1282 to 1328, and Andronikos III, 1328 to 1341."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Δεκεμβρίου — «Όσιος Ιωάννης επίσκοπος Ζιχνών»",
+        "url": "https://www.saint.gr/12/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Δεκεμβρίου εκάστου έτους», the same day as the listing, and that day is also the day of his death. The page offers his name twice over, «Ο Όσιος Ιωάννης (ή Ιωακείμ)», so Ιωακείμ is an alternative it records rather than a second name form to store. His uncle the monk Ιωαννίκιος is named as the man who brought him up; the corpus holds no folder this reading could attach to him, and no `related` row is made. It names the place of his relics, the monastery of the Honourable Forerunner at Serres, and the Menoikion mountain of eastern Macedonia; no coordinate is proposed. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

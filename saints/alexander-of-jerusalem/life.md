@@ -10,4 +10,12 @@ Old as he was, he was arrested between 249 and 251 with other bishops in the per
 
 Eusebius of Caesarea knew several of the letters he sent to the Antinoites, a Christian people of Egypt, and quotes from one of them; another known letter is addressed to the Antiochenes, a third to Origen, and a fourth was written together with Theoctistus of Caesarea to Demetrius of Alexandria.
 
-*After doxologia.ro's calendar for 12 decembrie — [the day](https://doxologia.ro/12-decembrie) and [the life](https://doxologia.ro/sfantul-ierarh-alexandru-arhiepiscopul-ierusalimului); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 12 December, and adds the see he held before Jerusalem and the library he built there. saint.gr has Alexander living from the end of the second century to the middle of the third, and makes him a pupil of Clement of Alexandria; he distinguished himself in his studies and was marked out in the preaching of the Gospel, and later was shown to be bishop of Flaviada in Cappadocia.
+
+His work there made him brighter still; and because [Narcissus](/saints/narcissus-of-jerusalem), bishop of Jerusalem, was very old — a hundred and sixteen, the page says — he took Alexander as assistant bishop and at the same time as his successor.
+
+When Narcissus had died a martyr's death, then, Alexander took the episcopal throne of Jerusalem. From that place he contended for the faith, enlightened and built up the people, and took care at the same time for the founding of a library at Jerusalem, in which he gathered many ecclesiastical and theological writings to help the studies of the younger clergy.
+
+In 251, in the persecution of the Church under Decius, he was arrested by the governor of Palestine at Caesarea, who required the faithful bishop to deny Christ; and he not only refused but remarked with courage and force on the error of the idolaters. He was then given as food to the beasts, after having first undergone hard tortures; the lions came up to him without harming him at all, but he died of the wounds of the torments. His memory, the page adds, is repeated also on 16 May.
+
+*After doxologia.ro's calendar for 12 decembrie — [the day](https://doxologia.ro/12-decembrie) and [the life](https://doxologia.ro/sfantul-ierarh-alexandru-arhiepiscopul-ierusalimului); read 25 September 2026; and saint.gr's calendar for 12 Δεκεμβρίου — [the day](https://www.saint.gr/12/12/index.aspx) and [the life](https://www.saint.gr/417/saint.aspx), read 2 October 2026.*
