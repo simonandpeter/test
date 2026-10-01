@@ -6,6 +6,11 @@
       "form": "Sara",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 iulie, «Sfânta Cuvioasă Sara», with the rank words left off."
+    },
+    {
+      "form": "Σάρρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουλίου, «Οσία Σάρρα», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουλίου — «Οσία Σάρρα»",
+        "url": "https://www.saint.gr/07/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek line is as bare as the Romanian one — «Οσία Σάρρα» against «Sfânta Cuvioasă Sara» — with the same rank and the same absence of a byname. The corpus keeps no other Sara, and the amma of the Paradise of the Fathers that the Greek page quotes is the venerable woman the day keeps. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
     },
     {
       "church": "serbian",

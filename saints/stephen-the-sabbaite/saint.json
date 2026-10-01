@@ -6,6 +6,11 @@
       "form": "Ștefan Savaitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 iulie, «Sfântul Cuvios Ștefan Savaitul», with the rank word left off."
+    },
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουλίου, «Όσιος Στέφανος ο Σαββαΐτης», with the rank word and the byname left off. The page gives his father's name as Θεόδωρος Μανσούρ."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουλίου — «Όσιος Στέφανος ο Σαββαΐτης»",
+        "url": "https://www.saint.gr/07/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Οσιος Στεφανος ο Σαββαϊτης (725 - 794)», nephew of John of Damascus, born at Damascus in 725, brought into the Lavra of Saint Sabbas at ten years old. The Greek page adds two things the Romanian source did not. It gives a variant year of repose: «πέθανε ειρηνικά το 794 μ.Χ. (κατά άλλους το 807 μ.Χ.)», and the folder's `dates` already read 794 off doxologia, so no change to `dates` is proposed and the variant is recorded here. And it says his memory is repeated on 28 Οκτωβρίου, with «Για ποιόν λόγο υπάρχει διπλή μνημόνευση του Οσίου Στεφάνου, δεν γνωρίζουμε» — for what reason there is a double commemoration we do not know — guessing that today may be the translation of his relics and 28 October the memory proper. One row per church is the schema, so the row is the day page read and the second Greek day is recorded here; no second row and no second folder. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, and it is taken; its text addresses him as a hierarch, «σὺ γὰρ ὡς ἱεράρχης», which neither the page's notice nor the folder makes him, and that is said in the hymn's own source line rather than acted on."
     },
     {
       "church": "serbian",
@@ -74,6 +89,23 @@
       },
       "english": {
         "text": "Guide of Orthodoxy, teacher of true reverence towards God and of purity, and light of the world, God-inspired adornment of monks, wise father Stephen: by your teachings you enlightened all. Spiritual harp, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς θεῖον στεφάνωμα, τὴν ἀρετὴν ἐσχηκῶς, λαμπρῶς ἐστεφάνωσας, τὴν Ἐκκλησίαν Χριστοῦ, ἐν λόγοις καὶ πράξεσι, σὺ γὰρ ὡς ἱεράρχης, καὶ σοφὸς θεηγόρος, θείων ᾀσμάτων λύρα, Πάτερ Στέφανε ὤφθης, διὸ ταὶς σαὶς φαιδρότησιν, ἠμᾶς στεφάνωσαν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ', Ταχὺ προκατάλαβε — the only hymn on the page of «Όσιος Στέφανος ο Σαββαΐτης», and it names him. It calls him a hierarch, which the page's own notice does not; the reading is the source's and is copied as it stands",
+        "url": "https://www.saint.gr/2092/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having virtue for a divine crown, you crowned the Church of Christ splendidly in words and in deeds; for you were shown, father Stephen, a hierarch and a wise speaker of God, a lyre of divine songs. Therefore crown us too with your radiance.",
         "rendered": "site"
       }
     }

@@ -11,6 +11,16 @@
       "form": "Maria",
       "lang": "ro",
       "note": "Her baptismal name, read out of the last line of doxologia.ro's life: «Sfânta Muceniță Maria, care mai înainte s-a numit Golinduhia»."
+    },
+    {
+      "form": "Γολινδούχ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουλίου, «Αγία Γολινδούχ η Περσίδα που μετονομάστηκε Μαρία», with the rank word, the nationality and the clause about her new name left off."
+    },
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "The baptismal name, read out of the same line for 13 Ιουλίου: «η Περσίδα που μετονομάστηκε Μαρία», and out of the life page's «όταν βαπτίστηκε πήρε το όνομα Μαρία»."
     }
   ],
   "sex": "female",
@@ -39,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουλίου — «Αγία Γολινδούχ η Περσίδα που μετονομάστηκε Μαρία»",
+        "url": "https://www.saint.gr/07/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same woman: the Persian renamed Mary at her baptism, which is what the folder's second recorded name form already says. She is the corpus's only Golinduhia. The Greek page adds the reigns — Khosrow of the Persians and Maurice of the Romans, which it brackets 582 to 602 — but no year of her own, so no `dates` object is proposed: the bracket is the reign of the emperor and not of her life, and the page gives eighteen years of her imprisonment without a start. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under her line."
     },
     {
       "church": "serbian",

@@ -1,0 +1,71 @@
+{
+  "slug": "onesiphorus-of-anarita",
+  "display_name": "Onesiphorus of Anarita",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ονησίφορος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουλίου, «Άγιος Ονησίφορος», with the rank word left off. The page gives him no byname; its apolytikion calls him «πάτερ ὅσιε Ὀνησίφορε» and names Anarita in Paphos as the place that holds his relics."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουλίου — «Άγιος Ονησίφορος»",
+        "url": "https://www.saint.gr/07/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουλίου εκάστου έτους», the same day as the listing. He is neither of the corpus's two other men of the name — the martyr of 9 November and Onesiphorus of Colophon, the apostle: this is the Augustalios of the imperial fleet who, after a defeat at sea, came to Cyprus with ten companions and lived as an ascetic in a cave by the village of Anarita in Paphos. The display name carries that village because the page gives him no byname of its own and the apolytikion names it. The page says in its first sentence that where exactly he was born and flourished is not known, and it gives no year or century anywhere, so there is no `dates` object. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names him, and it is taken."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ'.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείοις θαύμασι κατεπλουτίσθη, πάτερ ὅσιε Ὀνησίφορε, ἡ τῆς Πάφου Ἁγία Μητρόπολις- τὸν ἄσυλον θησαυρὸν ἡ Ἀναρίτις ἐκτήσατο, ἔχουσα τὴν λάρνακα τῶν ἁγίων λειψάνων σου' ἡ καὶ βρύει ἀεννάως ἰάσεις εἰς δόξαν Χριστοῦ τοῦ ἐν Τριάδι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ', Θείας πίστεως — the only hymn on the page of «Άγιος Ονησίφορος», and it names him and Anarita of Paphos",
+        "url": "https://www.saint.gr/2096/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The holy metropolis of Paphos was enriched with divine wonders, venerable father Onesiphorus; Anarita gained the treasure no man can steal, holding the casket of your holy relics, which pours out healings unceasingly to the glory of Christ who is in the Trinity.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

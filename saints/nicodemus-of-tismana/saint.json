@@ -6,6 +6,11 @@
       "form": "Nicodim",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 decembrie, «Sfântul Cuvios Nicodim de la Tismana», with the rank words left off."
+    },
+    {
+      "form": "Νικόδημος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουλίου, «Όσιος Νικόδημος της Τισμάνα», with the rank word and the monastery left off."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 26 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουλίου — «Όσιος Νικόδημος της Τισμάνα»",
+        "url": "https://www.saint.gr/07/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουλίου εκάστου έτους», and the years on it are the folder's own: «Οσιος Νικοδημος Της Τισμανα (1320 - 1406)». He is none of the corpus's five other men of the name. The Greek and the Romanian calendars keep him on different days — the folder's Romanian row is 26 December, and the Greek page itself sends the reader there for the life, «Για τον βίο του Οσίου Νικοδήμου της Τισμάνα βλέπε στις 26 Δεκεμβρίου» — so this row records the Greek day page read, as the schema's one row per church requires, and no change is made to the Romanian row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn: it carries the dates, the note of his relics at Tismana, and the cross-reference, and nothing else."
     },
     {
       "church": "serbian",
