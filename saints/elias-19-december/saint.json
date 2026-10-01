@@ -1,0 +1,54 @@
+{
+  "slug": "elias-19-december",
+  "display_name": "Elias (19 December)",
+  "names": [
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Ηλίας, Πρόβος και Άρης», with the rank word left off. The page glosses the name itself, «(εβραϊκή λέξη από το ελίγια) = αυτός που έχει θεία δύναμη, ο θείος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Άγιοι Ηλίας, Πρόβος και Άρης»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The entry enumerates its company — three named men — so it is a folder each, and each relates the other two.** The page's whole narrative is two sentences: the holy Elias, Probus — or Promus, as it gives him a second name — and Ares came of Egypt, and inspired by their warm faith went about to various cities and served the persecuted Christians; at Ascalon they were arrested, held to their confession of Jesus Christ, and were condemned to death by the judge Firmilianus; Elias and Probus were beheaded and Ares gave up his holy soul in the flames. **Only Ares carries a year, and only in the page's name-block head, «Αγιος Αρης (; - 308)»; Elias and Probus carry none at all, and none is inferred for them from his.** It names Egypt and Ascalon and no coordinate is proposed. It prints no hymn. **An identity question named and not decided: saint.gr keeps an «Όσιος Άρης» on 13 Δεκεμβρίου too, one of the ascetics of the Egyptian desert whose sayings are in the Evergetinos, drafted in that day's batch as `ares-of-the-egyptian-desert`. Two entries on one calendar are two commemorations, and these two Ares are a desert elder who died in peace and a martyr burnt at Ascalon under Firmilianus; nothing is merged.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "probus-19-december",
+    "ares-19-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

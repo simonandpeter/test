@@ -1,0 +1,54 @@
+{
+  "slug": "polyeuctus-of-caesarea",
+  "display_name": "Polyeuctus of Caesarea",
+  "names": [
+    {
+      "form": "Πολύευκτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Τιμόθεος και Πολύευκτος», with the rank word left off. The page glosses the name itself, «(πολύ + εύχομαι) = ο πολυπόθητος», and its epigram calls him «Πολύευκτε Καισαρεῦ», which is where the English form of this folder's name comes from."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "preacher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Άγιοι Τιμόθεος και Πολύευκτος»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The entry enumerates two men, so it is a folder each, and each relates the other.** The page's narrative: they died after being thrown into the fire, Timothy in Africa and Polyeuctus at Caesarea, because they were catechising and baptising idolaters; and although their own people were present at the execution and wept, they were undaunted by divine grace and comforted them, and went into the flames keeping their good courage and chanting hymns to the Lord. **It then corrects other books in its own voice: «Ορισμένοι Συναξαριστές, λανθασμένα αναφέρουν την ημέρα αυτή και δεύτερο Άγιο Πολύευκτο, που όμως πρόκειται για τον ίδιο με τον πιο πάνω Άγιο» — some synaxaristes wrongly put a second Polyeuctus on this day, who is however the same man as the one above. So there is one Polyeuctus here and not two.** It gives no year and no reign, names Africa and Caesarea and no coordinate is proposed, lists no relic and prints no hymn. **An identity question named and not decided: the corpus keeps a `timothy-martyred-in-africa` and a `eutychius-martyred-in-africa`, whose `greek` rows are already `venerated` on 21 Μαΐου from saint.gr's «Άγιοι Τιμόθεος, Πόλιος και Ευτύχιος οι Ιερομάρτυρες», deacons martyred in Africa at an unknown time. The phrase ‘martyred in Africa' is common to both entries. Two entries on one calendar are two commemorations, and this one pairs Timothy with a Polyeuctus of Caesarea and not with a Polios and a Eutychius; nothing is merged and no row is moved.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "timothy-19-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

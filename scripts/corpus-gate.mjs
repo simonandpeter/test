@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τρυφων tryphon-19-december tryphon-companion-of-trophimus tryphon-of-campsada tryphon-of-constantinople tryphon-of-vyatka':
+    'Five now. The new one is the Tryphon of 19 December; the others are read in the el-09-29 entry for this name form, with Tryphon of Vyatka on 8 October.',
+  'τιμοθεοσ timothy-1-february timothy-19-december timothy-5-november timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-esphigmenou timothy-of-euripos timothy-of-gaza timothy-of-konstamonitou timothy-of-prokonnesos timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-of-tiberiopolis timothy-the-stylite':
+    'Twenty now. The new one is the Timothy of 19 December, who preached with Polyeuctus of Caesarea; the others are read in the el-11-28 entry for this name form.',
+  'θεσσαλονικη thessalonike thessalonike-19-december':
+    'Two women. The new one is the Thessalonike of 19 December, martyred with Eutychius; the other is the Thessalonike of 7 November, and whether they are one woman is in ro-run/FINDINGS.md.',
+  'προβοσ probus-16-december probus-19-december probus-9-july probus-of-tarsus':
+    'Four men. The new one is the Probus of 19 December, three days after the Probus of the 16th — two entries, two men; the others are the Probus of 9 July and Probus of Tarsus on 12 October.',
+  'πολυευκτοσ polyeuctus-1-august polyeuctus-of-caesarea polyeuctus-of-constantinople polyeuctus-of-megara polyeuctus-of-melitene':
+    'Five men. The new one is Polyeuctus of Caesarea on 19 December, who preached with Timothy; the others are read in the el-02-05 entry for this name form.',
+  'ευτυχιοσ eutychius-19-december eutychius-27-march eutychius-companion-of-bassus eutychius-companion-of-januarius eutychius-martyred-in-africa eutychius-of-constantinople eutychius-of-mesopotamia eutychius-of-nursia eutychius-of-the-forty-martyrs eutychius-the-subdeacon':
+    'Ten now. The new one is the Eutychius of 19 December, martyred with Thessalonike — and whether he is the Eutychius martyred in Africa on 21 May is an open reading in ro-run/FINDINGS.md. The others are read in the el-05-08 entry for this name form.',
+  'ηλιου elijah-of-murom eliou-the-wonderworker':
+    'Two men. The new one is Elijah of Murom on 19 December; the other is Eliou the Wonderworker on 12 January.',
+  'ηλιασ elias-19-december elias-3-november elias-companion-of-jonah elias-companion-of-terentius elias-fondaminsky elias-martyr-with-patermuthius elias-nikolayevich-hieromartyr elias-of-calabria elias-of-cordoba elias-of-heliopolis elias-of-thessalonica elias-of-trebizond elias-the-cave-dweller-of-calabria elias-the-egyptian elijah-the-tishbite iorest-of-transylvania':
+    'Sixteen now. The new one is the Elias of 19 December, who heads that day’s three; the others are read in the el-11-03 entry for this name form.',
+  'αρησ ares-19-december ares-of-the-egyptian-desert':
+    'Two men. The new one is the Ares of 19 December, martyred with Elias and Probus; the other is Ares of the Egyptian desert on 13 December.',
   'θαδδαιοσ thaddeus-22-november thaddeus-apostle-of-the-seventy thaddeus-of-stepantsminda thaddeus-of-tver':
     'Four men. The new one is Thaddeus archbishop of Tver on 18 December, a new martyr; the others are read in the el-11-22 entry for this name form.',
   'σοφια sophia-18-december sophia-martyr-18-september sophia-of-aenus sophia-of-kleisoura sophia-of-kyiv':

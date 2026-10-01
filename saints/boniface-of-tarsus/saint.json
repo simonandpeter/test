@@ -6,6 +6,11 @@
       "form": "Bonifatie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 decembrie, «Sfântul Mucenic Bonifatie»."
+    },
+    {
+      "form": "Βονιφάτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Βονιφάτιος και Αγλαΐα η Ρωμαία», with the rank word left off. The page glosses the name itself, «(από το λατινικό bonus + fatus) = ο ευλογημένος»."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Άγιοι Βονιφάτιος και Αγλαΐα η Ρωμαία»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day both folders already keep, and the entry is the same pair: the rich Roman woman and the steward of her property, who sinned together, repented, and parted — he to martyrdom at Tarsus of Cilicia, she to the relief of the poor. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The two sources differ in what they make of the household and the page states its own century.** doxologia makes Boniface the household servant of Aglaia, daughter of a proconsul named Acacius; saint.gr makes him «γραμματέας της περιουσίας της Αγλαΐας και επόπτης των κτημάτων της», secretary of her property and overseer of her estates, says nothing of her father, and says of her only that she belonged to the class of the noble and rich Roman women; and it opens «Οι Άγιοι Βονιφάτιος και Αγλαΐα έζησαν τον 3ο μ.Χ. αιώνα», which is recorded in `dates` for folders that held none. Boniface's page head adds «(; - 290)». saint.gr is as plain about the sin as doxologia and gives it a reason, quoting Luke 15:10 on the joy in heaven over one sinner who repents, and it has them confess the moral fall to a spiritual priest. It names Rome and Tarsus of Cilicia; no coordinate is proposed. It lists portions of Boniface's relic at the monasteries of Panteleimon on the Holy Mountain, Giromeri of Filiates, Phaneromeni of Salamis, Saint Nicholas of Andros and Saint Cyprian of Fyli in Attica, which is not drafted. It prints an apolytikion and a kontakion, both naming Boniface — the apolytikion names Aglaia too, as the one to whom he gave his body — and an oikos and a kathisma, which are kinds the schema does not hold."
     },
     {
       "church": "serbian",
@@ -48,5 +63,57 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "attested",
+      "note": "saint.gr's opening sentence for the pair: «Οι Άγιοι Βονιφάτιος και Αγλαΐα έζησαν τον 3ο μ.Χ. αιώνα.» The folder held no dates before this reading."
+    },
+    "death": {
+      "earliest": 290,
+      "latest": 290,
+      "display": "290",
+      "basis": "attested",
+      "note": "saint.gr's page head for him, «Αγιος Βονιφατιος (; - 290)». Its narrative gives no year at all, saying only that he died a martyr's death for the faith at Tarsus of Cilicia; the century in the floruit is the page's own opening sentence for him and Aglaia together."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Μαρτύρων τὴν εὔκλειαν ἰχνηλατήσας θερμῶς, Χριστὸν ὡμολόγησας ἐπὶ ἀπίστων στερρῶς, σοφὲ Βονιφάτιε· ὅθεν καθάπερ πλοῦτον ἀδαπάνητον, μάρτυς, δέδωκάς σου τὸ σῶμα τῇ σεμνῇ Ἀγλαΐᾳ· ἐξ οὗ τῷ κόσμῳ πηγάζει ῥώσις καὶ ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε. It names Boniface, and names Aglaia as the one to whom his body was given, so it is taken into both folders, on the page of «Άγιοι Βονιφάτιος και Αγλαΐα η Ρωμαία».",
+        "url": "https://www.saint.gr/3306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Warmly tracking out the good fame of the martyrs, you confessed Christ steadfastly before unbelievers, O wise Boniface; wherefore, O martyr, you gave your body to the modest Aglaia as a wealth that is never spent, and from it strength and mercy well up for the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἱερεῖον ἄμωμον, ἐθελουσίως, σεαυτὸν προσήγαγες, τῷ ἐκ Παρθένου διὰ σέ, τεχθῆναι μέλλοντι Ἅγιε, στεφανηφόρε σοφὲ Βονιφάτιε.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον. It names Boniface alone, so it is taken into his folder only, on the page of «Άγιοι Βονιφάτιος και Αγλαΐα η Ρωμαία».",
+        "url": "https://www.saint.gr/3306/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A spotless victim, you offered yourself willingly to him who for your sake was about to be born of the Virgin, O holy one, O crown-bearing and wise Boniface.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

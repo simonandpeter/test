@@ -1,0 +1,51 @@
+{
+  "slug": "elijah-of-murom",
+  "display_name": "Elijah of Murom",
+  "names": [
+    {
+      "form": "Ηλιού",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Όσιος Ηλιού Μουρόμας ο Θαυματουργός «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word, the place and the by-names left off. The page prints the name as «Ηλιού» and glosses it under the heading «ΗΛΙΑΣ», «(εβραϊκή λέξη από το ελίγια) = αυτός που έχει θεία δύναμη, ο θείος»; the form on the calendar line is the one stored."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Όσιος Ηλιού Μουρόμας ο Θαυματουργός «ὁ ἐν τῷ Σπηλαίῳ»»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου.»** That is a refusal to tell the life and not a refusal to vouch for the man: no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…». There is no year anywhere on the page, not even in the head, so there is no `dates` object. `types` carries `venerable` and `wonderworker`, which the calendar line's own words give — «Όσιος» and «ο Θαυματουργός»; the further by-name «ὁ ἐν τῷ Σπηλαίῳ», of the Cave, is recorded here and is not asserted as an office or a see. It names Murom and no coordinate is proposed; it prints no hymn. The `russian` row is left `undocumented` although the page calls him a Russian venerable, because days.pravoslavie.ru was not read. The corpus keeps nine folders of Murom — among them `peter-of-murom`, `fevronia-of-murom` and `juliana-of-lazarevo` — and none of them is this man."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

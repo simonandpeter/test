@@ -1,0 +1,53 @@
+{
+  "slug": "eutychius-19-december",
+  "display_name": "Eutychius (19 December)",
+  "names": [
+    {
+      "form": "Ευτύχιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιοι Ευτύχιος, Θεσσαλονίκη, Διακόσιοι Άνδρες και Εβδομήντα Γυναίκες», with the rank word left off. The page glosses the name itself, «(από το ευτυχής) = ο μακάριος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Άγιοι Ευτύχιος, Θεσσαλονίκη, Διακόσιοι Άνδρες και Εβδομήντα Γυναίκες»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The entry names two of its company and leaves the rest unnamed — two hundred men and seventy women — so the two named get a folder each and the unnamed remainder gets none.** The whole of the page's narrative is four words: «Μαρτύρησαν όλοι δια ξίφους» — they were all martyred by the sword. It gives no year, no reign, no judge and no place, lists no relic and prints no hymn. Its epigrams add only the counting: that the sword took ten score of men and seven times ten women, and that Thessalonike found victory happily by the sword together with Eutychios — a play on both names which is all the page says of either of them. **An identity question named and not decided: the corpus keeps a `thessalonike` whose `greek` row is already `venerated` on 7 Νοεμβρίου, the daughter of the idol-priest Kleon martyred at Amphipolis of Macedonia with Auctus and Taurion. Two entries on one calendar are two commemorations, and this Thessalonike's company is a Eutychios with two hundred men and seventy women; nothing is merged and no row is moved. The corpus also keeps a `eutychius-martyred-in-africa` on 21 Μαΐου and many another Eutychius, none of them this one.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "thessalonike-19-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

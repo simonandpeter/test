@@ -7,6 +7,11 @@
       "form": "Grichentie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 decembrie, «Sfântul Ierarh Grichentie, Episcopul Etiopiei». The English form is chosen; doxologia prints only the Romanian spelling."
+    },
+    {
+      "form": "Γρηγέντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Όσιος Γρηγέντιος επίσκοπος Αιθιοπίας», with the rank word and the see left off. The page gives this name no gloss."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Όσιος Γρηγέντιος επίσκοπος Αιθιοπίας»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: of Milan, son of Agapius and Theodota, sent to Ethiopia at king Elesbaan's request and the converter of the rabbi. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **saint.gr gives the folder its first years:** «έζησε τον 6ο αιώνα μ.Χ.», the page head «(; - 552)», and the death «πέθανε ειρηνικά στις 19 Δεκεμβρίου 552 μ.Χ.» — the same day as the feast. It adds his journey to the East as the great theological centre of the time, his becoming known at Constantinople to the emperor Justin and to the patriarch, his ordination to the presbyterate at Alexandria by the patriarch Proterius, the vacancy of the see of Ethiopia and Elesbaan's asking the patriarch of Alexandria for an educated and virtuous bishop, the rabbi Hervas whom he won and who was baptised in the king's presence, renamed Leo and honoured with the rank of patrician, and Elesbaan's successor his son Erdidos, who kept the same policy of reverence towards him. **It calls him «Όσιος… επίσκοπος Αιθιοπίας» and the see is Ethiopia as the page gives it; no coordinate is proposed for it, nor for Milan.** The rabbi, the two kings, the patriarch Proterius and the emperor Justin have no folders this reading could attach to and no `related` row is made. It prints no hymn."
     },
     {
       "church": "serbian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 552,
+      "latest": 552,
+      "display": "552",
+      "basis": "attested",
+      "note": "saint.gr: «Ο Γρηγέντιος πέθανε ειρηνικά στις 19 Δεκεμβρίου 552 μ.Χ. και τη στέρησή του, θρήνησε πολύς κόσμος», with «(; - 552)» in the page head and «έζησε τον 6ο αιώνα μ.Χ.» in its first sentence. No year of birth is given. The folder held no dates before this reading."
+    }
   }
 }

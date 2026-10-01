@@ -1,0 +1,50 @@
+{
+  "slug": "tryphon-19-december",
+  "display_name": "Tryphon (19 December)",
+  "names": [
+    {
+      "form": "Τρύφων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Δεκεμβρίου, «Άγιος Τρύφων», with the rank word left off. The page glosses the name itself, «(από την λέξη τρυφή = αβρότητα) = ο αβρός, ο λεπτός στους τρόπους»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Δεκεμβρίου — «Άγιος Τρύφων»",
+        "url": "https://www.saint.gr/12/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Ο Άγιος Τρύφων μαρτύρησε δια απαγχονισμού πάνω από μια Ιτιά.»** It gives no year, no reign, no judge and no place, lists no relic and prints no hymn. Its epigram repeats the willow — Tryphon went up in body to a willow tree, and in spirit to the great height of heaven — and nothing else is drafted from it. The corpus keeps five other folders of this name, among them a `tryphon-of-campsada` on 1 Φεβρουαρίου, a `tryphon-companion-of-trophimus` on 29 Σεπτεμβρίου, a `tryphon-of-constantinople` and a `tryphon-of-vyatka`; the page says nothing that would join this hanged martyr to any of them, and two entries on one calendar are two commemorations."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
