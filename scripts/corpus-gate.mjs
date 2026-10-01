@@ -115,6 +115,24 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'θαλλελαιοσ thalaleus-the-physician thalelaeus-of-gabala thallelaeus-19-november':
+    'Three men. The new one is the Thallelaeus of 19 November, of that day’s company; the others are Thalaleus the physician on 20 May and Thalelaeus of Gabala on 27 February, both of whom the Romanian calendar keeps too.',
+  'σιμων simon-19-november simon-25-june simon-of-moscow simon-of-suzdal simon-of-vladimir simon-of-zographou simon-the-martyr-3-february simon-the-zealot':
+    'Eight now. The new one is the Simon of 19 November, a monk; the others are read in the el-05-23 entry for this name form.',
+  'παγχαριοσ pancharius pancharius-19-november pancharius-25-may':
+    'Three men. The new one is the Pancharius of 19 November, of that day’s company; the others are the Pancharius of 19 March and the Pancharius of 25 May.',
+  'ηλιοδωροσ heliodorus-companion-of-mark-the-shepherd heliodorus-of-africa heliodorus-of-altinum heliodorus-of-magydos heliodorus-the-martyr-20-august':
+    'Five men. The new one is Heliodorus of Magydos on 19 November; the others are read in the el-05-05 entry for this name form, with Heliodorus of Altinum on 3 July.',
+  'ευφημια euphemia-19-november euphemia-4-january euphemia-of-amisos':
+    'Three women. The new one is the Euphemia of 19 November, the woman of that day’s company; the others are the Euphemia of 4 January and Euphemia of Amisos on 20 March.',
+  'χριστοφοροσ christopher christopher-19-november christopher-20-april christopher-24-april christopher-9-november christopher-martyr-5-june christopher-of-adrianople christopher-of-antioch christopher-of-georgia christopher-of-saint-sabbas christopher-of-soumela':
+    'Eleven now. The new one is the Christopher of 19 November, of that day’s company of five; the others are read in the el-11-09 entry for this name form.',
+  'βαρλααμ barlaam-30-may barlaam-hutinski barlaam-of-antioch barlaam-of-sikisk barlaam-of-the-alamanoi barlaam-of-the-kyiv-caves barlaam-of-vazsky barlaam-the-anchorite':
+    'Eight now, and two stand on 19 November: Barlaam of Antioch, whose day the Romanian calendar keeps too and whose Greek row this batch adds, and Barlaam of the Kyiv Caves, new here. Two entries, two men. The others are read in the el-10-12 entry for this name form.',
+  'αζησ azes azes-19-november':
+    'Two men. The new one is the Azes of 19 November, with whom the page keeps a hundred and fifty soldiers, twelve more, and the wife and daughter of Aquilinus; the other is the Azes of 21 October.',
+  'ανθιμοσ anthimus-19-november anthimus-of-arabia anthimus-the-elder':
+    'Three men. The new one is the Anthimus of 19 November, of the company with Thallelaeus, Christopher, Euphemia and Pancharius; the others are Anthimus the Elder on 2 July and Anthimus of Arabia on 17 October.',
   'βασιλειοσ basil-18-november basil-companion-of-artemidorus basil-companion-of-euphrasius basil-companion-of-isaurus basil-kadomsky basil-martyr-6-february basil-martyr-6-july basil-of-ancyra basil-of-bathys-ryax basil-of-braga basil-of-chernigov basil-of-georgia basil-of-mangazeya basil-of-mirozh basil-of-moldovita basil-of-moscow basil-of-novgorod basil-of-ostrog basil-of-poiana-marului basil-of-rostov basil-of-ryazan basil-of-the-alamanoi basil-of-the-kyiv-caves basil-of-thessalonica basil-of-trebizond basil-of-yaroslavl basil-ratishvili basil-son-of-david-komnenos basil-the-confessor basil-the-new-of-latros basil-uncle-of-eustratius':
     'Thirty-one now. The new one is the Basil of 18 November, whom the page keeps as a venerable without a surname; the others are read in the el-10-20 entry for this name form.',
   'αναστασιοσ anastasius-25-october anastasius-8-january anastasius-of-antioch anastasius-of-brescia anastasius-of-nauplion anastasius-of-paramythia anastasius-of-radovishte anastasius-of-thessalonica anastasius-patriarch-of-jerusalem anastasius-the-furrier anastasius-the-sinaite':

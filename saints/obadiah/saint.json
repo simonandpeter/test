@@ -6,6 +6,11 @@
       "form": "Avdie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Proroc Avdie»."
+    },
+    {
+      "form": "Αβδιού",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Προφήτης Αβδιού», with the rank word left off. The same page also prints the variant «Οβδιού», which is not recorded as a separate form."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Προφήτης Αβδιού»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2902/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own minor prophet: the page spells him «Αβδιού (ή Οβδιού)», glosses the name as «δούλος Κυρίου», quotes his own book at Οβδιού α΄ 3-4, and makes him a disciple of the prophet Elijah, which is the relation the folder already records. No `dates` are proposed: the page prints two readings — «έζησε περί το 800 π.Χ., (κατ' άλλη εκδοχή στο δεύτερο μισό του 6ου αιώνα π.Χ.)» — and which of the two the corpus should hold is a question for an author, not a reader. The hymn taken is the page's «Έτερον Ἀπολυτίκιον (Κατέβασμα)», which names him and gives both its ἦχος and its model; the page's first apolytikion, «Τοῦ Προφήτου σου Ἀβδιού τὴν μνήμην», is the common of a prophet with his name set in it and carries a tone but no model, and the Κάθισμα is neither a troparion nor a kontakion, so neither is drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -62,6 +77,23 @@
         "text": "As we keep the feast of Thy prophet Obadiah, O Lord, through him we entreat Thee: deliver our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὥσπερ θεράπων φερωνύμως τοῦ Λόγου, τοῦ ὑπὲρ ἔννοιαν φωτὸς ἠξιώθης, καὶ προφητείας ἔλλαμψιν ἐδέξω σοφὲ δόξαν γὰρ τὴν ἄυλον, καθαρῶς ἐποπτεύων, ὄργανον θεόπνευστον, Ὀβδιοὺ ἀνεδείχθης, προμελωδοῦν ἐν κόσμῳ μυστικῶς, τῶν ἐσομένων, Προφῆτα τὴν ἔκβασιν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — on the page of «Προφήτης Αβδιού». It names him, in the page's variant spelling «Ὀβδιού», and no other saint.",
+        "url": "https://www.saint.gr/2902/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a servant of the Word, true to your own name, you were counted worthy of light beyond understanding and received the shining of prophecy, O wise one. For beholding purely the glory that has no matter, you were shown to be a God-breathed instrument, Obadiah, singing out beforehand in the world, mystically, the outcome of things to come, O Prophet.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
     }
   ],
   "text": {

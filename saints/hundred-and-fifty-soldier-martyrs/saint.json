@@ -1,0 +1,56 @@
+{
+  "slug": "hundred-and-fifty-soldier-martyrs",
+  "display_name": "The Hundred and Fifty Soldier Martyrs",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Εκατόν πενήντα Μάρτυρες Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιοι Εκατόν πενήντα Μάρτυρες Στρατιώτες», with the rank word left off. The page names none of the hundred and fifty."
+    }
+  ],
+  "related": [
+    "azes-19-november",
+    "twelve-soldier-martyrs-19-november",
+    "wife-and-daughter-of-aquilinus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιοι Εκατόν πενήντα Μάρτυρες Στρατιώτες»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2905/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. The company is not enumerated — the page names not one of the hundred and fifty — so it is one folder. It is not the corpus's `hundred-and-fifty-martyrs-of-palestine`, who are not soldiers and are kept on another day. No year, no place, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

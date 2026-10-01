@@ -7,6 +7,11 @@
       "form": "Filaret",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Ierarh Filaret, Mitropolitul Moscovei și Kolomnei»."
+    },
+    {
+      "form": "Φιλάρετος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Φιλάρετος Πατριάρχης Μόσχας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιος Φιλάρετος Πατριάρχης Μόσχας»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2683/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους» and «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)», the same day the folder's Romanian row already carries, and the dates are the Moscow hierarch's own, so the man is the folder's. The page says «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» and gives his relics at the Trinity-Saint Sergius Lavra. **saint.gr calls him Patriarch of Moscow where doxologia and this folder call him Metropolitan, and the discrepancy is not resolved here**: the title in the source's own words stands in this note, the folder's `types` are not changed, and the matter is named in the reader's report. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -48,5 +63,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 1782,
+      "latest": 1782,
+      "display": "1782",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
+    }
   }
 }

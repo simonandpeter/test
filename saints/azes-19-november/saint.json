@@ -1,0 +1,65 @@
+{
+  "slug": "azes-19-november",
+  "display_name": "Azes (19 November)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Άζης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Άζης ο Θαυματουργός», with the rank word left off; the epithet «ο Θαυματουργός» is left out of the stored form because the folder's `types` carry it."
+    }
+  ],
+  "related": [
+    "hundred-and-fifty-soldier-martyrs",
+    "twelve-soldier-martyrs-19-november",
+    "wife-and-daughter-of-aquilinus"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 289,
+      "latest": 289,
+      "display": "about 289",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Άζης έζησε στα χρόνια του βασιλιά Διοκλητιανού (περί το 289 μ.Χ.)» — the page's own year, written «περί», about, for the reign it sets him in. It gives no year for the beheading, so the interval is recorded as a floruit and not as a death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιος Άζης ο Θαυματουργός»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2904/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. **This is not the corpus's `azes`**, which carries a venerated Greek row on 21 October from `https://www.saint.gr/2555/saint.aspx`: that page's whole narrative is «Ο Άγιος Άζης μαρτύρησε διά πυρός», martyred by fire, with no country, no year and no emperor, while this one is an Isaurian soldier turned desert-dweller under Diocletian, beheaded by the eparch Aquilinus, with a hundred and fifty soldiers, twelve more and the eparch's own wife and daughter converted through him. Two entries on one calendar are two commemorations, so two men; the 21 October row is left exactly where it is. No hymn on this page. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

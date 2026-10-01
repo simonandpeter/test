@@ -1,0 +1,59 @@
+{
+  "slug": "heliodorus-of-magydos",
+  "display_name": "Heliodorus of Magydos",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ηλιόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Ηλιόδωρος από τη Μαγιδώ της Παμφιλίας», with the rank word and the place left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 272,
+      "latest": 272,
+      "display": "272",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Ηλιόδωρος μαρτύρησε στα χρόνια του αυτοκράτορα Αυρηλιανού (272 μ.Χ.) στη Μαγιδώ της Παμφυλίας», and the page heads him «Αγιος Ηλιοδωρος Απο Τη Μαγιδω Της Παμφιλιας (; - 272)». The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιος Ηλιόδωρος από τη Μαγιδώ της Παμφιλίας»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2909/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. None of the corpus's five Heliodorus folders is this man: `heliodorus-the-martyr-20-august` is kept on 20 August, `heliodorus-companion-of-mark-the-shepherd` on 28 September, `heliodorus-of-africa` on 6 May, `heliodorus-of-altinum` on 3 July, and `heliodorus-golovanitsky` is a Russian of the nineteenth century. This one is placed by his own city, Magydos in Pamphylia, and by the governor Aetius under Aurelian. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "slug": "twelve-soldier-martyrs-19-november",
+  "display_name": "The Twelve Soldier Martyrs (19 November)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Δώδεκα Μάρτυρες Στρατιώτες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιοι Δώδεκα Μάρτυρες Στρατιώτες», with the rank word left off. The page names none of the twelve."
+    }
+  ],
+  "related": [
+    "azes-19-november",
+    "hundred-and-fifty-soldier-martyrs",
+    "wife-and-daughter-of-aquilinus"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιοι Δώδεκα Μάρτυρες Στρατιώτες»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2906/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. The company is not enumerated, so it is one folder. The display name takes the day because the corpus already keeps `twelve-soldier-martyrs-of-crete` on 12 August, who are a different company on a different day. The page's own link between these twelve and the hundred and fifty of the same day is hedged — «ίσως την εποχή των Εκατόν πενήντα Αγίων μαρτύρων στρατιωτών» — and the hedge is kept in the life. No year, no place, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

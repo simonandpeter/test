@@ -1,0 +1,60 @@
+{
+  "slug": "barlaam-of-the-kyiv-caves",
+  "display_name": "Barlaam of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Βαρλαάμ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Όσιος Βαρλαάμ ηγούμενος του Σπηλαίου», with the rank word and the office left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1065,
+      "latest": 1065,
+      "display": "1065",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Οσιος Βαρλααμ Ηγουμενος Του Σπηλαιου (; - 1065)». The page has no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Αγίου» — so that heading is the whole of its dating, and it gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Όσιος Βαρλαάμ ηγούμενος του Σπηλαίου»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2911/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. This is not the `barlaam-of-antioch` of the same day, who is a martyr of 304 under the eparch of Antioch and whose Greek row this batch sets from his own page; nor any of the corpus's other seven Barlaam folders, which are kept on other days and none of which is of the Caves at Kyiv. The place in the display name is the page's own «Λαύρα των Σπηλαίων του Κιέβου», where it puts his relics. The folder is given no `locations`, because the page names the monastery and not a place of life or death. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

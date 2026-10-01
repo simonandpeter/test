@@ -1,0 +1,51 @@
+{
+  "slug": "simon-19-november",
+  "display_name": "Simon (19 November)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Σίμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Όσιος Σίμων», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Όσιος Σίμων»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2912/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. The page says where the commemoration comes from and does not overstate it: «Άγνωστος στους Συναξαριστές και στα Μηναία. Η μνήμη του υπάρχει στον Παρισινό Κώδικα 1621 (13ος αιώνας μ.Χ.)», and the narrative it prints is a quotation it credits to S. Eustratiades's Hagiology, page 425. This is a statement about the entry's own sources and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου», which is not on the page, and there is no asterisk. None of the corpus's nine other Simon folders is proposed as this man: they are kept on other days and none is a Calabrian. The thirteenth-century codex dates the commemoration and not the man, so no `dates` object is proposed. No hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

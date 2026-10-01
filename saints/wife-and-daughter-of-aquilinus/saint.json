@@ -1,0 +1,55 @@
+{
+  "slug": "wife-and-daughter-of-aquilinus",
+  "display_name": "The Wife and Daughter of Aquilinus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Γυναίκα και Θυγατέρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Αγίες Γυναίκα και Θυγατέρα», with the rank word left off. The page's own heading splits the line into «Αγια Γυναικα» and «Αγια Θυγατερα» and gives neither a name."
+    }
+  ],
+  "related": [
+    "azes-19-november",
+    "hundred-and-fifty-soldier-martyrs",
+    "twelve-soldier-martyrs-19-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Αγίες Γυναίκα και Θυγατέρα»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2907/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. The page's heading does enumerate the pair — «Αγια Γυναικα» and «Αγια Θυγατερα» — but it names neither of them, so there is nothing to make a folder per member out of and the pair is one folder, as the day's own single line has it. They are placed by their household and not by a name: the wife and the daughter of the eparch Aquilinus who condemned Azes. No year, no place, no hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

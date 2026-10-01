@@ -1,0 +1,56 @@
+{
+  "slug": "euphemia-19-november",
+  "display_name": "Euphemia (19 November)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευφημία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιοι Άνθιμος, Θαλλελαίος, Χριστόφορος, Ευφημία και τα παιδιά τους και Παγχάριος», with the rank word left off."
+    }
+  ],
+  "related": [
+    "anthimus-19-november",
+    "thallelaeus-19-november",
+    "christopher-19-november",
+    "pancharius-19-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Άγιοι Άνθιμος, Θαλλελαίος, Χριστόφορος, Ευφημία και τα παιδιά τους και Παγχάριος»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2910/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους», the same day as the listing. The line enumerates five by name and leaves the children unnamed, so there is a folder for each of the five and none for the children. The page says «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων», so the five folders share one life. The display name takes the day because the corpus keeps `euphemia-the-great-martyr` on 16 September, `euphemia-4-january` and `euphemia-of-amisos` on their own days, and none on 19 November. Whose wife or mother she is the page does not say: it says only «και τα παιδιά τους», and their children, of the company as a whole. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Ilarion Georgianul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 noiembrie, «Sfântul Ilarion Georgianul, făcătorul de minuni»."
+    },
+    {
+      "form": "Ιλαρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Όσιος Ιλαρίων ο Ίβηρ, ο εν Θεσσαλονίκη», with the rank word left off; the page's epithets «ο Ίβηρ» — the Georgian — and «ο εν Θεσσαλονίκη» are left out of the stored form and said in the life."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Νοεμβρίου — «Όσιος Ιλαρίων ο Ίβηρ, ο εν Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/11/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page `https://www.saint.gr/2913/saint.aspx` heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Νοεμβρίου εκάστου έτους» and «Οσιος Ιλαριων ο Ιβηρ, ο Εν Θεσσαλονικη (; - 875)», the same day and the same year of death the folder already carries from doxologia, and the same man: a ninth-century Georgian who travelled to the Holy Land, Constantinople and Bithynia, then by way of Thessalonica to Rome, and who stayed at Thessalonica and died there in 875. The folder's existing dates are not replaced; the page adds only that he built a church there in 870. No hymn on the page. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
