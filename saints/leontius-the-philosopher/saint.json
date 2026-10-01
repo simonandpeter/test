@@ -1,0 +1,47 @@
+{
+  "slug": "leontius-the-philosopher",
+  "display_name": "Leontius the Philosopher",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιος Λεόντιος ο φιλόσοφος», with the rank words left off. The epithet «ο φιλόσοφος» is kept in the display name, there being nothing else to tell him from the sixteen Leontii the corpus already holds."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Άγιος Λεόντιος ο φιλόσοφος»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The whole notice is one sentence — «Ο Άγιος Λεόντιος ο φιλόσοφος απεβίωσε ειρηνικά» — he died in peace, and nothing else. **No `types`**: the page gives him no rank at all, and «φιλόσοφος» is not one of the corpus's type slugs; the two-line verse addresses him as «πάτερ», father, which is not enough to make him a monk in the record, so the field is left out and named in the reader's report. **No `dates`, no `locations`, no `related` and no hymn**: the page gives none of them. The corpus holds sixteen other folders named Leontius; none of them is kept on 19 October in any calendar and none is called a philosopher, so this is a new folder and not an upgrade. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

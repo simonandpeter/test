@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μνασων mnason-of-cyprus mnason-the-disciple':
+    'Two entries on two days, and the page is the reason they are two folders rather than one man: Mnason bishop of Cyprus on 18 October and Mnason the Ancient Disciple, bishop of Tamasos, on 19 October. The 19 October reading relates Heraclides of Tamasos, as his own page does. Whether the two lines are one man is the author’s, and the report of this reading says so.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-philosopher leontius-the-shepherd two-leontii-of-athos':
+    'Fifteen now. The new one is Leontius the Philosopher on 19 October; the others are read in the el-10-26 entry for this name form, where the two Leontii of Athos are one folder.',
   'ισιδωροσ isidore-10-may isidore-8-january isidore-of-antioch isidore-of-chios isidore-of-cordoba isidore-of-pelusium isidore-of-rostov isidore-of-samtavisi isidore-of-seville isidore-of-vali':
     'Ten now. The new one is Isidore of Vali on 18 October, a presbyter martyred with his son George and his daughter Irene; the others are read in the el-05-10 entry for this name form, with the two of 14 May.',
   'ειρηνη irene-companion-of-plantinos irene-daughter-of-isidore irene-martyr-16-april irene-of-aquileia irene-of-chrysovalantou irene-of-magedon irene-the-empress-nun-xenia':

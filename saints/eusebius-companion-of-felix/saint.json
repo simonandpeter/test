@@ -6,6 +6,11 @@
       "form": "Eusebiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 octombrie, «Sfântul Mucenic Eusebiu, diaconul»."
+    },
+    {
+      "form": "Ευσέβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιοι Φήλιξ ο Πρεσβύτερος και Ευσέβιος ο Διάκονος», with the rank words left off. The line keeps the two together; the bare personal name is taken out of it, the rank left to `types`."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Άγιοι Φήλιξ ο Πρεσβύτερος και Ευσέβιος ο Διάκονος»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The whole notice is two sentences: «Οι Άγιοι Φήλιξ ο Πρεσβύτερος και Ευσέβιος ο Διάκονος μαρτύρησαν δια ξίφους» and «Ίσως να είναι οι ίδιοι με αυτούς που εορτάζουν στις 7 Οκτωβρίου σαν Άγιοι Ευσέβιος ο Πρεσβύτερος και Φίληξ» — perhaps they are the same as those kept on 7 October as Eusebius the presbyter and Felix. **The page's own guess is recorded and not acted on**: the ranks are swapped between the two entries, the corpus's settled rule makes two entries on one calendar two commemorations, and nothing is proposed about 7 October; it is a line in the reader's report. The ranks this entry gives — Felix presbyter, Eusebius deacon — are the ones the folders already carry. **No `dates`, no `locations`, no hymn**: the page gives none of the three. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

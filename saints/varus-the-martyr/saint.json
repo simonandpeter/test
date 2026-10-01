@@ -6,6 +6,11 @@
       "form": "Uar",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 octombrie."
+    },
+    {
+      "form": "Ούαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιος Ούαρος», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -14,7 +19,8 @@
     "soldier"
   ],
   "related": [
-    "cleopatra"
+    "cleopatra",
+    "six-hermit-martyrs"
   ],
   "attestations": [
     {
@@ -38,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Άγιος Ούαρος»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry is the same soldier: of Tyana, in the years of the persecutions under Diocletian, a guard over the prisons who was himself a Christian without his officers or fellow soldiers knowing it, and who used his position to bring food to the martyrs; six venerable ascetics were brought in — there had been a seventh, who died on the road of old age and hardship — and when the judge asked where their seventh companion was, Varus cried «ἰδοὺ ἐγώ», here am I. He died under very savage torture without changing his faith, the ascetics were beheaded the next day, and Christian hands buried the seven at night. **No `dates` proposed**: the only year on the page hangs on a reign — «στα χρόνια των διωγμών επί Διοκλητιανού» — and the page gives no figure of its own; the reign is in the life paragraph instead. The page records a fragment of his relics at the monastery of Kykkos in Cyprus. The Ἀπολυτίκιον is taken and it names him. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -63,6 +79,23 @@
         "text": "Thy martyr Varus, O Lord, in his contest received from Thee our God the crown of incorruption; for having Thy strength he brought the torturers low, and broke the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Τῶν Μαρτύρων ζηλώσας τὰ κατορθώματα, μαρτυρικῶς ἠγωνίσω ὑπὲρ τῆς δόξης Χριστοῦ, καὶ καθεῖλες τὸν ἐχθρὸν παμμάκαρ Οὔαρε, ἐν γὰρ ἰκρίω προσδεθεῖς, πρὸς τῷ ξύλῳ τῆς ζωῆς, νομίμως ἀποκατέστης, πρεσβευτικὴ χορηγία, καταφαιδρύνων τᾶς ψυχᾶς ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’. Τὸν συνάναρχον Λόγον — the only hymn on the page of «Άγιος Ούαρος», and it names him.",
+        "url": "https://www.saint.gr/2767/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Emulating the achievements of the Martyrs, you contended as a martyr for the glory of Christ and pulled the enemy down, all-blessed Varus; for bound upon the frame you were lawfully restored to the tree of life, and by the bounty of your intercession you make our souls bright.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον."
     }
   ],
   "text": {

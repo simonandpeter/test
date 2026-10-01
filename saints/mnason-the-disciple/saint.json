@@ -1,0 +1,55 @@
+{
+  "slug": "mnason-the-disciple",
+  "display_name": "Mnason the Ancient Disciple",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Tamasos",
+  "names": [
+    {
+      "form": "Μνάσων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιος Μνάσων ο αρχαίος μαθητής», with the rank words left off. The epithet «ο αρχαίος μαθητής» is Acts 21:16's own phrase for him and is kept in the display name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Άγιος Μνάσων ο αρχαίος μαθητής»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. A long and careful life, built on Acts 21:15–16 and on his synaxarion and his Service («Ακολουθία αγίου Μνάσωνος σελ. 16, Ενετίησιν 1774»): born at Tamasos in Cyprus of idolatrous parents, sent to Rome with his friend Theonas over a quarrel between the idolaters of Politiko and the village of Pera, taught about Christ there by some of the Seventy, baptised at Jerusalem by John the Theologian, a companion and helper of Heraclides the first bishop of Tamasos, his successor in that see, and dead on 19 October in deep old age three days after ordaining Rhodon in his place. **No `dates`**: the page gives not one year for him, only the apostolic generation and a Russian pilgrim's visit of 1735 to the monastery that later stood by his tomb. No `locations`, the folder being undated. The page prints no hymn. **Not the Mnason of 18 Οκτωβρίου**: that entry is the bishop of Cyprus martyred by the sword, whose own page guesses the two may be one man «παρόλο που εκείνος κοιμήθηκε εν ειρήνη» — although this one fell asleep in peace. Two entries on one calendar are two commemorations, the manner of death differs, and both folders are drafted; the identification is a question for the writer. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "heraclides-of-tamasos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

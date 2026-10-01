@@ -711,6 +711,7 @@ export const el = {
   offices: {
     'Abbess of Coldingham': 'Ηγουμένη Κόλντιγχαμ',
     'Abbess of Minster': 'Ηγουμένη Μίνστερ',
+    'Abbess of Oxford': 'Ηγουμένη Οξφόρδης',
     'Abbess of a monastery in Kyiv': 'Ηγουμένη μονής στο Κίεβο',
     'Abbot': 'Ηγούμενος',
     'Abbot of Bathys Ryax': 'Ηγούμενος Βαθέος Ρύακος',

@@ -6,6 +6,11 @@
       "form": "Cleopatra",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 octombrie."
+    },
+    {
+      "form": "Κλεοπάτρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Οσία Κλεοπάτρα», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 19 Οκτωβρίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Οσία Κλεοπάτρα»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry is the same woman, and the page's story is the one the folder already keeps: she tended Varus while he was being tortured, took his relics after his death, buried them in Palestine and built a magnificent church to him; her only son, an officer at the king's court, fell ill and died, and she ran to the church and begged Varus either to raise him or to take her with him; she saw the martyr and her son in bright clothing in her sleep, buried the boy near the martyr's tomb, gave her property away to the poor, stayed by the church doing many good works, and after seven years fell asleep in peace. **No `dates`**: the page gives her no year at all. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

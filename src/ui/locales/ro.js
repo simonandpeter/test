@@ -710,6 +710,7 @@ export const ro = {
   offices: {
     'Abbess of Coldingham': 'Stareță de Coldingham',
     'Abbess of Minster': 'Stareță de Minster',
+    'Abbess of Oxford': 'Stareță de Oxford',
     'Abbess of a monastery in Kyiv': 'Stareță a unei mănăstiri din Kiev',
     'Abbot': 'Egumen',
     'Abbot of Bathys Ryax': 'Egumen de Bathys Ryax',

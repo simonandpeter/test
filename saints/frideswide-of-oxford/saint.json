@@ -1,0 +1,73 @@
+{
+  "slug": "frideswide-of-oxford",
+  "display_name": "Frideswide of Oxford",
+  "sex": "female",
+  "types": [
+    "abbess",
+    "princess"
+  ],
+  "office": "Abbess of Oxford",
+  "names": [
+    {
+      "form": "Φριδεσγουΐδη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Αγία Φριδεσγουΐδη», with the rank words left off."
+    },
+    {
+      "form": "Frideswide",
+      "lang": "en",
+      "note": "The page prints the Latin-letter form beside the Greek one, «H Αγία Φριδεσγουΐδη (Frideswide)», and the English form is recorded as the page has it, on the `cedd-the-bishop` precedent."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Αγία Φριδεσγουΐδη»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The head line gives her «(650 - 727)» and calls her «Αγγλίδα πριγκίπισσα και ηγουμένη», an English princess and abbess: daughter of Dida of Eynsham, under-king of Mercia, with whose help she built a community; sought in marriage by Algar, a king of Mercia, whom she refused and who tried to carry her off, so that she hid in a wood outside Oxford while he, following her, fell from his horse outside the city gates and broke his neck; the spring she prayed up for the nuns of Binsey, who had to carry water from the Thames, which the page says is still at the church of Saint Margaret there and has healing properties; abbess at her monastery at Oxford until her repose in 727, «ή σύμφωνα με κάποιες άλλες πηγές το 735 μ.Χ.», and buried there; patron of Oxford and of its University, with her relics at Christ Church, Oxford. `dates` are taken from the head line and the repose the page states, and the variant 735 is quoted in the note rather than widened into the interval. No `locations`, following this wave's practice for a saint with no coordinate read off a page. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 650,
+      "latest": 650,
+      "display": "650",
+      "basis": "traditional",
+      "note": "saint.gr's head line: «Αγία Φριδεσγουΐδη (650 - 727)»."
+    },
+    "death": {
+      "earliest": 727,
+      "latest": 727,
+      "display": "727",
+      "basis": "traditional",
+      "note": "saint.gr: «Παρέμεινε ηγουμένη στο μοναστήρι της Οξφόρδης μέχρι την κοίμησή της το 727 μ.Χ. (ή σύμφωνα με κάποιες άλλες πηγές το 735 μ.Χ.), όπου ετάφη.» The head line gives the same 727; the variant 735 is the page's own alternative and is left in this note."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

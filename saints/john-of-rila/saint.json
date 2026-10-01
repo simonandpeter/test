@@ -19,6 +19,11 @@
       "form": "Ioan de la Rila",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 august and 19 octombrie."
+    },
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Όσιος Ιωάννης ο θαυματουργός που ασκήτευσε στο όρος του Ρίλα», with the rank words left off. The epithet and the mountain are left to the display name and the life."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 18 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Όσιος Ιωάννης ο θαυματουργός που ασκήτευσε στο όρος του Ρίλα»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The Greek keeps him on **19 October**, where the Russian, Romanian and Serbian rows of this folder all keep 18 August; the two are different commemorations of the one man and each church's row records its own day. The entry is plainly him: Bulgarian by descent, born in the village of Skrino near Sofia «επί βασιλείας Πέτρου του Βούλγαρου (περί το 884 μ.Χ.)», first in some monastery and then up on Mount Rila, where he built a small hut that in time became the refuge of many monks, and so built the monastery of Rila, where he lived in asceticism and died in peace. The page records his relics incorrupt at the monastery of Rila in Bulgaria and his right palm at the monastery of Kechrovouni on Tinos. **No `dates` proposed**: the folder already carries a `death`, and the only year here, «περί το 884», is attached to the reign of Peter of Bulgaria and not to the saint. The page prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

@@ -712,6 +712,7 @@ export const sr = {
   offices: {
     'Abbess of Coldingham': 'Игуманија колдингемска',
     'Abbess of Minster': 'Игуманија минстерска',
+    'Abbess of Oxford': 'Игуманија оксфордска',
     'Abbess of a monastery in Kyiv': 'Игуманија манастира у Кијеву',
     'Abbot': 'Игуман',
     'Abbot of Bathys Ryax': 'Игуман Ватис Ријака',

@@ -1,0 +1,53 @@
+{
+  "slug": "hundred-and-twenty-martyrs-of-persia",
+  "display_name": "The Hundred and Twenty Martyrs of Persia",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Εκατόν είκοσι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιος Σαδώθ ο επίσκοπος και οι Εκατόν είκοσι Μάρτυρες από την Περσία», with the rank words left off. The page's own heading for the company is «Αγιοι Εκατον Εικοσι Μαρτυρες Απο Την Περσια». The form recorded is the whole designation, because the page names not one of the hundred and twenty."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Οκτωβρίου — «Άγιος Σαδώθ ο επίσκοπος και οι Εκατόν είκοσι Μάρτυρες από την Περσία»",
+        "url": "https://www.saint.gr/10/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Οκτωβρίου εκάστου έτους», the same day as the listing. The line keeps the bishop Sadoth and the hundred and twenty martyrs of Persia together, and **the company is enumerated nowhere**: the page names Sadoth and nobody else, so the hundred and twenty are one entry and one folder, on `BRIEF.md` §4's test. The corpus holds no folder for them under any calendar. `sadoth-of-persia` is **not drafted here**: his `greek` row is already `venerated`, on 20 Φεβρουαρίου, and its note already records that saint.gr repeats the memory on 19 Οκτωβρίου — a venerated row on another day is left where it is, per BRIEF-GREEK §5, and the reading goes in the reader's report. **Two numbers for one company, and it is an open question**: the February entry is «Άγιος Σαδώκ ο Ιερομάρτυρας και οι μαζί μ' αυτόν Εκατόν εικοσιοκτώ μάρτυρες», a hundred and twenty-eight, where this one has a hundred and twenty. The folder records the October number because that is the page it is read from, and the discrepancy is named here and in the report. **No `dates`**: the «περί το 330 μ.Χ.» the page gives belongs to Sadoth's episcopate, not to the company's death, and no year is inferred from Shapur's reign. No `locations` and no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+    }
+  ],
+  "related": [
+    "sadoth-of-persia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
