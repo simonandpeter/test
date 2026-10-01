@@ -6,6 +6,11 @@
       "form": "Terţiu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 noiembrie."
+    },
+    {
+      "form": "Τέρτιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους». The folder's Romanian row keeps him on 10 November, a different day, and that row is not touched: this is the Greek calendar's own day for the same man, and he is identified not by his name but by what the page says of him — second bishop of Iconium after Sosipater, and the man who wrote down Saint Paul's letter to the Romans, as he says himself at Romans 16.22. The entry enumerates four apostles of the Seventy; two of them, Artemas of Lystra and Justus of Eleutheropolis, are new folders of this batch, and the fourth, Mark, is reported and not drafted because the corpus's Mark of Apollonias already carries a venerated Greek row on 16 June. No year, so the folder's dateless state is unchanged. No hymn on this page. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

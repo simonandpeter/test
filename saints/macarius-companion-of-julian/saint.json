@@ -1,0 +1,64 @@
+{
+  "slug": "macarius-companion-of-julian",
+  "display_name": "Macarius, companion of Julian",
+  "names": [
+    {
+      "form": "Μακάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Αλέξανδρος, Κρονίων, Ιουλιανός, Μακάριος και άλλοι Δεκατρείς Μάρτυρες», with the rank word left off. The page glosses the name as «ο ευτυχής», the happy one."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "julian-companion-of-macarius",
+    "alexander-companion-of-cronion",
+    "cronion-companion-of-alexander"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr: «Μαρτύρησαν όλοι στα χρόνια του βασιλιά Δεκίου το 250 μ.Χ., στην Αλεξάνδρεια» — the page's own year for the whole company."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Αλέξανδρος, Κρονίων, Ιουλιανός, Μακάριος και άλλοι Δεκατρείς Μάρτυρες»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates four of its members and not the other thirteen, so it is four folders and one unnamed company. This is not the corpus's Macarius of Alexandria, who is a monk and a presbyter kept on 19 January in both the Greek and the Romanian calendars and who died in his bed; this man is a martyr beheaded at Alexandria under Decius. The display name takes the companion the page's own epigram pairs him with. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

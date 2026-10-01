@@ -1,0 +1,83 @@
+{
+  "slug": "apollonia-of-alexandria",
+  "display_name": "Apollonia of Alexandria",
+  "names": [
+    {
+      "form": "Απολλωνία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Αγία Απολλωνία, η Παρθένος και Πρεσβύτης, και οι συν αυτή εν Αλεξάνδρεια Μάρτυρες», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "virgin",
+    "deaconess"
+  ],
+  "related": [
+    "dionysius-of-alexandria"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 248,
+      "latest": 249,
+      "display": "248–249",
+      "basis": "traditional",
+      "note": "saint.gr: «Η Αγία Απολλωνία μαρτύρησε στην Αλεξάνδρεια, λίγο πριν να ξεσπάσει ο διωγμός επί Δεκίου (248 – 249 μ.Χ.)» — the page's own years, which it attaches to the Decian persecution her death came shortly before, so the interval is the page's and not a year of her own."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Αγία Απολλωνία, η Παρθένος και Πρεσβύτης, και οι συν αυτή εν Αλεξάνδρεια Μάρτυρες»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing, and the notice gives the reason for the day: «Η μνήμη της τιμάται στην Ελλαδική Εκκλησία, στις 30 Οκτωβρίου, σύμφωνα με σχετική Απόφαση (έτος 2000 μ.Χ.) της Εκκλησίας της Ελλάδος, ενώ στη Δυτική Εκκλησία τιμάται στις 9 Φεβρουαρίου». The Western 9 February is recorded here as this note and not as a row, because one row per church is the schema and the Western calendar is not one of the four. `deaconess` is recorded because the page states the inference itself: «Το «παρθένος πρεσβῦτις» προφανώς σημαίνει ότι η Απολλωνία ήταν Διακόνισσα». The martyrs who suffered with her have their own heading in the entry and are named nowhere, so they get no folder. The apolytikion names her and is taken. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Των οδόντων εκρίζωσιν καθυπέμεινας και συντριβήν των σων γνάθων, Απολλωνία σεμνή, εκλεκτή παρθενομάρτυς και παρέδωκας σώμα το θείον σου πυρί, ίνα δρόσου θεϊκής παστάδος επαπολαύσης και χάριν λάβης οδόντων διώκειν άλγη τα κατώδυνα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος πλ. α’, Τον συνάναρχον Λόγον — the one hymn on the page of «Αγία Απολλωνία, η Παρθένος και Πρεσβύτης». It names her and no other saint. The page prints it without breathings and accents and it is copied as it stands.",
+        "url": "https://www.saint.gr/2851/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You endured the uprooting of your teeth and the breaking of your jaws, modest Apollonia, chosen virgin martyr, and you gave over your godly body to the fire, that you might enjoy the dew of the divine bridal chamber and receive the grace of driving away the sharpest pains of teeth.",
+        "rendered": "site"
+      },
+      "tone": "Ήχος πλ. α’.",
+      "model": "Τον συνάναρχον Λόγον."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

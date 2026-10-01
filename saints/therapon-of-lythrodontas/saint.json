@@ -1,0 +1,97 @@
+{
+  "slug": "therapon-of-lythrodontas",
+  "display_name": "Therapon of Lythrodontas",
+  "names": [
+    {
+      "form": "Θεράπων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιος Θεράπων ο παρά τον Λυθροδόνταν ασκήσας», with the rank word left off. The page glosses the name as «ο εξυπηρετικός», the serviceable one."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "wonderworker"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "saint.gr: «ήρθε μαζί με την ομάδα των «Τριακοσίων» προσφύγων από την Παλαιστίνη κατά τους διωγμούς που έγιναν κατά τον Ζ' αιώνα από τους μουσουλμάνους Άραβες» — the page's own century for his coming to Cyprus. It gives no year for his birth or his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Όσιος Θεράπων ο παρά τον Λυθροδόνταν ασκήσας»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. **This is not the corpus's Therapon of Cyprus**, who is a hieromartyr and a bishop with a Greek and a Romanian feast on 14 May; this man is a monk of the seventh century who came with the «Τριακόσιοι» from Palestine and lived as an ascetic by the village of Lythrodontas in the district of Nicosia, and the page makes him a wonderworker and not a martyr. No location is recorded even so, because the page's place is the village his church stands in rather than a point it fixes for him. The apolytikion and the kontakion both name him and are taken; the troparion of the eighth ode and the doxastikon of the lauds which the page quotes from his service are neither, and are quoted in the life instead. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Δεῦτε, πάντες Θεράποντα ὁσιώτατον, ἐν Λυθροδόντᾳ ἀσκήσει συντόνῳ καὶ προσευχῆ τῷ Χριστῷ εὐαρεστήσαντα τιμήσωμεν ὡς ταχινὸν θεραπευτὴν τῶν νοσούντων ἀλγεινῶς καὶ πάντων θερμὸν προστάτην τῶν ἐκβοώντων ἐν πίστει· Χαῖρε, κρουνὲ τῆς Θείας Χάριτος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α΄, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Όσιος Θεράπων ο παρά τον Λυθροδόνταν ασκήσας». It names him and the village and no other saint.",
+        "url": "https://www.saint.gr/4174/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, all of you, and let us honour Therapon the most holy, who pleased Christ at Lythrodontas by strenuous asceticism and by prayer, as a swift healer of those who are grievously sick and a fervent protector of all who cry out in faith: hail, wellspring of divine grace.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. α΄.",
+      "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Επ' εὐλογίαις σπόρον σπείραντα ἀσκήσεως ἐν λυθροδόντα καὶ θερίσαντα τὸν ἄσταχυν τὸν πολύχουν ἀφθαρσίας ψαλμοῖς εὐτάκτοις εὐφημήσωμεν, Θεράποντα, τὸ σέμνωμα ἰσαγγέλου πολιτείας καὶ θεώσεως, πόθω κράζοντες· Χαίροις, Πάτερ πανόσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. β’, Τῇ ὑπερμάχῳ — on the page of «Όσιος Θεράπων ο παρά τον Λυθροδόνταν ασκήσας». It names him and no other saint. The page writes the village with a small letter, «ἐν λυθροδόντα», and it is copied as it stands.",
+        "url": "https://www.saint.gr/4174/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in well-ordered psalms the man who sowed the seed of asceticism at Lythrodontas unto blessings and reaped the many-grained ear of incorruption — Therapon, the ornament of a life equal to the angels and of deification — crying out to him with longing: hail, all-holy father.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. β’.",
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

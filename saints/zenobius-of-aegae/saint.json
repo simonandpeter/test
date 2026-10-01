@@ -7,6 +7,11 @@
       "form": "Zenovie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 octombrie, «Sfântul Sfințit Mucenic Zenovie, Episcopul Ciliciei»."
+    },
+    {
+      "form": "Ζηνόβιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 30 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: of Aegae in Cilicia, a physician who took no fee, arrested by the governor Lysias, beheaded with his sister. A `dates` object is proposed from this page where the folder had none. The page's own σημείωση supports the folder's office: «όταν μεγάλωσε έγινε επίσκοπος Αιγών, επιτελώντας πολλά θαύματα», and names his parents Zenodotos and Thekla. It records a fragment of his relics at the monastery of Kato Xenia at Almyros in Magnesia. The apolytikion and the kontakion both name him and his sister and are taken into both folders; the Οἶκος is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -65,9 +80,52 @@
         "text": "Thy martyrs, O Lord, in their contest received incorruptible crowns from Thee our God; for possessing Thy strength they overthrew their torturers, and broke the feeble daring of the demons. By their prayers save Thou our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὡς θεῖοι αὐτάδελφοι ὁμονοοῦντες καλῶς, Ζηνόβιε ἔνδοξε καὶ Ζηνοβία σεμνή, συμφώνως ἠθλήσατε· ὅθεν καὶ τῶν στεφανῶν τῶν ἀφθάρτων τυχόντες, δόξης ἀκαταλύτου ἠξιώθητε, ἅμα ἐκλάμποντες τοῖς ἐν κόσμῳ χάριν ἰάσεων.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια». It names the two of them and no other saint.",
+        "url": "https://www.saint.gr/2856/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As godly brother and sister well agreed together, glorious Zenobius and modest Zenobia, you contended with one voice; and so, having obtained the incorruptible crowns, you were counted worthy of indissoluble glory, shining out together upon those in the world with the grace of healings.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τοὺς ἀληθείας Μάρτυρας, καὶ εὐσεβείας κήρυκας, τῶν ἀδελφῶν τὴν δυάδα τιμήσωμεν, ἐν θεοπνεύστοις ᾄσμασι, τὸν Zηvόβιοv ἅμα τῇ σεπτῇ Zηνοβία, ὁμοῦ βιώσαντας, καὶ διὰ μαρτυρίου τευξαμένους στέφος ἄφθαρτον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς — on the page of «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια». It names the two of them and no other saint. The readings «Zηvόβιοv» and «Zηνοβία» with Latin letters among the Greek are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/2856/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour in God-inspired songs the martyrs of the truth and heralds of godliness, the pair of brother and sister, Zenobius together with the revered Zenobia, who lived together and by martyrdom obtained the incorruptible crown.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 285,
+      "latest": 285,
+      "display": "285",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Ζηνοβιος (; - 285)», and in the notice «Και οι δύο θανατώθηκαν με αποκεφαλισμό κατόπιν βασανιστηρίων το 285 μ.Χ.». The same page adds a σημείωση that by another account he suffered under Diocletian, whose reign begins in 284; the year is recorded because the page states it, and the alternative is recorded here because the page prints it."
+    }
   }
 }

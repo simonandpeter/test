@@ -115,6 +115,40 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'alexander companion cronion alexander-companion-of-cronion cronion-companion-of-alexander':
+    'Two men of one company, not one man twice: saint.gr’s line for 30 Οκτωβρίου names Alexander and Cronion together, and each is surnamed by the other because the page gives neither a see nor a city of his own.',
+  'θεραπων therapon-of-cyprus therapon-of-lythrodontas therapon-of-the-white-lake':
+    'Three men. The new one is Therapon of Lythrodontas on 30 October, a hermit of Cyprus; the others are Therapon of Cyprus on 14 May and Therapon of the White Lake on 27 May.',
+  'θεοκτιστοσ theoctistus-brother-of-stephen-milutin theoctistus-of-kantara theoctistus-of-st-sabbas theoctistus-the-martyr':
+    'Four men. The new one is Theoctistus the brother of Stephen Milutin on 30 October, a king who died a monk; the others are read in the el-05-19 entry for this name form.',
+  'ελενη helen-martyr-26-may helen-mother-of-stephen-milutin helen-of-auxerre helen-of-decani helen-the-empress':
+    'Five women. The new one is Helen the mother of Stephen Milutin on 30 October, kept with her son and his brother Theoctistus; the others are Helen the Empress and Helen of Dečani on 21 May, Helen of Auxerre on 22 May and the Helen of 26 May.',
+  'δομετιοσ dometios-of-philotheou dometius-8-march dometius-brother-of-maximus dometius-disciple-of-dionysius dometius-martyr-30-october dometius-of-phrygia dometius-of-zographou dometius-the-martyr-16-october dometius-the-persian':
+    'Nine now. The new one is the Dometius of 30 October, whom the page names without a surname; the others are read in the el-03-23 entry for this name form, with the two of 7 August.',
+  'νεων neon-1-june neon-24-april neon-companion-of-mark-the-shepherd neon-of-corfu neon-of-laranda':
+    'Five men. The new one is Neon of Laranda on 30 October, of the company of Asterius and Claudius; the others are the Neon of 24 April, Neon of Corfu on 29 April, the Neon of 1 June and Neon the companion of Mark the Shepherd on 28 September.',
+  'μαρκιανοσ marcian-11-july marcian-companion-of-martyrius marcian-companion-of-peter marcian-of-constantinople marcian-of-cyrrhus marcian-of-durostorum marcian-of-egypt marcian-of-syracuse marcian-of-the-brazen-gate marcian-the-emperor':
+    'Ten now. The new one is Marcian bishop of Syracuse on 30 October, whom his life makes a disciple of the apostle Peter; the others are read in the el-03-26 entry for this name form.',
+  'μακαριοσ macarius-archbishop-16-august macarius-companion-of-eudoxius macarius-companion-of-julian macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-martyr-11-august macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-of-zheltovodsk macarius-the-confessor macarius-the-roman makarios-of-mount-auxentios':
+    'Twenty-six now. The new one is the Macarius of 30 October, martyred with Julian; the others are read in the el-08-16 entry for this name form.',
+  'ιουστοσ justus-1-june justus-companion-of-matthew justus-of-eleutheropolis justus-of-rome justus-the-soldier':
+    'Five now. The new one is Justus bishop of Eleutheropolis on 30 October, one of the Seventy; the others are read in the el-07-21 entry for this name form.',
+  'companion julian macarius julian-companion-of-macarius macarius-companion-of-julian':
+    'Two men of one company, not one man twice: the 30 Οκτωβρίου line names Julian and Macarius together, and each is surnamed by the other because the page gives neither a city of his own. They are listed beside Alexander and Cronion of the same day.',
+  'ιωσηφ joseph-archbishop-of-thessalonica joseph-gerontogiannis joseph-i-of-constantinople joseph-of-alaverdi joseph-of-aleppo joseph-of-arimathea joseph-of-astrakhan joseph-of-bisericani joseph-of-kantara joseph-of-lythrodontas joseph-of-nea-moni joseph-of-optina joseph-of-thessalonica-1821 joseph-the-anchorite joseph-the-hesychast joseph-the-hymnographer':
+    'Sixteen now. The new one is Joseph I patriarch of Constantinople on 30 October, a confessor; the others are read in the el-06-17 entry for this name form.',
+  'ιουλιανοσ helianus-of-the-forty-martyrs julian-companion-of-caesarius julian-companion-of-euboulos julian-companion-of-macarius julian-companion-of-modestus julian-companion-of-pamphilus julian-of-africa julian-of-antinoopolis julian-of-emesa julian-of-kandavla julian-of-samosata julian-of-tarsus julian-of-the-brazen-gate julian-of-the-dogazou julian-the-deacon-of-aegina julian-the-martyr-18-may':
+    'Sixteen now. The new one is the Julian of 30 October, martyred with Macarius; the others are read in the el-05-23 entry for this name form.',
+  'ευτροπια eutropia-25-june eutropia-of-alexandria':
+    'Two women. The new one is Eutropia of Alexandria on 30 October; the other is the Eutropia of 25 June.',
+  'κλαυδιοσ claudius-companion-of-lucillian claudius-husband-of-hilaria claudius-of-corinth claudius-of-laranda claudius-of-the-forty-martyrs claudius-venerable-3-february':
+    'Six men. The new one is Claudius of Laranda on 30 October, of the company of Asterius and Neon; the others are read in the el-02-03 entry for this name form.',
+  'αστεριοσ asterios-7-august asterius-companion-of-thalaleus asterius-of-laranda':
+    'Three men. The new one is Asterius of Laranda on 30 October, martyred with Claudius and Neon; the others are Asterius the companion of Thalaleus on 20 May and the Asterios of 7 August.',
+  'αρτεμασ artemas-of-cyzicus artemas-of-lystra':
+    'Two men. The new one is Artemas bishop of Lystra on 30 October, one of the Seventy; the other is Artemas of Cyzicus, kept on 28 April by the Greek calendar and 29 April by the Romanian.',
+  'αλεξανδροσ alexander-22-october alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-antonina alexander-companion-of-barbarus alexander-companion-of-cronion alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-in-iconium alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-perge alexander-of-prusa alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-seven now. The new one is the Alexander of 30 October, martyred with Cronion at Alexandria; the others are read in the el-10-12 entry for this name form.',
   'νεστωρ nestor-26-april nestor-father-of-conon nestor-of-maghid nestor-of-thessalonica nestor-the-chronicler nestor-the-martyr-2-march nestor-the-unlearned':
     'Seven now. The new one is Nestor the Unlearned on 29 October, who is neither of the two the day before — Nestor of Thessalonica nor Nestor the Chronicler; the others are read in the el-10-27 entry for this name form.',
   'κυριλλοσ cyril-alfanov cyril-bishop-in-africa cyril-companion-of-photius cyril-ii-of-rostov cyril-martyr-29-october cyril-of-alexandria cyril-of-astrakhan cyril-of-gortyna cyril-of-heliopolis cyril-of-jerusalem cyril-of-kantara cyril-of-kazan cyril-of-the-forty-martyrs cyril-of-the-white-lake cyril-of-thessalonica cyril-of-turov cyril-of-zographou cyril-the-new-of-paros cyril-the-philosopher cyril-vi-of-constantinople':

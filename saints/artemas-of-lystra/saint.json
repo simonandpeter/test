@@ -1,0 +1,51 @@
+{
+  "slug": "artemas-of-lystra",
+  "display_name": "Artemas of Lystra",
+  "names": [
+    {
+      "form": "Αρτεμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "office": "Bishop of Lystra",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates four apostles of the Seventy, each with his own heading and his own see, so it is four folders in principle; two of them the corpus already keeps and this is a new one. **It is not the corpus's Artemas of Cyzicus**, who is a martyr with a Greek feast on 28 April and a Romanian one on 29 April; this Artemas is an apostle of the Seventy who became bishop at Lystra. The page records fragments of his relics at the monasteries of Mega Spilaio at Kalavryta and of Kykkos in Cyprus. No year, so no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "slug": "eutropia-of-alexandria",
+  "display_name": "Eutropia of Alexandria",
+  "names": [
+    {
+      "form": "Ευτροπία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Αγία Ευτροπία», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Αγία Ευτροπία»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. **This is an open identity question and the report says so.** The corpus already keeps a folder «eutropia-25-june», display name Eutropia, with a Greek feast on 25 June and the rank Όσιομάρτυς, and no city and no life. This entry is a different day, a different rank — plain Άγια and a martyr by beheading — and a life with a city and a persecutor in it: Alexandria in Egypt and the prefect Appellianos. On the corpus's settled rule that two entries on one calendar are two commemorations, and on those three differences, this is drafted as a second woman; a writer who reads the 25 June page and finds otherwise should make this an upgrade of that folder instead. The page gives no year, so no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

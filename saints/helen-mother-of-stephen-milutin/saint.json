@@ -1,0 +1,63 @@
+{
+  "slug": "helen-mother-of-stephen-milutin",
+  "display_name": "Helen, mother of Stephen Milutin",
+  "names": [
+    {
+      "form": "Ελένη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "related": [
+    "stephen-milutin",
+    "theoctistus-brother-of-stephen-milutin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1306,
+      "latest": 1306,
+      "display": "1306",
+      "basis": "traditional",
+      "note": "saint.gr's heading for her, «Οσια Ελενη η Μητερα Των Οσιων Στεφανου Μιλιουτιν Και Θεοκτιστου (; - 1306)», and in the notice «Κοιμήθηκε το 1306 μ.Χ.». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates three members of one family, so it is three folders; this is the mother. The page identifies her only by that kinship, which is why the display name keeps it: «η Μητερα Των Οσιων Στεφανου Μιλιουτιν Και Θεοκτιστου». No queenly title is recorded because the page gives her none, although it makes her the wife — it does not say so — of a king's sons' father; it says only that she lived in a way pleasing to God and worked hard for the raising of new monasteries. The corpus keeps eight other Helens and none of them is Serbian of this family. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026). This is the calendar that would say most about her, and it has not been read here."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

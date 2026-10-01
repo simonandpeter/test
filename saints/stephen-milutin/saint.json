@@ -7,6 +7,11 @@
       "form": "Ștefan Milutin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 octombrie, «Sfântul Ștefan Milutin, țarul sârbilor»."
+    },
+    {
+      "form": "Στέφανος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word and the surname left off; the page's own surname form is «Μιλιούτιν»."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 30 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Οσιος Στεφανος Μιλιουτιν (; - 1320)», who ruled Serbia from 1275 to his death in 1320. The folder's existing dates are left untouched. The entry enumerates three of one family, so his brother Theoctistus and their mother Helen are new folders of this batch. The page records his relics incorrupt, less the skull which is lost, in the church of Saint Kyriake in Sofia. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -56,5 +71,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theoctistus-brother-of-stephen-milutin",
+    "helen-mother-of-stephen-milutin"
+  ]
 }

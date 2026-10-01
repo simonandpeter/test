@@ -1,0 +1,56 @@
+{
+  "slug": "justus-of-eleutheropolis",
+  "display_name": "Justus of Eleutheropolis",
+  "names": [
+    {
+      "form": "Ιούστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Ιησούς",
+      "lang": "el",
+      "note": "The page's second form for the same man: «Ο Ιούστος (ή Ιησούς) έγινε επίσκοπος Ελευθερούπολης», and its epigram for him is headed «Eις τον Iησούν»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "apostle"
+  ],
+  "office": "Bishop of Eleutheropolis",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates four apostles of the Seventy, each with his own see, so it is four folders in principle. The corpus's four other Justuses are none of them this man: Justus of Rome is a martyr with a Greek feast on 28 February, and the others are a soldier, a companion of Matthew, and one kept by date on 1 June. No year, so no `dates` object. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

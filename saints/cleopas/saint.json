@@ -6,6 +6,11 @@
       "form": "Cleopa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 octombrie, «Sfântul Apostol Cleopa»."
+    },
+    {
+      "form": "Κλεόπας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Κλεόπας ο Απόστολος και Ιωσήφ Πατριάρχης Κωνσταντινούπολης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 30 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Άγιοι Κλεόπας ο Απόστολος και Ιωσήφ Πατριάρχης Κωνσταντινούπολης»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: one of the Seventy, whom the page sends the reader to find at Luke 24.19–27. The page carries one notice for two men who have nothing to do with each other; the second, Joseph patriarch of Constantinople, is a new folder of this day's batch. saint.gr gives Cleopas no year, so the folder's dateless state is unchanged, and prints no hymn for him. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

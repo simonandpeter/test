@@ -1,0 +1,65 @@
+{
+  "slug": "theoctistus-brother-of-stephen-milutin",
+  "display_name": "Theoctistus, brother of Stephen Milutin",
+  "names": [
+    {
+      "form": "Θεόκτιστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monastic",
+    "king"
+  ],
+  "related": [
+    "stephen-milutin",
+    "helen-mother-of-stephen-milutin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1316,
+      "latest": 1316,
+      "display": "1316",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Οσιος Θεοκτιστος Αδελφος Του Στεφανου Μιλιουτιν (; - 1316)», and in the notice «ασκήτεψε στο Σρέμ μέχρι την κοίμηση του το 1316 μ.Χ.». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 30ης Οκτωβρίου — «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους»",
+        "url": "https://www.saint.gr/10/30/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 30 Οκτωβρίου εκάστου έτους», the same day as the listing. The entry enumerates three members of one family, each with his or her own heading and year, so it is three folders: Stephen Milutin the corpus already keeps and is upgraded from this page, and his brother and their mother are new. `king` is recorded because the page says he ruled Serbia for a short time before resigning the throne; the Serbian row is `undocumented` and is the one that would say most about him. The corpus keeps seven other Theoctistuses and none of them is Serbian. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026). This is the calendar that would say most about a king of the Serbs, and it has not been read here."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
