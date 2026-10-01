@@ -1,0 +1,50 @@
+{
+  "slug": "ten-thousand-martyrs-13-june",
+  "display_name": "The Ten Thousand Martyrs (13 June)",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μύριοι Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Άγιοι Μύριοι Μάρτυρες», with the rank word Άγιοι left off. The page glosses the word itself: «Μύριοι (δηλαδή δέκα χιλιάδες)»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Άγιοι Μύριοι Μάρτυρες»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The entry names nobody and enumerates nobody, so it is one entry and not ten thousand folders; the page gives no place, no emperor and no judge. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

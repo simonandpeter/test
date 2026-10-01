@@ -1,0 +1,64 @@
+{
+  "slug": "anna-of-larissa",
+  "display_name": "Anna of Larissa",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Άννα και Ιωάννης ο γιος της», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 950,
+      "display": "9th to mid 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά τη μεσοβυζαντινή περίοδο, 9ος αιώνας – μέσα 10ου αιώνα μ.Χ., αναδεικνύεται μία ακόμη αγία μορφή της πόλης της Λάρισας η οσία Άννα και ο υιός της Ιωάννης.» The bracket is that stated span. The page gives no year of birth or death; its source, Paul of Monemvasia's narrative, it dates to the tenth century."
+    }
+  },
+  "related": [
+    "john-son-of-anna-of-larissa"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Οσία Άννα και Ιωάννης ο γιος της»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing. The page is unusually explicit about its sources: her synaxarion was published by Stavros Gouloulis from the codex Vaticanus graecus 1558, ff. 71v–73r, a sixteenth-century June Menaion; the Synaxaria selecta of the Church of Constantinople have «της οσίας μητρός ημών Άννης και τον υϊού αυτής Ιωάννου»; Nikodemos the Hagiorite has the same; and the synaxarion is an epitome of the narrative of Paul of Monemvasia, of the tenth century. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

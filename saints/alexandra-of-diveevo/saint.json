@@ -6,6 +6,11 @@
       "form": "Alexandra",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 iunie, «Sfânta Alexandra Schimonahia, Stareța și Întemeietoarea Mănăstirii Diveevo»."
+    },
+    {
+      "form": "Αλεξάνδρα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Αλεξάνδρα Ηγουμένη και θεμελιώτρια της Μονής Ντιβέεβο», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -47,8 +52,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Οσία Αλεξάνδρα Ηγουμένη και θεμελιώτρια της Μονής Ντιβέεβο»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries, and dates her «(; - 1789)». It is plainly the same woman: Agatha Semyonovna Melgunova, widowed young, tonsured in 1760 at the Florovsky monastery of Kiev with the name Alexandra, sent by a vision of the Mother of God to found a new house, who settled at Diveevo near Sarov and died there on 13 June 1789. The page records her relics at the monastery of Diveevo. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
     },
     {
       "church": "serbian",

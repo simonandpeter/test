@@ -1,0 +1,62 @@
+{
+  "slug": "john-son-of-anna-of-larissa",
+  "display_name": "John, son of Anna of Larissa",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Άννα και Ιωάννης ο γιος της», with the rank word left off. The page says the name is handed down by the Synaxaria selecta and by Nikodemos the Hagiorite, and that Paul of Monemvasia's narrative and her synaxarion do not give it."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 950,
+      "display": "9th to mid 10th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Κατά τη μεσοβυζαντινή περίοδο, 9ος αιώνας – μέσα 10ου αιώνα μ.Χ., αναδεικνύεται μία ακόμη αγία μορφή της πόλης της Λάρισας η οσία Άννα και ο υιός της Ιωάννης.» The bracket is that stated span. The page says he was about thirty when he was baptised, and gives no year."
+    }
+  },
+  "related": [
+    "anna-of-larissa"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Οσία Άννα και Ιωάννης ο γιος της»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing, and the day's line names him as a second person with his mother, which is why he is a folder of his own. The page notes that his name is not uniform in its sources: «Σε μία κοντινή πηγή ο ιερομόναχος κατήχησε και βάπτισε το γιο της δίνοντας του, σύμφωνα με τα Synaxaria selecta και τον Συναξαριστή του αγίου Νικόδημου, το όνομα Ιωάννης. Η Διήγηση του Παύλου Μονεμβασίας και το Συναξάρι της δεν παραδίδουν το όνομα του γιου της.» No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

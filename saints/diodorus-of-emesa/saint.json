@@ -1,0 +1,50 @@
+{
+  "slug": "diodorus-of-emesa",
+  "display_name": "Diodorus of Emesa",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Διόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Άγιος Διόδωρος ο εξ Εμέσης», with the rank word and the place-phrase left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Άγιος Διόδωρος ο εξ Εμέσης»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. He is none of the four other men of the name the corpus already keeps, each on his own day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

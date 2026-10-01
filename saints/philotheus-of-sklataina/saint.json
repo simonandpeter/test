@@ -1,0 +1,80 @@
+{
+  "slug": "philotheus-of-sklataina",
+  "display_name": "Philotheus of Sklataina",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Φιλόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Όσιος Φιλόθεος ο εκ Σκλαταίνης», with the rank word and the place-phrase left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1475,
+      "latest": 1550,
+      "display": "between 1475 and 1550",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Φιλόθεος ο εκ Σκλαταίνης (Ρίζωμα) έζησε μεταξύ των ετών 1475 μ.Χ. με 1550 μ.Χ., αν ληφθεί υπ’ όψιν ότι διετέλεσε ηγούμενος της Ιεράς Μονής Αγίου Στεφάνου Μετεώρων κατά το έτος 1545 μ.Χ.» — the span and the reasoning behind it are the page's own, and it gives no year of birth or death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Όσιος Φιλόθεος ο εκ Σκλαταίνης»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing. He is none of the six other men of the name the corpus already keeps. The page gives his village's modern name, Rizoma, quotes the donor inscription in the narthex of Saint Stephen's at Meteora, and says a supplicatory canon for him was composed in 1997 by the hieromonk Athanasios of Simonopetra and a church in his birthplace dedicated to him in 2004. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Σκλαταίνης τόν γόνον, Μετεώρων τό καύχημα, καί Μονῆς Ἁγίου Στεφάνου, πολιστήν καί δομήτορα, τιμήσωμεν Φιλόθεον πιστοί, ὡς λύχνον τοῦ Χριστοῦ ἀειλαμπῆ, καταυγάζει γάρ Σεμνείῳ τῷ Ἱερῷ, τῆς Οἰκουμένης πέρατα. Δόξα τῷ ἁγιάσαντι Θεῷ, δόξα τοῖς ἑπομένοις σοῖς σεπτοῖς, ἐντάλμασιν Πανίερε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of «Όσιος Φιλόθεος ο εκ Σκλαταίνης», and it names him, Sklataina and the monastery of Saint Stephen",
+        "url": "https://www.saint.gr/4279/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful honour Philotheus, the offspring of Sklataina, the boast of Meteora, the settler and builder of the monastery of Saint Stephen, as an ever-shining lamp of Christ; for by that holy house he lights up the ends of the world. Glory to God who sanctified you, glory to those who follow your venerable commands, all-sacred one.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

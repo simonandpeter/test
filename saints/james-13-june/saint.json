@@ -1,0 +1,51 @@
+{
+  "slug": "james-13-june",
+  "display_name": "James (13 June)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Ιάκωβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Όσιος Ιάκωβος ο εξ απάτης τον διάβολον προσκυνήσας», with the rank word and the long epithet left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Όσιος Ιάκωβος ο εξ απάτης τον διάβολον προσκυνήσας»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing, and carries no years. The day's line is itself the whole of his identification — the venerable James who by a deception did reverence to the devil — and the page gives him no place, no century and no monastery by name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

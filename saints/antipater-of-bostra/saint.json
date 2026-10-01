@@ -1,0 +1,61 @@
+{
+  "slug": "antipater-of-bostra",
+  "display_name": "Antipater of Bostra",
+  "sex": "male",
+  "office": "Bishop of Bostra",
+  "types": [
+    "bishop",
+    "apologist"
+  ],
+  "names": [
+    {
+      "form": "Αντίπατρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Άγιος Αντίπατρος επίσκοπος Βόστρων», with the rank word and the see left off."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 451,
+      "latest": 500,
+      "display": "second half of the 5th century",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε το δεύτερο μισό του 5ου αιώνα» — the half-century is the page's own, and the bracket is that half-century. The page gives no year of birth and no year of death, and says outright that the synaxaria carry no biographical material for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Άγιος Αντίπατρος επίσκοπος Βόστρων»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing. He is not the corpus's `antipater-of-cyzicus`. The page says its biographical material comes from outside the synaxaria — «Στους Συναξαριστές δεν υπάρχουν βιογραφικά του στοιχεία. Από άλλου όμως γνωρίζουμε …» — and names no source for it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

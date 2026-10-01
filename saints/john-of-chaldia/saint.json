@@ -1,0 +1,103 @@
+{
+  "slug": "john-of-chaldia",
+  "display_name": "John of Chaldia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Όσιος Ιωάννης ο πρεσβύτερος, ο νέος χρυσόστομος και ελεήμονος, εκ Χαλδίας Μικράς Ασίας», with the rank words and the epithets left off. The page gives his surname as Τριανταφυλλίδης, which is not part of the stored form."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1836,
+      "latest": 1836,
+      "display": "10 February 1836",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο π. Ιωάννης Τριανταφυλλίδης γεννήθηκε στις 10 Φεβρουαρίου 1836 μ.Χ. στο χωριό Λωρία (Μούζενα) του νομού Τραπεζούντος, από ευλαβείς γονείς, τον Τριαντάφυλλο και την Κυριακή», and the head line reads «(1836 - 1903)»."
+    },
+    "death": {
+      "earliest": 1903,
+      "latest": 1903,
+      "display": "1903",
+      "basis": "traditional",
+      "note": "saint.gr's head line reads «Οσιος Ιωαννης ο Πρεσβυτερος, ο Νεος Χρυσοστομος Και Ελεημονος, Εκ Χαλδιας Μικρας Ασιας (1836 - 1903)». The page gives no day for the repose."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Όσιος Ιωάννης ο πρεσβύτερος, ο νέος χρυσόστομος και ελεήμονος, εκ Χαλδίας Μικράς Ασίας»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day as the listing, and dates him «(1836 - 1903)». The page names its source: what is known of him was preserved by his grandson Spyridon Triantaphyllides in manuscript notes in katharevousa — Spyridon had been a teacher at Trebizond and died at Thessalonica in 1942 — whose son John gave them to Panagiotis Klementides, who made them over for the writing of the book «Ασκητές μέσα στον κόσμο». The page's related links include a translation of his relics, which is a separate commemoration and is not recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τῆς ἐρήμου πολίτης.",
+      "text": "Τῆς Χαλδίας τὸν γόνον Ὀρθοδόξων τὸ κλέϊσμα, τὸ τῆς εὐσεβείας ταμεῖον, Ἰωάννην ὑμνήσωμεν, τὸν χέοντα ἰάματα πιστοῖς, καὶ ἔλεος τοῖς τρέχουσιν αὐτῷ, καρποδότην διδαγμάτων τῶν θεϊκῶν, εἰρήνην τὸν παρέχοντα· δόξα σοι κράζομεν σοφέ, δόξα τῷ σὲ ἀναδείξαντι, πᾶσι τοῖς προσιοῦσί σοι πιστῶς, σκέπην παρήγορον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τῆς ἐρήμου πολίτης, on the page of «Όσιος Ιωάννης ο πρεσβύτερος … εκ Χαλδίας Μικράς Ασίας», and it names him and Chaldia",
+        "url": "https://www.saint.gr/391/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn John, the offspring of Chaldia, the glory of the Orthodox, the treasury of piety, who pours out healings upon the faithful and mercy upon those who run to him, the giver of the fruit of divine teachings, the bestower of peace. Glory to you, we cry, O wise one; glory to him who showed you forth to all who come to you in faith as a comforting shelter.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ΄.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Τῷ καλάμῳ Ἅγιε, τῆς σῆς ἀγάπης καὶ λόγου, τὴν σὴν ποίμνην ἥλκυσας, ἐν ἁγιότητος τρίβῳ, ὤφθης δέ, δοχεῖον χάριτος οὐρανίου, νῦν ἡμεῖς, σκιρτῶντες τρέχοντες σοῖς λειψάνοις, καὶ ἰάσεις ἀπαντλοῦντες, ὦ Ἰωάννη, ὕμνους προσάγομεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ΄, Ἡ Παρθένος σήμερον, on the page of «Όσιος Ιωάννης ο πρεσβύτερος … εκ Χαλδίας Μικράς Ασίας», and it names him",
+        "url": "https://www.saint.gr/391/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the reed of your love and of your word, O holy one, you drew your flock along the path of holiness, and you were shown to be a vessel of heavenly grace; and now we, leaping for joy as we run to your relics and draw up healings from them, offer you our hymns, O John.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

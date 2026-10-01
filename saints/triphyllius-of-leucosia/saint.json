@@ -7,6 +7,11 @@
       "form": "Trifilie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 iunie, «Sfântul Ierarh Trifilie, Episcopul Levcosiei din Cipru»."
+    },
+    {
+      "form": "Τριφύλλιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Ιουνίου, «Άγιος Τριφύλλιος Επίσκοπος Λήδρας», with the rank word and the see left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 13 Ιουνίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Ιουνίου — «Άγιος Τριφύλλιος Επίσκοπος Λήδρας»",
+        "url": "https://www.saint.gr/06/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Ιουνίου εκάστου έτους», the same day the folder's Romanian row already carries. It is plainly the same man: the first bishop of Leucosia in Cyprus — Ledra is the older name of the city — trained at Salamis and Soloi and then in law and rhetoric at Beirut, and bound in the sources to Trimythous, the country of his teacher Spyridon. The page calls him the patron of Nicosia, records his skull at the monastery of Kykkos, and says the one church in Cyprus dedicated to him today is the small chapel in the yard of the Eleneion primary school. It gives him no year, and it reasons rather than states about his birthplace and his parents: «Ο τόπος που γεννήθηκε ο Άγιος αυτός δεν αναφέρεται πουθενά … Επίσης και τα ονόματα των γονέων του δεν μας είναι γνωστά. Πρέπει όμως να ήσαν πλούσιοι.» No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -60,5 +75,23 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "text": "Ζήλον πίστεως έχων, Παμμάκαρ, ανεβλάστησας καρπούς ωρίμους, των γαρ εχθρών κατήσχυνας τας φάλαγγας, και τον Βελίαρ, Τριφύλλιε, έκτεινας· Πάτερ όσιε, Χριστόν τον Θεόν ικέτευε, δωρήσασθαι ημίν το μέγα έλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ήχος γ', the one hymn on the page of «Άγιος Τριφύλλιος Επίσκοπος Λήδρας», and it names him; the page's text breaks the word «ικέτευε» across a line and it is set whole here",
+        "url": "https://www.saint.gr/1854/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having the zeal of faith, all-blessed one, you brought forth ripe fruits; for you put to shame the ranks of the enemies and slew Belial, O Triphyllios. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
