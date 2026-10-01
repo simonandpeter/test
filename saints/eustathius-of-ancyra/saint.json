@@ -1,0 +1,50 @@
+{
+  "slug": "eustathius-of-ancyra",
+  "display_name": "Eustathius of Ancyra",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευστάθιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουλίου, «Άγιος Ευστάθιος που μαρτύρησε στην Άγκυρα», with the rank word and the clause of place left off. The page glosses the name from ευσταθής, the man steady in a decision."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουλίου — «Άγιος Ευστάθιος που μαρτύρησε στην Άγκυρα»",
+        "url": "https://www.saint.gr/07/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουλίου εκάστου έτους», the same day as the listing. He is none of the corpus's many men of the name: not the great-martyr, not the Roman, not of Antioch, of Kios, of Mtskheta, of Vilnius, not the two Serbian archbishops, not Kataphloros of Thessalonica, and not the bare hieromartyr of 7 July. None of those is born at Ancyra, dragged into the river Sagaris and killed with the eparch's own knife, and none is kept on 28 July. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page names the eparch Cornelius and no year, so there is no `dates` object, and it prints no hymn. Ancyra and the Sagaris are named and `locations` is left out, the notice being four sentences long. Under the name gloss the page carries three bearers of the name out of antiquity — a fourth-century Neoplatonist, a lawgiver of Byzantium and an eleventh-century Byzantine painter — which is a dictionary note and not part of his life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

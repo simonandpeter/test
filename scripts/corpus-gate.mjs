@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευσταθιοσ eustathius-hieromartyr-7-july eustathius-i-archbishop-of-serbia eustathius-of-ancyra eustathius-of-antioch eustathius-of-kios eustathius-of-vilnius eustathius-the-roman':
+    'Seven now. The new one is Eustathius of Ancyra on 28 July; the others are read in the el-07-07 entry for this name form.',
+  'αυξεντιοσ auxentius-of-bithynia auxentius-of-kartilio auxentius-of-laodicea auxentius-of-vella':
+    'Four now. The new one is Auxentius of Laodicea on 28 July; the others are read in the el-02-14 entry for this name form.',
+  'ακακιοσ acacius-companion-of-patrick acacius-of-amida acacius-of-apollonia acacius-of-gaul acacius-of-latros acacius-of-melitene acacius-of-the-forty-martyrs acacius-of-tver acacius-the-centurion acacius-the-executioner acacius-the-kausokalyvite acacius-the-new-of-neochorion':
+    'The new one is Acacius of Apollonia on 28 July; the rest of the fold is read in the el-05-19 entry for this name form.',
   'νικολαοσ nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-migulin nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-metsovo nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
     'Twenty-three now. The new one is Nicholas of Novgorod on 27 July; the others are read in the el-05-31 entry for this name form.',
   'χριστοδουλοσ christodoulos-26-february christodoulos-of-kassandra christodoulos-of-patmos christopher-of-adrianople':

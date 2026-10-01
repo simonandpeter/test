@@ -6,6 +6,11 @@
       "form": "Nicanor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 iulie, «Sfinții Apostoli și Diaconi Prohor, Nicanor, Timon și Parmena, dintre cei 70», with the rank words left off."
+    },
+    {
+      "form": "Νικάνωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουλίου, «Άγιοι Πρόχορος, Νικάνωρ, Τίμων και Παρμένας οι Απόστολοι και Διάκονοι», with the rank words left off. The page glosses the name as «ο νικητής», the victor."
     }
   ],
   "sex": "male",
@@ -35,6 +40,56 @@
         "text": "Holy apostles, entreat the merciful God to grant our souls forgiveness of offences.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς θεῖοι συνέκδημοι, τῶν Ἀποστόλων Χριστοῦ, θεόθεν ἐκρίθητε διακονεῖν εὐσεβῶς, τῷ θείῳ πληρώματι, Πρόχορε θεηγόρε, σὺν Νικάνορι ἅμα, Τίμων ὁ θεοκήρυξ. Παρμενᾶς τε ὁ θεῖος, πρεσβεύοντες τῷ Κυρίῳ, ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — on the shared page of the four, and it names him among them",
+        "url": "https://www.saint.gr/2145/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As divine fellow travellers of the Apostles of Christ, you were judged from God to serve the divine fullness in piety — Prochorus, speaker of God, together with Nicanor, and Timon the herald of God, and divine Parmenas — interceding with the Lord for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "text": "Ἀπόστολοι Ἅγιοι, πρεσβεύσατε τῷ ἐλεήμονι Θεῷ , ἵνα πταισμάτων ἄφεσιν, παράσχῃ ταῖς ψυχαῖς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος γ’ — the second hymn on the shared page of the four. It is the common of apostles and names nobody, but the page prints it under their names, so by the corpus's rule it is their service and is copied whole",
+        "url": "https://www.saint.gr/2145/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy Apostles, intercede with the merciful God, that he may grant our souls the forgiveness of their offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ.",
+      "text": "Διάκονοι σεπτοί, καὶ αὐτόπται τοῦ Λόγου, καὶ σκεύη ἐκλογῆς, ἀνεδείχθητε πίστει, Νικάνορ καὶ Πρόχορε, Παρμενᾶ, Τίμων ἔνδοξε· ὅθεν σήμερον, τὴν ἱερὰν ὑμῶν μνήμην, ἑορτάζομεν, ἐν εὐφροσύνῃ καρδίας, ὑμᾶς μακαρίζοντες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος α’, Τὸν τάφον σου Σωτὴρ — the third hymn on the shared page of the four, and it names him first of them",
+        "url": "https://www.saint.gr/2145/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Revered deacons and eyewitnesses of the Word, you were shown by faith to be chosen vessels, Nicanor and Prochorus, Parmenas and glorious Timon; and so today we keep your sacred memory with gladness of heart, and call you blessed.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
@@ -59,8 +114,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουλίου — «Άγιοι Πρόχορος, Νικάνωρ, Τίμων και Παρμένας οι Απόστολοι και Διάκονοι»",
+        "url": "https://www.saint.gr/07/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the four deacons are the folder's own company, with a head line each on one page. Of Nicanor the Greek page says he died at Jerusalem carrying out his deacon's work and was buried by the Apostles themselves, in the mourning of the whole Church — which is what the folder's existing `types` of apostle, deacon and martyr will want weighing against: **the Greek page does not call him a martyr**, it says he died doing his work at Jerusalem, and that disagreement with the folder's Romanian source is recorded here and nothing is removed. The page gives no year for any of the four, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. It prints three hymns and all three are taken, two of them naming him."
     },
     {
       "church": "serbian",

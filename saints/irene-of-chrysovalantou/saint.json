@@ -6,6 +6,11 @@
       "form": "Irina Hrisovalantou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 iulie, «Sfânta Cuvioasă Irina Hrisovalantou, care a primit mere din Rai», with the rank words left off."
+    },
+    {
+      "form": "Ειρήνη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουλίου, «Οσία Ειρήνη η Χρυσοβαλάντου», with the rank word and the byname left off."
     }
   ],
   "sex": "female",
@@ -48,8 +53,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουλίου — «Οσία Ειρήνη η Χρυσοβαλάντου»",
+        "url": "https://www.saint.gr/07/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: the Cappadocian who was going to Byzantium to be married, turned aside at the monastery of Chrysovalantou and became its abbess, against the Romanian «Sfânta Cuvioasă Irina Hrisovalantou» of the same day and the same monastery. The Greek page sets her in the years of the empress Theodora who restored the holy icons, which is the connection the folder's existing `related` row to `theodora-the-empress` already records; it gives no year of its own, so no `dates` object is proposed and the folder's `birth` stands untouched. It adds the gifts of prophecy and of wonders, the many she freed of demons by prayer, and her foreknowledge of her own death. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one hymn, an apolytikion that names her and names Chrysovalantou, and it is taken; there is no kontakion."
     },
     {
       "church": "serbian",
@@ -71,6 +86,23 @@
       },
       "english": {
         "text": "Most venerable Mother Irene, you hallowed the chamber of your mind with the myrrh of prayer and lit the lamp of your heart with the fire of humble thought, to make the light of wisdom shine for your community. Standing now before the Light unutterable, pray that the lightning of your prayer may scatter the darkness of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Βασιλείας γήινους πάλαι οὐκ ἔτυχες, ἀλλ' ἄφθάρτων στεφάνων νῦν σὲ ἠξίωσεν, ὁ Νυμφίος σου Χριστὸς ὁ ὡραιότατος, ᾧ καθιέρωσας σαυτήν, ὅλῃ καρδίᾳ καὶ ψυχῇ, Εἰρήνη Ὁσία Μῆτερ, Χρυσοβαλάντου ἡ δόξα, ἡμῶν δὲ προσφυγὴ καὶ βοήθεια.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — the only hymn on the page of «Οσία Ειρήνη η Χρυσοβαλάντου». It names her and names her monastery, so it is her own proper; its «Βασιλείας γήινους» is the page's reading and is copied as it stands",
+        "url": "https://www.saint.gr/2141/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An earthly kingdom you did not obtain of old, but now your most beautiful Bridegroom Christ has counted you worthy of incorruptible crowns, to whom you consecrated yourself with all your heart and soul, Irene, venerable mother, the glory of Chrysovalantou and our refuge and help.",
         "rendered": "site"
       }
     }

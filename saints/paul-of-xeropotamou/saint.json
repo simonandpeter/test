@@ -6,6 +6,11 @@
       "form": "Pavel de la Xiropotamu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 iulie, «Sfântul Cuvios Pavel de la Xiropotamu», with the rank word left off."
+    },
+    {
+      "form": "Παύλος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 28 Ιουλίου, «Όσιος Παύλος ο Ξηροποταμινός», with the rank word and the byname left off. The page glosses the name from the Latin paulus, the very small one."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 28 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 28ης Ιουλίου — «Όσιος Παύλος ο Ξηροποταμινός»",
+        "url": "https://www.saint.gr/07/28/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the founder of Xeropotamou on the Holy Mountain and afterwards of the monastery now called Saint Paul's, against the Romanian «Sfântul Pavel de la Xiropotamu» of the same day. The Greek page's main notice puts him in the tenth century and calls him the son of devout Byzantine nobles, «ύπατος των φιλοσόφων» by his life. **It then argues with itself, and that is reported rather than acted on.** Its own «Σημείωση» says that according to S. Eustratiades the biography of the venerable Paul which stands in the Neon Eklogion — where he is made the son of the emperor Michael I Rangabe, 811 to 813, and of the daughter of the emperor Nicephorus the General, castrated in childhood and risen to great heights of philosophy — «είναι τελείως φανταστική», is completely fictional, while Athonite tradition makes him a contemporary of Saint Athanasius, the founder of the Lavra. That is a dispute about one published life and not a doubt about the saint or about the day, which both calendars give as 28 July, so the row is made and the quarrel is written into the folder's life; there is no asterisk and no «Δεν είναι διασταυρωμένη» sentence. Because of it no `dates` object is proposed: the page offers a century in one place and a disowned imperial parentage in another, and the two cannot both be recorded. The page prints an apolytikion and a kontakion, both of which name him and both of which are taken — the kontakion calls him an offspring of kings, which is the very tradition the page's note disowns, and that is said in its source line. It also prints a μεγαλυνάριον, which the schema's `kind` enum cannot hold and which is therefore not drafted."
     },
     {
       "church": "serbian",
@@ -58,6 +73,40 @@
       },
       "english": {
         "text": "An angel in the body, foundation of the hermits, holy Paul the glorious, the first adorner of the monastery of Xeropotamou, calls the multitude of angels from above; and from below he gathers the ranks of his disciples, to sing with songs his godly memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Βασιλείου ἀξία ἀνταλλαξάμενος, τὸν θεούφαντον τρίβωνα τῆς ὅσιας ζωῆς, ὡς ἀστὴρ ἑωθινὸς ἐν Ἄθῳ ἔλαμψας, καὶ ὁδηγεῖς φωτιστικῶς, Μοναζόντων τοὺς χορούς, πρὸς κτῆσιν τὴν τῶν κρειττόνων, Παῦλε Πατέρων ἄκρατης, καὶ πρεσβευτὰ ἠμῶν πρὸς Κύριον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τὸν συνάναρχον Λόγον — on the page of «Όσιος Παύλος ο Ξηροποταμινός». It names him and names Athos, so it is his own proper. Its «Παῦλε Πατέρων ἄκρατης» is the page's reading and is copied as it stands",
+        "url": "https://www.saint.gr/2139/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having exchanged a royal dignity for the God-woven cloak of the holy life, you shone on Athos like a morning star, and you guide the choirs of monks with light towards the gaining of better things, Paul, height of the fathers and our ambassador to the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ὡς ἀνάκτων βλάστημα, Παῦλε θεόφρον, κληρονόμος ἄξιος, καὶ υἱὸς ὤφθης εὐκλεής, τοῦ οὐρανίου Παντάνακτος, δι’ ἰσαγγέλου ζωῆς Πάτερ Ὅσιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — the second hymn on the page of «Όσιος Παύλος ο Ξηροποταμινός», and it names him. It calls him «ἀνάκτων βλάστημα», an offspring of kings, which is the imperial parentage the same page's own note calls completely fictional; the reading is the source's and is copied as it stands, and the disagreement is recorded in the attestation note and in the life",
+        "url": "https://www.saint.gr/2139/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As an offspring of kings, God-minded Paul, you were shown a worthy heir and a renowned son of the heavenly King of all, through a life equal to the angels, venerable father.",
         "rendered": "site"
       }
     }
