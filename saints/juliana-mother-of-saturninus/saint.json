@@ -1,0 +1,53 @@
+{
+  "slug": "juliana-mother-of-saturninus",
+  "display_name": "Juliana, mother of Saturninus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ιουλιανή",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 22 Ιουνίου, «Αγία Ιουλιανή και Σατορνίνος ο γιος της», with the rank word left off."
+    }
+  ],
+  "related": [
+    "saturninus-son-of-juliana"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 22ης Ιουνίου — «Αγία Ιουλιανή και Σατορνίνος ο γιος της»",
+        "url": "https://www.saint.gr/06/22/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 22 Ιουνίου εκάστου έτους», the same day as the listing, and gives no year. The entry names both members, so it is one folder each. She is none of the corpus's three other Julianas — of Lazarevo, of Nicomedia and of Ptolemais — none of whom is kept on this day or has a son of this name. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
