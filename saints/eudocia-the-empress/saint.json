@@ -1,0 +1,63 @@
+{
+  "slug": "eudocia-the-empress",
+  "display_name": "Eudocia, wife of Theodosius the Younger",
+  "sex": "female",
+  "types": [
+    "empress"
+  ],
+  "names": [
+    {
+      "form": "Ευδοκία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Αυγούστου, «Αγία Ευδοκία η βασίλισσα», with the rank word and the royal title left off. The page glosses the name from ευδοκία, good disposition and love of one's fellows, and says it was given her at her baptism, her earlier name having been Αθηναΐς."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Αυγούστου — «Αγία Ευδοκία η βασίλισσα»",
+        "url": "https://www.saint.gr/08/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγια Ευδοκια η Βασιλισσα (401 - ;)», and the notice makes her the daughter of the Athenian philosopher Λεόντιος, born in 401, married to Θεοδόσιος ο Β' through the good offices of his sister Πουλχερία, baptised Ευδοκία from Αθηναΐς, and dead at Jerusalem after founding many monasteries there. The second half of the head line is a question mark: saint.gr gives no year of her death, so the folder's `dates` carries the birth alone. The corpus keeps no other empress of this name; the four Eudocias it holds — of Heliopolis, the Child, and the two new martyrs of the Soviet years — are other women on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion — no hymn of any kind under its own heading — so this folder takes no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 401,
+      "latest": 401,
+      "display": "401",
+      "basis": "attested",
+      "note": "saint.gr: «Η Αγία Ευδοκία ήταν κόρη του αθηναίου φιλοσόφου Λεοντίου και γεννήθηκε το 401 μ.Χ.», and its head line «(401 - ;)». The page gives no year of death at all."
+    }
+  },
+  "related": [
+    "theodosius-the-younger",
+    "pulcheria-the-empress"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

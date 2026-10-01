@@ -15,6 +15,11 @@
       "form": "Tihon din Zadonsk",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 august, «Sfântul Ierarh Tihon din Zadonsk», with the rank word left off."
+    },
+    {
+      "form": "Τύχων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Αυγούστου, «Άγιος Τύχων Επίσκοπος Ζαντόνσκ», with the rank word and the see left off. The page glosses the name from τύχη, the fortunate, the auspicious, and gives his name in the world as Τιμόθεος Σοκολώφ."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Αυγούστου — «Άγιος Τύχων Επίσκοπος Ζαντόνσκ»",
+        "url": "https://www.saint.gr/08/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Αυγούστου εκάστου έτους», the same day as the listing. The Russian, Romanian and Serbian rows already keep him on this menologion day and the Greek calendar keeps him on the revised-julian 13 August. The head line «Αγιος Τυχων Επισκοπος Ζαντονσκ (1724 - 1783)» agrees with the folder's dates exactly, and the long Greek notice is the same man: Timothy Sokolov, born 1724 at Korotsk in the province of Novgorod, the seminary, teacher of Greek and then of rhetoric from July 1754, tonsured Tikhon on 10 April 1758, teacher of philosophy from 27 August 1758, inspector of the seminary 13 January 1759, Tver from 26 August 1759, consecrated 13 May 1761 at Saint Petersburg as chorbishop of the diocese of Novgorod at thirty-seven. **Two readings of the page differ from what the folder already says and neither is changed here: saint.gr makes his father a deacon, «στην οικογένεια του διακόνου Σαβελλίου», where the folder's Romanian row has a poor sacristan's family; and saint.gr dates his accession to Voronezh to 3 February 1763, «όπου υπηρέτησε 4 χρόνια και 7 μήνες», where the folder's Romanian row has 1761. Both are named in the reader's report.** The page adds a relic: «Απότμημα αφθάρτου Λειψάνου του Αγίου βρίσκεται στη Μονή Παντελεήμονος Αγίου Όρους». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints apophthegms and prayers of his at length but no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

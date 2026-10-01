@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευδοκια eudocia-of-heliopolis eudocia-the-empress':
+    'Two women: Eudocia of Heliopolis on 1 March and Eudocia the Empress on 13 August.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Twenty-five now. The new one is the Stephen of 12 August; the others are read in the el-08-03 entry for this name form.',
   'σεργιοσ sergius-12-august sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-valaam sergius-of-zographou sergius-the-confessor sergius-the-magistros sergius-zipulin':

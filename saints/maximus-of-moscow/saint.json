@@ -6,6 +6,11 @@
     {
       "form": "Максим Московский",
       "lang": "ru"
+    },
+    {
+      "form": "Μάξιμος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Αυγούστου, «Ανακομιδή Ιερών Λειψάνων του Αγίου Μάξιμου της Μόσχας», with the rank word, the words about the translation of the relics and the city left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Αυγούστου — «Ανακομιδή Ιερών Λειψάνων του Αγίου Μάξιμου της Μόσχας»",
+        "url": "https://www.saint.gr/08/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 13 Αυγούστου εκάστου έτους», the same day as the listing. **The Greek line is a translation of relics, not a repose**: «Ανακομιδή Ιερών Λειψάνων του Αγίου Μάξιμου της Μόσχας», which is the same commemoration the Russian row already carries on the Julian 13 August as the finding of his relics. It is recorded as this church's feast because that is the day the Greek calendar keeps him on and the only one it gives him; a reader cannot make it a second row, and the character of the line is set down here instead. The whole notice behind it is one sentence about the man: «Ο Άγιος Μάξιμος της Μόσχας ήταν δια Χριστόν σαλός και κοιμήθηκε στις 11 Νοεμβρίου του 1434 μ.Χ.» — he was a fool for Christ and fell asleep on 11 November 1434. **That date disagrees with the folder's `dates`, which displays «c. 1547» out of a Sretensky line that is itself about the finding of the relics and not the repose; nothing is changed here and the question is in the reader's report.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",
