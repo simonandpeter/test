@@ -11,6 +11,11 @@
       "form": "Eliza",
       "lang": "ro",
       "note": "The second form the same line prints, in a parenthesis: «Sfânta Muceniţă Elesa (Eliza) din Kythira»."
+    },
+    {
+      "form": "Ελέσα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Αυγούστου, «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», with the rank word and the clause about her martyrdom left off. The page explains the name from the voice her mother heard, «ἐλέησέ σε ὁ Θεός» — God has had mercy on you."
     }
   ],
   "sex": "female",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: the father Ελλάδιος and the mother Ευγενία, the barren woman's prayer, the flight to Kythira, the father's pursuit and the beheading on «την 1η Αυγούστου 375 μ.Χ.», which is the year the folder's `dates` already holds. So no change to `dates` is proposed. The page's head line reads «Αγια Ελεσα Οσιομαρτυς Που Μαρτυρησε Στα Κυθηρα (; - 375)». It carries no asterisk and not the «Δεν είναι διασταυρωμένη» sentence, but it does carry a note of its own which is quoted in full in the life: «Σημείωση: Η μνήμη της συγκεκριμένης Αγίας δεν αναφέρεται πουθενά στους Συναξαριστές, τη βρίσκουμε σαν μάρτυρα μόνο στα Κύθηρα» — her memory is nowhere mentioned in the Synaxaristes and we find her as a martyr only in Kythira. That is a statement about where she is attested and not a refusal to vouch for her: the page gives her a full life, a year, a shrine with its building history and six hymns, and the folder already exists from the Romanian calendar, so the row is drafted and the note is reported. The page prints three apolytikia and two kontakia, all of which name her, and all five are taken; its megalynarion, its oikos and its kathisma are kinds the schema does not hold and are not drafted."
     },
     {
       "church": "serbian",
@@ -60,5 +75,94 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodore-of-kythera"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Γόνος ἅγιος, Πελοποννήσου, γέρας ἔνθεον, νήσου Κυθήρων, ἀνεδείχθης, Ἐλέσα πανεύφημε, ὑπὲρ Χριστοῦ γὰρ νομίμως ἀθλήσασα, χειρὶ πατρῷα ἐτμήθης τὴν κάραν σου, Μάρτυς ἔνδοξε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — on the page of «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», and it names her",
+        "url": "https://www.saint.gr/2188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A holy offspring of the Peloponnese and a godly ornament of the island of Kythira you were shown to be, all-praised Elesa; for having lawfully contended for Christ you had your head cut off by a father's hand. Glorious martyr, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ἐκ στείρας ἐβλάστησας, καθάπερ ἄνθος τερπνόν, πατρὸς δὲ μισήσασα, τὴν ἀθεΐαν στερρῶς, Ἐλέσα πανένδοξε, ἔλαμψας ἐν τῇ νήσῳ τῶν Κυθήρων ὁσίως, ἤθλησας δὲ ἐν ταύτῃ, καὶ λαμπρῶς ἐδοξάσθης· καὶ νῦν ἀναπηγάζεις, τὰ θεῖα δωρήματα.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — on the page of «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», and it names her",
+        "url": "https://www.saint.gr/2188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Out of a barren woman you sprang like a delightful flower, and hating steadfastly your father's godlessness, all-glorious Elesa, you shone in holiness on the island of Kythira; there you contended and were brightly glorified, and now you pour forth the divine gifts.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "text": "Ὡς ὁ προφήτης ἐκ στείρας, Ἐλέσα, βλαστήσασα, καὶ τῆς ἐρήμου ὡς οὗτος οἰκήτειρα γέγονας. Λιποῦσα γὰρ δόξας τιμάς τε ἐν γῇ, λαμπαδηφόρος ἐχώρεις πρὸς τὰ οὐράνια. Θαυματουργούσης δὲ ὄρη πορείαν σοὶ ἐσκεύαζον, τὴν κεφαλὴν τμηθείση ὑπ’ αὐτοῦ τοῦ γεννήτορος. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ θαυμαστώσαντι, δόξα τῷ δωρησαμένῳ σὲ ἡμῖν προστάτιν ἀκοίμητον.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α΄ — on the page of «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», and it names her",
+        "url": "https://www.saint.gr/2188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the prophet sprang from a barren woman, Elesa, so did you, and like him you became a dweller of the wilderness. For leaving glories and honours on earth you went torch-bearing towards the things of heaven; and as you worked wonders the mountains made a road for you, when your head was cut off by your own begetter. Glory to Christ who glorified you, glory to him who made you wondrous, glory to him who gave you to us as a sleepless protectress.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ.",
+      "text": "Τὴν τῶν παρθένων καλλονὴν μεγαλομάρτυρα, καὶ τῶν Κυθήρων κραταιὰν σκέπην καὶ πρόμαχον, ἀνυμνήσωμεν συμφώνως θείαν Ἐλέσαν, πρὸς τὸν Κύριον γὰρ παῤῥησίαν κέκτηται ἡμᾶς πάντας ἐκ κινδύνων περισκέπουσα, τοὺς κραυγάζοντας· χαίροις Μάρτυς πανένδοξε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — on the page of «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», and it names her",
+        "url": "https://www.saint.gr/2188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn with one voice the beauty of virgins, the great martyr, the strong shelter and champion of Kythira, the divine Elesa; for she has boldness before the Lord, sheltering all of us from dangers who cry out: hail, all-glorious martyr.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ἐπεφάνης σήμερον.",
+      "text": "Ἐν Κυθήροις ἔλαμψας ἀμέμπτῳ βίῳ, καὶ λαμπρῶς ἠγώνισαι, ὑπὲρ Χριστοῦ μαρτυρικῶς· ὅθεν ἀξίως δεδόξασαι, Ὁσιομάρτυς Ἐλέσα πανένδοξε.",
+      "source": {
+        "text": "saint.gr, Έτερον Κοντάκιον, Ἦχος δ’, Ἐπεφάνης σήμερον — on the page of «Αγία Ελέσα Οσιομάρτυς που μαρτύρησε στα Κύθηρα», and it names her",
+        "url": "https://www.saint.gr/2188/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In Kythira you shone with a blameless life, and brightly you contended for Christ after the manner of a martyr; whence you are worthily glorified, all-glorious venerable-martyr Elesa.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

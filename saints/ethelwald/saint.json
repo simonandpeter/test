@@ -1,0 +1,48 @@
+{
+  "slug": "ethelwald",
+  "display_name": "Ethelwald",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Ethelwald",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and not in Greek, both in its line for 1 Αυγούστου, «Άγιος Ethelwald», and in its page heading, «Αγιος Ethelwald». No Greek form of it appears on either, and none is supplied here."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιος Ethelwald»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. The whole notice is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο του Αγγλοσάξωνα Αγίου» — we have no details of the life of this Anglo-Saxon saint. So there is no year, no place, no rank, no office, no hymn and no account of anything he did, and `types` is left empty because the page states no rank at all. The spelling is the page's own, in Latin letters inside a Greek listing, and is kept as printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

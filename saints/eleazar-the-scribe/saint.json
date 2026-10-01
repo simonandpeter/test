@@ -6,6 +6,11 @@
       "form": "Eleazar",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 august, «Sfinții 7 Mucenici Macabei, cu mama lor Solomoni și dascălul lor Eleazar», with the rank words left off; the line calls him their teacher."
+    },
+    {
+      "form": "Ελεάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», with the rank word and the clause about his pupils left off. The page's sub-heading for him is «Αγιος Ελεαζαρος Διδασκαλος Των Επτα Μακκαβαιων», and it glosses the name as a Hebrew word, the help of God."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 1 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company: the seven brothers, their mother Σολομονή and their teacher Ελεάζαρος, under Antiochus king of Syria. saint.gr dates it, «περί το 5327 από κτίσεως κόσμου ή 173 π.Χ.» — about 5327 from the creation of the world, or 173 BC — and gives the teacher's age as ninety; no `dates` object is proposed from that here, because the folder has none and a BC interval is a reading for the writer rather than a reader's by-the-way, and the figures are recorded in the life instead. It also enumerates the seven by name, with variants: «Αβείμ (ή Άβιβος), Αντώνιος (ή Αντωνίνος), Γουρίας, Ελεαζάρος, Ευσέβωνας, Αχείμ, Μάρκελλος (ή Σάμωνας, ή Εύλαλος ή Μάρκος)». The corpus keeps the seven as one folder from the Romanian pass and this reader does not split an existing folder; the seven names are recorded here and in the life and the question is left in the report. The page adds two relics: a portion of Eleazar at the monastery of Panteleimon on the Holy Mountain, and Solomone's body incorrupt in the patriarchal church of Saint George at the Phanar, with a portion at Xeropotamou. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion which names him, «καὶ Ἐλεάζαρ ἅμα», and it is taken; its kontakion addresses the seven alone and is not taken here. A separate entry on this same day, «Άγιος Ελεαζάρος» at https://www.saint.gr/2183/saint.aspx, is a different commemoration with its own page and its own manner of death, and is drafted as its own folder; nothing joins the two."
     },
     {
       "church": "serbian",
@@ -62,6 +77,23 @@
       },
       "english": {
         "text": "For the pains of the saints who suffered for You, be merciful, O Lord, and heal all our pains, Lover of mankind: this we pray of You.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Τῶν Μακκαβαίων τὸν ἐπτάριθμον δῆμον, σὺν τὴ μητρὶ Σολομονὴ τὴ ἁγία, καὶ Ἐλεάζαρ ἅμα εὐφημήσωμεν οὗτοι γὰρ ἠρίστευσαν, δι' ἀγώνων νομίμων, ὡς φρουροὶ καὶ φύλακες, τῶν τοῦ Νόμου δογμάτων καὶ νῦν ὡς καλλιμάρτυρες Χριστοῦ, ὑπὲρ τοῦ κόσμου, ἀπαύστως πρεσβεύουσι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ — the first hymn on the page of «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», and it names all three parties of the entry: the seven, the mother Solomone and Eleazar",
+        "url": "https://www.saint.gr/2180/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise together the seven-numbered company of the Maccabees, with their mother the holy Solomone, and Eleazar as well; for these were valiant through lawful contests, as wardens and keepers of the decrees of the Law, and now, as fair martyrs of Christ, they intercede unceasingly for the world.",
         "rendered": "site"
       }
     }

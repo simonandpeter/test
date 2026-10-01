@@ -115,6 +115,26 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-konstamonitou timothy-of-prokonnesos timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
+    'Fourteen now. The new one is Timothy of Prokonnesos on 1 August; the others are read in the el-01-04 entry for this name form.',
+  'πολυευκτοσ polyeuctus-1-august polyeuctus-of-constantinople polyeuctus-of-megara polyeuctus-of-melitene':
+    'Four now. The new one is the Polyeuctus of 1 August; the others are read in the el-02-05 entry for this name form.',
+  'θεοδωροσ mstislav-of-kiev theodore-1-august theodore-companion-of-george theodore-companion-of-pausolypius theodore-companion-of-stephen theodore-companion-of-terentius theodore-founder-of-chora theodore-of-cyrene theodore-of-gortyna theodore-of-kama-the-philosopher theodore-of-kandavla theodore-of-kythera theodore-of-moscow theodore-of-murom theodore-of-novgorod theodore-of-pavia theodore-of-pentapolis theodore-of-perga theodore-of-rostov-and-suzdal theodore-of-samothrace theodore-of-sykeon theodore-of-tamasos theodore-of-the-twelve-tribunes theodore-of-tomsk theodore-of-vrsac theodore-prince-of-yaroslavl theodore-stratelates theodore-the-byzantine theodore-the-envoy-of-nicomedia theodore-the-recruit theodore-the-sabbaite-of-edessa theodore-the-silent theodore-trichinas theodore-yaroslavich':
+    'Thirty-four now. The new one is the Theodore of 1 August; the others are read in the el-07-25 entry for this name form.',
+  'companion menaeus menes menaeus-companion-of-menes menes-companion-of-menaeus':
+    'Not one man drafted twice: Menaeus and Menes are the pair the 1 August page names together, each folder surnamed for the other.',
+  'μηναιοσ menaeus-companion-of-menes menaeus-of-perge':
+    'Two men on 1 August: Menaeus one of the nine of Perge, and Menaeus the companion of Menes, whom the same day names in a pair of their own. Two entries, two men.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-perge leontius-of-scythopolis leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-shepherd':
+    'Nine now. The new one is Leontius, who heads the nine of Perge on 1 August; the others are read in the el-06-18 entry for this name form.',
+  'ελεαζαροσ eleazar-1-august eleazar-of-anzersky eleazar-of-murmansk eleazar-of-vazhen eleazar-the-scribe':
+    'Five now, and two of them stand on 1 August: Eleazar the scribe of the Maccabees, whom this batch upgraded, and the Eleazar the same day names on his own line. The others are read in the el-06-04 entry for this name form.',
+  'κηρυκοσ cyricus-son-of-julitta kerykos-1-august kerykos-of-aprus':
+    'Three now. The new one is the Kerykos of 1 August; the others are Cyricus the son of Julitta on 15 July and Kerykos of Aprus on 27 March.',
+  'κυριακοσ cyriacus-attendant-of-faustus cyriacus-brother-of-orentius cyriacus-of-eurychou cyriacus-of-perge cyriacus-son-of-hesperus cyriacus-the-executioner cyriacus-the-infant cyril-of-thessalonica':
+    'Eight now. The new one is Cyriacus of Perge on 1 August; the others are read in the el-07-16 entry for this name form.',
+  'αλεξανδροσ alexander-brother-of-alphaeus alexander-companion-of-agapius alexander-companion-of-agapius-second alexander-companion-of-antonina alexander-companion-of-barbarus alexander-companion-of-sisinnius alexander-companion-of-terentius alexander-companion-of-thalaleus alexander-martyr-1-april alexander-of-cartagena alexander-of-kentoukellai alexander-of-kharkov alexander-of-lyons alexander-of-oshevensk alexander-of-perge alexander-of-prusa alexander-of-pydna alexander-of-rome-pope alexander-of-the-forty-martyrs alexander-of-thessalonica alexander-of-voskiy alexander-the-dervish alexander-the-sleepless alexander-with-thirty-martyrs':
+    'Twenty-four now. The new one is Alexander, one of the nine of Perge the 1 August page names; the others are read in the el-06-08 entry for this name form.',
   'θεοδοσιοσ theodosius-25-june theodosius-companion-of-paisius theodosius-of-antioch theodosius-of-chernigov theodosius-of-the-east theodosius-of-the-kyiv-caves theodosius-of-totma theodosius-of-trebizond theodosius-of-triglia theodosius-the-cenobiarch theodosius-the-younger':
     'Eleven now. The new one is Theodosius the Younger on 29 July; the others are read in the el-06-25 entry for this name form.',
   'μαμασ mamas-29-july mamas-6-may mamas-companion-of-hermogenes mamas-of-georgia':

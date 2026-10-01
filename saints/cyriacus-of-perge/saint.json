@@ -1,0 +1,69 @@
+{
+  "slug": "cyriacus-of-perge",
+  "display_name": "Cyriacus of Perge",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κυριακός",
+      "lang": "el",
+      "note": "Read out of saint.gr's sub-heading for 1 Αυγούστου, «Αγιος Κυριακός Που Μαρτυρησε Στην Περγη Της Παμφυλιας», with the rank word and the place clause left off; the page's running list spells it Κυριακός."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιοι εννέα μάρτυρες που μαρτύρησαν στην Πέργη της Παμφυλίας»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. The entry is a company of nine that the page enumerates by name — «Οι Άγιοι εννέα μάρτυρες, Λέοντιος, Άττος, Αλέξανδρος, Κινδέας, Μνησίθεος, Κυριακός, Μηναίος, Κατούνος και Ευκλής» — so it is one folder for each of the nine. The corpus's `four-martyrs-of-perge` is a different and unnamed company whose greek row is 31 August, and nothing here is claimed about the two. The page dates them only by the emperor and the governor, «έζησαν την εποχή του αυτοκράτορα Διοκλητιανου και του ηγεμόνα Φλαβιανού», so the `dates` bounds are Diocletian's reign and not years of their own. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησαν την εποχή του αυτοκράτορα Διοκλητιανου και του ηγεμόνα Φλαβιανού, στην Πέργη της Παμφυλίας». The page gives the emperor and the governor and no year at all; the bounds are Diocletian's reign, which the page does not date."
+    }
+  },
+  "related": [
+    "leontius-of-perge",
+    "attus-of-perge",
+    "alexander-of-perge",
+    "cindeus-of-perge",
+    "mnesitheus-of-perge",
+    "menaeus-of-perge",
+    "catunus-of-perge",
+    "eucles-of-perge"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

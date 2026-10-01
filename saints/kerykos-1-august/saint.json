@@ -1,0 +1,50 @@
+{
+  "slug": "kerykos-1-august",
+  "display_name": "Kerykos (1 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Κήρυκος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιος Κήρυκος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιος Κήρυκος»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. Its whole notice of him is one sentence. There is no country, no century, no emperor, no year and no hymn. The corpus already keeps two men of this name, `kerykos-of-aprus`, a venerable ascetic whose greek row is 27 March, and `cyricus-son-of-julitta`; both are on other days and this one is a martyr beheaded, so nothing here is claimed about any of the three. The transliteration Kerykos follows the form the corpus already uses for Κήρυκος. The folder is marked by its day because the page gives him nothing else to be known by. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

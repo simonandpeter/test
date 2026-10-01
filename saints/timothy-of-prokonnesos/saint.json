@@ -1,0 +1,61 @@
+{
+  "slug": "timothy-of-prokonnesos",
+  "display_name": "Timothy of Prokonnesos",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "wonderworker"
+  ],
+  "office": "Bishop of Prokonnesos",
+  "names": [
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιος Τιμόθεος ο Θαυματουργός Αρχιεπίσκοπος Προκοννήσου», with the rank words, the byname and the see left off. The page glosses the name from τιμώ and Θεός: he who honours God, the pious one."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιος Τιμόθεος ο Θαυματουργός Αρχιεπίσκοπος Προκοννήσου»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. The page calls him archbishop in its line and bishop in its prose, «έγινε επίσκοπος Προκοννήσου ή Προικοννήσου, και που σήμερα λέγεται Μαρμαράς»; the `office` follows the prose and the difference is said here. It gives no year: «έζησε στα μέσα του 6ου αιώνα μ.Χ., επί βασιλέων Ιουστίνου του θράκας και ανεψιού του Ιουστινιανού του Μεγάλου», so the `dates` bounds are the century it names. It says he reposed in peace on 1 Αυγούστου, which is the day of the listing. It prints no hymn. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Τιμόθεος έζησε στα μέσα του 6ου αιώνα μ.Χ., επί βασιλέων Ιουστίνου του θράκας και ανεψιού του Ιουστινιανού του Μεγάλου». The page says the middle of the sixth century and names the two emperors, and gives no year of birth and none of death; the bounds here are the century it names."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

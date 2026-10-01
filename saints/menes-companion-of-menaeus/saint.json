@@ -1,0 +1,53 @@
+{
+  "slug": "menes-companion-of-menaeus",
+  "display_name": "Menes, companion of Menaeus",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Μήνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's sub-heading for 1 Αυγούστου, «Αγιος Μήνης Εν Τω Βιγλεντιω, Πλησιον Του Χαλκου Τετραπυλου», with the rank word and the place clause left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιοι Μήνης και Μηναίος και οι λοιποί εν τω Βιγλεντίω, πλησίον του χαλκού Τετραπύλου»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. The entry names two of the company, «Αγιος Μηναιος» and «Αγιος Μηνης», and leaves the others as «Αγιοι Μαρτυρες», holy martyrs, with neither a count nor a name; so the two named men take a folder each and the unnamed rest take none, there being nothing to make a folder out of. The place is the page's own, «ἐν τῷ Βιγλεντίῳ, πλησίον τοῦ χαλκοῦ Τετραπύλου», and the display names use the companionship clause rather than an English form of it, which the page does not print. The whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων» — we have no details of the life of the saints — so there is no country, no century, no emperor, no manner of death, no year and no hymn. A Μηναίος is also kept on this same 1 August among the nine martyrs of Perge, in a separate entry with its own page; two entries on one calendar are two commemorations and so two men, and nothing here is claimed about the two. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "menaeus-companion-of-menes"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

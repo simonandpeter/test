@@ -1,0 +1,50 @@
+{
+  "slug": "eleazar-1-august",
+  "display_name": "Eleazar (1 August)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ελεαζάρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιος Ελεαζάρος», with the rank word left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 1ης Αυγούστου — «Άγιος Ελεαζάρος»",
+        "url": "https://www.saint.gr/08/01/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 1 Αυγούστου εκάστου έτους», the same day as the listing. Its whole notice of him is one sentence. There is no country, no century, no emperor, no year and no hymn. This is a separate entry on the same day from «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», whose Eleazar is the corpus's `eleazar-the-scribe`: two entries on one calendar are two commemorations and so two men, and this one has his own page, his own couplet and his own manner of death. The folder is marked by its day because the page gives him nothing else to be known by. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
