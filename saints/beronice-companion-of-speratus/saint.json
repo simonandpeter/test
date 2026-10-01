@@ -1,0 +1,53 @@
+{
+  "slug": "beronice-companion-of-speratus",
+  "display_name": "Beronice, companion of Speratus",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Βηρονίκη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουλίου, «Άγιοι Σπεράτος και Βηρονίκη», with the rank word left off. The page's own notice gives a second spelling beside it, «της Αγίας Βηρονίκης (ή Βερονίκης)» — Beronice or Veronice — and that variant is recorded here in this note rather than as a second form, because the page offers it as an alternative and does not settle on it."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουλίου — «Άγιοι Σπεράτος και Βηρονίκη»",
+        "url": "https://www.saint.gr/07/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page /721/ heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουλίου εκάστου έτους», the same day as the listing, and its whole notice is the sentence saying it has no details of either life. She is not the corpus's `berenice-daughter-of-domnina`, whose Greek name form is Βερνίκη and whose rows stand on 4 Οκτωβρίου with her mother Domnina and her sister Prosdoce, nor `veronica-of-caesarea-philippi`, whose Greek form is Βερονίκη — the page's own variant spelling for this woman — and whose rows stand on 12 Ιουλίου, five days before this day: this one has no kin, no city and no story on the page, only the companion she is named with and the manner of her death. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. No year, no place and no judge is printed, so there is no `dates` object and no `locations`, and the page prints no hymn. The couplet over the notice, «Συν αίμασι Σπεράτε τοις εξ αυχένος, / Aίμα τραχήλου μιγνύει Bηρονίκη», has the blood of both running from the neck, which is beheading said in verse and not in prose."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "speratus-the-martyr"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

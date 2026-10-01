@@ -7,6 +7,11 @@
       "form": "Eufrasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 iulie, «Sfântul Ierarh Eufrasie, Episcopul Ienopolei», with the rank word left off."
+    },
+    {
+      "form": "Ευφράσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουλίου, «Άγιος Ευφράσιος επίσκοπος Ιωνοπόλεως», with the rank word and the see left off. The summary verse over the notice has the vocative «Eυφράσιε»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουλίου — «Άγιος Ευφράσιος επίσκοπος Ιωνοπόλεως»",
+        "url": "https://www.saint.gr/07/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the bishop of the same see, named with the same rank. The Greek page adds one fact and one confirmation. The fact is the manner of his end — «ήταν επίσκοπος Ιωνοπόλεως και απεβίωσε ειρηνικά», he died peacefully, where doxologia printed only the day line and gave no death at all. The confirmation is the spelling of the see: the folder's English «Ionopolis» was taken from the Romanian «Ienopolei» and flagged as such in its life, and saint.gr's «Ιωνοπόλεως» agrees with it. He is not `euphrasius-of-corfu` or `euphrasius-companion-of-basil`, both of which stand on other days. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page gives no year, no birthplace and no account of his episcopate, so nothing is proposed for `dates` or `locations`, and it prints no hymn."
     },
     {
       "church": "serbian",

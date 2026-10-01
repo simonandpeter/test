@@ -6,6 +6,11 @@
       "form": "Marina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 iulie, «Sfânta Mare Muceniță Marina», with the rank words left off."
+    },
+    {
+      "form": "Μαρίνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Ιουλίου, «Αγία Μαρίνα», with the rank word left off. The page's etymology box is headed for the masculine ΜΑΡΙΝΟΣ and does not give her name any other form; its hymns and verses have «Μαρίνα» and the vocative «Μαρῖνα»."
     }
   ],
   "sex": "female",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Ιουλίου — «Αγία Μαρίνα»",
+        "url": "https://www.saint.gr/07/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: born at Antioch of Pisidia, daughter of a priest of the idols named Αιδέσιος — doxologia's Edesius — brought up by a Christian woman, and beheaded by the eparch after refusing him. She is none of the corpus's other folders the name sweep raised: `marinus-martyr-17-march`, `marinus-the-elder`, `marana` and the Marcians are other names or other days. The Greek page adds what doxologia's long life did not carry: the year of her birth, 270, and the reign of Claudius II; the eparch's name, Ολύμβριος; her age of fifteen when she told her father she was a Christian, where the Romanian life has her hearing of Christ at twelve; the black dog the dragon turned into in the prison and the hammer she struck it with; the lighted candles she was burned with and the healing of those wounds; and the history of her relics — kept at Constantinople until the Latins took it in 1204, or by other sources at Antioch until 908 and then carried to Italy, and now in Athens in a church of her name, with her hand at the monastery of Vatopedi on Athos. It also names her as patron of Leros, of Heliopolis and of Schinoudi on Imbros. A `dates` object is proposed from the year 270. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints six hymn texts: three apolytikia, a kontakion, a megalynarion and an oikos. The three apolytikia and the kontakion are taken — the first names her and Olymbrios, the second and the kontakion name her, and the third, «Ἡ ἀμνάς σου Ἰησοῦ», names nobody and is the common of a virgin martyr printed under her name, taken as a common and said here to be one. The megalynarion and the oikos are not taken, because this schema holds only a troparion or a kontakion."
     },
     {
       "church": "serbian",
@@ -60,9 +75,83 @@
         "text": "Your ewe-lamb, Jesus, Marina, cries out with a great voice: You, my Bridegroom, I love, and singing to You I am tormented and crucified with You, and buried with You in Your baptism; and I suffer for You, that I may reign in You; and I die for You, that I may live for You. As an unblemished sacrifice receive me, who offer myself to You with love. At her prayers, as the merciful One, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀνδρείαν καὶ φρόνησιν, σὺ κεκτημένη σεμνή, ἀνδρείως κατεπάτησας ὄφιν ἀρχέκακον, Μαρίνα πανεύφημε, ἤσχυνας Ὀλυμβρίου τᾶς πικρᾶς τιμωρίας, εὐφρανας Ἀσωμάτων τᾶς χορείας ἀθλοῦσα, διὸ ἀπαύστως πρέσβευε Χριστῷ, εἰς τὸ σωθήναι ἠμᾶς.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον — the first of three apolytikia on the page of «Αγία Μαρίνα», printed with no ἦχος; it names her and the eparch Olymbrios",
+        "url": "https://www.saint.gr/722/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained courage and good sense, modest one, you bravely trod down the serpent that began our evils, all-praised Marina; you put the bitter punishments of Olymbrios to shame, and by your contest you gladdened the companies of the bodiless ones. Therefore intercede unceasingly with Christ, that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τόν συνάναρχον Λόγον.",
+      "text": "Μνηστευθεῖσα τῷ Λόγῳ Μαρίνα ἔνδοξε, τῶν ἐπιγείων τὴν σχέσιν πᾶσαν κατέλιπες, καὶ ἐνήθλησας λαμπρῶς ὡς καλλιπάρθενος· τὸν γὰρ ἀόρατον ἐχθρὸν κατεπάτησας στερρῶς ὀφθέντα σοὶ Ἀθληφόρε. Καὶ νῦν πηγάζεις τῷ κόσμῳ τῶν ἰαμάτων τὰ δωρήματα.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος πλ. α', Τόν συνάναρχον Λόγον — the second of three apolytikia on the page of «Αγία Μαρίνα», and it names her",
+        "url": "https://www.saint.gr/722/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Betrothed to the Word, glorious Marina, you left behind every tie with things of earth and contended brilliantly as a fair virgin; for you trod down stoutly the unseen enemy when he showed himself to you, prize-winner. And now you pour out upon the world the gifts of healings.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "text": "Ἡ ἀμνάς σου Ἰησοῦ, κράζει μεγάλη τῇ φωνῇ. Σὲ Νυμφίε μου ποθῶ, καὶ σὲ ζητοῦσα ἀθλῶ, καὶ συσταυροῦμαι καὶ συνθάπτομαι τῷ βαπτισμῷ σου· καὶ πάσχω διὰ σέ, ὡς βασιλεύσω σὺν σοί, καὶ θνήσκω ὑπὲρ σοῦ, ἵνα καὶ ζήσω ἐν σοί· ἀλλ᾽ ὡς θυσίαν ἄμωμον προσδέχου τὴν μετὰ πόθου τυθεῖσάν σοι. Αὐτῆς πρεσβείαις, ὡς ἐλεήμων, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ' — the third of three apolytikia on the page of «Αγία Μαρίνα». It names no saint and is the common of a virgin martyr, printed under her name and therefore taken as her service and recorded here as a common",
+        "url": "https://www.saint.gr/722/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your ewe-lamb, Jesus, cries out with a loud voice: You, my Bridegroom, I long for, and seeking You I contend; I am crucified with You and buried with You in Your baptism; and I suffer for Your sake, that I may reign with You, and I die for You, that I may live in You. Receive her then as a spotless sacrifice, offered to You in longing. By her prayers, as You are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον.",
+      "text": "Παρθενίας κάλλεσι, πεποικιλμένη παρθένε, ἀκηράτοις στέμμασιν, ἐστεφανώθης Mαρίνα, αἵμασι, τοῦ μαρτυρίου δε φοινιχθεῖσα, θαύμασι καταλαμπρύνθης τῶν ἰαμάτων, καὶ τῆς νίκης τὰ βραβεῖα, ἐδέξω Μάρτυς χειρὶ τοῦ Κτίστου σου.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ', Ἡ Παρθένος σήμερον — the one kontakion on the page of «Αγία Μαρίνα», and it names her",
+        "url": "https://www.saint.gr/722/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the beauties of virginity, O virgin, you were crowned with undefiled crowns, Marina; and reddened with the blood of martyrdom, you were made radiant with the wonders of healings, and received the prizes of victory, martyr, from the hand of your Creator.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "270",
+      "basis": "attested",
+      "note": "saint.gr: «Η Αγία Μαρίνα γεννήθηκε στην Αντιόχεια της Πισιδίας, στα χρόνια του αυτοκράτορα Κλαυδίου του Β', το 270 μ.Χ.» The page gives no year for her death, and doxologia.ro, the folder's other source, gave no year at all."
+    }
   }
 }
