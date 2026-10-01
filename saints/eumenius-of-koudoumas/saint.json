@@ -1,0 +1,89 @@
+{
+  "slug": "eumenius-of-koudoumas",
+  "display_name": "Eumenius of Koudoumas",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "names": [
+    {
+      "form": "Ευμένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης», with the rank word left off. The page gives his baptismal name as Εμμανουήλ and his first monastic name as Μεθόδιος; Ευμένιος is the name he took at the great schema."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1846,
+      "latest": 1846,
+      "display": "1846",
+      "basis": "attested",
+      "note": "saint.gr heads him «Οσιος Ευμενιος O Εν Γορτυνη Της Νησου Κρητης (1846 - 1920)» and its narrative: «το 1846 μ.Χ. γεννήθηκε και ο Ευμένιος, κατά κόσμον Εμμανουήλ»."
+    },
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "saint.gr: «εκοιμήθη στις 12 Σεπτεμβρίου του 1920 μ.Χ.», and the page's heading closes the bracket at 1920."
+    }
+  },
+  "related": [
+    "parthenius-of-koudoumas"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day as the listing: the first church in the two brothers' honour was consecrated at Koudoumas on 10 July 1983 and the day was fixed as their memory then, and the Ecumenical Patriarchate entered them in the calendar of saints in 2007. **He is not the corpus's `eumenius-of-gortyna`**, although the Greek line calls both men «εν Γορτύνη»: that one is the seventh-century wonderworking bishop of Gortyna whom saint.gr itself keeps on 18 Σεπτεμβρίου and whose folder already carries a venerated Greek row for that day; this one is the monk born at Pitsidia in 1846, ordained priest in 1870, confessor of Koudoumas, who died on 12 September 1920. The see, the century and the brother settle it. The page gives his repose as 12 September and the memory as 10 July, which is the consecration day, not a second feast; one row per church is the schema, so the row is the day page read and the repose date is recorded here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia; the first names both brothers and is taken here, the second names Parthenius alone and is not."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τόν συνάναρχον Λόγον.",
+      "text": "Κουδουμᾶ τοῦ σεμνείου τούς νέους κτίτορας, τούς αὐταδέλφους ὁσίους ἐν τοῖς ἐσχάτοις καιροῖς ἐγκρατείας καί εὐχῆς βολαῖς ἐκλάμψαντας, θεῖον Εὐμένιον ᾠδαῖς καί Παρθένιον σοφόν, τιμῶντες ἀξιοχρέως ὑπέρ ὑμῶν τάς ἐντεύξεις πρός τόν Χριστόν αὐτῶν αἰτούμεθα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τόν συνάναρχον Λόγον — the first of two apolytikia on the shared page of «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης», and it names them both",
+        "url": "https://www.saint.gr/54/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honouring as we ought the new founders of the monastery of Koudoumas, the brothers in the flesh, venerable ones who in these last times shone out with the shafts of abstinence and of prayer — divine Eumenius and wise Parthenius — we ask of them with songs their intercessions with Christ on your behalf.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -7,12 +7,18 @@
       "form": "Gheorghe",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Ierarh Gheorghe, episcopul Tesalonicului», with the rank word left off."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιος Γεώργιος Μητροπολίτης Θεσσαλονίκης ο Γλυκύς», with the rank word and the see left off. The epithet «ο Γλυκύς» the page gives him is not part of the stored form."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "metropolitan"
   ],
   "attestations": [
     {
@@ -37,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιος Γεώργιος Μητροπολίτης Θεσσαλονίκης ο Γλυκύς»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the see is the folder's own byname: the Romanian line reads «Sfântul Ierarh Gheorghe, episcopul Tesalonicului» and the Greek «Άγιος Γεώργιος Μητροπολίτης Θεσσαλονίκης ο Γλυκύς». That, and the day, settle him against the corpus's many other men named George. The Greek page adds the ground of the memory and its date: his name stands twenty-ninth in the Synodikon of Thessalonica, which puts his episcopate in the third decade of the eleventh century; «Η μνήμη του είναι άγνωστη στους συναξαριστές», he is honoured with the Vatopedi saints on 10 July, and he is also commemorated at the synaxis of all the saints of Thessalonica, which falls on the third Sunday of Matthew — a feast reckoned from Pascha that the schema cannot hold, and no second row is proposed for it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
     },
     {
       "church": "serbian",

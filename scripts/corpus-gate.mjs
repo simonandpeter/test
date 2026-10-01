@@ -115,6 +115,12 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'παρθενιοσ parthenius-martyr-1-april parthenius-of-kiev parthenius-of-koudoumas parthenius-of-lampsacus parthenius-of-zographou parthenius-the-third':
+    'Six now. The new one is Parthenius of Koudoumas on 10 July, who stands with Eumenius of Koudoumas; the others are read in the el-04-01 entry for this name form.',
+  'ευμενιοσ eumenios-saridakis eumenius-of-koudoumas eumenius-of-murmansk':
+    'Three now. The new one is Eumenius of Koudoumas on 10 July, who is **not** Eumenius of Gortyna though the Greek line calls both «εν Γορτύνη» — the reader read the two pages and said so. The others are read in the el-06-04 entry for this name form.',
+  'αθανασιοσ athanasius-martyr-13-january athanasius-of-alexandria athanasius-of-attaleia athanasius-of-christianoupolis athanasius-of-corinth athanasius-of-kargopol athanasius-of-meteora athanasius-of-murom athanasius-of-paros athanasius-of-the-forty-martyrs athanasius-of-vologda athanasius-once-a-magician athanasius-the-athonite athanasius-the-confessor athanasius-the-pentaschoinites athanasius-the-reader athanasius-the-wonderworker':
+    'Seventeen now. The new one is Athanasius the Pentaschoinites on 10 July; the others are read in the el-06-23 entry for this name form.',
   'φωτιοσ photius-companion-of-cyril photius-of-akapniou photius-of-constantinople photius-of-kyiv photius-of-yuriev':
     'Five now. The new one is Photius of Akapniou on 9 July; the others are read in the el-03-05 entry for this name form, with Photius of Kyiv, whom the Russian keeps on 16 September and the Greek on 2 July.',
   'σαββασ sabbas-companion-of-jonah sabbas-martyr-8-july sabbas-of-daphnousia sabbas-of-sicily sabbas-of-sourozh sabbas-of-stagira sabbas-of-the-kyiv-caves sabbas-of-tver sabbas-of-zographou sabbas-stratelates sabbas-the-spiritual sabbas-the-vatopedine sava-brancovici-of-transylvania sava-of-serbia sava-the-second':

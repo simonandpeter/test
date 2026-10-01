@@ -1,0 +1,77 @@
+{
+  "slug": "amalia-of-brabant",
+  "display_name": "Amalia of Brabant",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "names": [
+    {
+      "form": "Αμαλία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Οσία Αμαλία», with the rank word left off. The page adds «(στη φλαμανδική γλώσσα Αμαλβέργη)» — its own Greek spelling of the Flemish name — and that form is not stored here, because it is the page writing a foreign name in Greek letters and not a recorded Greek form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 690,
+      "latest": 690,
+      "display": "690",
+      "basis": "traditional",
+      "note": "saint.gr heads her «Οσια Αμαλια (; - 690)» and its narrative says «όπου εκοιμήθη οσιακώς το έτος 690 μ.Χ.». The same sentence puts her life «κατά τον 7ο μ.Χ. αιώνα»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Οσία Αμαλία»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day as the listing. The corpus keeps no Amalia and no Amalberga, and the century, the province and the family leave nothing to confuse her with. The five relatives the page names — Pepin duke of Brabant, her husband count Witger, and her children Emebert bishop of Cambrai, Gudula, Reinelde and Pharaildis — have no folders in the corpus, so the life names them as plain text and `related` is empty. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints one apolytikion, which names her; it gives no ἦχος for it, so `tone` is absent."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Αμαλίαν οσίαν δεύτε τιμήσωμεν ότι δόξα ανθρώπων καταφρονήσαντα και τον νυμφίο της Χριστό ακολουθήσασα μοναζουσών καλλονή ανεδείχθης ηρωΐς ασκήσεως και αγώνων, διό μη παύσεις πρευβεύων ελεηθήναι τας ψυχάς ημών.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον — the only hymn on the page of «Οσία Αμαλία», printed without an ἦχος, and it names her; the page's own text shifts between addressing her and speaking of her, and is copied as it stands",
+        "url": "https://www.saint.gr/4089/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, let us honour the venerable Amalia, for having despised the glory of men and followed Christ her bridegroom, you were shown the beauty of nuns, a heroine of ascesis and of struggles; therefore do not cease interceding, that our souls may find mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

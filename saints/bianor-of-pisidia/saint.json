@@ -6,6 +6,11 @@
       "form": "Vianor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Mucenic Vianor», with the rank words left off."
+    },
+    {
+      "form": "Βιάνωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Βιάνωρ και Σιλουανός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιοι Βιάνωρ και Σιλουανός»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is plainly the same man: «Ο Άγιος Βιάνωρ καταγόταν από την επαρχία της Πισιδίας», the province the folder's own byname keeps him by, and the Greek line pairs him with Silvanus as the Romanian one does. He is the corpus's only Bianor. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under their line."
     },
     {
       "church": "serbian",

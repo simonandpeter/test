@@ -6,6 +6,11 @@
       "form": "Apolonie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Mucenic Apolonie», with the rank words left off."
+    },
+    {
+      "form": "Απολλώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιος Απολλώνιος από τις Σάρδεις», with the rank word and the city left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιος Απολλώνιος από τις Σάρδεις»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the city in the Greek line is the folder's own byname: «Ο Άγιος Απολλώνιος καταγοταν από τις Σάρδεις». That, and the day, settle him against the corpus's three other men of the name — the companion of Proclus, the anchorite and the reader. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
     },
     {
       "church": "serbian",

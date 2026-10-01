@@ -10,6 +10,11 @@
       "form": "Antonie de la Lavra Pecerska",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Cuvios Antonie de la Lavra Pecerska», with the rank word left off."
+    },
+    {
+      "form": "Αντώνιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Όσιος Αντώνιος ο Ρώσος ο Εσφιγμενίτης», with the rank word and the two bynames — the Russian, the Esphigmenite — left off."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 2 September (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Όσιος Αντώνιος ο Ρώσος ο Εσφιγμενίτης»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the years on it are the folder's own: «Όσιος Αντώνιος ο Ρώσος ο Εσφιγμενίτης (983 - 1073)», born 983, father of the Russian monastic order, builder of the Pechersk monastery, with his relics buried in the Lavra of the Caves at Kyiv. The Greek calendar keeps him by the monastery of his tonsure on Athos, Esphigmenou, which the Russian and Romanian sources the folder was built from do not name; everything else matches and nothing else of the name does. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under his line."
     },
     {
       "church": "serbian",

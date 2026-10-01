@@ -6,6 +6,11 @@
       "form": "Cei 45 de Mucenici din Nicopolea Armeniei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfinții 45 de Mucenici din Nicopolea Armeniei», with the rank word left off."
+    },
+    {
+      "form": "Σαράντα Πέντε Μάρτυρες",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Σαράντα Πέντε Μάρτυρες», with the rank word left off. The company's own hymn on the page addresses them as «Μάρτυρες τοῦ Κυρίου, Τεσσαράκοντα πέντε»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιοι Σαράντα Πέντε Μάρτυρες»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same company: «Οι Άγιοι Σαράντα Πέντε Μάρτυρες μαρτύρησαν στη Νικόπολη της Αρμενίας», against the Romanian «Sfinții 45 de Mucenici din Nicopolea Armeniei». The Greek page names four of the forty-five, the leading men of the city — Δανιήλ, Μαυρίκιος, Αντώνιος, Λεόντιος — and no more; four of forty-five is not an enumeration, so this stays one entry, as the Fathers of a council and the Twenty-six of Gothia do, and the four names are recorded in the life. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia: the first names the Forty-five and is taken, the second is the common of martyrs «Οἱ Μάρτυρες σου Κύριε» printed under their name, which the corpus's standing rule treats as their service, and it is taken as a common and said to be one."
     },
     {
       "church": "serbian",
@@ -60,9 +75,52 @@
         "text": "Your martyrs, Lord, in their struggles received from You, our God, the crowns of incorruption; for having Your strength they overthrew their torturers and broke the powerless insolence of the demons. At their prayers, Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Στρατὸς θεοσύλεκτος, παρεμβολὴ ἱερά, νομίμως ἀθλήσαντες ὑπὲρ τῆς δόξης Χριστοῦ, ἐν Πνεύματι ὤφθητε, Μάρτυρες τοῦ Κυρίου, Τεσσαράκοντα πέντε, λύσαντες δι' ἀγώνων, τὴν πολύθεον πλάνην διὸ ἠμῶν τοὺς ἀγῶνας, πάντες δοξάζομεν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first of two apolytikia on the page of «Άγιοι Σαράντα Πέντε Μάρτυρες», and it names them by their number",
+        "url": "https://www.saint.gr/700/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "An army gathered by God, a sacred encampment, contending lawfully for the glory of Christ, you were seen in the Spirit, martyrs of the Lord, Forty-five, undoing by your struggles the error of the many gods; and so we all glorify your struggles.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Οἱ Μάρτυρες σου Κύριε, ἐν τῇ ἀθλήσει αὐτῶν, τὸ στέφος ἐκομίσαντο τῆς ἀφθαρσίας, ἐκ σοῦ τοῦ Θεοῦ ἡμῶν· σχόντες γὰρ τὴν ἰσχύν σου, τοὺς τυράννους καθεῖλον· ἔθραυσαν καὶ δαιμόνων τὰ ἀνίσχυρα θράση. Αὐτῶν ταῖς ἱκεσίαις Χριστὲ ὁ Θεός, σῶσον τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the second apolytikion on the page of «Άγιοι Σαράντα Πέντε Μάρτυρες». It is the common of several martyrs, printed under their name and naming nobody else, and is copied as the page has it",
+        "url": "https://www.saint.gr/700/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their contending received from you our God the crown of incorruption; for having your strength they brought down the tyrants, and shattered the powerless insolence of the demons. By their entreaties, Christ our God, save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 315,
+      "latest": 315,
+      "display": "315",
+      "basis": "traditional",
+      "note": "saint.gr heads the company and each of its four named men «(; - 315)», and its narrative dates the edict they gave themselves up under: «Όταν το 315 μ.Χ. ο αυτοκράτορας Λικίνιος εξέδωσε διάταγμα κατά των χριστιανών». The Romanian source the folder was built from gave no year."
+    }
   }
 }

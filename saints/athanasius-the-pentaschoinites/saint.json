@@ -1,0 +1,50 @@
+{
+  "slug": "athanasius-the-pentaschoinites",
+  "display_name": "Athanasius the Pentaschoinites",
+  "sex": "male",
+  "types": [
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιος Αθανάσιος ο Πεντασχοινίτης», with the rank word left off. The byname is the village it keeps him by, and the page's quotation from the Cypriot chronicler Leontios Machairas spells it «ο Πεντασκοινίτης»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιος Αθανάσιος ο Πεντασχοινίτης»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day as the listing, and adds that the community of Agios Theodoros in the Larnaca district keeps the day in its own church with a procession of his icon. He is none of the corpus's many men of the name: this one is Cypriot, of the vanished village of Pentaschoinon, and the page says in so many words that there is no evidence whether he was a martyr, a layman, a fool for Christ, a monk or an ascetic. `types` therefore carries only the wonderworking the page does state, out of Leontios Machairas: «Και ο Άγιος Αθανάσιος ο Πεντασκοινίτης απέ το Πεντάσκηνο και βρύει ιάματα». No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

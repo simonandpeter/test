@@ -6,6 +6,11 @@
       "form": "Siluan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iulie, «Sfântul Mucenic Siluan», with the rank words left off."
+    },
+    {
+      "form": "Σιλουανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Βιάνωρ και Σιλουανός», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 10 Ιουλίου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιοι Βιάνωρ και Σιλουανός»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day the folder's Romanian row already carries, and the Greek page gives him the same part the folder's byname does: the bystander who watched Bianor's torture, believed, confessed Christ before the idolaters, and lost his tongue and then his head. That office settles him against the corpus's other men named Silvanus, none of whom is kept on this day. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn under their line."
     },
     {
       "church": "serbian",

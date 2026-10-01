@@ -1,0 +1,106 @@
+{
+  "slug": "parthenius-of-koudoumas",
+  "display_name": "Parthenius of Koudoumas",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Παρθένιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης», with the rank word left off. The page gives his baptismal name as Νικόλαος and his first monastic name as Νέστωρ; Παρθένιος is the name he took at the great schema."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1829,
+      "latest": 1829,
+      "display": "1829",
+      "basis": "attested",
+      "note": "saint.gr heads him «Οσιος Παρθενιος O Εν Γορτυνη Της Νησου Κρητης (1829 - 1905)» and its narrative says «Ο Παρθένιος γεννήθηκε το 1829 μ.Χ. και έλαβε το κοσμικό όνομα Νικόλαος»."
+    },
+    "death": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "1905",
+      "basis": "attested",
+      "note": "saint.gr: «Το έτος 1905 μ.Χ. ο μοναχός Παρθένιος ασθένησε βαριά», and the page's heading closes the bracket at 1905. It adds that the translation of his relics was made in 1907 in the presence of Basil, bishop of Arcadia."
+    }
+  },
+  "related": [
+    "eumenius-of-koudoumas"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day as the listing, and says where the day comes from: the first church in their honour was consecrated at the monastery of Koudoumas by Cyril, metropolitan of Gortyna and Arcadia, on 10 July 1983, «οπότε και καθιερώθηκε ως ημέρα της μνήμης τους», and the Ecumenical Patriarchate entered the two in the calendar of saints in 2007. He is none of the corpus's nine other men of the name: this is the elder brother, born 1829 at Pitsidia, who founded Koudoumas with his brother and died in 1905. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. The page prints two apolytikia, the first naming both brothers and the second naming him alone; both are taken here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τόν συνάναρχον Λόγον.",
+      "text": "Κουδουμᾶ τοῦ σεμνείου τούς νέους κτίτορας, τούς αὐταδέλφους ὁσίους ἐν τοῖς ἐσχάτοις καιροῖς ἐγκρατείας καί εὐχῆς βολαῖς ἐκλάμψαντας, θεῖον Εὐμένιον ᾠδαῖς καί Παρθένιον σοφόν, τιμῶντες ἀξιοχρέως ὑπέρ ὑμῶν τάς ἐντεύξεις πρός τόν Χριστόν αὐτῶν αἰτούμεθα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. α’, Τόν συνάναρχον Λόγον — the first of two apolytikia on the shared page of «Όσιοι Παρθένιος και Ευμένιος οι εν Γορτύνη της Νήσου Κρήτης», and it names them both",
+        "url": "https://www.saint.gr/54/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honouring as we ought the new founders of the monastery of Koudoumas, the brothers in the flesh, venerable ones who in these last times shone out with the shafts of abstinence and of prayer — divine Eumenius and wise Parthenius — we ask of them with songs their intercessions with Christ on your behalf.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. α’.",
+      "model": "Τόν συνάναρχον Λόγον.",
+      "text": "Ἐν σπηλαίοις οἰκήσας ἀνεζωγράφησας ὁσίων ἄρτι τῶν πάλαι τάς ἀρετάς, ἀσκητά, Κουδουμᾶ μονῆς δομῆτορ ἱερώτατε ὅθεν εἰς ὕψος ἀνελθών θεωρίας μυστικῆς, Παρθένιε, χάριν εὗρες ὑπέρ ἡμῶν ἱκετεύειν τῶν προστρεχόντων τῇ σῇ χάριτι.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος πλ. α’, Τόν συνάναρχον Λόγον — the second apolytikion on the shared page of the two brothers, and it names Parthenius alone",
+        "url": "https://www.saint.gr/54/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Dwelling in caves you painted afresh the virtues of the venerable of old, ascetic, most sacred builder of the monastery of Koudoumas; and so, having climbed to the height of mystical contemplation, Parthenius, you found grace to entreat on behalf of us who run to your grace.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

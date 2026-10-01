@@ -1,0 +1,50 @@
+{
+  "slug": "ten-thousand-of-nitria",
+  "display_name": "The Ten Thousand of Nitria",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Μύριοι",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Μύριοι», with the rank word left off. The page's own first sentence expands it: «Οι Άγιοι Μύριοι (10.000) Όσιοι της Νιτρίας»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 10ης Ιουλίου — «Άγιοι Μύριοι»",
+        "url": "https://www.saint.gr/07/10/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 10 Ιουλίου εκάστου έτους», the same day as the listing. This is not the corpus's `ten-thousand-martyrs`, whose Greek row is already venerated on 18 Μαρτίου off saint.gr's own «Άγιοι Μύριοι Μάρτυρες», nor `ten-thousand-martyrs-13-june` nor `ten-thousand-martyrs-of-antioch`: those are companies of martyrs under the persecutions, while this entry is a company of Όσιοι, the ten thousand ascetics of Nitria in Egypt burned alive in their cells by men sent secretly by Theophilus of Alexandria in his quarrel with Isidore the Presbyter. Two entries on one calendar are two commemorations, and the corpus already keeps three distinct ten-thousands; the identity is nevertheless named as an open question in the reader's report. The entry names no member but Isidore, «ο πρώτος απ' αυτούς», for whom the corpus has no folder, so it is one entry and `related` is empty. No asterisk and no «Δεν είναι διασταυρωμένη» sentence, and the page prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

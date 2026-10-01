@@ -1,0 +1,11 @@
+# Athanasius the Pentaschoinites
+
+saint.gr says Athanasius the Pentaschoinites was Cyprus's own, born and reared there, and that he came from the village of Pentaschoinon, which no longer exists but lies in ruins south of the village of Agios Theodoros in the district of Larnaca. The ruins of a church dedicated to him survive there too, and the page judges from them that it must have been beautiful and splendid while it stood in its glory.
+
+In the floor of that church, it says, there were two openings leading into an underground tunnel that reached as far as the sea and served for escape in time of danger; the floor is today covered by the church's own rubble. The church of Saint Athanasius the Pentaschoinites was brought down by an earthquake on Sunday 24 April 1491, which the German traveller Duke Alexander of Bavaria reports as well; the Cypriot historian Neokles G. Kyriazis has the village of Pentaschoinon disappear in the eighteenth century, and a local tradition holds that it was destroyed by raids of pirates.
+
+Of the man himself the page has one sentence of substance, and it comes from the medieval Cypriot chronicler Leontios Machairas: that he worked wonders and gave healings to the sick — «Και ο Άγιος Αθανάσιος ο Πεντασκοινίτης απέ το Πεντάσκηνο και βρύει ιάματα». Beyond that, it says plainly, no material survives and no exact proof whether he was a martyr, or a layman like the unmercenary saints, or a fool for Christ, or a monk, or an ascetic.
+
+What the page offers instead is the evidence of the pictures. Wall paintings of him at the monastery of Amasgou in Monagri and in the painted chapel of Saint Sozomenos in the village of Galata show him as a deacon; a portable icon in Agios Theodoros of Larnaca, painted about the middle of the nineteenth century, shows him beardless as a shepherd, holding a crook in his left hand and a cross in his right, as Saint Mamas and Saint Sozon the Cypriot are shown. The page's own guess is that he was most probably a venerable ascetic of the district, and it argues it from John Lampadistes, who was such an ascetic and is nowhere called a deacon in his life and yet is painted as one. No year of any kind is given.
+
+*After saint.gr's calendar for 10 Ιουλίου — [the day](https://www.saint.gr/07/10/index.aspx) and [the life](https://www.saint.gr/4341/saint.aspx); read 1 October 2026.*
