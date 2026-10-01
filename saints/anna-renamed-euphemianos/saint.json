@@ -1,0 +1,65 @@
+{
+  "slug": "anna-renamed-euphemianos",
+  "display_name": "Anna, renamed Euphemianos",
+  "names": [
+    {
+      "form": "Άννα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Οσία Άννα η μετονομασθείσα Eυφημιανός», with the rank word left off. The page glosses the name from the Hebrew Hannah, favour and grace."
+    },
+    {
+      "form": "Ευφημιανός",
+      "lang": "el",
+      "note": "The name she took in the men's monastery, printed in the same line of saint.gr's calendar for 29 Οκτωβρίου: «η μετονομασθείσα Eυφημιανός», and in the notice «με το ψευδώνυμο: Ευφημιανός»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 716,
+      "latest": null,
+      "display": "after 716",
+      "basis": "traditional",
+      "note": "saint.gr: «ο εικονομάχος Λέων ο Ίσαυρος (περί το 716 μ.Χ.), διέλυσε τη Μονή στην οποία ανήκε η Άννα» — the page's own year, written «περί», about, for the dissolution of her monastery, after which she lived in disguise and then outlived Leo. It gives no year for her birth or her death, so the upper bound is open."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Οσία Άννα η μετονομασθείσα Eυφημιανός»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day as the listing. The corpus keeps ten other Annas and none of them is this one: the daughter of a deacon John of the Blachernae, widowed, who entered a men's monastery under the name Euphemianos in the time of Leo the Isaurian. No location is recorded although the page names Byzantium and the Blachernae, because it names no place of her monastery. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

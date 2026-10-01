@@ -1,0 +1,55 @@
+{
+  "slug": "abramius-of-rostov",
+  "display_name": "Abramius of Rostov",
+  "names": [
+    {
+      "form": "Αβράμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος Αρχιμανδρίτης Ροστόβ», with the rank words and the city left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "office": "Archimandrite of Rostov",
+  "related": [
+    "abraham-the-recluse"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a Russian archimandrite, and it has not been read here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Όσιος Αβράμιος Αρχιμανδρίτης Ροστόβ»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day as the listing, and its whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο του Οσίου». So the rank and the city are all it gives: no year, so no `dates` object, and no location, since Rostov is his see and not a place the page puts him in. The corpus keeps nine other Abrahams and Abramii, none of them of Rostov; the Abramius whose niece was Mary is a separate entry on this same day with a page of his own, and is an upgrade rather than a folder. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

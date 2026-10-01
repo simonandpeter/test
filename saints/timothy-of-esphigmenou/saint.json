@@ -6,6 +6,11 @@
       "form": "Timotei Esfigmenitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Nou Mucenic Timotei Esfigmenitul»."
+    },
+    {
+      "form": "Τιμόθεος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Άγιος Τιμόθεος ο Εσφιγμενίτης ο νέος Οσιομάρτυρας», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Άγιος Τιμόθεος ο Εσφιγμενίτης ο νέος Οσιομάρτυρας»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: «Αγιος Τιμοθεος ο Εσφιγμενιτης ο Νεος Οσιομαρτυρας (; - 1820)», Triantaphyllos of Paraora in Thrace, beheaded at Adrianople on 29 October 1820. The folder's existing dates are left untouched: this page gives the same year. The page adds two things worth a reader's eye and neither is drafted as a relation: that some synaxaria name a priest Nicholas along with these saints, and that part of his bloodied clothing is at the monastery of Esphigmenou. No hymn is printed. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

@@ -6,6 +6,11 @@
       "form": "Anastasia Romana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfânta Mare Muceniță Anastasia Romana»."
+    },
+    {
+      "form": "Αναστασία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Αγία Αναστασία η Ρωμαία, η Οσιομάρτυς», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Αγία Αναστασία η Ρωμαία, η Οσιομάρτυς»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: of Rome, rich parents, their fortune given to the poor, a monastery, and the governor Probus. The corpus's other Anastasias — of Rome with Basilissa on 15 April, the pupil of Chrysogonus, the Patrician — are none of them this one. A `dates` object is proposed from this page where the folder had none; the page's own reigns disagree with each other and the note on the interval says so. The proper apolytikion and the kontakion both name her and are taken; the Κάθισμα is neither a troparion nor a kontakion and is not drafted. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -61,9 +76,52 @@
         "text": "Thy lamb Anastasia, O Jesus, cries out with a loud voice: Thee, my Bridegroom, I love; and seeking Thee I am in torment; with Thee I am crucified and with Thee buried in Thy baptism; I suffer for Thee that I may reign in Thee, and I die for Thee that I may live for Thee. Receive me, then, as a spotless sacrifice, who offer myself to Thee in love. By her prayers, as the Merciful One, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀσκήσει ἐκλάμψασα ὥσπερ παρθένος σεμνή ἀθλήσεως αἵμασι τὴν τῆς ἁγνείας στολὴν ἐνθέως ἐφοίνιξας· ὅθεν, Ἀναστασία, ὡς ὁσία καὶ μάρτυς, χάριτας ἰαμάτων ἀποστράπτεις ἐν κόσμῳ πρεσβεύουσα τῷ Σωτῆρι ὑπὲρ τῶν ψυχῶν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχύ προκατάλαβε — the first hymn on the page of «Αγία Αναστασία η Ρωμαία, η Οσιομάρτυς». It names her and no other saint.",
+        "url": "https://www.saint.gr/2834/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out in asceticism as a modest virgin, with the blood of your contest you dyed the robe of your purity in a godly way; and so, Anastasia, as both nun and martyr, you flash out graces of healing in the world, interceding with the Saviour for our souls.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχύ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Παρθενίας vάμασι, καθηγvισμέvη ὁσία, μαρτυρίου αἵμασιν, Ἀvαστασία πλυθεῖσα, παρέχεις τοῖς ἐν ἀνάγκαις τῶν νοσημάτων, ἴασιν καὶ σωτηρίαν τοῖς προσιοῦσιν, ἐκ καρδίας, ἰσχὺν γᾶρ νέμει, Χριστὸς ὁ βρύωv, χάριν ἀέναον.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Αγία Αναστασία η Ρωμαία, η Οσιομάρτυς». It names her and no other saint. The readings «vάμασι», «Ἀvαστασία», «βρύωv» and «γᾶρ» are the page's own and are copied as they stand.",
+        "url": "https://www.saint.gr/2834/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hallowed in the streams of virginity, holy one, and washed in the blood of martyrdom, Anastasia, you grant healing and salvation to those in the straits of sickness who come to you from the heart; for Christ, who wells up unfailing grace, gives you the strength.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 256,
+      "latest": 256,
+      "display": "about 256",
+      "basis": "traditional",
+      "note": "saint.gr: «Όταν τη συνέλαβε ο ηγεμόνας Πρόβος (περί το 256 μ.Χ.)» — the page's own year, written «περί», about, for her arrest, and the torments and the beheading follow in the same notice with no further date. The same page sets her «στα χρόνια του Δεκίου (κατ' άλλους του Διοκλητιανού) και Bαλλεριανού», three reigns that do not agree with one another or all with 256; the year is recorded because the page states it, and the disagreement is recorded here because the page prints it."
+    }
   }
 }

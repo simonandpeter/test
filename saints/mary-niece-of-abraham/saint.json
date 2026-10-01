@@ -6,6 +6,11 @@
       "form": "Maria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Cuvios Avramie și Maria, nepoata sa»."
+    },
+    {
+      "form": "Μαρία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος και Μαρία η ανεψιά του», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Όσιος Αβράμιος και Μαρία η ανεψιά του»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the woman is the folder's own: «Οσια Μαρια η Ανεψια Του Οσιου Αβραμιου», the brother's daughter whom Abramius drew out of her sin. saint.gr gives no year, so the folder's dateless state is unchanged. Both hymns on the page name Abramius and not Mary, so none is taken into this folder; the epigram over her name, «Ἀφεῖσα σαρκὸς τοὺς ἐραστὰς Μαρία, ψυχῶν ἐραστῇ μυστικῶς περιπλέκῃ», is quoted in the life instead. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",

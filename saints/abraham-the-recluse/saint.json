@@ -6,6 +6,11 @@
       "form": "Avramie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 octombrie, «Sfântul Cuvios Avramie și Maria, nepoata sa»."
+    },
+    {
+      "form": "Αβράμιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος και Μαρία η ανεψιά του», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr's list for 29 Οκτωβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Όσιος Αβράμιος και Μαρία η ανεψιά του»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day the folder's Romanian row already carries, and the man is the folder's own: the ascetic who gave away a great inheritance, lived in a desert place, preached in the cities, and drew his brother's daughter Mary out of her sin. The same day's listing keeps a different Abramius, the archimandrite of Rostov, who is a new folder of this batch and not this man. saint.gr gives no year, so the folder's dateless state is unchanged. The proper apolytikion and the kontakion both name him and are taken; the «Έτερον Ἀπολυτίκιον» is the common «Ἐν σοὶ Πάτερ ἀκριβῶς» and is not drafted, and neither is the Οἶκος. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
     },
     {
       "church": "serbian",
@@ -64,6 +79,40 @@
         "text": "In you, father, the image was saved with all diligence; for taking up the cross you followed Christ, and by your works you taught us to overlook the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, most venerable father Abraham.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ζωῆς τῆς φθειρομένης λιπῶν τᾶς ἀπολαύσεις, ἐν τὴ τῶν μελλόντων ἐλπίδι, Ἀβράμιε θεοφόρε, ὁσίως ἐβίωσας ἐν γῇ, καὶ χρῖσμα ὑπεδέξω ἱερὸν διὰ τοῦτο ὡς τοῦ Λόγου μυσταγωγός, κατηύγασας τοὺς βοώντας, δόξα τῷ δεδωκότι σοι ἰσχύν, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σοῦ, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τοῦ λίθου σφραγισθέντος — the first hymn on the page of «Όσιος Αβράμιος και Μαρία η ανεψιά του». It names him and no other saint. The reading «τᾶς» is the page's own and is copied as it stands.",
+        "url": "https://www.saint.gr/2835/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the enjoyments of this perishing life, in the hope of the things to come, God-bearing Abramius, you lived on earth in holiness and received a sacred anointing; and so, as an initiate of the Word, you lit up those who cry: glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ἐν σαρκὶ ὡς Ἄγγελος, ἐπὶ τῆς γῆς ἀνεφάνης, καὶ ἀσκήσας γέγονας, πεφυτευμένον ὡς ξύλον, ὕδατι τῆς ἐγκρατείας καλῶς αὐξήσας, ῥεύματι τῶν σῶν δακρύων ῥύπον ἐκπλύνας· διὰ τοῦτο ἀνεδείχθης, δοχεῖον θείου, Ἀβράμιε Πνεύματος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος γ’, Ἡ Παρθένος σήμερον — on the page of «Όσιος Αβράμιος και Μαρία η ανεψιά του». It names him and no other saint.",
+        "url": "https://www.saint.gr/2835/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the flesh you appeared on earth as an angel, and by your ascetic labour you became like a tree planted, well grown by the water of self-restraint, washing away defilement in the stream of your tears; and so you were shown to be a vessel of the divine Spirit, Abramius.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Ἡ Παρθένος σήμερον."
     }
   ],
   "text": {

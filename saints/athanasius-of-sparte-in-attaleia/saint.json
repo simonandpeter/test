@@ -1,0 +1,63 @@
+{
+  "slug": "athanasius-of-sparte-in-attaleia",
+  "display_name": "Athanasius of Sparte in Attaleia",
+  "names": [
+    {
+      "form": "Αθανάσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Άγιος Αθανάσιος ο Ιερομάρτυρας «ἐκ Σπάρτης Ἀτταλίας»», with the rank words left off; the page's own «ἐκ Σπάρτης Ἀτταλίας» is what the English form keeps."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr",
+    "hieromartyr"
+  ],
+  "related": [
+    "athanasius-of-attaleia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1653,
+      "latest": 1653,
+      "display": "1653",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him, «Αγιος Αθανασιος ο Ιερομαρτυρας «εκ Σπαρτης Ατταλιασ» (; - 1653)», and in the notice «Σύμφωνα με το Νέο Μαρτυρολόγιο, ο μάρτυρας αυτός μαρτύρησε στα Μουδανιά στις 29 Οκτωβρίου 1653 μ.Χ.». No year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Άγιος Αθανάσιος ο Ιερομάρτυρας «ἐκ Σπάρτης Ἀτταλίας»»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day as the listing. This is a new folder and not an upgrade of the corpus's Athanasius of Attaleia because the page itself separates the two: «Ο Otto Meinardus, αναφέρει σαν ήμερα μνήμης του νεομάρτυρα την 7η Ιανουαρίου και συγχέει τα περιστατικά του βίου του με αυτά του Αθανασίου εξ Ατταλίας, που μαρτύρησε το 1700 μ.Χ.» The corpus's folder for that other man carries a Greek feast on 7 January and a death at Smyrna in 1700, which is the conflation saint.gr names. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

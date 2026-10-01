@@ -1,0 +1,50 @@
+{
+  "slug": "nestor-the-unlearned",
+  "display_name": "Nestor the Unlearned",
+  "names": [
+    {
+      "form": "Νέστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Νέστωρ ο αμαθής», with the rank word left off; the epithet «ο Αμαθής» is the page's own and is what the English form keeps."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a saint the Greek page calls Russian, and it has not been read here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Οκτωβρίου — «Όσιος Νέστωρ ο αμαθής»",
+        "url": "https://www.saint.gr/10/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Οκτωβρίου εκάστου έτους», the same day as the listing, and its whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου». The epithet and the one word «Ρώσου», Russian, are all the page gives. The corpus keeps eight other Nestors — of Thessalonica, of Tremithus, of Maghid, two by date and three by companionship — and none of them carries this epithet or this day. No year, so no `dates` object; no place, so no location. No hymn. No asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου»."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
