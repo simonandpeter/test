@@ -7,6 +7,11 @@
       "form": "Modest",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 decembrie, «Sfântul Ierarh Modest, Patriarhul Ierusalimului», with the rank words left off; the title of his troparion page calls him «Arhiepiscopul Ierusalimului» instead, and the life «arhiereu al Ierusalimului»."
+    },
+    {
+      "form": "Μόδεστος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Μόδεστος Αρχιεπίσκοπος Ιεροσολύμων», with the rank word and the see left off. The page glosses the name itself, «(από την λατινική λέξη modestus) = ο εγκρατής, ο σώφρων»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 18 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Άγιος Μόδεστος Αρχιεπίσκοπος Ιεροσολύμων»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: son of Eusebius and Theodula of Sebasteia, archbishop of Jerusalem, who renewed the holy places. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. **The page opens by calling his own biographical data confused, and says why: «Τα βιογραφικά στοιχεία του Αγίου Μοδέστου είναι αρκετά συγκεχυμένα. Για παράδειγμα, τον πατέρα του Ευσέβιο και τη μητέρα του Θεοδούλη από τη Σεβάστεια της Παλαιστίνης, τους θέλουν επί Μαξιμιανού (286 - 305 μ.Χ.) να πεθαίνουν στη φυλακή, ενώ γνωρίζουμε ότι τα χρόνια της πατριαρχίας του Αγίου αυτού ήταν από το 632 μ.Χ. μέχρι το 634 μ.Χ.» — three centuries between the parents' deaths and the son's patriarchate. That is the page's own doubt about the received life, not a doubt about the man or his day, and the folder's life, which is doxologia's telling of the parents under Maximian, is left standing and not altered.** The years of the patriarchate the page states as known are recorded in `dates`, which the folder did not have. It adds that he renewed the holy shrines destroyed by the Persians and asked the help of the Christians of the East; that he lived in holiness, did much for the holy places and died in peace; and that he is held to protect animals, especially those that draw the plough, with the customs of his feast in many places and on Lesbos. It names Sebasteia of Palestine, Jerusalem and Lesbos; no coordinate is proposed. It prints three hymns and two are taken: an **Ἀπολυτίκιον for which the page gives no ἦχος and no model at all, which is therefore left out**, an Έτερον Ἀπολυτίκιον in Ἦχος γ’ and a Κοντάκιον in Ήχος γ', both naming him; and an oikos, which is a kind the schema does not hold."
     },
     {
       "church": "serbian",
@@ -61,9 +76,52 @@
         "text": "Having passed your life in holiness, O wise one, you were adorned with the shining vesture of the high priesthood, consecrated contender Modestus. Therefore, having striven most diligently, Father, you now rejoice in gladness together with Christ, praying for all of us who praise you.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείων ἔργων σου, τὴ ἐπιδείξει, πάσαν εὔφρανας, Σιῶν τὴν θείαν, τῶν Ἀποστόλων πλουτήσας τὴν ἔλλαμψιν, καὶ τῷ Σωτήρι ὁσίως ἱερεύσας, ἱεραρχία καὶ βίου λαμπρότητι. Πάτερ Μόδεστε, Χριστὸν τὸν Θεὸν ἱκέτευε, δωρήσασθαι ἠμὶν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr — Έτερον Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως. The page prints a first Ἀπολυτίκιον above it with no ἦχος and no model given, which is not recorded here because its key is missing from the page, on the page of Άγιος Μόδεστος Αρχιεπίσκοπος Ιεροσολύμων. It names him or her.",
+        "url": "https://www.saint.gr/3277/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the showing forth of your divine works you gladdened all divine Sion, having grown rich in the illumination of the Apostles and having served the Saviour in holiness, in your hierarchy and in the brightness of your life. Father Modestus, entreat Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος γ'.",
+      "model": "Η Παρθένος σήμερον.",
+      "text": "Ιακώβου μάκαρ σε, του αδελφού του Κυρίου, αρετών διάδοχον, ως και του θρόνου και τέλους, στέφομεν την θείαν σου κάραν ως ειδότες, κράζοντες` μη υπερίδης τους σους ικέτας, τους την μνήμην σου τελούντας, Ιερέων και Μαρτύρων Μόδεστε καύχημα.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ήχος γ', Η Παρθένος σήμερον, printed in monotonic Greek where the apolytikion above it is polytonic, and copied as printed. It calls him successor of James the brother of the Lord in the throne of Jerusalem and in his end, and it names him, on the page of Άγιος Μόδεστος Αρχιεπίσκοπος Ιεροσολύμων. It names him or her.",
+        "url": "https://www.saint.gr/3277/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Knowing you, O blessed one, for the successor of James the brother of the Lord in his virtues, and in his throne and in his end as well, we crown your divine head and cry out: do not overlook your suppliants who keep your memory, O Modestus, boast of priests and of martyrs.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 632,
+      "latest": 634,
+      "display": "632 to 634",
+      "basis": "attested",
+      "note": "saint.gr states these as the one thing it knows for certain about his dating, and uses them to call the rest of his received life confused: «γνωρίζουμε ότι τα χρόνια της πατριαρχίας του Αγίου αυτού ήταν από το 632 μ.Χ. μέχρι το 634 μ.Χ.» The interval is his patriarchate and not his life; no year of birth and no year of death is given, and the page itself notes that the account which has his parents die under Maximian, 286 to 305, cannot be squared with these."
+    }
   }
 }

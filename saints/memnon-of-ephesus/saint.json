@@ -1,0 +1,55 @@
+{
+  "slug": "memnon-of-ephesus",
+  "display_name": "Memnon of Ephesus",
+  "names": [
+    {
+      "form": "Μέμνων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Μέμνων Αρχιεπίσκοπος Εφέσου», with the rank word and the see left off. The page glosses the name itself, «(από το ρήμα μέμνω) = ο σταθερός, ο επίμονος»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Ephesus",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Άγιος Μέμνων Αρχιεπίσκοπος Εφέσου»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page is one sentence and a correction: «Ο Άγιος Μέμνων Αρχιεπίσκοπος Εφέσου απεβίωσε ειρηνικά. Ορισμένοι Συναξαριστές, λανθασμένα τον αναφέρουν σαν επίσκοπο Ιεροσολύμων.» **The correction is the page's own and it is about the see, not about the man or his day**; the see recorded here is Ephesus, the one the calendar line and the page's first words give. No year, no place beyond the see, no relic, no hymn. The same day page keeps «Άγιος Συμεών Αρχιεπίσκοπος Αντιοχείας», whose own page says that his memory stands in Delehaye's synaxarion beside this man's and calls this man «επισκόπου Εφέσου»; he is drafted in the same batch as `symeon-of-antioch`. The corpus also keeps `memnon-the-centurion`, `memnon-the-venerable-19-may` and `memnon-the-wonderworker`, none of them a bishop of Ephesus."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "symeon-of-antioch"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

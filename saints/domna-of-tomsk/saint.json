@@ -1,0 +1,59 @@
+{
+  "slug": "domna-of-tomsk",
+  "display_name": "Domna of Tomsk",
+  "names": [
+    {
+      "form": "Δόμνα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Αγία Δόμνα του Τόμσκ η δια Χριστόν σαλή», with the rank word, the place and the by-name left off. The page glosses the name itself, «(απο το λατινικό dominus) = η δέσποινα, η κυρίαρχος»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "saint.gr's page head, which is the only year on the page: «Αγια Δομνα Του Τομσκ η Δια Χριστον Σαλη (; - 1872)». The text gives no year at all, and no year of birth is given."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Αγία Δόμνα του Τόμσκ η δια Χριστόν σαλή»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is one sentence: «Δεν έχουμε λεπτομέρειες για τον βίο της Ρωσίδας Αγίας.»** That is a refusal to tell the life and not a refusal to vouch for her: there is no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…». The only year is in the head, and it is recorded. The page's related links name the synaxis of all the saints of Siberia and OCA's Feasts and Saints, neither of which was read. It names Tomsk and no coordinate is proposed; it prints no hymn. The `russian` row is left `undocumented` although the page calls her a Russian saint, because days.pravoslavie.ru was not read."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

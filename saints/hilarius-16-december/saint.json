@@ -1,0 +1,53 @@
+{
+  "slug": "hilarius-16-december",
+  "display_name": "Hilarius (16 December)",
+  "names": [
+    {
+      "form": "Ιλάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιοι Πρόβος και Ιλάριος», with the rank word left off. The page glosses the name itself, «(από την λέξη ιλαρός = φαιδρός, εύθυμος) = ο φαιδρός, ο εύθυμος, ο γαλήνιος»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Άγιοι Πρόβος και Ιλάριος»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page is one sentence long and it enumerates its company: «Οι Άγιοι Πρόβος (ή Πρόμος) και Ιλάριος μαρτύρησαν δια ξίφους.» Two named men, so a folder each.** It gives no year, no place, no emperor, no circumstance beyond the sword, lists no relic and prints no hymn. It carries an epigram in which the two speak to each other, «Χλόη τις ἡ φλὸξ ἐστιν, εἰπόντος Πρόβου, Ἱλάριος, Ναί, φησὶ φίλτατε Πρόβε» — Probus saying that the flame is a kind of green herbage, and Hilarius answering, yes, dearest Probus — which is the only other thing on the page and from which nothing is drafted."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "probus-16-december"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Teofana",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 decembrie, «Sfânta Teofana Împărăteasa», with the rank word left off."
+    },
+    {
+      "form": "Θεοφανώ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Αγία Θεοφανώ η Θαυματουργή σύζυγος του βασιλιά Λέοντα του σοφού», with the rank word, the by-name and the clause naming her husband left off."
     }
   ],
   "sex": "female",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 16 Δεκεμβρίου (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Αγία Θεοφανώ η Θαυματουργή σύζυγος του βασιλιά Λέοντα του σοφού»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same woman: the daughter of Constantine Martinakios the illustris and of Anna, given by Basil the Macedonian to his son Leo the Wise. No asterisk and no «Δεν είναι διασταυρωμένη» sentence. saint.gr adds the twelve years of the marriage, Leo's reign as 886 to 912, her going about the houses of the poor plainly dressed with two trusted servants so as not to be recognised, her healing of patients medicine had given up, the church her husband built for her near the church of the Holy Apostles, and the later removals of her relic — by the patriarch Gennadios Scholarios to the church of the Holy Apostles and from there to the Patriarchate, where it is kept incorrupt in the patriarchal church of Saint George at the Phanar, with part of her head at the monastery of Dionysiou on the Holy Mountain. **It gives no year of birth and no year of death**, only Leo's reign, so no `dates` are supplied for a folder that has none. No coordinate is proposed. It prints an apolytikion and a kontakion, both naming her, which are taken, and an oikos, which is a kind the schema does not hold."
     },
     {
       "church": "serbian",
@@ -48,5 +63,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ.",
+      "text": "Προελομένη τὰ οὐράνια πόθω, Θεοφανῶ τὴν βιοτὴν διεξῆλθες, ἀγγελικῶς ἐν γῇ περιπολεύουσα• ὅθεν κατηξίωσαι, οὐρανίων χαρίτων, σὺν Ἀγγέλων τόξεσι, καὶ Ἁγίων χορείαις, παριστάμενη τῷ Παμβασιλεῖ ὂν ἐκδυσώπει, εὐρεὶν ἠμᾶς ἔλεος.",
+      "source": {
+        "text": "saint.gr — Ἀπολυτίκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ, on the page of Αγία Θεοφανώ. It names him or her.",
+        "url": "https://www.saint.gr/3274/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having chosen the things of heaven with longing, O Theophano, you passed through this life going about on earth like an angel; wherefore you were counted worthy of the graces of heaven, and you stand before the King of all with the ranks of the Angels and the choirs of the Saints. Entreat him that we may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ήχος δ'.",
+      "model": "Επεφάνη σήμερον.",
+      "text": "Εορτήν σου σήμερον, την λαμπροτάτην, εκτελούντες κράζομεν, Θεοφανώ, πανευσεβώς, τους σε υμνούντας διάσωσον, από παντοίων κινδύνων τους δούλους σου.",
+      "source": {
+        "text": "saint.gr — Κοντάκιον, Ήχος δ', Επεφάνη σήμερον. The page prints this one in monotonic Greek where its apolytikion is polytonic, and both are copied as printed, on the page of Αγία Θεοφανώ. It names him or her.",
+        "url": "https://www.saint.gr/3274/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping today your most radiant feast, we cry out most reverently, O Theophano: save those who hymn you, your servants, from dangers of every kind.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

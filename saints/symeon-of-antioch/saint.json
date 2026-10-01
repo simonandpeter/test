@@ -1,0 +1,55 @@
+{
+  "slug": "symeon-of-antioch",
+  "display_name": "Symeon of Antioch",
+  "names": [
+    {
+      "form": "Συμεών",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Συμεών Αρχιεπίσκοπος Αντιοχείας», with the rank word and the see left off. The page glosses the name itself, «(εβραϊκή λέξη) = ο φιλάνθρωπος»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop of Antioch",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Άγιος Συμεών Αρχιεπίσκοπος Αντιοχείας»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The whole of the page's text is a citation and nothing else: «Η μνήμη του Αγίου Συμεών αναφέρεται στον Συναξαριστή Delehaye σελ. 361, 53 συνοδευμένη με αυτή του Αγίου Μέμνονος επισκόπου Εφέσου (βλέπε ίδια ημέρα).»** It is a statement about where the memory is recorded and not a refusal to vouch for the man: there is no asterisk and not the sentence «Δεν είναι διασταυρωμένη η ύπαρξη του Αγίου…», and the feast type is plainly «Σταθερή». No life, no year, no place beyond the see, no relic, no hymn. The Memnon the citation pairs him with is the same day's «Άγιος Μέμνων Αρχιεπίσκοπος Εφέσου», drafted in this batch as `memnon-of-ephesus`; note that this page calls him bishop of Ephesus where the calendar line calls him archbishop."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "related": [
+    "memnon-of-ephesus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

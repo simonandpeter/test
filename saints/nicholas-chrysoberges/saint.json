@@ -1,0 +1,66 @@
+{
+  "slug": "nicholas-chrysoberges",
+  "display_name": "Nicholas II Chrysoberges",
+  "names": [
+    {
+      "form": "Νικόλαος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Νικόλαος Β' Χρυσοβέργης», with the rank word, the regnal number and the surname left off. The page glosses the name itself, «Ο εκ του λαού νικητής, η νίκη του λαού»."
+    },
+    {
+      "form": "Χρυσοβέργης",
+      "lang": "el",
+      "note": "The surname saint.gr prints with him on the same line for 16 Δεκεμβρίου, «Άγιος Νικόλαος Β' Χρυσοβέργης». The page is explicit that it is the right one: «ο Χρυσοβέργης (και όχι Γραμματικός, όπως τον αναφέρει ο Άγιος Νικόδημος)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Patriarch of Constantinople",
+  "types": [
+    "hierarch",
+    "patriarch"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 995,
+      "latest": 995,
+      "display": "995",
+      "basis": "attested",
+      "note": "saint.gr's page head, «Αγιος Νικολαος Β' Χρυσοβεργης (; - 995)». Its text carries «(984 - 995 μ.Χ.)» in a position that could belong either to his own patriarchate or to the Antony III he succeeded — «διαδέχτηκε στον Πατριαρχικό θρόνο τον παραιτηθέντα Πατριάρχη Αντώνιο τον Γ’ (984 - 995 μ.Χ.)» — so only the year from the head is recorded, and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 16ης Δεκεμβρίου — «Άγιος Νικόλαος Β' Χρυσοβέργης»",
+        "url": "https://www.saint.gr/12/16/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 16 Δεκεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. **The page corrects Nicodemus the Hagiorite on his surname in its own voice: «Ο Νικόλαος ο Β’, ο Χρυσοβέργης (και όχι Γραμματικός, όπως τον αναφέρει ο Άγιος Νικόδημος)»**, which is why both forms of his name are stored from the one line. It says he succeeded the patriarch Antony III, who had resigned, and that during his patriarchate the Byzantine mission for the spreading of Christianity in Russia was organised, in 988, and placed under the administrative jurisdiction of the Ecumenical Patriarchate. **The parenthesis «(984 - 995 μ.Χ.)» sits after Antony III's name and it is not clear whose years it gives**, so `dates` takes only the 995 of the page head. It names Constantinople and Russia; no coordinate is proposed. It prints no hymn."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -115,6 +115,20 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'συμεων simeon-metaphrastes simeon-of-mega-spileo simeon-of-persia simeon-of-tver simeon-the-elder simeon-the-fool-for-christ simeon-the-myrrh-streaming symeon-4-january symeon-beyond-the-anaplous symeon-kinsman-of-the-lord symeon-of-antioch symeon-of-novgorod symeon-of-the-wonderful-mountain symeon-the-barefoot symeon-the-god-receiver symeon-the-goldsmith-of-trebizond symeon-the-new-of-mytilene symeon-the-new-theologian symeon-the-newly-appeared symeon-the-pentaglot symeon-the-pious symeon-with-theonas-and-pherbinus':
+    'Twenty-two now. The new one is Symeon archbishop of Antioch on 16 December, who stands with Memnon of Ephesus; the others are read in the el-07-26 entry for this name form.',
+  'προβοσ probus-16-december probus-9-july probus-of-tarsus':
+    'Three men. The new one is the Probus of 16 December, martyred with Hilarius; the others are the Probus of 9 July and Probus of Tarsus on 12 October.',
+  'νικολαοσ nicholas-chrysoberges nicholas-companion-of-platon-of-reval nicholas-efimov nicholas-katopinos nicholas-kedrov nicholas-martyr-7-december nicholas-migulin nicholas-of-chios nicholas-of-corinth nicholas-of-japan nicholas-of-magnesia nicholas-of-melambes nicholas-of-metsovo nicholas-of-myra nicholas-of-novgorod nicholas-of-pskov nicholas-of-spetses nicholas-of-the-forty-martyrs nicholas-of-thessalonica nicholas-of-trebizond nicholas-of-valaam nicholas-of-vounena nicholas-patriarch-of-georgia nicholas-son-of-philosophos nicholas-the-bulgarian-17-may nicholas-the-mystikos nicholas-the-simple nicholas-the-studite nicholas-velimirovich nicholas-zagorovsky':
+    'Thirty now. The new one is Nicholas II Chrysoberges, patriarch of Constantinople, on 16 December; the others are read in the el-12-07 entry for this name form.',
+  'μεμνων memnon-of-ephesus memnon-the-centurion memnon-the-venerable-19-may memnon-the-wonderworker':
+    'Four men. The new one is Memnon archbishop of Ephesus on 16 December, who stands with Symeon of Antioch; the others are Memnon the centurion on 20 August, the Memnon of 19 May and Memnon the Wonderworker on 28 April.',
+  'μαρινοσ marinos-vaanes marinus-martyr-17-march marinus-of-sebasteia marinus-the-elder marinus-the-senator':
+    'Five men. The new one is Marinus the Senator on 16 December; the others are read in the el-11-02 entry for this name form, with Marinus the Elder on 18 October.',
+  'ιλαριοσ hilarion-4-may hilarius-16-december hilarius-companion-of-aquila hilary-companion-of-proclus hilary-of-carcassonne hilary-of-poitiers':
+    'Six now. The new one is the Hilarius of 16 December, martyred with Probus; the others are read in the el-06-02 entry for this name form.',
+  'δομνα domna-martyr-2-november domna-of-tomsk domnina-5-january':
+    'Three women. The new one is Domna of Tomsk on 16 December, a fool for Christ; the others are the Domna of 2 November and the Domnina of 5 January, whose name folds onto theirs.',
   'στεφανοσ stefan-brancoveanu stephen-12-august stephen-21-october stephen-22-november stephen-27-february stephen-31-october stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-milutin stephen-of-chenolakkos stephen-of-hungary stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-sourozh stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-new stephen-the-newly-shining stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
     'Thirty-three now. The new one is Stephen archbishop of Sourozh on 15 December; the others are read in the el-08-20 entry for this name form.',
   'γουριασ gurias-companion-of-barsanuphius gurias-of-edessa':
