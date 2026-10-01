@@ -15,6 +15,11 @@
       "form": "Alipie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Alipie, iconarul», and out of its life's «Cuviosul părintele nostru Alipie al Pecerscăi»."
+    },
+    {
+      "form": "Αλύπιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Όσιος Αλύπιος ο Εικονογράφος ο εν Σπηλαίω», with the rank word, the craft and the place left off. The page glosses the name as α privative + λύπη, the one who is never grieved."
     }
   ],
   "sex": "male",
@@ -62,8 +67,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Όσιος Αλύπιος ο Εικονογράφος ο εν Σπηλαίω»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Αλυπιος ο Εικονογραφος ο Εν Σπηλαιω (; - 1114)», which agrees with the folder's «c. 1114». The Greek notice is a full life of him: an imitator of the evangelist Luke, the first iconographer; a layman still when he witnessed the wonder in the church of the Caves during its painting, helping the Greek iconographers who were decorating the church of the Theotokos and seeing with his own eyes the dove that strangely appeared; afterwards tonsured by the hand of the abbot the venerable Nikon, «βλέπε 23 Μαρτίου», and perfected in the sacred art; and given by God, because he practised it not for gain, the grace of stamping on the lifeless painted figures of the saints all the virtues and divine gifts that adorned them in life, and of being a wonderworking physician of souls and bodies. The page glosses the name as α privative + λύπη, the one who is never grieved. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints an apolytikion and a kontakion, both naming him and the Caves of Kyiv, and both are added; it also prints a megalynarion and three kathismata, which are not kinds this corpus records, and none is drafted."
     },
     {
       "church": "serbian",
@@ -113,6 +128,40 @@
       },
       "english": {
         "text": "Having from thy youth the divine imprint within thee, thou wast given over to be taught the painting of icons; and when the church of the Theotokos, which is like unto heaven, was being adorned with painting, thou didst lend thy help there and didst behold the illumination of the Holy Spirit, from whom thou didst receive the working of wonders, so that thine icons wrought miracles. Therefore we honour thee and call thee blessed, O wondrous Alypius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος α΄.",
+      "model": "Τὸν συνάναρχον Λόγον.",
+      "text": "Ἀσκητὴν τῶν Σπηλαίων Κιέβου φίλεργον, τὸν εἰληφότα τὴν χάριν, γράφειν εἰκόνας σεπτάς, καὶ πρὸς τοῦτο ὑπ’ Ἀγγέλων βοηθούμενον, Ὅσιον καὶ θαυματουργόν, ἐπαινέσωμεν πιστοί, Ἀλύπιον τὸν θεόπνουν, ἀναβοῶντες· εἰκόνας, ἡμᾶς ἀνάδειξον χρηστότητος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α΄, Τὸν συνάναρχον Λόγον — the first hymn on the page of «Όσιος Αλύπιος ο Εικονογράφος ο εν Σπηλαίω», and it names him and the Caves of Kyiv and his craft",
+        "url": "https://www.saint.gr/815/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful praise the industrious ascetic of the Caves of Kyiv, who received the grace to paint venerable icons and was helped in it by angels, the venerable wonderworker God-breathing Alypius, crying out to him: show us forth as icons of goodness.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος πλ. δ΄.",
+      "model": "Τῇ Ὑπερμάχῳ.",
+      "text": "Εἰκονογράφον τὸν σεπτὸν καὶ ἀγγελόβιον, χαριτωθέντα οὐρανόθεν ὡς ἑπόμενον, ἀρετῇ Ὁσίων πάλαι κλεινῶν Πατέρων, ἐν Σπηλαίοις τοῦ Κιέβου τὸν ασκήσαντα, καὶ πρὸς δόμους οὐρανῶν πολλοὺς ἰθύναντα, πίστει κράζοντες· Χαίροις μάκαρ Ἀλύπιε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ΄, Τῇ Ὑπερμάχῳ — the second hymn on the page of «Όσιος Αλύπιος ο Εικονογράφος ο εν Σπηλαίω», and it names him and the Caves of Kyiv",
+        "url": "https://www.saint.gr/815/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "The venerable iconographer of angelic life, graced from heaven as one who followed the virtue of the famed venerable fathers of old, who practised asceticism in the Caves of Kyiv and guided many towards the mansions of the heavens — to him we cry in faith: Hail, blessed Alypius.",
         "rendered": "site"
       }
     }

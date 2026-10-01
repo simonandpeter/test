@@ -6,6 +6,11 @@
     {
       "form": "Преп. Илија Калабријски",
       "lang": "sr"
+    },
+    {
+      "form": "Ηλίας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Όσιος Ηλίας ο Νέος», with the rank word and the epithet left off. The page glosses the name as a Hebrew word, the one who has divine power."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Όσιος Ηλίας ο Νέος»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Οσιος Ηλιας ο Νεος (823 - 903)», which confirms the folder's 903 and adds a year of birth it did not carry, 823; no `dates` change is proposed from the head line alone and the figure is recorded here and in the life. The entry is the same man the folder keeps: «ιδρυτής Μονής και αναχωρητής», of Sicily, who foretold the fall of Thessalonica, travelled in the Peloponnese and to Constantinople where he fell ill, and on the way back to Thessalonica lodged in the church of the Holy Apostles and of Saint Demetrius; «Πέθανε την 17η Αυγούστου του 903, οπότε και η μνήμη του» — he died on 17 August 903, which is why his memory is kept then. The folder's `office`, Abbot of Melicucca, is not in the Greek line, which says only that he founded a monastery; it is left as it stands. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

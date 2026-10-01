@@ -1,0 +1,60 @@
+{
+  "slug": "demetrios-of-samarina",
+  "display_name": "Demetrios of Samarina",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Δημήτριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιος Δημήτριος ο Μοναχός από τη Σαμαρίνα της Πίνδου», with the rank word, the station and the clause naming his village left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Άγιος Δημήτριος ο Μοναχός από τη Σαμαρίνα της Πίνδου»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Δημητριος ο Μοναχος Απο Τη Σαμαρινα Της Πινδου (; - 1808)», and the notice ends «Τελικά παρέδωσε το πνεύμα του στον Θεό, το έτος 1808». It names the writer of the martyrdom, the French consul at Ioannina, «Ε. Pouqueville», and the monk Gerasimos Mikragiannanitis who copied it afterwards. **The page then prints, in its own parenthesis, a note against its own entry and its own day, and the whole of it is quoted here because it is a question for the writer: «Να σημειώσουμε εδώ, ότι ο Δουκάκης και ο Άγιος Νικόδημος στους Συναξαριστές τους καθώς και ο Σ. Ευστρατιάδης στο Αγιολόγιο του δεν αναφέρουν τη μνήμη του νεομάρτυρα αυτού. Στην τοπική αγιολογία της Ιεράς Μητροπόλεως Γρεβενών, ένα Ημερολόγιο της Εκκλησίας της Ελλάδος (1963), σελ. 306, αναφέρει τη μνήμη του Αγίου την 18η Αυγούστου. Το Μέγα Ευχολόγιο όμως, καθώς και ο Otto Meinardus, αναφέρουν τη μνήμη του την 17η Αυγούστου» — Doukakis and Saint Nikodemos in their synaxaristai, and S. Eustratiades in his hagiology, do not mention this new martyr's memory; a calendar of the Church of Greece of 1963, in the local hagiology of the metropolis of Grevena, puts his memory on 18 August; the Mega Euchologion, however, and Otto Meinardus put it on 17 August. The page does not refuse to vouch for him — it carries no asterisk and not a word of the «Δεν είναι διασταυρωμένη» sentence, it keeps him on 17 August in its own feast line and its own day listing, and it names its authorities on both sides — so the row records 17 August and the whole disagreement stands here and in the reader's report. If the writer reads this as the self-doubt of BRIEF-GREEK §10, this is the folder to drop.**"
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1808,
+      "latest": 1808,
+      "display": "1808",
+      "basis": "attested",
+      "note": "saint.gr: «Τελικά παρέδωσε το πνεύμα του στον Θεό, το έτος 1808», and its head line «(; - 1808)». The page gives no year of birth, only that he was born at Samarina «στα τέλη του 18ου μ.Χ. αιώνα», at the end of the eighteenth century — which cannot be squared with his death in 1808 and is left as the page's own words."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

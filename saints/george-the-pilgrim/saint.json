@@ -6,6 +6,11 @@
       "form": "Gheorghe Pelerinul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Gheorghe Pelerinul», with the rank word left off."
+    },
+    {
+      "form": "Γεώργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιος Γεώργιος ο Προσκυνητής», with the rank word and the epithet left off. The page gives his surname in the Romanian form, Λαζάρ."
     }
   ],
   "sex": "male",
@@ -45,8 +50,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 17 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Άγιος Γεώργιος ο Προσκυνητής»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. Its head line reads «Αγιος Γεωργιος ο Προσκυνητης (1846 - 1916)», which agrees with the folder's 1916 and adds the year of birth, 1846. The Greek page is a long life and it is plainly the same man: «Ο πιστός λαϊκός χριστιανός Γεώργιος Λαζάρ είναι το πρότυπο του αληθινού Ρουμάνου προσκυνητή», the lay Christian George Lazar, the model of the true Romanian pilgrim, born in the community of Sugag in the province of Alba in 1846; married at twenty-four and left heir of his parents' property; some twenty years with his wife and five children; the Holy Sepulchre in 1884 and a year in the monasteries of the Jordan desert and Sinai; a year and a half on Athos; the monasteries of Moldavia from 1890; and his settling at Piatra in the district of Neamț, where he lived like a true hermit. **Its account of his repose puts it on the day of the Dormition, as the bell-ringer of the princely church of Saint John at Piatra-Neamț was climbing the tower to ring for the general mobilisation, while the feast the Greek calendar keeps for him is 17 August. The row records the day page read and the page's own account of the day of his death stands here and in the life. Named in the reader's report.** No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",

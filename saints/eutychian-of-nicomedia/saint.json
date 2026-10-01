@@ -5,6 +5,11 @@
     {
       "form": "Евтихиан",
       "lang": "ru"
+    },
+    {
+      "form": "Ευτυχιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιοι Στράτων, Φίλιππος, Ευτυχιανός και Κυπριανός», which names the four together; the rank word is left off. The page prints no gloss of this name."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Άγιοι Στράτων, Φίλιππος, Ευτυχιανός και Κυπριανός»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. The Russian and Serbian rows already keep the four on this menologion day, and the Greek entry is the same company, with all four names in the one listing line and a head line apiece on the shared page. The whole notice is one paragraph: they were inhabitants of Nicomedia and went daily to the amphitheatre and systematically taught and catechised idolaters, with the result that many idolaters believed in Christ and the amphitheatre was almost emptied of spectators of unseemly shows; the ruler of Nicomedia noticed the thinning of the audience, learned the cause, and ordered the four seized; they did not hesitate to confess Christ before him and the works they were doing for love of him; and he in rage had them tortured hard and then thrown alive into the fire, so that all of them gloriously received the crown of martyrdom. The page gives no year and no emperor, so the folder's «c. 303» from days.pravoslavie.ru stands unchanged; the Greek page is beside it and does not contradict it. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints a distich apiece and no apolytikion and no kontakion, so no hymn is added."
     },
     {
       "church": "serbian",
@@ -63,5 +78,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "straton-of-nicomedia",
+    "philip-of-nicomedia",
+    "cyprian-of-nicomedia"
+  ]
 }

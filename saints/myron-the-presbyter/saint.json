@@ -15,6 +15,11 @@
       "form": "Miron",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 august, «Sfântul Mucenic Miron», with the rank words left off; its life's heading calls him «Sfântul Sfințit Mucenic Miron», the priest."
+    },
+    {
+      "form": "Μύρων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιος Μύρων», with the rank word left off. The page glosses the name from μύρο, the myrrh: the pleasing one, like myrrh."
     }
   ],
   "sex": "male",
@@ -62,8 +67,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 17 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Άγιος Μύρων»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 17 Αυγούστου εκάστου έτους», the same day as the listing. The Russian, Romanian and Serbian rows already keep him on this menologion day, and the Greek entry is the same priest of Achaia under Decius: head line «Αγιος Μυρων (; - 250)», which agrees with the folder's 250 exactly. The notice makes him of a rich family who might have lived at ease, ordained priest out of his love for Christ, daily careful for the poor, the widows and the orphans; and it tells the scene the other calendars do not print, in which the eparch of Achaia Antipatros brought his flock before him and offered to free them all if he would deny Christ, and both he and they refused. It adds «Πολιούχος: Αντικύθηρα», patron of Antikythera, and a relic: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Μονή Κύκκου Κύπρου». Its third verse puts the day in the metre: «Ἑβδομάτῃ δεκάτῃ Μύρωνα τάμε ξίφος ὀξύ». No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. It prints an apolytikion and a kontakion, both naming him, and both are added; it also prints an oikos and a kathisma, which are not kinds this corpus records, and neither is drafted."
     },
     {
       "church": "serbian",
@@ -129,6 +144,40 @@
       },
       "english": {
         "text": "Your martyr Myron, O Lord, in his struggle received the crown of incorruption from you, our God; for having your strength he overthrew the torturers, and shattered the feeble insolence of the demons. At his prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "text": "Ὡς θεῖον ἀλάβαστρον, τῶν ἱερῶν ἀρετῶν, πιστῶς Ἱεράτευσας, τὴ Ἐκκλησία Χριστοῦ, καὶ χαίρων ἐνήθλησας, ὅθεν τὴ εὐωδία, τῶν ἐν σοῖ χαρισμάτων, Μύρων Ἱερομάρτυς, τῶν παθῶν τὸ δυσῶδες, ἀπέλασαν ἀνενδότως, ἐκ τῶν ψυχῶν ἠμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Μύρων», and it names him and his rank, «Μύρων Ἱερομάρτυς», and plays on his name as an alabaster jar of myrrh",
+        "url": "https://www.saint.gr/824/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a divine alabaster jar of the sacred virtues you served the Church of Christ faithfully as a priest, and rejoicing you contended; therefore by the fragrance of the gifts in you, Myron the hieromartyr, drive out unrelentingly the stench of the passions from our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος β’.",
+      "model": "Τὰ ἄνω ζητῶν.",
+      "text": "Ἐκ βρέφους Χριστόν, ποθήσας παναοίδιμε, καὶ τούτου τηρῶν, τὰ θεῖα παραγγέλματα, πρὸς αὐτὸν ἀνέδραμες, ὁλοκλήρως Μύρων καὶ κατέπαυσας, σὺν Ἀγγέλοις δοξάζων αὐτόν, αἰτούμενος πᾶσι θείαν ἄφεσιν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος β’, Τὰ ἄνω ζητῶν — the second hymn on the page of «Άγιος Μύρων», and it names him",
+        "url": "https://www.saint.gr/824/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having longed for Christ from infancy, all-renowned one, and keeping his divine commandments, you ran up to him wholly, Myron, and came to rest, glorifying him with the angels and asking divine forgiveness for all.",
         "rendered": "site"
       }
     }

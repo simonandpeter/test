@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'μακαριοσ macarius-archbishop-16-august macarius-companion-of-eudoxius macarius-companion-of-terentius macarius-companion-of-theodoula macarius-magistrate-of-alexandria macarius-makres macarius-martyr-11-august macarius-metropolitan-of-moscow macarius-new-hieromartyr-1944 macarius-notaras macarius-of-ierissos macarius-of-kalyazin macarius-of-kios macarius-of-kyiv macarius-of-paphos macarius-of-pelecete macarius-of-pisma macarius-of-rome macarius-of-the-altai macarius-of-valaam macarius-of-zhabyn macarius-of-zheltovodsk macarius-the-confessor makarios-of-mount-auxentios':
+    'Twenty-four now. The new one is Makarios of Mount Auxentios on 17 August, a day after the Macarius of 16 August — two days, two entries, two men; the others are read in the el-08-16 entry for this name form.',
+  'δημητριοσ demetrios-of-samarina demetrius-24-april demetrius-donskoi demetrius-ivanov demetrius-klepinin demetrius-of-chios demetrius-of-constantinople demetrius-of-georgia demetrius-of-moscow demetrius-of-philadelphia demetrius-of-prilutsk demetrius-of-the-brazen-gate demetrius-the-peloponnesian demetrius-the-skeuophylax demetrius-tornaras demos-the-fisherman':
+    'Sixteen now. The new one is Demetrios of Samarina on 17 August; the others are read in the el-07-20 entry for this name form.',
   'τιμοθεοσ timothy-1-february timothy-companion-of-diogenes timothy-companion-of-terentius timothy-disciple-of-babylas timothy-husband-of-maura timothy-martyred-in-africa timothy-of-caesarea timothy-of-ephesus timothy-of-euripos timothy-of-konstamonitou timothy-of-prokonnesos timothy-of-prusa timothy-of-pskov timothy-of-symbola timothy-the-stylite':
     'Fifteen now. The new one is Timothy bishop of Euripos on 16 August; the others are read in the el-08-01 entry for this name form.',
   'νικοδημοσ nicodemus-of-elbasan nicodemus-of-lake-kozha nicodemus-of-serbia nicodemus-of-the-cave nicodemus-of-tismana nicodemus-of-vatopedi nikodemos-of-meteora':
