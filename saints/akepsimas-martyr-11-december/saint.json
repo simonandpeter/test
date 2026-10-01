@@ -1,0 +1,53 @@
+{
+  "slug": "akepsimas-martyr-11-december",
+  "display_name": "Akepsimas (11 December)",
+  "names": [
+    {
+      "form": "Ακεψιμάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιοι Πέτρος ο ασκητής και Ακεψιμάς», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "peter-the-ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιοι Πέτρος ο ασκητής και Ακεψιμάς»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members, so it is one folder per named member and each relates the other. **Four entries of this name have to be kept apart**, and they are kept apart because the calendar keeps them apart: this one of 11 December with Peter the ascetic; the `akepsimas-29-january` the corpus already holds; the 7 December Akepsimas with Isidore and Leo, drafted in this run; and the Ἀκεψεής of this same day's entry with Aeithalas of Arbela, which is a different name. Nothing on any of the pages joins any two of them. No year, so no `dates` object. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

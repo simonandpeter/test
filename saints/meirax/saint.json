@@ -1,0 +1,50 @@
+{
+  "slug": "meirax",
+  "display_name": "Meirax",
+  "names": [
+    {
+      "form": "Μείραξ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιος Μείραξ και διήγησις πάνυ ωφέλιμος», with the rank word and the words «and a most profitable narrative» left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιος Μείραξ και διήγησις πάνυ ωφέλιμος»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The day's line carries «και διήγησις πάνυ ωφέλιμος», and a most profitable narrative, which is the title of the reading and not a second commemoration. The page gives no year and names no emir but the title Ἀμηρᾶς, so no `dates` object. Tenese in Egypt is named; no coordinate is proposed. The corpus holds nobody of this name. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

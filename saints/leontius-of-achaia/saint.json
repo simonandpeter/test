@@ -1,0 +1,71 @@
+{
+  "slug": "leontius-of-achaia",
+  "display_name": "Leontius of Achaia",
+  "names": [
+    {
+      "form": "Λεόντιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Λεόντιος που μόνασε στην Αχαΐα», with the rank word left off. The page also gives his name before the tonsure, Λέων, which is not drafted as a second form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "preacher"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Όσιος Λεόντιος που μόνασε στην Αχαΐα»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The page gives him **no year of his own**: the reign it dates, Andronikos II Palaiologos, 1283 to 1328, is the reign under which his father was given office in the Morea, and the Palaiologos brothers Thomas and Theodore who built the monastery acted after his death; so no `dates` object is proposed from either. It prints an apolytikion that names him, taken here. The corpus keeps several men called Leontius on other days and none on this one. Monemvasia, Mount Athos and the mountain near Aigio are named; no coordinate is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ἀσκήσει λαμπρυνθεῖς, ὡς χρυσὸς ἐν χωνείᾳ, λαμπρύνεις Μοναστῶν, τοὺς χοροὺς ἑπομένους, τοὶς θείοις σου διδάγμασι, θεοφόρε Λεόντιε, ὅθεν σήμερον, τὴν φωτοφόρον σου μνήμην, ἑορτάζοντες, ὑπὲρ ἠμῶν σὲ πρεσβεύειν, αἰτοῦμεν πρὸς Κύριoν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τὸν τάφον σου Σωτὴρ — the one hymn on the page of «Όσιος Λεόντιος που μόνασε στην Αχαΐα», and it names him.",
+        "url": "https://www.saint.gr/3172/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made bright by ascesis, like gold in the furnace, you make bright the companies of monks who follow your divine teachings, God-bearing Leontius; and so today, keeping your light-bearing memory, we ask you to intercede for us with the Lord.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τὸν τάφον σου Σωτὴρ."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

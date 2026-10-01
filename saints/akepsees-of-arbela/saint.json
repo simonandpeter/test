@@ -1,0 +1,54 @@
+{
+  "slug": "akepsees-of-arbela",
+  "display_name": "Akepsees of Arbela",
+  "names": [
+    {
+      "form": "Ακεψεής",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιοι Αειθαλάς και Ακεψεής», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "deacon"
+  ],
+  "related": [
+    "aeithalas-of-arbela"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιοι Αειθαλάς και Ακεψεής»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members and gives each his rank, so it is one folder per named member and each relates the other. His name, Ἀκεψεής, is not the Ἀκεψιμάς of the same day's separate entry for Peter the ascetic, nor the Akepsimas of 29 January the corpus already keeps, nor the one of 7 December drafted in this run; the four are kept apart because the calendar keeps them apart. No year, so no `dates` object. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

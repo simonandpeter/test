@@ -6,4 +6,8 @@ What the page prints beside the name are the readings appointed for his commemor
 
 Nothing further is set down here because nothing further was read. Another calendar will carry his life; none was consulted for this page, and the three other churches' rows say so.
 
-*After doxologia.ro's calendar for 11 decembrie — [the day](https://doxologia.ro/11-decembrie) and [his page there](https://doxologia.ro/sfantul-cuvios-luca-cel-nou); read 25 September 2026.*
+The Greek calendar keeps him on the same day, 11 December, and calls him the New Stylite. saint.gr has him living in the middle of the tenth century and coming from Asia Minor; his parents, Christophoros and Kale, brought him up according to the commands of the Gospel. He served as a soldier, and not only kept his own purity but influenced towards the good the young men who served with him and had an inclination to corruption.
+
+Later Luke became a priest and gave himself to the enlightening of the souls of his parish. After that he went up as an ascetic to Olympus, from there to Constantinople, and then to Chalcedon, where he set his hut on top of a pillar. From that new ascetic base he used to go to various places and preach the word of God, and he worked many wonders. On that pillar Luke spent forty-five whole years, and he died in a marvellous spiritual brightness. The couplet over his name says that the pillar carried Luke up to the height, and Luke carried his mind up to God, towards whom he runs.
+
+*After doxologia.ro's calendar for 11 decembrie — [the day](https://doxologia.ro/11-decembrie) and [his page there](https://doxologia.ro/sfantul-cuvios-luca-cel-nou); read 25 September 2026; and saint.gr's calendar for 11 Δεκεμβρίου — [the day](https://www.saint.gr/12/11/index.aspx) and [the life](https://www.saint.gr/3165/saint.aspx), read 2 October 2026.*

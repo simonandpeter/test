@@ -115,6 +115,22 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'πετροσ peter-abesalamites peter-bishop-of-jerusalem peter-companion-of-aphrodisius peter-companion-of-leucius peter-companion-of-manuel peter-companion-of-marcian peter-companion-of-stephen peter-disciple-of-athenogenes peter-disciple-of-dionysius-of-alexandria peter-doroshenko peter-from-the-soldiers peter-martyr-2-june peter-of-alexandria peter-of-aneia peter-of-argos peter-of-bulgaria peter-of-capitolias peter-of-damascus peter-of-galatia peter-of-gortyna peter-of-kazan peter-of-lampsacus peter-of-monevata peter-of-murom peter-of-olympus peter-of-sebaste peter-of-sinope peter-of-the-brazen-gate peter-of-tiberiopolis peter-of-tobolsk peter-ordynsky-of-rostov peter-son-of-john-of-syracuse peter-the-apostle peter-the-ascetic peter-the-athonite peter-the-egyptian peter-the-gaoler peter-the-hesychast peter-the-patrician peter-the-peloponnesian peter-the-sign-bearer':
+    'Forty-one now. The new one is Peter the Ascetic on 11 December; the rest of the fold is read in the el-11-28 entry for this name form.',
+  'ακεψιμασ acepsimas-3-november acepsimas-of-naeson akepsimas-29-january akepsimas-martyr-11-december akepsimas-martyr-7-december':
+    'Five men, and the new one is the fourth day of December to carry the name: the Akepsimas of the 11th, martyred with Peter the Ascetic, four days after the Akepsimas of the 7th. The others are read in the el-12-07 entry for this name form.',
+  'βικεντιοσ vincent-of-spain vincentius-martyr-11-december':
+    'Two men. The new one is the Vincentius of 11 December, of that day’s company; the other is Vincent of Spain on 11 November.',
+  'τερεντιοσ terence-husband-of-neonilla terentius-17-october terentius-companion-of-publius terentius-martyr-11-december terentius-of-africa terentius-the-martyr-16-october':
+    'Six men. The new one is the Terentius of 11 December, who heads that day’s company of four; the others are read in the el-10-17 entry for this name form.',
+  'νικων nikon-companion-of-mark-the-shepherd nikon-disciple-of-sergius nikon-of-the-kyiv-caves nikon-the-dry nikon-the-metanoeite':
+    'Five men. The new one is Nikon the Dry on 11 December; the others are read in the el-11-26 entry for this name form.',
+  'λεοντιοσ leontios-dionysiatis leontius-24-april leontius-of-achaia leontius-of-arabia leontius-of-perge leontius-of-scythopolis leontius-of-the-brazen-gate leontius-of-the-forty-martyrs leontius-of-tripoli leontius-patriarch-of-jerusalem leontius-the-canonarch leontius-the-hypatikos leontius-the-martyr-16-october leontius-the-philosopher leontius-the-shepherd two-leontii-of-athos':
+    'Sixteen now. The new one is Leontius of Achaia on 11 December; the others are read in the el-10-19 entry for this name form.',
+  'αιμιλιανοσ emilian-martyr-11-december emilian-of-cyzicus emilian-of-durostorum emilian-the-roman':
+    'Four men. The new one is the Emilian of 11 December, of that day’s company of four; the others are read in the el-08-08 entry for this name form.',
+  'αειθαλασ aeithalas-of-arbela aithalas-the-deacon':
+    'Two men. The new one is Aeithalas bishop of Arbela on 11 December, martyred with Akepsees his deacon; the other is Aithalas the deacon, whom the Russian keeps on 1 September, the Greek on the 2nd and the Romanian on 3 November — and whose identity against the Persian deacon of Arbela is an open reading in ro-run/FINDINGS.md.',
   'θωμασ thomas-companion-of-terentius thomas-defourkinos thomas-ii-of-constantinople thomas-of-constantinople thomas-of-maleon thomas-of-tiberiopolis thomas-of-zographou thomas-the-apostle thomas-the-fool-for-christ thomas-the-infant':
     'Ten now. The new one is Thomas Defourkinos on 10 December, an abbot; the others are read in the el-11-28 entry for this name form.',
   'θεοτεκνοσ theotecnus-the-martyr theoteknos':

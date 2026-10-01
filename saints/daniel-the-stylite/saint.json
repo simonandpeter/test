@@ -6,6 +6,11 @@
       "form": "Daniil Stâlpnicul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 decembrie, «Sfântul Cuvios Daniil Stâlpnicul», with the rank words left off."
+    },
+    {
+      "form": "Δανιήλ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Δανιήλ ο Στυλίτης», with the rank word and the by-name left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Όσιος Δανιήλ ο Στυλίτης»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the stylite of the Propontis who took Symeon's blessing and sat at Chalcedon. Its head line gives «(410 - 490)», which the folder did not hold, and the text adds that he was born in 410 at the village of Maroutha in the district of Samosata, of Elias and Martha, and died at eighty. It prints two apolytikia, a kontakion and a kathisma. The first apolytikion, «Ὑψώσας τὸ σῶμα σου», names him, and so does the second, «Ὑπομονῆς στύλος γέγονας», which is the common of a venerable father with his name set into it; both are taken, as is the kontakion, which names the pillar and the blessed one and is printed as his. The kathisma is not a kind the schema holds. A portion of his relic, the page says, is at the Great Lavra on Athos. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -64,9 +79,75 @@
         "text": "You were a pillar of patience, emulating the forefathers: righteous Job in his sufferings, Saint Joseph in his temptations; and living the life of the bodiless in the body, most venerable Daniel our father, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὑψώσας τὸ σῶμα σου, ἐπὶ τοῦ στύλου σοφέ, τὸν νοῦν σου ἐπτέρωσας, πρὸς τὸν Θεὸν ἀκλινῶς, βιώσας ὡς ἄγγελος, ὅθεν σὲ στήλην ζῶσαν, εὐσεβείας εἰδότες, κράζοντας σοὶ βοῶμεν, Δανιὴλ Θεοφόρε, Παντοίων ἠμᾶς κινδύνων, πρέσβευε ρύεσθαι.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ’, Ταχὺ προκατάλαβε — the first hymn on the page of «Όσιος Δανιήλ ο Στυλίτης», and it names him.",
+        "url": "https://www.saint.gr/3164/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lifted your body up on the pillar, wise one, you gave your mind wings towards God without wavering, and lived as an angel; and so, knowing you for a living column of true religion, we cry out to you: God-bearing Daniel, intercede that we be delivered from dangers of every kind.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ὑπομονῆς στύλος γέγονας, ζηλώσας τοὺς Προπάτορας Ὅσιε· τὸν Ἰὼβ ἐν τοῖς πάθεσι, τὸν Ἰωσὴφ ἐν τοῖς πειρασμοῖς, καὶ τὴν τῶν ἀσωμάτων πολιτείαν, ὑπάρχων ἐν σώματι. Δανιὴλ Πατὴρ ἡμῶν, Ὅσιε, πρέσβευε Χριστῷ τῷ Θεῷ, σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Έτερον Ἀπολυτίκιον, Ἦχος α’ — the second hymn on the page of «Όσιος Δανιήλ ο Στυλίτης»; it is the common of a venerable father, printed under his name with his name in it.",
+        "url": "https://www.saint.gr/3164/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "You became a pillar of patience, venerable father, emulating the forefathers: Job in his sufferings, Joseph in his temptations, and the manner of life of the bodiless powers while you were yet in a body. Daniel our venerable father, intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὥσπερ ἀστὴρ πολύφωτος, σὺ ἀναβὰς μακάριε, ἐπὶ τοῦ στύλου τὸν κόσμον ἐφώτισας, ἐν τοῖς ὁσίοις ἔργοις σου, καὶ τὸ σκότος τῆς πλάνης, ἀπεδιώξας Πάτερ· διὸ δεόμεθα, καὶ νῦν ἐπίλαμψον, ἐν ταῖς καρδίαις τῶν δούλων σου, τὸ ἄδυτον φῶς τῆς γνώσεως.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Ὡς ἀπαρχὰς τῆς φύσεως — on the page of «Όσιος Δανιήλ ο Στυλίτης», and it is printed as his.",
+        "url": "https://www.saint.gr/3164/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a star of many lights you went up on the pillar, blessed one, and lit the world with your holy works, and drove away the darkness of error, father. Therefore we beg you: shine out now also in the hearts of your servants the unsetting light of knowledge.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 410,
+      "latest": 410,
+      "display": "410",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Όσιος Δανιήλ ο Στυλίτης, λοιπόν, γεννήθηκε το 410 μ.Χ., στο χωριό Μαρουθά της περιφερείας Σαμοσάτων», with the page's own head «(410 - 490)»."
+    },
+    "death": {
+      "earliest": 490,
+      "latest": 490,
+      "display": "490",
+      "basis": "traditional",
+      "note": "saint.gr's head line, «(410 - 490)», read with the same page's «Πέθανε 80 χρονών»."
+    }
   }
 }

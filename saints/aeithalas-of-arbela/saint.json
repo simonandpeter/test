@@ -1,0 +1,55 @@
+{
+  "slug": "aeithalas-of-arbela",
+  "display_name": "Aeithalas of Arbela",
+  "names": [
+    {
+      "form": "Αειθαλάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιοι Αειθαλάς και Ακεψεής», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop of Arbela",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "related": [
+    "akepsees-of-arbela"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιοι Αειθαλάς και Ακεψεής»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names both its members and gives each his rank, so it is one folder per named member and each relates the other. The page does not name the Persian king, so no `dates` object. The corpus keeps an `akepsimas-29-january` and, drafted in this run, an Akepsimas of 7 December and an Akepsimas of this same 11 December in the separate entry of Peter the ascetic; this man's companion Ἀκεψεής is a different name again and the four are kept apart. Arbela in Persia is named; no coordinate is proposed. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

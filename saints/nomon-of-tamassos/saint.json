@@ -1,0 +1,70 @@
+{
+  "slug": "nomon-of-tamassos",
+  "display_name": "Nomon of Tamassos",
+  "names": [
+    {
+      "form": "Νόμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιος Νόμων», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιος Νόμων»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing, and opens by saying «δεν έχουμε πολλά στοιχεία», that there is not much about him. No year, so no `dates` object. The page pairs him throughout with the Cypriot Βηχιανός of the same day, and the apolytikion it prints names them both; that hymn is copied here because it names Nomon. The second hymn, «Έτερον Ἀπολυτίκιον», addresses Nomon alone but **is printed with no ἦχος and no automelon**, so it is left out rather than recorded with a null. The Βηχιανός entry itself is not drafted: his page identifies him with Gennadius, patriarch of Constantinople, whom the corpus already keeps, and that identification is a question for the author, so no `related` row is made here either. Tamassos and the village of Anagyia are named; no coordinate is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ταμασέων τὸ κλέος καὶ Κυπρίων ἀγλάϊσμα, θαυματουργοὶ ὤφθητε ὄντως, Βηχιανὲ καὶ Νόμων ὅσιοι. Νηστεία, κατετήξατε σαρκός, ἀλόγους ἐνθυμήσεις πανσθενῶς. Ὅθεν χάριν ἰαμάτων, ἐξ οὐρανοῦ ἐδέξασθε, θεόπνευστοι. Δόξα τῷ ἐνισχύσαντι ὑμᾶς, τῷ καὶ ὑμᾶς στεφανώσαντι, δόξα τῷ ἐνεργούντι δι' ὑμῶν πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’ — the first hymn on the page of «Άγιος Νόμων», which the same site also prints on the page of «Άγιος Βηχιανός»; it names them both.",
+        "url": "https://www.saint.gr/3175/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glory of the people of Tamassos and ornament of the Cypriots, you were shown to be true wonderworkers, venerable Vechianos and Nomon. By fasting you wore away with all your strength the unreasoning imaginings of the flesh, and so you received from heaven the grace of healings, you God-inspired men. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

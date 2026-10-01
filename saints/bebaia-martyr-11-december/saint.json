@@ -1,0 +1,55 @@
+{
+  "slug": "bebaia-martyr-11-december",
+  "display_name": "Bebaia (11 December)",
+  "names": [
+    {
+      "form": "Βεβαία",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Άγιοι Τερέντιος, Βικέντιος, Αιμιλιανός και Βεβαία», with the rank word left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "terentius-martyr-11-december",
+    "vincentius-martyr-11-december",
+    "emilian-martyr-11-december"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Άγιοι Τερέντιος, Βικέντιος, Αιμιλιανός και Βεβαία»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names all four of its members, so it is one folder per named member and each relates the others; she is the one woman of the four, which the entry's couplet counts as three and one. The corpus keeps a `bebaia-the-martyr` with a venerated Greek row on 4 September, the companion of Thathuel; that is another entry on the same calendar and therefore another commemoration, and nothing on either page joins the two. No year, so no `dates` object. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

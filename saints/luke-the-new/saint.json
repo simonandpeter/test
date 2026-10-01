@@ -6,11 +6,19 @@
       "form": "Luca cel Nou",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 decembrie, «Sfântul Cuvios Luca cel Nou», with the rank words left off."
+    },
+    {
+      "form": "Λουκάς",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Λουκάς ο Νέος Στυλίτης», with the rank word and the by-name left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "stylite",
+    "presbyter",
+    "soldier"
   ],
   "attestations": [
     {
@@ -34,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 11 Δεκεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 11ης Δεκεμβρίου — «Όσιος Λουκάς ο Νέος Στυλίτης»",
+        "url": "https://www.saint.gr/12/11/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 11 Δεκεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man, whom saint.gr calls «ο Νέος Στυλίτης», the New Stylite, where the folder's English is simply Luke the New. It gives no year but places him in the middle of the tenth century, so no `dates` object is proposed from a half-century the page states as such; the figure of forty-five years on the pillar is recorded in the life. No hymn is printed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
