@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'ευτυχιανοσ eutychian-of-nicomedia eutychian-the-soldier':
+    'Two men two days apart: Eutychian of Nicomedia on 17 August, whose row this wave added, and Eutychian the soldier on 19 August.',
   'σωφρονιοσ sophronius-bishop-19-february sophronius-companion-of-sylvester sophronius-of-bulgaria sophronius-of-irkutsk sophronius-of-jerusalem sophronius-of-soumela sophronius-of-vratsa sophronius-the-athonite sophronius-the-recluse sophrony-of-essex':
     'Ten now, and two stand on 18 August: Sophronius of Soumela, whom the Romanian keeps there too and whose Greek row this batch adds, and Sophronius the Athonite, new here. Two entries, two men.',
   'πορφυριοσ porphyrius-companion-of-baptos porphyrius-mindrinos porphyrius-of-gaza porphyrius-servant-of-pamphilus':

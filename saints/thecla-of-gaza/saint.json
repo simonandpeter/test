@@ -14,6 +14,11 @@
       "form": "Tecla",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 august, «Sfânta Muceniţă Tecla», with the rank words left off; the life calls her «Tecla Vizianca», Thecla of Byzia."
+    },
+    {
+      "form": "Θέκλα",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Αυγούστου, «Άγιοι Τιμόθεος, Αγάπιος και Θέκλα», with the rank word left off. The page's distich for her gives her homeland as Βιζύη."
     }
   ],
   "sex": "female",
@@ -60,8 +65,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Αυγούστου — «Άγιοι Τιμόθεος, Αγάπιος και Θέκλα»",
+        "url": "https://www.saint.gr/08/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Αυγούστου εκάστου έτους», the same day the folder's Russian, Romanian and Serbian rows already carry, and the entry is the same three: «Οι Άγιοι Τιμόθεος, Αγάπιος και Θέκλα, μαρτύρησαν στην Γάζα», under the eparch Ourbanos — Timothy burned, Agapius and Thecla thrown to the wild beasts. saint.gr gives no year, so no `dates` object is proposed here and the folders keep what they already have. The page's distich for Thecla names a homeland the other sources do not, «Ἔμοιγε κλῆσις Θέκλα· πατρὶς Βιζύη» — my name is Thecla, my homeland Bizye — which is recorded in the life and not in a `locations` entry, a distich being a verse and not a gazetteer. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn, only the three distichs."
     },
     {
       "church": "serbian",

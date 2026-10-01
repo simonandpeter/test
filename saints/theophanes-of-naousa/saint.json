@@ -11,6 +11,11 @@
       "form": "Teofan cel Nou de la Dohiariu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 august, «Sfântul Cuvios Teofan cel Nou de la Dohiariu, făcătorul de minuni», with the rank words left off."
+    },
+    {
+      "form": "Θεοφάνης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Αυγούστου, «Όσιος Θεοφάνης ο νέος και θαυματουργός», with the rank word and the epithets left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Αυγούστου — «Όσιος Θεοφάνης ο νέος και θαυματουργός»",
+        "url": "https://www.saint.gr/08/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Αυγούστου εκάστου έτους», the same day the folder's Romanian and Serbian rows already carry, and the entry is the same man: born at Ioannina at the beginning of the sixteenth century, a monk and then abbot of Docheiariou, founder of the kathisma of the Panagia in the skete of Beroia and of the monastery of the Taxiarchs at Naousa, «Πολιούχος: Νάουσα Ημαθίας», patron of Naousa in Imathia. saint.gr gives the century of his birth and the day of his death and no year for either, so no `dates` object is proposed here and the folder keeps what it already has. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both taken here, and a megalynarion besides, which is not a kind the schema holds and is not drafted."
     },
     {
       "church": "serbian",
@@ -69,5 +84,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Βλαστὸς Ἰωαννίνων ἀνεδείχθης περίδοξος, καὶ θεῖος πολιοῦχος τῆς Ναούσης θεόφανες- ὡς ἄγγελος γὰρ ζήσας ἐπὶ γῆς, θαυμάτων ἐκομίσω δωρεάν, καὶ παρέχεις τᾶς ἰάσεις τοὶς εὐλαβῶς, προστρέχουσι τὴ σκέπη σου. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ στεφανώσαντι, δόξα τῷ ἐνεργούντι διὰ σου, πάσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Όσιος Θεοφάνης ο νέος και θαυματουργός», and it names him and both his cities, Ioannina and Naousa.",
+        "url": "https://www.saint.gr/2217/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A most glorious shoot of Ioannina you were shown to be, and the divine patron of Naousa, Theophanes; for having lived on earth as an angel you received the gift of wonders, and you grant healings to those who run devoutly to your protection. Glory to Christ who glorified you, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τῆς μυστικῆς θεοφανείας θεῖον ὄργανον τῇ ἰσαγγέλῳ πολιτείᾳ ἐχρημάτισας καὶ θαυμάτων ἐδοξάσθης τῇ χορηγίᾳ. Ἀλλ’ ὡς μέγας τοῦ Θεοῦ θεράπων Ἅγιε καθικέτευε λυτροῦσθαι πάσης θλίψεως τοὺς βοῶντάς σοι, χαίροις Πάτερ Θεόφανες.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ ὑπερμάχῳ — the second hymn on the page of «Όσιος Θεοφάνης ο νέος και θαυματουργός», and it names him, «χαίροις Πάτερ Θεόφανες». The page also prints a Μεγαλυνάριον, which is not a kind the schema holds and is not drafted.",
+        "url": "https://www.saint.gr/2217/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By a manner of life equal to the angels you became a divine instrument of the mystical appearing of God, and you were glorified with the supply of wonders. But as a great servant of God, O holy one, implore him that those who cry to you be delivered from every affliction: Rejoice, father Theophanes.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
+    }
+  ]
 }

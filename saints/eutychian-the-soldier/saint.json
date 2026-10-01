@@ -1,0 +1,53 @@
+{
+  "slug": "eutychian-the-soldier",
+  "display_name": "Eutychian the Soldier",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Ευτυχιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Αυγούστου, «Άγιοι Ευτυχιανός ο στρατιώτης και Στρατήγιος», with the rank word left off. The page's own head line for him is «Αγιος Ευτυχιανος ο Στρατιωτης»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Αυγούστου — «Άγιοι Ευτυχιανός ο στρατιώτης και Στρατήγιος»",
+        "url": "https://www.saint.gr/08/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Αυγούστου εκάστου έτους», the same day as the listing. The whole of the life is one sentence — «Οι Άγιοι Ευτυχιανός ο στρατιώτης και Στρατήγιος μαρτύρησαν δια πυρός» — and two synaxarion distichs, one for each man. The entry names both, so it is two folders and not one. There is no year, no place and no emperor, so there is no `dates` object. The corpus's other two Eutychians, of Nicomedia and the one kept on 2 September, are other days and other men. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn. The display name keeps «ο στρατιώτης», the soldier, because three Eutychians have to be told apart; `soldier` is therefore left out of `types`, where it would print the same word twice beside the name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "related": [
+    "strategius"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

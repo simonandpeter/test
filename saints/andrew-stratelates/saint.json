@@ -14,6 +14,11 @@
       "form": "Andrei Stratilat",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 19 august, «Sfântul Mucenic Andrei Stratilat», with the rank words left off."
+    },
+    {
+      "form": "Ανδρέας",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 19 Αυγούστου, «Άγιος Ανδρέας ο Στρατηλάτης και οι δύο χιλιάδες πεντακόσιοι ενενήντα τρεις Μάρτυρες, που μαρτύρησαν μαζί μ' αυτόν», with the rank word, the epithet and the clause about the company left off."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for 23 August – 19 September; its page for 19 August was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 19ης Αυγούστου — «Άγιος Ανδρέας ο Στρατηλάτης και οι δύο χιλιάδες πεντακόσιοι ενενήντα τρεις Μάρτυρες, που μαρτύρησαν μαζί μ' αυτόν»",
+        "url": "https://www.saint.gr/08/19/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 19 Αυγούστου εκάστου έτους», the same day the folder's Russian, Romanian and Serbian rows already carry, and the entry is the same man: the brave Christian officer to whom the commander-in-chief Antiochus gave a small body of soldiers, who beat a far larger army, and whose men Antiochus then had killed when he learned that Andrew had drawn them to Christ. The listing's line carries the 2,593 who died with him, and the page's own head line gives them their own entry, «Αγιοι Δυο Χιλιαδες Πεντακοσιοι Ενενηντα Τρεις Μαρτυρες» — but it names not one of them, so by the standing ruling the company is part of this entry and not 2,593 folders. The page gives no year, so no `dates` object is proposed and the folder keeps what it already has. It records a relic: «Απότμημα του Ιερού Λειψάνου του Αγίου βρίσκεται στη Λαύρα Αγ. Αλεξάνδρου Νέβσκι Αγίας Πετρουπόλεως», a portion at the Lavra of Saint Alexander Nevsky in Saint Petersburg. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints one apolytikion, which names Andrew and the army with him."
     },
     {
       "church": "serbian",
@@ -146,6 +161,23 @@
         "text": "You left earthly glory and inherited the Kingdom of Heaven; your blood falling drop by drop, you were adorned most wondrously as with a crown of incorruptible stone; and you came to Christ with a company of passion-bearers, with the choir of angels, into the Light that knows no evening, and found Christ the Sun that never sets, holy Andrew the Stratelates. Pray to Him always, together with those who bore the torments beside you, that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείας πίστεως, τὴ δυvαστεία, προσενήνοχας, ὡς στρατηγέτης, τῷ Παντάνακτι στρατὸν θεοσύλλεκτον τύπος γὰρ τούτων Ἀνδρέα γενόμενος, μαρτυρικῶς σὺν αὐτοὶς ἠνδραγάθησας. Μεθ' ὧν πρέσβευε, Κυρίω τῷ σὲ δοξάσαντι, δωρήσασθαι ἠμιν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — the one hymn on the page of «Άγιος Ανδρέας ο Στρατηλάτης…», and it names him, «τύπος γὰρ τούτων Ἀνδρέα γενόμενος», and the army that died with him.",
+        "url": "https://www.saint.gr/2214/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the sovereignty of divine faith you brought to the King of all, as their general, an army gathered by God; for having become their pattern, Andrew, you bore yourself bravely with them in martyrdom. With them intercede before the Lord who glorified you, that he grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
     }
   ],
   "images": [
