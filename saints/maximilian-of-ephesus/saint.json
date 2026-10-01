@@ -6,6 +6,11 @@
       "form": "Maximilian",
       "lang": "ro",
       "note": "Read out of the roll of the seven in doxologia.ro's life for the day, «Maximilian, Iamvlih, Martinian, Ioan, Dionisie, Exacustodian și Antonin»; the calendar's own line for 4 august names none of them, only «Sfinții 7 tineri din Efes»."
+    },
+    {
+      "form": "Μαξιμιλιανός",
+      "lang": "el",
+      "note": "Read out of saint.gr's page for the 4 Αυγούστου entry «Άγιοι Επτά Παίδες εν Εφέσω», whose own enumeration of the company is «Μαξιμιλιανός, Ιάμβλιχος, Μαρτινιανός, Διονύσιος, Αντωνίνος (ή Ιωάννης), Κωνσταντίνος και Εξακουστοδιανός»; the day's listing itself prints no personal names. The page glosses the name from the Latin maximus and mille as the one a thousand times greatest."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 4 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Αυγούστου — «Άγιοι Επτά Παίδες εν Εφέσω»",
+        "url": "https://www.saint.gr/08/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and the entry is the same company. saint.gr enumerates it: «Μαξιμιλιανός, Ιάμβλιχος, Μαρτινιανός, Διονύσιος, Αντωνίνος (ή Ιωάννης), Κωνσταντίνος και Εξακουστοδιανός» — and that list is not the corpus's. It makes Ιωάννης an alternative name for Αντωνίνος rather than a member of his own, and its seventh member is Κωνσταντίνος, for whom the corpus has no folder; the corpus's seven, from the Romanian pass, are Antoninus and John as two men and no Constantine. This upgrade therefore touches only the six whom the Greek list names as the corpus names them, and `john-of-ephesus` takes no Greek row and Κωνσταντίνος takes no folder: two lists of one company that disagree are a reading for the writer and not a reader's to settle, and both questions are in the report. The page dates the company «στα χρόνια του αυτοκράτορα Δεκίου (249 - 251 μ.Χ.)» and the rising «Μετά από 194 χρόνια (περί το 446 μ.Χ.), επί Θεοδοσίου του Μικρού»; the folder's `dates` are left exactly as the Romanian pass set them and the Greek figures are recorded in the life instead. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints an apolytikion and a kontakion, both of which name the company collectively — «οἱ ἐν Ἐφέσῳ ἐπτάριθμοι Μάρτυρες» — so both are the company's own service and both are taken for each of the six. It also prints a μεγαλυνάριον, which is not a kind this schema holds, and that is not drafted."
     },
     {
       "church": "serbian",
@@ -77,6 +92,40 @@
       },
       "english": {
         "text": "Great are the achievements of faith! In the cave, as in a royal chamber, the seven holy youths dwelt, and died without corruption; and after a long time they rose as out of sleep, for the assurance of the resurrection of all men. At their prayers, Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως.",
+      "text": "Θείω Πνεύματι, ἀφθαρτισθέντες, πολυχρόνιον, ἤνυσαν ὕπνον, οἱ ἐν Ἐφέσῳ ἐπτάριθμοι Μάρτυρες, καὶ ἀναστάντες πιστοὺς ἐβεβαίωσαν, τὴν τῶν ἀνθρώπων κοινὴν ἐξανάστασιν ὅθεν ἅπαντες, συμφώνως τούτους τιμήσωμεν, δοξάζοντες Χριστὸν τὸν πολυέλεον.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον (Κατέβασμα), Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Επτά Παίδες εν Εφέσω», and it names the company collectively, «οἱ ἐν Ἐφέσῳ ἐπτάριθμοι Μάρτυρες»",
+        "url": "https://www.saint.gr/2218/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made incorrupt by the divine Spirit, the seven-numbered martyrs in Ephesus accomplished a sleep of many years; and rising again they confirmed the faithful in the common resurrection of mankind. Therefore let us all with one voice honour them, glorifying Christ who is rich in mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ.",
+      "text": "Οἱ τὰ τοῦ κόσμου ὡς φθαρτὰ παριδόντες, καὶ τὰς ἀφθάρτους δωρεὰς εἰληφότες, διαφθορᾶς διέμειναν θανόντες παρεκτός· ὅθεν ἐξανίστανται, μετὰ πλείονας χρόνους, ἅπασαν ἐνθάψαντες, δυσμενῶν ἀπιστίαν· οὓς ἐν αἰνέσει σήμερον πιστοί, ἀνευφημοῦντες, Χριστὸν ἀνυμνήσωμεν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ — the second hymn on the page of «Άγιοι Επτά Παίδες εν Εφέσω»; it too addresses the company and not one member of it",
+        "url": "https://www.saint.gr/2218/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "They who looked past the things of the world as corruptible, and who received the incorruptible gifts, remained in death untouched by decay; and so they rise again after many years, having buried every unbelief of their enemies. Praising them today, O faithful, let us sing to Christ.",
         "rendered": "site"
       }
     }
