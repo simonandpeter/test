@@ -6,11 +6,18 @@
       "form": "Pitirun",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Cuvios Pitirun», with the rank words left off."
+    },
+    {
+      "form": "Πιτυρούν",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Όσιος Πιτυρούν», with the rank word left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "ascetic",
+    "monk"
   ],
   "attestations": [
     {
@@ -34,8 +41,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Όσιος Πιτυρούν»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. It gives the life doxologia.ro had none of, and the one fact in it that places him: that he was a disciple of Anthony the Great, to whom the page sends the reader at 17 Ιανουαρίου."
     },
     {
       "church": "serbian",
@@ -45,5 +62,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "anthony-the-great"
+  ]
 }

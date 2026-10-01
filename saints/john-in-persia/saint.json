@@ -1,0 +1,50 @@
+{
+  "slug": "john-in-persia",
+  "display_name": "John in Persia",
+  "names": [
+    {
+      "form": "Ιωάννης",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Άγιος Ιωάννης ο Ιερομάρτυρας, “ὁ ἐν Περσίδι”», with the rank word left off. The epithet «ὁ ἐν Περσίδι» is the page's own."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Άγιος Ιωάννης ο Ιερομάρτυρας, “ὁ ἐν Περσίδι”»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn and gives no year. Its one sentence of life cites «πολλά Μηνολόγια», many Menologia, rather than any single synaxarist, and hedges with «αναφέρεται ότι», it is reported that; the life keeps the hedge."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

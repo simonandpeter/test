@@ -1,0 +1,61 @@
+{
+  "slug": "dionysius-of-corinth",
+  "display_name": "Dionysius of Corinth",
+  "names": [
+    {
+      "form": "Διονύσιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Άγιος Διονύσιος επίσκοπος Κορίνθου», with the rank word and the see left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Corinth",
+  "dates": {
+    "floruit": {
+      "earliest": 160,
+      "latest": 160,
+      "display": "c. 160",
+      "basis": "traditional",
+      "note": "saint.gr: «έζησε το δεύτερο αιώνα μ.Χ. (περί το 160 μ.Χ.) στην εποχή του αυτοκράτορα Μάρκου Αυρηλίου». The page gives no year for the martyrdom and no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Άγιος Διονύσιος επίσκοπος Κορίνθου»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page. The only hymn it prints for him is a Μεγαλυνάριον, which is neither troparion nor kontakion, so no hymn is recorded here; it also links a full Ἀκολουθία that this folder has not read. The page hedges the martyrdom itself — «Λέγεται ότι μαρτύρησε δια ξίφους», it is said that he was martyred by the sword — and that hedge is kept in the life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Filumen",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Mucenic Filumen», with the rank word left off."
+    },
+    {
+      "form": "Φιλούμενος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Άγιος Φιλούμενος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Άγιος Φιλούμενος»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and its heading dates him «(; - 270)». It is the Philoumenos of Lycaonia, the corn merchant denounced at Ankara, and not `philoumenos-of-jacobs-well`, the Cypriot killed at Nablus in 1979, whom the corpus keeps separately. The one hymn on his page is the same Ἀπολυτίκιον that stands on Paramon's, naming the two together, and it is taken here as it is there."
     },
     {
       "church": "serbian",
@@ -49,5 +64,33 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 270,
+      "display": "270",
+      "basis": "traditional",
+      "note": "saint.gr: «Καταγγέλθηκε, το 270 μ.Χ., ως χριστιανός στον ηγεμόνα της Άγκυρας Φήλικα», and its own heading for him reads «(; - 270)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Παράμονον μέλψωμεν σὺν Φιλουμένῳ πιστοί, ὡς θείους θεράποντας καὶ ἀθλητὰς εὐκλεεῖς Χριστοῦ τοῦ Θεοῦ ἡμῶν· τοῦτον γὰρ φερωνύμως ὡς φιλήσαντας ἄγαν, ᾔσχυναν δι' ἀγώνων παρανόμων τὸ κράτος αἰτοῦντες πταισμάτων λύσιν πᾶσι καὶ ἔλεος.",
+      "english": {
+        "text": "Let us sing, O faithful, of Paramon together with Philoumenos, as divine servants and glorious contenders of Christ our God; for having loved him exceedingly, as the one's very name declares, they shamed by their contests the power of the lawless, and they ask for all release from their faults, and mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ', Ταχὺ προκατάλαβε — the only hymn on the page of «Άγιος Φιλούμενος», and the same text that stands on Paramon's page: it names Paramon first and Philoumenos beside him, so it is the service of the two kept on this day together.",
+        "url": "https://www.saint.gr/3120/saint.aspx",
+        "year": 2026
+      }
+    }
+  ]
 }

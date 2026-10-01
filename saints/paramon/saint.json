@@ -6,6 +6,11 @@
       "form": "Paramon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 noiembrie, «Sfântul Mucenic Paramon», with the rank word left off."
+    },
+    {
+      "form": "Παράμονος",
+      "lang": "el",
+      "note": "Read out of saint.gr's heading «Αγιος Παραμονος (; - 250)» on the page of «Άγιος Παράμονος και οι Τριακόσιοι Εβδομήντα Μάρτυρες» for 29 Νοεμβρίου, with the rank word left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 29 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Άγιος Παράμονος και οι Τριακόσιοι Εβδομήντα Μάρτυρες που μαρτύρησαν μαζί μ' αυτόν»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it is the same man: the martyr of the baths by the Tigris killed with three hundred and seventy others by the ruler Aquilinus under Decius. Its heading dates him «(; - 250)». The three hundred and seventy are not named on the page, so no folder is made for them and none for any member; they are a company the source leaves anonymous. Of the page's two hymns the Ἀπολυτίκιον, which names him and Philoumenos together, is taken here; the Κάθισμα, which also names him, is neither troparion nor kontakion and is not drafted."
     },
     {
       "church": "serbian",
@@ -59,9 +74,35 @@
         "text": "Your martyr Paramon, O Lord, in his contest received the crown of incorruption from you, our God; for having your strength he overcame the torturers, and broke also the feeble daring of the demons. By his prayers save our souls, O Christ God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Παράμονον μέλψωμεν σὺν Φιλουμένῳ πιστοί, ὡς θείους θεράποντας καὶ ἀθλητὰς εὐκλεεῖς Χριστοῦ τοῦ Θεοῦ ἡμῶν· τοῦτον γὰρ φερωνύμως ὡς φιλήσαντας ἄγαν, ᾔσχυναν δι' ἀγώνων παρανόμων τὸ κράτος αἰτοῦντες πταισμάτων λύσιν πᾶσι καὶ ἔλεος.",
+      "english": {
+        "text": "Let us sing, O faithful, of Paramon together with Philoumenos, as divine servants and glorious contenders of Christ our God; for having loved him exceedingly, as the one's very name declares, they shamed by their contests the power of the lawless, and they ask for all release from their faults, and mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ'.",
+      "model": "Ταχὺ προκατάλαβε.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος δ', Ταχὺ προκατάλαβε — the first hymn on the page of «Άγιος Παράμονος και οι Τριακόσιοι Εβδομήντα Μάρτυρες», and it names him first and Philoumenos beside him, so it is the service of the two kept on this day together.",
+        "url": "https://www.saint.gr/3121/saint.aspx",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "saint.gr's heading for him reads «Αγιος Παραμονος (; - 250)», and its narrative puts the martyrdom «στα μέσα του 3ου μ.Χ. αιώνα, όταν αυτοκράτορας ήταν ο Δέκιος»."
+    }
   }
 }

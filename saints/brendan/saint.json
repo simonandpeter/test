@@ -1,0 +1,48 @@
+{
+  "slug": "brendan",
+  "display_name": "Brendan",
+  "names": [
+    {
+      "form": "Brendan",
+      "lang": "en",
+      "note": "saint.gr prints the name in Latin letters and not in Greek — its line reads «Άγιος Brendan» — so the form is copied exactly as the page has it, with the rank word left off. The page offers no Greek spelling and none is invented here."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (2 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 29ης Νοεμβρίου — «Άγιος Brendan»",
+        "url": "https://www.saint.gr/11/29/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page, and it prints no hymn, no distich and no year. Its whole entry is one sentence saying it has no details of the life of this Irish saint; it does not say whether he was a monk, an abbot or a bishop, so this folder carries no types at all. Nothing in the page identifies him with any particular Brendan, and no identification is made here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
