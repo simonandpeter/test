@@ -353,3 +353,29 @@ three tests, and `dayKeptOnlyElsewhere`. The pattern is worth knowing before the
 Russian wave starts — **a corpus that fills a calendar completely takes away
 every fixture that looked for an empty day in it**, and the repair each time was
 to make the state with `withoutSaintsOn` rather than to find it.
+
+### The FCP floor was tripped once, and the margin is thin
+
+`5db1e86f` went red on the **other** quality floor — the Lighthouse one, not the
+e2e one — and that failure is not a flake in the sense the three above are. Its
+own line:
+
+```
+FAIL calendar, populated    a11y 100  FCP  1750 ms  (FCP 1506/1750/1754/1751/1354)
+FAIL all saints             a11y 100  FCP  1767 ms  (FCP 1368/1366/1767/1769/1769)
+floor: accessibility >= 95, FCP < 1500 ms on 1.6 Mbit/s / 4x CPU
+```
+
+Two things in that. The five samples per route are **bimodal** — about 1360 or
+about 1760, nothing between — so the runner has two modes and the median falls
+on whichever it spent more of the run in; `c5e380e9`, which is the same code
+plus one documentation line, passed. And **both failing routes are the two that
+read the whole manifest**, which the Greek wave took from 2,496 folders to
+5,232; `build:manifest` now reports 376 KB gzipped against its own 400 KB
+budget. Accessibility is 100 on every route, so this is the byte weight and
+nothing else.
+
+Nothing is broken and nothing was changed for it. But the next person to add
+two thousand folders should expect this floor, not the e2e suite, to be what
+stops them — and the lever is the manifest's size on the first paint, not the
+corpus's size.
