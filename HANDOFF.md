@@ -301,3 +301,47 @@ times the output read as success.
 **`4983e72` is titled as a docs fix and also carries 3,400 lines of spec
 deletions**, swept in by a bare `git commit` after `git add`. The tree is right,
 the history is not. It is unpushed, so a rebase would still tidy it.
+
+## The Greek wave is finished (2 October 2026)
+
+**All 366 Greek days are read and written**, `01-01` to `12-31`, one commit per
+civil day. Run the count rather than trusting a number here:
+
+```bash
+ls saints | wc -l; git rev-list --count bf181d2f..HEAD
+```
+
+25 December has no batch and needs none: its page prints the Nativity, the
+Adoration of the Magi and the Memory of the Shepherds, and the last two name
+nobody.
+
+**Queued next, in this order** (the author's, 2 October): the saint images for
+the Romanian calendar, then for the Greek, then the Russian reading wave.
+
+### The intermittent CI reds are two tests, and one of them predates the wave
+
+About one run in four came back red on the **Quality floor** step while the wave
+was pushing, and in every case the failures were the same two kinds.
+
+**The shelf-swipe pair is older than the corpus.** `chrome.spec.js`'s "on a
+touch device the shelf row carries no ×, and the swipe still clears it" and
+"under reduced motion a swiped row goes without flying" fail on the row not
+clearing. Measured, because "machine noise" has been a real number twice
+before: **4 failures in 24 runs on this tree, and 2 in 24 on a worktree of
+`bf181d2f`** — the pre-wave commit, with the same assertion and the same two
+tests. So the corpus is not the cause and the gesture is not newly broken; the
+test is intermittently dispatching a drag the handler does not complete. Not
+fixed, and a probe that reads the row's width between moves clears **nothing**
+in 6 of 6, so that instrument changes what it measures — the next attempt wants
+Playwright's trace, not a width.
+
+**`daily-panel.spec.js`'s "opening from the calendar goes through the prefetched
+payload"** failed once at mobile-360 and passes 6 of 6 on `--repeat-each=3`. It
+hovers and waits 300 ms for one request; that is a budget, not a bug.
+
+Everything else that went red was a fixture whose premise the wave killed, and
+all of those are fixed: `EMPTY`, `dayOneChurchKeeps('russian', 'greek')` in
+three tests, and `dayKeptOnlyElsewhere`. The pattern is worth knowing before the
+Russian wave starts — **a corpus that fills a calendar completely takes away
+every fixture that looked for an empty day in it**, and the repair each time was
+to make the state with `withoutSaintsOn` rather than to find it.
