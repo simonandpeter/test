@@ -1,0 +1,72 @@
+{
+  "slug": "willibrord",
+  "display_name": "Willibrord",
+  "names": [
+    {
+      "form": "Βιλλιβρόρδος",
+      "lang": "el",
+      "note": "The Greek form saint.gr gives in its own text, «Ο Άγιος Willibrord (Βιλλιβρόρδος)», with the rank word left off."
+    },
+    {
+      "form": "Willibrord",
+      "lang": "en",
+      "note": "The form saint.gr's line for 7 Νοεμβρίου prints, in Latin letters: «Άγιος Willibrord»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "bishop",
+    "preacher"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 658,
+      "latest": 658,
+      "display": "658",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Willibrord (Βιλλιβρόρδος) γεννήθηκε το 658 μ.Χ. στη Νορθουμβρία της Βρετανίας», with the page's own head «(658 - 739)»."
+    },
+    "death": {
+      "earliest": 739,
+      "latest": 739,
+      "display": "739",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Βιλλιβρόρδος κοιμήθηκε στις 7 Νοεμβρίου του 739 μ.Χ. και τάφηκε στη μονή Ετστέρναχ του Λουξεμβούργου»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Άγιος Willibrord»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day as the listing, and the page gives the same day for his repose. It says he was ordained bishop at Rome by Pope Sergius I in 695 and settled at Utrecht, but it names no see for him in so many words, so no `office` is recorded. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "33 de Mucenici din Melitina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 noiembrie, «Sfinții 33 de Mucenici din Melitina»."
+    },
+    {
+      "form": "Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»», with the rank word left off."
     }
   ],
   "sex": "unknown",
@@ -34,8 +39,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Άγιοι Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the same number and city. Unlike doxologia, which named nobody, saint.gr enumerates all thirty-three: «Ιέρων, Νίκανδρος, Ησύχιος, Βαράχος (ή Βαράχιος), Μαξιμιανός, Καλλίνικος, Ξαντικός (ή Ξανθιάς), Αθανάσιος, Θεόδωρος, Δουκίτιος, Ευγένιος, Θεόφιλος, Ουαλέριος, Θεόδοτος, Καλλίμαχος, Ιλάριος, Γιγάντιος, Λογγίνος, Θεμέλιος, Ευτύχιος, Διόδοτος, Καστρίκιος, Θεαγένης, Μάμας, Νίκων, Θεόδουλος, Βοστρύκιος (ή Ουστρίχιος), Ουΐκτωρ, Δωρόθεος, Κλαυδιανός, Επιφάνιος, Ανίκητος και άλλος Ιέρων». A reader does not split a folder the corpus already keeps, so the enumeration is recorded here and the folder left whole: `docs/CORPUS.md` §10.1 would make it thirty-three folders and that is the writer's decision, not this row's. The page's two hymns are commons of the martyrs printed under the entry's name and are taken as the entry's; the «Έτερον Ἀπολυτίκιον» and the Κάθισμα it also prints are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence; the page gives no year, so no `dates` object is proposed."
     },
     {
       "church": "serbian",
@@ -59,9 +74,47 @@
         "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Θείῳ Πνεύματι συντεταγμένοι, δῆμος ὤφθητε, τροπαιοφόροι ἀθλοφόροι τοῦ Σωτῆρος πανθαύμαστοι· ὁμοφροσύνῃ γὰρ γνώμης ἑνούμενοι, μαρτυρικῶς τὸν ἐχθρὸν ἐτροπώσασθε. Ἀλλ' αἰτήσασθε τριάδα τὴν Ὑπερούσιον δωρίσασθαι ἡμῖν τὸ μέγα ἔλεος.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος γ’, Θείας πίστεως — the first hymn on the page of «Άγιοι Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»». It names none of them and is a common of a company of martyrs, printed under this entry's name.",
+        "url": "https://www.saint.gr/2932/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Drawn up together by the divine Spirit, you appeared as one company, all-wondrous trophy-bearers and prize-winners of the Saviour; for being united in one mind and judgement you routed the enemy as martyrs. But ask the superessential Trinity to grant us his great mercy.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος γ’.",
+      "model": "Θείας πίστεως."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Χορὸς Μαρτύρων τηλαυγὴς καὶ φωσφόρος, ἐξανατείλας νοητῶς κατεφαίδρυνε, τὴν Ἐκκλησίαν σήμερον θαυμάτων βολαῖς· ὅθεν ἑορτάζοντες, τὴν σεπτὴν αὐτῶν μνήμην, αἰτοῦμέν σε Σωτὴρ ἡμῶν· Ταῖς αὐτῶν ἱκεσίαις, ἐκ τῶν κινδύνων λύτρωσαι ἡμᾶς, ὡς ἐλεήμων Θεὸς καὶ φιλάνθρωπος.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Ὁ ὑψωθεὶς — on the page of «Άγιοι Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»». Like the apolytikion above it, it names none of them: a common of a company of martyrs printed under this entry's name.",
+        "url": "https://www.saint.gr/2932/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "A choir of martyrs, far-shining and light-bearing, risen spiritually, has made the Church glad today with the beams of its wonders; and so, keeping their honoured memory, we ask you, our Saviour: at their entreaties deliver us from dangers, as a God merciful and loving to mankind.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Ὁ ὑψωθεὶς."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "matronianus-brother-of-hieron",
+    "antonius-brother-of-hieron"
+  ]
 }

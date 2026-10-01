@@ -1,0 +1,54 @@
+{
+  "slug": "taurion",
+  "display_name": "Taurion",
+  "names": [
+    {
+      "form": "Ταυρίων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Αύκτος, Ταυρίων και Θεσσαλονίκη», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "auctus",
+    "thessalonike"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Άγιοι Αύκτος, Ταυρίων και Θεσσαλονίκη»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day as the listing. The page gives no year for any of the three, so no `dates` object is proposed. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

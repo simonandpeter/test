@@ -1,0 +1,51 @@
+{
+  "slug": "athenodorus",
+  "display_name": "Athenodorus",
+  "names": [
+    {
+      "form": "Αθηνόδωρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιος Αθηνόδωρος», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "related": [
+    "gregory-the-wonderworker-of-neocaesarea",
+    "gregory-brother-of-the-wonderworker"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Άγιος Αθηνόδωρος»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day as the listing. The page gives him no rank and no year, so this folder carries no `types` and no `dates`. It reports that some hagiological sources make him the brother of Gregory the Wonderworker rather than the Gregory kept the same day, and calls that improbable on the evidence of Gregory's distich; that argument is the page's own and is quoted rather than resolved. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

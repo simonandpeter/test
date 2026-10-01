@@ -1,0 +1,64 @@
+{
+  "slug": "melasippus",
+  "display_name": "Melasippus",
+  "names": [
+    {
+      "form": "Μελάσιππος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Μελάσιππος, Κασσίνη και Αντώνιος και Σαράντα Παίδες», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "cassine",
+    "antonius-son-of-melasippus",
+    "forty-children"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him, «Αγιος Μελασιππος (; - 361)», and its text: «έζησαν κατά τους χρόνους του αυτοκράτορα Ιουλιανού του Παραβάτη (361 μ.Χ.)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Άγιοι Μελάσιππος, Κασσίνη και Αντώνιος και Σαράντα Παίδες»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the page."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

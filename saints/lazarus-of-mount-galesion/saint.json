@@ -6,6 +6,11 @@
       "form": "Lazăr",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 noiembrie."
+    },
+    {
+      "form": "Λάζαρος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Όσιος Λάζαρος ο Θαυματουργός, ο Γαλλησιώτης», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 7 Νοεμβρίου (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 7ης Νοεμβρίου — «Όσιος Λάζαρος ο Θαυματουργός, ο Γαλλησιώτης»",
+        "url": "https://www.saint.gr/11/07/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 7 Νοεμβρίου εκάστου έτους», the same day the folder already keeps, and the entry is the same man: the son of Nicetas and Irene from a village near Magnesia, who kept a pillar on Mount Galesion by Ephesus. It prints a proper apolytikion that names him and a kontakion that addresses him as our father and shepherd, both taken here; the Οἶκος on the same page is not a kind the schema holds and is not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -63,9 +78,51 @@
         "text": "With vigilant prayers thou didst water thy pillar with the streams of thy tears, and with sighs from the depths thou didst make it fruitful unto labours a hundredfold. And thou wast a shepherd, granting pardon to all; venerable Lazarus our father, pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Ταῖς ἐπαγρύπνοις προσευχαῖς, ἐν ὀχετοῖς δακρύων τὸν στῦλον κατέβρεχες· καὶ τοῖς ἐκ βάθων στεναγμοῖς, εἰς ἑκατὸν τοὺς πόνους ἐκαρποφόρησας· καὶ γέγονας ποιμήν, τοῖς προσιοῦσι νέμων συγχώρησιν, Ὅσιε Πατὴρ ἡμῶν Λάζαρε· πρέσβευε Χριστῷ τῷ Θεῷ σωθῆναι τὰς ψυχὰς ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος πλ. δ’ — the first hymn on the page of «Όσιος Λάζαρος ο Θαυματουργός, ο Γαλλησιώτης», and it names him and his pillar.",
+        "url": "https://www.saint.gr/2939/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "With sleepless prayers you drenched your pillar in streams of tears; and with groanings from the depths you made your labours bear fruit a hundredfold; and you became a shepherd, dealing out forgiveness to those who came to you, our venerable father Lazarus. Intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Τοὺς ὑπὲρ φύσιν σου Σοφὲ πόνους καὶ σκάμματα, αὐτοὶ οἱ Ἄγγελοι ἰδόντες κατεπλάγησαν, δι᾽ ὧν εἴληφας θεόθεν καὶ τοὺς στεφάνους, Ἀλλ᾽ ὣς ἔχων παῤῥησίαν πρὸς τὸν Κύριον, ἐκ παντοίων ἡμᾶς σῷζε περιστάσεων, ἵνα κράζωμεν, Χαίροις Πάτερ Ποιμὴν ἡμῶν.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος δ’, Τῇ ὑπερμάχῳ — on the page of «Όσιος Λάζαρος ο Θαυματουργός, ο Γαλλησιώτης». It addresses him as wise one and as our father and shepherd and names no other saint.",
+        "url": "https://www.saint.gr/2939/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeing your labours and your contests, which were beyond nature, O wise one, the very angels were amazed; and through them you received your crowns from God. Having then boldness before the Lord, save us from every kind of trouble, that we may cry: Rejoice, our father and shepherd.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος δ’.",
+      "model": "Τῇ ὑπερμάχῳ."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1054,
+      "latest": 1054,
+      "display": "1054",
+      "basis": "traditional",
+      "note": "saint.gr's head line for him, «Οσιος Λαζαρος ο Θαυματουργος, ο Γαλλησιωτης (; - 1054)», and its text: «πέθανε με αγιότητα σε βαθιά γεράματα το 1054 μ.Χ.»; the same page puts his birth in the eleventh century."
+    }
   }
 }
