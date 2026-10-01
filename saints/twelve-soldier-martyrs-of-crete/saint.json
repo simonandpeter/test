@@ -1,0 +1,51 @@
+{
+  "slug": "twelve-soldier-martyrs-of-crete",
+  "display_name": "The Twelve Soldier Martyrs of Crete",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Δώδεκα Στρατιώτες Μάρτυρες από την Κρήτη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Αυγούστου, «Άγιοι Δώδεκα Στρατιώτες Μάρτυρες από την Κρήτη», with the rank word «Άγιοι» left off. «Μάρτυρες» is kept because nothing of the company's designation would remain without it; the page names none of the twelve."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Αυγούστου — «Άγιοι Δώδεκα Στρατιώτες Μάρτυρες από την Κρήτη»",
+        "url": "https://www.saint.gr/08/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Αυγούστου εκάστου έτους», the same day as the listing. A company of twelve the page does not enumerate — it names none of the twelve — so by the rule that a company naming nobody is one entry this is one folder and not twelve. **The page is not quite sure of the country.** Its listing and its head line say from Crete, and beneath the distich it adds a parenthesis, «(Ή, εκ Kρήτης, παρ’ άλλοις.)» — or, from Crete, in others — which only makes sense as a note that other books read Crete where this one read something else, and the something else is not printed. The listing's reading is what this folder's name records, because the listing is the source being quoted, and the parenthesis is set down in the life and named in the reader's report. No `locations` object is proposed for the same reason. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page, no year and no hymn of any kind. The listing's word «Στρατιώτες» is what the type soldier rests on."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

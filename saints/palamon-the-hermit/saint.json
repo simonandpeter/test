@@ -6,6 +6,11 @@
       "form": "Palamon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 august, «Sfântul Cuvios Palamon», with the rank word left off."
+    },
+    {
+      "form": "Παλάμων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Αυγούστου, «Όσιος Παλάμων», with the rank word left off. The page's distich plays on the name against παλάμαι, the palms of the hands."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr for 12 Αυγούστου (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Αυγούστου — «Όσιος Παλάμων»",
+        "url": "https://www.saint.gr/08/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Αυγούστου εκάστου έτους», the same day the folder's Romanian row already carries, and it is the same man: «Ο Όσιος Παλάμων ήταν γέροντας και σοφός διδάσκαλος του μεγάλου Παχωμίου (τιμάται 15 Μάιου ) και απεβίωσε ειρηνικά» — the elder and wise teacher of Pachomius the Great, who reposed in peace. The page gives no year, no place and no hymn of any kind, so no `dates` object is proposed. It names Pachomius, whom the corpus keeps as `pachomius-the-great`, so the added paragraph links him and a `related_add` row goes with the link. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",
@@ -48,5 +63,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "pachomius-the-great"
+  ]
 }

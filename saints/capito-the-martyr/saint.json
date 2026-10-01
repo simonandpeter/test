@@ -10,6 +10,11 @@
       "form": "Capiton",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 august, «Sfântul Mucenic Capiton», with the rank word left off."
+    },
+    {
+      "form": "Καπίτων",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Αυγούστου, «Άγιοι Πάμφιλος και Καπίτων», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not checked: saint.gr was read for the civil week 23–29 August, which names other saints; its page for this Julian date was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Αυγούστου — «Άγιοι Πάμφιλος και Καπίτων»",
+        "url": "https://www.saint.gr/08/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The second of the pair in the listing line, with his own head line on the shared page, «Αγιος Καπιτων». The page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Αυγούστου εκάστου έτους», the same day the folder's other rows already carry. The whole of its prose is one sentence — «Οι Άγιοι Πάμφιλος και Καπίτων μαρτύρησαν δια ξίφους» — so it adds no year, no place and no hymn of any kind, and no `dates` object is proposed. The page offers no gloss on this name at all, where it glosses most others. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page."
     },
     {
       "church": "serbian",

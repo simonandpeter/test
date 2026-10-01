@@ -115,6 +115,10 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'στεφανοσ stefan-brancoveanu stephen-12-august stephen-27-february stephen-andronov stephen-bekh stephen-companion-of-meletius stephen-ii-of-constantinople stephen-martyr-8-february stephen-of-chenolakkos stephen-of-kazan stephen-of-khirsa stephen-of-makhrishche stephen-of-montenegro stephen-of-perm stephen-of-placidianae stephen-of-rhegium stephen-of-tomsk stephen-of-triglia stephen-of-vladimir stephen-patriarch-of-constantinople stephen-pope-of-rome stephen-the-great stephen-the-presbyter-7-june stephen-the-sabbaite stephen-xylinites':
+    'Twenty-five now. The new one is the Stephen of 12 August; the others are read in the el-08-03 entry for this name form.',
+  'σεργιοσ sergius-12-august sergius-martyr-2-january sergius-of-russia sergius-of-sukhtoma sergius-of-the-twelve-tribunes sergius-of-valaam sergius-of-zographou sergius-the-confessor sergius-the-magistros sergius-zipulin':
+    'The new one is the Sergius of 12 August; the rest of the fold is read in the el-06-28 entry for this name form.',
   'ζηνων zeno-20-april zeno-companion-of-terentius zeno-companion-of-zoilus zeno-disciple-of-silvanus zeno-of-corfu zeno-of-diospolis zeno-of-ikalto zeno-the-courier zeno-the-faster-of-kiev zeno-the-martyr-22-june zenon-12-june zenon-martyr-11-august':
     'Twelve now. The new one is the Zenon of 11 August, one of the six; the others are read in the el-06-18 entry for this name form.',
   'μαρκοσ mark-companion-of-mokianos mark-martyr-11-august mark-martyr-8-june mark-of-apollonias mark-of-arethusa mark-of-byblos mark-of-chios mark-of-kantara mark-of-the-lavra-of-pskov mark-the-ascetic mark-the-cretan-of-smyrna mark-the-deaf mark-the-evangelist mark-the-hermit-20-may mark-the-shepherd':

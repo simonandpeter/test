@@ -1,0 +1,50 @@
+{
+  "slug": "castor-12-august",
+  "display_name": "Castor (12 August)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Κάστωρ",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Αυγούστου, «Όσιος Κάστωρ», with the rank word left off. The page glosses the name as «το στολίδι», the ornament, and notes that it belonged in mythology to a son of Zeus and Leda and later to a rhetorician of Rhodes."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Αυγούστου — «Όσιος Κάστωρ»",
+        "url": "https://www.saint.gr/08/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Αυγούστου εκάστου έτους», the same day as the listing. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The whole of the page's prose is «Ο Όσιος Κάστωρ απεβίωσε ειρηνικά» — he reposed in peace — with no year, no place and no hymn of any kind. **The corpus already keeps two men named Castor**, `castor-the-martyr`, whose own `greek` row is saint.gr's 18 Σεπτεμβρίου «Άγιος Κάστωρ», and `castor-martyr-9-november` from the Romanian 9 noiembrie. Both are martyrs; this one is Όσιος, venerable, and reposed in peace, and saint.gr keeps him on a third day. Two entries on one calendar are two commemorations and so two men, and here the rank differs as well as the day, so he is drafted as his own folder; the three are named together in the reader's report."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

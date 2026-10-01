@@ -1,0 +1,53 @@
+{
+  "slug": "sergius-12-august",
+  "display_name": "Sergius (12 August)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Σέργιος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 12 Αυγούστου, «Όσιοι Σέργιος και Στέφανος», with the rank word left off. The page offers no gloss on this name, though it glosses his companion's."
+    }
+  ],
+  "related": [
+    "stephen-12-august"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Αυγούστου — «Όσιοι Σέργιος και Στέφανος»",
+        "url": "https://www.saint.gr/08/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 12 Αυγούστου εκάστου έτους», the same day as the listing. One listing line names two men, each with his own head line on the shared page, «Οσιος Σεργιος» and «Οσιος Στεφανος», so it is two folders. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The whole of the page's prose is «Οι Όσιοι Σέργιος και Στέφανος απεβίωσαν ειρηνικά» — they reposed in peace — with no year, no place and no hymn of any kind. The corpus keeps many men named Sergius and none of them paired with a Stephen on this day; the distinguisher is the day, as the corpus does it elsewhere."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
