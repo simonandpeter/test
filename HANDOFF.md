@@ -380,36 +380,43 @@ two thousand folders should expect this floor, not the e2e suite, to be what
 stops them — and the lever is the manifest's size on the first paint, not the
 corpus's size.
 
-## Where this sitting stands (2 October 2026, afternoon)
+## Where this sitting stands (3 October 2026)
 
-**Six commits are local and unpushed**, at the author's instruction: "can you
-please not push until we finalise … I dont want to wait 20min for a CI". The
-design loop is `npm run build` → refresh the preview on 4173 → commit; one push
-and one CI run at the end. Read them with `git log origin/main..HEAD`.
+**Pushed.** TODO item 11's cadence replaces "nothing until we finalise": the
+six commits that were held, the eight fixed feasts and this run's seven are on
+`main`, tip `772a6c36`.
 
-Green when they were made: 449 unit tests, and `index-grid` + `index-controls`
-at 130 e2e. CI is green through `c928bc3c`; `050904db`, `f8737b0f` and
-`2f73b0e8` were pushed before the instruction and their runs were never read.
+**`1431a42d` went red on the unit step** and `772a6c36` is the fix —
+`tests/fixed-feasts.test.mjs` read `data/manifest.json` at module scope, which
+is gitignored and absent when CI runs `npm test` before `build:manifest`.
+Read the conclusion of `772a6c36`'s own run with `scratchpad/ci.py` and its
+flaky line with `scratchpad/ci-flaky.py`; neither is written here.
+`bash scripts/state.sh` is the truth about what has landed.
 
-### The icon wave is half fetched
+**TODO item 12 is done, and item 4 with it.** `index-grid.spec.js` needed
+nothing — 58 of 58. `prayer.spec.js` caught a real defect: `controls()` emitted
+one surplus `</div>`, which closed `.hymnal` early, so `.hy-body` was parsed as
+a sibling and lost both stage J's full bleed and the bounded height the hymn
+column scrolls inside. Four of its five failures were that one character.
+The five dead `STRINGS.prayer` keys of item 12's tail are **not** done.
 
-`.tmp/icon-drafts/ro-{A,B,C,D}.json` hold 38 licence-checked drafts. **18
-landed; 20 did not** — Commons rate-limited this address through
-`geticon.py`'s whole backoff ladder, `ro-B` dying at Basil of Parium and `ro-C`
-at Eugene of Cherson. They need a slower re-run, not a wider ladder:
+**e2e that could not be run is not e2e that failed.** Fourteen of the first
+run's nineteen failures were `page.goto: net::ERR_ABORTED` and timeouts at six
+workers against one preview, and all fourteen passed at two. Run these two
+specs at `--workers=2` on this desk.
 
-```bash
-PYTHONIOENCODING=utf-8 python scratchpad/geticon.py .tmp/icon-drafts/ro-B.json --write
-```
+**The full suite stands at 1,092 passed and one failure**: `daily-stage`'s
+"comes back to the line it was left on", the restore race this file already
+records at 1 in 6 on this tree and 1 in 6 on `bf181d2f`.
 
-Two were refused on the licence rather than the identity and must not be
-re-added without a better file: Nicholas Velimirovich and Ephraim of
-Katounakia, each tagged "author died more than 70 years ago" on a file whose
-author Commons records as unknown.
-
-Work list after the 18: `node scripts/heroless.mjs romanian` reports 255 of 356,
-`greek` 282 of 364. The Russian reading wave is still the queued work after the
-images.
+**Measured for TODO item 8, and it reverses the item's premise.**
+`node scripts/link-coverage.mjs` and a pass over the folders' add commits:
+2,767 of 5,232 folders carry a `related` array (52.9%), and the split is
+**early corpus 378 of 856 (44.2%), the Romanian wave 1,245 of 2,151 (57.9%),
+the Greek wave 1,138 of 2,219 (51.3%)**. The recent waves are better linked
+than the early corpus, not worse, so the work list is the early corpus.
+`link-coverage.mjs` also prints 8,464 edges and 2,235 saints (42.7%) with no
+link in either direction.
 
 ### What changed in the page this sitting
 
@@ -422,8 +429,15 @@ images.
 - A filter panel on All Saints is a popup over the register. One at a time, a
   click away closes it, and the saint page's side facets are untouched.
 
-### The known reds, unchanged
+### The known reds
 
 The shelf-swipe pair in `chrome.spec.js` and `a press on a carousel card opens
 the saint` both fail on `03270f7b` too — measured, not assumed. The Lighthouse
 FCP floor is the one real margin and is written up above.
+
+**The two Orloff citations are fixed**: `saint.spec.js`'s common-troparion and
+made-here tests stood on "Thy martyr, O Lord" cited to the General Menaion of
+1899, which the corpus stopped carrying on 2 October. Hapgood's Service Book of
+1906, on Anna the Righteous, is now the only English in the corpus taken out of
+a book, and it is what the `Text from` half of that distinction is tested
+against.
