@@ -76,6 +76,9 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
     }
   ],
+  "related": [
+    "gregory-of-shlisselburg"
+  ],
   "text": {
     "life": "life.md"
   }

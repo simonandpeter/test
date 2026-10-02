@@ -52,6 +52,9 @@
       "note": "Eleven in number, as the Russian calendar counts them; the Greek synaxarion names them one by one."
     }
   ],
+  "related": [
+    "faustus-presbyter-of-alexandria"
+  ],
   "text": {
     "life": "life.md"
   },

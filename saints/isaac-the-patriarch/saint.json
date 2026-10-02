@@ -43,6 +43,10 @@
       }
     }
   ],
+  "related": [
+    "abraham-the-patriarch",
+    "jacob-the-patriarch"
+  ],
   "text": {
     "life": "life.md"
   },

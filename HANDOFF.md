@@ -413,11 +413,19 @@ nothing: all 34 shared Greek couplets are companions inside one entry.
 is answered — it stays, the Meeting and the Exaltation reach it.
 
 **Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
-work list, 383 early-corpus folders with no link in either direction, and it is
-worked in order: **lines 1-110 are committed and pushed, and line 111 is where
-the next batch starts.** 33 of those 110 gained a link and 77 name nobody this
-corpus holds, which is the ordinary answer here. Isolated 2,234 to 2,174. The brief that produced that
-batch is worth reusing whole — what it refused is the valuable half, and the
+work list, 383 early-corpus folders, and it is worked in order: **lines 1-170
+are committed, and line 171 is where the next batch starts.** 50 of those 170
+gained a link and 120 name nobody this corpus holds, which is the ordinary
+answer here. Isolated both ways 2,234 to 2,150.
+
+**The work list is not what its name says**, and batch 3 found it: it lists
+folders whose *own* `saint.json` has no `related`, not folders with no link in
+either direction. 21 of batch 3's pairs were already present one way and wanted
+only the reverse. The corpus-wide asymmetry is large and old — 1,502 links point
+one way only — so a reader working this list is completing links as often as
+making them, and a new link still has to be written both ways by hand.
+
+The brief that produced those batches is worth reusing whole — what it refused is the valuable half, and the
 refusals are in the commit message. **One reader at a time**: a link is written
 into both folders, and the partner can be anywhere in the corpus, so two readers
 would collide outside their own slices.

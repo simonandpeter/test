@@ -43,6 +43,10 @@
       }
     }
   ],
+  "related": [
+    "abraham-the-patriarch",
+    "isaac-the-patriarch"
+  ],
   "text": {
     "life": "life.md"
   },

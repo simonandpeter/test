@@ -232,6 +232,13 @@ list.** Five more were dropped as explicit negatives — the page or a reader
 already ruled them two people: Eleazar, Antonina, Acacius of Melitene, Peter the
 Sign-bearer, Hermes of Dalmatia.
 
+**Batch 3 of item 8 adds one more of the dropped kind, not a thirteenth row.**
+`euxiphius-the-martyr` is nothing but its own doubt — one line in the 1956
+Hagiasmatarion “and nowhere else; perhaps he is confused with Auxibius, kept
+on 17 February”. The corpus holds `auxibius-of-soloi` and
+`auxibius-28-april` and **neither is kept on 17 February**, so the source’s
+own cross-reference does not land on either folder. No merge is possible; it is a sourcing question.
+
 ## 14. The feasts, drawn as a day's main card
 
 **Done, 3 October 2026.** The drawing landed with `e4e8de6a`; what this sitting
