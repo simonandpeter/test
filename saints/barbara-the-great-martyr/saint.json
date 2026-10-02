@@ -142,5 +142,11 @@
       "tone": "Ἦχος δ’.",
       "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
   ]
 }

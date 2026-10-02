@@ -146,6 +146,12 @@
       "model": "Ἡ Παρθένος σήμερον."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "hundred-and-fifty-rhetors",
     "basilissa-wife-of-maxentius"

@@ -17,6 +17,12 @@
   "types": [
     "king"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "stefan-the-first-crowned",
     "sava-of-serbia"

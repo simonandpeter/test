@@ -103,6 +103,12 @@
       }
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "sergius-of-radonezh"
   ]

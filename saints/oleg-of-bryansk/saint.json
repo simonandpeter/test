@@ -23,6 +23,12 @@
       "note": "The Sretensky day prints «(ок. 1285)» and its first life «скончался строгим подвижником около 1285 года»; its second life: «Он мирно скончался в своем монастыре около 1289 г.»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "michael-of-chernigov"
   ],

@@ -27,6 +27,12 @@
       "note": "The Sretensky day prints «(1245)»; both of its lives put the martyrdom in 1246 («Когда в 1246 году благоверный князь Михаил и боярин Феодор прибыли в Орду», and «пострадавшего в Орде в 1246 году»); the Ohrid Prologue: «бише посечени 1244. год.»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "michael-of-chernigov"
   ],

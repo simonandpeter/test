@@ -439,6 +439,40 @@ refusals are in the commit message. **One reader at a time**: a link is written
 into both folders, and the partner can be anywhere in the corpus, so two readers
 would collide outside their own slices.
 
+### The image programme: the Russians and the Serbians are nearly done
+
+**26 icons, 33 heroes read, 7 refused**, the first slice of item 5 worked off
+`scripts/heroless.mjs`. Russian fell from 22 imageless days of 63 to **1**, and
+Serbian from 14 of 44 to **3**; Romanian fell 236 to 224 and Greek 268 to 255
+without being worked at all, because these saints lead days in those calendars
+too. **That is the shape of the rest of the programme**: a slice chosen for one
+church pays into the others, and the two big churches are cheapest to attack
+through the saints who are heroes in several.
+
+The 7 refusals are all the same answer — Commons has no file this sourcer could
+identify as the saint, and 4 of them are still their days' heroes:
+`john-maisuradze`, `macarius-disciple-of-niphon`, `hypatius-bishop-of-lydia`,
+`john-of-konitsa`. **Nothing was refused on licence**: all 26 came back PD, CC0
+or CC BY(-SA), 26 ready and 0 problems on the dry run.
+
+**`geticon.py` had a bug that fetched an icon and did not declare it.** A folder
+whose `saint.json` already carried `"images": []` kept the empty array — the
+key-copy loop copied it and `setdefault` then found the key present — so the
+picture sat on disk and the manifest never saw it. `christopher` was fetched
+twice that way. Fixed in the tool, and the lesson generalises: **the manifest
+reads the folder's own `images` array, not the directory**, so the check after a
+fetch is `heroless.mjs`, not `ls`.
+
+**The 429 ladder is not enough for a batch this size.** The write run died three
+times on a narrow file's original URL — at icon 14, then 8, then 5 — and the
+cure each time was a 90 to 150 second pause and a re-run, which resumes cleanly
+because the tool skips a folder that already has an icon. Four runs for 26 files.
+
+**The manifest is at 385.3 KB gzipped against its 400 KB budget**, up from 376
+before the icons; `build:manifest`'s own projection reads 368 KB at 5,000
+saints. The Lighthouse FCP floor is the thing this trips first, not the e2e
+suite — see the section above — and every icon costs a little of what is left.
+
 ### Two reds this sitting, both mine, both the same lesson
 
 **A document that names a path CI does not have fails `citations.test.mjs`.**

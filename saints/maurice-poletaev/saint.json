@@ -29,6 +29,12 @@
       "note": "azbyka.ru’s short life: «28 сентября 1937 года архимандрит Маврикий был расстрелян»; its full life: «28 сентября приговорен к расстрелу»; the Sretensky day prints «(1937)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "basil-kondratiev",
     "john-of-kronstadt"

@@ -199,6 +199,12 @@
       }
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "agapitus-the-deacon",
     "felicissimus-the-deacon",

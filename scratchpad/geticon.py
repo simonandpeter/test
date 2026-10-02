@@ -171,12 +171,17 @@ for d, got in ready:
         # examples do, before `related`. Rebuilding to one canonical order
         # instead rewrote whole folders for nothing: the first twenty icons
         # cost 690 deleted lines of identical content.
+        # A folder whose schema already carries `"images": []` kept the empty
+        # array: the loop copied the existing key and `setdefault` then found it
+        # present and did nothing, so the icon was fetched and never declared.
+        # `christopher` was fetched twice that way before it was noticed.
+        decl = [{'file': 'images/icon.jpg', 'meta': 'images/icon.meta.json'}]
         out = {}
         for k, v in folder.items():
-            if k == 'related':
-                out['images'] = [{'file': 'images/icon.jpg', 'meta': 'images/icon.meta.json'}]
-            out[k] = v
-        out.setdefault('images', [{'file': 'images/icon.jpg', 'meta': 'images/icon.meta.json'}])
+            if k == 'related' and 'images' not in folder:
+                out['images'] = decl
+            out[k] = decl if k == 'images' else v
+        out.setdefault('images', decl)
         io.open(sp, 'w', encoding='utf-8', newline='\n').write(
             json.dumps(out, ensure_ascii=False, indent=2) + '\n')
     print('wrote %s (%d bytes)' % (slug, len(blob)))

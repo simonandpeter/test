@@ -190,6 +190,12 @@
       }
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "photius-of-nicomedia"
   ]
