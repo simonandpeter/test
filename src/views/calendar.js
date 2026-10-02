@@ -1206,6 +1206,12 @@ function openFastBubble(button) {
 
   const el = document.createElement('div');
   el.className = 'fast-bubble';
+  // The chip's own tone, carried over whole: the bubble explains that chip, so
+  // `fast-fast` / `fast-fish` / `fast-fast-free` is the one thing that says
+  // which of the three it belongs to.
+  for (const name of button.classList) {
+    if (name.startsWith('fast-') && name !== 'fast-chip') el.classList.add(name);
+  }
   el.setAttribute('role', 'dialog');
   el.setAttribute('aria-label', M.open);
   el.tabIndex = -1;

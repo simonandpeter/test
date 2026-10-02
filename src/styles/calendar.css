@@ -3590,12 +3590,18 @@ a.name-day:hover {
   z-index: 40;
   max-width: min(36ch, calc(100vw - 2 * var(--space-4)));
   padding: var(--space-3);
-  border: 1px solid var(--rule);
+  /* The bubble wears the chip it came from (author, 2026-10-02). The tone is
+     the chip's own three tokens and is mixed into the rule and the ground at
+     the chip's own strengths, so the two read as one object; the prose stays
+     `--ink`, because a paragraph is not a label and has to survive greyscale
+     and a reader who cannot separate the hues. */
+  --fast-tone: var(--fast-free);
+  border: 1px solid color-mix(in srgb, var(--fast-tone) 40%, var(--rule));
   /* Rounder than the site's panels (author, 2026-08-26: "soften the corners
      of the fasting tool tip bubble") — the same reasoning as the coachmark's
      own corner in base.css: a bubble pointing at a word is not a panel. */
   border-radius: 10px;
-  background: var(--gesso);
+  background: color-mix(in srgb, var(--fast-tone) 9%, var(--gesso));
   color: var(--ink);
   /* The one shadow on the site that is not a picture's: a bubble has to read
      as *above* the line it explains, and it has no ground of its own. */
@@ -3604,6 +3610,14 @@ a.name-day:hover {
   transform: scale(0.9);
   transform-origin: var(--arrow-x, 50%) 0;
   transition: opacity var(--dur-answer) var(--ease-out), transform var(--dur-answer) var(--ease-spring);
+}
+
+.fast-bubble.fast-fast {
+  --fast-tone: var(--fast-strict);
+}
+
+.fast-bubble.fast-fish {
+  --fast-tone: var(--fast-fish);
 }
 
 .fast-bubble.is-in {
@@ -3629,17 +3643,20 @@ a.name-day:hover {
 
 .fast-bubble::before {
   top: -7px;
-  background: var(--rule);
+  background: color-mix(in srgb, var(--fast-tone) 40%, var(--rule));
 }
 
 .fast-bubble::after {
   top: -5px;
-  background: var(--gesso);
+  background: color-mix(in srgb, var(--fast-tone) 9%, var(--gesso));
 }
 
-/* What the day allows, which is the whole point of the bubble. */
+/* What the day allows, which is the whole point of the bubble, and the one
+   line in it that carries the chip's colour. */
 .fast-allows {
   margin: 0;
+  color: var(--fast-tone);
+  font-weight: 500;
 }
 
 /* The source's own words, quoted rather than translated — as every other
