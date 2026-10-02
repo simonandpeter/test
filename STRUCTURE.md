@@ -1248,16 +1248,20 @@ is discussed.
     church and puts the second day on it, with its own note and its own
     citation.
 
-    What is left is the corpus pass. Where a church kept a second day the
-    sourcer recorded it as a *note* on the first row, and nothing renders on
-    the second. Matthew's Romanian 16 noiembrie is written; **Andrew the
-    First-Called (30 November) and Philip (14 November) are not**, and a reader
-    who opens the Romanian 30 November still will not find Andrew. Every such
-    note already names the day and the saint, so nothing has to be re-read —
-    but the day's own page is the citation and is read before it is written.
-    `../ro-run/FINDINGS.md` holds the question and the way to count how many
-    saints are waiting on it; the count is a scan of the folders and the
-    pending upgrade files, not a number to copy.
+    What is left is the corpus pass, and it is larger than the three apostles
+    it was first described by. Where a church kept a second day the sourcer
+    recorded it as a *note* on the first row, and nothing renders on the
+    second. The three apostles of the Synaxis of the Twelve are written —
+    Matthew's Romanian 16 noiembrie, Andrew the First-Called's 30 noiembrie and
+    Philip's 14 noiembrie — and **33 attestation notes still carry a second day
+    that renders nowhere**, which `grep -rl "one feast to a church" saints/`
+    finds. They are not all the apostles' shape: some are a translation of
+    relics against a repose, some are a second day on the saint's own page, and
+    a few are the Greek day of a saint whose Romanian day is already doubled.
+    Every note names the day and the saint, so nothing has to be re-read — but
+    the day's own page is the citation and is read before it is written, and the
+    first row's note is corrected in the same commit, because it states the dead
+    premise that the corpus keeps one feast to a church.
 
 ### Recorded, deliberately not done
 

@@ -36,11 +36,26 @@
         "day": 30,
         "month": 6,
         "calendar": "revised-julian",
-        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 14 noiembrie, his own day, where the line reads «Sfântul Apostol Filip, unul dintre cei 12 Apostoli» (https://doxologia.ro/14-noiembrie, read 25 September 2026), with a full life and a proper troparion of his own; the corpus keeps one feast to a church, so he renders on 30 iunie only, and whether the proper day should stand instead of the synaxis is left open."
+        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 14 noiembrie, his own day, with a full life and a proper troparion of his own. Both days are now recorded, each as its own Romanian attestation with its own source."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Soborul Sfinților 12 Apostoli», whose life names him: «Sfântul Apostol Filip»",
         "url": "https://doxologia.ro/30-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "His own day in the Romanian calendar, where the line reads «Sfântul Apostol Filip, unul dintre cei 12 Apostoli», with a full life, a proper troparion and a canon. The day also holds Gregory Palamas and his family. The Synaxis of the Twelve on 30 iunie is recorded separately."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 14 noiembrie — «† Sfântul Apostol Filip, unul dintre cei 12 Apostoli»",
+        "url": "https://doxologia.ro/14-noiembrie",
         "year": 2026
       }
     },
