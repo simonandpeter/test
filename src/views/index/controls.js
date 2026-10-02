@@ -343,7 +343,6 @@ export function controls(state, { sort = true, layout = true, detailed = true } 
     </div>
 
     </div></div>
-    </div>
   </div>`;
 }
 
