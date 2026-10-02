@@ -121,9 +121,8 @@ civil 7 October.
   protected by copyright law". **A licence that cannot be established is not a
   licence.**
 - **Any modern translation.** A living author's work needs their permission.
-  The two published renderings that may be copied are named and are both long
-  out of copyright: Orloff's *General Menaion* (1899) and Hapgood's *Service
-  Book* (1906).
+  The published rendering the corpus cites is named and is long out of
+  copyright: Hapgood's *Service Book* (1906).
 - **Quoting a calendar's prose into a life.** The four calendar sites are
   copyrighted. A life here is a paraphrase in the house voice and closes with
   the source it was read from. The one place a source's own words are copied
@@ -251,8 +250,10 @@ rows).
 **`hymns`** — copied whole from the cited source with the tone it prints, in
 that church's own language. A hymn belongs to a church as an attestation does;
 the Greek apolytikion and the Romanian tropar are different texts, not
-translations of one. `english` is either a citation to Orloff or Hapgood or
-`rendered: "site"`, exactly one of the two.
+translations of one. `english` is either a citation to Hapgood or
+`rendered: "site"`, exactly one of the two — and a rendering of the hymn beats
+a citation of a general service, which is why Orloff's 50 came out on
+2026-10-02.
 
 **A reading that looks corrupt is the source's, not the scrape's.** Twenty
 suspicious hymn readings were fetched back from their own `source.url` and
@@ -263,11 +264,12 @@ common of apostles printed under one apostle's name. So a hymn that does not
 construe is **not** evidence of a bad scrape, and correcting it silently would
 put words in a source's mouth. Check the page before you touch the field.
 
-**Orloff is exhausted for troparia and not for kontakia.** His 27 chapters were
-indexed by their troparia and matched against every rendering the corpus had
-made; he prints a kontakion in every general service and those have never been
-matched. Hapgood carries the fixed services and the great feasts only, and the
-corpus's one great-feast hymn already cites him.
+**A general service is not this saint's hymn.** Orloff's *General Menaion*
+(1899) stood under 50 hymns until 2026-10-02 and printed the common of apostles
+or hieromartyrs where the folder's own troparion names the saint — Ἀπόστολε
+Ἅγιε Ἀνανία against "O holy apostle (mentioned by name)". All 50 are now
+rendered from the original beside them. Hapgood carries the fixed services and
+the great feasts only, and the corpus's one great-feast hymn cites him.
 
 **`images`** — `icon.jpg` plus `icon.meta.json` with `credit`, `licence`,
 `source_url`, then `npm run thumbs` for the two derivatives. The build *fails*

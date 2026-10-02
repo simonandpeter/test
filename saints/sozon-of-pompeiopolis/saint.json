@@ -123,12 +123,8 @@
         "year": 2026
       },
       "english": {
-        "text": "Thy martyr, O Lord (mentioned by name), through his suffering, an incorruptible crown did obtain from Thee, our God; for, rejoicing in Thy strength, he laid low his tormentors and did beat off impotent affronts of the demons also; at his intercessions save our souls.",
-        "source": {
-          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XIV, The General Service to One Martyr",
-          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
-          "year": 1899
-        }
+        "text": "Your martyr, O Lord, in his contest received the crown of incorruption from you, our God; for possessing your strength, he cast down the tyrants and shattered the feeble insolence of the demons. By his entreaties, O Christ God, save our souls.",
+        "rendered": "site"
       }
     },
     {
@@ -176,12 +172,8 @@
         "year": 2026
       },
       "english": {
-        "text": "Thy martyr, O Lord (mentioned by name), through his suffering, an incorruptible crown did obtain from Thee, our God; for, rejoicing in Thy strength, he laid low his tormentors and did beat off impotent affronts of the demons also; at his intercessions save our souls.",
-        "source": {
-          "text": "Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter XIV, The General Service to One Martyr",
-          "url": "https://www.ponomar.net/data/orloff_general_menaion.pdf",
-          "year": 1899
-        }
+        "text": "Thy martyr Sozon, O Lord, in his struggle received the crown of incorruption from thee our God; for having thy power, he overcame the tormentors and shattered also the feeble insolence of the demons. For his prayers' sake, save our souls, O Christ God.",
+        "rendered": "site"
       }
     }
   ],

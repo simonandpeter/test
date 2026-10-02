@@ -63,7 +63,7 @@
  *
  * And the register: traditional liturgical English — thou, thee, thy, verbs in
  * -est and -eth — because that is what the corpus's existing renderings and
- * its two cited books are in, and a modern-English hymn beside an Orloff
+ * its cited book is in, and a modern-English hymn beside a cited
  * citation would read as two different sites.
  */
 

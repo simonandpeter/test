@@ -17,9 +17,8 @@
  * file now has to say out loud.
  *
  * **A citation**: somebody else's published rendering of that same hymn, with
- * its own source. Orloff's General Menaion (1899) and Hapgood's Service Book
- * (1906) are the two, both long in the public domain, which the OCA's modern
- * translations are not.
+ * its own source. Hapgood's Service Book (1906) is the one the corpus cites,
+ * long in the public domain, which the OCA's modern translations are not.
  *
  * **Or this site's own** (`rendered: 'site'`). the corpus's no-invention rule forbade that from
  * 2026-08-22 — no invented content — and the author reversed it for hymns
@@ -137,9 +136,9 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
    * `original` beside the book that published its English, so the two lists
    * are the same length whichever kind of claim the footer is making.
    *
-   * Deduplicated on the rendered citation because one book very often prints
-   * the whole of a general service: Orloff's Chapter VIII answers for a Greek
-   * apostle and a Slavonic one alike, and the merged row said so twice.
+   * Deduplicated on the rendered citation because one book can answer for more
+   * than one tradition — a general service covers a Greek apostle and a
+   * Slavonic one alike — and the merged row said so twice.
    */
   const src = [
     own ? h.source : rendering.source,

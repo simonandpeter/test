@@ -3179,8 +3179,8 @@ export const LITURGICAL_DAYS = {
           text: 'Sfinţilor Apostoli, rugaţi pe Milostivul Dumnezeu ca să dea iertare de greşeli sufletelor noastre.',
           source: { text: 'Doxologia — Troparul Sfinţilor Apostoli Filimon, Arhip şi Onisim şi al celor împreună cu dânşii', url: 'https://doxologia.ro/troparul-sfintilor-apostoli-filimon-arhip-onisim-al-celor-impreuna-cu-dansii', year: 2026 },
           english: {
-            text: 'O holy apostles, entreat the Merciful God that He may grant forgiveness of sins to our souls.',
-            source: { text: 'Orloff, tr., The General Menaion (London: J. Davy & Sons, 1899), Chapter IX, The Service Common to Two or Many Apostles', url: 'https://www.ponomar.net/data/orloff_general_menaion.pdf', year: 1899 },
+            text: 'O Holy Apostles, entreat the merciful God, that He may grant remission of offences unto our souls.',
+            rendered: 'site',
           },
         },
         {

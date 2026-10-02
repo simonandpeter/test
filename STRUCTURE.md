@@ -1122,22 +1122,24 @@ is discussed.
    Serbian** (author, 2026-09-17), so a Slavonic original is a fallback for
    both.
 
-   **The two books are exhausted for troparia and not for kontakia.** Orloff's
-   *General Menaion* (1899) and Hapgood's *Service Book* (1906) were both read
-   in full against the renderings made here; Orloff's 27 chapters were indexed
-   **by their troparia only**, and he prints a kontakion in every general
-   service. So the kontakia are the pass that remains, and a citation beats a
-   rendering wherever one exists. Hapgood carries the great feasts alone and
-   has nothing further to give.
+   **A rendering beats a citation** (author, 2026-10-02: "I just want to get
+   rid of Orloff and use the English translations of the Romanian, Greek,
+   Russian or Serbian hymns"). The rule ran the other way while the corpus had
+   few renderings of its own, and it put Orloff's *General Menaion* (1899)
+   under 50 hymns: a book of **general** services, whose text is the common of
+   apostles or hieromartyrs rather than the hymn beside it, and which prints
+   "(mentioned by name)" where the saint's name belongs — 40 of the 50. The
+   folders' own originals name the saint outright, so every one of the 50 is
+   now rendered from the text it stands beside. Hapgood's *Service Book* (1906)
+   keeps its 2, being the hymn itself rather than a common.
 
-7. **40 English renderings print "(mentioned by name)" where the saint's name
-   belongs**, across 27 folders — Orloff's placeholder for the name a general
-   service leaves to the server, copied into the corpus with the text around
-   it. A reader meeting "O holy apostle (mentioned by name)" is being shown the
-   rubric rather than the hymn. Every one is a common (apostle, martyr, prophet,
-   hierarch, venerable woman), so the fix is the saint's name in the form that
-   folder already prints. Found by the stage-L sweep, 2026-09-18; not a language
-   fault and deliberately not swept up with one.
+7. **Done, 2026-10-02: the 40 "(mentioned by name)" renderings are gone**,
+   with the other 10 Orloff citations beside them. They were his placeholder
+   for the name a general service leaves to the server, and a reader meeting
+   "O holy apostle (mentioned by name)" was being shown the rubric rather than
+   the hymn. All 50 are rendered from each folder's own original — Greek 13,
+   Romanian 21, Church Slavonic 15, Serbian 1 — in the register that language's
+   existing renderings use. `grep -ri orloff saints/` returns nothing.
 
 8. **Raise the cross-linker's ceiling.** `lib/cross-link.js` can match 375 of the
    corpus's folders; the rest have name forms too short or ambiguous to be safe.
@@ -1187,9 +1189,9 @@ is discussed.
 
 ### Recorded, deliberately not done
 
-- **41 hymns cite Orloff (1899) or Hapgood (1906).** The other renderings have no
-  published English in either book — checked, not assumed. Someone with the
-  physical books could still improve on much of this.
+- **2 hymns cite Hapgood (1906).** Everything else the corpus prints in English
+  is its own rendering of the text beside it. Orloff's 50 were replaced on
+  2026-10-02; the reasoning is under the hymns rule above.
 
 ---
 

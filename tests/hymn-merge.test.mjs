@@ -22,7 +22,7 @@ const greek = {
   tone: 'Ἦχος δ´',
   text: '[the Greek]',
   source: { text: 'saint.gr', url: 'https://example.invalid/el' },
-  english: { text: 'O holy one, intercede for us.', source: { text: 'Orloff', url: 'https://example.invalid/orloff' } },
+  english: { text: 'O holy one, intercede for us.', source: { text: 'A published book', url: 'https://example.invalid/book' } },
 };
 const russian = {
   church: 'russian',
