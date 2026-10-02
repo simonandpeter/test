@@ -100,3 +100,69 @@ else touching Commons**, then `npm run thumbs && npm run build:manifest`.
 Romanian and Greek still lead with an imageless hero on most days; the Russian
 reading wave (`days.pravoslavie.ru`, julian) has not started. Counts are in
 HANDOFF.md and go stale — re-measure, do not quote them.
+
+## 6. One search bar, with Advanced as an option, on both pages
+
+**The ask (2 October 2026):** rebuild the search bar on All Saints and Prayer so
+both carry an **Advanced** option, and the advanced panel is the same thing on
+both pages. In-flight work already covers part of this (the Prayer page gaining
+the facet chips and the shell); this item is the finish.
+
+- Advanced is an *option*, not the default: the field alone is what a reader
+  meets, and Advanced opens the facets. Same control, same wording, same place
+  on both pages.
+- The advanced panel itself must be one implementation. `facetGroups` is already
+  shared; `wireControls` is being lifted off the All Saints state singleton.
+- **Prayer keeps no Sort chip and no Detailed box** — its order is the book, and
+  it has no grid to detail.
+
+## 7. Prayer on a phone: no display-type selector
+
+Remove the square/burger display-type selector from the Prayer page **on
+mobile**. The saints beside a hymn draw the **All Saints row card** —
+`card(item, router, { rows: true })` — at every width, so there is nothing for
+the selector to switch between.
+
+The obstacle is named in `views/prayer/asides.js`: an aside row is a *door* with
+three cases (a button that opens the saint in place where the hymnal holds them,
+a link to their own page past 1024 px where it does not, a disabled button below
+that width). The shared row card has to take its door from the caller. Keep the
+three cases and the `is-dim` mark: they are the ruling from
+`docs/mockup-review/BRIEF.md` stage I and the author's instruction of
+2026-09-17, after 84 of 116 names in those columns did nothing when pressed.
+
+## 8. Related: the links between saints
+
+**The ask:** the Related section under a profile — which the Prayer page also
+draws — has to exist for the saints added in the recent waves, not only the
+early ones.
+
+**Measure first, then work.** How many folders carry a `related` array at all,
+and how that splits between the early corpus and the Greek and Romanian waves.
+Report the number before writing any.
+
+A link is a claim: companions martyred together, a teacher and a disciple, a
+translator of relics, two commemorations that may be one person (item 2). It
+comes out of the saint's own life or the calendar's own line, never out of a
+shared name or a shared day. A wrong link is worse than a missing one — the
+corpus's known failure mode is the wrong-saint match (`b6dc41ab`).
+
+Every link is two-way, or the reader meets a one-sided relation.
+
+## 9. The Russians, for the full year, with their images
+
+The Russian calendar covers **63 of 366 days** today, against 364 for the Greek
+and 357 for the Romanian. Read `days.pravoslavie.ru` (Julian date in the path)
+for the whole year, folder by folder, to the same standard as the Greek and
+Romanian waves: the name in the calendar's own words, a life, the attestation
+with its citation, hymns where the page prints them.
+
+Then their icons, by `scratchpad/geticon.py`'s rules — the licence comes from
+Commons' own `imageinfo` and a file Commons does not state as public domain or
+a CC licence is refused, never warned about. One fetcher at a time: parallel
+sourcers draw 429s through the whole backoff ladder.
+
+## 10. Then the Serbians
+
+**44 of 366 days.** The Ohrid Prologue at pravoslavno.rs, Julian, same standard,
+then their icons. Only after item 9 is finished.
