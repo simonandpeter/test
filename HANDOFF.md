@@ -380,64 +380,46 @@ two thousand folders should expect this floor, not the e2e suite, to be what
 stops them — and the lever is the manifest's size on the first paint, not the
 corpus's size.
 
-## Where this sitting stands (3 October 2026)
+## Where this sitting stands (3 October 2026, overnight)
 
-**Pushed.** TODO item 11's cadence replaces "nothing until we finalise": the
-six commits that were held, the eight fixed feasts and this run's seven are on
-`main`, tip `772a6c36`.
+`772a6c36`'s run was green — 1,096 passed, 1 skipped, 1 flaky, and the flaky is
+`daily-stage`'s restore race this file already records at 1 in 6 on this tree
+and on `bf181d2f`. Nothing was chased.
 
-**`1431a42d` went red on the unit step** and `772a6c36` is the fix —
-`tests/fixed-feasts.test.mjs` read `data/manifest.json` at module scope, which
-is gitignored and absent when CI runs `npm test` before `build:manifest`.
-Read the conclusion of `772a6c36`'s own run with `scratchpad/ci.py` and its
-flaky line with `scratchpad/ci-flaky.py`; neither is written here.
-`bash scripts/state.sh` is the truth about what has landed.
+**A church may keep a saint on more than one day.** The schema never forbade a
+second attestation and `buildFeastIndex` always looped them; four readers
+assumed one, and `views/saint.js`'s `new Map(attestations.map(…))` was the real
+break — last one wins, so one of the two days printed nowhere. All four read
+`lib/church.js`'s `attestationsIn` / `attestationsByChurch` / `churchStatus`
+now. The e2e test types the second row and was measured failing against `HEAD`
+before the fix, 1 feast line of 2.
 
-**TODO item 12 is done, and item 4 with it.** `index-grid.spec.js` needed
-nothing — 58 of 58. `prayer.spec.js` caught a real defect: `controls()` emitted
-one surplus `</div>`, which closed `.hymnal` early, so `.hy-body` was parsed as
-a sibling and lost both stage J's full bleed and the bounded height the hymn
-column scrolls inside. Four of its five failures were that one character.
-The five dead `STRINGS.prayer` keys of item 12's tail are **not** done.
+**Charitina is one record**, the author's ruling, with the Greek 4 September and
+the Greek 5 October both on it. `aliases` is new in the schema and is written
+only by a merge: an unknown slug renders a refusal, so the folded-away slug
+would have died. The saint page replaces the URL with the live one.
+5,231 folders.
 
-**e2e that could not be run is not e2e that failed.** Fourteen of the first
-run's nineteen failures were `page.goto: net::ERR_ABORTED` and timeouts at six
-workers against one preview, and all fourteen passed at two. Run these two
-specs at `--workers=2` on this desk.
+**Matthew's Romanian 16 noiembrie is written** and that day is no longer blank.
+Andrew the First-Called (30 November) and Philip (14 November) are the same
+shape and are **not** done — `STRUCTURE.md` §6 item 13.
 
-**The full suite stands at 1,092 passed and one failure**: `daily-stage`'s
-"comes back to the line it was left on", the restore race this file already
-records at 1 in 6 on this tree and 1 in 6 on `bf181d2f`.
+**Ten merge candidates are in `TODO.md` item 13 for the author to rule**, each
+with the sources' own doubt quoted, out of 40 identity questions in 5,231
+folders. Nothing was merged on a pattern. The shared-verse signal produced
+nothing: all 34 shared Greek couplets are companions inside one entry.
 
-**Measured for TODO item 8, and it reverses the item's premise.**
-`node scripts/link-coverage.mjs` and a pass over the folders' add commits:
-2,767 of 5,232 folders carry a `related` array (52.9%), and the split is
-**early corpus 378 of 856 (44.2%), the Romanian wave 1,245 of 2,151 (57.9%),
-the Greek wave 1,138 of 2,219 (51.3%)**. The recent waves are better linked
-than the early corpus, not worse, so the work list is the early corpus.
-`link-coverage.mjs` also prints 8,464 edges and 2,235 saints (42.7%) with no
-link in either direction.
+**The feast card is read at both widths** and the `emptyDayNote` branch question
+is answered — it stays, the Meeting and the Exaltation reach it.
 
-### What changed in the page this sitting
+### What the next person should not re-do
 
-- Orloff is gone from the corpus; his 50 are rendered from the hymn beside
-  them, and 16 of those were realigned so a hymn sung in three calendars is one
-  English text again (`mergeForReading` keys on the rendering).
-- The melody notice is gone from hymn headings.
-- The search field is one box at every width; Prayer's phone exception is
-  deleted, and its tap target is 34 px rather than 46.
-- A filter panel on All Saints is a popup over the register. One at a time, a
-  click away closes it, and the saint page's side facets are untouched.
+- **Do not re-measure item 8.** The numbers are in the item and the item's
+  premise is corrected there: the early corpus is the work list, not the waves.
+- **Python's `write_text` writes CRLF on this desk.** It broke
+  `tokens-table.mjs --check` once by rewriting all 1,265 line endings of
+  `STRUCTURE.md`. Write bytes, or normalise after.
+- `scratchpad/shoot-feast.mjs` shoots the feast and a saint hero at 360 and
+  1280 against `vite preview` on 4175. It is a one-off reading tool, not a
+  baseline, and nothing under `shots/` was touched.
 
-### The known reds
-
-The shelf-swipe pair in `chrome.spec.js` and `a press on a carousel card opens
-the saint` both fail on `03270f7b` too — measured, not assumed. The Lighthouse
-FCP floor is the one real margin and is written up above.
-
-**The two Orloff citations are fixed**: `saint.spec.js`'s common-troparion and
-made-here tests stood on "Thy martyr, O Lord" cited to the General Menaion of
-1899, which the corpus stopped carrying on 2 October. Hapgood's Service Book of
-1906, on Anna the Righteous, is now the only English in the corpus taken out of
-a book, and it is what the `Text from` half of that distinction is tested
-against.
