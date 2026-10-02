@@ -2,7 +2,17 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 
 import { CHURCHES, CHURCHES_BY_ID, enabledChurches } from '../src/data/churches.js';
-import { calendarFor, churchIds, churchName, entriesInChurch, keptBy } from '../src/lib/church.js';
+import {
+  attestationsByChurch,
+  attestationsIn,
+  calendarFor,
+  churchIds,
+  churchName,
+  churchStatus,
+  entriesInChurch,
+  keptBy,
+} from '../src/lib/church.js';
+import { facetsOf } from '../src/lib/index-filters.js';
 import { WIDE, isWide } from '../src/lib/viewport.js';
 import { greatFeast } from '../src/lib/liturgy.js';
 import { CALENDAR_LABELS, formatFeast } from '../src/data/calendars.js';
@@ -106,4 +116,56 @@ test('under 1024 px the reckoning is Gregorian, and the fast moves with the labe
   // every build step that reads a calendar without a window, depends on it.
   assert.equal(isWide(), true);
   assert.equal(calendarFor('russian'), 'julian');
+});
+
+/*
+ * One church, more than one day (the author, 2 October 2026: "whats so hard
+ * about having the same saint profile commemorated on 2 days"). The corpus held
+ * one feast to a church by convention and not by rule — the schema never
+ * forbade a second — so the readers that mapped a church to *one* attestation
+ * were the whole obstacle, and these three functions are what they read now.
+ */
+
+const twiceInGreek = {
+  attestations: [
+    { church: 'greek', status: 'venerated', feast: { day: 4, month: 9, calendar: 'revised-julian' }, titles: ['Martyr'] },
+    { church: 'romanian', status: 'venerated', feast: { day: 5, month: 10, calendar: 'revised-julian' } },
+    { church: 'greek', status: 'venerated', feast: { day: 5, month: 10, calendar: 'revised-julian' }, titles: ['Martyr', 'of Amisos'] },
+    { church: 'serbian', status: 'undocumented' },
+  ],
+};
+
+test('a church’s attestations are all of them, in the order the folder wrote them', () => {
+  assert.deepEqual(
+    attestationsIn(twiceInGreek.attestations, 'greek').map((a) => a.feast.month),
+    [9, 10],
+  );
+  assert.equal(attestationsIn(twiceInGreek.attestations, 'romanian').length, 1);
+  // A church that attests nothing, and a saint whose folder has no array at
+  // all, both read as none rather than throwing: the readers walk the whole
+  // registry and most saints answer for one calendar.
+  assert.deepEqual(attestationsIn(twiceInGreek.attestations, 'russian'), []);
+  assert.deepEqual(attestationsIn(undefined, 'greek'), []);
+});
+
+test('grouping by church keeps both days and leaves the silent churches out', () => {
+  const by = attestationsByChurch(twiceInGreek.attestations);
+  assert.deepEqual([...by.keys()], ['greek', 'romanian', 'serbian']);
+  assert.equal(by.get('greek').length, 2);
+  assert.equal(by.get('russian'), undefined);
+  assert.equal(attestationsByChurch(undefined).size, 0);
+});
+
+test('one word for a church that recorded more than one row', () => {
+  assert.equal(churchStatus(attestationsIn(twiceInGreek.attestations, 'greek')), 'venerated');
+  assert.equal(churchStatus([]), 'undocumented');
+  assert.equal(churchStatus([{ status: 'not-venerated' }]), 'not-venerated');
+  // Veneration carries: a refusal recorded beside a feast is a refusal of that
+  // other day, not of the saint, so the row may not read "Not venerated".
+  assert.equal(churchStatus([{ status: 'not-venerated' }, { status: 'venerated' }]), 'venerated');
+});
+
+test('a saint kept twice by one church still stands in it, and once', () => {
+  assert.ok(keptBy(twiceInGreek, 'greek'));
+  assert.deepEqual(facetsOf([twiceInGreek]).churches, ['greek', 'romanian']);
 });

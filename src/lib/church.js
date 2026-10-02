@@ -265,3 +265,49 @@ export const entriesInChurch = (entries, churchId) =>
 export const keptBy = (card, churchId) =>
   !churchId ||
   (card.attestations ?? []).some((a) => a.church === churchId && a.status === 'venerated');
+
+/**
+ * Every attestation one church records for a saint, in the folder's own order.
+ *
+ * **Plural since 2026-10-03** (TODO item 1, the author's "whats so hard about
+ * having the same saint profile commemorated on 2 days"): a church may keep one
+ * saint on more than one day — the Greek synaxarion keeps Charitina on both 4
+ * September and 5 October — and `buildFeastIndex` always allowed it. Four
+ * readers did not: three took the first or the last of a church's attestations
+ * and one produced a duplicate church. Nothing in `schema/saint.schema.json`
+ * ever forbade the second row, so a reader that assumes one is a reader that
+ * silently drops a recorded feast.
+ *
+ * @param attestations a card's or payload's `attestations`, possibly absent
+ * @param churchId the church to read
+ * @returns the matching attestations, never null, in recorded order
+ */
+export const attestationsIn = (attestations, churchId) =>
+  (attestations ?? []).filter((a) => a.church === churchId);
+
+/**
+ * The same reading for every church at once, for a caller walking the registry.
+ *
+ * @param attestations a card's or payload's `attestations`, possibly absent
+ * @returns church id -> its attestations, in recorded order; a church that
+ *   attests nothing is absent rather than empty
+ */
+export function attestationsByChurch(attestations) {
+  const by = new Map();
+  for (const a of attestations ?? []) {
+    if (!by.has(a.church)) by.set(a.church, []);
+    by.get(a.church).push(a);
+  }
+  return by;
+}
+
+/**
+ * One word for a church that may have recorded more than one day. Veneration
+ * carries: a church that keeps a saint at all keeps them, and a refusal
+ * recorded beside a feast is a refusal of that other day, not of the saint.
+ *
+ * @param atts one church's attestations, as `attestationsIn` returns them
+ * @returns `venerated`, the first recorded status, or `undocumented` for none
+ */
+export const churchStatus = (atts) =>
+  atts.some((a) => a.status === 'venerated') ? 'venerated' : (atts[0]?.status ?? 'undocumented');

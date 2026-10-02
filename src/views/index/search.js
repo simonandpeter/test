@@ -64,10 +64,16 @@ export async function loadSearch(cards, { onChange: update }) {
        * there too, so an old bookmarked query still matches.
        */
       types: (card.types ?? []).flatMap(allNames).join(' '),
-      churches: card.attestations
-        .filter((a) => a.status === 'venerated')
-        .map((a) => CHURCHES_BY_ID[a.church]?.display_name ?? '')
-        .join(' '),
+      // Each church's name once: a church that keeps the saint on two days
+      // (2026-10-03, TODO item 1) would otherwise weight this field twice
+      // against every other, and the index is scored on what it holds.
+      churches: [
+        ...new Set(
+          card.attestations
+            .filter((a) => a.status === 'venerated')
+            .map((a) => CHURCHES_BY_ID[a.church]?.display_name ?? ''),
+        ),
+      ].join(' '),
       regions: (card.locations ?? [])
         .map((l) => REGIONS_BY_ID[l.region]?.display_name ?? '')
         .join(' '),

@@ -94,8 +94,14 @@ export function lifeInterval(dates) {
  */
 export const UNCALENDARED = 'uncalendared';
 
-const veneratedChurches = (card) =>
-  card.attestations.filter((a) => a.status === 'venerated').map((a) => a.church);
+/*
+ * Each church once, however many days it keeps the saint on (2026-10-03, TODO
+ * item 1). This fed the Calendar facet's counts and its membership test, and a
+ * church recorded twice would have been counted twice in the facet's tally.
+ */
+const veneratedChurches = (card) => [
+  ...new Set(card.attestations.filter((a) => a.status === 'venerated').map((a) => a.church)),
+];
 
 /**
  * The two values every filter and sort asks a card for, derived once (Addendum

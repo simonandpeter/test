@@ -1845,3 +1845,67 @@ test('a phone gets Continue reading under the life, and a desk does not', async 
   await expect(widePage.locator('[data-shelves] a')).toHaveCount(0);
   await wide.close();
 });
+
+/*
+ * One church, more than one day (the author, 2 October 2026: "whats so hard
+ * about having the same saint profile commemorated on 2 days"). The Greek
+ * synaxarion keeps Charitina on both 4 September and 5 October, and the corpus
+ * could not say so: the veneration table built a church -> attestation map, so
+ * the *last* of a church's rows won and the other day was printed nowhere.
+ *
+ * The second row is typed here rather than found, because the corpus holds no
+ * such folder yet — TODO item 13 is the merge that makes the first one, and it
+ * waits on this. `tests/church.test.mjs` pins the three readers underneath;
+ * this is the one that proves the page prints both days.
+ */
+test.describe('one church, more than one day', () => {
+test.use({ serviceWorkers: 'block' });
+
+test('a church that keeps a saint on two days has both on its one row', async ({ page }) => {
+  const SECOND = {
+    church: 'greek',
+    status: 'venerated',
+    feast: { day: 3, month: 5, calendar: 'revised-julian' },
+    // The same title as the row above it, which the page must not print twice.
+    titles: ['the Great'],
+    source: {
+      text: 'A second Greek entry, typed by this test',
+      url: 'https://www.saint.gr/05/03/index.aspx',
+      year: 2026,
+    },
+    note: 'The second Greek day, typed by this test.',
+  };
+  let served = 0;
+  await page.route('**/saints/anthony-the-great/saint.json', async (route) => {
+    const response = await route.fetch();
+    const saint = await response.json();
+    served += 1;
+    const attestations = [...saint.attestations];
+    attestations.splice(attestations.findIndex((a) => a.church === 'greek') + 1, 0, SECOND);
+    await route.fulfill({ response, json: { ...saint, attestations } });
+  });
+
+  await page.goto(DETAIL, { waitUntil: 'networkidle' });
+  // Fails shut: a route that matched nothing would leave every assertion below
+  // testing the unmodified corpus.
+  expect(served).toBeGreaterThan(0);
+
+  // Still one row per church. A second day is a second line *on* the Greek
+  // row, not a second Greek row: the table's subject is the church.
+  await expect(page.locator('.attestations .att')).toHaveCount(4);
+  const greek = page.locator('.attestations .att', {
+    has: page.locator('.att-church', { hasText: 'Greek' }),
+  });
+  await expect(greek).toHaveCount(1);
+  await expect(greek.locator('.att-feast')).toHaveCount(2);
+  await expect(greek).toContainText('17 January (Revised Julian)');
+  await expect(greek).toContainText('3 May (Revised Julian)');
+  // Each day with its own note and its own citation, in its own block.
+  await expect(greek).toContainText('The second Greek day, typed by this test.');
+  await expect(greek).toContainText('A second Greek entry, typed by this test');
+  // The title the two rows share is printed once, like the info line above.
+  await expect(greek.locator('.att-titles')).toHaveCount(1);
+  await expect(greek.locator('.att-titles')).toHaveText('the Great');
+  await expect(greek.locator('.att-status')).toHaveText('Venerated');
+});
+});

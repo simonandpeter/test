@@ -1,5 +1,5 @@
 import { formatSubtext, todayIso } from '../../lib/calendar-page.js';
-import { churchName, entriesInChurch } from '../../lib/church.js';
+import { attestationsIn, churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail, loadSource } from '../../lib/detail.js';
 import { dayHero, fixedFeastOn } from '../../lib/fixed-feasts.js';
 import { cardCrop, columnCrop, heroCrop } from '../../lib/hero-crop.js';
@@ -1172,8 +1172,16 @@ export function markChosen(root, slug) {
 // Translated, like the office beside it (2026-09-08): a title is a recorded
 // English phrase and `lib/i18n.js`'s `translateOffice` is the one table for
 // both.
-const titleFor = (saint, churchId) =>
-  saint.attestations.find((a) => a.church === churchId)?.titles?.map(translateOffice).join(', ') ?? '';
+// Every attestation that church records, not the first (2026-10-03, TODO item
+// 1): a church may keep one saint on two days, and the day the shelf row is
+// standing on is not knowable here. Deduplicated on the recorded English, as
+// the saint page's row is.
+const titleFor = (saint, churchId) => {
+  const seen = new Set();
+  for (const att of attestationsIn(saint.attestations, churchId))
+    for (const title of att.titles ?? []) seen.add(title);
+  return [...seen].map(translateOffice).join(', ');
+};
 
 /**
  * Whose name day it is (author, 2026-08-26: "add name days"). Under the day's

@@ -19,7 +19,15 @@
 
 import { CHURCHES } from '../data/churches.js';
 import { typeNames } from '../lib/saint-types.js';
-import { chooseChurch, chosenChurch, churchName, currentChurch, subscribeChurch } from '../lib/church.js';
+import {
+  attestationsByChurch,
+  chooseChurch,
+  chosenChurch,
+  churchName,
+  churchStatus,
+  currentChurch,
+  subscribeChurch,
+} from '../lib/church.js';
 import { formatFeast } from '../data/calendars.js';
 import { feastOccurrences } from '../lib/feasts.js';
 import { formatLifespan } from '../lib/calendar-page.js';
@@ -1024,32 +1032,58 @@ function wireFeastLinks(box, router) {
 
 function veneration(saint, churches, router) {
   const year = new Date().getFullYear();
-  const byChurch = new Map((saint.attestations ?? []).map((a) => [a.church, a]));
+  const byChurch = attestationsByChurch(saint.attestations);
 
   const rows = churches.map((church) => {
-    const att = byChurch.get(church.id);
-    const status = att?.status ?? 'undocumented';
+    const atts = byChurch.get(church.id) ?? [];
+    const status = churchStatus(atts);
     const lines = [];
 
     // The church's own titles for this saint, in the reader's language —
     // `lib/i18n.js`'s `translateOffice` over the same table the office line
     // above reads, since these are the same kind of recorded English phrase
-    // (2026-09-08).
-    if (att?.titles?.length)
-      lines.push(`<span class="att-titles">${esc(att.titles.map(translateOffice).join(', '))}</span>`);
-
-    if (status === 'venerated') {
-      // Not escaped: `feastLine` returns markup and escapes its own parts.
-      lines.push(`<span class="att-feast utility">${feastLine(att.feast, church, year, router)}</span>`);
-    } else if (status === 'not-venerated') {
-      // A refusal is a finding about that church and is stated on its row.
-      // Undocumented is a fact about our sourcing and is the same fact every
-      // time, so it is said once below the list rather than seven times down it.
-      lines.push(`<span class="att-note utility">${STRINGS.saint.refusedNote}</span>`);
+    // (2026-09-08). Deduplicated on the recorded English across the church's
+    // attestations, as the info line above does: a church that keeps a saint
+    // on two days ordinarily gives her the same titles on both, and printing
+    // them twice would read as two findings.
+    const titles = [];
+    const seen = new Set();
+    for (const att of atts) {
+      for (const title of att.titles ?? []) {
+        if (seen.has(title.toLowerCase())) continue;
+        seen.add(title.toLowerCase());
+        titles.push(title);
+      }
     }
+    if (titles.length)
+      lines.push(`<span class="att-titles">${esc(titles.map(translateOffice).join(', '))}</span>`);
 
-    if (att?.note) lines.push(`<span class="att-note utility">${esc(att.note)}</span>`);
-    if (att?.source) lines.push(`<span class="att-source utility">${citation(att.source)}</span>`);
+    /*
+     * One block per attestation, not one per church (2026-10-03, TODO item 1).
+     * A church may record more than one day — the Greek synaxarion keeps
+     * Charitina on both 4 September and 5 October — and each day comes with
+     * its own citation and its own note, so the feast, the note and the
+     * source stay together. A single attestation renders exactly as it did.
+     *
+     * The refusal sentence is said once however many rows carry it: it is one
+     * finding about that church, and `churchStatus` only lets this branch run
+     * when no row of the church venerates.
+     */
+    let refused = false;
+    for (const att of atts) {
+      if (att.status === 'venerated') {
+        // Not escaped: `feastLine` returns markup and escapes its own parts.
+        lines.push(`<span class="att-feast utility">${feastLine(att.feast, church, year, router)}</span>`);
+      } else if (att.status === 'not-venerated' && !refused) {
+        // A refusal is a finding about that church and is stated on its row.
+        // Undocumented is a fact about our sourcing and is the same fact every
+        // time, so it is said once below the list rather than seven times down it.
+        refused = true;
+        lines.push(`<span class="att-note utility">${STRINGS.saint.refusedNote}</span>`);
+      }
+      if (att.note) lines.push(`<span class="att-note utility">${esc(att.note)}</span>`);
+      if (att.source) lines.push(`<span class="att-source utility">${citation(att.source)}</span>`);
+    }
 
     return `<li class="att att-${status}">
       <span class="att-church utility">${esc(churchName(church.id))}</span>
@@ -1059,7 +1093,7 @@ function veneration(saint, churches, router) {
   });
 
   const anyUndocumented = churches.some(
-    (c) => (byChurch.get(c.id)?.status ?? 'undocumented') === 'undocumented',
+    (c) => churchStatus(byChurch.get(c.id) ?? []) === 'undocumented',
   );
   const note = anyUndocumented
     ? `<p class="att-legend utility">${STRINGS.saint.undocumentedNote}</p>`
