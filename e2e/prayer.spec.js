@@ -1325,11 +1325,6 @@ const fieldDress = (page) =>
       font: `${c.fontSize} ${c.fontFamily}`,
       lineHeight: c.lineHeight,
       color: c.color,
-      /* The two spacing tokens the phone's exception below is written in,
-         resolved by the element itself so the assertion cannot go stale the day
-         a token moves. */
-      space3: c.getPropertyValue('--space-3').trim(),
-      space4: c.getPropertyValue('--space-4').trim(),
     };
   });
 
@@ -1350,27 +1345,24 @@ test('at the desk the field on Prayer is the field All Saints draws', async ({ p
   expect(prayer).toEqual(saints);
 });
 
-test('below the desk Prayer keeps the field it shipped with', async ({ page }) => {
+test('on a phone it is the same field, which it was not until 2026-10-02', async ({ page }) => {
+  /* Prayer kept its own 46 px box on `--field` below 1024 px, because the
+     ruling that unified the two was scoped to the desk. The author lifted that
+     scope — "it shouldnt look different. I dont care if the functinality is
+     different thats fine, but it should look the same" — so this is the desk's
+     comparison run at 360, and the exception it used to assert is gone rather
+     than loosened. */
   await phone(page);
   await page.goto(SAINTS_ROUTE, { waitUntil: 'networkidle' });
   await expect(page.locator('.search-field')).toBeVisible();
   const saints = await fieldDress(page);
+  expect(saints.count).toBe(1);
 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   const prayer = await fieldDress(page);
 
-  /* The one place the component draws two ways, and it is deliberate: the
-     ruling is about the desk and mobile does not move in this pass. All three
-     declarations of the exception are read, because the third — the UA's own
-     `normal` line box, which `font: inherit` would replace with the root's —
-     is worth 5 px of the field's height and nothing else names it. */
-  expect(prayer.padding).toBe(`${prayer.space3} ${prayer.space4} ${prayer.space3} ${prayer.space4}`);
-  expect(prayer.background).not.toBe(saints.background);
-  expect(prayer.lineHeight).toBe('normal');
-  expect(saints.lineHeight).not.toBe('normal');
-  // Geometry, not a stylesheet: the taller tap target the phone has always had.
-  expect(prayer.height).toBeGreaterThan(saints.height + 8);
+  expect(prayer).toEqual(saints);
 });
 
 /**

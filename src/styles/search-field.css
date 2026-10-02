@@ -48,31 +48,16 @@
    therefore the same ring on every route whichever of these two sheets is
    loaded. Nothing is written here for it on purpose. */
 
-/* ---- the phone keeps what it had ------------------------------------------
-   **Prayer's field below 1024 px is the field Prayer shipped with**, and this
-   is the only place the component draws two ways. The author's ruling is about
-   the desk — "ONLY DESKTOP OF COURSE FOR ALL OF THESE UPDATES" (2026-09-17) —
-   and the standing rule for this whole pass is that mobile does not move, so a
-   control whose phone appearance is a reader's muscle memory keeps it: 12/16
-   padding on `--field`, which is a 46 px tap target against the 35 px the desk
-   now shares.
+/* ---- and at every width ----------------------------------------------------
+   **The rules above are the whole of the field on every screen.** Prayer kept
+   its own 46 px / 12-16 / `--field` box below 1024 px until 2026-10-02,
+   because the ruling that unified the two was scoped to the desk ("ONLY
+   DESKTOP OF COURSE FOR ALL OF THESE UPDATES", 2026-09-17) and the phone was
+   held still. The author lifted that scope: "it shouldnt look different. I
+   dont care if the functinality is different thats fine, but it should look
+   the same."
 
-   It sits in the component's own sheet rather than back in `prayer.css` for
-   the reason the file exists: one place holds every declaration this field
-   wears, including the exception, so the exception is read by anyone who reads
-   the component and is deleted in one edit the day the phone is allowed to
-   follow. `e2e/prayer.spec.js` pins both halves — the desk's identity with All
-   Saints and the phone's 12/16 — so neither can be lost quietly. */
-@media (max-width: 1023.98px) {
-  html[data-route~='prayer'] .search-field {
-    padding: var(--space-3) var(--space-4);
-    background: var(--field);
-    /* The third of the three, and the one that is easy to miss: Prayer's own
-       rule never set `font` at all, so its field kept the UA's `normal` line
-       box — 20 px against the 25 px `font: inherit` brings from the root. Left
-       out, the phone's field came back 51 px tall rather than the 46 it has
-       always been, which is not the same field however right the padding is.
-       A keyword, not a measure; there is no token for the UA's own default. */
-    line-height: normal;
-  }
-}
+   So the phone's field is All Saints' field, and the tap target it leaves is
+   34 px rather than the 46 Prayer had. That is the cost, named here because it
+   is the one thing the exception was buying; what the two pages do with what
+   is typed stays each page's own, and only the drawing is shared. */

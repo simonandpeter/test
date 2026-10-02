@@ -84,16 +84,15 @@ test('the component sheet declares the whole of the field', () => {
     'the hover border is not in the component',
   );
   /*
-   * The one place the component draws two ways, and it is deliberate: Prayer's
-   * field below 1024 px is the field it shipped with, because the author's
-   * ruling is about the desk and mobile does not move in this pass. Asserted
-   * here so that it stays *inside* the component — moved back into
-   * `prayer.css` it would be drift again, and claim 2 below would not see it.
+   * And the component draws one way at every width (author, 2026-10-02: "it
+   * shouldnt look different"). Prayer had its own box below 1024 px until
+   * then; nothing may dress the field per route again, here or in either
+   * page's sheet, which is what claim 2 below holds for the other two files.
    */
-  const phone = own.find(
-    (r) => r.selector === "html[data-route~='prayer'] .search-field" && r.props.includes('padding'),
+  assert.ok(
+    !own.some((r) => /data-route/.test(r.selector)),
+    'search-field.css dresses the field differently on one route',
   );
-  assert.ok(phone, "the phone's exception for Prayer is not in the component sheet");
 });
 
 test('neither page declares the field itself, so the two cannot drift', () => {
