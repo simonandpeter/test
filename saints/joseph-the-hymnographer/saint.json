@@ -21,6 +21,12 @@
     "abbot",
     "confessor"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "bartholomew-the-apostle",
     "gregory-the-decapolite",

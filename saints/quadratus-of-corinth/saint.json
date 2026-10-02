@@ -19,6 +19,12 @@
     "physician",
     "hermit"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "cyprian-companion-of-quadratus",
     "dionysius-companion-of-quadratus"
