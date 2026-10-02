@@ -11,6 +11,11 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "emilian-of-trebia",
+    "hermippus-companion-of-emilian",
+    "hilarion-companion-of-emilian"
+  ],
   "dates": {
     "death": {
       "earliest": 295,

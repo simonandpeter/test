@@ -30,6 +30,10 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "sabbatius-of-antioch",
+    "trophimus-of-antioch"
+  ],
   "dates": {
     "death": {
       "earliest": 276,

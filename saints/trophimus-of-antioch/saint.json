@@ -30,6 +30,9 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "dorymedon-the-senator"
+  ],
   "dates": {
     "death": {
       "earliest": 276,

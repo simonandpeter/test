@@ -21,6 +21,9 @@
   "types": [
     "venerable"
   ],
+  "related": [
+    "palladius-of-helenopolis"
+  ],
   "dates": {
     "death": {
       "earliest": 301,

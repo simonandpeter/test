@@ -11,6 +11,10 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "dionysius-companion-of-emilian",
+    "emilian-of-trebia"
+  ],
   "dates": {
     "death": {
       "earliest": 295,

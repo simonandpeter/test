@@ -11,6 +11,10 @@
   "types": [
     "venerable"
   ],
+  "related": [
+    "dunstan-of-canterbury",
+    "edward-of-england"
+  ],
   "dates": {
     "birth": {
       "earliest": 961,

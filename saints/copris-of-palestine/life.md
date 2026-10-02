@@ -1,6 +1,6 @@
 # Copris
 
-He was born on the dung-heap beside the monastery of St Theodosius the Cenobiarch, to a woman fleeing with many other Christians from a raid; when the raiders had gone, the monks found the newborn there, and at the great Theodosius's command took him in and named him Copris - which means dung. He was nursed, the life says, by a she-goat that came down from the mountain of her own accord whenever it was time.
+He was born on the dung-heap beside the monastery of St Theodosius the Cenobiarch, to a woman fleeing with many other Christians from a raid; when the raiders had gone, the monks found the newborn there, and at the great [Theodosius](/saints/theodosius-the-cenobiarch)'s command took him in and named him Copris - which means dung. He was nursed, the life says, by a she-goat that came down from the mountain of her own accord whenever it was time.
 
 Grown, he was dear to Theodosius and was granted the Holy Spirit, and keeping his soul's purity he came to have the wild beasts obey him: a bear he found eating the lettuces he took by the ears and put out of the garden, and it never dared return; and when another bear wounded the donkey that carried his firewood, he caught it and loaded the wood on its back - "you must do the donkey's service until it heals" - and by the prayer of the great Theodosius the bear submitted and carried the wood.
 

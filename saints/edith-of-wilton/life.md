@@ -2,7 +2,7 @@
 
 Edith — Eadgith — was born in 961, the natural daughter of King Edgar by
 Wulfrida, a noble lady he had ravished, for which he did seven years’
-penance at Dunstan’s hands; after his wife’s death he begged Wulfrida with
+penance at [Dunstan](/saints/dunstan-of-canterbury)’s hands; after his wife’s death he begged Wulfrida with
 great importunity to marry him, and she constantly refused and took the veil
 at Wilton, where she was soon chosen abbess.
 
@@ -28,7 +28,7 @@ sign of the cross.
 At fifteen her father pressed her to govern three monasteries, so great were
 her virtue and discretion judged, and she humbly refused all superiority and
 stayed in her own house under her mother; soon after, Edgar died, and after
-the death of his son Edward the Martyr the nobles of the martyred king’s
+the death of his son [Edward the Martyr](/saints/edward-of-england) the nobles of the martyred king’s
 party asked her to leave her monastery and take the throne, and she
 preferred humility and obedience to a crown.
 

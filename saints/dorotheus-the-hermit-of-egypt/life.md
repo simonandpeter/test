@@ -1,7 +1,7 @@
 # Dorotheus the Hermit of Egypt
 
 Dorotheus was a native of the Thebaid who spent sixty years in the desert of
-Scetis, west of the Nile. Palladius, later bishop of Helenopolis, was his
+Scetis, west of the Nile. [Palladius](/saints/palladius-of-helenopolis), later bishop of Helenopolis, was his
 disciple as a young man and kept the memory of him in the Lausiac History:
 how, when his prayers were done, the old man went out in the noonday heat to
 gather stones along the shore and build cells for other hermits, and wove
