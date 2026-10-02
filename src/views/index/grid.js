@@ -266,8 +266,8 @@ export function paintGrid(matched, { animate }) {
   // What this layout was computed from, so the container observer below can
   // tell a real move from its own first, informational, callback.
   state.laidOutWidth = grid.clientWidth;
-  const result = rows
-    ? layout(matched, {
+  const options = rows
+    ? {
         width: grid.clientWidth,
         gap: ROW_GAP,
         columns: 1,
@@ -276,8 +276,8 @@ export function paintGrid(matched, { animate }) {
         // square beside the text — so nothing about its height comes from the
         // image. What varies is the name, and `rowHeights` answers that.
         aspectOf: () => null,
-      })
-    : layout(matched, {
+      }
+    : {
         width: grid.clientWidth,
         gap: GAP,
         textHeight: cardHeights(grid),
@@ -288,11 +288,22 @@ export function paintGrid(matched, { animate }) {
         // it will be cropped to, or the grid reserves a box the picture never
         // fills (`cardCrop`, lib/hero-crop.js).
         aspectOf: (card) => cardCrop(card.image).aspect,
-      });
-  state.positions = result.positions;
+      };
+  state.grid = { items: matched, options, result: layout(matched, { ...options, take: 0 }) };
+  // Assigned before the extension rather than by it: a filter that matches
+  // nothing places nothing, and the window has to be read from the new empty
+  // set rather than from the last one that had cards in it.
+  state.positions = state.grid.result.positions;
+  extendGrid(scrollTop());
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const keep = new Set(result.positions.map((p) => p.slug));
+  /*
+   * Every saint the filters kept, not every saint laid out: the grid below is
+   * a prefix of the matched set, and a card is leaving only if the *filters*
+   * dropped it. Reading the prefix instead would fade out everything past it
+   * on each pass and animate the whole corpus away behind the viewport.
+   */
+  const keep = new Set(matched.map((item) => item.slug));
   const leaving = [...state.rendered.keys()].filter((slug) => !keep.has(slug));
 
   // Fading is the reason the removal is deferred: a filtered-out saint should
@@ -325,11 +336,137 @@ export function paintGrid(matched, { animate }) {
     }
   }
 
-  inner.style.height = `${result.height}px`;
   paintWindow();
+  if (!state.grid.result.complete) packGrid();
   // The carousel draws from the same filtered set, so it follows a search or a
   // filter change like the grid does. It is a no-op when the pool has not moved.
   if (state.mode === 'carousel') paintCarousel();
+}
+
+/**
+ * How many cards one extension places. A card's box costs a `measureText` on
+ * its name, so this is the unit the lag was made of.
+ */
+const LAYOUT_CHUNK = 120;
+
+/** How far past the viewport the grid is laid out, in viewport heights. */
+const LAYOUT_AHEAD = 2;
+
+/** Where the grid's own top sits against the scroll, in px. */
+function scrollTop() {
+  const inner = state.el.querySelector('[data-grid-inner]');
+  return Math.max(0, -inner.getBoundingClientRect().top);
+}
+
+/**
+ * Lay out as much of the matched set as the reader can be about to see, and no
+ * more (author, 2026-10-02: "so it doesn't load all entries just the top few
+ * scrolls of visible entries").
+ *
+ * **The cards were always virtualised; the *layout* was not.** `paintWindow`
+ * has only ever mounted the cards near the viewport, but it chose them from
+ * positions computed for the whole matched set — one `measureText` per name,
+ * 5,232 of them with the Greek year written, before the first card appeared.
+ * That is what made pressing *Advanced search* lag: not the DOM, the
+ * arithmetic in front of it.
+ *
+ * So the grid grows the way the carousel's row does (`packRest`): a prefix
+ * that covers the screen, extended as the reader arrives. The page's height is
+ * the height of what is placed, so the scrollbar lengthens while they scroll —
+ * the alternative is to estimate the rest from the prefix's mean, and an
+ * estimate that is wrong moves cards under the reader when it is corrected.
+ *
+ * @param top where the viewport is against the grid's top, in px
+ * @param paint whether to resize the container — `false` for a caller that is
+ *   about to set the height itself
+ * @returns whether anything new was placed
+ */
+/**
+ * Lay the grid out far enough that a given scroll position exists.
+ *
+ * A restored place is a scroll offset taken against the whole corpus, and the
+ * page is only as tall as the part of it that is placed — so `scrollTo` would
+ * be clamped to the prefix and the reader would come back near the top. The
+ * caller grows the grid to where it is about to send them, and then sends
+ * them.
+ *
+ * @param top the scroll position about to be restored, in px
+ */
+export function growGrid(top) {
+  extendGrid(top);
+}
+
+function extendGrid(top) {
+  if (!state?.grid) return false;
+  const { items, options } = state.grid;
+  const until = top + window.innerHeight * (1 + LAYOUT_AHEAD);
+  let result = state.grid.result;
+  while (!result.complete && result.height < until) {
+    result = layout(items, { ...options, take: LAYOUT_CHUNK, resume: result });
+  }
+  if (result === state.grid.result) return false;
+  commitGrid(result);
+  return true;
+}
+
+/** What the page is as tall as: the part of the corpus that is placed. */
+function commitGrid(result) {
+  state.grid.result = result;
+  state.positions = result.positions;
+  state.el.querySelector('[data-grid-inner]').style.height = `${result.height}px`;
+}
+
+/**
+ * How many cards one idle slice places. Smaller than a scroll's chunk: this
+ * one runs inside somebody else's spare milliseconds and gives them back.
+ */
+const IDLE_CHUNK = 40;
+
+/**
+ * The rest of the corpus, once the reader has cards to look at — the grid's
+ * side of the carousel's `packRest`.
+ *
+ * Without it the page is only ever as tall as the reader has scrolled, and
+ * *End*, a scrollbar dragged to the bottom, or any jump to a position that is
+ * not yet placed lands short and has to be repeated: 44 presses to reach the
+ * end of the Greek corpus. So the placing finishes by itself, in idle slices,
+ * and by the time a reader could ask for the end it is there.
+ *
+ * `requestIdleCallback` is the point, as it is there — this must never compete
+ * with the scroll it exists behind — and Safari has never shipped it, so a
+ * timeout stands in.
+ *
+ * **The slice is held to a wall clock, not to the deadline's own
+ * `timeRemaining`.** Spending the idle period the browser offers is what that
+ * number is for, and it is still the wrong budget here: on a throttled desk a
+ * slice that filled a 50 ms grant showed up as a 1,143 ms task and *lost* the
+ * A/B it was added to win, because the whole corpus went in a handful of
+ * grants. 8 ms is a frame's worth, and the press is what this is protecting.
+ */
+function packGrid() {
+  const idle =
+    typeof window.requestIdleCallback === 'function'
+      ? window.requestIdleCallback
+      : (fn) => setTimeout(fn, 200);
+  const cancel =
+    typeof window.cancelIdleCallback === 'function' ? window.cancelIdleCallback : clearTimeout;
+  const step = () => {
+    if (!state?.grid || state.grid.result.complete) return;
+    const { items, options } = state.grid;
+    const spent = performance.now();
+    let result = state.grid.result;
+    do {
+      result = layout(items, { ...options, take: IDLE_CHUNK, resume: result });
+    } while (!result.complete && performance.now() - spent < 8);
+    commitGrid(result);
+    // The cards this slice placed may be on screen already — a reader sitting
+    // at the bottom of what was placed before. Nothing else would mount them:
+    // the page grew without the scroll moving, so no scroll event is coming.
+    paintWindow();
+    state.gridPacking = result.complete ? null : idle(step);
+  };
+  cancel(state.gridPacking);
+  state.gridPacking = idle(step);
 }
 
 
@@ -441,6 +578,12 @@ export function wireGrid({ onChange }) {
   state.cleanups.push(() => {
     if (frame) cancelAnimationFrame(frame);
     if (resizeFrame) cancelAnimationFrame(resizeFrame);
+    // Registered here rather than where it is scheduled: `packGrid` runs again
+    // on every filter change, and a cleanup pushed per run would be a list as
+    // long as the reader's visit.
+    if (state.gridPacking != null) {
+      (window.cancelIdleCallback ?? clearTimeout)(state.gridPacking);
+    }
     window.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onResize);
     observer?.disconnect();
@@ -453,6 +596,9 @@ export function paintWindow() {
   if (!state) return;
   const inner = state.el.querySelector('[data-grid-inner]');
   const top = -inner.getBoundingClientRect().top;
+  // Before the window is read, not after: the cards it is about to choose from
+  // are only as far down the corpus as the reader has been.
+  extendGrid(Math.max(0, top));
   const visible = windowOf(state.positions, top, window.innerHeight);
   const wanted = new Set(visible.map((p) => p.slug));
 

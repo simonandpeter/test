@@ -260,3 +260,50 @@ The press starts the glide and the navigation behind it arms one too;
 restarting the tween from wherever it had reached, on a fresh clock,
 is the stutter that would put back exactly the unevenness starting it on
 the press was meant to remove.
+
+---
+
+## src/views/index/grid.js
+
+### The press that laid out the whole corpus, 2026-10-02
+
+Author: *"fix the All Saints advanced search so it doesn't load all entries
+just the top few scrolls of visible entries. Use the same logic of loading the
+carousel if it helps because currently it lags a lot when clicking advanced
+search"*.
+
+The cards were always virtualised — `paintWindow` has only ever mounted the
+forty or so near the viewport — but the *layout* was not. `layout()` was handed
+the whole matched set, and a card's box costs a `measureText` on its name
+(`nameLines`), so pressing *Advanced search* measured 5,232 names inside one
+task before the first card appeared.
+
+Measured with `scratchpad/adv-press.mjs`: three arms rewritten into `grid.js`
+on its way to the browser, interleaved against one dev server at 4x CPU, so
+both sides see the same minute of the same desk. The wall clock here is bimodal
+and drifts by a factor of three across identical runs — the deterministic
+column is the one to read.
+
+```
+fix    press→card   936 ms  longest 175 ms   120 of 5232 placed,  42 ms inside layout() over  2 calls
+full   press→card  1267 ms  longest 465 ms  5232 of 5232 placed, 339 ms inside layout() over 45 calls
+```
+
+Three pairs, medians over six: longest task 175 ms against 408 ms, and the time
+spent inside `layout()` before the first card 29–52 ms against 217–339 ms. A
+third arm with the idle repack rewritten out measured the same as the fix,
+which is what says the repack is not on the press's path.
+
+**The repack is held to a wall clock, not to `timeRemaining()`.** Spending the
+grant the browser offers is what that number is for, and it was the wrong
+budget here: a slice that filled a 50 ms grant put the whole corpus through in
+a handful of grants, showed up as a 1,143 ms task, and *lost* the A/B it had
+been added to win. 8 ms per slice, and the press is what it is protecting.
+
+**Why repack at all.** Without it the page is only ever as tall as the reader
+has scrolled, so *End*, a scrollbar dragged to the bottom, and a restored
+reading place all land short and have to be repeated: `scratchpad/adv-scroll.mjs`
+took **44** jumps to the end of the Greek corpus without it and **2** with it.
+A restored place is `growGrid`'s business instead — it is a position taken
+against the whole corpus, and it has to be made to exist before it can be
+scrolled to.

@@ -202,7 +202,18 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   expect(await page.locator('.index-card').count()).toBeLessThan(20);
   await expect(last).toHaveCount(0);
 
-  await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));
+  /*
+   * **To the bottom, which takes more than one jump** (2026-10-02). The grid
+   * is laid out a few screens ahead of the reader rather than all at once, so
+   * the page is only as tall as the part of the corpus that is placed and one
+   * `scrollTo(scrollHeight)` lands at the end of *that*. A reader scrolling to
+   * the end keeps arriving somewhere further down, which is what this is: jump
+   * to the bottom until the last saint in the order is under it.
+   */
+  await expect(async () => {
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await expect(last).toHaveCount(1, { timeout: 500 });
+  }).toPass({ timeout: 30000 });
   await expect(last).toHaveCount(1);
   // And the window still is one: what came into the document pushed something
   // else out of it.

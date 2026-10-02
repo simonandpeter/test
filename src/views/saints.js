@@ -36,7 +36,7 @@ import {
 import { loadSearch, monthsBySlugFor } from './index/search.js';
 import { applySnapshot, keep, snapshot } from './index/place.js';
 import { matching, readerHasFiltered } from './index/filter.js';
-import { paintGrid, paintWindow, wireGrid } from './index/grid.js';
+import { growGrid, paintGrid, paintWindow, wireGrid } from './index/grid.js';
 import { wireSticky } from './index/sticky.js';
 import { applyMode, paintCarousel, sessionMode } from './index/modes.js';
 import { paintSummary } from './index/count.js';
@@ -241,6 +241,10 @@ export function render(el, { data, router, nav }) {
   update({ animate: false });
   applyMode();
   if (restoring) {
+    // The grid is laid out as far as the reader has been and no further, so
+    // the place being restored has to be made to exist before it can be
+    // scrolled to.
+    growGrid(restoring.scrollY);
     window.scrollTo(0, restoring.scrollY);
     paintWindow();
   }

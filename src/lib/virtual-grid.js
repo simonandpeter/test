@@ -43,18 +43,49 @@ export function columnsFor(width, { min = MIN_COLUMN, gap = 16, max = 4 } = {}) 
  * wider than the one it is in, and every card overflows by a few pixels —
  * which, with the card's height fixed by this same function, crops the image
  * instead of growing the card.
+ *
+ * **It lays out a prefix, and resumes.** `take` caps how many items this call
+ * places; pass the previous result back as `resume` and the next call carries
+ * on from where it stopped, appending to its positions. Omit both and it
+ * places everything, which is what it always did. The packing is resumable
+ * because the only state it carries between items is `bottoms`, so a resumed
+ * run gives position-for-position the same answer as one pass — the test holds
+ * it to that. `resume.positions` is never mutated.
+ *
+ * `width`, `columns` and the height functions must be the same across a
+ * resumed run; a changed column count is a different layout, not a longer one,
+ * and the caller starts again rather than resuming.
+ *
+ * @param take how many items to place in this call; `Infinity` for all of them
+ * @param resume a previous result of this function over the same `items`
+ * @returns `{columns, columnWidth, positions, height, bottoms, laid, complete}`
+ *   — `laid` how many items are placed so far, `complete` whether that is all
+ *   of them, `height` the height of what is placed (so it grows as the run
+ *   does), and `bottoms` the packing state `resume` needs.
  */
 export function layout(
   items,
-  { width, gap = 16, columns, textHeight = 96, mediaInset = 0, aspectOf = (item) => item.aspect } = {},
+  {
+    width,
+    gap = 16,
+    columns,
+    textHeight = 96,
+    mediaInset = 0,
+    aspectOf = (item) => item.aspect,
+    take = Infinity,
+    resume = null,
+  } = {},
 ) {
   const cols = columns ?? columnsFor(width, { gap });
   const columnWidth = Math.max(1, (width - gap * (cols - 1)) / cols);
   const textOf = typeof textHeight === 'function' ? textHeight : () => textHeight;
-  const bottoms = new Array(cols).fill(0);
-  const positions = [];
+  const bottoms = resume ? resume.bottoms.slice() : new Array(cols).fill(0);
+  const positions = resume ? resume.positions.slice() : [];
+  const from = resume ? resume.laid : 0;
+  const until = Math.min(items.length, from + Math.max(0, take));
 
-  for (const item of items) {
+  for (let i = from; i < until; i++) {
+    const item = items[i];
     let target = 0;
     for (let c = 1; c < cols; c++) if (bottoms[c] < bottoms[target] - 0.5) target = c;
 
@@ -89,6 +120,9 @@ export function layout(
     positions,
     // Trailing gap trimmed: the last row should not push the page down by one.
     height: Math.max(0, Math.max(...bottoms, 0) - gap),
+    bottoms,
+    laid: until,
+    complete: until >= items.length,
   };
 }
 
