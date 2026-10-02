@@ -147,5 +147,11 @@
       "basis": "traditional",
       "note": "saint.gr says he gave up his spirit «στις 2 Ιουνίου 822 μ.Χ.», on 2 June 822."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

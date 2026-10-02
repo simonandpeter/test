@@ -106,6 +106,12 @@
       "note": "saint.gr: «Ο Μάρκελλος έζησε τον 5ο αιώνα μ.Χ., επί πατριαρχείας Γενναδίου του Α' (458 - 471 μ.Χ.) και βασιλέως του Λέοντα Α' του Μακέλλη». The page gives no year of birth and no year of death, and doxologia.ro's life, which the folder follows, gives neither either; so the century is recorded and nothing is narrowed to the patriarch's dates, which the page gives as the setting of his life and not as the span of it."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "alexander-the-sleepless"
   ]

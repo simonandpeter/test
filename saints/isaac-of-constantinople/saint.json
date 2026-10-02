@@ -124,5 +124,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Προαισθανόμενος το τέλος του, αφού διόρισε διάδοχό του τον Όσιο Δαλμάτιο (τιμάται 3 Αυγούστου), κοιμήθηκε με ειρήνη σε βαθύ γήρας το 396 μ.Χ.» The page's own heading is «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων (; - 396)» and it gives no year of birth, only that he lived «στα χρόνια του βασιλιά Ουάλη (364 μ. Χ.)» and died in deep old age."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

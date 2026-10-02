@@ -122,5 +122,11 @@
       "basis": "traditional",
       "note": "saint.gr heads her «Αγια Ολγα η Ισαποστολος (μετονομασθεισα Ελενη) η Βασιλισσα (; - 969)» and its narrative: «παρέδωσε την τελευταία της πνοή την 11η Ιουλίου 969 μ.Χ.». The same page dates her baptism, at which she was renamed Helen, to «το έτος 957 μ.Χ.». The Romanian source the folder was built from gave no year."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

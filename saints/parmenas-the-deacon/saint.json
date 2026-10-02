@@ -18,6 +18,12 @@
     "apostle",
     "deacon"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "prochorus-the-deacon",
     "nicanor-the-deacon",

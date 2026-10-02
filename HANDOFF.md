@@ -468,10 +468,30 @@ times on a narrow file's original URL — at icon 14, then 8, then 5 — and the
 cure each time was a 90 to 150 second pause and a re-run, which resumes cleanly
 because the tool skips a folder that already has an icon. Four runs for 26 files.
 
-**The manifest is at 385.3 KB gzipped against its 400 KB budget**, up from 376
-before the icons; `build:manifest`'s own projection reads 368 KB at 5,000
-saints. The Lighthouse FCP floor is the thing this trips first, not the e2e
-suite — see the section above — and every icon costs a little of what is left.
+**Batch 2 took the two-slot tier**, 46 heroes each leading two day-and-church
+slots, and 39 of them got an icon: Romanian 224 to 185 and Greek 255 to 216, 79
+slots for 39 pictures. 389 heroless heroes remain and the ranking that chose
+that slice is `node scripts/heroless.mjs | awk '{print $1}' | sort | uniq -c |
+sort -rn` — nothing now unblocks more than two slots, so the rest is one icon
+per one or two days and the cheap half of the programme is spent.
+
+The identity work is where the time goes, not the fetching. The Russian *Zhitiya
+Svyatykh* plate series (1903-1911) is numbered `VVDDn` with volume 01 =
+September, so every plate carries a calendar day, and that day is what separated
+twelve near-misses: Nestor of Thessalonica from Nestor the Chronicler, Isaac of
+Dalmatia from Isaac of the Caves, Quadratus of Athens from Quadratus of Corinth,
+Philip the Deacon from Philip of the Twelve, Silouan the Athonite from Silvanus
+of the Seventy, and so on. **Three Matronas were available for Matrona of
+Thessalonica and all three were wrong** — Perge, Chios, Moscow — so that slug
+was skipped rather than filled with a namesake, while Matrona of Moscow was
+settled the same way in the affirmative.
+
+**The manifest is at 387.1 KB gzipped against its 400 KB budget**, up from 376
+before any of these icons; `build:manifest`'s own projection reads 370 KB at
+5,000 saints. The Lighthouse FCP floor is the thing this trips first, not the
+e2e suite — see the section above — and every icon costs a little of what is
+left. **An image programme that finishes Greek and Romanian would add about 400
+more declarations**; whoever plans that should price the manifest first.
 
 ### Two reds this sitting, both mine, both the same lesson
 

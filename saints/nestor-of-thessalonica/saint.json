@@ -122,6 +122,12 @@
       "note": "saint.gr heads him «Αγιος Νεστωρ (; - 306)»; the narrative gives no year and names only the emperor Diocletian."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "demetrius-the-myrrhstreamer"
   ]

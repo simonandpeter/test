@@ -73,6 +73,12 @@
       "note": "saint.gr: «Αφού συνελήφθη, βασανίσθηκε σκληρά και στη συνέχεια οδηγήθηκε σε σταυρικό θάνατο, το έτος 107 μ.Χ., σε ηλικία εκατόν είκοσι ετών» — crucified in the year 107 at the age of a hundred and twenty. The page heads him «(-12 - 107)»; that first figure is the page's own subtraction from the age of a hundred and twenty and not a year it states anywhere in its text, so no year of birth is recorded here."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "james-the-brother-of-the-lord"
   ],

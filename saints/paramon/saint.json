@@ -104,5 +104,11 @@
       "basis": "traditional",
       "note": "saint.gr's heading for him reads «Αγιος Παραμονος (; - 250)», and its narrative puts the martyrdom «στα μέσα του 3ου μ.Χ. αιώνα, όταν αυτοκράτορας ήταν ο Δέκιος»."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
