@@ -71,6 +71,12 @@
       "note": "saint.gr: «Η Αγία Ευγενία η Οσιοπαρθενομάρτυς έζησε στο δεύτερο μισό του 3ου αιώνα μ.Χ.» The same page's head gives «(; - 262)», which the stated half-century contains but does not confirm; the sentence is followed and the head's year is recorded here rather than drafted. The folder held no `dates` before this."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "philip-father-of-eugenia",
     "basilla-martyr-24-december",

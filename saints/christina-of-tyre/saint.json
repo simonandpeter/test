@@ -138,5 +138,11 @@
       "basis": "traditional",
       "note": "saint.gr: «καταγόταν από την Τύρο της Συρίας και ήταν κόρη του στρατηγού Ουρβανού (περί το 200 μ.Χ.)» — the page's own «about 200», set against her father's generalship; it gives no year of her martyrdom. The folder's Romanian source gave no year at all."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

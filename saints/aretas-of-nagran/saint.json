@@ -122,6 +122,12 @@
       "note": "saint.gr: «Ήταν ένας από τους προύχοντες της πόλεως Νεγράς στην Αιθιοπία επί εποχής Ιουστίνου (518 - 527 μ.Χ.)» — the page gives the reign and no year."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "holy-woman-and-her-infant"
   ]

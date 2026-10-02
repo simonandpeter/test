@@ -121,5 +121,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Ο Όσιος Ευδόκιμος γεννήθηκε στη Καππαδοκία και έδρασε κατά τους χρόνους του αυτοκράτορα Θεόφιλου (829 - 842 μ.Χ.)». The bounds are the reign the page prints and not years of his own; it gives no year of birth and none of death, only that he died in his thirty-third year, and it dates the translation of his relic to 6 July 831."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

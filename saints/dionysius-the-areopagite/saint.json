@@ -27,6 +27,12 @@
       "note": "saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)»; doxologia.ro: «a pătimit în al nouăzecilea an al vieții sale, iar de la nașterea lui Hristos în al nouăzeci și șaselea an». saint.gr quotes Galanos against the martyrdom at Paris."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "rusticus-disciple-of-dionysius",
     "eleutherius-disciple-of-dionysius",

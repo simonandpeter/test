@@ -32,6 +32,12 @@
       "note": "saint.gr’s heading for the entry: «(257 - 331)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "rhipsime",
     "gaiane-companion-of-rhipsime",

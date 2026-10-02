@@ -122,5 +122,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Ο Προφήτης Ηλίας άσκησε το προφητικό του χάρισμα επί 25 έτη στα χρόνια του βασιλέα Αχαάβ, που βασίλεψε στα 873 - 854 π.Χ.» The interval is that reign, which is the only one the page prints; it also sets him more broadly, «ο προφήτης Ηλίας έζησε τον 9 π.Χ. αιώνα». The twenty-five years of his prophesying are longer than the nineteen the reign allows, and the page does not reconcile them. The Romanian source the folder was built from gave no year for anything."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

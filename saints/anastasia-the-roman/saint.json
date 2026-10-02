@@ -123,5 +123,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Όταν τη συνέλαβε ο ηγεμόνας Πρόβος (περί το 256 μ.Χ.)» — the page's own year, written «περί», about, for her arrest, and the torments and the beheading follow in the same notice with no further date. The same page sets her «στα χρόνια του Δεκίου (κατ' άλλους του Διοκλητιανού) και Bαλλεριανού», three reigns that do not agree with one another or all with 256; the year is recorded because the page states it, and the disagreement is recorded here because the page prints it."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

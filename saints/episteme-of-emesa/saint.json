@@ -20,6 +20,12 @@
     "monastic",
     "venerable-martyr"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "galaction-of-emesa"
   ],

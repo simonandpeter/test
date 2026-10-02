@@ -61,6 +61,12 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "alexander-of-comana"
   ],

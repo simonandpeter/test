@@ -114,5 +114,11 @@
       "basis": "traditional",
       "note": "saint.gr: «επέστρεψε στη Μονή του, έζησε τρία ακόμη χρόνια και εκοιμήθη ειρηνικά σε ηλικία 70 ετών, το 845 μ.Χ.»"
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

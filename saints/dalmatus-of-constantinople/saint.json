@@ -19,6 +19,12 @@
     "abbot",
     "presbyter"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "isaac-of-constantinople",
     "faustus-son-of-dalmatus"

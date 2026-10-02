@@ -18,6 +18,12 @@
     "equal-to-the-apostles",
     "empress"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "constantine-the-great"
   ],

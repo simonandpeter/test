@@ -17,6 +17,12 @@
   "types": [
     "martyr"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "eulampia-sister-of-eulampius",
     "two-hundred-martyrs-of-nicomedia"

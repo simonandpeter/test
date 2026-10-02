@@ -122,5 +122,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Τελικά τον αποκεφάλισαν χαρίζοντας του το στέφανο της δόξας το 160 μ.Χ.» The page's heading is «Άγιος Ερμείας (; - 160)» and gives no year of birth, only that he was already of venerable old age when he was taken. **The same page names two emperors for the one persecution** — it puts him «την εποχή του αυτοκράτορα των Ρωμαίων Αντωνίνου Πίου» and the persecution «την περίοδο της βασιλείας του Μάρκου Αυρήλιου (138 - 161 μ.Χ.)», where those dates are Antoninus Pius's reign and not Marcus Aurelius's — so no reign is recorded as an interval, and only the year the page gives for the beheading is entered."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

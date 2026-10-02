@@ -124,6 +124,12 @@
       "note": "saint.gr heads him «Αγιος Αθηνογενης Επισκοπος Πηδαχθοης (; - 311)», with no year of birth, and gives the same year to each of the ten disciples in their own headings. Its narrative states no year; the heading is where the year is. doxologia.ro, the folder's other source, gave no year at all and only the reign of Diocletian."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "reginus-disciple-of-athenogenes",
     "maximinus-disciple-of-athenogenes",

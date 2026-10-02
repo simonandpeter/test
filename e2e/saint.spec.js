@@ -8,6 +8,7 @@ import {
   NO_RU_NAME,
   POPULATED,
   SPARSE_DETAIL,
+  SPARSE_NAME,
   answered,
   facet,
   ready,
@@ -146,12 +147,19 @@ test('a place keeps the note that says how far it is really fixed', async ({ pag
   await expect(page.locator('.fact-note')).toContainText('Vandal siege');
 });
 
-test('a saint with no life, no image and no birth date is still a whole page', async ({ page }) => {
+test('a saint with no picture, no place and no birth date is still a whole page', async ({ page }) => {
+  /*
+   * The fixture is found rather than named, and `SPARSE_DETAIL` says why: this
+   * was Christopher until the image programme gave him an icon, and then the
+   * test that asks what a page with no picture looks like was asking it of a
+   * page with one. The title said "no life" too, and no folder in the corpus
+   * is lifeless any more.
+   */
   await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
-  await expect(page.locator('h1.saint-name')).toHaveText('Martyr Christopher');
+  await expect(page.locator('h1.saint-name')).toHaveText(SPARSE_NAME);
   await expect(page.locator('.saint-media')).toHaveCount(0);
-  // Removed from the General Roman Calendar in 1969 and still venerated: the
-  // page must not turn that into a refusal.
+  // Venerated and nothing else recorded: the page must not turn a gap into a
+  // refusal.
   await expect(page.locator('.att').first()).toContainText('Venerated');
   /*
    * Undated at birth, dated at death, and no place at either end — so the

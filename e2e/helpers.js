@@ -499,12 +499,38 @@ export const dayWithoutHymns = (church) => {
 };
 
 export // Anthony carries an image, all three churches' attestations, Greek and Coptic
-// name forms, related saints and a life; Christopher is the awkward one —
-// legendary, undated, no image, no coordinates. Between them the detail page's
-// states are covered rather than sampled.
+// name forms, related saints and a life; the sparse one below is the awkward
+// end. Between them the detail page's states are covered rather than sampled.
 const DETAIL = '/saints/anthony-the-great';
 
-export const SPARSE_DETAIL = '/saints/christopher';
+/**
+ * **The sparse saint is found, not named.** This was `/saints/christopher`
+ * until the image programme gave Christopher an icon, and then the test that
+ * asks what a page with no picture looks like was asking it of a page with
+ * one — two red projects on `e223292e`, and no defect behind them. The same
+ * failure as every other typed fixture here: a literal states a fact about the
+ * corpus that the corpus is free to change.
+ *
+ * So the premises are read off the manifest the page is served, and the first
+ * card by slug that holds them is the fixture: no image, no coordinates, no
+ * birth date, a dated death, and venerated somewhere. **"No life" is not among
+ * them**: every one of the 5,231 folders carries one now, Christopher included,
+ * so a fixture asking for a lifeless page would find nothing at all.
+ */
+const sparse = CARDS.filter(
+  (c) =>
+    !c.image &&
+    !c.primary_location &&
+    !c.dates?.birth?.display &&
+    c.dates?.death?.display &&
+    (c.attestations ?? []).some((a) => a.status === 'venerated'),
+).sort((a, b) => a.slug.localeCompare(b.slug))[0];
+if (!sparse) throw new Error('no saint in the corpus is sparse enough to stand for one');
+
+export const SPARSE_DETAIL = `/saints/${sparse.slug}`;
+
+/** That saint's name as the page prints it, rank in front. */
+export const SPARSE_NAME = saintName(sparse);
 
 export /*
  * The third entry of each row is anything the route needs before the floor can

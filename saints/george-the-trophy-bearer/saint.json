@@ -129,6 +129,12 @@
       "note": "saint.gr heads him «Αγιος Γεωργιος ο Μεγαλομαρτυρας Και Τροπαιοφορος (275 - 303)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "polychronia-mother-of-george",
     "glycerius-the-farmer",
