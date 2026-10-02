@@ -67,19 +67,17 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
    *
    * So both follow the text: they are the source's own words about the
    * source's own hymn, and they are printed beside the source's own hymn.
-   * Where an English rendering stands in its place the heading **says the
-   * melody was not rendered** rather than quoting it in a tongue the reader
-   * did not ask for — CLAUDE.md's errors rule, a failure may degrade the page
-   * and never fake it. Nothing here translates an incipit: a `model` names
-   * another hymn by quoting its opening words, so rendering it would be
-   * inventing a citation, which is the one thing the 2026-09-07 reversal did
-   * not license.
+   * **Beside a rendering the melody is simply absent** (author, 2026-10-02:
+   * "the melody not rendered thing - I dont think we need that"). Nothing here
+   * translates an incipit — a `model` names another hymn by quoting its
+   * opening words, so rendering it would be inventing a citation — and the
+   * heading said so in its place until 1,592 of the corpus's 2,929 hymns
+   * carried one, which put the admission on 54% of English headings. A mark
+   * that common stops reading as a gap.
    *
-   * An unreadable tone is dropped instead of admitted because a tone the page
-   * could not read is not a fact the page holds — there is no eighth of the
-   * Octoechos to name and no silence to explain, only a string it could not
-   * parse. The melody is different: the corpus *has* it and has not rendered
-   * it, and that is a gap the reader should be able to see.
+   * An unreadable tone is dropped for a different reason and would be dropped
+   * however rare it was: a tone the page could not read is not a fact the page
+   * holds, only a string it could not parse.
    */
   const showingOriginal = rendering === h;
   /*
@@ -105,7 +103,7 @@ export function hymnMarkup(h, { withChurch = false } = {}) {
   const head = [
     H[h.kind] ?? h.kind,
     toneNo ? fill(STRINGS.calendar.liturgy.tone, { tone: toneNo }) : (showingOriginal ? h.tone : null),
-    h.model && (showingOriginal ? h.model : H.modelNotRendered),
+    showingOriginal && h.model,
     churches,
   ]
     .filter(Boolean)

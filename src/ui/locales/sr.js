@@ -202,7 +202,6 @@ export const sr = {
       troparion: 'Тропар',
       kontakion: 'Кондак',
       source: 'Текст из {source}',
-      modelNotRendered: 'Подобан није преведен',
       renderedFrom: 'Prevod načinjen za ovaj sajt prema tekstu: {source}',
       noEnglish: 'Енглески превод није записан',
       noneInYourLanguage: 'Српски текст није записан',

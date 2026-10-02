@@ -220,7 +220,7 @@ test('a merged site rendering cites every original it was made from', () => {
 
 const withModel = { ...sample, tone: 'Ἦχος πλ.', model: 'Ταχὺ προκατάλαβε.' };
 
-test('the melody is named beside the original and admitted as a gap beside a rendering', () => {
+test('the melody is named beside the original and absent beside a rendering', () => {
   chooseLanguage('el');
   try {
     const out = hymnMarkup(withModel);
@@ -232,7 +232,7 @@ test('the melody is named beside the original and admitted as a gap beside a ren
 
   const en = hymnMarkup(withModel);
   assert.doesNotMatch(en, /Ταχὺ προκατάλαβε\./, 'an English reader is not given the incipit in Greek');
-  assert.match(en, /Melody not rendered/, 'and is told the melody was not rendered rather than left to guess');
+  assert.doesNotMatch(en, /[Mm]elody/, 'and the slot is empty rather than carrying a notice');
   assert.doesNotMatch(en, /Ἦχος πλ\./, 'nor the unresolvable tone in Greek');
   assert.doesNotMatch(en, /Tone \d/, 'and no tone is invented in its place');
 });

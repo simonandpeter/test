@@ -202,7 +202,6 @@ export const el = {
       troparion: 'Απολυτίκιο',
       kontakion: 'Κοντάκιο',
       source: 'Κείμενο από {source}',
-      modelNotRendered: 'Το μέλος δεν αποδόθηκε',
       renderedFrom: 'Απόδοση που έγινε για αυτόν τον ιστότοπο από {source}',
       noEnglish: 'Δεν έχει καταγραφεί αγγλική απόδοση',
       noneInYourLanguage: 'Δεν έχει καταγραφεί ελληνικό κείμενο',

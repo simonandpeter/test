@@ -482,7 +482,6 @@ export const STRINGS = {
        * hymn and cannot be rendered without inventing one, so the heading
        * names the gap rather than printing Greek beside English.
        */
-      modelNotRendered: 'Melody not rendered',
       /*
        * Under a hymn this site rendered itself. The corpus's no-invention rule
        * forbade rendering anything here until the author reversed it for hymns

@@ -202,7 +202,6 @@ export const ro = {
       troparion: 'Troparul',
       kontakion: 'Condacul',
       source: 'Text din {source}',
-      modelNotRendered: 'Podobia nu a fost tălmăcită',
       renderedFrom: 'Tălmăcire făcută pentru acest sit după {source}',
       noEnglish: 'Nu este înregistrată nicio tălmăcire în engleză',
       noneInYourLanguage: 'Nu este înregistrat niciun text în limba română',
