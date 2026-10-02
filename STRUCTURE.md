@@ -480,9 +480,10 @@ what there is.
 
 `/` and `/calendar/:date?` · nav key `calendar` · entry `views/calendar.js`
 
-- **Owns** `views/calendar.js`, `views/daily/*`, `styles/calendar.css`
-- **Reads** `lib/`: `calendar-page`, `liturgy`, `feasts`, `computus`, `church`,
-  `viewport`, `date-display`, `hero-crop`
+- **Owns** `views/calendar.js`, `views/daily/*`, `styles/calendar.css`,
+  `styles/feast-hero.css`
+- **Reads** `lib/`: `calendar-page`, `liturgy`, `feasts`, `fixed-feasts`,
+  `computus`, `church`, `viewport`, `date-display`, `hero-crop`
 - **Specs** `daily-panel`, `daily-picker`, `daily-register`, `daily-stage`
 
 #### Modules
@@ -609,12 +610,9 @@ else.
 - **One tile, drawn once.** The plate's declarations carry two selectors — the
   shelf's own `li.reg-card`, which has the register's base rules to outrank,
   and a bare `.day-tile` for anything else that wants the same drawing. The
-  mockup draws the shelf and the Prayer face's two lists with one function, so
-  Prayer's side lists take the second selector by emitting `.day-tile` with
-  `.reg-thumb` / `.reg-pic` / `.reg-name` / `.reg-sub` / `.reg-life` inside it
-  and **not** `.reg-card`, whose base rules are the 40 px row this face
-  replaces. `calendar.css` is on the entry sheet, so that costs Prayer nothing
-  to reach.
+  second selector has no reader today: Prayer's side lists took it until
+  2026-10-02 and now draw All Saints' row card instead (§4 Prayer), which is
+  the drawing the author ruled they should share.
 - **The head is pinned and carries one rule across the column**, at its own
   bottom edge, which is the edge the saints go under. The shelf's
   `.slot-viewport` takes `overflow: clip` for it: `hidden` would make that box
@@ -731,6 +729,16 @@ The two widths are free to diverge except here.
   `.reg-thumb`, `.reg-pic` and `.reg-body` are laid into, inside
   `@media (min-width: 1024px)` and nowhere else. Nothing is rendered twice and
   no phone rule is touched.
+- **A feast of the Lord, of the Theotokos or of the angels leads the day over
+  every saint of it, and is not clickable.** Eight fixed feasts are records in
+  `src/data/feasts-fixed.js` rather than folders in `saints/`, because the
+  corpus holds persons: `lib/fixed-feasts.js` resolves each one onto the civil
+  day its church keeps it and ranks it above `pickHero`'s answer, and
+  `daily/panel.js` prints it as the hero with the saint hero's own classes and
+  no anchor — no link, no *continue reading*, no route. Nothing in that file
+  reaches the manifest, so no count of saints and no row of the All Saints
+  register changes. `styles/feast-hero.css` is the difference in the drawing
+  and the only sheet outside `calendar.css` this page wears.
 - **The tokens.** No raw colour, duration, easing, type size or spacing value in
   `calendar.css`.
 - **The derived card box**, per §3's materials rule, with the hero as its one
@@ -789,19 +797,45 @@ independent by construction, but it is a read of each block, never a sweep.
   `lib/prayer-order.js`
 - **Reads** `lib/`: `prayer-order`, `index-filters`, `feasts`, `church`,
   `detail`, `hero-crop`, `honorific`, `calendar-page`, `motion`, `markdown`;
-  `ui/`: `hymns`, `grain-drag`, `search-field`, `strings`
-- **Specs** `prayer.spec.js`
+  `ui/`: `hymns`, `grain-drag`, `search-field`, `sheets`, `strings`;
+  `views/index/`: `controls` (the shell), `grid` (the row card), `filter`,
+  `search`
+- **Specs** `prayer.spec.js`, and `index-grid.spec.js` for the shared row
 
-**The search field is All Saints' own control, not a second one.** `ui/search-field.js`
-is the markup and the wiring and `styles/search-field.css` is the whole drawing,
-imported by `index.css` and by `prayer.css` so it cannot depend on which route's
-sheet a reader loaded first (author, 2026-09-17: "the search bar should be the
-exact same as the All Saints page, not any different. SSOT, repeating designed
-elements"). What the two do *not* share is the index behind it: All Saints runs
+**The whole advanced search is All Saints' own, not a second one** (author,
+2026-10-02: "explain to me again why dont we have advanced search in the Prayer
+view… And display the same as All Saints page… SSOT"). There was never a
+decision behind the difference: `views/index/controls.js` read the All Saints
+`state` singleton, so the shell could not be mounted anywhere else. It takes
+its host as an argument now, and `views/prayer/find.js` mounts it over this
+page's state — the same field, the same six facet chips, the same date range,
+the same die, the same `.filter-drop`, and `index.css` loaded for it through
+`ui/sheets.js`.
+
+**What Prayer's shell deliberately lacks** is the Sort chip and the Detailed
+box. The order *is* the book, so a sort control here would mean reordering the
+hymnal — `find.js`'s `narrowed` uses `applyFilters`' matched set as a
+membership test over the book rather than as an ordering, which is why
+`filters.sort` is never read — and there is no grid to detail. The one control
+in `.index-foot` is the View chip, which is the face the two asides are listed
+in.
+
+**The filters narrow the book, they do not filter a list beside it.** The
+arrows step through what is left and the count line says how much that is, so a
+reader who has narrowed is reading a shorter hymnal. A name in a margin that
+the narrowing excludes is still reachable: the press widens the page back
+through the shell's own Clear filters, because a relation is a fact about the
+saint and not about the search.
+
+What the two still do *not* share is the index behind the field: All Saints runs
 the corpus through `views/index/search.js`, Prayer its own MiniSearch over the
-hymnal (`views/prayer/find.js`). Below 1024 px Prayer's field keeps the taller
-dress it shipped with — the one exception, and it lives in the component's own
-sheet.
+hymnal, handed to `applyFilters` as its `matchesQuery`. The field itself is
+`ui/search-field.js` and `styles/search-field.css`, imported by `index.css` and
+by `prayer.css` so it cannot depend on which route's sheet a reader loaded
+first (author, 2026-09-17: "the search bar should be the exact same as the All
+Saints page, not any different. SSOT, repeating designed elements"). Below 1024
+px it keeps the taller dress it shipped with — the one exception, and it lives
+in the component's own sheet.
 
 **The page is the saints the corpus has a hymn for, one at a time.** A card
 keys `hymned: [...churches]` and the hymn text stays in the saint's own folder,
@@ -829,13 +863,21 @@ html[data-route~='prayer'][data-fills-window]
       └ .hymnal                    flex column; height 100%, full bleed (≥1024)
         │                          touch-action: pan-y — the swipe
         ├ h1.sr-only               the route's focus target; never drawn
-        ├ .hy-find                 flex; wraps to two lines below 1024
-        │ ├ input#hy-q             `.search-field` — All Saints' own control
-        │ │ .search-field          (`ui/search-field.js`, `search-field.css`),
-        │ │                        the whole of the first line on a phone,
-        │ │                        where it keeps its taller 12/16 dress
-        │ ├ p#hy-count             aria-live: what the field left
-        │ └ #hy-views              the two marks, aria-pressed
+        ├ .sticky-sentinel         All Saints' own, and inert here: this page
+        │                          does not scroll past its own shell
+        ├ .index-controls          All Saints' advanced search, mounted whole
+        │ │                        (`views/index/controls.js`, `index.css`);
+        │ │                        this sheet sets only `flex: none` and the
+        │ │                        page's own side gutter
+        │ ├ .index-row             the field and Clear filters
+        │ │ └ input.search-field   `[data-query]` (`ui/search-field.js`)
+        │ └ .filter-drop           .facets — Calendar, Feast month, Type,
+        │                          Gender, Region, Historicity, Dates, the die
+        │                          — and .index-foot, which holds **only** the
+        │                          View chip: no Sort, because the order is the
+        │                          book, and no Detailed, because there is no
+        │                          grid to detail
+        ├ p#hy-count               aria-live: what the filters left
         └ .hy-body                 grid: --hy-side-w minmax(0,1fr) --hy-side-w
           │                        (≥1024); a plain block below it
           ├ .hy-view#hy-view       row 1, column 2. The positioning context
@@ -953,18 +995,27 @@ The two widths are free to diverge except here.
 - **The swipe is bound at both widths** and turns the page in the same
   direction Daily turns a day: leftward is onward. `onGrainDrag` answers touch
   and pen and refuses a mouse, so a desk without a touchscreen never reaches it.
-  The find row is excluded by name — a finger dragging through the field is
-  selecting text in it.
-- **The rows in the two asides are one drawing with two faces**, the same press
-  in both: a plate of the saint over their name, or the name alone.
-- **Past 1024 px the picture face is Daily's own tile** and the page opens on
-  it. The tile is `calendar.css`'s single drawing (§4 Daily, "One tile, drawn
-  once") reached by emitting `.day-tile` with the `.reg-*` boxes inside it, so
-  the reader learns one list and can read it anywhere on the site: a 3:2 plate,
-  the name at `--text-base`, a line at `--text-2xs`, and three lines of the
-  life. **No picture, no box** — the blank mat is emitted and the shared rule
-  hides it, where this page used to paint a `--mount` block under every saint
-  with no icon.
+  The whole shell is excluded by name — a finger dragging through the field is
+  selecting text in it, and a facet panel is a sheet to scroll.
+- **The rows in the two asides are All Saints' row card** (author, 2026-10-02:
+  "The 'Recorded with' and 'Kept the same day' rows should have the same design
+  as the all saints entries advanced search mode row cards. Dont know why they
+  are so different. SSOT"). `views/index/grid.js`'s `card()` draws them, in its
+  row shape and its card shape, and the face chip in the shell is that page's
+  View chip over the same two words — so the two faces here *are* All Saints'
+  two faces and there is one drawing rather than the three there were.
+  `index.css` is loaded by this route for it (`ui/sheets.js`).
+- **The row and its door are two elements.** An All Saints row wraps the name
+  in a link to the saint's own page; a row here is a door into the hymnal, so
+  `card()` takes the door from the caller and `asides.js` supplies it. The
+  `<li class="index-card">` carries `data-slug`; the `.index-name` inside it is
+  the `<button data-go>`, the `<a href>` past 1024 px, or the disabled button
+  below it. `.index-name::after` covers the card, so the press is still the
+  whole row and there is still one keyboard stop per saint.
+- **The card face is the row card detailed**: a cropped plate, the name, the
+  line, and three lines of the life behind `[data-desc]`. **No picture, no
+  box** — the shared card emits no media at all for a saint with no icon, where
+  this page used to paint a `--mount` block under every one of them.
 - **The line under the name is the day in the same-day column and the dates in
   the recorded-with one**: one column is a day and says so, the other is a
   relation and says who they were. `Intl` formats the day, so there is nothing
@@ -1015,9 +1066,9 @@ The two widths are free to diverge except here.
 | `data-fills-window` | `index.html` before first paint, `main.js` on every navigation | `base.css`, at 1024 px and up. `index.html`'s pre-paint classifier **names this route**, so the first frame is not laid out as the calendar |
 | `data-slug` | `card.js` on `article.hy-saint`, `asides.js` on every row | `prayer.spec.js`, and the card's own staleness check |
 | `data-go` | `asides.js`, on a row this page can reach | `prayer.js`'s one delegated press. Two attributes and not one, so "who is named here" and "where can this go" are separate questions. A row without it carries an `href` instead past 1024 px |
-| `data-hy-life` | `asides.js`, on a tile's own life box | `fillTileLives`, which fills it from the saint's folder four at a time and leaves it `hidden` if nothing arrives |
+| `data-desc` | `views/index/grid.js`'s `card()`, on a detailed row's description box | `asides.js`'s `fillLives` here, which fills it from the saint's folder four at a time under the page's generation guard and leaves it `hidden` if nothing arrives; All Saints' own `fillDescription` there |
 | `data-iso` | `asides.js` on `#hy-sameday` | the civil day the aside resolved, for the year it resolved it in |
-| `data-hy-view` | `find.js` | the face switch's own press, and `aria-pressed` says which is live |
+| `data-query`, `data-clear`, `data-random`, `name="layout"` | `views/index/controls.js` | the shell's own field, Clear filters, the die and the View chip. `find.js` reads none of them directly — `wireControls` is handed this page's state and calls back |
 
 #### Breakpoints
 
