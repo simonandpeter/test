@@ -239,6 +239,15 @@ on 17 February”. The corpus holds `auxibius-of-soloi` and
 `auxibius-28-april` and **neither is kept on 17 February**, so the source’s
 own cross-reference does not land on either folder. No merge is possible; it is a sourcing question.
 
+**Batch 4 adds one of a different kind: a company recorded twice, not a person.**
+The 4 September martyrs of Kandavla are printed as two lists on one day — the
+Russian “Theodore, Mianus, Julian and Kion… under Maximian (305–311)” and the
+Greek “Centurion, Theodore, Ammianus, Julian and Oceanus… seized under Maximian
+in 288” — and each folder names the other list. Mianus against Ammianus and Kion
+against Oceanus look like one man under two name-forms, but **the corpus holds
+only one folder from each pair**, so there is nothing here to merge; the five
+were linked as one company instead. Neither source voices the doubt in words.
+
 ## 14. The feasts, drawn as a day's main card
 
 **Done, 3 October 2026.** The drawing landed with `e4e8de6a`; what this sitting

@@ -73,5 +73,11 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "centurion-the-martyr",
+    "julian-of-kandavla",
+    "kion-of-kandavla",
+    "theodore-of-kandavla"
   ]
 }

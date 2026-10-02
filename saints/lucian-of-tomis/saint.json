@@ -88,7 +88,12 @@
     }
   ],
   "related": [
-    "helias-of-tomis"
+    "gordian-of-tomis",
+    "helias-of-tomis",
+    "macrobius-of-tomis",
+    "seleucus-of-tomis",
+    "valerian-of-tomis",
+    "zoticus-of-tomis"
   ],
   "text": {
     "life": "life.md"

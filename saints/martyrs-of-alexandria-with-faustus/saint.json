@@ -53,7 +53,19 @@
     }
   ],
   "related": [
-    "faustus-presbyter-of-alexandria"
+    "abibus-deacon-of-alexandria",
+    "andrew-curator-of-alexandria",
+    "andrew-soldier-of-alexandria",
+    "andropelagia-of-alexandria",
+    "calodote-of-alexandria",
+    "cyriacus-attendant-of-faustus",
+    "cyriacus-the-commoner",
+    "dionysius-reader-of-alexandria",
+    "faustus-presbyter-of-alexandria",
+    "macarius-magistrate-of-alexandria",
+    "sarapabon-the-senator",
+    "thecla-of-alexandria",
+    "theoctistus-the-shipmaster"
   ],
   "text": {
     "life": "life.md"

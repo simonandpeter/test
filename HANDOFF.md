@@ -413,10 +413,10 @@ nothing: all 34 shared Greek couplets are companions inside one entry.
 is answered — it stays, the Meeting and the Exaltation reach it.
 
 **Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
-work list, 383 early-corpus folders, and it is worked in order: **lines 1-170
-are committed, and line 171 is where the next batch starts.** 50 of those 170
-gained a link and 120 name nobody this corpus holds, which is the ordinary
-answer here. Isolated both ways 2,234 to 2,150.
+work list, 383 early-corpus folders, and it is worked in order: **lines 1-230
+are committed, and line 231 is where the next batch starts.** 66 of those 230
+gained a link, which is the ordinary rate: a slice of 60 yields 16 or 17.
+Isolated both ways 2,234 to 2,134.
 
 **The work list is not what its name says**, and batch 3 found it: it lists
 folders whose *own* `saint.json` has no `related`, not folders with no link in
