@@ -21,6 +21,12 @@
     "monk",
     "wonderworker"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "filofteia-of-pasarea"
   ],

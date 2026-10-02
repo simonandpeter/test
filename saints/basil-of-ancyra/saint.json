@@ -106,5 +106,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Έτσι μαρτύρησε ο Άγιος Βασίλειος, το έτος 362 μ.Χ. και έλαβε το αμαράντινο στέφανο της δόξας του Θεού», and it heads him «(; - 362)». It places him «στα χρόνια του Ιουλιανού του Παραβάτη (360-363)», in the years of Julian the Apostate, and 362 falls inside that reign. doxologia.ro gave no year at all."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

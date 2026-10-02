@@ -111,5 +111,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Εκοιμήθη εν ειρήνη περί το 606 μ.Χ. και άφησε δύο σπουδαιότατα συγγράμματα, την «Κλίμακα» και τον «Λόγον προς τον Ποιμένα»», and the page heads him «(523 - 606)». The page's «περί», about, is why the display says about 606."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
