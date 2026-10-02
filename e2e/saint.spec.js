@@ -1909,3 +1909,61 @@ test('a church that keeps a saint on two days has both on its one row', async ({
   await expect(greek.locator('.att-status')).toHaveText('Venerated');
 });
 });
+
+test('a slug a merge folded away opens the saint it was folded into, under its own URL', async ({ page }) => {
+  /*
+   * The author's ruling of 2 October 2026 — the two Charitinas are one woman —
+   * left one dead slug, and TODO item 13 says it must not 404. `aliases` is how
+   * the folder records it; the page replaces the URL rather than rendering
+   * under the old one, so the reader's bookmark heals and the detail payload is
+   * fetched from one folder only.
+   *
+   * Found in the manifest rather than named: `STRUCTURE.md` §5, tests must not
+   * name instances. The premise is asserted, so a corpus that stops carrying an
+   * alias fails here instead of passing vacuously.
+   */
+  const aliased = MANIFEST_CARDS.find((c) => c.aliases?.length);
+  expect(aliased, 'no folder in the corpus carries an alias').toBeTruthy();
+  const dead = aliased.aliases[0];
+
+  await page.goto(`/saints/${dead}`, { waitUntil: 'networkidle' });
+
+  await expect(page).toHaveURL(new RegExp(`/saints/${aliased.slug}$`));
+  await expect(page.locator('h1.saint-name')).toHaveCount(1);
+  await expect(page.locator('.error-note')).toHaveCount(0);
+  // And the dead slug is not a saint of its own anywhere.
+  expect(MANIFEST_CARDS.some((c) => c.slug === dead)).toBe(false);
+});
+
+test('a saint one church keeps twice has both of that church’s days on the page', async ({ page }) => {
+  /*
+   * The corpus's own case, not a typed one: the test above this describe block
+   * types a second attestation to prove the renderer, and this reads whatever
+   * folder actually carries two rows for one church. The premise is asserted,
+   * because a corpus with none would make every assertion below vacuous.
+   */
+  const twice = MANIFEST_CARDS.map((c) => {
+    const counts = new Map();
+    for (const a of c.attestations ?? []) counts.set(a.church, (counts.get(a.church) ?? 0) + 1);
+    const church = [...counts].find(([, n]) => n > 1)?.[0];
+    return church ? { slug: c.slug, church } : null;
+  }).find(Boolean);
+  expect(twice, 'no folder in the corpus keeps a saint twice in one church').toBeTruthy();
+
+  const days = folder(twice.slug)
+    .attestations.filter((a) => a.church === twice.church && a.status === 'venerated')
+    .map((a) => a.feast);
+  expect(days.length).toBeGreaterThan(1);
+
+  await page.goto(`/saints/${twice.slug}`, { waitUntil: 'networkidle' });
+  await expect(page.locator('.attestations .att').first()).toBeVisible();
+  // Every day that church records is printed, and the church still has one row.
+  const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  for (const feast of days) {
+    await expect(page.locator('.attestations')).toContainText(`${feast.day} ${MONTHS[feast.month - 1]}`);
+  }
+  await expect(page.locator('.attestations .att-feast')).toHaveCount(
+    (folder(twice.slug).attestations ?? []).filter((a) => a.status === 'venerated').length,
+  );
+});

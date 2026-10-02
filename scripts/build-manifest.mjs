@@ -151,6 +151,9 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
 
   const loaded = [];
   const seenSlugs = new Map();
+  /* alias -> the folder claiming it. Checked against every slug after the loop,
+     since a slug later in the walk is still a slug (2026-10-03, TODO item 13). */
+  const seenAliases = new Map();
 
   for (const folder of folders) {
     const dir = path.join(saintsDir, folder);
@@ -185,6 +188,14 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
       fail(folder, `duplicate slug "${saint.slug}", already used by folder "${seenSlugs.get(key)}"`);
     } else {
       seenSlugs.set(key, folder);
+    }
+
+    for (const alias of saint.aliases ?? []) {
+      const a = alias.toLowerCase();
+      if (a === key) fail(folder, `alias "${alias}" is this folder's own slug`);
+      else if (seenAliases.has(a)) {
+        fail(folder, `alias "${alias}" is already claimed by folder "${seenAliases.get(a)}"`);
+      } else seenAliases.set(a, folder);
     }
 
     for (const [which, raw] of Object.entries(saint.dates ?? {})) {
@@ -267,6 +278,19 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
     }
 
     loaded.push({ folder, saint });
+  }
+
+  /*
+   * An alias is a slug that must *not* resolve, so the one thing that breaks it
+   * is a live folder of that name: the saint page would never reach the
+   * redirect, and the reader would land on whichever of the two the walk found.
+   * Checked here because a colliding slug may come later in the walk than the
+   * alias claiming it.
+   */
+  for (const [alias, folder] of seenAliases) {
+    if (seenSlugs.has(alias)) {
+      fail(folder, `alias "${alias}" is folder "${seenSlugs.get(alias)}"'s own slug — an alias may only name a folder that is gone`);
+    }
   }
 
   for (const { folder, saint } of loaded) {
@@ -485,6 +509,13 @@ function toCard(saint, dir) {
 
   return {
     slug: saint.slug,
+    /*
+     * The slugs this folder used to be, carried so the saint page can redirect
+     * one without fetching anything (2026-10-03, TODO item 13). Absent rather
+     * than empty: one folder in the corpus has any, and the manifest's gzipped
+     * weight is what the Lighthouse FCP floor is measured against.
+     */
+    ...(saint.aliases?.length ? { aliases: saint.aliases } : {}),
     display_name: saint.display_name,
     /*
      * One display form per language, chosen from the folder's recorded

@@ -1,4 +1,4 @@
-# Charitina (5 October)
+# Charitina
 
 Charitina was a martyr under Diocletian. The Greek calendar makes her a slave of the senator Claudianus (or Claudius); the Romanian makes her an orphan whom a rich and well-born man, Claudius, merciful to the poor, took in as a small child and brought up as his own daughter. She grew up beautiful and gentle, gave herself to Christ as his bride, and kept her virginity; Claudius built her a quiet house where she studied the law of the Lord day and night, taught the faithful who visited her and brought unbelievers to the faith.
 
@@ -6,6 +6,10 @@ In 304, the Greek entry says, she was denounced to Domitian, the count, as a Chr
 
 Both tell of the tortures: her head was shaved and at once the hair grew back, longer, the Romanian says; burning coals were heaped on her head and vinegar poured over the burns; her sides were burned with lit torches, and the Romanian adds red-hot iron spikes driven into her breast; with a stone at her neck she was thrown into the sea, and God saved her — in the Romanian the stone came loose and she walked on the water back to the shore and the judge. The Romanian goes on with a wheel set over blades and coals that stood still, and her nails torn out and her teeth broken. Then she was ordered given over to a brothel, and she prayed and gave up her pure soul to God. In the Romanian the judge had her body sewn into a sack of sand and thrown into the sea; three days later the waves cast it ashore unharmed, and Claudius buried her.
 
-saint.gr notes that she has the same verse as the Charitina it keeps on 4 September, and that entry wonders whether the two are one; the two calendars keep separate entries, and so does the corpus. The Greek calendar prints her apolytikion; the Romanian prints a troparion, the common of a woman martyr also sung to Justina, and two kontakia.
+The Greek calendar keeps her twice. Its 4 September entry carries her memory with that of Petronius and with those of Hermione and Eutychis, the daughters of the apostle Philip, and from that company the synaxarion supposes that she too may have been martyred at Trajan’s passing through Ephesus on his way to the Persian war — two centuries before the year its own 5 October entry gives. That entry has no life of its own beyond the supposition, and it has the same verse as this one: what she had asked in prayer, release from the flesh, she received through prayer. It is the September entry itself that asks whether the two Charitinas are one.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2667/saint.aspx); doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-haritina); read 17 September 2026.*
+The author ruled on 2 October 2026 that they are, and this record is the two folders the corpus held made one: the Greek 4 September and the Greek 5 October, each with its own citation, and the Romanian 5 October. The Trajan supposition stands here rather than in the dates, because it is the September entry’s reading of the company she is kept in and not a year either calendar prints.
+
+The Greek calendar prints her apolytikion; the Romanian prints a troparion, the common of a woman martyr also sung to Justina, and two kontakia.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2667/saint.aspx) and 4 Σεπτεμβρίου — [the entry for her other day](https://www.saint.gr/2345/saint.aspx), read 23 August 2026; doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-haritina); read 17 September 2026.*

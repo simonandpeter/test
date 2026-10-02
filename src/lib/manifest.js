@@ -12,10 +12,34 @@ let cachedMeta = null;
 
 export async function loadManifest() {
   if (cached) return cached;
-  const manifest = await fetch(url('data/manifest.json')).then(ok);
-  const bySlug = new Map(manifest.map((s) => [s.slug, s]));
-  cached = { saints: manifest, bySlug };
+  cached = indexManifest(await fetch(url('data/manifest.json')).then(ok));
   return cached;
+}
+
+/**
+ * The two lookups every view is handed, built once off the fetched array.
+ *
+ * **`byAlias` is the slugs that are gone** (2026-10-03, TODO item 13): a merge
+ * folds two folders into one and the folded-away slug survives as an alias, so
+ * a bookmark of it still opens the saint. It is separate from `bySlug` and
+ * consulted only when that misses — an alias may never shadow a live folder,
+ * which `scripts/build-manifest.mjs` fails the build over.
+ *
+ * Exported for `tests/manifest.test.mjs`: the fetch is the only reason
+ * `loadManifest` needs a browser, and the indexing is the part with a rule in
+ * it.
+ *
+ * @param manifest the manifest array as fetched
+ * @returns `{ saints, bySlug, byAlias }`; `byAlias` maps a dead slug to the
+ *   card that claims it
+ */
+export function indexManifest(manifest) {
+  const bySlug = new Map(manifest.map((s) => [s.slug, s]));
+  const byAlias = new Map();
+  for (const card of manifest) {
+    for (const alias of card.aliases ?? []) if (!bySlug.has(alias)) byAlias.set(alias, card);
+  }
+  return { saints: manifest, bySlug, byAlias };
 }
 
 /**

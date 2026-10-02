@@ -72,7 +72,9 @@ export const title = () => STRINGS.saints.title;
 
 /** The manifest already knows the name, so the tab title never waits. */
 export const titleFor = (params, data) => {
-  const card = data.bySlug.get(params.slug);
+  // An alias is a slug a merge folded away; `render` redirects it, and the tab
+  // may as well name the saint it is about to show rather than flash a refusal.
+  const card = data.bySlug.get(params.slug) ?? data.byAlias?.get(params.slug);
   return card ? saintName(card) : STRINGS.saint.notFoundTitle;
 };
 
@@ -105,6 +107,20 @@ export function render(el, { data, params, router, cameFrom }) {
 
   const slug = params.slug;
   const card = data.bySlug.get(slug);
+
+  /*
+   * A slug a merge folded away still opens the saint it was folded into
+   * (2026-10-03, TODO item 13). A replace rather than a render under the old
+   * URL: the reader's bookmark heals, the detail payload is fetched from one
+   * folder only, and the page they land on names itself honestly. `replace`
+   * keeps the back button pointing where they came from rather than at a URL
+   * that only bounces.
+   */
+  const heir = card ? null : data.byAlias?.get(slug);
+  if (heir) {
+    router.navigate(`/saints/${heir.slug}`, { replace: true });
+    return;
+  }
 
   if (!card) {
     el.innerHTML = `<h1>${STRINGS.saint.notFoundTitle}</h1>

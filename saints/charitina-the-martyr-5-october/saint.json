@@ -1,6 +1,9 @@
 {
   "slug": "charitina-the-martyr-5-october",
-  "display_name": "Charitina (5 October)",
+  "aliases": [
+    "charitina-the-martyr-4-september"
+  ],
+  "display_name": "Charitina",
   "names": [
     {
       "form": "Χαριτίνη",
@@ -24,14 +27,14 @@
       "latest": 304,
       "display": "304",
       "basis": "traditional",
-      "note": "saint.gr heads its entry «Αγια Χαριτινη (; - 304)» and says: «Το 304 μ.Χ. κάποιοι την κατήγγειλαν». doxologia.ro sets her under Diocletian and prints no year."
+      "note": "saint.gr heads its entry «Αγια Χαριτινη (; - 304)» and says: «Το 304 μ.Χ. κάποιοι την κατήγγειλαν». doxologia.ro sets her under Diocletian and prints no year. The Greek 4 September entry, which is the same saint (the author’s ruling of 2 October 2026), supposes instead that she may have been martyred at Trajan’s passing through Ephesus on his way to the Persian war, two centuries earlier; it supposes it from the company her memory is kept in and states no year, so 304 stands as the only year either calendar prints and the supposition is in the life."
     }
   },
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17); and she is not on the Moscow Patriarchate’s list for 4 September (Julian) — days.pravoslavie.ru, read 2026-08-23."
     },
     {
       "church": "romanian",
@@ -39,11 +42,27 @@
       "feast": {
         "day": 5,
         "month": 10,
-        "calendar": "revised-julian"
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps her on this day only: she is not on doxologia.ro’s list for 4 septembrie, where the Greek synaxarion keeps her too (checked 2026-08-23)."
       },
       "source": {
         "text": "doxologia.ro, 5 octombrie — „Sfânta Muceniță Haritina”",
         "url": "https://doxologia.ro/5-octombrie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The second Greek day, kept with Petronius and with Hermione and Eutychis the daughters of the apostle Philip. Its entry carries the same verse as the 5 October entry and itself asks whether the two Charitinas are one; the author ruled on 2 October 2026 that they are, and this record is the merge of the two folders the corpus held."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Αγία Χαριτίνη»",
+        "url": "https://www.saint.gr/09/04/index.aspx",
         "year": 2026
       }
     },
@@ -64,7 +83,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17); and she is on neither the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.) nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
   "hymns": [

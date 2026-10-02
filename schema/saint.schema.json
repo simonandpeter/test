@@ -12,6 +12,13 @@
       "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
       "description": "Permanent id. Must equal the folder name."
     },
+    "aliases": {
+      "$comment": "Written only by a merge (2026-10-03, TODO item 13): two folders that held one saint become one, and the slug that was folded away is recorded here so its URL does not die. `views/saint.js` redirects an alias to the slug it names. Not a place for spellings or transliterations - those are `names`.",
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$" },
+      "description": "Slugs this folder used to be. May not be any folder's slug, nor another folder's alias."
+    },
     "display_name": {
       "$comment": "The bare name, and only the name (author, 2026-08-27). It used to hold name, office, rank and death year in one string - \"Gorazd, Bishop of Bohemia and Moravia-Silesia, Hieromartyr (1942)\" - which is why the site could only ever prefix \"St.\": any other honorific would have collided with a rank already sitting in the string. The rank is read from `types`, the office is the field below, and the year is in `dates.death`; none of the three belongs here.",
       "type": "string",
