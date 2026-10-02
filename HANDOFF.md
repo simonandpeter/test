@@ -421,5 +421,8 @@ is answered — it stays, the Meeting and the Exaltation reach it.
   `STRUCTURE.md`. Write bytes, or normalise after.
 - `scratchpad/shoot-feast.mjs` shoots the feast and a saint hero at 360 and
   1280 against `vite preview` on 4175. It is a one-off reading tool, not a
-  baseline, and nothing under `shots/` was touched.
+  baseline, and nothing under `shots/` was touched. **It is committed because
+  this file names it**: `tests/citations.test.mjs` fails on a document that
+  points at a path CI does not have, and naming an uncommitted scratchpad tool
+  here cost a red run.
 
