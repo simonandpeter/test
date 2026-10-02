@@ -1,0 +1,102 @@
+# Overnight queue
+
+Work the author has queued but not watched. Each item says what it is, what it
+costs, and what has already been checked — so whoever picks it up does not
+re-measure what is written here.
+
+Standing rule for everything below: **nothing is pushed** until the author says
+we are finalising. Commit locally.
+
+## 1. One church, more than one day
+
+**The ask (2 October 2026):** "whats so hard about having the same saint profile
+commemorated on 2 days".
+
+The corpus holds *one feast to a church*, without exception — no folder among
+the 5,232 carries two attestations for the same church. That rule is why one
+saint kept twice in one calendar becomes two folders, each with its own life,
+instead of one record saying "the Greek calendar keeps her on both days".
+
+Two known cases, both already flagged in their own folders:
+
+- `charitina-the-martyr-4-september` / `charitina-the-martyr-5-october` — the
+  Greek synaxarion gives both the same verse and its 4 September entry asks
+  whether the two are one. The September entry is a name and a guess; October
+  is a full martyrdom in two calendars with an apolytikion and two kontakia.
+- `matthew-the-apostle` — doxologia.ro keeps him on 30 iunie with the Synaxis of
+  the Twelve *and* alone on 16 noiembrie with a life and a proper troparion. His
+  note says the corpus can hold only one and leaves the question open. 16
+  November is one of the blank Romanian days because of it.
+
+**What was measured on 2 October, before anyone writes code:**
+
+- `lib/feasts.js` `buildFeastIndex` already loops attestations and pushes one
+  entry per feast. A second feast for the same church needs **no change there**.
+- `schema/saint.schema.json` has no uniqueness constraint on `church`. The
+  schema permits it today.
+- The places that assume one attestation per church are few and named:
+  - `views/saint.js:1027` — `new Map(attestations.map(a => [a.church, a]))`.
+    **Last one wins**, so the veneration table would silently print one of the
+    two days. This is the real break.
+  - `views/daily/panel.js:1176` — `.find(a => a.church === churchId)` for the
+    church's titles. First wins; harmless for titles, wrong in principle.
+  - `lib/index-filters.js:98` — maps attestations to a church list; would
+    produce duplicates that want deduping.
+  - `views/index/search.js:67` — same shape, same question.
+
+So the cost is a handful of readers, not a migration. What it is *not* is free:
+each of the two cases above is a judgement about whether two commemorations are
+one person, and that judgement belongs to the sources, not to the code. The
+code change only makes it possible to record what a calendar actually prints.
+
+**Do:** make the readers above handle more than one attestation per church, with
+tests; then record Matthew's 16 November feast and give 16 November its saint.
+Leave Charitina as two folders — the calendars keep two entries and so should we
+— but link them (see item 2).
+
+## 2. Lives that cross-reference in prose with no link
+
+`charitina-the-martyr-4-september`'s life says "or she may be the Charitina of 5
+October" and nothing in either record points at the other: neither folder has a
+`related` entry. The reader has to search the name and hope.
+
+**Do:** link the two both ways, then sweep the corpus for other same-name pairs
+whose lives already name each other in prose without a `related` link.
+
+## 3. The 44 lonely date-tags
+
+358 display names carry a parenthesised day. For 115 of them a namesake in the
+corpus carries one too, which is what the convention is for. **44 carry a day
+with no namesake anywhere in the corpus by any spelling** — Abdas (8 July),
+Aristonicus (19 April), Basilla (24 December), Felicity (8 March) and 40 more.
+(The count already allows for namesakes distinguished another way, so "Adrian
+(17 April)" is not counted while "Adrian of Nicomedia" exists.)
+
+They are not necessarily wrong: a sourcer reading a calendar that listed three
+Theodores may have tagged defensively, and the twin may be a saint not yet
+added.
+
+**Do:** check each of the 44 against its source calendar. Drop the day where the
+name is genuinely unique in that calendar; keep it, with a note saying why,
+where a namesake is real but unrecorded.
+
+## 4. The ten icons Commons refused
+
+Ten of the twenty rate-limited icons landed on 2 October; ten did not, because
+two agents were pulling from Commons at once and the 429s came back through the
+whole backoff ladder.
+
+Still missing: `mary-of-egypt`, `nicholas-of-lesvos`, `nikon-of-sicily`,
+`simeon-of-persia`, `sophronius-of-jerusalem`, `martin-pope-of-rome`,
+`paul-of-ptolemais`, `theodore-of-sykeon`, `theophanes-of-sigriane`,
+`zacharias-the-faster`.
+
+**Do:** `PYTHONIOENCODING=utf-8 python scratchpad/geticon.py
+.tmp/icon-drafts/ro-C.json --write` then `ro-D.json`, **one at a time, nothing
+else touching Commons**, then `npm run thumbs && npm run build:manifest`.
+
+## 5. The image programme, then the Russians
+
+Romanian and Greek still lead with an imageless hero on most days; the Russian
+reading wave (`days.pravoslavie.ru`, julian) has not started. Counts are in
+HANDOFF.md and go stale — re-measure, do not quote them.
