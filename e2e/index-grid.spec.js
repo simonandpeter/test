@@ -1637,9 +1637,26 @@ test('a card prints the whole name, however many lines it takes, and a row still
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.index-card').first()).toBeVisible();
 
-  // The longest name the site prints: five lines in a card's column.
-  await page.locator('[data-query]').fill('Theodulus');
-  const long = page.locator('.index-card:not(.is-row)').filter({ hasText: 'executioner converted by Hermione' }).first();
+  /*
+   * The longest name the site prints: five lines in a card's column.
+   *
+   * **Searched by his own phrase, not by his first name** (2026-10-02). The
+   * grid is virtualised and the default order is a fresh shuffle, so a query
+   * has to leave few enough cards that the one this test is about is in the
+   * document whichever way the hand falls. `Theodulus` left 57 — the name is
+   * in the companion lines of the Ten of Crete, the Forty of Sebaste and
+   * Hermione's household — and the card was mounted about half the time.
+   */
+  await page.locator('[data-query]').fill('executioner converted by Hermione');
+  const cards = page.locator('.index-card:not(.is-row)');
+  // Few enough that the shuffle cannot put him outside the window, and
+  // asserted rather than assumed: a corpus that makes this phrase common again
+  // should fail here, where the reason is written down, rather than as a card
+  // that is mounted half the time.
+  await expect
+    .poll(() => cards.count(), { message: 'the phrase no longer narrows the grid to a handful' })
+    .toBeLessThan(8);
+  const long = cards.filter({ hasText: 'executioner converted by Hermione' }).first();
   await expect(long).toBeVisible();
 
   const m = await long.evaluate((card) => {

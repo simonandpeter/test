@@ -352,6 +352,13 @@ const LAYOUT_CHUNK = 120;
 /** How far past the viewport the grid is laid out, in viewport heights. */
 const LAYOUT_AHEAD = 2;
 
+/**
+ * How far below the fold a repack still has to mount what it places, in px —
+ * `windowOf`'s own overscan, which is what decides whether a card that far
+ * down belongs in the document.
+ */
+const PACK_REACH = 400;
+
 /** Where the grid's own top sits against the scroll, in px. */
 function scrollTop() {
   const inner = state.el.querySelector('[data-grid-inner]');
@@ -454,15 +461,25 @@ function packGrid() {
     if (!state?.grid || state.grid.result.complete) return;
     const { items, options } = state.grid;
     const spent = performance.now();
+    const floor = state.grid.result.height;
     let result = state.grid.result;
     do {
       result = layout(items, { ...options, take: IDLE_CHUNK, resume: result });
     } while (!result.complete && performance.now() - spent < 8);
     commitGrid(result);
-    // The cards this slice placed may be on screen already — a reader sitting
-    // at the bottom of what was placed before. Nothing else would mount them:
-    // the page grew without the scroll moving, so no scroll event is coming.
-    paintWindow();
+    /*
+     * **Only when the slice placed cards the reader can be looking at** — they
+     * are sitting at the bottom of what was placed before, and nothing else
+     * would mount them: the page grew without the scroll moving, so no scroll
+     * event is coming.
+     *
+     * The condition is the point rather than the call. A repaint per slice is
+     * a hundred and thirty of them over the corpus, each rewriting the width,
+     * height and transform of every mounted card, and the churn landed in the
+     * middle of a measurement: `a card prints the whole name` read a card's
+     * box while the pack moved it.
+     */
+    if (floor < scrollTop() + window.innerHeight + PACK_REACH) paintWindow();
     state.gridPacking = result.complete ? null : idle(step);
   };
   cancel(state.gridPacking);
