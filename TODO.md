@@ -166,3 +166,22 @@ sourcers draw 429s through the whole backoff ladder.
 
 **44 of 366 days.** The Ohrid Prologue at pravoslavno.rs, Julian, same standard,
 then their icons. Only after item 9 is finished.
+
+## 11. Cadence: push and read CI about every 8 hours
+
+**The ask (2 October 2026):** aim to push and check CI roughly every 8 hours
+rather than holding everything to the end.
+
+This **replaces** the earlier "nothing is pushed until the author says we are
+finalising" for overnight work: a run of eight hours is the unit, and the end of
+one is a push. Within a run, commit locally as before.
+
+- Push once per run, then read the result. There is no `gh` here — use
+  `scratchpad/ci-runs.py`, `ci-steps.py`, `ci-log.py`, `ci-flaky.py` (the last
+  two 404 or 302 on some jobs).
+- A red CI is the run's next job, ahead of whatever was queued. Before calling
+  anything a flake, measure its rate: the carousel flake was real at 1-in-6 and
+  then masked a 16-of-16 regression.
+- Never push a tree whose unit tests are failing. e2e that could not be *run*
+  is a different thing from e2e that failed — say which in the commit or the
+  handoff, never blur them.
