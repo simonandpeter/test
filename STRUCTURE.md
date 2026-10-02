@@ -366,6 +366,7 @@ sitting in it. The inventory, held by `tests/structure.test.mjs`:
 | --- | --- |
 | `.church-panel` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the chooser, fixed over the page |
 | `.fast-bubble` | `0 6px 20px rgb(0 0 0 / 0.14)` — the fast's note, over the liturgy line it points at |
+| `.index-controls .facet > :not(summary)` | `0 10px 20px -12px rgb(0 0 0 / 0.6)` — an open filter panel, over the register |
 | `.index-controls.is-stuck .index-row` | `0 6px 12px -10px rgb(0 0 0 / 0.5)` — the bar once it sticks |
 | `.index-controls.is-stuck.is-filters-open .filter-drop-inner` | `0 8px 14px -12px rgb(0 0 0 / 0.5)` |
 | `.reckoning-pop` | `0 6px 18px -8px rgb(0 0 0 / 0.4)` — the reckoning control's popover |

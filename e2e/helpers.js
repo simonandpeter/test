@@ -521,7 +521,17 @@ export const desk = (page) => page.setViewportSize({ width: 1280, height: 900 })
 export /** Facet groups are disclosures; a reader opens one before using it. */
 const facet = async (page, name) => {
   const group = page.locator(`[data-facet="${name}"]`);
-  if (!(await group.evaluate((el) => el.open))) await group.locator('summary').click();
+  if (await group.evaluate((el) => el.open)) return group;
+  /*
+   * **Dismiss whatever is open first** (2026-10-02). A facet's panel is a popup
+   * over the page since the chips stopped pushing the register down, so an open
+   * one covers the chips and the sort row beneath it and Playwright refuses the
+   * click: "`<label class="facet-option">` intercepts pointer events". A reader
+   * dismisses it by looking away, which is a click outside the block, and that
+   * is what this does — the product path, not a flag set on the element.
+   */
+  await page.locator('.index-head h1, h1').first().click({ position: { x: 1, y: 1 } });
+  await group.locator('summary').click();
   return group;
 };
 
@@ -628,8 +638,7 @@ export /**
  *
  */
 const chooseSort = async (page, value) => {
-  const chip = page.locator('details[data-facet="sort"] > summary');
-  if (!(await page.locator('details[data-facet="sort"]').evaluate((d) => d.open))) await chip.click();
+  await facet(page, 'sort');
   await page.locator(`input[name="sort"][value="${value}"]`).check();
 };
 

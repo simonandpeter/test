@@ -169,6 +169,53 @@ select:hover {
   flex: none;
 }
 
+/* ---- an open facet is a popup, not a push ---------------------------------
+   Author, 2026-10-02: "make the drop down menu open up over the top of the
+   display, not make the whole content drop down to make space, it should just
+   print as a pop-up over the top without moving everything below it down the
+   screen". Opening Calendar at the top of the page moved the grid **158 px**
+   down, and the sticky block grows in flow, so it moved there whether the
+   block was stuck or not.
+
+   **It hangs from its own chip, a few pixels under it** (author: "the drop
+   down should originate from the bottom of the filter button it comes from,
+   with a small margin") — from the chip's left edge, and below the chips. At
+   the desk the row is one line and that is the chip's own bottom; on a phone
+   it wraps to three, and a panel hung from the first line would cover the
+   chips on the other two, so it clears the row. `controls.js` carries which
+   measurement is which.
+
+   The containing block is the row rather than the chip, and the offsets come
+   from `controls.js` as `--pop-x` and `--pop-y`, measured off the chip when it
+   opens. That split is what lets the panel be as wide as it needs and no wider
+   than the column: sized against the chip it would be capped at the width of
+   the word *Type*, and the chips wrap, so the row's own `100%` is the wrong
+   edge to hang from on any line but the last. The same measurement pulls a
+   panel back inside the column when its chip starts too far right to hold it —
+   which at 360 px is most of the second line.
+
+   Physical `left`/`top` rather than the logical pair, because what they carry
+   is `offsetLeft` and `offsetTop`, which are physical and do not flip.
+
+   `controls.js` closes the others when one opens, so two panels never occupy
+   the same space, and the ground is opaque because the register runs under
+   it. */
+.index-controls .facets {
+  position: relative;
+}
+
+.index-controls .facet > :not(summary) {
+  position: absolute;
+  top: var(--pop-y, 100%);
+  left: var(--pop-x, 0);
+  width: max-content;
+  max-width: 100%;
+  z-index: 3;
+  margin: 0;
+  background: var(--gesso);
+  box-shadow: 0 10px 20px -12px rgb(0 0 0 / 0.6);
+}
+
 /* A chip, not a run of text (author, 2026-08-25: the disclosure triangles
    "look like inline text, not controls, and wrap raggedly across two lines").
    The marker is the browser's own triangle, which is what read as prose; it
@@ -1012,6 +1059,19 @@ html.is-rolling #view {
   overflow: hidden;
   margin-inline: calc(-1 * var(--space-3));
   padding-inline: var(--space-3);
+}
+
+/* The clip is what the open panel has to escape, since the panel hangs below
+   the band's own box. It is given back the moment the band is the thing
+   moving: the rule below is the same weight and comes after, so a stuck band
+   folding away is clipped as it always was, and a reader cannot leave a panel
+   open to be dragged up through the search row with it. */
+.index-controls:has(.facet[open]) .filter-drop {
+  overflow: visible;
+}
+
+.index-controls.is-stuck:not(.is-filters-open) .filter-drop {
+  overflow: hidden;
 }
 
 /*

@@ -393,6 +393,9 @@ function readSort(sort) {
  * parameter serves where the daily picker's `select` needed the whole state
  * object.
  */
+/** The small margin between a chip and the panel it opens, in px. */
+const FACET_POP_GAP = 6;
+
 export function wireControls({ onChange: update }) {
   const { el } = state;
   const controlsEl = el.querySelector('.index-controls');
@@ -446,6 +449,84 @@ export function wireControls({ onChange: update }) {
     input.closest('details')?.removeAttribute('open');
   };
   controlsEl.addEventListener('input', onChoice);
+
+  /*
+   * **One panel at a time, and it closes when the reader looks away.** The
+   * panels are popups over the register since 2026-10-02, so two open at once
+   * would be two sheets in the same place; and one left open would sit over
+   * the cards a reader is trying to reach. `details` fires `toggle` without
+   * bubbling, so the opening is caught on the summary's own click, before the
+   * element has the attribute.
+   */
+  /*
+   * Where an open panel hangs: from its own chip's left edge, `FACET_POP_GAP`
+   * under the chips.
+   *
+   * **Under the whole row, not under the chip's own line**, which are the same
+   * place at the desk and are not on a phone. The row wraps to three lines at
+   * 360 px, and a panel hung from the first line covers the chips on the
+   * second and third: Playwright could not click *Sort* through an open
+   * *Calendar*, and neither could a reader. Sideways it still starts at its
+   * chip, which is what ties the panel to the control that opened it.
+   *
+   * The offsets are read from the elements when the panel opens rather than
+   * written in the sheet, because both depend on where the row wrapped.
+   * `offsetLeft` is against `.facets`, which is the panel's containing block
+   * (`index.css`).
+   *
+   * The second write is the one that matters at 360 px: a chip that starts
+   * past the middle of the row cannot hold a panel at its own left edge, so
+   * the panel is pulled back until its right edge is inside the column. It is
+   * measured rather than guessed — the panel's width is its content's.
+   */
+  const facetsEl = controlsEl.querySelector('.facets');
+  const placePanel = (details) => {
+    const summary = details.querySelector(':scope > summary');
+    const panel = details.querySelector(':scope > :not(summary)');
+    if (!summary || !panel || !facetsEl) return;
+    panel.style.setProperty('--pop-y', `${facetsEl.clientHeight + FACET_POP_GAP}px`);
+    panel.style.setProperty('--pop-x', `${summary.offsetLeft}px`);
+    const over = panel.getBoundingClientRect().right - facetsEl.getBoundingClientRect().right;
+    if (over > 0) {
+      panel.style.setProperty('--pop-x', `${Math.max(0, summary.offsetLeft - Math.ceil(over))}px`);
+    }
+  };
+  for (const details of controlsEl.querySelectorAll('.facet')) {
+    details.addEventListener('toggle', () => {
+      if (details.open) placePanel(details);
+    });
+  }
+  // A chip that moves to another line under a resize takes its open panel with
+  // it; nothing else would move the panel, which is out of flow.
+  const onFacetResize = () => {
+    const open = controlsEl.querySelector('.facet[open]');
+    if (open) placePanel(open);
+  };
+  window.addEventListener('resize', onFacetResize);
+  state.cleanups.push(() => window.removeEventListener('resize', onFacetResize));
+
+  const closeFacets = (except) => {
+    for (const d of controlsEl.querySelectorAll('.facet[open]')) {
+      if (d !== except) d.removeAttribute('open');
+    }
+  };
+  const onFacetClick = (e) => {
+    const summary = e.target.closest?.('.facet > summary');
+    if (summary && !summary.parentElement.hasAttribute('open')) closeFacets(summary.parentElement);
+  };
+  controlsEl.addEventListener('click', onFacetClick);
+  const onAway = (e) => {
+    if (!controlsEl.contains(e.target)) closeFacets(null);
+  };
+  const onEscape = (e) => {
+    if (e.key === 'Escape') closeFacets(null);
+  };
+  document.addEventListener('click', onAway);
+  document.addEventListener('keydown', onEscape);
+  state.cleanups.push(() => {
+    document.removeEventListener('click', onAway);
+    document.removeEventListener('keydown', onEscape);
+  });
 
   const random = controlsEl.querySelector('[data-random]');
   const onRandom = () => {

@@ -547,6 +547,7 @@ test('the × returns the reader to the Index as they left it, and so does the br
   // after a trip into a saint, not which saints are on top.
   await chooseSort(page, 'earliest');
   await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
+  await facet(page, 'churches');
   await page.evaluate(() => window.scrollTo(0, 500));
   await page.waitForTimeout(200);
   /*
@@ -578,7 +579,17 @@ test('the × returns the reader to the Index as they left it, and so does the br
   await expect(page).toHaveURL(/\/saints$/);
   await expect(page.locator('[data-count]')).toHaveText(VENERATED.romanian);
   await expect(page.locator('input[name="churches"][value="romanian"]')).toBeChecked();
-  expect(await page.evaluate(() => document.querySelector('[data-facet="churches"]').open)).toBe(true);
+  /*
+   * **The panel is closed, and that is the click that opened the saint**
+   * (author, 2026-10-02, choosing the dismiss rule for the new popup). A facet
+   * opens over the register now, so the click that reaches a card is a click
+   * away from the panel and closes it; the snapshot is taken after that, which
+   * is why what comes back is the filters and the place rather than the open
+   * disclosure Addendum H3 wrote down when the panel pushed the page instead.
+   * `.facets` still restores whatever was open — `place.js` — and this is the
+   * assertion that says what the reader can actually arrive with.
+   */
+  expect(await page.evaluate(() => document.querySelectorAll('.facet[open]').length)).toBe(0);
   expect(await page.evaluate(() => window.scrollY)).toBe(left);
 
   // The browser's own back finds the same place.
