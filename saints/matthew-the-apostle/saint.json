@@ -32,11 +32,26 @@
         "day": 30,
         "month": 6,
         "calendar": "revised-julian",
-        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 16 noiembrie, his own day and the only entry the calendar prints for it, where the line reads «Sfântul Apostol și Evanghelist Matei» (https://doxologia.ro/16-noiembrie, read 25 September 2026), with a full life and a proper troparion of his own; the corpus keeps one feast to a church, so he renders on 30 iunie only, and whether the proper day should stand instead of the synaxis is left open."
+        "note": "doxologia.ro keeps 30 iunie as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and names each apostle in turn. It also keeps him alone on 16 noiembrie, his own day, with a full life and a proper troparion of his own. Both days are now recorded, each as its own Romanian attestation with its own source."
       },
       "source": {
         "text": "Calendarul zilei, Doxologia (doxologia.ro), 30 iunie — «Soborul Sfinților 12 Apostoli», whose life names him: «Sfântul Apostol Matei, fratele lui Iacov al lui Alfeu»",
         "url": "https://doxologia.ro/30-iunie",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "His own day in the Romanian calendar, and the only saint doxologia.ro's Calendarul zilei prints for it, with a full life and a proper troparion of his own, both cited in this folder. The Synaxis of the Twelve on 30 iunie is recorded separately."
+      },
+      "source": {
+        "text": "Calendarul zilei, Doxologia (doxologia.ro), 16 noiembrie — «Sfântul Apostol și Evanghelist Matei», the only saint the day prints",
+        "url": "https://doxologia.ro/16-noiembrie",
         "year": 2026
       }
     },
@@ -47,7 +62,7 @@
         "day": 30,
         "month": 6,
         "calendar": "revised-julian",
-        "note": "saint.gr keeps 30 Ιουνίου as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and its page names each apostle in turn, this one among them. His own Greek day has not been read in this wave, and saint.gr will have a page for it; the corpus keeps one feast to a church, so the synaxis day is what is recorded here and whether the proper day should replace it is a question left to the writer (1 October 2026)."
+        "note": "saint.gr keeps 30 Ιουνίου as the Synaxis of the Twelve Apostles, a common commemoration of all of them, and its page names each apostle in turn, this one among them. His own Greek day has not been read in this wave, and saint.gr will have a page for it; that day is still to be read, and until it is, the synaxis is the only Greek feast recorded here (1 October 2026)."
       },
       "source": {
         "text": "saint.gr, το εορτολόγιο της 30ης Ιουνίου — «Σύναξη των Αγίων Δώδεκα Αποστόλων», whose page names him among the twelve",
