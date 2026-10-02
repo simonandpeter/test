@@ -414,8 +414,9 @@ is answered — it stays, the Meeting and the Exaltation reach it.
 
 **Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
 work list, 383 early-corpus folders with no link in either direction, and it is
-worked in order: lines 1-50 are committed, 15 of them gained a link and 35 name
-nobody this corpus holds. Isolated 2,234 to 2,200. The brief that produced that
+worked in order: **lines 1-110 are committed and pushed, and line 111 is where
+the next batch starts.** 33 of those 110 gained a link and 77 name nobody this
+corpus holds, which is the ordinary answer here. Isolated 2,234 to 2,174. The brief that produced that
 batch is worth reusing whole — what it refused is the valuable half, and the
 refusals are in the commit message. **One reader at a time**: a link is written
 into both folders, and the partner can be anywhere in the corpus, so two readers
