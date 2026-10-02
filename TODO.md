@@ -115,6 +115,28 @@ corpus's known failure mode is the wrong-saint match (`b6dc41ab`).
 
 Every link is two-way, or the reader meets a one-sided relation.
 
+**The 383-folder work list is finished, 3 October 2026** (`git log --grep="the
+early corpus, lines"`, five commits). `node scripts/link-coverage.mjs` now reads
+8,931 edges and 2,113 isolated, 40.4%, against 8,464 and 2,235 when the item was
+measured. **93 of the 383 gained a link and 290 name nobody this corpus holds**,
+which is the honest rate for the early corpus: the slice-by-slice yield was 33
+of 110, then 17, 16, 6, 16 and 5 of 60, 60, 60, 60 and 33. The 6 is the modern
+martyrs, whose companions are mostly not glorified.
+
+**What is left of this item is not another slice of that list.** Two things came
+out of the pass and neither is in it:
+
+- **1,497 links point one way only, corpus-wide**, out of 8,931 ends. Every
+  reader on this pass made its own writes symmetric and left the rest, because a
+  one-way link already in the corpus is somebody else's claim. A sweep that
+  completes them is a day's work and wants a rule first: a reverse is only owed
+  where the *forward* link came out of a life's sentence.
+- **A company's clique does not close itself.** The seven martyrs of Tomis were
+  reached from three slices and ended with three members holding all six
+  partners and one holding three; the Kazan ten and the Gagino eight were the
+  same. Closing a clique is one pass over the life that names the members, not a
+  slug at a time, and the group entries (`martyrs-of-…`) are the handle.
+
 ## 9. The Russians, for the full year, with their images
 
 The Russian calendar covers **63 of 366 days** today, against 364 for the Greek

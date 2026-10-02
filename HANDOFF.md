@@ -412,12 +412,13 @@ nothing: all 34 shared Greek couplets are companions inside one entry.
 **The feast card is read at both widths** and the `emptyDayNote` branch question
 is answered — it stays, the Meeting and the Exaltation reach it.
 
-**Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
-work list, 383 early-corpus folders, and it is worked in order: **lines 1-230
-are committed, and line 351 is where the next batch starts** — 33 folders left.
-88 of those 350 gained a link; the rate by slice is 17, 16, 6, 16, and the 6 is
-the modern-martyr stretch, whose companions are mostly unglorified.
-Isolated both ways 2,234 to 2,119.
+**Item 8's work list is finished.** `.tmp/early-isolated.txt` held 383
+early-corpus folders and was worked in order; **all 383 are committed.** 93 of the 383 gained a link and 290 name nobody this corpus
+holds; the slice yield was 33 of 110, then 17, 16, 6, 16 and 5. The 6 is the
+modern-martyr stretch, whose companions are mostly unglorified. Isolated both
+ways 2,234 to 2,113, and `link-coverage.mjs` reads 8,931 edges against 8,464.
+**TODO item 8 says what is left**, and it is not another slice: 1,497 one-way
+links corpus-wide, and the half-open cliques.
 
 **A company's clique does not close itself.** Each reader writes only the ends
 that make its own slug symmetric, so a seven-member company reached from three
