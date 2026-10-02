@@ -632,10 +632,25 @@ function buildMeta(manifest, warnings, loaded = []) {
 
   for (const card of manifest) {
     const named = new Set();
+    /*
+     * **One count per saint per church, not one per attestation** (2026-10-03).
+     * A church may keep a saint on two days now, and this counted rows: the
+     * Romanian came to 1,680 for 1,679 saints the moment Matthew's 16 noiembrie
+     * was written, and `e2e/helpers.js`'s `VENERATED` reads these numbers while
+     * the page counts cards, so the Index's own count went red against them.
+     * The four statuses are a partition of the corpus per church and have to
+     * add up to it.
+     *
+     * Veneration carries, which is `lib/church.js`'s `churchStatus`: a refusal
+     * recorded beside a feast is a refusal of that other day.
+     */
+    const status = new Map();
     for (const a of card.attestations) {
-      if (byChurch[a.church]) byChurch[a.church][a.status]++;
       named.add(a.church);
+      if (!byChurch[a.church]) continue;
+      if (a.status === 'venerated' || !status.has(a.church)) status.set(a.church, a.status);
     }
+    for (const [church, resolved] of status) byChurch[church][resolved]++;
     // A church a saint's file never mentions is not the same as one it records
     // as undocumented: the first is a gap in our sourcing, the second is a
     // finding that we looked. Both are counted, separately.
