@@ -379,3 +379,51 @@ Nothing is broken and nothing was changed for it. But the next person to add
 two thousand folders should expect this floor, not the e2e suite, to be what
 stops them — and the lever is the manifest's size on the first paint, not the
 corpus's size.
+
+## Where this sitting stands (2 October 2026, afternoon)
+
+**Six commits are local and unpushed**, at the author's instruction: "can you
+please not push until we finalise … I dont want to wait 20min for a CI". The
+design loop is `npm run build` → refresh the preview on 4173 → commit; one push
+and one CI run at the end. Read them with `git log origin/main..HEAD`.
+
+Green when they were made: 449 unit tests, and `index-grid` + `index-controls`
+at 130 e2e. CI is green through `c928bc3c`; `050904db`, `f8737b0f` and
+`2f73b0e8` were pushed before the instruction and their runs were never read.
+
+### The icon wave is half fetched
+
+`.tmp/icon-drafts/ro-{A,B,C,D}.json` hold 38 licence-checked drafts. **18
+landed; 20 did not** — Commons rate-limited this address through
+`geticon.py`'s whole backoff ladder, `ro-B` dying at Basil of Parium and `ro-C`
+at Eugene of Cherson. They need a slower re-run, not a wider ladder:
+
+```bash
+PYTHONIOENCODING=utf-8 python scratchpad/geticon.py .tmp/icon-drafts/ro-B.json --write
+```
+
+Two were refused on the licence rather than the identity and must not be
+re-added without a better file: Nicholas Velimirovich and Ephraim of
+Katounakia, each tagged "author died more than 70 years ago" on a file whose
+author Commons records as unknown.
+
+Work list after the 18: `node scripts/heroless.mjs romanian` reports 255 of 356,
+`greek` 282 of 364. The Russian reading wave is still the queued work after the
+images.
+
+### What changed in the page this sitting
+
+- Orloff is gone from the corpus; his 50 are rendered from the hymn beside
+  them, and 16 of those were realigned so a hymn sung in three calendars is one
+  English text again (`mergeForReading` keys on the rendering).
+- The melody notice is gone from hymn headings.
+- The search field is one box at every width; Prayer's phone exception is
+  deleted, and its tap target is 34 px rather than 46.
+- A filter panel on All Saints is a popup over the register. One at a time, a
+  click away closes it, and the saint page's side facets are untouched.
+
+### The known reds, unchanged
+
+The shelf-swipe pair in `chrome.spec.js` and `a press on a carousel card opens
+the saint` both fail on `03270f7b` too — measured, not assumed. The Lighthouse
+FCP floor is the one real margin and is written up above.
