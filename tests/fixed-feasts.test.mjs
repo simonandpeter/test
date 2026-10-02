@@ -10,6 +10,7 @@ import { dayHero, fixedFeastOn } from '../src/lib/fixed-feasts.js';
 import { buildFeastIndex } from '../src/lib/feasts.js';
 import { licenceIsSettled, requiresAttribution } from '../src/lib/licence.js';
 import { LANGUAGES } from '../src/lib/i18n.js';
+import { readCorpus } from '../scripts/corpus-index.mjs';
 
 /**
  * The eight feasts the corpus cannot hold.
@@ -22,7 +23,11 @@ import { LANGUAGES } from '../src/lib/i18n.js';
  */
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const saints = JSON.parse(readFileSync(path.join(ROOT, 'data/manifest.json'), 'utf8'));
+/* **The folders, never `data/manifest.json`** — `/data/` is gitignored, so on
+   CI the manifest does not exist when `npm test` runs and reading it is an
+   ENOENT at import time rather than a failed assertion (CLAUDE.md, the corpus
+   section). `readCorpus` is the same source `e2e/helpers.js` reads. */
+const saints = readCorpus().map((record) => ({ slug: record.slug, ...record.saint }));
 const bySlug = new Map(saints.map((s) => [s.slug, s]));
 const enabled = CHURCHES.filter((c) => c.enabled !== false).map((c) => c.id);
 
@@ -176,12 +181,13 @@ test('no fixed-feast day is left without a hero in any church', () => {
 test('nothing here is a saint, is counted as one, or can be linked like one', () => {
   for (const feast of FIXED_FEASTS) {
     assert.equal(bySlug.has(feast.id), false, `${feast.id}: not a corpus slug`);
-    // The register and every count on the site read the manifest; a record
-    // that reached it would be counted as a saint by all of them.
+    // The register and every count on the site read the manifest, which is
+    // built from these folders; a record that reached one of them would be
+    // counted as a saint by all of them.
     assert.equal(
       saints.some((s) => s.slug === feast.id || s.display_name === feast.title.en),
       false,
-      `${feast.id}: absent from the manifest`,
+      `${feast.id}: absent from the corpus`,
     );
     assert.equal('slug' in feast, false, `${feast.id}: carries no slug to route on`);
   }
