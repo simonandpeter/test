@@ -412,6 +412,30 @@ nothing: all 34 shared Greek couplets are companions inside one entry.
 **The feast card is read at both widths** and the `emptyDayNote` branch question
 is answered — it stays, the Meeting and the Exaltation reach it.
 
+**Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
+work list, 383 early-corpus folders with no link in either direction, and it is
+worked in order: lines 1-50 are committed, 15 of them gained a link and 35 name
+nobody this corpus holds. Isolated 2,234 to 2,200. The brief that produced that
+batch is worth reusing whole — what it refused is the valuable half, and the
+refusals are in the commit message. **One reader at a time**: a link is written
+into both folders, and the partner can be anywhere in the corpus, so two readers
+would collide outside their own slices.
+
+### Two reds this sitting, both mine, both the same lesson
+
+**A document that names a path CI does not have fails `citations.test.mjs`.**
+HANDOFF.md named an uncommitted `scratchpad/` tool. Same shape as the manifest
+trap, different file: the desk has the file and the runner does not.
+
+**`buildMeta` counted attestation rows, not saints.** The moment one church kept
+one saint on two days, `manifest.meta.json`'s `by_church` said 1,680 Romanian
+for 1,679 saints, `e2e/helpers.js`'s `VENERATED` read it, the Index counted
+cards, and four tests in `index-controls.spec.js` and one in `index-grid.spec.js`
+compared the two. Fixed, and the invariant to hold on to is that the four
+statuses are a partition of the corpus per church: they add to the total in all
+four churches, and they did not while rows were being counted. **Anything else
+that counts attestations now counts a thing that can repeat.**
+
 ### What the next person should not re-do
 
 - **Do not re-measure item 8.** The numbers are in the item and the item's
