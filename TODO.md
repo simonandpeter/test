@@ -214,6 +214,15 @@ produced no candidate at all.
 | 9 | `goudelia` + `gobdelaas-son-of-sapor` | Here for completeness, and the source **leans against** it: copyists may have made Gobdelaas into Goudelia, "but other sources say that there really was a martyr Goudelia", which the page calls "the more likely and the more accepted". A man and a woman on one day. |
 | 10 | `sosthenes-the-apostle` + `crispus` | Chrysostom's identification of two *different* names, reported and not settled. Weakest row: this is not the one-calendar-doubling shape the others are. |
 
+**Two more came out of item 8's first link batch** (3 October), found by a
+reader working the early corpus rather than by the grep above, so the scan's ten
+are not the whole of it:
+
+| # | the two folders | the doubt |
+| --- | --- | --- |
+| 11 | `aristocles-of-moscow` + `aristokles-the-athonite` | **Not a doubt — one man, twice.** Alexis Amvrosiev of Orenburg, b. 1846, Athos 1876, tonsured Aristocles 1880, the Moscow metochion, died 24 August 1918, moved to Danilov 1923, glorified 2001. Both folders carry that life. |
+| 12 | `alexander-the-confessor-1961` + `alexander-the-confessor-relics-2001` | George Urodov of Nevezhkino, b. 1882, Sanaksar, died 14 August 1961 — one folder stands on his repose and the other on the finding of his relics, which is the `nectarios`/`nektarios` shape of row 1. |
+
 **Nine more were dropped because the other half is not a folder here** — Aeros,
 Michael Mavroeidis, Moses the Confessor, Mark the Ascetic, the three 6 February
 martyrs (whose note carries the purest shared-verse evidence in the corpus and
