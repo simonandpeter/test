@@ -15,7 +15,9 @@
       "note": "Read out of saint.gr's line for 22 Απριλίου, «Άγιος Πλάτων ο Ιερομάρτυρας επίσκοπος Μπάνια Λούκα», with the rank words and the see left off; the page gives his name in the world as Milivoje Jovanović, in Greek letters."
     }
   ],
-  "related": [],
+  "related": [
+    "peter-of-dabar-bosnia"
+  ],
   "dates": {
     "birth": {
       "earliest": 1874,

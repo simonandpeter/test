@@ -248,6 +248,18 @@ against Oceanus look like one man under two name-forms, but **the corpus holds
 only one folder from each pair**, so there is nothing here to merge; the five
 were linked as one company instead. Neither source voices the doubt in words.
 
+**Batch 5 raises one the sources do not raise at all, and it wants the author.**
+`philonides-of-kourion` names “three of his spiritual children, the priest
+Aristocles, the deacon Demetrianus and the reader Athanasius”, killed in his
+cell at Kourion about 306. The corpus holds exactly that trio —
+`aristocleus-of-tamassos`, `demetrianus-the-deacon`, `athanasius-the-reader`,
+already a linked triangle — but their own lives have them beheaded at **Salamis
+in 302** after going out to encourage the persecuted, name no Philonides, and
+are kept on 23 June against his 30 August. Same three names, same three ranks,
+same island, same persecution; two irreconcilable passions. No source voices
+the doubt, so nothing was linked and nothing merged. A ruling either joins the
+four or records the two companies as distinct.
+
 ## 14. The feasts, drawn as a day's main card
 
 **Done, 3 October 2026.** The drawing landed with `e4e8de6a`; what this sitting
