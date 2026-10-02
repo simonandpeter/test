@@ -1257,19 +1257,10 @@ export const STRINGS = {
     next: 'The saint after',
     /*
      * **The field narrows the hymnal itself**, so the arrows step through what
-     * the reader asked for rather than past it. What is indexed is what the
-     * card already shows — the name in every form the corpus records, the line
-     * of office and dates under it, and the names of whoever the corpus records
-     * this saint with — because a reader searching for a saint they can see is
-     * the case, and hymn text is a fetch a page cannot make 142 times.
+     * the reader asked for rather than past it. Its label and its placeholder
+     * went with the control when the search field became one box at every
+     * width; what this page still writes of its own is the count below it.
      */
-    searchLabel: 'Find a saint',
-    /* **Short enough to be read whole in a 360 px field.** The placeholder is
-       the only part of this control a reader sees before they type, and one cut
-       off mid-phrase — which the four packs' longer words make worse — says
-       less than a short one. The sentence the field really answers to is on the
-       label above, where nothing truncates it. */
-    searchPlaceholder: 'A saint, a companion',
     /*
      * Three lines and not one with a number in it: four of the five languages
      * do not pluralise the way English does, and «1 святых» is the kind of
@@ -1278,14 +1269,6 @@ export const STRINGS = {
     count: '{n} saints',
     countOne: '1 saint',
     countNone: 'nothing by that name',
-    /*
-     * The two faces of the columns beside: the saint's own picture over their
-     * name, or the name alone. The words are `sr-only` beside each mark — a
-     * shape told from another shape by colour is nothing to a screen reader.
-     */
-    views: 'How the saints beside are listed',
-    viewPlate: 'Pictures',
-    viewRows: 'Rows',
     /*
      * The two asides' headings. **`related` is one heading over both directions
      * of one relation** — who a saint's life speaks of and whose life speaks of
