@@ -438,7 +438,7 @@ html[data-route~='prayer'] .hy-arrow.is-next {
      The underline on hover and the pointer stay, where the mockup takes both
      off: there is somewhere to go now. */
   html[data-route~='prayer'] .hy-side .index-card.is-dim {
-    opacity: 0.64;
+    opacity: 0.65;
   }
 
   html[data-route~='prayer'] .hy-side .index-card.is-dim .index-dates,

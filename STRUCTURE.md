@@ -1031,13 +1031,16 @@ The two widths are free to diverge except here.
   only "this page can reach them". **Below 1024 px a row the hymnal does not
   hold is still the inert button it shipped with** — §6 carries that half.
 - **A saint the hymnal does not hold is dimmed, and the dim is legible.**
-  `opacity: 0.64` on the row, and its two small lines take `--ink` inside it:
+  `opacity: 0.65` on the row, and its two small lines take `--ink` inside it:
   the mockup's 0.45 is affordable on an inert tile and not on a live one —
   `--ink` at .45 is 2.69:1 in day and 3.60:1 in vigil, and `--ink-soft` clears
   4.5:1 at no useful depth. The author ruled on 2026-09-18 that the mockup's
   value be taken if the floor allowed it; it does not, so the page stands at
-  the lowest hundredth that passes both themes — .64, giving 4.60:1 in day and
-  6.02:1 in vigil, where .63 is 4.46:1 and fails.
+  the lowest hundredth that passes both themes.
+  **The ground is `--field`, not `--gesso`** (2026-10-03): these rows became
+  `.panel` cards on 2026-10-02 and a panel stands on `--field`, which is darker,
+  so .64 fell to 4.46:1 in day and the value is .65 — **4.59:1 in day and
+  5.96:1 in vigil**, printed by `prayer.spec.js`'s own arithmetic.
 - **The field narrows the book itself**, so the arrows step through what the
   query left and the count line is that book's length. It searches the names,
   the line of office and dates, and the names of whoever the corpus records the
