@@ -1,3 +1,6 @@
+import { EMPTY_FILTERS } from '../../lib/index-filters.js';
+import { LAYOUTS } from '../index/controls.js';
+
 /**
  * The Prayer page's own state, and the one module that writes it.
  *
@@ -10,10 +13,22 @@
  * What is in it:
  *   data       the manifest, as `lib/manifest.js` hands it over
  *   all        every hymned saint in name order (`lib/prayer-order.js`)
- *   order      the ones the search field has left showing — `all` until the
- *              reader types. The arrows step through this and the count line
- *              counts it, so a narrowed hymnal is a shorter book rather than a
- *              book with holes in it.
+ *   order      the ones the search field and the facets have left showing —
+ *              `all` until the reader narrows. The arrows step through this and
+ *              the count line counts it, so a narrowed hymnal is a shorter book
+ *              rather than a book with holes in it.
+ *   el         the page's own box, which `views/index/controls.js` reads: the
+ *              advanced-search shell is mounted over this state since
+ *              2026-10-02 and that module takes its host as an argument
+ *   filters    the shell's filter set, in `lib/index-filters.js`'s own shape.
+ *              Its `sort` is never read — `find.js`'s `narrowed` uses the
+ *              matched set as a membership test over `all`, because the book's
+ *              order is the book
+ *   facets     the facet values this corpus actually holds, so no chip offers
+ *              a dead end
+ *   monthsBySlug  which Gregorian months hold each saint's feasts this year,
+ *              for the Feast month chip
+ *   cleanups   the shell's own teardown, run by `views/prayer.js`
  *   reach      the slugs `all` holds, so an aside can tell in one lookup
  *              whether a saint it is naming is one this page can go to. It is
  *              `all` and not `order`, because a query is the reader's way of
@@ -24,8 +39,12 @@
  *   query      what is in the field, so a redraw can put it back
  *   router     the app's router, for the one href this page writes: a name the
  *              hymnal does not hold opens the saint's own page (stage I)
- *   view       `plate` or `rows` — how the two asides list a saint. **`plate`
- *              past 1024 px and `rows` below it**, which is the mockup's own
+ *   layout     `cards` or `rows` — how the two asides list a saint, and since
+ *              2026-10-02 these are **All Saints' own two words for All Saints'
+ *              own two shapes**: the asides draw `views/index/grid.js`'s
+ *              `card()`, so the face chip is that page's View chip over
+ *              `LAYOUTS` and the vocabulary is shared rather than translated.
+ *              **`cards` past 1024 px and `rows` below it**, which is the mockup's own
  *              default at the width the mockup was drawn at
  *              (`../mockup-review/REVIEW.md` finding 9, stage I).
  *              It was `rows` at both widths, on the reading that only about a
@@ -47,12 +66,14 @@ export let state = null;
 
 /**
  * The face the page opens on, which is a width and not a preference — see
- * `view` above. Guarded on `window` because `lib/` and `views/` are both read
+ * `layout` above. Guarded on `window` because `lib/` and `views/` are both read
  * by the unit tests under node, and a default is not worth an import that only
  * resolves in a browser.
  */
-const openingView = () =>
-  typeof window !== 'undefined' && window.matchMedia?.('(min-width: 1024px)').matches ? 'plate' : 'rows';
+const openingLayout = () =>
+  typeof window !== 'undefined' && window.matchMedia?.('(min-width: 1024px)').matches
+    ? LAYOUTS[0]
+    : LAYOUTS[1];
 
 /** Starts a render. Returns the object so the caller can keep a local handle. */
 export function open(next) {
@@ -61,10 +82,11 @@ export function open(next) {
     all: [],
     at: 0,
     detail: null,
-    query: '',
-    view: openingView(),
+    filters: { ...EMPTY_FILTERS },
+    layout: openingLayout(),
     search: null,
     generation: 0,
+    cleanups: [],
     ...next,
   };
   state.order = state.all;

@@ -15,13 +15,14 @@
    specificity and the same declarations, so whichever wins draws the same
    field. It is the one shape of shared rule that is order-independent by
    construction, and it is why the drawing is not left in either page's sheet
-   for the other to borrow — `prayer.css`'s `.hy-views` comment names the day
-   that kind of borrowing breaks.
+   for the other to borrow: a sheet that one route takes off the entry bundle
+   is a dependency four routes away that nothing warns you about.
 
    The layout around it is each page's own and stays there: `flex` on the field
-   is set by `.index-row` and by Prayer's `.hy-find`, at a specificity above
-   these rules, because growing along the main axis means growing wider in one
-   row and taller in the saint page's column.
+   is set by `.index-row` — which since 2026-10-02 is Prayer's row too, that
+   page mounting All Saints' whole control block — at a specificity above these
+   rules, because growing along the main axis means growing wider in one row
+   and taller in the saint page's column.
 
    **`font: inherit` before the two font declarations** is the reset a form
    control needs before anything else takes hold; `color: inherit` is the same

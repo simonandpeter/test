@@ -1,18 +1,34 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
-import { searchField, wireSearchField } from '../../ui/search-field.js';
+import { applyFilters } from '../../lib/index-filters.js';
+import { readerHasFiltered } from '../index/filter.js';
+import { controls, syncCalendarFacet, wireControls } from '../index/controls.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { goToSlug, refreshEnds, showCard } from './card.js';
 import { state } from './state.js';
 
 /**
- * The row above the hymnal: the field that narrows it, the line that says how
- * much is left, and the switch between the two faces of the columns beside.
+ * The row above the hymnal: **All Saints' own advanced search**, the line that
+ * says how much of the book is left, and the switch between the two faces of
+ * the columns beside.
  *
  * **The field narrows the book rather than filtering a list beside it.** The
  * arrows step through what the field has left, so a reader who has typed three
  * letters is reading a shorter hymnal and not walking past the saints the
  * query excluded — which is the only reading of a search field on a page that
- * shows one saint at a time.
+ * shows one saint at a time. The facets narrow it the same way, which is the
+ * whole of why they could be lifted here rather than written again: the
+ * semantics were never "hide rows in a grid", they were "this is the pool".
+ *
+ * **It is the same shell and not a copy of it** (author, 2026-10-02: "display
+ * the same as All Saints page… SSOT"). `views/index/controls.js` draws the
+ * sticky block and wires it over whatever state it is handed; there is no
+ * second sheet and no second set of chips.
+ *
+ * **No Sort chip and no Detailed box.** All Saints sorts a grid; this page's
+ * order *is* the book, so a sort control here would mean reordering the
+ * hymnal, and there is no grid to detail. The one control that means something
+ * in that row is the face the two asides are listed in, and it takes the slot
+ * All Saints gives View.
  */
 
 /* ---- the index ----------------------------------------------------------- */
@@ -71,29 +87,43 @@ async function loadSearch(el) {
   index.addAll(documents(all, state.data?.bySlug));
   if (!state || state.all !== all) return;
   state.search = index;
-  if (state.query.trim()) apply(el);
+  if (state.filters.query.trim()) apply(el);
 }
 
 /* ---- narrowing ----------------------------------------------------------- */
 
 /**
- * The hymnal the query leaves, in the book's own order.
+ * The hymnal the filters leave, in the book's own order.
  *
- * MiniSearch answers by score and this page is a book, so the hits are used as
- * a membership test over `all` rather than as an ordering: a reader stepping
- * through a narrowed hymnal is still stepping alphabetically.
+ * **`applyFilters` decides membership and never the order.** It sorts what it
+ * matches, because All Saints hands the answer straight to a grid; here the
+ * answer is used as a set over `all`, so a reader stepping through a narrowed
+ * hymnal is still stepping alphabetically. That is also why this page has no
+ * Sort chip to feed it: whatever `filters.sort` happens to say is discarded
+ * one line later.
+ *
+ * MiniSearch is the query half, handed in as `matchesQuery` exactly as
+ * `views/index/filter.js` hands in its own.
  */
-function narrowed() {
-  const q = state.query.trim();
-  if (!q || !state.search) return state.all;
-  const hits = new Set(state.search.search(q).map((r) => r.id));
-  return state.all.filter((card) => hits.has(card.slug));
+export function narrowed() {
+  const q = state.filters.query.trim();
+  const hits = q && state.search ? new Set(state.search.search(q).map((r) => r.id)) : null;
+  const { matched } = applyFilters(state.all, state.filters, {
+    monthsBySlug: state.monthsBySlug,
+    matchesQuery: hits ? (slug) => hits.has(slug) : null,
+  });
+  const keep = new Set(matched.map((card) => card.slug));
+  return state.all.filter((card) => keep.has(card.slug));
 }
 
 /**
  * The count line. Three strings and no `{n}` in two of them: four of the five
  * languages do not pluralise the way English does, so "1 saint" is its own
  * sentence rather than a template that happened to be handed a 1.
+ *
+ * **Visible, where All Saints' tweened line is `sr-only`.** There it sits over
+ * a grid the reader can count for themselves; here it is the only thing on the
+ * page that says how long the book now is.
  *
  * `aria-live` is on the element in the markup, not set here: the line is
  * rewritten on every keystroke and a region announced into existence mid-typing
@@ -105,12 +135,14 @@ function paintCount(el) {
   const P = STRINGS.prayer;
   const n = state.order.length;
   line.textContent = n === 0 ? P.countNone : n === 1 ? P.countOne : fill(P.count, { n });
+  const clear = el.querySelector('[data-clear]');
+  if (clear) clear.hidden = !readerHasFiltered(state.filters, state.facets?.churches);
 }
 
 /**
  * Puts a new shown list in place and keeps the reader where they were.
  *
- * **The saint in hand is held across the change where the query still holds
+ * **The saint in hand is held across the change where the filters still hold
  * them.** Typing narrows the book under the reader's hands, and a page that
  * jumped back to the first saint on every keystroke would be unusable; a page
  * that redrew the same saint on every keystroke would throw away the hymn's
@@ -134,113 +166,74 @@ function setOrder(el, order) {
   paintCount(el);
 }
 
-/** Reads the field and narrows to it. */
+/** Reads the controls and narrows to them. */
 function apply(el) {
   if (!state) return;
   setOrder(el, narrowed());
 }
 
 /**
- * A saint named in an aside, reached whether or not the query is showing them.
+ * A saint named in an aside, reached whether or not the filters are showing
+ * them.
  *
  * A relation is a fact about the saint and not about the search, so pressing a
- * name that the current query excludes takes the reader there and puts the
- * field back to the whole hymnal rather than refusing. The field is cleared as
- * well as the state, because a query left in a box that is no longer narrowing
- * anything is the control lying about itself.
+ * name that the current narrowing excludes takes the reader there and widens
+ * the page back to the whole hymnal rather than refusing. **Through the shell's
+ * own Clear**, because the DOM is the source of truth for the filter state
+ * (`views/index/controls.js`) and a reset written here would have to tick every
+ * box the panel holds and then re-read them — which is that button.
  */
 export function revealSlug(el, slug) {
   if (!state) return;
   if (!state.order.some((card) => card.slug === slug)) {
-    state.query = '';
-    const field = el.querySelector('#hy-q');
-    if (field) field.value = '';
-    setOrder(el, state.all);
+    el.querySelector('[data-clear]')?.click();
   }
   goToSlug(el, slug);
 }
 
-/* ---- the two faces ------------------------------------------------------- */
+/* ---- the shell ----------------------------------------------------------- */
 
 /**
- * The two faces, in the order the pair is drawn — the square then the four
- * lines, which is the order the Daily register draws the same pair in, so the
- * control reads the same wherever a reader meets it. Which of them a page opens
- * in is `views/prayer/state.js`'s, not this list's.
- *
- * **Not stored.** `lib/settings.js` keeps the Daily register's face across
- * visits, and that setting's two values are that register's two faces; this
- * control's are this page's, and one setting answering to two vocabularies is
- * how a stored preference comes to mean neither. Said plainly rather than left
- * looking like an oversight.
- */
-export const VIEWS = ['plate', 'rows'];
-
-const VIEW_MARKS = {
-  plate: '<svg class="hy-vt" viewBox="0 0 14 14" aria-hidden="true"><rect x="1" y="1" width="12" height="12" rx="1" /></svg>',
-  rows: '<svg class="hy-vt" viewBox="0 0 14 14" aria-hidden="true"><path d="M1 2h12M1 5.7h12M1 9.3h12M1 13h12" /></svg>',
-};
-
-/* Read at call time, never captured: the packs merge over the base in place
-   (ui/strings.js), so a branch held at module scope would be whichever language
-   was current when this file was first imported. */
-const VIEW_WORDS = {
-  plate: () => STRINGS.prayer.viewPlate,
-  rows: () => STRINGS.prayer.viewRows,
-};
-
-/**
- * The row's markup. `views/prayer.js` writes it into the page so the whole of
+ * The shell's markup. `views/prayer.js` writes it into the page so the whole of
  * the page's shape is readable in one file; everything that happens to it
- * afterwards is here — which is why that view opens the state before it writes
- * the markup: the live face is read from one place and not spelled in two.
+ * afterwards is here.
  */
 export function findMarkup() {
-  const P = STRINGS.prayer;
-  const buttons = VIEWS.map(
-    (mode) =>
-      `<button class="hy-vt-button" type="button" data-hy-view="${mode}" aria-pressed="${mode === state?.view}">
-        <span class="sr-only">${VIEW_WORDS[mode]()}</span>${VIEW_MARKS[mode]}
-      </button>`,
-  ).join('');
-  return `<div class="hy-find">
-    ${searchField({ label: P.searchLabel, placeholder: P.searchPlaceholder, attrs: 'id="hy-q"' })}
-    <p class="hy-count utility" id="hy-count" aria-live="polite"></p>
-    <div class="hy-views" id="hy-views" role="group" aria-label="${P.views}">${buttons}</div>
-  </div>`;
+  return `${controls(state, { sort: false, detailed: false })}
+    <p class="hy-count utility" id="hy-count" aria-live="polite"></p>`;
 }
 
 /**
- * Wires the row and paints the count for the first time.
+ * Wires the shell and paints the count for the first time.
  *
- * One listener for the field and one for the group, both on boxes this view
- * owns for its whole life, so nothing here is rebound when the card or an aside
- * is redrawn.
+ * The face chip is All Saints' View chip, over the same two values, so nothing
+ * here listens for it: `wireControls` writes `state.layout` and calls back,
+ * and the callback is the aside redraw. **`layoutKey` is deliberately not
+ * passed**, so the face is not stored: `lib/settings.js` keeps the Daily
+ * register's face across visits and that setting's two values are that
+ * register's; one setting answering to two vocabularies is how a stored
+ * preference comes to mean neither.
  */
 export function wireFind(el, { redrawAsides }) {
-  paintCount(el);
+  /* Every calendar ticked, as the Index opens — the one place allowed to tick
+     a box and re-read the DOM together, and it has to run before the first
+     narrowing pass reads `state.filters`. */
+  syncCalendarFacet(state);
+  wireControls(state, {
+    onChange: () => apply(el),
+    // Random from what the filters have left, and it opens the saint in this
+    // page's own way: the hymnal turns to them rather than navigating away.
+    pool: () => (state.order.length ? state.order : state.all),
+    open: (slug) => revealSlug(el, slug),
+    rerender: redrawAsides,
+    sort: false,
+    detailed: false,
+    modeToggle: false,
+  });
+  apply(el);
   loadSearch(el).catch(() => {
     /* MiniSearch did not arrive. The field then narrows nothing and the page is
-       the whole hymnal, which is what it is before the index lands anyway. */
-  });
-
-  /* The shared control, this page's own index: `ui/search-field.js` hands over
-     what was typed and this is where the hymnal narrows to it. */
-  wireSearchField(el.querySelector('#hy-q'), (query) => {
-    if (!state) return;
-    state.query = query;
-    apply(el);
-  });
-
-  el.querySelector('#hy-views')?.addEventListener('click', (e) => {
-    const button = e.target.closest?.('[data-hy-view]');
-    if (!button || !state) return;
-    const mode = button.dataset.hyView;
-    if (!VIEWS.includes(mode) || mode === state.view) return;
-    state.view = mode;
-    for (const other of el.querySelectorAll('[data-hy-view]')) {
-      other.setAttribute('aria-pressed', String(other.dataset.hyView === mode));
-    }
-    redrawAsides();
+       whatever the facets left, which is what it is before the index lands
+       anyway. */
   });
 }

@@ -53,94 +53,31 @@ html[data-route~='prayer'] .hy-side {
   padding: 0 var(--space-4) var(--space-6);
 }
 
-/* ---- the row above the book ----------------------------------------------
-   The field that narrows the hymnal, the line that says how much is left, and
-   the switch between the two faces of the columns beside. `flex: none`, so the
-   body below it is what the page's height is spent on. */
+/* ---- the shell above the book --------------------------------------------
+   **All Saints' advanced search, mounted here** (author, 2026-10-02: "display
+   the same as All Saints page… SSOT"). Every chip, panel, field and fold is
+   `index.css`'s — this sheet says only where the block sits on this page and
+   nothing about how it is dressed. `views/prayer/find.js` is the other half.
 
-/* **Two lines on a phone, one past 1024 px, and that is a measurement.** Held
-   to one line at 360 px the field's own inner width comes to 127 px — about
-   fifteen characters, before the four packs' longer words — because the count
-   and the two marks are fixed and everything left over is the field. A search
-   box a reader cannot see what they typed in is not a search box, so the field
-   takes the whole first line and the count and the marks take the second. */
-html[data-route~='prayer'] .hy-find {
+   `flex: none`, so the body below it is what the page's height is spent on.
+   The side padding is the page's, matching the asides' own margin at this
+   width, and it is set here because `index.css` leaves the gutter to whichever
+   view mounts the block. */
+html[data-route~='prayer'] .index-controls {
   flex: none;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: var(--space-4);
-  padding: 0 var(--space-4) var(--space-4);
+  padding-inline: var(--space-4);
 }
 
-/* All Saints' field, mounted here (`ui/search-field.js`). Only how it sits in
-   this row is this sheet's: the whole of the first line on a phone, where the
-   row wraps, and one of three things on the line at the desk. Everything it
-   wears is `search-field.css`'s, including the phone's own padding and ground
-   — which is the field Prayer shipped with and keeps below 1024 px. */
-html[data-route~='prayer'] .search-field {
-  flex: 1 1 100%;
-}
-
+/* The line that says how long the book now is. Visible, where All Saints'
+   tweened line is `sr-only`: there it sits over a grid the reader can count
+   for themselves, and here it is the only thing on the page that says what the
+   filters left. */
 html[data-route~='prayer'] .hy-count {
   flex: none;
+  margin: 0 0 var(--space-4);
+  padding-inline: var(--space-4);
   font-size: var(--text-sm);
   color: var(--ink-soft);
-  margin: 0;
-}
-
-/* Two marks and no words, the pair this site already draws over the Daily
-   register: a square for the pictures, four lines for the names alone, at one
-   size so the two read as one control. The live one is `--accent` and the other
-   `--rule`, and the word each stands for is `sr-only` inside it — which is what
-   actually says which face is showing, to a reader who cannot separate the two
-   hues or is not looking at them at all.
-
-   **The geometry is written here rather than borrowed from `.vt`.** That class
-   is `calendar.css`'s and `calendar.css` is on the entry bundle today, which is
-   the kind of dependency that holds until the day somebody takes a sheet off
-   the entry and a control four routes away quietly loses its drawing. */
-html[data-route~='prayer'] .hy-views {
-  flex: none;
-  /* The right edge of whichever line it lands on, which is the same place at
-     both widths — beside the count on a phone's second line, and at the end of
-     the desk's single one. */
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-  gap: var(--space-1);
-}
-
-html[data-route~='prayer'] .hy-vt-button {
-  display: inline-flex;
-  padding: var(--space-1);
-  border: 0;
-  background: none;
-  font: inherit;
-  line-height: 0;
-  color: var(--rule);
-  cursor: pointer;
-  transition: color var(--dur-answer) var(--ease);
-}
-
-html[data-route~='prayer'] .hy-vt {
-  display: block;
-  flex: none;
-  width: 13px;
-  height: 13px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.3;
-  stroke-linecap: round;
-}
-
-html[data-route~='prayer'] .hy-vt-button:hover {
-  color: var(--ink-soft);
-}
-
-/* Last, so hovering the live mark does not take it back to the soft ink. */
-html[data-route~='prayer'] .hy-vt-button[aria-pressed='true'] {
-  color: var(--accent);
 }
 
 /* ---- the two asides ------------------------------------------------------
@@ -162,92 +99,60 @@ html[data-route~='prayer'] .hy-links {
   padding: 0;
 }
 
-html[data-route~='prayer'] .hy-link {
-  display: block;
+/* **The rows are All Saints' row cards** (author, 2026-10-02: "The 'Recorded
+   with' and 'Kept the same day' rows should have the same design as the all
+   saints entries advanced search mode row cards"). `index.css` draws the card,
+   the row, the 48 px thumbnail, the name and the line under it; three things
+   are this page's and they are all three about putting that card in a column
+   instead of in a virtualised grid.
+
+   **`position` is the load-bearing one.** An index card is absolutely
+   positioned because the grid places it by transform; in a list it has to be
+   in flow — and it has to be a containing block all the same, because
+   `.index-name::after` is what makes the whole row pressable. */
+html[data-route~='prayer'] .hy-side .index-card {
+  position: relative;
   width: 100%;
-  text-align: left;
-  appearance: none;
-  border: 0;
-  border-left: 2px solid transparent;
-  background: none;
-  padding: var(--space-1) 0 var(--space-1) var(--space-3);
-  margin-left: calc(var(--space-3) * -1);
-  font-family: var(--font-serif);
-  font-size: var(--text-sm);
-  line-height: 1.3;
-  color: var(--ink-soft);
-  /* The row is a `<button>` where this page can reach the saint and an `<a>`
-     where it sends the reader to their own page instead (stage I), so the
-     underline an anchor is given has to come off. */
-  text-decoration: none;
-  cursor: pointer;
-  transition: color var(--dur-answer) var(--ease);
 }
 
-html[data-route~='prayer'] .hy-link:hover {
-  color: var(--ink);
-  border-left-color: var(--rubric);
+/* The chrome a control is given everywhere else, back off: the whole row is
+   the press, so the press is the element, and a `<button>` brings a border, a
+   ground and a font of its own with it. The row card is a `<button>` where this
+   page can reach the saint and an `<a>` where it sends the reader to their own
+   page instead (stage I), so the underline an anchor is given comes off too.
+
+   **`font-family` and not `font`.** The shorthand resets size, weight and
+   line-height as well, and those three are `index.css`'s own statement about
+   what a row's name looks like — the whole point of sharing the drawing. Only
+   the family is missing on a `<button>`, which takes the UA's. */
+html[data-route~='prayer'] .hy-side .index-name {
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  font-family: inherit;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 /* A saint the hymnal does not hold, **below 1024 px**, where the row is still
    inert: the relation is a fact about the saint whether or not this page can
    take the reader to them. Past 1024 px every name opens something and the
-   rule below draws the dim instead — `views/prayer/asides.js` has the ruling
-   and `STRUCTURE.md` §6 carries the phone's half as open. */
-html[data-route~='prayer'] .hy-link[disabled] {
-  color: var(--rule);
+   dim in the desk block draws it instead — `views/prayer/asides.js` has the
+   ruling and `STRUCTURE.md` §6 carries the phone's half as open. */
+html[data-route~='prayer'] .hy-side .index-name[disabled] {
+  color: var(--ink-soft);
   cursor: default;
 }
 
-html[data-route~='prayer'] .hy-who {
-  display: block;
-}
-
-html[data-route~='prayer'] .hy-when {
-  display: block;
-  font-size: var(--text-2xs);
-  color: var(--ink-soft);
-}
-
-/* ---- the columns' picture face -------------------------------------------
-   **A plate of the saint above their name**, the shape this site gives a small
-   icon everywhere else: a 3:2 box whatever the icon's own proportions, filled
-   and positioned by `lib/hero-crop.js`'s focus so a face stays in the frame.
-
-   The two faces are two drawings of one row — the same element, the same
-   classes, the same press — so nothing is rebuilt to switch between them beyond
-   the picture itself, and a reader who has learnt the rows has learnt the
-   plates. A row whose saint has no icon keeps an empty mat rather than standing
-   shorter than its neighbours, which would read as something meant. */
-html[data-route~='prayer'] .hy-links.is-plate .hy-link {
-  border-left: 0;
-  margin-left: 0;
-  padding: 0 0 var(--space-4);
-}
-
-html[data-route~='prayer'] .hy-links.is-plate .hy-link:hover {
-  border-left: 0;
-}
-
-html[data-route~='prayer'] .hy-plate {
-  display: block;
-  aspect-ratio: 3 / 2;
-  margin-bottom: var(--space-1);
-  background: var(--mount);
-  overflow: hidden;
-}
-
-html[data-route~='prayer'] .hy-plate img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: var(--hy-focus, 50% 0);
-}
-
-/* The one thing a dimmed row must keep saying is that it is dimmed, and a
-   picture at full ink over a name at a quarter of it says the opposite. */
-html[data-route~='prayer'] .hy-link[disabled] .hy-plate {
-  opacity: 0.45;
+/* The card face is a column of cards and not a grid: one aside is never wide
+   enough for two. */
+html[data-route~='prayer'] .hy-links.is-plate {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
 }
 
 /* ---- the saint in hand ---------------------------------------------------
@@ -435,18 +340,12 @@ html[data-route~='prayer'] .hy-arrow.is-next {
     margin-inline: calc(var(--page-pad) * -1);
   }
 
-  /* The row takes the same side margin the three columns under it take, so the
-     field's left edge and the first aside's stand on one line — and there is
-     room here for the field, the count and the marks to be one line. */
-  html[data-route~='prayer'] .hy-find {
-    flex-wrap: nowrap;
-    padding: 0 var(--space-8) var(--space-4);
+  /* The shell takes the same side margin the three columns under it take, so
+     the field's left edge and the first aside's stand on one line. */
+  html[data-route~='prayer'] .index-controls,
+  html[data-route~='prayer'] .hy-count {
+    padding-inline: var(--space-8);
   }
-
-  html[data-route~='prayer'] .search-field {
-    flex: 1 1 auto;
-  }
-
   html[data-route~='prayer'] .hy-arrow {
     display: block;
   }
@@ -510,26 +409,13 @@ html[data-route~='prayer'] .hy-arrow.is-next {
     padding: 0 var(--space-8) var(--space-8) var(--space-6);
   }
 
-  /* ---- the saints beside are the Daily page's own tiles -------------------
-     `../mockup-review/REVIEW.md` findings 9 and 16, stage I. The tile
-     itself is `calendar.css`'s — one drawing for the shelf and for these two
-     columns, off the seam stage G left — and nothing of it is repeated here.
-     What this sheet says is only how a `<button>` or an `<a>` comes to be that
-     tile: the whole tile is the press, so the press is the element, and the
-     chrome a control is given everywhere else has to come back off it. */
-  html[data-route~='prayer'] .hy-side .day-tile {
-    width: 100%;
-    appearance: none;
-    border-right: 0;
-    border-bottom: 0;
-    border-left: 0;
-    border-radius: 0;
-    background: none;
-    font: inherit;
-    color: inherit;
-    text-align: left;
-    text-decoration: none;
-  }
+  /* ---- the saints beside ---------------------------------------------------
+     `../mockup-review/REVIEW.md` findings 9 and 16, stage I, now answered with
+     All Saints' own card rather than with the Daily shelf's tile: one drawing,
+     and the phone and the desk differ only in the door. Nothing of the card is
+     repeated here — see the phone's rules above for the three things that are
+     this page's.
+  */
 
   /* **The dim stays and the door is what changed** (finding 16, and the
      ruling: every name opens something). A row the hymnal does not hold is
@@ -551,18 +437,15 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 
      The underline on hover and the pointer stay, where the mockup takes both
      off: there is somewhere to go now. */
-  html[data-route~='prayer'] .hy-side .day-tile.is-dim,
-  html[data-route~='prayer'] .hy-side .hy-link.is-dim {
+  html[data-route~='prayer'] .hy-side .index-card.is-dim {
     opacity: 0.64;
   }
 
-  html[data-route~='prayer'] .hy-side .day-tile.is-dim .reg-sub,
-  html[data-route~='prayer'] .hy-side .day-tile.is-dim .reg-life,
-  html[data-route~='prayer'] .hy-side .hy-link.is-dim,
-  html[data-route~='prayer'] .hy-side .hy-link.is-dim .hy-when {
+  html[data-route~='prayer'] .hy-side .index-card.is-dim .index-dates,
+  html[data-route~='prayer'] .hy-side .index-card.is-dim .index-desc,
+  html[data-route~='prayer'] .hy-side .index-card.is-dim .index-name {
     color: var(--ink);
   }
-
   /* The heading stays in sight while its own column is scrolled past. It is
      sticky only here, because only here is the aside a scroller of its own:
      below 1024 the page carries the scroll and a heading pinned to the window

@@ -45,18 +45,3 @@ export const searchField = ({ label, placeholder = label, attrs = '' }) =>
   `<input class="search-field" type="search" autocomplete="off" ${attrs}
       aria-label="${esc(label)}"
       placeholder="${esc(placeholder)}" />`;
-
-/**
- * One listener on the field, handing the caller what was typed.
- *
- * All Saints does not use this: its whole filter block is read by a single
- * delegated `input` listener on the block (`views/index/controls.js`), so the
- * field is read there with the facets rather than separately, and a second
- * listener on the same element would read the same state twice.
- *
- * @param {HTMLInputElement|null} field
- * @param {(query: string) => void} onQuery
- */
-export function wireSearchField(field, onQuery) {
-  field?.addEventListener('input', (e) => onQuery(e.target.value));
-}

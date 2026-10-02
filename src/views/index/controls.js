@@ -10,7 +10,6 @@ import { searchField } from '../../ui/search-field.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { defaultChurches } from './filter.js';
 import { switchMode } from './modes.js';
-import { state } from './state.js';
 
 /**
  * Everything above the grid: the search field, the facet chips, the sort and
@@ -63,10 +62,10 @@ const monthLabel = (m) =>
  * `defaultChurches` is given the same set, so Clear filters stays hidden on a
  * page nobody has narrowed.
  */
-export function syncCalendarFacet() {
-  const inputs = [...state.el.querySelectorAll('input[name="churches"]')];
+export function syncCalendarFacet(host) {
+  const inputs = [...host.el.querySelectorAll('input[name="churches"]')];
   for (const input of inputs) input.checked = true;
-  state.filters = { ...state.filters, churches: defaultChurches(inputs.map((i) => i.value)) };
+  host.filters = { ...host.filters, churches: defaultChurches(inputs.map((i) => i.value)) };
 }
 
 /*
@@ -231,7 +230,16 @@ export const setChoice = (root, name, value) => {
   }
 };
 
-export function controls(state) {
+/**
+ * The shell, over whichever page's state is handed in.
+ *
+ * `sort` and `detailed` are the grid's own and are drawn only where there is a
+ * grid: All Saints sorts a list, and Prayer's order *is* the book, so a sort
+ * control there would mean reordering the hymnal and a Detailed box would be
+ * detailing a grid that does not exist. `wireControls` is given the same three
+ * flags so a page cannot wire a control it did not draw.
+ */
+export function controls(state, { sort = true, layout = true, detailed = true } = {}) {
   const { facets } = state;
   /*
    * The fifth calendar value, offered only when the corpus has someone in it
@@ -301,25 +309,37 @@ export function controls(state) {
          different axis from View, which is why it is still a box of its own
          and not a third option inside that chip. -->
     <div class="index-foot">
-      ${choiceGroup(
-        STRINGS.saints.sort.label,
-        'sort',
-        SORTS.map((id) => ({ value: id, label: STRINGS.saints.sort[id] })),
-        state.filters.sort,
-      )}
-      ${choiceGroup(
-        STRINGS.saints.layout.label,
-        'layout',
-        LAYOUTS.map((id) => ({ value: id, label: STRINGS.saints.layout[id] })),
-        state.layout,
-      )}
+      ${
+        sort
+          ? choiceGroup(
+              STRINGS.saints.sort.label,
+              'sort',
+              SORTS.map((id) => ({ value: id, label: STRINGS.saints.sort[id] })),
+              state.filters.sort,
+            )
+          : ''
+      }
+      ${
+        layout
+          ? choiceGroup(
+              STRINGS.saints.layout.label,
+              'layout',
+              LAYOUTS.map((id) => ({ value: id, label: STRINGS.saints.layout[id] })),
+              state.layout,
+            )
+          : ''
+      }
 
-      <label class="detail-toggle utility">
+      ${
+        detailed
+          ? `<label class="detail-toggle utility">
         <input type="checkbox" data-detailed${state.detailed ? ' checked' : ''}
           aria-describedby="detailed-description" />
         ${STRINGS.saints.layout.detailed}
       </label>
-      <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>
+      <span id="detailed-description" class="sr-only">${STRINGS.saints.layout.detailedDescription}</span>`
+          : ''
+      }
     </div>
 
     </div></div>
@@ -378,26 +398,56 @@ export function seeded(f) {
  * under the reader — this function runs on every `input` event in the panel,
  * which is most of them.
  */
-function readSort(sort) {
+function readSort(host, sort) {
   if (sort !== 'random') return { sort, shuffleSeed: null };
-  const kept = state.filters.sort === 'random' ? state.filters.shuffleSeed : null;
+  const kept = host.filters.sort === 'random' ? host.filters.shuffleSeed : null;
   return { sort, shuffleSeed: kept ?? String(Date.now()) };
 }
 
 /**
  * Every listener the controls need, and the one cleanup that takes them off.
  *
+ * **The host arrives as an argument.** This read the All Saints `state`
+ * singleton until 2026-10-02, which is the whole of why the shell could not be
+ * mounted anywhere else: Prayer wanted the same field, the same chips and the
+ * same panels over its own 1,196, and the only thing standing in the way was
+ * an import. Everything a page differs in is now a callback or a flag, and
+ * nothing in here knows which page it is wiring.
+ *
  * `onChange` is the page's single update pass, handed over at wiring time
  * rather than imported: it lives in the composition root and an import from
- * here would run backwards. There is exactly one call site, which is why a
- * parameter serves where the daily picker's `select` needed the whole state
- * object.
+ * here would run backwards.
+ *
+ * `pool` is what Random may choose from and `open` is how it opens one — All
+ * Saints navigates to the saint's page, Prayer turns to them in place, and
+ * neither is this module's business. `rerender` is the pass the layout chip
+ * and the Detailed box need, which on a virtualised grid is not the same pass
+ * as a filter change.
+ *
+ * The three flags are the ones `controls` was drawn with; a page that did not
+ * draw a chip must not wire it, and passing them twice is how the two halves
+ * are kept from disagreeing. `layoutKey` is the settings key the layout chip
+ * remembers itself under, or null for a face that is the page's own and not
+ * stored (`views/prayer/find.js` argues that for the hymnal).
  */
 /** The small margin between a chip and the panel it opens, in px. */
 const FACET_POP_GAP = 6;
 
-export function wireControls({ onChange: update }) {
-  const { el } = state;
+export function wireControls(
+  host,
+  {
+    onChange: update,
+    pool,
+    open: openSaint,
+    rerender,
+    sort = true,
+    layout = true,
+    detailed = true,
+    layoutKey = null,
+    modeToggle = true,
+  },
+) {
+  const { el } = host;
   const controlsEl = el.querySelector('.index-controls');
 
   const checked = (name) =>
@@ -413,8 +463,8 @@ export function wireControls({ onChange: update }) {
     if (e?.target?.matches?.('[data-detailed], input[name="layout"]')) return;
     const from = controlsEl.querySelector('[data-from]').value;
     const to = controlsEl.querySelector('[data-to]').value;
-    state.filters = {
-      ...state.filters,
+    host.filters = {
+      ...host.filters,
       query: controlsEl.querySelector('[data-query]').value,
       churches: checked('churches'),
       months: checked('months').map(Number),
@@ -425,7 +475,8 @@ export function wireControls({ onChange: update }) {
       from: from === '' ? null : Number(from),
       to: to === '' ? null : Number(to),
       rangeMode: controlsEl.querySelector('input[name="rangeMode"]:checked').value,
-      ...readSort(currentChoice(controlsEl, 'sort', EMPTY_FILTERS.sort)),
+      // A page with no sort chip keeps whatever order it was opened with.
+      ...(sort ? readSort(host, currentChoice(controlsEl, 'sort', EMPTY_FILTERS.sort)) : {}),
     };
     update({ animate: true });
   };
@@ -448,7 +499,7 @@ export function wireControls({ onChange: update }) {
     setChoice(controlsEl, 'sort', input.value);
     input.closest('details')?.removeAttribute('open');
   };
-  controlsEl.addEventListener('input', onChoice);
+  if (sort) controlsEl.addEventListener('input', onChoice);
 
   /*
    * **One panel at a time, and it closes when the reader looks away.** The
@@ -505,7 +556,7 @@ export function wireControls({ onChange: update }) {
     if (open) placePanel(open);
   };
   window.addEventListener('resize', onFacetResize);
-  state.cleanups.push(() => window.removeEventListener('resize', onFacetResize));
+  host.cleanups.push(() => window.removeEventListener('resize', onFacetResize));
 
   const closeFacets = (except) => {
     for (const d of controlsEl.querySelectorAll('.facet[open]')) {
@@ -521,7 +572,7 @@ export function wireControls({ onChange: update }) {
   };
   document.addEventListener('click', onAway);
   document.addEventListener('keydown', onEscape);
-  state.cleanups.push(() => {
+  host.cleanups.push(() => {
     document.removeEventListener('click', onAway);
     document.removeEventListener('keydown', onEscape);
   });
@@ -530,25 +581,14 @@ export function wireControls({ onChange: update }) {
   const onRandom = () => {
     // Random within what is on screen: a random saint that the reader's own
     // filters exclude would look like the filters had failed.
-    const pool = state.shownCards.length ? state.shownCards : state.cards;
-    if (!pool.length) return;
-    const card = pool[Math.floor(Math.random() * pool.length)];
+    const cards = pool();
+    if (!cards.length) return;
+    const card = cards[Math.floor(Math.random() * cards.length)];
     // The saint is drawn before the die turns, not after: the roll is how the
     // answer is shown, not how it is decided.
-    rollDie(random, () => state.router.navigate(`/saints/${card.slug}`));
+    rollDie(random, () => openSaint(card.slug));
   };
   random.addEventListener('click', onRandom);
-
-  // Every card's markup and box change, so none of the rendered ones can be
-  // kept: this is a re-render, not a reflow. Shared by the layout buttons and
-  // the Detailed box, which change the same things.
-  const rerenderAll = () => {
-    for (const [slug, node] of state.rendered) {
-      node.remove();
-      state.rendered.delete(slug);
-    }
-    update({ animate: false });
-  };
 
   /*
    * View is a chip of its own since 2026-08-26 evening, so the change arrives
@@ -559,23 +599,23 @@ export function wireControls({ onChange: update }) {
    */
   const onLayout = (e) => {
     if (!e.target?.matches?.('input[name="layout"]')) return;
-    const next = currentChoice(controlsEl, 'layout', state.layout);
-    if (next === state.layout) return;
-    state.layout = next;
+    const next = currentChoice(controlsEl, 'layout', host.layout);
+    if (next === host.layout) return;
+    host.layout = next;
     setChoice(controlsEl, 'layout', next);
     e.target.closest('details')?.removeAttribute('open');
-    store.setSetting('indexLayout', state.layout);
-    rerenderAll();
+    if (layoutKey) store.setSetting(layoutKey, host.layout);
+    rerender();
   };
-  controlsEl.addEventListener('input', onLayout);
+  if (layout) controlsEl.addEventListener('input', onLayout);
 
-  const detailedBox = controlsEl.querySelector('[data-detailed]');
+  const detailedBox = detailed ? controlsEl.querySelector('[data-detailed]') : null;
   const onDetailed = () => {
-    state.detailed = detailedBox.checked;
-    store.setSetting('indexDetailed', state.detailed);
-    rerenderAll();
+    host.detailed = detailedBox.checked;
+    store.setSetting('indexDetailed', host.detailed);
+    rerender();
   };
-  detailedBox.addEventListener('change', onDetailed);
+  detailedBox?.addEventListener('change', onDetailed);
 
   const clear = controlsEl.querySelector('[data-clear]');
   const onClear = () => {
@@ -588,25 +628,22 @@ export function wireControls({ onChange: update }) {
     controlsEl.querySelector('input[name="rangeMode"][value="overlaps"]').checked = true;
     // Clear returns the page to where it opens, which since 2026-08-27
     // includes the header's calendar ticked in the Calendar facet.
-    syncCalendarFacet();
+    syncCalendarFacet(host);
     readFilters();
   };
   clear.addEventListener('click', onClear);
 
-  const toggle = state.el.querySelector('[data-mode-toggle]');
-  const onToggle = () => switchMode(state.mode === 'carousel' ? 'search' : 'carousel');
-  toggle.addEventListener('click', onToggle);
+  const toggle = modeToggle ? el.querySelector('[data-mode-toggle]') : null;
+  const onToggle = () => switchMode(host.mode === 'carousel' ? 'search' : 'carousel');
+  toggle?.addEventListener('click', onToggle);
 
-  state.cleanups.push(() => {
+  host.cleanups.push(() => {
     controlsEl.removeEventListener('input', readFilters);
     controlsEl.removeEventListener('input', onChoice);
     controlsEl.removeEventListener('input', onLayout);
-    detailedBox.removeEventListener('change', onDetailed);
+    detailedBox?.removeEventListener('change', onDetailed);
     random.removeEventListener('click', onRandom);
     clear.removeEventListener('click', onClear);
-    toggle.removeEventListener('click', onToggle);
-    state.loop?.destroy();
-    state.carouselPrefetch?.();
-    state.carouselWindow?.();
+    toggle?.removeEventListener('click', onToggle);
   });
 }

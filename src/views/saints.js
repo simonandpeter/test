@@ -184,8 +184,32 @@ export function render(el, { data, router, nav }) {
   // cross over from on the page's first paint.
   el.querySelector('[data-mode-label]').textContent =
     state.mode === 'carousel' ? STRINGS.saints.modeToSearch : STRINGS.saints.modeToCarousel;
-  syncCalendarFacet();
-  wireControls({ onChange: update });
+  syncCalendarFacet(state);
+  wireControls(state, {
+    onChange: update,
+    // Random within what the filters have left; the whole corpus before a
+    // pass has run.
+    pool: () => (state.shownCards.length ? state.shownCards : state.cards),
+    open: (slug) => state.router.navigate(`/saints/${slug}`),
+    // Every card's markup and box change, so none of the rendered ones can be
+    // kept: this is a re-render, not a reflow. Shared by the layout chip and
+    // the Detailed box, which change the same things.
+    rerender: () => {
+      for (const [slug, node] of state.rendered) {
+        node.remove();
+        state.rendered.delete(slug);
+      }
+      update({ animate: false });
+    },
+    layoutKey: 'indexLayout',
+  });
+  // The carousel's own teardown, which was in `wireControls` while that
+  // function was this page's alone.
+  state.cleanups.push(() => {
+    state.loop?.destroy();
+    state.carouselPrefetch?.();
+    state.carouselWindow?.();
+  });
   wireShuffle();
   wireCarouselKeys();
   wireSticky();
@@ -195,7 +219,7 @@ export function render(el, { data, router, nav }) {
   state.cleanups.push(
     subscribeChurch(() => {
       if (!state) return;
-      syncCalendarFacet();
+      syncCalendarFacet(state);
       update({ animate: true });
     }),
   );

@@ -1,7 +1,10 @@
+import { facetsOf } from '../lib/index-filters.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { stepOrder } from '../lib/prayer-order.js';
 import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
+import { indexSheet } from '../ui/sheets.js';
 import { STRINGS } from '../ui/strings.js';
+import { monthsBySlugFor } from './index/search.js';
 import { showCard, stepBy } from './prayer/card.js';
 import { drawAsides } from './prayer/asides.js';
 import { findMarkup, revealSlug, wireFind } from './prayer/find.js';
@@ -20,6 +23,16 @@ import { close, open, state } from './prayer/state.js';
 import('../styles/prayer.css');
 
 export const title = () => STRINGS.prayer.title;
+
+/**
+ * **All Saints' sheet, because this page wears All Saints' advanced search.**
+ * The shell above the hymnal and the rows in the two asides are
+ * `views/index/*`'s own elements since 2026-10-02, and `ui/sheets.js` argues
+ * both why `index.css` is not on the entry bundle and why the views that paint
+ * text on their first frame await it rather than firing and forgetting.
+ * `prayer.css` stays a bare import above: it is this route's alone.
+ */
+export const styles = indexSheet;
 
 /**
  * Prayer — the hymns the corpus holds, one saint at a time.
@@ -53,7 +66,17 @@ export function render(el, { data, router } = {}) {
 
      The router is kept for the one href these columns write: a saint the
      hymnal does not hold opens their own page (stage I, `prayer/asides.js`). */
-  open({ data, router, all: stepOrder(data?.saints ?? []) });
+  const all = stepOrder(data?.saints ?? []);
+  /* `el` and the three filter fields are what `views/index/controls.js` reads
+     off its host; `find.js` mounts that shell over this state. */
+  open({
+    data,
+    router,
+    el,
+    all,
+    facets: facetsOf(all),
+    monthsBySlug: monthsBySlugFor(all),
+  });
   el.innerHTML = `
     <div class="hymnal">
       <h1 class="sr-only">${esc(P.title)}</h1>
@@ -97,11 +120,12 @@ export function render(el, { data, router } = {}) {
       if (!arrow.disabled) stepBy(el, arrow.id === 'hy-next' ? 1 : -1);
       return;
     }
-    /* Both faces, named rather than reduced to `[data-go]` alone: the row and
-       the tile are two elements and the attribute is what says the press can
-       act. A name the hymnal does not hold carries an `href` and no `data-go`,
-       so it falls through this to the browser and opens the saint's own page. */
-    const go = e.target.closest?.('.hy-link[data-go], .day-tile[data-go]');
+    /* One element in both faces since 2026-10-02 — the shared row card's own
+       `.index-name`, whose `::after` covers the whole card, so a press anywhere
+       on a row arrives here. The attribute is what says the press can act: a
+       name the hymnal does not hold carries an `href` and no `data-go`, so it
+       falls through this to the browser and opens the saint's own page. */
+    const go = e.target.closest?.('.index-name[data-go]');
     // Through `find.js`, because a name the current query excludes is still a
     // saint this page holds: the search widens to let the reader reach them.
     if (go) revealSlug(el, go.dataset.go);
@@ -124,12 +148,12 @@ export function render(el, { data, router } = {}) {
    * answers touch and pen and refuses a mouse: a desk without a touchscreen
    * never reaches this, and a desk with one has no reason to be refused.
    *
-   * The find row is excluded — a finger dragging through the field is selecting
-   * text in it, and a gesture that turned the page from there would take the
-   * query with it.
+   * The whole shell is excluded — a finger dragging through the field is
+   * selecting text in it, and a facet panel is a sheet to scroll, so a gesture
+   * that turned the page from either would take the reader's narrowing with it.
    */
   unswipe = onGrainDrag(el, {
-    ignore: (target) => !!target.closest?.('.hy-find'),
+    ignore: (target) => !!target.closest?.('.index-controls, .hy-count'),
     end(dx) {
       if (Math.abs(dx) >= SETTLE) stepBy(el, dx < 0 ? 1 : -1);
     },
@@ -137,6 +161,8 @@ export function render(el, { data, router } = {}) {
 }
 
 export function destroy() {
+  /* The shell's own listeners, which `wireControls` pushed onto this state. */
+  state?.cleanups.forEach((fn) => fn?.());
   root?.removeEventListener('click', onPress);
   unswipe?.();
   unswipe = null;

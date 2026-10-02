@@ -659,8 +659,17 @@ export function paintWindow() {
  * constant, so an imageless saint still gets an empty one and the column of
  * names stays a column. Detailed swaps the badge for the matrix and adds the
  * description box, held by skeleton bars until the life arrives.
+ *
+ * **`door` and `sub` are the two seams a second page needed** (2026-10-02).
+ * Prayer's two aside columns draw this same card, and a row there is not a
+ * link: a saint the hymnal holds opens *in place*, which is the whole point of
+ * those columns, so the caller says what element wraps the name and with what
+ * attributes (`views/prayer/asides.js`'s `door`). The default is the link this
+ * page has always drawn, so All Saints passes neither and is unchanged. `sub`
+ * is the line under the name, which on a same-day column is the day and not
+ * the lifespan.
  */
-export function card(item, router, { rows = false, detailed = false } = {}) {
+export function card(item, router, { rows = false, detailed = false, door = null, sub = null } = {}) {
   /*
    * **Held to the hero's own two limits since 2026-09-02** (author: the same
    * aspect-ratio limitations "to crop any saint card display"). `cardCrop`
@@ -721,10 +730,14 @@ export function card(item, router, { rows = false, detailed = false } = {}) {
   // of its own. The bookmark sits above that ::after, so pressing it saves
   // rather than opens. (The veneration glyph stood beside the name in this
   // line until 2026-08-22 — STRUCTURE.md.)
+  const open = door?.(item) ?? {
+    tag: 'a',
+    attrs: ` href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}"`,
+  };
   const body = `<span class="name-line">
-      <a class="index-name" href="${router.href(`/saints/${item.slug}`)}" data-prefetch="${esc(item.slug)}">${esc(saintName(item))}</a>
+      <${open.tag} class="index-name"${open.attrs}>${esc(saintName(item))}</${open.tag}>
     </span>
-    <span class="index-dates utility">${esc(formatSubtext(item))}</span>
+    <span class="index-dates utility">${esc(sub ? sub(item) : formatSubtext(item))}</span>
     ${description}`;
 
   /*

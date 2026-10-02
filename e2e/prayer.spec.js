@@ -32,12 +32,22 @@ const HYMNED = CARDS.filter((c) => c.hymned?.length).sort((a, b) =>
 const PRAYER = '/prayer';
 
 /**
- * A row in either aside, in either face. The names face draws `.hy-link` and
- * the picture face past 1024 px draws the Daily shelf's own `.day-tile`
- * (stage I), so a test about what a row *says* names both and a test about
- * what one *is* names the one it means.
+ * A row in either aside, in either face — **All Saints' row card** since
+ * 2026-10-02 (author: "The 'Recorded with' and 'Kept the same day' rows should
+ * have the same design as the all saints entries advanced search mode row
+ * cards… SSOT"). The names face is `.index-card.is-row` and the picture face
+ * is the same card without it, which is that page's own two shapes.
+ *
+ * **The row and its door are two elements now**, where `.hy-link` was both:
+ * the `<li class="index-card">` carries `data-slug`, and the `.index-name`
+ * inside it is the `<button data-go>`, the `<a href>` or the disabled button
+ * (`views/prayer/asides.js`). A test about what a row *says* reads the row; a
+ * test about where it *goes* reads `DOOR` inside it.
  */
-const ROW = ':is(.hy-link, .day-tile)';
+const ROW = '.hy-links .index-card';
+
+/** The door inside a row — see `ROW`. */
+const DOOR = '.index-name';
 
 /** The church every test here reads in, and the one `ready()` seeds. */
 const CHURCH = 'russian';
@@ -143,7 +153,7 @@ for (const width of [1440, 1280]) {
         right: rect(asides[asides.length - 1]),
         rightHead: head(asides[asides.length - 1]),
         view: rect(document.getElementById('hy-view')),
-        field: rect(document.querySelector('.hy-find .search-field')),
+        field: rect(document.querySelector('.index-row .search-field')),
         scrollW: document.documentElement.scrollWidth,
         clientW: document.documentElement.clientWidth,
       };
@@ -468,9 +478,9 @@ test('recorded-with names the saints the corpus records this one with', async ({
     .toBeGreaterThanOrEqual((subject.mentionedIn ?? []).length);
 
   const drawn = await aside.evaluate((el) =>
-    [...el.querySelectorAll(':is(.hy-link, .day-tile)')].map((b) => ({
+    [...el.querySelectorAll('.hy-links .index-card')].map((b) => ({
       slug: b.dataset.slug,
-      reachable: !!b.dataset.go,
+      reachable: !!b.querySelector('.index-name')?.dataset.go,
       text: b.textContent.trim(),
     })),
   );
@@ -548,7 +558,7 @@ test('the same day holds only the saints this reader’s church keeps that day',
 
   // Every row says who it names, whether or not this page can go there.
   const drawn = await aside.evaluate((el) =>
-    [...el.querySelectorAll(':is(.hy-link, .day-tile)')].map((b) => b.dataset.slug),
+    [...el.querySelectorAll('.hy-links .index-card')].map((b) => b.dataset.slug),
   );
   const shouldBe = new Set(expected.filter((s) => s !== subject));
   expect(drawn.length, 'no more rows than the day holds').toBeLessThanOrEqual(shouldBe.size);
@@ -582,7 +592,7 @@ test('the same day holds only the saints this reader’s church keeps that day',
 /** What is in the field, set and announced the way a keystroke would. */
 async function type(page, query) {
   await page.evaluate((q) => {
-    const field = document.querySelector('#hy-q');
+    const field = document.querySelector('[data-query]');
     field.value = q;
     field.dispatchEvent(new Event('input', { bubbles: true }));
   }, query);
@@ -709,7 +719,7 @@ test('a name pressed in an aside is reached even when the query is hiding it', a
 
   await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', target);
   // And the field says what it is doing: nothing, now.
-  await expect(page.locator('#hy-q')).toHaveValue('');
+  await expect(page.locator('[data-query]')).toHaveValue('');
   await expect(page.locator('#hy-count')).toHaveText(fill(STRINGS.prayer.count, { n: HYMNED.length }));
 });
 
@@ -719,15 +729,18 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
   await stepTo(page, WITH_MENTIONS);
   await expect(page.locator(`#hy-related ${ROW}`).first()).toBeVisible();
 
-  const plate = page.locator('#hy-views [data-hy-view="plate"]');
-  const rows = page.locator('#hy-views [data-hy-view="rows"]');
+  /* The face chip is All Saints' own View chip since 2026-10-02 — the same
+     `choiceGroup` radio pair in `.index-foot` — so the two faces are asked for
+     by `cards` and `rows` rather than by this page's old two words. */
+  const plate = page.locator('.index-foot input[name="layout"][value="cards"]');
+  const rows = page.locator('.index-foot input[name="layout"][value="rows"]');
   /* **The desk opens on the pictures**, which is the mockup's own default and
      is affordable since stage G: a tile whose saint has no icon has no box at
      all here, so the face no longer opens on empty mats. The phone still opens
      on the names — the 360 px block below asserts that half. */
-  await expect(plate).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('#hy-related .day-tile').first()).toBeVisible();
-  await expect(page.locator(`#hy-related .hy-link`)).toHaveCount(0);
+  await expect(plate).toBeChecked();
+  await expect(page.locator('#hy-related .index-card:not(.is-row)').first()).toBeVisible();
+  await expect(page.locator(`#hy-related .index-card.is-row`)).toHaveCount(0);
 
   /*
    * **Geometry, not the class** (the whole point of this test): a row in the
@@ -739,7 +752,7 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
    */
   const rowHeight = () =>
     page.evaluate(() => {
-      const el = document.querySelector('#hy-related :is(.hy-link, .day-tile)');
+      const el = document.querySelector('#hy-related .hy-links .index-card');
       // A hidden element reports 0 and would satisfy "shorter" by accident.
       return el && el.clientWidth > 0 ? el.getBoundingClientRect().height : 0;
     });
@@ -747,11 +760,11 @@ test('the two faces are two drawings, not two class names', async ({ page }) => 
   const asPlate = await rowHeight();
   expect(asPlate, 'the picture face is drawn').toBeGreaterThan(0);
 
-  await page.evaluate(() => document.querySelector('[data-hy-view="rows"]').click());
-  await expect(rows).toHaveAttribute('aria-pressed', 'true');
-  await expect(plate).toHaveAttribute('aria-pressed', 'false');
-  await expect(page.locator('#hy-related .day-tile')).toHaveCount(0);
-  await expect(page.locator('#hy-related .hy-link').first()).toBeVisible();
+  await page.evaluate(() => document.querySelector('input[name="layout"][value="rows"]').click());
+  await expect(rows).toBeChecked();
+  await expect(plate).not.toBeChecked();
+  await expect(page.locator('#hy-related .index-card:not(.is-row)')).toHaveCount(0);
+  await expect(page.locator('#hy-related .index-card.is-row').first()).toBeVisible();
 
   const asRows = await rowHeight();
   expect(asRows, 'the names face is drawn').toBeGreaterThan(0);
@@ -780,12 +793,14 @@ test('every name in a margin opens something past 1024 px', async ({ page }) => 
   const read = () =>
     page.evaluate(() =>
       ['#hy-related', '#hy-sameday'].flatMap((id) =>
-        [...document.querySelectorAll(`${id} :is(.hy-link, .day-tile)`)].map((b) => ({
+        [...document.querySelectorAll(`${id} .hy-links .index-card`)].map((b) => ({
           slug: b.dataset.slug,
-          tag: b.tagName,
-          go: b.dataset.go ?? null,
-          href: b.getAttribute('href'),
-          inert: b.hasAttribute('disabled'),
+          ...((d) => ({
+            tag: d.tagName,
+            go: d.dataset.go ?? null,
+            href: d.getAttribute('href'),
+            inert: d.hasAttribute('disabled'),
+          }))(b.querySelector('.index-name')),
           // A hidden row reports 0 and would pass every claim below by not
           // being there at all (trap 7).
           drawn: b.clientWidth > 0,
@@ -831,13 +846,13 @@ test('a name the hymnal does not hold opens that saint’s own page', async ({ p
     if (i > 0) await stepTo(page, 1);
     await expect.poll(() => page.locator(`.hy-body ${ROW}`).count()).toBeGreaterThanOrEqual(0);
     target = await page.evaluate(
-      () => document.querySelector('.hy-body :is(.hy-link, .day-tile).is-dim')?.dataset.slug ?? null,
+      () => document.querySelector('.hy-body .hy-links .index-card.is-dim')?.dataset.slug ?? null,
     );
   }
   expect(target, 'some saint in the first eight has un-hymned company').not.toBeNull();
 
   await page.evaluate((slug) => {
-    document.querySelector(`.hy-body [data-slug="${slug}"]`).click();
+    document.querySelector(`.hy-body [data-slug="${slug}"] .index-name`).click();
   }, target);
 
   // Two independent things (trap 14): the address the router settled on, and a
@@ -860,7 +875,7 @@ test('a tile with no icon has no box, and one with an icon has a 3:2 plate', asy
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
   expect(WITH_SAME_DAY, 'the corpus holds a hymned saint with company on his day').toBeGreaterThanOrEqual(0);
   await stepTo(page, WITH_SAME_DAY);
-  await expect(page.locator('#hy-sameday .day-tile').first()).toBeVisible();
+  await expect(page.locator('#hy-sameday .index-card:not(.is-row)').first()).toBeVisible();
 
   /* A walk, because whether the day in hand holds both a pictured and an
      unpictured saint is a fact about the corpus. */
@@ -868,7 +883,7 @@ test('a tile with no icon has no box, and one with an icon has a 3:2 plate', asy
   for (let i = 0; i < 10 && !both; i += 1) {
     if (i > 0) await stepTo(page, 1);
     both = await page.evaluate(() => {
-      const rows = [...document.querySelectorAll('.hy-body .day-tile')];
+      const rows = [...document.querySelectorAll('.hy-body .index-card:not(.is-row)')];
       const box = (row) => {
         const thumb = row.querySelector('.reg-thumb');
         if (!thumb) return null;
@@ -908,7 +923,7 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
   const aside = page.locator('#hy-sameday');
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
   await stepTo(page, WITH_SAME_DAY);
-  await expect(aside.locator('.day-tile').first()).toBeVisible();
+  await expect(aside.locator('.index-card:not(.is-row)').first()).toBeVisible();
   await expect.poll(() => aside.getAttribute('data-iso')).not.toBeNull();
 
   const iso = await aside.getAttribute('data-iso');
@@ -919,14 +934,14 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
     new Date(`${iso}T00:00:00Z`),
   );
   const subs = await aside.evaluate((el) =>
-    [...el.querySelectorAll('.day-tile .reg-sub')].map((s) => s.textContent.trim()),
+    [...el.querySelectorAll('.index-card .index-dates')].map((s) => s.textContent.trim()),
   );
   expect(subs.length, 'the column has tiles').toBeGreaterThan(0);
   for (const sub of subs) expect(sub, 'every tile says the day the column is').toBe(said);
 
   // And the names column still says who they were, which is the other reading.
   const related = await page.evaluate(() =>
-    [...document.querySelectorAll('#hy-related .day-tile .reg-sub')].map((s) => s.textContent.trim()),
+    [...document.querySelectorAll('#hy-related .index-card .index-dates')].map((s) => s.textContent.trim()),
   );
   for (const sub of related) expect(sub, 'a recorded-with tile is not dated by the day').not.toBe(said);
 });
@@ -957,13 +972,13 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
   expect(WITH_UNHYMNED_COMPANY, 'the corpus holds a hymned saint with un-hymned company').toBeGreaterThanOrEqual(0);
   await stepTo(page, WITH_UNHYMNED_COMPANY);
   await expect
-    .poll(() => page.locator('.hy-body .day-tile.is-dim').count())
+    .poll(() => page.locator('.hy-body .index-card.is-dim').count())
     .toBeGreaterThan(0);
 
   for (const theme of ['day', 'vigil']) {
     await page.evaluate((t) => document.documentElement.classList.toggle('dark', t === 'vigil'), theme);
     const read = await page.evaluate(() => {
-      const tile = document.querySelector('.hy-body .day-tile.is-dim');
+      const tile = document.querySelector('.hy-body .index-card.is-dim');
       /* The ground is painted, never parsed: `--gesso` hands back its own
          `clamp`-free literal here, but the fifteen tokens the theme cross-fade
          animates are registered and hand back a computed colour instead, so
@@ -971,7 +986,9 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
       const probe = document.createElement('span');
       probe.style.position = 'fixed';
       probe.style.left = '-9999px';
-      probe.style.backgroundColor = 'var(--gesso)';
+      /* The card's own ground, not the page's: these rows are `.panel` index
+         cards since 2026-10-02 and a panel stands on `--field`. */
+      probe.style.backgroundColor = 'var(--field)';
       document.body.append(probe);
       const ground = getComputedStyle(probe).backgroundColor;
       probe.remove();
@@ -979,8 +996,8 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
       return {
         opacity: parseFloat(getComputedStyle(tile).opacity),
         ground,
-        name: of('.reg-name'),
-        sub: of('.reg-sub'),
+        name: of('.index-name'),
+        sub: of('.index-dates'),
       };
     });
     expect(read.opacity, `${theme}: the mockup's fade, at a legible depth`).toBeCloseTo(0.64, 2);
@@ -1133,10 +1150,14 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
 });
 
 /**
- * **Every name is reachable from the keyboard, and the press is the tile.**
- * The whole tile is the control, so the tile is the element that takes focus —
- * one stop per saint and not one per word — and a dimmed row is in the order
+ * **Every name is reachable from the keyboard, and the press is the row.**
+ * One stop per saint and not one per word, and a dimmed row is in the order
  * with the rest of them now that it has somewhere to go.
+ *
+ * **The control is the name and the press is the whole row**, which is All
+ * Saints' own arrangement: `.index-name::after` covers the card, so there is
+ * one focusable element per row and pressing anywhere on it opens the saint.
+ * That is what replaced a `<button>` wrapping the whole tile.
  */
 test('every name in a margin is a keyboard stop, and Enter opens it', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
@@ -1146,14 +1167,16 @@ test('every name in a margin is a keyboard stop, and Enter opens it', async ({ p
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const stops = await page.evaluate(() => {
-    const rows = [...document.querySelectorAll(`.hy-body :is(.hy-link, .day-tile)`)];
-    return rows.map((b) => ({
-      slug: b.dataset.slug,
+    const rows = [...document.querySelectorAll(`.hy-body .hy-links .index-card`)];
+    return rows.map((row) => ({
+      slug: row.dataset.slug,
       // A negative tabindex, a `disabled`, or a non-control element would each
       // take the row out of the order; the tag is what puts it in.
-      tab: b.getAttribute('tabindex'),
-      tag: b.tagName,
-      inert: b.hasAttribute('disabled'),
+      ...((b) => ({
+        tab: b.getAttribute('tabindex'),
+        tag: b.tagName,
+        inert: b.hasAttribute('disabled'),
+      }))(row.querySelector('.index-name')),
     }));
   });
   expect(stops.length).toBeGreaterThan(0);
@@ -1172,7 +1195,7 @@ test('every name in a margin is a keyboard stop, and Enter opens it', async ({ p
      asserting the wrong thing. */
   await page.keyboard.press('Tab');
   const target = await page.evaluate(() => {
-    const row = document.querySelector('.hy-body :is(.hy-link, .day-tile)[data-go]');
+    const row = document.querySelector('.hy-body .hy-links .index-card .index-name[data-go]');
     row.focus();
     const cs = getComputedStyle(row);
     return {
@@ -1206,10 +1229,10 @@ test.describe('at 360 px', () => {
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
     await expect(page.locator('.hy-saint')).toBeVisible();
     await stepTo(page, WITH_MENTIONS);
-    await expect(page.locator('#hy-related .hy-link').first()).toBeVisible();
+    await expect(page.locator('#hy-related .index-card.is-row').first()).toBeVisible();
 
     const boxes = await page.evaluate(() =>
-      ['.hy-find', '.hy-saint', '#hy-related', '#hy-sameday'].map((sel) => {
+      ['.index-controls', '.hy-saint', '#hy-related', '#hy-sameday'].map((sel) => {
         const el = document.querySelector(sel);
         const r = el.getBoundingClientRect();
         // A hidden element reports 0 and would satisfy an ordering by accident
@@ -1270,7 +1293,7 @@ test.describe('at 360 px', () => {
     /* A finger dragging through the field is selecting text in it. The gesture
        is refused there by name (`ignore`), and this is the reading that says so
        rather than the absence of a complaint. */
-    await dragGrain(page, '#hy-q', -80);
+    await dragGrain(page, '[data-query]', -80);
     await page.waitForTimeout(150);
     await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[0].slug);
   });
@@ -1366,40 +1389,46 @@ test('on a phone it is the same field, which it was not until 2026-10-02', async
 });
 
 /**
- * **The phone did not move in this pass.** The review, the mockup and the
- * author's instruction are all the desk, so below 1024 px the two columns keep
- * the face they open on and the row they draw — including the inert one a
- * saint the hymnal does not hold gets. `STRUCTURE.md` §6 carries that half as
- * open rather than as finished.
+ * **The phone keeps the face it opens on and the door it had.** The review, the
+ * mockup and the author's instruction are all the desk, so below 1024 px a
+ * saint the hymnal does not hold is still the inert button rather than a link
+ * out. `STRUCTURE.md` §6 carries that half as open rather than as finished.
+ *
+ * What the phone no longer keeps is a *drawing* of its own: both faces are All
+ * Saints' row card at both widths since 2026-10-02, which is the whole of what
+ * "SSOT" asked for.
  */
-test('below the desk the margins open on the names and keep the row they had', async ({ page }) => {
+test('below the desk the margins open on the names and keep the door they had', async ({ page }) => {
   await phone(page);
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
   await stepTo(page, WITH_SAME_DAY);
-  await expect(page.locator('#hy-sameday .hy-link').first()).toBeVisible();
+  await expect(page.locator('#hy-sameday .index-card.is-row').first()).toBeVisible();
 
-  await expect(page.locator('#hy-views [data-hy-view="rows"]')).toHaveAttribute('aria-pressed', 'true');
-  await expect(page.locator('.hy-body .day-tile')).toHaveCount(0);
+  await expect(page.locator('.index-foot input[name="layout"][value="rows"]')).toBeChecked();
+  await expect(page.locator('.hy-body .index-card:not(.is-row)')).toHaveCount(0);
 
-  /* The picture face is still the phone's own plate, mat and all: a face with
-     holes in it would have the reader reading the holes as something meant,
-     and the corpus behind that reading has not changed below 1024 px. */
-  await page.evaluate(() => document.querySelector('[data-hy-view="plate"]').click());
-  await expect.poll(() => page.locator('#hy-sameday .hy-plate').count()).toBeGreaterThan(0);
-  await expect(page.locator('.hy-body .day-tile')).toHaveCount(0);
-  await expect
-    .poll(() => page.locator('#hy-sameday .hy-plate').count())
-    .toBe(await page.locator('#hy-sameday .hy-link').count());
+  /* The picture face is the card shape, here as at the desk, and **no picture
+     means no box** — the stage G ruling, which the shared card keeps by
+     emitting no media at all for a saint with no icon. So there are never more
+     plates than rows, and at least one. */
+  await page.evaluate(() => document.querySelector('input[name="layout"][value="cards"]').click());
+  await expect.poll(() => page.locator(`#hy-sameday ${ROW}`).count()).toBeGreaterThan(0);
+  await expect(page.locator('.hy-body .index-card.is-row')).toHaveCount(0);
+  const plates = await page.locator('#hy-sameday .index-card .index-media').count();
+  expect(plates, 'the picture face is drawn').toBeGreaterThan(0);
+  expect(plates, 'and no saint without an icon is given a box').toBeLessThanOrEqual(
+    await page.locator(`#hy-sameday ${ROW}`).count(),
+  );
 
   // And a name the hymnal does not hold is the inert button it has always been.
   const inert = await page.evaluate(
-    () => document.querySelectorAll('.hy-body .hy-link[disabled]').length,
+    () => document.querySelectorAll('.hy-body .index-name[disabled]').length,
   );
-  const doors = await page.evaluate(() => document.querySelectorAll('.hy-body .hy-link[data-go]').length);
+  const doors = await page.evaluate(() => document.querySelectorAll('.hy-body .index-name[data-go]').length);
   expect(inert + doors, 'every row is one or the other').toBe(
-    await page.locator('.hy-body .hy-link').count(),
+    await page.locator(`.hy-body ${ROW}`).count(),
   );
-  expect(await page.locator('.hy-body a.hy-link').count(), 'and none of them is a link out').toBe(0);
+  expect(await page.locator('.hy-body a.index-name').count(), 'and none of them is a link out').toBe(0);
 });
