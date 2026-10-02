@@ -1067,11 +1067,13 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
    * A card with a picture, a life long enough to fill the preview, and a hymn.
    * The saints with icons are listed off the manifest and stepped to one by
    * one, because the twelve at the head of the hymnal hold no icon between them
-   * since the Greek wave, and how long a life is is not in the manifest.
+   * since the Greek wave, and how long a life is is not in the manifest. The
+   * window is 24 rather than 12 because the image programme keeps changing who
+   * is at the head of that list.
    */
   expect(WITH_PICTURE.length, 'the corpus holds hymned saints with icons').toBeGreaterThan(0);
   let found = false;
-  for (const at of WITH_PICTURE.slice(0, 12)) {
+  for (const at of WITH_PICTURE.slice(0, 24)) {
     if (found) break;
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
     /* The card has to be on the page before the arrow is pressed: `#hy-next`
@@ -1091,9 +1093,21 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
         .poll(() => page.locator('.hy-pic [data-hy-credit]').textContent())
         .not.toBe('');
       await expect(page.locator('.hy-hymns .hymn-text').first()).toBeVisible();
-      found = await page.evaluate(
-        () => (document.querySelector('.hy-line[data-hy-lede]')?.scrollHeight ?? 0) > 120,
-      );
+      /*
+       * **The walk looks for the state N2 asserts, not a proxy for it.** This
+       * read `scrollHeight > 120`, which let Abercius of Hierapolis through on
+       * `cab93377` — a 4,157-character life whose opening paragraph draws five
+       * of the clamp's six lines — and then N2 asked for six and got five.
+       * Clamped alone is not enough either: a lede can overflow its box at five
+       * lines. Six lines *and* clamped is the premise, measured at whichever
+       * viewport the project is running.
+       */
+      found = await page.evaluate(() => {
+        const lede = document.querySelector('.hy-line[data-hy-lede]');
+        if (!lede) return false;
+        const lines = Math.round(lede.getBoundingClientRect().height / parseFloat(getComputedStyle(lede).lineHeight));
+        return lines === 6 && lede.scrollHeight > lede.clientHeight;
+      });
     }
   }
   expect(found, 'none of the first twelve hymned saints with an icon has a long life too').toBe(true);
