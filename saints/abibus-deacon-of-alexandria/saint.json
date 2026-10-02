@@ -17,6 +17,20 @@
     "martyr",
     "deacon"
   ],
+  "related": [
+    "faustus-presbyter-of-alexandria",
+    "cyriacus-attendant-of-faustus",
+    "dionysius-reader-of-alexandria",
+    "andrew-soldier-of-alexandria",
+    "andropelagia-of-alexandria",
+    "thecla-of-alexandria",
+    "theoctistus-the-shipmaster",
+    "macarius-magistrate-of-alexandria",
+    "andrew-curator-of-alexandria",
+    "cyriacus-the-commoner",
+    "sarapabon-the-senator",
+    "calodote-of-alexandria"
+  ],
   "dates": {
     "death": {
       "earliest": 250,

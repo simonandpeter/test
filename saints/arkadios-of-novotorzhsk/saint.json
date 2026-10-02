@@ -11,6 +11,9 @@
   "types": [
     "venerable"
   ],
+  "related": [
+    "ephrem-of-novotorzhsk"
+  ],
   "dates": {
     "death": {
       "earliest": 1001,

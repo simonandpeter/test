@@ -26,7 +26,7 @@ services according to the rule, the nuns sang in the choir and one of them
 he made warden. That was enough.
 
 The NKVD arrested him on 23 July 1937 and put him in the Toropets prison,
-and the next day the investigator asked his relations with Bishop John
+and the next day the investigator asked his relations with Bishop [John](/saints/john-of-velikiye-luki)
 (Troyansky) and the other priests — normal, he said; the bishop had been to
 his flat and he to the bishop’s, on religious matters; whether the bishop
 had handed out sweets to children in his church to recruit worshippers —
@@ -36,7 +36,7 @@ he did not consider it anything abnormal; whether the bishop preached there
 he was hard put to say, since at that moment he was consuming the holy
 gifts. On 31 August the NKVD troika sentenced him to be shot, and he was
 shot on 4 September 1937 — 22 August of the old style, the day the Russian
-calendar keeps him, with the bishops John and Alexius and their company. The
+calendar keeps him, with the bishops John and [Alexius](/saints/alexius-of-omsk) and their company. The
 Jubilee Council of Bishops of August 2000 numbered him among the new martyrs
 and confessors of Russia.
 

@@ -2,7 +2,7 @@
 
 Arkadios came from the town of Vyazma, of simple devout parents who taught him prayer and obedience from childhood. Meek, perceptive, kind and chaste, the young man chose folly for Christ as his feat: he lived on alms and slept where he could — in the forest, on the church porch — and the blessed carelessness and closeness to nature gave him an air of detachment from all the bustle of life; in church, deep in prayer, he often wept with tenderness and spiritual joy, his advice was exact, his predictions came true and his rebukes brought men to their senses.
 
-An experienced guide, Ephrem the wonderworker of Novy Torg, helped the young ascetic through the spiritual dangers of a hard feat then rare; and when the people of Vyazma had witnessed several miracles at his prayer, he fled human glory to the upper reaches of the Tvertsa, where he shared Ephrem’s labours in founding the church and monastery of the princes Boris and Gleb.
+An experienced guide, [Ephrem the wonderworker of Novy Torg](/saints/ephrem-of-novotorzhsk), helped the young ascetic through the spiritual dangers of a hard feat then rare; and when the people of Vyazma had witnessed several miracles at his prayer, he fled human glory to the upper reaches of the Tvertsa, where he shared Ephrem’s labours in founding the church and monastery of the princes Boris and Gleb.
 
 Entering the new monastery he was tonsured and took on complete obedience to his spiritual father; he never missed the Liturgy and came first to matins with his elder. After Ephrem’s death on 28 January 1053 he went on as his elder had taught, in prayer, fasting and silence, and some years later — on 13 December 1077 by some accounts — he too died in peace.
 

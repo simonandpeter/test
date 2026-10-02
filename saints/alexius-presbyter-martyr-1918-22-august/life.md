@@ -26,7 +26,7 @@ men and 1,072 women — where he also taught singing at the commercial
 school and the Law of God at the primary school across the river, and from
 1917 was candidate to the investigator of the first deanery. In 1918 he
 was arrested on a denunciation for anti-Soviet activity: at that time the
-appeal of Bishop Andronicus (Nikolsky) was being read in every church, and
+appeal of Bishop [Andronicus (Nikolsky)](/saints/andronicus-of-perm) was being read in every church, and
 the Soviet power could not fail to answer it.
 
 On 4 September 1918, after cruel tortures and mockery, he was shot by Red

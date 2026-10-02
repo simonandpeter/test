@@ -64,7 +64,7 @@ memory of the martyrs has lasted to our day, and their grave, ringed with
 a plain fence and crowned with a worn wooden cross, has never ceased to be
 a place of veneration.
 
-Bishop Pimen (Belolikov) of Verny and Semirechye appealed to the Turkestan
+Bishop [Pimen (Belolikov)](/saints/pimen-of-verny) of Verny and Semirechye appealed to the Turkestan
 clergy for help for the families of those killed. Basil Kolmykov was
 rehabilitated under the law of the Republic of Kazakhstan of 14 April
 1993, and the Council of Bishops of 13–16 August 2000 numbered him among

@@ -14,7 +14,7 @@ In April 1903, at his own request, he was moved to the Saviour church of
 the village of Ivashevo in the Rostov district — now in the Ilyinsky
 district of the Ivanovo region — teaching the Law of God at the Ivashevo
 and Channikovo zemstvo schools and church singing at the Ivashevo school;
-and on 12 November 1912 Tikhon (Belavin), archbishop of Yaroslavl and
+and on 12 November 1912 [Tikhon (Belavin)](/saints/tikhon-of-moscow), archbishop of Yaroslavl and
 Rostov and the future patriarch, moved him to the church of the Smolensk
 icon at Diyevo-Gorodishche in the Yaroslavl district, then made him rector
 of the Trinity church of the same village.

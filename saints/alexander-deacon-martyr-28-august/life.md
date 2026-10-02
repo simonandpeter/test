@@ -37,8 +37,8 @@ desecrated everywhere and reprisals taken on the clergy.
 
 The young deacon — twenty-seven, the calendar says — went on with his
 service at Bolshe-Trifonskoye through the reprisals against the clergy that
-ran without pause all the summer of 1918, serving with the priest Peter
-Snezhnitsky, who likewise had not left his parish in that terrible time;
+ran without pause all the summer of 1918, serving with the priest [Peter
+Snezhnitsky](/saints/peter-snezhnitsky), who likewise had not left his parish in that terrible time;
 and on 28 August 1918 — 10 September of the new style — he was killed
 without trial or investigation by Red Guards at Yegorshino station, cut to
 pieces with sabres. By decision of the Holy Synod of 17 July 2002 he was

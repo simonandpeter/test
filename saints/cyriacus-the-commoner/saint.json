@@ -11,6 +11,9 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "abibus-deacon-of-alexandria"
+  ],
   "dates": {
     "death": {
       "earliest": 250,

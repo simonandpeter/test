@@ -2,7 +2,7 @@
 
 Albeus — Ailbe — is honoured as the chief patron of Munster, one of the four
 provinces of Ireland. He was converted by certain Britons and had travelled
-to Rome before Patrick came among the Irish; after his return he became the
+to Rome before [Patrick](/saints/patrick-of-ireland) came among the Irish; after his return he became the
 disciple and fellow-labourer of that apostle of his country, who ordained
 him first archbishop of Munster, and he fixed his see at Emly, since removed
 to Cashel.

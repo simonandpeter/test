@@ -11,6 +11,11 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "abibus-deacon-of-alexandria",
+    "macarius-magistrate-of-alexandria",
+    "faustus-presbyter-of-alexandria"
+  ],
   "dates": {
     "death": {
       "earliest": 250,

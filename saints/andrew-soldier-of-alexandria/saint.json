@@ -11,6 +11,12 @@
   "types": [
     "martyr"
   ],
+  "related": [
+    "abibus-deacon-of-alexandria",
+    "cyriacus-attendant-of-faustus",
+    "dionysius-reader-of-alexandria",
+    "faustus-presbyter-of-alexandria"
+  ],
   "dates": {
     "death": {
       "earliest": 250,
