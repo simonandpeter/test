@@ -190,6 +190,7 @@ export const ru = {
         dormition: 'Успение Пресвятой Богородицы',
       },
     },
+    fixedFeast: { label: 'Праздник Церкви' },
     readings: {
       heading: 'Чтения',
       source: 'Как печатает {source}. Ссылки открывают {bible}.',

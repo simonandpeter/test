@@ -187,6 +187,7 @@ export const ro = {
         dormition: 'Adormirea Maicii Domnului',
       },
     },
+    fixedFeast: { label: 'Praznic al Bisericii' },
     readings: {
       heading: 'Citiri',
       source: 'După cum tipărește {source}. Legăturile deschid {bible}.',

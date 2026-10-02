@@ -441,7 +441,7 @@ four boundaries: ~480–560, ~700–768, 900, and 1024.
 | --- | --- | --- |
 | `max-width: 480px` | `calendar.css`, `saint.css` | the shelf row's feast chip moves ahead of the date rather than wrapping to a third line |
 | `max-width: 559.98px` | `base.css`, `calendar.css`, `index.css` | the first-visit choices close up; All Saints' head takes the phone's padding |
-| `min-width: 620px` | `calendar.css` | the week rail's peek and gutter widen |
+| `min-width: 620px` | `calendar.css`, `feast-hero.css` | the week rail's peek and gutter widen; the hero's two columns, which a feast's third box has to be placed into by hand |
 | `max-width: 619.98px` | `calendar.css` | the complement |
 | `max-width: 699.98px` | `calendar.css` | the full-screen calendar drops to one column — seven columns stop holding a phrase |
 | `min-width: 700px` | `calendar.css`, `index.css` | the full-screen calendar's weekday heads; the carousel's own card measure. `views/index/controls.js` opens on cards rather than rows at the same width |

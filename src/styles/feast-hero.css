@@ -1,0 +1,79 @@
+/*
+ * The Daily hero when the day's subject is a feast and not a saint.
+ *
+ * `src/data/feasts-fixed.js` says why eight days need a record the corpus
+ * cannot hold; `views/daily/panel.js` prints it with the saint hero's own
+ * classes, because the shape on the page is the same shape and calendar.css
+ * draws all of it from classes. This sheet is only the difference, which comes
+ * to three things: a ground behind an icon that has no placeholder to fade in
+ * from, a title that is not a link, and a lede that is not clamped.
+ *
+ * Imported by `views/daily/panel.js` rather than by `main.js`: nothing else on
+ * the site wears any of it.
+ */
+
+/*
+ * A quiet ground under the icon while it decodes.
+ *
+ * A saint's `.hero-media` carries its own LQIP as a background image, so the
+ * box is never bare; a feast record holds `file` and `meta` and no derivatives,
+ * so the box would be a hole in the page for as long as the fetch takes. The
+ * field is the recessed surface the rest of the page uses for exactly this.
+ */
+.hero-feast .hero-media {
+  background-color: var(--field);
+  /* Not an anchor here, and it must not pretend to be one: there is no page
+     behind a feast. The element is a `div` for the same reason. */
+  cursor: default;
+}
+
+/* The title is plain text where a saint's is a link, so it has to say in ink
+   what the anchor said for the saint — otherwise the two heroes differ by the
+   colour of their heading and nothing explains why. */
+.hero-feast .feast-name {
+  color: var(--ink);
+}
+
+/*
+ * **The credit goes under the picture, not beside it.**
+ *
+ * `.hero.has-media` is a two-column grid from 620 px — picture, then words —
+ * and a saint's hero has exactly two children to fill it. A feast's has three,
+ * because the credit cannot ride in on a payload and is a sibling of the
+ * figure, so auto-placement put it in the words' column and pushed the words
+ * underneath the picture. Both boxes are placed by hand instead.
+ *
+ * **No upper bound, and that is deliberate rather than lazy.** Past 1024 px
+ * the saint column's hero is a single column (`calendar.css`'s stacking rule)
+ * and `paintFeastReading` passes no body, so there is no `.hero-body` element
+ * for the second rule to place at all — and the credit's `grid-column: 1` is
+ * where a single-column grid would have put it anyway. Closing the query at
+ * 1023.98 would have been a sixth breakpoint on this page for no difference
+ * in the drawing.
+ */
+@media (min-width: 620px) {
+  .hero-feast.has-media .hero-credit {
+    grid-column: 1;
+  }
+
+  .hero-feast.has-media .hero-body {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+/*
+ * **The lede is the whole of it, so it is not clamped.**
+ *
+ * `.hero-lede` is a way into a life: three to eighteen lines of a longer text
+ * with `Continue reading` after it. A feast has no life and no page, so there
+ * is nothing for a clamp to be a way into — cutting these two or three
+ * sentences off would hide the only prose the site has about the day. The
+ * measure is `.hero-lede`'s 68ch, because the column is the same column.
+ */
+.hero-feast .feast-lede,
+.cal-read .feast-lede {
+  color: var(--ink-soft);
+  margin: var(--space-3) 0 0;
+  max-width: 68ch;
+}

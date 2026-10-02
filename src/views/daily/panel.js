@@ -1,6 +1,7 @@
-import { formatSubtext, pickHero, todayIso } from '../../lib/calendar-page.js';
+import { formatSubtext, todayIso } from '../../lib/calendar-page.js';
 import { churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail, loadSource } from '../../lib/detail.js';
+import { dayHero, fixedFeastOn } from '../../lib/fixed-feasts.js';
 import { cardCrop, columnCrop, heroCrop } from '../../lib/hero-crop.js';
 import { saintName } from '../../lib/honorific.js';
 import { currentLanguage, languageTag, translateOffice } from '../../lib/i18n.js';
@@ -16,6 +17,9 @@ import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
 import { state } from './state.js';
 import { isWide } from '../../lib/viewport.js';
 import { srcsetFor } from '../../lib/picture.js';
+/* Imported here rather than from main.js because the Daily hero is the only
+   thing that wears it; Vite hoists it into the bundle's sheet either way. */
+import '../../styles/feast-hero.css';
 
 /* The site's base path, declared per file as every other view does: it is a
    build-time constant, not shared state. */
@@ -669,7 +673,23 @@ export function paintDay(panels) {
   const wide = isWide();
   for (const box of [saintCol, readCol, shelfCol]) if (box) box.innerHTML = '';
 
-  if (entries.length === 0) {
+  /*
+   * **A fixed feast leads the day, and on a day with no saint folders it is
+   * the day's whole subject** — so the silence below is reached only where
+   * there is neither. That is the fourth silence's own case closed properly:
+   * 28 August 2026 in the Russian calendar printed the Dormition's chip, fast,
+   * readings and troparion around a sentence saying nothing was recorded, and
+   * `emptyDayNote` could only soften the wording because the page had no
+   * record to make the Dormition the subject of. It has one now.
+   *
+   * The reader's own press still wins past 1024 px, where there are rows to
+   * press: a chosen saint of the day is shown as a saint, feast or no feast.
+   */
+  const lead = dayHero(selected, entries, data.bySlug, state.calendar);
+  const feastLead =
+    lead?.kind === 'feast' && !entries.some((e) => e.slug === state.picked) ? lead.feast : null;
+
+  if (entries.length === 0 && !feastLead) {
     const note = `<div class="empty-day"><p>${emptyDayNote(selected)}</p></div>`;
     main.innerHTML = wide ? '' : note;
     if (wide && readCol) readCol.innerHTML = note;
@@ -677,9 +697,9 @@ export function paintDay(panels) {
     return;
   }
 
-  const heroSlug = chosenSlug(entries);
-  const hero = data.bySlug.get(heroSlug);
-  const { media, ratio } = heroPicture(hero, wide);
+  const heroSlug = feastLead ? null : chosenSlug(entries);
+  const hero = heroSlug ? data.bySlug.get(heroSlug) : null;
+  const { media, ratio } = hero ? heroPicture(hero, wide) : { media: '', ratio: '1' };
 
   /*
    * One calendar, one church: the register needs no church heading, and a
@@ -694,8 +714,10 @@ export function paintDay(panels) {
    * page's own choice and cannot be changed, so the row would be a second
    * printing of the saint above it and is filtered out as it always was.
    */
-  const registerEntries = wide ? entries : entries.filter((e) => e.slug !== heroSlug);
-  const named = new Set([heroSlug]);
+  // The phone drops the hero's own row as a second printing of the card above
+  // it; a feast is not in this list to be dropped, so the day stands whole.
+  const registerEntries = wide || feastLead ? entries : entries.filter((e) => e.slug !== heroSlug);
+  const named = new Set(heroSlug ? [heroSlug] : []);
   const rows = registerOrder(registerEntries, data)
     .map(({ entry: e, seq }) => {
       const person = data.bySlug.get(e.slug);
@@ -814,9 +836,18 @@ export function paintDay(panels) {
 
   if (wide) {
     main.innerHTML = '';
-    paintReading(saintCol, readCol, hero, media, ratio);
+    if (feastLead) paintFeastReading(saintCol, readCol, feastLead);
+    else paintReading(saintCol, readCol, hero, media, ratio);
     shelfCol.innerHTML = register;
     fillRegisterLives(shelfCol, selected);
+    return;
+  }
+
+  if (feastLead) {
+    main.innerHTML = `${feastArticle(feastLead, `${feastIdentity(feastLead)}${feastLede(feastLead)}`)}
+    ${register}`;
+    fillFeastCredit(main, feastLead);
+    fillRegisterLives(main, selected);
     return;
   }
 
@@ -938,6 +969,104 @@ function fillWritings(box) {
   });
 }
 
+/* ---- the fixed feasts ---------------------------------------------------- */
+
+/**
+ * A feast's hero, which is a saint's hero with the links taken out.
+ *
+ * `src/data/feasts-fixed.js` says why these eight days cannot be saint
+ * folders, and `lib/fixed-feasts.js` why the feast leads the day over any
+ * saint of it. What is left for this file is one rule, and it is the reason
+ * none of this reuses `heroArticle`, `heroIdentity` or `heroPicture`: **there
+ * is nothing to click.** A feast has no page, no slug and no route, so the
+ * picture is not an anchor, the title is not a link, and there is no way into
+ * a life — the lede is the whole of what the site has to say. Reusing the
+ * saint markup and stripping anchors from it afterwards would have left three
+ * templates each one edit away from printing a link to `/saints/undefined`.
+ *
+ * The classes *are* the saint hero's, because the shape on the page is the
+ * same shape and calendar.css draws all of it from classes; `feast-hero.css`
+ * adds only what differs.
+ */
+const feastPicture = (feast) =>
+  feast.image
+    ? `<div class="hero-figure">
+        <div class="hero-media" aria-hidden="true" style="--hero-shape:${FEAST_SHAPE}">
+          <img src="${BASE + feast.image.file}" alt="" loading="eager" decoding="async" />
+        </div>
+      </div>
+      <p class="hero-credit utility" data-feast-credit hidden></p>`
+    : '';
+
+/*
+ * One shape for all eight, and the only honest one available: a feast record
+ * carries `file` and `meta` and no dimensions, so there is no per-feast
+ * `aspect-ratio` to publish the way `heroCrop` publishes a saint's. A declared
+ * box with `object-fit: cover` reserves its height before the image decodes,
+ * which is what the attribute pair buys a saint; 3:4 is the standing panel
+ * these eight icons are, and the alternative — no declared shape — is a
+ * register that jumps when each one lands.
+ */
+const FEAST_SHAPE = '3 / 4';
+
+/** The feast's name in the reader's language, English where the pack has none. */
+const feastTitle = (feast) => feast.title[currentLanguage()] ?? feast.title.en;
+
+const feastIdentity = (feast) => `
+        <h2 class="hero-name feast-name">${esc(feastTitle(feast))}</h2>
+        <p class="hero-dates utility">${esc(STRINGS.calendar.fixedFeast.label)}</p>`;
+
+/* English, and marked as English, exactly as a life is: the lede is written
+   prose in one language and the packs do not translate it. */
+const feastLede = (feast) => `<p class="feast-lede" lang="en">${esc(feast.lede)}</p>`;
+
+const feastArticle = (feast, body) => `
+    <article class="hero hero-feast ${feast.image ? 'has-media' : ''}" style="--hero-r:1.3333">
+      ${feastPicture(feast)}
+      ${body ? `<div class="hero-body">${body}</div>` : ''}
+    </article>`;
+
+/**
+ * The picture's credit, fetched from the `icon.meta.json` beside it.
+ *
+ * A saint's credit rides in on the payload the life comes with; a feast has no
+ * payload, so the one file that records what Commons stated is fetched on its
+ * own. All eight sourced in October 2026 came back public domain, which owes
+ * nobody a credit, so what this prints today is a licence rather than an
+ * attribution. It is still not dressing: the next icon swapped in may be CC
+ * BY-SA, whose licence obliges one, and `creditLine` is the only function that
+ * knows which licences owe a credit and which owe nothing.
+ */
+function fillFeastCredit(root, feast) {
+  const box = root.querySelector('[data-feast-credit]');
+  if (!box || !feast.image?.meta) return;
+  fetch(BASE + feast.image.meta)
+    .then((r) => (r.ok ? r.json() : null))
+    .then((meta) => {
+      if (!meta || !box.isConnected) return;
+      box.innerHTML = creditLine(meta);
+      box.hidden = false;
+    })
+    .catch(() => {});
+}
+
+/**
+ * The feast in the desk's two middle columns: the icon in the saint column and
+ * the words in the reading column, which is where `paintReading` puts a saint.
+ *
+ * No tablist, because the three tabs are a saint's sections — a life to fetch,
+ * writings to fetch, hymns of the person — and a feast has none of them. What
+ * the day itself is singing is the *day's* record, so `hymnsMarkup` stands
+ * under the lede here rather than in a pane of its own.
+ */
+function paintFeastReading(saintCol, readCol, feast) {
+  saintCol.innerHTML = feastArticle(feast, '');
+  readCol.innerHTML = `<header class="hero-head">${feastIdentity(feast)}</header>
+    ${feastLede(feast)}
+    ${hymnsMarkup(state.selected, state.calendar)}`;
+  fillFeastCredit(saintCol, feast);
+}
+
 const heroArticle = (hero, media, ratio, body) => `
     <article class="hero ${hero.image ? 'has-media' : ''}" style="--hero-r:${ratio}">
       ${media}
@@ -995,8 +1124,12 @@ const heroOpening = (hero) => `
  * calendar at all.
  */
 function chosenSlug(entries) {
-  const own = pickHero(state.selected, entries, state.data.bySlug, state.calendar);
-  return entries.some((e) => e.slug === state.picked) ? state.picked : own;
+  if (entries.some((e) => e.slug === state.picked)) return state.picked;
+  const own = dayHero(state.selected, entries, state.data.bySlug, state.calendar);
+  // Null where the day's own pick is a feast, which has no slug and never gets
+  // one; the caller paints `paintFeastReading` instead. A reader who presses a
+  // saint's row still gets that saint, which is the branch above.
+  return own?.kind === 'saint' ? own.slug : null;
 }
 
 /**
@@ -1011,8 +1144,13 @@ export function paintChosen({ saint: saintCol, content: readCol }) {
   if (!isWide() || !saintCol || !readCol) return;
   const { data, selected } = state;
   const entries = entriesFor(selected, data);
-  if (!entries.length) return;
-  const hero = data.bySlug.get(chosenSlug(entries));
+  const slug = chosenSlug(entries);
+  if (!slug) {
+    const feast = fixedFeastOn(selected, state.calendar);
+    if (feast) paintFeastReading(saintCol, readCol, feast);
+    return;
+  }
+  const hero = data.bySlug.get(slug);
   const { media, ratio } = heroPicture(hero, true);
   paintReading(saintCol, readCol, hero, media, ratio);
 }
