@@ -1045,8 +1045,12 @@ test('the Serbian calendar is the fourth choice, on the Julian calendar, with it
    * Slavonic. HANDOFF had left this to the author twice; the author called it.
    */
   await expect(page.locator('[data-hymns] .hymn-kind').first()).toContainText('Tone');
+  /* The day's own troparion, which names its martyr: the common "Thy martyr,
+     O Lord" stood here until the Orloff removal realigned the English
+     renderings (2026-10-03), and the saint's name in the first line is the
+     stronger reading of the same claim. */
   await expect(page.locator('[data-hymns] .hymn-text[lang="en"]').first())
-    .toContainText('Thy martyr, O Lord');
+    .toContainText('Thy martyr Euplus, O Lord');
   // The claim this line has always made: nothing Serbian on the Russian
   // calendar. Unchanged.
   await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]')).toHaveCount(0);
@@ -1583,11 +1587,19 @@ test('the hymns carry no note about their own tongue', async ({ page }) => {
   await ready(page);
   await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns] .hymn-own')).toHaveCount(0);
+  /* The Forerunner's troparion as the corpus now renders it (2026-10-03): one
+     English text for a hymn three calendars sing, which is what the Orloff
+     removal was for. */
   await expect(page.locator('[data-hymns] .hymn-text[lang="en"]').first())
-    .toContainText('The memory of a righteous one');
+    .toContainText('The memory of the righteous is kept with hymns of praise');
   // the kontakion has no book to cite, so the rendering made here says so
   const madeHere = page.locator('[data-hymns] .hymn[data-rendered="site"]');
-  await expect(madeHere.locator('.hymn-text')).toContainText('The glorious beheading of the Forerunner');
+  /* Scoped to the one hymn, because the troparion above is rendered here too
+     since the Orloff removal and a bare `.hymn-text` under this locator is two
+     elements. */
+  await expect(
+    madeHere.locator('.hymn-text').filter({ hasText: 'The glorious beheading of the Forerunner' }),
+  ).toHaveCount(1);
 
   await page.locator('#lang-open').click();
   await page.locator('#lang-panel [data-language="ru"]').click();
@@ -2548,66 +2560,137 @@ test('the Daily page carries no bookmark, at any width and whatever the name doe
 });
 
 
-test('a Great Feast is what the day is, and the page stops saying there is nothing', async ({ page }) => {
+test('a Great Feast the corpus cannot hold is the day\u2019s whole subject', async ({ page }) => {
   /*
    * Found in review, 2026-08-27: 28 August 2026 in the Russian calendar
    * printed the Dormition's gold chip, the fish it allows on a Friday, the
-   * feast's own readings and the feast's own troparion — and, in the middle of
+   * feast's own readings and the feast's own troparion \u2014 and, in the middle of
    * them, "Nothing in the Russian calendar today."
    *
    * The defect was structural rather than a wording slip. The Daily page's
    * subject is a saint *folder*, so a day whose subject is a feast had no
    * subject at all and fell through to the silence; 28 August has no folder
    * for any saint of it, which is a true sentence about the corpus and a false
-   * one about the day. The feast is read in the church's own calendar, exactly
-   * as the chip above reads it, so the Russian keeps the Dormition on the
-   * civil 28 August and the Greek on the 15th, and both are checked here.
+   * one about the day.
+   *
+   * **The first repair softened the note's wording; `e4e8de6a` gave the day a
+   * subject** (2026-10-03). Eight feasts the corpus cannot hold as folders are
+   * records of their own in `src/data/feasts-fixed.js`, and on a day one of
+   * them covers the panel paints a feast hero and writes no note at all. So
+   * the assertion that used to read the note's prose now reads the hero, which
+   * is the stronger half of the same claim: the page says what the day *is*
+   * rather than apologising for what it lacks.
    */
   await ready(page, { church: 'russian', language: 'en', reckoning: null });
 
   await desk(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
 
-  const note = page.locator('.empty-day');
-  await expect(note).toContainText('Today is The Dormition of the Theotokos in the Russian calendar');
-  await expect(note).not.toContainText('Nothing in the Russian calendar today');
-  // What is missing is the folders, and the note now says so in those words.
-  await expect(note).toContainText('No saint of the day is a folder here yet');
-  // The pointer half of the old sentence survives the split intact.
-  await expect(note).toContainText('other churches’ calendars');
+  /* The article and the name are two boxes past 1024 px: the picture stands in
+     the saint column and the name is pinned over the reading column, which is
+     stage D's arrangement and the saint hero's own (`views/daily/panel.js`).
+     So the name is not asserted inside the article. */
+  const feastHero = page.locator('.hero-feast');
+  const feastName = page.locator('.feast-name');
+  await expect(feastHero).toHaveCount(1);
+  await expect(feastName).toHaveText('The Dormition of the Theotokos');
+  await expect(page.locator('.hero-dates').first()).toHaveText(STRINGS.calendar.fixedFeast.label);
+  // No note at all, rather than a note that reads better.
+  await expect(page.locator('.empty-day')).toHaveCount(0);
+  await expect(page.locator('main')).not.toContainText('Nothing in the Russian calendar today');
   // And it was standing in the middle of the feast's own record all along.
   await expect(page.locator('[data-hymns] .hymn')).not.toHaveCount(0);
   await expect(page.locator('.feast-chip')).toContainText('Dormition');
+  /*
+   * There is no page behind a feast, so the hero offers nothing to press \u2014
+   * `panel.js`'s own rule for why the feast markup is not the saint markup
+   * with the anchors stripped off it afterwards.
+   */
+  await expect(feastHero.locator('a.hero-media'), 'the picture is an anchor').toHaveCount(0);
+  await expect(feastHero.locator('a[href*="/saints/"]'), 'a link into a life').toHaveCount(0);
+  await expect(page.locator('.hero-more'), 'a way to continue reading').toHaveCount(0);
+  /* The picture's credit is the one anchor a feast article carries, and it
+     points at Commons rather than at anything on this site. The reading says
+     which anchor broke the rule rather than only that one did. */
+  await expect(feastHero.locator('[data-feast-credit] a')).toHaveCount(1);
+  const strays = await page.evaluate(() =>
+    [...document.querySelectorAll('.hero-feast a')]
+      .filter((a) => !a.closest('[data-feast-credit]'))
+      .map((a) => a.outerHTML));
+  expect(strays, 'the feast article offers something to press').toEqual([]);
 
   /*
-   * Past the end of the day records the readings clause comes off, because
-   * there are none below to be the feast's own — which is the same defect one
-   * horizon further on.
+   * Past the end of the day records the same day is still the feast's. The
+   * readings and hymns are gone with the records; the subject is not.
    */
   await page.goto('/calendar/2027-04-07', { waitUntil: 'networkidle' });
-  await expect(note).toContainText('Today is The Annunciation in the Russian calendar');
-  await expect(note).not.toContainText('readings and hymns below');
+  await expect(feastName).toHaveText('The Annunciation');
+  await expect(page.locator('.empty-day')).toHaveCount(0);
 
   /*
-   * And the same in the Greek calendar, on a feast of its own whose day has no
-   * folder. The civil 15 August was written here until `el-08-15` gave the
-   * Greek Dormition its first folder, which is a thing a batch is free to do
-   * and a fixture is not free to assume.
+   * And in the Greek calendar, on a feast of its own whose day has no folder.
+   * The civil 15 August was written here until `el-08-15` gave the Greek
+   * Dormition its first folder, which is a thing a batch is free to do and a
+   * fixture is not free to assume.
    */
   await page.evaluate(() => {
     const key = 'gos-settings';
     const now = JSON.parse(localStorage.getItem(key) ?? '{}');
     localStorage.setItem(key, JSON.stringify({ ...now, church: 'greek' }));
   });
-  const feast = feastWithoutFolders('greek');
-  await page.goto(feast.route, { waitUntil: 'networkidle' });
-  await expect(note).toContainText(
-    `Today is ${STRINGS.calendar.feasts.names[feast.key]} in the Greek calendar`,
-  );
+  const covered = feastWithoutFolders('greek', { record: true });
+  await page.goto(covered.route, { waitUntil: 'networkidle' });
+  await expect(feastName).toHaveText(covered.feast.title.en);
+  await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // A day that is not a feast and has no folders still reads exactly as it did.
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day')).toHaveCount(0);
+});
+
+
+test('a Great Feast with no record of its own still says what the day is', async ({ page }) => {
+  /*
+   * The other half of the day above, and the half the note still writes
+   * (2026-10-03). Eight feasts have records in `src/data/feasts-fixed.js`;
+   * the Meeting and the Exaltation are the two Great Feasts of 2026 that have
+   * neither a record nor a folder on the day, so `emptyDayNote`'s feast
+   * sentence is what a reader meets there \u2014 a note about the folders, not
+   * about the day.
+   *
+   * `feastWithoutFolders(church, { record: false })` finds it rather than a
+   * date being written here, because the next batch to give one of those two
+   * days a folder would otherwise leave this test asserting prose the page no
+   * longer writes.
+   */
+  await ready(page, { church: 'russian', language: 'en', reckoning: null });
+  await desk(page);
+
+  const bare = feastWithoutFolders('russian', { record: false });
+  await page.goto(bare.route, { waitUntil: 'networkidle' });
+
+  const note = page.locator('.empty-day');
+  await expect(note).toContainText(
+    `Today is ${STRINGS.calendar.feasts.names[bare.key]} in the Russian calendar`,
+  );
+  await expect(note).not.toContainText('Nothing in the Russian calendar today');
+  // What is missing is the folders, and the note says so in those words.
+  await expect(note).toContainText('No saint of the day is a folder here yet');
+  // The pointer half of the old sentence survives the split intact.
+  await expect(note).toContainText('other churches\u2019 calendars');
+  // No feast hero on this day: there is no record to make one from.
+  await expect(page.locator('.hero-feast')).toHaveCount(0);
+
+  /*
+   * Past the end of the day records the readings clause comes off, because
+   * there are none below to be the feast's own \u2014 which is the same defect one
+   * horizon further on. The same feast, one year on, is past `RECORDS_REACH`.
+   */
+  await page.goto(`/calendar/${bare.iso.replace('2026', '2027')}`, { waitUntil: 'networkidle' });
+  await expect(note).toContainText(
+    `Today is ${STRINGS.calendar.feasts.names[bare.key]} in the Russian calendar`,
+  );
+  await expect(note).not.toContainText('readings and hymns below');
 });
 
 

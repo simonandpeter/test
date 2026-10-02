@@ -863,13 +863,18 @@ test('a name the hymnal does not hold opens that saint’s own page', async ({ p
 
 /**
  * **No picture, no box** — finding 16's "solid dark or grey 174x116 box", which
- * is `--mount` painted under every saint in these columns who has no icon, and
- * most of them have none. The fix is not written here: the tile is
- * `calendar.css`'s one drawing and stage G took the blank mat out of it, so
- * what this asserts is that Prayer reaches that rule — the box is emitted, in
- * the shelf's own markup, and the shared sheet is what hides it.
+ * was `--mount` painted under every saint in these columns who has no icon,
+ * and most of them have none.
+ *
+ * **These columns draw All Saints' card, not Daily's tile** (measured
+ * 2026-10-03): `views/index/grid.js` emits `.index-media` only where the saint
+ * has an image, so there is no blank mat to hide and nothing in
+ * `calendar.css`'s drawing is reached. `.reg-thumb` and the 3:2 plate were
+ * Daily's tile and were never on this page; the plate here is as wide as the
+ * card and as tall as the saint's own `cardCrop` makes it, which is why the
+ * shape is read off the box rather than written here as a number.
  */
-test('a tile with no icon has no box, and one with an icon has a 3:2 plate', async ({ page }) => {
+test('a tile with no icon has no box, and one with an icon has a plate', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
@@ -884,11 +889,23 @@ test('a tile with no icon has no box, and one with an icon has a 3:2 plate', asy
     if (i > 0) await stepTo(page, 1);
     both = await page.evaluate(() => {
       const rows = [...document.querySelectorAll('.hy-body .index-card:not(.is-row)')];
+      /* `present: false` rather than `null`, because the absence of the
+         element is the finding on this page and `{ ...null }` is `{}`, which
+         reports every assertion below as `undefined`. */
       const box = (row) => {
-        const thumb = row.querySelector('.reg-thumb');
-        if (!thumb) return null;
-        const r = thumb.getBoundingClientRect();
-        return { w: r.width, h: r.height, painted: getComputedStyle(thumb).display !== 'none' };
+        const plate = row.querySelector('.index-media');
+        if (!plate) return { present: false, w: 0, h: 0, painted: false, declared: null };
+        const r = plate.getBoundingClientRect();
+        return {
+          present: true,
+          w: r.width,
+          h: r.height,
+          painted: getComputedStyle(plate).display !== 'none',
+          /* What the box says it is. The reading above is what it drew, and
+             the two are asserted against each other (trap 14). */
+          declared: plate.style.aspectRatio || null,
+          inner: row.clientWidth - 2 * parseFloat(getComputedStyle(row).paddingLeft),
+        };
       };
       const pic = rows.find((r) => r.querySelector('img'));
       const blank = rows.find((r) => !r.querySelector('img'));
@@ -901,12 +918,18 @@ test('a tile with no icon has no box, and one with an icon has a 3:2 plate', asy
   }
   expect(both, 'a day in the first ten holds a saint with an icon and one without').not.toBeNull();
 
-  expect(both.pic.painted, 'the pictured tile has its plate').toBe(true);
-  expect(both.pic.w).toBeGreaterThan(100);
-  expect(both.pic.h / both.pic.w, 'and it is 3:2').toBeCloseTo(2 / 3, 2);
+  expect(both.pic.present, 'the pictured tile has its plate').toBe(true);
+  expect(both.pic.painted, 'and the plate is drawn').toBe(true);
+  // The plate spans the card's content box, which is the whole of its measure.
+  expect(Math.abs(both.pic.w - both.pic.inner), 'the plate is as wide as the card').toBeLessThan(1);
+  /* The shape is the saint's own crop rather than a constant, so the claim is
+     that the drawn box is the box it declared — a reserved height that the
+     picture then fills, which is what stops the column jumping as icons land. */
+  expect(both.pic.declared, 'the plate declares a shape').not.toBeNull();
+  expect(both.pic.w / both.pic.h, 'and it drew the shape it declared')
+    .toBeCloseTo(parseFloat(both.pic.declared), 1);
 
-  expect(both.blank.painted, 'the unpictured tile has no box at all').toBe(false);
-  expect(both.blank.w, 'so it occupies nothing').toBe(0);
+  expect(both.blank.present, 'the unpictured tile has no box at all').toBe(false);
   expect(both.blank.tile, 'and the tile is shorter by the plate').toBeLessThan(both.pic.tile);
 });
 
@@ -1000,7 +1023,7 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
         sub: of('.index-dates'),
       };
     });
-    expect(read.opacity, `${theme}: the mockup's fade, at a legible depth`).toBeCloseTo(0.64, 2);
+    expect(read.opacity, `${theme}: the mockup's fade, at a legible depth`).toBeCloseTo(0.65, 2);
 
     const rgb = (s) => s.match(/[\d.]+/g).slice(0, 3).map(Number);
     const lum = (c) => {

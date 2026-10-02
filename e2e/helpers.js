@@ -5,6 +5,7 @@ import { monthsBySlugFor } from '../src/views/index/search.js';
 import { saintName } from '../src/lib/honorific.js';
 import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
 import { greatFeast } from '../src/lib/liturgy.js';
+import { fixedFeastOn } from '../src/lib/fixed-feasts.js';
 import { RECORDS_REACH } from '../src/data/liturgical-days.js';
 import { chooseLanguage, ensureAllPacks } from '../src/lib/i18n.js';
 
@@ -389,21 +390,46 @@ export const dayOneChurchKeeps = (keeper, empty) => {
 
 /**
  * A fixed great feast in `church`'s own calendar whose day the corpus has no
- * folder for — the shape `emptyDayNote` writes its feast sentence on, which is
- * a note about the folders and not about the day.
+ * folder for.
  *
  * **Written as 15 August 2026 until 2026-10-01**, when `el-08-15` gave the
  * Greek Dormition its first folder and the note went away. The feast key comes
  * back with the route so the test can name the feast from `STRINGS` rather
  * than spell it twice.
  *
+ * **`record` splits the two days this shape now makes** (2026-10-03). Eight of
+ * the Great Feasts have a record of their own in `src/data/feasts-fixed.js`,
+ * and on those days the feast *is* the day's subject: the panel paints a feast
+ * hero and writes no note at all. The rest — the Meeting and the Exaltation
+ * are the two of 2026 with no folders — still fall to `emptyDayNote`, whose
+ * feast sentence is a note about the folders and not about the day. A caller
+ * that does not say which it wants gets either, which is what every caller
+ * before that commit meant.
+ *
  * @param church the church whose calendar is read
- * @returns `{ route, iso, key }`, `key` being `greatFeast`'s own
+ * @param record `true` for a day one of the eight covers, `false` for one it
+ *   does not, omitted for either
+ * @returns `{ route, iso, key, feast }`, `key` being `greatFeast`'s own and
+ *   `feast` the fixed record where there is one
  */
-export const feastWithoutFolders = (church) => {
-  const iso = CIVIL_2026.find((d) => greatFeast(d, church) && kept(church, d).length === 0);
-  if (!iso) throw new Error(`every great feast of 2026 in the ${church} calendar now has a folder`);
-  return { route: `/calendar/${iso}`, iso, key: greatFeast(iso, church) };
+export const feastWithoutFolders = (church, { record } = {}) => {
+  const iso = CIVIL_2026.find(
+    (d) => greatFeast(d, church)
+      && kept(church, d).length === 0
+      && (record === undefined || !!fixedFeastOn(d, church) === record),
+  );
+  if (!iso) {
+    throw new Error(
+      `no great feast of 2026 in the ${church} calendar is without folders`
+        + (record === undefined ? '' : ` and ${record ? 'with' : 'without'} a record of its own`),
+    );
+  }
+  return {
+    route: `/calendar/${iso}`,
+    iso,
+    key: greatFeast(iso, church),
+    feast: fixedFeastOn(iso, church),
+  };
 };
 
 /**
