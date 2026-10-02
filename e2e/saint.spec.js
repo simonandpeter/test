@@ -453,17 +453,22 @@ test('a saint is named in the reader own language where the corpus has the name'
   await ctx.close();
 });
 
-test('a general troparion reads in Orloff’s English, and the original stays for everyone else', async ({ browser }) => {
+test('a common troparion is one English reading, cited to every calendar it came from', async ({ browser }) => {
   /*
-   * Hapgood's Service Book holds no menaion, so it could only reach
-   * the Great Feasts. Orloff's *General Menaion* of 1899 is the other seam:
-   * the common services, one troparion for any martyr, any hierarch, any
-   * prophet — which is what this corpus records for a good many of its
-   * lesser-known saints. Mamas of Caesarea sings the martyrs' common
-   * troparion in Greek, so an English reader meets Orloff there.
+   * The common services — one troparion for any martyr, any hierarch, any
+   * prophet — are what this corpus records for a good many of its
+   * lesser-known saints, and Mamas of Caesarea sings the martyrs' in four
+   * calendars at once.
    *
-   * The second half of the test is the point. This is a *rendering* of the
-   * Greek, offered only to a reader reading English; a Greek reader must
+   * **Orloff's *General Menaion* of 1899 was the English here until the
+   * corpus stopped carrying him** (2026-10-02): his fifty are rendered from
+   * the hymn beside them now, and sixteen were realigned so that a hymn sung
+   * in three calendars is one English text again. So the reading is one row
+   * naming three churches, and the footer owes a citation per tradition
+   * rather than a book.
+   *
+   * The second half of the test is the point, and is unchanged. This is a
+   * *rendering*, offered only to a reader reading English; a Greek reader must
    * still meet the Greek.
    */
   const en = await browser.newContext();
@@ -472,26 +477,33 @@ test('a general troparion reads in Orloff’s English, and the original stays fo
     localStorage.setItem('gos-settings', JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' })),
   );
   await enPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
-  const rendered = enPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' });
   /*
-   * **One reading, naming both churches** (2026-09-12). Mamas sings the
-   * martyrs' common troparion in the Greek *and* the Romanian: two hymns, in
-   * two churches' books, and the corpus still keeps both — but they are the
-   * same words once rendered, so an English reader is shown one of them with
-   * both churches named on it rather than the same paragraph twice.
+   * **One reading, naming every church that sings it** (2026-09-12).
    * `mergeForReading` collapses at the reading and never in the data, which is
    * why the Greek reader below still meets the Greek.
    *
-   * This asserted 2 until the corpus finished its English; what it was really
-   * claiming — that the rendering is Orloff's, cited, and offered only to the
-   * reader reading English — is unchanged and is asserted below.
+   * Pinned by the Romanian in its heading rather than by the English alone:
+   * the Serbian calendar's rendering of the same troparion differs by one
+   * word and is therefore a row of its own, so the text is two hymns and the
+   * merge is the one that names three churches.
    */
+  const rendered = enPage
+    .locator('[data-hymns-box] .hymn')
+    .filter({ hasText: 'Thy martyr Mamas, O Lord' })
+    .filter({ has: enPage.locator('.hymn-kind', { hasText: 'Romanian' }) });
   await expect(rendered).toHaveCount(1);
-  await expect(rendered.first().locator('.hymn-kind')).toContainText('Greek');
-  await expect(rendered.first().locator('.hymn-kind')).toContainText('Romanian');
-  await expect(rendered.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
-  await expect(rendered.first().locator('.hymn-source')).toContainText('Orloff');
-  await expect(rendered.first().locator('.hymn-source')).toContainText('1899');
+  for (const church of ['Greek', 'Romanian', 'Russian']) {
+    await expect(rendered.locator('.hymn-kind'), church).toContainText(church);
+  }
+  await expect(rendered.locator('.hymn-text')).toHaveAttribute('lang', 'en');
+  /* Made here, and from what: one citation per tradition, which is the whole
+     of what the merge owes the reader (`ui/hymns.js`). */
+  await expect(rendered).toHaveAttribute('data-rendered', 'site');
+  await expect(rendered.locator('.hymn-source')).toContainText('Translated for this site from');
+  for (const calendar of ['days.pravoslavie.ru', 'saint.gr', 'Doxologia']) {
+    await expect(rendered.locator('.hymn-source'), calendar).toContainText(calendar);
+  }
+  await expect(rendered.locator('.hymn-source')).not.toContainText('Orloff');
   await en.close();
 
   const el = await browser.newContext();
@@ -1609,7 +1621,15 @@ test('a rendering made here says so, where a citation names its book', async ({ 
   await expect(ruPage.locator('[data-hymns-box] .hymn[data-rendered="site"]')).toHaveCount(0);
   await ru.close();
 
-  // The other kind, unchanged: a published rendering names its book.
+  /*
+   * The other kind: a published rendering names its book. **Mamas stood here
+   * until the Orloff removal** (2026-10-02) left Hapgood's Service Book of
+   * 1906 the one English in the corpus taken out of a book — Anna the
+   * Righteous carries it, on the Nativity of the Theotokos, and it is the
+   * only row on her page without `data-rendered`. The distinction this test
+   * exists for is carried by the words: `Text from` against `Translated for
+   * this site from`.
+   */
   const cited = await browser.newContext();
   const citedPage = await cited.newPage();
   await citedPage.addInitScript(() =>
@@ -1618,10 +1638,16 @@ test('a rendering made here says so, where a citation names its book', async ({ 
       JSON.stringify({ ...JSON.parse(localStorage.getItem('gos-settings') ?? '{}'), church: 'greek', language: 'en' }),
     ),
   );
-  await citedPage.goto('/saints/mamas-of-caesarea', { waitUntil: 'networkidle' });
-  const orloff = citedPage.locator('[data-hymns-box] .hymn', { hasText: 'Thy martyr, O Lord' }).first();
-  await expect(orloff).not.toHaveAttribute('data-rendered', 'site');
-  await expect(orloff.locator('.hymn-source')).toContainText('Orloff');
+  await citedPage.goto('/saints/anna-the-righteous', { waitUntil: 'networkidle' });
+  const book = citedPage
+    .locator('[data-hymns-box] .hymn')
+    .filter({ hasText: 'Thy holy Nativity, O virgin Birth-giver of God' });
+  await expect(book).toHaveCount(1);
+  await expect(book).not.toHaveAttribute('data-rendered', 'site');
+  await expect(book.locator('.hymn-source')).toContainText('Text from');
+  await expect(book.locator('.hymn-source')).toContainText('Hapgood');
+  await expect(book.locator('.hymn-source')).toContainText('1906');
+  await expect(book.locator('.hymn-source')).not.toContainText('Translated for this site');
   await cited.close();
 });
 
