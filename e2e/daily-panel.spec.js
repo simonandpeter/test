@@ -2649,6 +2649,66 @@ test('a Great Feast the corpus cannot hold is the day\u2019s whole subject', asy
 });
 
 
+test('a Great Feast is the day’s main card on a phone too, at a saint card’s weight', async ({ page }) => {
+  /*
+   * The other width of the day above (TODO item 14, 2026-10-03). The desk
+   * takes the hero apart at one seam — icon in the saint column, words in the
+   * reading column — and a phone does not, so the two paints are two branches
+   * of `renderPanel` and only one of them was read by a test.
+   *
+   * What is asserted is the instruction: the feast reads as the day's main
+   * saint card, same shape and same weight, with the icon and a few lines of
+   * explanatory text; and it opens nothing. The shape is measured against a
+   * saint's hero at the same viewport rather than against a number, because
+   * the number is `calendar.css`'s to change and the claim is that the two
+   * cards are the same card.
+   */
+  await ready(page, { church: 'russian', language: 'en', reckoning: null });
+  await phone(page);
+
+  await page.goto('/calendar/2026-08-30', { waitUntil: 'networkidle' });
+  const saintBox = await page.locator('.hero .hero-media').first().boundingBox();
+
+  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await expect(page.locator('.hero-feast')).toHaveCount(1);
+  await expect(page.locator('.feast-name')).toHaveText('The Dormition of the Theotokos');
+  // Where a saint's hero prints the office and the years, a feast prints what
+  // it is. That line is the difference a reader *sees* between the two cards.
+  await expect(page.locator('.hero-feast .hero-dates')).toHaveText(STRINGS.calendar.fixedFeast.label);
+  await expect(page.locator('.empty-day')).toHaveCount(0);
+
+  // A few lines of explanatory text, and the whole of what the site says: a
+  // feast has no life to continue into, so the lede is not clamped.
+  const lede = page.locator('.feast-lede');
+  await expect(lede).toBeVisible();
+  expect((await lede.innerText()).split(/\s+/).length).toBeGreaterThan(20);
+
+  // Same shape, same weight: the picture is the same box a saint's is.
+  const feastBox = await page.locator('.hero-feast .hero-media').boundingBox();
+  expect(feastBox.width).toBeCloseTo(saintBox.width, 0);
+  expect(feastBox.height).toBeCloseTo(saintBox.height, 0);
+
+  /*
+   * And it opens nothing — on the width where a saint's card has exactly one
+   * way in. The phone's hero carries no *continue reading* (it was removed on
+   * 2026-09-02), so the saint's name and picture are both anchors and are the
+   * only door; a feast has neither, and the credit under the picture is the
+   * one anchor it carries, which leaves the site.
+   */
+  await expect(page.locator('.hero-more')).toHaveCount(0);
+  const strays = await page.evaluate(() =>
+    [...document.querySelectorAll('.hero-feast a, .hero-feast [role="button"], .hero-feast button')]
+      .filter((el) => !el.closest('[data-feast-credit]'))
+      .map((el) => el.outerHTML));
+  expect(strays, 'the feast card offers something to press').toEqual([]);
+  // The picture is not an anchor and does not pretend to be one.
+  await expect(page.locator('.hero-feast a.hero-media')).toHaveCount(0);
+  expect(
+    await page.locator('.hero-feast .hero-media').evaluate((el) => getComputedStyle(el).cursor),
+  ).toBe('default');
+});
+
+
 test('a Great Feast with no record of its own still says what the day is', async ({ page }) => {
   /*
    * The other half of the day above, and the half the note still writes

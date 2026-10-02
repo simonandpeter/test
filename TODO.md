@@ -9,59 +9,26 @@ we are finalising. Commit locally.
 
 ## 1. One church, more than one day
 
-**The ask (2 October 2026):** "whats so hard about having the same saint profile
-commemorated on 2 days".
+**Done, 3 October 2026.** `lib/church.js` holds the three readings every caller
+uses now and the saint page's veneration table puts a church's second day on
+that church's one row. Matthew's Romanian 16 noiembrie is recorded and the day
+is no longer blank. `git log --grep="more than one day"` is the work.
 
-The corpus holds *one feast to a church*, without exception — no folder among
-the 5,232 carries two attestations for the same church. That rule is why one
-saint kept twice in one calendar becomes two folders, each with its own life,
-instead of one record saying "the Greek calendar keeps her on both days".
-
-Two known cases, both already flagged in their own folders:
-
-- `charitina-the-martyr-4-september` / `charitina-the-martyr-5-october` — the
-  Greek synaxarion gives both the same verse and its 4 September entry asks
-  whether the two are one. The September entry is a name and a guess; October
-  is a full martyrdom in two calendars with an apolytikion and two kontakia.
-- `matthew-the-apostle` — doxologia.ro keeps him on 30 iunie with the Synaxis of
-  the Twelve *and* alone on 16 noiembrie with a life and a proper troparion. His
-  note says the corpus can hold only one and leaves the question open. 16
-  November is one of the blank Romanian days because of it.
-
-**What was measured on 2 October, before anyone writes code:**
-
-- `lib/feasts.js` `buildFeastIndex` already loops attestations and pushes one
-  entry per feast. A second feast for the same church needs **no change there**.
-- `schema/saint.schema.json` has no uniqueness constraint on `church`. The
-  schema permits it today.
-- The places that assume one attestation per church are few and named:
-  - `views/saint.js:1027` — `new Map(attestations.map(a => [a.church, a]))`.
-    **Last one wins**, so the veneration table would silently print one of the
-    two days. This is the real break.
-  - `views/daily/panel.js:1176` — `.find(a => a.church === churchId)` for the
-    church's titles. First wins; harmless for titles, wrong in principle.
-  - `lib/index-filters.js:98` — maps attestations to a church list; would
-    produce duplicates that want deduping.
-  - `views/index/search.js:67` — same shape, same question.
-
-So the cost is a handful of readers, not a migration. What it is *not* is free:
-each of the two cases above is a judgement about whether two commemorations are
-one person, and that judgement belongs to the sources, not to the code. The
-code change only makes it possible to record what a calendar actually prints.
-
-**Do:** make the readers above handle more than one attestation per church, with
-tests; then record Matthew's 16 November feast and give 16 November its saint.
-Leave Charitina as two folders — the calendars keep two entries and so should we
-— but link them (see item 2).
+**What is left is the corpus pass, and it is `STRUCTURE.md` §6 item 13 now**:
+Andrew the First-Called (Romanian 30 November) and Philip (14 November) are
+still recorded only on the 30 June synaxis, and a reader who opens the Romanian
+30 November will not find Andrew. The note on each first row already names the
+day; the day's own page is the citation and is read before it is written.
 
 ## 2. Lives that cross-reference in prose with no link
 
-`charitina-the-martyr-4-september`'s life says "or she may be the Charitina of 5
-October" and nothing in either record points at the other: neither folder has a
-`related` entry. The reader has to search the name and hope.
-
-**Do:** link the two both ways, then sweep the corpus for other same-name pairs
-whose lives already name each other in prose without a `related` link.
+**The Charitina half is gone rather than done**: the author ruled the two are
+one woman and item 13 merged them, so there is no pair left to link — one record
+carries both Greek days and the September entry's evidence. What the item asked
+for in general is the sweep in item 13's second half: same-name pairs whose
+lives already name each other in prose. A pair that the sources say are *two*
+people wants the link; a pair they say are one wants the merge, and the author
+rules which.
 
 ## 3. The 44 lonely date-tags
 
@@ -82,18 +49,7 @@ where a namesake is real but unrecorded.
 
 ## 4. The ten icons Commons refused
 
-Ten of the twenty rate-limited icons landed on 2 October; ten did not, because
-two agents were pulling from Commons at once and the 429s came back through the
-whole backoff ladder.
-
-Still missing: `mary-of-egypt`, `nicholas-of-lesvos`, `nikon-of-sicily`,
-`simeon-of-persia`, `sophronius-of-jerusalem`, `martin-pope-of-rome`,
-`paul-of-ptolemais`, `theodore-of-sykeon`, `theophanes-of-sigriane`,
-`zacharias-the-faster`.
-
-**Do:** `PYTHONIOENCODING=utf-8 python scratchpad/geticon.py
-.tmp/icon-drafts/ro-C.json --write` then `ro-D.json`, **one at a time, nothing
-else touching Commons**, then `npm run thumbs && npm run build:manifest`.
+**Done, 3 October 2026** — `git log --grep=Icons`.
 
 ## 5. The image programme, then the Russians
 
@@ -134,15 +90,25 @@ three cases and the `is-dim` mark: they are the ruling from
 ## 8. Related: the links between saints
 
 **The ask:** the Related section under a profile — which the Prayer page also
-draws — has to exist for the saints added in the recent waves, not only the
-early ones.
+draws — has to exist for the saints who have none.
 
-**Measure first, then work.** How many folders carry a `related` array at all,
-and how that splits between the early corpus and the Greek and Romanian waves.
-Report the number before writing any.
+**The item said "the recent waves, not only the early ones", and the
+measurement reverses it** (2 October, `node scripts/link-coverage.mjs` plus a
+pass over the folders' add commits — do not re-measure). 2,767 of 5,232 folders
+carry a `related` array, 52.9%, and by wave:
+
+| wave | with `related` | share |
+| --- | --- | --- |
+| early corpus | 378 of 856 | 44.2% |
+| Romanian | 1,245 of 2,151 | 57.9% |
+| Greek | 1,138 of 2,219 | 51.3% |
+
+So **the recent waves are the better-linked ones and the work list is the early
+corpus.** 8,464 edges, and 2,235 saints (42.7%) have no link in either
+direction.
 
 A link is a claim: companions martyred together, a teacher and a disciple, a
-translator of relics, two commemorations that may be one person (item 2). It
+translator of relics, two commemorations that may be one person (item 13). It
 comes out of the saint's own life or the calendar's own line, never out of a
 shared name or a shared day. A wrong link is worse than a missing one — the
 corpus's known failure mode is the wrong-saint match (`b6dc41ab`).
@@ -205,64 +171,75 @@ Also waiting, and small: five dead `STRINGS.prayer` keys (`searchLabel`,
 and the four packs, left because another agent was editing all five files.
 `locale-coverage.mjs` must read 0 fallbacks after they go.
 
-## 13. Charitina is one woman: merge her, then find the others
+## 13. Charitina is one woman: merged. The others are below, for the author
 
-**The author's ruling (2 October 2026):** the two Charitinas are the same person.
-Merge them, and do the same wherever else the corpus has split one saint in two.
+**The merge is done, 3 October 2026** (`git log --grep="one woman"`). One
+record, `charitina-the-martyr-5-october`, with the Greek 4 September and the
+Greek 5 October each carrying its own citation and the Romanian 5 October as it
+stood; the display name has dropped its parenthesised day; the September
+entry's evidence — the company her memory is kept in, the shared verse, the
+Trajan supposition that stands two centuries off the October entry's 304 — is in
+the life, because it is *why* they are one.
 
-This **depends on item 1**, and that is why it is not trivial: the Greek calendar
-keeps her on **both** 4 September and 5 October, so a merged record needs two
-Greek attestations, which no folder has today. Do item 1 first.
+The old slug does not 404. An unknown slug renders a refusal with a link to All
+Saints, so `aliases` is new in the schema, written only by a merge: the manifest
+carries it and the saint page replaces the URL with the live slug's.
 
-The merge itself:
+### The candidates, for the author to rule
 
-- One folder. `charitina-the-martyr-5-october` is the fuller record — a life in
-  two calendars, an apolytikion, a troparion and two kontakia — so it survives;
-  the September folder is folded into it, not dropped. The September life
-  carries the synaxarion's own evidence (the shared verse, the memory kept with
-  the daughters of the apostle Philip, the Trajan supposition) and that evidence
-  must survive the merge, because it is *why* they are one.
-- Attestations: greek 4 September **and** greek 5 October, each with its own
-  citation; romanian 5 October as it stands.
-- The display name drops its parenthesised day once there is no second
-  Charitina to tell it from.
-- The old slug must not 404. Check how the router resolves an unknown slug
-  before deciding between a redirect and a kept alias.
+**Nothing below has been merged and nothing below should be merged by anyone
+but the author.** Every row is the sources' own doubt, quoted. A pair that only
+shares a name is not here: 115 name-pairs in this corpus carry a disambiguating
+day precisely because they are different people, and a wrong merge is invisible
+to every test (`b6dc41ab`).
 
-**Then scan the corpus for the same shape and add what you find here.** Signals,
-strongest first:
+The funnel, so the list can be judged: 226 folders of 5,231 carry any of the
+cross-reference prose shapes, 40 carry a tight *identity question*, and of those
+40 only these ten have **both halves standing as folders here** — the rest point
+at a day or a person the corpus does not hold, so no merge is even possible. A
+mechanical pass for signal 2, the shared synaxarion verse, found 34 shared Greek
+couplets and **every one of them is companions inside one entry on one day**; it
+produced no candidate at all.
 
-1. A life that already names the other in prose — "or she may be the N of
-   <date>", "the same verse as", "saint.gr wonders whether". Grep the lives;
-   this is how Charitina surfaced.
-2. A shared synaxarion verse where the entry records one.
-3. Two folders of one base name, both thin, both martyrs, neither with a place.
+| # | the two folders | the doubt, in the corpus's own words |
+| --- | --- | --- |
+| 1 | `nectarios-of-aegina` + `nektarios-of-aegina` | The corpus already says it: "the same saint as nektarios-of-aegina (the Greek and Romanian entry for the translation of his relics)". Against: a translation of relics is a commemoration some would keep separate. |
+| 2 | `ia-of-persia` + `ias-of-persia` | Both lives say it, each about the other — "she may be the same as the Ias kept on 11 September and 4 August"; "the Greek synaxarion thinks the Ia of 10 September may be the same woman". One story in both: captive with nine thousand, before the magi under Shapur. The source notes the verses differ. |
+| 3 | `titus-the-soldier` + `titus-27-january` | One calendar, two days, each page pointing at the other: "for Titus the soldier, see 27 February"; "his memory is kept again on 27 January". The January folder is a cross-reference stub with no life. |
+| 4 | `mnason-of-cyprus` + `mnason-the-disciple` | "it is possible, it says, that he is the same saint who is kept on 19 October as Mnason the ancient disciple, although that one fell asleep in peace" — and this one is martyred by the sword. |
+| 5 | `zosimas-the-hermit` + `zosimas-of-cilicia` | "whether the two are one man is left open" — and both lives tell one story: the monk of Cilicia among the beasts, the governor Dom(e)tian, the lion that speaks. Note that `HANDOFF.md` records the opposite call being made deliberately on the days: two days, two lives, kept as two. |
+| 6 | `abibus-of-hermoupolis` + `sabinus-of-hermopolis` | «Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο τον Αιγύπτιο, βλ. 16 Μαρτίου» — different names, identical death (a stone bound to the body, thrown in the river). Sabinus's own page says nothing back. |
+| 7 | `coronatus-of-caesarea` + `cornutus-of-iconium` | "Coronatus may be the same man as Cornutus, whose memory is kept on 12 September". **Two questions, not one**: the corpus holds two 12 September Cornuti, so even a yes leaves which one open. |
+| 8 | `john-the-soldier-29-july` + `john-the-soldier-12-june` | The folder itself raises it and refuses to answer: "says nothing about whether the two are one man". The June notice is «Δεν έχουμε λεπτομέρειες» — no life at all. |
+| 9 | `goudelia` + `gobdelaas-son-of-sapor` | Here for completeness, and the source **leans against** it: copyists may have made Gobdelaas into Goudelia, "but other sources say that there really was a martyr Goudelia", which the page calls "the more likely and the more accepted". A man and a woman on one day. |
+| 10 | `sosthenes-the-apostle` + `crispus` | Chrysostom's identification of two *different* names, reported and not settled. Weakest row: this is not the one-calendar-doubling shape the others are. |
 
-**Propose, never merge on a pattern.** Each candidate needs its sources read.
-Two saints sharing a name and a rank is the ordinary case here — 115 name-pairs
-carry a disambiguating day precisely because they are different people. A merge
-that collapses two real martyrs into one is invisible to every test, which is
-the corpus's worst failure mode (`b6dc41ab`). Bring the list back with the
-evidence per row and let the author rule, as he ruled on Charitina.
+**Nine more were dropped because the other half is not a folder here** — Aeros,
+Michael Mavroeidis, Moses the Confessor, Mark the Ascetic, the three 6 February
+martyrs (whose note carries the purest shared-verse evidence in the corpus and
+points at a 25 October company nobody has written), the Thirty-eight Martyrs of
+Thrace, Herodion, Maurice of Apamea. **Those are a sourcing list, not a merge
+list.** Five more were dropped as explicit negatives — the page or a reader
+already ruled them two people: Eleazar, Antonina, Acacius of Melitene, Peter the
+Sign-bearer, Hermes of Dalmatia.
 
 ## 14. The feasts, drawn as a day's main card
 
-The eight fixed Great Feasts now lead their days (`src/lib/fixed-feasts.js`,
-`src/data/feasts-fixed.js`, commit `e4e8de6a`). **Finish the presentation** on
-the Daily page, at both widths:
+**Done, 3 October 2026.** The drawing landed with `e4e8de6a`; what this sitting
+added is the half nothing had read. The feast is the day's main card at both
+widths — the phone paints one hero, the desk takes it apart at the hero's own
+seam — and the picture is measured against a saint's at the same viewport, so
+"same shape, same weight" is a test rather than a claim. It offers nothing to
+press on either width: no anchor, no press state, no *continue reading*, and
+the picture is a `div` with `cursor: default`. What a reader sees in place of a
+way in is the line under the name, where a saint's prints the office and the
+years.
 
-- It reads as the day's main saint card — same shape, same weight — with the
-  icon and a few lines of explanatory text.
-- **It opens nothing.** No link, no route, no read-more chevron, no press state.
-  A card that looks pressable and is not is worse than one that plainly is not,
-  so the difference has to be visible, not merely functional.
-- Desktop and mobile both. STRUCTURE.md §4 covers Daily; correct it in the same
-  commit if this changes what it says.
+**The fourth silence stays.** `emptyDayNote`'s feast sentence looked unreachable
+from the eight feasts that have records; the Meeting and the Exaltation have
+none, and a day whose church keeps one of those and whose corpus holds no folder
+lands there. `e2e/daily-panel.spec.js` holds both days, each found rather than
+typed. `STRUCTURE.md` §4 carries both rules now.
 
-Known and waiting: `e2e/daily-panel.spec.js`'s *"a Great Feast is what the day
-is, and the page stops saying there is nothing"* **fails by design** — it asserts
-the empty-day note on 2026-08-28 and 2027-04-07 Russian, and both now paint a
-feast hero. Other specs stand on 2026-08-15, 08-19, 09-08 and 09-21. Repair the
-premises; do not weaken the assertions. The fourth silence in `emptyDayNote` is
-now unreachable for those eight days in four churches — decide whether the
-branch stays, with a test either way.
+The test the item listed as failing by design was repaired in `a647a875`; the
+full `daily-panel.spec.js` is green.

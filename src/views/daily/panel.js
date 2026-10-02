@@ -466,6 +466,16 @@ function emptyDayNote(iso) {
    * reads it, so the Russian keeps the Dormition on the civil 28 August and
    * the other three on the 15th - and the note follows the chip rather than
    * guessing at the civil date.
+   *
+   * **It stays, and it is not dead code** (asked and answered, 2026-10-03).
+   * `e4e8de6a` gave eight of the Great Feasts a record of their own, and on
+   * those days the panel paints a feast hero and never reaches this function
+   * at all - which looks, from the eight, like a branch nothing can run. The
+   * others have no record: the Meeting and the Exaltation are the two of 2026,
+   * and a day whose church keeps one of them and whose corpus holds no folder
+   * for it lands here. `e2e/daily-panel.spec.js`'s 'a Great Feast with no
+   * record of its own still says what the day is' is that day, found rather
+   * than typed, so the branch has a test and the day it serves is real.
    */
   const feast = greatFeast(iso, state.calendar);
   // The day's own calendar, which is recorded further ahead than its saints

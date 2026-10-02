@@ -739,6 +739,21 @@ The two widths are free to diverge except here.
   reaches the manifest, so no count of saints and no row of the All Saints
   register changes. `styles/feast-hero.css` is the difference in the drawing
   and the only sheet outside `calendar.css` this page wears.
+
+  **It is the day's main card at both widths and it offers nothing to press.**
+  The phone paints it as one hero and the desk takes it apart at the hero's own
+  seam - icon in the saint column, name, the lede and what the day sings in the
+  reading column - which is exactly what a saint's hero does, and the picture
+  is measured the same box. What a reader *sees* in place of a way in is the
+  line under the name: a saint's prints the office and the years, a feast's
+  prints what it is. There is no anchor, no press state and no *continue
+  reading* on either width, and the credit under the picture is the one link a
+  feast article carries, which leaves the site.
+
+  **A Great Feast with no record of its own is a different day.** Only eight
+  have records; the Meeting and the Exaltation are the two of 2026 that do not,
+  and on those `emptyDayNote`'s feast sentence still speaks - a note about the
+  folders, not about the day. That branch stays and is tested.
 - **The tokens.** No raw colour, duration, easing, type size or spacing value in
   `calendar.css`.
 - **The derived card box**, per §3's materials rule, with the hero as its one
@@ -1224,23 +1239,25 @@ is discussed.
     `package.json`'s own script names. Either generate it or fold it into
     `CLAUDE.md` beside the traps it serves.
 
-13. **An attestation row holds one feast, and a saint the calendar keeps twice is
-    therefore invisible on one of his days.** The schema allows one `feast` per
-    church, so where a church keeps a second day the corpus records it as a
-    *note* on the first row and nothing renders on the second. Three apostles
-    are already in that position — Andrew the First-Called, Philip and Matthew
-    are each recorded on the 30 June synaxis while their own principal Romanian
-    days, 30 November, 14 November and 16 November, render them nowhere. A
-    reader who opens the Romanian 30 November will not find Andrew.
+13. **A church may keep a saint on two days, and the corpus has not finished
+    saying so.** The code half is done (2026-10-03): the schema never forbade a
+    second attestation for one church and `buildFeastIndex` always looped them,
+    so what was wrong was four readers, and all four read
+    `lib/church.js`'s `attestationsIn` / `attestationsByChurch` /
+    `churchStatus` now. The saint page's veneration table keeps one row per
+    church and puts the second day on it, with its own note and its own
+    citation.
 
-    Readers have raised it independently and each correctly refused to move the
-    row, so the rule is working and the schema is the thing that is wrong. The
-    fix is a schema change plus the render that reads it — a second feast per
-    church row, or a list of them — and not a corpus pass: every such note
-    already names the day and the saint, so the data to migrate is written and
-    nothing has to be re-read. `../ro-run/FINDINGS.md` holds the question and
-    the way to count how many saints are waiting on it; the count is a scan of
-    the folders and the pending upgrade files, not a number to copy.
+    What is left is the corpus pass. Where a church kept a second day the
+    sourcer recorded it as a *note* on the first row, and nothing renders on
+    the second. Matthew's Romanian 16 noiembrie is written; **Andrew the
+    First-Called (30 November) and Philip (14 November) are not**, and a reader
+    who opens the Romanian 30 November still will not find Andrew. Every such
+    note already names the day and the saint, so nothing has to be re-read —
+    but the day's own page is the citation and is read before it is written.
+    `../ro-run/FINDINGS.md` holds the question and the way to count how many
+    saints are waiting on it; the count is a scan of the folders and the
+    pending upgrade files, not a number to copy.
 
 ### Recorded, deliberately not done
 
