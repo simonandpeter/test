@@ -176,12 +176,31 @@ This **replaces** the earlier "nothing is pushed until the author says we are
 finalising" for overnight work: a run of eight hours is the unit, and the end of
 one is a push. Within a run, commit locally as before.
 
-- Push once per run, then read the result. There is no `gh` here — use
-  `scratchpad/ci-runs.py`, `ci-steps.py`, `ci-log.py`, `ci-flaky.py` (the last
-  two 404 or 302 on some jobs).
+- `bash scripts/push.sh` is the one step: it refuses a dirty tree, pushes,
+  confirms the ref landed and prints the conclusion **and** the `flaky` line.
+  Then `scratchpad/ci-flaky.py <sha>` for the test names under that line — a
+  green run with `N flaky` holds a test that failed and passed on retry.
 - A red CI is the run's next job, ahead of whatever was queued. Before calling
   anything a flake, measure its rate: the carousel flake was real at 1-in-6 and
   then masked a 16-of-16 regression.
 - Never push a tree whose unit tests are failing. e2e that could not be *run*
   is a different thing from e2e that failed — say which in the commit or the
   handoff, never blur them.
+
+## 12. Two suites nobody has run
+
+`e2e/index-grid.spec.js` and `e2e/prayer.spec.js` were both rewritten on 2 October
+and **neither has been run in a browser**: port 4173 was held by the preview the
+author was reading, and `reuseExistingServer` is false. `npx vite build` is clean,
+so imports and syntax are sound; nothing about the rendered page is verified.
+
+`index-grid` is the check that All Saints did not move when `wireControls` was
+lifted off its state singleton. `prayer.spec.js` is the one that changed most.
+
+**Do this before any push**: stop the preview, run both, repair what they catch.
+Say which failed and which could not be *run* — never blur the two.
+
+Also waiting, and small: five dead `STRINGS.prayer` keys (`searchLabel`,
+`searchPlaceholder`, `views`, `viewPlate`, `viewRows`) are still in `strings.js`
+and the four packs, left because another agent was editing all five files.
+`locale-coverage.mjs` must read 0 fallbacks after they go.
