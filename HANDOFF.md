@@ -414,10 +414,17 @@ is answered — it stays, the Meeting and the Exaltation reach it.
 
 **Item 8 is running, one batch at a time.** `.tmp/early-isolated.txt` is the
 work list, 383 early-corpus folders, and it is worked in order: **lines 1-230
-are committed, and line 291 is where the next batch starts.** 72 of those 290
-gained a link. The rate falls as the list runs: 17, 16, then 6 of 60, because
-the tail is the modern martyrs whose companions are mostly unglorified.
-Isolated both ways 2,234 to 2,129.
+are committed, and line 351 is where the next batch starts** — 33 folders left.
+88 of those 350 gained a link; the rate by slice is 17, 16, 6, 16, and the 6 is
+the modern-martyr stretch, whose companions are mostly unglorified.
+Isolated both ways 2,234 to 2,119.
+
+**A company's clique does not close itself.** Each reader writes only the ends
+that make its own slug symmetric, so a seven-member company reached from three
+slices had Helias, Lucian and Seleucus holding all six partners while Zoticus
+held three. The Tomis seven were closed by hand after batch 6; the Kazan ten and
+the Gagino eight the same way inside their batches. **A group whose life names
+its members wants its clique closed in one pass, not a slug at a time.**
 
 **The work list is not what its name says**, and batch 3 found it: it lists
 folders whose *own* `saint.json` has no `related`, not folders with no link in

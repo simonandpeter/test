@@ -13,7 +13,9 @@
       "note": "The Greek form saint.gr prints in brackets after the Latin spelling: «Ο Άγιος Erconwald (Ερκονγουάλδος) κοιμήθηκε το έτος 693 μ.Χ.» The day's own line spells the name in Latin letters, «Άγιος Erconwald επίσκοπος Λονδίνου»."
     }
   ],
-  "related": [],
+  "related": [
+    "sebbi-of-essex"
+  ],
   "dates": {
     "death": {
       "earliest": 693,

@@ -260,6 +260,15 @@ same island, same persecution; two irreconcilable passions. No source voices
 the doubt, so nothing was linked and nothing merged. A ruling either joins the
 four or records the two companies as distinct.
 
+**Batch 6 found one the corpus states itself.** `straton-of-bithynia` says the
+Russian calendar “knows him as Strator, or Stratonicus, of Nicomedia in
+Bithynia … and keeps him on 9 and 13 September of the old style” — and
+`straton-the-martyr-9-september` is that other day, citing the same page and the
+same death, torn between two bent trees at Nicomedia by the governor’s order.
+Both halves are folders; the only difference is the year, 315 under Licinius
+against “the 3rd century”. This is the one-calendar-doubling shape of rows 3
+and 8 above.
+
 ## 14. The feasts, drawn as a day's main card
 
 **Done, 3 October 2026.** The drawing landed with `e4e8de6a`; what this sitting

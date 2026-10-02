@@ -55,7 +55,9 @@
       "note": "saint.gr: «τελείωσε αυτή με μαρτυρικό θάνατο κατά τον διωγμό του αυτοκράτορα Μάρκου Αυρηλίου (161-180 μ.Χ.)», and it puts him «κατά τον δεύτερο αιώνα μετά Χριστόν». The page gives no year, so the interval is the reign it prints."
     }
   },
-  "related": [],
+  "related": [
+    "quadratus-the-apostle"
+  ],
   "text": {
     "life": "life.md"
   }
