@@ -128,7 +128,7 @@ three cases (a button that opens the saint in place where the hymnal holds them,
 a link to their own page past 1024 px where it does not, a disabled button below
 that width). The shared row card has to take its door from the caller. Keep the
 three cases and the `is-dim` mark: they are the ruling from
-`docs/mockup-review/BRIEF.md` stage I and the author's instruction of
+`../mockup-review/BRIEF.md` stage I and the author's instruction of
 2026-09-17, after 84 of 116 names in those columns did nothing when pressed.
 
 ## 8. Related: the links between saints
@@ -204,3 +204,65 @@ Also waiting, and small: five dead `STRINGS.prayer` keys (`searchLabel`,
 `searchPlaceholder`, `views`, `viewPlate`, `viewRows`) are still in `strings.js`
 and the four packs, left because another agent was editing all five files.
 `locale-coverage.mjs` must read 0 fallbacks after they go.
+
+## 13. Charitina is one woman: merge her, then find the others
+
+**The author's ruling (2 October 2026):** the two Charitinas are the same person.
+Merge them, and do the same wherever else the corpus has split one saint in two.
+
+This **depends on item 1**, and that is why it is not trivial: the Greek calendar
+keeps her on **both** 4 September and 5 October, so a merged record needs two
+Greek attestations, which no folder has today. Do item 1 first.
+
+The merge itself:
+
+- One folder. `charitina-the-martyr-5-october` is the fuller record — a life in
+  two calendars, an apolytikion, a troparion and two kontakia — so it survives;
+  the September folder is folded into it, not dropped. The September life
+  carries the synaxarion's own evidence (the shared verse, the memory kept with
+  the daughters of the apostle Philip, the Trajan supposition) and that evidence
+  must survive the merge, because it is *why* they are one.
+- Attestations: greek 4 September **and** greek 5 October, each with its own
+  citation; romanian 5 October as it stands.
+- The display name drops its parenthesised day once there is no second
+  Charitina to tell it from.
+- The old slug must not 404. Check how the router resolves an unknown slug
+  before deciding between a redirect and a kept alias.
+
+**Then scan the corpus for the same shape and add what you find here.** Signals,
+strongest first:
+
+1. A life that already names the other in prose — "or she may be the N of
+   <date>", "the same verse as", "saint.gr wonders whether". Grep the lives;
+   this is how Charitina surfaced.
+2. A shared synaxarion verse where the entry records one.
+3. Two folders of one base name, both thin, both martyrs, neither with a place.
+
+**Propose, never merge on a pattern.** Each candidate needs its sources read.
+Two saints sharing a name and a rank is the ordinary case here — 115 name-pairs
+carry a disambiguating day precisely because they are different people. A merge
+that collapses two real martyrs into one is invisible to every test, which is
+the corpus's worst failure mode (`b6dc41ab`). Bring the list back with the
+evidence per row and let the author rule, as he ruled on Charitina.
+
+## 14. The feasts, drawn as a day's main card
+
+The eight fixed Great Feasts now lead their days (`src/lib/fixed-feasts.js`,
+`src/data/feasts-fixed.js`, commit `e4e8de6a`). **Finish the presentation** on
+the Daily page, at both widths:
+
+- It reads as the day's main saint card — same shape, same weight — with the
+  icon and a few lines of explanatory text.
+- **It opens nothing.** No link, no route, no read-more chevron, no press state.
+  A card that looks pressable and is not is worse than one that plainly is not,
+  so the difference has to be visible, not merely functional.
+- Desktop and mobile both. STRUCTURE.md §4 covers Daily; correct it in the same
+  commit if this changes what it says.
+
+Known and waiting: `e2e/daily-panel.spec.js`'s *"a Great Feast is what the day
+is, and the page stops saying there is nothing"* **fails by design** — it asserts
+the empty-day note on 2026-08-28 and 2027-04-07 Russian, and both now paint a
+feast hero. Other specs stand on 2026-08-15, 08-19, 09-08 and 09-21. Repair the
+premises; do not weaken the assertions. The fourth silence in `emptyDayNote` is
+now unreachable for those eight days in four churches — decide whether the
+branch stays, with a test either way.
