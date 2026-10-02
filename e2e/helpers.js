@@ -516,6 +516,12 @@ const DETAIL = '/saints/anthony-the-great';
  * birth date, a dated death, and venerated somewhere. **"No life" is not among
  * them**: every one of the 5,231 folders carries one now, Christopher included,
  * so a fixture asking for a lifeless page would find nothing at all.
+ *
+ * The veneration premise is the **Russian** row rather than any row, because
+ * the page draws one row per church in `CHURCH_IDS` order whether that church
+ * records anything or not, so `.att` first is Russian's. A saint venerated only
+ * in Romania opens its table with "Undocumented", which is a true row and the
+ * wrong one to ask this question of.
  */
 const sparse = CARDS.filter(
   (c) =>
@@ -523,7 +529,7 @@ const sparse = CARDS.filter(
     !c.primary_location &&
     !c.dates?.birth?.display &&
     c.dates?.death?.display &&
-    (c.attestations ?? []).some((a) => a.status === 'venerated'),
+    (c.attestations ?? []).some((a) => a.church === 'russian' && a.status === 'venerated'),
 ).sort((a, b) => a.slug.localeCompare(b.slug))[0];
 if (!sparse) throw new Error('no saint in the corpus is sparse enough to stand for one');
 
