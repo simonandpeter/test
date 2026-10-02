@@ -479,14 +479,16 @@ export function wireControls({ onChange: update }) {
    * the panel is pulled back until its right edge is inside the column. It is
    * measured rather than guessed — the panel's width is its content's.
    */
-  const facetsEl = controlsEl.querySelector('.facets');
   const placePanel = (details) => {
     const summary = details.querySelector(':scope > summary');
     const panel = details.querySelector(':scope > :not(summary)');
-    if (!summary || !panel || !facetsEl) return;
-    panel.style.setProperty('--pop-y', `${facetsEl.clientHeight + FACET_POP_GAP}px`);
+    // Sort and View are chips in `.index-foot`, not in `.facets`; measuring
+    // every panel against `.facets` put those two above their own chip.
+    const row = details.closest('.facets, .index-foot');
+    if (!summary || !panel || !row) return;
+    panel.style.setProperty('--pop-y', `${row.clientHeight + FACET_POP_GAP}px`);
     panel.style.setProperty('--pop-x', `${summary.offsetLeft}px`);
-    const over = panel.getBoundingClientRect().right - facetsEl.getBoundingClientRect().right;
+    const over = panel.getBoundingClientRect().right - row.getBoundingClientRect().right;
     if (over > 0) {
       panel.style.setProperty('--pop-x', `${Math.max(0, summary.offsetLeft - Math.ceil(over))}px`);
     }
@@ -510,14 +512,10 @@ export function wireControls({ onChange: update }) {
       if (d !== except) d.removeAttribute('open');
     }
   };
-  const onFacetClick = (e) => {
-    const summary = e.target.closest?.('.facet > summary');
-    if (summary && !summary.parentElement.hasAttribute('open')) closeFacets(summary.parentElement);
-  };
-  controlsEl.addEventListener('click', onFacetClick);
-  const onAway = (e) => {
-    if (!controlsEl.contains(e.target)) closeFacets(null);
-  };
+  // Anywhere but the open panel itself dismisses it, including the rest of
+  // the controls: the search field and the chip rows are a wide dead zone to
+  // click into, and sparing them read as the panel being stuck.
+  const onAway = (e) => closeFacets(e.target?.closest?.('.facet') ?? null);
   const onEscape = (e) => {
     if (e.key === 'Escape') closeFacets(null);
   };

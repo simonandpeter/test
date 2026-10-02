@@ -200,7 +200,8 @@ select:hover {
    `controls.js` closes the others when one opens, so two panels never occupy
    the same space, and the ground is opaque because the register runs under
    it. */
-.index-controls .facets {
+.index-controls .facets,
+.index-controls .index-foot {
   position: relative;
 }
 
