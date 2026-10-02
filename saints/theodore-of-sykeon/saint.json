@@ -125,6 +125,12 @@
       "note": "saint.gr: «Ο Όσιος Θεόδωρος κοιμήθηκε με ειρήνη το έτος 613 μ.Χ.», and the page heads him «(; - 613)»; no year of birth is printed, though the page dates his second visit to Constantinople to 610."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "george-the-trophy-bearer"
   ]

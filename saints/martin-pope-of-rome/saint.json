@@ -71,6 +71,12 @@
       "note": "Died 16 September 655 at Cherson, saint.gr (13 April)."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "maximus-the-confessor"
   ],

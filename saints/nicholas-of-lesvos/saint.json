@@ -14,6 +14,12 @@
     "deacon",
     "monk"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "raphael-of-lesvos",
     "irene-of-lesvos"

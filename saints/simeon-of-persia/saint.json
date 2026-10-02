@@ -130,6 +130,12 @@
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "audelas-companion-of-simeon",
     "gothazat-companion-of-simeon",
