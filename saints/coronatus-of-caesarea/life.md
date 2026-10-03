@@ -1,9 +1,0 @@
-# Coronatus of Caesarea
-
-The martyrs [Thyrsus](/saints/thyrsus-of-caesarea), [Leucius](/saints/leucius-of-caesarea), Coronatus and their company suffered at Caesarea in Bithynia and at Apollonia under the emperor Decius (249–251). That is all the Sretensky calendar’s life says of him, adding that Coronatus may be the same man as Cornutus, whose memory is kept on 12 September.
-
-The Greek calendar keeps the three of them on the same menologion day, with their company, and adds two things and no narrative. The first is a doubt of its own: perhaps, saint.gr says, they are confused with those of 14 December, and the name Callinicus of the third martyr became Coronatus. Nothing here is merged on the strength of that; it is set down as the page's own hesitation. The second is a place: of these three, it says, it is recorded that «τελείται αυτών η σύναξις πλησίον των Ελενιανών», their synaxis is held near the Helenianai, in Constantinople. He is named on the page beside [Thyrsus](/saints/thyrsus-of-caesarea), [Leucius](/saints/leucius-of-caesarea).
-
-The distich the page prints is for the three together: «Οἱ τρεῖς ἀθληταὶ νῦν παρίστανται πόθῳ, / Τριάδι θείᾳ, ἧς ἐνήθλησαν χάριν» — the three contenders now stand with longing before the divine Trinity, for whose sake they contended. saint.gr gives no year, no emperor and no hymn. The [Callinicus](/saints/callinicus-of-caesarea) its hedge names is the folder this corpus already keeps in the same company, and a separate «Άγιος Κορωνάτος» stands on the Greek 13 August with a notice of his own.
-
-*After the life printed by the Sretensky calendar (days.pravoslavie.ru) — [the entry](https://days.pravoslavie.ru/Life/life4458.htm); read 23 August 2026; and saint.gr's calendar for 17 Αυγούστου — [the day](https://www.saint.gr/08/17/index.aspx) and [the life](https://www.saint.gr/821/saint.aspx), read 1 October 2026.*

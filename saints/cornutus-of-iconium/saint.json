@@ -15,12 +15,22 @@
       "form": "Корнут",
       "lang": "sr",
       "note": "Read out of «Свешт. муч. Корнут еп. Иконијски.» in this folder’s Serbian citation."
+    },
+    {
+      "form": "Коронат",
+      "lang": "ru"
+    },
+    {
+      "form": "Κορωνάτος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους», which names the three together; the rank word is left off. The page prints no gloss of this name."
     }
   ],
   "sex": "male",
   "types": [
     "hieromartyr",
-    "bishop"
+    "bishop",
+    "martyr"
   ],
   "dates": {
     "death": {
@@ -28,7 +38,7 @@
       "latest": 259,
       "display": "c. 249-259",
       "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: «Сщмч. Корнута, еп. Никомидийского (Иконийского) (ок. 249-259)»."
+      "note": "As printed by days.pravoslavie.ru for 12 September: «Сщмч. Корнута, еп. Никомидийского (Иконийского) (ок. 249-259)». Its 17 August line for the company dates that passion «(249-251)», inside the same interval and under the same Decius, which is the wider of the two and is the one kept."
     }
   },
   "attestations": [
@@ -38,11 +48,27 @@
       "feast": {
         "day": 12,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "His own day, and the day the Sretensky life of the 17 August company points at when it says that Coronatus may be the same man as Cornutus. The author ruled on 3 October 2026 that the Coronatus of the 17 August company and the Cornutus of 12 September are one man (TODO item 13 row 7), and this record is the merge of the two folders the corpus held. **Which Cornutus was a second question and is settled by reading**: the Sretensky line for 12 September is «Сщмч. Корнута, еп. Никомидийского (Иконийского)», so the Cornutus that calendar keeps on the day its Coronatus life points at is this bishop, not the `cornutus-of-acheras` whom only the Greek calendar keeps there and whom saint.gr does not identify with him. **What the merge does not do is settle the names.** saint.gr’s 17 August page offers a different account of the same oddity — «Ίσως να συγχέονται με αυτούς της 14ης Δεκεμβρίου και το όνομα Καλλίνικος του τρίτου μάρτυρα να έγινε Κορωνάτος», perhaps they are confused with those of 14 December and the third martyr’s name Callinicus became Coronatus — and the corpus keeps a `callinicus-of-caesarea` in that same company. Both readings are in the life, in the sources’ own words, and neither page knows of the other."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 сентября ст. ст. — «Сщмч. Корнута, еп. Никомидийского (Иконийского) (ок. 249-259)»",
         "url": "https://days.pravoslavie.ru/Days/20260912.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "julian",
+        "note": "The second Russian day: the company of «Мчч. Фирса, Левкия, Короната и дружины их (249-251)», who suffered at Caesarea in Bithynia and at Apollonia under Decius. It is as Coronatus that he stands on it, with Thyrsus and Leucius, and the `related` rows to the three of them are this day’s. The author ruled on 3 October 2026 that the Coronatus of the 17 August company and the Cornutus of 12 September are one man (TODO item 13 row 7), and this record is the merge of the two folders the corpus held. **Which Cornutus was a second question and is settled by reading**: the Sretensky line for 12 September is «Сщмч. Корнута, еп. Никомидийского (Иконийского)», so the Cornutus that calendar keeps on the day its Coronatus life points at is this bishop, not the `cornutus-of-acheras` whom only the Greek calendar keeps there and whom saint.gr does not identify with him. **What the merge does not do is settle the names.** saint.gr’s 17 August page offers a different account of the same oddity — «Ίσως να συγχέονται με αυτούς της 14ης Δεκεμβρίου και το όνομα Καλλίνικος του τρίτου μάρτυρα να έγινε Κορωνάτος», perhaps they are confused with those of 14 December and the third martyr’s name Callinicus became Coronatus — and the corpus keeps a `callinicus-of-caesarea` in that same company. Both readings are in the life, in the sources’ own words, and neither page knows of the other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 августа ст. ст. — «Мчч. Фирса, Левкия, Короната и дружины их (249-251)»",
+        "url": "https://days.pravoslavie.ru/Days/20260817.html",
         "year": 2026
       }
     },
@@ -64,6 +90,21 @@
         "url": "https://www.saint.gr/09/12/index.aspx",
         "year": 2026
       }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 8,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 17ης Αυγούστου — «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους»",
+        "url": "https://www.saint.gr/08/17/index.aspx",
+        "year": 2026
+      },
+      "note": "The second Greek day, the same company under the same three names, «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους». The notice carries no passion: a hedge of its own about the names, which is in the life, and one positive thing — «Πάντως γι' αυτούς τους τρεις αναφέρεται ότι «τελείται αυτών η σύναξις πλησίον των Ελενιανών»», of these three it is said that their synaxis is held near the Helenianai, in Constantinople. A single distich for the three and no apolytikion and no kontakion, so no hymn. A separate «Άγιος Κορωνάτος» stands on the Greek 13 Αυγούστου, martyred by the sword and nothing more; that is `coronatus-13-august` and nothing joins it here. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -92,5 +133,13 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "aliases": [
+    "coronatus-of-caesarea"
+  ],
+  "related": [
+    "callinicus-of-caesarea",
+    "leucius-of-caesarea",
+    "thyrsus-of-caesarea"
+  ]
 }
