@@ -14,6 +14,11 @@
       "form": "Vasile cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 ianuarie."
+    },
+    {
+      "form": "Василије Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 1. јануар ст. ст., „Св. Василије Велики архиеп. Кесаријски.“, with the rank word «Св.» and the office «архиеп. Кесаријски» left off."
     }
   ],
   "sex": "male",
@@ -87,8 +92,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.01.2026 (1. јануар ст. ст.) — „Св. Василије Велики архиеп. Кесаријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "historicity": "attested",
