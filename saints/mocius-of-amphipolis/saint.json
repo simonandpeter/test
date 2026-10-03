@@ -106,6 +106,12 @@
       "note": "saint.gr: «Τότε, το έτος 288 μ.Χ. τον έστειλε δέσμιο στο Βυζάντιο, όπου τον αποκεφάλισαν», and the head line of the same page gives «(; - 288)». The page gives no year for his birth, only that his parents were at Rome under Diocletian, «(επί Διοκλητιανού 284 - 304 μ.Χ.)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "constantine-the-great",
     "samson-the-hospitable"
