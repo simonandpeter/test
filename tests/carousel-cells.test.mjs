@@ -153,3 +153,42 @@ test('a pool with no room to pack into is one saint a column', () => {
     pool.map((i) => [i]),
   );
 });
+
+/**
+ * **A prefix dealt against the whole pool's census is the head of the whole
+ * pool's deal** — the property All Saints' two-pass pack rests on.
+ *
+ * `views/index/modes.js` deals the first `CX_PREFIX` saints while the reader
+ * waits and the rest from idle time, then replaces the row with the second
+ * deal. The pacing counts its pictures against the saints still to come, so
+ * without `census` a prefix counted against itself was dealt a different
+ * *first* column from the one the full deal produces — and the second pass put
+ * other saints where the reader was already reading, and moved the row under
+ * them to do it. Measured on 2026-10-03 at 1280 px as four different names at
+ * the same four places, with the row 111 px off.
+ */
+test('a prefix dealt against the whole pool is the head of the whole pool', () => {
+  const slugs = (cells) => cells.map((c) => c.map((i) => i.slug).join('+'));
+  for (const w of WINDOWS) {
+    const pool = corpus(130, 2, 11);
+    const whole = deal(pool, w);
+    const prefix = carouselCells(pool.slice(0, 60), {
+      ...w,
+      census: pool,
+      heightOf: (item, width) =>
+        item.image ? Math.min(width / item.image.aspect, w.space - item.caption) + 8 + item.caption : item.caption,
+    });
+    /*
+     * **The opening columns, not the whole prefix.** A prefix can only deal as
+     * the whole does while the decisions stay inside it: where the rule reaches
+     * past `LOOKAHEAD` for an icon, the whole pool has one to reach for and
+     * sixty saints may not, so the two deals part company somewhere before the
+     * prefix runs out. Five columns is more than a 1280 px window holds, which
+     * is the thing the reader is looking at and the thing the second pass must
+     * not change under them.
+     */
+    const head = slugs(prefix).slice(0, 5);
+    assert.equal(head.length, 5, `${w.name}: the prefix dealt only ${head.length} columns`);
+    assert.deepEqual(head, slugs(whole).slice(0, 5), `${w.name}: the prefix is not the head`);
+  }
+});

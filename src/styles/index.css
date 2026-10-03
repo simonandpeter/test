@@ -1598,6 +1598,36 @@ html.is-rolling #view {
   animation-delay: var(--cx-delay, 0ms);
 }
 
+/*
+ * **And the second half of one arrival is not a second arrival** (author,
+ * 2026-10-03: "Things flash before they fade in, and they start in different
+ * locations").
+ *
+ * The row is built twice on a cold load: a prefix of the pool while the reader
+ * waits, then the whole of it from idle time (`CX_PREFIX`, views/index/modes.js).
+ * The second build replaces every node, so every caption played `cx-caption-in`
+ * again from zero and every picture faded in again — measured at 1280 px as the
+ * visible captions snapping from 1.00 back to 0.00 and climbing a second time,
+ * about 400 ms after they had finished.
+ *
+ * `is-continuing` is the track saying those words have already been
+ * introduced, so they stand. `is-instant` is the picture's half of the same
+ * sentence: `windowImages` writes it on a bitmap the browser still holds when
+ * the continuing row's first band is filled (ui/loop-scroll.js), and the
+ * opacity then arrives rather than travels. Both are confined to that one
+ * build — a card coming round a second time still fades, which is the recorded
+ * instruction of 2026-09-07.
+ */
+.carousel-track.is-continuing .cx-card .cx-name,
+.carousel-track.is-continuing .cx-card .cx-sub {
+  animation: none;
+  --cx-cap-a: 1;
+}
+
+.cx-media img.is-instant {
+  transition: none;
+}
+
 /* Reduced motion removes the animation, never shortens it (STRUCTURE.md): the
    words stand from the first frame, and a picture still waits for its
    bitmap but arrives without the fade. */

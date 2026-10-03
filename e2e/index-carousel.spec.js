@@ -2064,3 +2064,177 @@ test('a phone takes the narrow card file, and a dense screen takes the wide one'
     await ctx.close();
   }
 });
+
+/* ---- the 2026-10-03 round: the second pack is not a second arrival -------- */
+
+/**
+ * **The row is built twice on a cold load, and the second build must not be
+ * visible** (author, 2026-10-03: "The load of the Saints page is not smooth.
+ * Things flash before they fade in, and they start in different locations").
+ *
+ * `CX_PREFIX` saints are packed while the reader waits and the whole pool from
+ * idle time (views/index/modes.js); the second pass replaces every node in the
+ * track. Measured on the build before this test, at 1280 px and 6x CPU: the
+ * saints on screen changed identity, the row moved 111 px, every visible
+ * caption snapped from a mask alpha of 1 back to 0 and climbed again, and every
+ * picture that had faded in faded in a second time over 900 ms.
+ *
+ * Three claims, all about the same instant, because they had one cause and
+ * three fixes — `census` (lib/carousel-cells.js), `carry` (ui/loop-scroll.js)
+ * and `is-continuing` / `shown` (index.css, ui/loop-scroll.js). Backing any one
+ * of them out fails this.
+ *
+ * **Sampled in the page, not polled from here.** The event is one frame wide
+ * and lands anywhere between 300 ms and 10 s depending on the machine, so a
+ * round trip cannot be aimed at it: the page watches its own track, writes down
+ * what it could see on the frame before the children were replaced, and reads
+ * the same saints back two frames after.
+ */
+test('the second pack continues the row rather than replacing it', async ({ page }) => {
+  await carouselMode(page);
+  await ready(page);
+
+  await page.addInitScript(() => {
+    window.__pack = null;
+    const read = () => {
+      const out = [];
+      for (const card of document.querySelectorAll('.cx-card')) {
+        const r = card.getBoundingClientRect();
+        if (r.right < 0 || r.left > window.innerWidth || r.width === 0) continue;
+        const name = card.querySelector('.cx-name');
+        const img = card.querySelector('.cx-media img');
+        out.push({
+          name: name?.textContent ?? '',
+          x: Math.round(r.left),
+          a: name ? Number(getComputedStyle(name).getPropertyValue('--cx-cap-a')) : 0,
+          io: img ? Number(getComputedStyle(img).opacity) : null,
+        });
+        if (out.length >= 12) break;
+      }
+      return out;
+    };
+    const watch = () => {
+      const track = document.querySelector('[data-carousel-track]');
+      if (!track) return setTimeout(watch, 10);
+      let last = [];
+      const tick = () => {
+        if (track.querySelector('.cx-card')) last = read();
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      new MutationObserver((muts, obs) => {
+        if (!last.length) return;
+        obs.disconnect();
+        const before = last;
+        /*
+         * **The captions are read on the frame the children were replaced**,
+         * not after it. Two frames later a caption that restarted its fade has
+         * already travelled some of the way back, which is enough to pass a
+         * threshold and not enough to be the thing the reader did not see — so
+         * the claim is made at the only instant that separates "it never went"
+         * from "it went and came back quickly".
+         */
+        const atOnce = read();
+        // Two frames: one for the new children to be laid out, one for the loop
+        // to have put the row where `carry` says it goes.
+        requestAnimationFrame(() =>
+          requestAnimationFrame(() => {
+            const after = read();
+            /*
+             * And once more when the pictures have had time to answer: a
+             * bitmap the browser still holds is handed back on its own `load`,
+             * which is a task or two away rather than a frame. 300 ms is a
+             * third of the fade it stands against, so a picture that is still
+             * travelling is unmistakably below where it was.
+             */
+            setTimeout(() => {
+              window.__pack = { before, atOnce, after, settled: read() };
+            }, 300);
+          }),
+        );
+      }).observe(track, { childList: true });
+    };
+    watch();
+  });
+
+  /*
+   * **Throttled, because an unthrottled desk never reaches the state this test
+   * is about** (trap 10). The second pack is scheduled from idle time, and on
+   * this machine it lands *before* the captions of the first have finished
+   * fading in — so every assertion below passes against the unfixed code for
+   * the wrong reason, which is what backing the fix out proved. At 6x the first
+   * row is up for about two seconds before the second pack arrives, which is
+   * the gap the reader on a phone sees. `cdp` after the `goto`, as the trap
+   * says; the premises below are what prove it bit.
+   */
+  const cdp = await page.context().newCDPSession(page);
+  await page.goto(INDEX);
+  await cdp.send('Emulation.setCPUThrottlingRate', { rate: 6 });
+  await expect(page.locator('.cx-card').first()).toBeVisible();
+  await expect.poll(() => page.evaluate(() => window.__pack), { timeout: 40_000 }).not.toBeNull();
+
+  const { before, atOnce, after, settled } = await page.evaluate(() => window.__pack);
+  const seen = new Map(after.map((c) => [c.name, c]));
+  const atOnceBy = new Map(atOnce.map((c) => [c.name, c]));
+  const later = new Map(settled.map((c) => [c.name, c]));
+  const kept = before.filter((c) => seen.has(c.name));
+
+  /*
+   * **Most of the screenful, not all of it.** The columns that straddle the
+   * left edge are the loop's leading clones — the run's own tail — and a longer
+   * run has a different tail, so the partly visible column there is allowed to
+   * change. Everything the reader can actually read is the claim.
+   */
+  expect(
+    kept.length,
+    `only ${kept.length} of ${before.length} saints survived the second pack: ` +
+      `${before.map((c) => c.name).join(' | ')} -> ${after.map((c) => c.name).join(' | ')}`,
+  ).toBeGreaterThanOrEqual(Math.ceil(before.length / 2));
+
+  for (const was of kept) {
+    const now = seen.get(was.name);
+    /*
+     * 40 px is a quarter of the narrowest column and well past the ~26 px/s the
+     * row drifts in the three frames this spans. The defect it stands against
+     * moved the whole row by 111 px.
+     */
+    expect(Math.abs(now.x - was.x), `${was.name} moved ${now.x - was.x} px`).toBeLessThan(40);
+  }
+
+  /*
+   * **The premise before the claim** (trap 5). A caption that had not finished
+   * fading when the second pack arrived cannot show that the second pack made
+   * it start again, so the assertion is made on the ones that *had* — and the
+   * test says so out loud when there are none, rather than passing on an empty
+   * set, which is exactly how it passed against the unfixed code at 1x.
+   */
+  const lit = kept.filter((c) => c.a > 0.5 && atOnceBy.has(c.name));
+  expect(
+    lit.length,
+    `no caption had finished fading before the second pack — alphas ${kept.map((c) => c.a.toFixed(2)).join(', ')}`,
+  ).toBeGreaterThan(0);
+  for (const was of lit) {
+    expect(
+      atOnceBy.get(was.name).a,
+      `${was.name}'s caption fell from ${was.a} to ${atOnceBy.get(was.name).a}`,
+    ).toBeGreaterThan(0.5);
+  }
+
+  /*
+   * **The pictures are asserted where they happen to be up, and no premise is
+   * put on their being up.** Measured over ten throttled runs at both widths:
+   * the second pack almost always arrives before any picture has finished its
+   * 900 ms fade, so a premise here fails on the instrument rather than on the
+   * page. `shown` (ui/loop-scroll.js) is therefore gated only on the runs that
+   * reach the state — measured by hand at 6x on an idle machine, where two or
+   * three pictures are up at the pack and come back at full strength within
+   * one frame instead of fading again.
+   */
+  const drawn = kept.filter((c) => c.io !== null && c.io > 0.5 && later.has(c.name));
+  for (const was of drawn) {
+    expect(
+      later.get(was.name).io,
+      `${was.name}'s picture fell from ${was.io} to ${later.get(was.name).io}`,
+    ).toBeGreaterThan(0.5);
+  }
+});

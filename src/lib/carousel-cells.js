@@ -136,12 +136,31 @@ export const isNameCell = (cell) => cell.every((item) => !item.image);
  * `node -e "const m=require('./data/manifest.json');const i=m.filter(s=>s.image).length;console.log((m.length-i)/i)"`
  * after `npm run build:manifest`.
  */
-export function carouselCells(pool, { space = 0, cardWidth = 150, textWidth = cardWidth, heightOf } = {}) {
+/**
+ * `census` is the set the pacing is *counted* over, which is the pool itself
+ * unless the caller says otherwise.
+ *
+ * **It exists so that a prefix packs as the head of the whole.** All Saints
+ * deals the first `CX_PREFIX` saints while the reader waits and the rest from
+ * idle time (views/index/modes.js), and the share below is a ratio over
+ * everything still to come — so the same first saints, counted against 180 of
+ * their fellows rather than 5,393, were dealt a *different* first column, and
+ * the second pack replaced the row the reader was already reading with other
+ * saints. Handing the prefix the whole pool's census makes its columns the
+ * ones the full pack will produce, and the second pack an extension rather
+ * than a replacement. Measured on 2026-10-03 at 1280 px: four different names
+ * at the same four places across the repack, and the row moved 111 px with
+ * them.
+ */
+export function carouselCells(
+  pool,
+  { space = 0, cardWidth = 150, textWidth = cardWidth, heightOf, census = pool } = {},
+) {
   if (!space) return pool.map((item) => [item]);
   const cells = [];
   const taken = new Array(pool.length).fill(false);
-  let iconsLeft = pool.reduce((n, item) => n + (item.image ? 1 : 0), 0);
-  let namesLeft = pool.length - iconsLeft;
+  let iconsLeft = census.reduce((n, item) => n + (item.image ? 1 : 0), 0);
+  let namesLeft = census.length - iconsLeft;
   // Names dealt since the last icon, including those beside it in its column.
   let group = 0;
   // Columns since one held a picture. It starts at the limit so the run opens
