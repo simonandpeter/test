@@ -104,5 +104,11 @@
       "basis": "traditional",
       "note": "saint.gr: «τον οποίο υπέστη με πλήρη αγαλλίαση το 303 μ.Χ.», and its own heading for him reads «(; - 303)»."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

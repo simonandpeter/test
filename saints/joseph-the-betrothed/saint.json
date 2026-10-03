@@ -12,6 +12,12 @@
   "types": [
     "righteous"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "james-the-brother-of-the-lord",
     "john-the-theologian",

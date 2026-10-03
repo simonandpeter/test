@@ -20,6 +20,12 @@
     "hermit",
     "wonderworker"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "anthony-the-great",
     "constantia-of-paphos",

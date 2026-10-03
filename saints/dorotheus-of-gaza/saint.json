@@ -20,6 +20,12 @@
     "ascetic",
     "abbot"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "barsanuphius-the-great",
     "john-the-prophet-of-gaza",
