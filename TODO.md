@@ -192,21 +192,25 @@ one is a push. Within a run, commit locally as before.
 
 ## 12. Two suites nobody has run
 
-`e2e/index-grid.spec.js` and `e2e/prayer.spec.js` were both rewritten on 2 October
-and **neither has been run in a browser**: port 4173 was held by the preview the
-author was reading, and `reuseExistingServer` is false. `npx vite build` is clean,
-so imports and syntax are sound; nothing about the rendered page is verified.
+**Done, 3 October 2026** (`e3a3ed12`). Both were run in a browser, each caught
+one real defect, and neither failed to *run* — the distinction this item asked
+for.
 
-`index-grid` is the check that All Saints did not move when `wireControls` was
-lifted off its state singleton. `prayer.spec.js` is the one that changed most.
+`index-grid` was 28 of 29. "Every row starts its name at the card margin" is
+superseded a third time and again in its mechanism: the bullet added that day
+stands at the margin and the name begins past it (measured at 360 px — 4 px to
+the bullet, 30 px to the name, the bullet 18 px). What the test asserts now is
+the claim that outlived all three arrangements: a saint with no icon does not
+pull the column about, because the bullet is the same width whether it draws a
+thumbnail or a type glyph. 29 pass.
 
-**Do this before any push**: stop the preview, run both, repair what they catch.
-Say which failed and which could not be *run* — never blur the two.
+`prayer` was 30 of 31, and that one was a live regression: the Daily page's
+hymns had been given `--text-base` on the bare `.hymn-text`, which reached the
+Prayer page, where the same class is the reading voice at `--text-lg`. The rule
+is scoped to `.day-hymns` now. 31 pass.
 
-Also waiting, and small: five dead `STRINGS.prayer` keys (`searchLabel`,
-`searchPlaceholder`, `views`, `viewPlate`, `viewRows`) are still in `strings.js`
-and the four packs, left because another agent was editing all five files.
-`locale-coverage.mjs` must read 0 fallbacks after they go.
+The five dead `STRINGS.prayer` keys were already gone — from `strings.js` and
+from all four packs. `locale-coverage.mjs` reads 0 fallbacks.
 
 ## 13. The merges are done
 
