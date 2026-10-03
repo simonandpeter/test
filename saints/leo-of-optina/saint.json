@@ -6,31 +6,61 @@
       "form": "Lev de la Optina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 octombrie."
+    },
+    {
+      "form": "Лев",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 7008, headed «Лев Оптинский, прп.», with the rank word and the epithet left off. The life gives his name in the world, Лев Данилович Наголкин, and says Leo was his schema name over the mantle name Леонид."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "hieromonk",
+    "wonderworker"
   ],
   "related": [
+    "ambrose-of-optina",
+    "anthony-of-optina",
     "macarius-of-optina",
+    "moses-of-optina",
+    "paisius-of-neamt",
     "peter-confessor-presbyter-1972",
     "philaret-of-moscow"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1768,
+      "latest": 1768,
+      "display": "1768",
+      "basis": "traditional",
+      "note": "The life the day reaches: «родился в 1768 году в городе Карачеве Орловской губернии». doxologia.ro gave this folder no birth at all."
+    },
     "death": {
       "earliest": 1841,
       "latest": 1841,
       "display": "1841",
       "basis": "attested",
-      "note": "doxologia.ro: «După suferințe cumplite, Lev s-a mutat la Domnul pe 11 octombrie, în anul 1841.»"
+      "note": "doxologia.ro: «După suferințe cumplite, Lev s-a mutat la Domnul pe 11 octombrie, în anul 1841.» days.pravoslavie.ru's life agrees to the day and gives both styles: «В день кончины преподобного, 11/24 октября 1841 года»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 27 июня (обретение мощей) , 11 октября (Оптин.)» — the finding of his relics, and this day, which it marks as the Optina one. One row per church is the schema, so the June day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Прп. Льва Оптинского (1841).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the third of the day's first paragraph and carries no icon of its own; the two plain-service icons in that paragraph stand immediately before the apostle Philip and immediately before Theophanes of Nicaea, and nothing is read from them onto the lines that follow."
+      },
+      "note": "The line after his on the same page is «Собор всех святых, в Оптиной пустыни просиявших», the synaxis of all the saints who shone in the Optina hermitage. It enumerates nobody, so by §4.6 it is not a folder and not a folder each; its own index page carries a troparion and a kontakion to the synaxis, and those belong to the feast rather than to any one elder, so they are not drafted here. The day the Russian keeps him on is the day of his death: «В день кончины преподобного, 11/24 октября 1841 года»."
     },
     {
       "church": "romanian",
@@ -59,5 +89,6 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Hieromonk"
 }

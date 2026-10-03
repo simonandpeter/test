@@ -11,19 +11,37 @@
       "form": "Θεοφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Όσιος Θεοφάνης ο Γραπτός, ο Ομολογητής επίσκοπος Νίκαιας», with the rank words left off; the epithet «ο Γραπτός», the branded, is the page's own."
+    },
+    {
+      "form": "Феофан",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2256, headed «Исповедник Феофан Никейский, Константинопольский», with the rank word and the two epithets left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
+    "bishop",
     "confessor",
     "hymnographer"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Прп. Феофана Исповедника, творца канонов, еп. Никейского (ок. 850).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the second of the day's two icons, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — the plain service — which stands immediately before his line. The first icon, of the same kind, stands before the apostle Philip at the head of the paragraph, and the two lines after his carry none."
+      },
+      "note": "The day line is a whole description where the Greek gave a name: «Исповедника, творца канонов, еп. Никейского (ок. 850)» — confessor, maker of canons, bishop of Nicaea, about 850 — and the folder's `dates`, office and types all come from it and from the two lives behind it. The site's own two accounts disagree about his brother: the first dates Theodore the Graptos's death in prison to about 833 and the second to about 840. That is a disagreement about a man this corpus does not hold, so it is recorded here and nowhere else."
     },
     {
       "church": "romanian",
@@ -114,5 +132,15 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "office": "Bishop of Nicaea",
+  "dates": {
+    "death": {
+      "earliest": 850,
+      "latest": 850,
+      "display": "c. 850",
+      "basis": "traditional",
+      "note": "The calendar's day line prints «(ок. 850)», about 850, and the first of its two lives for him closes «Скончался преподобный в мире около 850 года». Neither saint.gr nor doxologia.ro was read for a year."
+    }
   }
 }

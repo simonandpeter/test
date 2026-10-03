@@ -11,6 +11,11 @@
       "form": "Φίλιππος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Άγιος Φίλιππος ο Απόστολος ένας από τους επτά Διακόνους», with the rank words left off."
+    },
+    {
+      "form": "Филипп",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2292, headed «Святой Филипп, апостол от 70-ти», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -22,8 +27,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of the site's lives for him head «Дни памяти: 4 января (70 ап.) , 11 октября» — this day and the synaxis of the Seventy Apostles. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Ап. Филиппа , единого от семи диаконов (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the first of the day's two icons, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — the plain service — which stands immediately before his line. The day carries a second icon of the same kind a few words later, before Theophanes of Nicaea, and the two lines after that, Leo of Optina and the Optina synaxis, carry none."
+      },
+      "note": "The Russian's «(I)» is the first century and no year is given on either of its two lives, so no `dates` are proposed. Its index page heads him «Святой Филипп, апостол от 70-ти», of the Seventy, where the day line calls him one of the seven deacons; both are his. The two lives differ in where they end him: the first has the apostles ordain him bishop at Jerusalem and send him to Lydia, the second to Tralles in Lydia, and both have him die in deep old age. The second also carries the detail from Acts the first leaves out, that an angel caught him away to Azotus after the eunuch's baptism."
     },
     {
       "church": "romanian",
@@ -123,6 +141,8 @@
   ],
   "related": [
     "john-the-theologian",
+    "paul-the-apostle",
+    "stephen-the-first-martyr",
     "the-eunuch-of-queen-candace"
   ]
 }

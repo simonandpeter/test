@@ -11,20 +11,38 @@
       "form": "Ζηναΐδα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Αγίες Ζηναΐδα και Φιλονίλλα οι αδελφές», with the rank word left off."
+    },
+    {
+      "form": "Зинаида",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2508, headed «Зинаида Тарсийская, мц.», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
   "types": [
-    "martyr"
+    "martyr",
+    "physician"
   ],
   "related": [
+    "paul-the-apostle",
     "philonilla-of-tarsus"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Мцц. Зинаиды и Филониллы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "No rank is read onto her. Her line opens the day's second paragraph, which carries no icon; the day's two icons are both plain-service ones in the first paragraph, standing before the apostle Philip and before Theophanes of Nicaea."
+      },
+      "note": "The Russian adds two things the other two calendars did not give this folder: that the two women were kinswomen of the apostle Paul, and that they practised the art of medicine. Its index page heads her «Зинаида Тарсийская, мц.» and gives the healer's epithet to her sister rather than to her, «Филонилла Тарсийская, целительница» — so the `physician` type here is read off the life, which gives the medicine to both of them, and not off the index line. The «(I)» is the first century and no year is printed, so no `dates` are proposed."
     },
     {
       "church": "romanian",

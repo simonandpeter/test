@@ -4169,6 +4169,8 @@ const READ_FOLDS = {
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
     'the abbot of Kucumia in Sicily, Romanian 4 January, against the martyr by the sword the Greek and Romanian keep on 3 October; doxologia’s own page for 4 January is a note saying which Theoctistus the day is not (read 19 September 2026)',
+  'феофан theophanes-of-nicaea theophanes-presbyter-martyr-1920 theophanes-the-confessor-9-september theophanes-the-faster-of-the-caves':
+    'four men the Russian bare forename «Феофан» folds together and nothing else does: the maker of canons and bishop of Nicaea, branded on the face by Theophilus and dead about 850; the confessor born in 283 under Carus and Carinus, kept on 9 September; the faster of the Kyiv Caves, of whom the Russian prints two epithets and the twelfth century; and Theophanes (Sokolov), a presbyter killed in 1920 (read 4 October 2026)',
   'амфилохии amphilochius-of-vladimir-volynsky amphilochius-skvortsov':
     'the third bishop of Vladimir in Volhynia, consecrated in 1105 and dead in a cave of the Kyiv Caves monastery in 1122, against the Kazan academic of Lamaism born in 1885 and shot in the Soviet years. Eight centuries, and the bare forename is all they share (read 4 October 2026)',
   'иоанн рыбин john-rybin john-rybin-8-october':

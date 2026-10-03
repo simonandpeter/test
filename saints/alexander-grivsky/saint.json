@@ -1,0 +1,67 @@
+{
+  "slug": "alexander-grivsky",
+  "display_name": "Alexander (Grivsky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Александр (Гривский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13825, «Александр (Гривский), иерей, сщмч.», with the office and the rank word left off. The day line gives neither the surname nor the grade, only «пресвитеров»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the pair it names him in: «Сщмчч. Филарета и Александра пресвитеров (1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «8 июня (Псков.)», the synaxis of the saints of Pskov. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Сщмчч. Филарета и Александра пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the whole of the day's third paragraph, which carries no icon. The day's two icons are both in the first paragraph and are both the plain service, standing before the apostle Philip and before Theophanes of Nicaea."
+      },
+      "note": "The Pskov synaxis on his index page is the one thing the calendar says about him beyond the name, the grade and the year — it places him in that country, though it does not say he served there. It is recorded as what it is, a second commemoration, and no diocese is inferred from it. The corpus holds a `nicander-grivsky` of the same surname; nothing on either page connects the two and nothing is inferred."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 24 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/24 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 24 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "philaret-velikanov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

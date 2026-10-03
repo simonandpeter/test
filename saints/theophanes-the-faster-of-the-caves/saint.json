@@ -1,0 +1,63 @@
+{
+  "slug": "theophanes-the-faster-of-the-caves",
+  "display_name": "Theophanes the Faster of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Феофан",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2257, headed «Феофан Печерский, Постник», with the two epithets left off — of the Caves, and the Faster, «Постник», which is the word the day line also uses of him."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "The century the calendar's day line prints after his name and the only date on either page: «Прп. Феофана , постника Печерского (XII)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», the synaxis of the venerable fathers of the Near Caves. One row per church is the schema, so the September day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Прп. Феофана , постника Печерского (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line closes the day's second paragraph, which carries no icon. The day's two icons are both in the first paragraph and are both the plain service, one standing immediately before the apostle Philip and one immediately before Theophanes of Nicaea."
+      },
+      "note": "The whole of the record is the line: a forename, two epithets and a century. His name page carries no life, and «Постник», the Faster, is the only thing either page says about how he lived."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 24 octombrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/24 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 24 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

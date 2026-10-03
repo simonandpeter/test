@@ -1,0 +1,67 @@
+{
+  "slug": "philaret-velikanov",
+  "display_name": "Philaret (Velikanov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Филарет (Великанов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9824, «Филарет (Великанов), иерей, сщмч.», with the office and the rank word left off. The day line gives neither the surname nor the grade, only «пресвитеров»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the pair it names him in: «Сщмчч. Филарета и Александра пресвитеров (1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 11 октября ст. ст. — «Сщмчч. Филарета и Александра пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261011.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the whole of the day's third paragraph, which carries no icon. The day's two icons are both in the first paragraph and are both the plain service, standing before the apostle Philip and before Theophanes of Nicaea."
+      },
+      "note": "«Сщмч.» marks a hieromartyr, a priest killed for the faith, and «иерей» on his index page is the simple priesthood. Nothing else is printed about him on either page: no birth, no diocese, no parish, no charge, no place of death."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 24 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/24 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 24 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "alexander-grivsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
