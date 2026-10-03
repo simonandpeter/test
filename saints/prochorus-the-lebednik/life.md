@@ -8,4 +8,4 @@ In his time came the civil war between the prince Michael Svyatopolk and the pri
 
 The merchants complained to the hard prince Michael Svyatopolk, who ordered the salt carried to his court so that he could sell it himself; and then the salt became ash again, and the truth was uncovered, that God's name might be glorified. The prince, broken, went to the monastery of the Caves and fell down humbly before the venerable one, who prophesied his victory over the Polovtsy. Prochorus fell asleep in peace in 1107, and the prince buried him in tears near the monastery of Saint Antony of the Caves.
 
-*After saint.gr's calendar for 10 Φεβρουαρίου — [the day](https://www.saint.gr/02/10/index.aspx) and [the life](https://www.saint.gr/1217/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 10 Φεβρουαρίου — [the day](https://www.saint.gr/02/10/index.aspx) and [the life](https://www.saint.gr/1217/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 10 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260210.html), read 3 October 2026.*

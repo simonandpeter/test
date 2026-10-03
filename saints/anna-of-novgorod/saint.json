@@ -11,6 +11,11 @@
       "form": "Άννα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Οσία Άννα η Πριγκίπισσα», with the rank word left off."
+    },
+    {
+      "form": "Анна Новгородская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Благоверная княгиня Анна Новгородская», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Блгв. Кн. Анны Новгородской (1050).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -70,5 +84,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "От запада возсиявши, яко звезда небосветлая,/ прияти Православную веру сподобилася еси,/ в нейже плод благославный Русской земле принесши,/ святая благоверная княгине Анно,/ Христа всем сердцем возлюбила еси,/ Того оправдания и законы хранящи;/ темже днесь всесвятую твою память празднующе,/ грехов оставление молитвами твоими приемлем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Тропарь благоверной княгини Анны Новгородской»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having risen from the West like a star bright as heaven, thou wast counted worthy to receive the Orthodox faith, and in it thou didst bring forth a glorious fruit for the Russian land, O holy and right-believing princess Anna. Thou didst love Christ with all thy heart and didst keep his ordinances and his laws. Therefore, keeping thy all-holy memory today, we receive by thy prayers the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Днесь в светлой памяти твоей/ Великий Новград веселится,/ созывая всех верных светло праздновати память твою,/ и мы ныне, духовно ликовствующе,/ радостно славим тя и молим:/ святая благоверная княгине Анно,/ предстоя Святей Троице/ моли избавити Великий Новград и всю землю Русскую/ от всяких бед и обстояний и всем нам спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Кондак благоверной княгини Анны Новгородской»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today Great Novgorod rejoices in thy radiant memory, calling all the faithful to keep thy feast with gladness; and we too, exulting in spirit, joyfully glorify thee and pray: O holy and right-believing princess Anna, standing before the Holy Trinity, pray that Great Novgorod and all the Russian land be delivered from every evil and affliction, and that we all be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

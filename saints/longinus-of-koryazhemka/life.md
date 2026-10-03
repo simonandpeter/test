@@ -4,4 +4,4 @@ The venerable Longinus of Koryazhemka came from Russia. He practised ascesis fir
 
 Longinus fell asleep in peace in the year 1540. Sixteen years after his repose, saint.gr adds, his honourable relic was carried into the church. That is the whole of what the page keeps of him: four houses, a river, a dedication, a companion named once, and two dates. No parentage, no hymn and no distich are printed, and the day's line gives him nothing but the bare epithet of a hermit.
 
-*After saint.gr's calendar for 10 Φεβρουαρίου — [the day](https://www.saint.gr/02/10/index.aspx) and [his page](https://www.saint.gr/1214/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 10 Φεβρουαρίου — [the day](https://www.saint.gr/02/10/index.aspx) and [his page](https://www.saint.gr/1214/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 10 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260210.html), read 3 October 2026.*

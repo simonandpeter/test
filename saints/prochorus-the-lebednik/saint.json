@@ -6,6 +6,11 @@
       "form": "Πρόχορος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Όσιος Πρόχορος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Прохор Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Преподобный Прохор Печерский», with the rank word left off. The day's line adds the by-name «Лебедника», after the goosefoot he made his bread from; the name link leaves it out, and the name is read from the link."
     }
   ],
   "sex": "male",
@@ -17,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Прп. Прохора Лебедника, Печерского (1107).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,5 +71,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преподобне и чудотворче, отче Прохоре,/ препитавый во гладе алчущия хлебом от былия и солию от пепела,/ напитай и нас пищею духовною,/ моля Христа Бога/ о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Тропарь преподобного Прохора Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O venerable father and wonderworker Prochorus, who in the famine fed the hungry with bread made of weeds and with salt made of ashes, feed us also with spiritual food, praying to Christ God for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Велиим воздержанием удручая плоть свою, святе,/ лишився пищи человеческия,/ зелием и травою вместо хлеба, пепелом же, аки солию, питался еси,/ чудодейственне Прохоре./ Еже видя, Господь преложи зелие во хлеб и пепел в соль,/ имиже ты множество гладных препитал еси,/ тем тя чтем и ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Кондак преподобного Прохора Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wearing down thy flesh with great abstinence, O holy one, thou didst forgo the food of men and didst feed on herbs and grass instead of bread and on ashes as on salt, O wonder-working Prochorus. Seeing it, the Lord turned the herbs into bread and the ashes into salt, and with them thou didst feed a multitude of the hungry. Therefore we honour thee and call thee blessed.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

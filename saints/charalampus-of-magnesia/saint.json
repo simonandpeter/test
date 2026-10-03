@@ -11,6 +11,11 @@
       "form": "Χαράλαμπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιος Χαράλαμπος ο Ιερομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Харалампий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Священномученик Харалампий», with the rank word left off. The calendar gives the name without any epithet or see."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Сщмч. Харалампия и с ним мчч. Порфирия, Ваптоса и трех мучениц (202).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +136,38 @@
       },
       "english": {
         "text": "Thou didst rise like a light-giver out of the east, and didst enlighten the faithful with the beams of thy miracles, O hieromartyr Charalampus; wherefore we honour thy divine contest.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко столп избранный Церкве Христовой/ и светильник присносветлый всея вселенныя,/ премудре показася, Харалампие,/ возсия в мире мучением,/ разруши идольское мракобесие, блаженне,/ сего ради явися предстатель Христу,/ молися спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Тропарь священномученика Харалампия»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a chosen pillar of the Church of Christ and an ever-shining lamp of the whole world wast thou shown forth in wisdom, O Charalampus. Thou didst shine in the world by thy martyrdom and didst break down the dark folly of the idols, O blessed one. Therefore thou standest revealed as an intercessor before Christ: pray that we may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Подобствовав благодатию священства, славне,/ Церковь светло украсил еси Божественным страданием,/ еже за Христа приял еси доблественно, радуяся, Харалампие,/ честный светильниче всемирный, осияваяй концы,// яко непобедимый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Кондак священномученика Харалампия»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Made like unto Christ by the grace of the priesthood, O glorious one, thou didst brightly adorn the Church by thy divine suffering, which thou didst accept for Christ bravely and with joy, O Charalampus, honoured lamp of the whole world, shining upon its furthest ends as one unconquered.",
         "rendered": "site"
       }
     }

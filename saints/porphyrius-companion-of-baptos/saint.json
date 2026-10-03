@@ -6,6 +6,11 @@
       "form": "Πορφύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιοι Βάπτος και Πορφύριος», with the rank word left off."
+    },
+    {
+      "form": "Порфирий Антиохийский (Писидийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Порфирий Антиохийский (Писидийский), мч.», with the rank word left off; the parenthesis is the calendar's own."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Сщмч. Харалампия и с ним мчч. Порфирия, Ваптоса и трех мучениц (202).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

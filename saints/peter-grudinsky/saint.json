@@ -1,0 +1,67 @@
+{
+  "slug": "peter-grudinsky",
+  "display_name": "Peter (Grudinsky)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Грудинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Петр (Грудинский), иерей, сщмч.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Сщмчч. Петра и Валериана пресвитеров (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 23 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 23 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's notice of the Minsk hieromartyrs: «родился в 1877 году в семье мещан города Глуск Минской губернии»."
+    },
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "23 February 1930",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's notice of the Minsk hieromartyrs: «23 февраля 1930 года он был расстрелян»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

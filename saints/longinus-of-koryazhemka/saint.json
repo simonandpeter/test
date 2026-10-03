@@ -6,6 +6,11 @@
       "form": "Λογγίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Όσιος Λογγίνος ο Ερημίτης», with the rank word left off."
+    },
+    {
+      "form": "Лонгин Коряжемский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Лонгин Коряжемский, иеромонах», with the office left off."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Прп. Лонгина Коряжемского (1540).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   },
   "related": [
     "paul-of-obnora"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "От мятежа мирскаго удалився,/ к немерцающему Свету притекл еси, преподобне отче Лонгине,/ и ныне чисте зриши Святую Троицу,/ Юже моли за ны недостойныя,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Тропарь преподобного Лонгина Коряжемского»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having withdrawn from the tumult of the world, thou didst run to the Light that never fades, O venerable father Longinus, and now thou beholdest the Holy Trinity with a pure heart. Pray to it for us the unworthy, that it may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "По словеси Учителя Христа,/ крест на рамо твое приял еси,/ вся житейская отринув,/ и образ Животворящаго Древа в пустыню принесл еси,/ идеже доныне исцеления неоскудно источаются/ с верою приходящим к тебе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Кондак преподобного Лонгина Коряжемского»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "According to the word of Christ the Teacher thou didst take the cross upon thy shoulder and cast off all the things of this life, and thou didst carry the image of the Life-giving Tree into the wilderness, where to this day healings flow unstintingly for those who come to thee in faith.",
+        "rendered": "site"
+      }
+    }
   ]
 }

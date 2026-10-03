@@ -11,6 +11,11 @@
       "form": "Ουαλεντίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Φεβρουαρίου, «Άγιοι Ενναθά, Ουαλεντίνα και Παύλος», with the rank word left off."
+    },
+    {
+      "form": "Валентина Кесарийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Мученица Валентина Кесарийская», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 февраля ст. ст. — «Мцц. дев Еннафы, Валентины и Павлы (308).»",
+        "url": "https://days.pravoslavie.ru/Days/20260210.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
