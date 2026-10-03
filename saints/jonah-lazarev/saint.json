@@ -1,0 +1,85 @@
+{
+  "slug": "jonah-lazarev",
+  "display_name": "Jonah (Lazarev)",
+  "office": "Bishop of Nevel",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "bishop",
+    "hierarch"
+  ],
+  "names": [
+    {
+      "form": "Иона (Лазарев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9145, «Святитель Иона (Лазарев), епископ Велижский, сщмч.», with the rank words and the office left off. The life that page reaches heads him «епископ Невельский, викарий Витебской епархии» instead, and his name in the world is given there as Иван Иванович Лазарев."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "The life the day reaches: «родился в 1869 году в селе Лучино Санкт-Петербургской губернии в семье священника»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life names the day: «Епископ Иона (Лазарев) был расстрелян 21 октября 1937 года и погребен в безвестной могиле». The calendar's day line prints the year, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it. The Julian 8 October is the civil 21 October, the day he was shot."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Сщмчч. Ионы , еп. Велижского, прмч. Серафима , сщмчч. Петра , Василия , Павла , Петра , Владимира пресвитеров, мчч. Виктора , Иоанна , Николая и мц. Елисаветы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's third paragraph, which carries no icon; the day's one icon is the plain service and it stands two paragraphs above, before Pelagia of 457."
+      },
+      "note": "The site names his see twice and differently. The day line and his index entry both say «еп. Велижского», bishop of Velizh; the life the index page reaches heads him «епископ Невельский, викарий Витебской епархии», bishop of Nevel and vicar of Vitebsk, and inside the text gives the consecration as to Nevel on 29 January 1926. The office on this folder follows the life, which is the fuller reading, and the day line's Velizh is recorded here and not resolved. Both towns are in the Vitebsk country. The page also prints «14 мая 19261 года», which is a typo for 1926 and is not followed."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "barlaam-efimov",
+    "basil-ozeretskovsky",
+    "elizabeth-kuranova",
+    "john-rybin-8-october",
+    "nicholas-kuzmin",
+    "paul-preobrazhensky",
+    "peter-nikotin",
+    "peter-ozeretskovsky",
+    "seraphim-shchelokov",
+    "victor-frolov",
+    "vladimir-speransky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

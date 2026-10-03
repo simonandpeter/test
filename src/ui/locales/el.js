@@ -932,6 +932,7 @@ export const el = {
     'Bishop of Myra': 'Επίσκοπος Μύρων',
     'Bishop of Naeson in Persia': 'Επίσκοπος Ναεσών της Περσίας',
     'Bishop of Narnia': 'Επίσκοπος Νάρνιας',
+    'Bishop of Nevel': 'Επίσκοπος Νέβελ',
     'Bishop of Narva': 'Επίσκοπος Νάρβας',
     'Bishop of Nazianzus': 'Επίσκοπος Ναζιανζού',
     'Bishop of Neocaesarea in Pontus': 'Επίσκοπος Νεοκαισαρείας του Πόντου',

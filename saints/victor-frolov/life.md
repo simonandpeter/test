@@ -1,0 +1,9 @@
+# Victor (Frolov)
+
+The Russian calendar's 8 October names a company of eleven on one line: «Сщмчч. Ионы , еп. Велижского, прмч. Серафима , сщмчч. Петра , Василия , Павла , Петра , Владимира пресвитеров, мчч. Виктора , Иоанна , Николая и мц. Елисаветы (1937)». Victor is in it, and the site's index of names gives the surname: «Виктор (Фролов), мч.». «Мч.» marks a martyr who held no orders — a layman killed for the faith.
+
+He is the first of the three laymen the day line names after the priests, and his index entry gives him no office at all, which for this calendar is itself the statement that he held none.
+
+The site carries a life for one of the eleven, the bishop [Jonah (Lazarev)](/saints/jonah-lazarev), and for the other ten it carries none. His index entry keeps him here and on 26 January with the whole company of the new martyrs and confessors of Russia, and the year 1937 at the end of the line is the only date on either page. The long lives of the twentieth-century Russian saints are on azbyka.ru, which answered 403 to this desk's fetcher on 4 October 2026 even with a browser user-agent, so the line stands as the line.
+
+*After the Russian church calendar's [8 October](https://days.pravoslavie.ru/Days/20261008.html) and [its index entry for him](https://days.pravoslavie.ru/name/13819.html); read 4 October 2026.*
