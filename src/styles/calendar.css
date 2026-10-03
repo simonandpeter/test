@@ -51,6 +51,7 @@
 }
 
 .cal-jump {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex: none;
@@ -86,7 +87,19 @@
  * the grid takes beside them, which is why this box can hold the stepping
  * without costing the picker a row.
  */
+/*
+ * **Out of flow, and that is the whole of why.** `.cal-controls` is a flex row
+ * and its height is the taller of this column and the grid beside it, so three
+ * names appearing at full height the instant the month opens dropped the page
+ * 75 px before the grid had moved a pixel - the jump this box was added to
+ * remove, reappearing on the opening. Absolute, so the column stays the
+ * toggle's own height and the row is sized by the grid alone.
+ */
 .month-pick {
+  position: absolute;
+  top: var(--cal-row-h);
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -615,6 +628,22 @@
  * has always been held to ("the month is the week grown taller").
  */
 @media (max-width: 1023.98px) {
+  /*
+   * **The day names draw where the rail's draw.** `.month-day-name` carries
+   * `calc(var(--space-1) + 1px)` of padding to stand in for the rail button's
+   * own 3 px and its 1 px transparent border - which was right while the
+   * day-name line was the first thing in `.cal-month`. It is not any more:
+   * `.month-head` is an empty box here with `--space-1` of margin under it,
+   * and that margin is already the 4 px. The padding was being counted twice
+   * and the names sat 5 px below the rail's.
+   *
+   * Measured in a 360 px frame: rail name text at 62.6, month name text at
+   * 67.8 before this rule and 62.8 after.
+   */
+  .cal-month .month-day-name {
+    padding-top: 0;
+  }
+
   /* **The day swipe is only live where this is declared** (author, 2026-09-02:
      "can you also swipe on today's date on mobile?"). Binding `wireDaySwipe`
      to the whole view the day before made the *listener* reach the date, the
