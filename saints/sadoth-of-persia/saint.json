@@ -16,6 +16,11 @@
       "form": "Σαδώθ",
       "lang": "el",
       "note": "The other form the same page prints, in its own referral: «βλέπε στις 19 Οκτωβρίου όπου επαναλαμβάνεται η μνήμη τους σαν Άγιος Σαδώθ ο επίσκοπος και οι Εκατόν είκοσι Μάρτυρες από την Περσία»."
+    },
+    {
+      "form": "Садок",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 20. фебруар ст. ст., „Свети свештеномученик Садок.“, with Свети and the rank word свештеномученик left off; the rank is in the folder's `types`. The heading gives no epithet, and Persia, which the folder's English name carries, is in the body."
     }
   ],
   "related": [],
@@ -47,11 +52,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.03.2026 (20. фебруар ст. ст.) — „Свети свештеномученик Садок.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 342,
+      "latest": 344,
+      "display": "342 or 344",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 20 February: „Пострадаше 342. или 344. године.“ The page itself offers the two years and chooses neither, so the interval carries both and the display says so. The folder carried no dates at all before this reading."
+    }
   }
 }

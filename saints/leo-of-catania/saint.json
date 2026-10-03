@@ -12,6 +12,11 @@
       "form": "Λέων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Άγιος Λέων ο Θαυματουργός Επίσκοπος Κατάνης», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Лав",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. фебруар ст. ст., „Свети Лав, епископ катански.“, with Свети, the rank word епископ and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -124,8 +129,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.03.2026 (20. фебруар ст. ст.) — „Свети Лав, епископ катански.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -136,5 +150,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 20 February: „Скончао у VIII веку.“ It gives the century and no year. The folder carried no dates at all before this reading."
+    }
+  }
 }
