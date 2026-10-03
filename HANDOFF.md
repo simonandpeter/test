@@ -132,6 +132,31 @@ Five `tile-diff` baselines exist. Do not re-shoot any of them.
   --widths=360,768 --themes=day,vigil --langs=en`, shot at `cd503dbc` with the
   N1/N4 rules backed out; after them all four compared identical.
 
+**The ship gate, 4 October 2026: nothing ships until all four calendars are
+filled** (STRUCTURE.md §7). Run `node scripts/ship-gate-days.mjs` for the
+answer — it counts the eight `data/feasts-fixed.js` records as covering their
+own day, which a count over `saints/` alone does not, and that undercount is
+how the first figures were wrong by eight in every church. As of the evening of
+4 October: **romanian closed** at 366 of 366, **greek one day** (29 February,
+which no civil year in Daily's runway prints), **russian 115 of 366**,
+**serbian 84 of 366**. The script prints each church's remaining days in that
+church's own reckoning — Julian for the Russian and the Serbian. The Russian run
+from Julian 30 September and the Serbian from Julian 26 September are where the
+night of 3 October stopped, and both are contiguous from there.
+
+**azbyka.ru answered 403 on 4 October**, to the repo fetcher's user-agent and
+to a full Chrome one. `docs/CORPUS.md` §2 records it answering 200 on
+10 September and names it the only workable source for the twentieth-century
+new martyrs, who are most of a Russian day in these months — 13 of one night's
+21 new folders. **Whether the in-app browser still reads it is the single
+biggest open question on Russian quality**, and CORPUS.md §2 was deliberately
+left unamended until someone measures it.
+
+**pravoslavno.rs's entry list is unusable and its Ohrid Prologue text is
+excellent**: for one Julian day the list printed one entry where the Prologue
+text on the same Julian day of the previous year enumerated three, each with a
+full life. That is the door for the remaining Serbian days.
+
 **The Romanian year is written** — every saint doxologia.ro prints for all 366
 days is in `saints/`, finished 30 September 2026, 2,496 folders, `npm test` 442
 green and the Playwright suite 1,045 green. The Greek, the Russian and the
