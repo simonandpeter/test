@@ -16,6 +16,11 @@
       "form": "Агния Римская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Мученица Агния Римская», with the rank word left off; the day line names her only «Агнии девы»."
+    },
+    {
+      "form": "Агнија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 21. јануар ст. ст. (civil 2026-02-03), „Света мученица Агнија“. The rank words „Света мученица“ are left off and the heading gives no epithet, so the form is bare; the Prologue does not say Rome, only that she suffered under Diocletian in 305."
     }
   ],
   "sex": "female",
@@ -85,8 +90,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.02.2026 (21. јануар ст. ст.) — „Света мученица Агнија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

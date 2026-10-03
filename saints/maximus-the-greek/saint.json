@@ -16,6 +16,11 @@
       "form": "Максим Грек",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Максим Грек, прп.», with the rank word left off."
+    },
+    {
+      "form": "Максим Грк",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 21. јануар ст. ст. (civil 2026-02-03), „Блажени Максим Грк“. The rank word „Блажени“ is left off; „Грк“ — the Greek — is kept, being what distinguishes him from the other Maximus on the same day."
     }
   ],
   "sex": "male",
@@ -76,8 +81,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.02.2026 (21. јануар ст. ст.) — „Блажени Максим Грк.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

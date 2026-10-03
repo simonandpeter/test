@@ -20,6 +20,11 @@
       "form": "Максим Исповедник",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Максим Исповедник, прп.», with the rank word left off."
+    },
+    {
+      "form": "Максим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 21. јануар ст. ст. (civil 2026-02-03), „Преподобни Максим Исповедник“. Both „Преподобни“ and „Исповедник“ are rank words the site composes itself — the folder's `types` already hold `venerable` and `confessor` — so the form is bare. The fuller form the heading prints is „Максим Исповедник“, should the fold need breaking."
     }
   ],
   "sex": "male",
@@ -89,8 +94,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.02.2026 (21. јануар ст. ст.) — „Преподобни Максим Исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "track": [
