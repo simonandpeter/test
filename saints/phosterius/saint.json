@@ -6,6 +6,11 @@
       "form": "Φωστήριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Όσιος Φωστήριος», with the rank word left off."
+    },
+    {
+      "form": "Фостирий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., «Фостирий, прп.»; the rank word is left off, which leaves the bare name, since the calendar gives him no epithet and no surname."
     }
   ],
   "sex": "male",
@@ -18,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прп. Фостирия (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The same hermit the folder's Greek row keeps on 5 January: the life page days.pravoslavie.ru/Life/life159.htm heads «День памяти: 5 января» and is two sentences long. The day page carries no hymn under his name."
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 5 января ст. ст.: «Прп. Фостирия (VI)». The life page gives no year at all, and no narrower reading is proposed."
+    }
   }
 }

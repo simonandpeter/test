@@ -6,6 +6,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Όσιος Γρηγόριος ο εν Ακρίτα», with the rank word left off."
+    },
+    {
+      "form": "Григорий Акритский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., «Григорий Акритский, прп.»; the rank word is left off."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прп. Григория Акритского (ок. 820)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The same ascetic of the cape of Akritas the folder's Greek row keeps on 5 January: the life page days.pravoslavie.ru/Life/life161.htm heads «День памяти: 5 января», names him «Преподобный Григорий Акритский», gives his birth on Crete in 760 and his end about 820, the year the day page prints. The day page carries no hymn under his name."
     },
     {
       "church": "romanian",

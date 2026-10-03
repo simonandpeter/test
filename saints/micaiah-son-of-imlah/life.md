@@ -1,0 +1,9 @@
+# Micaiah, son of Imlah
+
+The Russian calendar keeps a prophet Micaiah on 5 января old style, and he is not the writing prophet of the twelve whom it keeps on 14 августа: this one it names «Сын Иемвлая», the son of Imlah, and dates to the ninth century before Christ, a hundred years the earlier of the two. He came of the tribe of Ephraim and was a contemporary of the prophet Elijah.
+
+He reproved Ahab, king of Israel, for falling away from God into idolatry, and foretold that he would perish in the war with the Assyrians; for which he was put in prison and fed on nothing but bread and water. The king went out to the war all the same and was killed there, as the prophecy had said. The calendar gives the place: the third book of Kings, chapter twenty-two, verses eight to thirty-five.
+
+Of his own end Holy Scripture says nothing, and the calendar says so. It thinks it very likely that he died a martyr's death at the hand of one of the persecutors, since Ahab's widow Jezebel, his son Ahaziah who took the kingdom after him, and his son-in-law Jehoram, king of Jerusalem, could none of them be well disposed towards the man who had foretold Ahab's ruin. Other sources, it adds, say that he was killed for reproving lawlessness and thrown into a chasm, and that his own people drew his honourable body out of it and buried it in their own land.
+
+*After the Православный церковный календарь of the Сретенский monastery for 5 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260105.html) and [the life](https://days.pravoslavie.ru/Life/life6748.htm); read 3 October 2026.*

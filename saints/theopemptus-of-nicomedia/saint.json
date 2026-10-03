@@ -12,6 +12,11 @@
       "form": "Θεόπεμπτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιοι Θεόπεμπτος και Θεωνάς», with the rank word left off."
+    },
+    {
+      "form": "Феопемпт Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Святитель Феопемпт Никомидийский, епископ, сщмч.»; the rank words and the office are left off. The line on the day page itself declines the name and abbreviates the see."
     }
   ],
   "sex": "male",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Сщмч. Феопемпта, еп. Никомидийского и мч. Феоны волхва (303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The same bishop of Nicomedia the folder's Greek row keeps on 5 January, and with the same companion: the life page days.pravoslavie.ru/Life/life155.htm heads «День памяти: 5 января», is titled «Священномученик Феопемт, епископ Никомидийский, и мученик Феона волхв», and dates both deaths to 303, the year the day page prints. The day page carries no hymn under his name; its troparion and kontakion are the eve of Theophany's."
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Apolinaria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    },
+    {
+      "form": "Аполлинария",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., «Аполлинария, прп.»; the rank word is left off, which leaves the bare name, since the calendar gives her no surname. The caption on her life page adds the epithet «Египетская», Egyptian, which the line and the name link do not, so it is recorded here and not in the form."
     }
   ],
   "sex": "female",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прп. Аполлинарии (ок. 470)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps her a day later than the Romanian row this folder already carries, 5 января ст. ст. against the Romanian 4 ianuarie, and the two are not thirteen days apart, so neither is a style conversion of the other. The life page days.pravoslavie.ru/Life/life158.htm heads «День памяти: 5 января», names her «Преподобная Аполлинария» and in the caption «Аполлинария Египетская», and tells the same story the Romanian calendar tells — the daughter of Anthemius, the habit of a monk, the name Dorotheus, and the year 470, which the day page prints as «ок. 470». The day page carries no hymn under her name."
     },
     {
       "church": "romanian",
@@ -63,6 +78,8 @@
     }
   ],
   "related": [
-    "leo-the-great"
+    "leo-the-great",
+    "macarius-the-egyptian",
+    "theodosius-the-younger"
   ]
 }

@@ -11,6 +11,11 @@
       "form": "Θεωνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιοι Θεόπεμπτος και Θεωνάς», with the rank word left off."
+    },
+    {
+      "form": "Феона Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Феона (в крещении Синесий) Никомидийский, мч.»; the rank word is left off, and the parenthesis is the calendar saying what he was named at his baptism rather than a second part of the form, so it is recorded in this note and not in the name. The line on the day page itself gives «Феоны волхва», Theonas the sorcerer."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Сщмч. Феопемпта, еп. Никомидийского и мч. Феоны волхва (303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The same sorcerer who was baptised Synesius whom the folder's Greek row keeps on 5 January: the name link reads «Феона (в крещении Синесий) Никомидийский, мч.» — Theonas, at baptism Synesius — and the one life page the calendar gives for the pair, days.pravoslavie.ru/Life/life155.htm, tells how the bishop gave him that name. The day page carries no hymn under his name."
     },
     {
       "church": "romanian",

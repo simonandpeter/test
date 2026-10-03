@@ -11,6 +11,11 @@
       "form": "Συγκλητική",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Οσία Συγκλητική», with the rank word left off."
+    },
+    {
+      "form": "Синклитикия Александрийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Синклитикия Александрийская, прп.»; the rank word is left off."
     }
   ],
   "sex": "female",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прп. Синклитикии Александрийской (ок. 350)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      },
+      "note": "The same ascetic of Alexandria the folder's Greek row keeps on 5 January: the life page days.pravoslavie.ru/Life/life156.htm heads «День памяти: 5 января», names her «Преподобная Синклитикия Александрийская», and ends «Скончалась святая около 350 года, в возрасте 83-х лет». The day page carries no hymn under her name."
     },
     {
       "church": "romanian",

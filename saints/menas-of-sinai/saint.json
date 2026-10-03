@@ -1,0 +1,59 @@
+{
+  "slug": "menas-of-sinai",
+  "display_name": "Menas of Sinai",
+  "names": [
+    {
+      "form": "Мина Синайский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Мина Синайский, прп.»; the rank word is left off. The line on the day page itself gives only the forename, in the genitive; the rest comes from the name link."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 551,
+      "latest": 600,
+      "display": "second half of the 6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Преподобный Мина 50 лет подвизался в Синайском монастыре, скончался мирно во второй половине VI века»; the day page prints «Прп. Мины (VI)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прп. Мины (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 18 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 18 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

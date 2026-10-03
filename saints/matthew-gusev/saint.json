@@ -1,0 +1,58 @@
+{
+  "slug": "matthew-gusev",
+  "display_name": "Matthew (Gusev)",
+  "names": [
+    {
+      "form": "Матфей (Гусев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Матфей (Гусев), мч.»; the rank word is left off. The line on the day page itself gives only the forename, in the genitive; the rest comes from the name link."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 5 января ст. ст.: «Мч. Матфея (1938)». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Мч. Матфея (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 18 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 18 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

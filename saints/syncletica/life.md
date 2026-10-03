@@ -12,4 +12,10 @@ The Greek calendar keeps her on the same fifth of January, and saint.gr gives th
 
 The page gives her teaching at length — fasting as the one medicine of body and soul, pride as the last weapon the enemy keeps back — and then three months of illness, the loss of her voice, the rotting of her jaw, and her death at eighty on the third day after she told the nuns she would leave them.
 
-*After doxologia.ro's calendar for 5 ianuarie — [the day](https://doxologia.ro/5-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-sinclitichia); read 19 September 2026; and after saint.gr's calendar for 5 Ιανουαρίου — [the day](https://www.saint.gr/01/05/index.aspx) and [the life](https://www.saint.gr/582/saint.aspx), read 30 September 2026.*
+The Russian calendar keeps her on 5 января old style and adds to the Greek account two things the reader would want: her sister, and her age. She was of Alexandria, the daughter of rich parents and beautiful, and from her youth she thought of nothing but pleasing God. Loving the purity of virginity she refused to marry and spent all her time in fasting and prayer.
+
+When her parents had died she gave their goods away to the poor and, with her blind sister, took the monastic habit and hid in one of the tombs that belonged to her kinsfolk. Word of her struggles spread quickly through the country round about, and many devout women and maidens came to her to live under her direction, and all through her ascetic life she taught them diligently by word and by deed.
+
+In her eightieth year a heavy and tormenting illness came upon her, and she bore what was sent her with a patience the calendar calls truly Christian. She died, it says, about the year 350, at the age of eighty-three.
+
+*After doxologia.ro's calendar for 5 ianuarie — [the day](https://doxologia.ro/5-ianuarie) and [the life](https://doxologia.ro/viata-sfintei-cuvioase-sinclitichia); read 19 September 2026; and after saint.gr's calendar for 5 Ιανουαρίου — [the day](https://www.saint.gr/01/05/index.aspx) and [the life](https://www.saint.gr/582/saint.aspx), read 30 September 2026; and after the Православный церковный календарь of the Сретенский monastery for 5 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260105.html) and [the life](https://days.pravoslavie.ru/Life/life156.htm), read 3 October 2026.*

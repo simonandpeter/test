@@ -1,0 +1,58 @@
+{
+  "slug": "micaiah-son-of-imlah",
+  "display_name": "Micaiah, son of Imlah",
+  "names": [
+    {
+      "form": "Михей",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., «Пророк Михей», and the title of its life page; the rank word is left off. The calendar gives him no epithet and no surname, and the clause by which it tells him from the writing prophet of the same name — «Сын Иемвлая» — is a description and not part of the form, so the form it prints is the bare name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "prophet"
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -900,
+      "latest": -801,
+      "display": "9th century BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 5 января ст. ст.: «Прор. Михея (IX до Р.Х.)»; its life page: «Сын Иемвлая. Жил в IX веке до Р. Х и происходил из колена Ефремова, был современником пророка Илии»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 января ст. ст. — «Прор. Михея (IX до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260105.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 18 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 18 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
