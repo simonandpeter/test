@@ -58,22 +58,18 @@ const MONTH_FADE = DUR.travel;
  */
 
 /**
- * **The month is stepped like a spinner** (author, 2026-10-03: "from Oct to
- * Sep is an arrow or swipe up above the Oct 2026 print, and conversely an
- * arrow down underneath it").
+ * **A month moves the way the gesture moves** (author, 2026-10-03: "The arrow
+ * that points up goes up makes an animation that goes down").
  *
- * The step *up* is the month *before*, so the month before arrives from below
- * and the grid rolls upward - which is what a number spinner's digits do, and
- * the only arrangement in which the arrow above the heading and a swipe up
- * mean the same thing while the grid still follows the finger. Every geometric
- * direction handed to the grain is therefore the negative of the month delta:
- * here in `moveMonth`, and in the sides, the settle and the flick
- * views/calendar.js gives `makeGrain`.
+ * The step *up* is the month *before*, and it arrives from above: the grid
+ * follows the arrow rather than a spinner's digits, so an arrow drawn pointing
+ * up slides its grid up, and a finger dragged up pulls the month after this one
+ * into view the way a scroll does.
  *
  * The week rail is untouched by it. It is the phone's own compact grain and it
  * still scrolls sideways; what the month does on the other axis is the month's.
  */
-export const SPIN = -1;
+export const SPIN = 1;
 
 /* ---- the day rail ------------------------------------------------------- */
 
@@ -898,30 +894,27 @@ const hasFeast = (iso) =>
 const FEAST_MARK = '<i class="month-feast" aria-hidden="true"></i>';
 
 /**
- * A day either side of the month: numbered, one step back in ink, and **out of
- * reach** — `aria-hidden`, a span rather than a button, so it is neither
- * focusable nor clickable.
+ * A day either side of the month: numbered, one step back in ink, and **a
+ * button like any other day** (author, 2026-10-03: "They are unclickable.
+ * Retarded mistake - fix"). Picking one selects that date and carries the grid
+ * to the month it belongs to, so a reader who sees 28 September under Monday
+ * can reach it without stepping the month first.
  *
- * **It carries no fast tone and no feast mark, and that is not the plan's
- * first answer.** §3.3 drew these days "numbered and marked", tinted 38%
- * toward the field, on §10.6's reasoning that `aria-hidden` keeps the tint out
- * of axe's reach. **Measured, it does not**: axe 4.13's colour-contrast rule
- * matches on `isVisibleOnScreen`, not on whether a screen reader can see the
- * node, so the five tinted numerals raised 128 violations across four
- * `quality-floor` runs at 1.71–2.61:1 — and `npm run test:lighthouse` gates CI
- * on accessibility 100 besides, where a spec-level exclusion could not reach.
+ * It was a span until then, on the reasoning that `aria-hidden` would keep the
+ * tint it then carried out of axe's reach. **Measured, it does not**: axe
+ * 4.13's colour-contrast rule matches on `isVisibleOnScreen`, not on whether a
+ * screen reader can see the node, so the tint went and `--ink-soft` took its
+ * place - 5.92:1 on gesso, 5.53:1 on the field. With the tint gone the
+ * `aria-hidden` was buying nothing, and it was the only thing making these
+ * days unreachable.
  *
- * So they take the treatment the peek cells they replace already had, for the
- * same reason written beside `.peek-prev`: "text a sighted reader might try to
- * read has to clear 4.5:1 wherever it is legible at all". `--ink-soft` is
- * 5.92:1 on gesso and 5.53:1 on the field, and a numeral in it against a
- * neighbour in `--ink` is a step back a reader can see. What is given up is
- * the fast hue out there — which the peeked columns never carried either —
- * and it buys the distinction back: **a coloured numeral is this month's**.
+ * **It carries no fast tone and no feast mark.** That is what buys the
+ * distinction back now that the shape is a day of this month's exactly: a
+ * coloured numeral is this month's.
  */
-const outCell = (day) => `<span class="month-out" aria-hidden="true"><span class="day-num">${
-  day
-}</span></span>`;
+const outCell = (iso, day, delta) =>
+  `<button type="button" class="month-out" data-iso="${iso}" data-mout="${delta}"
+    aria-label="${dayLabel(iso)}"><span class="day-num">${day}</span></button>`;
 
 /**
  * One month into one row: the grid, with the days either side of it filling
@@ -951,7 +944,10 @@ export function paintMonthInto(row, cursor, { live }) {
   const cells = [];
   const before = stepCursor(cursor, -1);
   const last = daysInMonthOf(cal, before);
-  for (let i = lead; i > 0; i--) cells.push(outCell(last - i + 1));
+  for (let i = lead; i > 0; i--) {
+    const day = last - i + 1;
+    cells.push(outCell(isoOfDate(cal, { ...before, day }), day, -1));
+  }
   const days = daysInMonthOf(cal, cursor);
   for (let day = 1; day <= days; day++) {
     const iso = isoOfDate(cal, { year: cursor.year, month: cursor.month, day });
@@ -993,13 +989,26 @@ export function paintMonthInto(row, cursor, { live }) {
   // Only the last row's remainder, so the month never grows a row it did not
   // have: a month ending on a Sunday adds nothing at all.
   const trail = (7 - ((lead + days) % 7)) % 7;
-  for (let day = 1; day <= trail; day++) cells.push(outCell(day));
+  const next = stepCursor(cursor, 1);
+  for (let day = 1; day <= trail; day++) {
+    cells.push(outCell(isoOfDate(cal, { ...next, day }), day, 1));
+  }
   row.querySelector('.month-grid').innerHTML = cells.join('');
 
   if (!live) return;
   // Picking a date does not close the month: only the toggle does.
   for (const b of row.querySelectorAll('.month-grid [data-iso]')) {
-    b.addEventListener('click', () => state.select(b.dataset.iso));
+    b.addEventListener('click', () => {
+      state.select(b.dataset.iso);
+      /*
+       * A day outside the month is a day in the month either side of it, so
+       * the grid follows the selection there - otherwise the chosen day sits
+       * in the corner of a month it does not belong to, marked current in a
+       * grid that disagrees with it.
+       */
+      const out = Number(b.dataset.mout);
+      if (out) moveMonth(out);
+    });
   }
 }
 

@@ -966,15 +966,25 @@ html[data-route~='calendar'] .cal-main .month-grid .month-out {
  * reading back — **a coloured numeral is this month's**.
  */
 html[data-route~='calendar'] .month-grid .month-out {
+  /* Every one of these is the day button's own (`.month-grid button`), padding
+     included: the numeral has to sit on the same line as its neighbours in the
+     row, and the 2px of padding left out of this list is what used to lift it
+     off that line. */
+  border: 1px solid transparent;
+  padding: 2px 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid transparent;
+  gap: 2px;
   font-family: var(--font-utility);
   font-size: var(--text-sm);
   line-height: 1.2;
   font-variant-numeric: tabular-nums;
   color: var(--ink-soft);
+}
+
+html[data-route~='calendar'] .month-grid .month-out:hover {
+  border-color: var(--rule);
 }
 
 /* ---- the day ---------------------------------------------------------- */
