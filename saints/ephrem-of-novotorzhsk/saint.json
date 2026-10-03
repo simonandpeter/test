@@ -6,6 +6,11 @@
       "form": "Εφραίμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο εκ Ρωσίας», with the rank word left off. His own page calls him «ο Όσιος Εφραίμ του Νοβοτόρζσκϊυ»."
+    },
+    {
+      "form": "Ефрем Новоторжский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Ефрем Новоторжский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Прп. Ефрема Новоторжского (1053)»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною свыше благодатию просветився, Богомудре, / и по смерти яви тя светлость жития твоего, / темже источаеши мирови благоухание, / иже с верою притекающим к раце мощей твоих, Ефреме преподобне. / Тем вопием ти: / слава Давшему ти чудесем благодать, / слава Прославльшему тя в чудесех, / слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Тропарь преподобного Ефрема Новоторжского»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened from above by divine grace, O God-wise one, the brightness of thy life was shown even after thy death; and so thou pourest out fragrance on the world and on those who come with faith to the shrine of thy relics, O venerable Ephrem. Therefore we cry to thee: glory to him who gave thee the grace of miracles, glory to him who glorified thee in miracles, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною свыше просветися благодатию, преподобне,/ многим терпением во временной жизни подвиг совершил еси./ Темже источаеши чудес благодать/ всем, с верою приходящим к мощем твоим, Ефреме преблаженне./ Сего ради зовем:/ слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Тропарь преподобного Ефрема»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened from above by divine grace, O venerable one, thou didst finish thy struggle in this temporal life with much patience; and so thou pourest out the grace of miracles on all who come with faith to thy relics, O most blessed Ephrem. Therefore we cry: glory to him who gave thee strength, glory to him who crowned thee, glory to him who works healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко Богоявленная Российская звезда,/ днесь сияя чудесы, явился еси, преподобне отче Ефреме./ Тем не престай моляся о стаде своем,/ сохраняли отечество твое, град же и люди,/ иже тебе верою почитающих/ и к честным мощем твоим усердно притекающих,/ да велегласно тебе вопием:/ радуйся, Богомудре Ефреме, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Кондак преподобного Ефрема Новоторжского»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast appeared as a star of Russia shown forth by God, shining today with miracles, O venerable father Ephrem. Therefore cease not to pray for thy flock, keeping thy homeland, and the city and the people who honour thee with faith and come earnestly to thy honourable relics, that we may cry aloud to thee: rejoice, O God-wise Ephrem, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

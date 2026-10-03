@@ -7,6 +7,11 @@
       "form": "Εφραίμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο εκ Κιέβου», with the rank word left off."
+    },
+    {
+      "form": "Ефрем Печерский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Ефрем Печерский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Прп. Ефрема Печерского, еп. Переяславского (ок. 1098)»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Духом горя путешествия к святым местом, / странствовал еси в Греческую землю, / святителю Ефреме, / отнюдуже со многою пользою возвращаяся, / устав святаго Студийскаго монастыря списав, / аки некий многочестен дар, семо принесл еси, / имже и днесь Церковь Российская управляема / славит тебе, истиннаго о ней промысленника.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Тропарь преподобного Ефрема Печерского, еп. Переяславского»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Burning in spirit to journey to the holy places, thou didst travel into the land of the Greeks, O hierarch Ephrem, and returning from there with much profit thou didst copy out the rule of the holy monastery of Studion and bring it here as a gift of great price; and the Russian Church, governed by it to this day, glorifies thee as one who truly provided for her.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Церкви Православной Российской по желанию Бргоноснаго Феодосия устав Студийский принесшаго,/ во святйтелех же светло просиявшаго/ и стадо свое добре упасшаго,/ восхваляем тя, Ефреме,/ яко молящася Господеви о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Кондак преподобного Ефрема Печерского, еп. Переяславского»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thee who at the wish of the God-bearing Theodosius brought the rule of Studion to the Orthodox Church of Russia, who shone brightly among the hierarchs and shepherded thy flock well, we praise, O Ephrem, as one who prays to the Lord for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -10,6 +10,11 @@
       "form": "Isaac",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 ianuarie, «Sfântul Cuvios Isaac Sirul»."
+    },
+    {
+      "form": "Исаак Сирин",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Исаак Сирин», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Прп. Исаака Сирина, еп. Ниневийского (VI-VII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

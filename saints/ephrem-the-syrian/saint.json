@@ -11,6 +11,11 @@
       "form": "Εφραίμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Εφραίμ ο Σύρος», with the rank word left off."
+    },
+    {
+      "form": "Ефрем Сирин",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Ефрем Сирин», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Прп. Ефрема Сирина (373-379)»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -157,6 +171,38 @@
       },
       "english": {
         "text": "Ever foreseeing the hour of the examination, you wept bitterly, Ephrem, with tears of compunction; and you became a teacher in deeds and not in words alone, venerable one. Whence, father of the whole world, you rouse the slothful to repentance.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси, / и иже из глубины воздыханьми во сто трудов уплодоносил еси, / и был еси светильник вселенней, / сияя чудесы, Ефреме, отче наш, / моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Тропарь преподобного Ефрема Сирина»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barrenness of the desert, and with sighings from the depths thou didst make thy labours bear fruit a hundredfold; and thou wast a lamp to the whole world, shining with miracles, O Ephrem our father: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Час присно провидя Суда,/ рыдал еси горько, Ефреме, яко любобезмолвный,/ делателен же был еси в делех учитель, преподобне./ Темже, отче всемирный, ленивыя воздвизаеши к покаянию.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Кондак преподобного Ефрема Сирина»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ever foreseeing the hour of the Judgement, thou didst weep bitterly, O Ephrem, as one who loved stillness; and thou wast a teacher active in deeds, O venerable one. Therefore, O father of all the world, thou rousest the slothful to repentance.",
         "rendered": "site"
       }
     }

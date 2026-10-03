@@ -987,6 +987,7 @@ export const ru = {
     'Bishop of Sirmium': 'Епископ Сирмийский',
     'Bishop of Skepsis in Mysia': 'Епископ Скепсийский в Мисии',
     'Bishop of Skopelos': 'Епископ Скопельский',
+    'Bishop of Skopin': 'Епископ Скопинский',
     'Bishop of Smyrna': 'Епископ Смирнский',
     'Bishop of Soissons': 'Епископ Суассонский',
     'Bishop of Soleas and Archbishop of Cyprus': 'Епископ Солийский и Архиепископ Кипрский',

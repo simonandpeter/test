@@ -1,0 +1,70 @@
+{
+  "slug": "leontius-stasevich",
+  "display_name": "Leontius (Stasevich)",
+  "names": [
+    {
+      "form": "Леонтий (Стасевич)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Леонтий (Стасевич), архимандрит, исп.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "1884",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: «родился 20 марта 1884 года в посаде Тарноград Белгорайского уезда Люблинской губернии»."
+    },
+    "death": {
+      "earliest": 1972,
+      "latest": 1972,
+      "display": "1972",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: his last Liturgy was on 7 February 1972 and «9 февраля […] В 16 часов душа его отошла ко Господу»; the day line prints the year as (1972)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 января ст. ст. — «Прп. Леонтия исповедника (1972)»",
+        "url": "https://days.pravoslavie.ru/Days/20260128.html",
+        "year": 2026
+      },
+      "note": "His life page lists his days as «Дни памяти: 26 января (Новомуч.), 28 января». The first is the general commemoration of the new martyrs and not a proper feast of his own, so the row records the day whose calendar line names him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "tikhon-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

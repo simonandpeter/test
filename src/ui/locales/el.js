@@ -969,6 +969,7 @@ export const el = {
     'Bishop of Sirmium': 'Επίσκοπος Σιρμίου',
     'Bishop of Skepsis in Mysia': 'Επίσκοπος Σκήψεως Μυσίας',
     'Bishop of Skopelos': 'Επίσκοπος Σκοπέλου',
+    'Bishop of Skopin': 'Επίσκοπος Σκόπιν',
     'Bishop of Smyrna': 'Επίσκοπος Σμύρνης',
     'Bishop of Soissons': 'Επίσκοπος Σουασόν',
     'Bishop of Soleas and Archbishop of Cyprus': 'Επίσκοπος Σολέας και Αρχιεπίσκοπος Κύπρου',
