@@ -113,6 +113,13 @@ for (const { slug, saint } of corpus) {
  * has been settled by reading both pages is not a finding any more. The key is
  * the folded form and both slugs, sorted, so that a *third* folder joining the
  * fold is an unread pair again and stops the gate as it should.
+ *
+ * **Giving an existing folder a name form widens a fold too**, and that is the
+ * case nobody expects: no folder was added, the batch is upgrades, and the gate
+ * goes red anyway because the key is the slug list. «Феофан» went from two
+ * folders to four the day Theophanes of Nicaea got his Russian form. The old
+ * entry is then **replaced**, not extended — it was a reading of a different
+ * set, and a reading that no longer names everyone it folds is worse than none.
  */
 const READ_FOLDS = {
   'богоявленскии феодор theodore-bogoyavlensky theodore-bogoyavlensky-27-september':
