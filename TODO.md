@@ -22,13 +22,16 @@ day; the day's own page is the citation and is read before it is written.
 
 ## 2. Lives that cross-reference in prose with no link
 
-**The Charitina half is gone rather than done**: the author ruled the two are
-one woman and item 13 merged them, so there is no pair left to link — one record
-carries both Greek days and the September entry's evidence. What the item asked
-for in general is the sweep in item 13's second half: same-name pairs whose
-lives already name each other in prose. A pair that the sources say are *two*
-people wants the link; a pair they say are one wants the merge, and the author
-rules which.
+**This item is gone rather than done, and item 13 is why.** Every pair whose
+life cross-referenced another in prose turned out to be an identity question,
+and all fifteen of them are merged now — one record each, carrying both days.
+There is no pair left to link that a merge has not already made one folder.
+
+What survives of the general ask is the rule the merges proved: a pair the
+sources say are *two* people wants the link, a pair they say are one wants the
+merge, and the author rules which. Item 13's closing section is the sourcing
+list that remains, and none of it can be linked because the other half of each
+pair is not a folder here.
 
 ## 3. The 44 lonely date-tags
 
@@ -108,10 +111,22 @@ corpus.** 8,464 edges, and 2,235 saints (42.7%) have no link in either
 direction.
 
 A link is a claim: companions martyred together, a teacher and a disciple, a
-translator of relics, two commemorations that may be one person (item 13). It
-comes out of the saint's own life or the calendar's own line, never out of a
-shared name or a shared day. A wrong link is worse than a missing one — the
-corpus's known failure mode is the wrong-saint match (`b6dc41ab`).
+translator of relics. It comes out of the saint's own life or the calendar's own
+line, never out of a shared name or a shared day. A wrong link is worse than a
+missing one — the corpus's known failure mode is the wrong-saint match
+(`b6dc41ab`). **Two commemorations that may be one person are no longer a link
+but a merge**: item 13 is finished and all fifteen are one folder each.
+
+**A dedication is a relation** (author, 3 October 2026: "the more connections
+the better"), and the 89 exclusions that said otherwise are flipped in —
+`dfd9a198`. That ruling also removed the `NAMED_FOR` table from
+`scripts/life-links.mjs` and every encoding of the assumption in
+`related-floor.mjs`, `related-from-links.mjs`, `tests/life-links.test.mjs`,
+`docs/CORPUS.md` and `scratchpad/corpus-plan.md`. 52 exclusions remain and 50
+of them are **denials** — a life saying outright "He is not the «Laurence of
+Chernigov» whom the Romanian calendar keeps", where a row asserts the opposite
+of the text and no test can see it. The other two are a saying quoted seven
+centuries later and an emperor named only to date a life.
 
 Every link is two-way, or the reader meets a one-sided relation.
 
@@ -193,103 +208,101 @@ Also waiting, and small: five dead `STRINGS.prayer` keys (`searchLabel`,
 and the four packs, left because another agent was editing all five files.
 `locale-coverage.mjs` must read 0 fallbacks after they go.
 
-## 13. Charitina is one woman: merged. The others are below, for the author
+## 13. The merges are done
 
-**The merge is done, 3 October 2026** (`git log --grep="one woman"`). One
-record, `charitina-the-martyr-5-october`, with the Greek 4 September and the
-Greek 5 October each carrying its own citation and the Romanian 5 October as it
-stood; the display name has dropped its parenthesised day; the September
-entry's evidence — the company her memory is kept in, the shared verse, the
-Trajan supposition that stands two centuries off the October entry's 304 — is in
-the life, because it is *why* they are one.
+**All of item 13 is merged, 3 October 2026**, the author's ruling that every
+candidate on the list is to be merged — `git log --grep="one man"` plus the
+seven commits named below. Fourteen pairs, one commit each, each naming both
+slugs and the source sentence that settles it:
 
-The old slug does not 404. An unknown slug renders a refusal with a link to All
-Saints, so `aliases` is new in the schema, written only by a merge: the manifest
-carries it and the saint page replaces the URL with the live slug's.
+| the pair | what settled it |
+| --- | --- |
+| `nectarios-of-aegina` → `nektarios-of-aegina` | the corpus's own `dates.birth.note`, "the same saint as nektarios-of-aegina" |
+| `ia-of-persia` → `ias-of-persia` | both entries, each about the other, "may be the same" |
+| `titus-27-january` → `titus-the-soldier` | the stub prints «βλέπε στις 27 Φεβρουαρίου» in place of a life |
+| `mnason-of-cyprus` → `mnason-the-disciple` | «Είναι πιθανόν να είναι ο ίδιος Άγιος» |
+| `zosimas-of-cilicia` → `zosimas-the-hermit` | the Sretensky name page files the two lives together |
+| `abibus-of-hermoupolis` → `sabinus-of-hermopolis` | «Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο» |
+| `coronatus-of-caesarea` → `cornutus-of-iconium` | "Coronatus may be the same man as Cornutus" |
+| `john-the-soldier-12-june` → `john-the-soldier-29-july` | the July folder's own refusal to answer |
+| `goudelia` → `gobdelaas-son-of-sapor` | the synaxarion's copyists' error — **which it then argues against** |
+| `crispus` → `sosthenes-the-apostle` | Chrysostom, «Oίμαι δε τούτον και Σωσθένη λέγεσθαι» |
+| `aristokles-the-athonite` → `aristocles-of-moscow` | one life in both folders, not a doubt |
+| `alexander-the-confessor-relics-2001` → `alexander-the-confessor-1961` | a repose and a finding of relics |
+| `straton-the-martyr-9-september` → `straton-of-bithynia` | the corpus's own "keeps him on 9 and 13 September" |
+| `theodote-21-october` → `theodote-of-nicaea` | "probably the same saint as the one kept with Socrates" |
 
-### The candidates, for the author to rule
+**What a merge is, now that fourteen have been done.** `scratchpad/merge-saint.py`
+moves the half that cannot be read wrong — the `aliases` row so the folded URL
+redirects rather than 404ing, the union of `names`, `types`, `related` and
+`hymns`, the folded attestation rows, the folded folder's `images/` files where
+the survivor had none, and every reference to the dead slug elsewhere in
+`saints/`. It prints what it refuses to move, which is `dates` and the life,
+because those are the reading. Three things bit and are worth knowing:
 
-**Nothing below has been merged and nothing below should be merged by anyone
-but the author.** Every row is the sources' own doubt, quoted. A pair that only
-shares a name is not here: 115 name-pairs in this corpus carry a disambiguating
-day precisely because they are different people, and a wrong merge is invisible
-to every test (`b6dc41ab`).
+- **An `undocumented` row the survivor already has for a church that the folded
+  folder answers for has to go by hand.** Every merge left three or four of them.
+- **A display name that disappears takes its hyperlinks with it.** `cross-link.js`
+  indexes `display_name` alone, so the prose that named the folded folder stops
+  matching — and a `related-floor` exclusion keyed on that match goes stale and
+  turns `tests/related-floor.test.mjs` red. `nectarius-venerable-17-may`'s
+  denial of "Nectarios of Aegina" is the case: the life now writes the surviving
+  spelling and the exclusion key follows it.
+- **Two entries of one calendar on one day are one attestation row**, not two.
+  Goudelia and Gobdelaas stand on the same Greek 29 September, so that row's note
+  carries both entries; the schema's two-rows-per-church is for two *days*.
 
-The funnel, so the list can be judged: 226 folders of 5,231 carry any of the
-cross-reference prose shapes, 40 carry a tight *identity question*, and of those
-40 only these ten have **both halves standing as folders here** — the rest point
-at a day or a person the corpus does not hold, so no merge is even possible. A
-mechanical pass for signal 2, the shared synaxarion verse, found 34 shared Greek
-couplets and **every one of them is companions inside one entry on one day**; it
-produced no candidate at all.
+**Where a merge found a contradiction it left it standing**, which was the
+author's instruction for `theodote-of-nicaea` and for Goudelia and Sosthenes and
+turned out to be needed for seven of the fourteen. Mnason dies by the sword on
+one day and in peace on the other; Zosimas has three endings in three calendars;
+Straton is dated 315 by one calendar and the third century by the other, so
+`dates.death` spans 201–315 and displays "3rd century, or 315". None of that is
+smoothed and each life says plainly which source says what.
 
-| # | the two folders | the doubt, in the corpus's own words |
-| --- | --- | --- |
-| 1 | `nectarios-of-aegina` + `nektarios-of-aegina` | The corpus already says it: "the same saint as nektarios-of-aegina (the Greek and Romanian entry for the translation of his relics)". Against: a translation of relics is a commemoration some would keep separate. |
-| 2 | `ia-of-persia` + `ias-of-persia` | Both lives say it, each about the other — "she may be the same as the Ias kept on 11 September and 4 August"; "the Greek synaxarion thinks the Ia of 10 September may be the same woman". One story in both: captive with nine thousand, before the magi under Shapur. The source notes the verses differ. |
-| 3 | `titus-the-soldier` + `titus-27-january` | One calendar, two days, each page pointing at the other: "for Titus the soldier, see 27 February"; "his memory is kept again on 27 January". The January folder is a cross-reference stub with no life. |
-| 4 | `mnason-of-cyprus` + `mnason-the-disciple` | "it is possible, it says, that he is the same saint who is kept on 19 October as Mnason the ancient disciple, although that one fell asleep in peace" — and this one is martyred by the sword. |
-| 5 | `zosimas-the-hermit` + `zosimas-of-cilicia` | "whether the two are one man is left open" — and both lives tell one story: the monk of Cilicia among the beasts, the governor Dom(e)tian, the lion that speaks. Note that `HANDOFF.md` records the opposite call being made deliberately on the days: two days, two lives, kept as two. |
-| 6 | `abibus-of-hermoupolis` + `sabinus-of-hermopolis` | «Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο τον Αιγύπτιο, βλ. 16 Μαρτίου» — different names, identical death (a stone bound to the body, thrown in the river). Sabinus's own page says nothing back. |
-| 7 | `coronatus-of-caesarea` + `cornutus-of-iconium` | "Coronatus may be the same man as Cornutus, whose memory is kept on 12 September". **Two questions, not one**: the corpus holds two 12 September Cornuti, so even a yes leaves which one open. |
-| 8 | `john-the-soldier-29-july` + `john-the-soldier-12-june` | The folder itself raises it and refuses to answer: "says nothing about whether the two are one man". The June notice is «Δεν έχουμε λεπτομέρειες» — no life at all. |
-| 9 | `goudelia` + `gobdelaas-son-of-sapor` | Here for completeness, and the source **leans against** it: copyists may have made Gobdelaas into Goudelia, "but other sources say that there really was a martyr Goudelia", which the page calls "the more likely and the more accepted". A man and a woman on one day. |
-| 10 | `sosthenes-the-apostle` + `crispus` | Chrysostom's identification of two *different* names, reported and not settled. Weakest row: this is not the one-calendar-doubling shape the others are. |
+### The two carve-outs, and both are recorded rather than merged
 
-**Two more came out of item 8's first link batch** (3 October), found by a
-reader working the early corpus rather than by the grep above, so the scan's ten
-are not the whole of it:
+**Kandavla is done as a name-form fix** (`af16db05`), the author's carve-out: the
+corpus holds one folder from each pair, so `mianus-of-kandavla` and
+`kion-of-kandavla` gained their own Greek forms «Αμμιανός» and «Ωκεανός», each
+with a note saying the identification is this corpus's reading and that neither
+page voices it. `centurion-the-martyr` gained «Κεντυρίων» on the same footing as
+Theodore's and Julian's, having no Russian counterpart at all.
 
-| # | the two folders | the doubt |
-| --- | --- | --- |
-| 11 | `aristocles-of-moscow` + `aristokles-the-athonite` | **Not a doubt — one man, twice.** Alexis Amvrosiev of Orenburg, b. 1846, Athos 1876, tonsured Aristocles 1880, the Moscow metochion, died 24 August 1918, moved to Danilov 1923, glorified 2001. Both folders carry that life. |
-| 12 | `alexander-the-confessor-1961` + `alexander-the-confessor-relics-2001` | George Urodov of Nevezhkino, b. 1882, Sanaksar, died 14 August 1961 — one folder stands on his repose and the other on the finding of his relics, which is the `nectarios`/`nektarios` shape of row 1. |
+**`philonides-of-kourion` stays linked and unmerged**, the author's other
+carve-out. He names "three of his spiritual children, the priest Aristocles, the
+deacon Demetrianus and the reader Athanasius", killed in his cell at Kourion
+about 306; the corpus holds that trio as `aristocleus-of-tamassos`,
+`demetrianus-the-deacon` and `athanasius-the-reader`, already a linked triangle,
+but their own lives have them beheaded at **Salamis in 302** and name no
+Philonides, and are kept on 23 June against his 30 August. Same three names,
+same three ranks, same island, same persecution; two irreconcilable passions and
+no source voicing the doubt. A ruling either joins the four or records the two
+companies as distinct, and until one comes nothing is linked and nothing merged.
 
-**Nine more were dropped because the other half is not a folder here** — Aeros,
+### What is left of the item is a sourcing list, not a merge list
+
+**Nine pairs were dropped because the other half is not a folder here** — Aeros,
 Michael Mavroeidis, Moses the Confessor, Mark the Ascetic, the three 6 February
 martyrs (whose note carries the purest shared-verse evidence in the corpus and
 points at a 25 October company nobody has written), the Thirty-eight Martyrs of
-Thrace, Herodion, Maurice of Apamea. **Those are a sourcing list, not a merge
-list.** Five more were dropped as explicit negatives — the page or a reader
-already ruled them two people: Eleazar, Antonina, Acacius of Melitene, Peter the
-Sign-bearer, Hermes of Dalmatia.
+Thrace, Herodion, Maurice of Apamea. **Five more are explicit negatives** — the
+page or a reader already ruled them two people: Eleazar, Antonina, Acacius of
+Melitene, Peter the Sign-bearer, Hermes of Dalmatia. And
+**`euxiphius-the-martyr` is nothing but its own doubt**: one line in the 1956
+Hagiasmatarion "and nowhere else; perhaps he is confused with Auxibius, kept on
+17 February", and the corpus's `auxibius-of-soloi` and `auxibius-28-april` are
+**neither of them kept on 17 February**, so the source's own cross-reference
+lands on neither folder.
 
-**Batch 3 of item 8 adds one more of the dropped kind, not a thirteenth row.**
-`euxiphius-the-martyr` is nothing but its own doubt — one line in the 1956
-Hagiasmatarion “and nowhere else; perhaps he is confused with Auxibius, kept
-on 17 February”. The corpus holds `auxibius-of-soloi` and
-`auxibius-28-april` and **neither is kept on 17 February**, so the source’s
-own cross-reference does not land on either folder. No merge is possible; it is a sourcing question.
-
-**Batch 4 adds one of a different kind: a company recorded twice, not a person.**
-The 4 September martyrs of Kandavla are printed as two lists on one day — the
-Russian “Theodore, Mianus, Julian and Kion… under Maximian (305–311)” and the
-Greek “Centurion, Theodore, Ammianus, Julian and Oceanus… seized under Maximian
-in 288” — and each folder names the other list. Mianus against Ammianus and Kion
-against Oceanus look like one man under two name-forms, but **the corpus holds
-only one folder from each pair**, so there is nothing here to merge; the five
-were linked as one company instead. Neither source voices the doubt in words.
-
-**Batch 5 raises one the sources do not raise at all, and it wants the author.**
-`philonides-of-kourion` names “three of his spiritual children, the priest
-Aristocles, the deacon Demetrianus and the reader Athanasius”, killed in his
-cell at Kourion about 306. The corpus holds exactly that trio —
-`aristocleus-of-tamassos`, `demetrianus-the-deacon`, `athanasius-the-reader`,
-already a linked triangle — but their own lives have them beheaded at **Salamis
-in 302** after going out to encourage the persecuted, name no Philonides, and
-are kept on 23 June against his 30 August. Same three names, same three ranks,
-same island, same persecution; two irreconcilable passions. No source voices
-the doubt, so nothing was linked and nothing merged. A ruling either joins the
-four or records the two companies as distinct.
-
-**Batch 6 found one the corpus states itself.** `straton-of-bithynia` says the
-Russian calendar “knows him as Strator, or Stratonicus, of Nicomedia in
-Bithynia … and keeps him on 9 and 13 September of the old style” — and
-`straton-the-martyr-9-september` is that other day, citing the same page and the
-same death, torn between two bent trees at Nicomedia by the governor’s order.
-Both halves are folders; the only difference is the year, 315 under Licinius
-against “the 3rd century”. This is the one-calendar-doubling shape of rows 3
-and 8 above.
+**The funnel, kept because it says what a rescan would cost**: 226 folders of
+5,231 carried any of the cross-reference prose shapes, 40 carried a tight
+identity question, and of those 40 only the ten of the original table had both
+halves standing as folders. A mechanical pass for the shared synaxarion verse
+found 34 shared Greek couplets and **every one of them is companions inside one
+entry on one day**; it produced no candidate at all. Four more pairs were found
+by readers working the early corpus rather than by that grep, so the scan was
+never the whole of it.
 
 ## 14. The feasts, drawn as a day's main card
 
