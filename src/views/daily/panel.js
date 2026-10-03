@@ -915,11 +915,19 @@ export function paintDay(panels) {
    * them, so the desk keeps the cheaper arrangement and fills in place.
    */
   side.innerHTML = readingsMarkup(selected, state.calendar);
+  /*
+   * **The name days do not wait for a fetch they are not under.** Past 1024 px
+   * the hymns are a column of their own, so this column is the readings and
+   * the name days and nothing between them can grow: the pair goes in now.
+   * Below that the hymns stand between the two and the name days follow them,
+   * which is what `sideTail` is for.
+   */
+  if (wide) side.insertAdjacentHTML('beforeend', nameDaysMarkup(entries, data));
   const sideTail = (saintHymns) => {
     if (!state || state.selected !== selected) return;
     side.insertAdjacentHTML(
       'beforeend',
-      `${wide ? '' : hymnsMarkup(selected, state.calendar, saintHymns)}
+      `${hymnsMarkup(selected, state.calendar, saintHymns)}
        ${nameDaysMarkup(entries, data)}`,
     );
   };
@@ -936,6 +944,8 @@ export function paintDay(panels) {
   if (feastLead) {
     main.innerHTML = `${feastArticle(feastLead, `${feastIdentity(feastLead)}${feastLede(feastLead)}`)}
     ${register}`;
+    // There is no saint and so no second half of the hymns to wait for.
+    sideTail('');
     fillFeastCredit(main, feastLead);
     fillRegisterLives(main, selected);
     return;
@@ -1081,37 +1091,49 @@ function fillWritings(box) {
 const feastPicture = (feast) =>
   feast.image
     ? `<div class="hero-figure">
-        <div class="hero-media" aria-hidden="true" style="--hero-shape:${FEAST_SHAPE}">
-          <img src="${BASE + feast.image.file}" alt="" loading="eager" decoding="async" />
+        <div class="hero-media" aria-hidden="true" style="--hero-shape:${feastShape(feast)}">
+          <img src="${BASE + feast.image.file}" alt="" width="${feast.image.w}"
+            height="${feast.image.h}" loading="eager" decoding="async" />
         </div>
       </div>
       <p class="hero-credit utility" data-feast-credit hidden></p>`
     : '';
 
 /*
- * One shape for all eight, and the only honest one available: a feast record
- * carries `file` and `meta` and no dimensions, so there is no per-feast
- * `aspect-ratio` to publish the way `heroCrop` publishes a saint's. A declared
- * box with `object-fit: cover` reserves its height before the image decodes,
- * which is what the attribute pair buys a saint; 3:4 is the standing panel
- * these eight icons are, and the alternative — no declared shape — is a
- * register that jumps when each one lands.
+ * **The icon's own shape, uncropped at every width** (author, 2026-10-03:
+ * "Dont crop those images at all. Print them in full").
+ *
+ * None of the limits a saint's icon passes through apply here: `heroCrop`'s
+ * 1:1.6, the phone's 3:2 band and `columnCrop`'s A4 all exist to stop one
+ * folder of a growing corpus spending the window, and these are eight chosen
+ * icons that stand between 1:1.22 and 1:1.5. So the box is the picture's own
+ * ratio and `feast-hero.css` draws the image `contain` inside it, which cannot
+ * crop even if a swapped-in icon and its recorded dimensions ever disagree.
+ *
+ * `w` and `h` are in `data/feasts-fixed.js` because a feast has no payload and
+ * no manifest row to carry them, and a shape that is not declared before the
+ * image decodes is a register that jumps when it lands.
  */
-const FEAST_SHAPE = '3 / 4';
+const feastShape = (feast) => `${feast.image.w} / ${feast.image.h}`;
+
+/** Height over width, which is what `--hero-r` means. */
+const feastRatio = (feast) => (feast.image ? feast.image.h / feast.image.w : 1);
 
 /** The feast's name in the reader's language, English where the pack has none. */
 const feastTitle = (feast) => feast.title[currentLanguage()] ?? feast.title.en;
 
+/* The name alone, where a saint's hero carries their office and their years
+   and this carried "Feast of the Church" until 2026-10-03 (author: "Remove the
+   'Feast of the Church' subtext under Nativity of Christ and all others"). */
 const feastIdentity = (feast) => `
-        <h2 class="hero-name feast-name">${esc(feastTitle(feast))}</h2>
-        <p class="hero-dates utility">${esc(STRINGS.calendar.fixedFeast.label)}</p>`;
+        <h2 class="hero-name feast-name">${esc(feastTitle(feast))}</h2>`;
 
 /* English, and marked as English, exactly as a life is: the lede is written
    prose in one language and the packs do not translate it. */
 const feastLede = (feast) => `<p class="feast-lede" lang="en">${esc(feast.lede)}</p>`;
 
 const feastArticle = (feast, body) => `
-    <article class="hero hero-feast ${feast.image ? 'has-media' : ''}" style="--hero-r:1.3333">
+    <article class="hero hero-feast ${feast.image ? 'has-media' : ''}" style="--hero-r:${feastRatio(feast)}">
       ${feastPicture(feast)}
       ${body ? `<div class="hero-body">${body}</div>` : ''}
     </article>`;

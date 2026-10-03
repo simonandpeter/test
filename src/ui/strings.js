@@ -439,24 +439,6 @@ export const STRINGS = {
         dormition: 'The Dormition of the Theotokos',
       },
     },
-    /*
-     * The line under a fixed feast's name on the Daily hero
-     * (`src/data/feasts-fixed.js`), where a saint's hero carries their office
-     * and their years.
-     *
-     * It does the work the missing link would have done: a reader who has
-     * learnt that the hero's name opens a profile needs to be told why this
-     * one does not, and "Feast of the Church" says what kind of record they
-     * are looking at instead of apologising for the absence of a page. One
-     * phrase for all eight, because seven of them are feasts of the Lord or
-     * of the Theotokos and the eighth is of the angels, and no shorter words
-     * cover both.
-     *
-     * The names themselves are not here: a feast record carries its own title
-     * in all five languages. `feasts.names` above is keyed by lib/liturgy.js's
-     * table of the Great Feasts, which is not the same eight.
-     */
-    fixedFeast: { label: 'Feast of the Church' },
     // The day's readings, where a church's calendar has been read and recorded
     // (author, 2026-08-22; src/data/liturgical-days.js). Links open the NKJV
     // at Bible Gateway for now.

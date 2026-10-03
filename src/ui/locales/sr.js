@@ -187,7 +187,6 @@ export const sr = {
         dormition: 'Успење Пресвете Богородице',
       },
     },
-    fixedFeast: { label: 'Празник Цркве' },
     readings: {
       heading: 'Читања',
       source: 'Како штампа {source}. Везе отварају {bible}.',

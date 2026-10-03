@@ -19,12 +19,29 @@
  * box is never bare; a feast record holds `file` and `meta` and no derivatives,
  * so the box would be a hole in the page for as long as the fetch takes. The
  * field is the recessed surface the rest of the page uses for exactly this.
+ *
+ * **And the icon's own shape at every width** (author, 2026-10-03: "Dont crop
+ * those images at all. Print them in full"). Three rules in calendar.css would
+ * otherwise cut one: the 3:2 band below 620 px, `--hero-shape` from 620 px,
+ * which a feast now writes itself (`feastShape`), and the 50vh ceiling on the
+ * desk's saint column. The ratio is declared here so the box is reserved
+ * before the image decodes, and the image is `contain` rather than `cover`, so
+ * the ceiling mats the picture in the ground above instead of trimming it.
  */
 .hero-feast .hero-media {
   background-color: var(--field);
+  /* The fallback is the standing panel these eight are, for a record that
+     somehow reaches the page without its dimensions: a shape that is wrong by
+     a few per cent mats correctly, and no shape at all is a collapsed box. */
+  aspect-ratio: var(--hero-shape, 3 / 4);
   /* Not an anchor here, and it must not pretend to be one: there is no page
      behind a feast. The element is a `div` for the same reason. */
   cursor: default;
+}
+
+.hero-feast .hero-media img {
+  object-fit: contain;
+  object-position: 50% 50%;
 }
 
 /* The title is plain text where a saint's is a link, so it has to say in ink
@@ -68,12 +85,22 @@
  * `.hero-lede` is a way into a life: three to eighteen lines of a longer text
  * with `Continue reading` after it. A feast has no life and no page, so there
  * is nothing for a clamp to be a way into — cutting these two or three
- * sentences off would hide the only prose the site has about the day. The
- * measure is `.hero-lede`'s 68ch, because the column is the same column.
+ * sentences off would hide the only prose the site has about the day.
+ *
+ * **In the hymns' voice** (author, 2026-10-03: "the text should be matching in
+ * font style size colour etc. with the Hymns section"), which is the standing
+ * complaint about this page answered once more: one reading size on it rather
+ * than four near-identical ones. Every declaration here is `.day-hymns
+ * .hymn-text`'s own, measure included — if that voice changes, this follows it
+ * by hand, because the two are not the same element and `.hymn-text` carries a
+ * language the lede does not have.
  */
 .hero-feast .feast-lede,
 .cal-read .feast-lede {
-  color: var(--ink-soft);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--ink);
   margin: var(--space-3) 0 0;
-  max-width: 68ch;
+  max-width: 65ch;
 }

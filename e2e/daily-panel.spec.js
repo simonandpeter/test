@@ -1,5 +1,6 @@
 // Where the day records stop, from the records themselves: the horizon a
 // reading wave moves, and the test of what lies past it asks for the day after.
+import { FIXED_FEASTS_BY_ID } from '../src/data/feasts-fixed.js';
 import { RECORDS_REACH } from '../src/data/liturgical-days.js';
 import { STRINGS } from '../src/ui/strings.js';
 import { test, expect } from './fixtures.js';
@@ -2699,7 +2700,10 @@ test('a Great Feast the corpus cannot hold is the day\u2019s whole subject', asy
   const feastName = page.locator('.feast-name');
   await expect(feastHero).toHaveCount(1);
   await expect(feastName).toHaveText(bare.feast.title.en);
-  await expect(page.locator('.hero-dates').first()).toHaveText(STRINGS.calendar.fixedFeast.label);
+  /* **And nothing under it** (author, 2026-10-03: "Remove the 'Feast of the
+     Church' subtext under Nativity of Christ and all others"), where this read
+     that line from 2026-10-02. The name is the whole of the identity. */
+  await expect(page.locator('.hero-feast .hero-dates, .cal-read .hero-dates')).toHaveCount(0);
   // No note at all, rather than a note that reads better.
   await expect(page.locator('.empty-day')).toHaveCount(0);
   await expect(page.locator('main')).not.toContainText('Nothing in the Russian calendar today');
@@ -2790,9 +2794,9 @@ test('a Great Feast is the day’s main card on a phone too, at a saint card’s
   ).toHaveCount(0);
   await expect(page.locator('.hero-feast')).toHaveCount(1);
   await expect(page.locator('.feast-name')).toHaveText('The Dormition of the Theotokos');
-  // Where a saint's hero prints the office and the years, a feast prints what
-  // it is. That line is the difference a reader *sees* between the two cards.
-  await expect(page.locator('.hero-feast .hero-dates')).toHaveText(STRINGS.calendar.fixedFeast.label);
+  // Where a saint's hero prints the office and the years, a feast prints its
+  // name and stops (author, 2026-10-03).
+  await expect(page.locator('.hero-feast .hero-dates')).toHaveCount(0);
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // A few lines of explanatory text, and the whole of what the site says: a
@@ -2801,10 +2805,24 @@ test('a Great Feast is the day’s main card on a phone too, at a saint card’s
   await expect(lede).toBeVisible();
   expect((await lede.innerText()).split(/\s+/).length).toBeGreaterThan(20);
 
-  // Same shape, same weight: the picture is the same box a saint's is.
+  /* Same width, same weight — and **its own height, uncropped** (author,
+     2026-10-03: "Dont crop those images at all. Print them in full"), where
+     this asserted the saint's 3:2 phone band for both. A feast's icon is one
+     of eight chosen panels and `feastShape` draws each at its recorded
+     dimensions, so the box is taller than a saint's by the shape of the
+     picture in it; what makes the two the same card is the column they fill.
+     Asserted against the record's own numbers rather than a constant. */
   const feastBox = await page.locator('.hero-feast .hero-media').boundingBox();
   expect(feastBox.width).toBeCloseTo(saintBox.width, 0);
-  expect(feastBox.height).toBeCloseTo(saintBox.height, 0);
+  const dormition = FIXED_FEASTS_BY_ID.get('dormition-of-the-theotokos');
+  expect(feastBox.height / feastBox.width).toBeCloseTo(
+    dormition.image.h / dormition.image.w,
+    2,
+  );
+  // And nothing of it is cut away.
+  expect(
+    await page.locator('.hero-feast .hero-media img').evaluate((el) => getComputedStyle(el).objectFit),
+  ).toBe('contain');
 
   /*
    * And it opens nothing — on the width where a saint's card has exactly one

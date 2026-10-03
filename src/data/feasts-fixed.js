@@ -60,7 +60,12 @@ export const FIXED_FEASTS = [
     lede:
       'The baptism of Christ in the Jordan at the hands of John the Forerunner, and the showing of God as Trinity at it: the Father speaks from heaven, the Spirit descends as a dove, the Son stands in the water. The name means the showing-forth of God, and the feast is kept for that showing rather than for the washing, which Christ did not need. Its waters are blessed on the day in every one of the four churches.',
     observance: inAllChurches(6, 1),
-    image: { file: 'feasts/theophany/icon.jpg', meta: 'feasts/theophany/icon.meta.json' },
+    image: {
+      file: 'feasts/theophany/icon.jpg',
+      meta: 'feasts/theophany/icon.meta.json',
+      w: 1000,
+      h: 1500,
+    },
   },
   {
     id: 'annunciation',
@@ -74,7 +79,12 @@ export const FIXED_FEASTS = [
     lede:
       'The archangel Gabriel brings the Virgin Mary word that she will bear the Son of God, and she consents: "Behold the handmaid of the Lord." The Church keeps the day as the beginning of the Incarnation itself, nine months before the Nativity, which is why it falls inside Lent and is never moved out of it.',
     observance: inAllChurches(25, 3),
-    image: { file: 'feasts/annunciation/icon.jpg', meta: 'feasts/annunciation/icon.meta.json' },
+    image: {
+      file: 'feasts/annunciation/icon.jpg',
+      meta: 'feasts/annunciation/icon.meta.json',
+      w: 1000,
+      h: 1340,
+    },
   },
   {
     id: 'transfiguration',
@@ -88,7 +98,12 @@ export const FIXED_FEASTS = [
     lede:
       'On a mountain before Peter, James and John, Christ is changed in appearance and shines, and Moses and Elijah stand with him. The three disciples are shown the glory that was always his before they are asked to watch him crucified, and the feast is kept for that: not a change in Christ, but a change in what the eyes of the disciples were allowed to see.',
     observance: inAllChurches(6, 8),
-    image: { file: 'feasts/transfiguration/icon.jpg', meta: 'feasts/transfiguration/icon.meta.json' },
+    image: {
+      file: 'feasts/transfiguration/icon.jpg',
+      meta: 'feasts/transfiguration/icon.meta.json',
+      w: 1000,
+      h: 1264,
+    },
   },
   {
     id: 'dormition-of-the-theotokos',
@@ -105,6 +120,8 @@ export const FIXED_FEASTS = [
     image: {
       file: 'feasts/dormition-of-the-theotokos/icon.jpg',
       meta: 'feasts/dormition-of-the-theotokos/icon.meta.json',
+      w: 1000,
+      h: 1238,
     },
   },
   {
@@ -122,6 +139,8 @@ export const FIXED_FEASTS = [
     image: {
       file: 'feasts/nativity-of-the-theotokos/icon.jpg',
       meta: 'feasts/nativity-of-the-theotokos/icon.meta.json',
+      w: 1000,
+      h: 1419,
     },
   },
   {
@@ -139,6 +158,8 @@ export const FIXED_FEASTS = [
     image: {
       file: 'feasts/synaxis-of-the-archangels/icon.jpg',
       meta: 'feasts/synaxis-of-the-archangels/icon.meta.json',
+      w: 1000,
+      h: 1218,
     },
   },
   {
@@ -156,6 +177,8 @@ export const FIXED_FEASTS = [
     image: {
       file: 'feasts/entry-of-the-theotokos/icon.jpg',
       meta: 'feasts/entry-of-the-theotokos/icon.meta.json',
+      w: 1000,
+      h: 1218,
     },
   },
   {
@@ -170,7 +193,12 @@ export const FIXED_FEASTS = [
     lede:
       'The birth of Christ at Bethlehem, which the Church calls the feast of feasts after Pascha alone. What is kept is the Incarnation: that God was born as a child of a particular mother in a particular place, and not that a teacher appeared. A forty-day fast leads up to it, and the twelve days after it are kept as one festal season.',
     observance: inAllChurches(25, 12),
-    image: { file: 'feasts/nativity-of-christ/icon.jpg', meta: 'feasts/nativity-of-christ/icon.meta.json' },
+    image: {
+      file: 'feasts/nativity-of-christ/icon.jpg',
+      meta: 'feasts/nativity-of-christ/icon.meta.json',
+      w: 1000,
+      h: 1440,
+    },
   },
 ];
 

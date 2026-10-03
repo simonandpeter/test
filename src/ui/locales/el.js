@@ -187,7 +187,6 @@ export const el = {
         dormition: 'Η Κοίμησις της Θεοτόκου',
       },
     },
-    fixedFeast: { label: 'Εορτή της Εκκλησίας' },
     readings: {
       heading: 'Αναγνώσματα',
       source: 'Όπως το τυπώνει η {source}. Οι σύνδεσμοι ανοίγουν {bible}.',
