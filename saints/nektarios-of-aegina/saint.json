@@ -9,12 +9,27 @@
     {
       "form": "Sfântul Ierarh Nectarie",
       "lang": "ro"
+    },
+    {
+      "form": "Нектарий Эгинский",
+      "lang": "ru"
+    },
+    {
+      "form": "Νεκτάριος Αἰγίνης",
+      "lang": "el"
+    },
+    {
+      "form": "Νεκτάριος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου», with the rank words left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "metropolitan",
+    "wonderworker"
   ],
   "dates": {
     "birth": {
@@ -22,21 +37,35 @@
       "latest": 1846,
       "display": "1846",
       "basis": "attested",
-      "note": "Wikipedia’s article “Nectarios of Aegina”: Metropolitan of Pentapolis, 1846–1920."
+      "note": "Born at Silivria — Selymbria — of Eastern Thrace on 1 October 1846, the fifth of the six children of Demosthenes and Maria Kephala; saint.gr’s head line for him reads «Αγιος Νεκταριος Μητροπολιτης Πενταπολεως Αιγυπτου (1846 - 1920)»."
     },
     "death": {
       "earliest": 1920,
       "latest": 1920,
       "display": "1920",
       "basis": "attested",
-      "note": "Wikipedia’s article “Nectarios of Aegina”: Metropolitan of Pentapolis, 1846–1920; glorified 20 April 1961."
+      "note": "He died in the Aretaieion hospital at Athens on 9 November 1920; the year stands beside his name on days.pravoslavie.ru for 9 November old style and in saint.gr’s head line «(1846 - 1920)». The Ecumenical Patriarchate recognised him a saint in 1961."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His principal feast, the day of his repose in 1920, and the day the Russian calendar keeps him on. The Greek and Romanian calendars keep it too and also keep the translation of his relics on 3 September; both days are rows on this one record, which is the merge of the two folders this corpus held for him (the author’s ruling of 3 October 2026, TODO item 13)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Свт. Нектария Эгинского, митр. Пентапольского, чудотворца (1920)»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "titles": [
+        "Metropolitan of Pentapolis",
+        "the Wonderworker"
+      ]
     },
     {
       "church": "romanian",
@@ -45,7 +74,7 @@
         "day": 3,
         "month": 9,
         "calendar": "revised-julian",
-        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November."
+        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November, which is the first row above."
       },
       "source": {
         "text": "doxologia.ro, 3 septembrie — „Mutarea moaștelor Sfântului Ierarh Nectarie”",
@@ -60,13 +89,29 @@
         "day": 3,
         "month": 9,
         "calendar": "revised-julian",
-        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November."
+        "note": "The translation of his relics (1953), as the Greek and Romanian calendars keep it on 3 September; his principal feast is 9 November, which is the first row above."
       },
       "source": {
         "text": "Ορθόδοξος Συναξαριστής (saint.gr), 3 Σεπτεμβρίου — «Ανακομιδή Ιερών λειψάνων του Αγίου Νεκταρίου Αιγίνης»",
         "url": "https://www.saint.gr/09/03/index.aspx",
         "year": 2026
       }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "revised-julian",
+        "note": "The second Greek day on this record and the principal one: saint.gr’s life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», and its entry is the same man as the 3 September translation — Anastasios Kephalas, born at Silivria of Eastern Thrace on 1 October 1846, metropolitan of Pentapolis, whose relics are on Aegina. The page is some 34,000 characters and only its opening and its list of relics have been read; its «Έτερον Ἀπολυτίκιον», its Οἶκος and its four Καθίσματα are not drafted."
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 9ης Νοεμβρίου — «Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου»",
+        "url": "https://www.saint.gr/11/09/index.aspx",
+        "year": 2026
+      },
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 9 Νοεμβρίου εκάστου έτους», the same day the folder already keeps on its Russian row, and the entry is the same man: Anastasios Kephalas, born at Silivria of Eastern Thrace on 1 October 1846, metropolitan of Pentapolis, whose relics are on Aegina. Its head gives «(1846 - 1920)», the years the folder already holds. The page is very long — some 34,000 characters — and the paragraph added to the life takes only its opening and its list of relics; the rest of it has not been read. Its apolytikion and kontakion, which name him, are taken here; the «Έτερον Ἀπολυτίκιον», the Οἶκος and the four Καθίσματα it also prints are not drafted. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
     },
     {
       "church": "serbian",
@@ -169,7 +214,46 @@
   "related": [
     "anthimos-of-chios",
     "daniel-katounakiotis",
-    "nectarios-of-aegina",
     "nicodemus-the-hagiorite"
-  ]
+  ],
+  "aliases": [
+    "nectarios-of-aegina"
+  ],
+  "hymns": [
+    {
+      "church": "greek",
+      "kind": "troparion",
+      "lang": "el",
+      "text": "Σηλυβρίας τὸν γόνον καὶ Αἰγίνης τὸν ἔφορον, τὸν ἐσχάτοις χρόνοις φανέντα ἀρετῆς φίλον γνήσιον, Νεκτάριον τιμήσωμεν πιστοί, ὡς ἔνθεον θεράποντα Χριστοῦ, ἀναβλύζει γὰρ ἰάσεις παντοδαπὰς τοῖς εὐλαβῶς κραυγάζουσι. Δόξα τῷ σὲ δοξάσαντι Χριστῷ, δόξα τῷ σὲ θαυματώσαντι, δόξα τῷ ἐνεργοῦντι διὰ σοῦ πᾶσιν ἰάματα.",
+      "source": {
+        "text": "saint.gr, Ἀπολυτίκιον, Ἦχος α’, Τῆς ἐρήμου πολίτης — the first hymn on the page of «Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου», and it names him, his birthplace and Aegina.",
+        "url": "https://www.saint.gr/2960/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us honour the faithful Nectarios, offspring of Silivria and guardian of Aegina, who appeared in the last times as a true friend of virtue, as a godly servant of Christ; for he pours out healings of every kind on those who cry to him with reverence. Glory to Christ who glorified you, glory to him who made you a wonderworker, glory to him who works healings for all through you.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος α’.",
+      "model": "Τῆς ἐρήμου πολίτης."
+    },
+    {
+      "church": "greek",
+      "kind": "kontakion",
+      "lang": "el",
+      "text": "Ὀρθοδοξίας τὸν ἀστέρα τὸν νεόφωτον, καὶ Ἐκκλησίας τὸ νεόδμητον προτείχισμα Ἀνυμνήσωμεν καρδίας ἐν εὐφροσύνῃ. Δοξασθεὶς γὰρ ἐνεργείᾳ τῇ τοῦ Πνεύματος. Ἰαμάτων ἀναβλύζει χάριν ἄφθονον τοῖς κραυγάζουσι· χαίροις Πάτερ Νεκτάριε.",
+      "source": {
+        "text": "saint.gr, Κοντάκιον, Ἦχος πλ. δ’, Τῇ Ὑπερμάχῳ — on the page of «Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου», and it names him.",
+        "url": "https://www.saint.gr/2960/saint.aspx",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us hymn with gladness of heart the newly lit star of Orthodoxy and the newly built bulwark of the Church; for having been glorified by the working of the Spirit, he pours out ungrudging grace of healings on those who cry: Rejoice, father Nectarios.",
+        "rendered": "site"
+      },
+      "tone": "Ἦχος πλ. δ’.",
+      "model": "Τῇ Ὑπερμάχῳ."
+    }
+  ],
+  "historicity": "attested"
 }

@@ -160,11 +160,19 @@ Patriarchate formally recognised him a saint. The room where he died is a
 small church on the second floor of the Aretaieion, hung with icons and the
 votive offerings of the sick’s relatives.
 
-The Greek and Romanian calendars keep the translation of 1953 on 3
-September, which is the line this entry stands under, and his feast on 9
-November. The Russian calendar keeps him on his principal feast, 9 November
-of the old style, 22 November, and this corpus holds that day as a second
-entry, [Nectarios of Aegina](/saints/nectarios-of-aegina), with the
-Sretensky calendar’s own shorter life.
+The Russian calendar keeps him on his principal feast, 9 November of the old
+style, 22 November, and prints a shorter life beside it. Two details stand only
+there: that the captain of the boat to Constantinople first told the penniless
+boy to take a walk and come back, and then gave the order to start the engines
+and nothing happened, until he looked up, met the boy’s eyes on the dock, took
+pity and called him aboard — and the engines started at once; and that in the
+tobacco merchant’s shop he copied short maxims out of spiritual books onto the
+paper bags and packages, so that a customer reading one out of curiosity might
+take some good from it.
 
-*After the Greek synaxarion’s own page for 9 November — [saint.gr, Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου](https://www.saint.gr/2960/saint.aspx), read 6 September 2026; its 3 September line was all this entry had until then.*
+The Greek and Romanian calendars keep the translation of 1953 on 3 September and
+his feast on 9 November, and the Russian keeps the 9 November. All of those days
+are rows on this one record: this corpus held him twice, once for each feast,
+and the author ruled on 3 October 2026 that the two entries are the one man.
+
+*After the Greek synaxarion’s own page for 9 November — [saint.gr, Άγιος Νεκτάριος Μητροπολίτης Πενταπόλεως Αιγύπτου](https://www.saint.gr/2960/saint.aspx), read 6 September 2026; its 3 September line was all this entry had until then. The two details of the voyage and the paper bags are from the life printed by the Orthodox Church in America — [the entry](https://www.oca.org/saints/lives/2026/11/09/103251-saint-nectarius-kephalas-metropolitan-of-pentapolis) — and the 9 November feast and the year from the Moscow Patriarchate's calendar — [the day](https://days.pravoslavie.ru/Days/20261109.html); both read 31 August 2026.*
