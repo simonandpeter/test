@@ -126,8 +126,16 @@ const NOT_A_PERSON = [
   [/soborul|înainte-?prăznuire|odovania|icoan|aducerea moaștelor|aflarea moaștelor|acoperământul/i, 'ro'],
   [/сабор\b|икон|пренос моштију|празник/i, 'sr'],
 ];
-/** The word a sentence ends on, which is the only one an abbreviation test may look at. */
-const lastWord = (token) => (/(\S+)\s*$/.exec(String(token).replace(/⟦[^⟧]*⟧/g, '').trim())?.[1] ?? '');
+/**
+ * The word a sentence ends on, which is the only one an abbreviation test may
+ * look at — with any opening bracket or quote cut off it first. Without that
+ * cut, the Russian calendar's «(ок. 320)» reads as a sentence ending on `(ок.`,
+ * which `ABBREV` anchors at the start and therefore does not match, and the
+ * year is flushed as an entry of its own: 2 January printed a line reading
+ * `320).`
+ */
+const lastWord = (token) =>
+  (/(\S+)\s*$/.exec(String(token).replace(/⟦[^⟧]*⟧/g, '').trim())?.[1] ?? '').replace(/^[^\p{L}\p{N}]+/u, '');
 
 const kindOf = (label) => (NOT_A_PERSON.some(([re]) => re.test(label)) ? 'not-a-person?' : 'person');
 
@@ -159,13 +167,24 @@ async function russian() {
     // Life links are the one thing worth keeping out of the markup: an entry
     // with one has a written life behind it, an entry without has only the
     // calendar's own line and its folder must say so.
-    const marked = para.replace(/<a[^>]*href="([^"]*\/Life\/[^"]*)"[^>]*>/gi, ' ⟦L:$1⟧ ');
+    // Two things are worth keeping out of the markup. A Life link, because an
+    // entry with one has a written life behind it and an entry without has
+    // only the calendar's own line, which its folder must then say. And the
+    // `title` on a `/name/` anchor, because the line itself declines the name
+    // — «Свт. Сильвестра, Папы Римского» — while that title carries the
+    // calendar's own nominative, «Святитель Сильвестр I Римский, папа», which
+    // is the form a `ru` name row is read out of. Rank and all: the row stores
+    // it bare, and stripping the rank is a reading, not a regex.
+    const marked = para
+      .replace(/<a[^>]*href="([^"]*\/Life\/[^"]*)"[^>]*>/gi, ' ⟦L:$1⟧ ')
+      .replace(/<a[^>]*href="[^"]*\/name\/[^"]*"[^>]*title="([^"]*)"[^>]*>/gi, ' ⟦N:$1⟧ ');
     const text = strip(marked);
     let buf = '';
     const flush = () => {
-      const label = buf.replace(/⟦L:[^⟧]*⟧/g, '').replace(/\s+/g, ' ').trim();
+      const label = buf.replace(/⟦[LN]:[^⟧]*⟧/g, '').replace(/\s+/g, ' ').trim();
       const lives = [...buf.matchAll(/⟦L:([^⟧]*)⟧/g)].map((m) => m[1]);
-      if (label.length > 3) entries.push({ label, lives, kind: kindOf(label) });
+      const names = [...new Set([...buf.matchAll(/⟦N:([^⟧]*)⟧/g)].map((m) => m[1].trim()))];
+      if (label.length > 3) entries.push({ label, names, lives, kind: kindOf(label) });
       buf = '';
     };
     for (const token of text.split(/(?<=\.)\s+/)) {
@@ -322,6 +341,7 @@ for (const church of wanted) {
   console.log(`    the page prints ${day.entries.length} entrie(s):\n`);
   for (const e of day.entries) {
     console.log(`      [${e.kind === 'person' ? ' ' : '~'}] ${e.label}`);
+    for (const n of e.names ?? []) console.log(`            name: ${n}`);
     for (const l of e.lives) console.log(`            life: ${l}`);
   }
 }
