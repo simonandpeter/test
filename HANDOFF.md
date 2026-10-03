@@ -400,17 +400,13 @@ dedication ruling; `8fb9b5b9` to `af16db05` are the fifteen merges and the
 Kandavla name-forms, one commit each; `d9fabf34` is `TODO.md`. 5,217 folders,
 `build:manifest` clean. Run `bash scripts/state.sh` rather than trusting this.
 
-**`npm test` is red on committed `main`, and it is not the corpus.**
-`tests/type-glyph.test.mjs`'s "a type outside the six shows no mark at all"
-fails on `["prophet"]`: `9997b827` gave `prophet` a seventh mark in
-`src/lib/saint-types.js` and did not move the test. 473 of 474 otherwise.
-**Nothing may be pushed until that is fixed** — the rule is never to push a tree
-whose unit tests are failing, and this one is a one-line disagreement between a
-new mark and a test that counts six.
+**`npm test` is green: 474 of 474**, measured 3 October against `560b9586`.
+`tests/type-glyph.test.mjs` now counts seven marks and the `prophet`
+disagreement is gone.
 
 **Not started, and clean to start**: `TODO.md` items 16 (date the corpus, 2,021
-folders with `dates: null`), 15 (picture quality) and 9 and 10 (the Russian and
-Serbian reading waves). Nothing of mine is half-done in any of them.
+folders with `dates: null`) and 15 (picture quality). Item 9, the Russian
+reading wave, has started — see its own section below.
 
 ## Where this sitting stands (3 October 2026, the fourth manager)
 
