@@ -18,14 +18,9 @@
       "note": "The second Greek form saint.gr's notice for 3 Ιανουαρίου prints, in brackets: «Η Αγία Γενεβιέβη (Γενοβέφα)»."
     },
     {
-      "form": "Женевьева Парижская",
-      "lang": "ru",
-      "note": "Read out of days.pravoslavie.ru's line for 3 января ст. ст., «Прп. Женевьевы (Геновефы) Парижской (512)», declined there and given in the nominative by the name link behind it, «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off."
-    },
-    {
       "form": "Геновефа Парижская",
       "lang": "ru",
-      "note": "The second form the same calendar prints for her, set in brackets beside the first on the line for 3 января ст. ст. and leading the name link, «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off."
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 января ст. ст., which gives the calendar's own nominative «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off, and of the two spellings the calendar prints side by side the one it leads with is kept. The line itself declines the other first — «Прп. Женевьевы (Геновефы) Парижской (512)» — so the calendar holds both the Latin Genovefa and the French Geneviève and chooses between them nowhere; only one form is stored, and this note is where the other is recorded."
     }
   ],
   "sex": "female",
