@@ -1,0 +1,60 @@
+{
+  "display_name": "Mastridia",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Мастридија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 7 February on pravoslavno.rs, «Преподобна Мастридија», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 580,
+      "latest": 580,
+      "display": "about 580",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 7 February: „Упокојила се мирно око 580. године.“ The page says about the year 580, not 580, and it is the only source read for her."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "days.pravoslavie.ru's day for 7 февраля ст. ст. was read whole on 4 October 2026 and does not name her; its five entries are Parthenius of Lampsacus, Luke of Hellas, the 1003 of Nicomedia and two new martyrs of 1938 and 1942. Only the day page was read and none of its life pages, so this is a gap in that reading and not a finding that the Russian church does not keep her."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 7 februarie, which is the page for this menologion number — not 20 februarie, which merely shares her civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 7 Φεβρουαρίου, which is the page for this menologion number — not 02/20, which merely shares her civil date in 2026."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.02.2026 (7. фебруар ст. ст.) — „3. Преподобна Мастридија. Живела у Јерусалиму и строго се подвизавала. Неки млад човек загледа се у њу и почне јој досађивати. Да би спасла и себе и тога младог човека од греха, Мастридија узме у једну котарицу мало наквашена боба и удаљи се у пустињу.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-20&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which printed one heading for the day's four numbered entries and did not print hers. She is the third entry. This is the whole of her record: the Prologue is the only one of the four calendars found to keep her on this menologion number."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "slug": "mastridia"
+}
