@@ -23,6 +23,15 @@
     "venerable",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прпп. Евгения и Макария исповедников, пресвитеров Антиохийских (363).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

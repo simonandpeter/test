@@ -21,6 +21,15 @@
     }
   ],
   "related": [],
+  "dates": {
+    "death": {
+      "earliest": 525,
+      "latest": 535,
+      "display": "c. 530",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Равулы (ок. 530).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

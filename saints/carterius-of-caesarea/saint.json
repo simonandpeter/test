@@ -18,6 +18,15 @@
     "hieromartyr",
     "presbyter"
   ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Сщмч. Картерия, пресвитера Кесарии Капподакийской (304).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

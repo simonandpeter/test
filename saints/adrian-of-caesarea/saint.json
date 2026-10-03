@@ -20,6 +20,15 @@
   "related": [
     "eubulus-of-caesarea"
   ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 309,
+      "display": "c. 308–309",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Адриана и Еввула (ок. 308-309).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

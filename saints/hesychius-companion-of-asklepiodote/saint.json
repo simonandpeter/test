@@ -23,6 +23,15 @@
     "theodotus-companion-of-asklepiodote",
     "asklepiodote-companion-of-maximus"
   ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Максима, Феодота, Исихия, мц. Асклипиодоты (305-311).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

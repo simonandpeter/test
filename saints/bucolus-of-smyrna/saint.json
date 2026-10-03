@@ -24,6 +24,15 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 95,
+      "latest": 105,
+      "display": "c. 100",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Вукола, еп. Смирнского (ок. 100).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

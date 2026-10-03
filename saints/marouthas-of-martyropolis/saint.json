@@ -21,6 +21,15 @@
   "related": [
     "martyrs-of-martyropolis"
   ],
+  "dates": {
+    "death": {
+      "earliest": 422,
+      "latest": 422,
+      "display": "422",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Маруфа, еп. Месопотамского (422).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -119,6 +119,15 @@
     "philemon-the-apostle",
     "paul-the-apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 104,
+      "latest": 114,
+      "display": "c. 109",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Ап. от 70-ти Онисима (ок. 109).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
