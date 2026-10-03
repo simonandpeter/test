@@ -11,6 +11,11 @@
       "form": "Παρασκευή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Οσία Παρασκευή η Νέα η «Επιβατηνή»», with the rank word left off."
+    },
+    {
+      "form": "Параскева-Петка Сербская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's day line, «Прп. Параскевы-Петки Сербской», with the rank word left off; one of its lives heads her «Преподобная Параскева-Петка Сербская, Болгарская» and the index page «Преподобная Параскева Сербская». The Russian calls her Serbian where the Romanian calls her of Iași and the Greek of Epivates, and the three mean the same woman."
     }
   ],
   "sex": "female",
@@ -26,14 +31,27 @@
       "latest": 1050,
       "display": "first half of the 11th century",
       "basis": "traditional",
-      "note": "doxologia.ro: «Sfânta Cuvioasă Parascheva a trăit pe pământ în prima jumătate a veacului al XI-lea.» The page gives no year for her birth or her death; the interval is that statement and nothing narrower."
+      "note": "doxologia.ro: «Sfânta Cuvioasă Parascheva a trăit pe pământ în prima jumătate a veacului al XI-lea.» The page gives no year for her birth or her death; the interval is that statement and nothing narrower. days.pravoslavie.ru agrees and says no more: its day line gives «Прп. Параскевы-Петки Сербской (XI)» and both of the lives its index page links put the family «жившей в XI веке в селении Епиват»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "great-doxology",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «30 августа (Серб.)», the synaxis of the Serbian saints. One row per church is the schema, so the August day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Прп. Параскевы-Петки Сербской (XI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before her line, «Совершается служба со славословием» — the service with the Great Doxology. It is a great line's own icon and reaches no further; the day's other icon is the plain service and stands before the four martyrs of Milan."
+      },
+      "note": "The same woman, and the Russian proves it rather than her name doing so: its lives put her relics «в соборном храме в Яссах», in the cathedral at Iași, which is where this folder's Romanian name comes from, and her birth at Epivates between Silistra and Constantinople, which is where the Greek's «Επιβατηνή» comes from. What it adds is the verse that pierced her «как стрела», like an arrow — Matthew 16:24 — the clothes given to the poor and the grief that brought her from her own family, the Jordan valley where she laboured to a great age, and the angel who two years before the end told her to go home."
     },
     {
       "church": "romanian",

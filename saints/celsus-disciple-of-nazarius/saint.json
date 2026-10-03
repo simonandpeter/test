@@ -11,6 +11,11 @@
       "form": "Κέλσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιοι Ναζάριος, Προτάσιος, Γερβάσιος και Κέλσιος», with the rank word left off; the page's own heading for this one is «Αγιος Κελσιος»."
+    },
+    {
+      "form": "Келсий Медиоланский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1194, «Келсий Медиоланский, мч.», with the rank word left off. The epithet is the city he died in rather than the one he was baptised in; the day line gives «Келсия» alone."
     }
   ],
   "sex": "male",
@@ -25,8 +30,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Мчч. Назария, Гервасия, Протасия, Келсия (54-68).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon is «Совершается служба со славословием», the service with the Great Doxology, and it stands immediately before Paraskeva-Petka's line, which is that line's alone and does not reach this one."
+      },
+      "note": "The Russian gives the four their only date, Nero's reign, and names the city where Nazarius baptised him, Cimiez, and the fact that he was the son of a Christian woman there and was brought up by his baptiser. It has the two of them thrown to beasts that would not touch them, walking on the sea when they were to be drowned, and let go by soldiers who became Christians at the sight; then beheaded at Milan on Nero's order after they visited the twins in prison."
     },
     {
       "church": "romanian",
@@ -115,6 +132,15 @@
       "model": "Χορός Ἀγγελικὸς."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "between 54 and 68",
+      "basis": "traditional",
+      "note": "Nero's reign, which is the only date any of the three calendars gives the four: days.pravoslavie.ru prints «Мчч. Назария, Гервасия, Протасия, Келсия (54-68)» on the day line and opens its life «пострадали в царствование императора Нерона (54 - 68)». Where a calendar prints a reign rather than a year, that is the interval. Neither doxologia.ro nor saint.gr gives one, and this folder held none."
+    }
+  },
   "text": {
     "life": "life.md"
   }

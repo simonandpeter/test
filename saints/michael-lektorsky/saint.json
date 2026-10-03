@@ -1,0 +1,68 @@
+{
+  "slug": "michael-lektorsky",
+  "display_name": "Michael (Lektorsky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Михаил (Лекторский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13829, «Михаил (Лекторский), иерей, сщмч.», with the office and the rank word left off. The day line gives the forename and the grade only, «Сщмч. Михаила пресвитера»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Михаила пресвитера (1921)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Сщмч. Михаила пресвитера (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's two icons both stand in its first paragraph — the plain service before the four martyrs of Milan, and the service with the Great Doxology immediately before Paraskeva-Petka, which is hers alone — and his line opens the third."
+      },
+      "note": "«Сщмч.» marks a hieromartyr, a priest killed for the faith; «пресвитер» on the day line and «иерей» on his index page are both the simple priesthood. Nothing else is printed on either page: no birth, no diocese, no parish, no charge, no place of death, and no life. 1921 puts him in the civil war rather than in the terror of the thirties."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 27 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 27 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "peter-lebedev",
+    "maximilian-marchenko"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

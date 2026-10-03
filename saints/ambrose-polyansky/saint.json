@@ -1,0 +1,72 @@
+{
+  "slug": "ambrose-polyansky",
+  "display_name": "Ambrose (Polyansky)",
+  "office": "Bishop of Kamenets-Podolsky",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "confessor",
+    "bishop",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Амвросий (Полянский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's life for him, «Священноисповедник Амвросий (Полянский), епископ Каменец-Подольский и Брацлавский», with the rank word and the office left off. His life gives the name he was born with as well, «в миру Александр Алексеевич Полянский»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life: «Священноисповедник Амвросий (в миру Александр Алексеевич Полянский) родился 12 ноября 1878 года в селе Петелино Елатемского уезда Тамбовской губернии в семье священника.»"
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "The year the calendar's day line prints, «Свт. Амвросия исп. еп. Каменец-Подольского (1932)», and the year its life reaches: he came to Turkestan in exile at the beginning of September 1932, was sent on across the desert to Suzak, went straight into hospital on arrival and «через неделю скончался», died a week later."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The day his life prints bare. It keeps two others: «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «7 декабря (УПЦ МП)», which is the Ukrainian Orthodox Church of the Moscow Patriarchate's own day for him. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Свт. Амвросия исп. еп. Каменец-Подольского (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's two icons both stand in its first paragraph — the plain service before the four martyrs of Milan, and the service with the Great Doxology immediately before Paraskeva-Petka, which is hers alone — and his line is in the third."
+      },
+      "note": "«Свт.» marks a hierarch and «исп.» a confessor; his own life heads him «священноисповедник», which is both. It names the see twice over, «Каменец-Подольский и Брацлавский», where the day line gives only the first half. He was glorified for church-wide veneration at the Jubilee Council of Bishops in August 2000."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 27 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian confessors of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 27 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

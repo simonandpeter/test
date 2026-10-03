@@ -1,0 +1,69 @@
+{
+  "slug": "nicholas-svyatosha",
+  "display_name": "Nicholas Svyatosha",
+  "office": "Prince of Chernigov",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "prince",
+    "monk",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Никола Святоша, Черниговский, Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1633, «Никола Святоша, Черниговский, Печерский, князь, инок», with the office and the monastic grade left off. His life gives the baptismal name beside the by-name, «Никола Святоша (Святослав)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1143,
+      "latest": 1143,
+      "display": "1143",
+      "basis": "traditional",
+      "note": "The year the Russian calendar's day line prints after his name, «Прп. Николы Святоши (Святослава), кн. Черниговского, Печерского чудотворца (1143)», and the year its life opens with, «+ 1143». No other calendar keeps him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», the synaxis of the fathers of the Near — Antony — caves, where his relics lie. One row per church is the schema, so the September day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Прп. Николы Святоши (Святослава), кн. Черниговского, Печерского чудотворца (1143).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day prints two icons and both stand in its first paragraph: the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком», before the four martyrs of Milan, and «Совершается служба со славословием» immediately before Paraskeva-Petka, which is that one great line's alone. His line is in the second paragraph and carries neither."
+      },
+      "note": "The Russian is the only calendar that keeps him. Its life makes him the great-grandson of the great prince Yaroslav the Wise and the son of prince David Svyatoslavich of Chernigov, who died in 1123 and whom it says some sources call a saint; it names 17 February 1106 as the day he left his family for the tonsure, and says he was the first of the Russian princes to become a monk."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 27 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 27 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "anthony-of-the-caves",
+    "igor-of-chernigov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

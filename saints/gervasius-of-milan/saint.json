@@ -11,6 +11,11 @@
       "form": "Γερβάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιοι Ναζάριος, Προτάσιος, Γερβάσιος και Κέλσιος», with the rank word left off; the page's own heading for this one is «Αγιος Γερβασιος»."
+    },
+    {
+      "form": "Гервасий Медиоланский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 505, «Гервасий Медиоланский, мч.», with the rank word left off. «Медиоланский» is of Mediolanum, Milan; the day line gives «Гервасия» alone."
     }
   ],
   "sex": "male",
@@ -25,8 +30,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Мчч. Назария, Гервасия, Протасия, Келсия (54-68).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon is «Совершается служба со славословием», the service with the Great Doxology, and it stands immediately before Paraskeva-Petka's line, which is that line's alone and does not reach this one."
+      },
+      "note": "The Russian gives the four their only date, Nero's reign, and gives the twins their parents: Vitalis and Valeria, rich Roman citizens of Mediolanum, both of them tortured to death for the faith. Orphaned, it says, the brothers gave their property to the poor, set their slaves free and took to fasting and prayer, and were imprisoned for confessing Christ. It is also the source of the detail that Ambrose of Milan uncovered their relics by a revelation from above under the emperor Theodosius."
     },
     {
       "church": "romanian",
@@ -115,6 +132,15 @@
       "model": "Χορός Ἀγγελικὸς."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 54,
+      "latest": 68,
+      "display": "between 54 and 68",
+      "basis": "traditional",
+      "note": "Nero's reign, which is the only date any of the three calendars gives the four: days.pravoslavie.ru prints «Мчч. Назария, Гервасия, Протасия, Келсия (54-68)» on the day line and opens its life «пострадали в царствование императора Нерона (54 - 68)». Where a calendar prints a reign rather than a year, that is the interval. Neither doxologia.ro nor saint.gr gives one, and this folder held none."
+    }
+  },
   "text": {
     "life": "life.md"
   }
