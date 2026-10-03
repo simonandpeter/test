@@ -45,18 +45,75 @@ import {
 } from './ui/face-stage.js';
 import * as calendar from './views/calendar.js';
 import * as saints from './views/saints.js';
-import * as saint from './views/saint.js';
-import * as map from './views/map.js';
 import * as texts from './views/texts.js';
 import * as about from './views/about.js';
+import * as saint from './views/saint.js';
 import * as prayer from './views/prayer.js';
+
+/**
+ * A route's view, loaded when the reader first goes there.
+ *
+ * **The load rides on `styles()`**, which the swap below already awaits before
+ * it takes anything down — "a view that paints text on its first frame waits
+ * for its own sheet". A module is the same kind of wait as a stylesheet and
+ * wants the same place in the swap: inside the transition callback, spent on a
+ * frozen picture of the page the reader was looking at.
+ *
+ * **Why three routes and not seven.** The boot download is one 150 ms round
+ * trip wide at the top end (`scripts/lighthouse-floor.mjs`, `BOOT_CEILING`),
+ * and these three are the ones that cost nothing to move: Map, Texts and About
+ * are never the first paint and are the only views `main.js` does not compare
+ * by identity. Calendar is the landing route; All Saints and a saint page are
+ * identity-compared here — `leaving === saints`, `route?.view === saint` — and
+ * Prayer is a nav route a reader opens often. Those four want a different
+ * answer than this one.
+ *
+ * `titleFor` and `title` are getters rather than wrappers because the swap
+ * tells the two apart by presence (`view.titleFor ? … : typeof view.title ===
+ * 'function'`), and a wrapper is always truthy. Both are read after the await,
+ * so the real module is in hand by then. `destroy` can be called on a view
+ * that never rendered, so it is guarded.
+ */
+function lazyView(load) {
+  let real = null;
+  return {
+    async styles() {
+      /*
+       * **A load that fails is a page, not a blank** (brief §12: an uncached
+       * page shows a clear state, "not a broken card"). Measured offline
+       * before this was here: the chunk 404s, `styles()` rejected inside the
+       * view transition, and `/map` came up as the header over an empty
+       * document. Swallowed rather than rethrown so the swap completes and
+       * `render` below has somewhere to put the note.
+       */
+      if (!real) real = await load().catch(() => null);
+      await real?.styles?.();
+    },
+    get titleFor() {
+      return real?.titleFor;
+    },
+    get title() {
+      return real?.title;
+    },
+    render(el, ctx) {
+      if (real) {
+        real.render(el, ctx);
+        return;
+      }
+      el.innerHTML = `<div class="error-note"><p>${STRINGS.loading.viewFailed}</p>
+        <button id="retry-view">${STRINGS.loading.retry}</button></div>`;
+      el.querySelector('#retry-view').addEventListener('click', () => location.reload());
+    },
+    destroy: (...args) => real?.destroy?.(...args),
+  };
+}
 
 const routes = [
   { path: '/', view: calendar, nav: 'calendar' },
   { path: '/calendar/:date?', view: calendar, nav: 'calendar' },
   { path: '/saints', view: saints, nav: 'saints' },
   { path: '/saints/:slug', view: saint, nav: 'saints' },
-  { path: '/map', view: map, nav: 'map' },
+  { path: '/map', view: lazyView(() => import('./views/map.js')), nav: 'map' },
   { path: '/prayer', view: prayer, nav: 'prayer' },
   { path: '/texts', view: texts, nav: 'texts' },
   { path: '/about', view: about, nav: 'about' },

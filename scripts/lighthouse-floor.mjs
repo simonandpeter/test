@@ -104,6 +104,46 @@ const FLOOR = {
 const ENTRY_CSS_CEILING = 73_400;
 
 /*
+ * **And the whole first-paint download's ceiling, which is where the step
+ * actually lives.**
+ *
+ * The comment above says it twice — "the step is a fact about the whole
+ * first-paint download, not about this file alone" — and then says nobody had
+ * re-measured the cliff after ~18 kB of CSS left the entry on 2026-09-16, so
+ * `ENTRY_CSS_CEILING` had become 16 kB of slack rather than a measurement. It
+ * was right, and on 3 October 2026 the step was found again from the other
+ * side: the stylesheet had 15 kB to spare and FCP had moved 150 ms anyway.
+ *
+ * **Measured, by the 57-byte method, on this build.** Three builds of the same
+ * tree differing only in how many of the eight feast ledes carried their prose,
+ * five runs each, on one machine:
+ *
+ *   | entry js | + entry css | total   | FCP (cal / empty / saint)  |
+ *   | -------- | ----------- | ------- | -------------------------- |
+ *   | 297,179  | 57,944      | 355,123 | 1878 / 1867 / 1885 ms      |
+ *   | 298,122  | 57,539      | 355,661 | 1889 / 1862 / 1887 ms      |
+ *   | 298,838  | 57,944      | 356,782 | 2047 / 2020 / 2025 ms      |
+ *   | 299,904  | 57,944      | 357,848 | 2040 / 2019 / 2029 ms      |
+ *
+ * So the cliff is in the 1,121 bytes between **355,661 (green) and 356,782
+ * (red)**, it is one 150 ms round trip as ever, and it is the *sum* that
+ * crosses it: the 298,838 build is red with a stylesheet 405 bytes larger and
+ * a script 1,066 bytes smaller than a green one. A ceiling on either file
+ * alone cannot see that.
+ *
+ * ~600 bytes below the green end, as the stylesheet's own ceiling is drawn.
+ * Re-measure rather than nudging it to fit a run: the number is a fact about
+ * this bundle's transfer, and it moves when the transfer does.
+ *
+ * **It is over today, by about 2.8 kB, and that is the 150 ms on CI.** The
+ * answer is the way down rather than another 3,000 — the eight feast ledes are
+ * 2.7 kB of prose on the entry chunk for eight days a year, and the next route
+ * to leave the entry the way `index.css` and `saint.css` did would clear it
+ * outright.
+ */
+const BOOT_CEILING = 355_000;
+
+/*
  * Lighthouse's stock mobile profile *is* the brief's throttled 4G: 150 ms RTT,
  * 1.6 Mbit/s down, 4x CPU slowdown, applied by simulation rather than by
  * shaping the socket. Naming it here rather than inheriting it silently means a
@@ -143,10 +183,12 @@ const settings = {
  * parser blocks on, and that *is* the definition of the thing being measured.
  */
 let entryCss = null;
+let boot = null;
 async function reportEntryStylesheet() {
   const dist = path.join(process.cwd(), 'dist');
   const html = await readFile(path.join(dist, 'index.html'), 'utf8');
   const hrefs = [...html.matchAll(/<link[^>]+rel="stylesheet"[^>]+href="([^"]+)"/g)].map((m) => m[1]);
+  const srcs = [...html.matchAll(/<script[^>]+type="module"[^>]+src="([^"]+)"/g)].map((m) => m[1]);
   if (hrefs.length !== 1) {
     console.log(`entry stylesheet: ${hrefs.length} stylesheet links in dist/index.html, not measuring`);
     return;
@@ -157,6 +199,22 @@ async function reportEntryStylesheet() {
   console.log(
     `entry stylesheet: ${name}  ${bytes} bytes  (ceiling ${ENTRY_CSS_CEILING})` +
       (entryCss.ok ? `  — ${ENTRY_CSS_CEILING - bytes} to spare` : '  **OVER**'),
+  );
+
+  /* The script the parser blocks on, by the same definition as the sheet: the
+     one module the shell names. More than one and the sum this gate is about
+     is not the sum it would be measuring. */
+  if (srcs.length !== 1) {
+    console.log(`boot download: ${srcs.length} entry scripts in dist/index.html, not measuring`);
+    return;
+  }
+  const js = srcs[0].replace(/^.*\//, '');
+  const jsBytes = (await stat(path.join(dist, 'assets', js))).size;
+  const total = jsBytes + bytes;
+  boot = { js, jsBytes, total, ok: total <= BOOT_CEILING };
+  console.log(
+    `boot download: ${js} ${jsBytes} + ${bytes} css = ${total} bytes  (ceiling ${BOOT_CEILING})` +
+      (boot.ok ? `  — ${BOOT_CEILING - total} to spare` : '  **OVER**'),
   );
 }
 
@@ -356,8 +414,16 @@ if (entryCss && !entryCss.ok) {
       `FCP floor arriving early; ENTRY_CSS_CEILING's comment has the measurement and the way down.`,
   );
 }
+if (boot && !boot.ok) {
+  console.error(
+    `the boot download is ${boot.total} bytes, over the ${BOOT_CEILING} ceiling by ` +
+      `${boot.total - BOOT_CEILING}. FCP steps a whole round trip across this line and it is the ` +
+      `sum that crosses it, not either file; BOOT_CEILING's comment has the measurement and the ` +
+      `way down.`,
+  );
+}
 if (bad) {
   console.error(`${bad} of ${rows.length} routes below the floor`);
 }
-if (bad || (entryCss && !entryCss.ok)) process.exit(1);
+if (bad || (entryCss && !entryCss.ok) || (boot && !boot.ok)) process.exit(1);
 console.log(`${rows.length} routes, all above it`);

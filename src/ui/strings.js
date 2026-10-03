@@ -52,6 +52,14 @@ export const STRINGS = {
   loading: {
     manifestFailed: 'The list of saints could not be loaded. This site needs that one file to work at all, so nothing can be shown yet.',
     retry: 'Try again',
+    /*
+     * A route whose code has not been stored on this device yet, reached
+     * without the network (3 October 2026, when Map's view became its own
+     * chunk). The Daily page, All Saints, a saint and Prayer are in the shell
+     * the service worker precaches; Map is fetched when a reader first goes
+     * there, which is also how its terrain has always worked.
+     */
+    viewFailed: 'This page has not been stored on this device yet, so it needs the network once.',
   },
 
   calendar: {

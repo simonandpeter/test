@@ -39,6 +39,8 @@ export const ro = {
   loading: {
     manifestFailed: 'Lista sfinților nu a putut fi încărcată. Site-ul are nevoie de acest fișier ca să funcționeze, așa că deocamdată nu se poate arăta nimic.',
     retry: 'Încearcă din nou',
+    viewFailed:
+      'Această pagină nu a fost încă stocată pe acest dispozitiv, așa că are nevoie o dată de rețea.',
   },
 
   calendar: {
