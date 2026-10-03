@@ -16,6 +16,11 @@
       "form": "Савва II Сербский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 февраля ст. ст., «Святитель Савва II Сербский, архиепископ», with the rank word and the office left off."
+    },
+    {
+      "form": "Сава II",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 8 February on pravoslavno.rs, «Свети Сава II, архиепископ српски», with the rank word and the office left off."
     }
   ],
   "images": [
@@ -26,15 +31,17 @@
   ],
   "related": [
     "sava-of-serbia",
-    "sava-the-third"
+    "sava-the-third",
+    "stefan-the-first-crowned",
+    "arsenius-of-serbia"
   ],
   "dates": {
     "death": {
-      "earliest": 1271,
+      "earliest": 1268,
       "latest": 1271,
-      "display": "1271",
+      "display": "between 1268 and 1271",
       "basis": "attested",
-      "note": "saint.gr: «Ο Άγιος Σάββας Β', Αρχιεπίσκοπος Σερβίας κοιμήθηκε με ειρήνη το έτος 1271.»"
+      "note": "Three sources, three years, and the interval is the disagreement. The Ohrid Prologue at pravoslavno.rs for the Julian 8 February: „Упокојио се 1268. године.“; days.pravoslavie.ru for 8 февраля ст. ст.: «Свт. Саввы II, архиеп. Сербского (1269).»; saint.gr: «Ο Άγιος Σάββας Β', Αρχιεπίσκοπος Σερβίας κοιμήθηκε με ειρήνη το έτος 1271.» None of the three says how it reached its figure. The Russian figure was cited on this folder before this batch and had not been carried into the date, which stood at saint.gr's 1271 alone."
     }
   },
   "attestations": [
@@ -73,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.02.2026 (8. фебруар ст. ст.) — „3. Свети Сава II, архиепископ српски. Син краља Стефана Првовенчаног а синовац светог Саве I. Пре монашења звао се Предислав. … Упокојио се 1268. године. Мошти му леже у манастиру у Пећи.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list; he is its third numbered entry and the list printed his heading. It is the first Serbian source read for a Serbian archbishop, and it supplies what the Greek page says it has not: his family. He was the son of King Stefan the First-Crowned and the nephew of St Sava I, and before he was tonsured his name was Predislav; he became a monk following his great uncle's example, and was elected archbishop of Serbia after St Arsenius, under the name Sava II. It is also the only source to say where his relics lie — the monastery at Peć. Its year of repose is 1268, against the Russian line's «(1269)» and saint.gr's 1271: three sources, three years, none of them saying how it arrived at its own, so dates.death is the interval across all three and the note carries each. The Serbian name form «Сава II» is taken from this heading; the folder had no Serbian form at all."
     }
   ],
   "text": {

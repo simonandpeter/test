@@ -67,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.02.2026 (8. фебруар ст. ст.) — „2. Свети пророк Захарија. Једанаести од мањих пророка. Заједно с пророком Агејем побуђивао кнеза Зоровавеља да обнови храм јерусалимски. … Упокојио се последње године царовања Дарија Хистаспа, око 520. године пре Христа.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list; he is its second numbered entry and the list printed his heading. It is the only one of the four to number him among the minor prophets — the eleventh — and to say what he and Haggai did, which was to urge the prince Zerubbabel to rebuild the temple at Jerusalem. It cites three of his prophecies by chapter and verse and explains his epithet: he is called the Sickle-seer because he saw in a vision a sickle coming down from heaven to mow the unrighteous, and thieves and blasphemers of God's name especially. Its year of repose, «око 520. године пре Христа», agrees with the Russian line's «(ок. 520 до Р.Х.)», which was cited on this folder and had never been recorded as a date; the folder carried no dates at all before this batch. The Prologue sets the same repose in the last year of the reign of Darius Hystaspes, and no source read here gives that reign's years, so the quoted words stand in the note and nothing is computed from them."
     }
   ],
   "text": {
@@ -118,5 +128,14 @@
   "related": [
     "haggai-the-prophet",
     "theodosius-the-great"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": -520,
+      "latest": -520,
+      "display": "about 520 BC",
+      "basis": "traditional",
+      "note": "Two sources, one figure, and it had never been recorded: this folder carried no dates although the year was quoted in its own Russian citation. days.pravoslavie.ru for 8 февраля ст. ст.: «Прор. Захарии Серповидца из 12-ти (ок. 520 до Р.Х.).»; the Ohrid Prologue at pravoslavno.rs for the Julian 8 February: „Упокојио се последње године царовања Дарија Хистаспа, око 520. године пре Христа.“ The Prologue also puts the repose in the last year of Darius Hystaspes's reign; no source read here gives that reign's years, so its words are quoted and no year is derived from them. saint.gr and doxologia.ro give no year."
+    }
+  }
 }
