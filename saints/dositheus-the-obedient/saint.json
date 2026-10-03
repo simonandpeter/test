@@ -16,6 +16,11 @@
       "form": "Досифей Палестинский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Досифей Палестинский, прп.», with the rank word left off. The day's own line gives no epithet at all and names him by his teacher instead."
+    },
+    {
+      "form": "Доситеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 19. фебруар ст. ст., „Преподобни Доситеј.“, with the rank word Преподобни left off. The heading gives no epithet; the obedience the folder's English name is built on is what the body's last sentences are about."
     }
   ],
   "sex": "male",
@@ -75,11 +80,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026). The Prologue keeps [Seridos](/saints/seridos-of-gaza), the abbot of the house he lived in, on this same day."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.03.2026 (19. фебруар ст. ст.) — „Преподобни Доситеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-04&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 19 February: „Живљаше овај млади светитељ у VI веку.“ It gives the century and no year, and calls him young. The folder carried no dates at all before this reading."
+    }
   }
 }

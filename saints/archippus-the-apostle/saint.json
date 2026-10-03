@@ -16,6 +16,11 @@
       "form": "Архипп",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Апостол от 70-ти Архипп», with the rank word and the count of the Seventy left off. The calendar gives the name alone, with no surname and no epithet."
+    },
+    {
+      "form": "Архип",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's first heading for 19. фебруар ст. ст., „Свети апостол Архип, Филимон и Апфија.“, with Свети and the rank word апостол left off; the rank is in the folder's `types`. The heading gives the three bare forenames and no epithet for any of them."
     }
   ],
   "sex": "male",
@@ -170,8 +175,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.03.2026 (19. фебруар ст. ст.) — „Свети апостол Архип, Филимон и Апфија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's first heading names the three of them together, so this row and those of `philemon-the-apostle` and `apphia-wife-of-philemon` quote the same line."
     }
   ],
   "text": {

@@ -16,6 +16,11 @@
       "form": "Апфия",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Равноапостольная Апфия», with the rank word left off. The day's own line marks her «мц. равноап.», a martyr equal to the apostles."
+    },
+    {
+      "form": "Апфија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's first heading for 19. фебруар ст. ст., „Свети апостол Архип, Филимон и Апфија.“, which gives the three bare forenames under one rank word; the kinship clause the folder's English name carries, Филимонова жена, is in the body and not in the heading."
     }
   ],
   "sex": "female",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.03.2026 (19. фебруар ст. ст.) — „Свети апостол Архип, Филимон и Апфија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's first heading names the three of them together, so this row and those of `archippus-the-apostle` and `philemon-the-apostle` quote the same line."
     }
   ],
   "related": [
