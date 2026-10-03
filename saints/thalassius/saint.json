@@ -11,6 +11,11 @@
       "form": "Θαλάσσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Φεβρουαρίου, «Όσιοι Θαλάσσιος και Λιμναίος», with the rank words left off."
+    },
+    {
+      "form": "Таласије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 22. фебруар ст. ст., „Преподобни Таласије и Лимније.“, which gives the two bare forenames under one rank word and no epithet for either."
     }
   ],
   "sex": "male",
@@ -59,11 +64,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.03.2026 (22. фебруар ст. ст.) — „Преподобни Таласије и Лимније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's third heading names the two hermits together, so this row and `limnaeus`'s quote the same line."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "440",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 22 February dates his death inside the sentence about his companion: „По смрти светог Таласија 440. Лимније пређе ка светом Марону.“ The folder carried no dates at all before this reading."
+    }
   }
 }

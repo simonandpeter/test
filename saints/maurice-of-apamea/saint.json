@@ -11,6 +11,11 @@
       "form": "Μαυρίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουλίου, «Άγιος Μαυρίκιος», with the rank word left off."
+    },
+    {
+      "form": "Маврикије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. фебруар ст. ст., „Свети мученик Маврикије и седамдесет војника.“, with Свети, the rank word мученик and the company clause left off; Apamea, which the folder's English name carries, is in the body."
     }
   ],
   "sex": "male",
@@ -55,11 +60,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.03.2026 (22. фебруар ст. ст.) — „Свети мученик Маврикије и седамдесет војника.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading names him and the seventy soldiers with him, which is what this folder already holds as one company; the body names one of the seventy, his son Фотин, and no other, so the company is not enumerated and no folder was made for the son."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "about 305",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 22 February: „Ови храбри Христови војини пострадаше око 305. године.“ The page says about the year 305, not 305, and it is the only source read for him that gives a year; the folder carried no dates at all before this reading."
+    }
   }
 }

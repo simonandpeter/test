@@ -1,0 +1,48 @@
+{
+  "slug": "papias-of-hierapolis",
+  "display_name": "Papias of Hierapolis",
+  "sex": "male",
+  "types": [],
+  "names": [
+    {
+      "form": "Папије Јерапољски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 22 February on pravoslavno.rs, „Свети Папије Јерапољски.“, with Свети left off, which is not a rank. The heading carries the city as part of the form and no rank word at all, so the form is kept whole; nothing in the entry names him a bishop."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 22 февраля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 februarie, which is the page for this menologion number — not 7 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 22 Φεβρουαρίου, which is the page for this menologion number — not 03/07, which merely shares his civil date in 2026. The corpus holds two other folders for men of this name, `papias` on the Greek and Romanian 28 June and `papias-20-november` among a company on the Greek 20 November; neither is this man, who is a writer of the generation after the apostles and not a martyr under Diocletian."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.03.2026 (22. фебруар ст. ст.) — „Свети Папије Јерапољски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth and last entry, and two sentences long. The Prologue is the only one of the four calendars read for him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
