@@ -11,6 +11,11 @@
       "form": "Θεοδώρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Αγία Θεοδώρα η Βασίλισσα», with the rank word left off."
+    },
+    {
+      "form": "Феодора Греческая",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Феодора Греческая, царица», with the rank left off."
     }
   ],
   "sex": "female",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Прав. Феодоры, царицы Греческой, восстановившей почитание святых икон (ок. 867).»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

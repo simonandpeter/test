@@ -6,6 +6,11 @@
       "form": "Δημήτριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Όσιος Δημήτριος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Димитрий Прилуцкий, Вологодский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Преподобный Димитрий Прилуцкий, Вологодский», with the rank word left off; both epithets are the calendar's own and the comma between them is its own."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Прп. Димитрия Прилуцкого, Вологодского (1392).»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Свыше от Бога, преподобне,/ благодать приял еси духовную,/ и от Него убо познался еси, блаженне,/ того ради и ты духом познал еси лучшая Его,/ будущаго века пребывание,/ и постнически испытався во своих обителех./ И ныне со ангели ликовствуя,/ Спасу всех за ны молися, святе Димитрие, да вси вопием:/ Слава Давшему ти крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Тропарь преподобного Димитрия Прилуцкого, Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From on high, O venerable one, thou didst receive spiritual grace from God, and by him wast thou known, O blessed one; and therefore thou too didst know in the spirit his better things, the abiding of the age to come, being proved in fasting in thine own monasteries. And now, rejoicing with the angels, pray to the Saviour of all for us, O holy Demetrius, that we may all cry out: glory to him who gave thee strength, glory to him who crowned thee, glory to him who worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности, преподобне, крест твой взем, Христу последовал еси,/ в молитвах и пощениих, во бдениих же и злостраданиих плоть твою изнуряя;/ темже и Всевидящее Око, твоя труды видев,/ чудесы тя прославляет и всех звати тебе научает:/ радуйся, преподобне отче Димитрие, постников удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Кондак преподобного Димитрия Прилуцкого, Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O venerable one, thou didst take up thy cross and follow Christ, wearing out thy flesh in prayers and fastings, in vigils and in hardships. Therefore the All-seeing Eye, beholding thy labours, glorifies thee with wonders and teaches all to call to thee: rejoice, O venerable father Demetrius, adornment of the fasters.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

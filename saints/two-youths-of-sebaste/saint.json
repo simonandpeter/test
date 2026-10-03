@@ -15,8 +15,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Сщмч. Власия, еп. Севастийского, и с ним двух отроков и 7 жен (ок. 316).»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

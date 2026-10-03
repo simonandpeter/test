@@ -6,6 +6,11 @@
       "form": "Γαβριήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Γαβριήλ ο βασιλέας», with the rank word left off. His page adds the civil name in parentheses: «Ο Άγιος Γαβριήλ (Βσεβολόδος Μστισλάβιτς)»."
+    },
+    {
+      "form": "Всеволод Псковский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Благоверный князь Всеволод Псковский», with the rank words left off. The calendar's epithet is Pskov, where he ended, and its line adds that Gabriel was the name he was given in holy baptism."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Блгв. Кн. Всеволода, во св. Крещении Гавриила, Псковского (1138).»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +70,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Из млада явился еси, Богомудре княже Гаврииле,/ Божественный сосуд, избран Богови,/ благочестием воспитан, веру непорочну соблюд/ и многи святыя церкви устроив,/ изгнание претерпел еси от своих,/ якоже и целомудрии прародители твои от брата убиение./ С нимиже предстоя Святей Троице,/ молися, стране нашей сохраненной быти/ и всем нам спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Тропарь благоверного князя Всеволода, во святом Крещении Гавриила»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou wast shown forth, O prince Gabriel wise in God, as a divine vessel chosen by God. Reared in piety, thou didst keep the faith undefiled and didst build many holy churches, and thou didst endure banishment at the hands of thine own, as thy chaste forefathers endured murder at a brother's hand. Standing with them before the Holy Trinity, pray that our land be kept safe and that we all be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Многомудренно преселився во град Псков, блаженне княже Гаврииле,/ плод благий Богови в жизни сей был еси,/ присноцветущ добродетельми и, якоже Давид, незлобием./ Того ради получил еси жизнь вечную на Небесех,/ всегда зря Святую Троицу./ Моли избавитися нам от всяких бед, да зовем ти:/ радуйся, утверждение граду нашему.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Кондак благоверного князя Всеволода, во святом Крещении Гавриила»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having removed in great wisdom to the city of Pskov, O blessed prince Gabriel, thou wast a good fruit to God in this life, ever flowering with the virtues and, like David, with guilelessness. Therefore hast thou received eternal life in the heavens, beholding the Holy Trinity always. Pray that we be delivered from every evil, that we may cry to thee: rejoice, O strength of our city.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

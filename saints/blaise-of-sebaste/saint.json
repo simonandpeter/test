@@ -11,6 +11,11 @@
       "form": "Βλάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Βλάσιος επίσκοπος Σεβαστείας», with the rank word and the see left off."
+    },
+    {
+      "form": "Власий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Священномученик Власий, епископ Севастийский», with the rank word and the office left off. The calendar carries the see in the office and gives the name itself without an epithet."
     }
   ],
   "sex": "male",
@@ -85,13 +90,54 @@
         "text": "O divine shoot, unfading flower, fruitful branch of the vine of Christ, God-bearing Blaise: fill with thy gladness those who honour thy memory in faith, interceding without ceasing for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяния обрел еси, Богодохновенне,/ в видения восход,/ сего ради слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Власие./ Моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Тропарь священномученика Власия»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing the apostles' way of life and succeeding to their throne, O thou inspired of God, thou didst find in action an ascent to contemplation. Therefore, rightly dividing the word of truth, thou didst suffer for the faith even unto blood, O hieromartyr Blaise. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественное прозябение, цвет неувядаемый,/ лозы Христовы розго многострадальная, Богоносе Власие,/ верою чтущия память твою веселия твоего исполни,/ моляся непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Кондак священномученика Власия»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O divine shoot, unfading flower, much-suffering branch of the vine of Christ, O God-bearing Blaise, fill with thy gladness those who honour thy memory in faith, praying without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 февраля ст. ст. — «Сщмч. Власия, еп. Севастийского, и с ним двух отроков и 7 жен (ок. 316).»",
+        "url": "https://days.pravoslavie.ru/Days/20260211.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

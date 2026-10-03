@@ -8,4 +8,4 @@ Demetrius then established the first coenobitic monastery of the Russian north. 
 
 The gifts the faithful made to the monastery he received with discernment and care, and managed in a way that gave no offence, watching particularly that no worldly mind should be cultivated in the hearts of the monks. God endowed him with the gift of discernment. Having lived out the rest of his life in a way pleasing to God, Demetrius fell asleep in deep old age in the year 1392.
 
-*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [the life](https://www.saint.gr/3644/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [the life](https://www.saint.gr/3644/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 11 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260211.html), read 3 October 2026.*

@@ -4,4 +4,4 @@ saint.gr's calendar for 11 Φεβρουαρίου names the venerable Cassian fr
 
 So the by-name, the house, the abbot he lived under and the year are the whole of what the Greek calendar keeps of him. Nothing else is printed: no parentage, no office, no hymn, no relics and not even a distich, and the page adds only its gloss on the name, that Κασσιανός is from the Latin cassis, a helmet, and means the brave champion.
 
-*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [his page](https://www.saint.gr/3645/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [his page](https://www.saint.gr/3645/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 11 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260211.html), read 3 October 2026.*
