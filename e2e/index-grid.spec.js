@@ -1004,6 +1004,8 @@ test('every row starts its name at the card margin, picture or no picture', asyn
       return {
         gap: name.left - card.left,
         height: card.height,
+        cardLeft: card.left,
+        nameLeft: name.left,
         mediaLeft: media ? media.getBoundingClientRect().left : null,
         nameRight: name.right,
       };
@@ -1018,13 +1020,26 @@ test('every row starts its name at the card margin, picture or no picture', asyn
     seen,
     'premise: this day no longer keeps both a saint with an icon and a saint without one',
   ).not.toBeNull();
-  // The name begins at the card's own padding on both, which is the whole
-  // point of the reformat: one left edge down a scrolling register.
-  expect(seen.without.gap).toBeLessThan(16);
-  expect(seen.withPicture.gap).toBeLessThan(16);
+  /*
+   * **Superseded a third time, and again in its mechanism** (author,
+   * 2026-10-03: "add a small ornamental cross dot point next to each also
+   * commemorated saint and instead of the cross make it a tiny thumbnail of
+   * their image if they have an image"). What stands at the card's margin is
+   * the bullet now, and the name begins past it - measured, 4 px to the bullet
+   * and 30 px to the name, where the bullet is 18 px wide and the gap beside it
+   * is --space-2.
+   *
+   * So the number this asserted is gone and the claim it was making is not.
+   * **A saint with no icon does not pull the column about**: the bullet is the
+   * same 18 px whether it draws a thumbnail or a type glyph, so every name down
+   * the register starts at one left edge, which is what the three instructions
+   * behind this test have each asked for in their own arrangement.
+   */
+  expect(seen.without.mediaLeft - seen.without.cardLeft).toBeLessThan(8);
+  expect(seen.withPicture.mediaLeft - seen.withPicture.cardLeft).toBeLessThan(8);
   expect(Math.abs(seen.without.gap - seen.withPicture.gap)).toBeLessThan(2);
-  // And the picture is past the name, not in front of it.
-  expect(seen.withPicture.mediaLeft).toBeGreaterThan(seen.withPicture.gap);
+  // And the bullet is in front of the name, which is what a bullet is.
+  expect(seen.withPicture.mediaLeft).toBeLessThan(seen.withPicture.nameLeft);
   // Both rows are still the same height. This list is not virtualised — that
   // was the Index's reason and it left with the Index's row — but a register
   // whose rows change height depending on whether a saint has an icon reads as

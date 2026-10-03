@@ -3826,17 +3826,26 @@ a.name-day:hover {
 /* The hymn is text, in the reading face and the church's own language; its
    line is bounded so a fallback face with taller metrics cannot move what is
    below it (Addendum C3, as for the name forms). */
-/* **One size, and the register's** (author, 2026-10-03: "the font size for the
-   hymns should be the same font size as the also commemorated, and should be
-   bold too ... There are too many slightly different font sizes around").
-   `--text-base` is what `.reg-card .reg-name` sets, so the two lists on this
-   page are read at one size. */
 .hymn-text {
   font-family: var(--font-serif);
-  font-size: var(--text-base);
   max-width: 65ch;
   line-height: 1.55;
   margin-bottom: var(--space-1);
+}
+
+/* **One size, and the register's** (author, 2026-10-03: "the font size for the
+   hymns should be the same font size as the also commemorated ... There are too
+   many slightly different font sizes around"). `--text-base` is what
+   `.reg-card .reg-name` sets, so the two lists on the Daily page are read at
+   one size.
+
+   **Scoped to `.day-hymns`, which is that page's section.** On the bare class
+   it reached the Prayer page too, where the same `.hymn-text` is the reading
+   voice at `--text-lg` and is the whole subject of the page rather than one
+   list beside another. `prayer.spec.js` asserts that voice at 360 px and
+   caught it. */
+.day-hymns .hymn-text {
+  font-size: var(--text-base);
 }
 
 /* ---- the fast, and what it allows (author, 2026-08-25) ------------------ */
