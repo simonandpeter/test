@@ -6,4 +6,4 @@ Pelagius then put her to tortures, over which her woman's nature rose by the pow
 
 Helladius is named on the day with a title and not with a homeland: «Ελλάδιος ο Κομενταρήσιος», the commentaresios, which the page sets down without explaining it. He believed through [Theodoula](/saints/theodoula-of-diocaesarea) and was beheaded with [Boethus](/saints/boethus-companion-of-theodoula), and the epigram over the two of them reads «Θείον Βοηθόν συν Κομενταρησίω, Δόξης κατηξίωσε Χριστού, το ξίφος». Nothing else of him is printed.
 
-*After saint.gr's calendar for 18 Ιανουαρίου — [the day](https://www.saint.gr/01/18/index.aspx) and [the life](https://www.saint.gr/1126/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 18 Ιανουαρίου — [the day](https://www.saint.gr/01/18/index.aspx) and [the life](https://www.saint.gr/1126/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 5 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260205.html), read 3 October 2026.*

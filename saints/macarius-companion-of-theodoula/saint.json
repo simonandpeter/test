@@ -6,6 +6,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Αγία Θεοδούλη και οι πιστεύσαντες δι' αυτής Ευάγριος, Μακάριος, Ελλάδιος ο Κομενταρήσιος και Βοηθός»."
+    },
+    {
+      "form": "Макарий Аназарвский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 февраля ст. ст., «Макарий Аназарвский, мч.», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 февраля ст. ст. — «Мц. Феодулии и мчч. Елладия, Макария и Евагрия (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260205.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,58 @@
+{
+  "slug": "alexandra-kasparova",
+  "display_name": "Alexandra (Kasparova)",
+  "names": [
+    {
+      "form": "Александра (Каспарова)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 февраля ст. ст., «Александра (Каспарова), прмц.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 февраля ст. ст. — «Мч. Михаила, прмц. Александры (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260205.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 5 февраля ст. ст.: «Мч. Михаила, прмц. Александры (1942).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

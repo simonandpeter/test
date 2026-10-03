@@ -6,4 +6,4 @@ Pelagius then put her to tortures, over which her woman's nature rose by the pow
 
 Of Macarius himself the day says nothing beyond this: that he believed through [Theodoula](/saints/theodoula-of-diocaesarea) and was cast into the fire with her and with [Evagrius](/saints/evagrius-companion-of-theodoula). The epigram the page sets over the two men reads «Βληθέντες εις πυρ οσφράδια Κυρίω, Ώφθητε Μακάριε Ευάγριέ τε». Neither his city nor his trade nor his age is printed.
 
-*After saint.gr's calendar for 18 Ιανουαρίου — [the day](https://www.saint.gr/01/18/index.aspx) and [the life](https://www.saint.gr/1126/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 18 Ιανουαρίου — [the day](https://www.saint.gr/01/18/index.aspx) and [the life](https://www.saint.gr/1126/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 5 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260205.html), read 3 October 2026.*

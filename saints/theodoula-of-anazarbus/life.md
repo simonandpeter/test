@@ -16,4 +16,4 @@ Theodoula was cast into a burning furnace and stayed in it unharmed. After that 
 
 Seeing the wonder, the crowd believed in Christ, and among them were two honoured citizens, Macarius and Evagrius. Afterwards the unbelievers heated the furnace again and threw into it Theodoula, and with her Macarius and Evagrius and the multitude of those who had believed in Christ; and there, all of them praying together, they gave up their end and passed to the life that has no end.
 
-*After doxologia.ro's calendar for 5 februarie — [the day](https://doxologia.ro/5-februarie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-teodula); read 19 September 2026.*
+*After doxologia.ro's calendar for 5 februarie — [the day](https://doxologia.ro/5-februarie) and [the life](https://doxologia.ro/viata-sfintei-mucenite-teodula); read 19 September 2026; and the Православный церковный календарь of the Сретенский monastery for 5 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260205.html), read 3 October 2026.*

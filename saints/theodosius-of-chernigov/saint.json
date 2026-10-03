@@ -11,6 +11,11 @@
       "form": "Θεοδόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Θεοδόσιος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Феодосий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 февраля ст. ст., «Святитель Феодосий, архиепископ Черниговский», with the rank word and the office left off. The link gives the rank and the see and no epithet, so only the personal name is stored; «архиепископ Черниговский» is the office. No attestation row is replaced: the folder already keeps a venerated russian feast on 9 сентября ст. ст., and the 5 февраля line is reported as his second Russian day, not written as a feast."
     }
   ],
   "sex": "male",
@@ -91,5 +96,39 @@
   },
   "related": [
     "nicholas-of-alma-ata"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преудобрен во архиереех, святителю Феодосие,/ был еси светило своему стаду,/ таже преставился еси в вечныя Обители./ Умоли у Престола Царя Славы избавитися нам от находящих на ны зол/ и спастися душам нашим, святе, молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 февраля ст. ст. — «Тропарь святителя Феодосия, архиепископа Черниговского»",
+        "url": "https://days.pravoslavie.ru/Days/20260205.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Most excellent among bishops, O hierarch Theodosius, thou wast a light to thine own flock, and then didst pass over to the eternal mansions. Entreat before the throne of the King of glory that we be delivered from the evils that come upon us, and that our souls be saved, O holy one, by thy prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Пастырей Начальнику Христу трудился еси,/ святителю Феодосие,/ на пажити духовней словесныя твоя овцы питая,/ и целебен дар от Христа Спаса приял еси,/ во еже немощи душевныя и телесныя целити всех,/ с верою к тебе приходящих./ Темже и ныне, святе, молися,/ всем, имя твое призывающим,/ от наветов вражиих спастися/ и помиловатися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 февраля ст. ст. — «Кондак святителя Феодосия, архиепископа Черниговского»",
+        "url": "https://days.pravoslavie.ru/Days/20260205.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst labour for Christ, the chief of shepherds, O hierarch Theodosius, feeding thy rational sheep in a spiritual pasture; and thou didst receive from Christ the Saviour the gift of healing, to heal the infirmities of soul and of body in all who come to thee with faith. Therefore now also pray, O holy one, that all who call upon thy name may be saved from the snares of the enemy, and that our souls may find mercy.",
+        "rendered": "site"
+      }
+    }
   ]
 }

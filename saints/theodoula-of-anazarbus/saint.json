@@ -6,6 +6,11 @@
       "form": "Teodula",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 februarie, «Sfânta Muceniță Teodula»."
+    },
+    {
+      "form": "Феодулия Аназаровская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 февраля ст. ст., «Феодулия Аназаровская, мц.», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 февраля ст. ст. — «Мц. Феодулии и мчч. Елладия, Макария и Евагрия (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260205.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
