@@ -24,7 +24,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 2 октября ст. ст. (civil 15 October 2026) was read on 2026-10-04 and prints seven lines. It keeps a Theodore on the day, but that is Theodore Ushakov the righteous soldier, dead in 1817, and not this twelfth-century great-martyr. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -51,6 +51,9 @@
       "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "greek",
@@ -86,8 +89,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

@@ -10,6 +10,11 @@
     {
       "form": "Sfântul Sfințit Mucenic Ciprian",
       "lang": "ro"
+    },
+    {
+      "form": "Киприан",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 1205 heads him «Священномученик Киприан»; the bare name is all of it that is not rank."
     }
   ],
   "sex": "male",
@@ -20,28 +25,35 @@
   "dates": {
     "floruit": {
       "earliest": 249,
-      "latest": 251,
-      "display": "249–251",
+      "latest": 304,
+      "display": "249–251, or 304",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu»."
+      "note": "A persecution and a reign apart: saint.gr puts the martyrdom under Decius, «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and days.pravoslavie.ru puts it under Diocletian and names the year — «умерщвлены в Никомидии в 304 году». The interval now spans both readings and resolves neither."
     }
   },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
   "related": [
     "cyprian-30-may",
     "cyprian-martyr-10-may",
-    "justina-of-antioch"
+    "justina-of-antioch",
+    "theoctistus-of-nicomedia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Сщмч. Киприана, мц. Иустины и мч. Феоктиста (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian life for the three of them is much the fuller: thirty years a pagan priest from the age of seven, trained on Olympus and at Argos, Tauropolis, Memphis and Babylon, a legion of demons at his service, beaten by the devil himself when he first used the sign of the Cross, his books burnt before Bishop Anthimus, reader at seven days from his baptism, subdeacon at twenty, deacon at thirty, presbyter within the year and bishop soon after. It also dates the martyrdom to 304 against saint.gr's Decius."
     },
     {
       "church": "romanian",
@@ -75,6 +87,15 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -195,8 +216,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }
