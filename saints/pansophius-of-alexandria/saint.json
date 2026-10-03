@@ -10,6 +10,11 @@
       "form": "Πανσόφιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Άγιος Πανσόφιος», with the rank word left off."
+    },
+    {
+      "form": "Пансофије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 15. јануар ст. ст. (civil 2026-01-28), „Свети мученик Пансофије“. The words „Свети мученик“ are left off: the site composes the rank itself."
     }
   ],
   "dates": {
@@ -48,8 +53,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.01.2026 (15. јануар ст. ст.) — „Свети мученик Пансофије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

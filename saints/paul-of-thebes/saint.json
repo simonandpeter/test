@@ -25,6 +25,11 @@
       "form": "Pavel Tebeul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 ianuarie, «Sfântul Cuvios Pavel Tebeul»."
+    },
+    {
+      "form": "Павле Тивејски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 15. јануар ст. ст. (civil 2026-01-28), „Преподобни Павле Тивејски“. The rank word „Преподобни“ is left off; „Тивејски“ is kept, being what distinguishes him."
     }
   ],
   "sex": "male",
@@ -98,8 +103,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.01.2026 (15. јануар ст. ст.) — „Преподобни Павле Тивејски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [

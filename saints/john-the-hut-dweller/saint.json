@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Όσιος Ιωάννης ο Καλυβίτης ο δια Χριστόν πτωχός», with the rank word left off."
+    },
+    {
+      "form": "Јован Кушчник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 15. јануар ст. ст. (civil 2026-01-28), „Преподобни Јован Кушчник“. The rank word „Преподобни“ is left off; „Кушчник“ is kept, being what distinguishes him."
     }
   ],
   "sex": "male",
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.01.2026 (15. јануар ст. ст.) — „Преподобни Јован Кушчник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
