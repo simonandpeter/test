@@ -73,10 +73,31 @@ const GONE = new Map([
 /** `life.md` is a corpus filename, not a document anyone cites. */
 const CORPUS = /^(life|saint)\.md$/;
 
+/**
+ * What counts as a document name in the source. One definition, because the
+ * test below asserts against this and not against a copy of it — the same
+ * pattern written twice is two claims, and the day they disagree neither is
+ * trusted.
+ *
+ * Bounded at **both** ends. The lookbehind stops a name starting mid-path; the
+ * lookahead stops it ending mid-identifier. See the note at its use.
+ */
+const CITATION = /(?<![\w/.-])((?:docs\/)?[A-Za-z][A-Za-z0-9._-]*\.md)(?![\w-])/g;
+
 test('every document the source names exists', () => {
   const missing = [];
   for (const [file, text] of FILES) {
-    for (const m of text.matchAll(/(?<![\w/.-])((?:docs\/)?[A-Za-z][A-Za-z0-9._-]*\.md)/g)) {
+    /*
+     * `CITATION`'s trailing `(?![\w-])` is the half this had been missing.
+     * Without it the name is allowed to end mid-identifier, because
+     * `[A-Za-z0-9._-]*` is greedy and then backtracks to whatever `.md` it can
+     * reach: on 3 October 2026 `Number(b.dataset.mdelta)` in
+     * `views/daily/picker.js` came back as a citation of a document called
+     * `b.dataset.md`, and the suite went red with nothing wrong in the diff.
+     * Any identifier chain holding a segment that opens `md` would have done
+     * it — `.mdelta` was simply the first one anybody wrote.
+     */
+    for (const m of text.matchAll(CITATION)) {
       const named = m[1];
       if (CORPUS.test(path.basename(named))) continue;
       if (GONE.has(named)) continue;
@@ -238,4 +259,28 @@ test('every "STRUCTURE.md\'s X section" is a heading STRUCTURE.md has', () => {
     [],
     `STRUCTURE.md has no such section:\n  ${bad.join('\n  ')}\n  it has: ${headings.join(' / ')}`,
   );
+});
+
+test('a document name is bounded at both ends, so an identifier is not a citation', () => {
+  /*
+   * The regression for `b.dataset.mdelta`. The reader above is greedy and
+   * backtracks, so without a boundary on each side it will find a document
+   * name inside any identifier chain that happens to hold a segment opening
+   * `md`, and inside any path ending in one. Back either boundary out of
+   * `CITATION` and a row here fails.
+   */
+  const read = (s) => [...s.matchAll(CITATION)].map((m) => m[1]);
+
+  for (const code of ['Number(b.dataset.mdelta)', 'el.dataset.mdkey', 'a.mdx', 'x.mdelta.y']) {
+    assert.deepEqual(read(code), [], `${code} is code, not a citation`);
+  }
+  for (const [text, expected] of [
+    ['see CORPUS.md', ['CORPUS.md']],
+    ['see docs/CORPUS.md', ['docs/CORPUS.md']],
+    ['STRUCTURE.md, and HANDOFF.md.', ['STRUCTURE.md', 'HANDOFF.md']],
+    ["STRUCTURE.md's tables", ['STRUCTURE.md']],
+    ['`CLAUDE.md`', ['CLAUDE.md']],
+  ]) {
+    assert.deepEqual(read(text), expected, text);
+  }
 });
