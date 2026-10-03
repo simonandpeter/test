@@ -2271,7 +2271,11 @@ html[data-route~='calendar'] .month-grid .month-out {
     border: 0;
   }
 
+  /* `.reg-card .reg-glyph` is `display: none` at the top of the file — the
+     glyph was only ever drawn in the desktop's expanded face — so the bullet
+     has to turn it back on, not just size it. */
   .register-cards .reg-card .reg-thumb.is-bullet .reg-glyph {
+    display: block;
     width: 18px;
     height: 18px;
   }
@@ -2280,6 +2284,12 @@ html[data-route~='calendar'] .month-grid .month-out {
     align-items: center;
     gap: var(--space-2);
     padding: 2px 4px;
+  }
+
+  /* The picture is the row's last child — the plate hangs it on the right —
+     and a bullet belongs where a bullet goes, before the name it marks. */
+  .register-cards .reg-card .reg-thumb.is-bullet {
+    order: -1;
   }
 }
 
