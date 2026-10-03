@@ -1,9 +1,8 @@
 import { CHURCHES } from '../data/churches.js';
 import { churchName } from '../lib/church.js';
 import { loadManifestMeta } from '../lib/manifest.js';
-import { formatDate } from '../lib/i18n.js';
+import { formatDate, languageTag } from '../lib/i18n.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
-import * as store from '../lib/store.js';
 import { STRINGS, fill } from '../ui/strings.js';
 
 export const title = () => STRINGS.about.title;
@@ -23,6 +22,14 @@ const C = STRINGS.contact;
 
 const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li>`).join('')}</ul>`;
 
+/** "Russian and Serbian" in the reader's own language. */
+const names = (churches) =>
+  new Intl.ListFormat(languageTag(), { style: 'long', type: 'conjunction' }).format(
+    churches.map((c) => churchName(c.id)),
+  );
+
+const enabled = () => CHURCHES.filter((c) => c.enabled !== false);
+
 /**
  * The editorial page. Until 2026-08-22 it also explained the veneration mark,
  * with every circle drawn by the glyph's own component; the mark is removed
@@ -34,18 +41,39 @@ const list = (items) => `<ul class="plain-list">${items.map((t) => `<li>${t}</li
  * three states against the schema, the calendars against the church registry,
  * the counts against `manifest.meta.json`.
  *
- * **Nothing here states a number.** The coverage section reads them at render
+ * **Nothing here states a number**, which includes how many churches there
+ * are: the registry is asked for that too, so enabling a fifth cannot leave a
+ * sentence saying four. The coverage and licence figures are read at render
  * time from `manifest.meta.json`, which is where `loadManifestMeta()` finally
- * gets its caller: a statistic typed into a sentence is stale the next time a
+ * gets its caller — a statistic typed into a sentence is stale the next time a
  * folder is added, and this page is the one place where a stale number would
  * read as a claim rather than as a bug.
  *
- * The privacy statement below is not a placeholder either (author,
- * 2026-08-24). It is short because the truth is short: the site keeps four
- * things, all of them on the reader's own device, and does nothing else.
+ * **It is also the app's privacy policy and its content-rights answer**
+ * (2026-10-03, for the store listings — `docs/APP.md` points both consoles at
+ * this page). Three things follow: the privacy section answers for the app by
+ * name and not only for the website, the pictures say where they come from
+ * and under what licence, and a sentence about a page this build does not
+ * ship is not printed — the app carries Daily, Saints, Prayer and About, so
+ * `router.has` decides the Texts and map paragraphs rather than a reader
+ * meeting a link to nothing.
+ *
+ * **Export and import are gone** (author, 2026-10-03: "Is it legally
+ * required? If not, get rid of it"). It is not: a portability right is a
+ * right against whoever holds your data, and nothing here is held by anyone
+ * - it is in the reader's own browser, where clearing the site's data is the
+ * whole of the control. `store.exportData` and `importData` stay in
+ * `lib/store.js`, tested and uncalled, because the next caller for them is a
+ * settings page rather than a policy.
  */
 export function render(el, { router } = {}) {
   const A = STRINGS.about;
+  // Without a router — a test mounting the view bare — the website's own set
+  // is the honest assumption: it is the build this file ships in.
+  const has = (path) => (router ? router.has(path) : true);
+
+  const old = enabled().filter((c) => c.default_calendar === 'julian');
+  const revised = enabled().filter((c) => c.default_calendar !== 'julian');
 
   /*
    * **One box around the page** (author, 2026-09-02: "Make the formatting of
@@ -62,6 +90,7 @@ export function render(el, { router } = {}) {
     <section aria-labelledby="policy">
       <h2 id="policy">${esc(A.policy.heading)}</h2>
       <p>${esc(A.policy.attest)}</p>
+      <p>${esc(A.policy.affiliation)}</p>
 
       <h3>${esc(A.policy.statesHeading)}</h3>
       <p>${emphasise(A.policy.states)}</p>
@@ -80,12 +109,10 @@ export function render(el, { router } = {}) {
         prose is a second thing to keep true.
       -->
       ${list(
-        CHURCHES.filter((c) => c.enabled !== false).map(
-          (c) =>
-            `<strong>${esc(churchName(c.id))}</strong> - ${esc(
-              c.default_calendar === 'julian' ? A.calendars.old : A.calendars.new,
-            )}`,
-        ),
+        [
+          old.length ? fill(esc(A.calendars.old), { churches: `<strong>${esc(names(old))}</strong>` }) : '',
+          revised.length ? fill(esc(A.calendars.new), { churches: `<strong>${esc(names(revised))}</strong>` }) : '',
+        ].filter(Boolean),
       )}
     </section>
 
@@ -94,10 +121,21 @@ export function render(el, { router } = {}) {
       <p>${esc(A.sourcing.lede)}</p>
       <div data-sources></div>
       <p>${esc(A.sourcing.lives)}</p>
-      <p>${esc(A.sourcing.map)}</p>
-      <p>${fill(esc(A.sourcing.texts), {
-        link: `<a href="${router ? router.href('/texts') : `${import.meta.env.BASE_URL}texts`}">${esc(STRINGS.texts.title)}</a>`,
-      })}</p>
+      ${has('/map') ? `<p>${esc(A.sourcing.map)}</p>` : ''}
+      ${
+        has('/texts')
+          ? `<p>${fill(esc(A.sourcing.texts), {
+              link: `<a href="${router ? router.href('/texts') : `${import.meta.env.BASE_URL}texts`}">${esc(STRINGS.texts.title)}</a>`,
+            })}</p>`
+          : ''
+      }
+    </section>
+
+    <section aria-labelledby="pictures">
+      <h2 id="pictures">${esc(A.pictures.heading)}</h2>
+      <p>${esc(A.pictures.lede)}</p>
+      <p data-licences class="utility"></p>
+      <p>${esc(A.pictures.unsettled)}</p>
     </section>
 
     <section aria-labelledby="coverage">
@@ -108,84 +146,32 @@ export function render(el, { router } = {}) {
     </section>
 
     <section class="privacy" aria-labelledby="privacy">
-      <h2 id="privacy">${P.heading}</h2>
-      <p>${P.lede}</p>
+      <h2 id="privacy">${esc(P.heading)}</h2>
+      <p>${esc(P.lede)}</p>
 
-      <h3>${P.keepsHeading}</h3>
-      ${list(P.keeps)}
+      <h3>${esc(P.keepsHeading)}</h3>
+      ${list(P.keeps.map(esc))}
 
-      <h3>${P.notHeading}</h3>
-      ${list(P.not)}
+      <h3>${esc(P.notHeading)}</h3>
+      <p>${esc(P.not)}</p>
 
-      <p>${P.clearing}</p>
-
-      <h3>${esc(A.data.heading)}</h3>
-      <p>${esc(A.data.lede)}</p>
-      <p class="data-controls">
-        <button type="button" data-export>${esc(A.data.exportButton)}</button>
-        <button type="button" data-import>${esc(A.data.importButton)}</button>
-        <input type="file" accept="application/json,.json" data-import-file hidden />
-      </p>
-      <p class="utility" data-import-note aria-live="polite"></p>
-
-      <p class="utility">${P.hosting}</p>
+      <p>${esc(P.clearing)}</p>
+      <p class="utility">${esc(P.hosting)}</p>
     </section>
+
 
     <section class="contact" aria-labelledby="contact">
-      <h2 id="contact">${C.heading}</h2>
-      <p>${C.lede}</p>
-      <p><a href="${ISSUES}" rel="noopener noreferrer">${C.open}</a></p>
-      <p class="utility">${C.note}</p>
+      <h2 id="contact">${esc(C.heading)}</h2>
+      <p>${esc(C.lede)}</p>
+      <p><a href="${ISSUES}" rel="noopener noreferrer">${esc(C.open)}</a></p>
+      <p class="utility">${esc(C.note)}</p>
     </section>
+
+    <p class="built-with">${esc(A.builtWith)}</p>
     </div>
   `;
 
   fillCounted(el);
-  wireDataControls(el);
-}
-
-/**
- * Export / Import (brief §11): the whole log as one JSON file, and back.
- *
- * The export is an <a download> minted on the press - a static site has no
- * endpoint to download *from*, so the file is built in memory and the URL
- * revoked once the click has gone through. The import announces its result in
- * an aria-live note rather than an alert, and says how many records were
- * actually newer - "imported" with nothing taken is a different fact from
- * "imported", and the store's merge answer is worth the sentence.
- */
-function wireDataControls(el) {
-  const A = STRINGS.about;
-  const note = el.querySelector('[data-import-note]');
-  const file = el.querySelector('[data-import-file]');
-
-  el.querySelector('[data-export]').addEventListener('click', async () => {
-    const dump = await store.exportData();
-    const blob = new Blob([JSON.stringify(dump, null, 2)], { type: 'application/json' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    // The date in the name, so two backups on one desk stay tellable apart.
-    a.download = `daily-dox-${dump.exportedAt.slice(0, 10)}.json`;
-    a.click();
-    URL.revokeObjectURL(a.href);
-  });
-
-  el.querySelector('[data-import]').addEventListener('click', () => file.click());
-  file.addEventListener('change', async () => {
-    const chosen = file.files?.[0];
-    if (!chosen) return;
-    // The same file twice must fire change twice; a picker that remembers is
-    // a second press that silently does nothing.
-    file.value = '';
-    try {
-      const taken = await store.importData(JSON.parse(await chosen.text()));
-      note.textContent = taken
-        ? fill(A.data.imported, { count: taken })
-        : A.data.importedNone;
-    } catch {
-      note.textContent = A.data.importFailed;
-    }
-  });
 }
 
 /**
@@ -211,6 +197,7 @@ async function fillCounted(el) {
   const A = STRINGS.about;
   const coverage = el.querySelector('[data-coverage]');
   const sources = el.querySelector('[data-sources]');
+  const licences = el.querySelector('[data-licences]');
   let meta;
   try {
     meta = await loadManifestMeta();
@@ -231,6 +218,20 @@ async function fillCounted(el) {
   coverage.innerHTML =
     list(rows.map(esc)) +
     `<p class="utility">${esc(fill(A.coverage.built, { when: formatDate({ day: 'numeric', month: 'long', year: 'numeric' }, new Date(meta.built_at)) }))}</p>`;
+
+  /*
+   * The licence tally in two families, which is the shape of the obligation
+   * rather than the shape of the data: a public-domain file owes nobody
+   * anything, and everything else on the page owes a named author, which
+   * `ui/credit.js` prints under the picture itself. `by_licence` arrived with
+   * this section; a manifest built before it simply leaves the line out.
+   */
+  if (licences?.isConnected && meta.by_licence) {
+    const entries = Object.entries(meta.by_licence);
+    const pd = entries.filter(([k]) => /public domain/i.test(k)).reduce((n, [, v]) => n + v, 0);
+    const cc = entries.filter(([k]) => !/public domain/i.test(k)).reduce((n, [, v]) => n + v, 0);
+    licences.textContent = fill(A.pictures.counts, { summary: fill(A.pictures.summary, { pd, cc }) });
+  }
 
   /*
    * The publications the corpus actually cites, counted at build time

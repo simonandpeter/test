@@ -82,5 +82,14 @@ export function createRouter(routes, onNavigate) {
     // nothing else moved.
     refresh: () => onNavigate(resolve(location.pathname), { pop: false }),
     href: (to) => BASE + to,
+    /*
+     * Whether this build has that page at all. The app ships a subset of the
+     * routes the website does (docs/APP.md), and the About page tells a
+     * reader about the Texts page and the map's own sources - sentences that
+     * must not be printed where the page they point at does not exist. Asked
+     * of the table rather than of a build flag, so dropping a route is the
+     * only edit that is needed.
+     */
+    has: (to) => resolve(to).route !== null,
   };
 }

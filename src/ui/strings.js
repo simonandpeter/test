@@ -906,7 +906,7 @@ export const STRINGS = {
     // told before they open one rather than after.
     lede: 'Corrections, a saint who is missing, a source that says otherwise - all of it is welcome.',
     open: 'Open an issue on the project',
-    note: 'Issues are part of the public repository this site is built from, so what you write there can be read by anyone. Please leave out anything you would not put on a page of it.',
+    note: 'Issues are public - they live in the repository this site is built from - so please leave out anything you would not put on a page of it.',
   },
 
   saint: {
@@ -1308,6 +1308,13 @@ export const STRINGS = {
        * facts rather than settling them.
        */
       attest: 'This site never says that someone is a saint. It reports that a named church commemorates them, on a stated day, according to a source you can open. Where two churches differ, both are shown, and neither is corrected.',
+      /*
+       * Named churches on every page, and a store listing that will sit beside
+       * their own apps: a reader - or a reviewer - is owed the plain statement
+       * that nobody here speaks for them. Play's deceptive-behaviour policy
+       * asks the same question of any app that carries an organisation's name.
+       */
+      affiliation: 'This is an independent project. It is not affiliated with, endorsed by, or published by any of the churches it reports on, and nothing here is an official statement of any of them.',
       statesHeading: 'Three answers, not two',
       /*
        * §2 again: collapsing "not venerated" into "undocumented" would
@@ -1320,10 +1327,15 @@ export const STRINGS = {
     },
     calendars: {
       heading: 'The calendars',
-      lede: 'Fixed feasts are stored with the calendar they were given in and converted for display; they are never rewritten into one reckoning. Pascha and everything that moves with it are reckoned by the Julian computus in all four churches.',
-      /** One line per church: which reckoning it keeps. */
-      old: 'Old Calendar - fixed feasts by the Julian reckoning, thirteen days behind the civil date until 2100.',
-      new: 'New Calendar - fixed feasts on the civil date.',
+      lede: 'Fixed feasts are stored with the calendar they were given in and converted for display; they are never rewritten into one reckoning. Pascha and everything that moves with it are reckoned by the Julian computus in every church here.',
+      /**
+       * One line per reckoning, naming the churches that keep it. It was one
+       * line per church, which printed this sentence twice word for word -
+       * two of the four are Old Calendar, and the reader was being asked to
+       * compare two paragraphs to find out that they did not differ.
+       */
+      old: '{churches} - Old Calendar: fixed feasts by the Julian reckoning, thirteen days behind the civil date until 2100.',
+      new: '{churches} - New Calendar: fixed feasts on the civil date.',
     },
     sourcing: {
       heading: 'Where it comes from',
@@ -1345,25 +1357,28 @@ export const STRINGS = {
       texts: 'Some of these are reproduced in full on the {link} page.',
     },
     /*
-     * Export / Import (brief §11, Session 8's surviving third, 2026-08-29).
-     * In the privacy section, because that is where the page explains what the
-     * device holds - and taking it with you, or bringing it along, is the
-     * other half of that explanation.
+     * The images' provenance, stated once for the whole corpus (2026-10-03,
+     * for the store listings). `ui/credit.js` already prints each picture's
+     * own licence and author under it, which is where an attribution legally
+     * has to be; this is the paragraph a store's content-rights question and
+     * a reader who has not opened a saint yet are both asking for.
      */
-    data: {
-      heading: 'Your data, portable',
-      lede: 'Everything above can be downloaded as one file, and a downloaded file can be brought to another device. Importing merges: the newer record wins, so bringing an old backup cannot undo what you did here yesterday.',
-      exportButton: 'Download your data',
-      importButton: 'Import a file',
-      imported: 'Imported. {count} records were newer than what this device held.',
-      importedNone: 'Imported. This device already held everything in the file, at the same age or newer.',
-      importFailed: 'That file is not an export from this site, so nothing was changed.',
+    pictures: {
+      heading: 'The pictures',
+      lede: 'The icons and paintings are files published on Wikimedia Commons. Every picture on this site records the Commons file it came from, the licence Commons states for it, and the author where one is named - and each saint’s page prints that under the picture, which is where a licence that asks for credit is given it.',
+      /** Read rather than written: `by_licence` in build-manifest.mjs. */
+      counts: 'Today that is {summary}.',
+      summary: '{pd} in the public domain and {cc} under Creative Commons licences',
+      /* A picture whose licence we could not read is not published. The gate
+         is `lib/licence.js`, which treats "Creative Commons" as unsettled
+         because the family spans CC0 and CC BY-SA. */
+      unsettled: 'Where a licence could not be established the picture is not used, and a page leads without one rather than with a file we cannot account for.',
     },
     coverage: {
       heading: 'How much is here',
       lede: 'Counted from the corpus at the last build rather than stated from memory.',
       saints: '{count} saints',
-      commemorations: '{count} commemorations across four churches',
+      commemorations: '{count} commemorations across the churches here',
       undated: '{count} with no date recorded',
       located: '{count} with a place we can point to',
       /*
@@ -1387,10 +1402,14 @@ export const STRINGS = {
      */
     privacy: {
       heading: 'Privacy',
+      /* The app is this site's own files inside a shell (docs/APP.md), so one
+         statement is true of both - and a store's privacy-policy field points
+         at this section, which has to answer for the app by name. */
       lede:
         'Nothing about you is collected, and there is no account to make. ' +
-        'What this site remembers, it remembers on your own device, and it is ' +
-        'only what it needs to give you back the page you left.',
+        'What this site and its app remember, they remember on your own ' +
+        'device, and it is only what they need to give you back the page you ' +
+        'left.',
       keepsHeading: 'What is kept on your device',
       keeps: [
         'Where you were reading, and how far down the page you had got.',
@@ -1399,22 +1418,23 @@ export const STRINGS = {
         'How you last left the All Saints page - cards or rows, and whether descriptions were shown.',
       ],
       notHeading: 'What is not done',
-      not: [
-        'No analytics, no tracking pixels, no advertising, and no cookies.',
-        'Nothing you do here is sent to this site’s makers or to anyone else.',
-        'Nothing is shared or sold, because nothing is gathered to share or sell.',
-      ],
+      /* One sentence where there were three bullets, each of which was the
+         lede again: nothing is collected, nothing is sent, nothing is sold
+         are one fact stated from three sides. */
+      not: 'No analytics, no tracking pixels, no advertising and no cookies. Nothing you do here is sent to this site’s makers or to anyone else, and nothing is gathered, so there is nothing to share or sell.',
       clearing:
         'All of it stays in this browser, on this device, and clearing the ' +
-        'site’s data in your browser removes every trace of it. Nothing is ' +
-        'kept anywhere else, so there is nothing to ask us to delete.',
+        'site’s data in your browser removes every trace of it. There is ' +
+        'nothing kept anywhere else to ask us to delete.',
       hosting:
-        'Two honest footnotes. The files are served by GitHub Pages, and any ' +
-        'web server sees the requests made to it; that is the host’s doing, ' +
-        'not this site’s, and it is the same for every page on the internet. ' +
-        'And the day’s readings link out to Bible Gateway - following one ' +
-        'takes you to a different site, with its own policy.',
+        'Two footnotes. The website’s files are served by GitHub Pages, and ' +
+        'any web server sees the requests made to it; that is the host’s ' +
+        'doing and the same for every page on the internet. The app carries ' +
+        'its own copy of everything and asks the network for nothing. And ' +
+        'the day’s readings link out to Bible Gateway, which is a different ' +
+        'site with its own policy.',
     },
+    builtWith: 'Built with Claude.',
   },
 
   notFound: {

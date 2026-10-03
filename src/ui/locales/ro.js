@@ -586,6 +586,7 @@ export const ro = {
     policy: {
       heading: 'Ce susține acest sit',
       attest: 'Acest sit nu spune niciodată că cineva este sfânt. El arată că o Biserică anume îl pomenește, într-o zi precizată, după un izvor pe care îl puteți deschide. Unde două Biserici se deosebesc, sunt arătate amândouă, și niciuna nu este îndreptată.',
+      affiliation: 'Acesta este un proiect independent. Nu este afiliat niciuneia dintre Bisericile despre care relatează, nu este aprobat și nici publicat de ele, iar nimic de aici nu este o declarație oficială a vreuneia dintre ele.',
       statesHeading: 'Trei răspunsuri, nu două',
       states: 'Pentru fiecare Biserică, un chip este *cinstit*, *necinstit* sau *nedocumentat*. Primele două sunt constatări și cer amândouă o trimitere; al treilea înseamnă doar că nu am cercetat. A socoti un gol din citirea noastră drept o respingere ar măguli pe tăcute Biserica ce publică mai mult pe internet.',
       datesHeading: 'Datele sunt intervale',
@@ -593,9 +594,9 @@ export const ro = {
     },
     calendars: {
       heading: 'Calendarele',
-      lede: 'Praznicele nemișcătoare se păstrează în calendarul în care au fost date și se prefac la afișare; ele nu sunt niciodată rescrise într-o singură socoteală. Paștile și tot ce se mișcă odată cu ele se socotesc după pascalia iuliană în toate cele patru Biserici.',
-      old: 'Calendarul vechi - praznice nemișcătoare după socoteala iuliană, cu treisprezece zile în urma datei civile până în 2100.',
-      new: 'Calendarul nou - praznice nemișcătoare la data civilă.',
+      lede: 'Praznicele nemișcătoare se păstrează în calendarul în care au fost date și se prefac la afișare; ele nu sunt niciodată rescrise într-o singură socoteală. Paștile și tot ce se mișcă odată cu ele se socotesc după pascalia iuliană în fiecare Biserică de aici.',
+      old: '{churches} - calendarul vechi: praznice nemișcătoare după socoteala iuliană, cu treisprezece zile în urma datei civile până în 2100.',
+      new: '{churches} - calendarul nou: praznice nemișcătoare la data civilă.',
     },
     sourcing: {
       heading: 'De unde vine',
@@ -605,20 +606,18 @@ export const ro = {
       map: 'Linia țărmului, râurile, lacurile și relieful de pe hartă sunt Natural Earth: domeniu public, care nu cere nicio mențiune. Este numit aici fiindcă cititorului i se cuvine proveniența unei imagini la fel ca proveniența unei date.',
       texts: 'Unele dintre ele sunt reproduse în întregime pe pagina {link}.',
     },
-    data: {
-      heading: 'Datele tale - portabile',
-      lede: 'Tot ce e mai sus se poate descărca într-un singur fișier, iar fișierul descărcat se poate aduce pe alt dispozitiv. Importul îmbină: câștigă înregistrarea mai nouă, așa că o copie veche nu poate desface ce ai făcut aici ieri.',
-      exportButton: 'Descarcă-ți datele',
-      importButton: 'Importă un fișier',
-      imported: 'Importat. {count} înregistrări erau mai noi decât ce ținea acest dispozitiv.',
-      importedNone: 'Importat. Acest dispozitiv ținea deja tot ce e în fișier, la aceeași vârstă sau mai nou.',
-      importFailed: 'Fișierul nu este un export de pe acest sit, așa că nimic nu s-a schimbat.',
+    pictures: {
+      heading: 'Imaginile',
+      lede: 'Icoanele și picturile sunt fișiere publicate pe Wikimedia Commons. Pentru fiecare imagine se însemnează fișierul Commons din care vine, licența pe care Commons o arată pentru el și autorul, unde este numit; pagina fiecărui sfânt le tipărește sub imagine - acolo unde o licență care cere mențiune o și primește.',
+      counts: 'Astăzi acestea sunt {summary}.',
+      summary: '{pd} în domeniul public și {cc} sub licențe Creative Commons',
+      unsettled: 'Unde licența nu a putut fi stabilită, imaginea nu se folosește: o pagină stă mai bine fără ea decât cu un fișier de care nu putem da seamă.',
     },
     coverage: {
       heading: 'Cât se află aici',
       lede: 'Numărat din culegere la ultima construire, nu spus din amintire.',
       saints: '{count} de sfinți',
-      commemorations: '{count} de pomeniri în patru Biserici',
+      commemorations: '{count} de pomeniri în Bisericile de aici',
       undated: '{count} fără dată însemnată',
       located: '{count} cu un loc pe care îl putem arăta',
       positiveOnly: 'Orice mărturie însemnată până acum este una pozitivă. Nicio respingere și nicio absență cu izvor nu au fost trecute încă, așa că o Biserică ce lipsește de pe pagina unui sfânt înseamnă că nu am citit-o pe el - nu că nu îl ține.',
@@ -629,7 +628,8 @@ export const ro = {
       heading: 'Confidențialitate',
       lede:
         'Nu se colectează nimic despre tine și nu e niciun cont de făcut. ' +
-        'Ce își amintește site-ul, își amintește pe dispozitivul tău - și doar ' +
+        'Ce își amintesc situl și aplicația lui, își amintesc pe dispozitivul ' +
+        'tău - și doar ' +
         'atât cât îi trebuie ca să-ți dea înapoi pagina unde ai rămas.',
       keepsHeading: 'Ce se păstrează pe dispozitivul tău',
       keeps: [
@@ -639,21 +639,19 @@ export const ro = {
         'Cum ai lăsat pagina „Toți sfinții” - cartele sau rânduri, și dacă se arătau descrierile.',
       ],
       notHeading: 'Ce nu se face',
-      not: [
-        'Fără analitice, fără pixeli de urmărire, fără reclame și fără cookie-uri.',
-        'Nimic din ce faci aici nu se trimite făcătorilor site-ului sau altcuiva.',
-        'Nimic nu se dă mai departe și nu se vinde, pentru că nimic nu se adună de dat sau de vândut.',
-      ],
+      not: 'Fără analitice, fără pixeli de urmărire, fără reclame și fără cookie-uri. Nimic din ce faci aici nu se trimite făcătorilor sitului sau altcuiva, și nimic nu se adună, deci nu e nimic de dat mai departe sau de vândut.',
       clearing:
         'Totul rămâne în acest browser, pe acest dispozitiv, iar ștergerea datelor ' +
         'site-ului din browser șterge orice urmă. Nicăieri altundeva nu se ține ' +
         'nimic, deci nu e nimic de cerut să ștergem.',
       hosting:
-        'Două note cinstite. Fișierele sunt servite de GitHub Pages, și orice server ' +
-        'web vede cererile care îi sunt făcute; e treaba gazdei, nu a site-ului, și ' +
-        'așa e fiecare pagină de pe internet. Iar citirile zilei duc la Bible ' +
+        'Două note. Fișierele sitului sunt servite de GitHub Pages, și orice server ' +
+        'web vede cererile care îi sunt făcute; e treaba gazdei, nu a sitului, și ' +
+        'așa e fiecare pagină de pe internet. Aplicația își poartă propria copie ' +
+        'a tot și nu cere nimic rețelei. Iar citirile zilei duc la Bible ' +
         'Gateway - urmând o legătură ajungi pe alt site, cu politica lui.',
     },
+    builtWith: 'Construit cu Claude.',
   },
 
   notFound: {

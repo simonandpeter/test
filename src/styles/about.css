@@ -33,8 +33,8 @@
   color: var(--ink-soft);
 }
 
-/* One section from the next, with a rule the width of the measure. `:not(:first-of-type)`
-   rather than a margin on every section, so the first heading sits under the
+/* One section from the next, with a rule the width of the measure. The rule is
+   on the pair rather than on every section, so the first heading sits under the
    lede's own space instead of being pushed twice. */
 .about section + section {
   margin-top: var(--space-12);
@@ -86,33 +86,17 @@
   margin-bottom: var(--space-1);
 }
 
-/* Export and Import stand together as a pair of controls rather than as two
-   words in a paragraph. */
-.about .data-controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2);
-  margin-top: var(--space-3);
-}
-
-.about .data-controls button {
-  padding: var(--space-1) var(--space-3);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-cell);
-  background: var(--field);
-  font-family: var(--font-utility);
-  font-size: var(--text-sm);
-  color: var(--ink);
-  cursor: pointer;
-}
-
-.about .data-controls button:hover {
-  background: var(--gesso);
-  color: var(--ink);
-}
-
 .about .utility {
   color: var(--ink-soft);
+}
+
+/* The last line on the page, set apart from the contact section above it and
+   quieter than anything in it. */
+.built-with {
+  margin-top: var(--space-8);
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  color: var(--ink-faint);
 }
 
 /* The coverage figures, which arrive from `manifest.meta.json` after the page

@@ -106,7 +106,17 @@ is installed, so none of this has been run.
    - *Data safety*: **no data collected, no data shared**. Settings, saved
      saints and reading history live in the device's own IndexedDB and
      localStorage; nothing leaves the device (the About page's privacy text is
-     written against the code and says the same).
+     written against the code, names the app beside the website, and says the
+     same).
+   - *App content -> Content rights*: the About page answers this in the
+     listing's own words - the pictures are Commons files whose licence and
+     author each page prints (`ui/credit.js`), the lives are written here from
+     the sources each page names, and the libraries are three permissive ones
+     named in its "The software" section. It also states there that the
+     project is not affiliated with any of the churches it reports on, which
+     is what the deceptive-behaviour policy asks of an app carrying their
+     names. The libraries' own notices ship as
+     `public/third-party-licences.txt` rather than as a page section.
    - *Content rating*: the IARC questionnaire — no violence, no user content,
      no purchases. Religious content is not a rated category.
    - *Target audience*: 13+ is the simplest honest answer (no under-13

@@ -150,6 +150,10 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
     .sort();
 
   const loaded = [];
+  /* Every published picture's licence, as its own meta file states it. The
+     About page publishes the tally rather than a sentence someone typed, for
+     the same reason the corpus counts are read there and not written. */
+  const licences = {};
   const seenSlugs = new Map();
   /* alias -> the folder claiming it. Checked against every slug after the loop,
      since a slug later in the walk is still a slug (2026-10-03, TODO item 13). */
@@ -253,6 +257,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
       }
       try {
         const meta = await readJson(metaPath);
+        if (meta.licence) licences[meta.licence] = (licences[meta.licence] ?? 0) + 1;
         for (const field of ['credit', 'licence', 'source_url']) {
           if (!(field in meta)) fail(folder, `image meta "${img.meta}" is missing "${field}"`);
         }
@@ -339,7 +344,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
     const from = inbound.get(card.slug);
     if (from?.length) mentions[card.slug] = from;
   }
-  const meta = buildMeta(manifest, warnings, loaded);
+  const meta = buildMeta(manifest, warnings, loaded, licences);
   const manifestJson = JSON.stringify(manifest);
 
   if (write) {
@@ -640,7 +645,7 @@ function sourcesByChurch(loaded) {
   );
 }
 
-function buildMeta(manifest, warnings, loaded = []) {
+function buildMeta(manifest, warnings, loaded = [], licences = {}) {
   const byChurch = {};
   for (const id of Object.keys(CHURCHES_BY_ID)) {
     byChurch[id] = { venerated: 0, 'not-venerated': 0, undocumented: 0, unattested: 0 };
@@ -706,6 +711,7 @@ function buildMeta(manifest, warnings, loaded = []) {
     by_historicity: byHistoricity,
     by_region: byRegion,
     by_source: bySource,
+    by_licence: Object.fromEntries(Object.entries(licences).sort((a, b) => b[1] - a[1])),
     warnings: warnings.map(({ folder, msg }) => ({ slug: folder, message: msg })),
   };
 }
