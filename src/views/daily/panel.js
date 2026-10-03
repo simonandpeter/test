@@ -897,22 +897,24 @@ export function paintDay(panels) {
      what is sung belongs beside the life rather than under the readings, being
      a text of the saint and not a fact about the date. */
   /*
-   * **The hymns go last, because they are the one block that arrives late.**
-   * A saint's hymns need a second fetch - the day's saints have to be known
-   * before anything can be asked for them - and `fillSaintHymns` grows this
-   * section in place when that lands. Measured on a 360 px phone: the block
-   * settles at 537 px and everything after it was pushed down 566 px about a
-   * tenth of a second into the load.
+   * **The hymns keep their place under the readings** (author, 2026-10-03,
+   * on seeing them moved). They are the day's service texts together and the
+   * name days are a different kind of fact, so the pair is not split to buy a
+   * layout-shift number.
    *
-   * Nothing can reserve that space honestly, because the height is however
-   * many hymns the saint turns out to have. So the block that moves is put
-   * where nothing stands below it to be moved, which costs the day's service
-   * texts their adjacency and buys a shift of zero.
+   * The cost is stated rather than hidden: the hymns are the one block that
+   * arrives from a second fetch - a saint's hymns cannot be asked for until
+   * the day's saints are known - and `fillSaintHymns` grows them in place when
+   * it lands. Measured on a 360 px phone, the block settles at 537 px and the
+   * name-day list under it drops 566 px about a tenth of a second into the
+   * load. Reserving that space needs a skeleton the height of however many
+   * hymns the saint turns out to have, which is the real fix and is not this
+   * commit.
    */
   side.innerHTML = `
     ${readingsMarkup(selected, state.calendar)}
-    ${nameDaysMarkup(entries, data)}
-    ${wide ? '' : hymnsMarkup(selected, state.calendar)}`;
+    ${wide ? '' : hymnsMarkup(selected, state.calendar)}
+    ${nameDaysMarkup(entries, data)}`;
 
   if (wide) {
     main.innerHTML = '';
