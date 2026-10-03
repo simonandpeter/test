@@ -293,9 +293,11 @@ const GLYPH_PATHS = {
   hierarch: '<path d="M12 2v4M10.5 4h3"/><path d="M6 20v-5a6 6 0 0 1 12 0v5z"/>',
   presbyter: '<path d="M8 5h8l-1 5a3 3 0 0 1-6 0z"/><path d="M12 13v5M9 19h6"/>',
   prince: '<path d="M5 17l1.6-8 3.4 4 2-6 2 6 3.4-4L19 17z"/><path d="M5 19.5h14"/>',
-  /* Not a type, unlike every other glyph here: this is what a saint with no
-     picture gets on the phone, so it has to read at 16 px. */
-  cross: '<path d="M12 3v18M9 7h6M5.5 11h13M9.5 16.5l5-2.5"/>',
+  prophet: '<path d="M12 3v18M7 7h10M7 12h10"/>',
+  /* The mockup's `GLYPH_ANY` (carousel-mockup-f/index.html), for a saint whose
+     types match no glyph above: not a type mark, so it is the last resort
+     rather than one of the set. */
+  any: '<path d="M12 3v18M9 6h6M6 10h12M9.5 20h5M8 15.5l8 1.5"/>',
 };
 
 const glyphMarkup = (kind) =>
@@ -354,7 +356,7 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
         </span>
       </span>`
     : `<span class="reg-thumb is-blank${bullet}" aria-hidden="true">${glyphMarkup(
-        chosen === null ? 'cross' : typeGlyph(saint.types),
+        chosen === null ? (typeGlyph(saint.types) ?? 'any') : typeGlyph(saint.types),
       )}</span>`;
   /*
    * **The word the mark stands for, where the row does not already print it**

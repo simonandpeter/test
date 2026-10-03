@@ -2799,6 +2799,26 @@ html[data-route~='calendar'] .month-grid .month-out {
     object-fit: cover;
   }
 
+  /*
+   * **An 18px square wants the face, not the icon** (author, 2026-10-03). The
+   * plate's crop keeps the whole panel; at this size that is a gold ground with
+   * a head somewhere in it. `--reg-focus` is `50% 0` or `50% 50%` by whether
+   * the picture is wider than 2:1 (`lib/hero-crop.js`), which puts the top of a
+   * portrait in frame, and the scale closes the rest of the way: an icon's head
+   * sits in the upper middle, so the box takes the top third and a half of the
+   * width rather than the whole panel shrunk to a stamp.
+   */
+  .register-cards .reg-card .reg-thumb.is-bullet .reg-pic {
+    background-size: 220%;
+    background-position: var(--reg-focus, 50% 0);
+  }
+
+  .register-cards .reg-card .reg-thumb.is-bullet .reg-pic img {
+    object-position: var(--reg-focus, 50% 0);
+    transform: scale(2.2);
+    transform-origin: 50% 18%;
+  }
+
   /* The cross carries the row's colour at the apparatus weight: it is a bullet
      before a name, not a second thing to read. */
   .register-cards .reg-card .reg-thumb.is-bullet.is-blank {

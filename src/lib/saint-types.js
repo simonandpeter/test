@@ -102,6 +102,7 @@ const GLYPH_TYPES = [
   ['venerable', ['venerable', 'venerable-martyr', 'monastic', 'monk', 'abbot', 'abbess', 'hermit', 'stylite']],
   ['presbyter', ['presbyter', 'deacon', 'archdeacon']],
   ['martyr', ['martyr', 'new-martyr', 'great-martyr', 'virgin-martyr', 'passion-bearer']],
+  ['prophet', ['prophet', 'forerunner']],
 ];
 
 export function typeGlyph(ids) {
