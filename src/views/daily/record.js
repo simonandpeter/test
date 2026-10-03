@@ -85,14 +85,45 @@ export function readingsMarkup(iso, churchId) {
   </section>`;
 }
 
-export function hymnsMarkup(iso, churchId) {
+/**
+ * The day's hymns, with the saint's own already in them where the caller has
+ * them (author, 2026-10-03: "load ALL THE HYMNS IN ONE GO AND THEN THE NAME
+ * DAYS SO THAT NOTHING HAS TO MOVE").
+ *
+ * `saintHtml` is the second half of this section and it arrives from its own
+ * fetch, because a saint's hymns cannot be asked for until the day's saints
+ * are known. A caller that has waited for it passes it here and the section is
+ * drawn at its final height; a caller that has not passes nothing and fills
+ * `[data-saint-hymns]` later through `fillSaintHymns`, which is what the desk
+ * does, where the hymns are a column of their own with nothing under them to
+ * move.
+ */
+export function hymnsMarkup(iso, churchId, saintHtml = '') {
   const rec = dayRecordFor(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
-  return `<section class="day-hymns" data-hymns${feastHymns.length ? '' : ' hidden'}>
+  const empty = !feastHymns.length && !saintHtml;
+  return `<section class="day-hymns" data-hymns${empty ? ' hidden' : ''}>
     <h2 class="register-heading">${STRINGS.calendar.hymns.heading}</h2>
     <div data-feast-hymns>${mergeForReading(feastHymns).map((h) => hymnMarkup(h)).join('')}</div>
-    <div data-saint-hymns></div>
+    <div data-saint-hymns>${saintHtml}</div>
   </section>`;
+}
+
+/**
+ * The saint's own hymns as markup, for a caller that means to draw the section
+ * once rather than grow it. Resolves to the empty string for a saint with
+ * none, and for a failed load — the day is still a day without them, and a
+ * rejected promise here would take the name days down with it.
+ */
+export function saintHymnsHtml(slug, iso) {
+  return loadDetail(slug).then(
+    (payload) => {
+      if (!state || state.selected !== iso) return '';
+      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
+      return hymns.length ? mergeForReading(hymns).map((h) => hymnMarkup(h)).join('') : '';
+    },
+    () => '',
+  );
 }
 
 export function fillSaintHymns(panel, slug, iso) {

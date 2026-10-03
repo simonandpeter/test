@@ -13,7 +13,7 @@ import { typeGlyph, typeName } from '../../lib/saint-types.js';
 import { creditLine } from '../../ui/credit.js';
 import { STRINGS, fill } from '../../ui/strings.js';
 import { allEntriesFor, dayRecordFor, entriesFor, reachInWords } from './entries.js';
-import { fillSaintHymns, hymnsMarkup, readingsMarkup } from './record.js';
+import { fillSaintHymns, hymnsMarkup, readingsMarkup, saintHymnsHtml } from './record.js';
 import { state } from './state.js';
 import { isWide } from '../../lib/viewport.js';
 import { srcsetFor } from '../../lib/picture.js';
@@ -897,24 +897,32 @@ export function paintDay(panels) {
      what is sung belongs beside the life rather than under the readings, being
      a text of the saint and not a fact about the date. */
   /*
-   * **The hymns keep their place under the readings** (author, 2026-10-03,
-   * on seeing them moved). They are the day's service texts together and the
-   * name days are a different kind of fact, so the pair is not split to buy a
-   * layout-shift number.
+   * **The readings now; the hymns and the name days together, once the hymns
+   * are whole** (author, 2026-10-03: "load ALL THE HYMNS IN ONE GO AND THEN
+   * THE NAME DAYS SO THAT NOTHING HAS TO MOVE").
    *
-   * The cost is stated rather than hidden: the hymns are the one block that
-   * arrives from a second fetch - a saint's hymns cannot be asked for until
-   * the day's saints are known - and `fillSaintHymns` grows them in place when
-   * it lands. Measured on a 360 px phone, the block settles at 537 px and the
-   * name-day list under it drops 566 px about a tenth of a second into the
-   * load. Reserving that space needs a skeleton the height of however many
-   * hymns the saint turns out to have, which is the real fix and is not this
-   * commit.
+   * The readings need no fetch, so they are drawn immediately. The hymns are
+   * in two halves - the day's own, which are here, and the saint's, which
+   * arrive from `loadDetail` - and the section used to be drawn with the first
+   * half and grown with the second, which pushed the name days under it down
+   * 566 px on a 360 px phone a tenth of a second into the load.
+   *
+   * Nothing below a growing block is the same as nothing growing. The pair is
+   * written in one go at its final height instead, and the name days keep
+   * their place under the hymns, which is where the author wants them.
+   *
+   * Past 1024 px the hymns are a column of their own with nothing beneath
+   * them, so the desk keeps the cheaper arrangement and fills in place.
    */
-  side.innerHTML = `
-    ${readingsMarkup(selected, state.calendar)}
-    ${wide ? '' : hymnsMarkup(selected, state.calendar)}
-    ${nameDaysMarkup(entries, data)}`;
+  side.innerHTML = readingsMarkup(selected, state.calendar);
+  const sideTail = (saintHymns) => {
+    if (!state || state.selected !== selected) return;
+    side.insertAdjacentHTML(
+      'beforeend',
+      `${wide ? '' : hymnsMarkup(selected, state.calendar, saintHymns)}
+       ${nameDaysMarkup(entries, data)}`,
+    );
+  };
 
   if (wide) {
     main.innerHTML = '';
@@ -936,7 +944,7 @@ export function paintDay(panels) {
   main.innerHTML = `${heroArticle(hero, media, ratio, `${heroIdentity(hero)}${heroOpening(hero)}`)}
     ${register}`;
 
-  fillSaintHymns(side, hero.slug, selected);
+  saintHymnsHtml(hero.slug, selected).then(sideTail);
   fillHeroLede(main, hero.slug, selected, hero);
   fillRegisterLives(main, selected);
 }
