@@ -71,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.02.2026 (4. фебруар ст. ст.) — „2. Преподобни Николај Исповедник. Овај светитељ беше са острва Крита. Дође у Цариград да обиђе свога сродника Теодора, игумана манастира Студијског, па ту и оста, и замонаши се.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-17&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its second numbered entry for the day. It differs from saint.gr on who drew him to Constantinople — his kinsman Theodore, abbot of Studion, where saint.gr has his uncle Theophanes, a monk of that house — and on the shape of his abbacy, which here follows straight on Theodore's death where saint.gr has an election in 847, a resignation in 850 and a refusal in 867. It is the only source here to name the persecutor, Leo the Armenian, and to say the two were beaten with ox sinews and held three years in prison. Four miracles stand only in it. Both readings stand as read."
     }
   ],
   "hymns": [
@@ -113,5 +123,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "theodore-the-studite"
+  ]
 }
