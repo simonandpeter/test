@@ -60,6 +60,23 @@ Romanian and Greek still lead with an imageless hero on most days; the Russian
 reading wave (`days.pravoslavie.ru`, julian) has not started. Counts are in
 HANDOFF.md and go stale — re-measure, do not quote them.
 
+**Measured 3 October 2026** (`node scripts/heroless.mjs romanian greek`):
+Romanian 141 of 357 days and 140 distinct saints, Greek 168 of 364 and 168, nine
+saints in both — **299 distinct saints** want an icon. `scratchpad/geticon.py`
+is the instrument; it reads the licence off Commons' own `imageinfo` and refuses
+anything Commons does not state as PD or CC, so a sourcer cannot get a licence
+wrong. **A historical painting may fill a hero slot where no icon exists**
+(author, same day), said so in the draft's `why`.
+
+**The manifest is the reason the corpus's size is not free.** The first paint
+waits for the whole of it, so every saint added costs FCP on the Lighthouse
+floor: the growth to 419 KB gzipped put FCP at 1,507 ms against a 1,500 ms line
+on every route, which is what sent `mentionedIn` into its own file
+(`aafc2470`, 419 -> 347 KB). An icon costs the manifest almost nothing — 14 KB
+gzipped for all 5,393 rows' `image` fields — but a reading wave's attestations
+and dates do, and the next thing to come off that path when it binds again is
+`attestations` at 62 KB.
+
 ## 6. One search bar, with Advanced as an option, on both pages
 
 **The ask (2 October 2026):** rebuild the search bar on All Saints and Prayer so
@@ -76,6 +93,14 @@ the facet chips and the shell); this item is the finish.
   it has no grid to detail.
 
 ## 7. Prayer on a phone: no display-type selector
+
+**Done, 3 October 2026** (`git log --grep="no display-type selector"`). The
+item's named obstacle was already gone — `door()` is handed to `card()` as its
+`door`, with the three cases and the `is-dim` mark intact — so what was left was
+the chip itself. It is removed below 1024 px rather than hidden, and `syncFace`
+runs on every crossing of the breakpoint, because a reader who chose Pictures at
+a desk and then narrowed the window kept a face the page would no longer draw
+and had nothing left to change it with.
 
 Remove the square/burger display-type selector from the Prayer page **on
 mobile**. The saints beside a hymn draw the **All Saints row card** —
