@@ -9,6 +9,10 @@
     {
       "form": "Стратоник",
       "lang": "ru"
+    },
+    {
+      "form": "Стратор (Стратоник) Никомидийский",
+      "lang": "ru"
     }
   ],
   "sex": "male",
@@ -17,11 +21,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 315,
+      "earliest": 201,
       "latest": 315,
-      "display": "315",
+      "display": "3rd century, or 315",
       "basis": "traditional",
-      "note": "saint.gr: in the years of the tyrant Licinius, 315."
+      "note": "**The two calendars disagree and the merge does not settle it.** saint.gr puts him in the years of the tyrant Licinius, 315; days.pravoslavie.ru prints «(III)» on both its days. The interval spans both readings and the display names both, because nothing in either source chooses between them."
     }
   },
   "attestations": [
@@ -31,7 +35,8 @@
       "feast": {
         "day": 13,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Sretensky day prints «Мчч. Селевка и Стратоника (III)», with Seleucus of Galatia and, on the azbyka page, the Egyptians Cronides, Leontius and Serapion. The corpus held the two Russian days as two folders. The author ruled on 3 October 2026 that they are one man (TODO item 13, batch 6), and the corpus states it itself: this folder’s own life says the Russian calendar “keeps him on 9 and 13 September of the old style”, and both folders cite the one azbyka page and the one death, torn in two between two bent trees by order of the governor of Bithynia."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 сентября ст. ст. — «Мчч. Селевка и Стратоника (III)»",
@@ -40,9 +45,24 @@
       }
     },
     {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The second Russian day, «Мчч. Харитона и Стратора (Стратоника) (III)», kept with the martyr Chariton. The corpus held the two Russian days as two folders. The author ruled on 3 October 2026 that they are one man (TODO item 13, batch 6), and the corpus states it itself: this folder’s own life says the Russian calendar “keeps him on 9 and 13 September of the old style”, and both folders cite the one azbyka page and the one death, torn in two between two bent trees by order of the governor of Bithynia."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 сентября ст. ст. — «Мчч. Харитона и Стратора (Стратоника) (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260909.html",
+        "year": 2026
+      }
+    },
+    {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23); no other day checked."
+      "note": "Not on doxologia.ro’s list for 13 septembrie (checked 2026-08-23) nor for 22 septembrie, the civil day of the Russian 9 September (checked 2026-08-30)."
     },
     {
       "church": "greek",
@@ -61,10 +81,16 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
+      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its pages for 9. and 13. септембар ст. ст. were not read (2026-08-23 and 2026-08-30)."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "aliases": [
+    "straton-the-martyr-9-september"
+  ],
+  "related": [
+    "demetrius-of-rostov"
+  ]
 }
