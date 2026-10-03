@@ -16,6 +16,11 @@
       "form": "Серафим Саровский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., «Преподобный Серафим, Саровский чудотворец»; the rank word «Преподобный» and the rank «чудотворец» are left off, leaving the name and the place."
+    },
+    {
+      "form": "Серафим Саровски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 2. јануар ст. ст., „Преподобни Серафим Саровски.“, with the rank word «Преподобни» left off."
     }
   ],
   "sex": "male",
@@ -86,8 +91,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.01.2026 (2. јануар ст. ст.) — „Преподобни Серафим Саровски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-15&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

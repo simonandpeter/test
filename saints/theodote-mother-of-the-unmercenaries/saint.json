@@ -6,6 +6,11 @@
       "form": "Θεοδότη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Αγία Θεοδότη μητέρα των Αγίων Αναργύρων», with the rank word left off."
+    },
+    {
+      "form": "Теодота",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 2. јануар ст. ст., „Света Теодота.“, with the rank word «Света» left off."
     }
   ],
   "sex": "female",
@@ -43,8 +48,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.01.2026 (2. јануар ст. ст.) — „Света Теодота.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-15&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
