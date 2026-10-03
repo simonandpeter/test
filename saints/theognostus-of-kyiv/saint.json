@@ -1,25 +1,52 @@
 {
   "slug": "theognostus-of-kyiv",
   "display_name": "Theognostus of Kyiv",
+  "office": "Metropolitan of Kyiv",
   "names": [
     {
       "form": "Θεόγνωστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαρτίου, «Όσιος Θεόγνωστος ο Έλλην», with the rank words left off. The epithet ο Έλλην, the Greek, is the page's own and is kept in the life; the English name follows the see."
+    },
+    {
+      "form": "Феогност Киевский и Московский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 2173 heads him «Святитель Феогност Киевский и Московский, митрополит»; the two sees are kept in the form because the Russian names both where the Greek names only Kyiv."
     }
   ],
   "sex": "male",
-  "office": "Metropolitan of Kyiv",
   "types": [
     "hierarch",
     "metropolitan",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1353,
+      "latest": 1353,
+      "display": "1353",
+      "basis": "traditional",
+      "note": "saint.gr: «Ο Άγιος Θεόγνωστος κοιμήθηκε με ειρήνη, το έτος 1353 μ.Χ., αφού προηγουμένως είχε επιλέξει ως διάδοχό του τον Επίσκοπο του Βλαδιμήρ, Αλέξιο», and the page heads him «(; - 1353)»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists two other days, «14 марта», his repose, and «10 октября (Волын.)», which the abbreviation marks as a Volhynian commemoration. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the second of the seventeen names."
+      },
+      "note": "The Russian index of names gives him both sees where the Greek gives one: «Святитель Феогност Киевский и Московский, митрополит». The synaxis is the reason this day was read for him; his own repose day, 14 March, was not."
     },
     {
       "church": "romanian",
@@ -47,15 +74,6 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 1353,
-      "latest": 1353,
-      "display": "1353",
-      "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Θεόγνωστος κοιμήθηκε με ειρήνη, το έτος 1353 μ.Χ., αφού προηγουμένως είχε επιλέξει ως διάδοχό του τον Επίσκοπο του Βλαδιμήρ, Αλέξιο», and the page heads him «(; - 1353)»."
-    }
-  },
   "related": [
     "alexis-of-moscow"
   ],

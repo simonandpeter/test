@@ -1117,6 +1117,7 @@ export const ru = {
     'Metropolitan of Kazan': 'Митрополит Казанский',
     'Metropolitan of Kydonies': 'Митрополит Кидонийский',
     'Metropolitan of Kyiv': 'Митрополит Киевский',
+    'Metropolitan of Krutitsy': 'Митрополит Крутицкий',
     'Metropolitan of Lacedaemonia': 'Митрополит Лакедемонийский',
     'Metropolitan of Larissa': 'Митрополит Ларисский',
     'Metropolitan of Moldavia': 'Митрополит Молдавский',

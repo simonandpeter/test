@@ -25,7 +25,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 5 октября ст. ст. (civil 18 October 2026) was read on 2026-10-04 and prints eight lines, none of them his, although the day is a heavily Russian one. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -52,10 +52,10 @@
       "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "barlaam-30-may"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

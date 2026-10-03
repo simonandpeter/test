@@ -4,4 +4,6 @@ Mamelchtha was a Persian, at first a zealous pagan and a priestess in the temple
 
 The pagans were enraged that the Christians had drawn away one of their own priestesses. A mob seized her from her house, threw her into a deep pit and stoned her to death — still in her baptismal garments, the Romanian says — and pious Christians took up her body, hardly able to draw it out of the pit, and buried it with great honour. Soon after, the temple of Artemis was pulled down and a church dedicated to her built in its place; in the Romanian the bishop went to the king of the Persians for leave to destroy the temple, and her relics were laid in the new church.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2668/saint.aspx); doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-mamelta); read 17 September 2026.*
+The Russian church calendar keeps her on the Julian 5 October and agrees with saint.gr on 344. It adds the country the Greek entry leaves out, heading her «Мамелхва Персидская, мц.» — Mamelchtha the Persian.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2668/saint.aspx); doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-mamelta); read 17 September 2026; the Russian church calendar keeps her on the Julian 5 October — [the day](https://days.pravoslavie.ru/Days/20261005.html); read 4 October 2026.*

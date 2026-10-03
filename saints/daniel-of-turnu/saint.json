@@ -22,16 +22,11 @@
       "note": "doxologia.ro: «după trecerea la cele veșnice, în prima jumătate a veacului al XVII-lea»."
     }
   },
-  "related": [
-    "misael-of-turnu",
-    "neophytos-of-stanisoara",
-    "meletius-of-stanisoara"
-  ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 5 октября ст. ст. (civil 18 October 2026) was read on 2026-10-04 and prints eight lines, none of them his. The Russian calendar does not keep the hermits of Turnu. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -59,6 +54,14 @@
       "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
     }
   ],
+  "related": [
+    "misael-of-turnu",
+    "neophytos-of-stanisoara",
+    "meletius-of-stanisoara"
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -92,8 +95,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

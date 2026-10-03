@@ -9,18 +9,11 @@
     }
   ],
   "sex": "male",
-  "related": [
-    "john-companion-of-hilarion-the-new",
-    "joseph-of-lythrodontas",
-    "kalandios-of-tamasia",
-    "cassian-of-glyphia",
-    "cassian-of-axylou"
-  ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 6 октября ст. ст. (civil 19 October 2026) was read on 2026-10-04 and prints three lines only — the apostle Thomas, a Russian confessor of 1922 and a Russian new martyr of 1937. The Russian calendar does not keep the saints of Cyprus the Greek gathers on this day. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -46,6 +39,13 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "john-companion-of-hilarion-the-new",
+    "joseph-of-lythrodontas",
+    "kalandios-of-tamasia",
+    "cassian-of-glyphia",
+    "cassian-of-axylou"
   ],
   "text": {
     "life": "life.md"

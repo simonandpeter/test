@@ -28,9 +28,6 @@
       "note": "days.pravoslavie.ru’s life: died on the feast of the Placing of the Robe of the Theotokos, «2 июля 1431 года»."
     }
   },
-  "related": [
-    "cyprian-of-kyiv"
-  ],
   "attestations": [
     {
       "church": "russian",
@@ -38,7 +35,8 @@
       "feast": {
         "day": 16,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the fifth of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it. Its index lists five days for him in all, including «10 октября (Волын.)», a Volhynian commemoration."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 сентября ст. ст. — «Свт. Фотия , митр. Киевского, Московского и всея Руси, чудотворца (1431)»",
@@ -71,6 +69,9 @@
       "status": "undocumented",
       "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
     }
+  ],
+  "related": [
+    "cyprian-of-kyiv"
   ],
   "text": {
     "life": "life.md"

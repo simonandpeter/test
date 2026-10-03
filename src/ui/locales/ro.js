@@ -1098,6 +1098,7 @@ export const ro = {
     'Metropolitan of Kydonies': 'Mitropolit de Kydonies',
     'Metropolitan': 'Mitropolit',
     'Metropolitan of Kyiv': 'Mitropolit de Kiev',
+    'Metropolitan of Krutitsy': 'Mitropolit de Krutitsy',
     'Metropolitan of Lacedaemonia': 'Mitropolit al Lacedemoniei',
     'Metropolitan of Larissa': 'Mitropolit de Larisa',
     'Metropolitan of Moldavia': 'Mitropolit al Moldovei',

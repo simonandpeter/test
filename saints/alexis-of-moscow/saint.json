@@ -1,6 +1,7 @@
 {
   "slug": "alexis-of-moscow",
   "display_name": "Alexis of Moscow",
+  "office": "Metropolitan of Moscow and All Russia",
   "names": [
     {
       "form": "Alexie",
@@ -24,11 +25,6 @@
     "monk",
     "wonderworker"
   ],
-  "office": "Metropolitan of Moscow and All Russia",
-  "related": [
-    "sergius-of-radonezh",
-    "peter-of-moscow"
-  ],
   "dates": {
     "death": {
       "earliest": 1378,
@@ -45,7 +41,8 @@
       "feast": {
         "day": 12,
         "month": 2,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the third of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Свт. Алексия, митр. Московского и всея России, чудотворца (1378).»",
@@ -87,6 +84,10 @@
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
     }
+  ],
+  "related": [
+    "sergius-of-radonezh",
+    "peter-of-moscow"
   ],
   "text": {
     "life": "life.md"

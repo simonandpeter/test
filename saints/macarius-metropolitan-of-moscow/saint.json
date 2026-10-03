@@ -1,11 +1,6 @@
 {
   "slug": "macarius-metropolitan-of-moscow",
   "display_name": "Macarius of Moscow (16 February)",
-  "sex": "male",
-  "types": [
-    "metropolitan",
-    "hierarch"
-  ],
   "names": [
     {
       "form": "Μακάριος",
@@ -18,8 +13,10 @@
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Святитель Макарий (Невский, Парвицкий), митрополит Московский и Коломенский», with the rank word and the see left off. The calendar gives two surnames in the brackets and the day's own line gives none."
     }
   ],
-  "related": [
-    "barsanuphius-of-optina"
+  "sex": "male",
+  "types": [
+    "metropolitan",
+    "hierarch"
   ],
   "attestations": [
     {
@@ -28,7 +25,8 @@
       "feast": {
         "day": 16,
         "month": 2,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the seventeenth and last of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it. He is the second Macarius on the line; the ninth is the metropolitan who died in 1563, who has his own folder."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Свт. Макария митр. Московского и Коломенского (1926).»",
@@ -60,6 +58,9 @@
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
+  ],
+  "related": [
+    "barsanuphius-of-optina"
   ],
   "text": {
     "life": "life.md"

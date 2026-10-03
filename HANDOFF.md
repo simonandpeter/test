@@ -152,6 +152,18 @@ new martyrs, who are most of a Russian day in these months — 13 of one night's
 biggest open question on Russian quality**, and CORPUS.md §2 was deliberately
 left unamended until someone measures it.
 
+**One Russian name is blocked on a naming decision, not on a source.** Macarius
+metropolitan of Moscow, d. 1563 - compiler of the Great Menologion, patron of
+Ivan Fedorov's press - cannot be written while `macarius-metropolitan-of-moscow`
+holds the English display name "Macarius of Moscow" for a different man, the
+metropolitan of 1926 whose own Russian form is «Макарий (Невский, Парвицкий)».
+Any display name for the 1563 man that begins "Macarius of Moscow" steals the
+linker match an entry in `related-floor-exclusions.json` depends on, and
+`related-floor.test.mjs` goes red on an exclusion that no longer describes
+anything. The job is: rename the 1926 metropolitan to the name his own calendar
+gives him, move the exclusion's quote with him, then write the 1563 one. It is a
+naming change with an exclusion hanging off it, not a corpus batch.
+
 **pravoslavno.rs's entry list is unusable and its Ohrid Prologue text is
 excellent**: for one Julian day the list printed one entry where the Prologue
 text on the same Julian day of the previous year enumerated three, each with a

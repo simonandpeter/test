@@ -1,18 +1,23 @@
 {
   "slug": "job-patriarch-of-moscow",
   "display_name": "Job of Moscow",
-  "sex": "male",
-  "types": [
-    "hierarch",
-    "patriarch"
-  ],
   "office": "Patriarch of Moscow",
   "names": [
     {
       "form": "Ιώβ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ιώβ Μητροπολίτης Μόσχας», with the rank word and the see left off."
+    },
+    {
+      "form": "Иов Московский и всея Руси",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1036, «Святитель Иов Московский и всея Руси, патриарх», with the rank words left off."
     }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "patriarch"
   ],
   "dates": {
     "birth": {
@@ -33,8 +38,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists three other days: «19 июня», his repose, «5 апреля (перенесение мощей)», and «26 января (интронизация)», the day of his enthronement as the first patriarch of Moscow. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the eleventh of the seventeen names and the first patriarch on it."
+      },
+      "note": "The index keeps his enthronement as a feast in its own right, which for the first patriarch of Moscow is the thing it would keep. It prints no year; the folder's dates still rest on their own source."
     },
     {
       "church": "romanian",

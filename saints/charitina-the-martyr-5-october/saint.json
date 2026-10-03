@@ -1,8 +1,5 @@
 {
   "slug": "charitina-the-martyr-5-october",
-  "aliases": [
-    "charitina-the-martyr-4-september"
-  ],
   "display_name": "Charitina",
   "names": [
     {
@@ -18,6 +15,11 @@
     {
       "form": "Св. муч. Харитина",
       "lang": "sr"
+    },
+    {
+      "form": "Харитина Амисийская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2747, «Харитина Амисийская (Понтийская), мц.», with the rank word left off and the parenthesised second form of the place left to this note."
     }
   ],
   "sex": "female",
@@ -38,7 +40,7 @@
     {
       "church": "russian",
       "status": "venerated",
-      "note": "Only the day line was read, not this calendar’s own life page for her. The same line keeps a second and different Charitina on this day — «Прп. Харитины, кн. Литовской, в Новгороде подвизавшейся (1281)», the Lithuanian princess who struggled at Novgorod — who is not this saint, is not in the Ohrid Prologue, and has no folder here.",
+      "rank": "simple",
       "feast": {
         "day": 5,
         "month": 10,
@@ -47,8 +49,10 @@
       "source": {
         "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Мц. Харитины (304).»",
         "url": "https://days.pravoslavie.ru/Days/20261005.html",
-        "year": 2026
-      }
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the day's first line, which is this one: «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's one higher rank belongs to the synaxis of the hierarchs of Moscow, which follows."
+      },
+      "note": "The year agrees with saint.gr's 304. The Russian index of names gives her a city the Greek entry does not, and gives it twice over: «Харитина Амисийская (Понтийская), мц.» — of Amisus, of Pontus. The same day keeps a second Charitina, the princess of Lithuania who died in 1281, and the page distinguishes them by title alone, «мц.» against «прп.» The same day line keeps a second and different Charitina — «Прп. Харитины, кн. Литовской, в Новгороде подвизавшейся (1281)», the Lithuanian princess who struggled at Novgorod. She is not this saint, is not in the Ohrid Prologue, and has no folder; dedupe on the date finds them both on this day and the name is what would conflate them."
     },
     {
       "church": "romanian",
@@ -77,20 +81,6 @@
       "source": {
         "text": "Ορθόδοξος Συναξαριστής (saint.gr), 4 Σεπτεμβρίου — «Αγία Χαριτίνη»",
         "url": "https://www.saint.gr/09/04/index.aspx",
-        "year": 2026
-      }
-    },
-    {
-      "church": "greek",
-      "status": "venerated",
-      "feast": {
-        "day": 5,
-        "month": 10,
-        "calendar": "revised-julian"
-      },
-      "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Αγία Χαριτίνη»",
-        "url": "https://www.saint.gr/10/05/index.aspx",
         "year": 2026
       }
     },
@@ -179,13 +169,16 @@
       }
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "images": [
     {
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "aliases": [
+    "charitina-the-martyr-4-september"
   ]
 }

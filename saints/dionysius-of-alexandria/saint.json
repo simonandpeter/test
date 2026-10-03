@@ -10,6 +10,11 @@
     {
       "form": "Свешт. муч. Дионисије еп. Александријски",
       "lang": "sr"
+    },
+    {
+      "form": "Дионисий Александрийский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 617 heads him «Святитель Дионисий Александрийский, епископ, исповедник»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -30,17 +35,19 @@
     {
       "church": "russian",
       "status": "venerated",
-      "note": "Only the day line was read, not this calendar’s own life page for him; the Russian wave reading these days will have more than this.",
       "feast": {
         "day": 5,
         "month": 10,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Russian keeps him on 5 October where the Greek keeps him on 3 October, and keeps four of his company on the 4th — Gaius, Faustus, Eusebius and Chaeremon. Three Russian days were read for him before this one was found."
       },
       "source": {
         "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Сщмч. Дионисия, еп. Александрийского (264-265).»",
         "url": "https://days.pravoslavie.ru/Days/20261005.html",
-        "year": 2026
-      }
+        "year": 2026,
+        "note": "No rank is recorded. The one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line, and reading a polyeleos off it for the lines that follow would be an inference rather than the source's statement."
+      },
+      "note": "**Two disagreements, both kept.** saint.gr has him martyred under Valerian and gives 254; the Russian gives «(264-265)», ten years later, and the death interval now spans both. And saint.gr makes him a hieromartyr where the Russian index of names heads him «Святитель Дионисий Александрийский, епископ, исповедник» — a confessor, which is to say it does not have him die for the faith at all. The folder keeps the Greek reading in its types and records the Russian one here."
     },
     {
       "church": "romanian",
