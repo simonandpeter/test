@@ -2238,3 +2238,66 @@ test('the second pack continues the row rather than replacing it', async ({ page
     ).toBeGreaterThan(0.5);
   }
 });
+
+test('no one frame measures the whole corpus', async ({ page }) => {
+  /*
+   * Author, 2026-10-04: "opening just the carousel on the first run" lags.
+   *
+   * It did, and the cause was not what the row shows. The second pack — the
+   * one that replaces the opening prefix with the whole pool — measured every
+   * caption in the corpus inside a single idle callback: 41,347 `measureText`
+   * calls, 544 ms of a 1,327 ms task at 6x CPU, against 1,388 calls with that
+   * pass disabled outright (`scratchpad/splitcost.mjs`). The row is identical
+   * either way; the reader was simply waiting for it.
+   *
+   * The measuring is now sliced across idle callbacks and the pack that
+   * follows reads `pen.cache`, so the assertion is a *shape* rather than a
+   * duration: whatever this machine's speed, no single frame may measure more
+   * than a slice's worth. A wall-clock budget would say more and mean less —
+   * CI's runner is slower than any desk and the number would be tuned to
+   * whichever it was written on.
+   */
+  await ready(page);
+  await page.addInitScript(() => {
+    const proto = CanvasRenderingContext2D.prototype;
+    const real = proto.measureText;
+    window.__measured = { total: 0, worstFrame: 0 };
+    proto.measureText = function (t) {
+      window.__measured.total += 1;
+      return real.call(this, t);
+    };
+    const tick = () => {
+      const seen = window.__measured.total;
+      requestAnimationFrame(() => {
+        const since = window.__measured.total - seen;
+        if (since > window.__measured.worstFrame) window.__measured.worstFrame = since;
+        tick();
+      });
+    };
+    requestAnimationFrame(tick);
+  });
+  await carouselMode(page);
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+  // The second pack runs from idle time, so it has to be waited for rather
+  // than assumed: the track holding more than the opening prefix is it landing.
+  await expect
+    .poll(() => page.evaluate(() => document.querySelectorAll('.carousel-track > *').length), {
+      timeout: 15_000,
+    })
+    .toBeGreaterThan(200);
+
+  const seen = await page.evaluate(() => window.__measured);
+  /* Premise: the corpus really was measured, or this proves nothing — a build
+     that measured nothing at all would pass the assertion below trivially. */
+  expect(seen.total, 'premise: nothing was measured, so there was no pass to slice').toBeGreaterThan(
+    5000,
+  );
+  /* A slice is 400 captions and each may be measured at two widths, and one
+     caption costs about three `measureText` calls — so a frame that honours
+     the slicing cannot reach five figures. Backed out (the warm-up removed,
+     `packRest` packing straight away) this reads around 40,000. */
+  expect(
+    seen.worstFrame,
+    `one frame made ${seen.worstFrame} measurements, so the corpus is being measured in a single task again`,
+  ).toBeLessThan(6000);
+});
