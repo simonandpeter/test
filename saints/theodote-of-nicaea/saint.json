@@ -15,6 +15,11 @@
       "form": "Теодотија",
       "lang": "sr",
       "note": "Read out of «Св. муч. Теодотија.» in this folder’s Serbian citation."
+    },
+    {
+      "form": "Θεοδότη",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Αγία Θεοδότη και ο Άγιος Σωκράτης ο Πρεσβύτερος», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -27,7 +32,7 @@
       "latest": 235,
       "display": "under Alexander Severus",
       "basis": "traditional",
-      "note": "saint.gr: lived in the years of Alexander Severus (222)."
+      "note": "saint.gr’s 17 September entry: lived in the years of Alexander Severus (222). Its 21 October entry prints the same reign and the third century and no year; the Sretensky life gives the reign as 222–235 and the Ohrid Prologue “about 230”. The interval is that reign, which all four readings sit inside."
     }
   },
   "attestations": [
@@ -48,7 +53,7 @@
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 17 septembrie (checked 2026-08-23); no other day checked."
+      "note": "Not on doxologia.ro’s list for 17 septembrie (checked 2026-08-23) nor for the civil day of the Greek 21 October (checked 2026-10-01)."
     },
     {
       "church": "greek",
@@ -63,6 +68,21 @@
         "url": "https://www.saint.gr/09/17/index.aspx",
         "year": 2026
       }
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 21ης Οκτωβρίου — «Αγία Θεοδότη και Άγιος Σωκράτης ο Πρεσβύτερος»",
+        "url": "https://www.saint.gr/10/21/index.aspx",
+        "year": 2026
+      },
+      "note": "The second Greek day, where saint.gr keeps her with Socrates the presbyter and tells one story for the two: a woman of a noble family, bold in the faith, who prepared pagan women for baptism by her teaching and was his precious helper in it, denounced and arrested with him, pressed with threats and tortures to sacrifice, and beheaded at Ancyra in the third century under Alexander Severus. The 17 September entry says of her that she **is probably the same saint** as the one kept with Socrates on 21 October, and the author ruled on 3 October 2026 that she is; this record is the merge of the two folders the corpus held, and the “probably” stands in the life rather than being resolved there. She is not the corpus’s `theodote-of-ancyra`, whose Greek row is venerated on 18 Μαΐου among the virgin-martyrs of Ancyra with Theodotus. The page prints no hymn for the pair and names Ancyra without a year."
     },
     {
       "church": "serbian",
@@ -83,6 +103,9 @@
     "life": "life.md"
   },
   "related": [
+    "socrates-companion-of-theodote"
+  ],
+  "aliases": [
     "theodote-21-october"
   ]
 }

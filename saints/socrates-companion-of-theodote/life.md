@@ -1,6 +1,6 @@
 # Socrates, companion of Theodote
 
-saint.gr's calendar for 21 Οκτωβρίου names Socrates the presbyter together with [Theodote](/saints/theodote-21-october), and tells one story for the two of them. They lived in the third century, the page says, when Alexander Severus was emperor, and they were martyred at Ancyra. Socrates was a priest of the kind who do not only serve the liturgy but enlighten and build up, and who are ready at need to be sacrificed for the faith and for their flock.
+saint.gr's calendar for 21 Οκτωβρίου names Socrates the presbyter together with [Theodote](/saints/theodote-of-nicaea), and tells one story for the two of them. They lived in the third century, the page says, when Alexander Severus was emperor, and they were martyred at Ancyra. Socrates was a priest of the kind who do not only serve the liturgy but enlighten and build up, and who are ready at need to be sacrificed for the faith and for their flock.
 
 In that work, the page says, he had the pious Theodote for a precious helper: by her teaching she prepared pagan women for the knowledge of the truths of the faith and for holy baptism, while she herself, who came of a noble family, spoke of the Gospel wherever she found herself.
 
