@@ -58,13 +58,26 @@ const MONTH_FADE = DUR.travel;
  */
 
 /**
- * **A month moves the way the gesture moves** (author, 2026-10-03: "The arrow
- * that points up goes up makes an animation that goes down").
+ * **The grid travels the way the names in the gutter travel** (author,
+ * 2026-10-03: "the month abbreviations move down the same way the calendar
+ * days move down or up").
  *
- * The step *up* is the month *before*, and it arrives from above: the grid
- * follows the arrow rather than a spinner's digits, so an arrow drawn pointing
- * up slides its grid up, and a finger dragged up pulls the month after this one
- * into view the way a scroll does.
+ * The names stack in order down the column, so the month before this one is
+ * the row *above* it and arrives by travelling down. Coupling the grid to that
+ * is what the instruction asks for, and it fixes the sign: a step back in time
+ * moves everything down, a step forward moves everything up, and a finger
+ * dragged up pulls the next month in the way a scroll does.
+ *
+ * **The sign is measured, not reasoned.** `travel(-1)` starts the grid above
+ * its resting place and releases it downward; `travel(+1)` starts it below and
+ * it rises. Read off the mid-flight transform in a 360 px frame: with this
+ * value a step back gives the names -23.6 and the grid -141, both descending.
+ *
+ * This reverses "The arrow that points up goes up makes an animation that goes
+ * down", which was about the two arrows that stood above and below the
+ * heading. Those are gone; the control is a name sitting above the one it
+ * replaces, and a name above arrives from above. One constant moves both if
+ * that reading turns out to be the wrong one.
  *
  * The week rail is untouched by it. It is the phone's own compact grain and it
  * still scrolls sideways; what the month does on the other axis is the month's.
@@ -877,8 +890,15 @@ export function paintMonth() {
    */
   const tag = (c) => monthTagFmt(utc(isoOfDate(gridCalendar(), { ...c, day: 1 })));
   el.querySelector('.mpick-now .month-name').textContent = tag(cursor);
-  el.querySelector('.mpick-prev').textContent = tag(stepCursor(cursor, -1));
-  el.querySelector('.mpick-next').textContent = tag(stepCursor(cursor, 1));
+  /*
+   * Five, where three are drawn: the outer pair live under the mask's own
+   * dissolve and exist so a roll has a name arriving rather than a gap. They
+   * step by two for the same reason the inner pair step by one - a name in
+   * this column is the month it says, whether or not it is fully lit.
+   */
+  for (const b of el.querySelectorAll('.mpick[data-mstepper]')) {
+    b.textContent = tag(stepCursor(cursor, Number(b.dataset.mstepper)));
+  }
 
   // They say nothing a date's own label does not — the button below each of
   // them reads "Friday, 30 January 2026" in full.
@@ -1070,7 +1090,41 @@ export function moveMonth(n, { travelled = false } = {}) {
   paintMonth();
   const after = measure(body);
   if (!travelled) state.monthGrain.travel(SPIN * (n > 0 ? 1 : -1));
+  rollPick(n);
   if (after !== before) growMonthBody(body, before, after);
+}
+
+/**
+ * The names roll with the grid (author, 2026-10-03: "make them animated, the
+ * month abbreviations move down the same way the calendar days move down or
+ * up").
+ *
+ * Played backwards, which is the only way it can be played: the names have
+ * already been repainted by the time this runs, so the track is thrown back to
+ * where the month that is leaving stood and released. A forwards animation
+ * would have to hold the old names for the length of it and repaint at the
+ * end, which is a second source of truth about which month this is.
+ *
+ * `n` is the month delta and the sign is its own, not `SPIN`'s: the stack
+ * reads in order down the column, so the month before this one is the row
+ * above and arrives by travelling down. `SPIN` carries the same sign for the
+ * grid, which is what makes the two move together.
+ */
+function rollPick(n) {
+  const track = state.el?.querySelector('.mpick-track');
+  if (!track || reducedMotion()) return;
+  const rows = track.children;
+  if (rows.length < 2) return;
+  // Row pitch off the rendered rows rather than a number written here, so the
+  // gap and the type size stay the stylesheet's to change.
+  const pitch = rows[1].getBoundingClientRect().top - rows[0].getBoundingClientRect().top;
+  track.style.transition = 'none';
+  track.style.transform = `translateY(${n * pitch}px)`;
+  // Without a layout between the two values the browser coalesces them and
+  // there is no transition to run - the same flush growMonthBody needs.
+  void track.offsetHeight;
+  track.style.transition = '';
+  track.style.transform = '';
 }
 
 export const stepMonth = (n) => moveMonth(n);

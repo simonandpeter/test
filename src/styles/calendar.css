@@ -100,14 +100,47 @@
   top: var(--cal-row-h);
   left: 0;
   right: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-1);
   padding-top: var(--space-2);
   font-family: var(--font-utility);
   font-size: var(--text-2xs);
   line-height: 1.3;
+  /* **The same dissolve the rail puts on its edge days** (author, 2026-10-03:
+     "make it so the prev and next months are gradient faded the same way
+     Sun/Mon around the extremes are gradient faded on the weekly display"),
+     turned a quarter because this run goes down the page instead of across it.
+     A mask and never an opacity, for the reason written on `.week-strip`: a
+     wash over --ink-soft is 2.1:1, and what this has to do is end the run
+     rather than dim a word a reader might try to read.
+
+     --pick-fade is a whole row, so the outer pair of the five are gone by the
+     time they are read and the three that are left are the three the author
+     asked for. They exist so a roll has a name arriving rather than a gap. */
+  --pick-fade: 24px;
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--pick-fade),
+    #000 calc(100% - var(--pick-fade)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0,
+    #000 var(--pick-fade),
+    #000 calc(100% - var(--pick-fade)),
+    transparent 100%
+  );
+}
+
+/* What rolls. The transform is cleared by the JS the frame after it is set, so
+   the declaration here is only the easing it is released under - the same one
+   the grid's own travel uses, which is what makes the two read as one move. */
+.mpick-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  transition: transform var(--dur-travel) var(--ease);
 }
 
 .mpick {
@@ -121,14 +154,15 @@
 /* The two neighbours, one step back in ink: the same distance `.month-out`
    puts the days either side of the month at, for the same reason — they are
    present and reachable, and they are not this month. */
-.mpick-prev,
-.mpick-next {
+/* Every name that is not this month: one step back in ink, the same distance
+   `.month-out` puts the days either side of the month at, and for the same
+   reason - they are present and reachable, and they are not this month. */
+button.mpick {
   color: var(--ink-soft);
   cursor: pointer;
 }
 
-.mpick-prev:hover,
-.mpick-next:hover {
+button.mpick:hover {
   color: var(--ink);
 }
 
@@ -877,6 +911,17 @@
   color: var(--rubric);
 }
 
+/* The rail's own treatment of the day being read, in the month (author,
+   2026-10-03: "Match that in the calendar view"): rubric, and underlined so
+   colour never stands alone. The fast tone sets `.day-num`'s colour on every
+   other day, which is why the rubric has to be stated here rather than
+   inherited from the button. */
+.month-grid button[aria-current='date'] .day-num {
+  color: var(--rubric);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 /* The month's numerals wear the fast's colour (author, 2026-08-26 evening:
    "in monthly view, make the text colour of each day match the fasting dot
    colour for that day"). The same two tokens the rail's dots and the chip
@@ -979,8 +1024,8 @@ html[data-route~='calendar'] .month-feast {
  * stands on, in both themes, rather than against a number written here.
  */
 html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
-  background: none;
-  border-color: var(--accent);
+  background: var(--field);
+  border-color: var(--rule);
 }
 
 /*
@@ -1010,8 +1055,13 @@ html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
  * reference does not draw that state, so it is the reference's silence being
  * followed, not a decision this file is making on its own.
  */
+/* **Overruled 2026-10-03**: "In weekly display I like how the current day is
+   shown and also how the selected day is shown. Match that in the calendar
+   view." The ring is the rail's mark for today and it is drawn in the month at
+   both widths again; the paragraphs above record the reference it was dropped
+   for, which the author has now decided against. */
 html[data-route~='calendar'] .cal-main .month-grid button.is-today .day-num::before {
-  content: none;
+  content: '';
 }
 
 /*

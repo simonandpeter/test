@@ -231,11 +231,13 @@ export function render(el, { data, params, router }) {
                 same instruction names.
               -->
               <div class="month-pick" hidden>
-                <button type="button" class="mpick mpick-prev" data-mstepper="-1"
-                  aria-label="${esc(STRINGS.calendar.prevMonth)}"></button>
-                <span class="mpick mpick-now"><span class="month-name"></span></span>
-                <button type="button" class="mpick mpick-next" data-mstepper="1"
-                  aria-label="${esc(STRINGS.calendar.nextMonth)}"></button>
+                <div class="mpick-track">
+                  <button type="button" class="mpick" data-mstepper="-2"></button>
+                  <button type="button" class="mpick" data-mstepper="-1"></button>
+                  <span class="mpick mpick-now"><span class="month-name"></span></span>
+                  <button type="button" class="mpick" data-mstepper="1"></button>
+                  <button type="button" class="mpick" data-mstepper="2"></button>
+                </div>
               </div>
             </div>
             <div class="cal-span">
