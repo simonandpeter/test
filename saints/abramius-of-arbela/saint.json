@@ -12,6 +12,11 @@
       "form": "Αβράμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Άγιος Αβράμιος ο Ιερομάρτυρας Επίσκοπος Αρβήλ της Περσίας», with the rank words and the see left off."
+    },
+    {
+      "form": "Авраамий Арвильский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Святитель Авраамий Арвильский, епископ, сщмч.», with the rank word and the office left off. The day's own line spells the forename «Аврамия»; the name link has «Авраамий», which is the form taken here."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Сщмч. Аврамия, еп. Арвильского (ок. 344-347).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

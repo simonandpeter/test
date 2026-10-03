@@ -12,6 +12,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Κύριλλος ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Кирилл Новоезерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Преподобный Кирилл Новоезерский», with the rank word and the office left off."
     }
   ],
   "dates": {
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The day's line names him «Кирилла Новоезерского», Cyril of New Lake, and dates him 1532, which is this folder's own life and year; the hymns on the page call him «Новоезерского (Новгородского)». The corpus's English display name reads instead as Cyril of the White Lake, the name of the better-known Cyril of Belozersk who died in 1427; that is a naming question raised in the reader's report and not changed here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Прп. Кирилла Новоезерского (1532).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,5 +76,71 @@
   "related": [
     "cornelius-of-komel",
     "innocent-of-nurma"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Божиим Духом подвизаемь,/ слез твоих тучами изсохшее напоил еси,/ и безплотное в пустыни житие показал еси,/ и еже из глубины сердца бодренными молитвами и постом/ благодеяния труды уплодоносил еси,/ и вселенную всю просветил еси сиянием чудес твоих,/ отче наш Кирилле./ Моли Христа Бога, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Тропарь преподобного Кирилла Новоезерского (Новгородского) чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Moved by the Spirit of God, thou didst water the parched ground with the rain of thy tears and didst show forth in the wilderness a life without flesh; out of the depth of thy heart, with watchful prayers and with fasting, thou didst bring the labours of well-doing to fruit, and thou hast enlightened the whole world with the shining of thy wonders, O our father Cyril. Pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко светильник явился еси всесветел/ во отоце Нова езера на Красном острове,/ преподобне отче Кирилле,/ ты бо крест Христов на рамо взем,/ усердно Тому последовал еси,/ чистотою Богови приближився,/ от Негоже и силами чудес обогатися,/ тем и мы любезно прибегаем к раце честных мощей твоих, умильно глаголем:/ о, преподобне отче Кирилле!/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Тропарь на обретение мощей преподоного Кирилла Новоезерского (Новгородского)»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown forth as a lamp all-radiant on the island of New Lake, on the Red Island, O venerable father Cyril; for taking the cross of Christ upon thy shoulder thou didst follow after him diligently, drawing near to God by purity, and from him thou wast enriched with the powers of wonders. Therefore we too run with love to the shrine of thy honourable relics and say with compunction: O venerable father Cyril, pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Взбранному и крепкому адаманту,/ прогонителю бесов, новому чудотворцу/ победительная, страстей злых свободившеся,/ благодарственная восписуем ти, отче наш Кирилле./ Но яко имея дерзновение у престола Христова,/ верою чтущих тя, град же и люди, молитвою твоею сохраняй,/ ты бо еси стаду твоему похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Кондак преподобного Кирилла Новоезерского (Новгородского) чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To the champion and strong adamant, the driver-out of demons, the new wonderworker, we who have been freed from evil passions ascribe songs of victory and of thanksgiving, O our father Cyril. Having boldness before the throne of Christ, keep by thy prayer those who honour thee with faith, and the city and its people; for thou art the praise and the stronghold of thy flock.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Христов ярем на рамо взем,/ усердно Тому последова,/ чистотою Богови приближився,/ отче преподобне Кирилле,/ молим тя, посещай милостивно чад своих,/ и моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Кондак на обретение мощей преподоного Кирилла Новоезерского»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking the yoke of Christ upon thy shoulder, thou didst follow after him diligently, drawing near to God by purity, O venerable father Cyril. We entreat thee: visit thy children in mercy, and pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
   ]
 }

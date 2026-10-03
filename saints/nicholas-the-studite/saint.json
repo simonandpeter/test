@@ -12,6 +12,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Νικόλαος ο Ομολογητής ο Στουδίτης», with the rank words left off."
+    },
+    {
+      "form": "Николай Студийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Николай Студийский, игумен, исповедник», with the rank word and the office left off."
     }
   ],
   "dates": {
@@ -33,8 +38,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Прп. Николая исп., игумена Студийского (868).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -8,4 +8,4 @@ After a succession of divine signs and visions of the Mother of God he founded a
 
 The page then says that the Church keeps his memory on 15 June and on 7 November — neither of them the day on which this same site prints him. The day recorded here is the day page that names him. No hymn is printed for him.
 
-*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1379/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1379/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 4 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260204.html), read 3 October 2026.*

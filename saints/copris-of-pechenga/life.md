@@ -4,4 +4,4 @@ Copris is the second of the two names in saint.gr's line for 4 February, «Όσ�
 
 In its note on relics the page says separately of him that part of Copris's relics is in the church of the village of Vladimirsko-Pechengsky in Vologda — the only sentence on the page that is about him and not about both. No year of death, no homeland, no hymn, no verses.
 
-*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1369/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1369/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 4 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260204.html), read 3 October 2026.*

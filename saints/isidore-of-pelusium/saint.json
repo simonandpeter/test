@@ -11,6 +11,11 @@
       "form": "Ισίδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιος Ισίδωρος ο Πηλουσιώτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Исидор Пелусиот",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Исидор Пелусиот, прп.», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Прп. Исидора Пелусиотского (ок. 436-440).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -126,6 +140,38 @@
       },
       "english": {
         "text": "Having found you, glorious one, as another morning star, the Church, made bright by the lightnings of your words, cries out to you: rejoice, all-blessed Isidore of the mind of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас",
+      "text": "В тебе, отче, известно спасеся еже по образу:/ приим бо крест, последовал еси Христу/ и, дея, учил еси презирати убо плоть, преходит бо/ прилежати же о души, вещи безсмертней:/ темже и со Ангелы срадуется, преподобне Исидоре, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Тропарь преподобного Исидора Пелусиотского»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, that which was made after the image was surely kept safe; for taking up the cross thou didst follow Christ, and by thy doing thou didst teach men to despise the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit, O venerable Isidore, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Денницу другую тя Церковь обретши, преславне,/ твоих словес молниями освещаема,/ взывает ти:/ радуйся, всеблаженне Богомудре Исидоре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Кондак преподобного Исидора Пелусиотского»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church, having found thee a second morning star, O most glorious one, and being lit by the lightnings of thy words, cries out to thee: rejoice, O all-blessed Isidore, wise in God.",
         "rendered": "site"
       }
     }

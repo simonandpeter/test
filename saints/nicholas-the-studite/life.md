@@ -8,4 +8,4 @@ Even from there the ecclesiastical quarrels between the parties of the patriarch
 
 He fell asleep in peace on 4 February 868, and his honoured body was laid near the holy remains of the glorious Studites Naukratios and Theodore. The page prints his apolytikion, his kontakion and a megalynarion; the corpus holds only the first two, because it stores troparia and kontakia and nothing else.
 
-*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1377/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 4 Φεβρουαρίου — [the day](https://www.saint.gr/02/04/index.aspx) and [the life](https://www.saint.gr/1377/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 4 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260204.html), read 3 October 2026.*

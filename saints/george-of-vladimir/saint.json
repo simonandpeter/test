@@ -10,6 +10,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Άγιος Γεώργιος ο Πρίγκιπας», with the rank word left off; the page's life adds the family name in brackets, «Ο Άγιος Γεώργιος (Βσεβολόντοβιτς)»."
+    },
+    {
+      "form": "Георгий Всеволодович",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Святой благоверный князь Георгий Всеволодович», with the rank word and the office left off. The day's own line adds «(Юрия)» as a variant of the forename and «Владимирского» as the see of his princedom."
     }
   ],
   "dates": {
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Блгв. вел. кн. Георгия (Юрия) Всеволодовича Владимирского (1238).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -62,5 +76,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "На высоте великаго княжения седя,/ явился еси, благочестием и верою сияя отечеству своему, яко солнце;/ по Святей Троице ревностию разжегся/ и за веру крепко пострадав, кровь твою пролиял еси./ Тем и отсеченая твоя за Христа глава свидетельствует яве о тебе,/ прилепшая по смерти к телеси твоему,/ с неюже и до днесь нетленны пребывают мощи твоя,/ от нихже источаеши исцеления душам и телесем нашим./ Но яко дерзновение имея ко Христу, страстотерпче Георгие,/ непрестанно моли державу твою и сродник твоих/ безвредну сохранити молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Тропарь благоверного великого князя Георгия (Юрия) Всеволодовича Владимирского»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seated on the height of a great princedom, thou wast shown forth shining upon thine own country like the sun with piety and with faith; kindled with zeal for the Holy Trinity and suffering stoutly for the faith, thou didst pour out thy blood. Wherefore thy head, cut off for Christ, bears open witness of thee, for after death it joined itself again to thy body, and with it thy relics remain incorrupt to this day, and from them thou pourest out healings for our souls and our bodies. Having boldness before Christ, O passion-bearer George, pray thou without ceasing that thy realm and thy kinsmen be kept unharmed by thy prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христове смерти подобяся/ и Того испити чашу возжелев, яко Живота,/ за Негоже мужески подвизался еси, презрев земное царство,/ от безбожных варвар пострадав до смерти,/ Георгие Богомудре./ Тем моли, спастися верным людем молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Кондак благоверного великого князя Георгия»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being made like to the death of Christ and longing to drink his cup as life itself, thou didst contend manfully for him, despising an earthly kingdom, and didst suffer unto death at the hands of godless barbarians, O George wise in God. Therefore pray that the faithful people may be saved by thy prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христове смерти подобяся, и Того испити чашу возжелев, яко живота, за Него же мужески подвизався, презрев земное царство, от безбожных варвар пострадав до смерти, Георгие богомудре; тем моли спастися христолюбивому императору нашему молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Кондак благоверному великому князю Георгию (Юрию) Владимирскому»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being made like to the death of Christ and longing to drink his cup as life itself, thou didst contend manfully for him, despising an earthly kingdom, and didst suffer unto death at the hands of godless barbarians, O George wise in God; therefore pray that our Christ-loving emperor may be saved by thy prayers.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
