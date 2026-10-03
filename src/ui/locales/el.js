@@ -774,6 +774,7 @@ export const el = {
     'Archbishop of Perm': 'Αρχιεπίσκοπος Περμ',
     'Archbishop of Phanarion and Neochori': 'Αρχιεπίσκοπος Φαναρίου και Νεοχωρίου',
     'Archbishop of Peć in Serbia': 'Αρχιεπίσκοπος Πεκίου Σερβίας',
+    'Archbishop of Riga': 'Αρχιεπίσκοπος Ρίγας',
     'Archbishop of Ravenna': 'Αρχιεπίσκοπος Ραβέννης',
     'Archbishop of Rostov': 'Αρχιεπίσκοπος Ροστόβ',
     'Archbishop of Seville': 'Αρχιεπίσκοπος Σεβίλλης',

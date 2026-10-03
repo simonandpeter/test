@@ -44,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The day commemorates the finding of his relics, which his name page marks «(Обретение мощей)» and the day line dates 1993; his repose is the other day that page lists, «19 июня». One row per church is the schema, so the second day is recorded here and he does not render on it; the Greek and Romanian rows on this folder keep his repose, 2 July new style."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 29 сентября ст. ст. — «Обретение мощей свт. Иоанна, архиеп. Шанхайского и Сан-Францисского (1993).»",
+        "url": "https://days.pravoslavie.ru/Days/20260929.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

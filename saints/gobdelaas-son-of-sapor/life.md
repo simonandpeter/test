@@ -30,4 +30,6 @@ this record stands under his name and his sex, and the reading the synaxarion
 itself prefers is set down beside it, unresolved, because the source has not
 resolved it.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the company's entry](https://www.saint.gr/2403/saint.aspx) and [Goudelia's](https://www.saint.gr/2402/saint.aspx); read 17 September 2026; and the Romanian life at doxologia.ro — [the page](https://doxologia.ro/viata-sfintei-mucenite-gudelia).*
+The Russian calendar keeps him on the same 29 September, second of the three it names out of the Greek's four, and its index of names states his rank as well as the kingdom: «Гаведдай (Гавделас) Персидский, царевич, мч.» — Gaveddai, or Gavdelas, the Persian, a king's son. It gives both forms of the name, which is how the Russian and the Greek Γοβδέλαος are reconciled on the page itself.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the company's entry](https://www.saint.gr/2403/saint.aspx) and [Goudelia's](https://www.saint.gr/2402/saint.aspx); read 17 September 2026; and the Romanian life at doxologia.ro — [the page](https://doxologia.ro/viata-sfintei-mucenite-gudelia); and the Russian church calendar's [29 September](https://days.pravoslavie.ru/Days/20260929.html), read 4 October 2026.*

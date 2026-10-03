@@ -775,6 +775,7 @@ export const sr = {
     'Archbishop of Perm': 'Архиепископ пермски',
     'Archbishop of Phanarion and Neochori': 'Архиепископ фанарски и неохорски',
     'Archbishop of Peć in Serbia': 'Архиепископ пећки',
+    'Archbishop of Riga': 'Архиепископ рижски',
     'Archbishop of Ravenna': 'Архиепископ равенски',
     'Archbishop of Rostov': 'Архиепископ ростовски',
     'Archbishop of Seville': 'Архиепископ севиљски',
