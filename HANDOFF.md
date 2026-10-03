@@ -244,6 +244,50 @@ rendered day or saint page), `qf.py <sha>` (a run's job log when
 `ci-flaky.py` meets a 404). A back-out's render check greps the heading line:
 a needle can also match a companion's life.
 
+## The Russian and Serbian waves (TODO items 9 and 10), 3 October 2026
+
+Measure, do not trust a number here. Russian and Serbian days covered:
+
+```bash
+node -e "const fs=require('fs');const per={};
+for(const d of fs.readdirSync('saints')){let j;try{j=JSON.parse(fs.readFileSync('saints/'+d+'/saint.json','utf8'))}catch(e){continue}
+for(const a of (j.attestations||[])){if(a.status!=='venerated'||!a.feast)continue;(per[a.church]=per[a.church]||new Set()).add(String(a.feast.month).padStart(2,'0')+'-'+String(a.feast.day).padStart(2,'0'));}}
+for(const c of ['russian','serbian'])console.log(c,(per[c]||new Set()).size);"
+```
+
+**The briefs are `../ro-run/BRIEF.md` plus `BRIEF-RUSSIAN.md` or
+`BRIEF-SERBIAN.md`.** Reader reports are under `../ro-run/reports/ru/` and
+`reports/sr/`. `../ro-run/FINDINGS.md` holds what is waiting on the author,
+including the **deliberate-folds table** — a shared name form recorded there is
+not a duplicate, and `corpus-gate.mjs` is never passed silently without a row
+in it.
+
+**The Russian January is finished**, 01-01 to 01-31, one commit per Julian day,
+except 01-06 and 01-07 which owe nothing. **Serbian 01-01 to 01-16 is
+finished.** Both sources are Julian and the civil date is the Julian day plus
+thirteen; `.tmp/ru-civil.mjs` and `.tmp/sr-civil.mjs` do that conversion and
+also know which URL year each host serves — days.pravoslavie.ru 404s on 2027,
+and pravoslavno.rs publishes only about thirty days ahead but repeats annually.
+
+**The tools, all in `.tmp/` and therefore gitignored and invisible to history:**
+`rubody.mjs` (hymns live on the *day* page, never on a life page; `/Life/idN.htm`
+is an index, not a life), `ru-namesweep.mjs` (Russian spells both theta and phi
+`ф`, so a word with one yields a skeleton for each reading), `ru-civil.mjs`,
+`ru-officescan.mjs`, `ru-hymnstrip.mjs`, `ru-dupscan.mjs`, `ru-deepdup.mjs`;
+and `sr-cand.mjs`, `srbody.mjs`, `sr-namesweep.mjs`, `sr-civil.mjs`,
+`sr-dupscan.mjs`, `sr-deepdup.mjs`. Writers: `scratchpad/wbru.sh` and
+`wbsr.sh`, neither idempotent.
+
+**`day-candidates.mjs --church serbian` is not to be trusted for its entry
+list** and says so in its own `note`; the Serbian wave uses `.tmp/sr-cand.mjs`.
+The Prologue prints **no hymns at all**, so Serbian folders take none. Julian
+02-29 has no Serbian source.
+
+**Read and waiting for a writer: Russian 02-03 to 02-11**, nineteen draft files
+under `.tmp/ru-drafts`. Run them with `bash scratchpad/wbru.sh MM-DD` in date
+order. **No icons have been fetched for either church** — that is the back half
+of item 9 and item 5, and it wants one Commons fetcher with nothing beside it.
+
 ## Three things git cannot tell you
 
 **`android/app/src/main/assets/public/` holds a built copy of the site from
