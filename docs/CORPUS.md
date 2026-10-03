@@ -96,11 +96,18 @@ civil 7 October.
 ### Sources for a life where the calendar prints only a line
 
 - **azbyka.ru** — the Russian church calendar's own long lives, and the only
-  workable source for the twentieth-century new martyrs. `CLAUDE.md` says it
-  answers 403 to Python and curl; **measured 2026-09-10, it answers 200 to
-  `node`'s `fetch` with a browser user-agent**, and `day-candidates.mjs`'s
-  fetcher uses one. Its `robots.txt` disallows media and archive formats, not
-  the calendar.
+  workable source for the twentieth-century new martyrs. Its `robots.txt`
+  disallows media and archive formats, not the calendar.
+
+  **It is a browser source now, not a fetcher source.** Measured 2026-09-10 it
+  answered 200 to `node`'s `fetch` with a browser user-agent, which is what
+  `day-candidates.mjs`'s fetcher sends. Measured again on 2026-10-04 it answers
+  **403** to that fetcher *and* to a full Chrome user-agent with
+  accept-language — and **200 in the in-app browser**, same day, same machine,
+  `/days/2026-10-12` read whole. So a sitting that needs azbyka reads it
+  through the browser, and a batch script that needs it is a batch script that
+  will quietly write thinner folders: 13 of one night's 21 new Russian folders
+  were new martyrs carrying one calendar line each because of this.
 - **oca.org** — English prose lives, already cited here. Its `robots.txt` asks
   for `Crawl-delay: 10` and the fetcher honours that. English prose keeps a
   paraphrase honest in a way a page skimmed in Greek does not, which is why
