@@ -4,4 +4,10 @@ Damian was a monk of the Kyiv Caves Lavra whose guide was [Theodosius of the Cav
 
 When he fell ill near the end of his life, he prayed to God with tears to be made a sharer in the glory of the saints and not to be parted from his spiritual father: “Jesus Christ, do not part me from my teacher, Saint Theodosius, in thy Kingdom!” As he prayed, an angel in the likeness of Theodosius appeared by his bed, bent over him and told him that the Lord had heard his prayer and sent him to assure him of it: he would not be parted from him in the life to come. And Damian gave up his soul in peace into the Lord’s hands. doxologia.ro gives no year.
 
-*After doxologia.ro — [the life](https://doxologia.ro/viata-sfantului-cuvios-damian-tamaduitorul-de-la-lavra-pecerska); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 5 October with two clairvoyants of the Kyiv Caves, [Jeremiah](/saints/jeremiah-of-the-caves) and [Matthew](/saints/matthew-of-the-caves), and it is the Russian that makes this folder into a life at all. It gives the year of death it had none for, 1071; the office, presbyter; and the epithet «целебник», the healer, which the Romanian page carries only as part of a name.
+
+The life, written by [Nestor the Chronicler](/saints/nestor-the-chronicler), says that Damian still remembered the Baptism of Rus in 988. A zealous imitator of [Theodosius of the Kyiv Caves](/saints/theodosius-of-the-kyiv-caves), he was mild, hardworking and obedient, to the joy of all the brethren; he spent whole nights in prayer and in the reading of the divine books; he was a strict faster who tasted nothing but bread and water. And the Lord rewarded him with the gift of healing sicknesses, which is where the name this corpus knows him by comes from.
+
+The three have a troparion of their own on the page, naming them together as a threefold dwelling of the Trinity. This batch did not take it: a hymn here needs either a Hapgood citation or a rendering made beside it, and neither was done.
+
+*After doxologia.ro — [the life](https://doxologia.ro/viata-sfantului-cuvios-damian-tamaduitorul-de-la-lavra-pecerska); read 17 September 2026; the Russian church calendar keeps him on the Julian 5 October — [the day](https://days.pravoslavie.ru/Days/20261005.html); read 4 October 2026.*

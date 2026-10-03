@@ -1,0 +1,66 @@
+{
+  "slug": "jeremiah-of-the-caves",
+  "display_name": "Jeremiah of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Иеремия Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 915, «Иеремия Печерский, Прозорливый», with the epithet left to the note: the clairvoyant."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1070,
+      "latest": 1070,
+      "display": "c. 1070",
+      "basis": "traditional",
+      "note": "The year the Russian calendar's day line prints against his name, «Иеремии (ок. 1070)»; his life on the same site gives «+ ок. 1070» and adds that he died in deep old age."
+    }
+  },
+  "related": [
+    "damian-the-healer",
+    "matthew-of-the-caves",
+    "nestor-the-chronicler"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», which its own abbreviation marks as the synaxis of the saints of the Near Caves. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Прпп. Дамиана, пресвитера, целебника (1071), Иеремии (ок. 1070) и Матфея (ок. 1085) прозорливых, Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "No rank is recorded. The one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line, and reading a polyeleos off it for the lines that follow would be an inference rather than the source's statement."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 18 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/18 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 18 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

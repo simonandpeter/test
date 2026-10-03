@@ -1,0 +1,66 @@
+{
+  "slug": "michael-soyuzov",
+  "display_name": "Michael (Soyuzov)",
+  "office": "Presbyter",
+  "sex": "male",
+  "types": [
+    "confessor",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Михаил (Союзов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 15073, «Михаил (Союзов), исп.», with the rank word left off. The day line adds the office the index leaves out, «Св. Михаила пресвитера»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1922,
+      "latest": 1922,
+      "display": "1922",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Св. Михаила пресвитера, исп (1922)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 6 октября ст. ст. — «Св. Михаила пресвитера, исп (1922).»",
+        "url": "https://days.pravoslavie.ru/Days/20261006.html",
+        "year": 2026,
+        "note": "No rank is recorded. The day's one icon, «Совершается служба с полиелеем», stands before the apostle Thomas's line, which is the first of three, and reading a polyeleos off it for a confessor of 1922 would be an inference rather than the source's statement."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 19 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian confessors of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/19 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 19 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "john-rybin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

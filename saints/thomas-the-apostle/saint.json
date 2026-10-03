@@ -11,6 +11,11 @@
       "form": "Toma",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Apostol Toma” for 6 octombrie."
+    },
+    {
+      "form": "Фома",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 2323 heads him «Апостол Фома»; the bare name is all of it that is not rank."
     }
   ],
   "sex": "male",
@@ -18,11 +23,33 @@
     "apostle",
     "martyr"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian calendar prints after his name, «Апостола Фомы (I)». The folder held no date at all before this reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists three other days: «6 апреля (Воспоминание уверения апостола Фомы)», the remembrance of his own doubting and confession, «20 июня», and «30 июня (12 ап.)», the synaxis of the Twelve. One row per church is the schema, so the other three days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 6 октября ст. ст. — «Апостола Фомы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261006.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба с полиелеем» — a polyeleos service. The day's other two lines are a confessor of 1922 and a new martyr of 1937, and no rank is recorded for either, the icon standing before the apostle."
+      },
+      "note": "The first century, which the folder had no date for at all. The Russian keeps a second day for the event rather than the man — «Воспоминание уверения апостола Фомы», the remembrance of his doubting and his confession — which the Greek and Romanian rows on this folder do not."
     },
     {
       "church": "romanian",
@@ -57,6 +84,15 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -142,15 +178,6 @@
         "text": "Filled with the grace of wisdom, the apostle of Christ and true servant said in repentance: Thou art my God and Lord.",
         "rendered": "site"
       }
-    }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

@@ -29,6 +29,13 @@
       "note": "saint.gr: «κοιμήθηκε περί το 1114 μ.Χ.» — the page says about 1114; the interval is the five years either side that «περί» allows, and its heading prints 1114 flat."
     }
   },
+  "related": [
+    "sylvester-of-the-kyiv-caves",
+    "theodosius-of-the-kyiv-caves",
+    "damian-the-healer",
+    "jeremiah-of-the-caves",
+    "matthew-of-the-caves"
+  ],
   "attestations": [
     {
       "church": "russian",
@@ -63,9 +70,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "related": [
-    "sylvester-of-the-kyiv-caves",
-    "theodosius-of-the-kyiv-caves"
-  ]
+  }
 }

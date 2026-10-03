@@ -1,18 +1,23 @@
 {
   "slug": "gerontius-of-moscow",
   "display_name": "Gerontius of Moscow",
-  "sex": "male",
-  "types": [
-    "hierarch",
-    "metropolitan"
-  ],
   "office": "Metropolitan of Moscow",
   "names": [
     {
       "form": "Γερόντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Γερόντιος της Μόσχας», with the rank word left off."
+    },
+    {
+      "form": "Геронтий, митрополит Московский и всея Руси",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14262, «Святитель Геронтий, митрополит Московский и всея Руси», with the rank word left off."
     }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan"
   ],
   "dates": {
     "death": {
@@ -26,8 +31,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists one other day, «28 мая». One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the seventh of the seventeen names."
+      },
+      "note": "The Russian index gives him the fuller see the folder has as «Metropolitan of Moscow»: «Святитель Геронтий, митрополит Московский и всея Руси». It prints no year, so the 1489 the folder carries still rests on its own source."
     },
     {
       "church": "romanian",

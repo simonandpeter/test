@@ -1099,6 +1099,7 @@ export const el = {
     'Metropolitan of Kydonies': 'Μητροπολίτης Κυδωνιών',
     'Metropolitan': 'Μητροπολίτης',
     'Metropolitan of Kyiv': 'Μητροπολίτης Κιέβου',
+    'Metropolitan of Krutitsy': 'Μητροπολίτης Κρουτίτσι',
     'Metropolitan of Lacedaemonia': 'Μητροπολίτης Λακεδαιμονίας',
     'Metropolitan of Larissa': 'Μητροπολίτης Λαρίσης',
     'Metropolitan of Moldavia': 'Μητροπολίτης Μολδαβίας',

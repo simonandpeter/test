@@ -1,25 +1,55 @@
 {
   "slug": "damian-the-healer",
   "display_name": "Damian the Healer",
+  "office": "Presbyter",
   "names": [
     {
       "form": "Damian",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Cuvios Damian, tămăduitorul de la Lavra Pecerska” for 5 octombrie."
+    },
+    {
+      "form": "Дамиан Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 573, «Дамиан Печерский, пресвитер», with the office word left off."
     }
   ],
   "sex": "male",
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1071,
+      "latest": 1071,
+      "display": "1071",
+      "basis": "traditional",
+      "note": "The year the Russian calendar's day line prints against his name, «Дамиана, пресвитера, целебника (1071)», and the year his life on the same site gives, «Преподобный Дамиан (+ 1071)». The folder held no date at all before this reading."
+    }
+  },
   "related": [
-    "theodosius-of-the-kyiv-caves"
+    "theodosius-of-the-kyiv-caves",
+    "jeremiah-of-the-caves",
+    "matthew-of-the-caves",
+    "nestor-the-chronicler"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», which its own abbreviation marks as the synaxis of the saints of the Near Caves. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Прпп. Дамиана, пресвитера, целебника (1071), Иеремии (ок. 1070) и Матфея (ок. 1085) прозорливых, Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "No rank is recorded. The one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line, and reading a polyeleos off it for the lines that follow would be an inference rather than the source's statement."
+      },
+      "note": "The Russian gives the year of death the folder had none for, 1071, and far more besides: the office, presbyter; the epithet the Romanian page renders only as a name, «целебник», the healer; and the life, written by Nestor the Chronicler."
     },
     {
       "church": "romanian",

@@ -12,6 +12,11 @@
       "form": "Ιωνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Ιωνάς Μητροπολίτης πασών των Ρωσιών», with the rank word and the see left off."
+    },
+    {
+      "form": "Иона, митрополит Московский и всея Руси",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1042, «Святитель Иона, митрополит Московский и всея Руси», with the rank word left off. The see is kept in the form because the corpus holds several Jonahs."
     }
   ],
   "sex": "male",
@@ -22,8 +27,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists four other days: «31 марта», his repose, «27 мая (перенесение мощей)», «15 июня», and «15 декабря (интронизация)», the day of his enthronement. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the sixth of the seventeen names."
+      },
+      "note": "Five days for one man on the one index, which is as many as any name in this corpus carries, and one of them is his enthronement rather than a death or a translation. The folder holds no date at all and the calendar supplies none: the line gives name, see and company only."
     },
     {
       "church": "romanian",

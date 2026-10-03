@@ -12,4 +12,6 @@ The author ruled on 2 October 2026 that they are, and this record is the two fol
 
 The Greek calendar prints her apolytikion; the Romanian prints a troparion, the common of a woman martyr also sung to Justina, and two kontakia.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2667/saint.aspx) and 4 Σεπτεμβρίου — [the entry for her other day](https://www.saint.gr/2345/saint.aspx), read 23 August 2026; doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-haritina); read 17 September 2026.*
+The Russian church calendar keeps her on the Julian 5 October and agrees with saint.gr on 304. It gives her a city the Greek entry does not, and gives it twice over: «Харитина Амисийская (Понтийская), мц.» — of Amisus, of Pontus. **The same Russian day keeps a second Charitina**, the princess of Lithuania who died in 1281, nine lines further down, and the page tells the two apart by title alone, «мц.» for this one and «прп.» for the other.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — [the entry](https://www.saint.gr/2667/saint.aspx) and 4 Σεπτεμβρίου — [the entry for her other day](https://www.saint.gr/2345/saint.aspx), read 23 August 2026; doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-haritina); read 17 September 2026; the Russian church calendar keeps her on the Julian 5 October — [the day](https://days.pravoslavie.ru/Days/20261005.html); read 4 October 2026.*
