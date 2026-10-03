@@ -11,6 +11,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιος Πέτρος ο Δαμασκηνός», with the rank word left off."
+    },
+    {
+      "form": "Петар Дамаскин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 9. фебруар ст. ст., „Свештеномученик Петар Дамаскин.“, with the rank word Свештеномученик left off."
     }
   ],
   "sex": "male",
@@ -18,7 +23,8 @@
     "monk",
     "bishop",
     "confessor",
-    "martyr"
+    "martyr",
+    "hieromartyr"
   ],
   "related": [
     "nicodemus-the-hagiorite"
@@ -60,8 +66,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.02.2026 (9. фебруар ст. ст.) — „Свештеномученик Петар Дамаскин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
