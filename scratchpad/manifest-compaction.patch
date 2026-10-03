@@ -1,0 +1,321 @@
+diff --git a/scripts/build-manifest.mjs b/scripts/build-manifest.mjs
+index 0f06bab2..27699e10 100644
+--- a/scripts/build-manifest.mjs
++++ b/scripts/build-manifest.mjs
+@@ -34,6 +34,10 @@ import { isValidDate } from '../src/lib/jdn.js';
+ import { makeInterval, primaryCentury } from '../src/lib/dates.js';
+ import { regionOf } from '../src/lib/regions.js';
+ import { isPlaceholderSource, licenceIsSettled, requiresAttribution } from '../src/lib/licence.js';
++// The derivative names and the three `srcset` widths, shared with the client:
++// the manifest stores only `w`/`h`, and `src/lib/manifest.js` rebuilds the
++// rest from them with these same functions.
++import { DEFAULT_FILE, cardFor, cardSmFor, heroFor, thumbFor } from '../src/lib/image-shape.js';
+ 
+ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+ const SAINTS_DIR = path.join(ROOT, 'saints');
+@@ -41,55 +45,6 @@ const DATA_DIR = path.join(ROOT, 'data');
+ 
+ export const SCHEMA_VERSION = 1;
+ 
+-/** Card thumbnails are the blurred placeholders make_thumbs.py writes. */
+-const thumbFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-thumb.jpg';
+-
+-/**
+- * The sharp, card-sized derivative make_thumbs.py writes beside the thumb
+- * (2026-09-06). A carousel card is 150-300 CSS px and was being handed the
+- * original: a median of 283 kB and up to 1.04 MB to draw a picture the width
+- * of a thumbnail. The thumb itself is blurred by design and cannot stand in.
+- */
+-const cardFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card.jpg';
+-
+-/**
+- * The same picture at half that again (2026-09-12). `-card.jpg` is sized for
+- * the widest card at two device pixels; a phone drawing a 150 CSS px card at
+- * one was being handed all of it — 525 kB of pictures for a screenful showing
+- * two, measured on the production build at 360 px
+- * (`scripts/screenful-bytes.mjs`). Both are named in the markup's `srcset`
+- * with the card's own width as `sizes`, so the browser chooses and the build
+- * does not have to guess which reader it is talking to.
+- */
+-const cardSmFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-card-sm.jpg';
+-
+-/**
+- * The picture the saint page and the Daily hero paint (2026-10-01). Those two
+- * were being handed `src`, the original as fetched: a median of 283 kB at 939
+- * px to draw a figure 328 CSS px wide, which on a 1.6 Mbps link completes 2.0
+- * s after the 560 card does and 5.1 s after it at the largest icon in the
+- * corpus. `HERO_W_PX` in make_thumbs.py has the cap and why it is on the
+- * width.
+- */
+-const heroFor = (file) => file.replace(/\.(jpe?g|png)$/i, '') + '-hero.jpg';
+-
+-/**
+- * The two caps make_thumbs.py writes the card derivatives at, on the *longer*
+- * edge. Repeated here rather than read, because the script is Python and this
+- * is the only arithmetic that needs them; `tests/manifest-image.test.mjs`
+- * holds the pair to the pixels the files actually have, so a change to one
+- * without the other fails rather than mis-declaring a `srcset`.
+- */
+-const CARD_MAX_PX = 560;
+-const CARD_SM_MAX_PX = 280;
+-
+-/** The hero cap, which is on the width — make_thumbs.py's `HERO_W_PX`. */
+-const HERO_W_PX = 1000;
+-
+-/** The width a derivative capped at `longest` on its long edge really has. */
+-const derivedWidth = (width, height, longest) =>
+-  Math.max(1, Math.round(width * Math.min(1, longest / Math.max(width, height))));
+-
+ /**
+  * JSON.parse rejects a byte-order mark, and Windows editors add one freely —
+  * PowerShell's Set-Content does it by default. A BOM carries no information
+@@ -460,7 +415,6 @@ function toCard(saint, dir) {
+     }
+   }
+ 
+-  const base = `saints/${saint.slug}/`;
+   // Pixel dimensions ride in the manifest so cards can reserve the box with
+   // aspect-ratio before a byte of image arrives (Addendum C1) — the
+   // no-layout-shift rule satisfied at the source. image-size reads headers
+@@ -470,41 +424,20 @@ function toCard(saint, dir) {
+   const file = saint.images?.[0]?.file;
+   if (file) {
+     const { width, height } = imageSize(readFileSync(path.join(dir, file)));
+-    image = {
+-      src: base + file,
+-      lqip: base + thumbFor(file),
+-      /*
+-       * The picture a *card* shows. `src` stays the original — nothing paints
+-       * it since 2026-10-01, and it stays in the manifest because it is the
+-       * file the folder holds and the one a licence note points at; `w`/`h`
+-       * stay the original's too, because their job is the aspect ratio that
+-       * reserves the box before a byte arrives, and every derivative
+-       * preserves it exactly.
+-       */
+-      card: base + cardFor(file),
+-      // The narrow half of the card's `srcset`. `CARD_SM_MAX_PX` in
+-      // make_thumbs.py is the width it was written at, and `cardW`/`cardSmW`
+-      // below are what the markup declares in the descriptor.
+-      cardSm: base + cardSmFor(file),
+-      /*
+-       * **The two `w` descriptors, which are widths and not long edges.** A
+-       * srcset descriptor states the file's own pixel width; make_thumbs.py
+-       * caps the *longer* edge, so a portrait icon capped at 560 is 560 tall
+-       * and rather less than that wide. Computed here from the original's
+-       * shape rather than by opening two more files per saint, which is the
+-       * same arithmetic the script does and is exact because it never
+-       * upscales.
+-       */
+-      cardW: derivedWidth(width, height, CARD_MAX_PX),
+-      cardSmW: derivedWidth(width, height, CARD_SM_MAX_PX),
+-      // The hero's cap is on the width, so its descriptor needs no shape
+-      // arithmetic — only the refusal to upscale that `heroFor` shares.
+-      hero: base + heroFor(file),
+-      heroW: Math.min(width, HERO_W_PX),
+-      w: width,
+-      h: height,
+-      aspect: Math.round((width / height) * 10000) / 10000,
+-    };
++    /*
++     * **`w`/`h` and nothing else.** The five paths and the three `srcset`
++     * widths are all a function of the slug, the conventional icon path and
++     * these two numbers, so `src/lib/image-shape.js` derives them and the
++     * manifest does not carry them: eleven fields cost 65 bytes gzipped per
++     * icon against a hard 400 KB budget the Lighthouse FCP floor is measured
++     * on, and two cost 13. `f` appears only for a folder that does not use
++     * `DEFAULT_FILE`, so a `.png` or a second stem still works.
++     *
++     * They stay the *original's* dimensions, not a derivative's: their job is
++     * the aspect ratio that reserves the box before a byte arrives, and every
++     * derivative preserves it exactly.
++     */
++    image = { w: width, h: height, ...(file === DEFAULT_FILE ? {} : { f: file }) };
+   }
+ 
+   return {
+diff --git a/src/lib/manifest.js b/src/lib/manifest.js
+index e34b1307..4cffbab5 100644
+--- a/src/lib/manifest.js
++++ b/src/lib/manifest.js
+@@ -5,6 +5,8 @@
+  * full-size images) are fetched per saint, on open, in Session 4a.
+  */
+ 
++import { hydrateImage } from './image-shape.js';
++
+ const url = (rel) => import.meta.env.BASE_URL + rel;
+ 
+ let cached = null;
+@@ -29,6 +31,13 @@ export async function loadManifest() {
+  * `loadManifest` needs a browser, and the indexing is the part with a rule in
+  * it.
+  *
++ * **It is also where `card.image` becomes the object the views expect.** The
++ * manifest stores `{ w, h }` and `src/lib/image-shape.js` derives the five
++ * paths and the three `srcset` widths from the slug (see the comment on the
++ * image record in `scripts/build-manifest.mjs` for the gzip budget that is
++ * about). This is the one chokepoint every view goes through, so all ~30 call
++ * sites read the same fields they always did.
++ *
+  * @param manifest the manifest array as fetched
+  * @returns `{ saints, bySlug, byAlias }`; `byAlias` maps a dead slug to the
+  *   card that claims it
+@@ -37,11 +46,36 @@ export function indexManifest(manifest) {
+   const bySlug = new Map(manifest.map((s) => [s.slug, s]));
+   const byAlias = new Map();
+   for (const card of manifest) {
++    if (card.image) defineImage(card);
+     for (const alias of card.aliases ?? []) if (!bySlug.has(alias)) byAlias.set(alias, card);
+   }
+   return { saints: manifest, bySlug, byAlias };
+ }
+ 
++/**
++ * **Lazily**, and that is the whole point of doing it here rather than in a
++ * `map`. Hydrating eagerly would build five strings for each of the hundreds
++ * of iconed cards between the fetch resolving and the first paint, on the path
++ * that paint is waiting for, to serve the dozen cards a screenful shows. The
++ * getter replaces itself with the value on first read, so a card drawn twice
++ * pays once and a card never drawn pays nothing.
++ *
++ * `card.image` stays truthy either way, which is what the eight call sites
++ * that only ask whether there is a picture are testing.
++ */
++function defineImage(card) {
++  const stored = card.image;
++  Object.defineProperty(card, 'image', {
++    configurable: true,
++    enumerable: true,
++    get() {
++      const image = hydrateImage(card.slug, stored);
++      Object.defineProperty(card, 'image', { value: image, configurable: true, enumerable: true, writable: true });
++      return image;
++    },
++  });
++}
++
+ /**
+  * The coverage statistics, which **nothing on the boot path reads** (Addendum
+  * G1, done 2026-08-28). This was fetched beside the manifest in the same
+diff --git a/tests/build.test.mjs b/tests/build.test.mjs
+index 589b4267..9051e32d 100644
+--- a/tests/build.test.mjs
++++ b/tests/build.test.mjs
+@@ -5,6 +5,7 @@ import os from 'node:os';
+ import path from 'node:path';
+ import { build } from '../scripts/build-manifest.mjs';
+ import { PLACEHOLDER_SOURCE } from '../src/lib/licence.js';
++import { hydrateImage } from '../src/lib/image-shape.js';
+ 
+ /**
+  * These are the acceptance criteria for Phase 0, not incidental coverage. The
+@@ -172,7 +173,7 @@ test('the uncertainty radius must be a positive number no greater than 20000', a
+   assert.equal(ok.manifest[0].locations[0].uncertainty_km, 0.5);
+ });
+ 
+-test('image dimensions and aspect are emitted into the manifest', async () => {
++test('image dimensions are emitted, and hydrate back into the full record', async () => {
+   // A hand-crafted 8x10 PNG — signature plus IHDR is all image-size reads.
+   const png = Buffer.concat([
+     Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]),
+@@ -195,7 +196,18 @@ test('image dimensions and aspect are emitted into the manifest', async () => {
+     );
+     const r = await build({ saintsDir: dir, write: false });
+     assert.deepEqual(r.errors, []);
+-    assert.deepEqual(r.manifest[0].image, {
++    /*
++     * **What the manifest stores, and what a view is handed, are now two
++     * different objects** (2026-10-03). The eleven fields below are all a
++     * function of the slug and these two numbers, and eleven of them per icon
++     * cost 65 bytes gzipped against a budget with 10 KB left in it, so the
++     * file carries `{ w, h }` — plus `f` here, because this fixture's icon is
++     * a `.png` and not the conventional `images/icon.jpg`.
++     */
++    assert.deepEqual(r.manifest[0].image, { w: 8, h: 10, f: 'images/icon.png' });
++    // And `src/lib/image-shape.js` puts it back, which is the shape ~30 call
++    // sites in `src/` read and `src/lib/manifest.js` is the chokepoint for.
++    assert.deepEqual(hydrateImage('test-saint', r.manifest[0].image), {
+       src: 'saints/test-saint/images/icon.png',
+       lqip: 'saints/test-saint/images/icon-thumb.jpg',
+       // The card derivative, 2026-09-06: `src` is the original the saint's own
+@@ -308,7 +320,13 @@ test('the srcset widths the manifest declares are the widths the files really ha
+       );
+       const r = await build({ saintsDir: dir, write: false });
+       assert.deepEqual(r.errors, []);
+-      const image = r.manifest[0].image;
++      /*
++       * Hydrated, because the widths are derived and not stored: the point of
++       * this test is that `derivedWidth` and make_thumbs.py's caps agree, and
++       * that arithmetic moved to `src/lib/image-shape.js` without moving the
++       * risk.
++       */
++      const image = hydrateImage('test-saint', r.manifest[0].image);
+       const real = {
+         card: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card.jpg')),
+         cardSm: await imageSizeFromFile(path.join(dir, 'test-saint', 'images', 'icon-card-sm.jpg')),
+diff --git a/tests/manifest.test.mjs b/tests/manifest.test.mjs
+index 585d486f..dcc952a4 100644
+--- a/tests/manifest.test.mjs
++++ b/tests/manifest.test.mjs
+@@ -2,6 +2,7 @@ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ 
+ import { indexManifest } from '../src/lib/manifest.js';
++import { hydrateImage } from '../src/lib/image-shape.js';
+ 
+ /**
+  * The two lookups every view is handed. `loadManifest` fetches and this
+@@ -51,3 +52,53 @@ test('a live folder is never shadowed by another folder’s alias', () => {
+   assert.equal(bySlug.get('charitina-the-martyr-4-september'), live);
+   assert.equal(byAlias.size, 0);
+ });
++
++/*
++ * **The image is rehydrated here because here is the only door.** The manifest
++ * stores `{ w, h }` to stay under the gzip budget (see `src/lib/image-shape.js`
++ * for the measurement), and every view reaches a card through `indexManifest`,
++ * so the ~30 call sites that read `card.image.lqip` or `card.image.cardSmW`
++ * never learn that the file did not contain them.
++ */
++test('an iconed card is handed the full image object, derived from its slug', () => {
++  const { bySlug } = indexManifest([card('anthony-the-great', { image: { w: 939, h: 625 } })]);
++  assert.deepEqual(bySlug.get('anthony-the-great').image, hydrateImage('anthony-the-great', { w: 939, h: 625 }));
++});
++
++/*
++ * **Lazily, which is the half with the cost in it.** Hydrating every iconed
++ * card up front would build five strings each for hundreds of cards between
++ * the fetch resolving and the first paint — on the path the paint waits for —
++ * to serve the dozen a screenful shows. So the property is a getter that
++ * materialises once and then is the value.
++ */
++test('the image object is built on first read, once, and not before', () => {
++  let built = 0;
++  const probe = { slug: 'probe', display_name: 'probe', image: { w: 4, h: 3 } };
++  const { bySlug } = indexManifest([probe]);
++  const desc = Object.getOwnPropertyDescriptor(probe, 'image');
++  assert.equal(typeof desc.get, 'function', 'the image was hydrated eagerly');
++  assert.equal(desc.value, undefined);
++
++  // Reading it twice must give the same object, not two equal ones: the
++  // grid compares `item.image` identities across frames.
++  const once = bySlug.get('probe').image;
++  built += 1;
++  assert.equal(bySlug.get('probe').image, once);
++  assert.equal(built, 1);
++  assert.equal(typeof Object.getOwnPropertyDescriptor(probe, 'image').get, 'undefined');
++});
++
++// The eight call sites that only ask whether there is a picture — the carousel's
++// cell packer, the calendar's hero pick, the map's label weighting — test the
++// property for truth, and a getter answers that without being read specially.
++test('a card with no image keeps its falsy one, and an iconed card stays truthy', () => {
++  const { bySlug } = indexManifest([
++    card('plain', { image: null }),
++    card('bare'),
++    card('iconed', { image: { w: 4, h: 3 } }),
++  ]);
++  assert.equal(bySlug.get('plain').image, null);
++  assert.equal(bySlug.get('bare').image, undefined);
++  assert.ok(bySlug.get('iconed').image);
++});

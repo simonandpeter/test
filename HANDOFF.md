@@ -380,61 +380,122 @@ two thousand folders should expect this floor, not the e2e suite, to be what
 stops them — and the lever is the manifest's size on the first paint, not the
 corpus's size.
 
-## Where this sitting stands (3 October 2026, the third manager)
+---
 
-`main` is green and deployed at **`24f69c8f`**, run 37078215403: 1,101 passed,
-4 flaky, 1 skipped. Nothing is uncommitted.
+## Where this sitting stands (3 October 2026, the fourth manager)
 
-**Item 8's work list is finished** — see TODO item 8 for what is left of the
-item, which is not another slice of it. **Item 1's apostolic tail is written**
-and STRUCTURE.md §6 item 13 now states the pass honestly: 33 notes, not two
-apostles. **The image programme has taken Russian to 1 imageless day of 63 and
-Serbian to 2 of 44**, Romanian 236 to 141 and Greek 268 to 172, on 109 icons.
+Three commits on `main`, nothing uncommitted: `66a50933` and `7349ef6e` (the
+Related floor and its gate), `3193fbc6` (the e2e proxy-premise sweep). Run the
+state command rather than trusting this paragraph.
 
-### Three fixtures died of the icons, and all three the same way
+**The browser verification of `3193fbc6` did not finish.** It was in flight
+against a preview built from `1fd21622` in a throwaway worktree, 824 tests at
+`--workers=2`, and the sitting ended at about 190 of
+them with four failures. One was the sweep's own new instrument and is fixed in
+the commit; three were outside anything the edits reach. **`main`'s CI run is
+therefore the first reading of these twelve suites together** — read it before
+anything else, and treat a failure in a spec the sweep touched as the sweep's
+until proved otherwise. e2e that could not be *run* is not e2e that failed.
 
-**A fixture selected by a proxy for its premise goes red when the corpus moves,
-and finds nothing.** This cost two red runs, `e223292e` and `cab93377`, and both
-were mine.
+### Two author rulings landed this sitting and both change the queue
 
-- `e2e/saint.spec.js`'s sparse page was **named**: `/saints/christopher`. The
-  first icon batch gave Christopher a picture and the test that asks what a page
-  with no picture looks like was asking it of a page with one. `SPARSE_DETAIL`
-  is read off the manifest now, with `SPARSE_NAME` beside it.
-- That computed fixture then opened its table with "Undocumented", because **the
-  page draws one row per church in `CHURCH_IDS` order whether that church
-  records anything or not** — so `.att` first is Russian's, and the premise has
-  to be the Russian status, not any status.
-- `e2e/prayer.spec.js` walks the hymned saints with icons until the preview is
-  full, and walked with `scrollHeight > 120`. 44 new icons moved the head of
-  that list to Abercius of Hierapolis, whose 4,157-character life draws five of
-  the clamp's six lines. The walk measures six-and-clamped now, which is what the
-  assertion measures. **Clamped alone is not enough**: a lede can overflow its
-  box at five lines.
+**The 400 KB manifest budget is not a gate.** `build-manifest.mjs:389` is a
+`console.log`; `report` returns 0 over or under, and no test asserts it. The
+third manager read it as a blocker on the image programme and priced a
+re-representation of the icon declarations against it. **The image programme
+runs on and the ceiling is ignored.** The floors that do fail a build are
+`ENTRY_CSS_CEILING` in `scripts/lighthouse-floor.mjs` and `PICTURE_BUDGET` in
+`scripts/screenful-bytes.mjs`, and manifest growth touches neither. The comment
+on that line now says so.
 
-The class is worth a sweep before the next image batch: any e2e premise that
-names a slug, or reads a pixel where it means a state, is the next red run.
+That re-representation was built before the ruling and then reverted. It was
+complete and green — paths derived from the slug and the conventional stem,
+`{w,h}` stored, lazily rehydrated in `indexManifest`, 389.4 → 373.9 KB gzipped,
+a 15.5 KB saving and a 5x cut in per-icon cost. The patch is at
+`scratchpad/manifest-compaction.patch`, with `scratchpad/image-shape.js` and
+`scratchpad/manifest-image.test.mjs` beside it. Those three are committed
+because this file names them — `tests/citations.test.mjs` fails on a document
+pointing at a path CI does not have, which cost a red run on 2026-10-03. **Do not re-apply it without the author**;
+it is kept only so a ruling the other way costs one command.
 
-### The flake list has two new members, and they are consistent
+**TODO item 13's merge candidates are all to be merged**, the author's explicit
+instruction, the same authority as Charitina — bar two that cannot be merges and
+are to be reported instead: the **Kandavla company** (the corpus holds only one
+folder from each name-form pair, so fix the name-forms on the survivor) and
+**`philonides-of-kourion`** (no source voices the doubt; it is a linked
+triangle). `theodote-of-nicaea`/`theodote-21-october` rests on "probably the
+same saint" — merge it with the hedge visible in the life rather than silently
+resolved. Re-read each pair's sources: the ruling is to merge, not to merge
+blind.
 
-`chrome.spec.js`'s **"on a touch device the shelf row carries no ×"** and
-**"under reduced motion a swiped row goes without flying"** went flaky at *both*
-projects in all three runs of this sitting, failing on
-`expect(locator('.shelf-row')).toHaveCount(0)` and passing on retry. Four of the
-run's four flakies. That is a different pattern from the three recorded above —
-those are one project, one in six — and it has not been measured for a rate.
-`daily-stage`'s restore race showed once and is the old one.
+**None of them is done, and the reason is a permission wall.** A merge deletes
+the folded-away folder — that is what `aliases` exists to make safe — and the
+dispatch was refused by the harness as irreversible local destruction. **The
+author has to allow folder deletion under `saints/` before this item can move.**
 
-### The manifest's headroom is the next ceiling, not the test suite
+### The Related floor is derived now, and gated
 
-**389.4 KB gzipped against the 400 KB budget, 10.6 KB left**, from 376 before
-the icons. 109 declarations cost 13 KB, so **a batch of this size again lands
-within about 2 KB of the ceiling** and the one after it does not fit. Finishing
-Greek and Romanian means roughly 300 more. Whoever plans that prices the
-manifest first — and the Lighthouse FCP floor, bimodal at about 1360 or 1760 ms
-against a 1500 ms floor, is what it trips, not the e2e suite. **The local floor
-is not a reading of the runner's**: all four routes fail it on this desk at
-1756-1871 ms while CI passes.
+The author's rule — every saint hyperlinked in a life, and every saint mentioned
+in one, appears in that saint's Related section — could not be held by hand,
+because the hyperlink is computed at render time by `lib/cross-link.js` against
+the whole corpus and `related` is a hand-written array. The two diverged by
+construction. `scripts/related-floor.mjs` now runs the linker's *own* index over
+each life's prose and unions what it finds into `related`, both ways, and
+`tests/related-floor.test.mjs` holds it there. Backed out by deleting
+`gregory-palamas` from `saints/dumitru-staniloae/saint.json` — the case the item
+came from — and confirmed to fail before it was believed.
+
+Measured: 855 names linked in prose, 713 taken, **651 folders gained 1,232
+entries**; folders with no `related` key 2,164 → 1,890; `link-coverage.mjs`
+8,931 → **10,163** edges and 2,113 → **1,914** isolated. The surname pass was
+not run and cannot help: `buildSurnameIndex` takes `related` as its input.
+
+**142 exclusions are on file in `scripts/related-floor-exclusions.json`, and 89
+of them want the author.** They are dedications — "entered the monastery of St
+«John the Theologian»" (23 folders), "relics at the Lavra of St «Alexander
+Nevsky»" (14) — and all 89 **are** hyperlinked on the page today, so excluding
+them leaves page and data disagreeing for exactly the 89 edges the item set out
+to close. They were excluded because `docs/CORPUS.md` is binding and says a
+dedication is not a relation. One command flips them in. **The author's rule as
+he stated it includes them; the binding document excludes them. He rules.**
+
+The other 51 are the corpus's own denials — "He is not the «Laurence of
+Chernigov» whom the Romanian calendar keeps" — where a `related` row would
+assert the opposite of the life and no test could see it. Century mismatch was
+tried as an ambiguity signal and **rejected**: 195 pairs over 150 years, 114
+non-dedication, and reading them found no wrong-saint match, so it would have
+cost real relations to catch nothing.
+
+### The shelf-row flakes are measured, and they are the known one
+
+The two `chrome.spec.js` shelf-row failures were on file as failing at both
+projects in all three runs of last sitting, with no rate. On `1fd21622`, 48 runs
+at two workers: **"the shelf row carries no ×" fails 2 of 12 at desktop and 0 of
+12 at mobile-360; "a swiped row goes without flying" 0 of 24.** That matches the
+4-in-24 already recorded for this tree and the 2-in-24 on pre-wave `bf181d2f`,
+so it is the swipe flake `STRUCTURE.md` §6 item 5 rules on and not a regression.
+It is **load-dependent, not project-dependent** — which is why a full run shows
+it at both projects and a two-worker run of the pair shows it at one. Do not
+measure it again; fix the gesture or leave it.
+
+### What the sweep could not fix, and it is in the wave's path
+
+`STRUCTURE.md` §6 item 14 is the whole of it. Nine *computed* fixtures narrow or
+die as the Russian and Serbian waves fill all 366 days, and three die outright
+because each needs a church that keeps **nobody** on a civil day:
+`dayOneChurchKeeps`, `dayKeptOnlyElsewhere`, `dayOneElsewhereMade`. Two already
+throw. **`e2e/chrome.spec.js` line 498 is the one surviving caller of the worst
+of them.** The repair is the one `daily-panel.spec.js` already uses —
+`withoutSaintsOn` makes the state rather than finding it — and doing it before
+the wave is cheaper than during it, which is the whole lesson of the three reds
+that paid for this sweep.
+
+Two premises were left typed on purpose, with the reason on file: the second
+half of `daily-register.spec.js`'s mixed-cards test asserts Callinicus and
+Eutychius by name as its Serbian type-word half, and its name-day test asserts
+Sozon as the hero and «Иоанн» in Russian. A computed day supplies neither, and a
+fixture chosen on one criterion with two assertions typed against another is
+worse than the literal.
 
 ## Where the second sitting stood (3 October 2026, overnight)
 
