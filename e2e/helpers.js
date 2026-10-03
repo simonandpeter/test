@@ -683,6 +683,44 @@ export const dayOfMixedCards = (church, { pictured, blank }) => {
 };
 
 /**
+ * A civil day of 2026 where the day's own record and the hero's folder sing
+ * some of the same hymns.
+ *
+ * The Daily panel draws hymns from both — the church's calendar for the day
+ * above, the hero's folder below — and the two overlap, because the day's are
+ * transcribed from the pages the folders cite.
+ *
+ * `every: false` wants an overlap that is *partial*, which is the day that can
+ * tell a dropped duplicate from a block that never loaded: the folder's other
+ * hymn still has to arrive. `every: true` wants the folder to add nothing at
+ * all, which is the shape the author met on 4 October.
+ *
+ * Keyed on the published source, which is how `views/daily/record.js` keys it.
+ *
+ * @returns `{ route, feast, saintOnly }` — the day, how many hymns its record
+ *   holds for the church, and how many of the hero's it does not hold.
+ */
+export const dayHeroSharesHymns = (church, { every = false } = {}) => {
+  const key = (h) => `${h.church}|${h.source?.url ?? h.source?.text ?? ''}`;
+  for (const iso of CIVIL_2026) {
+    const feast = (recordedDay(iso, church)?.hymns ?? []).filter((h) => h.church === church);
+    if (!feast.length) continue;
+    const slugs = kept(church, iso);
+    const hero = pickHero(iso, slugs.map((slug) => ({ slug })), BY_SLUG, church);
+    const own = (FOLDERS.find((f) => f.slug === hero)?.hymns ?? []).filter((h) => h.church === church);
+    const keys = new Set(feast.map(key));
+    const shared = own.filter((h) => keys.has(key(h))).length;
+    const saintOnly = own.length - shared;
+    if (shared > 0 && (every ? saintOnly === 0 : saintOnly > 0)) {
+      return { route: `/calendar/${iso}`, feast: feast.length, saintOnly };
+    }
+  }
+  throw new Error(
+    `no civil day of 2026 gives ${church} a hero sharing ${every ? 'every one of' : 'some but not all of'} the day's hymns`,
+  );
+};
+
+/**
  * A civil day of 2026 whose `church` commemorations yield **exactly one** name
  * day, through `lib/name-days.js` — the page's own arithmetic, so a name form
  * added to a folder moves the fixture with it rather than against it.

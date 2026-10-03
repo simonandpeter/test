@@ -9,6 +9,7 @@ import {
   EMPTY_ISO,
   dayOneElsewhereMade,
   dayHeroWithoutIcon,
+  dayHeroSharesHymns,
   dayWithoutHymns,
   POPULATED,
   aDayThatIsNotToday,
@@ -1059,6 +1060,38 @@ test('the hymns of the day are the chosen church own, in its language, and the h
   await page.goto(dayWithoutHymns('romanian'), { waitUntil: 'networkidle' });
   await expect(page.locator('[data-hymns]:not([hidden])')).toHaveCount(0);
   await expect(page.locator('[data-readings]')).toHaveCount(0);
+});
+
+
+test('a hymn the day and its hero both sing is printed once', async ({ page }) => {
+  /*
+   * Author, 2026-10-04: "For today's Romanian saint in Daily, the hymns have
+   * doubled up." The panel draws the day's own hymns above and the hero's
+   * folder's below, and the day's are transcribed from the pages the folders
+   * cite — 67 of the day records' hymns are a folder's hymn under the same
+   * URL — so every one of them was printed twice.
+   *
+   * Counted, not matched: the fixture reads each day's two lists and says how
+   * many hymns belong to the day and how many the hero adds. Read in the
+   * church's own language, because `mergeForReading` collapses hymns for an
+   * English reader and that is a different question with tests of its own.
+   */
+  const partial = dayHeroSharesHymns('russian');
+  await ready(page, { church: 'russian', language: 'ru' });
+  await page.goto(partial.route, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn')).toHaveCount(partial.feast);
+  // The hero's own, which the day does not hold: this is what makes the line
+  // above a dropped duplicate rather than a block that never arrived.
+  await expect(page.locator('[data-hymns] [data-saint-hymns] .hymn')).toHaveCount(partial.saintOnly);
+
+  // And the shape the author met: a hero whose every hymn the day already
+  // sings, where the folder adds nothing and the section does not grow.
+  const every = dayHeroSharesHymns('romanian', { every: true });
+  await openChooser(page);
+  await page.locator('#church-panel [data-church="romanian"]').click();
+  await page.goto(every.route, { waitUntil: 'networkidle' });
+  await expect(page.locator('[data-hymns] [data-feast-hymns] .hymn')).toHaveCount(every.feast);
+  await expect(page.locator('[data-hymns] .hymn')).toHaveCount(every.feast);
 });
 
 
