@@ -16,6 +16,11 @@
       "form": "Мария Константинопольская, Палестинская",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Мария Константинопольская, Палестинская, прп.», with the rank words left off."
+    },
+    {
+      "form": "Марија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's enumerated heading for 26. јануар ст. ст. (civil 2026-02-08), „Преподобни Ксенофонт и Марија, и синови њихови Јован и Аркадије“. Her own name is taken out of the four and the rank word „Преподобни“ left off; the heading gives her no epithet and names her simply beside her husband."
     }
   ],
   "sex": "female",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.02.2026 (26. јануар ст. ст.) — „Преподобни Ксенофонт и Марија, и синови њихови Јован и Аркадије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-08&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

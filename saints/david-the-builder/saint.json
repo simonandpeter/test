@@ -17,6 +17,11 @@
       "form": "Давид III Возобновитель",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Давид III Возобновитель, царь Иверии и Абхазии», with the rank words left off."
+    },
+    {
+      "form": "Давид",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 26. јануар ст. ст. (civil 2026-02-08), „Свети Давид, цар грузијски (1089-1130)“. The word „Свети“ is left off, and so are the clause „цар грузијски“, which is the office, and the parenthesis of years — so the form stands bare. The Prologue's bracket opens on 1089, the year of his accession the folder already holds, and closes on 1130, where the folder's Romanian source gives 1125; the two are not reconciled here."
     }
   ],
   "sex": "male",
@@ -85,8 +90,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.02.2026 (26. јануар ст. ст.) — „Свети Давид, цар грузијски (1089-1130).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-08&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
