@@ -1,0 +1,64 @@
+{
+  "slug": "vladimir-presbyter-martyr-1919",
+  "display_name": "Vladimir (Fokin)",
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Владимир (Фокин)",
+      "lang": "ru",
+      "note": "Read out of the calendar's own name link behind that line, «Владимир (Фокин), иерей, сщмч.», with the rank words left off; the day line itself gives the name without the surname and in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, «Сщмчч. Николая, Феодора и Владимира пресвитеров (1919)»."
+    }
+  },
+  "related": [
+    "nicholas-presbyter-martyr-1919-11-january",
+    "theodore-presbyter-martyr-1919"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст. — «Сщмчч. Николая, Феодора и Владимира пресвитеров (1919)»",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

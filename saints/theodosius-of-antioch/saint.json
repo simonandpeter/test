@@ -12,13 +12,27 @@
       "form": "Θεοδόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Φεβρουαρίου, «Όσιος Θεοδόσιος ὁ ἐξ Ἀντιοχείας», with the rank word left off."
+    },
+    {
+      "form": "Феодосий Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 января ст. ст., «Феодосий Антиохийский, прп.», with the rank word left off."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст. — «Прп. Феодосия Антиохийского (ок. 412)»",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +61,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 412,
+      "latest": 412,
+      "display": "c. 412",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 11 января ст. ст., «Прп. Феодосия Антиохийского (ок. 412)», and its life page's closing «(+ок. 412)»; the «ок.» is the source's own."
+    }
   }
 }

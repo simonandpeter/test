@@ -11,6 +11,11 @@
       "form": "Θεοδόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Όσιος Θεοδόσιος ο κοινοβιάρχης», with the rank word left off."
+    },
+    {
+      "form": "Феодосий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 января ст. ст., «Преподобный Феодосий Великий», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст. — «Прп. Феодосия Великого, общих житий начальника (529)»",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -108,6 +122,38 @@
       },
       "english": {
         "text": "Shining with virtues given of God, O venerable one, thou wast shown a bright pattern of the monastic polity, and a godlike luminary and exarch, O wise Theodosius, imitator of the angels, servant of the Trinity. Entreat her without ceasing, that our souls may find mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Феодосие отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст., «Тропарь преподобного Феодосия», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren wilderness, and with sighings from the depth thou didst make thy labours fruitful a hundredfold, and thou wast a lamp to the whole world, shining with wonders, O Theodosius our father: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Насажден во дворех Господа твоего,/ преподобными твоими добродетельми красно процвел еси/ и умножил еси чада твоя в пустыни,/ слез твоих тучами напаяемая,/ стадоначальниче Божий Божественных дворов.// Темже зовем: радуйся, отче Феодосие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст., «Кондак преподобного Феодосия», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Planted in the courts of thy Lord, thou didst blossom beautifully with thy holy virtues and didst multiply thy children in the wilderness, watering them with the showers of thy tears, O leader of the flocks of God's divine courts. Therefore we cry: rejoice, O father Theodosius.",
         "rendered": "site"
       }
     }

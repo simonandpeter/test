@@ -1,0 +1,67 @@
+{
+  "slug": "vladimir-confessor-presbyter-1932",
+  "display_name": "Vladimir (Khirasko)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Владимир (Хираско)",
+      "lang": "ru",
+      "note": "Read out of the calendar's own name link behind that line, «Владимир (Хираско), протоиерей, исп.», with the rank words left off; the Minsk life page writes it «Владимир Хираско»; the day line itself gives the name without the surname and in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's Minsk new-martyrs page: «родился 11 января 1873 года в Подольске на Украине»."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket, «Св. Владимира исп., пресвитера (1932)», and its Minsk page: «После освобождения в 1932 году, батюшка, будучи тяжко больным, умер спустя несколько месяцев»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст. — «Св. Владимира исп., пресвитера (1932)»",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

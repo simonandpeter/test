@@ -12,6 +12,11 @@
       "form": "Μιχαήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιανουαρίου, «Άγιος Μιχαήλ διά Χριστόν Σαλός και Θαυματουργός», with the rank word left off."
+    },
+    {
+      "form": "Михаил Клопский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 января ст. ст., «Преподобный Михаил Клопский», with the rank word left off; the line itself adds «Новгородского»."
     }
   ],
   "dates": {
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст. — «Прп. Михаила Клопского, Новгородского (ок. 1453-1456)»",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   },
   "related": [
     "michael-the-russian-1-april"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Иже на земли Христа ради волею в буйство преложився, / мира сего красоты отнюд возненавидел еси / и, плотская играния увядив постом и жаждею и на земли леганием, / от зноя же и студени, от дождя и снега / и от прочия воздушныя тягости никогда же уклонился еси, / душу же очистил еси добродетельми, яко злато в горниле, / отче преподобне Богоносне Михаиле, / и ныне на Небесех предстоиши престолу Пресвятыя Троицы. / Но яко имея дерзновение многое, / моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст., «Тропарь преподобного Михаила Клопского, Новгородского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having of thine own will turned to folly upon earth for Christ's sake, thou didst utterly hate the beauties of this world; and withering the sportings of the flesh by fasting and thirst and by lying on the bare ground, thou didst never turn aside from heat or frost, from rain or snow or any other hardship of the open air, but didst cleanse thy soul with virtues as gold in the furnace, O venerable God-bearing father Michael, and now in the heavens thou standest before the throne of the Most Holy Trinity. But as one having great boldness, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Духа Святаго силою уподобился еси Богоглаголивым древним пророком,/ сказав безвестная и тайная и еже годе судьбам Божиим в сбытие, / и ина многа чудеса о Христе сотворив,/ и люди удивив, торжествовати устроил еси вопиющия: / слава Богу, прославляющему святыя Своя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 января ст. ст., «Кондак преподобного Михаила Клопского, Новгородского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the power of the Holy Spirit thou wast made like the God-speaking prophets of old, telling things unknown and hidden and what was pleasing to the judgements of God for their fulfilment, and working many other wonders in Christ; and having amazed the people, thou didst set them to keep festival and to cry: glory to God, who glorifieth his saints.",
+        "rendered": "site"
+      }
+    }
   ]
 }
