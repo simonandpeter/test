@@ -107,6 +107,12 @@
       "note": "saint.gr's page head: «Αγιος Κοσμας ο Μελωδος Επισκοπος Μαϊουμα (; - 787)». The page gives no year for his birth."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "john-of-damascus"
   ]

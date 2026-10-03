@@ -123,6 +123,12 @@
       "note": "saint.gr: «Η Αγία Κικιλία έζησε τον 3ο μ.Χ. αιώνα» and «Κατά τον επί Διοκλητιανού διωγμού η Κικιλία, ο Βαλέριος και ο Τιβούρτιος συνέχιζαν να δηλώνουν την πίστη τους στον Ιησού Χριστό». The page gives no year; the interval is the reign it names for the persecution, and its own century for her life is the wider claim beside it."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "valerian-husband-of-cecilia",
     "tiburtius-brother-of-valerian",

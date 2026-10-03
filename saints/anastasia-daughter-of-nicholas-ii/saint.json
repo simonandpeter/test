@@ -13,6 +13,12 @@
     "passion-bearer",
     "princess"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "alexandra-wife-of-nicholas-ii",
     "alexei-son-of-nicholas-ii",
