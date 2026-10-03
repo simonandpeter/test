@@ -12,13 +12,29 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Όσιος Νικήτας ο Ομολογητής και Πατρίκιος», with the rank word left off."
+    },
+    {
+      "form": "Никита Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1614, «Никита Константинопольский, Исповедник, прп.», with the rank words left off. The day line gives «Никиты исп» alone."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Прп. Никиты исп (ок. 838).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph — a polyeleos before the Iveron icon of the Theotokos, and the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the company of 251 — and neither reaches a later line. The one further polyeleos the day's readings name is Thaddeus of Tver's."
+      },
+      "note": "The same man and the same day as the Greek, and the two agree on the age and the year. The Russian is the fuller of the two on the court he left: he was at the court of the empress Irene — whose reign it dates 797 to 802 — and of her son Constantine, refused all titles and honours to be tonsured, and at the emperor's own request stayed in a monastery of the capital rather than going out to the desert. Under the iconoclast Theophilus he was driven out of it by the heretics for rebuking the heresy, and wandered the country a long while."
     },
     {
       "church": "romanian",
@@ -60,7 +76,7 @@
       "latest": 838,
       "display": "838",
       "basis": "attested",
-      "note": "saint.gr: «σε ηλικία 75 χρονών απεβίωσε ειρηνικά το έτος 838 μ.Χ.», and its page head gives him as «(763 - 838)»."
+      "note": "saint.gr: «σε ηλικία 75 χρονών απεβίωσε ειρηνικά το έτος 838 μ.Χ.», and its page head gives him as «(763 - 838)». days.pravoslavie.ru agrees on both figures and is less certain of the year: «Скончался он в возрасте 75 лет около 838 года», about 838, at the age of seventy-five. The bound is left at the year saint.gr states."
     }
   },
   "text": {
