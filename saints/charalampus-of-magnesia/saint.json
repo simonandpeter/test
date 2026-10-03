@@ -16,6 +16,11 @@
       "form": "Харалампий",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Священномученик Харалампий», with the rank word left off. The calendar gives the name without any epithet or see."
+    },
+    {
+      "form": "Харалампије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 10. фебруар ст. ст., „Свештеномученик Харалампије.“, with the rank word Свештеномученик left off; the heading gives no epithet and no see."
     }
   ],
   "sex": "male",
@@ -70,8 +75,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.02.2026 (10. фебруар ст. ст.) — „Свештеномученик Харалампије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

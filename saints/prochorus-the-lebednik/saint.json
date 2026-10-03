@@ -11,6 +11,11 @@
       "form": "Прохор Печерский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 февраля ст. ст., «Преподобный Прохор Печерский», with the rank word left off. The day's line adds the by-name «Лебедника», after the goosefoot he made his bread from; the name link leaves it out, and the name is read from the link."
+    },
+    {
+      "form": "Прохор Лободник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 10. фебруар ст. ст., „Преподобни Прохор Лободник.“, with the rank word Преподобни left off. The Serbian by-name is formed on лобода, the same plant the Russian calendar's Лебедник is formed on."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.02.2026 (10. фебруар ст. ст.) — „Преподобни Прохор Лободник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
