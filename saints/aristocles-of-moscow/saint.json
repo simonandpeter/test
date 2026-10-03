@@ -6,6 +6,10 @@
     {
       "form": "Аристоклий Московский",
       "lang": "ru"
+    },
+    {
+      "form": "Όσιος Αριστοκλής ο Αθωνίτης",
+      "lang": "el"
     }
   ],
   "sex": "male",
@@ -35,7 +39,8 @@
       "feast": {
         "day": 24,
         "month": 8,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Sretensky day prints «Прп. Аристоклия, старца Московского (1918)». The corpus held him twice, once for each calendar, as «Όσιος Αριστοκλής ο Αθωνίτης» and once as «Прп. Аристоклия, старца Московского»; the author ruled on 3 October 2026 that they are one man (TODO item 13 row 11) and this record is the merge. It is not a doubt: both lives carry the same man — Alexis Amvrosiev of Orenburg, born 1846, Athos in 1876, tonsured Aristocles in 1880, the Moscow metochion, dead 24 August 1918, moved to the Danilov in 1923, glorified 2001."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Прп. Аристоклия, старца Московского (1918)»",
@@ -46,12 +51,22 @@
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 24 august (checked 2026-08-23); no other day checked."
+      "note": "Not on doxologia.ro’s list for 24 august, checked under both name forms (2026-08-22 and 2026-08-23); no other day checked."
     },
     {
       "church": "greek",
-      "status": "undocumented",
-      "note": "Not in the Orthodox Synaxaristis for 24 August (saint.gr, checked 2026-08-23); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 8,
+        "calendar": "revised-julian",
+        "note": "The same day on the Greek calendar, kept as «Όσιος Αριστοκλής ο Αθωνίτης», the Athonite rather than the Muscovite. The corpus held him twice, once for each calendar, as «Όσιος Αριστοκλής ο Αθωνίτης» and once as «Прп. Аристоклия, старца Московского»; the author ruled on 3 October 2026 that they are one man (TODO item 13 row 11) and this record is the merge. It is not a doubt: both lives carry the same man — Alexis Amvrosiev of Orenburg, born 1846, Athos in 1876, tonsured Aristocles in 1880, the Moscow metochion, dead 24 August 1918, moved to the Danilov in 1923, glorified 2001."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 24 Αυγούστου — «Όσιος Αριστοκλής ο Αθωνίτης»",
+        "url": "https://www.saint.gr/08/24/index.aspx",
+        "year": 2026
+      }
     },
     {
       "church": "serbian",
@@ -61,5 +76,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "aliases": [
+    "aristokles-the-athonite"
+  ]
 }

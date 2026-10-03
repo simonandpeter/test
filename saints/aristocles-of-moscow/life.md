@@ -54,6 +54,15 @@ Nicetas. He is kept on 24 August of the old style, 6 September, and in the
 synaxes of the Moscow saints and of the fathers of the Russian monastery of
 St Panteleimon on Athos.
 
+The Greek calendar keeps the same day, as «Όσιος Αριστοκλής ο Αθωνίτης» —
+the Athonite rather than the Muscovite — and tells the same life in short: the
+tonsure of 1880, the metochion he built up and fathered, the gifts of foresight
+and of healing, the love that softened the hardest hearts, the three signs of
+the cross before the icon of the Mother of God Gorgoypekoos in his cell on the
+day he died, and the burial beneath the church he had built to it. This corpus
+held the two calendars as two folders; they are one record now.
+
 *After the life printed by the Russian church calendar at azbyka.ru —
 [the entry](https://azbyka.ru/days/sv-aristoklij-amvrosiev-starec-moskovskij), read 6 September 2026; until
-then this entry had only the Sretensky calendar’s line.*
+then this entry had only the Sretensky calendar’s line; and the Ορθόδοξος
+Συναξαριστής (saint.gr), 24 Αυγούστου — [the entry](https://www.saint.gr/841/saint.aspx), read 23 August 2026.*
