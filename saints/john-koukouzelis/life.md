@@ -10,4 +10,6 @@ Once, dozing in the choir during the Akathist, he saw the Theotokos, who told hi
 
 The two pages disagree on his time — the Greek puts him in the years of the Komnenoi but his death at the start of the fifteenth century, the Romanian at the court of John II Komnenos — and the Greek synaxarion tells the story of the Theotokos’s gold coin of Gregory the Domestikos, though its own apolytikion for John has her reward him with a golden coin.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — [the entry](https://www.saint.gr/2568/saint.aspx); doxologia.ro, [Viaţa Sfântului Ioan Cucuzel](https://doxologia.ro/viata-sfantului-ioan-cucuzel); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 1 October and prints «Прп. Иоанна Кукузеля (XIV)», the fourteenth century. That falls inside the span this folder already carried — the Komnenian twelfth at one end, the early fifteenth at the other — without closing it, so the interval stays open and the reading is recorded in the Russian row. The Greek keeps Gregory the Domestikos beside him on this day and the Russian page does not name Gregory at all.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 1 Οκτωβρίου — [the entry](https://www.saint.gr/2568/saint.aspx); doxologia.ro, [Viaţa Sfântului Ioan Cucuzel](https://doxologia.ro/viata-sfantului-ioan-cucuzel); read 17 September 2026; the Russian church calendar keeps him on the Julian 1 October — [the day](https://days.pravoslavie.ru/Days/20261001.html); read 4 October 2026.*

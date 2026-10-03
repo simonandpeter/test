@@ -6,12 +6,26 @@
       "form": "Mirian",
       "lang": "ro",
       "note": "Read out of «Sfinții Împărați ai Georgiei, Mirian și Nana» in this folder’s Romanian citation."
+    },
+    {
+      "form": "Мириан Иверский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6859, «Мириан Иверский, царь», with the rank word left off."
     }
   ],
   "sex": "male",
   "types": [
     "king"
   ],
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": null,
+      "display": "after 361",
+      "basis": "traditional",
+      "note": "An open upper bound, which is what the source gives: days.pravoslavie.ru's 1 октября ст. ст. prints «царя Иверского Мириана (после 361)» — after 361. The folder held no date at all before this reading."
+    }
+  },
   "related": [
     "constantine-the-great",
     "eustathius-of-antioch",
@@ -20,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Равноапп. царя Иверского Мириана (после 361) (Груз.) и царицы Иверской Наны (ок. 364) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The «(Груз.)» marks this as one of the Georgian commemorations the Russian calendar keeps. The same day also carries «Празднование в честь Хитона Господня и Столпа Животворящего (330) (Груз.)», the feast of the Lord's Robe and the Life-giving Pillar, which is a feast and not a folder."
     },
     {
       "church": "romanian",

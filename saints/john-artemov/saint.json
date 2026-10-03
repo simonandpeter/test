@@ -1,0 +1,66 @@
+{
+  "slug": "john-artemov",
+  "display_name": "John (Artemov)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Артемов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14098, «Иоанн (Артемов), мч.», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the four names it keeps together, his being the last: «Сщмчч. Александра, Георгия, Николая пресвитеров, мч. Иоанна (1937)»."
+    }
+  },
+  "related": [
+    "alexander-agafonnikov",
+    "george-arkhangelsky",
+    "nicholas-kuligin"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Сщмчч. Александра, Георгия, Николая пресвитеров, мч. Иоанна (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "«Мч.» and not «сщмч.»: the line's three presbyters are hieromartyrs and he is a martyr, a layman with no rank in the Church and no office."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 14 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/14 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 14 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

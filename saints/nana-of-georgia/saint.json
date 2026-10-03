@@ -6,12 +6,26 @@
       "form": "Nana",
       "lang": "ro",
       "note": "Read out of «Sfinții Împărați ai Georgiei, Mirian și Nana» in this folder’s Romanian citation."
+    },
+    {
+      "form": "Нана",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6860 is «Нана, царица»; the bare name is all of it that is not rank. Its day line calls her «царицы Иверской Наны»."
     }
   ],
   "sex": "female",
   "types": [
     "queen"
   ],
+  "dates": {
+    "death": {
+      "earliest": 364,
+      "latest": 364,
+      "display": "c. 364",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's 1 октября ст. ст.: «царицы Иверской Наны (ок. 364)» — about 364. The folder held no date at all before this reading."
+    }
+  },
   "related": [
     "constantine-the-great",
     "eustathius-of-antioch",
@@ -21,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Равноапп. царя Иверского Мириана (после 361) (Груз.) и царицы Иверской Наны (ок. 364) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The «(Груз.)» marks this as one of the Georgian commemorations the Russian calendar keeps. She and her husband [Mirian](/saints/mirian-of-georgia) are one line on the page and two folders here."
     },
     {
       "church": "romanian",

@@ -1,0 +1,66 @@
+{
+  "slug": "michael-vologodsky",
+  "display_name": "Michael (Vologodsky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Михаил (Вологодский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9679, «Михаил (Вологодский), иерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Михаила пресвитера (1920)»."
+    }
+  },
+  "related": [
+    "george-arkhangelsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Сщмч. Михаила пресвитера (1920).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "1920 puts him with the civil war rather than with either of the great waves the day's other new martyrs belong to, 1918 and 1937."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 14 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/14 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 14 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

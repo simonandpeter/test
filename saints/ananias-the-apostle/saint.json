@@ -1,6 +1,7 @@
 {
   "slug": "ananias-the-apostle",
   "display_name": "Ananias",
+  "office": "Bishop of Damascus",
   "names": [
     {
       "form": "Άγιος Ανανίας ο Απόστολος",
@@ -9,6 +10,11 @@
     {
       "form": "Sfântul Apostol Anania",
       "lang": "ro"
+    },
+    {
+      "form": "Анания",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 156 is «Святитель Анания, епископ Дамасский, апостол от 70-ти, сщмч.»; the bare name is all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -16,11 +22,31 @@
     "apostle",
     "martyr"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century the Russian calendar prints after his name, «Ап. от 70-ти Анании (I)». The folder held no date at all before this reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Ап. от 70-ти Анании (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026,
+        "note": "days.pravoslavie.ru's name page 156 heads him «епископ Дамасский»; the folder carried no office before this reading."
+      },
+      "note": "His name page lists one other day, «4 января (70 ап.)», the synaxis of the Seventy Apostles. One row per church is the schema, so the January day is recorded here and he does not render on it. The day carries a troparion for him which this batch did not take."
     },
     {
       "church": "romanian",
@@ -56,6 +82,9 @@
       "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "greek",
@@ -140,8 +169,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }
