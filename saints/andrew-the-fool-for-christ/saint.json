@@ -11,6 +11,10 @@
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ανδρέας ο διά Χριστόν σαλός», with the rank word left off. The epithet «ο διά Χριστόν σαλός» is left off with the rank."
+    },
+    {
+      "form": "Св. Андреј Јуродиви",
+      "lang": "sr"
     }
   ],
   "attestations": [
@@ -37,13 +41,36 @@
         "url": "https://www.saint.gr/05/28/index.aspx",
         "year": 2026
       },
-      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. The page places the vision of the Mother of God at the Blachernae in the same breath as the feast of the Protection — «είδε τη Θεοτόκο στον ουρανό προσευχόμενη και σκέπουσα το λαό με το τίμιο ωμοφόριό της ( 1 και 28 Οκτωβρίου)» — so it points at two October days as well, but those are the feast of the Protection and not a second commemoration of him, and no second row or folder is made on that account. The page gives no year of birth and no year of death, only the reign it sets him in, so there is no `dates` object here. It prints an apolytikion, two kontakia, a megalynarion, an oikos and a kathisma; the apolytikion is taken."
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 28 Μαΐου εκάστου έτους», the same day as the listing. The page places the vision of the Mother of God at the Blachernae in the same breath as the feast of the Protection — «είδε τη Θεοτόκο στον ουρανό προσευχόμενη και σκέπουσα το λαό με το τίμιο ωμοφόριό της ( 1 και 28 Οκτωβρίου)» — so it points at two October days as well, but those are the feast of the Protection and not a second commemoration of him, and no second row or folder is made on that account. The page gives no year of birth and no year of death, only the reign it sets him in and his age at death; the year in `dates` comes from the Serbian Prologue and not from here. It prints an apolytikion, two kontakia, a megalynarion, an oikos and a kathisma; the apolytikion is taken."
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "First of the three the Ohrid Prologue enumerates for this day. The Serbian church keeps him on 2 October where the Greek keeps him on 28 May, which is the day already recorded in this folder's Greek row; the two days are not reconciled here, each church's row carrying its own."
+      },
+      "source": {
+        "text": "Охридски пролог, 2. октобар ст. к. — «1. Св. Андреј Јуродиви. Словенин по пореклу. Као роб купљен неким богаташем Теогностом у Цариграду у време цара Лава Мудрога, сина цара Василија Македонца. … После нечувено тешких подвига упокојио се 911. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's entry for 2 October ст. к. is the fullest account of him in the corpus's four calendars and is the only one to give a year for his repose."
     }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 911,
+      "latest": 911,
+      "display": "911",
+      "basis": "traditional",
+      "note": "One of the two sources gives a year. The Serbian Ohrid Prologue, read 4 October 2026: «После нечувено тешких подвига упокојио се 911. год. и преселио у вечну славу Господа свога.» saint.gr gives no year and says only that he reposed at sixty-six, inside the reign of Leo VI it dates 886–912."
+    }
+  },
+  "related": [
+    "basil-the-macedonian"
   ],
   "text": {
     "life": "life.md"

@@ -10,6 +10,15 @@
     {
       "form": "Sfânta Muceniță Iustina",
       "lang": "ro"
+    },
+    {
+      "form": "Свешт. муч. Кипријан и Јустина девица",
+      "lang": "sr"
+    },
+    {
+      "form": "Јустина",
+      "lang": "sr",
+      "note": "Her own name, read out of «Свешт. муч. Кипријан и Јустина девица» — the line already recorded here, which names two saints, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "female",
@@ -20,10 +29,10 @@
   "dates": {
     "floruit": {
       "earliest": 249,
-      "latest": 251,
-      "display": "249–251",
+      "latest": 300,
+      "display": "249–251, or the end of the 3rd century",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu»."
+      "note": "Two readings, and the interval is their union. saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu». The Serbian Ohrid Prologue, read 4 October 2026, instead puts the beheading at Nicomedia «крајем III столећа», at the end of the third century. Neither reading is preferred."
     }
   },
   "related": [
@@ -65,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue enumerates for this day, under one heading with Cyprian. It dates the martyrdom to the end of the third century where the Greek and Romanian set it under Decius, and the disagreement is recorded rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 2. октобар ст. к. — «2. Свешт. муч. Кипријан и Јустина девица. Кипријан – досељен из Картагене у Антиохију, где живљаше и Јустина са својим родитељима, Едесијем и Клеодонијом. … обоје беху предати суду у Дамаску, по том мучени и посечени у Никомидији крајем III столећа.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-15&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
