@@ -1,12 +1,6 @@
 {
   "slug": "macarius-of-kyiv",
   "display_name": "Macarius of Kyiv",
-  "sex": "male",
-  "types": [
-    "hieromartyr",
-    "metropolitan",
-    "abbot"
-  ],
   "office": "Metropolitan of Kyiv",
   "names": [
     {
@@ -14,6 +8,12 @@
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Μακάριος ο Ιερομάρτυρας Μητροπολίτης Κιέβου», with the rank word and the see left off."
     }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "metropolitan",
+    "abbot"
   ],
   "dates": {
     "death": {
@@ -28,7 +28,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "note": "Read and not found, and the near-miss is the point: days.pravoslavie.ru's 5 октября ст. ст. (civil 18 October 2026) was read on 2026-10-04 and prints the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», with two Macarii in it — the metropolitan of Moscow who died in 1563 and the metropolitan of Moscow and Kolomna who died in 1926. Neither is this Macarius, metropolitan of Kyiv, killed in 1497. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",

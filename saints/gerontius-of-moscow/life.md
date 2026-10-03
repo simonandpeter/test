@@ -4,4 +4,6 @@ saint.gr's calendar names him Gerontius of Moscow and gives him three sentences:
 
 That is the whole of it. The page tells nothing of his years at Kolomna, nothing of his ten years in the metropolitan see, names no relics and prints no hymn, and nothing more is written here than it prints.
 
-*After saint.gr's calendar for 28 Μαΐου — [the day](https://www.saint.gr/05/28/index.aspx) and [the life](https://www.saint.gr/1768/saint.aspx); read 30 September 2026.*
+**The Russian church calendar keeps him on the Julian 5 October with the synaxis of the hierarchs of Moscow**, seventeen names in one line under one polyeleos service, marked «(Моск. Свт.)» and not expanded: Peter, Theognostus, Alexis, Cyprian, Photius, Jonah, Gerontius, Joasaph, Macarius, Philip, Job, Hermogenes, Tikhon, Peter, Philaret, Innocent and Macarius — two and a half centuries of metropolitans, then the patriarchs, then the metropolitans of Moscow and Kolomna, ending with a man shot in 1937. He is the seventh of them. The Russian index gives him the fuller see this folder abbreviates, «митрополит Московский и всея Руси», and one further day, 28 May. It prints no year, so the 1489 here still rests on the source it came from.
+
+*After saint.gr's calendar for 28 Μαΐου — [the day](https://www.saint.gr/05/28/index.aspx) and [the life](https://www.saint.gr/1768/saint.aspx); read 30 September 2026; the Russian church calendar keeps him on the Julian 5 October with the synaxis of the hierarchs of Moscow — [the day](https://days.pravoslavie.ru/Days/20261005.html); read 4 October 2026.*

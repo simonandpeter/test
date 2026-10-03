@@ -44,7 +44,8 @@
       "feast": {
         "day": 24,
         "month": 8,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the first of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it. Its index lists him on «21 декабря» as well, his repose, which is neither this row's day nor the synaxis."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 августа ст. ст. — «Перенесение мощей свт. Петра, митр. Московского, всея России чудотворца (1479)»",
@@ -88,9 +89,20 @@
       "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
     }
   ],
+  "related": [
+    "basil-the-great",
+    "gregory-the-theologian",
+    "john-chrysostom"
+  ],
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "hymns": [
     {
       "church": "russian",
@@ -156,16 +168,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "basil-the-great",
-    "gregory-the-theologian",
-    "john-chrysostom"
   ]
 }

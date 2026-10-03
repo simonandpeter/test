@@ -48,7 +48,7 @@
         "day": 23,
         "month": 9,
         "calendar": "julian",
-        "note": "The Sretensky day prints his glorification of 1977. Its life of him keeps his memory also on 31 марта, the day of his death, on 10 июня with the saints of Siberia and on 5 октября with the Moscow hierarchs; the corpus holds one feast a church, so those days do not list him."
+        "note": "The Sretensky day prints his glorification of 1977. Its life of him keeps his memory also on 31 марта, the day of his death, on 10 июня with the saints of Siberia and on 5 октября with the Moscow hierarchs; the corpus holds one feast a church, so those days do not list him. He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the sixteenth of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 сентября ст. ст. — «Прославление свт. Иннокентия , митр. Московского (1977).»",
@@ -89,6 +89,20 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not in the Ohrid Prologue on pravoslavno.rs for 06.10.2026 (23. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+    }
+  ],
+  "related": [
+    "innocent-of-irkutsk",
+    "nicholas-of-japan",
+    "philaret-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -140,19 +154,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "innocent-of-irkutsk",
-    "nicholas-of-japan",
-    "philaret-of-moscow"
   ]
 }

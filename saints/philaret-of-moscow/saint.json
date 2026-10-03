@@ -12,6 +12,11 @@
       "form": "Φιλάρετος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Φιλάρετος Πατριάρχης Μόσχας», with the rank word and the see left off."
+    },
+    {
+      "form": "Филарет (Дроздов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2284, «Святитель Филарет (Дроздов), митрополит Московский и Коломенский», with the rank and office words left off."
     }
   ],
   "sex": "male",
@@ -19,11 +24,40 @@
     "hierarch",
     "metropolitan"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1782,
+      "latest": 1782,
+      "display": "1782",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
+    },
+    "death": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "traditional",
+      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists one other day, «19 ноября». One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the fifteenth of the seventeen names."
+      },
+      "note": "The Russian index agrees with the folder's see, «митрополит Московский и Коломенский», and gives the surname in brackets as the calendar does for the modern hierarchs: «Святитель Филарет (Дроздов)». It prints no year; the folder's dates still rest on their own source."
     },
     {
       "church": "romanian",
@@ -61,27 +95,11 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
-  "dates": {
-    "birth": {
-      "earliest": 1782,
-      "latest": 1782,
-      "display": "1782",
-      "basis": "traditional",
-      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
-    },
-    "death": {
-      "earliest": 1867,
-      "latest": 1867,
-      "display": "1867",
-      "basis": "traditional",
-      "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
-    }
-  },
   "related": [
     "innocent-of-moscow",
     "leo-of-optina"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

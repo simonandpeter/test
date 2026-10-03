@@ -25,10 +25,6 @@
     "metropolitan",
     "confessor"
   ],
-  "related": [
-    "sabbatius-of-solovki",
-    "alexander-of-svir"
-  ],
   "dates": {
     "birth": {
       "earliest": 1507,
@@ -52,7 +48,8 @@
       "feast": {
         "day": 9,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "He is also kept on the Julian 5 October with the synaxis of the hierarchs of Moscow, «(Моск. Свт.)», as the tenth of its seventeen names, read on 2026-10-04 from days.pravoslavie.ru's own page for that day. One row per church is the schema, so the synaxis is recorded here and he does not render on it."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Свт. Филиппа, митр. Московского и всея России чудотворца (1569).»",
@@ -103,6 +100,10 @@
         "year": 2026
       }
     }
+  ],
+  "related": [
+    "sabbatius-of-solovki",
+    "alexander-of-svir"
   ],
   "text": {
     "life": "life.md"
