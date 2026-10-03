@@ -12,6 +12,11 @@
       "form": "Τατιανή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Αγία Τατιανή», with the rank word left off."
+    },
+    {
+      "form": "Татијана",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 12. јануар ст. ст. (civil 2026-01-25), „Света мученица Татијана“. The words „Света мученица“ are left off: the site composes the rank itself."
     }
   ],
   "sex": "female",
@@ -65,8 +70,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.01.2026 (12. јануар ст. ст.) — „Света мученица Татијана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-25&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

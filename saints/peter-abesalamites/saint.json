@@ -15,6 +15,11 @@
       "form": "Петр Авессаломит (Анийский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Петр Авессаломит (Анийский), мч.», with the rank word left off."
+    },
+    {
+      "form": "Петар Авесаламит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 12. јануар ст. ст. (civil 2026-01-25), „Свети мученик Петар Авесаламит“. The words „Свети мученик“ are left off; „Авесаламит“ is kept, being part of the name."
     }
   ],
   "attestations": [
@@ -53,8 +58,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.01.2026 (12. јануар ст. ст.) — „Свети мученик Петар Авесаламит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-25&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -1,0 +1,59 @@
+{
+  "slug": "theodora-12-january",
+  "display_name": "Theodora (12 January)",
+  "names": [
+    {
+      "form": "Теодора",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 12. јануар ст. ст. (civil 2026-01-25), „Преподобна Мати Теодора“. The rank word „Преподобна“ is left off, and so is „Мати“, which is how the Prologue addresses a nun and not part of her name. The heading gives no epithet, so the form is bare."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable",
+    "monastic"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 425,
+      "display": "early 5th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue: „Упокојила се мирно почетком V века.“ — she reposed in peace at the beginning of the fifth century. The entry gives no year."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the Julian 12 January (3 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 12 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 12 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.01.2026 (12. јануар ст. ст.) — „Преподобна Мати Теодора.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-25&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
