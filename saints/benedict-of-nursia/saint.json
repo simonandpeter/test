@@ -137,5 +137,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "hilary-of-poitiers"
   ]
 }

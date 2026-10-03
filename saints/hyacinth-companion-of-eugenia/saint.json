@@ -45,8 +45,9 @@
     }
   ],
   "related": [
-    "protas-companion-of-eugenia",
-    "eugenia"
+    "eugenia",
+    "hyacinth-of-vicina",
+    "protas-companion-of-eugenia"
   ],
   "text": {
     "life": "life.md"

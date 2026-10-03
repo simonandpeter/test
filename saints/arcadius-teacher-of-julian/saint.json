@@ -55,10 +55,11 @@
     }
   },
   "related": [
-    "julian-companion-of-euboulos",
-    "euboulos-the-physician",
     "arcadius-archbishop-of-cyprus",
-    "arcadius-of-arsinoe"
+    "arcadius-of-arsinoe",
+    "constantine-the-great",
+    "euboulos-the-physician",
+    "julian-companion-of-euboulos"
   ],
   "text": {
     "life": "life.md"

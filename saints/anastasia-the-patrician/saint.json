@@ -55,7 +55,9 @@
       "note": "saint.gr: «ήταν μια από τις πιο θεοφοβούμενες κόρες του Βυζαντίου, στα χρόνια του Ιουστινιανού του μεγάλου (527 - 565 μ.Χ.)». The page gives no year of her own, so the interval is the reign it prints."
     }
   },
-  "related": [],
+  "related": [
+    "justinian-the-great"
+  ],
   "text": {
     "life": "life.md"
   }

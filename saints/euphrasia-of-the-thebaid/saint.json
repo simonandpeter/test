@@ -45,7 +45,10 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
     }
   ],
-  "related": [],
+  "related": [
+    "euphrasia-of-ancyra",
+    "euphrasia-of-nicomedia"
+  ],
   "text": {
     "life": "life.md"
   }

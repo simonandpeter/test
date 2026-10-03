@@ -144,5 +144,13 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "acacius-of-melitene",
+    "cyriacus-the-anchorite",
+    "gerasimus-of-the-jordan",
+    "jacob-of-putna",
+    "theoctistus-of-kucumia",
+    "theoctistus-of-palestine"
   ]
 }

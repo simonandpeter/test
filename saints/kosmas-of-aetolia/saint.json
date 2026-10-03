@@ -145,5 +145,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "anthimos-the-new-of-cephalonia",
+    "nicodemus-the-hagiorite"
   ]
 }

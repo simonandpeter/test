@@ -157,5 +157,23 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "antipas-of-pergamum",
+    "athanasia-of-aegina",
+    "bucolus-of-smyrna",
+    "euodus-of-antioch",
+    "euthymius-of-novgorod",
+    "eutyches-the-hieromartyr",
+    "five-maidens-of-lesbos",
+    "hermione-daughter-of-philip",
+    "irenaeus-of-lyon",
+    "joseph-the-betrothed",
+    "mary-of-cleopas",
+    "micah-of-radonezh",
+    "nicodemus-of-vatopedi",
+    "paisios-the-athonite",
+    "petronius-of-ephesus",
+    "seraphim-of-sarov"
   ]
 }

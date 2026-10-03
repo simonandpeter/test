@@ -48,5 +48,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-of-the-ladder"
+  ]
 }

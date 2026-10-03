@@ -57,7 +57,10 @@
     }
   },
   "related": [
-    "arcadius-of-arsinoe"
+    "arcadius-of-arsinoe",
+    "basil-the-great",
+    "gregory-the-theologian",
+    "john-chrysostom"
   ],
   "text": {
     "life": "life.md"

@@ -14,7 +14,9 @@
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Μελίτων Αρχιεπίσκοπος Καντουαρίας», with the rank word and the see left off. The page prints only this Greek form of the name; the English form here is the one an English reader looks him up under."
     }
   ],
-  "related": [],
+  "related": [
+    "gregory-the-dialogist"
+  ],
   "dates": {
     "death": {
       "earliest": 624,

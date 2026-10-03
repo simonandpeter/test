@@ -71,5 +71,8 @@
       "basis": "traditional",
       "note": "saint.gr: «Ο Όσιος Αβραάμης έζησε κατά τους χρόνους του αυτοκράτορα Θεοδοσίου του Μεγάλου (395 - 408 μ.Χ.)». The interval is the reign the page itself prints. Those years are Arcadius's and not Theodosius the Great's, who died in 395; the mismatch is recorded here and not corrected, because the source's reading is the fact."
     }
-  }
+  },
+  "related": [
+    "theodosius-the-great"
+  ]
 }

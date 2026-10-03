@@ -121,5 +121,8 @@
       "basis": "traditional",
       "note": "saint.gr: «Ο Προφήτης Ησαΐας, υιός του Αμώς, γεννήθηκε στα Ιεροσόλυμα περί το 774 π.Χ.», and the head line of the same page gives «(-774 - ;)». The page gives no year for his death and leaves that half of the head line blank, so no death interval is recorded."
     }
-  }
+  },
+  "related": [
+    "dorotheus-of-tyre"
+  ]
 }

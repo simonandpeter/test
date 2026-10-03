@@ -54,11 +54,12 @@
     }
   },
   "related": [
-    "quadratus-of-corinth",
+    "anectus-companion-of-quadratus",
+    "crescens-of-myra",
     "cyprian-companion-of-quadratus",
     "dionysius-companion-of-quadratus",
-    "anectus-companion-of-quadratus",
-    "paul-companion-of-quadratus"
+    "paul-companion-of-quadratus",
+    "quadratus-of-corinth"
   ],
   "text": {
     "life": "life.md"

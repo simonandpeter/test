@@ -103,5 +103,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "constantine-the-great",
+    "meletius-of-antioch"
   ]
 }

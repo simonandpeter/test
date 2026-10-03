@@ -119,5 +119,10 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "isaiah-the-prophet",
+    "jason-of-tarsus",
+    "sosipater-of-iconium"
   ]
 }

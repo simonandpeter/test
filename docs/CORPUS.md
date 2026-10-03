@@ -247,6 +247,19 @@ which fails on a written link with no `related` row, and
 `node scripts/related-from-links.mjs` (proposes; `--write` applies the read
 rows).
 
+**A name the renderer links is a `related` row too, both ways.** The hyperlink
+in a life is derived at render time by `src/lib/cross-link.js` from every other
+display name in the corpus; `related` is typed by hand. The two have no
+connection, so they diverge with every folder added rather than through
+neglect, and hand-editing cannot close a gap that reopens by construction.
+`node scripts/related-floor.mjs --write` unions what the page's own index finds
+in a life's prose into `related`, on both folders, and never removes a row.
+What it deliberately leaves out is in `scripts/related-floor-exclusions.json`,
+one line each with its category, its reason and the words it was read in — a
+dedication, or a life saying outright that the two are not the same person.
+*Verified by:* `tests/related-floor.test.mjs`, which also fails on an exclusion
+that no longer describes anything and on one with no reason given.
+
 **`hymns`** — copied whole from the cited source with the tone it prints, in
 that church's own language. A hymn belongs to a church as an attestation does;
 the Greek apolytikion and the Romanian tropar are different texts, not
@@ -383,6 +396,7 @@ write** — with exactly one exception, which writes only what a person typed.
 | `draft-saint.mjs` | writes folders from a draft file a person typed; dry run by default; `--undo` | **yes, on `--write`** |
 | `corpus-gate.mjs` | schema + `npm test` + duplicates + names + citations + calendars + the e2e literals | no |
 | `corpus-index.mjs` | the shared reader and the two feast indexes | no |
+| `related-floor.mjs` | the `related` floor: every name the renderer links in a life, both ways | **yes, on `--write`** |
 
 And the ones that already existed and are part of this job:
 `validate.mjs`, `build-manifest.mjs`, `date-audit.mjs`, `language-audit.mjs`,

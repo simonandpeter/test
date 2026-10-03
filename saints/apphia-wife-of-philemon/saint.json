@@ -59,9 +59,10 @@
     }
   ],
   "related": [
-    "philemon-the-apostle",
     "archippus-the-apostle",
-    "paul-the-apostle"
+    "john-chrysostom",
+    "paul-the-apostle",
+    "philemon-the-apostle"
   ],
   "text": {
     "life": "life.md"

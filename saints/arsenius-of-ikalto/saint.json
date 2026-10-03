@@ -70,5 +70,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "david-the-builder"
+  ]
 }

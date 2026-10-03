@@ -14,7 +14,9 @@
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Βαρνάβας της Γεθσημανή», with the rank word and the place left off. The page gives his baptismal name in Greek letters as «Βασίλειος Ίλιτς Μέρκουλωφ»; no Russian form of either name is printed on the page, and none is invented here."
     }
   ],
-  "related": [],
+  "related": [
+    "alexis-of-zosimova"
+  ],
   "dates": {
     "birth": {
       "earliest": 1831,

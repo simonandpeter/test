@@ -135,5 +135,17 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "john-the-theologian",
+    "martha-of-diveyevo",
+    "nicholas-skvortsov",
+    "paraskeva-of-diveyevo",
+    "pelagia-of-diveyevo",
+    "philaret-danilevsky",
+    "seraphim-of-dmitrov",
+    "seraphim-of-vyritsa",
+    "sergius-of-radonezh",
+    "zenobius-mazhuga"
   ]
 }

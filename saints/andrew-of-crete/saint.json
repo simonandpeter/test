@@ -119,5 +119,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "germanus-of-constantinople",
+    "therapon-of-cyprus"
   ]
 }

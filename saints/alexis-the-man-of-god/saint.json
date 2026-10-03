@@ -128,5 +128,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "sebaldus-of-nuremberg",
+    "theodosius-the-younger"
   ]
 }

@@ -13,7 +13,9 @@
       "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Μακάριος Μητροπολίτης Μόσχας», with the rank word and the see left off. No Russian form is printed on the page, and none is invented here."
     }
   ],
-  "related": [],
+  "related": [
+    "barsanuphius-of-optina"
+  ],
   "attestations": [
     {
       "church": "russian",

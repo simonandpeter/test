@@ -12,7 +12,9 @@
       "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Λάζαρος ο Βοσκός από τη Βουλγαρία», with the rank word and the country left off."
     }
   ],
-  "related": [],
+  "related": [
+    "nikephoros-of-chios"
+  ],
   "dates": {
     "birth": {
       "earliest": 1774,

@@ -123,5 +123,8 @@
       "basis": "traditional",
       "note": "saint.gr heads the page «Αγιος Γρηγοριος Επισκοπος Ακραγαντινων (; - 690)» and the narrative closes with it: «Απεβίωσε ειρηνικά σε βαθιά γεράματα το 690 μ.Χ.» The page gives no year of birth, and the reign it names for his entry into the clergy, «Ιουστινιανού του Ρινότμητου (685 - 695 μ.Χ.)», does not sit easily with that death; both are the page's and neither is adjusted."
     }
-  }
+  },
+  "related": [
+    "justinian-rhinotmetos"
+  ]
 }

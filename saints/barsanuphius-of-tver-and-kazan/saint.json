@@ -15,7 +15,9 @@
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Βαρσανούφιος επίσκοπος Τβερ και Καζάν», with the rank word and the see left off."
     }
   ],
-  "related": [],
+  "related": [
+    "barsanuphius-of-optina"
+  ],
   "dates": {
     "birth": {
       "earliest": 1495,

@@ -61,7 +61,9 @@
       "note": "The page heads him «(1754 - 1801)» and closes «Ο αυτοκράτορας αρνήθηκε και στραγγαλίσθηκε» — he refused and was strangled; it gives no date within the year."
     }
   },
-  "related": [],
+  "related": [
+    "sophronius-of-vratsa"
+  ],
   "text": {
     "life": "life.md"
   }

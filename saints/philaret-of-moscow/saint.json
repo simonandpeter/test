@@ -79,5 +79,9 @@
       "basis": "traditional",
       "note": "saint.gr heads the page «Αγιος Φιλαρετος Πατριαρχης Μοσχας (1782 - 1867)». The page gives no narrative at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου» — so the two years in that heading are the whole of its dating."
     }
-  }
+  },
+  "related": [
+    "innocent-of-moscow",
+    "leo-of-optina"
+  ]
 }

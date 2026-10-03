@@ -57,7 +57,9 @@
       "note": "saint.gr: «αποσύρθηκε στη μονή Βγιαζίσκι, όπου κοιμήθηκε με ειρήνη το έτος 1458 μ.Χ.», and the page heads him «(; - 1458)», leaving the year of his birth a question mark."
     }
   },
-  "related": [],
+  "related": [
+    "john-the-theologian"
+  ],
   "text": {
     "life": "life.md"
   }

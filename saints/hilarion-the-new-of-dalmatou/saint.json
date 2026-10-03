@@ -120,5 +120,10 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "gregory-the-decapolite",
+    "hilarion-the-great",
+    "theodore-the-studite"
   ]
 }

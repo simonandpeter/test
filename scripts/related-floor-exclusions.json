@@ -1,0 +1,714 @@
+{
+  "exclusions": {
+    "abramius-of-spassk -> abramius-of-arbela": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "no distich and no hymn. The corpus keeps an «Abramius of Arbela», a bishop of the Persian mart"
+    },
+    "adrian-the-martyr-17-april -> adrian-of-nicomedia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "naion for April as its source. He is not the «Adrian of Nicomedia» whom this calendar keeps on 2"
+    },
+    "aetherius-martyr-18-june -> aetherius-of-cherson": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "nothing of a bishopric. He is not the bishop «Aetherius of Cherson» whom the calendars keep on 7"
+    },
+    "alexander-companion-of-sisinnius -> alexander-of-alexandria": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "rtyr and nothing further, and who is not the «Alexander of Alexandria» the same calendar keeps on th"
+    },
+    "alexander-of-bessarabia -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "d became himself the priest of the church of «Alexander Nevsky» at Călărași-sat, in what is t"
+    },
+    "alexis-the-man-of-god -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": ", at Kykkos in Cyprus and at the Lavra of St «Alexander Nevsky» in St Petersburg. *After dox"
+    },
+    "amphilochius-makris-of-patmos -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ssing gladly; he entered the monastery of St «John the Theologian» as a brother in March 1906, a"
+    },
+    "anastasia-the-roman -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "oly Mountain, and a fragment at the Lavra of «Alexander Nevsky» in Saint Petersburg. *After"
+    },
+    "andrew-stratelates -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "tion of Andrew's relic at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. *After"
+    },
+    "andronicus-lukash -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "nt on with his eldership in the cathedral of «Alexander Nevsky», where seekers from all over"
+    },
+    "anthousa-the-venerable-27-july -> anthousa-of-seleucia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "s name, and neither of them is claimed here: «Anthousa of Seleucia», a martyr, whom the Russian a"
+    },
+    "antony-of-thessalonica -> gregory-palamas": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "painting in the metropolitan church of Saint «Gregory Palamas» at Thessalonica. *After sain"
+    },
+    "aquilina-the-martyr-7-april -> aquilina-of-zagliveri": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "and no manner of death is given. She is not «Aquilina of Zagliveri», the new-martyr near Thessalo"
+    },
+    "arcadius-of-vyazniki -> xenophon-of-constantinople": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "eps on this day another Arcadius, the son of «Xenophon of Constantinople», and the two are different me"
+    },
+    "aretas-of-the-altai -> aretas-of-nagran": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "hurch in America. He is not the great-martyr «Aretas of Nagran», whom the corpus keeps in Oct"
+    },
+    "arsenios-of-cappadocia -> john-chrysostom": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "urgy; and he did this in the church of Saint «John Chrysostom», or of the Mother of God, or"
+    },
+    "arsenios-of-cappadocia -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "is relics are kept at the monastery of Saint «John the Theologian» at Souroti near Thessalonica."
+    },
+    "arsenius-bishop-of-tver -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "s relic, it says, is kept at the Lavra of St «Alexander Nevsky» in St Petersburg. That is al"
+    },
+    "barbara-the-great-martyr -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": ", moved after 1009 to the monastery of Saint «John the Theologian» at Torcello, and brought back"
+    },
+    "barnabas-of-soumela -> athanasius-the-athonite": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": ", where they venerated at the Great Lavra of «Athanasius the Athonite» and visited the monastery of"
+    },
+    "basil-of-chernigov -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "e illness, his entry into the Lavra of Saint «Alexander Nevsky» and his tonsure as a monk on"
+    },
+    "basil-of-mirozh -> basil-of-rostov": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "nd none of them stands on this day; a prince «Basil of Rostov» is kept on the same Greek day"
+    },
+    "basil-sungurov -> mary-magdalene": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "church, and in 1919 priest of the church of «Mary Magdalene» at Ulitkino in the same distr"
+    },
+    "basileus-of-amasea -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "Iviron, and a fragment at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. Its coup"
+    },
+    "bassian-of-rostov -> paphnutius-of-borovsk": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "and became a monk at the monastery of Saint «Paphnutius of Borovsk»; that in 1506 he was elected"
+    },
+    "bassos-of-the-lavra-of-pskov -> bassa-of-edessa": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "the two the corpus might confuse him with — «Bassa of Edessa» and Bassa of Tyre — who are b"
+    },
+    "bassos-of-the-lavra-of-pskov -> bassa-of-tyre": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "might confuse him with — Bassa of Edessa and «Bassa of Tyre» — who are both women and both"
+    },
+    "blandina-of-iasi -> john-of-kronstadt": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "Two hundred nuns from the monastery of Saint «John of Kronstadt» were brought to that camp, co"
+    },
+    "caecilius-of-carthage -> cyprian-of-carthage": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "ober, which is not the day this corpus keeps «Cyprian of Carthage» on; the man named in the page"
+    },
+    "christodoulos-of-patmos -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "relic lies incorrupt in the monastery of St «John the Theologian» on Patmos. *After doxologia."
+    },
+    "claudius-martyr-9-november -> claudius-of-corinth": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "ernor and no manner of death. He is not the «Claudius of Corinth» the corpus already keeps on 3"
+    },
+    "copres-the-egyptian -> theodosius-the-cenobiarch": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "born on a dung-heap beside the monastery of «Theodosius the Cenobiarch» and brought up by those monks"
+    },
+    "copris-of-palestine -> theodosius-the-cenobiarch": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "on the dung-heap beside the monastery of St «Theodosius the Cenobiarch», to a woman fleeing with many"
+    },
+    "cornelius-of-komel -> cyril-of-the-white-lake": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ecided to withdraw to the monastery of Saint «Cyril of the White Lake», that decision carried Cornel"
+    },
+    "cosmas-i-of-constantinople -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "y 1081, after serving in the church of Saint «John the Theologian», he left with his servant and"
+    },
+    "david-of-euboea -> athanasius-the-athonite": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "he chose the Great Lavra, the Lavra of Saint «Athanasius the Athonite». While David was struggling"
+    },
+    "eleutherius-the-persian -> dionysius-the-areopagite": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "therius kept in this corpus, the disciple of «Dionysius the Areopagite», is a different man on a diff"
+    },
+    "ennatha-of-gaza -> ennatha-of-aza": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "ies no hymn for her. This Ennatha is not the «Ennatha of Aza» whom the Greek synaxarion kee"
+    },
+    "ephrem-of-novotorzhsk -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ortion of his relic is at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. Nothing"
+    },
+    "ephrem-the-syrian -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "laio of Kalavryta, and at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. *After"
+    },
+    "eugene-martyr-1937 -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "mber. He served as psalmist at the church of «John the Theologian» in the village of Mitino in t"
+    },
+    "eulampius-martyr-5-march -> eulampius-of-nicomedia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "or in what persecution. The corpus keeps a «Eulampius of Nicomedia» who was martyred with his sis"
+    },
+    "euphrosynus-of-tver -> euphrosynus-the-cook": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "nd not a fact about him. The corpus keeps a «Euphrosynus the Cook» and another Euphrosynus on th"
+    },
+    "euthymius-of-karelia -> herman-of-alaska": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "In the calendar of the Brotherhood of Saint «Herman of Alaska», the page adds, he is commemo"
+    },
+    "euthymius-the-great -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ta, Kykkos in Cyprus, and the Lavra of Saint «Alexander Nevsky» at Saint Petersburg — and pri"
+    },
+    "euthymius-the-hesychast -> laurence-of-chernigov": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "nd no hymn is printed for him. He is not the «Laurence of Chernigov» whom the Romanian calendar ke"
+    },
+    "eutychian-the-soldier -> eutychian-of-nicomedia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "this, no relics, and no hymn. He is not the «Eutychian of Nicomedia» nor the Eutychian the Greek c"
+    },
+    "galaction-the-martyr-22-june -> galaction-of-vologda": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "no year, no icon and no hymn. He is not the «Galaction of Vologda» the corpus already keeps, and"
+    },
+    "george-of-diipion -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ntinople and took refuge in the church of St «John the Theologian» at Diipion, where he fell asl"
+    },
+    "gerasimus-the-byzantine -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "hania and his right hand at the monastery of «John the Theologian» on Patmos. Both readings are"
+    },
+    "gleb-prince-and-passion-bearer -> basil-the-great": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ers’ relics were translated to the church of «Basil the Great», where many wonders were work"
+    },
+    "gregentius-of-ethiopia -> proterius-of-alexandria": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "a perfect man as bishop. The corpus keeps a «Proterius of Alexandria» under Marcian, a century earl"
+    },
+    "gregory-kallidis -> gregory-palamas": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "fty years as a bishop in the church of Saint «Gregory Palamas», with the Ecumenical Patriarc"
+    },
+    "gregory-of-akragas -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "kastritsa in Corfu and at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. *After"
+    },
+    "gregory-of-shlisselburg -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "a pearl, he told them — and superior of the «Alexander Nevsky» Lavra, at the height of the R"
+    },
+    "gregory-the-hesychast-of-athos -> gregory-of-sinai": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "fulness, for so it was right. He is not the «Gregory of Sinai» whom the same calendar keeps"
+    },
+    "habakkuk-the-ascetic-of-cyprus -> habakkuk-of-thessalonica": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "e second of December also keeps, and not the «Habakkuk of Thessalonica» of the Greek calendar's other"
+    },
+    "hermes-brother-of-theodora -> hermes-of-bononia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "pt by this same Greek calendar in March, and «Hermes of Bononia» — and neither of them is a Ro"
+    },
+    "hermogenes-19-april -> hermogenes-of-alexandria": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "other men of the name stand in this corpus — «Hermogenes of Alexandria», of Nicomedia, of Samos, the"
+    },
+    "hermolaus-of-nicomedia -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "d of Kykkos in Cyprus, at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg and at th"
+    },
+    "hierotheus-monk-martyr-1937 -> paul-of-obnora": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "the brotherhood of the Trinity monastery of «Paul of Obnora» in the Gryazovets district, w"
+    },
+    "hilarion-the-georgian -> david-of-gareji": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "prayer and fasting at the monastery of Saint «David of Gareji», and crowds came to him for c"
+    },
+    "hilarion-the-new-of-georgia -> hilarion-the-georgian": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "ber 2002, and, to distinguish him from Saint «Hilarion the Georgian», who is kept on 19 November,"
+    },
+    "hilary-of-carcassonne -> hilary-of-poitiers": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "t is the page's own furniture. He is not the «Hilary of Poitiers» whom this corpus already keep"
+    },
+    "honoratus-of-amiens -> honoratus-of-arles": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "no wonder, no relics and no hymn. He is not «Honoratus of Arles», the founder of Lérins, whom"
+    },
+    "ignatius-biryukov -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": ", he was sent travelling, to the Trinity and «Alexander Nevsky» lavras and Valaam, and to New"
+    },
+    "ignatius-brianchaninov -> alexander-of-svir": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ggle with a friend at the monastery of Saint «Alexander of Svir», under the guidance of Saint"
+    },
+    "ignatius-monk-martyr-1938 -> sergius-of-radonezh": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ms, at the roomy left choir of the church of «Sergius of Radonezh», where two or three waited fo"
+    },
+    "innocent-of-nurma -> cyril-of-the-white-lake": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "in, and became a monk in the monastery of St «Cyril of the White Lake», whose memory it puts on 9 Ju"
+    },
+    "irene-of-chrysovalantou -> ephrem-the-syrian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "n Mount Olympus, near the monastery of Saint «Ephrem the Syrian», and beside it the nuns plant"
+    },
+    "isaac-i-of-optina -> hilarion-the-great": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "tal with a free dispensary and its church of «Hilarion the Great», a bookshop, a two-storey sto"
+    },
+    "joachim-i-pany-of-alexandria -> sabbas-the-sanctified": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "t the monastery of Sinai and at the Lavra of «Sabbas the Sanctified» in Palestine, and ascended th"
+    },
+    "john-disciple-of-gregory-the-decapolite -> john-chrysostom": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "e the city, not far from the church of Saint «John Chrysostom», built there a church in the"
+    },
+    "john-kochurov -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "27 August 1895 ordained priest in the Saint «Alexander Nevsky» Lavra in Saint Petersburg by"
+    },
+    "john-of-beverley -> augustine-of-canterbury": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "England and studied at the famous school of «Augustine of Canterbury». When his studies were finish"
+    },
+    "john-the-sinaite-venerable-martyr -> john-of-the-ladder": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "t the Greek calendar keeps of him. He is not «John of the Ladder», the other and far better kno"
+    },
+    "john-the-soldier-29-july -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "kept in the first apostolic church of Saint «John the Theologian». There is no hymn for him on"
+    },
+    "john-yakovlev -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ed at St Nicholas at Yeisk, the church of St «John the Theologian» at Novonikolayevskaya, the Da"
+    },
+    "jonah-the-sabaite -> sabbas-the-sanctified": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "his wife’s death he withdrew to the Lavra of «Sabbas the Sanctified», where both his sons had alre"
+    },
+    "jonas-the-lerian -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ΒΕΙΟΝ» of the holy and royal monastery of St «John the Theologian» on Patmos it can be establish"
+    },
+    "joseph-the-hymnographer -> john-chrysostom": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "e the city, not far from the church of Saint «John Chrysostom», built there a church in the"
+    },
+    "joseph-the-sanctified -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ather who lived at the small monastery of St «John the Theologian» called Dermatanos, near the s"
+    },
+    "justinian-rhinotmetos -> justinian-the-great": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "r you dwell in the Kingdom above. He is not «Justinian the Great», whom the Romanian calendar k"
+    },
+    "laurence-the-recluse -> laurence-of-chernigov": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "rom the tyranny of the demon. He is not the «Laurence of Chernigov» whom the Romanian calendar ke"
+    },
+    "leandros-of-epirus -> leander-of-seville": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "no troparion. He is not to be confused with «Leander of Seville», whom this corpus keeps alrea"
+    },
+    "leontius-patriarch-of-jerusalem -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "Patmos to venerate at the monastery of Saint «John the Theologian». He set out from there for C"
+    },
+    "longinus-of-koryazhemka -> paul-of-obnora": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ised ascesis first at the monastery of Saint «Paul of Obnora», then at the monastery of Sai"
+    },
+    "luke-of-crimea -> sergius-of-radonezh": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ishioners, and served in the church of Saint «Sergius of Radonezh», without being given any plac"
+    },
+    "macarius-of-pelecete -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "fe he left the world for the monastery of St «John the Theologian» called Pelekete, at Triglia o"
+    },
+    "marcian-the-emperor -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "e had had at Ephesus, in the church of Saint «John the Theologian»: that after his death Marcian"
+    },
+    "maria-skobtsova -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "e enrolled in the theological academy of the «Alexander Nevsky» monastery; her marriage broke"
+    },
+    "melania-8-june -> melania-the-roman": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "e is no hymn. She is not to be confused with «Melania the Roman», whom this corpus keeps alrea"
+    },
+    "metrophanes-the-protopresbyter -> mitrophan-of-constantinople": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "e name. He is not Mitrophan of Voronezh, nor «Mitrophan of Constantinople», both of whom this corpus kee"
+    },
+    "moses-of-novgorod -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "portion of it is kept at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg. *After"
+    },
+    "nectarius-venerable-17-may -> nectarios-of-aegina": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "men of that name. He is not to be taken for «Nectarios of Aegina», who is a twentieth-century G"
+    },
+    "neophytos-the-recluse -> john-chrysostom": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ouse and the wedding for the monastery of St «John Chrysostom» at Koutsoventis under the Pen"
+    },
+    "nicholas-of-alma-ata -> alexander-nevsky": {
+      "category": "quotation",
+      "reason": "a saying quoted seven centuries later, not a meeting; `life-links.mjs`'s REFUSED already carries this reading",
+      "quote": "flock weeping for Christ’s comfort only what «Alexander Nevsky» said, God is not in strength"
+    },
+    "nicholas-velimirovich -> naum-of-ohrid": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "in the village of Lelić, the feast of Saint «Naum of Ohrid», the eldest of nine children"
+    },
+    "nilus-the-hermit-of-sinai -> theodosius-the-great": {
+      "category": "reign",
+      "reason": "an emperor named to date the life, not a person in it",
+      "quote": "he page cannot settle: it names the reign of «Theodosius the Great», prefers Theodosius II by con"
+    },
+    "pachomius-the-new-of-usaki -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "rence. Today it is at the monastery of Saint «John the Theologian» on Patmos, and a piece of it"
+    },
+    "paraskevas-of-trebizond -> gregory-of-nyssa": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "is holy relic was buried in the church of St «Gregory of Nyssa», and from there it was transl"
+    },
+    "patroclus-martyr-21-january -> patroclus-of-troyes": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "death and no hymn is printed. He is not the «Patroclus of Troyes» whom the corpus keeps on anot"
+    },
+    "paul-the-confessor -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "y Mountain, a fragment at the Lavra of Saint «Alexander Nevsky» in Saint Petersburg, and the"
+    },
+    "paul-venerable-7-december -> paul-the-obedient-of-the-caves": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "calendar for 7 December keeps the venerable «Paul the Obedient», and begins by saying what is"
+    },
+    "pelagia-of-diveyevo -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ievich Serebrennikov, in the church of Saint «John the Theologian» at Arzamas, on 23 May 1828."
+    },
+    "peter-confessor-presbyter-1972 -> abraham-of-smolensk": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "de him deputy chairman of the brotherhood of «Abraham of Smolensk» in July 1916, and from August"
+    },
+    "peter-confessor-presbyter-1972 -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "and died on 12 September 1972, the feast of «Alexander Nevsky» — 30 August of the old style,"
+    },
+    "peter-martyr-2-june -> marcellinus-of-rome": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "s him: it is that the corpus already keeps a «Marcellinus of Rome» who died in the same persecut"
+    },
+    "philip-the-deacon -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "his skull is kept at the monastery of Saint «John the Theologian» on Patmos. *After doxologia."
+    },
+    "philothei-of-athens -> dionysius-the-areopagite": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ith her sisters. On the eve of the feast of «Dionysius the Areopagite», which is kept on 3 October,"
+    },
+    "pimen-of-ugresha -> mary-of-egypt": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "St Nicholas cathedral in 1843, the church of «Mary of Egypt» in 1851, the Dormition in 185"
+    },
+    "platonida-the-venerable-6-april -> platonida-of-arges": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "the Greek calendars give as ὁσία. She is not «Platonida of Argeș», the Romanian nun whom the co"
+    },
+    "polycarp-of-bryansk -> polycarp-of-smyrna": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "fers for his repose. The same day page keeps «Polycarp of Smyrna», and the two are not the same"
+    },
+    "polycarp-venerable-8-february -> polycarp-of-smyrna": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "y of a character. He is not the hieromartyr «Polycarp of Smyrna», the disciple of John, whom b"
+    },
+    "porphyrius-martyr-9-november -> porphyrius-of-gaza": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "iocletian and by nothing else. He is not the «Porphyrius of Gaza» the corpus already keeps, nor"
+    },
+    "pulcheria-the-empress -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ion given him at Ephesus in the church of St «John the Theologian»: that after his death the sol"
+    },
+    "romanus-of-uglich -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "in Russia, and a fragment at the Lavra of St «Alexander Nevsky» in St Petersburg. It prints n"
+    },
+    "rufus-19-april -> rufus-of-cyzicus": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "other men of the name stand in this corpus — «Rufus of Cyzicus», Rufus of Thessalonica, Rufus"
+    },
+    "sabbas-of-krypetsk -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "m to found a monastery and build a church of «John the Theologian»; he refused to be abbot and g"
+    },
+    "sabbatius-of-tver -> sabbatius-of-antioch": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "he corpus keeps a Sabbatius of Solovki and a «Sabbatius of Antioch», and neither of them stands o"
+    },
+    "sabbatius-of-tver -> sabbatius-of-solovki": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "no distich and no hymn. The corpus keeps a «Sabbatius of Solovki» and a Sabbatius of Antioch, a"
+    },
+    "sava-the-third -> sava-of-serbia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "fore carries no rank and no dates. He is not «Sava of Serbia», the first archbishop, whom t"
+    },
+    "savvas-of-kalymnos -> sabbas-the-sanctified": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "while in that time at the monastery of Saint «Sabbas the Sanctified». Afterwards he was two years"
+    },
+    "seraphim-of-vyritsa -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "monk, and went one day to the Lavra of Saint «Alexander Nevsky» to speak of it to one of the"
+    },
+    "sergius-of-narva -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "shouse. He consecrated the palace chapel of «Alexander Nevsky» at Strelna in 1912, blessed t"
+    },
+    "sergius-of-narva -> andrew-of-crete": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "zealots of faith and mercy at the church of «Andrew of Crete», with its orphan school and a"
+    },
+    "sophronius-of-soumela -> athanasius-the-athonite": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": ", where they venerated at the Great Lavra of «Athanasius the Athonite» and visited Vatopedi. There t"
+    },
+    "sozon-of-nicomedia -> sozon-of-cyprus": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "e Sozon of Pompeiopolis nor the shepherd boy «Sozon of Cyprus», both of whom the same calend"
+    },
+    "sozon-of-nicomedia -> sozon-of-pompeiopolis": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "hat is what the life says too. He is not the «Sozon of Pompeiopolis» nor the shepherd boy Sozon of"
+    },
+    "stephen-bekh -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "erved as archimandrite in the Lavra of Saint «Alexander Nevsky». On 9 October 1921 he was el"
+    },
+    "stephen-of-decani -> stefan-the-first-crowned": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "manner of death, and no hymn. He is not the «Stefan the First-Crowned» the corpus already keeps; not"
+    },
+    "stephen-of-perm -> gregory-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "He was tonsured a monk at the monastery of «Gregory the Theologian» at Rostov, which was famous f"
+    },
+    "stephen-the-sabbaite -> sabbas-the-sanctified": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ten years old he entered the Lavra of Saint «Sabbas the Sanctified», whose day it gives as 5 Dece"
+    },
+    "symeon-the-lesbian-stylite -> nicetas-of-medikion": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "he Church there, settled in the monastery of «Nicetas of Medikion», and from it travelled from t"
+    },
+    "theodulus-of-tripoli -> theodulus-of-myropolis": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "sed with him in the same rain. He is not the «Theodulus of Myropolis» whom this corpus keeps elsewh"
+    },
+    "victor-of-glazov -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "l and appointed hieromonk of the Lavra of St «Alexander Nevsky»; in 1910 he was made archiman"
+    },
+    "victor-presbyter-martyr-1937-26-august -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "the Mglin district and within a year to the «Alexander Nevsky» church of Lopatni in the Goro"
+    },
+    "vladimir-presbyter-martyr-1918-20-august -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "ewn into the antimension of the church of St «Alexander Nevsky» at Zelenograd, whose patronal"
+    },
+    "vladimir-presbyter-martyr-1920 -> john-the-theologian": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "on 2 July 2001 and rest in the church of St «John the Theologian» in Taldykorgan. He was glorif"
+    },
+    "vyacheslav-presbyter-martyr-1918 -> tikhon-of-zadonsk": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "buried in the town cemetery by the church of «Tikhon of Zadonsk». On 26 December 2001, on the"
+    },
+    "zenobius-mazhuga -> alexander-nevsky": {
+      "category": "dedication",
+      "reason": "a church, lavra, monastery, chapel or feast named for the saint",
+      "quote": "round him. All his thirty-five years at the «Alexander Nevsky» church he lived in a modest l"
+    },
+    "zosimas-the-hermit -> zosimas-of-cilicia": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "d style. Its name page lists this life under «Zosimas of Cilicia» beside a second life, of a ve"
+    }
+  }
+}

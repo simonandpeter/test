@@ -12,7 +12,10 @@
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιος Δημήτριος ο Πελοποννήσιος», with the rank word and the epithet left off."
     }
   ],
-  "related": [],
+  "related": [
+    "nicodemus-the-hagiorite",
+    "nikephoros-of-chios"
+  ],
   "dates": {
     "death": {
       "earliest": 1803,

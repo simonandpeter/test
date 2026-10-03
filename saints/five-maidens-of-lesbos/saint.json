@@ -13,7 +13,9 @@
       "note": "Read out of saint.gr's line for 5 Απριλίου, «Αγίες Πέντε Κόρες από την Λέσβο», with the rank word left off. The page names not one of the five."
     }
   ],
-  "related": [],
+  "related": [
+    "john-the-theologian"
+  ],
   "attestations": [
     {
       "church": "russian",

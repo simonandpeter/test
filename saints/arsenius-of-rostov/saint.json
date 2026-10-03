@@ -13,7 +13,9 @@
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Αρσένιος Μητροπολίτης Ροστώβ», with the rank word and the see left off."
     }
   ],
-  "related": [],
+  "related": [
+    "theodosius-the-great"
+  ],
   "attestations": [
     {
       "church": "russian",
