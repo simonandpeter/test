@@ -872,7 +872,7 @@ export function paintCarousel() {
     return;
   }
   buildCarousel(key, run, { cardWidth, textWidth, space, pen, continuing });
-  if (partial) packRest(poolId);
+  if (partial) packRest(poolId, { pool, cardWidth, textWidth, pen });
 }
 
 /**
@@ -883,12 +883,57 @@ export function paintCarousel() {
  * stands in. The flag is set *before* the repaint rather than after, or the
  * second pass would see `partial` again and schedule a third.
  */
-function packRest(poolId) {
+/**
+ * How many captions one idle slice measures before yielding.
+ *
+ * The pack itself cannot be sliced — a column's contents depend on what the
+ * column before it took — but the *measuring* can, and measuring is most of
+ * the bill: with this pass running, a cold All Saints at 6x CPU spent 544 ms
+ * of its 1,327 ms longest task inside `measureText` over 41,347 calls, against
+ * 87 ms and 1,388 calls with the second pack disabled entirely (author,
+ * 2026-10-04: "it lags a lot, and so does opening just the carousel on the
+ * first run"; `scratchpad/splitcost.mjs`).
+ *
+ * So the corpus is measured into `pen.cache` a slice at a time, and the pack
+ * that follows finds every height it needs already there. Nothing about the
+ * row changes — this is the same work in smaller pieces.
+ *
+ * 400 because a slice has to be short enough that a frame can land between two
+ * of them on a phone, and long enough that 5,500 saints is not 5,500 callbacks.
+ */
+const WARM_SLICE = 400;
+
+function packRest(poolId, warm) {
   const idle =
     typeof window.requestIdleCallback === 'function'
       ? window.requestIdleCallback
       : (fn) => setTimeout(fn, 200);
-  const handle = idle(() => {
+  /*
+   * Measure first, in slices, then pack. Each slice re-checks the mode and the
+   * pool, because the reader may have searched or crossed to the grid while
+   * this was waiting, and a warm-up for a pool nobody is looking at is work
+   * done for nothing.
+   */
+  const warmFrom = (i) => {
+    if (!state || state.mode !== 'carousel') return;
+    const { pool, cardWidth, textWidth, pen } = warm ?? {};
+    if (!pen || !pool) return packNow();
+    const end = Math.min(i + WARM_SLICE, pool.length);
+    for (let n = i; n < end; n += 1) {
+      // Both widths, because a cell is drawn at `--cx-w` with a picture and at
+      // `--cx-w-text` without, and the cache is keyed on the width.
+      captionH(pool[n], cardWidth, pen);
+      if (textWidth !== cardWidth) captionH(pool[n], textWidth, pen);
+    }
+    if (end < pool.length) {
+      const next = idle(() => warmFrom(end));
+      state.cleanups.push(() => cancelIdle(next));
+      return;
+    }
+    packNow();
+  };
+
+  const packNow = () => {
     if (!state || state.mode !== 'carousel') return;
     state.carouselFullFor = poolId;
     // The key belongs to the prefix row; clearing it is what lets the repaint
@@ -905,11 +950,16 @@ function packRest(poolId) {
      */
     state.carouselContinuing = true;
     paintCarousel();
-  });
-  state.cleanups.push(() => {
-    if (typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(handle);
-    else clearTimeout(handle);
-  });
+  };
+
+  const handle = idle(() => warmFrom(0));
+  state.cleanups.push(() => cancelIdle(handle));
+}
+
+/** Whichever cancel belongs to the schedule `packRest` used. */
+function cancelIdle(handle) {
+  if (typeof window.cancelIdleCallback === 'function') window.cancelIdleCallback(handle);
+  else clearTimeout(handle);
 }
 
 /** How long the row takes to go before the new one is built. */

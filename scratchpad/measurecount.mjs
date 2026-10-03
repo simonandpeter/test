@@ -1,0 +1,21 @@
+import { chromium } from 'playwright';
+const b = await chromium.launch();
+const ctx = await b.newContext({ viewport: { width: 360, height: 780 } });
+const page = await ctx.newPage();
+await page.addInitScript(() => {
+  localStorage.setItem('gos-settings', JSON.stringify({ church: 'russian', language: 'en', reckoning: 'gregorian' }));
+  const proto = CanvasRenderingContext2D.prototype;
+  const real = proto.measureText;
+  window.__mt = { boot: 0, press: 0, phase: 'boot' };
+  proto.measureText = function (t) { window.__mt[window.__mt.phase] += 1; return real.call(this, t); };
+});
+await page.goto('http://localhost:4173/saints', { waitUntil: 'networkidle' });
+await page.waitForTimeout(2500);
+const boot = await page.evaluate(() => { const n = window.__mt.boot; window.__mt.phase = 'press'; return n; });
+const pool = await page.evaluate(() => window.__INDEX_POOL__ ?? document.querySelectorAll('.carousel-track > *').length);
+await page.evaluate(() => document.querySelector('button[data-mode-toggle]').click());
+await page.waitForTimeout(2500);
+const press = await page.evaluate(() => window.__mt.press);
+const cards = await page.evaluate(() => document.querySelectorAll('.index-grid > *, [data-grid-inner] > *').length);
+console.log(JSON.stringify({ measureTextOnBoot: boot, measureTextOnPress: press, trackCells: pool, cardsInDom: cards }));
+await b.close();
