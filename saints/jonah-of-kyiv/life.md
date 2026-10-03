@@ -4,4 +4,4 @@ saint.gr's calendar for 9 Ιανουαρίου names «Όσιος Ιωνάς ο 
 
 Nothing else is printed for him here: no parents, no tonsure, no elder of his own, no account of the years between Russia and Kiev, and no hymn. The calendar keeps him on 9 January.
 
-*After saint.gr's calendar for 9 Ιανουαρίου — [the day](https://www.saint.gr/01/09/index.aspx) and [the life](https://www.saint.gr/1104/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 9 Ιανουαρίου — [the day](https://www.saint.gr/01/09/index.aspx) and [the life](https://www.saint.gr/1104/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 9 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260109.html), read 3 October 2026.*

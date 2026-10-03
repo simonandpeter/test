@@ -43,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Свт. Филиппа, митр. Московского и всея России чудотворца (1569).»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -83,5 +92,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Первопрестольников преемниче,/ столпе Православия, истины поборниче,/ новый исповедниче, святителю Филиппе,/ положивый душу за паству твою,/ темже, яко имея дерзновение ко Христу,/ моли за град же и люди,// чтущия достойно святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Тропарь святителя Филиппа»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Successor of them that held the first throne, pillar of Orthodoxy, champion of the truth, new confessor, O hierarch Philip, thou didst lay down thy life for thy flock. Therefore, having boldness before Christ, pray for the city and for the people who worthily honour thy holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Православия наставника и истины провозвестника,/ Златоустаго ревнителя,/ Российскаго светильника, Филиппа премудраго восхвалим,/ пищею словес своих разумно чада своя питающа,/ той бо языком хваление пояше,/ устнама же пение вещаше,// яко таинник Божия благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Кондак святителя Филиппа»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the teacher of Orthodoxy and the herald of the truth, the emulator of Chrysostom, the lamp of Russia, Philip the most wise, who fed his children understandingly with the food of his words; for with his tongue he sang praise and with his lips he uttered song, as an initiate of the grace of God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

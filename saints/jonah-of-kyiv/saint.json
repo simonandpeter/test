@@ -10,6 +10,11 @@
       "form": "Ιωνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιος Ιωνάς ο Γέροντας», with the rank word left off."
+    },
+    {
+      "form": "Иона (в схиме Петр) Киевский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Иона (в схиме Петр) Киевский, прп.», with the rank word left off. The parenthesis is the calendar's own and gives the name he took in the great schema."
     }
   ],
   "dates": {
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Прп. Ионы, в схиме Петра, Киевского, чудотворца (1902).»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

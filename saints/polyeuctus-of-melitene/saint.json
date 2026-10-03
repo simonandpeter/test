@@ -11,6 +11,11 @@
       "form": "Πολύευκτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Πολύευκτος», with the rank word left off."
+    },
+    {
+      "form": "Полиевкт Мелитинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Полиевкт Мелитинский, мч.», with the rank word left off. The day's line gives the forename alone."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Мч. Полиевкта (259).»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -118,6 +132,38 @@
       },
       "english": {
         "text": "Initiated from heaven into the shining of godliness, thou wast shown a noble soldier of the Saviour, O Polyeuctus; and when thy head was cut off with the sword thou wast numbered with the choirs of the Martyrs. With them intercede without ceasing, O God-minded one, for those who cry aloud to thee: Glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee grants unto all what is better.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Полиевкт,/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Тропарь мученика Полиевкта»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Polyeuctus, O Lord, in his suffering received an incorruptible crown from thee, our God; for having thy strength he cast down the tormentors and shattered the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Спасу приклоншу во Иордане главу,/ сокрушишася змиев главы./ Полиевктова же глава отсекшаяся// льстиваго посрами.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Кондак мученика Полиевкта»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "When the Saviour bowed his head in the Jordan, the heads of the serpents were crushed; and the head of Polyeuctus, struck off, put the deceiver to shame.",
         "rendered": "site"
       }
     }

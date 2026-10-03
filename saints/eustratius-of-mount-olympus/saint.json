@@ -12,6 +12,11 @@
       "form": "Ευστράτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Όσιος Ευστράτιος ο Θαυματουργός», with the rank word left off."
+    },
+    {
+      "form": "Евстратий Тарсийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Евстратий Тарсийский, игумен», with the office left off. The calendar's epithet is from Tarsus, where its own notice says he was born, and not from the mountain where he lived."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Прп. Евстратия чудотворца (821).»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

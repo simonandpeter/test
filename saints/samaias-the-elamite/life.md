@@ -4,4 +4,6 @@ saint.gr's whole notice for him is two sentences of scripture. He was one of the
 
 The page's two-line verse says that Samaias no longer prophesies what is to come on earth, because that prophetic tripod of his is now above. There is no year, no place beyond the epithet «ο Ελαμίτης» that the day's line gives him, and no hymn.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/118/saint.aspx); read 30 September 2026.*
+The Russian church calendar of the Сретенский monastery keeps him on 9 января ст. ст., a day later in the menologion than the Greek calendar does, and its own notice tells the same story from the books of Kings: «Пророк Самей жил при царе Соломоне и сыне его Ровоаме, которому пророк от лица Божия запретил воевать против 10 колен Израилевых, отделившихся от потомков Давидовых» — he lived under king Solomon and his son Rehoboam, whom he forbade, in the person of God, to make war on the ten tribes of Israel that had parted from David's line. It sets his time down as the tenth century before Christ and adds nothing else.
+
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/118/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 9 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260109.html) and [the life](https://days.pravoslavie.ru/Life/life180.htm), read 3 October 2026.*

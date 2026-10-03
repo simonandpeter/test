@@ -6,6 +6,11 @@
       "form": "Σαμέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Προφήτης Σαμέας ο Ελαμίτης», with the rank word left off."
+    },
+    {
+      "form": "Самей",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Самей, пророк», with the rank word left off. The calendar gives the name without any surname or epithet."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 января ст. ст. — «Прор. Самея (X до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
