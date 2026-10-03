@@ -21,6 +21,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мцц. Софии и Ирины (III)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

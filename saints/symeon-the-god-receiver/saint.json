@@ -35,6 +35,15 @@
     "james-the-brother-of-the-lord",
     "zacharias-father-of-the-forerunner"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Правв. Симеона Богоприимца и Анны пророчицы (I).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

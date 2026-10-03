@@ -27,6 +27,15 @@
     "seridos-of-gaza",
     "dorotheus-of-gaza"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Досифея (VII), ученика прп. аввы Дорофея.»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

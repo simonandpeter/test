@@ -17,6 +17,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Марии, именовавшейся Марином, и отца ее Евгения (VI).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -24,6 +24,15 @@
     "monk",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп Феодора молчаливого, Печерского (XIII).»; saint.gr says the same in words, that he lived in the thirteenth century."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -26,6 +26,15 @@
   "types": [
     "apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Апп. от 70-ти Апеллия, Лукия и Климента (I)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

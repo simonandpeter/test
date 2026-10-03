@@ -17,6 +17,15 @@
     "nilus-the-hermit-of-sinai",
     "anastasius-the-sinaite"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 500,
+      "display": "4th–5th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Преподобных отец, в Синае и Раифе избиенных: … и иных с ними (IV-V)». The Russian line holds the two slayings in one company; saint.gr's own account puts the first about 312 and the second a hundred years after it."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

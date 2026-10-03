@@ -17,6 +17,15 @@
     "hierarch",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Свтт. Петра и Павла, епископов Никейских (IX)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

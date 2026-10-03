@@ -27,6 +27,15 @@
     "bartholomew-the-apostle",
     "philip-the-apostle"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прав. Мариамны, сестры ап. Филиппа (I).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

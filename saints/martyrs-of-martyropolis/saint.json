@@ -15,6 +15,15 @@
   "related": [
     "marouthas-of-martyropolis"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Персидских в Мартирополе (IV).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
