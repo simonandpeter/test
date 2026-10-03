@@ -1,0 +1,60 @@
+{
+  "slug": "basil-kholmogorov",
+  "display_name": "Basil (Kholmogorov)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Василий (Холмогоров)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 января ст. ст., which gives the calendar's own nominative «Василий (Холмогоров), протоиерей, сщмч.»; the office and the rank word are left off. The calendar sets the surname in brackets, as it does for the twentieth-century martyrs generally, and it is kept so."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 3 января ст. ст.: «Сщмч. Василия пресвитера (1938)». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 января ст. ст. — «Сщмч. Василия пресвитера (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260103.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 16 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 16 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

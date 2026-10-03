@@ -16,6 +16,16 @@
       "form": "Γενοβέφα",
       "lang": "el",
       "note": "The second Greek form saint.gr's notice for 3 Ιανουαρίου prints, in brackets: «Η Αγία Γενεβιέβη (Γενοβέφα)»."
+    },
+    {
+      "form": "Женевьева Парижская",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's line for 3 января ст. ст., «Прп. Женевьевы (Геновефы) Парижской (512)», declined there and given in the nominative by the name link behind it, «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off."
+    },
+    {
+      "form": "Геновефа Парижская",
+      "lang": "ru",
+      "note": "The second form the same calendar prints for her, set in brackets beside the first on the line for 3 января ст. ст. and leading the name link, «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off."
     }
   ],
   "sex": "female",
@@ -42,8 +52,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 января ст. ст. — «Прп. Женевьевы (Геновефы) Парижской (512)»",
+        "url": "https://days.pravoslavie.ru/Days/20260103.html",
+        "year": 2026
+      },
+      "note": "The year the calendar prints, 512, is the year the folder already holds from saint.gr's page head. The calendar carries no life page for her and prints no hymn; the line and the name link are all there is."
     },
     {
       "church": "romanian",

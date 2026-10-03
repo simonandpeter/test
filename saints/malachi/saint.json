@@ -11,6 +11,11 @@
       "form": "Μαλαχίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιανουαρίου, «Προφήτης Μαλαχίας», with the rank word left off."
+    },
+    {
+      "form": "Малахия",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 января ст. ст., «Малахия, пророк, из 12 малых пророков»; the rank word and the clause placing him among the twelve minor prophets are left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 января ст. ст. — «Прор. Малахии (ок. 400 г. до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260103.html",
+        "year": 2026
+      },
+      "note": "The life page days.pravoslavie.ru/Life/life143.htm heads «День памяти: 3 января», the day the day page gives, and names him «Святой пророк Малахия», the last of the Old Testament prophets. The day page prints two kontakia for him and no troparion."
     },
     {
       "church": "romanian",
@@ -94,6 +109,47 @@
         "text": "Being filled from above, greatest Malachi, with the wisdom that is beyond wisdom and divine, as a prophet you showed to all that the very Wisdom of God had lived among us below; and for this we honour you, keeping your divine memory in faith.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Пророчества дарованием богатея, пророче,/ Христово предвозвестил еси пришествие яве и мирови спасение,// Егоже сиянием мир просветися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 января ст. ст. — «Кондак пророка Малахии»",
+        "url": "https://days.pravoslavie.ru/Days/20260103.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rich in the gift of prophecy, O prophet, thou didst foretell openly the coming of Christ and salvation for the world, by whose radiance the world was enlightened.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко Ангел послужил еси, всеблаженне,/ и сподобися преди будущая вещати,/ Господне бо вочеловечение всем уяснил еси,/ темже вопием ти:/ радуйся, пророче Божий Малахие, приснопамятне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 января ст. ст. — «Ин кондак пророку Малахии» (глас 8, подобен: Избранной)",
+        "url": "https://days.pravoslavie.ru/Days/20260103.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst serve as an angel, O all-blessed one, and wast counted worthy to tell beforehand the things to come; for thou madest the Lord's becoming man plain to all. Therefore we cry to thee: rejoice, O Malachi, prophet of God, ever remembered.",
+        "rendered": "site"
+      }
     }
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": -400,
+      "latest": -400,
+      "display": "c. 400 BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 3 января ст. ст.: «Прор. Малахии (ок. 400 г. до Р.Х.)»; its life page: «Святой пророк Малахия жил за 400 лет до Рождества Христова, во времена возвращения иудеев из плена Вавилонского»."
+    }
+  }
 }
