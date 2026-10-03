@@ -1223,7 +1223,7 @@ main.chrome {
 
 /* Who published it, or the admission that this site rendered it. */
 .hymn-source {
-  color: var(--ink-soft);
+  color: var(--ink-faint);
   max-width: 65ch;
 }
 

@@ -179,6 +179,7 @@ black.
 | `--gesso` | `#ece5d6` | `#1a1412` | the ground: primed gesso, not paper |
 | `--ink` | `#221d19` | `#e1dbd3` | body text |
 | `--ink-soft` | `#5c544d` | `#9b9187` | secondary text, coastlines, marks |
+| `--ink-faint` | `#675f57` | `#8d837a` | citations and sources: apparatus about apparatus |
 | `--rubric` | `#8a2e26` | `#bc7e74` | liturgical time and place only |
 | `--gold` | `#a98237` | `#c79a4b` | a glyph, a border or a tint — never a word |
 | `--gold-ink` | `#755925` | `#c79a4b` | gold where it has to be a word |
@@ -416,7 +417,8 @@ breakpoint are two decisions.
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
 | `--rail-fade` | `12px` | `calendar.css` |
-| `--pick-fade` | `24px` | `calendar.css` |
+| `--pick-fade` | `10px` | `calendar.css` |
+| `--mpick-row` | `24px` | `calendar.css` |
 | `--cx-w` | `150px` | `index.css` |
 | `--cx-w` | `clamp(150px, calc(var(--cx-max-h) * 0.58), 300px)` | `index.css` |
 | `--cx-w-text` | `clamp(150px, calc(var(--cx-w) * 0.62), 190px)` | `index.css` |

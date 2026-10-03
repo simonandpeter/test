@@ -115,7 +115,18 @@
      --pick-fade is a whole row, so the outer pair of the five are gone by the
      time they are read and the three that are left are the three the author
      asked for. They exist so a roll has a name arriving rather than a gap. */
-  --pick-fade: 24px;
+  /* **Three names, never five** (author, 2026-10-03: "Why are there 5 months
+     showing instead of 3"). The outer pair of the five exist so a roll has a
+     name arriving rather than a gap, and a mask alone left them legible: this
+     is a three-row window with the track hung one row above it, so the other
+     two are outside the box entirely. The fade is what the author asked for on
+     the two that are drawn, and it is now the only thing it does. */
+  /* Three rows plus the padding above them: the box is border-box, so the
+     padding comes out of the height unless it is added back. */
+  height: calc(3 * var(--mpick-row) + var(--space-2));
+  overflow: hidden;
+  --mpick-row: 24px;
+  --pick-fade: 10px;
   -webkit-mask-image: linear-gradient(
     to bottom,
     transparent 0,
@@ -136,6 +147,8 @@
    the declaration here is only the easing it is released under - the same one
    the grid's own travel uses, which is what makes the two read as one move. */
 .mpick-track {
+  /* One row up, so the five rendered rows show their middle three. */
+  margin-top: calc(-1 * var(--mpick-row));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,9 +156,13 @@
   transition: transform var(--dur-travel) var(--ease);
 }
 
+/* The row's height is declared rather than left to the type's metrics, because
+   --mpick-row is the window's arithmetic and the roll's pitch both. */
 .mpick {
+  box-sizing: border-box;
   width: 100%;
-  padding: 2px 0;
+  height: calc(var(--mpick-row) - var(--space-1));
+  padding: 0;
   border: 0;
   background: none;
   text-align: center;
@@ -2987,21 +3004,15 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
     height: 18px;
   }
 
-  /* **A box each, and air between them** (author, 2026-10-03: "space out each
-     dot point entry a bit more, they look a bit too packed, and make each have
-     a bounding box / text bubble around them"), which loosens the 2px 4px the
-     paragraph above set under "move them closer together" a day earlier. What
-     that instruction was about was the 48 px picture mat, and the mat is still
-     gone: this is a line of text in a box, not a plate.
-
-     The hairline is `--rule`, the same edge the selected day in the picker
-     above wears, so the page has one way of drawing a bounded thing. */
+  /* **A list with a little air, and no box** (author, 2026-10-03: "I dont like
+     the text boxes around the also commemorated saints. List them just as
+     before, but just add a tiny bit of space and thats it"). The 2px 4px the
+     paragraph above set stands; what the rows gained is the gap between them,
+     and nothing else. */
   .register-cards li.reg-card {
     align-items: center;
     gap: var(--space-2);
-    padding: var(--space-2);
-    border: 1px solid var(--rule);
-    border-radius: var(--radius-panel);
+    padding: 2px 4px;
   }
 
   .register-cards li.reg-card + li.reg-card {
@@ -3523,7 +3534,6 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    about. */
 .name-day {
   font-size: var(--text-base);
-  font-weight: 600;
 }
 
 a.name-day {
@@ -3769,14 +3779,21 @@ a.name-day:hover {
   margin-inline-end: var(--space-2);
 }
 
+/* **A step further back than the rest of the apparatus** (author, 2026-10-03:
+   "make the text under them with translation or citation more faded into the
+   background colour, for both light and dark modes. Same with the citation for
+   the readings"). `--ink-faint` is as faint as a word on this site can be: its
+   own comment in tokens.css carries the measurement and the floor. */
 .readings-source,
 .hymn-source {
-  color: var(--ink-soft);
+  color: var(--ink-faint);
   max-width: 65ch;
 }
 
+/* Author, 2026-10-03: "add a bit more space between the hymns, its a very busy
+   page." */
 .day-hymns .hymn + .hymn {
-  margin-top: var(--space-4);
+  margin-top: var(--space-6);
 }
 
 .hymn-kind {
@@ -3798,7 +3815,6 @@ a.name-day:hover {
 .hymn-text {
   font-family: var(--font-serif);
   font-size: var(--text-base);
-  font-weight: 600;
   max-width: 65ch;
   line-height: 1.55;
   margin-bottom: var(--space-1);

@@ -46,6 +46,7 @@
 @property --gesso { syntax: '<color>'; inherits: true; initial-value: #ece5d6; }
 @property --ink { syntax: '<color>'; inherits: true; initial-value: #221d19; }
 @property --ink-soft { syntax: '<color>'; inherits: true; initial-value: #5c544d; }
+@property --ink-faint { syntax: '<color>'; inherits: true; initial-value: #675f57; }
 @property --rubric { syntax: '<color>'; inherits: true; initial-value: #8a2e26; }
 @property --gold { syntax: '<color>'; inherits: true; initial-value: #a98237; }
 @property --gold-ink { syntax: '<color>'; inherits: true; initial-value: #755925; }
@@ -75,7 +76,8 @@
    is what makes "they all cross together" a fact about the stylesheet rather
    than about fifteen copies of a token agreeing. */
 html.theme-anim {
-  transition-property: --gesso, --ink, --ink-soft, --rubric, --gold, --gold-ink,
+  transition-property: --gesso, --ink, --ink-soft, --ink-faint, --rubric, --gold,
+    --gold-ink,
     --rule, --field, --fast-fish, --fast-free, --accent, --bub, --feast,
     --mount, --ground-ink;
   transition-duration: var(--dur-settle);

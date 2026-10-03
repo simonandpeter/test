@@ -16,6 +16,7 @@
   --gesso: #ece5d6; /* the ground: primed gesso, not paper */
   --ink: #221d19; /* body text */
   --ink-soft: #5c544d; /* secondary text, coastlines, marks */
+  --ink-faint: #675f57; /* citations and sources: apparatus about apparatus */
   --rubric: #8a2e26; /* liturgical time and place only */
   --gold: #a98237; /* a glyph, a border or a tint — never a word */
   /* The same gold at a value words can be read at (2026-08-27). `--gold` on
@@ -237,6 +238,10 @@ html.dark {
   --ink: #e1dbd3;
   /* Was #a89c8f at 6.78:1 against light's 5.92. 5.89:1 and 5.53:1. */
   --ink-soft: #9b9187;
+  /* 4.91:1 on gesso and 4.61:1 on the field, against --ink-soft's 5.89 and
+     5.53. The faintest this can be: 4.5:1 is the floor the Lighthouse
+     accessibility gate holds every word on the page to. */
+  --ink-faint: #8d837a;
   /* Was #C05B4B, which is 4.20:1 on gesso and 3.93:1 on the field — under the
      AA floor for normal text, on the token that carries the current nav item
      and today's date. STRUCTURE.md had recorded that as a live defect since

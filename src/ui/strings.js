@@ -34,7 +34,7 @@ export const STRINGS = {
      * `docs/SRC-DECISIONS.md § src/ui/strings.js — Today, and the four packs`
      */
     today: 'Today',
-    saints: 'All Saints',
+    saints: 'Saints',
     prayer: 'Prayer',
     texts: 'Texts',
     map: 'Map',
@@ -699,7 +699,7 @@ export const STRINGS = {
   },
 
   saints: {
-    title: 'All Saints',
+    title: 'Saints',
     /*
      * The 44 types the corpus uses, as words (author, 2026-08-25 evening:
      * "make all the search terms have a capital letter at the start, like
@@ -925,7 +925,7 @@ export const STRINGS = {
     // what a screen reader would otherwise be given.
     saveNamed: 'Save {name}',
     savedNamed: '{name} is saved. Activate to remove it.',
-    back: 'Back to All Saints',
+    back: 'Back to Saints',
     backDaily: 'Back to Daily',
     backMap: 'Back to the map',
     veneration: 'Veneration',
