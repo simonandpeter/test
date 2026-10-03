@@ -6,4 +6,6 @@ John is named in the day's list among the company taken with [Manuel](/saints/ma
 
 That is the whole of what the source gives him: a name, an office, a company and the manner of his death. No year of birth, no city, no word of his and no hymn is printed, and the day names no see or command for him.
 
-*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026.*
+The Russian calendar names him in the company's one line on the same menologion day, seventh of the nine, and calls him Адрианопольский, of Adrianople. It gives him no rank beyond martyr, no year of his own, no life page and no hymn.
+
+*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 22 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260122.html), read 3 October 2026.*

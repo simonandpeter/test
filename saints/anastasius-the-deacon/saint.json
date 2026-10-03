@@ -6,6 +6,11 @@
       "form": "Αναστάσιος ο Διάκονος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Όσιος Αναστάσιος ο Διάκονος», with the rank word left off."
+    },
+    {
+      "form": "Анастасий Печерский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Преподобномученик Анастасий, диакон Печерский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Прмч. Анастасия, диакона Печерского (XII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +69,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Плотское, яко безплотный Ангел, возненавидевши препитание,/ духовную во иноческом чину возлюбил еси пищу,/ и в нем Боговидцу на Синаи Моисею/ добрым жития твоего подвигом уподобляяся,/ многими на горе Божией Печерской возвысился еси добродетельми,/ идеже в молении к Вышннему непрестанно пребывал еси,/ ныне же со отцы преподобными Печерскими,/ аки бисер многоценен, мощми нетленными/ в пещере твоими пресветло сияеши,/ а душею со Ангелы пред Престолом Божиим,/ святый преподобномучениче Анастасие, предстоиши,/ о нас всегда моляся ко Господу/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Тропарь преподобномученика Анастасия, диакона Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Hating the food of the flesh like a bodiless angel, thou didst love the spiritual food of the monastic order, and in it, likening thyself by the good struggle of thy life to Moses who saw God on Sinai, thou wast raised high by many virtues on the Caves' mountain of God, where thou didst abide unceasingly in prayer to the Most High. Now with the venerable fathers of the Caves thou shinest most brightly in thy cave with incorrupt relics, like a pearl of great price, while in soul thou standest with the angels before the throne of God, O holy venerable-martyr Anastasius, praying always to the Lord for us, that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Постническим плоти твоея умерщвлением/ душу оживил еси,/ ибо твоего ради презельнаго воздержания/ и привременнаго терпения,/ жизнь непреемная и диадима неувядаемая/ от пострадавшаго за ны плотию/ и из мертвых воскресшаго Христа Бога нашего,/ тебе, святе, преподобномучениче Анастасие,/ яко злочестивых победителю/ несумненно и воистинну уготовася,/ занеже Божие тридневное Воскресение/ всем, живущим на земли,/ тобою, якоже иногда от отроков Ефесских православно воспроповедася,/ и сего ради, отче, днесь к тебе вси вопием немолчно:/ святый преподобномучениче Анастасие Печерский,/ моли прилежно воставшаго Христа тридневно из мертвых,/ да избавит от смерти вечныя душа наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Кондак преподобномученика Анастасия, диакона Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the ascetic mortification of thy flesh thou didst bring thy soul to life; for in return for thy exceeding abstinence and thy patience for a time, unending life and an unfading diadem were made ready for thee without doubt and in truth, O holy venerable-martyr Anastasius, as for a victor over the impious, by Christ our God who suffered for us in the flesh and rose from the dead. For through thee the resurrection of God on the third day was rightly preached to all who dwell on the earth, as once it was by the youths of Ephesus; and therefore, O father, we all cry out to thee today without ceasing: holy venerable-martyr Anastasius of the Caves, pray earnestly to Christ who rose on the third day from the dead, that he deliver our souls from eternal death.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Αναστάσιος ο Πέρσης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιος Αναστάσιος ο Πέρσης ο Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Анастасий Персиянин",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Преподобномученик Анастасий Персиянин», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Прмч. Анастасия Персянина (628)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "note": "The same calendar keeps the translation of his relics on 24 января ст. ст. — «Перенесение мощей прмч. Анастасия Персянина (VII)». That is a feast of the relics and not a second commemoration of him, so the row records the day whose line names him."
     },
     {
       "church": "romanian",
@@ -124,6 +139,38 @@
       },
       "english": {
         "text": "Let us the faithful all praise the divine disciple and fellow traveller of Paul, Timothy, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Анастасий/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощньш дерзости./ Того молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Тропарь мученика Анастасия»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Anastasius, O Lord, in his suffering received an incorruptible crown from thee, our God; for having thy strength he cast down the persecutors and broke also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественнаго ученика и спутешественника Павлова Тимофея,/ вернии, воспоим вси,/ с сим почитающе мудраго Анастасия,/ возсиявшаго от Персиды, яко звезду,/ и отгонящаго душевныя наша страсти/ и недуги телесныя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Кондак апостола Тимофея и преподобномученика Анастасия Персянина»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all, O faithful, sing of Timothy, the divine disciple and fellow traveller of Paul, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
         "rendered": "site"
       }
     }

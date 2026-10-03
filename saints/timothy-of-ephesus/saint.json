@@ -11,6 +11,11 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιος Τιμόθεος ο Απόστολος», with the rank words left off."
+    },
+    {
+      "form": "Тимофей Ефесский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Святитель Тимофей, епископ Ефесский, апостол от 70-ти, сщмч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -88,13 +93,54 @@
         "text": "Let us the faithful all praise the divine disciple and fellow traveller of Paul, Timothy, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Благости научився и трезвяся во всех, / благою совестию священолепно оболкся, / почерпл еси от сосуда избранного неизреченная / и, веру соблюд, равное течение совершил еси, / апостоле Тимофее, / моли Христа Бога / спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Тропарь апостола Тимофея»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught in goodness and sober in all things, clothed as a priest should be in a good conscience, thou didst draw unutterable things from the chosen vessel, and keeping the faith thou didst finish a course equal to his. O Apostle Timothy, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественнаго ученика и спутешественника Павлова Тимофея,/ вернии, воспоим вси,/ с сим почитающе мудраго Анастасия,/ возсиявшаго от Персиды, яко звезду,/ и отгонящаго душевныя наша страсти/ и недуги телесныя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Кондак апостола Тимофея и преподобномученика Анастасия Персянина»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all, O faithful, sing of Timothy, the divine disciple and fellow traveller of Paul, honouring with him the wise Anastasius, who shone out of Persia like a star and who drives away the passions of our souls and the sicknesses of our bodies.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Ап. Тимофея (ок. 97)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

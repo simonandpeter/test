@@ -6,4 +6,6 @@ Parodos is named last of the company that the day lists by name, with the rank o
 
 After him, the page says, another three hundred and seventy-seven Christians were beheaded, and those the source counts without naming, so they have no folder. Of Parodos himself no year, no city and no parish is printed, and no hymn. He was taken with [Manuel](/saints/manuel-of-adrianople), Metropolitan of Adrianople, and the rest.
 
-*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026.*
+The Russian calendar names him last of the nine in the company's one line on the same menologion day, as a presbyter, and its name link calls him Болгарский, of Bulgaria — which is the war the Greek life of Manuel told. After him the line counts the other three hundred and seventy-seven without naming them. No hymn and no life page.
+
+*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 22 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260122.html), read 3 October 2026.*

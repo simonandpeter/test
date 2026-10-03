@@ -6,6 +6,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Γεώργιος Επίσκοπος Δεβελτού», with the rank words left off. The same site's life spells the see differently, «Γεωργίου επισκόπου Δολβέρτου»; the day line's spelling is the one kept here."
+    },
+    {
+      "form": "Георгий Девельтский, Адрианопольский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Святитель Георгий Девельтский, Адрианопольский, епископ, сщмч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Мчч. Мануила, Георгия, Петра, Леонтия епископов, Сиония, Гавриила, Иоанна, Леонта, Парода пресвитера и прочих 377-ми (ок. 817)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

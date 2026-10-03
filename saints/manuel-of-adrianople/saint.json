@@ -6,6 +6,11 @@
       "form": "Μανουήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιανουαρίου, «Άγιοι Μανουήλ Επίσκοπος, Γεώργιος Επίσκοπος Δεβελτού, Πέτρος Επίσκοπος, Λέων Επίσκοπος Νικαίας, Γαβριήλ, Σιώνιος, Ιωάννης, Λέων, Πάροδος Πρεσβύτερος και άλλοι τριακόσιοι εβδομήντα επτά Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Мануил Адрианопольский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Святитель Мануил Адрианопольский, епископ, сщмч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -26,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Мчч. Мануила, Георгия, Петра, Леонтия епископов, Сиония, Гавриила, Иоанна, Леонта, Парода пресвитера и прочих 377-ми (ок. 817)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "note": "The day prints the whole company in one line and names nine men in it; this folder is the first of the nine. The three hundred and seventy-seven others the line counts are not named and have no folder."
     },
     {
       "church": "romanian",

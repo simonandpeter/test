@@ -6,4 +6,6 @@ Manuel was Metropolitan of Adrianople. He had been taken by the ruler of the Bul
 
 Manuel is named first of the company, and his see the day line leaves out where the life supplies it. Those three hundred and seventy-seven the source counts and does not name, so they have no folder here. No year of his birth is printed, and no hymn.
 
-*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps the whole company on the same menologion day and names him first of it, with the year about 817: «Мчч. Мануила, Георгия, Петра, Леонтия епископов, Сиония, Гавриила, Иоанна, Леонта, Парода пресвитера и прочих 377-ми». It too counts the three hundred and seventy-seven without naming them, it carries no life page for the company, and it prints no hymn for them.
+
+*After saint.gr's calendar for 22 Ιανουαρίου — [the day](https://www.saint.gr/01/22/index.aspx) and [the life](https://www.saint.gr/1148/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 22 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260122.html), read 3 October 2026.*

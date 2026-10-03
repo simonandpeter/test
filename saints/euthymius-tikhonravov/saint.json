@@ -1,0 +1,71 @@
+{
+  "slug": "euthymius-tikhonravov",
+  "display_name": "Euthymius (Tikhonravov)",
+  "names": [
+    {
+      "form": "Евфимий (Тихонравов)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Евфимий (Тихонравов), иерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: «Священномученик Евфимий родился 17 апреля 1881 года в городе Шуе Владимирской губернии»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: «4 февраля 1938 года, священник Евфимий Тихонравов был расстрелян в городе Иванове»; the day line prints the year as (1938)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 января ст. ст. — «Сщмчч. Иоанна и Евфимия пресвитеров (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260122.html",
+        "year": 2026
+      },
+      "note": "His life page lists his days as «Дни памяти: 22 января, 26 января (Новомуч.)». The second is the general commemoration of the new martyrs and not a proper feast of his own, so the row records the day whose calendar line names him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "john-uspensky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
