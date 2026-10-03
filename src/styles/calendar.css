@@ -112,9 +112,16 @@
      wash over --ink-soft is 2.1:1, and what this has to do is end the run
      rather than dim a word a reader might try to read.
 
-     --pick-fade is a whole row, so the outer pair of the five are gone by the
-     time they are read and the three that are left are the three the author
-     asked for. They exist so a roll has a name arriving rather than a gap. */
+     **The fade is a whole row, and it is measured off the text boxes, not off
+     the element's edges** (author, 2026-10-03: "the months above and below
+     have no visible fade"). A 10px fade from 0 and 100% spent 8 of its 10px on
+     the padding and 2 on the top row, so the neighbours were drawn at nearly
+     full ink: the dissolve has to start where the top row's text starts and be
+     complete where the middle row's text starts. The three text boxes are at
+     8-28, 32-52 and 56-76 inside an 80px box, so the stops are space-2 ->
+     space-2 + a row at the top and (100% - space-1) - a row -> 100% - space-1
+     at the bottom. That is one pitch of dissolve over each neighbour,
+     mirrored, with the middle row's text box wholly solid. */
   /* **Three names, never five** (author, 2026-10-03: "Why are there 5 months
      showing instead of 3"). The outer pair of the five exist so a roll has a
      name arriving rather than a gap, and a mask alone left them legible: this
@@ -126,20 +133,20 @@
   height: calc(3 * var(--mpick-row) + var(--space-2));
   overflow: hidden;
   --mpick-row: 24px;
-  --pick-fade: 10px;
+  --pick-fade: var(--mpick-row);
   -webkit-mask-image: linear-gradient(
     to bottom,
-    transparent 0,
-    #000 var(--pick-fade),
-    #000 calc(100% - var(--pick-fade)),
-    transparent 100%
+    transparent var(--space-2),
+    #000 calc(var(--space-2) + var(--pick-fade)),
+    #000 calc(100% - var(--space-1) - var(--pick-fade)),
+    transparent calc(100% - var(--space-1))
   );
   mask-image: linear-gradient(
     to bottom,
-    transparent 0,
-    #000 var(--pick-fade),
-    #000 calc(100% - var(--pick-fade)),
-    transparent 100%
+    transparent var(--space-2),
+    #000 calc(var(--space-2) + var(--pick-fade)),
+    #000 calc(100% - var(--space-1) - var(--pick-fade)),
+    transparent calc(100% - var(--space-1))
   );
 }
 
@@ -3060,8 +3067,13 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
     padding: 2px 4px;
   }
 
+  /* Raised from space-2 (author, 2026-10-03: "space out each dot point entry a
+     bit more, they look a bit too packed", then again of the 8px: "it did not
+     increase"). 8px of margin over 2px of padding either side read as the 8px
+     the unboxed list already had between its text; a whole row of air does
+     not. Nothing but this margin changes, so the list stays a list. */
   .register-cards li.reg-card + li.reg-card {
-    margin-top: var(--space-2);
+    margin-top: var(--space-4);
   }
 
   /* The picture is the row's last child — the plate hangs it on the right —

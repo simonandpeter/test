@@ -417,7 +417,6 @@ breakpoint are two decisions.
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
 | `--rail-fade` | `12px` | `calendar.css` |
-| `--pick-fade` | `10px` | `calendar.css` |
 | `--mpick-row` | `24px` | `calendar.css` |
 | `--cx-w` | `150px` | `index.css` |
 | `--cx-w` | `clamp(150px, calc(var(--cx-max-h) * 0.58), 300px)` | `index.css` |
