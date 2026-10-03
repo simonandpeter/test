@@ -4,4 +4,6 @@ Salamanes came of a small town built on the western bank of the river Euphrates 
 
 So he lived in a manner pleasing to God, the page ends, and fell asleep in peace. The distich over him reads «Οἴχῃ χαμερποῦς καὶ χαμαιζήλου βίου, Ὑψηλὲ πράξει καὶ λόγῳ Σαλαμάνη» — thou art gone from the life that creeps and covets the ground, O Salamanes, high in deed and word. No year of his birth or of his repose is printed for him, and no hymn.
 
-*After saint.gr's calendar for 23 Ιανουαρίου — [the day](https://www.saint.gr/01/23/index.aspx) and [the life](https://www.saint.gr/3375/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day as «Прп. Саламана молчальника (ок. 400)», the silent one, putting his repose about the year 400; its name link calls him Персиянин, the Persian, as well. It prints no hymn for him.
+
+*After saint.gr's calendar for 23 Ιανουαρίου — [the day](https://www.saint.gr/01/23/index.aspx) and [the life](https://www.saint.gr/3375/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 23 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260123.html), read 3 October 2026.*

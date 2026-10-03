@@ -1,0 +1,55 @@
+{
+  "slug": "seraphim-bulashov",
+  "display_name": "Seraphim (Bulashov)",
+  "names": [
+    {
+      "form": "Серафим (Булашов)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Серафим (Булашов), игумен, прмч.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Прмч. Серафима, прмц. Евдокии и Екатерины»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life page behind his name, only the day's line and the name link."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "eudocia-kuzminova",
+    "catherine-cherkasova"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

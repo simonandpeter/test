@@ -11,6 +11,11 @@
       "form": "Αγαθάγγελος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιοι Κλήμης Επίσκοπος Αγκύρας και Αγαθάγγελος», with the rank word left off."
+    },
+    {
+      "form": "Агафангел Римлянин",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Агафангел Римлянин, мч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -58,8 +63,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Сщмч. Климента, еп. Анкирского, и мч. Агафангела (ок. 312)»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Γεννάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Όσιος Γεννάδιος ο εν Κοστρόμα ο Λιθουανός», with the rank word left off."
+    },
+    {
+      "form": "Геннадий Костромской и Любимоградский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Преподобный Геннадий Костромской и Любимоградский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Прп. Геннадия Костромского и Любимоградского (1565)»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко пустыннолюбивая горлица, / от суетнаго и многомятежнаго мира в пустыню удалився, / чистотою и говением, молитвами и труждением / прославил еси Бога в душе и телеси своем. / И тако благочестно пожив, / явился еси, преподобне Геннадие, пустыни Любимоградския украшение, / иноком честнаго жития образ / и теплый молитвенник за всех, / притекающих к тебе с верою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Тропарь преподобного Геннадия Костромского и Любимоградского»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a turtle-dove that loves the wilderness, thou didst withdraw from the vain and troubled world into the desert, and by purity and abstinence, by prayer and by labour thou didst glorify God in thy soul and in thy body. Living thus in godliness, O venerable Gennadius, thou wast shown to be the adornment of the wilderness of Lyubimograd, a pattern of honourable life to monks, and a fervent intercessor for all who run to thee in faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Молитвою и постом, труждением и терпением/ умертвивый всякое плоти мудрование,/ чистоты сосуд благолепен,/ Божественных даров и чудес причастник,/ иноком же доблий наставник был еси,/ сподвизаяся блаженному Корнилию, отче Богомудре./ Сего ради вопием:/ молися ко Господу,/ да молитвами твоими дарует мир и спасение душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Кондак преподобного Геннадия Костромского и Любимоградского»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having put to death by prayer and fasting, by labour and by patience every thought of the flesh, thou wast a comely vessel of purity, a partaker of divine gifts and of miracles, and a valiant teacher of monks, struggling together with the blessed Cornelius, O God-wise father. Therefore we cry out: pray to the Lord, that by thy prayers he grant peace and salvation to our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

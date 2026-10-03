@@ -1,0 +1,59 @@
+{
+  "slug": "militsa-kuvshinova",
+  "display_name": "Militsa (Kuvshinova)",
+  "names": [
+    {
+      "form": "Милица (Кувшинова)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Милица (Кувшинова), мц.», with the rank words left off."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Мц. Милицы (1938)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 января ст. ст. — «Мц. Милицы (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260123.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life page behind her name, only the day's line and the name link."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

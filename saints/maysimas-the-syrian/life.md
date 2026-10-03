@@ -6,4 +6,6 @@ When he learned once that the lord of their town was oppressing the farmers, he 
 
 No year of his birth or of his repose is printed, and no hymn. The page closes by noting that his memory is repeated on 13 February, under the name Maÿoumas or Maïoumas; that day's page has not been read here, and the folder keeps the one day with a note.
 
-*After saint.gr's calendar for 23 Ιανουαρίου — [the day](https://www.saint.gr/01/23/index.aspx) and [the life](https://www.saint.gr/717/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day, «Прп. Мавсимы Сирина (IV)», putting him in the fourth century, and its name link calls him иерей, a priest, which the Greek calendar's line did not. It prints no hymn for him.
+
+*After saint.gr's calendar for 23 Ιανουαρίου — [the day](https://www.saint.gr/01/23/index.aspx) and [the life](https://www.saint.gr/717/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 23 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260123.html), read 3 October 2026.*
