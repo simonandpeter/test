@@ -13,8 +13,9 @@ import {
   ready,
   searchMode,
   swipe,
-  dayOneChurchKeeps,
+  dayOneChurchKeepsMade,
   dayOneSaint,
+  withoutSaintsOn,
 } from './helpers.js';
 
 /**
@@ -42,14 +43,14 @@ const NAV_KEYS = ['calendar', 'saints', 'prayer', 'texts', 'map', 'about'];
  * with `Augustine` typed into two tests, which holds only while the Russian
  * keeps him alone there — and the Russian reading wave is on its way from 63
  * days of the year to all 366, so a second saint on the day takes the hero
- * away from him with no defect behind it. The same reason
- * `dayOneChurchKeeps('romanian', 'russian')` is computed below.
+ * away from him with no defect behind it.
  *
- * `dayOneSaint` rather than `dayOneChurchKeeps`: these three tests need one
- * Russian saint on the day and nothing about a second church being silent on
- * it, and the Russian and Serbian reading waves delete every such silence —
- * `dayOneChurchKeeps('russian', 'greek')` and `('russian', 'romanian')` already
- * throw. It throws rather than hand back a day of the wrong shape.
+ * `dayOneSaint` rather than a fixture that also wants a second church silent on
+ * the day: these three tests need one Russian saint and nothing about a
+ * silence, and the Russian and Serbian reading waves delete every such silence
+ * — which is why the calendar-change test below makes its silence with
+ * `withoutSaintsOn` instead of searching for one. It throws rather than hand
+ * back a day of the wrong shape.
  */
 const GUESSED = dayOneSaint('russian');
 
@@ -503,15 +504,25 @@ test('the chrome line holds down to a 320 px phone, in every language', async ({
   }
 });
 
+test.describe('the calendar choice, on a day made one church\'s own', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('the calendar is remembered, and the header changes it', async ({ page }) => {
   // One choice, written once and read everywhere (author, 2026-08-22). The
   // header's button names it, opens the three, and a press closes the panel
   // and hands the focus back.
-  // The pair was Russian-keeps-one against Greek-keeps-none until the Greek
-  // year was written; the Greek keeps somebody on every day of it now.
-  const day = dayOneChurchKeeps('romanian', 'russian');
+  // **The day's silence is made, not found** (2026-10-03). The pair was
+  // Russian-keeps-one against Greek-keeps-none until the Greek year was
+  // written, then Romanian against Russian, and the Russian reading wave takes
+  // that one too: this was the last caller of a fixture whose two other
+  // argument pairs already threw. `dayOneChurchKeepsMade` takes a Romanian
+  // saint no other calendar keeps on his day and the rest of the day is
+  // withheld, so the Russian calendar is empty there by construction.
+  const day = dayOneChurchKeepsMade('romanian');
+  const bare = await withoutSaintsOn(page, day.iso, { keep: day.slug });
   await ready(page, { church: 'romanian', language: 'en' });
   await page.goto(day.route, { waitUntil: 'networkidle' });
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
   await expect(page.locator('.hero-name')).toContainText(day.name);
   const open = page.locator('#church-open');
   await expect(open).toHaveText('Romanian');
@@ -531,6 +542,7 @@ test('the calendar is remembered, and the header changes it', async ({ page }) =
   expect(await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings')).church)).toBe('russian');
   await expect(page.locator('#church-open')).toHaveText('Russian');
   await expect(page.locator('[data-ask]')).toHaveCount(0);
+});
 });
 
 test('an answered panel shrinks into the control that changes it', async ({ page }) => {

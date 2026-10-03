@@ -403,36 +403,43 @@ export const EMPTY_ISO = (() => {
 export const EMPTY = `/calendar/${EMPTY_ISO}`;
 
 /**
- * A civil day one church answers for alone: `keeper` keeps exactly one saint
- * there, `empty` keeps none, and no third calendar keeps that same saint — so
- * changing the calendar in the header empties the day rather than moving it,
- * and the one saint's name is the thing to look for before and after.
+ * A civil day one church answers for alone, **made rather than found**:
+ * `keeper` keeps a saint there whom no other calendar keeps that day, and the
+ * caller withholds everything else the day holds — `withoutSaintsOn(page,
+ * iso, { keep: slug })`. Every church but `keeper` is then silent on that day,
+ * so changing the calendar in the header empties it rather than moving it, and
+ * the one saint's name is the thing to look for before and after.
  *
- * **Typed as 28 June 2026 until 2026-10-01**, where the Russian calendar kept
- * Augustine and the Greek nobody; the Greek wave reached that day and put
- * twelve folders on it, and three tests failed on a premise rather than on a
- * fault. Computed now, and it throws rather than returning a day of the wrong
- * shape, because a test that has lost its premise must not pass.
+ * **The search it replaces wanted a second church that kept nobody there, and
+ * that is the half the reading waves delete.** It was typed as 28 June 2026
+ * until 2026-10-01 and computed until 2026-10-03, by which time
+ * `('russian', 'greek')` and `('russian', 'romanian')` already threw and only
+ * `('romanian', 'russian')` still answered — a premise one Russian batch
+ * would have taken. A withheld silence is a state no wave can reach.
  *
  * @param keeper the church whose single saint the day shows
- * @param empty the church that keeps nobody there
- * @returns `{ route, iso, name }` — the name as the hero prints it, through
- *   `saintName`, so a rank in front of it is the page's own
+ * @returns `{ route, iso, name, slug }` — `slug` the one saint the caller
+ *   keeps, `name` as the hero prints it, through `saintName`, so a rank in
+ *   front of it is the page's own
  */
-export const dayOneChurchKeeps = (keeper, empty) => {
-  const iso = CIVIL_2026.find((d) => {
-    const one = kept(keeper, d);
-    if (one.length !== 1 || kept(empty, d).length !== 0) return false;
-    // A great feast in `empty`'s own calendar is not the silence this finds:
-    // `emptyDayNote` writes the feast's sentence instead, and the Greek 25
-    // December began doing exactly that when the corpus reached it.
-    if (greatFeast(d, keeper) || greatFeast(d, empty)) return false;
-    return CHURCH_IDS.every((c) => c === keeper || !kept(c, d).includes(one[0]));
-  });
-  if (!iso) throw new Error(`no civil day of 2026 has one ${keeper} saint, none for ${empty}, no third keeper and no great feast in either`);
-  const slug = kept(keeper, iso)[0];
-  const card = FOLDERS.find((f) => f.slug === slug);
-  return { route: `/calendar/${iso}`, iso, name: saintName(card) };
+export const dayOneChurchKeepsMade = (keeper) => {
+  for (const iso of CIVIL_2026) {
+    // A great feast in any calendar is not this silence: `emptyDayNote` writes
+    // the feast's sentence instead, or the panel paints a feast hero. Every
+    // church is checked rather than two, because the feast the panel prints is
+    // read through the reader's own calendar setting and 6 August is the
+    // Transfiguration on one reckoning and 19 August on the other.
+    if (CHURCH_IDS.some((c) => greatFeast(iso, c))) continue;
+    // Kept by `keeper` and by nobody else that day, so withholding the rest
+    // leaves the other three calendars empty rather than showing him again.
+    const slug = kept(keeper, iso).find(
+      (s) => CHURCH_IDS.every((c) => c === keeper || !kept(c, iso).includes(s)),
+    );
+    if (!slug) continue;
+    const card = FOLDERS.find((f) => f.slug === slug);
+    return { route: `/calendar/${iso}`, iso, name: saintName(card), slug };
+  }
+  throw new Error(`no civil day of 2026 has a ${keeper} saint no other calendar keeps, free of a great feast everywhere`);
 };
 
 /**
@@ -490,42 +497,24 @@ export const feastWithoutFolders = (church, { record, recorded } = {}) => {
 };
 
 /**
- * A civil day `church` keeps nobody on while **exactly one** commemoration
- * falls in another calendar — the singular of the empty-day prose, "One
- * commemoration falls today in another church's calendar". The count decides
- * which sentence the page writes, so the day has to hold one and not two.
- *
- * **And the day may not be a great feast in any calendar**, which the first
- * matching day became on 2026-10-01 as the Greek wave filled August: the panel
- * then opens "Today is The Transfiguration in the Russian calendar" and the
- * sentence under test is never written at all. Every church is checked rather
- * than the one named, because the feast the panel prints is read through the
- * reader's own calendar setting, which this cannot see: 6 August is the
- * Transfiguration on the new calendar and 19 August on the old, and a day that
- * is either is no use here.
- */
-export const dayKeptOnlyElsewhere = (church) => {
-  const iso = CIVIL_2026.find(
-    (d) => kept(church, d).length === 0
-      && CHURCH_IDS.every((c) => !greatFeast(d, c))
-      && CHURCH_IDS.reduce((n, c) => n + kept(c, d).length, 0) === 1,
-  );
-  if (!iso) throw new Error(`no civil day of 2026 is empty for ${church} with exactly one elsewhere`);
-  return `/calendar/${iso}`;
-};
-
-/**
  * The same silence, for a corpus too full to have one lying about: a day, and
  * **one** saint on it that `church` does not keep. Everything else kept that
  * day is the caller's to withhold (`withoutSaintsOn`'s `keep`), and then the
  * page counts one commemoration elsewhere and writes the singular sentence.
  *
- * `dayKeptOnlyElsewhere` found such a day until the Greek year was finished;
+ * A sibling fixture found such a day whole until the Greek year was finished;
  * the Greek keeps several saints on all 366 days now, so the count can only be
- * made, not found. No great feast in any calendar, for the same reason `EMPTY`
- * excludes them: a feast writes its own sentence instead.
+ * made, not found. **`church`'s own silence is made too** (2026-10-03): the
+ * search used to want a day `church` kept nobody on, which the Russian and
+ * Serbian waves take away as they fill all 366 days, so what is asked of the
+ * day now is only that the one kept saint is not `church`'s — everything
+ * else on it, `church`'s own included, is withheld. No great feast in any
+ * calendar, for the same reason `EMPTY` excludes them: a feast writes its own
+ * sentence instead.
  *
- * @param church the reader's church, which must keep nobody once the rest is withheld
+ * @param church the reader's church, which keeps nobody once the rest is withheld
+ * @param spare a second day the caller withholds on, whose saints may not be
+ *   the one kept here
  * @returns `{ route, iso, slug }` — `slug` the one commemoration to keep
  */
 export const dayOneElsewhereMade = (church, spare) => {
@@ -534,13 +523,54 @@ export const dayOneElsewhereMade = (church, spare) => {
   // January in the Russian, which is exactly how this was found.
   const alsoOn = new Set(spare ? CHURCH_IDS.flatMap((c) => kept(c, spare)) : []);
   for (const iso of CIVIL_2026) {
-    if (kept(church, iso).length > 0) continue;
     if (CHURCH_IDS.some((c) => greatFeast(iso, c))) continue;
-    const slug = CHURCH_IDS.flatMap((c) => kept(c, iso)).find((s) => !alsoOn.has(s));
+    const mine = new Set(kept(church, iso));
+    const slug = CHURCH_IDS.flatMap((c) => kept(c, iso)).find((s) => !alsoOn.has(s) && !mine.has(s));
     if (slug) return { route: `/calendar/${iso}`, iso, slug };
   }
   throw new Error(`no civil day of 2026 has a saint ${church} does not keep and no great feast`);
 };
+
+/**
+ * **Serves the page a manifest with every saint any church keeps on `iso`
+ * withheld** (or on each of several — one route, since a second on the same
+ * URL would shadow the first), and returns what it withheld and how often it
+ * served. A silence is a state the corpus grows out of, one day per batch, so a
+ * test of what a bare day says cannot wait for the corpus to leave one bare; it
+ * makes the day bare instead, the same way whichever batches have landed on it
+ * (2026-09-16). The day is read by `keptOn`, not by the page's feast index, and
+ * in all four churches, because a folder the reader's church does not keep
+ * still changes the note to "Nothing in the Russian calendar today".
+ *
+ * **It lives here rather than in `daily-panel.spec.js`** since 2026-10-03,
+ * because `chrome.spec.js` needs it too: the fixtures that wanted a church to
+ * keep nobody on a civil day are made with this now rather than found
+ * (`dayOneChurchKeepsMade`, `dayOneElsewhereMade`).
+ *
+ * The service worker precaches the manifest and serves it on the next visit,
+ * which `page.route` never sees (trap 13), so a test using this declares
+ * `serviceWorkers: 'block'`, and `served()` is asserted so a route that
+ * matched nothing fails shut.
+ *
+ * @param page the page to route
+ * @param isos the civil days to empty, with an optional trailing `{ keep }`
+ * @returns `{ withheld, served }` — the slugs withheld and a count reader
+ */
+export async function withoutSaintsOn(page, ...isos) {
+  // A trailing `{ keep }` spares one slug, which is how a day is given exactly
+  // one commemoration: see `dayOneElsewhereMade`.
+  const keep = typeof isos.at(-1) === 'object' ? isos.pop().keep : null;
+  const withheld = new Set(isos.flatMap((iso) => CHURCH_IDS.flatMap((c) => keptOn(c, iso))));
+  if (keep) withheld.delete(keep);
+  let served = 0;
+  await page.route('**/data/manifest.json', async (route) => {
+    const response = await route.fetch();
+    const cards = await response.json();
+    served += 1;
+    await route.fulfill({ response, json: cards.filter((s) => !withheld.has(s.slug)) });
+  });
+  return { withheld, served: () => served };
+}
 
 /**
  * A day of a year past the readings' horizon where `church` keeps saints and

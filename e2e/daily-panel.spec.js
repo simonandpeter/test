@@ -1,4 +1,3 @@
-import { CHURCHES } from '../src/data/churches.js';
 // Where the day records stop, from the records themselves: the horizon a
 // reading wave moves, and the test of what lies past it asks for the day after.
 import { RECORDS_REACH } from '../src/data/liturgical-days.js';
@@ -23,7 +22,8 @@ import {
   searchMode,
   swipe,
   tokenColours,
-  dayOneChurchKeeps,
+  dayOneChurchKeepsMade,
+  withoutSaintsOn,
   feastWithoutFolders,
 } from './helpers.js';
 
@@ -467,18 +467,26 @@ test('a real drag past the threshold changes the day, not only a flick', async (
 });
 
 
+test.describe('changing the calendar, on a day made one church\'s own', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('changing the calendar changes the day everywhere it is counted', async ({ page }) => {
   /*
    * A day one calendar answers for alone, which is what makes this a test of
-   * the choice rather than of a coincidence. Computed, and the pair itself is
-   * computed too: it was Russian-keeps-one against Greek-keeps-none until the
-   * Greek year was finished, and the Greek now keeps somebody on every day of
-   * it.
+   * the choice rather than of a coincidence. **The day is made, not found**
+   * (2026-10-03): the pair it used to ask for — one church keeping a saint
+   * and another keeping nobody — was Russian against Greek until the Greek
+   * year was finished, then Romanian against Russian, and the Russian reading
+   * wave takes that one too. `dayOneChurchKeepsMade` picks a Romanian saint no
+   * other calendar keeps that day and the rest of the day is withheld, so the
+   * other three are silent by construction.
    */
-  const day = dayOneChurchKeeps('romanian', 'russian');
+  const day = dayOneChurchKeepsMade('romanian');
+  const bare = await withoutSaintsOn(page, day.iso, { keep: day.slug });
   await ready(page, { church: 'romanian', language: 'en' });
   await phone(page);
   await page.goto(day.route, { waitUntil: 'networkidle' });
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
   await expect(page.locator('.hero-name')).toContainText(day.name);
   await expect(page.locator('#church-open')).toHaveText('Romanian');
 
@@ -521,6 +529,7 @@ test('changing the calendar changes the day everywhere it is counted', async ({ 
   await page.waitForTimeout(600);
   await expect(page.locator('.density')).toHaveCount(0);
 
+});
 });
 
 
@@ -742,18 +751,23 @@ test('the saint name clears the fold at 360 px on a tall icon', async ({ page })
 /* ---- one swap primitive (src/ui/swap.js) -------------------------------- */
 
 
+test.describe('a calendar change, on a day made one church\'s own', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('a calendar change repaints the day in place rather than rolling it', async ({ page }) => {
   /*
    * The movement decides, not the gesture (STRUCTURE.md). A change of calendar
    * has not travelled anywhere in time, so the panel repaints where it stands
    * — it used to roll upward as if the reader had stepped forward a day. The
    * day is one calendar's alone, so the change empties it rather than taking
-   * it elsewhere; the pair was Russian against Greek until the Greek year was
-   * finished and the Greek began keeping somebody on every day of it.
+   * it elsewhere — **made so by withholding** since 2026-10-03, the pair it
+   * used to be found by being what the reading waves erase.
    */
-  const day = dayOneChurchKeeps('romanian', 'russian');
+  const day = dayOneChurchKeepsMade('romanian');
+  const bare = await withoutSaintsOn(page, day.iso, { keep: day.slug });
   await ready(page, { church: 'romanian', language: 'en' });
   await page.goto(day.route, { waitUntil: 'networkidle' });
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
   await expect(page.locator('.hero-name')).toContainText(day.name);
   await openChooser(page);
   await page.locator('#church-panel [data-church="russian"]').click();
@@ -774,9 +788,11 @@ test('a calendar change repaints the day in place rather than rolling it', async
   });
   expect(after).toEqual({ leaving: 0, entering: 0, panels: 1 });
   // The repaint itself still happened: the day's one saint is the Romanian
-  // calendar's and no other keeps him, which is what `dayOneChurchKeeps`
-  // guarantees, so the Serbian panel cannot be showing his name.
+  // calendar's and no other keeps him, which is what `dayOneChurchKeepsMade`
+  // guarantees and the withholding enforces, so the Serbian panel cannot be
+  // showing his name.
   await expect(page.locator('[data-slot="main"]')).not.toContainText(day.name);
+});
 });
 
 
@@ -2057,37 +2073,6 @@ test('a great feast months past the corpus keeps its readings, its fast and its 
     .toHaveAttribute('href', /days\.pravoslavie\.ru/);
 });
 
-
-/**
- * **Serves the page a manifest with every saint any church keeps on `iso`
- * withheld** (or on each of several — one route, since a second on the same
- * URL would shadow the first), and returns what it withheld and how often it served. A silence
- * is a state the corpus grows out of, one day per batch, so a test of what a
- * bare day says cannot wait for the corpus to leave one bare; it makes the day
- * bare instead, the same way whichever batches have landed on it (2026-09-16).
- * The day is read by `keptOn`, not by the page's feast index, and in all four
- * churches, because a folder the reader's church does not keep still changes
- * the note to "Nothing in the Russian calendar today".
- *
- * The service worker precaches the manifest and serves it on the next visit,
- * which `page.route` never sees (trap 13), so the tests using this block it,
- * and `served()` is asserted so a route that matched nothing fails shut.
- */
-async function withoutSaintsOn(page, ...isos) {
-  // A trailing `{ keep }` spares one slug, which is how a day is given exactly
-  // one commemoration: see `dayOneElsewhereMade`.
-  const keep = typeof isos.at(-1) === 'object' ? isos.pop().keep : null;
-  const withheld = new Set(isos.flatMap((iso) => CHURCHES.flatMap((c) => keptOn(c.id, iso))));
-  if (keep) withheld.delete(keep);
-  let served = 0;
-  await page.route('**/data/manifest.json', async (route) => {
-    const response = await route.fetch();
-    const cards = await response.json();
-    served += 1;
-    await route.fulfill({ response, json: cards.filter((s) => !withheld.has(s.slug)) });
-  });
-  return { withheld, served: () => served };
-}
 
 /**
  * **How far the corpus reaches for `church`, stated as the rule the page

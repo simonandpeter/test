@@ -478,17 +478,14 @@ It is **load-dependent, not project-dependent** — which is why a full run show
 it at both projects and a two-worker run of the pair shows it at one. Do not
 measure it again; fix the gesture or leave it.
 
-### What the sweep could not fix, and it is in the wave's path
+### The fixtures the sweep could not fix are fixed
 
-`STRUCTURE.md` §6 item 14 is the whole of it. Nine *computed* fixtures narrow or
-die as the Russian and Serbian waves fill all 366 days, and three die outright
-because each needs a church that keeps **nobody** on a civil day:
-`dayOneChurchKeeps`, `dayKeptOnlyElsewhere`, `dayOneElsewhereMade`. Two already
-throw. **`e2e/chrome.spec.js` line 498 is the one surviving caller of the worst
-of them.** The repair is the one `daily-panel.spec.js` already uses —
-`withoutSaintsOn` makes the state rather than finding it — and doing it before
-the wave is cheaper than during it, which is the whole lesson of the three reds
-that paid for this sweep.
+`STRUCTURE.md` §6 item 14 has the whole of it. The three computed fixtures that
+needed a church to keep **nobody** on a civil day make that silence with
+`withoutSaintsOn` now rather than hunting a corpus that will not have one, which
+is what the Russian and Serbian waves would have taken; `withoutSaintsOn` is in
+`e2e/helpers.js` so `chrome.spec.js` can reach it. The six that only narrow are
+listed in the item and each throws rather than lie.
 
 Two premises were left typed on purpose, with the reason on file: the second
 half of `daily-register.spec.js`'s mixed-cards test asserts Callinicus and
