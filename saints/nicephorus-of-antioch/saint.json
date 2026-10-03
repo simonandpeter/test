@@ -11,6 +11,11 @@
       "form": "Νικηφόρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιος Νικηφόρος», with the rank word left off."
+    },
+    {
+      "form": "Никифор Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 февраля ст. ст., «Мученик Никифор Антиохийский», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Мч. Никифора, из Антиохии Сирской (ок. 257).»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -136,6 +150,38 @@
       },
       "english": {
         "text": "Given wings, O far-sung one, by the love of the Lord, and bearing his Cross upon thy shoulders, O glorious one, thou didst put to shame the devil's devices, and didst contend for the truth as far as death. Therefore thou wast shown to be a soldier and an initiate of the grace of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Никифор,/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Тропарь мученика Никифора, из Антиохии Сирской»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Nicephorus, O Lord, in his suffering received an incorruptible crown from thee, our God; for having thy strength he cast down the tormentors and shattered the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Любве союзом связався, Никифоре,/ разрушил еси яве злобу ненависти/ и мечем во главу твою усечен был еси,/ мученик Божественный воплощшагося Спаса,/ Егоже о нас моли, поющих славную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Кондак мученика Никифора, из Антиохии Сирской»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bound by the bond of love, O Nicephorus, thou didst openly undo the malice of hatred, and thou wast struck in the head with the sword, a divine martyr of the Saviour made flesh. Entreat him for us who sing thy glorious memory.",
         "rendered": "site"
       }
     }

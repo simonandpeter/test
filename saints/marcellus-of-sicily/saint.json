@@ -26,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Сщмчч. Маркелла, еп. Сикелийского, Филагрия, еп. Кипрского, и Панкратия, еп. Тавроменийского (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

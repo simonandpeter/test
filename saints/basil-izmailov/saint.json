@@ -1,0 +1,67 @@
+{
+  "slug": "basil-izmailov",
+  "display_name": "Basil (Izmailov)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Василий (Измайлов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 февраля ст. ст., «Василий (Измайлов), протоиерей, сщмч.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it. The calendar's own notice of the Minsk hieromartyrs spells the surname «Измаилов»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Сщмч. Василия пресвитера (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 22 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 22 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "4 June 1885",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's notice of the Minsk hieromartyrs: «родился 4 июня 1885 года в семье священнослужителя г. Вышний Волочёк Тверской губернии»."
+    },
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "22 February 1930",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's notice of the Minsk hieromartyrs: «В лагере он скончался 22 февраля 1930 года»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Παγκράτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιος Παγκράτιος ο Έγκλειστος «εν τω Σπηλαίω»», with the rank word left off."
+    },
+    {
+      "form": "Панкратий Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 февраля ст. ст., «Панкратий Печерский, затворник», with the by-name of his manner of life left off."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Прп. Панкратия Печерского, в Дальних пещерах (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +61,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Панкратие Богомудре,/ священниче Господень изрядне,/ и чудес многих самодетелю,/ молися Господеви,/ во еже спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Тропарь преподобного Панкратия Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Pancratius, wise in God, excellent priest of the Lord and worker of many wonders, pray to the Lord that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В постницех явился еси велик,/ во иереех же нарочит/ и в чудотворениях даре показася славен,/ священне отче Панкратие,/ тем тя чтим и ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Кондак преподобного Панкратия Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great didst thou prove among the fasters, and notable among the priests, and glorious didst thou appear in the gift of working wonders, O consecrated father Pancratius. Therefore we honour thee and call thee blessed.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

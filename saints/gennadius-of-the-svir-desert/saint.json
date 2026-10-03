@@ -6,6 +6,11 @@
       "form": "Γεννάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιοι Νικηφόρος και Γεννάδιος εν Βολογντά», with the rank word left off."
+    },
+    {
+      "form": "Геннадий Важеозерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 февраля ст. ст., «Преподобный Геннадий Важеозерский», with the rank word left off. The day's line spells the epithet «Важеезерских»; the name link has «Важеозерский», and the name is read from the link."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Прпп. Геннадия (ок. 1516) и Никифора (1557) Важеезерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

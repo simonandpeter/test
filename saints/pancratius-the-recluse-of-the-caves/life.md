@@ -4,4 +4,4 @@ saint.gr's calendar for 9 Φεβρουαρίου names the venerable Pancratius 
 
 So the day, the epithet, the country and the Lavra are the whole of what the Greek calendar keeps of him. No year, no hymn and no distich are printed, and the bare title Όσιος is his only rank. The same day's calendar keeps another Pancratius, the first-century bishop of Tauromenium in Sicily, and the two are different men on different pages; nothing on either page joins them.
 
-*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [his page](https://www.saint.gr/2627/saint.aspx), which prints no life; read 30 September 2026.*
+*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [his page](https://www.saint.gr/2627/saint.aspx), which prints no life; read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 9 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260209.html), read 3 October 2026.*

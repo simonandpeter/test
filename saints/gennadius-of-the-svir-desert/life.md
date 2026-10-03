@@ -4,4 +4,4 @@ saint.gr's calendar for 9 Φεβρουαρίου names the venerable Gennadius w
 
 The day's own line calls the two of them «εν Βολογντά», in Vologda, which is not where the page then puts them; saint.gr does not reconcile the two places and the disagreement is recorded on this folder's Greek row rather than settled. Beyond the century, the region and the peaceful end, nothing is printed: no parentage, no year, no hymn and no relics, and the page adds only its gloss on the name, that Γεννάδιος is from γεννάδας and means the noble, the brave, the magnanimous.
 
-*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [the page for the two of them](https://www.saint.gr/3633/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [the page for the two of them](https://www.saint.gr/3633/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 9 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260209.html), read 3 October 2026.*

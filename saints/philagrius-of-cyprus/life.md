@@ -6,4 +6,4 @@ What it says of him is one sentence: «Ο Φιλάγριος διέπρεψε σ
 
 The distich over the three plays on the Greek for a knot: «Λυθέντες ἄνδρες σαρκικῶν τρεῖς ἁμμάτων, Τῶν τῆς Ἐδὲμ μετέσχον ἐντρυφημάτων» — three men, loosed from the bonds of the flesh, came to share the delights of Eden.
 
-*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [the page for the three of them](https://www.saint.gr/3630/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 9 Φεβρουαρίου — [the day](https://www.saint.gr/02/09/index.aspx) and [the page for the three of them](https://www.saint.gr/3630/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 9 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260209.html), read 3 October 2026.*

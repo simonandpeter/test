@@ -6,6 +6,11 @@
       "form": "Φιλάγριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Άγιοι Μάρκελλος επίσκοπος Σικελίας, Φιλάγριος επίσκοπος Κύπρου και Παγκράτιος επίσκοπος Ταυρομενίου», with the rank word and the see left off."
+    },
+    {
+      "form": "Филагрий Кипрский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 февраля ст. ст., «Святитель Филагрий Кипрский, епископ», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -17,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 февраля ст. ст. — «Сщмчч. Маркелла, еп. Сикелийского, Филагрия, еп. Кипрского, и Панкратия, еп. Тавроменийского (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260209.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
