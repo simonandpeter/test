@@ -12,6 +12,11 @@
       "form": "Τίτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Τίτος ο στρατιώτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Тит Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 27. јануар ст. ст. (civil 2026-02-09), „Преподобни Тит Печерски“. The rank word „Преподобни“ is left off; „Печерски“ is kept, being what distinguishes him. The Prologue keeps him by the Caves where the folder's Greek source keeps him by his old trade: its entry is a soldier wounded in the head who withdrew to the Caves monastery, took the habit there and lies in Theodosius's caves, which is the same man and not the presbyter Titus of the same Lavra."
     }
   ],
   "dates": {
@@ -66,8 +71,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.02.2026 (27. јануар ст. ст.) — „Преподобни Тит Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-09&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
