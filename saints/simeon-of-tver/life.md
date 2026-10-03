@@ -4,4 +4,4 @@ saint.gr's line calls him simply «Άγιος Συμεών εκ Ρωσίας», 
 
 Of everything else — where he was born, where he was a monk, how he governed the see, what was said of him afterwards — the Greek page says nothing, and it prints neither hymn nor verses for him. The Russian calendar, which would be the one to read next for him, was not read.
 
-*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1200/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1200/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 3 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260203.html), read 3 October 2026.*

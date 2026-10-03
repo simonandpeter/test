@@ -4,4 +4,4 @@ saint.gr's calendar for 25 Οκτωβρίου names three martyrs in one line an
 
 Because he could not change their mind, the page says, he beheaded them in the end. That is the whole of the entry. The couplet above it says that one sword cuts the heads of three contestants whose mind was one and the same in three heads. There is no year inside the reign, no further place, and no hymn.
 
-*After saint.gr's calendar for 25 Οκτωβρίου — [the day](https://www.saint.gr/10/25/index.aspx) and [the life](https://www.saint.gr/2808/saint.aspx); read 1 October 2026.*
+*After saint.gr's calendar for 25 Οκτωβρίου — [the day](https://www.saint.gr/10/25/index.aspx) and [the life](https://www.saint.gr/2808/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 3 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260203.html), read 3 October 2026.*

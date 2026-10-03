@@ -6,4 +6,4 @@ A second hearing produced the same confession, and the governor in his anger gav
 
 saint.gr gives no year and no century, and prints no hymn. Its couplet for him turns on his name: dying by the sword for the Lord's sake, Eubulus, you came to know what counsel it is that pleases the Lord.
 
-*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1197/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1197/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 3 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260203.html), read 3 October 2026.*

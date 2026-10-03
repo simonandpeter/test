@@ -11,6 +11,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Νικόλαος Κασάτκιν Επίσκοπος Ιαπωνίας ο Ισαπόστολος», with the rank words, the see and the epithet left off."
+    },
+    {
+      "form": "Николай, архиепископ Японский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Святой равноапостольный Николай, архиепископ Японский», with the rank word and the office left off. The rank word «равноапостольный» is left off; the see stays in the form because the calendar gives him nothing else to tell him from the corpus’s other Nicholases, and the day’s own line has it in the genitive, «Николая, архиеп. Японского»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Равноап. Николая, архиеп. Японского (1912).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -82,5 +96,71 @@
   "related": [
     "innocent-of-moscow",
     "pimen-of-verny"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Апостолов единонравне и сопрестольне,/ служителю Христов верный и Богомудрый,/ цевнице избранная Божественнаго Духа,/ сосуде преизливающийся любве Христовы,/ Японския земли просветителю,/ святый Николае, иерарше равноапостольне,/ молися Живоначальней Троице/ о всем твоем стаде/ и о всем мире.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Тропарь равноапостольного Николая, архиепископа Японского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O thou of one mind with the apostles and sharer of their throne, faithful servant of Christ and wise in God, chosen harp of the divine Spirit, vessel overflowing with the love of Christ, enlightener of the land of Japan, holy Nicholas, hierarch equal to the apostles: pray thou to the life-originating Trinity for all thy flock and for all the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко апостолом сопричастника в трудех и возмездиих/ Церковь тя с любовию почитает,/ святителю отче Николае равноапостольне./ Положив бо многими подвиги начало Православия в Японии язычестей,/ умножил еси в ней чада спасения,/ и по кончине прият тя Бог во обители апостол Своих по достоянию./ Сего ради молим тя/ молися Господеви пребыти и в предняя делу твоему незыблему на веки,/ и ввестися в лоно Церкве Православныя всем погибнути имущим,/ умиритися мирови/ и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин тропарь равноапостольного Николая, архиепископа Японского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who shared with the apostles in their labours and in their reward, the Church honours thee with love, O hierarch and father Nicholas, equal to the apostles. For by many labours thou didst lay the beginning of Orthodoxy in heathen Japan and didst multiply there the children of salvation, and after thy end God worthily received thee into the mansions of his apostles. Therefore we entreat thee: pray thou to the Lord that thy work may stand unshaken in the days to come for ever, that all who are perishing may be brought into the bosom of the Orthodox Church, that the world may be at peace, and that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Странника и пришельца прият тя страна Японская,/ равноапостолъне святителю Николае,/ в ней же исперва познал еси себе яко чуждаго,/ обаче теплоту и свет Христов источая,/ прелагал еси враги твоя в сыны духовныя,/ имже раздай благодать Божию, созидал еси Церковь Христову,/ о ней же ныне молися,/ и тебе бо сынове ея и дщери взывают:/ радуйся, пастырю добрый наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Кондак равноапостольного Николая, архиепископа Японского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The land of Japan received thee as a stranger and a sojourner, O hierarch Nicholas equal to the apostles; and there at the first thou didst know thyself a foreigner, yet pouring forth the warmth and the light of Christ thou didst turn thine enemies into spiritual sons, and dealing out to them the grace of God thou didst build up the Church of Christ. Pray now for her, for her sons and daughters cry out to thee: rejoice, O our good shepherd.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердаго и Боговещаннаго проповедателя Евангелия Твоего, Господи,/ возмездил еси Боголепно/, труды бо его и болезни приял еси паче всех жертв законных и всесожжении./ Того молитвами соблюди нас от неприязни.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин кондак равноапостольного Николая, архиепископа Японского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The steadfast and God-proclaimed preacher of thy Gospel, O Lord, thou hast rewarded in a manner befitting God, for thou didst accept his labours and his sufferings above all the sacrifices and whole burnt offerings of the law. By his prayers keep us from the enmity of the adversary.",
+        "rendered": "site"
+      }
+    }
   ]
 }

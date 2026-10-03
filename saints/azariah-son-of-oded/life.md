@@ -8,4 +8,4 @@ When he had won, Azariah, inspired by the Holy Spirit, went to king Asa and to t
 
 Azariah died peacefully and was buried in his own field. saint.gr prints no hymn for him; its couplet sets the oracles he gave before his death against the Pythia, who falls silent when she has prophesied crookedly.
 
-*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1195/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1195/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 3 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260203.html), read 3 October 2026.*

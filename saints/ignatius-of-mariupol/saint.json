@@ -11,6 +11,11 @@
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Ιγνάτιος Επίσκοπος Μαριουπόλεως», with the rank word and the see left off."
+    },
+    {
+      "form": "Игнатий Мариупольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Святитель Игнатий Мариупольский, митрополит Готии и Кафы», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Свт. Игнатия Мариупольского (1786).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

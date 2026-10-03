@@ -11,6 +11,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Δίκαιος Συμεών ο Θεοδόχος και Άννα η Προφήτιδα», with the rank words left off."
+    },
+    {
+      "form": "Симеон Богоприимец",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Святой праведный Симеон Богоприимец», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Правв. Симеона Богоприимца и Анны пророчицы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -99,6 +113,38 @@
       },
       "english": {
         "text": "You who sanctified the virgin womb by your birth, and blessed the hands of Symeon as was fitting, have come beforehand and saved us also now, Christ our God. Give peace in wars to our commonwealth, and strengthen the rulers whom you have loved, only lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Симеон старец днесь веселится,/ восприят на руку свою Младенца Превечнаго Бога,/ от уз плоти разрешитися прося/ и вопия: видеста очи мои// спасение Твое мирови.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Тропарь праведного Симеона Богоприимца»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The elder Symeon makes glad today, having received into his arms the pre-eternal God as a babe, asking to be loosed from the bonds of the flesh and crying: mine eyes have seen thy salvation for the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Старец днесь отрешитися/ от юз моляшеся/ сего жития тленнаго,/ Христа восприят на руки,// Зиждителя и Господа.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Кондак праведного Симеона Богоприимца»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The elder today, praying to be released from the bonds of this corruptible life, received into his arms Christ, the Maker and the Lord.",
         "rendered": "site"
       }
     }

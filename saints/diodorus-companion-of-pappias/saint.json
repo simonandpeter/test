@@ -10,6 +10,11 @@
       "form": "Διόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Παππίας, Διόδωρος και Κλαυδιανός», with the rank word left off."
+    },
+    {
+      "form": "Диодор Пергийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Диодор Пергийский (Памфилийский), мч.», with the rank word and the office left off. The link prints «(Памфилийский)» as a second epithet beside the first; the head form is the one taken here."
     }
   ],
   "dates": {
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Мчч. Папия, Диодора, Клавдиана (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -10,6 +10,11 @@
       "form": "Αζαρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Προφήτης Αζαρίας», with the rank word left off."
+    },
+    {
+      "form": "Азария",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Азария, пророк», with the rank word and the office left off. The link gives the rank and the bare forename and nothing further — no surname, no epithet — so the form is bare."
     }
   ],
   "dates": {
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Прор. Азарии (X в до Р.X.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

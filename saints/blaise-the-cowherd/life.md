@@ -8,4 +8,4 @@ When the governor heard of it he sent other soldiers to get Blaise out of the ca
 
 saint.gr gives no year for any of this and prints no hymn. Its couplet says that the byres of the cattle had Blaise once, and the Lord's courts have him now.
 
-*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1196/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 3 Φεβρουαρίου — [the day](https://www.saint.gr/02/03/index.aspx) and [the life](https://www.saint.gr/1196/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 3 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260203.html), read 3 October 2026.*

@@ -10,13 +10,27 @@
       "form": "Βλάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Βλάσιος ο Βουκόλος», with the rank word left off."
+    },
+    {
+      "form": "Власий Кесарийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Власий (Вукол) Кесарийский (Капподакийский), исповедник», with the rank word and the office left off. The link prints «Вукол» as a variant of the forename and «(Капподакийский)» as a second epithet; the head forms are the ones taken here."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Мч. Власия Кесарийского, пастуха (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -10,6 +10,11 @@
       "form": "Ρωμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Ρωμανός ο Πρίγκιπας», with the rank word left off."
+    },
+    {
+      "form": "Роман Угличский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Благоверный князь Роман Угличский», with the rank word and the office left off."
     }
   ],
   "dates": {
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Блгв. кн. Романа Угличского (1285).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -64,5 +78,101 @@
   },
   "related": [
     "alexander-nevsky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От младенства явился еси,/ правоверный княже Романе,/ избран от Бога/ благочестия столп необорим,/ веру непорочну соблюл еси,/ молитвами и милостынею и постом Богу угодил еси;/ темже и по смерти явися светлость жития твоего,/ исцелявши бо недуги немощствующих,/ верою притекающих ко святому твоему гробу./ Сего ради вопием ти:/ радуйся, угодниче Божий Романе,/ града Углеча похвало и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Тропарь благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From infancy thou wast shown forth, O right-believing prince Romanus, chosen of God as an unshaken pillar of piety; thou didst keep the faith undefiled and didst please God by prayers and almsgiving and fasting. Therefore after thy death also the brightness of thy life appeared, for thou healest the sicknesses of the ailing who run with faith to thy holy tomb. Wherefore we cry to thee: rejoice, O Romanus, servant of God, praise and stronghold of the city of Uglich.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Измлада явился еси, Богомудре,/ княже Романе всеблаженне,/ Божественный сосуд избран Богови,/ и ныне точиши нам многая исцеления,/ и вся недуги потоплявши,/ и спаси град свой Углеч,/ и всех верных сохраняй от невидимых и видимых враг,/ верою, молим, блаженне княже Романе,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин тропарь благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou wast shown forth, O all-blessed prince Romanus wise in God, a divine vessel chosen for God; and now thou pourest out upon us many healings and drownest every sickness. Save thou thy city of Uglich and keep all the faithful from enemies unseen and seen; with faith we entreat thee, O blessed prince Romanus, pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явися, яко звезда пресветлая,/ благоверный княже Романе,/ в Богом порученном ти граде Углече,/ в животе своем просветився/ воздержанием и всенощным стоянием,/ постом, и молитвою, и слезами,/ моляся ко Всемилостивому Спасу за град свой/ и за вся страны Русския земли,/ и по преставлении твоем источаеши исцеления неоскудно/ приходящим с верою,/ тем же вопием ти:/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин тропарь благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst appear as a most radiant star, O right-believing prince Romanus, in the city of Uglich committed to thee by God, enlightened in thy life by abstinence and by standing the night through, by fasting and prayer and tears, praying to the all-merciful Saviour for thy city and for all the lands of the Russian country; and after thy departure thou pourest out healings without stint upon those who come with faith. Wherefore we cry to thee: pray thou to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко многосветлая звезда,/ всепразднственная память твоя возсия днесь, благоверный княже Романе,/ созывающи к похвалению люди твоя,/ песньми славословити честное житие твое/ и верно торжествовати святое твое успение,/ в немже молися, святе, ко Христу Богу нашему,/ еже избавитися нам от всех наветов вражиих,/ да вси зовем ти:/ радуйся, Романе пребогате, новый Российский чудотворче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Кондак благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a star of many beams thy all-festal memory hath dawned today, O right-believing prince Romanus, calling thy people to praise, to glorify thy honourable life with hymns and to keep faithful festival for thy holy falling-asleep. Therein pray thou, O holy one, to Christ our God, that we may be delivered from all the snares of the enemy, and that we all may cry to thee: rejoice, O most rich Romanus, new wonderworker of Russia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Скончав добрый подвиг,/ и веру соблюде в сердцы своем,/ и венец нетленный от Бога приял еси,/ блаженный княже Романе,/ и славе Его сподобился еси,/ и Престолу предстал еси Спасову./ Молися Господеви спасти град Углеч и вся грады/ от нашествия иноплеменных, и междоусобныя брани, и поганых,/ и твое честное преставление почитающим/ грехов оставление даровати/ чтущим любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин кондак благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having finished the good contest and kept the faith in thy heart, thou didst receive from God an incorruptible crown, O blessed prince Romanus; thou wast counted worthy of his glory and didst stand before the throne of the Saviour. Pray thou to the Lord to save the city of Uglich and all cities from the invasion of foreigners, from civil war and from the heathen, and to grant remission of sins to those who honour thy precious departure and keep thy holy memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Красоту мира сего, княжение и славу/ яко временно помышляя,/ и сего ради благочестно в мире пожил еси,/ блаженне княже Романе,/ милостынею и молитвами Богу угодив,/ и по преставлении своем чудес дар приим от Христа Бога,/ и светильник явися пресветлый,/ просвещая своими чудесы, приходящим к тебе с верою здравие подавши и от бед избавлявши./ Тем же Христова Церковь песньми славит тя,/ благочестивый княже Романе,/ граду своему Углечу великий поборниче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Ин кондак благоверного князя Романа Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Accounting the beauty of this world, thy princedom and thy glory as things of a moment, for that reason thou didst live piously in the world, O blessed prince Romanus, pleasing God by almsgiving and by prayers; and after thy departure thou didst receive from Christ God the gift of wonders and wast shown forth as a most radiant lamp, enlightening by thy wonders, giving health to those who come to thee with faith and delivering them from troubles. Therefore the Church of Christ glorifies thee with hymns, O pious prince Romanus, great champion of thine own city of Uglich.",
+        "rendered": "site"
+      }
+    }
   ]
 }

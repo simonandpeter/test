@@ -11,6 +11,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Φεβρουαρίου, «Άγιος Συμεών εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Симеон, епископ Тверской",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Святитель Симеон, епископ Тверской», with the rank word and the office left off. The rank word «Святитель» is left off; the see stays in the form because the calendar gives him nothing else to tell him from the corpus’s other Simeons, and the day’s own line has «еп. Полоцкого, еп. Тверского»."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 февраля ст. ст. — «Свт. Симеона, еп. Полоцкого, еп. Тверского (1289).»",
+        "url": "https://days.pravoslavie.ru/Days/20260203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
