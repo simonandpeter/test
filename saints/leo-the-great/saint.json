@@ -17,6 +17,11 @@
       "form": "Лев",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Святитель Лев, папа Римский», with the rank word and the see left off. The calendar gives the name alone, with no surname and no epithet; everything after it is the see."
+    },
+    {
+      "form": "Лав",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 18. фебруар ст. ст., „Свети Лав I, папа римски.“, with Свети and the see left off; the see is the folder's `office`. The regnal number I is left out of the form as well, because it is a numbering of the see and not part of the name; it is recorded here."
     }
   ],
   "sex": "male",
@@ -90,8 +95,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.03.2026 (18. фебруар ст. ст.) — „Свети Лав I, папа римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -147,5 +161,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 461,
+      "latest": 461,
+      "display": "461",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 18 February: „Свети Лав упокојио се 461. године.“ The folder carried no dates at all before this reading, and the Prologue is the only source read for him that gives a year."
+    }
+  }
 }

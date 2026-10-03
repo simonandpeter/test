@@ -17,6 +17,11 @@
       "form": "Флавиан Константинопольский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Святитель Флавиан Константинопольский, патриарх, исповедник», with the rank word, the office and «исповедник» left off. The day's own line uses the older name of the city, «патриарха Цареградского»."
+    },
+    {
+      "form": "Флавијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 18. фебруар ст. ст., „Свети Флавијан, патријарх цариградски.“, with Свети and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -81,8 +86,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.03.2026 (18. фебруар ст. ст.) — „Свети Флавијан, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -92,6 +106,7 @@
     "flavian-the-recluse",
     "proclus-of-constantinople",
     "pulcheria-the-empress",
-    "theodosius-the-younger"
+    "theodosius-the-younger",
+    "leo-the-great"
   ]
 }
