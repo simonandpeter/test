@@ -16,6 +16,11 @@
       "form": "Феодора Греческая",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Феодора Греческая, царица», with the rank left off."
+    },
+    {
+      "form": "Теодора",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 11. фебруар ст. ст., „Света Теодора.“, with Света left off, which is not a rank. The heading carries no epithet and no title at all; the body supplies грчка царица, which is the office and not part of the name, so the bare form is the whole of what the calendar gives. Two other folders hold the same bare Serbian form; the fold is recorded for the author."
     }
   ],
   "sex": "female",
@@ -68,8 +73,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.02.2026 (11. фебруар ст. ст.) — „Света Теодора.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

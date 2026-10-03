@@ -8,4 +8,8 @@ The priest Peter visited him in prison, embraced him and said: rejoice, George, 
 
 Then the judge, giving way to the pressure of the mob, handed the martyr over to the raging crowd, who bound him and paraded him through the streets of the city. So Saint George was shown to be a martyr of the faith, and suffered death by fire in the year 1515 at Sofia in Bulgaria.
 
-*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [the life](https://www.saint.gr/3640/saint.aspx); read 30 September 2026.*
+The Serbian church keeps him on this day, and the Ohrid Prologue of Bishop Nikolai Velimirović gives him in a few lines as one of its own: a Serb by descent, from the town of Kratovo, a goldsmith by trade and by heart and soul a convinced and prayerful Christian. He was barely eighteen when the Turks wanted to make a Muslim of him, and he stayed hard as a diamond in the faith.
+
+They then put him to many fierce tortures, the Prologue says, and at the last burned him alive on a pyre. It dates his suffering precisely — 11 February 1515, at Sofia, in the time of the sultan Selim — and says he was glorified with an unfading glory in the heavens.
+
+*After saint.gr's calendar for 11 Φεβρουαρίου — [the day](https://www.saint.gr/02/11/index.aspx) and [the life](https://www.saint.gr/3640/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 11. фебруар ст. ст. — [the Serbian day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-24&prolog=1), read 4 October 2026.*

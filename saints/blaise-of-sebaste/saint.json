@@ -16,6 +16,11 @@
       "form": "Власий",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 февраля ст. ст., «Священномученик Власий, епископ Севастийский», with the rank word and the office left off. The calendar carries the see in the office and gives the name itself without an epithet."
+    },
+    {
+      "form": "Власије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 11. фебруар ст. ст., „Свештеномученик Власије.“, with the rank word Свештеномученик left off; the heading gives no see, which the body supplies as Севастија."
     }
   ],
   "sex": "male",
@@ -170,8 +175,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.02.2026 (11. фебруар ст. ст.) — „Свештеномученик Власије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

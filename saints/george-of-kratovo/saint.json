@@ -6,6 +6,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Φεβρουαρίου, «Άγιος Γεώργιος ο Νεομάρτυρας εκ Σερβίας», with the rank word left off."
+    },
+    {
+      "form": "Ђорђе Кратовац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 11. фебруар ст. ст., „Свети мученик Ђорђе Кратовац.“, with the rank words Свети мученик left off. Кратовац is the by-name the heading itself carries, after Кратово, the town the body names."
     }
   ],
   "sex": "male",
@@ -40,8 +45,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.02.2026 (11. фебруар ст. ст.) — „Свети мученик Ђорђе Кратовац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
