@@ -11,6 +11,11 @@
       "form": "Τρυφαίνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Ιανουαρίου, «Αγία Τρυφαίνη», with the rank word left off."
+    },
+    {
+      "form": "Трифена Кизическая",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Трифена Кизическая, мц.», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Мц. Трифены Кизической (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

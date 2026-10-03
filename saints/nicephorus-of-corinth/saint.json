@@ -11,6 +11,11 @@
       "form": "Νικηφόρος",
       "lang": "el",
       "note": "Read out of saint.gr's own heading for him on the page for the seven martyrs of 31 Ιανουαρίου, «Αγιος Νικηφορος», with the rank word left off; the day's line keeps the seven together as «Άγιοι Ουικτωρίνος, Ουίκτωρ, Νικηφόρος, Κλαύδιος, Διόδωρος, Σαραπίνος και Παπίας»."
+    },
+    {
+      "form": "Никифор Коринфский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Мученик Никифор Коринфский», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Мчч. Викторина, Виктора, Никифора, Клавдия, Диодора, Серапиона и Папия (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

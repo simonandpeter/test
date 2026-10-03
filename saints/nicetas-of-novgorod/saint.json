@@ -14,22 +14,37 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαΐου, «Όσιος Νικήτας εκ Κιέβου», with the rank word and the city left off."
+    },
+    {
+      "form": "Никита Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Святитель Никита Печерский, епископ Новгородский, затворник», with the rank word and the office left off."
     }
   ],
   "dates": {
     "death": {
-      "earliest": 1109,
+      "earliest": 1108,
       "latest": 1109,
-      "display": "1109",
+      "display": "1108 or 1109",
       "basis": "traditional",
-      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1109 μ.Χ.», and its head line reads «Οσιος Νικητας Εκ Κιεβου (; - 1109)»; the same page dates his election to Novgorod to 1096."
+      "note": "saint.gr: «κοιμήθηκε με ειρήνη το έτος 1109 μ.Χ.», and its head line reads «Οσιος Νικητας Εκ Κιεβου (; - 1109)»; the same page dates his election to Novgorod to 1096. The Sretensky life agrees, «13 лет управлял святитель Никита новгородской паствой и мирно скончался в 1109 году», but the Sretensky day's own line for 31 января dates him «(1108)». The interval is the disagreement."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The saint is a Russian one and saint.gr is the source read here; the Russian calendar's own day for him was not looked at."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian",
+        "note": "days.pravoslavie.ru's life page for him prints «Дни памяти: 31 января, 30 апреля, 14 мая»; the 31 января day page is the one that lists him and is the day recorded here. The other two were not checked against their own day pages."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Свт. Никиты, затворника Печерского, еп. Новгородского (1108).»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +74,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Насладився, богомудре, воздержания / и желание плоти твоея обуздав, / на престоле святительства сел еси, / и яко звезда многосветлая, просвещая верных сердца / зарями чудес твоих, отче наш, святителю Никито, / и ныне моли Христа Бога, / да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Тропарь святителя Никиты, затворника Печерского, еп. Новгородского»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having delighted in abstinence, O thou who art wise in God, and having bridled the desire of thy flesh, thou didst take thy seat upon the throne of the hierarchy; and like a star of many beams thou dost enlighten the hearts of the faithful with the radiance of thy wonders, O our father Nicetas the hierarch. And now pray thou to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Небеснаго пространства желая,/ от юности в тесне месте затворился еси,/ в немже прельщен быв от врага,/ паки смирением и послушанием/ победил еси прелестника крепце, Никито,/ и ныне, предстоя Христови,/ моли спастися всем нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин тропарь святителя Никиты, затворника Печерского, еп. Новгородского»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the wide spaces of heaven, from thy youth thou didst shut thyself into a narrow place; and having been deceived there by the enemy, thou didst yet overcome the deceiver mightily by humility and obedience, O Nicetas. And now, standing before Christ, pray that we all may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Архиерейства саном почтився/ и чисте Чистейшему предстоя,/ прилежно моление за люди твоя приносил еси,/ яко и дождь молитвою свел еси,/ овогда же и града запаления угасил еси./ И ныне, святителю Никито,/ моли Христа Бога/ спасти люди твоя молящияся,/ да вси вопием ти:/ радуйся, святителю отче предивный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Кондак святителя Никиты, затворника Печерского, еп. Новгородского»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honoured with the rank of the hierarchy, and standing in purity before the Most Pure, thou didst offer diligent prayer for thy people, so that by thy prayer thou didst bring down rain, and at another time didst quench the burning of the city. And now, O hierarch Nicetas, pray thou to Christ God to save thy people who pray to thee, that we all may cry to thee: rejoice, O hierarch and father most wondrous.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Победив вражия лести добле и светло добротедельми просияв, святительства одеждою облеклся еси, преславне Никито, в немже светом жития твоего и чудесы сияя паче солнца, многих просветив, привел еси Христови, Егоже моли о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин кондак святителя Никиты, затворника Печерского, еп. Новгородского»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having manfully overcome the deceits of the enemy and having shone brightly with the virtues, thou wast clothed in the vesture of the hierarchy, O most glorious Nicetas; and shining therein brighter than the sun with the light of thy life and with wonders, thou didst enlighten many and lead them to Christ, whom do thou entreat for us who sing thy praise.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

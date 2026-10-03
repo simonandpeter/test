@@ -6,6 +6,11 @@
       "form": "Θεοκτίστη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Ιανουαρίου, «Άγιοι Κύρος και Ιωάννης οι Ανάργυροι και η Αγία Αθανασία με τις τρεις θυγατέρες της Θεοδότη, Θεοκτίστη και Ευδοξία», with the rank word left off."
+    },
+    {
+      "form": "Феоктиста Канопская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Феоктиста Канопская, мц.», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Бессребреников мчч. Кира и Иоанна и с ними мцц. Афанасии и дщерей ее Феодотии, Феоктисты и Евдоксии (311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

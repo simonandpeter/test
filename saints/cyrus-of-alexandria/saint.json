@@ -11,6 +11,11 @@
       "form": "Κύρος",
       "lang": "el",
       "note": "Read out of saint.gr's own heading for him on the page for 31 Ιανουαρίου, «Αγιος Κυρος ο Αναργυρος», with the rank words left off; the day's line keeps the seven of them together as «Άγιοι Κύρος και Ιωάννης οι Ανάργυροι και η Αγία Αθανασία με τις τρεις θυγατέρες της Θεοδότη, Θεοκτίστη και Ευδοξία»."
+    },
+    {
+      "form": "Кир Александрийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Мученик Кир Александрийский», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Бессребреников мчч. Кира и Иоанна и с ними мцц. Афанасии и дщерей ее Феодотии, Феоктисты и Евдоксии (311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -153,6 +167,102 @@
       },
       "english": {
         "text": "Having received from divine grace the gift of wonders, holy ones, you work them unceasingly, cutting away all our passions by an unseen surgery, God-minded Cyrus with the divine John; for you are physicians given by God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Чудеса святых Твоих мученик/ стену необориму нам даровавый, Христе Боже,/ тех молитвами советы языков разори,/ Церковь Святую укрепи,// яко Един Благ и Человеколюбец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Тропарь бессребреников мучеников Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Christ God, who hast given us the wonders of thy holy martyrs for an unassailable wall, by their prayers scatter the counsels of the heathen and strengthen thy holy Church, for thou alone art good and the lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Святии славнии Кире и Иоанне,/ безсребренницы, мученицы и чудотворцы,/ милосердием своим, яко стеною необоримою, нас оградите от всех бед/ и от врагов видимых и невидимых сохраните/ непрестанною вашею молитвою ко Господу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин тропарь бессребренников мучеников Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy and glorious Cyrus and John, unmercenaries, martyrs and wonderworkers: fence us about with your mercy, as with an unassailable wall, from every misfortune, and keep us from enemies seen and unseen by your unceasing prayer to the Lord.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Троичная благодать всельшися в честная сердца ваша,/ преблаженнии Кире и Иоанне,/ на духи нечистью страшни прогонителие явистеся./ И не точию явленным, но и тайным/ недугом врачеве бысте,/ темже, дерзновение имуще к Человеколюбцу Богу,/ непрестанною молитвою душевныя наша страсти исцелите.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин тропарь бессребренников мучеников Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The grace of the Trinity having dwelt in your honourable hearts, O most blessed Cyrus and John, ye were shown forth as dread drivers-out of the unclean spirits; and ye became physicians not of open sicknesses only but of hidden ones also. Therefore, having boldness before God the lover of mankind, heal by your unceasing prayer the passions of our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Премудрии вселенней врачеве,/ Кире и Иоанне,/ от Бога приясте власть целити недуги душевныя,/ вкупе же и телесныя,/ и ныне молитеся/ сохранити град и люди от одержащих зол/ и спасти молитвами вашими души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин тропарь мучеников бессребреников и чудотворцев Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O most wise physicians of the whole world, Cyrus and John, from God ye received authority to heal the sicknesses of the soul and of the body together. And now pray that our city and its people be kept from the evils that beset them, and that our souls be saved by your prayers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "От Божественныя благодати дар чудес приемши, святии,/ чудодействуете непрестанно,/ вся наша страсти рукодейством секуще невидимым,/ Кире богомудре со Иоанном славным:// вы бо Божественнии врачеве есте.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Кондак бессребреников мучеников Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received from divine grace the gift of wonders, O holy ones, ye work wonders without ceasing, cutting away all our passions by an unseen surgery, O Cyrus wise in God together with glorious John: for ye are physicians divine.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Великое врачевство вселенней,/ супряжение Христово возлюбленное,/ светильники сияющия, зарю исцелений,/ воспоем, вернии, велегласно,/ внутрь церкве им вопиюще:/ Кире и Иоанне,/ податели чудесем, врачеве недужным,/ освящаете вся страны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 января ст. ст. — «Ин кондак мучеников бессребреников и чудотворцев Кира и Иоанна»",
+        "url": "https://days.pravoslavie.ru/Days/20260131.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful sing aloud of the great healing of the world, the beloved yokefellows of Christ, the shining lamps, the dawn of healings, crying out to them within the church: O Cyrus and John, givers of wonders, physicians of the sick, ye sanctify every land.",
         "rendered": "site"
       }
     }

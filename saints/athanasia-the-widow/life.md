@@ -8,4 +8,4 @@ The governor was enraged and ordered them put to many hard tortures; and after t
 
 The couplet the page sets over the four of them praises her first: «Μήτηρ ἀρίστη, καὶ τριὰς θυγατέρων, / Πόθῳ Πατρὸς θνῄσκουσι τοῦ πάντων ξίφει» — an excellent mother, and a trinity of daughters, die by the sword out of longing for the Father of all.
 
-*After saint.gr's calendar for 31 Ιανουαρίου — [the day](https://www.saint.gr/01/31/index.aspx) and [the life](https://www.saint.gr/3576/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 31 Ιανουαρίου — [the day](https://www.saint.gr/01/31/index.aspx) and [the life](https://www.saint.gr/3576/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 31 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260131.html), read 3 October 2026.*

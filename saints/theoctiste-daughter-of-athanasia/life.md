@@ -6,4 +6,4 @@ What the page records of her is what she shared with them. The governor tried to
 
 saint.gr gives her no year of birth, no age and no separate manner of death, and prints no apolytikion and no kontakion for the four women; the hymns on that page are the unmercenaries'. Their life and martyrdom, it says, was written by Sophronius the Sophist, and their synaxis was kept in the martyrion raised in their honour in the quarter of Phorakion.
 
-*After saint.gr's calendar for 31 Ιανουαρίου — [the day](https://www.saint.gr/01/31/index.aspx) and [the life](https://www.saint.gr/3576/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 31 Ιανουαρίου — [the day](https://www.saint.gr/01/31/index.aspx) and [the life](https://www.saint.gr/3576/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 31 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260131.html), read 3 October 2026.*
