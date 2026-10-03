@@ -16,6 +16,11 @@
       "form": "Спевсипп Лангонийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Спевсипп Лангонийский, мч.», with the rank word left off; the line itself gives him in the genitive."
+    },
+    {
+      "form": "Певсип",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 16. јануар ст. ст. (civil 2026-01-29), „Свети мученици Певсип, Елевсип, Малевсип и баба им Леонила“. The heading names the three brothers and their grandmother together. The words „Свети мученици“ and the other three names are left off, leaving his own."
     }
   ],
   "sex": "male",
@@ -82,8 +87,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.01.2026 (16. јануар ст. ст.) — „Свети мученици Певсип, Елевсип, Малевсип и баба им Леонила.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

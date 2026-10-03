@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Cuvios Romil de Ravanița",
       "lang": "ro"
+    },
+    {
+      "form": "Ромил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 16. јануар ст. ст. (civil 2026-01-29), „Преподобни Ромил“. The rank word „Преподобни“ is left off. The heading gives no epithet, so the form is bare."
     }
   ],
   "sex": "male",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 18. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.01.2026 (16. јануар ст. ст.) — „Преподобни Ромил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

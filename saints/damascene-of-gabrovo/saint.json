@@ -12,6 +12,11 @@
       "form": "Δαμασκηνός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Δαμασκηνός νέος Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Дамаскин Габровски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 16. јануар ст. ст. (civil 2026-01-29), „Преподобни мученик Дамаскин Габровски“. The rank words „Преподобни мученик“ are left off; „Габровски“ is kept, being what distinguishes him."
     }
   ],
   "dates": {
@@ -50,8 +55,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.01.2026 (16. јануар ст. ст.) — „Преподобни мученик Дамаскин Габровски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-29&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
