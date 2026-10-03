@@ -1,0 +1,73 @@
+{
+  "slug": "chionia-arkhangelskaya",
+  "display_name": "Chionia (Arkhangelskaya)",
+  "sex": "female",
+  "types": [
+    "confessor",
+    "new-martyr",
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Хиония (Архангельская)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10104, «Хиония (Архангельская), исп.», with the rank word left off. Her life gives her patronymic as Ивановна, after her father, the priest John Dmitriev."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1883,
+      "latest": 1883,
+      "display": "1883",
+      "basis": "attested",
+      "note": "Her life on days.pravoslavie.ru gives the day: «Она родилась 8 апреля 1883 года в селе Новый Копыл Воронежской губернии в семье священника Иоанна Дмитриева»."
+    },
+    "death": {
+      "earliest": 1945,
+      "latest": 1945,
+      "display": "1945",
+      "basis": "attested",
+      "note": "Her life on days.pravoslavie.ru gives the month of death and the day of burial: «Скончалась Хиония Ивановна в декабре. Похоронили ее на местном кладбище 22 декабря 1945 года.» The day line prints «(1945)» after her name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "She is kept on her husband's day, not on her own: he was sentenced on 4 October 1937 and she died in December 1945. Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and one row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Св. Хионии исп. (1945).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "«Исп.» is confessor, not martyr: she survived her sentence and died at home. The rank is the alt text of the icon the page sets over the group of lines hers stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs and confessors."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for her (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "tikhon-arkhangelsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

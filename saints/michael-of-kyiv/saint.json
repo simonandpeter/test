@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Μιχαήλ πρώτος Μητροπολίτης Κιέβου και πάσης Ρωσίας ο θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Михаил",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1553 is «Святитель Михаил, первый митрополит Киевский»; the bare name is all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -25,8 +30,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists two days, «15 июня» and «30 сентября (Перенесение мощей)» — this day is the translation of his relics and not his repose. One row per church is the schema, so the June day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Свт. Михаила, первого митр. Киевского (992).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "The year agrees with saint.gr's 992. The day carries two troparia and two kontakia for him, in two slightly different readings, which this batch did not take."
     },
     {
       "church": "romanian",

@@ -10,6 +10,11 @@
     {
       "form": "Sfânta Muceniță Iustina",
       "lang": "ro"
+    },
+    {
+      "form": "Иустина Антиохийская",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 2539 heads her «Мученица Иустина Антиохийская», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -20,20 +25,33 @@
   "dates": {
     "floruit": {
       "earliest": 249,
-      "latest": 251,
-      "display": "249–251",
+      "latest": 304,
+      "display": "249–251, or 304",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu»."
+      "note": "A persecution and a reign apart: saint.gr puts the martyrdom under Decius, «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and days.pravoslavie.ru puts it under Diocletian and names the year — «умерщвлены в Никомидии в 304 году». The interval now spans both readings and resolves neither."
     }
   },
   "related": [
-    "cyprian-of-antioch"
+    "cyprian-of-antioch",
+    "theoctistus-of-nicomedia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Сщмч. Киприана, мц. Иустины и мч. Феоктиста (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian life gives her what the Greek does not: she brought her own father and mother to the faith before she was pressed to marry, refused the youth Aglaides, broke every spell Cyprian sent against her by fasting and the sign of the Cross, and after his conversion withdrew to a monastery and was chosen its abbess. It also dates the martyrdom to 304 against saint.gr's Decius."
     },
     {
       "church": "romanian",
@@ -69,6 +87,9 @@
       "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
     }
   ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "greek",
@@ -137,8 +158,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

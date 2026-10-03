@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-kuligin",
+  "display_name": "Nicholas (Kuligin)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Николай (Кулигин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13813, «Николай (Кулигин), протоиерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the four names it keeps together: «Сщмчч. Александра, Георгия, Николая пресвитеров, мч. Иоанна (1937)»."
+    }
+  },
+  "related": [
+    "alexander-agafonnikov",
+    "george-arkhangelsky",
+    "john-artemov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Alone of the four his name page lists two other days, «26 января (Новомуч.)» and «8 июня (Петерб.)» — the second an abbreviation the page does not expand. One row per church is the schema, so the other two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Сщмчч. Александра, Георгия, Николая пресвитеров, мч. Иоанна (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 14 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/14 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 14 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

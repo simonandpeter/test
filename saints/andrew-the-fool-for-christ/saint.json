@@ -1,23 +1,50 @@
 {
   "slug": "andrew-the-fool-for-christ",
   "display_name": "Andrew the Fool for Christ",
-  "sex": "male",
-  "types": [
-    "venerable",
-    "fool-for-christ"
-  ],
   "names": [
     {
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ανδρέας ο διά Χριστόν σαλός», with the rank word left off. The epithet «ο διά Χριστόν σαλός» is left off with the rank."
+    },
+    {
+      "form": "Андрей Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 180, «Андрей Константинопольский, Христа ради юродивый», with the epithet left to the display name."
     }
   ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 936,
+      "latest": 936,
+      "display": "936",
+      "basis": "traditional",
+      "note": "The year the Russian calendar prints after his name, «Блж. Андрея, Христа ради юродивого (936)». The folder held no date at all before this reading; saint.gr places him by the reign of Constantine VII Porphyrogennetos instead."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek keeps him on 28 May and the Russian on 2 October, two days for one man. The Russian day is the eve of the Protection of the Mother of God, which is his vision in the church at Blachernae, and that is why it sits where it does."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Блж. Андрея, Христа ради юродивого (936).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The Russian gives the year the Greek page does not: 936. It also marks him «блж.», blessed, where the Greek has ὅσιος."
     },
     {
       "church": "romanian",

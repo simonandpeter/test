@@ -1,11 +1,17 @@
 {
   "slug": "gurias-companion-of-barsanuphius",
   "display_name": "Gurias, companion of Barsanuphius",
+  "office": "Archbishop of Kazan",
   "names": [
     {
       "form": "Γουρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Δεκεμβρίου, «Αγίος Γουρίας», with the rank word left off — the page spells the rank «Αγίος» there, and the form is copied as printed."
+    },
+    {
+      "form": "Гурий, архиепископ Казанский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 553, «Святитель Гурий, архиепископ Казанский», with the rank word left off. The see is kept in the form because it is what distinguishes him from the other Guriases the corpus holds."
     }
   ],
   "sex": "male",
@@ -15,8 +21,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "rank": "great-doxology",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the finding of his relics in 1595, not his repose, and the Russian line says so outright: «Обретение мощей». He is the Gurias the Greek keeps on 15 December with Barsanuphius."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Обретение мощей свтт. Гурия, архиеп. Казанского, и Варсонофия, еп. Тверского (1595).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line alone, «Совершается служба со славословием» — a service with the great doxology, and the only rank on the day above the plain one."
+      },
+      "note": "The Russian gives him the see the Greek's one-sentence entry does not: «Гурий, архиеп. Казанский», archbishop of Kazan. The day also carries «Собор Казанских Святых», the synaxis of the saints of Kazan, which enumerates nobody and is therefore not a folder."
     },
     {
       "church": "romanian",

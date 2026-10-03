@@ -6,4 +6,6 @@ Setting out from the Black Sea as commander in the Mediterranean with the ships 
 
 In the last years of his life he lived as a monk at the monastery of Sanaksar, giving away his possessions to needy sailors of Sevastopol, and he died on 14 October 1817. Small pieces of his relics are kept at the monastery of St Paraskevi at Sgourades. The Greek calendar keeps him on 2 October.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — [the entry](https://www.saint.gr/4151/saint.aspx); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 2 October and agrees with saint.gr on 1817. It calls him «прав. воина Феодора Ушакова», Theodore Ushakov the righteous soldier, and its index of names adds the monastery, «Феодор (Ушаков) Санаксарский». That index lists two further days, «23 июля» and «23 мая (Ростов.)», the second an abbreviation it does not expand, and both are recorded in the Russian row rather than guessed at.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 2 Οκτωβρίου — [the entry](https://www.saint.gr/4151/saint.aspx); read 17 September 2026; the Russian church calendar keeps him on the Julian 2 October — [the day](https://days.pravoslavie.ru/Days/20261002.html); read 4 October 2026.*

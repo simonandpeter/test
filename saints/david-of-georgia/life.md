@@ -6,4 +6,6 @@ Seeing at last that he could not move them, the Muslims tortured them terribly a
 
 In the twelfth century King Bagrat the Great (1072–1117), out hunting, found the relics in the cave, incorrupt and shining, and at once built a church in their honour, around which the Motsameta monastery, the monastery of the holy martyrs, was founded; from then, the synaxarion says, God has given healing to many through the relics of David and Constantine, and these wonders go on to this day. The Romanian calendar keeps the two brothers on 2 October.
 
-*After doxologia.ro, [Viața Sfinților Mucenici David și Constantin, prinți ai Georgiei](https://doxologia.ro/viata-sfintilor-mucenici-david-constantin-printi-ai-georgiei), from the Sinaxarul mare for October; read 17 September 2026.*
+The Russian church calendar keeps the two princes on the Julian 2 October, marked «(Груз.)» as one of the Georgian commemorations it carries, and agrees with doxologia.ro on the year 740. Its index of names gives him the house the Romanian page leaves out, «Давид Арагветский, князь, мч.» — David of Argveti, prince, martyr.
+
+*After doxologia.ro, [Viața Sfinților Mucenici David și Constantin, prinți ai Georgiei](https://doxologia.ro/viata-sfintilor-mucenici-david-constantin-printi-ai-georgiei), from the Sinaxarul mare for October; read 17 September 2026; the Russian church calendar keeps him on the Julian 2 October — [the day](https://days.pravoslavie.ru/Days/20261002.html); read 4 October 2026.*

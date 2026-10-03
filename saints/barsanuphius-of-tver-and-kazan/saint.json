@@ -1,22 +1,24 @@
 {
   "slug": "barsanuphius-of-tver-and-kazan",
   "display_name": "Barsanuphius of Tver and Kazan",
-  "sex": "male",
   "office": "Bishop of Tver and Kazan",
-  "types": [
-    "bishop",
-    "monk",
-    "abbot"
-  ],
   "names": [
     {
       "form": "Βαρσανούφιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Βαρσανούφιος επίσκοπος Τβερ και Καζάν», with the rank word and the see left off."
+    },
+    {
+      "form": "Варсонофий, епископ Тверской",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 362, «Святитель Варсонофий, епископ Тверской», with the rank word left off. The see is kept in the form because it is what distinguishes him from the five other Barsanuphiuses the corpus holds."
     }
   ],
-  "related": [
-    "barsanuphius-of-optina"
+  "sex": "male",
+  "types": [
+    "bishop",
+    "monk",
+    "abbot"
   ],
   "dates": {
     "birth": {
@@ -37,8 +39,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "rank": "great-doxology",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the finding of his relics in 1595, not his repose, and the Russian line says so outright: «Обретение мощей». The Greek keeps him on 11 April."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Обретение мощей свтт. Гурия, архиеп. Казанского, и Варсонофия, еп. Тверского (1595).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line alone, «Совершается служба со славословием» — a service with the great doxology, and the only rank on the day above the plain one."
+      },
+      "note": "The Russian names him for Tver where the Greek names him for Tver and Kazan both, and it keeps his relics with those of Gurias of Kazan, found together in 1595."
     },
     {
       "church": "romanian",
@@ -65,6 +80,9 @@
       "status": "undocumented",
       "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
     }
+  ],
+  "related": [
+    "barsanuphius-of-optina"
   ],
   "text": {
     "life": "life.md"

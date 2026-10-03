@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Θεόδωρος Ουσακώφ",
       "lang": "el"
+    },
+    {
+      "form": "Феодор (Ушаков) Санаксарский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14294, «Феодор (Ушаков) Санаксарский, воин», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «23 мая (Ростов.)» and «23 июля» — the first an abbreviation the page does not expand. One row per church is the schema, so the other two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Прав. воина Феодора Ушакова (1817).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The year agrees with saint.gr. The Russian calls him «прав. воина», the righteous soldier, and its index of names heads him «Феодор (Ушаков) Санаксарский, воин», for the Sanaksar monastery."
     },
     {
       "church": "romanian",

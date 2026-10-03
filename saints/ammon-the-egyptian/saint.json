@@ -6,6 +6,11 @@
       "form": "Αμμούν",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Αμμούν ο Αιγύπτιος»."
+    },
+    {
+      "form": "Аммон Нитрийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 144, «Аммон (Аммун) Нитрийский, Египетский, прп.», with the rank word left off and the second form of the name and the second place left to this note."
     }
   ],
   "sex": "male",
@@ -21,21 +26,30 @@
       "note": "saint.gr’s entry heads its page «Οσιος Αμμουν ο Αιγυπτιος (294 - 357)»."
     },
     "death": {
-      "earliest": 357,
-      "latest": 357,
-      "display": "357",
+      "earliest": 350,
+      "latest": 350,
+      "display": "c. 350",
       "basis": "traditional",
-      "note": "saint.gr’s entry heads its page «Οσιος Αμμουν ο Αιγυπτιος (294 - 357)»."
+      "note": "days.pravoslavie.ru's 4 октября ст. ст.: «Прп. Аммона (ок. 350)» — about 350. The folder carried a birth year of 294 from saint.gr and no death date."
     }
   },
-  "related": [
-    "anthony-the-great"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Прп. Аммона (ок. 350).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The Russian gives the year of death this folder had no death date for, and in its index of names both the second form of the name and the place: «Аммон (Аммун) Нитрийский, Египетский» — Ammun, of Nitria, of Egypt."
     },
     {
       "church": "romanian",
@@ -61,6 +75,9 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "anthony-the-great"
   ],
   "text": {
     "life": "life.md"

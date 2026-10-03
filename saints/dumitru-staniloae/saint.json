@@ -34,7 +34,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 4 октября ст. ст. (civil 17 October 2026) was read on 2026-10-04 and prints sixteen lines, none of them his. The Russian calendar does not keep the twentieth-century Romanian saints. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -61,6 +61,15 @@
       "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
     }
   ],
+  "related": [
+    "andrei-saguna",
+    "cleopa-of-sihastria",
+    "dometie-of-ramet",
+    "gregory-palamas"
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "romanian",
@@ -94,14 +103,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "related": [
-    "andrei-saguna",
-    "cleopa-of-sihastria",
-    "dometie-of-ramet",
-    "gregory-palamas"
   ]
 }

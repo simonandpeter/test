@@ -1,0 +1,66 @@
+{
+  "slug": "helladius-of-the-caves",
+  "display_name": "Helladius of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Елладий Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 769, «Елладий Печерский, затворник, постник», with the two epithets left to this note: recluse, and faster."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1300,
+      "display": "12th or 13th century",
+      "basis": "traditional",
+      "note": "The two centuries the Russian calendar prints after the pair of names, «Прпп. Елладия и Онисима Печерских (XII-XIII)», without choosing between them."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», which its own abbreviation marks as the synaxis of the saints of the Near Caves. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Прпп. Елладия и Онисима Печерских (XII-XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "onesimus-of-the-caves"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

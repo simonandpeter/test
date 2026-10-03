@@ -1,0 +1,62 @@
+{
+  "slug": "hesychius-the-choribite",
+  "display_name": "Hesychius the Choribite",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Исихий Хоривит",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1126, «Исихий Хоривит, безмолвник (исихаст), прп.», with the rank word and the gloss left off. «Безмолвник» — the silent one — is the Russian for ἡσυχαστής, and the page prints both."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The century his life on days.pravoslavie.ru gives, «жил в VI веке», and the century the day line prints after his name, «Блж. Исихия Хоривита (VI)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Блж. Исихия Хоривита (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 16 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/16 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 16 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

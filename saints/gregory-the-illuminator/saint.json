@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei celei Mari",
       "lang": "ro"
+    },
+    {
+      "form": "Григорий Армянский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 534, «Святитель Григорий Армянский, епископ, сщмч.», with the rank and office words left off. The Russian index names him for Armenia where the Greek and Romanian name him Illuminator of Greater Armenia."
     }
   ],
   "sex": "male",
@@ -26,10 +31,10 @@
     },
     "death": {
       "earliest": 331,
-      "latest": 331,
-      "display": "331",
+      "latest": 335,
+      "display": "331 or 335",
       "basis": "traditional",
-      "note": "saint.gr’s heading for the entry: «(257 - 331)»."
+      "note": "Two sources and two years, recorded as the disagreement rather than resolved: saint.gr's heading gives «(257 - 331)», and days.pravoslavie.ru's 30 сентября ст. ст. gives «просветителя Великой Армении (ок. 335)»."
     }
   },
   "images": [
@@ -46,8 +51,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Сщмч. Григория еп., просветителя Великой Армении (ок. 335).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar prints «ок. 335» where saint.gr's heading gives 331; the death interval now spans both and says so. Its index of names heads him «Святитель Григорий Армянский, епископ, сщмч.» and the day carries a troparion and a kontakion for him which this batch did not take."
     },
     {
       "church": "romanian",

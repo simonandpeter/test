@@ -8,4 +8,6 @@ When some brothers wished to build their cells farther off for more quiet, [Anth
 
 Ammon and Anthony were bound by so deep a love in God that when Ammon gave up his soul, Anthony, on his mountain fourteen days’ walk away, broke off his talk with some young monks, fell into ecstasy, and saw Ammon’s soul going up to heaven while angels sang hymns of joy. Among the sayings the Spirit gave Ammon the entry sets this: bear with every man as God bears with you. Its heading gives his life as 294–357. The Greek calendar keeps him on 4 October.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2591/saint.aspx); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 4 October and gives the year of death this folder had none for: «Прп. Аммона (ок. 350)», about 350, against the birth year of 294 the Greek supplied. Its index of names prints his name twice over and adds the place, «Аммон (Аммун) Нитрийский, Египетский» — Ammun, of Nitria, of Egypt. A second Ammon stands on the same page, the recluse of the Kyiv Caves, which is why that one's line names the caves and this one's does not.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2591/saint.aspx); read 17 September 2026; the Russian church calendar keeps him on the Julian 4 October — [the day](https://days.pravoslavie.ru/Days/20261004.html); read 4 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Constantin",
       "lang": "ro",
       "note": "His own name, read out of «Sfinții Mucenici David și Constantin, prinți ai Georgiei», which names two saints."
+    },
+    {
+      "form": "Константин Арагветский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1269, «Константин Арагветский, князь, мч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -22,14 +27,23 @@
       "note": "doxologia.ro: «să-i înece în Râul Rioni, aceasta petrecându-se în anul 740»."
     }
   },
-  "related": [
-    "david-of-georgia"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Мчч. Давида и Константина, князей Арагветских (740) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The year agrees with doxologia.ro's 740. The «(Груз.)» marks this as one of the Georgian commemorations the Russian calendar keeps, and its index of names gives him the princely house, «Константин Арагветский, князь, мч.» — of Argveti."
     },
     {
       "church": "romanian",
@@ -55,6 +69,9 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "david-of-georgia"
   ],
   "text": {
     "life": "life.md"

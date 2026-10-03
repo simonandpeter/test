@@ -1,0 +1,62 @@
+{
+  "slug": "stephen-stiljanovic",
+  "display_name": "Stephen Štiljanović",
+  "sex": "male",
+  "types": [
+    "righteous",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Стефан Щилянович",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2076, «Святой Стефан Щилянович», with the rank word left off. The same site's other life page for him spells it «Стефан Шилянович», with ш for щ."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1515,
+      "latest": 1515,
+      "display": "1515",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «Святой отошел ко Господу 4 октября 1515 года», and the day line prints «(1515)» after his name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «30 августа (Серб.)», which the abbreviation marks as a Serbian commemoration. One row per church is the schema, so the August day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Св. прав. Стефана Щиляновича (1515) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The «(Серб.)» marks this as one of the Serbian commemorations the Russian calendar keeps. The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked, and this is the row that most needs it: the Russian calendar marks him «(Серб.)» and his name page gives «30 августа (Серб.)» as his other day, so the Serbian church plainly keeps him, but pravoslavno.rs's own Prologue page was not read (2026-10-04) and an attestation for a church is cited from that church's calendar and no other."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

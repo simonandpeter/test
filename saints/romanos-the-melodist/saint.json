@@ -9,6 +9,11 @@
     {
       "form": "Sfântul Cuvios Roman Melodul",
       "lang": "ro"
+    },
+    {
+      "form": "Роман Сладкопевец",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1878, «Преподобный Роман Сладкопевец», with the rank left off. «Сладкопевец» — sweet-singer — is the Russian for the Greek Μελωδός."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Прп. Романа Сладкопевца (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The Russian prints «(VI)», the sixth century, and so takes one side of the fork saint.gr leaves open between the sixth and the eighth. The folder keeps the open interval and records which side this source came down on. The day carries a troparion for him which this batch did not take."
     },
     {
       "church": "romanian",
@@ -63,6 +78,15 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -130,15 +154,6 @@
         "text": "Adorned from thy youth with the divine virtues of the Spirit, O holy and most venerable father Romanos, most wise, thou wast the adorner of the honoured Church of Christ, for thou didst beautify it with fair songs, O blessed one. Wherefore we pray thee: grant thy divine gifts to those who long for them, that we may cry to thee: Rejoice, most blessed father, adornment of the Church.",
         "rendered": "site"
       }
-    }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ]
 }

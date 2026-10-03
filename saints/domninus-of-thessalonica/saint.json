@@ -5,6 +5,11 @@
     {
       "form": "Άγιος Δομνίνος",
       "lang": "el"
+    },
+    {
+      "form": "Домнин Солунский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 647, «Домнин Солунский (Фессалоникийский), мч.», with the rank word left off and the parenthesised second form of the city left to this note."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Мч. Домнина Солунского (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "Where saint.gr gives «περί το 288 μ.Χ.» the Russian gives «ок. 284-305», which is Diocletian's reign rather than a year. That is the wider reading of the same martyrdom, so the folder's date is left as the Greek source stated it and the reign is recorded here."
     },
     {
       "church": "romanian",
@@ -51,10 +66,10 @@
       "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "domninus-companion-of-philemon"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

@@ -5,6 +5,11 @@
     {
       "form": "Άγιος Μιχαήλ ηγούμενος της Μονής Ζώβης και τριάντα έξι άλλοι Οσιομάρτυρες",
       "lang": "el"
+    },
+    {
+      "form": "Михаил Зовийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1551, «Михаил Зовийский (Севастийский), игумен, сщмч.», with the rank and office words left off and the parenthesised second form left to this note."
     }
   ],
   "sex": "male",
@@ -15,17 +20,27 @@
   "dates": {
     "death": {
       "earliest": 780,
-      "latest": 780,
-      "display": "c. 780",
+      "latest": 790,
+      "display": "780 to 790",
       "basis": "traditional",
-      "note": "saint.gr: «έζησαν στα χρόνια του βασιλιά Κωνσταντίνου ΣΤ’ και της μητέρας του Ειρήνης (780 μ.Χ.)»."
+      "note": "Two readings of the same martyrdom, the wider one taken because it contains the other: saint.gr gives «έζησαν στα χρόνια του βασιλιά Κωνσταντίνου ΣΤ’ και της μητέρας του Ειρήνης (780 μ.Χ.)», and days.pravoslavie.ru's 1 октября ст. ст. gives «(780-790)»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Прмч. Михаила, игумена Зовийского, и с ним 36-ти преподобномучеников (780-790).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The Russian counts the company exactly as the Greek does, thirty-six with their abbot, and gives a decade where saint.gr gives a year: «(780-790)» against «(780 μ.Χ.)». The decade is now the death interval."
     },
     {
       "church": "romanian",

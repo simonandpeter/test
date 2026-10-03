@@ -4,4 +4,6 @@ Peter was born and raised in the city of Capitolias, an ancient city of eastern 
 
 The Greek calendar keeps him on 4 October. The entry gives no year.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2588/saint.aspx); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 4 October and gives this folder its first date, «Сщмч. Петра Капетолийского (III-IV)» — the third or fourth century, with no choice made between them. Its index of names adds a second place, «Петр Капетолийский, Дамасский, пресвитер, сщмч.»: of Capitolias and of Damascus, presbyter, hieromartyr.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2588/saint.aspx); read 17 September 2026; the Russian church calendar keeps him on the Julian 4 October — [the day](https://days.pravoslavie.ru/Days/20261004.html); read 4 October 2026.*
