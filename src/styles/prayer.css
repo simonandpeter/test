@@ -48,9 +48,12 @@ html[data-route~='prayer'] .hymnal {
    it, so the rule went rather than standing as a mechanism no test could see.
 
    The asides stand on the page's own margin at this width, where past 1024 they
-   are columns with padding of their own. */
+   are columns with padding of their own. That margin is `main.chrome`'s and is
+   not paid again here: every block on this page below 1024 takes its gutter
+   from the page, which is what All Saints does and why the two pages' content
+   stands on one line. */
 html[data-route~='prayer'] .hy-side {
-  padding: 0 var(--space-4) var(--space-6);
+  padding: 0 0 var(--space-6);
 }
 
 /* ---- the shell above the book --------------------------------------------
@@ -60,23 +63,21 @@ html[data-route~='prayer'] .hy-side {
    nothing about how it is dressed. `views/prayer/find.js` is the other half.
 
    `flex: none`, so the body below it is what the page's height is spent on.
-   The side padding is the page's, matching the asides' own margin at this
-   width, and it is set here because `index.css` leaves the gutter to whichever
-   view mounts the block. */
+   No gutter of its own: `main.chrome` pays the page's, as it does on All
+   Saints, and a second charge here put this page's field 16 px further in than
+   that page's at every width below 1024 (author, 2026-10-03: "That whole page
+   is also a different edge margin width than the Saints page"). */
 html[data-route~='prayer'] .index-controls {
   flex: none;
-  padding-inline: var(--space-4);
 }
 
 /* **The head row is All Saints' own too** (author, 2026-10-03: "instead of
    Saints it says Prayer as the text at the top"): `index.css` draws
-   `.index-head` and dresses the word in it, and this says only that it keeps
-   the page's gutter — the same one the shell and the count line pay, so the
-   name, the field and the first aside stand on one line — and that it spends no
-   height the book could have. */
+   `.index-head` and dresses the word in it, and this says only that it spends
+   no height the book could have. The gutter is the page's, as everywhere else
+   on this page. */
 html[data-route~='prayer'] .index-head {
   flex: none;
-  padding-inline: var(--space-4);
 }
 
 /* The line that says how long the book now is. Visible, where All Saints'
@@ -86,7 +87,6 @@ html[data-route~='prayer'] .index-head {
 html[data-route~='prayer'] .hy-count {
   flex: none;
   margin: 0 0 var(--space-4);
-  padding-inline: var(--space-4);
   font-size: var(--text-sm);
   color: var(--ink-soft);
 }

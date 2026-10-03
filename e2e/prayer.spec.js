@@ -1847,3 +1847,32 @@ test('the sticky controls block is opaque where the page scrolls under it', asyn
     'the instrument: with `background: none` back the band still did not change, so it measures nothing',
   ).toBe(false);
 });
+
+test("Prayer stands on All Saints' margin, not a wider one", async ({ page }) => {
+  /*
+   * Author, 2026-10-03: "That whole page is also a different edge margin width
+   * than the Saints page". It was. `main.chrome` pays the page's gutter on
+   * every route, and this page's shell, head row, count line and asides each
+   * paid it a second time, so its field began 16 px further in than All
+   * Saints' at every width below the desk.
+   *
+   * The assertion is the other page rather than a number: the complaint is
+   * that the two differ, and a number here would go stale the day the page's
+   * gutter changes while leaving the two pages just as far apart.
+   */
+  await ready(page);
+  const edgeOf = async (route) => {
+    await page.goto(route, { waitUntil: 'networkidle' });
+    await page.evaluate(() => document.fonts.ready);
+    return page.evaluate(() => {
+      const r = document.querySelector('.search-field').getBoundingClientRect();
+      return { left: Math.round(r.left), right: Math.round(innerWidth - r.right) };
+    });
+  };
+  for (const width of [360, 768]) {
+    await page.setViewportSize({ width, height: 800 });
+    const saints = await edgeOf(SAINTS_ROUTE);
+    const prayer = await edgeOf('/prayer');
+    expect(prayer, `at ${width} px`).toEqual(saints);
+  }
+});

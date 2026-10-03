@@ -1176,7 +1176,7 @@ test('About offers a way to write, and it goes to the repository', async ({ page
   await expect(contact.locator('h2')).toHaveText('Contact');
   const link = contact.locator('a');
   await expect(link).toHaveAttribute('href', /github\.com\/.+\/issues\/new/);
-  await expect(contact).toContainText('can be read by anyone');
+  await expect(contact).toContainText('Issues are public');
   // No address of the author's anywhere on the page, which is the whole point.
   expect(await page.content()).not.toContain('mailto:');
   expect(await page.locator('body').textContent()).not.toMatch(/@[\w.-]+\.(com|org|ro)/);
