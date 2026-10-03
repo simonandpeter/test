@@ -6,6 +6,11 @@
       "form": "Ονούφριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιος Ονούφριος ο Νέος», with the rank word left off. The notice gives his earlier names too: Ματθαίος at baptism and Μανασσής as a deacon."
+    },
+    {
+      "form": "Онуфрије хилендарац",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 4. јануар ст. ст., „Преподобномученик Онуфрије хилендарац.“, with the rank word «Преподобномученик» left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.01.2026 (4. јануар ст. ст.) — „Преподобномученик Онуфрије хилендарац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

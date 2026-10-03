@@ -1,0 +1,52 @@
+{
+  "slug": "the-eunuch-of-queen-candace",
+  "display_name": "The Eunuch of Queen Candace",
+  "names": [
+    {
+      "form": "Евнух царице Кандакије",
+      "lang": "sr",
+      "note": "The Ohrid Prologue gives him no name. Its heading for 4. јануар ст. ст. is „Евнух царице Кандакије.“, the eunuch of Queen Candace, and the form recorded here is that whole phrase, which is all the calendar calls him."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (3 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.01.2026 (4. јануар ст. ст.) — „Евнух царице Кандакије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-17&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "related": [
+    "philip-the-deacon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

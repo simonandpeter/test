@@ -8,4 +8,4 @@ So he went to the skete of the Honourable Forerunner, where the spiritual father
 
 The tortures that followed, the page says, were merciless and dreadful. In the end his torturers knifed him, and he died on 4 January 1818, a Friday, at three in the afternoon; the Turks threw his holy relic into the sea. A service and a life of him were written by Onuphrius the Iberite and published at Athens in 1862. saint.gr counts him among the new martyrs who bore witness after the fall of Constantinople.
 
-*After saint.gr's calendar for 4 Ιανουαρίου — [the day](https://www.saint.gr/01/04/index.aspx) and [the life](https://www.saint.gr/475/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 4 Ιανουαρίου — [the day](https://www.saint.gr/01/04/index.aspx) and [the life](https://www.saint.gr/475/saint.aspx); read 30 September 2026; the Ohrid Prologue for 17 January 2026 (4. јануар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-17&prolog=1), read 3 October 2026.*

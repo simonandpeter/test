@@ -11,6 +11,11 @@
       "form": "Евстафий I",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's line for 4 января ст. ст., «Свт. Евстафия I, архиеп. Сербского», declined there and given in the nominative by the name link behind it, «Святитель Евстафий, архиепископ Сербский», which omits the ordinal; the rank word and the see are left off."
+    },
+    {
+      "form": "Јевстатије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 4. јануар ст. ст., „Јевстатије, архиепископ српски.“, with the office «архиепископ српски» left off."
     }
   ],
   "sex": "male",
@@ -66,8 +71,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.01.2026 (4. јануар ст. ст.) — „Јевстатије, архиепископ српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
