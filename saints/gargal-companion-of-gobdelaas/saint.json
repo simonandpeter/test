@@ -1,0 +1,64 @@
+{
+  "slug": "gargal-companion-of-gobdelaas",
+  "display_name": "Gargal, companion of Gobdelaas",
+  "names": [
+    {
+      "form": "Гаргал",
+      "lang": "sr",
+      "note": "His own name, read out of «Са њима пострадаше – јер повероваше у Христа – и сестра Говделајева Каздоја и главни жрец Гаргал» in this folder's Serbian citation, where it stands in the nominative."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue, of the company he suffered with: «Пострадаше у IV столећу.» The Russian calendar's day line for 29 сентября ст. ст. prints «(IV)» for the same company, though it does not name him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Read and not found: days.pravoslavie.ru's page for 29 сентября ст. ст., read 4 October 2026, prints «Мчч. Дады, Гаведдая и Каздои (IV)» — three names, and no Gargal."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 septembrie keeps «Sfânta Muceniță Gudelia» of this company and was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked here: saint.gr's line for 29 Σεπτεμβρίου, as cited on the four folders of this company from a reading of 17 September 2026, is «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» — four names, and no Gargal — but that page was not opened for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Named inside the Prologue's second entry for this day, which is Dadas and Gobdelaas's. He is named by this calendar and by no other."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «2. Св. муч. Дада и Говделај. … Са њима пострадаше – јер повероваше у Христа – и сестра Говделајева Каздоја и главни жрец Гаргал.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "related": [
+    "dadas-companion-of-gobdelaas",
+    "gobdelaas-son-of-sapor",
+    "casdoa-sister-of-gobdelaas"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

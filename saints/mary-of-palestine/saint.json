@@ -1,0 +1,52 @@
+{
+  "slug": "mary-of-palestine",
+  "display_name": "Mary of Palestine",
+  "names": [
+    {
+      "form": "Св. Марија Палестинска",
+      "lang": "sr"
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Read and not found: days.pravoslavie.ru's page for 29 сентября ст. ст., read 4 October 2026, prints six entries — Cyriacus, the finding of John of Shanghai's relics, «Мчч. Дады, Гаведдая и Каздои», Theophanes the Merciful, John of Riga and the presbyter Michael — and no Mary. No other day checked."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 septembrie was not read for her (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked here: saint.gr's page for 29 Σεπτεμβρίου was read on 17 September 2026 for this day's other entries and its lines are cited on their folders, but it was not read for her (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Fourth of the four the Ohrid Prologue enumerates for this day, and the only one of them the corpus had no folder for."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «4. Св. Марија Палестинска. Била најпре чтеца Псалтира при цркви Васкрсења у Јерусалиму. … 18 година проживе св. Марија у пустињи, и силом Божјом нити јој неста боба ни воде.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "related": [
+    "cyriacus-the-anchorite"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

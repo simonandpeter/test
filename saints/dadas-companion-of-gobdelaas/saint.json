@@ -10,6 +10,15 @@
       "form": "Δάδας",
       "lang": "el",
       "note": "Read out of «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» in this folder’s Greek citation."
+    },
+    {
+      "form": "Св. муч. Дада и Говделај",
+      "lang": "sr"
+    },
+    {
+      "form": "Дада",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. муч. Дада и Говделај» — the line already recorded here, which names more than this saint, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",
@@ -19,7 +28,8 @@
   "related": [
     "gobdelaas-son-of-sapor",
     "casdoos-companion-of-gobdelaas",
-    "casdoa-sister-of-gobdelaas"
+    "casdoa-sister-of-gobdelaas",
+    "gargal-companion-of-gobdelaas"
   ],
   "attestations": [
     {
@@ -58,11 +68,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day. Its heading names Dadas and Gobdelaas only; Casdoa and the chief priest Gargal are named in the entry's closing line, and Casdoos it does not name at all."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «2. Св. муч. Дада и Говделај. Дада – великаш Персијски и сродник цара Сапора, а Говделај син истога цара. … Пострадаше у IV столећу. Са њима пострадаше – јер повероваше у Христа – и сестра Говделајева Каздоја и главни жрец Гаргал.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue, read 4 October 2026: «Пострадаше у IV столећу.» The Russian calendar's day line for 29 сентября ст. ст. prints «Мчч. Дады, Гаведдая и Каздои (IV)». The Greek entry gives no date at all."
+    }
   }
 }

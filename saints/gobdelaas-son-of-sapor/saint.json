@@ -23,6 +23,15 @@
       "form": "Γοβδελία",
       "lang": "el",
       "note": "The other form saint.gr’s entry gives: «Η Αγία Γουδελία (ή Γοβδελία)»."
+    },
+    {
+      "form": "Св. муч. Дада и Говделај",
+      "lang": "sr"
+    },
+    {
+      "form": "Говделај",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. муч. Дада и Говделај» — the line already recorded here, which names more than this saint, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",
@@ -33,7 +42,8 @@
   "related": [
     "casdoa-sister-of-gobdelaas",
     "casdoos-companion-of-gobdelaas",
-    "dadas-companion-of-gobdelaas"
+    "dadas-companion-of-gobdelaas",
+    "gargal-companion-of-gobdelaas"
   ],
   "attestations": [
     {
@@ -83,8 +93,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day. Its heading names Dadas and Gobdelaas only; Casdoa and the chief priest Gargal are named in the entry's closing line, and Casdoos it does not name at all."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «2. Св. муч. Дада и Говделај. Дада – великаш Персијски и сродник цара Сапора, а Говделај син истога цара. … Пострадаше у IV столећу. Са њима пострадаше – јер повероваше у Христа – и сестра Говделајева Каздоја и главни жрец Гаргал.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

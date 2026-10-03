@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Cuvios Chiriac Sihastrul",
       "lang": "ro"
+    },
+    {
+      "form": "Преп. Кириак Отшелник",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -23,7 +27,14 @@
       "latest": 500,
       "display": "5th century",
       "basis": "traditional",
-      "note": "saint.gr: «Γεννήθηκε στην Κόρινθο το 5ο αιώνα μ.Χ.»; it adds that he died aged 107."
+      "note": "saint.gr: «Γεννήθηκε στην Κόρινθο το 5ο αιώνα μ.Χ.»; it adds that he died aged 107. The Serbian Ohrid Prologue, read 4 October 2026, makes his age at death 109 instead; either age counted back from either of the two death years below falls inside this century, so the bound is unaffected."
+    },
+    "death": {
+      "earliest": 556,
+      "latest": 557,
+      "display": "556 or 557",
+      "basis": "traditional",
+      "note": "Two calendars, two years, and neither is preferred. The Russian calendar's day line for 29 сентября ст. ст. prints «Прп. Кириака отшельника (556)». The Serbian Ohrid Prologue, read 4 October 2026: «Пожививши дуго на корист многих пресели се у вечну радост Господа свога 557. год.» The Greek and Romanian entries give no year at all."
     }
   },
   "attestations": [
@@ -71,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day, and by far the longest of its four entries. It disagrees with the Greek entry about who Peter of Corinth was to him and about his age at death, and with the Russian about the year; all three disagreements are recorded in his life rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «1. Преп. Кириак Отшелник. Рођен у Коринту од родитеља Јована и Евдокије. … пресели се у вечну радост Господа свога 557. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
@@ -205,6 +226,9 @@
     }
   ],
   "related": [
-    "euthymius-the-great"
+    "euthymius-the-great",
+    "gerasimus-of-the-jordan",
+    "chariton-the-confessor",
+    "mary-of-palestine"
   ]
 }

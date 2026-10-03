@@ -10,6 +10,10 @@
       "form": "Θεοφάνης",
       "lang": "el",
       "note": "Read out of «Όσιος Θεοφάνης ο Φιλεύσπλαχνος από την Γάζα» in this folder’s Greek citation."
+    },
+    {
+      "form": "Св. Теофан Милостиви",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -53,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 29. септембар ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day, in four lines, and it gives no year either — all three calendars that keep him leave him undated."
+      },
+      "source": {
+        "text": "Охридски пролог, 29. септембар ст. к. — «3. Св. Теофан Милостиви. Богат грађанин из Газе. Толико беше милостив, да раздајући своје имање ништим и сам обништа.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
