@@ -4,6 +4,13 @@ Georgy Andreevich Urodov was born in 1882 to a peasant family in the village of 
 
 At the end of February 1918 part of the brethren, led by the hieromonk Vladimir and backed by the Bolsheviks, rose against him and deposed him; on 27 March the revolutionary tribunal had him arrested, and when he admitted no guilt it banished him from the monastery. On 3 April 1922 the Holy Synod appointed him superior of the Semiozernaya hermitage in the Kazan diocese and archimandrite; that year the authorities prosecuted him over the confiscation of church valuables, and that year too he became an active fighter against Renovationism in the Kazan country, the hermitage by his labours its centre. Arrested on 31 October 1928, he was sentenced to three years in a concentration camp and three of exile in the Urals.
 
-After the exile he found himself in the Vyatka diocese, where on 5 August 1935 Bishop Dimitri of Yaransk appointed him to the village of Sobolevo, now in the Kirov region, and there he laboured twenty-six years and ended his days. For a long time he was among the so-called non-commemorators; in 1955 he acknowledged the election of Patriarch Alexis and was reunited with the Patriarchal Church, writing to Archbishop Veniamin of Kirov to ask for a monastic burial when he died. He died on 14 August 1961 in deep old age, and his relics now rest at the Sanaksar monastery. The Sretensky calendar prints no life for him; this one follows azbyka.ru.
+After the exile he found himself in the Vyatka diocese, where on 5 August 1935 Bishop Dimitri of Yaransk appointed him to the village of Sobolevo, now in the Kirov region, and there he laboured twenty-six years and ended his days. For a long time he was among the so-called non-commemorators; in 1955 he acknowledged the election of Patriarch Alexis and was reunited with the Patriarchal Church, writing to Archbishop Veniamin of Kirov to ask for a monastic burial when he died. He died on 14 August 1961 in deep old age, and his relics now rest at the Sanaksar monastery.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandr-urodov); read 23 August 2026.*
+His relics rest now at Sanaksar, and the Russian calendar keeps their finding
+of 2001 as a second day, 5 September of the old style, 18 September; the corpus
+held that day as its own folder and both days are rows on this record now. The
+azbyka life says he is kept also on 27 August and in the synaxes of the new
+martyrs of Solovki and of the Kazan and Vyatka saints; neither of those days has
+been read here.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-aleksandr-urodov), read 23 August 2026; the Sretensky calendar prints no life for him, only its two day lines — [14 августа ст. ст.](https://days.pravoslavie.ru/Days/20260814.html) and [5 сентября ст. ст.](https://days.pravoslavie.ru/Days/20260905.html).*
