@@ -1,0 +1,119 @@
+{
+  "slug": "lazarus-the-four-days-dead",
+  "display_name": "Lazarus the Four-days-dead",
+  "office": "Bishop of Kition",
+  "names": [
+    {
+      "form": "Лазарь Четверодневный, Китийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1328, «Святитель Лазарь Четверодневный, Китийский, епископ», with the two rank words left off; Четверодневный is the four-days-dead and Китийский is Kition on Cyprus. The day line gives «прав. Лазаря Четверодневного, еп. Китийского»."
+    },
+    {
+      "form": "Лазар Четвородневни",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth entry for 17 October old style as the Православни подсетник prints it, «Св. Лазар Четвородневни», with the rank word left off; the Prologue gives him no see."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "hierarch",
+    "bishop"
+  ],
+  "related": [
+    "martha-sister-of-lazarus",
+    "mary-sister-of-lazarus"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 60,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "No calendar gives a year for the death. The Russian life says only «После воскрешения святой Лазарь жил еще 30 лет, епископствовал на острове Кипр … и там же мирно почил» — after the raising he lived thirty more years, was bishop on the island of Cyprus and there fell asleep in peace. Thirty years from the Passion puts his death in the second half of the first century, and the interval says no more than that. The year on the folder's Russian feast, 898, belongs to the translation of the relics and not to the death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian",
+        "note": "**This day is the translation of his relics, not his repose.** The Russian line is «Перенесение мощей прав. Лазаря Четверодневного, еп. Китийского (898)», and his name page gives three days, «Дни памяти: 22 марта , 4 мая , 17 октября»; the Church's chief commemoration of him is the moveable Lazarus Saturday, the sixth Saturday of Great Lent, which no fixed feast can carry. The row records the October day because that is the day whose page was read, and because the fixed hymns the calendar prints for him stand under it. The precedent for a feast on a translation with the event named is the corpus's `theodosius-of-chernigov`."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Перенесение мощей прав. Лазаря Четверодневного, еп. Китийского (898).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's two icons are both «Cовершается служба, не отмеченная в Типиконе никаким знаком» and stand in the paragraph above this one, before Hosea and before Andrew of Crete. `day-candidates.mjs` marks this line `[~]` because «перенесение мощей» usually means a feast rather than a person; here the subject is a person no folder held, so the line becomes a folder with the event named in the feast."
+      },
+      "note": "**The two calendars that keep this day disagree about the year of the translation and about his other days, and both readings are carried.** The Russian says the relics were brought from Kition to Constantinople in 898 by order of the emperor Leo the Wise, whose reign it dates 886–911, and laid in a church of the Righteous Lazarus; the Ohrid Prologue says Leo the Wise built the church and the relics were brought to it «890. год.» The Russian name page gives his days as 22 March, 4 May and 17 October; the Prologue says his chief feast is 17 March and Lazarus Saturday. Nothing read here reconciles either pair. The Russian life is otherwise the Gospel's: the brother of Martha and Mary, of the village of Bethany near Jerusalem, whom the Lord often visited and called his friend (John 11.3, 11.11), and whom he raised after four days in the tomb (John 11.17–44); many Jews who heard of it came to Bethany, were satisfied of the reality of the miracle and became followers of Christ, for which the chief priests wanted to kill Lazarus; and he is named once more in the Gospel, when six days before the Passover the Lord came again to Bethany and the raised Lazarus was there (John 12.1–2, 12.9–11)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 17 octombrie was read for this day's other entries and does not carry a translation of his relics, but none of his own days was looked for (read 30 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 17 Οκτωβρίου was read for this day's other entries and does not carry a translation of his relics, but none of his own days was looked for (read 30 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The same event and the same reason as the Russian row above: the Prologue says in its own words «Под данашњим датумом празнује се пренос његових моштију са острва Кипра у Цариград», under today's date the translation of his relics from the island of Cyprus to Constantinople is kept, and names his chief feast as 17 March and Lazarus Saturday, neither of which this row carries."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.10.2026 (17. октобар ст. ст.) — „4. Св. Лазар Четвородневни.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-30&prolog=1",
+        "year": 2026,
+        "note": "The fourth and last of the day's entries; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "Four lines, and two of them disagree with the Russian page. It dates the translation 890 where the Russian dates it 898, and it names his chief feast 17 March where the Russian name page gives 22 March and 4 May; both pairs are carried and neither is chosen. It agrees that the emperor was Leo the Wise and that he built the church at Constantinople for the relics. **Its last line is the inscription**, which the Russian life also keeps: when the grave was dug up in the city of Kition on Cyprus after nearly a thousand years they found a marble slab on which was written „Лазар Четвородневни пријатељ Христов“, Lazarus the Four-days-dead, the friend of Christ. The Russian page has the same words on a marble ark, «Лазарь Четверодневный, друг Христов», and says the relics were found at Kition; the Prologue puts the digging up a thousand years after the burial, which the Russian page does not."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко велико сокровище и богатство некрадомо/ к нам прииде из Кипра, Лазаре,/ Промыслом всех Бога, повелением царя благочестива,/ подая чтущим тя исцеления даром,/ избавляя от бед и от всякаго вреда,/ верою взывающих ти:/ спаси всех молитвами своими, Лазаре отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 1328 — «Тропарь праведного Лазаря Четверодневного», глас 4, printed under the day 17 октября. It names him twice, «Лазаре» and «Лазаре отче наш», and it is a hymn of this day and not of Lazarus Saturday: it sings the coming of the relics out of Cyprus at a pious emperor's command.",
+        "url": "https://days.pravoslavie.ru/name/1328.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a great treasure and a wealth that cannot be stolen thou hast come to us out of Cyprus, O Lazarus, by the providence of the God of all and at the command of a pious emperor, giving freely healings to those who honour thee and delivering from troubles and from every harm those who call upon thee in faith: save us all by thy prayers, O Lazarus our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Взыде, яко звезда пресветлая,/ от Кипра честныя мощи твоя, Лазаре,/ Царствующий град освящающи и христолюбиваго царя веселящи/ и люди своя обогащающи,/ тобою благодать исцеления подающи, верно зовущим ти:/ радуйся, Лазаре, друже Божий.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 1328 — «Кондак праведного Лазаря Четверодневного», глас 8, printed under the day 17 октября. It names him twice, «Лазаре» and «радуйся, Лазаре, друже Божий», and it too is a hymn of the translation rather than of the raising.",
+        "url": "https://days.pravoslavie.ru/name/1328.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy honoured relics have risen out of Cyprus like a most radiant star, O Lazarus, sanctifying the Imperial City and gladdening the Christ-loving emperor and enriching thy people, granting through thee the grace of healing to those who faithfully call upon thee: rejoice, O Lazarus, friend of God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

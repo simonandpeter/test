@@ -900,6 +900,7 @@ export const ro = {
     'Bishop of Karpathos': 'Episcop de Karpathos',
     'Bishop of Kios in Bithynia': 'Episcop de Kios în Bitinia',
     'Bishop of Kirillov': 'Episcop de Kirillov',
+    'Bishop of Kition': 'Episcop de Kition',
     'Bishop of Kitros': 'Episcop de Kitros',
     'Bishop of Kovrov': 'Episcop de Kovrov',
     'Bishop of Kourion': 'Episcop de Kourion',

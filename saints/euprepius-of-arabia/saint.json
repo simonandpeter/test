@@ -17,13 +17,34 @@
       "form": "Ευτρόπιος",
       "lang": "el",
       "note": "The second form the page prints for him, in the account under all five names, «Ευπρέπιος (ή Eυτρόπιος)», and again in the epigram he shares with Anthimus."
+    },
+    {
+      "form": "Евтропий Киликийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 733, «Евтропий Киликийский, мч.», with the rank word left off. Its epithet is Cilicia, where the Russian life puts the arrest, against the day line’s Arabia. **The Russian name is Евтропий, Eutropius, where the Greek page the folder was built from prints Εὐπρέπιος**, which is the form the display name carries; the two are different names for the same fifth member of the company, and neither is corrected here."
+    },
+    {
+      "form": "Евтропије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second entry for 17 October old style, «Са њима пострадаше и венац славе примише св. Леонтије, Антим и Евтропије», with the rank word left off."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Мчч. бессребреников Космы и Дамиана , Аравийских, и братий их мчч. Леонтия , Анфима и Евтропия (287 или 303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day has two, both «Cовершается служба, не отмеченная в Типиконе никаким знаком», and both stand in the paragraph above this one, before Hosea and before Andrew of Crete. The space before the comma after «Дамиана» and after «Леонтия» is the page’s own."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same company — the five the Greek page enumerates one by one. **Three things stand on the Russian pages and not on the Greek one.** **The years**: «(287 или 303)», the calendar offering a choice it does not make, which is now the folder’s `dates`. **The place and the judge**: the Russian life says the pagans seized the holy physicians in Cilicia and brought them to the governor Lysias, who had them beaten inhumanly and then drowned in the sea, and an angel of God carried them out of the deep to the shore, after which the pagans beheaded them. **The warning against confusion**, which the page prints in its own parenthesis: «Нельзя путать святых Косму и Дамиана Аравийских с другими бессребрениками, с такими же именами, память которых 1 ноября и 1 июля» — the two other pairs of unmercenaries of the same names, kept on 1 November and 1 July, which the corpus holds as `cosmas-of-asia` and `damian-of-asia` and as `cosmas-of-rome` and `damian-of-rome`, and which are already in this folder’s `related`. **And the Russian index gives this one a different epithet from the folder’s.** Its name page calls him Киликийский, of Cilicia, where the day line keeps him among the brothers of Cosmas and Damian «Аравийских», of Arabia, and the Greek page the folder was built from names the five together as οἱ Ἀνάργυροι with no country at all. Cilicia is where the Russian life puts the arrest, so the two epithets are the country and the place of the passion rather than two men; the form is recorded as the index prints it and the display name is left as it was."
     },
     {
       "church": "romanian",
@@ -47,8 +68,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.10.2026 (17. октобар ст. ст.) — „2. Св. муч. Козма и Дамјан Безсребреници… Са њима пострадаше и венац славе примише св. Леонтије, Антим и Евтропије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-30&prolog=1",
+        "year": 2026,
+        "note": "The second of the day’s four entries; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "The Prologue opens by sorting the three pairs out before it tells this one: there are three sets of holy physicians called Cosmas and Damian, it says — one pair fell asleep in peace on 1 November, another were stoned at Rome on 1 July, and «ови трећи беху из Арабије», these third were from Arabia, and it is of these that today speaks. It then differs from the Russian life on the city and on the tortures. The city is Aegae, not Cilicia at large, and the prince is the same Lysias. They were thrown first into the sea and then into the fire, and God saved them from both, an angel of the Lord appearing to them; the prince put it down to sorcery, and they answered «Никакву враџбину ми нити знамо нити потребујемо, него имамо силу Христову» — we neither know nor need any sorcery, but we have the power of Christ, which saves us and everyone who calls on his most holy name. Then they were struck with stones and the stones rebounded, and shot with arrows and the arrows rebounded, and at the last they were beheaded with the sword. Many wonders came from their relics as they had from them living."
     }
   ],
   "related": [
@@ -63,5 +95,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 303,
+      "display": "287 or 303",
+      "basis": "traditional",
+      "note": "The Russian day line gives the choice itself and does not resolve it: «Мчч. бессребреников Космы и Дамиана , Аравийских, и братий их мчч. Леонтия , Анфима и Евтропия (287 или 303)» — 287 or 303. The Ohrid Prologue dates them by reign instead, «Пострадаше у време Диоклецијана и Максимијана», in the time of Diocletian and Maximian, which both years fall inside. saint.gr, the page this folder was built from, gives no year at all. So the interval carries the two printed years and nothing is chosen."
+    }
   }
 }

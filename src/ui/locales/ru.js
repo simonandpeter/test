@@ -919,6 +919,7 @@ export const ru = {
     'Bishop of Karpathos': 'Епископ Карпафский',
     'Bishop of Kios in Bithynia': 'Епископ Кийский в Вифинии',
     'Bishop of Kirillov': 'Епископ Кирилловский',
+    'Bishop of Kition': 'Епископ Китийский',
     'Bishop of Kitros': 'Епископ Китросский',
     'Bishop of Kovrov': 'Епископ Ковровский',
     'Bishop of Kourion': 'Епископ Курийский',

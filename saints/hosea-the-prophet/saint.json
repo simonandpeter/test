@@ -11,6 +11,16 @@
       "form": "Ωσηέ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Προφήτης Ωσηέ», with the rank word left off."
+    },
+    {
+      "form": "Осия",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1680, «Осия, пророк, из 12 малых пророков» — Hosea, prophet, of the twelve minor prophets — with the rank word and the collection left off; the day line gives «Осии»."
+    },
+    {
+      "form": "Осија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first entry for 17 October old style as the Православни подсетник prints it, «Св. пророк Осија», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -19,18 +29,30 @@
   ],
   "dates": {
     "floruit": {
-      "earliest": -822,
-      "latest": -822,
-      "display": "822 BC",
+      "earliest": -900,
+      "latest": -701,
+      "display": "9th or 8th century BC",
       "basis": "traditional",
-      "note": "doxologia.ro: «Osea a viețuit ani îndelungați, cu 822 de ani înainte de nașterea lui Hristos.» The page gives no year for his birth or his death."
+      "note": "Four calendars, four readings, and the interval carries all of them. doxologia.ro: «Osea a viețuit ani îndelungați, cu 822 de ani înainte de nașterea lui Hristos», 822 years before the birth of Christ. days.pravoslavie.ru's day line gives «Прор. Осии (820 до Р.Х.)», 820 BC, and the life behind it «Он жил в IX в. до Рождества Христова», in the ninth century before Christ. saint.gr puts him in the eighth century, under Uzziah, Jotham, Ahaz and Hezekiah of Judah and Jeroboam II of Israel. The Ohrid Prologue says only «Живео и пророковао на преко 800 година пре Христова рођења», he lived and prophesied over 800 years before the birth of Christ. No page gives a year of birth or of death, and the two centuries named are not reconciled anywhere, so the floruit spans both."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Прор. Осии (820 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon is the same one and stands before the next entry, Andrew of Crete."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Romanian, and the same prophet — of the tribe of Issachar, as the Greek page also has it. **It dates him differently from both and names his company.** The day line gives 820 BC and the life «Он жил в IX в. до Рождества Христова», the ninth century, against saint.gr's eighth; `dates` now spans both centuries. The life makes him a contemporary of the prophets Isaiah, Micah and Amos, says that in his time many of his tribesmen had forgotten the true God and worshipped idols and that his wise instruction turned them back to the old piety, and that rebuking the lawlessness of the people of Israel he foretold great disasters from foreigners and the captivity in Assyria. **It then lists the prophecies the page reads as fulfilled in Christ, with the verses**: that the Old Testament sacrifice would cease and the priesthood of Aaron be no more (Hos. 3.5) and that the true knowledge of God would spread over all the earth (Hos. 2.20), almost a thousand years before the Saviour came; and of Christ, that he would return out of Egypt (Hos. 11.1, cf. Matt. 2.15), rise on the third day (Hos. 6, cf. 1 Cor. 15.4) and conquer death (Hos. 13.14, cf. 1 Cor. 15.54–55). His prophetic service lasted more than sixty years, and he died in great old age."
     },
     {
       "church": "romanian",
@@ -63,8 +85,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.10.2026 (17. октобар ст. ст.) — „1. Св. пророк Осија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-30&prolog=1",
+        "year": 2026,
+        "note": "The first of the day's four entries; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "The Prologue calls him the son of Beeri of the tribe of Issachar, which is the Greek page's parentage and the Russian page's tribe together, and dates him only «на преко 800 година пре Христова рођења», over 800 years before the birth of Christ. It is the one page of the four that counts his book: «Речи његове богодухновене налазе се у књизи његовој која садржи 14 глава», his God-inspired words are in his book, which has fourteen chapters. It says he rebuked Israel and Judah much for idolatry and foretold God's punishment for their sins, the ruin of Samaria and of Israel for their apostasy, but also God's mercy to the tribe of Judah; and that he prophesied the abolition and ceasing of the Old Testament sacrifice, the coming of the Lord, and the riches of the gifts he would bring with him to the earth. It ends as the Russian life does, that he lived to a deep old age and fell asleep in peace. No hymn is printed for him."
     }
   ],
   "hymns": [
