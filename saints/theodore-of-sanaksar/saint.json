@@ -1,0 +1,58 @@
+{
+  "slug": "theodore-of-sanaksar",
+  "display_name": "Theodore of Sanaksar",
+  "names": [
+    {
+      "form": "Феодор Санаксарский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Феодор Санаксарский, прп.», with the rank word left off. The calendar gives no surname and no second name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Прп. Феодора Санаксарского (1791).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 4 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 March 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1791,
+      "latest": 1791,
+      "display": "1791",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 19 февраля ст. ст.: «Прп. Феодора Санаксарского (1791).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

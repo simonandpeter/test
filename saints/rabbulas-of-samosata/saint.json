@@ -13,14 +13,28 @@
       "form": "Ραβουλάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Όσιος Ραβουλάς», with the rank word left off. The line gives him no epithet; the English form carries the birthplace the life page gives him."
+    },
+    {
+      "form": "Равула Самосатский, Финикийский, Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Равула Самосатский, Финикийский, Константинопольский, прп.», with the rank word left off. The day's own line gives the name bare, «Прп. Равулы (ок. 530).»"
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Прп. Равулы (ок. 530).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

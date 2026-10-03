@@ -11,6 +11,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Όσιοι Ευγένιος και Μακάριος οι Ομολογητές», with the rank word and the title left off."
+    },
+    {
+      "form": "Макарий Антиохийский, Мавританский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Макарий Антиохийский, Мавританский, пресвитер, сщмч.», with the rank word and the order of service left off. The day's own line calls the two of them «Прпп. ... исповедников, пресвитеров Антиохийских», venerable confessors, where the name link marks each «сщмч.», hieromartyr; both readings are the calendar's own and the difference is not resolved here."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Прпп. Евгения и Макария исповедников, пресвитеров Антиохийских (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

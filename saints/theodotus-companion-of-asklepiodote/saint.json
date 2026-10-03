@@ -11,6 +11,11 @@
       "form": "Θεόδοτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Άγιοι Μάξιμος, Θεόδοτος, Ησύχιος και Ασκληπιοδότη», with the rank word left off. The page glosses the name, from Θεός and δοτός, as the God-given, the grace and gift of God."
+    },
+    {
+      "form": "Феодот (Богдан) Адрианопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Феодот (Богдан) Адрианопольский, мч.», with the rank word left off. The calendar carries a second name in the brackets, «Богдан», which the day's own line does not print."
     }
   ],
   "related": [
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Мчч. Максима, Феодота, Исихия, мц. Асклипиодоты (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

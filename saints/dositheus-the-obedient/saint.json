@@ -11,6 +11,11 @@
       "form": "Δοσίθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Αυγούστου, «Όσιος Δοσίθεος ο υποτακτικός του Οσίου Δωροθέου», with the rank word and the clause naming his elder left off. The page glosses the name as «δίδομαι + Θεός», the God-given."
+    },
+    {
+      "form": "Досифей Палестинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Досифей Палестинский, прп.», with the rank word left off. The day's own line gives no epithet at all and names him by his teacher instead."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps him on this day, where the Greek and Romanian rows on this folder are 13 August; days.pravoslavie.ru's line for 19 февраля names him by his teacher, «ученика прп. аввы Дорофея» (read 3 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Прп. Досифея (VII), ученика прп. аввы Дорофея.»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

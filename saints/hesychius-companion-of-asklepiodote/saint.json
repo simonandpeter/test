@@ -11,6 +11,11 @@
       "form": "Ησύχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Άγιοι Μάξιμος, Θεόδοτος, Ησύχιος και Ασκληπιοδότη», with the rank word left off. The page glosses the name, from ήσυχος, as the quiet, the calm, the maker of calm, the conciliatory man."
+    },
+    {
+      "form": "Исихий Адрианопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Исихий Адрианопольский, мч.», with the rank word left off. The day's own line gives the four of them in one list and this name bare inside it."
     }
   ],
   "related": [
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Мчч. Максима, Феодота, Исихия, мц. Асклипиодоты (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

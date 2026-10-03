@@ -11,6 +11,11 @@
       "form": "Απφία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Φιλήμων ο Απόστολος, Άρχιππος, Ονήσιμος και Απφία», with the rank word left off."
+    },
+    {
+      "form": "Апфия",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 февраля ст. ст., «Равноапостольная Апфия», with the rank word left off. The day's own line marks her «мц. равноап.», a martyr equal to the apostles."
     }
   ],
   "sex": "female",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps her with Archippus on this day, where the Greek and Romanian rows on this folder are 22 November; days.pravoslavie.ru's line for 19 февраля names the three of them together (read 3 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Апп. От 70-ти Архиппа и Филимона и мц. равноап. Апфии (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
