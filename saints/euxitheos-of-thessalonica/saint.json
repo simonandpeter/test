@@ -14,6 +14,15 @@
       "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Αναστάσιος και Ευξίθεος Επίσκοποι Θεσσαλονίκης», with the rank word and the see left off. The page's narrative gives a variant beside it, «ο Ευξίθεος (ή Ευδόξιος)», Euxitheos or Eudoxius; that second form is recorded here only in this note, because the page offers it as an alternative and does not settle on it."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 451,
+      "latest": 451,
+      "display": "451",
+      "basis": "inferred",
+      "note": "Inferred, and the page says so of itself: saint.gr has Euxitheos succeed Anastasius «evidently after his death, which the page surmises came about towards the end of September 451». The year is the surmise's, not a stated one."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

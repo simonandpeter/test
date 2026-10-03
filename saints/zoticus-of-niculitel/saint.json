@@ -24,6 +24,15 @@
     "philippus-of-niculitel",
     "sava-of-buzau"
   ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 372,
+      "display": "284–372",
+      "basis": "traditional",
+      "note": "doxologia.ro's life gives three datings for the four of Niculițel and settles on none as stated fact: «the time of the emperor Diocletian, who reigned from 284 to 305», «between the years 319 and 324, when Licinius was emperor», and the persecution of «king Athanaric» in «the years 370 to 372», which it calls the likeliest. The interval spans what the page allows."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -19,6 +19,22 @@
     "ascetic",
     "wonderworker"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 445,
+      "latest": 455,
+      "display": "c. 450",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: a native of northern Mesopotamia, «born about 450». The Romanian calendar parts from it about his birth, which the life records."
+    },
+    "death": {
+      "earliest": 535,
+      "latest": 541,
+      "display": "535–541",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «He died at sea as the ship rounded the headland, between 535 and 541»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

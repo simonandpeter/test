@@ -19,6 +19,15 @@
     "hierarch",
     "archbishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 740,
+      "latest": 740,
+      "display": "740",
+      "basis": "traditional",
+      "note": "saint.gr's life, as the folder's own life has it: «he died in 740 aboard ship on the way back from Constantinople»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

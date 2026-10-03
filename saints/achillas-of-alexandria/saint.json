@@ -13,6 +13,15 @@
       "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Αχιλλάς Επίσκοπος Αλεξανδρείας», with the rank words left off."
     }
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 311,
+      "latest": 312,
+      "display": "311–312",
+      "basis": "traditional",
+      "note": "saint.gr's entry, as the folder's own life has it: «Saint Achillas, 311 to 312, was bishop of Alexandria and fell asleep in peace». The years are his episcopate, so they are a floruit; the page gives no year for his repose."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

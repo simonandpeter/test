@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 321,
+      "display": "c. 316",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Сщмч. Власия, еп. Севастийского, и с ним двух отроков и 7 жен (ок. 316).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

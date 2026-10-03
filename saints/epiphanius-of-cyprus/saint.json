@@ -27,6 +27,22 @@
     "theodosius-the-great",
     "theotimus-of-tomis"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 310,
+      "latest": 310,
+      "display": "310",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «saint.gr has him born in 310 to a very poor family of Jewish farmers»."
+    },
+    "death": {
+      "earliest": 403,
+      "latest": 403,
+      "display": "12 May 403",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «He died at sea on 12 May 403, returning from Constantinople to Constantia»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

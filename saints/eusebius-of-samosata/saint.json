@@ -19,6 +19,15 @@
     "bishop"
   ],
   "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 380,
+      "latest": 380,
+      "display": "380",
+      "basis": "traditional",
+      "note": "doxologia.ro's life, as the folder's own life has it: «One day in the year 380», a heretic woman struck him on the head with a stone «and the saint died on the spot»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

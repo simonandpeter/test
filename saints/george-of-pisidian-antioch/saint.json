@@ -20,6 +20,15 @@
     "hierarch",
     "confessor"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 754,
+      "latest": 775,
+      "display": "754–775",
+      "basis": "inferred",
+      "note": "The page fixes one end and bounds the other: he resisted the iconoclast council «at the council of 754», and was exiled by «the emperor Constantine V, called Copronymus, whose reign the page dates 741 to 775», dying in exile. So he was alive in 754 and dead by 775; no year of repose is printed."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -18,6 +18,15 @@
     "venerable",
     "hermit"
   ],
+  "dates": {
+    "death": {
+      "earliest": 395,
+      "latest": 405,
+      "display": "c. 400",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Саламана молчальника (ок. 400)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
