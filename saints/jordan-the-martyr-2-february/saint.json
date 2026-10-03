@@ -55,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.02.2026 (2. фебруар ст. ст.) — „2. Свети новомученик Јордан. Родом из Трапезунта, казанџија по занимању. Зато што је отворено бранио веру Христову и изобличавао веру Мухамедову, пострада од Турака 1650. године. у Галати у Цариграду.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-15&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its second numbered entry for the day, after the Meeting of the Lord. The Prologue is the only one of the three calendars to give his trade — казанџија, coppersmith — and it puts the martyrdom at Galata, where saint.gr has Galata as where he lived and Constantinople as where he was beheaded. It prints 1650 alone, against saint.gr's 1650 or 1651; the interval in dates.death keeps both readings."
     }
   ],
   "text": {
@@ -68,7 +78,7 @@
       "latest": 1651,
       "display": "1650 or 1651",
       "basis": "attested",
-      "note": "saint.gr: «Έτσι ο δήμιος έκοψε το κεφάλι του ένδοξου αυτού μάρτυρα, στην Κωνσταντινούπολη στις 2 Φεβρουαρίου του 1650 μ.Χ. (κατ' άλλους το 1651 μ.Χ.)» — the page carries both years and prefers neither."
+      "note": "saint.gr: «Έτσι ο δήμιος έκοψε το κεφάλι του ένδοξου αυτού μάρτυρα, στην Κωνσταντινούπολη στις 2 Φεβρουαρίου του 1650 μ.Χ. (κατ' άλλους το 1651 μ.Χ.)» — the page carries both years and prefers neither. The Ohrid Prologue at pravoslavno.rs prints the earlier year alone: „пострада од Турака 1650. године“."
     }
   }
 }

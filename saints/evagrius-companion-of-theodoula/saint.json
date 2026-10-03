@@ -28,7 +28,8 @@
   },
   "related": [
     "theodoula-of-diocaesarea",
-    "macarius-companion-of-theodoula"
+    "macarius-companion-of-theodoula",
+    "theodoula-of-anazarbus"
   ],
   "attestations": [
     {
@@ -66,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.02.2026 (5. фебруар ст. ст.) — „Међу онима беху и два угледна грађанина, Макарије и Евагрије. Са овом двојицом и многим другим Теодула би бачена у усијану пећ где чесно сви скончаше и Христовог се царства удостојише.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-18&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He has no entry of his own there: he is named inside the day's second entry, Theodoula's. The Prologue is the only source here to say what he was — one of two honoured citizens, turned to Christ by her bravery under the torments — and it has many others thrown into the furnace with the three of them. It gives no year. The Serbian keeps the Julian 5 February, which in this corpus is theodoula-of-anazarbus's day rather than the Greek 18 January of theodoula-of-diocaesarea, and the row is placed accordingly."
     }
   ],
   "text": {

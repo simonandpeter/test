@@ -56,11 +56,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.02.2026 (3. фебруар ст. ст.) — „2. Свети мученици Адријан и Евула. … Адријана посеку мачем, а Евулу баце пред зверове 309. године.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-16&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. It is the second numbered entry for the day, and it names the two together as the Greek and Russian calendars do. Three things are only in this source: that the Caesarea is Кесарија Кападокијска, Caesarea in Cappadocia, against the «(Палестинский)» the Russian calendar's name link carries; the year 309; and that the two came to visit the Christians shut up in the prison, to comfort and strengthen them. Its account of his own death is not saint.gr's — here he is thrown to the beasts and Adrian cut down with the sword, where saint.gr has both survive the beasts and both end by the sword. Both readings stand as read."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 309,
+      "display": "about 308 or 309",
+      "basis": "attested",
+      "note": "Two sources, two readings, and the interval is what they leave between them. days.pravoslavie.ru for 3 февраля ст. ст.: «Мчч. Адриана и Еввула (ок. 308-309).» — about 308 to 309; the Ohrid Prologue at pravoslavno.rs for the Julian 3 February prints the later year flatly: „Адријана посеку мачем, а Евулу баце пред зверове 309. године.“ saint.gr gives no year at all."
+    }
   }
 }

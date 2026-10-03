@@ -83,8 +83,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „5. Преподобни Варсонуфије и Јован. Велики подвижници од Газе, прозорљивци и чудотворци. Оставили знамениту књигу Одговора на многа питања о духовном животу. Живели у VI веку.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which dropped this entry whole — the list printed five headings for six numbered entries, and this fifth one was the missing heading. The Prologue keeps the two elders in one entry, as the Romanian calendar keeps them over one life, and gives them four short sentences. It is a second source for the century against the Greek page's: «Живели у VI веку», the sixth, where saint.gr has «Οι Όσιοι Βαρσανούφιος και Ιωάννης έζησαν κατά τον 4ο αιώνα μ.Χ.» and brings in Theodosius the Great. Two sources now read the sixth century and one the fourth; the recorded dates, which are the Romanian page's, are unchanged. The Prologue adds two titles neither other source gives them — прозорљивци, seers, and чудотворци, wonderworkers — and names the place Gaza where the Romanian life has the monastery of Abba Seridos near it."
     }
   ],
   "text": {

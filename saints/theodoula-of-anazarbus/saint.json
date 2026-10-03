@@ -54,11 +54,26 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.02.2026 (5. фебруар ст. ст.) — „2. Света мученица Теодула. Пострадала за Христа у време Диоклецијана, нечастивог цара римског.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-18&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. She is its second numbered entry for the day, and the row is placed on this folder because the Serbian church keeps the Julian 5 February and this is the folder the 5 February sources hold. The Prologue's account is much shorter than the Romanian life's and differs in one point of order: here it is Helladius, one of the torturers, whom she brings to Christ and who is then beheaded, where the Romanian life gives that part first to a Comentarisius, beheaded on 24 January, and Helladius after him. It names Macarius and Evagrius as the two honoured citizens thrown into the heated furnace with her, and it gives no year, only «у време Диоклецијана». It does not name Boethus, whom saint.gr keeps with the company on 18 January."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "helladius-the-commentaresios",
+    "macarius-companion-of-theodoula",
+    "evagrius-companion-of-theodoula"
+  ]
 }

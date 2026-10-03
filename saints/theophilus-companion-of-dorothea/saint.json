@@ -39,8 +39,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „Неки присутни велмож Теофил насмеје се на ове речи па довикну Доротеји: „Чуј, невесто Христова, пошаљи ми јабука и цвећа од шипака из Раја твога женика!“ … И он би мучен и убијен за Христа.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He has no entry of his own there: he is named inside the day's third entry, Dorothea's. Three differences from the Russian life, all recorded and none resolved: he is a велмож, a nobleman standing by, not a scholastic; what he asks for is apples and pomegranate flowers, and what the angel brings is three apples and three red pomegranate flowers, where the Russian life has roses; and the Prologue says the season was winter, which is what makes the gift a wonder. The Prologue has him tortured and killed for Christ without naming the manner, where the Russian life has him beheaded. It gives no year."
     }
   ],
   "dates": {

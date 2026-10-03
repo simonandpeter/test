@@ -39,8 +39,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „6. Свети мученици Марта и Марија и брат им Ликарион. Све троје распети на крст за Христа, па онда избодени и умртвљени копљем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is in its sixth and shortest numbered entry for the day, which gives the three of them one sentence. It disagrees with the Russian life about his own death: here all three are crucified and then pierced and killed with the spear, where the Russian life runs the sisters through with spears and has the boy Lykarion beheaded by the sword. Both readings stand as read. The Prologue carries no year, no place and no commander, and it does not call him a boy, where the Russian line has «прмч. Ликариона отрока»."
     }
   ],
   "related": [

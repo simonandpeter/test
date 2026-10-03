@@ -70,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „1. Свети Вукол, епископ смирнски. Ученик светог Јована Богослова, који га и посвети за епископа града Смирне. У Смирни беше тада мало крштених.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its first numbered entry for the day. It agrees with the other three on the ordination by John the Theologian and on Polycarp as his successor, and adds two things of its own: that there were few baptised in Smyrna at that time, and that of all his virtues the ones that marked him were gentleness and meekness. It does not carry the plant or tree that grew on his grave, which the Romanian and Greek lives both have, and it gives no year."
     }
   ],
   "text": {

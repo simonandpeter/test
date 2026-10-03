@@ -33,11 +33,11 @@
       "note": "saint.gr: «γεννήθηκε στην Αίγυπτο περί το 360 μ.Χ. από γονείς θεοφιλείς», with the page's own head «(360 - 440)»."
     },
     "death": {
-      "earliest": 440,
+      "earliest": 436,
       "latest": 440,
-      "display": "440",
+      "display": "about 436 to 440",
       "basis": "traditional",
-      "note": "saint.gr: «Εκοιμήθη ειρηνικά το 440 μ.Χ.»."
+      "note": "Three sources, two years, and the interval is what they leave between them. saint.gr: «Εκοιμήθη ειρηνικά το 440 μ.Χ.»; the Ohrid Prologue at pravoslavno.rs for the Julian 4 February: „преселио се у Царство Христово око 436. године“; and days.pravoslavie.ru for 4 февраля ст. ст. spans both — «Прп. Исидора Пелусиотского (ок. 436-440).» The Romanian life gives no year at all."
     }
   },
   "attestations": [
@@ -86,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.02.2026 (4. фебруар ст. ст.) — „1. Преподобни Исидор Пелусиот. Родом Мисирац; син угледних родитеља и сродник александријских патријараха: Теофила и Кирила.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-17&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its first numbered entry for the day. It is the only one of the four to put him on Chrysostom's side in the quarrel over him and to say he wrote to the patriarch Theophilus asking him to let his hatred go; it follows Nikephoros in counting over ten thousand letters, where saint.gr counts 2,012 surviving ones; and it quotes two of them. Its year of repose is «око 436», where saint.gr has 440 — recorded in dates.death as the interval between them."
     }
   ],
   "text": {
