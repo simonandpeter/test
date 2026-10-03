@@ -45,10 +45,15 @@ html[data-route='map'] main.chrome {
      the layout shift §13 forbids.
 
      `svh`, not `vh`: the *small* viewport height is the one with a phone's
-     URL bar showing, and it does not change as the bar comes and goes. */
+     URL bar showing, and it does not change as the bar comes and goes.
+
+     `--nav-bar-h` is the phone's pages, fixed at the foot since 2026-10-03,
+     and `body` reserves it there. Without it in this sum the one page that is
+     exactly the window became 52 px taller than it and scrolled. It is 0 past
+     759.98 px, where the pages are back in the header. */
   display: flex;
   flex-direction: column;
-  height: calc(100svh - var(--chrome-h-reserve) - env(safe-area-inset-top, 0px));
+  height: calc(100svh - var(--chrome-h-reserve) - var(--nav-bar-h) - env(safe-area-inset-top, 0px));
 }
 
 /* `#view` is the div main.js renders every view into (index.html), sitting

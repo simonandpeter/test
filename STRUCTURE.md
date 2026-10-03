@@ -414,7 +414,8 @@ breakpoint are two decisions.
 | `--mstep-h` | `24px` | `calendar.css` |
 | `--mstep-h` | `32px` | `calendar.css` |
 | `--saint-w` | `clamp(230px, 23vw, 360px)` | `calendar.css` |
-| `--nav-bar-h` | `52px` | `base.css` |
+| `--nav-bar-h` | `0px` | `base.css` |
+| `--nav-bar-h` | `calc(52px + env(safe-area-inset-bottom, 0px))` | `base.css` |
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
 | `--rail-fade` | `12px` | `calendar.css` |
@@ -509,6 +510,8 @@ what there is.
 ```
 html[data-route~='calendar'][data-fills-window]
 └ body                               padding-bottom --nav-bar-h (<760), for the page bar
+                                     --nav-bar-h is 0 past 760; the bar's own min-height
+                                     is the same token, so the reserve cannot outgrow it
   └ main.chrome                      100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                          height 100%
       └ .cal                         grid: --side-w --saint-w minmax(0,1fr)

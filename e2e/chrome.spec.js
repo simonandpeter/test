@@ -2727,11 +2727,18 @@ test('About says which reckoning each church keeps, and says it from the registr
    * assertion is that the page and the registry agree.
    */
   const said = await page.locator('section[aria-labelledby="calendars"] li').allTextContents();
-  const line = (name) => said.find((t) => t.startsWith(name)) ?? '';
-  expect(line('Russian')).toContain('Old Calendar');
-  expect(line('Serbian')).toContain('Old Calendar');
-  expect(line('Romanian')).toContain('New Calendar');
-  expect(line('Greek')).toContain('New Calendar');
+  /* One line per reckoning with the churches that keep it named together,
+     which is why a church is looked for inside a line rather than at the head
+     of one: `Intl.ListFormat` decides their order and the reader's language
+     decides the conjunction. */
+  const keeping = (reckoning) => said.find((t) => t.includes(reckoning)) ?? '';
+  expect(keeping('Old Calendar')).toContain('Russian');
+  expect(keeping('Old Calendar')).toContain('Serbian');
+  expect(keeping('New Calendar')).toContain('Romanian');
+  expect(keeping('New Calendar')).toContain('Greek');
+  // And no church stands under both, which a bad list join would do quietly.
+  expect(keeping('Old Calendar')).not.toContain('Greek');
+  expect(keeping('New Calendar')).not.toContain('Russian');
 });
 
 test('About no longer promises the page it now is', async ({ page }) => {

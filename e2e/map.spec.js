@@ -413,14 +413,20 @@ test('the map is the window, and holds that size before the coastline arrives', 
    * drifting apart — a header that grew without the token growing would leave
    * the map hanging off the bottom of the screen with nothing else to say so.
    */
-  const room = await page.evaluate(() => ({
-    vw: document.documentElement.clientWidth,
-    vh: window.innerHeight,
-    bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
-    timeline: document.querySelector('.map-timeline')?.getBoundingClientRect().height ?? 0,
-  }));
+  const room = await page.evaluate(() => {
+    const nav = document.querySelector('nav.site-nav');
+    return {
+      vw: document.documentElement.clientWidth,
+      vh: window.innerHeight,
+      bar: document.querySelector('.chrome-bar').getBoundingClientRect().height,
+      timeline: document.querySelector('.map-timeline')?.getBoundingClientRect().height ?? 0,
+      // The phone's pages, fixed at the foot since 2026-10-03; nothing at the
+      // widths where they are back in the header, and measured either way.
+      nav: getComputedStyle(nav).position === 'fixed' ? nav.getBoundingClientRect().height : 0,
+    };
+  });
   expect(after.width).toBeCloseTo(room.vw, 0);
-  expect(after.height).toBeCloseTo(room.vh - room.bar - room.timeline, 0);
+  expect(after.height).toBeCloseTo(room.vh - room.bar - room.timeline - room.nav, 0);
 
   // And the window is all there is: nothing on this page can scroll away.
   const scroll = await page.evaluate(() => ({

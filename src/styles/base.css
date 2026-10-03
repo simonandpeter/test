@@ -349,6 +349,9 @@ button:hover {
    declared, so the two rungs are one number. */
 :root {
   --chrome-h-reserve: 41px;
+  /* Zero until the phone's bar exists, so a page that sizes itself to the
+     window can subtract it at every width and be right at both. */
+  --nav-bar-h: 0px;
 }
 
 header.chrome {
@@ -898,11 +901,22 @@ nav.site-nav a[aria-current='page'] {
  */
 @media (max-width: 759.98px) {
   /* The bar's height, which `body` reserves so the page ends above it rather
-     than under it. Declared rather than measured off the element: a
-     reservation that waited for a measurement would be the header's own CLS
-     over again (see `--chrome-h-reserve`). 7 + 1 + the label's line + 7. */
+     than under it, and which the bar is then *made* rather than assumed to be
+     — see its `min-height` below. Declared rather than measured off the
+     element: a reservation that waited for a measurement would be the header's
+     own CLS over again (see `--chrome-h-reserve`).
+
+     The first cut reasoned "7 + 1 + the label's line + 7" and wrote 52, which
+     the padding and an 11 px line actually make 38.94: the page then ended 13
+     px above a bar that was 13 px shorter than its own reservation, and the
+     map — the one page that is exactly the window — showed the gap. 52 is kept
+     and the bar grows to it, because 38.94 is under every platform's thumb
+     floor anyway.
+
+     The home indicator's inset is inside the token so that the bar, the
+     reservation and the map's height cannot disagree about it. */
   :root {
-    --nav-bar-h: 52px;
+    --nav-bar-h: calc(52px + env(safe-area-inset-bottom, 0px));
   }
 
   nav.site-nav {
@@ -920,8 +934,11 @@ nav.site-nav a[aria-current='page'] {
     gap: 0;
     /* The safe area is the home indicator's: inside the app the window runs to
        the bottom edge (`viewport-fit=cover`), and a bar that ignored it would
-       put its labels under the indicator. */
+       put its labels under the indicator. It is in `--nav-bar-h` too, so the
+       reservation below grows with it. */
     padding: 7px 2px calc(7px + env(safe-area-inset-bottom, 0px));
+    /* The bar *is* its reservation, rather than being measured against it. */
+    min-height: var(--nav-bar-h);
     background: var(--gesso);
     border-top: 1px solid var(--rule);
     /* The floor under a pack whose labels are wider than the window: six
