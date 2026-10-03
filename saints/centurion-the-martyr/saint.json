@@ -5,6 +5,11 @@
     {
       "form": "Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός",
       "lang": "el"
+    },
+    {
+      "form": "Κεντυρίων",
+      "lang": "el",
+      "note": "His own name, read out of «Άγιοι Κεντυρίων, Θεόδωρος, Αμμιανός, Ιουλιανός και Ωκεανός» — the line already recorded here, which names more than this saint, so `pruneTo` would not resolve it to him alone."
     }
   ],
   "sex": "male",
