@@ -4,4 +4,10 @@ Macarius was born at Kios in Bithynia and was first called Manuel; his father wa
 
 After twelve years on the Holy Mountain he took the blessing to bear witness for the faith, and came by way of Constantinople to Prousa, where he was arrested and brought to the court. There he confessed Christ and rebuked the religion of Muhammad, saying that he would never leave the light to go into darkness. He was cruelly tortured, savagely stoned and beheaded on 6 October 1590, and his head was later taken to the Skete of Saint Anne.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — [the entry](https://www.saint.gr/1024/saint.aspx); read 17 September 2026.*
+The Serbian church's Ohrid Prologue keeps him second on this day and names his parents and his baptismal name. He was born at Kios in Bithynia of Christian parents, Peter and Anthusa, and baptised Manuel, and his parents put him to learn the tailor's trade. In the course of it his father turned Turk and moved to Brusa; and when Manuel came to Brusa once on business his father found him and fell on him to force him over too. He resisted in vain — the Turks circumcised him by force.
+
+Then Manuel fled to the Holy Mountain and was tonsured at the skete of Saint Anne under the name Macarius. He was an excellent monk for twelve years, the entry says, and had no peace of soul at all: *whosoever shall deny me before men, him will I also deny before my Father*, cited to Matthew 10:33, never stopped ringing in his ears. So he resolved, and with his elder's blessing went to Brusa and confessed the faith of Christ openly before the Turks, calling Muhammad a false prophet.
+
+After a scourging that went on through a hundred and thirty days, and other and heavier torments after it, he was beheaded with the sword at Brusa on 6 October 1590 — the same day and year saint.gr gives, «τον αποκεφάλισαν στις 6 Οκτωβρίου του 1590 μ.Χ.» A part of his wonderworking relics is kept at the skete of Saint Anne on Athos. His parents the Prologue names and does not commemorate, so neither has a folder here.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 6 Οκτωβρίου — [the entry](https://www.saint.gr/1024/saint.aspx); read 17 September 2026; and the Serbian church's [Ohrid Prologue for the Julian 6 October](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-19&prolog=1), read 4 October 2026.*

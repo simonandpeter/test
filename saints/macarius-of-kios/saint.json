@@ -6,6 +6,10 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Άγιος Μακάριος ο νέος οσιομάρτυρας από την Κίο της Βιθυνίας»."
+    },
+    {
+      "form": "Преп. новомуч. Макарије",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -49,8 +53,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the two the Ohrid Prologue enumerates for this day, and the entry list drops it: it prints one of the two headings and this one opens «Преп.» The Prologue agrees with the Greek entry on the day and the year of his beheading."
+      },
+      "source": {
+        "text": "Охридски пролог, 6. октобар ст. к. — «2. Преп. новомуч. Макарије. Рођен у месту Киону у Витинији од родитеља хришћанских, Петра и Антусе, и крштен са именом Мануил. … би посечен мачем, у Бруси 6. окт. 1590. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-19&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

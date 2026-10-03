@@ -11,6 +11,10 @@
       "form": "Toma",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Apostol Toma” for 6 octombrie."
+    },
+    {
+      "form": "Св. апостол Тома",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -55,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 6. октобар ст. ст. (civil 19 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 10,
+        "calendar": "julian",
+        "note": "First of the two the Ohrid Prologue enumerates for this day. It is the only one of the three calendars that keep him to name his Indian converts and to tell his coming late to the Dormition. It gives no year, as the other two do not."
+      },
+      "source": {
+        "text": "Охридски пролог, 6. октобар ст. к. — «1. Св. апостол Тома. Један од дванаест великих апостола. Кроз његову сумњу у васкрсење Христа Господа добила се нова потврда тога чудесног и спасоносног догађаја.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-19&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
