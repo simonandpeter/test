@@ -12,6 +12,11 @@
       "form": "Φίλιππος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Ιανουαρίου, «Άγιος Φίλιππος Μητροπολίτης Μόσχας και πάσης Ρωσίας», with the rank words left off."
+    },
+    {
+      "form": "Филип",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 9. јануар ст. ст. (civil 2026-01-22), „Свети Филип, митрополит московски“. The word „Свети“ and the see „митрополит московски“ are left off; the folder already keeps the see in `office`."
     }
   ],
   "sex": "male",
@@ -86,8 +91,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.01.2026 (9. јануар ст. ст.) — „Свети Филип, митрополит московски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

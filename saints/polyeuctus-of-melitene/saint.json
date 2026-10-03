@@ -16,6 +16,11 @@
       "form": "Полиевкт Мелитинский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Полиевкт Мелитинский, мч.», with the rank word left off. The day's line gives the forename alone."
+    },
+    {
+      "form": "Полиевкт",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 9. јануар ст. ст. (civil 2026-01-22), „Свети мученик Полиевкт“. The words „Свети мученик“ are left off: the site composes the rank itself."
     }
   ],
   "sex": "male",
@@ -77,8 +82,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.01.2026 (9. јануар ст. ст.) — „Свети мученик Полиевкт.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

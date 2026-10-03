@@ -17,6 +17,11 @@
       "form": "Евстратий Тарсийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 января ст. ст., «Евстратий Тарсийский, игумен», with the office left off. The calendar's epithet is from Tarsus, where its own notice says he was born, and not from the mountain where he lived."
+    },
+    {
+      "form": "Евстратије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 9. јануар ст. ст. (civil 2026-01-22), „Преподобни Евстратије“. The rank word „Преподобни“ is left off: the site composes the rank itself."
     }
   ],
   "sex": "male",
@@ -78,8 +83,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.01.2026 (9. јануар ст. ст.) — „Преподобни Евстратије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-22&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
