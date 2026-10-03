@@ -60,6 +60,12 @@
       "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "joseph-presbyter-of-persia",
     "aithalas-the-deacon"

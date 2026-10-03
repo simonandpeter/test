@@ -71,6 +71,12 @@
       "note": "saint.gr: he was buried in the monastery he founded on the Bosporus «μετά την οσιακή κοίμησή του την Τετάρτη της Α' εβδομάδας των Νηστειών, το έτος 806 μ.Χ.», and its heading prints «(; - 806)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "basil-of-ancyra",
     "john-of-damascus",

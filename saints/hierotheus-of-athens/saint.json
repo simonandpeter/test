@@ -27,6 +27,12 @@
       "note": "saint.gr’s entry heads its page «Αγιος Ιεροθεος Επισκοπος Αθηνων (; - 52)»; its life has him die in peace in deep old age."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "dionysius-the-areopagite"
   ],

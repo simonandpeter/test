@@ -62,6 +62,12 @@
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "five-hundred-martyrs-of-nicomedia",
     "hundred-and-thirty-women-martyrs"

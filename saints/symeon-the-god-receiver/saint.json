@@ -22,6 +22,12 @@
   "types": [
     "righteous"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "anna-the-prophetess",
     "athanasius-of-alexandria",

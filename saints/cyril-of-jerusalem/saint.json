@@ -131,6 +131,12 @@
       "note": "saint.gr: «Ο Άγιος Κύριλλος κοιμήθηκε με ειρήνη το έτος 387 μ.Χ.», and the page heads him «(313 - 387)». doxologia.ro gave no year at all."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "constantine-the-great",
     "gerasimus-of-the-jordan",
