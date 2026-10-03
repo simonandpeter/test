@@ -68,19 +68,43 @@ romanian greek`): Romanian 141 of 357 days and 140 distinct saints, Greek 168 of
 sourcer cannot get a licence wrong. **A historical painting may fill a hero slot
 where no icon exists** (author, same day), said so in the draft's `why`.
 
-**The Greek pass is in (`6a095e3f`): 60 icons, and the list reads Greek 108 and
-Romanian 113** — Romanian fell without its own pass, because many of these
-saints lead a day in both calendars. Re-measure after `npm run build:manifest`,
-not before: `heroless.mjs` reads the manifest, and on a stale one it reports the
-numbers the wave started from.
+**Both passes are in — 145 icons** (Greek `6a095e3f`, Romanian the merge after
+it) — and the four calendars now read:
 
-**What the remaining ~108 are is the thing to decide before another pass.** Of
-the Greek 95 that were skipped, about 70 have nothing on Commons at all under
-any of their names — the local Cypriot, Athonite and Thessalian saints and the
-Ottoman-era neomartyrs — and 13 were refused because only a namesake was on
-offer. More searching of Commons will not move those; a different source will,
-or the hero rule will have to be content with a day that leads without a
-picture.
+| calendar | imageless hero-days, before | now |
+| --- | --- | --- |
+| Romanian | 141 of 357 | **40** |
+| Greek | 168 of 364 | **69** |
+| Russian | — | 4 of 103 |
+| Serbian | — | 6 of 75 |
+
+Neither pass's own number is the one to quote: each measured in its own
+worktree without the other's icons, and a saint who leads a day in both
+calendars is fixed for both at once. **Re-measure on main after
+`npm run build:manifest`** — `heroless.mjs` reads the manifest, and on a stale
+one it reports the numbers the wave started from.
+
+**The method is the part to keep, and it is the Romanian pass's.** Free-text
+Commons search returns scanned 19th-century books for these saints; listing the
+saint's own Commons category is what works — search namespace 14 for the
+category, then `list=categorymembers` on it. And the richest single source is
+the Russian Menaion Reader plate series, 351 PD files whose names carry the
+church-year date (`икона NNNNN`: month counted from September, then the day), so
+pulling that category once and date-matching it against each saint's feast finds
+saints no search will, each with a date a reader can check. Two throttling
+facts: Commons serves the unscaled original for anything under ~1250 px wide and
+those 429 hard, so prefer files ≥1400 px and drive the fetcher one entry per
+invocation; and two API clients at once provoke the 429s on their own.
+
+**What is left is mostly not a searching problem.** Of the 110 skipped across
+both passes, roughly 94 have nothing free on Commons at all — the local Cypriot,
+Athonite, Thessalian and Romanian local saints, the Ottoman-era neomartyrs, and
+the modern saints whose only images are in-copyright photographs — 18 were
+refused for namesake risk or for being named only inside a group image that does
+not name them, and 8 were identified but are too small for a hero.
+`make_thumbs.py` never upscales, so ~450 px is the floor below which a candidate
+was rejected. Another Commons pass will not move these: it wants a different
+source, or the page accepts a day that leads without a picture.
 
 **The corpus's size is not free, but the manifest is not where it costs.** The
 reverse links came off the boot path on 2026-10-03 (`aafc2470`, 419 -> 347 KB
