@@ -98,6 +98,32 @@ export function readingsMarkup(iso, churchId) {
  * does, where the hymns are a column of their own with nothing under them to
  * move.
  */
+/**
+ * A hymn's identity across the two places this page draws hymns from: the
+ * church's own record for the day, and the folder of the saint that day names.
+ *
+ * The day's hymns are transcribed from the same published page the folder
+ * cites — 67 of the day records' hymns are a folder's hymn under the same URL
+ * (`scratchpad/hymn-dup.mjs` prints the rows) — so the panel printed each of
+ * them twice, once as the feast's and once as the saint's.
+ *
+ * Keyed on the published source and not on the text, because the same hymn
+ * reaches the page in two spellings: a calendar prints the podobie's incipit
+ * ahead of the troparion — «Apărătoare Doamnă...» — where the folder begins at
+ * the hymn itself.
+ */
+function hymnKey(h) {
+  return `${h.church}|${h.source?.url ?? h.source?.text ?? ''}`;
+}
+
+function feastHymnKeys(iso, churchId) {
+  return new Set(
+    (dayRecordFor(iso, churchId)?.hymns ?? [])
+      .filter((h) => h.church === churchId)
+      .map(hymnKey),
+  );
+}
+
 export function hymnsMarkup(iso, churchId, saintHtml = '') {
   const rec = dayRecordFor(iso, churchId);
   const feastHymns = (rec?.hymns ?? []).filter((h) => h.church === churchId);
@@ -119,7 +145,9 @@ export function saintHymnsHtml(slug, iso) {
   return loadDetail(slug).then(
     (payload) => {
       if (!state || state.selected !== iso) return '';
-      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
+      const already = feastHymnKeys(iso, state.calendar);
+      const hymns = (payload?.saint?.hymns ?? [])
+        .filter((h) => h.church === state.calendar && !already.has(hymnKey(h)));
       return hymns.length ? mergeForReading(hymns).map((h) => hymnMarkup(h)).join('') : '';
     },
     () => '',
@@ -132,7 +160,9 @@ export function fillSaintHymns(panel, slug, iso) {
       if (!state || state.selected !== iso) return;
       const box = panel.querySelector('[data-saint-hymns]');
       if (!box) return;
-      const hymns = (payload?.saint?.hymns ?? []).filter((h) => h.church === state.calendar);
+      const already = feastHymnKeys(iso, state.calendar);
+      const hymns = (payload?.saint?.hymns ?? [])
+        .filter((h) => h.church === state.calendar && !already.has(hymnKey(h)));
       if (!hymns.length) return;
       box.innerHTML = mergeForReading(hymns)
         .map((h) => hymnMarkup(h))
