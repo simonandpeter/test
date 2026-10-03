@@ -16,6 +16,11 @@
       "form": "Евфимий Великий",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Евфимий Великий, иеромонах», with the rank word left off."
+    },
+    {
+      "form": "Јевтимије Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 20. јануар ст. ст. (civil 2026-02-02), „Преподобни Јевтимије Велики“. The rank word „Преподобни“ is left off; „Велики“ is kept, being the epithet the Great and not a rank."
     }
   ],
   "sex": "male",
@@ -79,8 +84,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.02.2026 (20. јануар ст. ст.) — „Преподобни Јевтимије Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-02&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

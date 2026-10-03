@@ -24,7 +24,8 @@
   ],
   "related": [
     "pinna",
-    "rimma"
+    "rimma",
+    "andrew-the-first-called"
   ],
   "attestations": [
     {
@@ -73,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.02.2026 (20. јануар ст. ст.) — „Свети мученици Енен, Нирен и Пен.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-02&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
