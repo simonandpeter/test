@@ -16,6 +16,11 @@
       "form": "Иулиан Самосатский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Иулиан Самосатский, мч.», with the rank words left off."
+    },
+    {
+      "form": "Јулијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's enumerated heading for 29. јануар ст. ст. (civil 2026-02-11), „Свети мученици Роман, Јаков, Филотеј, Иперихије, Авив, Јулијан и Паригорије“. His own name is taken out of the seven and the rank words „Свети мученици“ left off; the heading gives him no epithet, and the entry's body puts all seven at Samosata in 297."
     }
   ],
   "sex": "male",
@@ -75,8 +80,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.02.2026 (29. јануар ст. ст.) — „Свети мученици Роман, Јаков, Филотеј, Иперихије, Авив, Јулијан и Паригорије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

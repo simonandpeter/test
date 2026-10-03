@@ -12,6 +12,11 @@
       "form": "Лаврентий Печерский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Преподобный Лаврентий, затворник Печерский», with the rank words left off."
+    },
+    {
+      "form": "Лаврентије Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 29. јануар ст. ст. (civil 2026-02-11), „Преподобни Лаврентије Печерски“. The rank word „Преподобни“ is left off; „Печерски“ is kept, being what distinguishes him. The Prologue keeps him by the Caves and not by the see of Turov, and gives the year of his repose as 1194, which is the year the folder already holds."
     }
   ],
   "sex": "male",
@@ -65,8 +70,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.02.2026 (29. јануар ст. ст.) — „Преподобни Лаврентије Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
