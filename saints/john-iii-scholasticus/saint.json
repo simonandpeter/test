@@ -12,6 +12,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Άγιος Ιωάννης Γ' Πατριάρχης Κωνσταντινούπολης ο από Σχολαστικών», with the rank word, the numeral and the see left off."
+    },
+    {
+      "form": "Јован Схоластик",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fourth heading for 21. фебруар ст. ст., „Свети Јован III Схоластик, патријарх цариградски.“, with Свети, the rank word патријарх and the see left off; the see is the folder's `office`. The by-name Схоластик is kept because the body explains it — he was ordained out of the advocate's profession — while the regnal number III, which numbers the see and not the man, is left out and recorded here."
     }
   ],
   "related": [],
@@ -51,8 +56,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.03.2026 (21. фебруар ст. ст.) — „Свети Јован III Схоластик, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

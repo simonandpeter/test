@@ -11,6 +11,11 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Φεβρουαρίου, «Όσιος Τιμόθεος ὁ ἐν Συμβόλοις», with the rank word and the place clause left off."
+    },
+    {
+      "form": "Тимотеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 21. фебруар ст. ст., „Преподобни Тимотеј.“, with the rank word Преподобни left off. The heading gives no epithet; Символи, the place the folder's English name carries, is in the body's first sentence."
     }
   ],
   "sex": "male",
@@ -107,8 +112,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.03.2026 (21. фебруар ст. ст.) — „Преподобни Тимотеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -119,5 +133,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 795,
+      "latest": 795,
+      "display": "795",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 21 February: „Овај свети човек упокојио се 795. године.“ The folder carried no dates at all before this reading, and the Prologue is the only source read for him that gives a year."
+    }
+  }
 }
