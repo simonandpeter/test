@@ -93,6 +93,33 @@ civil 21 September 2026 — so that page is the Julian 11 September, civil
 24 September. `Days/20260924.html` prints Thekla and the 19th week, which is
 civil 7 October.
 
+### Two readers on one day, from different calendars
+
+Deciding the same menologion day from two calendars at once produces **add/add
+pairs**: both readers meet the same enumerated heading, both create
+`jeremiah-of-the-caves`, and neither folder is a duplicate of the other. It
+happened twice in one night on 4 October 2026 and cost a merge each time.
+
+**Keep the two readers in different parts of the year.** It is the only fix that
+costs nothing; the expensive one is sharing the reading, and the reading is the
+part that cannot be shared.
+
+When a pair does have to be merged, two rules settle it without taste:
+
+- **The side that read a church's own life pages wins over the side that read
+  only its day line** for that church's row. A day line cannot find a
+  disagreement inside the site that prints it — `matthew-of-the-caves` is «ок.
+  1085» on the day line and «+ ок. 1088» in the life that same line links, and
+  only the fuller reading sees both.
+- **A claim the other side's reading disproves is deleted, not qualified.** A
+  note saying "only the day line was read, the life page would have more" is
+  simply untrue once someone has read the life page.
+
+Verify such a merge by comparing the result against **both** parents field by
+field, not by reading the diff: a textual union can leave the same key twice,
+`JSON.parse` keeps the last silently, and the suite stays green while one
+side's value is gone. `python scratchpad/dupkeys.py` sweeps the corpus for it.
+
 ### Sources for a life where the calendar prints only a line
 
 - **azbyka.ru** — the Russian church calendar's own long lives, and the only
