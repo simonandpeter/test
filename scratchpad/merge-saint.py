@@ -67,13 +67,31 @@ def main():
         s['hymns'] = s.get('hymns', []) + hymns
         moved.append('hymns: +%d (%s)' % (len(hymns), ', '.join(h['kind'] for h in hymns)))
 
-    rel = set(s.get('related', [])) | set(d.get('related', []))
-    rel -= {survivor, dead}
+    # Always rewritten, never only when non-empty: a survivor whose single
+    # `related` row was the folder being folded away would otherwise keep a
+    # row pointing at nothing, which `related-floor.test.mjs` catches and
+    # `build:manifest` fails on.
+    rel = (set(s.get('related', [])) | set(d.get('related', []))) - {survivor, dead}
     if rel:
         s['related'] = sorted(rel)
-        moved.append(f'related: {len(rel)}')
+    else:
+        s.pop('related', None)
+    moved.append(f'related: {len(rel)}')
 
-    for key in ('track', 'locations', 'images', 'office', 'kind', 'historicity'):
+    # `images` entries are paths relative to the folder, so taking the key
+    # without the files leaves the manifest declaring a picture that was
+    # deleted with the folder. The directory moves or the key does not.
+    s_img = os.path.join(SAINTS, survivor, 'images')
+    d_img = os.path.join(SAINTS, dead, 'images')
+    if d.get('images') and not s.get('images') and os.path.isdir(d_img):
+        if write:
+            shutil.copytree(d_img, s_img, dirs_exist_ok=True)
+        s['images'] = d['images']
+        moved.append('images/: the folded folder\'s files copied across, the survivor having none')
+    elif d.get('images') and s.get('images'):
+        left.append('images: both folders have one. The survivor keeps its own; TODO item 15 ranks them')
+
+    for key in ('track', 'locations', 'office', 'kind', 'historicity'):
         if key in d and key not in s:
             s[key] = d[key]
             moved.append(f'{key}: taken from the folded folder, which alone had it')

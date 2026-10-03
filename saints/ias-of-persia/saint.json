@@ -14,6 +14,10 @@
       "form": "Ија",
       "lang": "sr",
       "note": "Read out of «Св. муч. Ија.» in this folder’s Serbian citation."
+    },
+    {
+      "form": "Αγία Ία",
+      "lang": "el"
     }
   ],
   "sex": "female",
@@ -26,7 +30,7 @@
       "latest": 379,
       "display": "4th century",
       "basis": "traditional",
-      "note": "saint.gr: taken by the Persians with nine thousand Christians and brought before the chief magi of the king of Persia; Shapur reigned 309–379. The Ohrid Prologue on pravoslavno.rs: „пострадала за Господа у Персији у време Сапора II, 363. год.“"
+      "note": "saint.gr: taken by the Persians with nine thousand Christians and brought before the chief magi of the king of Persia; Shapur reigned 309–379. The Ohrid Prologue on pravoslavno.rs: „пострадала за Господа у Персији у време Сапора II, 363. год.“ The 10 September entry says the same: taken captive with nine thousand Christians and handed over by Shapur, king of the Persians, who reigned 309–379. The Sretensky day line prints «(362-364)» and the Prologue 363, both inside that reign."
     }
   },
   "attestations": [
@@ -36,7 +40,8 @@
       "feast": {
         "day": 11,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "Her principal day in this corpus. saint.gr says her memory is repeated on 4 August; that day has not been read and is no row here."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 сентября ст. ст. — «Мц. Ии (362-364)»",
@@ -64,6 +69,21 @@
       }
     },
     {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The second Greek day. saint.gr keeps an «Αγία Ία» on 10 September and an «Αγία Ίας» on 11 September and says of the first that she may be the Ias of 11 September and 4 August, though the verses differ; both entries tell the one story — captive with nine thousand Christians, handed to the magi of the king of Persia, tortured and beheaded under Shapur. The author ruled on 3 October 2026 that they are one woman and this record is the merge of the two folders the corpus held; the synaxarion’s own hedge stands in the life, unresolved, because the source has not resolved it."
+      },
+      "source": {
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 10 Σεπτεμβρίου — «Αγία Ία»",
+        "url": "https://www.saint.gr/09/10/index.aspx",
+        "year": 2026
+      }
+    },
+    {
       "church": "serbian",
       "status": "venerated",
       "feast": {
@@ -81,7 +101,13 @@
   "text": {
     "life": "life.md"
   },
-  "related": [
+  "aliases": [
     "ia-of-persia"
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
   ]
 }
