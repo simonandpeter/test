@@ -1,0 +1,9 @@
+# Amphilochius of Vladimir-Volynsky
+
+The Russian calendar's 10 October prints «Свт. Амфилохия , еп. Владимиро-Волынского (1122)», and the site reaches two lives for him. He was bishop in one of the oldest of the Russian dioceses, Vladimir in Volhynia, which [Vladimir](/saints/vladimir-the-great) himself had founded, and he was the third chief pastor of that see. The first bishop of Vladimir-Volynsky was Stephen, appointed by Vladimir, and his successor was the abbot of the Caves of the same name, who had received the abbacy from Theodosius.
+
+He was consecrated bishop on 27 August 1105 by the metropolitan Nicephorus of Kyiv, whose own years the page gives as 1103 to 1121, and he governed the Volhynian flock for seventeen years. Only a few generations separated his time from the baptism of Rus, and he had much to do in turning pagans to Christ, in rooting out pagan superstition among the newly baptised, and in making peace in the feuds of the princes. The second life says little else of those years but that they were an unquiet time of princely quarrels and collisions.
+
+Leaving the episcopate he went on serving God in the caves of the Kyiv Caves monastery, and died there in 1122. The first life says plainly how he came to be kept on this day: his memory on 10 October, together with the other saints of the Volhynian country, was appointed in 1831, after the Pochaev Lavra in Volhynia returned to Orthodoxy. The line that follows his on the calendar's own page is that synaxis, «Собор Волынских святых».
+
+*After the Russian church calendar's [10 October](https://days.pravoslavie.ru/Days/20261010.html), [its index entry for him](https://days.pravoslavie.ru/name/155.html) and the two lives it reaches, [the first](https://days.pravoslavie.ru/Life/life1703.htm) and [the second](https://days.pravoslavie.ru/Life/life6408.htm); read 4 October 2026.*

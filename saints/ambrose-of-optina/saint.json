@@ -11,36 +11,57 @@
       "form": "Αμβρόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Όσιος Αμβρόσιος της Όπτινα», with the rank word left off."
+    },
+    {
+      "form": "Амвросий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 143, headed «Амвросий Оптинский, прп.», with the rank word and the epithet left off. The life gives his name in the world, Александр Михайлович Гренков, and says the monastic name was given in memory of Ambrose of Milan."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "hieromonk",
+    "wonderworker"
   ],
   "related": [
+    "leo-of-optina",
     "macarius-of-optina"
   ],
   "dates": {
     "birth": {
       "earliest": 1812,
       "latest": 1812,
-      "display": "23 November 1812",
+      "display": "1812",
       "basis": "traditional",
-      "note": "saint.gr: «γεννήθηκε στις 23 Νοεμβρίου του 1812 μ.Χ. στο χωριό Μεγάλο Λιπόβιτς της περιφέρειας του Ταμπώφ»"
+      "note": "The Russian life leaves the day of the month open where the Greek page does not: «родился 21 или 23 ноября 1812 года, в духовной семье села Большие Липовицы Тамбовской Епархии» against saint.gr's «στις 23 Νοεμβρίου του 1812». The year is not in doubt, the day is, and the display no longer prints a day neither source agrees on."
     },
     "death": {
       "earliest": 1891,
       "latest": 1891,
-      "display": "10 October 1891",
+      "display": "1891",
       "basis": "traditional",
-      "note": "saint.gr: «Πέθανε στις 10 Οκτωβρίου του 1891 μ.Χ. και αγιοκατατάχθηκε το 1990 μ.Χ.»"
+      "note": "The Russian life names the hour as well as the year: «Был вечер 10 (22) октября» of 1891, which is the day the calendar keeps him on. The day line prints «(1891)»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This is the day of his repose, the evening of 10 October 1891 old style. His name page lists two others, «27 июня» and «11 октября (Оптин.)», the synaxis of the Optina elders. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Прп. Амвросия Оптинского (1891).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the second of the day's two icons, «Совершается служба с полиелеем» — a service with the polyeleos — and it stands immediately before his line and before nobody else's. The first icon, the plain service, stands at the head of the paragraph before Eulampius and Eulampia and is theirs; the line after his, Innocent of Penza, carries no icon, and reading the polyeleos onto it would be an inference."
+      },
+      "note": "The Russian is where the substance of this folder now comes from: saint.gr had the birth, the village and 1891, and the Russian has the whole of the rest, including his name in the world, Александр Гренков. It also prints his own account of his character — «Я — человек уступчивый» — and his birth with the day unsettled, «родился 21 или 23 ноября 1812 года», where saint.gr prints the 23rd flat. Three days are his: 27 June, this one, and 11 October with the Optina elders."
     },
     {
       "church": "romanian",
@@ -79,5 +100,6 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Hieromonk"
 }

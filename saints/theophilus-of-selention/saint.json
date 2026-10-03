@@ -6,6 +6,11 @@
       "form": "Θεόφιλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Όσιοι Θεόφιλος ο Ομολογητής και Λογγίνος ο Στυλίτης», with the rank words left off. The page glosses the name from Θεός and φίλος."
+    },
+    {
+      "form": "Феофил",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2272, headed «Феофил Тивериопольский, Константинопольский, исповедник, прп.», with the two epithets and the two rank words left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Прп. Феофила исп (ок. 717-741).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to Eulampius and Eulampia and to Ambrose of Optina."
+      },
+      "note": "The page contradicts itself outright about when he died and the folder's `dates` carry the contradiction rather than resolving it: the day line gives «ок. 717-741», its life has him stand up openly against the iconoclasm of Leo the Isaurian, whose reign it dates 717 to 741, and then ends «в 716 году святой Феофил мирно отошел ко Господу» — a year before the reign he is said to have resisted. Its index page heads him «Феофил Тивериопольский, Константинопольский, исповедник, прп.», which gives him the two epithets the day line leaves out."
     },
     {
       "church": "romanian",
@@ -50,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 716,
+      "latest": 741,
+      "display": "716–741",
+      "basis": "traditional",
+      "note": "One page, two answers, and the interval carries both. days.pravoslavie.ru's day line prints «Прп. Феофила исп (ок. 717-741)» and its life places his confession under «беззаконного императора-иконоборца Льва Исавра (717 - 741)» — and then closes «в 716 году святой Феофил мирно отошел ко Господу», a year before that reign began. Nothing on the page reconciles the two and neither is preferred."
+    }
   }
 }

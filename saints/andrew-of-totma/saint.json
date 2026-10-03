@@ -6,6 +6,11 @@
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιος Ανδρέας της Τότμα», with the rank word left off. The page glosses the name from ανήρ — the manly, the brave."
+    },
+    {
+      "form": "Андрей",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 191, headed «Андрей Тотемский, Христа ради юродивый», with the epithet and the words «Христа ради юродивый», for Christ's sake a fool, left off."
     }
   ],
   "sex": "male",
@@ -31,8 +36,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Блж. Андрея , Христа ради юродивого, Тотемского (1673).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to Eulampius and Eulampia and to Ambrose of Optina."
+      },
+      "note": "The Russian agrees with saint.gr on both years, 1638 and 1673, and adds the village of his birth, the abbot who blessed the folly, the river, the diet, the blind man Azhibokai and the belfry raised over his grave. Its index page heads him «Андрей Тотемский, Христа ради юродивый», with the epithet and the manner of his life and no office, which is right for a fool for Christ."
     },
     {
       "church": "romanian",
@@ -61,5 +77,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "andrew-stratelates"
+  ]
 }

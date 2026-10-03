@@ -6,10 +6,18 @@
       "form": "Inochentie al Penzei",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 octombrie."
+    },
+    {
+      "form": "Иннокентий (Смирнов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 7007, «Святитель Иннокентий (Смирнов), епископ Пензенский», with the rank word and the office left off."
     }
   ],
   "sex": "male",
-  "types": [],
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
   "dates": {
     "birth": {
       "earliest": 1784,
@@ -29,8 +37,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026). The Romanian page says the Russian Church recognised him officially in August 2000, but that page is not the Russian calendar and the Russian row is left as not read."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Свт. Иннокентия , епископа Пензенского (1819).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the last of the day's first paragraph and carries no icon of its own; the polyeleos a few words before it stands immediately before Ambrose of Optina and is his, and reading it onto the next line would be an inference rather than the source's statement."
+      },
+      "note": "This settles what the row said it could not: the Romanian page had the Russian Church recognising him officially in August 2000, and the Russian calendar's own life says the same, «Причислен к лику святых Русской Православной Церкви для общецерковного почитания на Юбилейном Архиерейском Соборе в августе 2000 года». His name page keeps him on this one day, which the life gives as the day of his death: «Святитель скончался 10 октября 1819 года»."
     },
     {
       "church": "romanian",
@@ -59,5 +78,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Bishop of Penza",
+  "related": [
+    "philaret-of-moscow"
+  ]
 }

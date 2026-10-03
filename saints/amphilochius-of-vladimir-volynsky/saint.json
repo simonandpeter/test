@@ -1,0 +1,73 @@
+{
+  "slug": "amphilochius-of-vladimir-volynsky",
+  "display_name": "Amphilochius of Vladimir-Volynsky",
+  "office": "Bishop of Vladimir-Volynsky",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Амфилохий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 155, headed «Святитель Амфилохий Владимиро-Волынский», with the rank word and the epithet left off. The second of its two lives adds «Печерский», of the Caves, where he ended his life."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1122,
+      "latest": 1122,
+      "display": "1122",
+      "basis": "attested",
+      "note": "Both of the site's lives for him: «скончался в 1122 году», in the caves of the Kyiv Caves monastery. The calendar's day line prints the same year, «(1122)»."
+    },
+    "floruit": {
+      "earliest": 1105,
+      "latest": 1122,
+      "display": "1105–1122",
+      "basis": "attested",
+      "note": "Both lives give the consecration exactly: «был хиротонисан во епископа 27 августа 1105 года митрополитом Киевским Никифором (1103 - 1121) и семнадцать лет управлял Владимиро-Волынской паствой», which runs to the year of his death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The first of the site's two lives says in so many words why this is his day: «Празднование его памяти — 10 октября, совместно с другими святыми Волынского края, было установлено в 1831 году, после возвращения Почаевской Лавры на Волыни к Православию» — the day was appointed in 1831, with the other saints of the Volhynian country, after the Pochaev Lavra returned to Orthodoxy. The day line prints «Собор Волынских святых», that synaxis, on the line after his own."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Свт. Амфилохия , еп. Владимиро-Волынского (1122).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the second from the end of the day's second paragraph, which carries no icon. The day's two icons are both in the first paragraph: the plain service before Eulampius and Eulampia, and a polyeleos immediately before Ambrose of Optina."
+      },
+      "note": "His name page keeps him on this one day. Its two lives agree on the dates and differ in what they add: the first gives the history of the see — the oldest Russian dioceses, founded by Vladimir, with Stephen its first bishop and the Caves abbot Stephen its second, Amphilochius the third — and the second gives only the princely feuds of his episcopate. Both have him withdraw to a cave of the Kyiv Caves monastery before his death."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 23 octombrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/23 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 23 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "vladimir-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
