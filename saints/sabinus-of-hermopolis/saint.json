@@ -11,6 +11,11 @@
       "form": "Σαβίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαρτίου, «Άγιος Σαβίνος ο Αιγύπτιος», with the rank words left off."
+    },
+    {
+      "form": "Αβίβος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιος Αβίβος από την Ερμούπολη», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -59,7 +64,22 @@
         "url": "https://www.saint.gr/03/16/index.aspx",
         "year": 2026
       },
-      "note": "The page heads him «(; - 287)» and closes «έλαβε το στέφανο του μαρτυρίου το 287 μ.Χ.», while it opens the account with the persecution of Diocletian «(284 - 305 μ.Χ.)»; the corpus's interval is that reign, from doxologia, and is left as it stands, with the page's year recorded here. It names the eparch Arrianos, has the Christians of the place persuade him to hide outside Hermoupolis for the good of the church, and drowns him with a stone about his neck in the Nile — the same death saint.gr gives Abibus of Hermoupolis on 13 Μαρτίου, of whom that page says «Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο τον Αιγύπτιο». The perhaps is the source's and is not acted on."
+      "note": "The page heads him «(; - 287)» and closes «έλαβε το στέφανο του μαρτυρίου το 287 μ.Χ.», while it opens the account with the persecution of Diocletian «(284 - 305 μ.Χ.)»; the corpus's interval is that reign, from doxologia, and is left as it stands, with the page's year recorded here. It names the eparch Arrianos, has the Christians of the place persuade him to hide outside Hermoupolis for the good of the church, and drowns him with a stone about his neck in the Nile — the same death saint.gr gives the Abibus of 13 Μαρτίου, which is the second Greek row below."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 13ης Μαρτίου — «Άγιος Αβίβος από την Ερμούπολη»",
+        "url": "https://www.saint.gr/03/13/index.aspx",
+        "year": 2026
+      },
+      "note": "The second Greek day, kept as «Άγιος Αβίβος από την Ερμούπολη. Its page holds one sentence and a bracket: he was from Hermoupolis of Egypt and took the crown of martyrdom after a great stone was bound to his body and he was thrown into the river, «(Ίσως είναι το ίδιο πρόσωπο με τον Άγιο Σαβίνο τον Αιγύπτιο, βλ. 16 Μαρτίου )» — perhaps he is the same person as the holy Sabinus the Egyptian, kept on 16 March. **The author ruled on 3 October 2026 that he is** and this record is the merge of the two folders the corpus held. The hedge is one-sided: it is the 13 March page that raises it and the 16 March page says nothing back, which is why the life keeps the bracket in the source’s own words. The day gives no year and no hymn. The two differ in the name and in nothing else about the death: a stone bound to the body and the river."
     },
     {
       "church": "serbian",
@@ -127,5 +147,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "aliases": [
+    "abibus-of-hermoupolis"
   ]
 }

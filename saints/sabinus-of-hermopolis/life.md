@@ -12,4 +12,19 @@ The Greek calendar keeps him on the same day and tells the same martyrdom with o
 
 The emperor's soldiers found him out, arrested him and brought him to the ruler of the city, who quickly understood that he would get nowhere either by flatteries or by threats; and for that reason he ordered a stone bound to the saint's neck and the saint thrown into the waters of the Nile. So Sabinus gave up his spirit and received the crown of martyrdom, the page says, in the year 287 — a year earlier than the persecution it began with, which is the page's own reckoning and is left as it is.
 
-*After doxologia.ro's calendar for 16 martie — [the day](https://doxologia.ro/16-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-sabin-egipteanul); read 19 September 2026; and saint.gr's calendar for 16 Μαρτίου — [the day](https://www.saint.gr/03/16/index.aspx) and [the life](https://www.saint.gr/3895/saint.aspx), read 30 September 2026.*
+The same calendar keeps a saint on 13 March whose entry is one sentence and a
+bracket: «Άγιος Αβίβος από την Ερμούπολη», Abibus of Hermoupolis, who was
+from Hermoupolis of Egypt and received the crown of martyrdom after they had
+bound a great stone to his body and thrown him into the river. Two lines of
+verse beside it say the same: «Βληθεὶς Ἄβιβος εἰς ποταμὸν σὺν λίθῳ, / Ἐκπλεῖ
+ποταμὸν συρφετώδη τοῦ βίου» — cast into a river with a stone, Abibus
+sails out of the muddy river of this life.
+
+Then the bracket: perhaps, the page says, he is the same person as the holy
+Sabinus the Egyptian, kept on 16 March. The hedge runs one way only — the
+16 March page says nothing back — and the author ruled on 3 October 2026 that
+the two are one man, so this record is both days. Beyond the city, the stone
+and the river the 13 March entry has nothing to add: no year, no persecutor, no
+relic and no hymn, and the name is the only thing in it that differs.
+
+*After doxologia.ro's calendar for 16 martie — [the day](https://doxologia.ro/16-martie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-sabin-egipteanul); read 19 September 2026; saint.gr's calendar for 16 Μαρτίου — [the day](https://www.saint.gr/03/16/index.aspx) and [the life](https://www.saint.gr/3895/saint.aspx), and its 13 Μαρτίου — [the day](https://www.saint.gr/03/13/index.aspx) and [the life](https://www.saint.gr/37/saint.aspx); both read 30 September 2026.*
