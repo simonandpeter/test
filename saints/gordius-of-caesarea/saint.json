@@ -16,6 +16,11 @@
       "form": "Гордий Каппадокийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 января ст. ст., «Гордий Каппадокийский, сотник, мч.»; the office and the rank word are left off."
+    },
+    {
+      "form": "Гордије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 3. јануар ст. ст., „Свети мученик Гордије.“, with the rank words «Свети мученик» left off."
     }
   ],
   "sex": "male",
@@ -78,8 +83,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.01.2026 (3. јануар ст. ст.) — „Свети мученик Гордије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -21,6 +21,11 @@
       "form": "Геновефа Парижская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 января ст. ст., which gives the calendar's own nominative «Геновефа (Женевьева) Парижская, прп.»; the rank word is left off, and of the two spellings the calendar prints side by side the one it leads with is kept. The line itself declines the other first — «Прп. Женевьевы (Геновефы) Парижской (512)» — so the calendar holds both the Latin Genovefa and the French Geneviève and chooses between them nowhere; only one form is stored, and this note is where the other is recorded."
+    },
+    {
+      "form": "Геновева",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 3. јануар ст. ст., „Света Геновева.“, with the rank word «Света» left off."
     }
   ],
   "sex": "female",
@@ -90,8 +95,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.01.2026 (3. јануар ст. ст.) — „Света Геновева.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
