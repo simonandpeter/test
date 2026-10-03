@@ -6,6 +6,11 @@
       "form": "Atanasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    },
+    {
+      "form": "Афанасий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., «Афанасий, комментарисий (смотритель темниц), прп.»; the office and the rank word are left off, which leaves the bare name, since the calendar gives him no epithet."
     }
   ],
   "sex": "male",
@@ -18,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Прмч. Зосимы, пустынника Киликийского и мч. Афанасия комментарисия (III-IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "note": "The same prison warden the folder's Romanian row keeps on 4 January: the calendar names him on one line with Zosimas and files the account under Zosimas's name at days.pravoslavie.ru/Life/life150.htm, where the warden who believes and is baptised is «смотритель тюрьмы, именем Афанасий». The name link glosses his office — «комментарисий (смотритель темниц)». The day page prints no hymn for the pair."
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 4 января ст. ст., on the one line it gives him with Zosimas: «Прмч. Зосимы, пустынника Киликийского и мч. Афанасия комментарисия (III-IV)». The life places the two in the persecution under Diocletian, «при царе Диоклитиане (284 - 305)», but the calendar's own bracket is the wider pair of centuries and that is what is recorded."
+    }
   }
 }

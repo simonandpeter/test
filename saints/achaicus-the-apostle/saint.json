@@ -10,6 +10,11 @@
       "form": "Αχαϊκός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιουνίου, «Άγιοι Φουρτουνάτος, Αχαϊκός και Στεφανάς οι Απόστολοι», with the rank words left off."
+    },
+    {
+      "form": "Ахаик",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., «Ахаик, апостол от 70-ти», and the title of his life page; the clause placing him among the Seventy is left off."
     }
   ],
   "related": [
@@ -19,8 +24,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian",
+        "note": "The day of the Synaxis of the Seventy Apostles, and his own day: his life page heads «День памяти: 4 января (70 ап.)» and nothing else, and the calendar's page on the synaxis, which lists the day on which each of the Seventy is kept through the year, gives «[Фортуната], [Ахаика] (4 января)»."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Собор 70-ти апостолов: … Фортуната и Ахаика»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "note": "The calendar names him within the enumerated Synaxis of the Seventy; the name link behind him reads «Ахаик, апостол от 70-ти», and his life page, days.pravoslavie.ru/Life/life6467.htm, is titled «Святой Ахаик, апостол от 70-ти» and consists of 1 Corinthians 16:17 — the same verse the folder's Greek row rests on."
     },
     {
       "church": "romanian",
@@ -50,5 +66,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Тропарь апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, entreat the merciful God, that he may grant our souls the remission of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Христовых учеников лик седмьдесят/ Божественно, вернии, в песнех восхвалим,/ теми бо вси навыкохом Троицу почитати Нераздельную,// и пребывают светильницы Божественныя веры.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Кондак апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us the faithful praise in song, as is divinely meet, the choir of the seventy disciples of Christ; for through them we all learned to honour the undivided Trinity, and they abide as lamps of the divine faith.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

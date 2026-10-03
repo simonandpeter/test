@@ -6,6 +6,11 @@
       "form": "Αχιλλέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Όσιος Αχιλλέας ο Διάκονος της Λαύρας Κιέβου», with the rank words left off."
+    },
+    {
+      "form": "Ахила Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., «Преподобный Ахила, диакон Печерский»; the rank word and the office are left off."
     }
   ],
   "sex": "male",
@@ -26,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian",
+        "note": "The day page for 4 января ст. ст. names him; his life pages head «Дни памяти: 4 января, 28 августа (Печер.(Д))», the second being the synaxis of the fathers who rest in the Far Caves and not a second proper feast, so it is not recorded here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Прп. Ахилы, диакона Печерского (XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "note": "The same deacon of the Kyiv Caves the folder's Greek row keeps on 4 January, and the Russian calendar prints the century the Greek page gives, the fourteenth. The day page prints his troparion and kontakion, both naming the Far Caves where his relics lie."
     },
     {
       "church": "romanian",
@@ -59,5 +75,39 @@
   },
   "related": [
     "peter-mohyla"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Постническое житие облобызав/ и многими труды от младых ногтей себе обложив,/ на степень диаконства произведен быв, всечестне,/ в коем служил еси в церкви Божия Матере непорочне,/ Ейже молися,/ во еже спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Тропарь преподобнаго Ахилы, диакона Печерскаго, в Дальних пещерах почивающаго»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having embraced the life of fasting and laid many labours upon thyself from thy earliest years, thou wast brought, O all-honoured one, to the step of the deaconate, in which thou didst serve blamelessly in the church of the Mother of God. Pray to her, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Велие имел еси воистинну воздержание, славне,/ и многое показал еси лощение, о Ахило,/ зане едва единою в седмицы,/ и се едину малу просфору снедаше/ и бденным стоянием к Нему выну дручашеся,/ тем тя, яко постника и преподобным сообщника/ чтуще, ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Кондак преподобнаго Ахилы, диакона Печерскаго, в Дальних пещерах почивающаго»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly thou hadst a great abstinence, O glorious one, and thou didst show much fasting, O Achilles, for scarcely once in the week wouldst thou eat, and that one small prosphoron, and thou didst wear thyself out besides with standing all night before him. Therefore, honouring thee as a faster and a companion of the venerable, we call thee blessed.",
+        "rendered": "site"
+      }
+    }
   ]
 }

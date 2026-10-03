@@ -1,0 +1,70 @@
+{
+  "slug": "nicholas-maslov",
+  "display_name": "Nicholas (Maslov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Маслов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., «Николай (Маслов), иерей, сщмч.», and the life page's heading «Священномученик Николай (Николай Иванович Маслов)»; the office and the rank word are left off. The calendar sets the surname in brackets and it is kept so. The line on the day page itself gives only the forename, in the genitive; the surname comes from the name link."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «Священномученик Николай (Николай Иванович Маслов) родился в 1874 году в Твери»."
+    },
+    "death": {
+      "earliest": 1939,
+      "latest": 1939,
+      "display": "1939",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «в июле 1938 года он был переведен из Твери в тюрьму в Лыкошино, находясь в которой, долго и тяжело болел и 17 января 1939 года скончался»; the day page prints «Сщмч. Николая пресвитера (1939)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Сщмч. Николая пресвитера (1939)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 17 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 17 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "thaddeus-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

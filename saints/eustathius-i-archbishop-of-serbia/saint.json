@@ -6,6 +6,11 @@
       "form": "Ευστάθιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιανουαρίου, «Άγιος Ευστάθιος ο Α', Αρχιεπίσκοπος Ζερβών», with the rank words left off."
+    },
+    {
+      "form": "Евстафий I",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's line for 4 января ст. ст., «Свт. Евстафия I, архиеп. Сербского», declined there and given in the nominative by the name link behind it, «Святитель Евстафий, архиепископ Сербский», which omits the ordinal; the rank word and the see are left off."
     }
   ],
   "sex": "male",
@@ -16,18 +21,29 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1286,
+      "earliest": 1285,
       "latest": 1286,
-      "display": "1286",
+      "display": "1285 or 1286",
       "basis": "traditional",
-      "note": "saint.gr: «Κοιμήθηκε εν ειρήνη το έτος 1286»."
+      "note": "The two sources disagree by a year and the interval records the disagreement. days.pravoslavie.ru: «Семь лет святитель Евстафий управлял Сербской Церковью и мирно скончался около 1285 года», and its day page prints «(ок. 1285)»; saint.gr: «Κοιμήθηκε εν ειρήνη το έτος 1286»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian",
+        "note": "The day page for 4 января ст. ст. names him; both his life pages head «Дни памяти: 4 января, 30 августа (Серб.)», marking the second as the Serbian church's day for him and not a second Russian feast, so it is not recorded here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Свт. Евстафия I, архиеп. Сербского (ок. 1285)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "note": "The same archbishop of Serbia the folder's Greek row keeps on 4 January. The calendar holds two readings of him, days.pravoslavie.ru/Life/life6908.htm and days.pravoslavie.ru/Life/life151.htm, which agree on the course of his life, and the day page prints his troparion and kontakion."
     },
     {
       "church": "romanian",
@@ -56,5 +72,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Избран от Бога, возлюблен от людей,/ архиереов Божественная красото,/ отче Евстафие, Ангелов сослужителю,/ таин же Божественных проповедатель был еси,/ темже моли Христа Бога со всеми святыми/ избавится от всяких зол/ молитвами твоими, блаженне,/ и спастися нам,/ чтущим любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Тропарь святителя Евстафия, архиепископа Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen by God and beloved of men, O divine beauty of the hierarchs, father Eustathius, fellow-servant of the angels, thou wast a herald of the divine mysteries. Therefore pray Christ God with all the saints that we may be delivered from every evil by thy prayers, O blessed one, and that we who honour thy holy memory with love may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Свыше благодать прием от Бога,/ во святительское подобие облеклся еси/ и от уст твоих благочестно всех научил еси покланятися Троице Единосущней./ Темже память твою чтуще,/ прославляем Бога, прославльшаго тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Кондак святителя Евстафия, архиепископа Сербского» (глас 6, подобен: Еже о нас)",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received grace from God above, thou wast clothed in the likeness of a hierarch, and out of thy mouth thou didst piously teach all men to worship the Trinity, one in essence. Therefore, honouring thy memory, we glorify God who hath glorified thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

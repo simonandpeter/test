@@ -1,0 +1,64 @@
+{
+  "slug": "philip-grigoriev",
+  "display_name": "Philip (Grigoriev)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Филипп (Григорьев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., which gives the calendar's own nominative «Филипп (Григорьев), протоиерей, сщмч.»; the office and the rank word are left off. The calendar sets the surname in brackets, as it does for the twentieth-century martyrs generally, and it is kept so. The line on the day page itself gives only the forename, in the genitive; the surname comes from the name link."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 4 января ст. ст.: «Сщмчч. Александра, Стефана и Филиппа пресвитеров (1933)». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Сщмчч. Александра, Стефана и Филиппа пресвитеров (1933)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 17 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 17 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "alexander-skalsky",
+    "stephen-ponomarev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

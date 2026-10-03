@@ -6,6 +6,11 @@
       "form": "Teoctist",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 ianuarie."
+    },
+    {
+      "form": "Феоктист Кукумский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 января ст. ст., «Феоктист Кукумский, Сикелийский (Сицилийский), игумен»; the office is left off, and of the two epithets the calendar gives — the monastery and the island — the first is kept."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Прп. Феоктиста, игумена Кукума Сикелийского (800)»",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "note": "The same abbot of Kucumion in Sicily the folder's Romanian row keeps on 4 January: the life page days.pravoslavie.ru/Life/life148.htm heads «День памяти: 4 января» and names him «Преподобный Феоктист, игумен Кукума Сикилийского». The day page prints a kontakion for him."
     },
     {
       "church": "romanian",
@@ -50,5 +65,32 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 800,
+      "latest": 800,
+      "display": "800",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Скончался преподобный в 800 году»; the day page prints «Прп. Феоктиста, игумена Кукума Сикелийского (800)»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко Ангел во плоти на земли показася,/ пощением насажден бысть, отче преподобне Феоктисте,/ наставник иноком многим быв,/ сего ради вопием ти:/ моли Христа Бога даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 января ст. ст. — «Кондак преподобнаго Феоктиста, игумена Кукума Сикелийского» (глас 3, подобен: Дева днесь)",
+        "url": "https://days.pravoslavie.ru/Days/20260104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown on earth as an angel in the flesh, O venerable father Theoctistus, planted by fasting and made a guide to many monks. Therefore we cry to thee: pray Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
