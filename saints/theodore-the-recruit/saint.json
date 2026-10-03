@@ -16,6 +16,11 @@
       "form": "Феодор Тирон",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Великомученик Феодор Тирон», with the rank word left off."
+    },
+    {
+      "form": "Теодор Тирон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. фебруар ст. ст., „Свети великомученик Теодор Тирон.“, with Свети and the rank word великомученик left off; the rank is in the folder's `types`. Тирон is kept in the form because the entry's first sentence treats it as his by-name and glosses it: тирон значи регрут, a recruit."
     }
   ],
   "sex": "male",
@@ -136,8 +141,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.03.2026 (17. фебруар ст. ст.) — „Свети великомученик Теодор Тирон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-02&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -6,6 +6,11 @@
       "form": "Θεοδόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Θεοδόσιος του Τυρνόβου», with the rank word left off."
+    },
+    {
+      "form": "Теодосије Бугарин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 17. фебруар ст. ст., „Преподобни Теодосије Бугарин и Роман, ученик Теодосијев.“, with the rank word Преподобни left off. Бугарин, the Bulgarian, is the by-name the heading itself gives him and is kept; Tarnovo, which the folder's English name carries, is in the body."
     }
   ],
   "sex": "male",
@@ -17,7 +22,8 @@
   "related": [
     "gregory-of-sinai",
     "euthymius-of-tarnovo",
-    "cyprian-of-kyiv"
+    "cyprian-of-kyiv",
+    "romanus-of-tarnovo"
   ],
   "dates": {
     "death": {
@@ -56,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.03.2026 (17. фебруар ст. ст.) — „Преподобни Теодосије Бугарин и Роман, ученик Теодосијев.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's second heading names master and disciple together, so this row and `romanus-of-tarnovo`'s quote the same line."
     }
   ],
   "text": {

@@ -11,9 +11,16 @@
       "form": "Ρωμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Ρωμανός ο εκ Τυρνόβου», with the rank word left off. No Bulgarian or Slavonic form is printed on the page, and none is invented here."
+    },
+    {
+      "form": "Роман",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 17. фебруар ст. ст., „Преподобни Теодосије Бугарин и Роман, ученик Теодосијев.“, with the rank word Преподобни left off. The heading gives him no epithet but the clause ученик Теодосијев, his master's disciple, which is a relation and not part of a name; Tarnovo, which the folder's English name carries, is in the body."
     }
   ],
-  "related": [],
+  "related": [
+    "theodosius-of-tarnovo"
+  ],
   "dates": {
     "death": {
       "earliest": 1370,
@@ -50,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.03.2026 (17. фебруар ст. ст.) — „Преподобни Теодосије Бугарин и Роман, ученик Теодосијев.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's second heading names master and disciple together, so this row and `theodosius-of-tarnovo`'s quote the same line."
     }
   ],
   "text": {

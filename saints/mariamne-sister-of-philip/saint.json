@@ -16,6 +16,11 @@
       "form": "Мариамна (Мария)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Мариамна (Мария)», which carries no rank word at all and gives the second name in brackets as the calendar prints it. The day's own line names her by her brother, «сестры ап. Филиппа»."
+    },
+    {
+      "form": "Маријамна",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 17. фебруар ст. ст., „Света Маријамна (Марија).“, with Света left off, which is not a rank. The heading puts a second form in brackets after it, Марија; the first is the one stored and the bracketed one is recorded here rather than kept beside it, because a bare Марија beside a fuller form is a fold with eleven other folders."
     }
   ],
   "sex": "female",
@@ -72,8 +77,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.03.2026 (17. фебруар ст. ст.) — „Света Маријамна (Марија).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-02&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
