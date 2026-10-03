@@ -811,6 +811,15 @@ export function paintCarousel() {
           cardWidth,
           textWidth,
           heightOf: (item, width) => cardHeight(item, width, space, pen),
+          /*
+           * **Counted over the whole pool even when only a prefix is dealt.**
+           * The packer paces its pictures against the saints still to come, so
+           * a prefix counted against itself deals a different first column
+           * from the one the full pack will deal — and the second pass then
+           * replaces the row under the reader instead of extending it.
+           * `lib/carousel-cells.js` carries the measurement.
+           */
+          census: pool,
         });
   state.carouselPackKey = packKey;
   state.carouselRun = run;
@@ -839,6 +848,16 @@ export function paintCarousel() {
    */
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const first = state.carouselKey === null || state.carouselKey === undefined;
+  /*
+   * **Is this build the second half of the first one?** `packRest` sets the
+   * flag, and it is read here rather than there because `paintCarousel` is the
+   * only place that knows whether the repaint it was asked for is still
+   * happening — a pool that moved between the idle callback and this line is a
+   * different row and gets the ordinary arrival. Cleared on every paint, so it
+   * cannot survive into a later one.
+   */
+  const continuing = state.carouselContinuing === true;
+  state.carouselContinuing = false;
   if (!reduced && !first && track.children.length) {
     clearTimeout(state.carouselFade);
     track.classList.add('is-swapping');
@@ -852,7 +871,7 @@ export function paintCarousel() {
     state.cleanups.push(() => clearTimeout(state.carouselFade));
     return;
   }
-  buildCarousel(key, run, { cardWidth, textWidth, space, pen });
+  buildCarousel(key, run, { cardWidth, textWidth, space, pen, continuing });
   if (partial) packRest(poolId);
 }
 
@@ -875,6 +894,16 @@ function packRest(poolId) {
     // The key belongs to the prefix row; clearing it is what lets the repaint
     // past the early return that skips an unchanged run.
     state.carouselKey = null;
+    /*
+     * **And the reader is already looking at the row this one continues.**
+     * Without this the second pass is an arrival: the loop re-seeds its own
+     * start so the row jumps sideways, and every caption and picture replays
+     * the fade it has just finished — measured on 2026-10-03 at 1280 px as a
+     * 111 px jump and every visible caption snapping from 1 back to 0. Nothing
+     * about the row has changed for the reader, so nothing should announce
+     * itself; `buildCarousel` is what honours it.
+     */
+    state.carouselContinuing = true;
     paintCarousel();
   });
   state.cleanups.push(() => {
@@ -887,7 +916,7 @@ function packRest(poolId) {
 const CX_FADE = DUR.answer;
 
 /** The half of `paintCarousel` that touches the DOM, deferred behind the fade. */
-function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
+function buildCarousel(key, run, { cardWidth, textWidth, space, pen, continuing = false }) {
   const { el, router } = state;
   const track = el.querySelector('[data-carousel-track]');
   if (!track) return;
@@ -895,6 +924,20 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
   // belonged to the old one.
   if (state.carouselKey !== null && state.carouselKey !== undefined) state.carouselAt = null;
   state.carouselKey = key;
+
+  /*
+   * And which pictures are up, for the same reason: every `<img>` here is about
+   * to be thrown away and rebuilt, and one that is already on the screen should
+   * come back at the strength it had rather than fade in again. By source
+   * rather than by node, because the node does not survive.
+   */
+  const shown = continuing
+    ? new Set(
+        [...track.querySelectorAll('.cx-media img.is-loaded')]
+          .map((img) => img.dataset.src)
+          .filter(Boolean),
+      )
+    : null;
 
   // What the loop being replaced knew that the DOM cannot say: a wheel still
   // spinning, a pointer hold still running. Taken here, because this is where
@@ -967,6 +1010,15 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
   const reveal = () => requestAnimationFrame(() => track.classList.remove('is-swapping'));
 
   /*
+   * **A row that continues one the reader is already reading does not
+   * introduce itself.** The class stands the captions up at full strength
+   * instead of replaying `cx-caption-in`; the pictures' half of it is `warm`
+   * below. Toggled rather than added, because this track outlives every build
+   * and a row that *is* a genuine arrival must still arrive.
+   */
+  track.classList.toggle('is-continuing', continuing);
+
+  /*
    * **Computed, not measured.** The first version laid the plain run out and
    * read `scrollWidth`, which meant painting 742 cells twice on every
    * keystroke — two full layouts of the largest thing on the page, which is
@@ -993,7 +1045,11 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
     // Left-justified and still: no clones to wrap between, and no drift to
     // start. `windowImages` still runs — a short row is not necessarily a small
     // one, and its pictures should still be released when scrolled past.
-    state.carouselWindow = windowImages(track, { margin: imageMargin(), inflight: imageInflight() });
+    state.carouselWindow = windowImages(track, {
+      margin: imageMargin(),
+      inflight: imageInflight(),
+      shown,
+    });
     state.carouselPrefetch?.();
     state.carouselPrefetch = observePrefetch(track);
     reveal();
@@ -1031,6 +1087,7 @@ function buildCarousel(key, run, { cardWidth, textWidth, space, pen }) {
     margin: imageMargin(),
     inflight: imageInflight(),
     direction: () => state.loop?.direction() ?? 1,
+    shown,
   });
   // One observer at a time. The track is rebuilt whenever the pool changes, and
   // pushing a fresh cleanup onto the pile each time would leave every previous

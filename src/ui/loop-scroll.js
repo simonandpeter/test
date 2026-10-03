@@ -154,7 +154,10 @@ const BEHIND = 2;
  * wrapped by a period every so often, so its own deltas lie. `loopScroll`
  * knows which way the row is going and says so.
  */
-export function windowImages(track, { margin = 700, direction = () => 1, inflight = MAX_INFLIGHT } = {}) {
+export function windowImages(
+  track,
+  { margin = 700, direction = () => 1, inflight = MAX_INFLIGHT, shown = null } = {},
+) {
   /*
    * **A picture is shown once it has arrived, and not before** (author,
    * 2026-09-07: "the saint images that are loaded in the carousel fade in,
@@ -194,6 +197,21 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
   };
   const arrived = (img) => {
     if (img.classList.contains('is-loaded')) return;
+    /*
+     * **A picture the reader is already looking at goes straight back up.**
+     * `shown` is the set of sources that were up in the row this one replaces
+     * (views/index/modes.js hands it over when the idle pack finishes the row
+     * the first paint began), so these have no arrival left to stage: no place
+     * in the 200 ms queue, and `is-instant` so the opacity does not travel a
+     * second time. Each source is spent on its first use, which is what keeps
+     * this to the one band and leaves "a card coming round a second time fades
+     * in a second time" (2026-09-07) exactly as it was.
+     */
+    if (shown?.delete(img.dataset.src)) {
+      img.classList.add('is-instant');
+      show(img);
+      return;
+    }
     const since = performance.now() - lastShown;
     if (!waitingToShow.length && since >= FADE_GAP_MS) {
       show(img);
@@ -297,7 +315,7 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
     img.removeEventListener('load', onArrived);
     const queued = waitingToShow.indexOf(img);
     if (queued >= 0) waitingToShow.splice(queued, 1);
-    img.classList.remove('is-loaded');
+    img.classList.remove('is-loaded', 'is-instant');
     img.removeAttribute('src');
   };
 
@@ -402,7 +420,14 @@ export function windowImages(track, { margin = 700, direction = () => 1, infligh
 export function loopScroll(
   track,
   count,
-  { buffer = 12, speed = 26, startAt = null, wheelMax = 900, wheelGain = 1.4, wheelDecay = 0.94 } = {},
+  {
+    buffer = 12,
+    speed = 26,
+    startAt = null,
+    wheelMax = 900,
+    wheelGain = 1.4,
+    wheelDecay = 0.94,
+  } = {},
 ) {
   let headSpan = 0; // where the first real item starts
   let bodySpan = 0; // one full period, first real item to the copy after the run
