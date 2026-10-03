@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Apostol Anania",
       "lang": "ro"
+    },
+    {
+      "form": "Св. апостол Ананија",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -52,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day, the first of them being the feast of the Protection and not a person. It is the only one of the three calendars that says where his relics went."
+      },
+      "source": {
+        "text": "Охридски пролог, 1. октобар ст. к. — «2. Св. апостол Ананија. Један од Седамдесеторице. Беше епископ у Дамаску. … Његове свете мошти пренете су у Дамаск а доцније у Цариград.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
@@ -140,6 +154,9 @@
         "rendered": "site"
       }
     }
+  ],
+  "related": [
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"

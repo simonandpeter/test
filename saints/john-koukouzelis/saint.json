@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Ioan Cucuzel",
       "lang": "ro"
+    },
+    {
+      "form": "Преп. Јован Кукузељ",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -21,7 +25,7 @@
       "latest": 1433,
       "display": "12th or early 15th century",
       "basis": "traditional",
-      "note": "saint.gr: «έζησε στα χρόνια των Κομνηνών» and «απεβίωσε ειρηνικά στις αρχές του 15ου μ.Χ. αιώνα»; doxologia.ro’s life puts him at the court of «împăratul Ioan al II-lea Comnenul (1118-1143)» before he went to Athos. The sources disagree by centuries, so the interval runs from the Romanian’s reign to the Greek’s early fifteenth century."
+      "note": "saint.gr: «έζησε στα χρόνια των Κομνηνών» and «απεβίωσε ειρηνικά στις αρχές του 15ου μ.Χ. αιώνα»; doxologia.ro’s life puts him at the court of «împăratul Ioan al II-lea Comnenul (1118-1143)» before he went to Athos. The sources disagree by centuries, so the interval runs from the Romanian’s reign to the Greek’s early fifteenth century. The Serbian Ohrid Prologue, read 4 October 2026, is a third reading and takes the earlier side: «Упокојио се у XII столећу.» It falls inside the interval and does not change it."
     }
   },
   "related": [
@@ -64,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Fourth of the four the Ohrid Prologue enumerates for this day, the first of them being the feast of the Protection and not a person. It makes him a Slav, where the Greek gives only his city and the Romanian makes him Bulgarian."
+      },
+      "source": {
+        "text": "Охридски пролог, 1. октобар ст. к. — «4. Преп. Јован Кукузељ. Словенин из Драча. … У два маха јавила му се Пресвета Богородица. Упокојио се у XII столећу.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

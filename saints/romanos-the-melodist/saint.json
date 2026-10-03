@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Cuvios Roman Melodul",
       "lang": "ro"
+    },
+    {
+      "form": "Преп. Роман Слаткопојац",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -22,7 +26,14 @@
       "latest": 800,
       "display": "6th or 8th century",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε ή τον 6ο αιώνα μ.Χ. επί του βασιλέως Αναστασίου του Α' ή κατά μία άλλη εκδοχή, τον 8ο αιώνα μ.Χ. επί τού βασιλέως Αναστασίου του Β'»; the interval spans both readings. doxologia.ro’s life says only «în anii domniei împăratului Anastasie»."
+      "note": "saint.gr: «Έζησε ή τον 6ο αιώνα μ.Χ. επί του βασιλέως Αναστασίου του Α' ή κατά μία άλλη εκδοχή, τον 8ο αιώνα μ.Χ. επί τού βασιλέως Αναστασίου του Β'»; the interval spans both readings. doxologia.ro’s life says only «în anii domniei împăratului Anastasie». The Serbian Ohrid Prologue, read 4 October 2026, takes the sixth-century reading and is the only one of the three to date anything: it puts his service at Constantinople «у време патријарха Јевтимија (490- 504. год.)» — the patriarch the Romanian life names without years — and his repose in 510. The interval is left as the union the Greek offers, because the eighth-century reading is a reading one of the sources still prints."
+    },
+    "death": {
+      "earliest": 510,
+      "latest": 510,
+      "display": "510",
+      "basis": "traditional",
+      "note": "One source of the three gives a year at all. The Serbian Ohrid Prologue, read 4 October 2026: «Као ђакон велике цркве упокојио се 510. год. у Цариграду, и преселио се међу ангелске хорове.» It belongs to the sixth-century reading of the floruit above and contradicts the eighth; both are recorded and neither is preferred. The Greek and Romanian lives give no year for his death."
     }
   },
   "attestations": [
@@ -61,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day, the first of them being the feast of the Protection and not a person. It is the only one of the three calendars that keep him to date him at all."
+      },
+      "source": {
+        "text": "Охридски пролог, 1. октобар ст. к. — «3. Преп. Роман Слаткопојац. Родом из Емеса града Сиријског. Служио као црквењак најпре у Бејруту, а по том у Цариграду при саборној цркви у време патријарха Јевтимија (490- 504. год.).»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
