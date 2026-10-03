@@ -11,6 +11,10 @@
       "form": "Evdochim Vatopedinul",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Evdochim Vatopedinul” for 5 octombrie."
+    },
+    {
+      "form": "Преп. Евдоким Ватопедски",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -30,7 +34,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru’s page for 5 октября ст. ст., read 4 October 2026, prints eight entries — Charitina, the Moscow hierarchs, Dionysius of Alexandria, Mamelchtha, Gregory of Khandzta, the three Caves fathers, Charitina the Lithuanian princess and the confessor Gabriel — and no Eudocimus. No other day checked."
     },
     {
       "church": "romanian",
@@ -62,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day. It dates the finding of the relics to 1841, the later of the two years this folder already held, and it is the only source here to quote the reliquary’s own inscription."
+      },
+      "source": {
+        "text": "Охридски пролог, 5. октобар ст. к. — «3. Преп. Евдоким Ватопедски. Године 1841. када су у Ватопеду оправљали костурницу, нађу мајстори мошти некога човека у ставу клечећем и са иконом Пресвете Богородице на прсима у рукама.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

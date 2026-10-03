@@ -14,6 +14,10 @@
       "form": "Haritina",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Haritina” for 5 octombrie."
+    },
+    {
+      "form": "Св. муч. Харитина",
+      "lang": "sr"
     }
   ],
   "sex": "female",
@@ -33,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17); and she is not on the Moscow Patriarchate’s list for 4 September (Julian) — days.pravoslavie.ru, read 2026-08-23."
+      "status": "venerated",
+      "note": "Only the day line was read, not this calendar’s own life page for her. The same line keeps a second and different Charitina on this day — «Прп. Харитины, кн. Литовской, в Новгороде подвизавшейся (1281)», the Lithuanian princess who struggled at Novgorod — who is not this saint, is not in the Ohrid Prologue, and has no folder here.",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Мц. Харитины (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -82,8 +96,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17); and she is on neither the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.) nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day, and much the fullest of them. Its account of her contest is longer than either of the other two calendars’."
+      },
+      "source": {
+        "text": "Охридски пролог, 5. октобар ст. к. — «1. Св. муч. Харитина. Као сироче у детињству би посвојена од некога угледна човека и хришћанина Клаудија, који је васпита као своју рођену кћер.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

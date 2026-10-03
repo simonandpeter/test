@@ -1,0 +1,74 @@
+{
+  "slug": "jeremiah-of-the-caves",
+  "display_name": "Jeremiah of the Caves",
+  "names": [
+    {
+      "form": "Јеремија",
+      "lang": "sr",
+      "note": "His own name, read out of «4. Преп. Дамјан, Јеремија и Матеј. Печерски прозорљивци и чудотворци» in this folder's Serbian citation, where it stands in the nominative; the heading names three saints, so `pickNameForms` would refuse the whole line for one person."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1070,
+      "latest": 1070,
+      "display": "c. 1070",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's 5 октября ст. ст., read 4 October 2026, prints «Иеремии (ок. 1070)» — about 1070. The Serbian Ohrid Prologue, read the same day, gives only the century for all three of them: «Сви из XI столећа», which contains it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Прпп. Дамиана, пресвитера, целебника (1071), Иеремии (ок. 1070) и Матфея (ок. 1085) прозорливых, Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026
+      },
+      "note": "Only the day line was read, not this calendar's own life page for him; the Russian wave will have more of him than this."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro keeps Damian the Healer of this company on 5 octombrie, and its list was not read for Jeremiah (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's page for 5 Οκτωβρίου was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue names in its fourth entry for this day, which is one heading over Damian, Jeremiah and Matthew. The entry list prints two of the day's four headings and drops this one, which opens «Преп.»"
+      },
+      "source": {
+        "text": "Охридски пролог, 5. октобар ст. к. — «4. Преп. Дамјан, Јеремија и Матеј. Печерски прозорљивци и чудотворци. Сви из XI столећа.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-18&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "related": [
+    "damian-the-healer",
+    "matthew-of-the-caves"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
