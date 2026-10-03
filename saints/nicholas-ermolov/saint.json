@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-ermolov",
+  "display_name": "Nicholas (Ermolov)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Николай (Ермолов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13828, «Николай (Ермолов), протоиерей, сщмч.», with the office and the rank word left off. The day line gives the forename and «пресвитеров» for the pair, which does not distinguish his grade from the other's."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the pair it names him in: «Сщмчч. Иннокентия и Николая пресвитеров (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Сщмчч. Иннокентия и Николая пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day prints two icons and both stand in its first paragraph — a polyeleos before the Iveron icon of the Theotokos and the plain service before the company of 251 — and neither reaches his line, which is in the third. The one further polyeleos the day's readings name is Thaddeus of Tver's."
+      },
+      "note": "«Сщмч.» marks a hieromartyr, a priest killed for the faith, and his index page gives the one thing the day line does not: «протоиерей», archpriest, against the «иерей» of the man named beside him. Nothing else is printed on either page: no birth, no diocese, no parish, no charge, no place of death, and no life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 26 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/26 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 26 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "innocent-kikin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

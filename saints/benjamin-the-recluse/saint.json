@@ -11,13 +11,30 @@
       "form": "Βενιαμίν",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Όσιος Βενιαμίν ο Έγκλειστος ο «εν τω Σπηλαίω»», with the rank word left off."
+    },
+    {
+      "form": "Вениамин Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 408, «Преподобный Вениамин Печерский», with the rank word left off. «Печерский» is of the Caves, which is what the Greek epithet «ο εν τω Σπηλαίω» says too."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page keeps one other day, «28 августа (Печер.(Д))», which is the synaxis of the fathers of the Far — Theodosius — caves. One row per church is the schema, so the August day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Прп. Вениамина Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph: a polyeleos before the Iveron icon of the Theotokos, and the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the company of 251. Neither reaches a later line. The day's readings do name one further polyeleos service, and it is Thaddeus of Tver's, not this one's."
+      },
+      "note": "The man the Greek keeps as «ο Έγκλειστος ο «εν τω Σπηλαίω»», the recluse in the Cave, on the same day and in the same century. The Russian has what the Greek notice lacks entirely: he was «купец великий», a great merchant, until one verse heard at a service — Matthew 19:23, that a rich man shall hardly enter the kingdom of heaven — went deep into his heart; he gave his estate to the poor, became a monk of the Kyiv Caves lavra, and was buried in the Far, or Theodosius, caves."
     },
     {
       "church": "romanian",
@@ -51,9 +68,44 @@
       "latest": 1400,
       "display": "14th century",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Βενιαμίν έζησε τον 14ο αιώνα μ.Χ.»"
+      "note": "saint.gr: «Ο Όσιος Βενιαμίν έζησε τον 14ο αιώνα μ.Χ.» days.pravoslavie.ru agrees, in both of the lives its index page links: «Жил в XIV в.» and «жил в XIV веке»."
     }
   },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Добр купец бысть, Богомудре Вениамине,/ богатство бо свое тленно раздав,/ купил еси оным нетленное в Царствии небеснем,/ в немже ныне тамошних благ наслаждаяся богатне,/ проси нам мира и велия милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Тропарь преподобного Вениамина Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A good merchant wast thou, O God-wise Benjamin: having given away thy corruptible wealth, with it thou didst buy the incorruptible in the kingdom of heaven, where now thou enjoyest its good things in abundance. Ask for us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Куплю житейскую яко тщетную оставль/ и шед, купил еси себе многоценен бисер Христа,/ Емуже во иночестем образе/ труды и подвиги, безменством же и послушанием, преподобне Вениамине, благоугождая,/ приял от Него велию и богатую милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Кондак преподобного Вениамина Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "«Безменством» is the page's own reading and is left as it prints; it does not construe, and the sense taken for the rendering is the possessionlessness the word is nearest to."
+      },
+      "english": {
+        "text": "Leaving the trade of this life behind as worthless, thou wentest and bought for thyself the pearl of great price, Christ; and pleasing him in the monastic habit by labours and ascetic feats, by owning nothing and by obedience, O venerable Benjamin, thou didst receive from him great and abundant mercy.",
+        "rendered": "site"
+      }
+    }
+  ],
   "text": {
     "life": "life.md"
   }

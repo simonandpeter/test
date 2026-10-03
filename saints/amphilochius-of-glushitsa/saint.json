@@ -1,0 +1,101 @@
+{
+  "slug": "amphilochius-of-glushitsa",
+  "display_name": "Amphilochius of Glushitsa",
+  "office": "Abbot of the Glushitsa monastery",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Амфилохий Глушицкий",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's second life for him, «Преподобный Амфилохий Глушицкий, игумен», with the rank and the office left off. The day line and the first life put the words in the other order, «Прп. Амфилохия, игумена Глушицкого»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1452,
+      "latest": 1452,
+      "display": "1452",
+      "basis": "attested",
+      "note": "Both of the calendar's lives for him and its day line give the year, and the second life gives the day with it: «После многих трудов преподобный Амфилохий мирно отошел ко Господу 12 октября 1452 г.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Прп. Амфилохия, игумена Глушицкого (1452).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day prints two icons and both are the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком»; each stands immediately before one great line — the Tarsus martyrs and Cosmas of Maiuma — and neither reaches as far as his, which is in the next paragraph and carries nothing."
+      },
+      "note": "The calendar keeps two lives for him, one on each of the pages its index page 152 links, and they agree: Ustyug, the arrival at Glushitsa in 1417, twenty years under Dionysius, fifteen as abbot after him, 1452. The second adds the day of his death and the two words it has for his character, «кротость и терпение», meekness and patience."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 25 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/25 was not read for him (2026-10-04). His teacher Dionysius of Glushitsa is in the Greek synaxaristis, so the Greek may keep him too."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 25 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Светильники светлыя явльшеся,/ доброту земную мудренно оставльше,/ и идоша во внутреннюю пустыню, Амфилохие, Макарие, Тарасие и Феодосие,/ смирение и всякую добродетель извыкше,/ и обретоша безсмертие,/ постом и бдением и прочим воздержанием себе приносяще Христу,/ и ныне на Небесех Престолу Христову предстоите./ Молите, отцы Богомудрии, Амфилохие, Макарие, Тарасие и Феодосие,/ умирити мир и спастися душам поющих вас,/ и согрешений оставление даровати/ чтущим всечестную память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Тропарь преподобных Амфилохия, Макария, Тарасия и Феодосия Глушицких»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "The service is of four of the Glushitsa fathers together and names him twice; the other three are not commemorated on this day. It is recorded here because it names him, not because it is the day's."
+      },
+      "english": {
+        "text": "Shining forth as bright lamps, wisely forsaking the comeliness of earth, ye went into the inner wilderness, O Amphilochius, Macarius, Tarasius and Theodosius; learning humility and every virtue ye found immortality, offering yourselves to Christ by fasting and vigil and all other abstinence, and now ye stand in the heavens before the throne of Christ. Pray, O God-wise fathers Amphilochius, Macarius, Tarasius and Theodosius, that the world be given peace, that the souls of those who sing of you be saved, and that remission of sins be granted to those who honour your all-honourable memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко светила незаходимая мысленнаго Солнца, просветисте вселенную,/ верным души и телеса лучами чудес ваших озаряюще,/ независтно подаваете от недуг исцеление,/ темже, сошедшеся верою, вас в песнех восхвалим,/ яко найти премудрыя наставники и к Богу ходатаи,/ и непрестанно вопием:/ радуйтеся, отцы Богомудрии Дионисие и Амфилохие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Кондак преподобных Амфилохия, Макария, Тарасия и Феодосия Глушицких»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "Headed for the four fathers and ending on two of them, «радуйтеся, отцы Богомудрии Дионисие и Амфилохие». «Яко найти премудрыя наставники» is the page's own reading and is left as it prints; it does not construe, and the site publishes it so."
+      },
+      "english": {
+        "text": "As unsetting luminaries of the noetic Sun ye have enlightened the world, lighting the souls and bodies of the faithful with the beams of your wonders and giving healing from sickness without grudging. Therefore, gathered in faith, we praise you in hymns as most wise teachers and intercessors before God, and cry without ceasing: rejoice, O God-wise fathers Dionysius and Amphilochius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "dionysius-of-glushitsa"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

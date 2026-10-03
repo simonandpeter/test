@@ -52,7 +52,8 @@
       "feast": {
         "day": 29,
         "month": 8,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Beheading. The Russian calendar's 12 October keeps an event of his relics that this folder does not render, and an attestation holds one feast: «Перенесение из Мальты в Гатчину части древа Животворящего Креста Господня, Филермской иконы Божией Матери и десной руки св. Иоанна Крестителя (1799)» — the bringing from Malta to Gatchina, in 1799, of a part of the wood of the Life-giving Cross, of the Philermos icon of the Theotokos and of the Forerunner's right hand (https://days.pravoslavie.ru/Days/20261012.html, read 4 October 2026). That day prints a troparion and a kontakion for the translation of the hand, neither of which is recorded here, because they belong to the event rather than to the feast this row keeps."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 августа ст. ст. — «Усекновение главы Пророка, Предтечи и Крестителя Господня Иоанна»",
@@ -109,9 +110,6 @@
       "note": "The Beheading. His other feasts — the Nativity (24 June), the Synaxis (7 January), the findings of his head — are not yet recorded here: an attestation holds one feast."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "hymns": [
     {
       "church": "greek",
@@ -215,5 +213,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

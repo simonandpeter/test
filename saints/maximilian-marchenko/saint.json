@@ -1,0 +1,68 @@
+{
+  "slug": "maximilian-marchenko",
+  "display_name": "Maximilian (Marchenko)",
+  "office": "Abbot",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Максимилиан (Марченко)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14339, «Максимилиан (Марченко), игумен, прмч.», with the office and the rank word left off. The day line gives the forename alone, «Прмч. Максимилиана»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Прмч. Максимилиана (1938)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Прмч. Максимилиана (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's two icons both stand in its first paragraph — the plain service before the four martyrs of Milan, and the service with the Great Doxology immediately before Paraskeva-Petka, which is hers alone — and his line closes the third."
+      },
+      "note": "«Прмч.» is the mark of a venerable martyr, a monk killed for the faith, and «игумен» on his index page is the one thing the day line does not give: he governed a house. Which house is not printed, and neither is a birth, a charge or a place of death; neither page carries a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 27 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 27 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "michael-lektorsky",
+    "peter-lebedev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

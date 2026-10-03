@@ -11,6 +11,11 @@
       "form": "Κάρπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Άγιοι Κάρπος, Πάπυλος, Αγαθόδωρος και Αγαθονίκη», with the rank word left off; the page's own heading for this one is «Αγιος Καρπος»."
+    },
+    {
+      "form": "Карп Фиатирский, Пергамский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1175, «Святитель Карп Фиатирский, Пергамский, епископ, сщмч.», with the rank words and the office left off. It keeps both epithets; the day line gives «Карпа, еп. Фиатрийского»."
     }
   ],
   "sex": "male",
@@ -33,8 +38,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Мчч. Карпа, еп. Фиатрийского, Папилы диакона, Агафодора и мц. Агафоники (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon is a polyeleos, «Совершается служба с полиелеем», and it stands immediately before the line of the Iveron icon of the Theotokos, which is that line's alone and does not reach any later one."
+      },
+      "note": "The Russian keeps the four together on 13 October, as the Greek and the Romanian do, and gives the year neither of them gives, 251. Its life has him and Papylas reported to the governor for staying away from the pagan feasts, and it is the governor who first argues the truth of the Roman religion with them before the torture starts. Its index page adds Pergamum to Thyatira as his second epithet."
     },
     {
       "church": "romanian",
@@ -121,8 +138,34 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ὁ ὑψωθεὶς."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Венченосцы явльшеся днесь в мире,/ премудрии, с Карпом Папиле,/ просвещаете всех,/ иже верою и веселием чтущих память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Ин кондак мучеников Карпа, Папилы диакона, Агафодора и мученицы Агафоники»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "The day prints a troparion and a kontakion of martyrs above it, «Мученицы Твои, Господи» and «Яко сокровище многоценное», both of which name nobody and are the common; this second kontakion is headed with all four names and is recorded for that reason."
+      },
+      "english": {
+        "text": "Shown forth today in the world as crown-bearers, O most wise ones, Papylas with Carpus, ye enlighten all who honour your memory with faith and gladness.",
+        "rendered": "site"
+      }
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after the four names, «Мчч. Карпа, еп. Фиатрийского, Папилы диакона, Агафодора и мц. Агафоники (251)». Its life for the four gives the reign rather than the year, «во времена гонения на христиан императора Декия в III веке», and Decius reigned to 251, so the two agree. Neither doxologia.ro nor saint.gr gives a year, and this folder held none."
+    }
+  },
   "text": {
     "life": "life.md"
   }

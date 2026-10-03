@@ -11,13 +11,30 @@
       "form": "Χρυσή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Αγία Χρυσή η Νεομάρτυς», with the rank word left off."
+    },
+    {
+      "form": "Хриса (Хрисия, Злата) Могленская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2751, «Хриса (Хрисия, Злата) Могленская, мц.», with the rank word left off. It carries all three Russian forms of the name; its life heads her «Святая Злата (Хриса) Мегленская» with the other spelling of the epithet."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her repose, as the Russian calendar's 18 October prints it. Her index page keeps one other day, «13 октября (Воспоминание чуда)» — the remembrance of a miracle of hers at Skopje in 1912, which that day's line gives as «Воспоминание чуда вмц. Златы (Хрисы) в Скопье (1912)» (https://days.pravoslavie.ru/Days/20261013.html, read 4 October 2026). One row per church is the schema, so the October 13th is recorded here and she does not render on it. saint.gr puts her death itself on 13 October."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 октября ст. ст. — «Преставление вмц. Златы (Хрисы) (1795) (Болг.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261018.html",
+        "year": 2026,
+        "note": "No rank is read onto her. The 18 October page's two icons both stand in its first paragraph — a polyeleos before the apostle and evangelist Luke, and the plain service before the finding of Joseph of Volotsk's relics — and her line is in the second. «(Болг.)» on that line marks her as a saint of the Bulgarian church."
+      },
+      "note": "The Russian keeps her repose five days after the day the Greek keeps her death on, and its index page keeps both days for her for two different reasons: the repose on 18 October and the remembrance of a miracle at Skopje on 13 October. Its life gives the village the Greek does not name — «болгарском селении Слатино, Могленской епархии», Slatino in the diocese of Moglena — the Turkish yoke Bulgaria lay under, and the local Turk who tried again and again to win her over and make her accept Islam, and whom neither persuasion nor threats nor monstrous torture through many months got anywhere with."
     },
     {
       "church": "romanian",
@@ -51,7 +68,7 @@
       "latest": 1795,
       "display": "1795",
       "basis": "attested",
-      "note": "saint.gr: «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια», and its page head gives her as «Αγια Χρυση η Νεομαρτυς (; - 1795)»."
+      "note": "saint.gr: «Τελικά στις 13 Οκτωβρίου 1795 μ.Χ., κατέκοψαν το σώμα της με μαχαίρια», and its page head gives her as «Αγια Χρυση η Νεομαρτυς (; - 1795)». days.pravoslavie.ru gives the same year and a different day for it: its life closes «(+ 1795)» and its 18 October line reads «Преставление вмц. Златы (Хрисы) (1795) (Болг.)», where saint.gr puts the death on 13 October 1795. The year is not in dispute and the day is recorded in the attestations."
     }
   },
   "hymns": [

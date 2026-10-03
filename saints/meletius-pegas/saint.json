@@ -6,6 +6,11 @@
     {
       "form": "Άγιος Μελέτιος Πηγάς",
       "lang": "el"
+    },
+    {
+      "form": "Мелетий (Пигас)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14337, «Святитель Мелетий (Пигас), патриарх Александрийский», with the rank word and the office left off. The day line gives «Мелетия, патриарха Александрийского»."
     }
   ],
   "sex": "male",
@@ -32,8 +37,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 13 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Свт. Мелетия, патриарха Александрийского (1601).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph — a polyeleos before the Iveron icon of the Theotokos, and the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the company of 251 — and neither reaches a later line. The one further polyeleos the day's readings name is Thaddeus of Tver's."
+      },
+      "note": "The two churches that keep him keep him a month apart: the Greek on 13 September and the Russian on 13 October. Both give 1601 — the Russian on its day line, the Greek through the patriarchate it dates 1590 to 1601 — so the disagreement is about the day alone and nothing here chooses between them. The Russian adds no life: its index page for him carries the heading, the one day, and nothing else."
     },
     {
       "church": "romanian",
@@ -60,9 +76,6 @@
       "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 13. септембар ст. ст. was not read (2026-08-23)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "hymns": [
     {
       "church": "greek",
@@ -81,5 +94,8 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

@@ -11,6 +11,11 @@
       "form": "Σιλβανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Όσιος Σιλβανός ο Γέρων Ιερομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Сильван Газский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1991, «Сильван Газский, пресвитер, сщмч.», with the office and the rank word left off. The day line gives «Сильвана, пресвитера Газского»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Сщмч. Сильвана, пресвитера Газского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph: the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the four martyrs of Milan, and «Совершается служба со славословием» immediately before Paraskeva-Petka, which is that one great line's alone. Neither reaches a later line."
+      },
+      "note": "The Russian gives this folder its first date, the fourth century, and the three things no other calendar prints for him: that he was of Gaza and was its presbyter, that he was sent to forced labour in the mines of the Palestinian town of Phaeno for his zeal in spreading the faith, and that he was beheaded in the end together with forty Christian soldiers. The calendar calls him «сщмч.», a hieromartyr, and «пресвитер», which is the priesthood and not the bishopric this folder's types carry from the Greek."
     },
     {
       "church": "romanian",
@@ -59,6 +75,15 @@
       "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints after his name, «Сщмч. Сильвана, пресвитера Газского (IV)», and repeats in its life. Neither doxologia.ro nor saint.gr gives a date, and this folder held none."
+    }
+  },
   "text": {
     "life": "life.md"
   }

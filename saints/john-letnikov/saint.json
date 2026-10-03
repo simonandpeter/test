@@ -1,0 +1,66 @@
+{
+  "slug": "john-letnikov",
+  "display_name": "John (Letnikov)",
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Летников)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13826, «Иоанн (Летников), исповедник», with the rank word left off. The day line gives the forename only."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Св. Иоанна исп (1930)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Св. Иоанна исп (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's two icons are both the plain service and both stand in its first paragraph, before the Tarsus martyrs and before Cosmas of Maiuma; his line is in the third and carries none."
+      },
+      "note": "«Исп.» is the mark of a confessor — one who suffered for the faith and was not killed for it. The index page adds the surname and nothing else: no birth, no place, no office, no account of what was done to him, and no life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 25 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian confessors of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/25 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 25 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "laurence-levchenko",
+    "alexander-pozdeevsky",
+    "nicholas-of-alma-ata"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

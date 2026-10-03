@@ -1,0 +1,68 @@
+{
+  "slug": "peter-lebedev",
+  "display_name": "Peter (Lebedev)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Петр (Лебедев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13830, «Петр (Лебедев), иерей, сщмч.», with the office and the rank word left off. The day line gives the forename and the grade only, «Сщмч. Петра пресвитера»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Петра пресвитера (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days: «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «7 июня (Иван.)», the synaxis of the saints of Ivanovo, which is the only thing on either page that puts him anywhere. One row per church is the schema, so both are recorded here and he does not render on either; no diocese is inferred from the Ivanovo synaxis."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 октября ст. ст. — «Сщмч. Петра пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261014.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's two icons both stand in its first paragraph — the plain service before the four martyrs of Milan, and the service with the Great Doxology immediately before Paraskeva-Petka, which is hers alone — and his line is in the third."
+      },
+      "note": "«Сщмч.» marks a hieromartyr and «иерей» on his index page is the simple priesthood. He has one day more than the other two priests of this day, «7 июня (Иван.)», the synaxis of the Ivanovo saints; it is recorded as a commemoration and no diocese is read out of it. Nothing else is printed on either page, and neither carries a life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 27 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 27 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "michael-lektorsky",
+    "maximilian-marchenko"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

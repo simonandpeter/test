@@ -127,6 +127,8 @@ in 2000 and calls him metropolitan of Alma-Ata; he is kept on 25 October, on
 8 September for the finding, and in the synaxes of the new martyrs and
 confessors of Russia, of Radonezh and of the Lipetsk saints.
 
+The Sretensky calendar's own 12 October — civil 25 October, the day of his repose — closes its list of twentieth-century names with him: «Свт. Николая исп. митр. Алма-Атинского (1955)». Its index of names gives him three days and prints this one bare, the other two with their reasons beside them: «26 августа (обретение мощей)», the finding of the relics, and «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. The day carries no icon for him and no service of his own.
+
 *After the life printed by the Russian church calendar at azbyka.ru —
 [the entry](https://azbyka.ru/days/sv-nikolaj-mogilevskij-alma-atinskij), read 6 September 2026; until
-then this entry had only the Sretensky calendar’s line.*
+then this entry had only the Sretensky calendar’s line; and that calendar's own [12 October](https://days.pravoslavie.ru/Days/20261012.html) and [its index entry for him](https://days.pravoslavie.ru/name/9099.html) at days.pravoslavie.ru, read 4 October 2026.*

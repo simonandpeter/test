@@ -6,6 +6,11 @@
       "form": "Θαδδαίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Δεκεμβρίου, «Άγιος Θαδδαίος Αρχιεπίσκοπος Τβέρ», with the rank word and the see left off. The page glosses the name itself, «(εβραϊκή λέξη) = ο γενναίος υμνητής του Θεού»."
+    },
+    {
+      "form": "Фаддей (Успенский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6609, «Священномученик архиепископ Фаддей (Успенский)», with the rank word and the office left off. His life gives the name he was born with as well, «в миру Иван Васильевич Успенский»."
     }
   ],
   "sex": "male",
@@ -21,14 +26,34 @@
       "latest": 1937,
       "display": "1937",
       "basis": "attested",
-      "note": "saint.gr, the whole of its text: «Ο Άγιος Θαδδαίος ήταν Αρχιεπίσκοπος Τβέρ και μαρτύρησε το 1937 μ.Χ.», with «(; - 1937)» in the page head. No year of birth is given."
+      "note": "saint.gr, the whole of its text: «Ο Άγιος Θαδδαίος ήταν Αρχιεπίσκοπος Τβέρ και μαρτύρησε το 1937 μ.Χ.», with «(; - 1937)» in the page head. No year of birth is given. days.pravoslavie.ru's two-part life agrees and is exact: the NKVD came for him on the evening of 20 December, he was sentenced to be shot ten days after the arrest, and the archival note it cites is an «Выписка о приведении в исполнение постановления Тройки У НКВД по Калининской области 31/Х11-1937 г.» — the Troika's sentence carried out on 31 December 1937."
+    },
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life, part one: «Архиепископ Фаддей (в миру Иван Васильевич Успенский) родился 12 ноября 1872 года в селе Наруксово Лукоянского уезда Нижегородской губернии в семье священника Василия и жены его Лидии». saint.gr gives no year of birth at all, and this folder held none."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian",
+        "note": "The day his index page prints bare, and the day the Greek keeps him on too. That page keeps two more: «13 октября (обретение мощей)», the finding of his relics, which the 13 October day line dates 1993 — «Обретение мощей сщмч. Фаддея, архиеп. Тверского (1993)» (https://days.pravoslavie.ru/Days/20261013.html, read 4 October 2026) — and «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 декабря ст. ст. — «Сщмч. Фаддея, архиепископа Тверского (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261218.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before his line on 18 December, «Cовершается служба, не отмеченная в Типиконе никаким знаком». Both that day's readings and the 13 October day's then name a fuller service as a possibility rather than as the day's: «Если совершается полиелейная служба сщмч. Фаддея, архиеп. Тверского, то на утрене читается…». A service that may be served is not the rank the day carries, so the icon's is kept."
+      },
+      "note": "His index page and his life keep three days and print this one bare, so it is the one the row holds. What the Russian gives this folder, which had one sentence of saint.gr's before, is the whole life: Ivan Vasilyevich Uspensky, born 12 November 1872 at Naruksovo in the Nizhny Novgorod country to the priest Vasily and his wife Lidia; the Nizhny Novgorod seminary and then the Moscow Academy under Antony (Khrapovitsky); the Vladimir-Volynsk see, nearly five years of imprisonment, Astrakhan, Saratov in 1927 and 1928, and Tver; the arrest on 20 December 1937 and the sentence ten days later; and the finding of the grave in 1990 and of the relics in 1993."
     },
     {
       "church": "romanian",
@@ -56,10 +81,10 @@
       "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "nicholas-maslov"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }
