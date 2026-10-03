@@ -1,0 +1,62 @@
+{
+  "slug": "demetrius-kryuchkov",
+  "display_name": "Demetrius (Kryuchkov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "confessor",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Димитрий (Крючков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9557, «Димитрий (Крючков), иерей, исп.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1952,
+      "latest": 1952,
+      "display": "1952",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Св. Димитрия исп., пресвитера (1952)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 26 сентября ст. ст. — «Св. Димитрия исп., пресвитера (1952).»",
+        "url": "https://days.pravoslavie.ru/Days/20260926.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 26 septembrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/26 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 26 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

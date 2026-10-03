@@ -5,6 +5,16 @@
     {
       "form": "Όσιος Εφραίμ ο εκ Ρωσίας ο θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Ефрем Перекомский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's life page, «Преподобный Ефрем Перекомский, Новгородский, игумен», with the rank and the office left off."
+    },
+    {
+      "form": "Евстафий",
+      "lang": "ru",
+      "note": "His baptismal name, from the same page: «В святом Крещении назван Евстафием»."
     }
   ],
   "sex": "male",
@@ -30,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 26 сентября ст. ст. (civil 9 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian calendar's life page lists a second memorial, «16 мая», the translation of his relics to the new monastery at Klinkovo in 1545. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 26 сентября ст. ст. — «Прп. Ефрема Перекомского, Новгородского (1492).»",
+        "url": "https://days.pravoslavie.ru/Days/20260926.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +80,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "euthymius-of-novgorod",
+    "sabbas-of-vishera"
+  ]
 }
