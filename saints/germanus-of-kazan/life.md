@@ -1,0 +1,13 @@
+# Germanus of Kazan
+
+The Russian calendar's 25 September does not keep the day he died but the day his body was moved, and the two pages behind the line disagree about the year: the day line says 1595, the life pages say 1592. What they agree on is the journey — out of Moscow, where he had died in disgrace, to the Dormition monastery at Sviyazhsk that he had built.
+
+He was born at Staritsa, of the old boyar family of the Polevs, and was called Gregory in the world. He was tonsured young at the Joseph-Volokolamsk monastery by its abbot Gury, afterwards the first archbishop of Kazan. There he copied books, and there he was close to Maximus the Greek, who was being held in the monastery at the time. In 1551 the brotherhood of the Dormition monastery at Staritsa, hearing of a devout man from their own town, elected him archimandrite.
+
+He governed it for two and a half years, gave the monks the rule of Joseph of Volotsk to follow, and then handed the house over to one of his own tonsured monks — Job, later the first Patriarch of Moscow — and went back to Volokolamsk to live as an ordinary brother. In 1553 the Moscow council that condemned the heretic Matvei Bashkin summoned him and his father, by then a monk of the same house under the name Philotheus; the council sent Bashkin to him to be brought to his senses.
+
+In 1555, after Kazan was taken, Gury was made its archbishop and sent Germanus to build the new Dormition monastery at Sviyazhsk. A stone cathedral and a bell tower went up, and its superior lived in a cramped cell beneath the belfry and spent himself on the library. The house became known for its almsgiving and was the centre of learning for the whole Kazan country. On 12 March 1564, Gury having died, Germanus was consecrated bishop of Kazan.
+
+In 1566 Ivan the Terrible called him to Moscow and ordered him elected to the metropolitan see. He refused it and was lodged in the metropolitan's rooms until he could be raised; seeing what went on around the Tsar, he tried to reason with him. «Ты еще не возведен на митрополию, а уже отнимаешь у меня свободу» came back through the favourites, and he was driven out of the metropolitan's court and kept under watch in the city. He died in that disgrace on 6 November 1567, and was buried in the church of St Nicholas Gostunsky. At Sviyazhsk's asking his relics were carried home, and Hermogenes, then metropolitan of Kazan, met the coffin.
+
+*After the Russian church calendar's [25 September](https://days.pravoslavie.ru/Days/20260925.html), its [life of him](https://days.pravoslavie.ru/Life/life2493.htm) and its [note on the translation](https://days.pravoslavie.ru/Life/life1604.htm); read 4 October 2026.*

@@ -27,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 12 сентября ст. ст. (civil 25 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line is «Преставление», his repose. The same calendar prints a troparion and kontakion for him on the day, and a common troparion to him and Nicon together."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Преставление прп. Сергия, игумена Радонежского, всея России чудотворца (1392).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

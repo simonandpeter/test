@@ -1,0 +1,56 @@
+{
+  "slug": "alexander-smirnov",
+  "display_name": "Alexander (Smirnov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Александр (Смирнов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Александр (Смирнов), иерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The day commemorates the finding of his relics, which the calendar's day line dates to 1985: «Обретение мощей сщмчч. Александра и Феодора пресвитеров (1985)». His name page marks this day «(обретение мощей)» and lists two others, «26 января (Новомуч.)» and «1 ноября»; one row per church is the schema, so those are recorded here and he does not render on them. No year of death is printed anywhere that was read, so this folder carries no dates."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Обретение мощей сщмчч. Александра и Феодора пресвитеров (1985).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 25 septembrie was not read (2026-10-04). doxologia.ro/8-octombrie was read for this civil day and does not name him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/25 was not read (2026-10-04). saint.gr/10/08 was read for this civil day and does not name him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not read: pravoslavno.rs's Prologue page for 2026-10-08 prints one entry only and its entry list is known to drop entries (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "theodore-lebedev-1-november"
+  ]
+}

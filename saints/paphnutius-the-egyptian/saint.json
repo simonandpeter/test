@@ -20,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 12 сентября ст. ст. (civil 25 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Прмч. Пафнутия египтянина и с ним 546-ти мучеников (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

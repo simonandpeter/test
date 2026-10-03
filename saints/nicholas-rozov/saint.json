@@ -1,0 +1,62 @@
+{
+  "slug": "nicholas-rozov",
+  "display_name": "Nicholas (Rozov)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "confessor",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Николай (Розов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Николай (Розов), протоиерей, исп.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Св. Николая исп., пресвитера (1941)». Neither page says anything else about him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists a second memorial, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Св. Николая исп., пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 25 septembrie was not read (2026-10-04). doxologia.ro/8-octombrie was read for this civil day and does not name him; the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/25 was not read (2026-10-04). saint.gr/10/08 was read for this civil day and does not name him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not read: pravoslavno.rs's Prologue page for 2026-10-08 prints one entry only and its entry list is known to drop entries (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

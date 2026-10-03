@@ -1,0 +1,89 @@
+{
+  "slug": "germanus-of-kazan",
+  "display_name": "Germanus of Kazan",
+  "office": "Archbishop of Kazan and Sviyazhsk",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Герман, архиепископ Казанский и Свияжский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Святитель Герман, архиепископ Казанский и Свияжский», with the rank word left off; the office it carries is the one printed."
+    },
+    {
+      "form": "Григорий",
+      "lang": "ru",
+      "note": "His name in the world, from the life page: «В молодые годы Григорий (так его звали в миру) принял постриг»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1567,
+      "latest": 1567,
+      "display": "6 November 1567",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, Life/life2493.htm: «Около двух лет святитель пробыл в опале и 6 ноября 1567 года скончался». No birth year is printed; the page says only «жил в XVI веке»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The day commemorates not his death but the carrying of his relics from Moscow to the Dormition monastery at Sviyazhsk. The two pages disagree on the year: the day line prints «(1595)» and the life pages «в 1592 году». The same name page lists «23 июня (Второе перенесение мощей)» and «6 ноября», his repose; one row per church is the schema, so those two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Перенесение мощей свт. Германа, архиеп. Казанского (1595).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 25 septembrie was not read (2026-10-04). doxologia.ro/8-octombrie was read for this civil day and does not name him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/25 was not read (2026-10-04). saint.gr/10/08 was read for this civil day and does not name him."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not read: pravoslavno.rs's Prologue page for 2026-10-08 prints one entry only and its entry list is known to drop entries (2026-10-04)."
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Staritsa",
+      "modern_name": "Staritsa, Tver Oblast, Russia",
+      "lat": 56.5156,
+      "lon": 34.9336,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "Moscow",
+      "modern_name": "Moscow, Russia",
+      "lat": 55.752,
+      "lon": 37.6175,
+      "uncertainty_km": 15
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "maximus-the-greek",
+    "job-patriarch-of-moscow",
+    "hermogenes-of-moscow"
+  ]
+}

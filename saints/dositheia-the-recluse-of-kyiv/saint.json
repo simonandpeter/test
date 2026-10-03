@@ -1,0 +1,94 @@
+{
+  "slug": "dositheia-the-recluse-of-kyiv",
+  "display_name": "Dositheia the Recluse of Kyiv",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Досифея (Тяпкина) Киевская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Досифея (Тяпкина) Киевская, затворница, прп.», with the rank words left off. The life page heads her «Преподобная Досифея, затворница Киевская»."
+    },
+    {
+      "form": "Досифей",
+      "lang": "ru",
+      "note": "The man's name she lived and died under: «ушла в Троице-Сергиеву лавру, где назвалась крестьянским сыном Досифеем»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1721,
+      "latest": 1721,
+      "display": "1721",
+      "basis": "traditional",
+      "note": "pravoslavie.ru/56537.html: «Прп. Досифея родилась в 1721 г. в Рязани в дворянской семье»."
+    },
+    "death": {
+      "earliest": 1776,
+      "latest": 1776,
+      "display": "1776",
+      "basis": "traditional",
+      "note": "pravoslavie.ru/56537.html: «Утром 26 сентября 1776 г. ее нашли на коленях перед иконой», in her fifty-fifth year; the calendar's day line prints «(1776)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The name page lists a second memorial, «10 июня (Ряз.)», among the saints of Ryazan. One row per church is the schema, so the second day is recorded here and she does not render on it. The same page's footnote dates her canonisation: the Ukrainian Orthodox Church of the Moscow Patriarchate in 1994, and her name entered in the Russian menologion by the blessing of Patriarch Alexy II on 8 December 2005."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Прп. Досифеи затворницы, Киевской (1776).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 25 septembrie was not read (2026-10-04). doxologia.ro/8-octombrie was read for this civil day and does not name her."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/25 was not read (2026-10-04). saint.gr/10/08 was read for this civil day and does not name her. Note for whoever does read it: the corpus already holds `dositheia-of-russia` from saint.gr's 4 Φεβρουαρίου, «Αγία Δοσιθέα Βασίλισσα της Ρωσίας», died 1810. Whether that is this woman under a garbled year and an invented rank, or somebody else, is not settled by anything read here, and no row has been written either way."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not read: pravoslavno.rs's Prologue page for 2026-10-08 prints one entry only and its entry list is known to drop entries (2026-10-04)."
+    }
+  ],
+  "locations": [
+    {
+      "kind": "birth",
+      "historical_name": "Ryazan",
+      "modern_name": "Ryazan, Russia",
+      "lat": 54.6269,
+      "lon": 39.6916,
+      "uncertainty_km": 15
+    },
+    {
+      "kind": "death",
+      "historical_name": "the Kitaev hermitage, outside Kyiv",
+      "modern_name": "Kytaiv, Kyiv, Ukraine",
+      "lat": 50.3722,
+      "lon": 30.51,
+      "uncertainty_km": 5
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "seraphim-of-sarov",
+    "paisius-of-neamt"
+  ]
+}
