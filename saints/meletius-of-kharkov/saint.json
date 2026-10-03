@@ -6,6 +6,11 @@
       "form": "Μελέτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Μελέτιος Επίσκοπος Χαρκώβ», with the rank word left off. The page gives his civil name too: «κατά κόσμο Μιχαήλ Ιβάνοβιτς Λεοντόβιτς»."
+    },
+    {
+      "form": "Мелетий (Леонтович)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Святитель Мелетий (Леонтович), архиепископ Харьковский», with the rank word and the see left off. The day's own line gives the name without the surname."
     }
   ],
   "sex": "male",
@@ -17,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Свт. Мелетия, архиеп. Харьковского (1840).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -64,5 +78,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мира сего временная, яко преходящая уразумел еси,/ от юности постническое и многотрудное житие возлюбил еси, всеблаженне,/ иерархов славо и преподобных похвале,/ Предвечнаго Слова усердный благовестниче,/ сирых и неимущих крове и прибежище./ Темже в молитвах пребывая, Христу утреневати прилежал еси/ и, Сего взыскуя, венец неувядаемый со всеми святыми стяжал еси,/ отче наш, святителю Мелетие,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Тропарь святителя Мелетия, архиепископа Харьковского и Ахтырского»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You understood the things of this world to be passing away, and from your youth you loved a life of fasting and much labour, O all-blessed one, glory of hierarchs and praise of the venerable, zealous herald of the Pre-eternal Word, shelter and refuge of orphans and of the destitute. Abiding therefore in prayer, you were diligent to rise early to Christ, and seeking him you gained the unfading crown with all the saints. O our father, hierarch Meletius, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Ревнуя, поревновал еси к Богу, Егоже возлюбил еси/ и Егоже всем сердцем возжелал еси, отче наш Мелетие,/ и Егоже ради к иноческому подвигу потекл еси/ и заклатися Христу Богу самаго себе привел еси,/ яко пастырь добрый врученное тебе стадо овец Христовых мудре упасл еси./ Моли о нас Христа Бога, святителю достохвальне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Кондак святителя Мелетия, архиепископа Харьковского и Ахтырского»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With zeal you were zealous for God, whom you loved and whom you desired with your whole heart, O our father Meletius; for his sake you hastened to the monastic struggle and brought your very self to be offered up to Christ God, and as a good shepherd you wisely pastured the flock of Christ's sheep entrusted to you. Pray to Christ God for us, O hierarch worthy of all praise.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

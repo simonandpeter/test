@@ -16,6 +16,11 @@
       "form": "Εμμανουήλ",
       "lang": "el",
       "note": "His baptismal name, which saint.gr prints on his own page: «ονομάστηκε κατά το άγιο Βάπτισμα Εμμανουήλ», before the angelic habit and the renaming to Meletius."
+    },
+    {
+      "form": "Мелетий Ипсенийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Мелетий Ипсенийский, прп.», with the rank word left off. The epithet is the Ypseni monastery on Rhodes, which saint.gr's «ο εν Υψενή» names for the same day."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Прп. Мелетия Ипсенийского (XIX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

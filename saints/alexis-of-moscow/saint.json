@@ -11,6 +11,11 @@
       "form": "Αλέξιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Αλέξιος ο Θαυματουργός Αρχιεπίσκοπος Μόσχας», with the rank words and the see left off."
+    },
+    {
+      "form": "Алексий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Алексий, митрополит Московский и всея Руси». The calendar gives the name alone, with no surname and no epithet; everything after it is the see."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Свт. Алексия, митр. Московского и всея России, чудотворца (1378).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,5 +90,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко апостолом сопрестольна,/ и врача предобра, и служителя благоприятна,/ к раце твоей честней притекающе, святителю Алексие, богомудре чудотворче,/ сошедшеся, любовию в память твою светло празднуем,/ в песнех и пениих радующеся и Христа славяще,/ таковую благодать тебе даровавшаго исцелений// и граду твоему великое утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Тропарь святителя Московского Алексия»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Running to your honoured reliquary, O hierarch Alexis, wonderworker wise in God — you who are enthroned with the apostles, a most excellent physician and a servant well-pleasing to God — we are gathered together and keep your memory brightly in love, rejoicing in songs and hymns and glorifying Christ, who gave you such grace of healings and gave your city a great strengthening.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко светоносная возсия днесь память твоя, славне,/ верных озаряющи души и телеса,/ и исцеления струй Богоприятными ти молитвами источаеши,/ отче святителю Алексие,/ темже тя молим, яко архиереом сопрестольна и чудодейственника изрядна,/ иже Христову Престолу предстояй,/ о нас не оскудевай моляся спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Ин тропарь Алексия, митрополита Московского и всея России»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your memory has dawned today as a bearer of light, O glorious one, lighting up the souls and bodies of the faithful; and by prayers acceptable to God you pour out streams of healing, O father and hierarch Alexis. Therefore we entreat you, enthroned with the bishops and surpassing in wonders, who stand before the throne of Christ: never leave off praying for us, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Божественнаго и пречестнаго святителя Христова,/ новаго чудотворца Алексия,/ верно вси поюще, людие, любовию да ублажим, яко пастыря великаго,/ служителя же и учителя премудра земли Российстей./ Днесь, в память его притекше, радостно возопием песнь богоносному:/ яко имея дерзновение к Богу, многообразных нас избави обстояний, да зовем ти:// радуйся, утверждение граду нашему.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Кондак святителя Московского Алексия»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O people, all of us singing faithfully of the divine and most honoured hierarch of Christ, Alexis the new wonderworker, let us bless him in love as a great shepherd, a servant and a most wise teacher of the Russian land. Coming today to his memory, let us cry out gladly a song to him who bore God: having boldness before God, deliver us from our manifold straits, that we may call to you, Rejoice, O strengthening of our city.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

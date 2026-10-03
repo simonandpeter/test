@@ -6,6 +6,11 @@
       "form": "Μαρία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Οσία Μαρία η μετονομασθείς Μαρίνος», with the rank word left off. The page prints the second name in the same line, «η μετονομασθείς Μαρίνος», the one renamed Marinos."
+    },
+    {
+      "form": "Мария Вифинская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Мария Вифинская, прп.», with the rank word left off. The day's own line names her instead by her second name, «именовавшейся Марином»."
     }
   ],
   "sex": "female",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Прп. Марии, именовавшейся Марином, и отца ее Евгения (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

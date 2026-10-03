@@ -11,6 +11,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Άγιος Αντώνιος Αρχιεπίσκοπος Κωνσταντινουπόλεως», with the rank word and the see left off."
+    },
+    {
+      "form": "Антоний Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Святитель Антоний Константинопольский, патриарх», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Свт. Антония, Патриарха Константинопольского (895).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

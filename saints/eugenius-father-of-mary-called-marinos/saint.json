@@ -6,6 +6,11 @@
       "form": "Ευγένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Φεβρουαρίου, «Όσιος Ευγένιος», with the rank word left off."
+    },
+    {
+      "form": "Евгений Вифинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Преподобный Евгений Вифинский», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 февраля ст. ст. — «Прп. Марии, именовавшейся Марином, и отца ее Евгения (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260212.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
