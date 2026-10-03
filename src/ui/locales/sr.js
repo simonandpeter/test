@@ -1006,6 +1006,7 @@ export const sr = {
     'Bishop of Tver and Kashin': 'Епископ тверски и кашински',
     'Bishop of Tver and Kazan': 'Епископ тверски и казански',
     'Bishop of Urbnisi': 'Епископ урбниски',
+    'Bishop of Volsk': 'Епископ волски',
     'Bishop of Vannes': 'Епископ вански',
     'Bishop of Velikiye Luki': 'Епископ великолуцки',
     'Bishop of Verny': 'Епископ верненски',

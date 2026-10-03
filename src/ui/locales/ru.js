@@ -1023,6 +1023,7 @@ export const ru = {
     'Bishop of Tver and Kashin': 'Епископ Тверской и Кашинский',
     'Bishop of Tver and Kazan': 'Епископ Тверской и Казанский',
     'Bishop of Urbnisi': 'Епископ Урбнисский',
+    'Bishop of Volsk': 'Епископ Вольский',
     'Bishop of Vannes': 'Епископ Ваннский',
     'Bishop of Velikiye Luki': 'Епископ Великолукский',
     'Bishop of Verny': 'Епископ Верненский',

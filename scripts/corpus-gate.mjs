@@ -115,6 +115,8 @@ for (const { slug, saint } of corpus) {
  * fold is an unread pair again and stops the gate as it should.
  */
 const READ_FOLDS = {
+  'богоявленскии феодор theodore-bogoyavlensky theodore-bogoyavlensky-27-september':
+    'Two priests of one name, separated by the calendar itself on three counts. `theodore-bogoyavlensky` is name page 10402, «Феодор (Богоявленский), иерей, исповедник», a confessor who died in 1933 and is kept on the Julian 28 January. The new one is name page 13806, «Феодор (Богоявленский), иерей, сщмч.», a hieromartyr of 1937 kept on 27 September and on 26 January with the new martyrs. Rank, year and day all differ, nothing read links them, and no row claims they are one man (read 4 October 2026).',
   'лебедев феодор theodore-lebedev theodore-lebedev-1-november':
     'Two priests of one name, and the Russian calendar itself separates them by rank and by day. `theodore-lebedev` is name page 9406, «Феодор (Лебедев), протоиерей, сщмч.», the archpriest of Kuznetsovo shot on 25 September 1937 and kept on the Julian 12 September. The new one is name page 9819, «Феодор (Лебедев), иерей, сщмч.», a priest whose relics were found in 1985 and who is kept on 25 September for that finding, on 1 November, and on 26 January with the new martyrs — no 12 September. Nothing read links them, and no row claims they are one man; the second is disambiguated by the day its own page lists (read 4 October 2026).',
   'григории germanus-of-kazan gregory-presbyter-martyr-1937-18-august':

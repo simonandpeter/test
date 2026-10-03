@@ -6,4 +6,6 @@ For his virtues he was made abbot of Snagov, then bishop of Râmnic, and soon af
 
 All of it counted for nothing with his enemies: unjustly he was stripped of his rank and struck from the episcopal roll, condemned to exile, and given into the keeping of Turkish soldiers, who tormented him to death - beheading him and throwing his body into the waters of the Tungia, a tributary of the Marița south of the Danube. So the Metropolitan of Wallachia finished by a martyr's death, and his memory, the life says, remains written for ever in the book of the Church and of the Romanian people.
 
-*After doxologia.ro, [Viața Sfântului Ierarh Martir Antim Ivireanul](https://doxologia.ro/viata-sfantului-ierarh-martir-antim-ivireanul-mitropolitul-tarii-romanesti); read 30 August 2026.*
+The Russian calendar keeps him too, on the same 27 September, with the year the Romanian gives — «Сщмч. Анфима Иверянина, митр. Валашского (1716)» — and marks the line «(Рум.)», a Romanian saint it keeps rather than one of its own. Its index of names renders him «Святитель Анфим Иверянин, митрополит Валашский, сщмч.», keeping the Georgian epithet the Romanian keeps.
+
+*After doxologia.ro, [Viața Sfântului Ierarh Martir Antim Ivireanul](https://doxologia.ro/viata-sfantului-ierarh-martir-antim-ivireanul-mitropolitul-tarii-romanesti); read 30 August 2026; and the Russian church calendar's [27 September](https://days.pravoslavie.ru/Days/20260927.html), read 4 October 2026.*

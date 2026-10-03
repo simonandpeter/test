@@ -14,8 +14,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 27 сентября ст. ст. (civil 10 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His own calendar's name page lists two other days, «26 января (Новомуч.)» and «5 октября (Моск. Свт.)», the synaxis of the Moscow hierarchs. One row per church is the schema, so they are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 27 сентября ст. ст. — «Сщмч. Петра, митрополита Крутицкого (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260927.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -44,5 +54,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "tikhon-of-moscow"
+  ]
 }
