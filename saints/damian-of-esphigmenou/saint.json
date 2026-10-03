@@ -11,6 +11,11 @@
       "form": "Δαμιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Φεβρουαρίου, «Όσιος Δαμιανός ο Εσφιγμενίτης», with the rank words left off."
+    },
+    {
+      "form": "Дамјан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 23. фебруар ст. ст., „Преподобни Дамјан.“, with the rank word Преподобни left off. The heading gives no epithet; Esphigmenou, which the folder's English name carries, is in the body's first sentence."
     }
   ],
   "sex": "male",
@@ -68,8 +73,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.03.2026 (23. фебруар ст. ст.) — „Преподобни Дамјан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-08&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
