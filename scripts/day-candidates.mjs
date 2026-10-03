@@ -152,9 +152,18 @@ const strip = (html) =>
 /**
  * Sentence-splitting Russian calendar prose, which is nine-tenths
  * abbreviations. A full stop after one of these is not the end of an entry.
+ *
+ * **A stem missing from this list costs an entry, not a comma.** The rank is
+ * written before the name, so the split lands between them and the calendar's
+ * «Прор. Малахии (ок. 400 г. до Р.Х.)» comes back as two: a line reading
+ * `Прор.`, which is nothing, and a line that has lost the word saying Malachi
+ * is a prophet. Across the 32 days read first, four stems were missing and
+ * produced eight such fragments — `прор`, `равноап`, `правв` and the `вел` of
+ * «Блгв. вел. кн.». The instrument for finding more is to list every entry
+ * short enough to be nothing but a rank and carrying no `/name/` link.
  */
 const ABBREV =
-  /^(?:еп|архиеп|митр|прот|прп|прпп|прмч|прмчч|прмц|прмцц|сщмч|сщмчч|мч|мчч|мц|мцц|свт|свтт|св|свв|блгв|блгвв|блж|прав|исп|игум|архим|иером|иеродиак|диак|пресвит|ап|апп|царев|кн|вмч|вмчч|вмц|вмцц|новомч|обрет|перенес|прмцц|ок|гг|в|вв|г|т|др|им)\.$/i;
+  /^(?:еп|архиеп|митр|прот|прп|прпп|прмч|прмчч|прмц|прмцц|сщмч|сщмчч|мч|мчч|мц|мцц|свт|свтт|св|свв|блгв|блгвв|блж|прав|правв|исп|игум|архим|иером|иеродиак|диак|пресвит|ап|апп|прор|прр|равноап|равноапп|вел|велик|царев|кн|вмч|вмчч|вмц|вмцц|новомч|обрет|перенес|прмцц|ок|гг|в|вв|г|т|др|им)\.$/i;
 
 async function russian() {
   const { year, month, day } = churchDate('julian', DATE);
