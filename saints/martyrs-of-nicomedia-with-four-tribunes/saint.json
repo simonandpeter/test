@@ -63,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.02.2026 (7. фебруар ст. ст.) — „4. Хиљаду и три мученика у Никомидији. Пострадали у време Диоклецијана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-20&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which printed one heading for the day's four entries and not theirs. They are its fourth and shortest numbered entry, one sentence: the thousand and three martyrs at Nicomedia, who suffered in the days of Diocletian. The verses the Prologue sets under the day then do what neither the Greek nor the Romanian calendar would: they name the four — Евсевије, Васа, Евтихије and Василид, beheaded as four courtiers of Diocletian — and have the thousand servants who served them answer the emperor as one, «Хришћани смо и ми». The four names are taken from the verses and not from an entry, and no calendar's entry enumerates them, so the company is still one folder and was not split into four. The entry gives the reign only; the year 303 in dates.death is the Russian line's, already cited on this folder and not until now recorded."
     }
   ],
   "text": {
@@ -72,5 +82,14 @@
   },
   "related": [
     "peter-of-alexandria"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru for 7 февраля ст. ст.: «Мчч. 1003 Никомидийских (303).» That figure was cited on this folder before this batch and had not been recorded as a date. The Ohrid Prologue at pravoslavno.rs for the Julian 7 February gives the reign instead — „Пострадали у време Диоклецијана.“ — and 303 falls inside it; the Greek and Romanian pages give no year at all."
+    }
+  }
 }

@@ -71,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.02.2026 (7. фебруар ст. ст.) — „1. Свети Партеније, епископ лампсакијски. Син некога ђакона из града Мелитопоља. … Преселио се у вечни покој Христов у IV веку.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-20&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which printed his heading and none of the day's other three entries. He is its first numbered entry. It agrees with the Romanian and Greek lives on the deacon father at Melitopolis, the lake and the fish sold and shared with the poor, the cleansing of Lampsacus and the building of churches, and it tells the exorcism in which he offers the demon himself as a dwelling. It gives the century — «у IV веку» — which the Russian line also gives as «(IV)» and which the Greek narrows to the reign of Constantine the Great, 324 to 337. That narrowest sourced reading is now the folder's floruit, with all three readings in its note; before this batch the folder carried no dates at all although two of its own citations stated the century."
     }
   ],
   "text": {
@@ -148,5 +158,14 @@
   ],
   "related": [
     "constantine-the-great"
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 324,
+      "latest": 337,
+      "display": "324 to 337",
+      "basis": "traditional",
+      "note": "Three sources, and the narrowest of them is taken while all three are recorded. saint.gr sets him in the years of Constantine the Great, 324 to 337; days.pravoslavie.ru for 7 февраля ст. ст. gives only the century — «Прп. Парфения, еп. Лампсакийского (IV).»; and the Ohrid Prologue at pravoslavno.rs for the Julian 7 February gives the century too — „Преселио се у вечни покој Христов у IV веку.“ The two centuries contain the reign, so the reign is the reading. Neither the Romanian nor the Greek life prints a year of birth or of repose."
+    }
+  }
 }
