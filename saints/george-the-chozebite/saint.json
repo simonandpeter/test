@@ -11,6 +11,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Γεώργιος ο Χοζεβίτης», with the rank word left off."
+    },
+    {
+      "form": "Георгий Хозевит",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Георгий Хозевит, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Прп. Георгия Хозевита (VII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -116,6 +130,22 @@
       },
       "english": {
         "text": "Having tilled the word of grace, father, you reaped a bright harvest of righteousness, since you had chosen the life that is filled with God; and so you were shown to be a sharer in the glory of Christ, God-bearing George, to whom you intercede without ceasing that our souls may be shown mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси светило пресветлое, Георгие,/ озаряя Божественными зарями верно зовущия ти:/ моли о нас Владыку Христа,/ явльшагося во струях// и просвещшаго земнородныя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Кондак преподобного Георгия»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou hast appeared as a most radiant light, O George, illumining with divine rays those who faithfully call upon thee. Pray for us to Christ the Master, who was made manifest in the streams of Jordan and gave light to those born of earth.",
         "rendered": "site"
       }
     }

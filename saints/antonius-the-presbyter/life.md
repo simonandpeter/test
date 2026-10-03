@@ -8,4 +8,4 @@ The day's line counts twenty jailers and seven brothers in the company as well a
 
 Of Antonius the page says that he was a priest and that he suffered with them; its verse for him and Celsus says the sword cut off Celsus's head and, with it, Antonius's.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

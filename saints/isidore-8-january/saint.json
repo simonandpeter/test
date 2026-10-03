@@ -6,6 +6,11 @@
       "form": "Ισίδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Ισίδωρος ο Ιερομάρτυρας και οι συν αυτώ 72 Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Исидор Юрьевский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Священномученик Исидор Юрьевский, пресвитер», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Сщмч. Исидора пресвитера и с ним 72-х в Юрьеве Лифляндском пострадавших (1472).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +69,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Страстотерпцы Господни блаженнии, православную веру Христову со дерзновением проповедасте, и на судищи учения врагов неправая обличисте: того ради и ввержени бысте, святии, во глубину речную, души же ваши вселишася в Небесныя кровы, идеже со святыми предстояще Престолу Царя всех Бога, молитеся Ему за благовернаго императора нашего и за вся православныя люди, подвиги ваша честно почитающия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Тропарь священномученика Исидора пресвитера и с ним 72-х в Юрьеве Лифляндском пострадавших»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Blessed passion-bearers of the Lord, with boldness ye preached the Orthodox faith of Christ, and at the tribunal ye laid bare the false teachings of its enemies. For this, O holy ones, ye were cast into the depth of the river, while your souls took up their dwelling in the mansions of heaven, where, standing with the saints before the throne of God the King of all, ye pray to him for our right-believing emperor and for all Orthodox people who honour your struggles.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Христовых лик песньми почтим, пострадавших крепко Христовы ради веры истинныя и вражию гордыню до конца низложивших: озарившеся бо благодатию несозданныя Троицы, славнии, со священномучеником Исидором пострадавшии, яко звезды сияете во всем мире, и ныне молитеся Христу непрестанно, и нас защищаете от враждебных язык нашествия, неусыпнии молитвенницы о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Кондак священномученика Исидора пресвитера и с ним 72-х в Юрьеве Лифляндском пострадавших»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With hymns let us honour the choir of Christ's martyrs, who suffered bravely for the true faith of Christ and cast down the pride of the enemy utterly. For, illumined by the grace of the uncreated Trinity, O glorious ones who suffered together with the hieromartyr Isidore, ye shine as stars throughout the whole world; and now ye pray to Christ without ceasing and defend us from the inroads of hostile peoples, unsleeping intercessors for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

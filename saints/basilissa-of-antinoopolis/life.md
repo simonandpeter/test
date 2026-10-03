@@ -8,4 +8,4 @@ The day's line counts twenty jailers and seven brothers in the company as well a
 
 Of Basilissa the page says only that she was Julian's wife, that she went to a convent when the persecution began, and that she died with him; the day's line names her second in the company.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

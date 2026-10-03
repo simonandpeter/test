@@ -1,0 +1,59 @@
+{
+  "slug": "elias-the-hermit-of-egypt",
+  "display_name": "Elias of Egypt (8 January)",
+  "names": [
+    {
+      "form": "Илия Египетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Илия Египетский, пустынник», with the rank word left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Прп. Илии Египетского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 ianuarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Ιανουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 January 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's page for him: «преставился в IV веке 110-летним старцем»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

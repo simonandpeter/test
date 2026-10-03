@@ -11,6 +11,11 @@
       "form": "Δομνίκη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Οσία Δομνίκη», with the rank word left off."
+    },
+    {
+      "form": "Домника Константинопольская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Домника Константинопольская, игумения», with the office left off. The day's line gives the forename alone."
     }
   ],
   "sex": "female",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Прп. Домники (ок. 474).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

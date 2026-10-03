@@ -6,6 +6,11 @@
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Παΐσιος του Ούγκλιχ», with the rank word left off. The epithet «του Ούγκλιχ» is printed in Greek letters only and is not transliterated here."
+    },
+    {
+      "form": "Паисий Угличский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Паисий Угличский, игумен», with the office left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Прп. Паисия Угличского (1504).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христовы ради любве отечество и род оставил еси,/ и, ангельскому житию поревновав,/ в пустыню вселился еси,/ в нейже многотрудное житие явил еси/ и чудес дарования от Бога приял еси,/ Паисие преподобне,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Тропарь преподобного Паисия Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of Christ thou didst leave fatherland and kindred, and, being zealous for the life of the angels, thou didst settle in the wilderness, where thou didst show forth a life of much labour and didst receive from God the gift of wonders. O venerable Paisius, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Чистотою душевною божественно вооружився/ и непрестанный молитвы, яко копие, имый,/ крепко ссекл еси бесовское ополчение,/ Паисие, отче наш,/ моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Кондак преподобного Паисия Угличского»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed divinely with purity of soul, and holding unceasing prayer as a spear, thou didst mightily cut down the array of the demons. O Paisius our father, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

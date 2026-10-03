@@ -4,4 +4,4 @@ saint.gr says Carterius too was martyred in Diocletian's persecution of the Chur
 
 The governor Urbanus — the page puts the year 298 beside his name — ordered him imprisoned. When he declared his faith again he was scourged hard; then they tore out the nails of his hands and feet, then opened his sides with iron claws and burned the wounds with lit torches of resin. But Carterius endured victoriously, the page says, putting into practice the word of the Apostle Paul: who shall separate you from Christ? tribulation, or peril, or the sword? And so he took the unfading crown of eternal glory. No year of death is printed and none is supplied here.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/123/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/123/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

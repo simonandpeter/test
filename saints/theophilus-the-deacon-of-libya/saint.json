@@ -6,6 +6,11 @@
       "form": "Θεόφιλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιοι Θεόφιλος ο Διάκονος και Ελλάδιος ο λαϊκός», with the rank words left off."
+    },
+    {
+      "form": "Феофил Ливийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Феофил Ливийский, диакон, сщмч.», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Мчч. Феофила диакона и Елладия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

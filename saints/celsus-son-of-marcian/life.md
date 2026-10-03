@@ -8,4 +8,4 @@ The day's line counts twenty jailers and seven brothers in the company as well a
 
 Of Celsus the page's verse says that the sword cut off his head, and Antonius's with his.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/125/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

@@ -4,4 +4,4 @@ saint.gr keeps two martyrs together on the eighth of January, a deacon and a lay
 
 Of Helladius in particular the page says only what the day's line says, that he was «ο λαϊκός», the layman, beside [Theophilus](/saints/theophilus-the-deacon-of-libya) the deacon. No year, no city and no hymn is printed for either of them, and nothing is supplied here.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/122/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/122/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

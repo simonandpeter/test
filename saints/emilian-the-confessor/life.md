@@ -4,4 +4,4 @@ doxologia.ro's calendar names him and gives no life. The line for 8 ianuarie rea
 
 Nothing further is set down here because nothing further was read. Another calendar may well carry his life; none was consulted for this page, and the three other churches' rows say so.
 
-*After doxologia.ro's calendar for 8 ianuarie — [the day](https://doxologia.ro/8-ianuarie) and [his page](https://doxologia.ro/sfantul-cuvios-emilian-marturisitorul); read 19 September 2026.*
+*After doxologia.ro's calendar for 8 ianuarie — [the day](https://doxologia.ro/8-ianuarie) and [his page](https://doxologia.ro/sfantul-cuvios-emilian-marturisitorul); read 19 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

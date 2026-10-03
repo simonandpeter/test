@@ -6,6 +6,11 @@
       "form": "Γυναίκα",
       "lang": "el",
       "note": "saint.gr gives her no name. Its line for 8 Ιανουαρίου is «Αγία Γυναίκα», the holy woman, and the form recorded here is that word, with the rank word left off; the notice identifies her only as the wife of the ruler who put Julian to death and the mother of Celsus."
+    },
+    {
+      "form": "Марионилла Египетская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Марионилла Египетская, мц.», with the rank word left off. The Greek calendar gives her no name at all; this is the Russian calendar's own."
     }
   ],
   "sex": "female",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Мчч. Иулиана, Келсия, Антония, Анастасия, мцц. Василиссы и Мариониллы, семи отроков и 20-ти воинов (313).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

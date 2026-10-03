@@ -4,4 +4,4 @@ saint.gr's calendar names him and says in the next breath that it has nothing to
 
 The epithet the day's line gives him is printed in Greek letters only, and no Russian or English form of that place is invented here; that is also why the English form of his name carries the day instead of the place. There is no hymn and nothing else on the page.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/113/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/113/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

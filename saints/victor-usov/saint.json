@@ -1,0 +1,60 @@
+{
+  "slug": "victor-usov",
+  "display_name": "Victor (Usov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Виктор (Усов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Виктор (Усов), иерей, сщмч.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Сщмч. Виктора пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 ianuarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Ιανουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 January 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 8 января ст. ст.: «Сщмч. Виктора пресвитера (1937).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

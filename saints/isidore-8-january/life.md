@@ -4,4 +4,4 @@ saint.gr's notice for him is one sentence: Saint Isidore was a presbyter and was
 
 The seventy-two who died with him are counted in the day's line and not one of them is named, so they have no folder here; they are remembered in his. The page prints no hymn, no account of the martyrdom and nothing further, and nothing is supplied here.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/131/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/131/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260108.html), read 3 October 2026.*

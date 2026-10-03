@@ -1,0 +1,58 @@
+{
+  "slug": "john-malyshev",
+  "display_name": "John (Malyshev)",
+  "names": [
+    {
+      "form": "Иоанн (Малышев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Иоанн (Малышев), мч.», with the rank word left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Мч. Иоанна (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 ianuarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Ιανουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 January 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 8 января ст. ст.: «Мч. Иоанна (1940).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

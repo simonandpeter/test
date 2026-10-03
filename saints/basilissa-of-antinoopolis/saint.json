@@ -6,6 +6,11 @@
       "form": "Βασίλισσα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Ιουλιανός ο Αιγύπτιος και οι μαζί μ' αυτόν μαρτυρήσαντες Βασίλισσα, …», with the rank word left off."
+    },
+    {
+      "form": "Василисса Египетская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Василисса Египетская, игумения, прмц.», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 января ст. ст. — «Мчч. Иулиана, Келсия, Антония, Анастасия, мцц. Василиссы и Мариониллы, семи отроков и 20-ти воинов (313).»",
+        "url": "https://days.pravoslavie.ru/Days/20260108.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
