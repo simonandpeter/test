@@ -16,6 +16,11 @@
       "form": "Онисим",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Онисим, апостол от 70-ти, сщмч.», with the rank words left off. The calendar gives the name alone, with no surname and no epithet; «от 70-ти» counts him among the Seventy."
+    },
+    {
+      "form": "Онисим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. фебруар ст. ст., „Свети апостол Онисим.“, with Свети and the rank word апостол left off; the rank is in the folder's `types`."
     }
   ],
   "sex": "male",
@@ -166,11 +171,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.02.2026 (15. фебруар ст. ст.) — „Свети апостол Онисим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 109,
+      "latest": 109,
+      "display": "109",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 15 February dates the burial, not the beheading: a rich woman took his body, laid it in a silver coffin and buried it honourably in 109. It places the arrest in Trajan's persecution and calls him an old man by then. The folder carried no dates at all before this reading, and no other calendar read for him gives a year."
+    }
   }
 }

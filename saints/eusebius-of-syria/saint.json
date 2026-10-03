@@ -16,6 +16,11 @@
       "form": "Евсевий Сирийский, пустынник",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Евсевий Сирийский, пустынник», with the rank word left off. The calendar keeps the word «пустынник», hermit, inside the form itself, as its own line for the day does."
+    },
+    {
+      "form": "Евсевије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. фебруар ст. ст., „Преподобни Евсевије.“, with the rank word Преподобни left off. The heading gives no epithet and no country; the body's first two words, пустињак сиријски, are what identify him as the Syrian hermit this folder holds."
     }
   ],
   "sex": "male",
@@ -70,8 +75,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.02.2026 (15. фебруар ст. ст.) — „Преподобни Евсевије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-28&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
