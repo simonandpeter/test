@@ -6,6 +6,11 @@
       "form": "Σωσθένης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Κρίσπος",
+      "lang": "el",
+      "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Άγιος Κρίσπος», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -15,11 +20,11 @@
     "bishop"
   ],
   "related": [
-    "cephas-the-apostle",
     "apollos-the-apostle",
+    "caesar-the-apostle",
+    "cephas-the-apostle",
     "epaphroditus-the-apostle",
-    "tychicus-the-apostle",
-    "caesar-the-apostle"
+    "tychicus-the-apostle"
   ],
   "attestations": [
     {
@@ -45,7 +50,22 @@
         "url": "https://www.saint.gr/12/08/index.aspx",
         "year": 2026
       },
-      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names all six of its members and gives each his own couplet and his own paragraph, so it is one folder per named member and each relates the others. The page quotes Chrysostom as reckoning this Sosthenes and Crispus, whom it refers to 4 December, to be one person — «Oίμαι δε τούτον και Σωσθένη λέγεσθαι» — which is an identity claim quoted by the page and not made by it, so no `related` row and no merge is drafted from it; it is recorded here for the author. The corpus keeps a `sosthenes-of-chalcedon`, a soldier martyr of the Russian 16 September, who is another entry and another man. The page prints one hymn, an apolytikion that names Tychicus, so it is his and not this man's. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 8 Δεκεμβρίου εκάστου έτους», the same day as the listing. The entry names all six of its members and gives each his own couplet and his own paragraph, so it is one folder per named member and each relates the others. The page quotes Chrysostom as reckoning this Sosthenes and the Crispus of 4 December to be one person — «Oίμαι δε τούτον και Σωσθένη λέγεσθαι» — and the author ruled on 3 October 2026 that they are (TODO item 13 row 10), so the 4 December row below is the second half of this record. The identification remains Chrysostom’s, reported by the page and settled by neither page; it stands in the life as that. The corpus keeps a `sosthenes-of-chalcedon`, a soldier martyr of the Russian 16 September, who is another entry and another man. The page prints one hymn, an apolytikion that names Tychicus, so it is his and not this man's. No asterisk and no «Δεν είναι διασταυρωμένη» sentence."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 4ης Δεκεμβρίου — «Άγιος Κρίσπος»",
+        "url": "https://www.saint.gr/12/04/index.aspx",
+        "year": 2026
+      },
+      "note": "The second Greek day, kept as «Άγιος Κρίσπος». Its page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 4 Δεκεμβρίου εκάστου έτους» and carries two hedged claims, both kept as hedges in the life: that he is «λέγεται» the founder of the church of Aegina, and that according to Chrysostom he is the apostle Sosthenes, quoted from the thirty-ninth homily on the Acts. It adds the one thing that points the same way without Chrysostom: **some hagiologies keep Crispus on 8 Δεκεμβρίου with others of the Seventy, Sosthenes among them**, which is a synaxarists’ day and not one saint.gr itself keeps. No asterisk, no «Δεν είναι διασταυρωμένη» sentence, no hymn, no distich and no year. The corpus’s `sosthenes-of-chalcedon`, a soldier martyr of the Russian 16 September, is another man and nothing joins him here."
     },
     {
       "church": "serbian",
@@ -55,5 +75,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "aliases": [
+    "crispus"
+  ]
 }
