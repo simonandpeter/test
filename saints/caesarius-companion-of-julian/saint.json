@@ -11,6 +11,11 @@
       "form": "Καισάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Άγιοι Ιουλιανός ο πρεσβύτερος και Καισάριος ο διάκονος», with the rank words left off."
+    },
+    {
+      "form": "Кесарий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1198, headed «Кесарий Терракинский, диакон, сщмч.», with the office, the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Мчч. Иулиана пресвитера и Кесария диакона (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. This line opens the day's second paragraph, which carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first."
+      },
+      "note": "The Russian dates the pair to the first century, «(I)», where saint.gr puts them about 268 under Claudius II. Neither is preferred: the folder's `dates` are left as the Greek page set them and the disagreement is recorded here. Its index names him «Кесарий Терракинский, диакон, сщмч.», Caesarius of Terracina, and its life says his relics are at Rome."
     },
     {
       "church": "romanian",

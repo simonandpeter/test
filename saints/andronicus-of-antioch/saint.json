@@ -11,6 +11,11 @@
       "form": "Ανδρόνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Όσιοι Ανδρόνικος και Αθανασία η συμβία του», with the rank word left off."
+    },
+    {
+      "form": "Андроник",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 193, headed «Андроник Антиохийский, Египетский, прп.», with the rank word and the two epithets left off."
     }
   ],
   "sex": "male",
@@ -24,8 +29,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Прпп. Андроника и супруги его Афанасии (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the second of the day's two icons, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service marked in the Typikon with no sign, which is the plain service — and it stands immediately before this line, which names the two of them together. The day's other icon, a polyeleos, stands at the head of the paragraph before the apostle James and is his."
+      },
+      "note": "The Russian puts the pair in the fifth century, «(V)», where saint.gr dates them to the year 540, which is the sixth; the folder's `floruit` is left as the Greek page set it and the disagreement is recorded here. Its life adds what the Greek does not: the trade, the thirds he divided his earnings into, the Scetis and the Tabennisiote convent, and the twelve years."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Σέργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Άγιοι Σέργιος και Βάκχος», with the rank word left off."
+    },
+    {
+      "form": "Сергий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1975, headed «Сергий Римлянин, Росафский, мч.», with the rank word and the two epithets left off."
     }
   ],
   "sex": "male",
@@ -29,8 +34,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Мчч. Сергия и Вакха (290-303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the day's one icon, «Совершается служба на шесть» — a service of six stichera. It stands immediately before this line, which is the first of the day, and the day's service block names this pair and nobody else: «7 октября: Святых мучеников Сергия и Вакха». The three later paragraphs carry no icon and no rank is read onto them."
+      },
+      "note": "The Russian prints a span of years where neither saint.gr nor doxologia.ro prints any, and the folder's `dates` now carry it. Its index of names calls him «Сергий Римлянин, Росафский, мч.», of Rosaf, which is the city the Romanian life has him beheaded at."
     },
     {
       "church": "romanian",
@@ -117,9 +134,50 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Удобрение Христовых страстотерпец/ и очи Христовы Церкве,/ очи просветите душ наших,/ Сергие многострадальне и Вакше преславне:/ молитеся ко Господу,/ яко да убежим тьмы греховныя/ и Света явимся общницы невечерняго// молитвами вашими, святии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Тропарь мучеников Сергия и Вакха»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adornment of the passion-bearers of Christ and eyes of the Church of Christ, enlighten the eyes of our souls, much-suffering Sergius and most glorious Bacchus; pray to the Lord that we may escape the darkness of sin and be shown partakers of the light that knows no evening, by your prayers, O holy ones.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Разум на враги мужески вооруживше,/ всю тех лесть разрушисте,/ и победу свыше приимше, мученицы всехвальнии,/ единомысленно вопиюще:// добро и красно еже быти с Богом.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Кондак мучеников Сергия и Вакха»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having armed your minds manfully against the enemies, you destroyed the whole of their deceit, and receiving the victory from on high, all-praised martyrs, you cried out with one mind: good and fair it is to be with God.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 290,
+      "latest": 303,
+      "display": "290–303",
+      "basis": "traditional",
+      "note": "The span the Russian calendar's day line prints after the pair's names: «Мчч. Сергия и Вакха (290-303)». Neither saint.gr nor doxologia.ro prints a year for either of them."
+    }
   }
 }

@@ -1,0 +1,66 @@
+{
+  "slug": "barlaam-efimov",
+  "display_name": "Barlaam (Efimov)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Варлаам (Ефимов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13823, «Варлаам (Ефимов), прмч.», with the rank word left off. The day line gives no surname and no office, only «Прмч. Варлаама»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1939,
+      "display": "1937–1939",
+      "basis": "traditional",
+      "note": "The calendar's day line gives no year but a period: «Прмч. Варлаама (конец 1930-х)» — the end of the nineteen-thirties — and that phrase is the whole of what either page says. The bounds 1937 and 1939 are this desk's reading of it rather than anything printed, and the display is the bounds because `lib/date-display.js` has no grammar for a decade and «late 1930s» came back unreadable in all four languages."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Прмч. Варлаама (конец 1930-х).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line closes the day's third paragraph, which carries no icon; the day's one icon is the plain service and it stands two paragraphs above, before Pelagia of 457."
+      },
+      "note": "He stands in a sentence of his own after both of the day's companies of 1937, and he is the one line on this day that the calendar does not give a year. «Прмч.» marks a venerable-martyr, a monastic killed for the faith, and the index adds the surname and no office. The surname is the same as that of «мч. Василий (Ефимов)», who is in the heading of the other company's life and on no day the calendar prints; nothing on either page connects the two and nothing is inferred."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "demetrius-dobroserdov",
+    "jonah-lazarev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

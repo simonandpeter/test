@@ -11,6 +11,11 @@
       "form": "Ταϊσία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Αγία Ταϊσία», with the rank word left off."
+    },
+    {
+      "form": "Таисия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2686, headed «Преподобная Таисия Египетская», with the rank word and the epithet left off. The longer of its two lives adds a second epithet, «Фиваидская», of the Thebaid."
     }
   ],
   "sex": "female",
@@ -24,8 +29,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Прп. Таисии (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto her. Her line is in the day's second paragraph, which carries no icon; the day's one icon is the plain one and it stands before the first line of the day, Pelagia of 457."
+      },
+      "note": "Her name page keeps this one day and reaches two lives, which agree on the whole story and differ in what they add: the shorter gives her words to the elder before her death and his answer, the longer gives the Thebaid, her birth at the end of the third century, the year 340 and the vision of Paul the Simple. The elder Paphnutius who brought her to repentance has no folder in this corpus; the two Paphnutii it holds are a martyr of Diocletian's persecution and a confessor-bishop of the Thebaid, and neither is him."
     },
     {
       "church": "romanian",
@@ -64,5 +80,21 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "birth": {
+      "earliest": 271,
+      "latest": 300,
+      "display": "late 3rd century",
+      "basis": "traditional",
+      "note": "The longer of the site's two lives: «Святая Таисия родилась в Египте в конце III столетия». The shorter gives no birth at all."
+    },
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "c. 340",
+      "basis": "traditional",
+      "note": "The longer life: «Скончалась преподобная Таисия около 340 года». The calendar's day line prints «(IV)», the fourth century, which agrees with it; the shorter life gives no year."
+    }
   }
 }

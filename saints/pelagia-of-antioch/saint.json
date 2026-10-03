@@ -11,6 +11,11 @@
       "form": "Πελαγία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Οσία Πελαγία», with the rank word left off. The page glosses the name from πέλαγος, the open sea."
+    },
+    {
+      "form": "Пелагия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2641 and the heading of both of its lives for her, «Преподобная Пелагия Антиохийская», with the rank word and the epithet left off. The longer life gives «Пелагея» beside it and is not followed."
     }
   ],
   "sex": "female",
@@ -20,8 +25,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Прп. Пелагии (457).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the day's one icon, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service marked with no sign in the Typikon, which is the plain service. It stands immediately before her line, and her line is the only one in its paragraph. The day's service block names her and nobody else, «8 октября: Преподобной матери нашей Пелаги»."
+      },
+      "note": "Her name page lists this one day and no other. The site's two lives for her disagree twice over and neither is preferred: the shorter makes Nonnus bishop of Edessa and puts her over the dancing-women of Antioch in Palestine, the longer makes him bishop of Heliopolis and has her born in Antioch in Syria. Both end her on the Mount of Olives under the man's name Pelagius, and the folder's `dates` carry the 457 they share."
     },
     {
       "church": "romanian",
@@ -120,6 +137,16 @@
     }
   ],
   "related": [
+    "nonnus-the-bishop",
     "pelagia-the-virgin-of-antioch"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 457,
+      "display": "457",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints, «Прп. Пелагии (457)», and the year both of its lives for her give: «до самой кончины (457) подвизалась в затворе» on the shorter, «инок Пелагий скончался приблизительно в 457 году» on the longer. Neither saint.gr nor doxologia.ro was read for a year."
+    }
+  }
 }

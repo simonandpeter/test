@@ -1,0 +1,65 @@
+{
+  "slug": "dositheus-of-verkhny-ostrov",
+  "display_name": "Dositheus of Verkhny Ostrov",
+  "office": "Abbot",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Досифей",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 655, headed «Досифей Верхнеостровский, Псковский, игумен», with the office and the two epithets left off. «Верхнеостровский» is the adjective of Верхний остров, the Upper Island in Lake Pskov, where his monastery stood."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1482,
+      "latest": 1482,
+      "display": "1482",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Прп. Досифея Верхнеостровского, Псковского (1482)». His life page gives no year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Прп. Досифея Верхнеостровского, Псковского (1482).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day carries one icon and it is the plain one, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service marked with no sign in the Typikon — and it stands immediately before the first line of the day, Pelagia of 457, which is the only line of its own paragraph. His line is in the second paragraph, which carries no icon."
+      },
+      "note": "His name page lists this one day and no other. The life is two sentences and this folder is as short as they are."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "euphrosynus-of-pskov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

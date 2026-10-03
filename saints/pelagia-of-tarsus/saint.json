@@ -11,6 +11,11 @@
       "form": "Πελαγία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαΐου, «Αγία Πελαγία», with the rank word left off."
+    },
+    {
+      "form": "Пелагия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2643 and the heading of both of its lives for her, «Мученица Пелагия Тарсийская», with the rank word and the epithet left off. The longer life gives «Пелагея» in the same breath as «Пелагия» and is not followed."
     }
   ],
   "sex": "female",
@@ -21,8 +26,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her two life pages both head «Дни памяти: 4 мая , 7 октября», and the Russian calendar keeps her on both; 4 May is the day the Greek and the Romanian keep her on as well. One row per church is the schema, so the May day is recorded here and she does not render on it. The 7 October page also points at a service «4 мая: Преподобномученицы Пелагии», which is the May day's."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Мц. Пелагии Тарсийской (290).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. Her line stands in the day's second paragraph, which carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first."
+      },
+      "note": "The two lives the site reaches for her disagree on the year — 287 on the shorter, 290 on the longer and on the day line — and they also tell the story differently: the shorter has her mother hand her to the rejected bridegroom and the emperor want her married to his heir, the longer has bishop Clinon, the baptism at the spring and the four lions. The folder's `dates` carry both years and neither is preferred."
     },
     {
       "church": "romanian",
@@ -102,5 +119,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 290,
+      "display": "287 or 290",
+      "basis": "traditional",
+      "note": "The site's two lives for her disagree and neither is preferred. The shorter says «предала Богу душу в 287 году»; the longer says «Мучения и смерть святой Пелагии произошли в 290 году», which is also the year the calendar's day line prints."
+    }
+  }
 }

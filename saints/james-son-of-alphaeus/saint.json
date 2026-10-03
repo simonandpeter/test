@@ -11,6 +11,11 @@
       "form": "Ιάκωβος του Αλφαίου",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Ιάκωβος του Αλφαίου», with no rank word attached."
+    },
+    {
+      "form": "Иаков",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 867, headed «Апостол Иаков Алфеев», with the rank word and the patronymic epithet left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «30 июня (12 ап.)», the synaxis of the Twelve Apostles. One row per church is the schema, so the June day is recorded here and he does not render on it — which is also the day saint.gr keeps him on, so the Greek row of this folder and this one are the same man on two different days of two calendars."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Ап. Иакова Алфеева (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the first of the day's two icons, «Совершается служба с полиелеем» — a service with the polyeleos — and it stands immediately before his line and his alone. The second icon, the plain service, stands a few words later, immediately before Andronicus and his wife, which is what makes the first one his rather than the paragraph's."
+      },
+      "note": "The Russian dates him «(I)», the first century, where neither folder's other row carries a year; no `dates` are proposed from a bare century for an apostle whose death year neither page gives. Its two lives for him add the brother and the places: Matthew the Evangelist's brother, preaching in Judaea, Edessa, Gaza and Eleutheropolis, and a death by crucifixion at Ostracine in Egypt."
     },
     {
       "church": "romanian",
@@ -134,5 +152,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "andrew-the-first-called",
+    "matthew-the-apostle"
   ]
 }

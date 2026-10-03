@@ -1,0 +1,76 @@
+{
+  "slug": "paul-preobrazhensky",
+  "display_name": "Paul (Preobrazhensky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Павел (Преображенский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9386, «Павел (Преображенский), протоиерей, сщмч.», with the office and the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints at the end of the company it names him in: «… и мц. Елисаветы (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Сщмчч. Ионы , еп. Велижского, прмч. Серафима , сщмчч. Петра , Василия , Павла , Петра , Владимира пресвитеров, мчч. Виктора , Иоанна , Николая и мц. Елисаветы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's third paragraph, which carries no icon; the day's one icon is the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком», and it stands two paragraphs above, before Pelagia of 457."
+      },
+      "note": "The line names eleven people and the site carries a life for one of them, the bishop. For this one it prints the forename, the surname, the rank abbreviation and, on the index page, the office — and nothing more."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "basil-ozeretskovsky",
+    "elizabeth-kuranova",
+    "john-rybin-8-october",
+    "jonah-lazarev",
+    "nicholas-kuzmin",
+    "peter-nikotin",
+    "peter-ozeretskovsky",
+    "seraphim-shchelokov",
+    "victor-frolov",
+    "vladimir-speransky"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "office": "Archpriest"
+}

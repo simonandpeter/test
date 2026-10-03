@@ -1,0 +1,78 @@
+{
+  "slug": "nadezhda-azhgerevich",
+  "display_name": "Nadezhda (Azhgerevich)",
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Надежда (Ажгеревич)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10090, «Надежда (Ажгеревич), мц.», with the rank word left off. The life names her father, Григорий Ажгеревич, and gives her no patronymic of her own."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "The life the day links: «родилась в 1877 году в деревне Головенщицы Сверженской волости Минской губернии в семье крестьянина Григория Ажгеревича»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life names the day: «21 октября … были расстреляны на полигоне Бутово под Москвой». The calendar's day line prints the year, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Сщмчч. Димитрия , архиеп. Можайского, и с ним Иоанна диакона, прмчч. Амвросия и Пахомия , прмц. Татианы , мч. Николая , мцц. Марии и Надежды (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto her. The day's one icon is the plain one and it stands before the first line of the day, two paragraphs above this one, which carries no icon."
+      },
+      "note": "She is the second of the day line's two «мцц.». She had a blessing to be tonsured and did not reach it, so she is a lay woman in the record and no office is given her."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for her (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "ambrose-astakhov",
+    "demetrius-dobroserdov",
+    "john-khrenov",
+    "maria-volnukhina",
+    "nicholas-rein",
+    "pachomius-turkevich",
+    "tatiana-besfamilnaya"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

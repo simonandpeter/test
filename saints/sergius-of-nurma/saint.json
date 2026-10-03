@@ -1,0 +1,103 @@
+{
+  "slug": "sergius-of-nurma",
+  "display_name": "Sergius of Nurma",
+  "office": "Abbot",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Сергий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1971, headed «Преподобный Сергий Обнорский, Нуромский, Вологодский», with the rank word and the three epithets left off. The day line writes him «Прп. Сергия Нуромского (Вологодского)»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1412,
+      "latest": 1421,
+      "display": "1412 or 1421",
+      "basis": "traditional",
+      "note": "The site's two lives for him disagree and neither is preferred here. The first says «Скончался преподобный Сергий 7 октября 1412 года»; the second says his repose «последовавшей в 1421 г.». The day line prints 1412."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Прп. Сергия Нуромского (Вологодского) (1412).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. The day's one icon, «Совершается служба на шесть», stands in the first paragraph immediately before the martyrs Sergius and Bacchus; his own line is in the second paragraph, which carries no icon. The day does print his troparion and kontakion in tone 8."
+      },
+      "note": "His name page lists this one day and no other. The two lives behind it disagree on his year of death, which the folder's `dates` note records rather than resolving; the first also says his church veneration began in 1546, and the second that as many as eighty of his miracles had been written down by 1584."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 20 octombrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/20 was not read for him (2026-10-04). saint.gr's own 7 Οκτωβρίου keeps a «Όσιος Σέργιος «ὁ ἐν τῷ Σπηλαίῳ»» whom this corpus holds as Sergius in the Cave; that entry gives Athos and the year 1412, which are this man's, over an epithet that is the other Sergius of the day's. The disagreement is recorded on that folder's Russian row and is not resolved here."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 20 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh",
+    "paul-of-obnora"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Желанием духовным разгарашеся, пребогате,/ слез твоих течением душу свою напоил еси/ и еже из глубины воздыханьми уязвляше сердце свое,/ и бодренными молитвами, и всенощным предстоянием Владыце Христу/ многодобродетелен плод принесе сам себе./ И сего ради яко Божий угодник светло миру показася,/ сияя чудесы, Сергие отче наш,/ теплый молитвенниче к Богу, всегда о нас Того моли,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Тропарь преподобного Сергия Нуромского (Вологодского)»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "The heading names him, so it is his own troparion and not a common of the venerable."
+      },
+      "english": {
+        "text": "Kindled with spiritual desire, O most rich one, thou didst water thy soul with the flowing of thy tears, and with sighs out of the depths thou didst wound thine own heart; and by watchful prayers and by standing all night before Christ the Master thou didst bring thyself as a fruit full of virtue. And therefore thou wast shown brightly to the world as a servant of God, shining with wonders, O Sergius our father: fervent intercessor before God, pray to him always for us, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко звезда пресветлая, от Святыя Горы провозшедши,/ доброты чудес твоих весь просветил мир,/ Христов бо крест взем, последова Ему,/ в пустынном озлоблении, в молитвах же и пощениих,/ во бдениих же и злостраданиих изнурив плоть свою,/ тем и Христос даром чудес одари тебе,/ Емуже о нас моляся, посещай чад своих, да зовем ти:/ радуйся, Сергие отче наш, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Кондак преподобного Сергия Нуромского (Вологодского)»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "It names him and opens on the Holy Mountain, «от Святыя Горы провозшедши», which is the Athos tonsure his life gives him."
+      },
+      "english": {
+        "text": "Having come forth like a most radiant star from the Holy Mountain, thou didst enlighten the whole world with the goodness of thy wonders; for taking up the cross of Christ thou didst follow him, wearing out thy flesh in the hardship of the wilderness, in prayers and fastings, in vigils and in sufferings, and for this Christ endowed thee with the gift of wonders. Praying to him for us, visit thy children, that we may cry to thee: rejoice, Sergius our father, dweller in the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ]
+}

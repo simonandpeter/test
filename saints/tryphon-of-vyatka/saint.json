@@ -6,10 +6,19 @@
       "form": "Τρύφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Άγιος Τρύφων της Βιάτκα», with the rank word left off. The page glosses the name from τρυφή, delicacy."
+    },
+    {
+      "form": "Трифон",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2125, headed «Преподобный Трифон, архимандрит Вятский», with the rank word, the office and the epithet left off."
     }
   ],
   "sex": "male",
-  "types": [],
+  "types": [
+    "venerable",
+    "abbot",
+    "wonderworker"
+  ],
   "dates": {
     "death": {
       "earliest": 1612,
@@ -22,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Прп. Трифона , архим. Вятского, чудотворца (1612).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's second paragraph, which carries no icon; the day's one icon is the plain one and it stands before the first line of the day, Pelagia of 457. The line next to his is «Собор Вятских святых», the synaxis of the saints of Vyatka, which enumerates nobody and is not a folder."
+      },
+      "note": "The Russian agrees with saint.gr on 1612 and is where everything else on this folder now comes from: the office, the three types, the name form, two lives and three hymns. The two lives differ in detail and not in substance — the second gives the village of his birth, Малая Немнюшка in the Pinega district, where the first says only that his parents lived in Arkhangelsk province; the second has the brethren's envy drive him from Pyskor where the first has him seek solitude; and the second writes the Vyatka town «Клыков» where the first and its own troparion write Хлынов. The reading is the site's and is left as it stands."
     },
     {
       "church": "romanian",
@@ -52,5 +72,46 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Archimandrite",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От земных на Небесная помыслив,/ иноческое житие измлада, преподобне, возлюбив,/ и делом совершив ко Господу любовь,/ и твердым умом Его Духновенным учением озаряя мир,/ и, возлюбив, блаженне, всенощное бдение/ и молитву непрестанну, и наставления Божественнаго разума,/ инок стадо собра, мудре,/ и наставил еси ко свету Богоразумия, Трифоне отче наш,/ Христа Бога моли даровати душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 2125 — «Тропарь преподобного Трифона, архимандрита Вятского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/name/2125.html",
+        "year": 2026,
+        "note": "The first of the two troparia the page prints for him; the second is headed «Ин тропарь», another troparion, in the same tone, and names Хлынов and the house he built there. It is not drafted."
+      },
+      "english": {
+        "text": "Turning thy mind from things earthly to the things of heaven, and loving the monastic life from thy youth, O venerable one, thou didst fulfil in deed thy love for the Lord, and with a steadfast mind thou didst light the world with his inspired teaching; and loving the all-night vigil, O blessed one, and unceasing prayer and the instructions of the divine understanding, thou didst wisely gather a flock of monks and lead them to the light of the knowledge of God, O Tryphon our father: pray to Christ God to grant our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Днесь в начале основания добродетелем, блаженне,/ положил еси в души своей страх Божий,/ от юности взем крест свой,/ благочестно Христови последовал еси,/ Ангельским образом облечеся и бысть монах предивен,/ в добро детелех цветяше, к будущим Богови простирался./ И своей плоти, яко врагу, немилостив, отче, был еси,/ терпением явися, блаженне, яко злато искушено в горниле,/ но и ныне не забуди посещати чад своих,/ поминай нас, чтущих пресвятую память твою,/ да вси благодарив вопием ти:/ радуйся, премудре Трифоне, наставниче монахом.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 2125 — «Кондак преподобного Трифона, архимандрита Вятского», глас 8",
+        "url": "https://days.pravoslavie.ru/name/2125.html",
+        "year": 2026,
+        "note": "The first of the two kontakia the page prints for him; the second, in tone 2, is five lines and is not drafted. The site splits «добродетелех» into «добро детелех» and writes «простирался» for «простираяся»; both readings are its own and are left as they stand."
+      },
+      "english": {
+        "text": "At the beginning of the foundation of the virtues, O blessed one, thou didst lay the fear of God in thy soul; taking up thy cross from thy youth thou didst follow Christ in piety, wast clothed in the angelic habit and became a wonderful monk, flowering in good deeds and reaching out towards the things to come with God. Thou wast unmerciful to thine own flesh as to an enemy, O father, and wast shown in thy patience, O blessed one, as gold tried in the furnace. Even now do not forget to visit thy children; remember us who honour thy most holy memory, that we may all cry out to thee in thanksgiving: rejoice, most wise Tryphon, instructor of monks.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "hermogenes-of-moscow",
+    "nicholas-of-myra"
+  ]
 }

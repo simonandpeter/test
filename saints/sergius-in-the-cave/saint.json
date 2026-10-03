@@ -6,6 +6,11 @@
       "form": "Σέργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Όσιος Σέργιος «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word left off; the epithet «ὁ ἐν τῷ Σπηλαίῳ» is the page's own."
+    },
+    {
+      "form": "Сергий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1973, headed «Сергий Печерский, Послушливый», with the two epithets left off. The day line writes him «Прп. Сергия Послушливого, Печерского»."
     }
   ],
   "sex": "male",
@@ -15,18 +20,30 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1412,
+      "earliest": 1101,
       "latest": 1412,
-      "display": "1412",
+      "display": "12th or 13th century, or 1412",
       "basis": "traditional",
-      "note": "saint.gr: «Κοιμήθηκε το 1412 μ.Χ.», and the page's head line gives «(; - 1412)»"
+      "note": "Two sources that keep the same epithet on the same day give irreconcilable periods and neither is preferred. days.pravoslavie.ru prints «ок. XIII» and its life «Известно, что он подвизался в XII-XIII вв.»; saint.gr prints «Κοιμήθηκε το 1412 μ.Χ.» and heads the page «(; - 1412)». The interval spans both. The Russian calendar gives 1412 on the same day to a different man, Sergius of Nurma, and that is the likelier source of the Greek page's year, but nothing on either page settles it."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His index entry lists one other day, «28 сентября (Печер.(Б))», the synaxis of the venerable fathers of the Near Caves. One row per church is the schema, so the September day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Прп. Сергия Послушливого, Печерского (ок. XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. His line stands in the day's second paragraph, which carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first."
+      },
+      "note": "The Russian and the Greek do not describe the same man's circumstances and this row does not resolve it. The Russian gives «ок. XIII», about the thirteenth century, and its life says he laboured in the twelfth and thirteenth, that his name records his renunciation of his own will and his perfect obedience to his superior, and that his incorrupt relics rest in the Near, or Antoniev, caves. saint.gr gives the same epithet and the same day but an Athos tonsure and the year 1412, which are what the Russian calendar prints two lines below on the same day for Sergius of Nurma. The folder's death interval was widened to carry both readings."
     },
     {
       "church": "romanian",
@@ -55,5 +72,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "sergius-of-nurma"
+  ]
 }

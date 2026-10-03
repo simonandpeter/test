@@ -41,13 +41,15 @@
       "feast": {
         "day": 5,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Russian keeps the pair twice, and this row prints the first of the two days. The 9 October page names them again in the same words and with the same years, «Мчч. Еввентия (Иувентина) и Максима воинов (361-363)», adding «Еввентий» as a second form of his name. One row per church is the schema, so the October day is recorded here and he does not render on it."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 сентября ст. ст. — «Мчч. Иувентина и Максима воинов (361-363)»",
         "url": "https://days.pravoslavie.ru/Days/20260905.html",
         "year": 2026
-      }
+      },
+      "note": "The 9 October page, read 4 October 2026, prints the same line a second time and gives his name in two forms, «Еввентия (Иувентина)». Both days are the Russian's own and neither is a correction of the other; this folder renders on the September one."
     },
     {
       "church": "romanian",

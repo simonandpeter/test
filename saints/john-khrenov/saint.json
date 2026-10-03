@@ -1,0 +1,79 @@
+{
+  "slug": "john-khrenov",
+  "display_name": "John (Khrenov)",
+  "office": "Deacon",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Хренов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9853, «Иоанн (Хренов), диакон, сщмч.», with the office and the rank word left off. The life calls him Иван Семенович Хренов."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "The life the day links: «родился 3 сентября 1888 года в городе Москве в семье служащего Таганской тюрьмы Семена Хренова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life names the day: «21 октября … были расстреляны на полигоне Бутово под Москвой». The calendar's day line prints the year, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Сщмчч. Димитрия , архиеп. Можайского, и с ним Иоанна диакона, прмчч. Амвросия и Пахомия , прмц. Татианы , мч. Николая , мцц. Марии и Надежды (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's one icon is the plain one and it stands before the first line of the day, two paragraphs above this one, which carries no icon."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "ambrose-astakhov",
+    "demetrius-dobroserdov",
+    "maria-volnukhina",
+    "nadezhda-azhgerevich",
+    "nicholas-rein",
+    "pachomius-turkevich",
+    "tatiana-besfamilnaya"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

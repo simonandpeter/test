@@ -11,6 +11,11 @@
       "form": "Πολυχρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Οκτωβρίου, «Άγιος Πολυχρόνιος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name as ο μακρόβιος, the long-lived."
+    },
+    {
+      "form": "Полихроний",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1815, headed «Полихроний, пресвитер, сщмч.», with the office and the rank word left off."
     }
   ],
   "sex": "male",
@@ -21,8 +26,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Мч. Полихрония пресвитера (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. His line stands in the day's second paragraph, which carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first."
+      },
+      "note": "The Russian's «(IV)» agrees with the fourth century saint.gr gives, so the folder's `dates` stand as they were. Its index names him «Полихроний, пресвитер, сщмч.», and its life adds what the Greek does not: the vineyard at Constantinople, the church he paid for, a tradition that he sat at the First Ecumenical Council, and Arians as his killers."
     },
     {
       "church": "romanian",

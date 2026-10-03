@@ -4169,6 +4169,14 @@ const READ_FOLDS = {
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
     'the abbot of Kucumia in Sicily, Romanian 4 January, against the martyr by the sword the Greek and Romanian keep on 3 October; doxologia’s own page for 4 January is a note saying which Theoctistus the day is not (read 19 September 2026)',
+  'иоанн рыбин john-rybin john-rybin-8-october':
+    'two index entries of the same site, two ranks and two days: name page 9635, «Иоанн (Рыбин), иерей, сщмч.», a priest kept on the Russian 6 October, against name page 13820, «Иоанн (Рыбин), мч.», a layman kept on the 8th in the company of Jonah of Velizh. Two men who share a surname, and the second folder carries the day in its display name because nothing else tells the names apart (read 4 October 2026)',
+  'досифеи dositheia-the-recluse-of-kyiv dositheus-of-verkhny-ostrov':
+    'the recluse of the Kitaev hermitage near Kyiv, born 1721, who was found to have been a woman only when she was buried and whom the Russian keeps on 25 September, against the abbot who founded the house of Peter and Paul on the Upper Island in Lake Pskov in 1470, Russian 8 October. Three centuries and two sexes (read 4 October 2026)',
+  'иона jonah-of-hankou jonah-the-prophet jonah-the-sabaite':
+    'the prophet of the twelve; the presbyter of 829 who became a monk at the Lavra of Saint Sabbas and was father to the two Graptoi; and the bishop of Hankou who died in Manchuria in 1925 in his thirty-seventh year. Three men, and the Russian bare forename «Иона» is the whole of what they share (read 4 October 2026)',
+  'сергии sergius-companion-of-bacchus sergius-galin-of-kazan sergius-in-the-cave sergius-of-nurma sergius-presbyter-martyr-1918-3-september sergius-zaitsev-of-kazan':
+    'three men the Russian 7 October prints in three separate lines — the Roman soldier of Rosaf kept with Bacchus, Sergius the Obedient of the Kyiv Caves, and Sergius of Nurma the Athonite of the Vologda forests — against three Russians of the Soviet years: two of the nine of the Zilantov monastery at Kazan, and the archpriest Fenomenov. The bare forename «Сергий» is all six have (read 4 October 2026)',
 };
 const foldKey = (key, slugs) => [key, ...[...slugs].sort()].join(' ');
 

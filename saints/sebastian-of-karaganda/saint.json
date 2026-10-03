@@ -4,6 +4,7 @@
   "sex": "male",
   "types": [
     "venerable",
+    "confessor",
     "hieromonk"
   ],
   "names": [
@@ -11,9 +12,17 @@
       "form": "Σεβαστιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Σεβαστιανός του Καραγκάντα», with the rank word left off; the page gives his name in the world as Stephen Vasilevich Fomin, in Greek letters."
+    },
+    {
+      "form": "Севастиан",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 9163, headed «Севастиан (Фомин) Карагандинский, схиархимандрит, исп.», with the surname, the office, the rank word and the epithet left off. The life gives his name in the world: Степан Васильевич Фомин."
     }
   ],
-  "related": [],
+  "related": [
+    "john-the-theologian",
+    "joseph-of-optina"
+  ],
   "dates": {
     "birth": {
       "earliest": 1884,
@@ -33,8 +42,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the finding of his relics, which the day line dates to 1997 and his index page marks «(обретение мощей)». That page lists two other days: «6 апреля», his repose, and «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Обретение мощей прп. Севастиана Карагандинского исп (1997).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line closes the day's third paragraph, which carries no icon; the day's two icons are both in the first, and belong to the apostle James and to Andronicus and his wife."
+      },
+      "note": "The Russian is where this folder's substance now comes from: saint.gr had the years 1884 and 1966 and the Orel province, and the Russian life has the whole of the rest. It also gives the office the Greek page does not, «схиархимандрит», and the mark «исп.», confessor, which the Greek page's own title for him, «Преподобноисповедник», says in one word."
     },
     {
       "church": "romanian",
@@ -64,5 +85,25 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Schema-archimandrite",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Троицы Святыя служителю,/ земне ангеле и небесне человече,/ духовнаго Оптинскаго старчества преемниче,/ Христов священнотаинниче и исповедниче,/ Духа Святаго обитель всечестная,/ преподобне отче Севастиане, досточтиме,/ испроси мирови мир/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 9163 — «Тропарь священноисповедника схиархимандрита Севастиана Карагандинского»",
+        "url": "https://days.pravoslavie.ru/name/9163.html",
+        "year": 2026,
+        "note": "The one hymn the page prints for him, and it names him and the Optina eldership he came out of, so it is his own and not a common."
+      },
+      "english": {
+        "text": "Servant of the Holy Trinity, earthly angel and heavenly man, heir of the spiritual eldership of Optina, priest of Christ's mysteries and confessor, all-honoured dwelling of the Holy Spirit, venerable and worthily honoured father Sebastian: ask peace for the world and great mercy for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

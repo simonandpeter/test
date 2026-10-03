@@ -12,6 +12,11 @@
       "form": "Μαρτινιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Όσιος Μαρτινιανός της Λευκής Λίμνης», with the rank word left off."
+    },
+    {
+      "form": "Мартиниан",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1490, headed «Мартиниан Белозерский, игумен», with the office and the epithet left off. The day line spells the epithet «Белоезерского» and the index «Белозерский»; both are the White Lake."
     }
   ],
   "dates": {
@@ -31,13 +36,28 @@
     }
   },
   "related": [
-    "galaction-disciple-of-martinian"
+    "cyril-of-the-white-lake",
+    "galaction-disciple-of-martinian",
+    "sergius-of-radonezh",
+    "therapon-of-the-white-lake"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian",
+        "note": "This day is the finding of his relics, which the day line dates to 1514: «Обретение мощей прп. Мартиниана Белоезерского (1514).» His index entry lists one other day, «12 января», his repose, which is the day the Greek calendar keeps him on. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Обретение мощей прп. Мартиниана Белоезерского (1514).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. His line stands in the day's second paragraph, which carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first. The day does print four hymns for him — a troparion and a kontakion and an «ин», another, of each — and the first of each pair is on this folder."
+      },
+      "note": "The Russian life agrees with saint.gr that he was Michael in the world and born in 1370, and then parts from it: it names no year of death at all and says he fell asleep at eighty-five, which from a birth in 1370 is about 1455, where saint.gr's header prints 1483. The folder's `dates` are left as the Greek page set them and the disagreement is recorded here rather than resolved. The Russian also gives the village, Berezniki near the Kirillov monastery, and the houses: Cyril's monastery, the island on Lake Vozhe, the Ferapontov monastery and the Trinity monastery of Sergius of Radonezh."
     },
     {
       "church": "romanian",
@@ -66,5 +86,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Богу от юности, отче, избравшу и возлюбившу тя/ и провидящу твое доброе произволение,/ наставляет тя приити к преподобному Своему угоднику -/ Кириллу всеблаженному,/ от негоже наставлен бысть на путь спасения,/ страхом Божиим, и чистотою душевною, и благоговением,/ и непрестанными к Богу молитвами/ во мнозе подвизе жизнь свою препроводил еси/ и заповеди Божия непорочно соблюл еси,/ пастырь и наставник иноком предивен был еси,/ и ныне Престолу Христову со дерзновением предстоиши на Небесех,/ со Ангелы светлоликовствуя,/ отче преподобне, Мартиниане всеблаженне,/ не престай молися Христу Богу/ спасти и помиловати души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Тропарь преподобного Мартиниана Белоезерского»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "The first of the two troparia the day prints for him; the second is headed «Ин тропарь», another troparion, in tone 7, and is not drafted."
+      },
+      "english": {
+        "text": "God having chosen and loved thee from thy youth, O father, and foreseeing thy good purpose, he guided thee to come to his venerable servant Cyril the all-blessed, by whom thou wast set upon the way of salvation; and in the fear of God, in purity of soul, in reverence and in unceasing prayer to God thou didst pass thy life in great labour and didst keep the commandments of God without blemish, and wast a wonderful shepherd and instructor of monks. And now thou standest with boldness before the throne of Christ in the heavens, keeping bright festival with the angels, O venerable father Martinian the all-blessed: cease not to pray to Christ God, that he may save our souls and have mercy on them.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Благоизволив, преподобне,/ от юнаго возраста работати Господеви день и нощь,/ в страсе Божий и благоговении чистоту душевную соблюл еси,/ в молитвах же и бдениих ум твой предочистил еси,/ в подвизех же, злостраданиих тело твое изнурив,/ вся добродетели духовный исправил еси/ и образ хотящим по тебе спастися явился еси./ Темже ныне, присно зря на Небесех Пресвятую Троицу,/ молися, всеблаженне, даровати душам нашим спасение,/ и житию нашему исправление,/ да вси верою вопием ти:/ радуйся, преподобне Мартиниане, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 октября ст. ст. — «Кондак преподобного Мартиниана Белоезерского»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "The first of the two kontakia the day prints for him; the second is headed «Ин кондак», another kontakion, in the same tone, and is not drafted. The reading «добродетели духовный» for «духовныя» is the site's own and is left as it stands."
+      },
+      "english": {
+        "text": "Having chosen, O venerable one, from thy young years to serve the Lord day and night, thou didst keep purity of soul in the fear of God and in reverence; in prayers and vigils thou didst cleanse thy mind beforehand, and wearing out thy body in labours and hardships thou didst accomplish every spiritual virtue and wast shown a pattern to those who would be saved after thee. Therefore now, beholding for ever the Most Holy Trinity in the heavens, pray, all-blessed one, that salvation be granted to our souls and amendment to our life, that we may all cry out to thee in faith: rejoice, venerable Martinian, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

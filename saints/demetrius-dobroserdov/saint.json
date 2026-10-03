@@ -1,0 +1,81 @@
+{
+  "slug": "demetrius-dobroserdov",
+  "display_name": "Demetrius (Dobroserdov)",
+  "office": "Archbishop of Mozhaysk",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop",
+    "hierarch"
+  ],
+  "names": [
+    {
+      "form": "Димитрий (Добросердов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9110, «Святитель Димитрий (Добросердов), архиепископ Можайский, сщмч.», with the rank words and the office left off. The life gives his name in the world: Иван Иванович Добросердов."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1864,
+      "latest": 1864,
+      "display": "1864",
+      "basis": "attested",
+      "note": "The life the day links: «родился 22 января 1864 года в селе Пахотный Угол Тамбовской губернии в семье священника»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The life names the day: «17 октября 1937 года Тройка НКВД приговорила арестованных к расстрелу. 21 октября … были расстреляны на полигоне Бутово под Москвой». The calendar's day line prints the year, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it. The Julian 8 October is the civil 21 October, which is the day the eight were shot."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Сщмчч. Димитрия , архиеп. Можайского, и с ним Иоанна диакона, прмчч. Амвросия и Пахомия , прмц. Татианы , мч. Николая , мцц. Марии и Надежды (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto him. The day's one icon is the plain one, «Cовершается служба, не отмеченная в Типиконе никаким знаком», and it stands before the first line of the day, two paragraphs above this one, which carries no icon."
+      },
+      "note": "The day line names eight of the company and the life page's own heading names nine, adding «мч. Василий (Ефимов)», who was sentenced to ten years rather than shot and died in the Lokchimlag. He is on no day the calendar prints and is deliberately not a folder here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 21 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/21 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 21 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "ambrose-astakhov",
+    "john-khrenov",
+    "maria-volnukhina",
+    "nadezhda-azhgerevich",
+    "nicholas-rein",
+    "pachomius-turkevich",
+    "tatiana-besfamilnaya"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Ποπλία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Οσία Ποπλία η Ομολογήτρια», with the rank words left off."
+    },
+    {
+      "form": "Поплия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2649, headed «Поплия Антиохийская, диакониса, исповедница», with the office, the rank word and the epithet left off. Its life gives «Публия» in brackets beside it as a second form of the same name."
     }
   ],
   "sex": "female",
@@ -24,8 +29,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Св. Поплии исповедницы, диакониссы Антиохийской (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto her. Her line is in the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to the apostle James and to Andronicus and his wife."
+      },
+      "note": "The Russian's «(IV)» agrees with the fourth century the Greek page gives, so the `floruit` stands as it was. The day line calls her «св.», holy, and a confessor and deaconess; the heading of its life calls her «мученица», martyr, where the life's own last sentence has her die in peace, which is a disagreement of one word inside one page. Its index entry heads her «Поплия Антиохийская, диакониса, исповедница» and keeps her on this one day."
     },
     {
       "church": "romanian",
