@@ -78,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.02.2026 (5. фебруар ст. ст.) — „1. Света мученица Агатија. Ова славна девица и мученица Христова роди се у сицилијанском граду Палерму од родитеља благородних и имућних.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-18&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. She is its first numbered entry for the day. It settles what saint.gr leaves open — born at Palermo, died at Catania — and agrees on 251 and on Decius and Quintianus. Three things are only here: her own saying about the wheat and the chaff; the Apostle Peter appearing in the prison and giving her back her body whole after the breasts were cut away; and the end of Quintianus, torn in the face by his own and his soldiers' horses and trampled to death on the road as he went to seize her property."
     }
   ],
   "text": {
@@ -174,5 +184,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "peter-the-apostle"
   ]
 }
