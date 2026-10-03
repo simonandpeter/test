@@ -92,6 +92,12 @@
       "note": "saint.gr's head for the page gives «Αγιος Ευθυμιος ο Ομολογητης, Επισκοπος Σαρδεων (; - 840)», and it is the only year of death the page carries. The Eustratiades passage the same page quotes ends his life under Michael the Stammerer, «(820 - 829 μ.Χ.)», who recalled him from exile and then exiled him to Akritas, where he died «ὀκτὼ ἡμέρας μετὰ τὴν ἄθλησιν»; that is recorded here and not reconciled with 840. No year of birth is given: the passage says only that he flourished under Constantine and Irene, «(780 - 797 μ.Χ.)», was born in Lykaonia and studied at Alexandria. The folder held no `dates` before this."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "nicetas-of-medikion",
     "theophylact-of-nicomedia"

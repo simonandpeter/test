@@ -121,5 +121,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Έζησε, μετά τη δοκιμασία του, επί εκατόν σαράντα έτη και σε ηλικία διακοσίων σαράντα ετών, περί το 1650 π.Χ., κοιμήθηκε με ειρήνη.» The same page dates his flourishing twice over and the two do not agree — «άκμασε περί το 1900 π.Χ. (κατ' άλλους το 1400 π.Χ.)» — so only the year it gives for his death is recorded, and the disagreement is left here."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

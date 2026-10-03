@@ -18,6 +18,12 @@
     "martyr",
     "soldier"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "antonina-of-crodamna"
   ],
