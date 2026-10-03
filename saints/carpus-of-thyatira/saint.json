@@ -19,6 +19,12 @@
     "bishop"
   ],
   "office": "Bishop of Thyateira",
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "papylas-the-deacon",
     "agathonica-sister-of-papylas",

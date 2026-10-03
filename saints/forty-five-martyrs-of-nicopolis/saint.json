@@ -122,5 +122,11 @@
       "basis": "traditional",
       "note": "saint.gr heads the company and each of its four named men «(; - 315)», and its narrative dates the edict they gave themselves up under: «Όταν το 315 μ.Χ. ο αυτοκράτορας Λικίνιος εξέδωσε διάταγμα κατά των χριστιανών». The Romanian source the folder was built from gave no year."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

@@ -103,5 +103,11 @@
       "basis": "traditional",
       "note": "saint.gr: «ήταν από τη φυλή του Συμεών και γιος του Σαφάτ και ο χρόνος που έδρασε τίθεται μεταξύ 650 και 672 π.Χ.»"
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

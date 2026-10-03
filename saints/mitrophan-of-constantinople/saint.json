@@ -19,6 +19,12 @@
     "patriarch"
   ],
   "office": "Patriarch of Constantinople",
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "alexander-patriarch-of-constantinople",
     "athanasius-of-alexandria",

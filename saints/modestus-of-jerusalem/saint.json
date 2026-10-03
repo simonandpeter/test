@@ -123,5 +123,11 @@
       "basis": "attested",
       "note": "saint.gr states these as the one thing it knows for certain about his dating, and uses them to call the rest of his received life confused: «γνωρίζουμε ότι τα χρόνια της πατριαρχίας του Αγίου αυτού ήταν από το 632 μ.Χ. μέχρι το 634 μ.Χ.» The interval is his patriarchate and not his life; no year of birth and no year of death is given, and the page itself notes that the account which has his parents die under Maximian, 286 to 305, cannot be squared with these."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

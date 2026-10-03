@@ -122,5 +122,11 @@
       "basis": "traditional",
       "note": "saint.gr: «Τελικά, ειρηνικά παρέδωσε την μακάρια ψυχή του στο Θεό το 620 μ.Χ.», with the page's own head «(; - 620)». The same page places his life «στα χρόνια του Βασιλιά Ηρακλείου (615 μ.Χ.)»."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

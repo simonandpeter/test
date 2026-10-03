@@ -84,6 +84,12 @@
   "text": {
     "life": "life.md"
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "callinicus-of-caesarea",
     "cornutus-of-iconium",

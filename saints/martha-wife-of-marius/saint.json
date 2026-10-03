@@ -12,6 +12,12 @@
   "types": [
     "martyr"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "marius-of-persia",
     "audifax-son-of-marius",
