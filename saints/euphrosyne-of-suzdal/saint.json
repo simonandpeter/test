@@ -64,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not read: pravoslavno.rs's Prologue page for 2026-10-08 prints only «Преп. Ефросинија», which is Euphrosyne of Alexandria on the same Julian day, and its entry list is known to drop entries (2026-10-04)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the three the Ohrid Prologue enumerates for this day. The Prologue and the Russian calendar disagree about her betrothal, and the disagreement is recorded in her life rather than resolved. pravoslavno.rs publishes about thirty days ahead and the Prologue repeats annually, so the page for civil 8 October 2025 serves the same Julian day; its own entry list for civil 8 October 2026 prints one of the three and is known to drop entries."
+      },
+      "source": {
+        "text": "Охридски пролог, 25. септембар ст. к. — «3. Преп. Ефросинија Суздаљска. Крштено јој име Теодула.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-10-08&prolog=1",
+        "year": 2025
+      }
     }
   ],
   "locations": [
