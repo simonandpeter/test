@@ -1,0 +1,58 @@
+{
+  "slug": "basil-petrov",
+  "display_name": "Basil (Petrov)",
+  "names": [
+    {
+      "form": "Василий Петров",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., which gives the calendar's own nominative «Василий Петров, мч.»; the rank word is left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 2 января ст. ст.: «Мч. Василия (1942)». The calendar gives no other year and no life page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Мч. Василия (1942)»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day, 15 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding civil day, 15 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
