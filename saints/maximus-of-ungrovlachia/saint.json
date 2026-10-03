@@ -6,6 +6,11 @@
       "form": "Μάξιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Άγιος Μάξιμος Επίσκοπος Ουγγροβλαχίας», with the rank words left off."
+    },
+    {
+      "form": "Максим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 18. јануар ст. ст. (civil 2026-01-31), „Свети Максим, архиепископ влахозапланински“. The word „Свети“ is left off and so is the see „архиепископ влахозапланински“, which follows the name after a comma rather than standing as an epithet on it; the calendar gives him no epithet, so the form is bare."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.01.2026 (18. јануар ст. ст.) — „Свети Максим, архиепископ влахозапланински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-31&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -30,6 +30,11 @@
       "form": "Atanasie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 ianuarie, «Sfântul Ierarh Atanasie, Arhiepiscopul Alexandriei»."
+    },
+    {
+      "form": "Атанасије Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 18. јануар ст. ст. (civil 2026-01-31), „Свети Атанасије Велики, архиепископ александријски“. The word „Свети“ and the see „архиепископ александријски“ are left off; „Велики“ is kept, being the epithet the Great and not a rank."
     }
   ],
   "sex": "male",
@@ -112,8 +117,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.01.2026 (18. јануар ст. ст.) — „Свети Атанасије Велики, архиепископ александријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-31&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [
