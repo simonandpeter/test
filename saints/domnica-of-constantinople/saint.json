@@ -16,6 +16,11 @@
       "form": "Домника Константинопольская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Домника Константинопольская, игумения», with the office left off. The day's line gives the forename alone."
+    },
+    {
+      "form": "Домника",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 8. јануар ст. ст., „Света Домника.“, with the rank word «Света» left off."
     }
   ],
   "sex": "female",
@@ -77,8 +82,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.01.2026 (8. јануар ст. ст.) — „Света Домника.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-21&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

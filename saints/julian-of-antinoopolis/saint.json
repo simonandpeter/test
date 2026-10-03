@@ -11,6 +11,11 @@
       "form": "Иулиан Египетский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Иулиан Египетский, игумен, сщмч.», with the rank word and the office left off."
+    },
+    {
+      "form": "Јулијан",
+      "lang": "sr",
+      "note": "The heading names two; this is his own name, read out of it, with the rank words «Свети мученици» left off."
     }
   ],
   "sex": "male",
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.01.2026 (8. јануар ст. ст.) — „Свети мученици Јулијан и Василиса.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-21&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [

@@ -16,6 +16,11 @@
       "form": "Георгий Хозевит",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 января ст. ст., «Георгий Хозевит, прп.», with the rank word left off."
+    },
+    {
+      "form": "Георгије Хозевит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 8. јануар ст. ст., „Преподобни Георгије Хозевит.“, with the rank word «Преподобни» left off."
     }
   ],
   "sex": "male",
@@ -78,8 +83,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.01.2026 (8. јануар ст. ст.) — „Преподобни Георгије Хозевит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-21&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

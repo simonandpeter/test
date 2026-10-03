@@ -6,6 +6,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Άγιος Γρηγόριος Επίσκοπος Μοισίας», with the rank words left off."
+    },
+    {
+      "form": "Григорије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 8. јануар ст. ст., „Свети Григорије, епископ охридски.“, with the rank word «Свети» and the see «епископ охридски»; the Prologue’s see is Ohrid where the corpus’s English form says Moesia left off."
     }
   ],
   "sex": "male",
@@ -50,8 +55,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.01.2026 (8. јануар ст. ст.) — „Свети Григорије, епископ охридски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-21&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
