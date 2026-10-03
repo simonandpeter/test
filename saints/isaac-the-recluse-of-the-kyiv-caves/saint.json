@@ -11,6 +11,11 @@
       "form": "Исаакий, Затворник Печерский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Преподобный Исаакий, Затворник Печерский», with the rank word left off. The day's hymns place him «в Ближних пещерах», in the Near Caves."
+    },
+    {
+      "form": "Исакије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 14. фебруар ст. ст., „Преподобни Исакије, затворник печерски.“, with the rank word Преподобни and the description затворник печерски left off; the recluse of the Caves is what the folder's English name and `types` already say and is not part of the name the heading gives."
     }
   ],
   "sex": "male",
@@ -55,8 +60,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.02.2026 (14. фебруар ст. ст.) — „Преподобни Исакије, затворник печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [
@@ -98,5 +112,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1090,
+      "latest": 1090,
+      "display": "1090",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 14 February: „Упокојио се 1090. године.“ It states the year flat; the Russian line this folder already quotes, days.pravoslavie.ru's «Прп. Исаакия, затворника Печерского (ок. 1090).», says about 1090. The folder carried no dates at all before this reading."
+    }
+  }
 }
