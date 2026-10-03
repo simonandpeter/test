@@ -1,0 +1,9 @@
+# Simeon (Konyukhov)
+
+The Russian calendar prints one line for him and no life at all. On 15 October old style it has «Сщмч. Симеона пресвитера (1918)» — the hieromartyr Simeon, presbyter, 1918 — and that is the whole of the entry. Almost every other name on that day carries a small icon linking to a written life; his carries none. His page in the calendar's own index of names adds his surname, «Симеон (Конюхов), иерей, сщмч.», Simeon Konyukhov, priest and hieromartyr, and the second day he is kept on, 26 January, among the new martyrs and confessors of Russia; and then it stops too.
+
+So what is known here is what those two pages say: a parish priest, killed in 1918, the first year of the persecution, whose calendar remembers him by name on the Julian 15 October and in the general synaxis in January. Where he served, how he died and who took him the calendar does not say, and nothing is supplied for it.
+
+azbyka.ru is the source that carries lives for the new martyrs of the twentieth century, and it would not be read. Asked for its page for this civil day, 28 October 2026, it answered 403 to the fetcher this corpus uses, and the refusal is recorded here because it is the reason this page is short rather than a judgement about the man.
+
+*After the Russian church calendar of the Sretensky monastery (days.pravoslavie.ru) for 15 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261015.html) and [his name page](https://days.pravoslavie.ru/name/9796.html), which is all there is; read 28 October 2026. The same menologion day was read in the other three calendars and does not keep him — [saint.gr](https://www.saint.gr/10/15/index.aspx), [doxologia.ro](https://doxologia.ro/15-octombrie) and the [Ohrid Prologue](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-28&prolog=1).*

@@ -1,0 +1,62 @@
+{
+  "slug": "simeon-konyukhov",
+  "display_name": "Simeon (Konyukhov)",
+  "names": [
+    {
+      "form": "Симеон (Конюхов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9796, «Симеон (Конюхов), иерей, сщмч.», with the two rank words left off; the day line gives «Симеона пресвитера» without the surname, and the surname is the index's."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The Russian day line, and the only thing printed about him besides his name and his rank: «Сщмч. Симеона пресвитера (1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Сщмч. Симеона пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's three icons all stand in the paragraph above it, each immediately before its own entry."
+      },
+      "note": "**The calendar prints a line and nothing else.** The day line gives the rank, the name and the year; his name page 9796 adds the surname, «Симеон (Конюхов), иерей, сщмч.», and the second day he is kept on, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors — and then stops. There is no life link on the day line and no life on the name page. So this folder stands on the line, and the life says so. **azbyka.ru, which is the workable source for the twentieth-century new martyrs, refused the page**: it answered 403 to the corpus's own fetcher for `/days/2026-10-28` on 28 October 2026, and that is the day and the reason this folder is thin. The 26 January day was not read and no row is written for it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 15 octombrie, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 15 Οκτωβρίου, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

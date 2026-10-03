@@ -1,0 +1,9 @@
+# Demetrius (Kasatkin)
+
+The Russian calendar prints one line for him and no life at all. On 15 October old style it has «Сщмч. Димитрия пресвитера (1942)» — the hieromartyr Demetrius, presbyter, 1942 — and that is the whole of the entry. His page in the calendar's own index of names adds his surname, «Димитрий (Касаткин), иерей, сщмч.», Demetrius Kasatkin, priest and hieromartyr, and the second day he is kept on, 26 January, among the new martyrs and confessors of Russia; and then it stops too. There is no life link anywhere on either page.
+
+So what is known here is what those two pages say: a parish priest, killed in 1942, remembered by name on the Julian 15 October and in the general synaxis in January. The year sets him apart from the other priest on this day, who died in 1918: the persecution that took the one in its first year took the other in the middle of the war, nearly a quarter of a century later. Where he served, how he died and who took him the calendar does not say, and nothing is supplied for it.
+
+azbyka.ru is the source that carries lives for the new martyrs of the twentieth century, and it would not be read. Asked for its page for this civil day, 28 October 2026, it answered 403 to the fetcher this corpus uses, and the refusal is recorded here because it is the reason this page is short rather than a judgement about the man.
+
+*After the Russian church calendar of the Sretensky monastery (days.pravoslavie.ru) for 15 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261015.html) and [his name page](https://days.pravoslavie.ru/name/14431.html), which is all there is; read 28 October 2026. The same menologion day was read in the other three calendars and does not keep him — [saint.gr](https://www.saint.gr/10/15/index.aspx), [doxologia.ro](https://doxologia.ro/15-octombrie) and the [Ohrid Prologue](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-28&prolog=1).*

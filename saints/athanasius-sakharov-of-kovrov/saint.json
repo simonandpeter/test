@@ -1,0 +1,79 @@
+{
+  "slug": "athanasius-sakharov-of-kovrov",
+  "display_name": "Athanasius (Sakharov) of Kovrov",
+  "office": "Bishop of Kovrov",
+  "names": [
+    {
+      "form": "Афанасий (Сахаров)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9133, «Святитель Афанасий (Сахаров), епископ Ковровский, исп.», with the rank words and the see left off. His name in the world, which the life page gives, is Сергей Григорьевич Сахаров."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "confessor",
+    "hymnographer"
+  ],
+  "related": [
+    "john-of-suzdal",
+    "sergius-of-radonezh",
+    "tikhon-of-moscow",
+    "thaddeus-of-tver",
+    "john-of-kronstadt"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "2 July 1887",
+      "basis": "attested",
+      "note": "The life page's first sentence: «Родился будущий епископ Афанасий (Сергей Григорьевич Сахаров) 2 июля (ст. ст.) 1887 года, в праздник Положения честной ризы Пресвятой Богородицы во Влахерне» — the date is the page's own and is old style, as it says."
+    },
+    "death": {
+      "earliest": 1962,
+      "latest": 1962,
+      "display": "28 October 1962",
+      "basis": "attested",
+      "note": "The life page's last sentence: «В воскресенье 28 октября 1962 года, на память святителя Иоанна Суздальского святитель тихо предал свой дух Богу. Он предсказал этот день и час заранее» — and the day line agrees, «Свт. Афанасия исп., еп. Ковровского (1962)». The date is civil: 28 October 1962 is the Julian 15 October, which is the day the calendar keeps him on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "polyeleos",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Свт. Афанасия исп., еп. Ковровского (1962).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Совершается служба с полиелеем» — a service served with polyeleos. It is the day's only polyeleos and the only entry the page sets in bold; the two icons before it are «Cовершается служба, не отмеченная в Типиконе никаким знаком» and belong to Euthymius the New and Lucian of Antioch."
+      },
+      "note": "He is the one entry on the Russian 15 October the page prints in bold and gives a polyeleos, and the one with a full written life — about 5,500 words, cited at its foot to a book, «Житие святителя Афанасия, епископа Ковровского, исповедника и песнописца» (Moscow, Отчий дом, 2000, pp. 3–21). His name page keeps him on two days, «26 января (Новомуч.) , 15 октября» — 26 January among the new martyrs and confessors, and 15 October, which is the day this row records and the civil day he died on. The 26 January day was not read and no row is written for it. The calendar's own heading gives him two ranks the day line leaves off, исповедник и песнописец, confessor and hymn-writer, and the second is why `hymnographer` is among the types: the service to All Saints who shone in the Russian land is his, and the life describes how he built it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 15 octombrie, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 15 Οκτωβρίου, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); its two entries that day are Lucian the presbyter of Antioch and Euthymius the New. No other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
