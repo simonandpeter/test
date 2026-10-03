@@ -11,6 +11,11 @@
       "form": "Петр Болгарский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Петр Болгарский, царь», with the rank words left off."
+    },
+    {
+      "form": "Петар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 30. јануар ст. ст. (civil 2026-02-12), „Свети Петар, цар бугарски“. The word „Свети“ is left off, and so is the clause „цар бугарски“, which is the office and not the name — so the form stands bare. The entry has him Symeon's son, who made the Bulgarian church independent of Constantinople and died in 976."
     }
   ],
   "sex": "male",
@@ -65,8 +70,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.02.2026 (30. јануар ст. ст.) — „Свети Петар, цар бугарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Феофил Новый, Константинопольский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Феофил Новый, Константинопольский, мч.», with the rank words left off."
+    },
+    {
+      "form": "Теофил Нови",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 30. јануар ст. ст. (civil 2026-02-12), „Свети мученик Теофил Нови“. The words „Свети мученик“ are left off: the site composes the rank itself. „Нови“ is kept, being what distinguishes him; the entry has him a general under Constantine and Irene, beheaded in 784."
     }
   ],
   "sex": "male",
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.02.2026 (30. јануар ст. ст.) — „Свети мученик Теофил Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

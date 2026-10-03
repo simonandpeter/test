@@ -96,7 +96,8 @@
       "feast": {
         "day": 1,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Ohrid Prologue keeps him again on 30. јануар ст. ст. (civil 2026-02-12, https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-12&prolog=1, read 3 October 2026), under the joint heading „Света Три Јерарха“, whose own text names the three and gives each his own January day — „Василије 1. јануар, Григорије 25. јануар и Златоуст 27. јануар“. The corpus keeps one feast to a church, so he renders on 1 January only."
       },
       "source": {
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.01.2026 (1. јануар ст. ст.) — „Св. Василије Велики архиеп. Кесаријски.“",
