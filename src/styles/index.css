@@ -1017,6 +1017,16 @@ html.is-rolling #view {
   background: var(--gesso);
 }
 
+/* Stuck and folded, the band below the row is a transparent window the
+   register scrolls through — the filters have gone up behind the row and the
+   height they occupied is *reserved*, not filled. A ground across the whole
+   block paints that reserve, and on a phone, where the band is most of the
+   block, it reads as a blank slab under the search field. The row keeps its
+   own ground; the open panel draws its own. */
+.index-controls.is-stuck:not(.is-filters-open) {
+  background: none;
+}
+
 /* The ground belongs to the search row, which is the part that is actually a
    bar: over scrolling text a transparent one is unreadable the moment a line
    passes under it.

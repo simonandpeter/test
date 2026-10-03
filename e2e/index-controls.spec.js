@@ -1579,6 +1579,40 @@ test('the stuck bar keeps its own hairline, which is a different claim', async (
 });
 
 
+test('the folded band is a window, and the open panel is not', async ({ page }) => {
+  /*
+   * Author, 2026-10-04, with a phone screenshot: a blank slab under the search
+   * field. The band keeps the folded filters' height whether they are shown or
+   * not, so a ground painted across the whole block paints that reserve, and on
+   * a phone the reserve is most of the block.
+   *
+   * Both halves are the claim. The register has to read through the band when
+   * the filters are away, and must not read through the chips when they are
+   * there - the first is what the author saw, the second is what the ground was
+   * added for, and a fix that only satisfies one of them puts the other back.
+   */
+  await ready(page);
+  await page.setViewportSize({ width: 360, height: 760 });
+  await page.goto(INDEX, { waitUntil: 'networkidle' });
+
+  const alpha = (sel) =>
+    page.evaluate((s) => {
+      const c = getComputedStyle(document.querySelector(s)).backgroundColor;
+      const n = c.match(/[\d.]+/g) ?? [];
+      return c === 'transparent' || n.length < 4 ? (c === 'transparent' ? 0 : 1) : Number(n[3]);
+    }, sel);
+
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.locator('.index-controls.is-stuck').count()).toBe(1);
+  expect(await alpha('.index-controls')).toBe(0);
+  expect(await alpha('.index-row')).toBe(1);
+
+  await page.evaluate(() => document.querySelector('.search-field').focus());
+  await expect.poll(() => page.locator('.index-controls.is-filters-open').count()).toBe(1);
+  await page.waitForTimeout(400);
+  expect(await alpha('.filter-drop-inner')).toBe(1);
+});
+
 test('the open filter panel draws its ground past the chips, and costs no height', async ({ page }) => {
   /*
    * Author, 2026-08-27: "there is no margin to the background of the filter
