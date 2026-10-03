@@ -1,0 +1,11 @@
+# Ambrose (Astakhov)
+
+He was Alexei Anikeevich Astakhov in the world, born in 1860 in the village of Borisovka in the Lebedyan district of Tambov province, in a peasant family. He lived in a monastery until 1925, and after it was closed in various villages of the Moscow region, among them Aksinyino in the Krasnogorsk district, and gave spiritual care to the nuns and novices of the Golovinsky convent. He was an archimandrite. He was arrested on 29 September 1937 with [Demetrius (Dobroserdov)](/saints/demetrius-dobroserdov), archbishop of Mozhaysk, and seven others.
+
+Unlike most of the eight, he answered the investigator's questions by agreeing with them. Asked who visited him at his flat and why, he said his admirers came to him for advice of various kinds, and that the advice he gave was only about family life. Asked to confirm that he worked on his admirers in an anti-Soviet spirit, he said: yes, I did indeed say that the Soviet power persecutes religion and the clergy, and that the Soviet power is the power of antichrist sent as a punishment to the people for their sins.
+
+Asked to set out his views on the Soviet power, he said he was hostile to it, that it destroys churches and exiles wholly innocent clergy and faithful, that by conviction he was a monarchist and regarded the Soviet power as a passing thing — and that the people in Russia who in their foolishness overthrew the Tsar were now repenting of it, because they saw a great deal of injustice from the Soviet power that there had not been under the Tsar.
+
+The NKVD troika sentenced the company to be shot on 17 October 1937, and on 21 October he was shot at the Butovo range outside Moscow and buried in a common unmarked grave. He was numbered among the new martyrs and confessors of Russia at the Jubilee Council of Bishops in August 2000. The site's own two pages disagree about his rank — the day line calls him a venerable-martyr and his index entry a hieromartyr — and this folder records the disagreement rather than settling it.
+
+*After the Russian church calendar's [8 October](https://days.pravoslavie.ru/Days/20261008.html), [its index entry for him](https://days.pravoslavie.ru/name/9164.html) and [the life of the company it reaches](https://days.pravoslavie.ru/Life/life4798.htm); read 4 October 2026.*

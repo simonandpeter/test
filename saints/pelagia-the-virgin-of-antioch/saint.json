@@ -6,6 +6,11 @@
       "form": "Πελαγία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Οκτωβρίου, «Αγία Πελαγία η Παρθένος», with the rank word left off. The page glosses the name from πέλαγος, the open sea."
+    },
+    {
+      "form": "Пелагия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2642, headed «Пелагия Антиохийская, дева, мч.», with the office and the rank word left off."
     }
   ],
   "sex": "female",
@@ -15,10 +20,10 @@
   "dates": {
     "death": {
       "earliest": 284,
-      "latest": 284,
-      "display": "284",
+      "latest": 303,
+      "display": "284 or 303",
       "basis": "traditional",
-      "note": "saint.gr's head line: «Αγια Πελαγια η Παρθενος (; - 284)», with «στα χρόνια του βασιλιά Νουμεριανού 282 - 284 μ.Χ.» in the life"
+      "note": "Two calendars give two years and neither is preferred. saint.gr's head line is «Αγια Πελαγια η Παρθενος (; - 284)» with «στα χρόνια του βασιλιά Νουμεριανού 282 - 284 μ.Χ.» in the life; days.pravoslavie.ru's day line prints «Св. Пелагии девы (303)». The interval spans both."
     }
   },
   "related": [
@@ -28,8 +33,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 8 октября ст. ст. — «Св. Пелагии девы (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261008.html",
+        "year": 2026,
+        "note": "No rank is read onto her. Her line is in the day's second paragraph, which carries no icon; the day's one icon is the plain one and it stands before the first line of the day, which is the other Pelagia's. The line marks her «Св.», holy, rather than «Мц.», martyr, where her index page heads her «Пелагия Антиохийская, дева, мч.» — the day line and the index differ on that word."
+      },
+      "note": "The Russian prints 303 where saint.gr prints 284 and sets her under Numerian, 282–284, and the folder's death interval now carries both. Her name page keeps this one day, carries no life, and sends the reader to an article on pravoslavie.ru instead; what that article says of her is in the life."
     },
     {
       "church": "romanian",

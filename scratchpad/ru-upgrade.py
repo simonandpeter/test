@@ -19,6 +19,7 @@ Keys the data file may carry per slug:
   dates            a whole replacement `dates` object
   hymns_add        hymn objects to append
   related_add      slugs to union into `related`
+  set              top-level fields to replace outright (`office`, `types`, …)
   life_paragraphs  paragraphs inserted before the life's closing source line
   source_line      the life's new closing source line
 """
@@ -55,6 +56,10 @@ for slug, up in data.items():
             continue
         d.setdefault('names', []).append(n)
         changed.append('name %s/%s' % (n['lang'], n['form']))
+
+    for key, value in up.get('set', {}).items():
+        changed.append('%s %s -> %s' % (key, json.dumps(d.get(key), ensure_ascii=False), json.dumps(value, ensure_ascii=False)))
+        d[key] = value
 
     if 'dates' in up:
         changed.append('dates %s -> %s' % (json.dumps(d.get('dates'), ensure_ascii=False)[:40], json.dumps(up['dates'], ensure_ascii=False)[:40]))

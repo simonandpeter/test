@@ -764,6 +764,7 @@ export const el = {
     'Archbishop of Larissa': 'Αρχιεπίσκοπος Λαρίσης',
     'Archbishop of Lacedaemonia': 'Αρχιεπίσκοπος Λακεδαιμονίας',
     'Archbishop of Myra in Lycia': 'Αρχιεπίσκοπος Μύρων της Λυκίας',
+    'Archbishop of Mozhaysk': 'Αρχιεπίσκοπος Μοζάισκ',
     'Archbishop of Neocaesarea': 'Αρχιεπίσκοπος Νεοκαισαρείας',
     'Archbishop of Novgorod': 'Αρχιεπίσκοπος Νόβγκοροντ',
     'Archbishop of Novgorod, Wonderworker': 'Αρχιεπίσκοπος Νόβγκοροντ, θαυματουργός',

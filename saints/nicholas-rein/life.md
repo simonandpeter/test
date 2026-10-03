@@ -1,0 +1,11 @@
+# Nicholas (Rein)
+
+He was born on 21 January 1892 in the village of Sosnovka in the Morshansk district of Tambov province, the son of Alexander Rein, a hereditary honorary citizen. His father had been born a Prussian subject and had come to Russia as the manager of an estate, and took Russian citizenship in 1903. Nicholas finished the Kreiman gymnasium in 1911 and an agricultural institute in 1918. From 1920 to 1930 he was a research worker at the Timiryazev academy in Moscow, and from then until the day of his arrest at the institute of vegetable farming. During the persecution of the Church he took the Athonite hieromonk Hilarion (Gromov) into his house and supported him with money.
+
+The life quotes three of his answers. Asked to confirm that he had spread provocative rumours among the faithful of a persecution of religion in the USSR, he said he did not deny that he might have spoken of an existing persecution of religion, but that he had spread no provocative rumours. Asked whether secret services had been held at his flat and at those of parishioners he knew, he said that there had been no secret services there, and that he did not deny that services were held at his flat and at his acquaintances' — but that this was in connection with carrying out religious rites, funerals, festal services of intercession and the like.
+
+Asked for his convictions and his views on the Soviet power, he said: I consider the Soviet power the lawful power, but it does not reckon with the outlook of believers; it fights religion and the Church as counter-revolutionary organisations. He is the one of the eight the calendar's own line calls simply a martyr.
+
+He was arrested on 29 September 1937 with [Demetrius (Dobroserdov)](/saints/demetrius-dobroserdov), archbishop of Mozhaysk, and seven others. The NKVD troika sentenced them on 17 October 1937, and on 21 October he was shot at the Butovo range outside Moscow and buried in a common unmarked grave. He was numbered among the new martyrs and confessors of Russia at the Jubilee Council of Bishops in August 2000.
+
+*After the Russian church calendar's [8 October](https://days.pravoslavie.ru/Days/20261008.html), [its index entry for him](https://days.pravoslavie.ru/name/10007.html) and [the life of the company it reaches](https://days.pravoslavie.ru/Life/life4798.htm); read 4 October 2026.*
