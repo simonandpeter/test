@@ -16,6 +16,11 @@
       "form": "Маркиан Константинопольский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Маркиан Константинопольский, пресвитер», with the rank word left off."
+    },
+    {
+      "form": "Маркијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 10. јануар ст. ст. (civil 2026-01-23), „Свети Маркијан“. The word „Свети“ is left off."
     }
   ],
   "sex": "male",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.01.2026 (10. јануар ст. ст.) — „Свети Маркијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

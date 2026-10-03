@@ -11,6 +11,11 @@
       "form": "Αμμώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Αμμώνιος», with the rank word left off."
+    },
+    {
+      "form": "Амон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 10. јануар ст. ст. (civil 2026-01-23), „Преподобни Амон“. The rank word „Преподобни“ is left off: the site composes the rank itself."
     }
   ],
   "related": [
@@ -44,8 +49,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.01.2026 (10. јануар ст. ст.) — „Преподобни Амон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

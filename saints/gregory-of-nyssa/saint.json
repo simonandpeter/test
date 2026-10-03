@@ -17,6 +17,11 @@
       "form": "Григорий Нисский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Святитель Григорий Нисский, епископ», with the rank words left off."
+    },
+    {
+      "form": "Григорије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 10. јануар ст. ст. (civil 2026-01-23), „Свети Григорије епископ ниски“. The word „Свети“ and the see „епископ ниски“ are left off; the folder already keeps the see in `office`."
     }
   ],
   "sex": "male",
@@ -87,8 +92,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.01.2026 (10. јануар ст. ст.) — „Свети Григорије епископ ниски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-23&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
