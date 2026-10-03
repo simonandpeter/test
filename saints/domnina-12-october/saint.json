@@ -10,13 +10,29 @@
       "form": "Δομνίνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Αγία Δομνίνη», with the rank word left off."
+    },
+    {
+      "form": "Домника (Домнина) Аназаровская (Киликийская)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2452, «Домника (Домнина) Аназаровская (Киликийская), мц.», with the rank word left off. It carries both Russian forms of the name and both epithets; the day line and the life head her «Домника» alone."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Мц. Домники (286).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both are the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all; each stands immediately before one great line of the first paragraph — the Tarsus martyrs, and Cosmas of Maiuma — and neither reaches a later line."
+      },
+      "note": "The Russian agrees with the Greek on the day, the year and the magistrate — «по приказу правителя Лисия», by order of the ruler Lysias — and adds two things the Greek notice does not have: the country, «Жила Домника в Киликийской области», and how she died, thrown into prison after the beatings and the burning and dying there rather than under the torture itself. Its index page is the only place either church names Anazarbus, and it is the Russian that gives her the second form of her name."
     },
     {
       "church": "romanian",
@@ -50,7 +66,7 @@
       "latest": 286,
       "display": "286",
       "basis": "traditional",
-      "note": "saint.gr: «Η Αγία Δομνίνα αξιώθηκε τον μαρτυρικό θάνατο επί Διοκλητιανού (286 μ.Χ.)», and its page head gives her as «Αγια Δομνινη (; - 286)»."
+      "note": "saint.gr: «Η Αγία Δομνίνα αξιώθηκε τον μαρτυρικό θάνατο επί Διοκλητιανού (286 μ.Χ.)», and its page head gives her as «Αγια Δομνινη (; - 286)». days.pravoslavie.ru prints the same year twice, on the day line «Мц. Домники (286)» and in its life, «Святая мученица Домника пострадала за исповедание христианства в 286 году»."
     }
   },
   "text": {

@@ -743,6 +743,7 @@ export const ru = {
     'Abbot of the Pskov Caves monastery': 'Игумен Псково-Печерского монастыря',
     'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Игумен Ильинского скита на Афоне',
     'Abbot of the Studion': 'Игумен Студийский',
+    'Abbot of the Glushitsa monastery': 'Игумен Глушицкого монастыря',
     'Abbot of the monastery of Augarus': 'Игумен монастыря Авгара',
     'Abbot of the St Simeon Monastery': 'Игумен монастыря святого Симеона',
     'Abbot of the monastery of Makhrishche': 'Игумен Махрищского монастыря',

@@ -725,6 +725,7 @@ export const el = {
     'Abbot of the Pskov Caves monastery': 'Ηγούμενος της μονής των Σπηλαίων του Πσκοφ',
     'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Ηγούμενος της Σκήτης του Προφήτη Ηλία στο Άγιον Όρος',
     'Abbot of the Studion': 'Ηγούμενος των Στουδίου',
+    'Abbot of the Glushitsa monastery': 'Ηγούμενος της μονής Γκλουσίτσα',
     'Abbot of the monastery of Augarus': 'Ηγούμενος της Μονής Αυγάρου',
     'Abbot of the St Simeon Monastery': 'Ηγούμενος της Μονής Αγίου Συμεών',
     'Abbot of the monastery of Makhrishche': 'Ηγούμενος της μονής Μαχρίστσε',

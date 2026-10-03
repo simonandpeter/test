@@ -23,8 +23,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Прп. Космы, еп. Маиумского, творца канонов (ок. 787).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon of the same kind stands before the Tarsus martyrs and does not reach this line."
+      },
+      "note": "The Russian keeps him on 12 October, the day the Romanian keeps him on, and the Greek keeps him on 14 October — the disagreement the folder already carried, now with a second church on the Romanian's side. Its life agrees with saint.gr on the schooling in the house of John of Damascus's parents and on the year of the consecration, 743, and names what he left: canons for the feast days and the triodia for four days of Holy Week. It is the one source that says the two of them wrote against the iconoclasts rather than only for the icons."
     },
     {
       "church": "romanian",
@@ -93,18 +105,48 @@
         "rendered": "site"
       },
       "tone": "Ἦχος πλ. δ’."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ архиереов богодухновенное удобрение,/ Космо премудре,/ ученьми твоими вся просветил еси, цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Тропарь преподобного Космы»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "It names him, «Космо премудре», where the troparion doxologia.ro prints under him is the common of a hierarch with the name changed."
+      },
+      "english": {
+        "text": "O teacher of Orthodoxy, instructor in piety and in purity, lamp of the whole world, God-inspired adornment of bishops: most wise Cosmas, by thy teachings thou hast enlightened all, O spiritual harp. Entreat Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Украшен добродетельми, Космо богодухновенне,/ Церкве Христовы украшение был еси:/ песньми бо украсил еси сию, блаженне./ Но молися ко Господу избавитися нам от всяких козней ратника, тебе зовущим:// радуйся, отче требогате.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Кондак преподобного Космы»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with virtues, O God-inspired Cosmas, thou wast the adornment of the Church of Christ, for thou didst adorn her with hymns, O blessed one. Pray then to the Lord that we who cry to thee be delivered from all the snares of the adversary: rejoice, O father rich in God.",
+        "rendered": "site"
+      }
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "dates": {
     "death": {
       "earliest": 787,
       "latest": 787,
       "display": "787",
       "basis": "traditional",
-      "note": "saint.gr's page head: «Αγιος Κοσμας ο Μελωδος Επισκοπος Μαϊουμα (; - 787)». The page gives no year for his birth."
+      "note": "saint.gr's page head: «Αγιος Κοσμας ο Μελωδος Επισκοπος Μαϊουμα (; - 787)». The page gives no year for his birth. days.pravoslavie.ru prints the same year twice with «ок.» in front of it — «Прп. Космы, еп. Маиумского, творца канонов (ок. 787)» on the day line and «Преставился он в глубокой старости (+ ок. 787)» at the end of its life — where saint.gr's heading gives it bare. The bound is left at the year both print."
     }
   },
   "images": [
@@ -115,5 +157,8 @@
   ],
   "related": [
     "john-of-damascus"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

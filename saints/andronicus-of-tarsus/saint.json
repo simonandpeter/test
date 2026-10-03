@@ -24,8 +24,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Мчч. Прова, Тараха и Андроника (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's other icon of the same kind stands before Cosmas of Maiuma and does not reach this line."
+      },
+      "note": "The Russian keeps the three on the same day as the Greek and the Romanian and gives the year neither of them gives, 304. Its life says nothing of him by himself — the answers in it belong to Tarachus and to Probus — so what it adds to this folder is the year, the place and the rank of the service."
     },
     {
       "church": "romanian",
@@ -112,8 +124,34 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Троицы нам славу явиша,/ доблии Христовы оружницы и мученицы,/ с Тарахом Пров же и Андроник:/ обличиша бо все мучителей безбожие,// верою доблественне страдальчествовавше.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Кондак мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "The day prints a troparion of martyrs above it, «Святых мученик исправлением», which names nobody and is the common; this kontakion names all three and is recorded for that reason."
+      },
+      "english": {
+        "text": "They made the glory of the Trinity known to us, the valiant men-at-arms and martyrs of Christ, Probus and Andronicus with Tarachus, for they laid bare the whole godlessness of their tormentors, having borne their contest valiantly in faith.",
+        "rendered": "site"
+      }
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after the three names, «Мчч. Прова, Тараха и Андроника (304)», and the year its life for the three opens with: «Святые мученики Пров, Тарах и Андроник пострадали за Христа в 304 году в городе Тарсе Киликийском». Neither doxologia.ro nor saint.gr gives a year; both say only that it was the persecution under Diocletian."
+    }
+  },
   "text": {
     "life": "life.md"
   }

@@ -15,19 +15,37 @@
     "wonderworker"
   ],
   "dates": {
-    "floruit": {
-      "earliest": 301,
-      "latest": 400,
-      "display": "4th century",
+    "birth": {
+      "earliest": 316,
+      "latest": 316,
+      "display": "316",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Μαρτίνος έζησε τον 4ο αιώνα μ.Χ. και καταγόταν από τη Σαβωρία της Παννονίας», and it says he died aged 81 at the village of Candes. The same page then gives another synaxaristic source whose account makes him a count and general under Trajan (98 - 117) and bishop of a city it calls Konstantinos of Gaul; that reading is two centuries off this one and is recorded in the attestation's note rather than in these dates."
+      "note": "days.pravoslavie.ru's life opens «Святитель Мартин Милостивый, епископ Турский, (316–397) родился в начале IV века в Паннонии». saint.gr gives no year of birth at all: «Ο Όσιος Μαρτίνος έζησε τον 4ο αιώνα μ.Χ. και καταγόταν από τη Σαβωρία της Παννονίας», and has him die aged eighty-one."
+    },
+    "death": {
+      "earliest": 397,
+      "latest": 400,
+      "display": "397 or about 400",
+      "basis": "traditional",
+      "note": "One page disagreeing with itself is read exactly as two churches disagreeing are, and days.pravoslavie.ru disagrees with itself here. Its life heads him «(316–397)» and says two thousand monks came to his funeral «в 397 году»; its own day line for 12 October prints «Свт. Мартина Милостивого, еп. Турского (ок. 400)». Nothing chooses between them, so the interval carries both. saint.gr gives no year and a second account two centuries off this one, recorded in the Greek row."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Свт. Мартина Милостивого, еп. Турского (ок. 400).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both are the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all; each stands immediately before one great line of the first paragraph — the Tarsus martyrs, and Cosmas of Maiuma — and neither reaches a later line."
+      },
+      "note": "The Russian keeps him a month before the Greek does — 12 October against 12 November — and tells the Western life rather than the synaxaristic one: Pannonia and a non-Christian father who insisted on the army, the cloak divided in winter, Ligugé near Poitiers and then Marmoutier with its Egyptian rule, the see of Tours taken by a ruse, the death at Candes above the meeting of the Vienne and the Loire and the body carried off upriver by the people of Tours. It names Sulpicius Severus as his contemporary biographer, and it gives him the two years the Greek page lacks, before contradicting the second of them on its own day line."
     },
     {
       "church": "romanian",
@@ -57,5 +75,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "anthony-the-great"
+  ]
 }

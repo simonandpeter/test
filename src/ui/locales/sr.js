@@ -725,6 +725,7 @@ export const sr = {
     'Abbot of the Pskov Caves monastery': 'Игуман Псковопечерског манастира',
     'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Игуман Илијинског скита на Атосу',
     'Abbot of the Studion': 'Игуман студитски',
+    'Abbot of the Glushitsa monastery': 'Игуман глушичког манастира',
     'Abbot of the monastery of Augarus': 'Игуман манастира Авгара',
     'Abbot of the St Simeon Monastery': 'Игуман манастира светог Симеона',
     'Abbot of the monastery of Makhrishche': 'Игуман махришког манастира',

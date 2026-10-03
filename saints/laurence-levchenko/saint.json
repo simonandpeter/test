@@ -1,0 +1,62 @@
+{
+  "slug": "laurence-levchenko",
+  "display_name": "Laurence (Levchenko)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Лаврентий (Левченко)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14430, «Лаврентий (Левченко), прмч.», with the rank word left off. The day line gives the forename only."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Прмч. Лаврентия (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Прмч. Лаврентия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "No rank is read onto him. Both of the day's icons are the plain service and both stand in its first paragraph; his line is in the third and carries none."
+      },
+      "note": "«Прмч.» is the mark of a venerable martyr — a monk killed for the faith — which is the whole of what either page says about his life before 1937: no birth, no monastery, no office, no charge, no place of death, and no life page."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's 25 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/25 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 25 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

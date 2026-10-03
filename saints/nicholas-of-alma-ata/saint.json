@@ -19,16 +19,18 @@
       "church": "russian",
       "status": "venerated",
       "feast": {
-        "day": 26,
-        "month": 8,
+        "day": 12,
+        "month": 10,
         "calendar": "julian",
-        "note": "The finding of his relics in 2000, as the Russian calendar keeps it."
+        "note": "His repose. The Russian calendar's index of names gives him two days besides: «26 августа (обретение мощей)», the finding of his relics in 2000, which this row cited before the 12 October page was read, and «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so both are recorded here and he does not render on either."
       },
       "source": {
-        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 августа ст. ст. — «Обретение мощей свт. Николая исп., митр. Алма- Атинского (2000)»",
-        "url": "https://days.pravoslavie.ru/Days/20260826.html",
-        "year": 2026
-      }
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 октября ст. ст. — «Свт. Николая исп. митр. Алма-Атинского (1955).»",
+        "url": "https://days.pravoslavie.ru/Days/20261012.html",
+        "year": 2026,
+        "note": "The 26 August line reads ««Обретение мощей свт. Николая исп., митр. Алма- Атинского (2000)»» (https://days.pravoslavie.ru/Days/20260826.html). No rank is read onto him: both of the 12 October icons are the plain service and stand in that day's first paragraph, and his line is in the third."
+      },
+      "note": "The repose, which is the day his index page prints bare. The year on it, 1955, is the year the folder already held from azbyka.ru, and the Sretensky calendar adds nothing to the life — it carries none for him, only the line and the three days."
     },
     {
       "church": "romanian",
@@ -46,9 +48,6 @@
       "note": "Not on the Православни подсетник’s calendar line for 08.09.2026 (26. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "dates": {
     "death": {
       "earliest": 1955,
@@ -67,5 +66,8 @@
   },
   "related": [
     "theodosius-of-chernigov"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

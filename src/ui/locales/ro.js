@@ -724,6 +724,7 @@ export const ro = {
     'Abbot of the Pskov Caves monastery': 'Egumen al mănăstirii Peșterilor din Pskov',
     'Abbot of the Skete of the Prophet Elias on Mount Athos': 'Egumen al Schitului Prorocul Ilie din Athos',
     'Abbot of the Studion': 'Egumen al Studionului',
+    'Abbot of the Glushitsa monastery': 'Egumen al mănăstirii Glușița',
     'Abbot of the monastery of Augarus': 'Egumen al Mănăstirii Augarus',
     'Abbot of the St Simeon Monastery': 'Egumen al Mănăstirii Sfântul Simeon',
     'Abbot of the monastery of Makhrishche': 'Egumen al mănăstirii Mahrișce',
