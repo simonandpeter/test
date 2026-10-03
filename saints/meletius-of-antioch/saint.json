@@ -24,6 +24,12 @@
     "archbishop"
   ],
   "office": "Archbishop of Antioch the Great",
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "babylas-of-antioch",
     "basil-the-great",
