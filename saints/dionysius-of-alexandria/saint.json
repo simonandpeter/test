@@ -6,6 +6,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»."
+    },
+    {
+      "form": "Дионисий Александрийский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 617 heads him «Святитель Дионисий Александрийский, епископ, исповедник»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -16,17 +21,29 @@
   "dates": {
     "death": {
       "earliest": 254,
-      "latest": 254,
-      "display": "254",
-      "basis": "attested",
-      "note": "saint.gr: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died."
+      "latest": 265,
+      "display": "254, or 264–265",
+      "basis": "traditional",
+      "note": "Two sources and a decade between them, recorded as the disagreement rather than resolved: saint.gr has him martyred in the reign of Valerian and gives 254, and days.pravoslavie.ru's 5 октября ст. ст. gives «(264-265)»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Read and not found: days.pravoslavie.ru's 3 октября ст. ст. (civil 16 October 2026) was read on 2026-10-04 and does not name him. His company is not absent from the Russian calendar, only from that day: four of them — Gaius, Faustus, Eusebius and Chaeremon — are kept on the Russian 4 October, read the same day. This stands undocumented rather than as a refusal, and whoever finds his own Russian day should look near the 4th."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Russian keeps him on 5 October where the Greek keeps him on 3 October, and keeps four of his company on the 4th — Gaius, Faustus, Eusebius and Chaeremon. Three Russian days were read for him before this one was found."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Сщмч. Дионисия, еп. Александрийского (264-265).»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "No rank is recorded. The one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line, and reading a polyeleos off it for the lines that follow would be an inference rather than the source's statement."
+      },
+      "note": "**Two disagreements, both kept.** saint.gr has him martyred under Valerian and gives 254; the Russian gives «(264-265)», ten years later, and the death interval now spans both. And saint.gr makes him a hieromartyr where the Russian index of names heads him «Святитель Дионисий Александрийский, епископ, исповедник» — a confessor, which is to say it does not have him die for the faith at all. The folder keeps the Greek reading in its types and records the Russian one here."
     },
     {
       "church": "romanian",

@@ -1,0 +1,61 @@
+{
+  "slug": "charitina-of-lithuania",
+  "display_name": "Charitina of Lithuania",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Харитина, княжна Литовская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2748, «Преподобная Харитина, княжна Литовская», with the rank left off. The title is kept in the form because the same day prints a second Charitina, the martyr of Amisus."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1281,
+      "latest": 1281,
+      "display": "1281",
+      "basis": "attested",
+      "note": "Her life on days.pravoslavie.ru: «Почила она в 1281 году и похоронена в монастырском Петропавловском храме», and the day line prints «(1281)» after her name."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Прп. Харитины, кн. Литовской, в Новгороде подвизавшейся (1281).»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "Her name page gives this as her only day. No rank is recorded: the one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 18 octombrie was not read for her (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/18 was not read for her (2026-10-04). The Greek keeps a Charitina on this menologion day, but that is the martyr of Amisus who died in 304, a different woman a thousand years earlier."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 18 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

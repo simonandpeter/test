@@ -1,6 +1,7 @@
 {
   "slug": "gregory-khandzteli",
   "display_name": "Gregory Khandzteli",
+  "office": "Archimandrite",
   "names": [
     {
       "form": "Γρηγορίος του Χαντζτέλι",
@@ -11,6 +12,11 @@
       "form": "Grigorie Khandzteli",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Grigorie Khandzteli din Georgia” for 6 octombrie."
+    },
+    {
+      "form": "Григорий Хандзтийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 550, «Григорий Хандзтийский (Грузинский), архимандрит», with the office word left off and the parenthesised second epithet left to this note. Its day line spells the epithet differently again, «Григория Хандзойского»."
     }
   ],
   "sex": "male",
@@ -30,15 +36,26 @@
       "earliest": 861,
       "latest": 861,
       "display": "861",
-      "basis": "attested",
-      "note": "doxologia.ro: «Era ziua de 6 octombrie a anului 861», when he had passed 102 years. saint.gr prints no year."
+      "basis": "traditional",
+      "note": "The year the Russian calendar prints after his name, «Прп. Григория Хандзойского (861)». The folder carried a birth year of 759 from doxologia.ro and no death date, so this is the reading that makes him a centenarian and it is the source's, not an inference."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 6 октября ст. ст. (civil 19 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Прп. Григория Хандзойского (861) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261005.html",
+        "year": 2026,
+        "note": "No rank is recorded. The one icon on the day above the plain service, «Совершается служба с полиелеем», stands before the synaxis of the hierarchs of Moscow and not before this line, and reading a polyeleos off it for the lines that follow would be an inference rather than the source's statement."
+      },
+      "note": "The «(Груз.)» marks this as one of the Georgian commemorations the Russian calendar keeps. It gives the year of death the folder had none for, 861, which against doxologia.ro's birth year of 759 makes him a hundred and two. The Russian index of names also gives the office the Romanian page does not: «Григорий Хандзтийский (Грузинский), архимандрит», an archimandrite."
     },
     {
       "church": "romanian",

@@ -17,7 +17,7 @@
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 5 октября ст. ст. (civil 18 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 5 октября ст. ст. (civil 18 October 2026) was read on 2026-10-04. It does keep a Hermogenes on the day — but that is Hermogenes, patriarch of Moscow, inside the synaxis of the hierarchs of Moscow, and not this one. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -44,6 +44,13 @@
       "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17)."
     }
   ],
+  "related": [
+    "barnabas-of-peristerona",
+    "hilarion-of-peristerona"
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "greek",
@@ -79,12 +86,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "related": [
-    "barnabas-of-peristerona",
-    "hilarion-of-peristerona"
   ]
 }
