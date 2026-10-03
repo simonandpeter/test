@@ -12,6 +12,12 @@
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος», with the rank words left off."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "tiburtius-brother-of-valerian",
     "cecilia-of-rome"

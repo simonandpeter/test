@@ -123,5 +123,11 @@
       "basis": "traditional",
       "note": "saint.gr's heading for him, «Αγιος Σταχυς ο Αποστολος Απο Τους Εβδομηκοντα (; - 54)». The notice adds only that he spent sixteen years in the apostolic preaching and gives no year of birth."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

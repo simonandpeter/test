@@ -17,6 +17,12 @@
   "types": [
     "martyr"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "agathopus-of-the-ten-of-crete",
     "basilides-of-the-ten-of-crete",

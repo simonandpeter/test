@@ -21,6 +21,12 @@
       "note": "saint.gr: «Οι Άγιοι αυτοί Πατέρες ζούσαν μέσα στις σπηλιές του όρους Σινά την αγία μοναχική ζωή (κατά τον 5ο αιώνα μ.Χ.)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "fathers-slain-at-raithu",
     "joseph-analytinus-of-raithu"
