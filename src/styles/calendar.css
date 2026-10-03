@@ -2596,6 +2596,15 @@
   text-decoration: none;
 }
 
+/* The century rides inside the name's own link, so it would otherwise take the
+   serif and the name's size along with it. */
+.reg-card .reg-century {
+  color: var(--ink-soft);
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  white-space: nowrap;
+}
+
 .reg-card .reg-sub {
   color: var(--ink-soft);
   white-space: nowrap;

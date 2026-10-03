@@ -311,3 +311,42 @@ typed. `STRUCTURE.md` §4 carries both rules now.
 
 The test the item listed as failing by design was repaired in `a647a875`; the
 full `daily-panel.spec.js` is green.
+
+## 15. A second pass for picture quality, not picture presence
+
+The first programme asked one question — does this saint have a picture — and
+`heroless.mjs` counts the answer. Nothing has ever asked whether the picture is
+a *good* one, so the corpus holds engravings thresholded to pure black and white
+beside full-colour miniatures, and the first is what a reader meets on the Daily
+page.
+
+Dionysius the Areopagite is the case the author raised (2026-10-03). The icon
+`geticon.py` had taken was a 1-bit engraving; the Menologion of Basil II
+miniature that Commons also holds — `File:Menologion of Basil 025.jpg`, public
+domain, the Vatican manuscript — is gold-ground colour at 1084x747. Both were
+available the whole time. The sourcing script took the first identifiable file
+and stopped, because that is all it was asked for.
+
+So this pass is a re-sourcing, not a filling:
+
+- **Rank what is already held.** Colour against bichrome, pixel dimensions
+  against the 1000px hero width, a manuscript or panel photograph against a line
+  engraving. The output is a worklist ordered by how much a reader would gain,
+  not an alphabetical sweep.
+- **Ask Commons for the alternatives.** A saint's category there usually holds
+  several files; `geticon.py` currently takes one by name and never looks at the
+  rest. The known failure mode is unchanged and still governs: a wrong-saint
+  match is invisible to every test (`b6dc41ab`, an "Arsenios the Wonderworker"
+  icon that was Arsenios of Cappadocia), so a replacement needs its own identity
+  evidence in `why` and is refused without one.
+- **Replacement has to be deliberate.** `geticon.py:117` skips any folder that
+  already has `images/icon.jpg`, which is right for a filling pass and wrong for
+  this one. Whatever lifts that guard must keep the old file until the new one
+  is written and checked, never the other way round.
+- **Licence rules do not relax.** Commons' own `imageinfo` is still the only
+  source of the licence, and anything not PD or CC is still refused here rather
+  than warned about later.
+
+Dionysius is done and is the shape of the rest: the old icon is parked at
+`scratchpad/old-dionysius/` rather than deleted, because nothing yet proves the
+new one is better for every face it has to fill.

@@ -1,4 +1,4 @@
-import { formatSubtext, todayIso } from '../../lib/calendar-page.js';
+import { centuryLabel, formatSubtext, todayIso } from '../../lib/calendar-page.js';
 import { attestationsIn, churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail, loadSource } from '../../lib/detail.js';
 import { dayHero, fixedFeastOn } from '../../lib/fixed-feasts.js';
@@ -381,9 +381,22 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
    */
   const href = state.router.href(`/saints/${saint.slug}`);
   const name = esc(saintName(saint));
+  /*
+   * **The phone trades the dates line for a century on the name** (author,
+   * 2026-10-03: "remove the date under each Also Commemorated saint ... instead,
+   * at the end of their name, add in grey text the century"). `chosen === null`
+   * is this panel's name for below 1024 px, and the panel repaints when that
+   * boundary is crossed, so the two faces never share a render.
+   *
+   * It stays out of the link text: a screen reader reading the row still gets
+   * `.reg-sub`'s full lifespan, which is the sr-only line below, so the century
+   * is the sighted reader's shorthand and not the only record of when.
+   */
+  const century = chosen === null ? centuryLabel(saint.dates) : null;
+  const centuryEl = century ? ` <span class="reg-century">${esc(century)}</span>` : '';
   const nameEl =
     chosen === null
-      ? `<a class="reg-name" href="${href}" data-prefetch="${saint.slug}"${transition}>${name}</a>`
+      ? `<a class="reg-name" href="${href}" data-prefetch="${saint.slug}"${transition}>${name}${centuryEl}</a>`
       : `<button type="button" class="reg-name" data-prefetch="${saint.slug}"${transition}>${name}</button>`;
   return `<li class="reg-card${picked ? ' is-picked' : ''}" style="--reg-seq:${seq}"${picks}>
     <span class="reg-body">
@@ -396,7 +409,7 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
              titles are data and the corpus grows; the register is where a
              church's own title for the day belongs when one arrives. */ ''}
       ${title ? `<span class="reg-title">${esc(title)}</span>` : ''}
-      <span class="reg-sub utility">${esc(subtext)}</span>${spoken}
+      <span class="reg-sub utility${chosen === null ? ' sr-only' : ''}">${esc(subtext)}</span>${spoken}
       <!--
         **One line of who they were**:
         "the register says who else is commemorated; this makes it say who they

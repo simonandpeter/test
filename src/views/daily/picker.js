@@ -168,7 +168,10 @@ const fastTone = (iso) => {
 
 const dayMarks = (iso) => {
   const tone = fastTone(iso);
-  const feast = Boolean(dayRecordFor(iso, state.calendar)?.hymns?.length);
+  // Every Sunday carries resurrection hymns, so a mark drawn on hymns alone
+  // lands on all of them and stops telling the reader anything about the day.
+  const feast =
+    utc(iso).getUTCDay() !== 0 && Boolean(dayRecordFor(iso, state.calendar)?.hymns?.length);
   const marks = [];
   const words = [];
   const D = STRINGS.calendar.marks;
