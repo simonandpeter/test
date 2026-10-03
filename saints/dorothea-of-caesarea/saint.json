@@ -40,8 +40,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „3. Света мученица Доротеја. Угледна и красна девица из Кесарије Кападокијске. Управник области Саприкије дадне Доротеју двема незнабожачким сестрама, Христини и Калисти, да би је оне одвратиле од Христа.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. She is its third numbered entry for the day. It agrees with the Russian life on Caesarea in Cappadocia and on the governor Sapricius, and differs in four places, all recorded in the life and none resolved: the two sisters are незнабожачке, pagans, where the Russian life has them lapsed Christians living an impious life; Theophilus is a велмож, a nobleman, not a scholastic; what he asks for is apples and pomegranate flowers, and what the angel brings is three apples and three red pomegranate flowers, where the Russian life has roses; and the Prologue adds that the season was winter, which is what makes the gift a wonder. It gives no year."
     }
   ],
   "dates": {
