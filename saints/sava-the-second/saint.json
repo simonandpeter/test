@@ -18,6 +18,12 @@
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 февраля ст. ст., «Святитель Савва II Сербский, архиепископ», with the rank word and the office left off."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "sava-of-serbia",
     "sava-the-third"
