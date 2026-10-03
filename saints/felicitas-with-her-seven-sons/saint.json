@@ -1,0 +1,58 @@
+{
+  "slug": "felicitas-with-her-seven-sons",
+  "display_name": "Felicitas, with her seven sons",
+  "names": [
+    {
+      "form": "Фелицита",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 25. јануар ст. ст. (civil 2026-02-07), „Свети мученици Фелицита и седам јој синова“. The rank words „Свети мученици“ are left off, and so is the clause „и седам јој синова“, which is kinship and not part of her name; the heading gives her no epithet, so the form stands bare."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 164,
+      "latest": 164,
+      "display": "164",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue: „Као хришћанка буде у време цара Антонина, 164. године заједно са својих седам синова осуђена на смрт.“ — as a Christian she was condemned to death in the time of the emperor Antoninus, in the year 164, together with her seven sons. The entry gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the Julian 25 January (3 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 25 ianuarie (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 25 Ιανουαρίου (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.02.2026 (25. јануар ст. ст.) — „Свети мученици Фелицита и седам јој синова.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-07&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Μάρης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Ιανουαρίου, «Όσιος Μάρης», with the rank word left off."
+    },
+    {
+      "form": "Мар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 25. јануар ст. ст. (civil 2026-02-07), „Преподобни Мар“. The rank word „Преподобни“ is left off and the heading gives no epithet, so the form stands bare — the Prologue names no city for him. Its body matches the folder's Greek source on the man: a hermit of great beauty and sweet voice who spent thirty-seven years in a hut and died at ninety, in 430 by the Prologue's reckoning and in the fourth century by saint.gr's; the two are not reconciled here."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.02.2026 (25. јануар ст. ст.) — „Преподобни Мар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

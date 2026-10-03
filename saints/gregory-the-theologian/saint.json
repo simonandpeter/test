@@ -14,6 +14,11 @@
       "form": "Grigorie Teologul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 25 ianuarie, «Sfântul Ierarh Grigorie Teologul, Arhiepiscopul Constantinopolului»."
+    },
+    {
+      "form": "Григорије Богослов",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 25. јануар ст. ст. (civil 2026-02-07), „Свети Григорије Богослов, архиепископ цариградски“. The word „Свети“ is left off and so is the office „архиепископ цариградски“. „Богослов“ is kept: the entry treats it as the name he is called by rather than a rank — „због чега је и назват Богословом“, which is why he was named the Theologian."
     }
   ],
   "sex": "male",
@@ -87,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 1,
+        "calendar": "julian",
+        "note": "The Ohrid Prologue keeps him again on 30. јануар ст. ст. (civil 2026-02-12, https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-12&prolog=1, read 3 October 2026), under the joint heading „Света Три Јерарха“; his own entry for 25. јануар closes „(в. 30. јануар)“ and the joint entry gives each of the three his own January day — „Василије 1. јануар, Григорије 25. јануар и Златоуст 27. јануар“. The corpus keeps one feast to a church, so he renders on 25 January only."
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.02.2026 (25. јануар ст. ст.) — „Свети Григорије Богослов, архиепископ цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
