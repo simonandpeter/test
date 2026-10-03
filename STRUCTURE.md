@@ -495,7 +495,7 @@ what there is.
 | `daily/entries.js` | who is commemorated on a day, in the chosen church |
 | `daily/record.js` | the day's readings and hymns |
 | `daily/panel.js` | paints the day into its panels: two below 1024 px, four above it |
-| `daily/picker.js` | the week rail **and** the month grid — one control, two faces |
+| `daily/picker.js` | the week rail **and** the month grid — one control, two grains. The month is one drawing at both widths; the rail is the phone's alone |
 | `daily/fullcal.js` | the full-screen calendar |
 | `daily/format.js` | dates in the reader's language and reckoning |
 
@@ -696,8 +696,17 @@ intentional.
   shelves 5. The desk's three columns are `display: none` and are not painted.
 - **The markup order is the phone's reading order**, which is the constraint the
   desk's column assignments are built around — see the box chain above.
-- **The picker is the week rail.** The month closes behind it rather than being
-  left open under a button that says shut.
+- **The picker opens on the week rail.** The month closes behind it rather than
+  being left open under a button that says shut, and the toggle on the row's
+  left edge is what swaps them. Past 1024 px there is no choice to make: the
+  month is the only grain and the toggle is not drawn.
+- **The month, once open, is the desk's month** (author, 2026-10-03: "Mobile
+  monthly and desktop monthly: one implementation, one look"). Same cells, the
+  same leading and trailing days filling the grid's corners in `--ink-soft`,
+  the same feast diamond in the cell's corner, the same accent border on the
+  day being read, the same whole month name. What differs is a cell's padding
+  and gap (2 px against the desk's 1) and the height of a step (32 px against
+  24), because a thumb is not a pointer.
 - **A phone is Gregorian throughout, fasts included** (`lib/church.js`
   `calendarFor`): below 1024 px the chosen reckoning is not read, so an Old
   Calendar reader is shown the Dormition Fast on 1–14 August where the desk
@@ -711,7 +720,8 @@ intentional.
 - **There is one hero and it is the page's own choice**: no row is a choosing
   surface, and the hero is filtered out of the register rather than hidden in
   it.
-- The reckoning control and the month steppers are not drawn.
+- The reckoning control is not drawn. The month's two steps are: they are the
+  month's only stepping at either width since 2026-10-03.
 - The rail's cells carry `tabindex="-1"`; the desk's month cells do not.
 
 #### Shared
@@ -719,7 +729,24 @@ intentional.
 The two widths are free to diverge except here.
 
 - **The day cells** — the week rail's and the month grid's — are one drawing:
-  the same box, numerals, feast mark and fast colour.
+  the same box, numerals, feast mark and fast colour. The feast mark skips
+  Sundays at both grains (author, 2026-10-03): every Sunday carries
+  resurrection hymns, so a mark drawn on hymns alone lands on all of them.
+- **The month is one drawing at both widths, and the week rail is the phone's
+  alone.** The two grains no longer share column centres: the month gave up the
+  peeked columns that used to inset it to the rail's seven, so its grid runs
+  the full width of the control while the rail keeps `--rail-inset` at each
+  edge for its half-cut neighbours.
+- **The month is stepped up and down** (author, 2026-10-03: "from Oct to Sep is
+  an arrow or swipe up above the Oct 2026 print, and conversely an arrow down
+  underneath it"). The step up stands above the month's name and the step down
+  below it, each a hairline closed by a diamond pointing away from the month it
+  leaves. **It is a spinner**: the month before arrives from below, which is
+  the only arrangement in which the arrow above the name and a swipe up agree
+  while the grid still follows the finger. `SPIN` in `daily/picker.js` is the
+  one place that sign is written, and `makeGrain`/`onGrainDrag` take an `axis`.
+  `.cal-month` therefore takes `touch-action: pan-x`, so an open month below
+  1024 px does not hand the page a vertical scroll; the rail keeps `pan-y`.
 - **The hero and the register rows are the same components at both widths.**
   Past 1024 px the hero is taken apart at one seam — its picture into the saint
   column, `heroIdentity` into the reading column's pinned head — and nothing is
@@ -766,15 +793,16 @@ The two widths are free to diverge except here.
 | `--side-w` | `:root` in base.css, ≥1024 | the day's column and the shelf; the saint page's search column |
 | `--saint-w` | `html[data-route~='calendar']`, ≥1024 | the chosen saint's column |
 | `--day-cols` | `.cal`, ≥1024 | the five tracks |
-| `--cal-peek`, `--cal-gutter` | `calendar.css` | the month's peeked neighbour columns and the gutter they need |
-| `--cal-row-h` | `calendar.css` | a month row |
+| `--cal-peek` | `calendar.css` | the rail's own inset, which is what shows the days either side half-cut |
+| `--cal-row-h` | `calendar.css` | the picker's control row |
+| `--mstep-h` | `calendar.css` | the month step's target: 32 px, 24 past 1024 |
 | `--card-h`, `--card-pic`, `--card-gap` | `calendar.css` | the register's card face |
 | `--hero-shape`, `--hero-focus` | inline per saint, `daily/panel.js` | the hero's crop: `heroCrop` below 1024, `columnCrop` (the icon's own shape, no taller than A4) past it |
 | `--hero-mat`, `--hero-r` | `calendar.css`, and inline per saint | the register's expanded mat; the hero's column between 620 and 1024 |
 
-The rest — `--ox`, `--rail-inset`, `--rail-fade`, `--peek-fade`, `--headgap`,
-`--rulegap`, `--lede-lines` — are local to one control and are
-read where they are declared.
+The rest — `--ox`, `--rail-inset`, `--rail-fade`, `--headgap`, `--rulegap`,
+`--lede-lines` — are local to one control and are read where they are
+declared.
 
 | attribute | set by | read by |
 | --- | --- | --- |
@@ -796,7 +824,7 @@ independent by construction, but it is a read of each block, never a sweep.
 
 | px | what turns |
 | --- | --- |
-| 1024 | **the layout break** — one column ↔ four, page scroll surrendered, week rail ↔ month grid, Gregorian ↔ the chosen reckoning, one hero ↔ a shelf to choose from |
+| 1024 | **the layout break** — one column ↔ four, page scroll surrendered, two grains and a toggle ↔ the month alone, Gregorian ↔ the chosen reckoning, one hero ↔ a shelf to choose from |
 | 900 | the full-screen calendar's body |
 | 760 | the hero's lede and its *more* control |
 | 700 | the full-screen calendar's weekday names |

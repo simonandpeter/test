@@ -855,7 +855,9 @@ const swipe = (page, selector, dx, dy = 0) =>
       const at = (px, py, pointerType) => ({
         pointerId: 1, pointerType, clientX: px, clientY: py, bubbles: true, cancelable: true,
       });
-      const kind = dx === 0 ? 'mouse' : 'touch';
+      // A gesture with no travel at all is the mouse case this helper is also
+      // asked for; anything that moves is a finger, on either axis.
+      const kind = dx === 0 && dy === 0 ? 'mouse' : 'touch';
       el.dispatchEvent(new PointerEvent('pointerdown', at(x, y, kind)));
       el.dispatchEvent(new PointerEvent('pointerup', at(x + dx, y + dy, kind)));
     },
@@ -867,41 +869,46 @@ export /**
  * and a release. Synthetic, for the same reason as `swipe`. The settle
  * threshold is a third of a grain, not a pixel count.
  */
-const dragGrain = (page, selector, dx, { release = true } = {}) =>
+const dragGrain = (page, selector, dx, { release = true, axis = 'x' } = {}) =>
   page.evaluate(
-    ([selector, dx, release]) => {
+    ([selector, dx, release, axis]) => {
       const el = document.querySelector(selector);
       const box = el.getBoundingClientRect();
       const x = box.x + box.width / 2;
       const y = box.y + box.height / 2;
-      const at = (px) => ({
-        pointerId: 7, pointerType: 'touch', clientX: px, clientY: y, bubbles: true, cancelable: true,
+      const at = (d) => ({
+        pointerId: 7,
+        pointerType: 'touch',
+        clientX: axis === 'y' ? x : x + d,
+        clientY: axis === 'y' ? y + d : y,
+        bubbles: true,
+        cancelable: true,
       });
-      el.dispatchEvent(new PointerEvent('pointerdown', at(x)));
+      el.dispatchEvent(new PointerEvent('pointerdown', at(0)));
       for (const step of [dx / 4, dx / 2, (dx * 3) / 4, dx]) {
-        el.dispatchEvent(new PointerEvent('pointermove', at(x + step)));
+        el.dispatchEvent(new PointerEvent('pointermove', at(step)));
       }
-      if (release) el.dispatchEvent(new PointerEvent('pointerup', at(x + dx)));
+      if (release) el.dispatchEvent(new PointerEvent('pointerup', at(dx)));
     },
-    [selector, dx, release],
+    [selector, dx, release, axis],
   );
 
-export const releaseGrain = (page, selector, dx) =>
+export const releaseGrain = (page, selector, dx, { axis = 'x' } = {}) =>
   page.evaluate(
-    ([selector, dx]) => {
+    ([selector, dx, axis]) => {
       const el = document.querySelector(selector);
       const box = el.getBoundingClientRect();
       el.dispatchEvent(
         new PointerEvent('pointerup', {
           pointerId: 7,
           pointerType: 'touch',
-          clientX: box.x + box.width / 2 + dx,
-          clientY: box.y + box.height / 2,
+          clientX: box.x + box.width / 2 + (axis === 'y' ? 0 : dx),
+          clientY: box.y + box.height / 2 + (axis === 'y' ? dx : 0),
           bubbles: true,
         }),
       );
     },
-    [selector, dx],
+    [selector, dx, axis],
   );
 
 export /** The header's control, open. */
@@ -1141,7 +1148,11 @@ const duringMove = (page, viewport, rowClass, act) =>
             );
           resolve({
             rows: vp.querySelectorAll(`.${rowClass}`).length,
+            // A horizontal grain parks its sides by `left` and a vertical one
+            // by `top`, so both are reported and the caller reads the one its
+            // grain uses.
             sides: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.left),
+            sideTops: [...vp.querySelectorAll('.grain-side')].map((s) => s.style.top),
             hidden: side.getAttribute('aria-hidden'),
             reachable: [...side.querySelectorAll('button')].filter((b) => b.tabIndex !== -1).length,
             reach: getComputedStyle(side).pointerEvents,

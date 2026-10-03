@@ -329,7 +329,7 @@ test('past 1024 px the month carries one mark, not the phone ring as well', asyn
 });
 
 
-test('the week and the month both take a swipe, in the same direction', async ({ page }) => {
+test('the week takes a sideways swipe and the month an up-and-down one', async ({ page }) => {
   await ready(page);
   await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
@@ -358,17 +358,24 @@ test('the week and the month both take a swipe, in the same direction', async ({
   // Scrolling is not selecting: the day only changes when one is chosen.
   await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 
+  /*
+   * **The month's own gesture turned on 2026-10-03** (author: "from Oct to Sep
+   * is an arrow or swipe up above the Oct 2026 print"). Up is back, and the
+   * grid is a spinner for it: the month before arrives from below, which is
+   * the only arrangement where the arrow above the name and a swipe up agree
+   * and the grid still follows the finger.
+   */
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
-  await swipe(page, '.cal-month', -120);
-  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
-  await swipe(page, '.cal-month', 120);
-  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
+  await swipe(page, '.cal-month', 0, -120);
+  await expect(page.locator('.month-name')).toHaveText('July 2026');
+  await swipe(page, '.cal-month', 0, 120);
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
 
-  // A short drag is a mistap, and a mostly-vertical one belongs to the scroll.
-  await swipe(page, '.cal-month', -20);
-  await swipe(page, '.cal-month', -120, 200);
-  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
+  // A short drag is a mistap, and a mostly-sideways one belongs to the day.
+  await swipe(page, '.cal-month', 0, -20);
+  await swipe(page, '.cal-month', 200, -120);
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
 });
 
 
@@ -392,98 +399,91 @@ test('picking a date leaves the month open; only the button closes it', async ({
 });
 
 
-test('the month keeps the week edges where they were, and names itself in the gutter', async ({ page }) => {
+test('the month runs the control\'s full width, and its name heads its own line', async ({ page }) => {
+  /*
+   * **The peeked columns went on 2026-10-03** and the month's grid took the
+   * width they stood in, because the phone's month and the desk's are one
+   * drawing now and the desk's had given them up in 2026-09-10. So the two
+   * grains no longer share column centres: the rail keeps its own snap inset
+   * at each edge, for the half-cut neighbours that are the whole of what the
+   * fade is hinting at, and the month runs edge to edge inside the same box.
+   */
   await ready(page);
   await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const box = async (sel) => (await page.locator(sel).first().boundingBox());
   const strip = await box('.week-strip');
-  // The rail replaced the week's peek buttons with real days (2026-08-24,
-  // Amendment 35), so the reference is the rail's own snap inset: the month's
-  // peeked column must stand in it — start where the strip starts, and end
-  // where the snapped days begin — or the two grains shift sideways as they
-  // swap. The snapped day's left edge is the strip's scroll-padding.
-  const inset = await page
-    .locator('.week-strip')
-    .evaluate((el) => parseFloat(getComputedStyle(el).scrollPaddingLeft));
 
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
-  const monthPrev = await box('.cal-month .peek');
-  const monthNext = await box('.cal-month .peek-next');
+  await expect(page.locator('.cal-month .peek')).toHaveCount(0);
 
-  expect(Math.round(monthPrev.x)).toBe(Math.round(strip.x));
-  expect(monthPrev.x + monthPrev.width).toBeLessThanOrEqual(strip.x + inset + 1);
-  expect(Math.round(monthNext.x + monthNext.width)).toBe(Math.round(strip.x + strip.width));
+  const grid = await box('.month-grid');
+  expect(Math.round(grid.x)).toBe(Math.round(strip.x));
+  expect(Math.round(grid.x + grid.width)).toBe(Math.round(strip.x + strip.width));
 
-  // The name prints in the gutter under the jump stack and the back chevron
-  // (author, 2026-08-21) rather than centred over the grid, where it pushed
-  // every date down a line for a label the week manages without. It ends where
-  // the chevron ends and starts below it, so it costs the row no height at all.
+  /*
+   * The name was printed into the gutter beside the grid, where it cost the
+   * row no height; it heads a line of its own between the two steps now. The
+   * order down the control is the instruction's: the step up, the name, the
+   * step down, the grid.
+   */
   const name = await box('.month-name');
-  // It stops where the peeked column starts. The peek runs the full height of
-  // the grid now, so a name spanning the whole gutter would print over it.
-  expect(Math.round(name.x + name.width)).toBe(Math.round(monthPrev.x));
-  const jump = await box('.cal-jump');
-  expect(name.y).toBeGreaterThanOrEqual(jump.y + jump.height);
-  expect(name.x).toBeLessThan((await box('.month-days')).x);
+  const up = await box('.mstep-prev');
+  const down = await box('.mstep-next');
+  expect(up.y + up.height).toBeLessThanOrEqual(name.y + 1);
+  expect(name.y + name.height).toBeLessThanOrEqual(down.y + 1);
+  expect(down.y + down.height).toBeLessThanOrEqual(grid.y + 1);
+  // All three start on the control's own left margin.
+  expect(Math.round(name.x)).toBe(Math.round(up.x));
+  expect(Math.round(up.x)).toBe(Math.round(down.x));
 });
 
 
-test('the month is the week grown taller: the day names do not move', async ({ page }) => {
-  // Toggling grain changes how many rows there are, not where the week's own
-  // headings sit (author, 2026-08-21) — which is what makes the dates read as
-  // unfurling from under them rather than as a second control arriving.
-  //
-  // Measured on the text rather than on its box: in the week a day name is a
-  // flex item centred in its button, in the month a grid cell carrying the
-  // padding itself, so the two boxes differ exactly where the glyphs do not.
+test('the month\'s day names stand over the month\'s own columns', async ({ page }) => {
+  /*
+   * The names sat on the week rail's columns to the pixel until 2026-10-03,
+   * which is what made toggling grain read as rows unfurling from under them
+   * (author, 2026-08-21). The month gave up the peeked columns that inset it
+   * to the rail's seven, so the two grains part company here and the names
+   * follow the grain they belong to — they are inside `.cal-month` and are
+   * drawn only while it is open.
+   *
+   * Measured on the text rather than on the boxes: a name is a grid cell
+   * carrying its own padding and a date is a flex column inside a button, so
+   * the two boxes differ exactly where the glyphs do not.
+   */
   await ready(page);
   await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  const text = (sel) =>
-    page.evaluate((s) => {
-      const range = document.createRange();
-      return [...document.querySelectorAll(s)].map((el) => {
-        range.selectNodeContents(el);
-        const r = range.getBoundingClientRect();
-        return [Math.round(r.x + r.width / 2), Math.round(r.top), Math.round(r.height)];
-      });
-    }, sel);
-
-  // The seven snapped days of the rail — the ones standing where the week
-  // stood. The rail holds 121 (2026-08-24), so the visible run is selected by
-  // geometry: from the snap inset to its mirror on the right.
-  const week = (await page.evaluate(() => {
-    const strip = document.querySelector('.week-strip');
-    const sb = strip.getBoundingClientRect();
-    const pad = parseFloat(getComputedStyle(strip).scrollPaddingLeft);
-    const range = document.createRange();
-    return [...strip.querySelectorAll('.day-name')]
-      .map((el) => {
-        range.selectNodeContents(el);
-        const r = range.getBoundingClientRect();
-        return [Math.round(r.x + r.width / 2), Math.round(r.top), Math.round(r.height)];
-      })
-      .filter(([x]) => x > sb.x + pad - 2 && x < sb.right - pad + 2);
-  })).slice(0, 7);
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await page.waitForTimeout(600);
 
-  expect(week).toHaveLength(7);
-  // Scoped to the day-name row: the peeked column beside the grid carries a
-  // spacer in the same class, because it takes the same metrics from it.
-  // Within a pixel, not exact (2026-08-24): the rail is a flex row and the
-  // month a grid, and at 360 px the two round the same fractional column to
-  // neighbouring pixels. A real shift is a column's worth, not one pixel.
-  const month = await text('.month-days .month-day-name');
-  expect(month).toHaveLength(7);
+  const centres = await page.evaluate(() => {
+    const range = document.createRange();
+    const mid = (el) => {
+      range.selectNodeContents(el);
+      const r = range.getBoundingClientRect();
+      return Math.round(r.x + r.width / 2);
+    };
+    const names = [...document.querySelectorAll('.month-days .month-day-name')].map(mid);
+    // The grid's first seven cells are its first row, whatever they hold:
+    // a leading day of the month before is a column of this month all the same.
+    const cells = [...document.querySelectorAll('.month-grid > *')]
+      .slice(0, 7)
+      .map((el) => {
+        const r = el.getBoundingClientRect();
+        return Math.round(r.x + r.width / 2);
+      });
+    return { names, cells };
+  });
+
+  expect(centres.names).toHaveLength(7);
+  expect(centres.cells).toHaveLength(7);
   for (let i = 0; i < 7; i += 1) {
-    expect(Math.abs(month[i][0] - week[i][0])).toBeLessThanOrEqual(1);
-    expect(Math.abs(month[i][1] - week[i][1])).toBeLessThanOrEqual(1);
-    expect(month[i][2]).toBe(week[i][2]);
+    expect(Math.abs(centres.names[i] - centres.cells[i])).toBeLessThanOrEqual(1);
   }
 });
 
@@ -507,8 +507,18 @@ test('the month spends its height on dates rather than on leading', async ({ pag
   // why the month stood 278 px tall (author, 2026-08-21).
   expect(rows[1] - rows[0]).toBeLessThanOrEqual(32);
 
+  /*
+   * The grid itself is what must not spend height on leading. The control
+   * around it grew a head on 2026-10-03 — the month's name with a step above
+   * and below it — and that is a declared cost, not drift: 32 px a step and
+   * the name's own line.
+   */
+  const grid = await page.locator('.month-grid').boundingBox();
+  expect(grid.height).toBeLessThan(140);
+  const head = await page.locator('.month-head').boundingBox();
+  expect(head.height).toBeLessThan(90);
   const controls = await page.locator('.cal-controls').boundingBox();
-  expect(controls.height).toBeLessThan(200);
+  expect(controls.height).toBeLessThan(250);
 });
 
 
@@ -653,10 +663,12 @@ test('the rail scrolls in one piece: real days, no copies, no track', async ({ p
 });
 
 
-test('a month travels sideways with its own edges, and its day names do not', async ({ page }) => {
+test('a month travels up and down, and its day names do not', async ({ page }) => {
   // The week got this on 2026-08-21 and the month did not, because the month's
   // column could not travel while the day names above it sat inside the same
-  // button. The names moved to a line of their own so that it could.
+  // button. The names moved to a line of their own so that it could, and on
+  // 2026-10-03 the travel turned a quarter: the grain is on the other axis and
+  // the names still do not move.
   await ready(page);
   await phone(page);
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
@@ -669,19 +681,18 @@ test('a month travels sideways with its own edges, and its day names do not', as
     );
   const before = await names();
 
-  const during = await duringMove(page, '.month-body', 'month-row', '.month-row [data-mstep="1"]');
+  const during = await duringMove(page, '.month-body', 'month-row', '.mstep-next');
   expect(during.rows).toBe(2);
-  expect(during.sides).toEqual(['-100%']);
+  // Parked in pixels and by `top`, not by a percentage of `left`: the step
+  // down brings September from above, so the month being left is parked below.
+  expect(during.sides).toEqual(['']);
+  expect(during.sideTops).toHaveLength(1);
+  expect(parseFloat(during.sideTops[0])).toBeGreaterThan(0);
   expect(during.hidden).toBe('true');
   expect(during.reach).toBe('none');
   expect(during.clipped).toBe(true);
 
-  // August's peeked columns leave with August — July's Sundays behind it,
-  // September's Mondays ahead of it — and September's arrive with September.
-  expect(during.sidePeeks).toEqual(['5', '12', '19', '26', '7', '14', '21', '28']);
-  expect(during.livePeeks).toEqual(['2', '9', '16', '23', '30', '5', '12', '19', '26']);
-
-  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
+  await expect(page.locator('.month-name')).toHaveText('September 2026');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   // The names stayed exactly where they were while the grid moved under them.
   expect(await names()).toEqual(before);
@@ -825,7 +836,9 @@ test('the month follows the finger too, and takes its height with it', async ({ 
   await page.waitForTimeout(600);
   const fiveRows = (await page.locator('.month-body').boundingBox()).height;
 
-  await dragGrain(page, '.cal-month', 60, { release: false });
+  // Up is back: September to August, and the finger goes the way the arrow
+  // above the name points (author, 2026-10-03).
+  await dragGrain(page, '.cal-month', -60, { release: false, axis: 'y' });
   const held = await page.evaluate(() => {
     const body = document.querySelector('.month-body');
     return {
@@ -835,13 +848,13 @@ test('the month follows the finger too, and takes its height with it', async ({ 
     };
   });
   expect(held.rows).toBe(3);
-  expect(held.transform).toMatch(/^translateX\(\d/);
+  expect(held.transform).toMatch(/^translateY\(-\d/);
   // The body takes the tallest of the three and holds it for as long as the
   // reader does, so August's sixth row is there to be dragged into view.
   expect(parseFloat(held.pinned)).toBeGreaterThan(fiveRows);
 
-  await releaseGrain(page, '.cal-month', 60);
-  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
+  await releaseGrain(page, '.cal-month', -60, { axis: 'y' });
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   await page.waitForTimeout(600);
   // Six rows now, and the height was released rather than left pinned.
@@ -881,7 +894,7 @@ test('under reduced motion a mouse drag settles with nothing to sit through', as
 });
 
 
-test('a month steps sideways and carries its height with it', async ({ page }) => {
+test('a month steps up and down and carries its height with it', async ({ page }) => {
   // August 2026 is six rows and September is five, so stepping between them is
   // the case where the page below would otherwise jump between two frames.
   await ready(page);
@@ -891,8 +904,8 @@ test('a month steps sideways and carries its height with it', async ({ page }) =
   await page.waitForTimeout(600);
   const six = await page.locator('.month-body').boundingBox();
 
-  await page.locator('[data-mstep="1"]').click();
-  await expect(page.locator('.month-name')).toHaveText('Sep 2026');
+  await page.locator('.mstep-next').click();
+  await expect(page.locator('.month-name')).toHaveText('September 2026');
   const held = await page.locator('.month-body').evaluate((el) => el.style.height);
   expect(parseFloat(held)).toBeGreaterThan(0);
 
@@ -997,30 +1010,6 @@ test('every day on the rail is full-strength ink — no wash, no mask', async ({
   });
   expect(days).toHaveLength(1);
   expect(days[0]).toMatch(/\|1\|none$/);
-});
-
-
-test('the month peeks a column of the neighbouring month, on the grid own rows', async ({ page }) => {
-  await ready(page);
-  await phone(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
-  await page.locator('[data-month]').click();
-  await page.waitForTimeout(600);
-
-  // September starts on a Tuesday, so its Mondays are 7, 14, 21 and 28.
-  await expect(page.locator('.cal-month .peek-next .peek-cell')).toHaveText(['7', '14', '21', '28']);
-
-  // On the grid's rows, not merely beside it: the first peeked cell shares a
-  // top with the grid's first row.
-  const tops = await page.evaluate(() => {
-    const first = document.querySelector('.month-grid button').getBoundingClientRect();
-    const peek = document.querySelector('.cal-month .peek-next .peek-cell').getBoundingClientRect();
-    return [Math.round(first.top), Math.round(peek.top)];
-  });
-  expect(tops[0]).toBe(tops[1]);
-
-  // And the name in the gutter is abbreviated, so it stops clear of the column.
-  await expect(page.locator('.month-name')).toHaveText('Aug 2026');
 });
 
 
@@ -1405,13 +1394,30 @@ test('no date carries a density dot, and a fast or a feast carries its own', asy
   // point of the pair: a token that carries a fact takes a floor.
   expect(painted).not.toBe(goldToken);
 
-  // The month is unchanged: the marks are the week strip's, which is where the
-  // author asked for them and where a week is planned.
+  /*
+   * **And the month says the same two things in its own idiom**, at both
+   * widths since 2026-10-03: the feast as a diamond in the cell's corner, the
+   * fast as the numeral's own colour, and both in the cell's accessible name.
+   * The density dots are gone from it as well.
+   */
   await page.locator('[data-month]').click();
   await page.waitForTimeout(600);
   await expect(page.locator('.density')).toHaveCount(0);
-  await expect(page.locator('.month-grid i')).toHaveCount(0);
   await expect(page.locator('.month-grid .day-mark')).toHaveCount(0);
+  const cell = page.locator('.month-grid [data-iso="2026-09-21"]');
+  await expect(cell.locator('.month-feast')).toHaveCount(1);
+  await expect(cell).toHaveAttribute('aria-label', /a feast$/);
+
+  /*
+   * **A Sunday carries no diamond** (author, 2026-10-03): every Sunday has
+   * resurrection hymns, so a mark drawn on hymns alone lands on all of them
+   * and stops telling the reader anything. 20 September 2026 is a Sunday whose
+   * record carries hymns, and it is the case the rule was written for.
+   */
+  const sundayCell = page.locator('.month-grid [data-iso="2026-09-20"]');
+  await expect(sundayCell.locator('.month-feast')).toHaveCount(0);
+  await expect(sundayCell).not.toHaveAttribute('aria-label', /a feast$/);
+  await expect(page.locator('.week-strip [data-iso="2026-09-20"] .mark-feast')).toHaveCount(0);
 });
 
 
@@ -1442,7 +1448,7 @@ test('a date picked in the month is where the week opens, however far it was scr
   // Three months out, which is past the rail's own radius and well past the
   // seven days it was showing.
   for (let i = 0; i < 3; i += 1) {
-    await page.locator('[data-mstep="1"]').click();
+    await page.locator('.mstep-next').click();
     await page.waitForTimeout(500);
   }
   await page.locator('.month-grid [data-iso="2026-12-14"]').click();
@@ -1709,7 +1715,7 @@ test('two months of the same height do not move the page between them', async ({
     const out = [];
     for (let i = 0; i < 3; i += 1) {
       growing = false;
-      document.querySelector('.month-row .peek-prev').click();
+      document.querySelector('.mstep-prev').click();
       await sleep(250);
       out.push({ month: document.querySelector('.month-name').textContent.trim(), grew: growing });
     }
@@ -2256,12 +2262,14 @@ test('a phone is told the reckoning without being offered the choice', async ({ 
  * the control that steps it. Each was backed out and watched to fail.
  */
 
-test('past 1024 px the month fills its own corners and keeps the days there out of reach', async ({ page }) => {
+test('the month fills its own corners and keeps the days there out of reach', async ({ page }) => {
   /*
    * The peeked columns — two columns of a neighbouring month standing
    * *outside* the seven, there since 2026-08-21 — are what kept the right
-   * column above 400 px. They go, and the days either side come inside the
-   * grid on its own rows instead: numbered, marked, tinted toward the field.
+   * column above 400 px. They went past 1024 px on 2026-09-10 and at every
+   * width on 2026-10-03, when the author ruled the phone's month and the
+   * desk's one drawing; the days either side come inside the grid on its own
+   * rows instead: numbered, marked, tinted toward the field.
    *
    * **And out of the accessibility tree, deliberately** (§10.6). The tint
    * lands at 1.71–2.60:1 on visible numerals; axe reads contrast on text and
@@ -2280,11 +2288,9 @@ test('past 1024 px the month fills its own corners and keeps the days there out 
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  // Still in the markup — this is a width's decision, not a deletion — and
-  // reachable by nothing.
-  await expect(page.locator('.cal-month .peek')).toHaveCount(2);
-  await expect(page.locator('.cal-month .peek-prev')).toBeHidden();
-  await expect(page.locator('.cal-month .peek-next')).toBeHidden();
+  // Gone from the markup, not merely hidden: the month is stepped from the two
+  // marks in its own head at both widths now.
+  await expect(page.locator('.cal-month .peek')).toHaveCount(0);
 
   await expect(page.locator('.month-grid [data-iso]'), 'September is 30 days').toHaveCount(30);
   const out = page.locator('.month-grid .month-out');
@@ -2377,6 +2383,33 @@ test('past 1024 px the month fills its own corners and keeps the days there out 
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
   await page.waitForTimeout(300);
   expect(await page.locator('.cal-date').textContent(), 'an out-of-month day changed the day').toBe(before);
+
+  /*
+   * **And the phone's month is the same month** (author, 2026-10-03: "Mobile
+   * monthly and desktop monthly: one implementation, one look"). Opened from
+   * the toggle, which is the phone's own way into it, so this is the state a
+   * reader actually meets rather than a width with a grain forced open.
+   */
+  await page.setViewportSize({ width: 360, height: 780 });
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
+  await page.waitForTimeout(600);
+  await expect(page.locator('.cal-month .peek')).toHaveCount(0);
+  await expect(page.locator('.month-grid [data-iso]')).toHaveCount(30);
+  await expect(page.locator('.month-grid .month-out')).toHaveText(['31', '1', '2', '3', '4']);
+  const phoneOut = await page.evaluate(() => {
+    const cell = document.querySelector('.month-grid .month-out');
+    return {
+      tag: cell.tagName,
+      hidden: cell.getAttribute('aria-hidden'),
+      colour: getComputedStyle(cell).color,
+      ink: getComputedStyle(document.querySelector('.month-grid [data-iso] .day-num')).color,
+    };
+  });
+  expect(phoneOut.tag).toBe('SPAN');
+  expect(phoneOut.hidden).toBe('true');
+  expect(phoneOut.colour, 'the phone out-day is not one step back in ink').not.toBe(phoneOut.ink);
 });
 
 test('the day the reader is on is told apart from the box it sits in', async ({ page }) => {
@@ -2557,12 +2590,15 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
   expect(paint.size).toEqual(['5px', '5px']);
 });
 
-test('the desktop month steps from the two marks in its own head', async ({ page }) => {
+test('the month steps from the two marks above and below its name', async ({ page }) => {
   /*
    * The peeked columns were the month's step control as well as its edge, and
-   * both go together. What replaces them is a mark either side of the month's
-   * name: a hairline closed by a diamond, pointing away from the month it
-   * leaves.
+   * both go together. What replaces them is a mark above the month's name and
+   * one below it: a hairline closed by a diamond, pointing away from the month
+   * it leaves. The pair stood either side of the name from 2026-09-10 until
+   * the author turned the stepping a quarter on 2026-10-03 — "an arrow or
+   * swipe up above the Oct 2026 print, and conversely an arrow down underneath
+   * it" — and the pieces are the same five, rotated.
    *
    * `--accent` is the rebuild's rule-and-mark colour and takes no contrast
    * floor, on `--gold`'s own exemption — never text, never the only carrier of
@@ -2608,25 +2644,52 @@ test('the desktop month steps from the two marks in its own head', async ({ page
       accent,
       dot: dot.backgroundColor,
       line: line.backgroundColor,
+      // The hairline is vertical since 2026-10-03, so its hair is its width and
+      // its length is its height.
+      lineWidth: line.width,
       lineHeight: line.height,
-      // One on each side, and the words between them: the marks reach out to
-      // the head's own edges rather than sitting beside the name.
+      // One above and one below, with the words between them, and all three
+      // starting on the control's own left margin.
       prevReachesEdge: Math.round(document.querySelector('.mstep-prev').getBoundingClientRect().left - head.left),
-      titleIsBetween: title.left > head.left && title.right < head.right,
+      titleIsBetween: title.top > head.top && title.bottom < head.bottom,
     };
   });
   expect(marks.dot, 'the stepper’s diamond is not --accent').toBe(marks.accent);
   expect(marks.line, 'the stepper’s hairline is not --accent').toBe(marks.accent);
-  expect(marks.lineHeight, 'the stepper’s hairline is not a hairline').toBe('1px');
+  expect(marks.lineWidth, 'the stepper’s hairline is not a hairline').toBe('1px');
+  expect(parseFloat(marks.lineHeight), 'the stepper’s hairline has no length').toBeGreaterThan(4);
   expect(marks.prevReachesEdge).toBe(0);
   expect(marks.titleIsBetween, 'the month’s words are not between the two marks').toBe(true);
 
-  // A phone keeps its peeked columns and never sees these.
+  /*
+   * **The step up is the month before.** It is the whole of the instruction's
+   * direction and the one thing a spinner can get backwards, so it is asserted
+   * rather than inferred from the markup's order.
+   */
+  await page.locator('.mstep-prev').click();
+  await page.waitForTimeout(600);
+  await expect(name).toHaveText('August 2026');
+
+  // And the phone's month wears the same pair, at a thumb's target rather than
+  // a pointer's: the peeked columns that stepped it there are gone.
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
+  await expect(page.locator('.cal-month')).toBeVisible();
   await page.waitForTimeout(600);
-  await expect(page.locator('.mstep-prev')).toBeHidden();
-  await expect(page.locator('.cal-month .peek-prev')).toBeVisible();
-  await expect(page.locator('.month-grid .month-out'), 'the phone grew out-of-month days').toHaveCount(0);
+  await expect(page.locator('.cal-month .peek')).toHaveCount(0);
+  await expect(page.locator('.mstep-prev')).toBeVisible();
+  await expect(page.locator('.mstep-next')).toBeVisible();
+  const phoneStep = await page.evaluate(() => {
+    const up = document.querySelector('.mstep-prev').getBoundingClientRect();
+    const down = document.querySelector('.mstep-next').getBoundingClientRect();
+    const title = document.querySelector('.month-title').getBoundingClientRect();
+    return { up: Math.round(up.height), down: Math.round(down.height), between: up.bottom <= title.top + 1 && down.top >= title.bottom - 1 };
+  });
+  expect(phoneStep.up, 'the phone step is not a thumb’s target').toBe(32);
+  expect(phoneStep.down).toBe(32);
+  expect(phoneStep.between).toBe(true);
+  await page.locator('.mstep-prev').click();
+  await page.waitForTimeout(600);
+  await expect(page.locator('.month-name')).toHaveText('August 2026');
 });
