@@ -11,6 +11,11 @@
       "form": "Сатир Карфагенский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Сатир (Сатур) Карфагенский, мч.», with the rank word and the office left off. The link prints «Сатур» as a variant beside «Сатир»; the head form is the one taken here."
+    },
+    {
+      "form": "Сатир",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's joint heading for 1. фебруар ст. ст. (civil 2026-02-14), „Свети мученици Перпетуа, Фелицита, Сатир, и други с њима“. The rank words „Свети мученици“ are left off and his own name taken out of the enumeration; the heading gives him no epithet, and the entry's body names him again as „Сатир“."
     }
   ],
   "sex": "male",
@@ -69,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.02.2026 (1. фебруар ст. ст.) — „Свети мученици Перпетуа, Фелицита, Сатир, и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

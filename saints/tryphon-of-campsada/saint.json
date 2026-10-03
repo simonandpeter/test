@@ -15,6 +15,11 @@
       "form": "Трифон",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Святой мученик Трифон», with the rank word and the office left off. The link gives the rank words and the bare forename and nothing further — no surname, no epithet, no see — so the form is bare; the day’s own line has it in the genitive, «Мч. Трифона»."
+    },
+    {
+      "form": "Трифун",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 1. фебруар ст. ст. (civil 2026-02-14), „Свети мученик Трифун“. The words „Свети мученик“ are left off: the site composes the rank itself. The heading gives no epithet, so the form is bare; the entry's own first sentence places him in the village of Кампсада in Phrygia."
     }
   ],
   "sex": "male",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint; no calendar’s 1 February has been read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.02.2026 (1. фебруар ст. ст.) — „Свети мученик Трифун.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

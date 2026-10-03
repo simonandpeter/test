@@ -16,6 +16,11 @@
       "form": "Петр Галатийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Петр Галатийский, Антиохийский, Молчальник, прп.», with the rank word and the office left off. The link also carries «Антиохийский» and «Молчальник», the Silent; the first epithet is the one the day's own line prints and the one taken here."
+    },
+    {
+      "form": "Петар Галатијски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 1. фебруар ст. ст. (civil 2026-02-14), „Преподобни Петар Галатијски“. The rank word „Преподобни“ is left off; „Галатијски“ is kept, being what distinguishes him."
     }
   ],
   "sex": "male",
@@ -78,8 +83,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.02.2026 (1. фебруар ст. ст.) — „Преподобни Петар Галатијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
