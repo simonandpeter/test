@@ -81,8 +81,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.02.2026 (3. фебруар ст. ст.) — „1. Свети Симеон Богопримац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-16&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its first numbered entry for the day, and the only one of the four calendars to call him the protector of small children and to set a prayer for a small child under his day. The Prologue tells the Septuagint story the Romanian life tells, and tells it differently in two places: the knife is taken up to replace «дјева» with «млада жена» rather than to scrape the word out, and the Prologue gives no span of years for his life where the Romanian life has three hundred and sixty. It puts Anna at eighty-four, as Luke does, and names her within his entry rather than enumerating her."
     }
   ],
   "text": {
