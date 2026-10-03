@@ -8,7 +8,7 @@ import { onGrainDrag, SETTLE } from '../../ui/grain-drag.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { beginSwap, landSwap, restore, setAside } from '../../ui/swap.js';
 import { countFor, dayRecordFor } from './entries.js';
-import { monthLongFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
+import { monthTagFmt, reckonedHeading, utc, weekdayFmt } from './format.js';
 import { reducedMotion, DUR } from '../../lib/motion.js';
 import { state } from './state.js';
 
@@ -702,6 +702,15 @@ export function toggleMonth() {
 
   button.setAttribute('aria-expanded', String(monthOpen));
   button.classList.toggle('is-on', monthOpen);
+  /*
+   * The names in the gutter are the month's, so they come and go with it
+   * (author, 2026-10-03: "visible only in calendar display"). Hidden outright
+   * rather than faded: they sit outside `.cal-span`, which is where the swap
+   * between the two grains is drawn, and a third thing fading on its own
+   * schedule beside that cell reads as a second animation rather than part of
+   * the same one.
+   */
+  el.querySelector('.month-pick').hidden = !monthOpen;
   state.monthGrain.land();
   // A fade still in flight lands rather than being abandoned mid-air, so this
   // toggle always starts from one grain showing and one at rest.
@@ -853,18 +862,23 @@ export function paintMonth() {
   const first = isoOfDate(gridCalendar(), { year: cursor.year, month: cursor.month, day: 1 });
 
   /*
-   * **The whole name at both widths** (author, 2026-09-02: "display the full
-   * month name"; carried to the phone 2026-10-03, when the month's head
-   * stopped sharing a gutter with the grid and the two monthly views became
-   * one drawing). `first` is a *civil* day, and the name printed is still the
-   * right one when the grid is counting in another calendar: the first of a
-   * Julian month falls thirteen days later on the civil one, and thirteen days
-   * after a first is the fourteenth of the same civil month. Any offset under
-   * 28 days keeps that true - the two calendars are 13 apart now and 14 from
-   * 2100 - so the month's own name and year come out of `Intl` in the reader's
-   * language rather than out of a table this file would have to keep.
+   * **This month between the two either side of it** (author, 2026-10-03:
+   * "replace the arrows with faded months above and below"). The pair are the
+   * stepping, so each has to say which month it reaches rather than only
+   * pointing at it.
+   *
+   * `first` is a *civil* day, and the name printed is still the right one when
+   * the grid is counting in another calendar: the first of a Julian month
+   * falls thirteen days later on the civil one, and thirteen days after a
+   * first is the fourteenth of the same civil month. Any offset under 28 days
+   * keeps that true - the two calendars are 13 apart now and 14 from 2100 - so
+   * each name comes out of `Intl` in the reader's language rather than out of
+   * a table this file would have to keep.
    */
-  el.querySelector('.month-name').textContent = monthLongFmt(utc(first));
+  const tag = (c) => monthTagFmt(utc(isoOfDate(gridCalendar(), { ...c, day: 1 })));
+  el.querySelector('.mpick-now .month-name').textContent = tag(cursor);
+  el.querySelector('.mpick-prev').textContent = tag(stepCursor(cursor, -1));
+  el.querySelector('.mpick-next').textContent = tag(stepCursor(cursor, 1));
 
   // They say nothing a date's own label does not — the button below each of
   // them reads "Friday, 30 January 2026" in full.

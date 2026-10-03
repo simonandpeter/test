@@ -109,6 +109,19 @@ export const dayInWords = (iso) => reckonedPlain(iso, reckoningInForce());
 export const monthFmt = (d) => formatDate({ month: 'short', year: 'numeric', timeZone: 'UTC' }, d);
 
 /**
+ * The month alone - "Oct", no year (author, 2026-10-03: "Reformat October 2026
+ * to just Oct, then move it to the left-side space under the button that
+ * toggles calendar and weekly displays").
+ *
+ * The year goes because the names are a stack of three in a 34 px gutter and
+ * the two either side are the months before and after this one: a year printed
+ * three times in that column says nothing the middle name does not, and the
+ * only place it would matter - a step across December - is the one place the
+ * reader is watching the names change anyway.
+ */
+export const monthTagFmt = (d) => formatDate({ month: 'short', timeZone: 'UTC' }, d);
+
+/**
  * The month's whole name, for the calendar's own header row (author,
  * 2026-09-02: "display the full month name").
  *

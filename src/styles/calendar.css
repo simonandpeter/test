@@ -56,7 +56,7 @@
   flex: none;
 }
 
-.cal-jump button {
+.cal-jump > button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -70,13 +70,62 @@
   color: var(--ink-soft);
 }
 
-.cal-jump button:hover {
+.cal-jump > button:hover {
+  color: var(--ink);
+}
+
+/*
+ * **The month's name between the two either side of it** (author, 2026-10-03),
+ * in the gutter the toggle button already owns. The pair are faded because
+ * they are not where the reader is - and they are buttons, because they are
+ * also how the reader leaves: a name that says which month it reaches is a
+ * larger and plainer target than the hairline-and-diamond mark it replaces.
+ *
+ * The column is 34 px, so the names are set at the smallest utility size and
+ * the year is dropped (`monthTagFmt`). Three of them stack inside the height
+ * the grid takes beside them, which is why this box can hold the stepping
+ * without costing the picker a row.
+ */
+.month-pick {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  padding-top: var(--space-2);
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  line-height: 1.3;
+}
+
+.mpick {
+  width: 100%;
+  padding: 2px 0;
+  border: 0;
+  background: none;
+  text-align: center;
+}
+
+/* The two neighbours, one step back in ink: the same distance `.month-out`
+   puts the days either side of the month at, for the same reason — they are
+   present and reachable, and they are not this month. */
+.mpick-prev,
+.mpick-next {
+  color: var(--ink-soft);
+  cursor: pointer;
+}
+
+.mpick-prev:hover,
+.mpick-next:hover {
+  color: var(--ink);
+}
+
+.mpick-now {
   color: var(--ink);
 }
 
 /* The month toggle stays lit while the month is showing: with the week gone
    there is nothing else on screen saying which grain you are in. */
-.cal-jump button.is-on {
+.cal-jump > button.is-on {
   color: var(--ink);
   background: var(--field);
   border-color: var(--ink-soft);
@@ -589,6 +638,17 @@
   }
 
   .reckoning {
+    display: none;
+  }
+
+  /* **Nothing of the head is drawn below the breakpoint** now that the month's
+     name has gone to the gutter: the reckoning and the way out to the full
+     calendar are both the desktop's, so what is left is an empty box whose own
+     margin would hold the day names 82 px below the line the week rail's names
+     stand on. Hidden outright, which is what puts them back on it - and what
+     takes those 82 px out of the close, where they were held open outside the
+     animating box and dropped on a single tick. */
+  .month-head {
     display: none;
   }
 }
@@ -1570,7 +1630,12 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    * whole picker: a month grid over the day on a 360 px screen is the day
    * pushed off the first screen, which is what the rail was built to avoid.
    */
-  .cal-jump {
+  /* **The column stays, the toggle goes.** There is no week rail past this
+     width, so nothing to toggle to - but the month's name and the two either
+     side of it are the stepping at both widths now (author, 2026-10-03: "I
+     want the same calendar look between mobile and desktop"), and they live in
+     this column. */
+  .cal-jump > button {
     display: none;
   }
 

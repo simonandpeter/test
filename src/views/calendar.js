@@ -211,6 +211,32 @@ export function render(el, { data, params, router }) {
             <div class="cal-jump">
               <button type="button" data-month aria-expanded="false"
                 aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
+              <!--
+                **The month's name and its stepping, in the gutter under the
+                toggle** (author, 2026-10-03: "move it to the left-side space
+                under the button that toggles calendar and weekly displays,
+                visible only in calendar display. Then replace the arrows with
+                faded months above and below").
+
+                Three names stacked, this month between the two either side of
+                it, and the faded pair are the control: there is nothing to aim
+                at here that is not also the thing it reaches, which is what the
+                two hairline-and-diamond marks above and below the heading were
+                standing in for.
+
+                It is also what takes the month's own header row out of the
+                grid's column. That row held 82 px open for the whole of a
+                close, outside the box that animates, and dropped them on one
+                tick when the month was hidden - the jump under the picker the
+                same instruction names.
+              -->
+              <div class="month-pick" hidden>
+                <button type="button" class="mpick mpick-prev" data-mstepper="-1"
+                  aria-label="${esc(STRINGS.calendar.prevMonth)}"></button>
+                <span class="mpick mpick-now"><span class="month-name"></span></span>
+                <button type="button" class="mpick mpick-next" data-mstepper="1"
+                  aria-label="${esc(STRINGS.calendar.nextMonth)}"></button>
+              </div>
             </div>
             <div class="cal-span">
               <div class="cal-week">
@@ -251,29 +277,18 @@ export function render(el, { data, params, router }) {
                   other: they are the two facts about *this grid* — which month,
                   and by whose arithmetic — and the pair reads as a heading.
                 -->
-                <div class="month-head">
-                  <!--
-                    **The month's two steps, above and below its own words**
-                    (author, 2026-10-03: "from Oct to Sep is an arrow or swipe
-                    up above the Oct 2026 print, and conversely an arrow down
-                    underneath it"). Each is a hairline closed by a diamond,
-                    pointing away from the month it leaves — the same pieces
-                    they were when they stood either side of the name, turned a
-                    quarter and stacked, because the grid now moves on the
-                    other axis.
+                <!--
+                  **What is left of the month's header row**: the reckoning the
+                  grid is counted by, and the way out to the full calendar.
+                  Both are the desktop's alone, so below 1024 px this box is not
+                  drawn at all and the day names stand where the week rail's
+                  stand.
 
-                    They are the month's stepping at both widths. The peeked
-                    columns that stepped it on a phone are gone with the rest of
-                    the two monthly views' differences, so data-mstep is gone
-                    and data-mstepper is the one name left. The *week* rail is
-                    untouched: it still scrolls sideways and keeps its own
-                    peeking neighbours.
-                  -->
-                  <button type="button" class="mstep mstep-prev" data-mstepper="-1"
-                    aria-label="${esc(STRINGS.calendar.prevMonth)}">
-                    <i class="mstep-dot"></i><i class="mstep-line"></i></button>
+                  The month's name and its two steps left on 2026-10-03 for the
+                  gutter under the toggle button - see .month-pick above.
+                -->
+                <div class="month-head">
                   <span class="month-title">
-                    <span class="month-name"></span>
                     <div class="reckoning" data-reckoning>
                       <button type="button" class="reckoning-btn utility" data-reckoning-btn
                         aria-expanded="false" aria-haspopup="listbox"
@@ -283,9 +298,6 @@ export function render(el, { data, params, router }) {
                     </div>
                     ${fullCalButton()}
                   </span>
-                  <button type="button" class="mstep mstep-next" data-mstepper="1"
-                    aria-label="${esc(STRINGS.calendar.nextMonth)}">
-                    <i class="mstep-line"></i><i class="mstep-dot"></i></button>
                 </div>
                 <div class="month-days-line" aria-hidden="true">
                   <div class="month-days"></div>
@@ -738,6 +750,11 @@ function wireGrainForWidth(el) {
       button?.setAttribute('aria-expanded', 'false');
       button?.classList.remove('is-on');
     }
+    /* This opens and closes the month without going through `toggleMonth`, so
+       the names in the gutter are set from the state rather than toggled with
+       it - past 1024 px the month is the only grain there is and they have to
+       be showing by the time the first paint lands. */
+    el.querySelector('.month-pick').hidden = !state.monthOpen;
     // The month grid is sized from its own box, which has just changed.
     if (state.monthOpen) revealSelected({ week: false });
   };
