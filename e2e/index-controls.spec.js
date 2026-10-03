@@ -663,7 +663,7 @@ test('All Saints says what it is by being it, with no line under the heading', a
   // grid of saints is not improved by a sentence saying it is one.
   await ready(page);
   await page.goto('/saints', { waitUntil: 'networkidle' });
-  await expect(page.locator('h1')).toHaveText('All Saints');
+  await expect(page.locator('h1')).toHaveText('Saints');
   await expect(page.locator('.index-lede')).toHaveCount(0);
   await expect(page.locator('#view')).not.toContainText('The whole corpus');
   // And the heading still has the controls straight under it.

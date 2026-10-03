@@ -73,7 +73,7 @@ async function withHeldSheets(browser, path) {
 }
 
 for (const [name, path] of [
-  ['All Saints', '/saints'],
+  ['Saints', '/saints'],
   ["a saint's page", DETAIL],
 ]) {
   test(`${name} does not paint its text before its stylesheet`, async ({ browser }) => {

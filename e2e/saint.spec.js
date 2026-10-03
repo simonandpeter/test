@@ -318,7 +318,7 @@ test('the saint page puts the register beside the image on desktop, the body ben
   await page.evaluate(() => document.fonts.ready);
   await expect(page.locator('.save-button')).toHaveCount(0);
   await expect(page.locator('.saint-head .bookmark')).toHaveCount(1);
-  await expect(page.locator('.saint-head [data-back]')).toHaveAttribute('aria-label', 'Back to All Saints');
+  await expect(page.locator('.saint-head [data-back]')).toHaveAttribute('aria-label', 'Back to Saints');
 
   const seen = await page.evaluate(() => {
     const r = (s) => document.querySelector(s).getBoundingClientRect();

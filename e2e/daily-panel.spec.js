@@ -848,7 +848,7 @@ test('the × returns to the Daily page when the saint was opened from it, not to
   await page.locator('[data-query]').fill('Anthony the Great');
   await page.locator('.index-card .index-name', { hasText: 'Anthony the Great' }).first().click();
   await expect(page).toHaveURL(/\/saints\/anthony-the-great$/);
-  await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to All Saints');
+  await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Saints');
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(/\/saints$/);
 });
