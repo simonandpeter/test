@@ -12,6 +12,11 @@
       "form": "Βουκόλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιος Βουκόλος Επίσκοπος Σμύρνης», with the rank word and the see left off."
+    },
+    {
+      "form": "Вукол Смирнский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Святитель Вукол Смирнский, епископ», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Прп. Вукола, еп. Смирнского (ок. 100).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -127,6 +141,22 @@
       },
       "english": {
         "text": "We praise you as a hierarch of the Church, all-wise Bucolus, as the disciple and imitator of the one loved before all the disciples of Christ; with whom intercede that those who honour you and cry to you be delivered from every necessity and circumstance: rejoice, thrice-blessed father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему,/ яже вещей истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая./ Отче Вуколе,/ моли Христа Бога,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Тропарь преподобного Вукола, епископа Смирнского»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The truth of things has shown thee to thy flock as a rule of faith, an image of meekness and a teacher of abstinence; therefore thou hast won the heights by humility and riches by poverty. O father Bucolus, pray thou to Christ God that our souls may be saved.",
         "rendered": "site"
       }
     }

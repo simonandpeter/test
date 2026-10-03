@@ -1,0 +1,94 @@
+{
+  "slug": "basil-nadezhdin",
+  "display_name": "Basil (Nadezhdin)",
+  "names": [
+    {
+      "form": "Василий (Надеждин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Василий (Надеждин), иерей, сщмч.», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Сщмч. Василия пресвитера (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 6 февраля ст. ст.: «Сщмч. Василия пресвитера (1930).»."
+    }
+  },
+  "office": "Priest",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Кротким нравом Христовым измлада украшенный, заповеди Божия возлюбив всею душею и всем сердцем, явился еси пастве твоей пастырь добрый, якоже и Бог Спас наш, душу твою полагаяй за овцы твоя. Моли Человеколюбца Бога, отче священномучениче Василие, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), житие священномученика Василия Надеждина — «Тропарь, глас 2-й»",
+        "url": "https://days.pravoslavie.ru/Life/life4776.htm",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned from thy youth with the meek temper of Christ, and having loved the commandments of God with all thy soul and all thy heart, thou wast shown to thy flock a good shepherd, laying down thy life for thy sheep as did God our Saviour. Pray thou to God the lover of mankind, O father and hieromartyr Basil, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "О славе Божией и вере православной ревнуя, отче священномучениче Василие, священническое служение на земли достойно совершил еси, с радостию и благодарением престолу Божию предстоя и паству твою наставляя. Незлобив сый и кроток, пред мучители явился еси адамант твердый, и славя Христа, из узилища мрачнаго в вожделенныя горния обители отшел еси. Темже ныне, в лице святых мучеников Триединаго Бога воспевая, огради нас, любовию тебе чтущих, молитвами твоими.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), житие священномученика Василия Надеждина — «Кондак, глас 2-й»",
+        "url": "https://days.pravoslavie.ru/Life/life4776.htm",
+        "year": 2026
+      },
+      "english": {
+        "text": "Zealous for the glory of God and for the Orthodox faith, O father and hieromartyr Basil, thou didst fulfil the priestly service on earth worthily, standing before the altar of God with joy and thanksgiving and teaching thy flock. Guileless and meek, thou wast shown before the tormentors a hard adamant, and glorifying Christ thou didst depart from a dark prison to the mansions on high for which thou didst long. Therefore now, singing with the choir of the holy martyrs to the Triune God, guard us by thy prayers who honour thee with love.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

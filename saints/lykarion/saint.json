@@ -1,0 +1,53 @@
+{
+  "slug": "lykarion",
+  "display_name": "Lykarion",
+  "names": [
+    {
+      "form": "Ликарион Азийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Ликарион Азийский, отрок, мч.», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Мцц. дев Марфы, Марии и брата их, прмч. Ликариона отрока.»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+    }
+  ],
+  "related": [
+    "martha-sister-of-lykarion",
+    "mary-sister-of-lykarion"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Φαύστα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Άγιοι Φαύστα, Ευϊλάσιος και Μάξιμος», with the rank word left off."
+    },
+    {
+      "form": "Фавста Кизическая",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Фавста (Фауста) Кизическая, дева, мц.», with the rank word and the office left off. The link prints «Фауста» as a variant of the forename; the head form is the one taken here."
     }
   ],
   "sex": "female",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Мц. Фавсты девы и мчч. Евиласия и Максима (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,60 @@
+{
+  "slug": "demetrius-rozhdestvensky",
+  "display_name": "Demetrius (Rozhdestvensky)",
+  "names": [
+    {
+      "form": "Димитрий (Рождественский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Димитрий (Рождественский), протоиерей, сщмч.», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Сщмч. Димитрия пресвитера и мч. Анатолия (1921).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1921,
+      "latest": 1921,
+      "display": "1921",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 6 февраля ст. ст.: «Сщмч. Димитрия пресвитера и мч. Анатолия (1921).»."
+    }
+  },
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}

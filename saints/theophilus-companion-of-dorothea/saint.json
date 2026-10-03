@@ -1,0 +1,63 @@
+{
+  "slug": "theophilus-companion-of-dorothea",
+  "display_name": "Theophilus, companion of Dorothea",
+  "names": [
+    {
+      "form": "Феофил Кесарийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Феофил Кесарийский (Каппадокийский), мч.», with the rank word and the office left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Мцц. Дорофеи девы, жен Христины, Каллисты и мч. Феофила (288-300).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 288,
+      "latest": 300,
+      "display": "288 or 300",
+      "basis": "traditional",
+      "note": "The Sretensky life: «пострадала при императоре Диоклитиане в 288 или 300 году». Two years are offered and neither is preferred, so the interval holds both; the day's own line prints the same pair as «(288-300)»."
+    }
+  },
+  "related": [
+    "dorothea-of-caesarea",
+    "christina-companion-of-dorothea",
+    "callista-companion-of-dorothea"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Σίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Φεβρουαρίου, «Όσιοι Ευάγριος και Σίος εκ Γεωργίας», with the rank word left off."
+    },
+    {
+      "form": "Шио Мгвимский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Преподобный Шио Мгвимский», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Прп. Шио Мгвимского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -78,5 +92,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся еже по образу,/ приим бо крест, последовал еси Христу,/ и, дея, учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней./ Темже и со Ангелы срадуется, преподобне Шио, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Тропарь преподобного Шио Мгвимского»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O father, that which was made after the image was surely kept safe; for taking up the cross thou didst follow Christ, and by thy doing thou didst teach men to despise the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore thy spirit, O venerable Shio, rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Житие твое служением Господним исправил еси/ и, взем крест, оставил еси вся житейская,/ красото пустыни, преподобне Шио./ Кого убо паче тя, и по смерти жива суща/ страна Иверская почитает/ и мощми твоими, от гроба явленными услаждается,/ темже не престай моляся о нас ко Господу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Кондак преподобного Шио Мгвимского»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst set thy life straight by the service of the Lord, and taking up the cross thou didst leave behind all the things of this life, O beauty of the wilderness, venerable Shio. Whom does the land of Iberia honour above thee, who art alive after death, and in whose relics, shown forth from the tomb, it takes its delight? Therefore cease not to pray to the Lord for us.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

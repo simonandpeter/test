@@ -11,6 +11,11 @@
       "form": "Μάρθα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιες Μάρθα, Μαρία και Λυκαρίων ο Οσιομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Марфа Азийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Марфа Азийская, дева, мц.», with the rank word and the office left off."
     }
   ],
   "sex": "female",
@@ -19,13 +24,23 @@
     "virgin"
   ],
   "related": [
-    "mary-sister-of-lykarion"
+    "mary-sister-of-lykarion",
+    "lykarion"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Мцц. дев Марфы, Марии и брата их, прмч. Ликариона отрока.»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

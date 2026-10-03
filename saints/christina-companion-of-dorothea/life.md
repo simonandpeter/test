@@ -1,0 +1,11 @@
+# Christina, companion of Dorothea
+
+The Russian calendar's life for 6 февраля ст. ст. tells one story of four. [Dorothea](/saints/dorothea-of-caesarea) lived at Caesarea in Cappadocia and suffered under the emperor Diocletian, in 288 or in 300, together with the martyrs Christina and [Callista](/saints/callista-companion-of-dorothea) and the martyr [Theophilus](/saints/theophilus-companion-of-dorothea). She was a pious Christian maiden, marked out by great meekness, humility and chastity, and by a wisdom given her of God that astonished many.
+
+Seized at the order of the governor Sapricius, she confessed her faith in Christ firmly and was put to torture. Unable to break her will, the governor handed her over to two women, sisters, Christina and Callista, who had been Christians before but had denied Christ in fear of torment and were living an impious life; he ordered them to persuade Dorothea to sacrifice to the pagan gods. The opposite happened. Convinced by Dorothea that God's mercy gives salvation to all who repent, the women repented and turned back to Christ, and for that they were bound back to back and burned in a barrel of pitch.
+
+Dorothea was tortured again, bore it with great joy, and received the sentence of death as joyfully. As she was being led out, a learned man, a scholastic named Theophilus, said to her mockingly: bride of Christ, send me roses and apples out of thy bridegroom's garden. The martyr nodded to him. Before her death she asked time to pray, and when her prayer was finished an angel stood before her in the form of a beautiful youth and held out, on a clean cloth, three apples and three roses. She asked that they be carried to Theophilus, and then she was beheaded by the sword.
+
+Receiving the gifts of grace, the lately persecutor of Christians was astounded, believed in the Saviour and confessed himself a Christian; he was cruelly tortured for it and met his martyr's end by the sword. The life adds that Dorothea's relics are at Rome, in a church of her name, and her head also at Rome, in the church of the Mother of God in Trastevere.
+
+*After the Православный церковный календарь of the Сретенский monastery for 6 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260206.html) and [the life](https://days.pravoslavie.ru/Life/life401.htm); read 3 October 2026.*

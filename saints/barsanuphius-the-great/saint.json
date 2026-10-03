@@ -11,6 +11,11 @@
       "form": "Βαρσανούφιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Φεβρουαρίου, «Όσιοι Βαρσανούφιος και Ιωάννης ο μαθητής του ο επικαλούμενος Προφήτης», with the rank word left off."
+    },
+    {
+      "form": "Варсонофий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 февраля ст. ст., «Преподобный Варсонофий Великий», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 февраля ст. ст. — «Прпп. Варсонофия Великого и Иоанна Пророка (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260206.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
