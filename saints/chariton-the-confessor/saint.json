@@ -9,6 +9,10 @@
     {
       "form": "Όσιος Χαρίτων ο Ομολογητής",
       "lang": "el"
+    },
+    {
+      "form": "Преп. Харитон исповедник",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -62,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day, and the only one of the four calendars to give a year for his repose rather than only a reign. Read off the Prologue text on the page and not off its entry list."
+      },
+      "source": {
+        "text": "Охридски пролог, 28. септембар ст. к. — «1. Преп. Харитон исповедник. Угледан и благочестив грађанин града Иконије. … Скончао у дубокој старости и преселио се у славу Господа свога 28. септ. 350. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
@@ -73,6 +87,13 @@
       "display": "under Aurelian (270-275)",
       "basis": "attested",
       "note": "The life on doxologia.ro: „în vremea lui Aurelian, rău credinciosul împărat (270-275), s-a arătat Mărturisitor”."
+    },
+    "death": {
+      "earliest": 350,
+      "latest": 350,
+      "display": "350",
+      "basis": "traditional",
+      "note": "Two calendars give it and the other two do not, and it does not sit easily with the floruit above. The Serbian Ohrid Prologue, read 4 October 2026: «Скончао у дубокој старости и преселио се у славу Господа свога 28. септ. 350. год.» The Russian calendar's day line for 28 сентября ст. ст. prints «ок. 350», about 350. The Romanian and Greek lives instead place his confession under Aurelian (270–275) and give no year for his repose, which leaves him dying some seventy-five years after the persecution that made him a confessor. Both readings are recorded and neither is preferred."
     }
   },
   "text": {
@@ -151,5 +172,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "thecla-the-protomartyr"
   ]
 }

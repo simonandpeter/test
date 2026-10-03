@@ -71,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Named inside the Prologue's third entry for this day, which is Mark the Shepherd's. The Prologue prints the three brothers' names only in the accusative, so no Serbian name form is recorded on this folder rather than one being derived."
+      },
+      "source": {
+        "text": "Охридски пролог, 28. септембар ст. к. — «3. Св. муч. Марко пастир. … Хегемон веза Марка, доведе у град, и позва три брата ковача: Александра, Алфеја и Зосима, и поручи им, да направе мучитељске справе за мучење Марка. Но они сва тројица разговоривши се са св. Марком примише веру Христову, и отказаше поруџбину хегемонову.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

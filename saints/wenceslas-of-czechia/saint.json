@@ -5,6 +5,10 @@
     {
       "form": "Άγιος Βιασεσλάβος Πρίγκιπας της Τσεχίας",
       "lang": "el"
+    },
+    {
+      "form": "Св. муч. Вацлав краљ Чешки",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -17,7 +21,7 @@
       "latest": 935,
       "display": "935",
       "basis": "traditional",
-      "note": "saint.gr’s heading: „Αγιος Βιασεσλαβος Πριγκιπας Της Τσεχιας (; - 935)”."
+      "note": "saint.gr’s heading: „Αγιος Βιασεσλαβος Πριγκιπας Της Τσεχιας (; - 935)”. The Russian calendar's day line for 28 сентября ст. ст. and the Serbian Ohrid Prologue, read 4 October 2026 — «Вацлав свети пострада 935. год.» — both print the same year."
     }
   },
   "attestations": [
@@ -56,9 +60,22 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Fourth of the four the Ohrid Prologue enumerates for this day, and the only one of the three calendars that keep him to tell his life at all. It calls him «краљ», king, where the Greek prints πρίγκιπας and the Russian «кн.», prince; this folder keeps the rank its other two sources give and the Prologue's word is recorded in the life."
+      },
+      "source": {
+        "text": "Охридски пролог, 28. септембар ст. к. — «4. Св. муч. Вацлав краљ Чешки. Унук св. Људмиле. … Вацлав свети пострада 935. год. Мошти му почивају у Прагу.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-11&prolog=1",
+        "year": 2026
+      }
     }
+  ],
+  "related": [
+    "ludmila-of-bohemia"
   ],
   "text": {
     "life": "life.md"

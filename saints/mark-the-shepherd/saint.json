@@ -10,6 +10,10 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of «Άγιοι Μάρκος ο ποιμένας, Αλέξανδρος, Αλφειός και Ζώσιμος τα αδέλφια, Νίκων, Νέων, Ηλιόδωρος και λοιπές Παρθένες και Παιδιά» in this folder’s Greek citation."
+    },
+    {
+      "form": "Св. муч. Марко пастир",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -34,7 +38,8 @@
     "neon-companion-of-mark-the-shepherd",
     "nikon-companion-of-mark-the-shepherd",
     "virgins-and-children-with-mark-the-shepherd",
-    "zosimas-brother-of-alexander"
+    "zosimas-brother-of-alexander",
+    "alexander-with-thirty-martyrs"
   ],
   "attestations": [
     {
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 28. септембар ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day. Its account differs from the Greek in the place, in how the three brothers came to confess, and in the thirty soldiers, and all of that is recorded in his life rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 28. септембар ст. к. — «3. Св. муч. Марко пастир. У време Диоклецијана неки Магн, хегемон Антиохијски, пође у лов с војницима. … А светоме Марку по том би одсечена глава, и положена у храм Артемидин, од чега се тај храм Божјом силом сруши.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
