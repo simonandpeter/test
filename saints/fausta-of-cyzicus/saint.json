@@ -73,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.02.2026 (6. фебруар ст. ст.) — „2. Света мученица Фауста. Пострадала за Христа у време цара Максимијана (између 305-311. године.). Својим јунаштвом задивила и у хришћанство обратила мучитеље своје: осамдесетогодишњег жреца Евиласија и Максима епарха.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-19&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. She is its second numbered entry for the day. It differs from the other two sources in four places, all recorded in the life and none resolved: the reign is «у време цара Максимијана (између 305-311. године)», where saint.gr dates Maximian 285 to 305 and puts the affair in 299; the painting is an icon she asks the judge to have made showing all the torments he threatens her with, where the Romanian life has a likeness of herself which she then has torn up; Evilasius is an eighty-year-old жрец, a priest of the idols, as in the Romanian life, and not saint.gr's senator; and she dies in a cauldron of boiling water, where the Romanian life has her and Evilasius stand unharmed in a cauldron of pitch and brimstone and all three die at a voice from heaven."
     }
   ],
   "text": {

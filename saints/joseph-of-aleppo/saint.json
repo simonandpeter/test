@@ -50,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.02.2026 (4. фебруар ст. ст.) — „3. Свети новомученик Јосиф. Родом из Алепа. Примораван од Турака да се потурчи, Јосиф не само да одбије то, него почне изобличавати мухамеданске лажи и хвалити веру Христову. Због тога би мучен и обезглављен 1686. године.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-17&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list. He is its third numbered entry for the day. It agrees with saint.gr on Aleppo, on the beheading and on 1686, and keeps him on the 4th — so it does not corroborate the 17 February the Esphigmenou codex gives on saint.gr's own page. Where it differs is the occasion: here the Turks press him to turn Turk and he answers by exposing the Mohammedan lies and praising the faith of Christ, where saint.gr has them bring a slander against him, that he had said he would become a Turk."
     }
   ],
   "text": {

@@ -53,8 +53,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.02.2026 (5. фебруар ст. ст.) — „3. Свети Полиевкт, патријарх цариградски (+ 970. године). Због свог високог ума, ревности верске и часноречивости назван другим Златоустом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-18&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which cut the heading off mid-parenthesis. He is its third numbered entry for the day. It agrees with saint.gr on 970 and on the name of a second Chrysostom, and differs on when he came to the throne: „Из простих монаха Полиевкт је био узет за патријарха 946. године“, where saint.gr has him made patriarch after Theophylact died in April 956. The ten-year difference is recorded and not resolved; nothing on this folder states a year of accession. The Prologue is also the only source here to carry Olga's baptism: 957, the patriarch baptising and the emperor standing godfather, and the words he spoke over her."
     }
   ],
   "text": {

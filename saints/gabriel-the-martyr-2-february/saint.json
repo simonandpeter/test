@@ -57,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.02.2026 (2. фебруар ст. ст.) — „Исто тако пострада и монах Гаврил, канонарх Велике цркве у Цариграду 1672. године.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-15&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which does not print him at all. He has no entry of his own there: the Prologue names him in the closing sentence of its second entry, that of the new martyr Jordan. It disagrees with saint.gr twice over, and the disagreement is recorded rather than resolved — 1672 against saint.gr's 1676, and канонарх Велике цркве, canonarch of the Great Church, against saint.gr's preacher of the Patriarchate's parish."
     }
   ],
   "text": {
@@ -66,11 +76,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 1676,
+      "earliest": 1672,
       "latest": 1676,
-      "display": "1676",
+      "display": "1672 or 1676",
       "basis": "attested",
-      "note": "saint.gr: «αποκεφαλίστηκε στις 2 Φεβρουαρίου 1676 μ.Χ.», and the page's own head «Αγιος Γαβριηλ ο Οσιομαρτυρας ο Εν Κωνσταντινουπολει (; - 1676)»."
+      "note": "Two sources, two years, and the interval is the disagreement. saint.gr: «αποκεφαλίστηκε στις 2 Φεβρουαρίου 1676 μ.Χ.», with the page's own head «Αγιος Γαβριηλ ο Οσιομαρτυρας ο Εν Κωνσταντινουπολει (; - 1676)»; the Ohrid Prologue at pravoslavno.rs for the Julian 2 February: „Исто тако пострада и монах Гаврил, канонарх Велике цркве у Цариграду 1672. године.“"
     }
   }
 }
