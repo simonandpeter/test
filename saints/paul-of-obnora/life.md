@@ -6,4 +6,4 @@ He became, saint.gr says, one of the most renowned and best loved of the elders 
 
 The page gives nothing further: no tonsure, no founding, no relics, and no hymn.
 
-*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1114/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1114/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 10 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260110.html), read 3 October 2026.*

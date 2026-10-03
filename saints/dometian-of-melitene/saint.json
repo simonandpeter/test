@@ -12,6 +12,11 @@
       "form": "Δομετιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Δομετιανός Επίσκοπος Μελιτηνής», with the rank words left off."
+    },
+    {
+      "form": "Дометиан Мелитинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Святитель Дометиан Мелитинский, епископ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Прп. Дометиана, еп. Мелитинского (601)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -90,6 +104,22 @@
       },
       "english": {
         "text": "Being pure and full of the divine illumination, thou wast entrusted with the care of shepherding the lambs of Christ our God, O venerable father; wherefore, having adorned the mantle of thy hierarchy by ascetic labour and by manifold wonders, thou wast shown, O Dometian, the ornament of the Church and the one set at its head.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Тропарь святителя Григория и преподобного Дометиана», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to thy gentleness, withdraw not thy mercy from us; but at their prayers guide our life in peace.",
         "rendered": "site"
       }
     }

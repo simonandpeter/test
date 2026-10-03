@@ -6,6 +6,16 @@
       "form": "Ανατόλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιος Ανατόλιος ο Ιερομάρτυρας Επίσκοπος Οδησσού», with the rank words left off."
+    },
+    {
+      "form": "Анатолий (Грисюк)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Святитель Анатолий (Грисюк), митрополит Одесский, сщмч.», with the rank words and the see left off."
+    },
+    {
+      "form": "Андрей Григорьевич Грисюк",
+      "lang": "ru",
+      "note": "His name in the world, as the Russian life prints it: «в миру Андрей Григорьевич Грисюк» (days.pravoslavie.ru/Life/life4752.htm)."
     }
   ],
   "sex": "male",
@@ -32,8 +42,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Сщмч. Анатолия, митр. Одесского (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

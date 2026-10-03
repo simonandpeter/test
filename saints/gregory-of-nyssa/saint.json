@@ -12,6 +12,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Άγιος Γρηγόριος Επίσκοπος Νύσσης», with the rank words left off."
+    },
+    {
+      "form": "Григорий Нисский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Святитель Григорий Нисский, епископ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -40,8 +45,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Свт. Григория, еп. Нисского (после 394)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -125,6 +139,54 @@
       },
       "english": {
         "text": "Showing forth a divine wakefulness and an unwearying mouth of godliness, thou wast revealed a hierarch, O Gregory; for by the wisdom of thy divine doctrines thou gladdenest the fullness of the Church. Venerable father, entreat Christ God that he grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Тропарь святителя Григория и преподобного Дометиана», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to thy gentleness, withdraw not thy mercy from us; but at their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Оком душевным бодрствуя, святителю,/ бодр пастырь явился еси миру,/ и жезлом мудрости твоея, и теплым предстательством твоим/ вся отгнал еси злославныя, яко волки,/ невредно соблюд стадо,// Григорие всемудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Кондак святителя Григория», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Watching with the eye of the soul, O hierarch, thou wast shown to the world a wakeful shepherd; and with the staff of thy wisdom and with thy fervent intercession thou didst drive off all the evil-believing as wolves, keeping the flock unharmed, O all-wise Gregory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Церкве Божественный иерарх/ и премудрости честный тайноглагольник, / Ниссийский бодрый ум, Григорий,/ со Ангелы ликовствуя/ и наслаждался Божественным светом,/ молится непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Ин кондак святителя Григория», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The divine hierarch of the Church and honoured speaker of the mysteries of wisdom, the watchful mind of Nyssa, Gregory, dancing with the angels and delighting in the divine light, prayeth unceasingly for us all.",
         "rendered": "site"
       }
     }

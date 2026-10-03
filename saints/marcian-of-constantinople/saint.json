@@ -11,6 +11,11 @@
       "form": "Μαρκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Άγιος Μαρκιανός», with the rank word left off."
+    },
+    {
+      "form": "Маркиан Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Маркиан Константинопольский, пресвитер», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Прп. Маркиана пресвитера (V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,60 @@
+{
+  "slug": "peter-presbyter-martyr-1930",
+  "display_name": "Peter (Uspensky)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Петр (Успенский)",
+      "lang": "ru",
+      "note": "Read out of the calendar's own name link behind that line, «Петр (Успенский), протоиерей, сщмч.», with the rank words left off. The calendar's line gives the name in the genitive and without the surname; that bare form is this one with less of it, so it is not stored separately."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, «Сщмч. Петра пресвитера (1930)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Сщмч. Петра пресвитера (1930)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

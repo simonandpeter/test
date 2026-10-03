@@ -11,6 +11,16 @@
       "form": "Αντίπας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Αντίπας ο Αθωνίτης», with the rank word left off."
+    },
+    {
+      "form": "Антипа Валаамский (Афонский)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's line for 10 января ст. ст., «Прп. Антипы Валаамского (Афонского) (1882)», put in the nominative the line declines and with the rank word left off."
+    },
+    {
+      "form": "Антипа Варлаамский (Афонский)",
+      "lang": "ru",
+      "note": "The form the calendar's own name link behind that line prints, «Антипа Варлаамский (Афонский), прп.», with the rank word left off; it differs from the day line's «Валаамского» and is recorded as the source has it, uncorrected."
     }
   ],
   "sex": "male",
@@ -37,8 +47,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Прп. Антипы Валаамского (Афонского) (1882)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

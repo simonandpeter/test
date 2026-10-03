@@ -12,6 +12,11 @@
       "form": "Θεοφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιανουαρίου, «Όσιος Θεοφάνης ο Έγκλειστος», with the rank word left off."
+    },
+    {
+      "form": "Феофан Затворник, Вышенский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Святитель Феофан Затворник, Вышенский, епископ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Свт. Феофана, Затворника Вышенского (1894)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -84,5 +98,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ Вышинский подвижниче, святителю Феофане богомудре,/ писаньми твоими Слово Божие изъяснил еси/ и всем верным путь ко спасению указал еси,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Тропарь святителя Феофана», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O teacher of Orthodoxy, master of piety and of purity, ascetic of Vysha, God-wise hierarch Theophan, by thy writings thou didst expound the Word of God and didst show to all the faithful the way of salvation: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Богоявлению тезоименитый,/ святителю Феофане,/ ученьми Твоими многи люди просветил еси,/ со Ангелы ныне предстоя Престолу Святыя Троицы,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Кондак святителя Феофана», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who bearest the name of the Theophany, O hierarch Theophan, by thy teachings thou didst enlighten many people; now standing with the angels before the throne of the Holy Trinity, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

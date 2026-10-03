@@ -10,6 +10,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιανουαρίου, «Όσιος Παύλος ο εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Павел Комельский (Обнорский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 10 января ст. ст., «Преподобный Павел Комельский (Обнорский)», with the rank word left off."
     }
   ],
   "dates": {
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Прп. Павла Комельского (Обнорского) (1429)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -66,5 +80,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Божественною любовию от юности распалаемь, Павле преподобне, / вся, яже в мире красная, возненавидев, / Христа единаго возлюбил еси / и сего ради во внутреннюю пустыню вселился еси, / со зверьми жити весь Христу. / Отонудуже и Всевидящее Око, твоя труды видев, / даром чудес и по преставлении обогати тя. / Темже вопием ти: / моли непрестанно о всех нас, / честную память твою присно в песнех почитающих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Тропарь преподобного Павла Комельского (Обнорского)», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled from thy youth with divine love, O venerable Paul, thou didst hate all the fair things that are in the world and didst love Christ alone; and for his sake thou didst settle in the inner wilderness, to live among the wild beasts wholly unto Christ. Wherefore the All-seeing Eye, beholding thy labours, enriched thee with the gift of wonders even after thy repose. Therefore we cry to thee: pray without ceasing for us all, who ever honour thy precious memory in hymns.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Все твое умное желание к Богу вперив,/ и Тому невозвратно от души последовал еси, в пустыню вселився,/ и, тамо ангельски пожив, многим путь был еси ко спасению. / Сего ради и Христос тя прослави и даром чудес обогати./ Темже вси вопием ти:/ радуйся, Павле преподобне, пустынный жителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст., «Кондак преподобного Павла Комельского (Обнорского)», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having set all the desire of thy mind upon God, thou didst follow after him from thy soul without turning back, and settling in the wilderness and living there as an angel, thou wast a way of salvation to many. For this cause Christ glorified thee and enriched thee with the gift of wonders. Therefore we all cry to thee: rejoice, O venerable Paul, dweller in the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

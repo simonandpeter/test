@@ -1,0 +1,60 @@
+{
+  "slug": "zenobius-presbyter-martyr-1920",
+  "display_name": "Zenobius (Sutormin)",
+  "office": "Presbyter",
+  "names": [
+    {
+      "form": "Зиновий (Сутормин)",
+      "lang": "ru",
+      "note": "Read out of the calendar's own name link behind that line, «Зиновий (Сутормин), иерей, сщмч.», with the rank words left off. The calendar's line gives the name in the genitive and without the surname; that bare form is this one with less of it, so it is not stored separately."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, «Сщмч. Зиновия пресвитера (1920)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 января ст. ст. — «Сщмч. Зиновия пресвитера (1920)»",
+        "url": "https://days.pravoslavie.ru/Days/20260110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

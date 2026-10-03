@@ -4,4 +4,4 @@ The Greek calendar prints him on 10 Ιανουαρίου as «Όσιος Μακ�
 
 So he followed the life of the desert, and he was marked out for the holiness and the strictness of it. Macarius fell asleep in peace. That is the whole of the page: it gives no year for his birth or his death, no account of any monastery he founded or entered, and no hymn.
 
-*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1113/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1113/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 10 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260110.html), read 3 October 2026.*

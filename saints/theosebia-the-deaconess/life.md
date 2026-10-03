@@ -6,4 +6,4 @@ What it does say can be said for certain is how [Gregory the Theologian](/saints
 
 The page gives her no year of birth or death, no place, and no hymn.
 
-*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1110/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 10 Ιανουαρίου — [the day](https://www.saint.gr/01/10/index.aspx) and [the life](https://www.saint.gr/1110/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 10 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260110.html) and [the Russian life](https://days.pravoslavie.ru/Life/life190.htm), read 3 October 2026.*
