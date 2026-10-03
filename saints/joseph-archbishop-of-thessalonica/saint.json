@@ -12,19 +12,34 @@
       "form": "Ιωσήφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουλίου, «Άγιος Ιωσήφ ο Ομολογητής, Αρχιεπίσκοπος Θεσσαλονίκης και αδελφός του Αγίου Θεοδώρου του Στουδίτου», with the rank words, the see and the kinship clause left off."
+    },
+    {
+      "form": "Иосиф Солунский (Фессалоникийский)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Святитель Иосиф Солунский (Фессалоникийский), архиепископ, песнописец, исповедник», with the rank words left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
     "archbishop",
-    "confessor"
+    "confessor",
+    "hymnographer"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Свт. Иосифа Студита, архиеп. Солунского (830)»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -66,11 +81,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 832,
+      "earliest": 830,
       "latest": 832,
-      "display": "832",
+      "display": "830 or 832",
       "basis": "attested",
-      "note": "saint.gr: «Έτσι μέσα στην πείνα και τη δίψα, και τις διάφορες θλίψεις, έφυγε για την αιώνια ζωή το 832 μ.Χ.», and its heading «Αγιος Ιωσηφ ο Ομολογητης, Αρχιεπισκοπος Θεσσαλονικης Και Αδελφος Του Αγιου Θεοδωρου Του Στουδιτου (; - 832)», which gives no year of birth. doxologia.ro, the folder's other source, gave no year at all."
+      "note": "The two calendars disagree by two years and both are recorded. days.pravoslavie.ru's life of him: «Последние годы он провел в Студийском монастыре, где преставился в 830 году», and its day line prints (830); saint.gr gave 832 — «έφυγε για την αιώνια ζωή το 832 μ.Χ.»"
     }
   },
   "related": [

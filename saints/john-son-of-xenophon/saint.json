@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Όσιος Ξενοφών μετά της συμβίου του Μαρίας και των τέκνων Αρκαδίου και Ιωάννη», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Константинопольский, Палестинский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Иоанн Константинопольский, Палестинский, прп.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -89,13 +94,70 @@
         "text": "Having escaped the sea of this life, the righteous Xenophon and his honoured wife rejoice together in the heavens with their children, magnifying Christ.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Тропарь преподобных»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us always according to thy gentleness, take not thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Житейскаго моря избегше,/ Ксенофонт праведный/ с сопружницею честною/ на Небесех свеселятся с чады,// Христа величающе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Кондак преподобных»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having escaped the sea of this life, the righteous Xenophon and his honoured wife rejoice together in the heavens with their children, magnifying Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4. Подобен: Явился еси:",
+      "text": "В заповедех бодрствовал еси Владычних,/ нищим расточйвый твое богатство, блаженне,/ тихо с сопружницею и чады твоими,/ темже наследуете/ Божественное наслаждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Ин кондак преподобных Ксенофонта, Марии и чад их»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast watchful in the commandments of the Master, O blessed one, scattering thy wealth to the poor, quietly, together with thy wife and thy children; and therefore ye inherit the divine delight.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Прпп. Ксенофонта, супруги его Марии и сыновей их Аркадия и Иоанна (V-VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

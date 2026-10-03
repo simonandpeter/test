@@ -29,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Мчч. Анании пресвитера, Петра, темничного стража, и с ними семи воинов (295)»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "note": "The line names Ananias and Peter and then counts the seven soldiers without naming them; this folder is that unnamed company, as it is on the Greek day."
     },
     {
       "church": "romanian",

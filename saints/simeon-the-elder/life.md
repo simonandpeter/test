@@ -6,4 +6,6 @@ From the desert he went to Mount Sinai, to venerate the places where God came do
 
 saint.gr says the life of Simeon was written by Theodoret of Cyrus, and points to the sixth chapter of the Philotheos Historia. The page gives no year for his birth and none for his death, and prints no troparion and no kontakion. Above the life it sets a couplet playing on his epithet: «Τὸν χοῦν παλαιὲ Συμεὼν ἀπεξύσω, / Ἐχθροῦ παλαιοῦ λεπτύνας εἰς χοῦν κάραν» — you scraped away the dust, old Simeon, grinding the head of the old enemy to dust.
 
-*After saint.gr's calendar for 26 Ιανουαρίου — [the day](https://www.saint.gr/01/26/index.aspx) and [the life](https://www.saint.gr/1173/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day as «Прп. Симеона Ветхого (390)», which is a year where the Greek calendar gave none, and its name link adds two things: Сирийский, the Syrian, and игумен, an abbot. It prints no hymn under his name.
+
+*After saint.gr's calendar for 26 Ιανουαρίου — [the day](https://www.saint.gr/01/26/index.aspx) and [the life](https://www.saint.gr/1173/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 26 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260126.html), read 3 October 2026.*

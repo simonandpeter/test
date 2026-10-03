@@ -1,0 +1,60 @@
+{
+  "slug": "john-popov-26-january",
+  "display_name": "John (Popov) (26 January)",
+  "names": [
+    {
+      "form": "Иоанн (Попов)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Иоанн (Попов), иерей, мч.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Мч. Иоанна (1938)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Мч. Иоанна (1938)»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life page behind his name, only the day's line and the name link. The corpus already holds a John (Popov), a priest of Vologda born in 1863 whom the same calendar keeps on 10 сентября ст. ст. and dates to 1937; the two are kept apart here on the year and the day, and the question is left open rather than merged."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

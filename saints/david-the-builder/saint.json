@@ -12,6 +12,11 @@
       "form": "Δαυίδ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Άγιος Δαυίδ βασιλεύς της Γεωργίας», with the rank word left off."
+    },
+    {
+      "form": "Давид III Возобновитель",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 26 января ст. ст., «Давид III Возобновитель, царь Иверии и Абхазии», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 января ст. ст. — «Блгв. Давида III Возобновителя, царя Иверии и Абхазии (1125) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260126.html",
+        "year": 2026
+      },
+      "note": "The line ends «(Груз.)», which is how this calendar marks a commemoration taken from the Georgian church; the day is the Russian calendar's own."
     },
     {
       "church": "romanian",
