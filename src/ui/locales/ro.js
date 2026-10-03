@@ -1119,6 +1119,7 @@ export const ro = {
     'Metropolitan of Transylvania': 'Mitropolit al Ardealului',
     'Metropolitan of Ungro-Wallachia': 'Mitropolit al Ungrovlahiei',
     'Metropolitan of Wallachia': 'Mitropolit al Țării Românești',
+    'Metropolitan of Yaroslavl': 'Mitropolit de Iaroslavl',
     'Monk': 'Monah',
     'Monk of Zilantov': 'Monah de la Zilantov',
     'Novice': 'Ascultător',

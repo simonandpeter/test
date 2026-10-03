@@ -4,4 +4,6 @@ John, the Greek synaxarion says, at first fell into the error of the Monophysite
 
 Returning, he became a monk at the place called Choziba, which the entry puts in Egypt, and grew so in the virtues of Orthodoxy that God gave him to heal the possessed by his prayer. He was made bishop of Caesarea but went back to his hermitage, and died there, having helped countless souls with his Orthodox teaching. The Greek calendar keeps him on 3 October; the entry gives no year.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — [the entry](https://www.saint.gr/2586/saint.aspx); read 17 September 2026.*
+The Russian church calendar keeps him on the Julian 3 October and gives this folder its first date: «Прп. Иоанна Хозевита, еп. Кесарийского (VI)», the sixth century. It agrees with the Greek that he was bishop of Caesarea, and its index of names lists a second day for him, 28 October, which is recorded in the Russian row.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 3 Οκτωβρίου — [the entry](https://www.saint.gr/2586/saint.aspx); read 17 September 2026; the Russian church calendar keeps him on the Julian 3 October — [the day](https://days.pravoslavie.ru/Days/20261003.html); read 4 October 2026.*

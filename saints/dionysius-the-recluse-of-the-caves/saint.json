@@ -7,6 +7,11 @@
       "form": "Διονύσιος ο Έγκλειστος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Διονύσιος ο Έγκλειστος «εν τω Σπηλαίω»»."
+    },
+    {
+      "form": "Дионисий Печерский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 628 heads him «Дионисий Печерский, Щепа, иеромонах, затворник»; the day line's shorter «Дионисия, затворника Печерского» is the form taken here and the byname is in this note."
     }
   ],
   "sex": "male",
@@ -25,8 +30,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 августа (Печер.(Д))», which its own abbreviation marks as one of the Kyiv Caves synaxes. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Прп. Дионисия, затворника Печерского (XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian gives the fifteenth century where the Greek gives the one dated event of his life, his Pascha of 1463 in the caves; the century contains the year. Its index of names carries a byname the Greek does not, «Дионисий Печерский, Щепа, иеромонах, затворник» — Shchepa, and it makes him a hieromonk as well as a recluse."
     },
     {
       "church": "romanian",

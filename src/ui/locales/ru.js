@@ -1138,6 +1138,7 @@ export const ru = {
     'Metropolitan of Transylvania': 'Митрополит Трансильванский',
     'Metropolitan of Ungro-Wallachia': 'Митрополит Унгро-Валашский',
     'Metropolitan of Wallachia': 'Митрополит Валашский',
+    'Metropolitan of Yaroslavl': 'Митрополит Ярославский',
     'Monk': 'Монах',
     'Monk of Zilantov': 'Монах Зилантовский',
     'Novice': 'Послушник',

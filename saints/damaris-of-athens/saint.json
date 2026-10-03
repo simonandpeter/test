@@ -21,14 +21,11 @@
       "note": "saint.gr: «πίστεψαν στο κήρυγμα του Αποστόλου Παύλου το 52 μ.Χ.»."
     }
   },
-  "related": [
-    "dionysius-the-areopagite"
-  ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 3 октября ст. ст. (civil 16 October 2026) was read on 2026-10-04. It keeps Dionysius the Areopagite on the day and gives him the Areopagus sermon of Acts 17 for its gospel, but it does not name her, although Acts 17 does. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -55,6 +52,12 @@
       "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
     }
   ],
+  "related": [
+    "dionysius-the-areopagite"
+  ],
+  "text": {
+    "life": "life.md"
+  },
   "hymns": [
     {
       "church": "greek",
@@ -90,8 +93,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

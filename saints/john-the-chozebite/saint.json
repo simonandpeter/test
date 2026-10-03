@@ -7,6 +7,11 @@
       "form": "Ιωάννης ο Χοζεβίτης",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Ιωάννης ο Χοζεβίτης επίσκοπος Καισαρείας»."
+    },
+    {
+      "form": "Иоанн Хозевит",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1024 is «Святитель Иоанн Хозевит, Кесарийский, епископ»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -14,11 +19,33 @@
     "venerable",
     "bishop"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The century the Russian calendar prints after his name, «Прп. Иоанна Хозевита, еп. Кесарийского (VI)». The folder held no date at all before this reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 октября». One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Прп. Иоанна Хозевита, еп. Кесарийского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian agrees with the folder's office, bishop of Caesarea, and gives it the century the folder had no date without."
     },
     {
       "church": "romanian",

@@ -1120,6 +1120,7 @@ export const sr = {
     'Metropolitan of Transylvania': 'Митрополит трансилванијски',
     'Metropolitan of Ungro-Wallachia': 'Митрополит унгровлашки',
     'Metropolitan of Wallachia': 'Митрополит влашки',
+    'Metropolitan of Yaroslavl': 'Митрополит јарославски',
     'Monk': 'Монах',
     'Monk of Zilantov': 'Монах зилантовски',
     'Novice': 'Искушеник',

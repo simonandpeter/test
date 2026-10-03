@@ -1120,6 +1120,7 @@ export const el = {
     'Metropolitan of Transylvania': 'Μητροπολίτης Τρανσυλβανίας',
     'Metropolitan of Ungro-Wallachia': 'Μητροπολίτης Ουγγροβλαχίας',
     'Metropolitan of Wallachia': 'Μητροπολίτης Βλαχίας',
+    'Metropolitan of Yaroslavl': 'Μητροπολίτης Γιαροσλάβλ',
     'Monk': 'Μοναχός',
     'Monk of Zilantov': 'Μοναχός Ζιλάντοφ',
     'Novice': 'Δόκιμος',

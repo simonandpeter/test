@@ -1,0 +1,77 @@
+{
+  "slug": "agathangel-preobrazhensky",
+  "display_name": "Agathangel (Preobrazhensky)",
+  "office": "Metropolitan of Yaroslavl",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "metropolitan",
+    "confessor",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Агафангел (Преображенский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9094, «Святитель Агафангел (Преображенский), митрополит Ярославский, исп.», with the rank and office words left off. His name in the world, which his life gives, was Александр Лаврентьевич Преображенский."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1854,
+      "latest": 1854,
+      "display": "1854",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «родился 27 сентября 1854 года в селе Могилы Кормовской волости Веневского уезда Тульской губернии, в семье священника Лаврентия»."
+    },
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day in both styles: «3 (16 н. ст.) октября 1928 года митрополит Агафангел скончался», and the day line prints «(1928)» after his name."
+    }
+  },
+  "related": [
+    "agathangelus",
+    "tikhon-of-moscow",
+    "clement-of-ancyra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «30 октября (обретение мощей)», the finding of his relics. One row per church is the schema, so the other two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Свт. Агафангела исп. митр. Ярославского (1928).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank recorded is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть». The page's readings then allow a higher one for him alone, conditionally: «Если совершается полиелейная служба свт. Агафангела исп., митр. Ярославского, то на утрене читается…» — if the polyeleos service is served. A condition is not a statement of rank, so the icon's six stichera is what stands here and the condition is recorded in this note."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 16 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs and confessors."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/16 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 16 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

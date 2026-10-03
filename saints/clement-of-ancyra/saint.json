@@ -38,6 +38,10 @@
       "note": "doxologia.ro's life opens: «După ce au trecut de la naşterea Domnului nostru Iisus Hristos 250 de ani - în vremea împărăţiei lui Valerian (253-259) -, cetatea de scaun a Ancirei, din părţile Galatiei, a odrăslit pe acest Sfânt Mucenic Clement». The two readings the page gives do not agree exactly, so the interval is the one that holds both."
     }
   },
+  "related": [
+    "agathangelus",
+    "agathangel-preobrazhensky"
+  ],
   "attestations": [
     {
       "church": "russian",
@@ -204,8 +208,5 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ],
-  "related": [
-    "agathangelus"
   ]
 }
