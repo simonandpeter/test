@@ -16,6 +16,11 @@
       "form": "Ефрем Сирин",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Ефрем Сирин», with the rank words left off."
+    },
+    {
+      "form": "Јефрем Сирин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 28. јануар ст. ст. (civil 2026-02-10), „Преподобни Јефрем Сирин“. The rank word „Преподобни“ is left off; „Сирин“ is kept, being what distinguishes him from the two other Ephrems the same day keeps. The entry gives the year of his repose as 378."
     }
   ],
   "sex": "male",
@@ -83,8 +88,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.02.2026 (28. јануар ст. ст.) — „Преподобни Јефрем Сирин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

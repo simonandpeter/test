@@ -12,6 +12,11 @@
       "form": "Ефрем Печерский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 28 января ст. ст., «Преподобный Ефрем Печерский», with the rank words left off."
+    },
+    {
+      "form": "Јефрем Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 28. јануар ст. ст. (civil 2026-02-10), „Преподобни Јефрем Печерски (+ 1096. године)“. The rank word „Преподобни“ is left off and so is the parenthesis giving the year; „Печерски“ is kept, being what distinguishes him from the Syrian and from the Ephrem of Torzhok. The Prologue dates his repose to 1096 and the folder's own source, saint.gr, to 1098; the two years are not reconciled here."
     }
   ],
   "sex": "male",
@@ -64,8 +69,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.02.2026 (28. јануар ст. ст.) — „Преподобни Јефрем Печерски (+ 1096. године).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
