@@ -11,6 +11,11 @@
       "form": "Ευσέβιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιοι Βάσσος, Ευσέβιος, Ευτύχιος και Βασιλίδης», with the rank word left off."
+    },
+    {
+      "form": "Евсевий Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Евсевий Никомидийский, мч.», with the rank word left off; the line itself gives him in the genitive."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Мчч. Васса, Евсевия, Евтихия и Василида (303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -4,4 +4,4 @@ The Greek calendar keeps four men together on 20 Ιανουαρίου — [Bassu
 
 Of Basilides the page says one thing: that they tore open his belly. So, it ends, these holy martyrs received the crown of witness. No year, no city and no judge is printed for him, and no hymn. The calendar keeps another Basilides among the Ten of Crete on another day, and nothing from that folder is carried over to this one.
 
-*After saint.gr's calendar for 20 Ιανουαρίου — [the day](https://www.saint.gr/01/20/index.aspx) and [the life](https://www.saint.gr/3323/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 20 Ιανουαρίου — [the day](https://www.saint.gr/01/20/index.aspx) and [the life](https://www.saint.gr/3323/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 20 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260120.html), read 3 October 2026, which keeps the four of them as «Мчч. Васса, Евсевия, Евтихия и Василида (303)», names each of them Nicomedian and dates them 303.*

@@ -4,4 +4,4 @@ Euthymius — saint.gr gives the family name in brackets, «Ευθύμιος (Κ
 
 Under the Soviet regime, the page says, he rescued many manuscripts of the ancient Georgian church hymns. He lived in a way pleasing to God and fell asleep in peace. That is the whole of it: saint.gr names no monastery, gives no year of birth and none of death, and prints no hymn and no verses for him.
 
-*After saint.gr's calendar for 2 Φεβρουαρίου — [the day](https://www.saint.gr/02/02/index.aspx) and [the life](https://www.saint.gr/1188/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 2 Φεβρουαρίου — [the day](https://www.saint.gr/02/02/index.aspx) and [the life](https://www.saint.gr/1188/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 20 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260120.html), read 3 October 2026, which keeps him as «Прп. Евфимия исп (1944) (Груз.)», names him «Евфимий (Кереселидзе)» and makes him an abbot and a confessor.*

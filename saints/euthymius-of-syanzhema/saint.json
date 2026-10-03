@@ -12,6 +12,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιοι Ευθύμιος και Χαρίτων», with the rank word left off."
+    },
+    {
+      "form": "Евфимий Сянжемский, Вологодский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Преподобный Евфимий Сянжемский, Вологодский», with the rank word left off."
     }
   ],
   "related": [
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Прп. Евфимия Сянжемского, Вологодского (ок. 1465)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

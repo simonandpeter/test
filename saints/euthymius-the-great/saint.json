@@ -11,6 +11,11 @@
       "form": "Ευθύμιος ο Μέγας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Όσιος Ευθύμιος ο Μέγας», with the rank word left off."
+    },
+    {
+      "form": "Евфимий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Евфимий Великий, иеромонах», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Прп. Евфимия Великого (473)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -135,6 +149,38 @@
       },
       "english": {
         "text": "At thy venerable birth creation found joy, and at thy divine memory, O venerable one, it received the good cheer of thy many wonders. Grant of them richly to our souls, and cleanse away the stains of our sins, that we may sing: Alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Веселися, пустыня нераждающая,/ благодушствуй, неболящая,/ яко умножи тебе чада муж желаний духовных,/ благочестием насадив,/ воздержанием воспитав добродетелей в совершенство./ Того молитвами, Христе Боже,// умири живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Тропарь преподобного Евфимия Великого», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Rejoice, O barren wilderness; be of good cheer, thou that didst not travail: for a man of spiritual desires hath multiplied children for thee, planting them in godliness and rearing them by abstinence to the perfection of the virtues. At his prayers, O Christ God, give peace to our life.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "В честнем рождестве твоем радость тварь обрете/ и в Божественней памяти твоей, преподобне,/ благодушие прият многих твоих чудес,/ от нихже подаждь богатно в души наша и очисти грехов скверны,// яко да поем: аллилуия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Кондак преподобного Евфимия Великого», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "At thy honoured birth creation found joy, and at thy divine memory, O venerable one, it received the good cheer of thy many wonders. Of these give richly into our souls, and cleanse away the stains of our sins, that we may sing: alleluia.",
         "rendered": "site"
       }
     }

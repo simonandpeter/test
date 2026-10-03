@@ -6,6 +6,11 @@
       "form": "Ευθύμιος ο Ησυχαστής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Όσιοι Ευθύμιος ο Ησυχαστής και Λαυρέντιος ο Έγκλειστος», with the rank word left off."
+    },
+    {
+      "form": "Евфимий, схимник Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Преподобный Евфимий, схимник Печерский», with the rank word «Преподобный» left off. «схимник», schemamonk, is kept because it is the calendar's own epithet for him where the Greek calendar has «ησυχαστής»."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Прп. Евфимия схимника Печерского (XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Евфимие всечестне, преподобным единоревнителю и Ангелом собеседниче, получивый с ними житием своим чистым и безмолвным вечная благая, молися Господеви присно о всех нас, да и мы тех же благ сподобимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Тропарь преподобного Евфимия, схимника Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "All-honoured Euthymius, fellow-zealot of the venerable and companion in speech of the angels, who with them hast obtained the eternal good things by thy pure and silent manner of life: pray the Lord always for us all, that we too may be counted worthy of those same good things.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко приял еси схиму, бысть выну тих и молчалив, препо­добне, никогдаже бо ни с ким, разве молитв ко Господу, ничесоже глаголал еси, и пищи, разве зелия сурова, никоея же вкушал еси. Тем обрет днесь пищу неиждившую на небеси, Евфимие, моли и нам тояжде причаститися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Кондак преподобного Евфимия, схимника Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From the time thou receivedst the schema thou wast always still and silent, O venerable one; for thou spakest nothing to anyone at all, save prayers to the Lord, and tastedst no food, save raw herbs. Having therefore found today in heaven the food that is never spent, O Euthymius, pray that we too may partake of it.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

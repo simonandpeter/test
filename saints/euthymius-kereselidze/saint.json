@@ -11,6 +11,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Φεβρουαρίου, «Όσιος Ευθύμιος εκ Γεωργίας», with the rank word left off; the page's life adds the family name in brackets, «Ευθύμιος (Κερεσελίντζε)»."
+    },
+    {
+      "form": "Евфимий (Кереселидзе)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Евфимий (Кереселидзе), игумен, исповедник, прп.», with the rank words left off; the line itself gives him only as «Прп. Евфимия исп (1944) (Груз.)»."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Прп. Евфимия исп (1944) (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -6,6 +6,11 @@
       "form": "Λαυρέντιος ο Έγκλειστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Όσιοι Ευθύμιος ο Ησυχαστής και Λαυρέντιος ο Έγκλειστος», with the rank word left off."
+    },
+    {
+      "form": "Лаврентий Печерский, затворник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Лаврентий Печерский, затворник»; «затворник», the recluse, is the calendar's own epithet and is kept because it is what tells him from the other Laurences."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Прп. Лаврентия затворника Печерского (XIII-XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -58,5 +72,38 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "text": "Затворивый себе Господа ради в темней пещере, / преподобне отче Лаврентие, многолетне / и Оному добре в ней угодивый, / подаждь и нам от всякаго зла чувствия затворити, / и тьмы страстей отвратитися, / и светлость получити Царствия Небеснаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Тропарь преподобного Лаврентия, затворника Печерского, в Дальних пещерах»; the page prints no tone for this one",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who for the Lord's sake didst shut thyself many years in a dark cave, O venerable father Laurence, and in it didst please him well: grant us also to shut our senses against every evil, and to turn away from the darkness of the passions, and to obtain the brightness of the kingdom of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Бог, рекий из тьмы свету возсияти,/ просил тебе из темна места, яко свет,/ и знаема всем показа, Лаврентие,/ яви же и Свету невечернему тя причастника, преподобне,/ в немже ликуя, поминай нас, хвалящих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст., «Кондак преподобного Лаврентия, затворника Печерского, в Дальних пещерах», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "God, who said that light should shine out of darkness, brought thee forth from a dark place as a light and made thee known to all, O Laurence; and he showed thee also a partaker of the light that knows no evening, O venerable one. Rejoicing in it, remember us who praise thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

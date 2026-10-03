@@ -6,4 +6,4 @@ One story is told of him. A man possessed was once brought to him from Kyiv, and
 
 He is not the Laurence of Chernigov whom the Romanian calendar keeps on this same day; that elder is another man of a much later age, and nothing is carried between the two folders. No year of birth or of repose is printed here, and no hymn.
 
-*After saint.gr's calendar for 20 Ιανουαρίου — [the day](https://www.saint.gr/01/20/index.aspx) and [the life](https://www.saint.gr/2607/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 20 Ιανουαρίου — [the day](https://www.saint.gr/01/20/index.aspx) and [the life](https://www.saint.gr/2607/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 20 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260120.html), read 3 October 2026, which keeps him as «Прп. Лаврентия затворника Печерского (XIII-XIV)» and sets his hymns «в Дальних пещерах», in the Far Caves.*

@@ -11,6 +11,11 @@
       "form": "Ιννάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιανουαρίου, «Άγιοι Ιννάς, Πιννάς και Ριμμάς», with the rank word left off."
+    },
+    {
+      "form": "Инна",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 20 января ст. ст., «Мученик Инна», with the rank word left off; the line itself gives him in the genitive, «Инны»."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 января ст. ст. — «Мчч. Инны, Пинны и Риммы (I-II)»",
+        "url": "https://days.pravoslavie.ru/Days/20260120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
