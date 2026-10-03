@@ -1,0 +1,72 @@
+{
+  "slug": "vladimir-yaroslavich-of-novgorod",
+  "display_name": "Vladimir Yaroslavich of Novgorod",
+  "sex": "male",
+  "types": [
+    "righteous",
+    "prince",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Владимир Ярославич Новгородский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 432, «Святой благоверный князь Владимир Ярославич Новгородский», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1020,
+      "latest": 1020,
+      "display": "1020",
+      "basis": "traditional",
+      "note": "His life on days.pravoslavie.ru: «старший сын великого князя Ярослава Мудрого, родился в 1020 году»."
+    },
+    "death": {
+      "earliest": 1052,
+      "latest": 1052,
+      "display": "1052",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day, the age and the interval from the consecration: «Скончался святой князь 32-х лет 4 октября 1052 года через 20 дней после освящения Софийского храма»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Блгв. кн. Владимира Ярославича Новгородского, чудотворца (1052).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's one higher rank belongs to the finding of the relics of Gurias and Barsanuphius."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read for him (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "euthymius-of-novgorod"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

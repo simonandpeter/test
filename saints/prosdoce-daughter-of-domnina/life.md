@@ -4,4 +4,6 @@ Prosdoce was one of the two daughters of [Domnina of Antioch](/saints/domnina-of
 
 The Romanian calendar, which spells her Prosdoca, has the three wander as far as Edessa of their own zeal, be caught there and taken to Hierapolis, and slip away from their drinking guards to throw themselves into the river that ran round the place. The Greek keeps her on 4 October with her mother and sister, the Romanian on her own line the same day.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2589/saint.aspx); doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-prosdoca); read 17 September 2026.*
+The Russian church calendar keeps her with her mother and sister on the Julian 4 October, «Мцц. Домнины и дщерей ее Виринеи (Вероники) и Проскудии (Просдоки) (305-306)», and prints her name twice over: «Проскудия (Просдока)», the Slavonic form and then the Greek one this folder uses. **It also moves the city**, heading her index entry «Проскудия (Просдока) Едесская, мц.» — of Edessa, where this folder, after the Greek, has Antioch. The date, 305 or 306, sits at the end of the reign the folder carried.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 4 Οκτωβρίου — [the entry](https://www.saint.gr/2589/saint.aspx); doxologia.ro — [the life](https://doxologia.ro/viata-sfintei-mucenite-prosdoca); read 17 September 2026; the Russian church calendar keeps her on the Julian 4 October — [the day](https://days.pravoslavie.ru/Days/20261004.html); read 4 October 2026.*

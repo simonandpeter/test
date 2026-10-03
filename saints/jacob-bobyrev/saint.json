@@ -1,0 +1,71 @@
+{
+  "slug": "jacob-bobyrev",
+  "display_name": "Jacob (Bobyrev)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Иаков (Бобырев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9580, «Иаков (Бобырев), иерей, сщмч.», with the rank words left off. His life there gives his name in the world as Яков Иванович Бобырев."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1883,
+      "latest": 1883,
+      "display": "1883",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «родился 25 ноября 1883 года в селе Букреевка Курской губернии в крестьянской семье»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru: «15 октября Тройка НКВД приговорила о. Иакова к расстрелу. Священник Иаков Бобырев был расстрелян через день, 17 октября 1937 года.»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Сщмчч. Николая, Михаила, Иакова и Тихона пресвитеров, прмч. Василия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

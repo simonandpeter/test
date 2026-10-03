@@ -6,17 +6,44 @@
       "form": "Αμμούν",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Αμμούν της Λαύρας των Σπηλαίων»."
+    },
+    {
+      "form": "Аммон, затворник Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 145, «Преподобный Аммон, затворник Печерский», with the rank word left off. The epithet is kept in the form because the same day prints a second Ammon."
     }
   ],
   "sex": "male",
   "types": [
     "venerable"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "The century the Russian calendar prints after his name, «Прп. Аммона, затворника Печерского (XIII)». The folder held no date at all before this reading, the Greek notice having given none."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page gives this as his only day, which is worth recording because the day's two other men of the Caves, Helladius and Onesimus, are also kept on 28 September with the synaxis of the Near Caves and he is not."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Прп. Аммона, затворника Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The Russian gives this folder its first date, the thirteenth century, which the Greek notice explicitly lacked, and the one word the Greek has not: «затворник», recluse. Two other Ammons stand on the same page — the Egyptian of about 350, and this one — which is why the day line names the Caves for him."
     },
     {
       "church": "romanian",

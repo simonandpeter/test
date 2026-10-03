@@ -1,0 +1,67 @@
+{
+  "slug": "basil-tsvetkov",
+  "display_name": "Basil (Tsvetkov)",
+  "office": "Archimandrite",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Василий (Цветков)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13815, «Василий (Цветков), архимандрит, прмч.», with the rank and office words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the five names it keeps together: «Сщмчч. Николая, Михаила, Иакова и Тихона пресвитеров, прмч. Василия (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Alone of the five his name page lists two other days, «26 января (Новомуч.)» and «10 июня (Ряз.)» — the second an abbreviation the page does not expand. One row per church is the schema, so the other two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Сщмчч. Николая, Михаила, Иакова и Тихона пресвитеров, прмч. Василия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "michael-tverdovsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

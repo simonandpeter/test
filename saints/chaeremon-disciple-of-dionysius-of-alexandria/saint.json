@@ -6,6 +6,11 @@
       "form": "Χαιρήμων",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»."
+    },
+    {
+      "form": "Херимон Александрийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2348, «Херимон Александрийский, диакон, сщмч.», with the rank and office words left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Read and not found: days.pravoslavie.ru's 3 октября ст. ст. (civil 16 October 2026) was read on 2026-10-04. It prints seven lines and keeps the Areopagite's company with him — Rusticus and Eleutherius — but names nobody of Dionysius of Alexandria's, whom the Greek keeps on this menologion day with seven disciples. This stands undocumented rather than as a refusal."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Russian keeps him on 4 October where the Greek keeps the company of Dionysius of Alexandria on 3 October — one day apart, and the Russian 3 October names none of them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Мчч. Гаия, Фавста, Евсевия и Херимона (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "**The Russian keeps these four on 4 October, not on the 3rd.** The Greek keeps Dionysius of Alexandria and his company on the menologion's 3 October; the Russian page for that day names none of them and this one names four. The century it gives, the third, contains the 254–264 the folder already carried. Its index of names makes him a deacon of Alexandria and a hieromartyr, «Херимон Александрийский, диакон, сщмч.», where the folder had him only a martyr."
     },
     {
       "church": "romanian",
