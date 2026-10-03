@@ -1,3 +1,4 @@
+import { readFileSync } from 'node:fs';
 import { COLD, coldFace, test, expect } from './fixtures.js';
 import {
   CORPUS,
@@ -11,6 +12,7 @@ import {
   chooseView,
   facet,
   keptOn,
+  lastBySort,
   onlyCalendar,
   withHistoricity,
   nothingCropped,
@@ -19,6 +21,38 @@ import {
   tokenColours,
   viewChip,
 } from './helpers.js';
+
+/**
+ * **The corpus's tallest icon, found rather than named.** The card-cropping test
+ * below needs one picture taller than the 1:1.6 the grid clamps to, and which
+ * saint that is, is a fact about which pictures have been licensed — Pulcheria
+ * was the tallest of 130 when it was written, there are 320 icons now and ~300
+ * more queued. Ties break by slug so the choice does not move between runs.
+ *
+ * Venerated in the Russian calendar, which is the reader `ready` hands every
+ * test here, so the card is one that reader's own page really draws — 16 of the
+ * 112 tall icons are, and the tallest of them is the saint this test has always
+ * named.
+ *
+ * Throws rather than handing back a saint whose icon needs no cropping: a test
+ * that has lost its premise must not pass.
+ */
+const TALLEST_ICON = (() => {
+  const manifest = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
+  const cards = manifest.saints ?? manifest;
+  const tall = cards
+    .filter(
+      (c) =>
+        c.image?.w > 0
+        && c.image?.h > 0
+        && (c.attestations ?? []).some((a) => a.church === 'russian' && a.status === 'venerated'),
+    )
+    .sort((a, b) => b.image.h / b.image.w - a.image.h / a.image.w || a.slug.localeCompare(b.slug))[0];
+  if (!tall || tall.image.h / tall.image.w <= 1.62) {
+    throw new Error('no icon in the corpus is taller than the 1:1.6 a card clamps to');
+  }
+  return tall;
+})();
 
 /**
  * All Saints, the search grid: the cards and the rows, what each prints, the window the grid keeps in the document, and the way from a card to a saint.
@@ -196,9 +230,11 @@ test('the grid keeps a window of the corpus in the document, not the corpus', as
   // card became whichever undated saint sorts last by name instead.
   await chooseSort(page, 'name');
 
-  // 742 saints now; Zoticus of Tomis is last alphabetically and far below
-  // a 480 px viewport. A window is far fewer than the corpus at either end.
-  const last = page.locator('.index-name', { hasText: 'Zoticus of Tomis' });
+  // Who is last alphabetically is whoever the newest batch left there —
+  // Zoticus of Tomis was, and four saints now sort after him, so a literal
+  // here passed on the ~20-card window rather than on this test's premise.
+  // A window is far fewer than the corpus at either end.
+  const last = page.locator('.index-name', { hasText: lastBySort('name') });
   expect(await page.locator('.index-card').count()).toBeLessThan(20);
   await expect(last).toHaveCount(0);
 
@@ -972,8 +1008,16 @@ test('every row starts its name at the card margin, picture or no picture', asyn
         nameRight: name.right,
       };
     };
+    /* Both shapes or neither: the day holding one of each is a fact about which
+       icons have been licensed, and `inset(null)` would report the premise as a
+       type error from inside the page. */
+    if (!withPicture || !without) return null;
     return { withPicture: inset(withPicture), without: inset(without) };
   });
+  expect(
+    seen,
+    'premise: this day no longer keeps both a saint with an icon and a saint without one',
+  ).not.toBeNull();
   // The name begins at the card's own padding on both, which is the whole
   // point of the reformat: one left edge down a scrolling register.
   expect(seen.without.gap).toBeLessThan(16);
@@ -1737,8 +1781,12 @@ test('an index card and a carousel column crop to the hero own limits', async ({
    * saint card display (on daily page and on all saints page) in the same way
    * it applies to the main saint card on Daily page desktop."
    *
-   * Pulcheria's icon is 3.1:1 - the tallest of the 130 - and drew a card three
-   * times the height of the ones beside it. The packer reads the same clamped
+   * Pulcheria's icon was 3.1:1 - the tallest in the corpus when this was
+   * written - and drew a card three times the height of the ones beside it.
+   * **Whose icon that is, is read off the manifest** (`TALLEST_ICON`): naming
+   * the saint makes the test's premise a fact about which pictures have been
+   * licensed so far, and the icon programme moves that by the hundred. The
+   * packer reads the same clamped
    * shape the box is drawn at, which is the half that keeps the carousel's
    * columns honest: budgeting one shape while the browser draws another is the
    * defect the caption height taught this file on 2026-09-02 already.
@@ -1749,16 +1797,18 @@ test('an index card and a carousel column crop to the hero own limits', async ({
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  await page.locator('[data-query]').fill('Pulcheria');
+  await page.locator('[data-query]').fill(TALLEST_ICON.display_name);
   /*
-   * Pinned by name, not read off the first card: the grid is virtualised, so
-   * DOM order is not screen order and the first `.index-card` in the document
-   * is whichever one the mounted window happens to start with (CLAUDE.md traps
-   * 1 and 5). Found this the honest way - the premise below failed.
+   * Pinned by the one card, not read off the first one: the grid is
+   * virtualised, so DOM order is not screen order and the first `.index-card`
+   * in the document is whichever one the mounted window happens to start with
+   * (CLAUDE.md traps 1 and 5). Found this the honest way - the premise below
+   * failed. By its `href` rather than its text, because a query of a name can
+   * reach a second saint whose record carries it.
    */
   const media = page
     .locator('.index-card:not(.is-row)')
-    .filter({ hasText: 'Pulcheria' })
+    .filter({ has: page.locator(`a[href="/saints/${TALLEST_ICON.slug}"]`) })
     .first()
     .locator('.index-media');
   await expect(media).toBeVisible();
@@ -1772,7 +1822,13 @@ test('an index card and a carousel column crop to the hero own limits', async ({
       pos: getComputedStyle(img).objectPosition,
     };
   });
-  expect(card.file, 'premise: this saint no longer has the tall icon').toBeGreaterThan(2);
+  // The icon really is the tall one the manifest named, so the clamp below has
+  // something to clamp: the markup's own numbers against the manifest's.
+  expect(card.file, 'the card did not draw the icon the manifest names').toBeCloseTo(
+    TALLEST_ICON.image.h / TALLEST_ICON.image.w,
+    1,
+  );
+  expect(card.file, 'premise: this icon does not need cropping at all').toBeGreaterThan(1.62);
   expect(card.drawn, 'the card was not clamped to 1:1.6').toBeLessThan(1.62);
   expect(card.fit).toBe('cover');
   // Cropped from the top, where a standing figure keeps their face.

@@ -1,5 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from './fixtures.js';
+import { recordedDay } from '../src/data/liturgical-days.js';
 import {
   notKeptBy,
   WITHOUT_HYMNS,
@@ -19,8 +20,60 @@ const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import
 const MANIFEST_CARDS = MANIFEST.saints ?? MANIFEST;
 const folder = (slug) => JSON.parse(readFileSync(new URL(`../saints/${slug}/saint.json`, import.meta.url), 'utf8'));
 const EUSTATHIUS = folder('eustathius-the-great-martyr');
+
+/**
+ * A hymn's English as `mergeForReading` compares it: one row per distinct text,
+ * so the number a reader meets is a fact about the folder and not a number to
+ * write down. The Russian 20 September moved Eustathius's by giving him two
+ * more, and the waves still to come move anyone's.
+ */
+const englishOf = (hymn) => hymn.english.text.replace(/\s+/g, ' ').trim().toLowerCase();
+
+/** Every hymn count below is read off the folder, for the reason above. */
+const ADRIAN = folder('adrian-of-nicomedia');
+const ADRIAN_ENGLISH = new Set(ADRIAN.hymns.map(englishOf));
+
+/**
+ * The churches a Greek reader's lead reading is merged from, as the page names
+ * them. Three of the four sing Adrian's troparion to the same English now; a
+ * fourth joining it, or the Greek's own text being realigned away from the
+ * others, is the corpus getting better and must not be a red run. Throws rather
+ * than naming one church, which the merge is not about.
+ */
+const ADRIAN_LEAD = (() => {
+  const lead = ADRIAN.hymns.find((h) => h.church === 'greek');
+  if (!lead) throw new Error('Adrian of Nicomedia has no Greek hymn to lead a Greek reader');
+  const churches = ADRIAN.hymns.filter((h) => englishOf(h) === englishOf(lead)).map((h) => h.church);
+  if (churches.length < 2) throw new Error('no church shares the Greek reading of Adrian’s troparion, so nothing is merged');
+  return churches.map((c) => c[0].toUpperCase() + c.slice(1));
+})();
+
+const CAVES = folder('anthony-of-the-caves');
+const CAVES_ENGLISH = new Set(CAVES.hymns.map(englishOf));
+/** His readings that were made here, which is what `data-rendered` marks. */
+const CAVES_RENDERED = new Set(
+  CAVES.hymns.filter((h) => h.english?.rendered === 'site').map(englishOf),
+);
+
+/**
+ * Eustathius's own Greek day, from his folder rather than typed, and the premise
+ * that the Greek calendar still records no readings for it: the two halves of
+ * the split this test is about have to be read of the *same* day. His day was
+ * "the first past the end of the day records" when this was written and the
+ * records have since run a fortnight into 2027, so the day is empty of Greek
+ * readings and not of records. Throws rather than mapping a feast the Greek no
+ * longer reckons on the civil calendar.
+ */
+const GREEK_FEAST = EUSTATHIUS.attestations.find((a) => a.church === 'greek' && a.status === 'venerated')?.feast;
+if (GREEK_FEAST?.calendar !== 'revised-julian') {
+  throw new Error('Eustathius has no revised-Julian Greek feast, so its civil day cannot be read off it');
+}
+const GREEK_DAY_ISO = `2026-${String(GREEK_FEAST.month).padStart(2, '0')}-${String(GREEK_FEAST.day).padStart(2, '0')}`;
+
 const UNREAD_ON_GREEK_20_SEPT = MANIFEST_CARDS.filter((c) =>
-  c.attestations.some((a) => a.church === 'greek' && a.feast?.day === 20 && a.feast?.month === 9),
+  c.attestations.some(
+    (a) => a.church === 'greek' && a.feast?.day === GREEK_FEAST.day && a.feast?.month === GREEK_FEAST.month,
+  ),
 )
   .map((c) => c.slug)
   .sort()
@@ -365,14 +418,15 @@ test('a saint page carries the saint own hymns, the reader church first', async 
   await ready(page, { church: 'greek' });
   await page.goto('/saints/adrian-of-nicomedia', { waitUntil: 'networkidle' });
   const hymns = page.locator('.saint-hymns .hymn');
-  await expect(hymns).toHaveCount(4);
+  // Both numbers are read off his folder (`ADRIAN_ENGLISH`): a hymn count is a
+  // fact about the corpus, and a batch that gives him one more must not be a
+  // red run.
+  await expect(hymns).toHaveCount(ADRIAN_ENGLISH.size);
   // The reader's own church leads, because that is the calendar the site is
   // read in — and the merged reading carries every church that sings it, which
   // is what makes one reading honest in place of three.
   const lead = hymns.first().locator('.hymn-kind');
-  await expect(lead).toContainText('Greek');
-  await expect(lead).toContainText('Romanian');
-  await expect(lead).toContainText('Russian');
+  for (const church of ADRIAN_LEAD) await expect(lead, church).toContainText(church);
   await expect(hymns.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
 
   /*
@@ -386,7 +440,7 @@ test('a saint page carries the saint own hymns, the reader church first', async 
     localStorage.setItem(key, JSON.stringify({ ...now, language: 'el' }));
   });
   await page.goto('/saints/adrian-of-nicomedia', { waitUntil: 'networkidle' });
-  await expect(page.locator('.saint-hymns .hymn')).toHaveCount(9);
+  await expect(page.locator('.saint-hymns .hymn')).toHaveCount(ADRIAN.hymns.length);
   await expect(page.locator('.saint-hymns .hymn').first().locator('.hymn-text')).toHaveAttribute('lang', 'el');
 
   // And a saint the corpus has no hymns for prints no heading over nothing.
@@ -693,7 +747,7 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
    * distinct rendering (`mergeForReading`), Greek every Greek text, and the
    * Greek reader's own church comes first.
    */
-  const english = new Set(EUSTATHIUS.hymns.map((h) => h.english.text.replace(/\s+/g, ' ').trim().toLowerCase()));
+  const english = new Set(EUSTATHIUS.hymns.map(englishOf));
   const greekFirst = EUSTATHIUS.hymns.find((h) => h.church === 'greek').kind;
   await expect(page.locator('[data-hymns-box] .hymn')).toHaveCount(english.size);
   await expect(page.locator('[data-hymns-box] .hymn-kind').first()).toContainText(greekFirst[0].toUpperCase() + greekFirst.slice(1));
@@ -736,8 +790,15 @@ test('the Greek calendar’s saints past the runway are in the corpus but not ye
   await expect(page.locator('h1')).toContainText('Theopiste');
 
   // And the day itself is still empty: no readings were taken from last year's
-  // page to stand in for this year's.
-  await page.goto('/calendar/2026-09-20', { waitUntil: 'networkidle' });
+  // page to stand in for this year's. His own day, read off his folder, and the
+  // premise asserted before the claim — a Greek reader sees nothing here
+  // because the Greek records nothing here, not because the day is past the
+  // records, which it no longer is.
+  expect(
+    recordedDay(GREEK_DAY_ISO, 'greek'),
+    'premise: the Greek calendar now records this day, so an empty column proves nothing',
+  ).toBeNull();
+  await page.goto(`/calendar/${GREEK_DAY_ISO}`, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]:not([hidden])')).toHaveCount(0);
 });
 
@@ -910,8 +971,15 @@ test('a saint with no image is not given a licence for one', async ({ page }) =>
    * for a page with no picture. Every imageless page ended in a disclaimer
    * about something that was never there.
    */
+  /*
+   * **The imageless page is found, not named** — it was Gorazd of Bohemia, and
+   * naming a saint with no picture is the premise that cost two red projects on
+   * `e223292e` when the image programme reached Christopher. `SPARSE_DETAIL` is
+   * the manifest's own answer to "a card with no image", and 300 more icons
+   * cannot take it away without the fixture moving with them.
+   */
   await ready(page);
-  await page.goto('/saints/gorazd-of-bohemia', { waitUntil: 'networkidle' });
+  await page.goto(SPARSE_DETAIL, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-life] p').first()).toBeVisible();
   await expect(page.locator('.saint-media, .saint-media-col')).toHaveCount(0);
   await expect(page.locator('[data-credit]')).toBeHidden();
@@ -1584,13 +1652,19 @@ test('a rendering made here says so, where a citation names its book', async ({ 
   await page.goto('/saints/anthony-of-the-caves', { waitUntil: 'networkidle' });
 
   const hymns = page.locator('[data-hymns-box] .hymn');
-  await expect(hymns).toHaveCount(4);
+  // Read off his folder, both of them: that every one of his readings was made
+  // here is the claim, and a fifth Slavonic hymn or a first cited English is
+  // the corpus moving under a typed 4 (`CAVES_ENGLISH`).
+  await expect(hymns).toHaveCount(CAVES_ENGLISH.size);
   const own = page.locator('[data-hymns-box] .hymn[data-rendered="site"]');
-  await expect(own).toHaveCount(4);
+  await expect(own).toHaveCount(CAVES_RENDERED.size);
+  /* The troparion by its own words rather than by its position in the box: an
+     added hymn can take the first row without touching what this asserts. */
+  const star = own.filter({ hasText: 'noetic stars' });
+  await expect(star, 'premise: his troparion no longer opens on the noetic stars').toHaveCount(1);
   // The English is there, in English, and it says who made it.
-  await expect(own.first().locator('.hymn-text')).toHaveAttribute('lang', 'en');
-  await expect(own.first().locator('.hymn-text')).toContainText('noetic stars');
-  await expect(own.first().locator('.hymn-source')).toContainText('Translated for this site');
+  await expect(star.locator('.hymn-text')).toHaveAttribute('lang', 'en');
+  await expect(star.locator('.hymn-source')).toContainText('Translated for this site');
   /*
    * **And which text it was made from** (author, 2026-09-24: the rendering
    * "doesnt list the original thing it was translated from"). This asserted
@@ -1601,10 +1675,10 @@ test('a rendering made here says so, where a citation names its book', async ({ 
    * carried by the words: `Translated for this site from` against `Text from`,
    * and Mamas below still names Orloff.
    */
-  await expect(own.first().locator('.hymn-source')).toContainText('Translated for this site from');
-  await expect(own.first().locator('.hymn-source a')).toHaveCount(1);
-  await expect(own.first().locator('.hymn-source a')).toHaveAttribute('href', /pravoslavie\.ru/);
-  await expect(own.first().locator('.hymn-source')).not.toContainText(/^Text from/);
+  await expect(star.locator('.hymn-source')).toContainText('Translated for this site from');
+  await expect(star.locator('.hymn-source a')).toHaveCount(1);
+  await expect(star.locator('.hymn-source a')).toHaveAttribute('href', /pravoslavie\.ru/);
+  await expect(star.locator('.hymn-source')).not.toContainText(/^Text from/);
 
   await ctx.close();
 

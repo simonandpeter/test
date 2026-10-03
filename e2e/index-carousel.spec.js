@@ -4,6 +4,7 @@ import {
   INDEX,
   carouselMode,
   facet,
+  narrowQuery,
   ready,
   searchMode,
 } from './helpers.js';
@@ -79,8 +80,10 @@ test('a search too short to fill the row stops it, left-justified, each saint on
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
 
-  // A name narrow enough that only a couple of saints answer to it.
-  await page.locator('[data-query]').fill('Placilla');
+  // A name narrow enough that only a couple of saints answer to it, found
+  // rather than typed: how many a given name answers for is the corpus's to
+  // change, and the row this test needs is defined by its length.
+  await page.locator('[data-query]').fill(narrowQuery(10));
   const track = page.locator('[data-carousel-track]');
   await expect(track).toHaveClass(/is-static/);
 

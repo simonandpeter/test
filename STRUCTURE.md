@@ -1263,6 +1263,31 @@ is discussed.
     first row's note is corrected in the same commit, because it states the dead
     premise that the corpus keeps one feast to a church.
 
+14. **Nine e2e fixtures lose their premise to the Russian and Serbian reading
+    waves, and the waves are queued next.** The sweep of 2026-10-03 replaced
+    every e2e premise selected by *proxy* — a literal naming a slug, or a pixel
+    read where a state was meant. What it could not replace is a *computed*
+    fixture whose search runs out, and three of them go the moment a calendar
+    covers all 366 days, because each needs a church that keeps **nobody** on a
+    civil day: `dayOneChurchKeeps`, `dayKeptOnlyElsewhere` and
+    `dayOneElsewhereMade` in `e2e/helpers.js`. Two already throw for
+    `russian`/`greek` and `russian`/`romanian`. `notKeptBy` is the most exposed —
+    it wants an `undocumented` row *and* exactly one venerating church, and the
+    waves erode both halves at once — and `WITHOUT_HYMNS`, `dayWithoutHymns`,
+    `NO_RU_NAME`, `SPARSE_DETAIL` and `feastWithoutFolders` all narrow with
+    every batch.
+
+    **The repair is the one `daily-panel.spec.js` already uses: make the state
+    rather than find it.** `withoutSaintsOn` withholds a day's saints, so a test
+    that needs a silence asks for one instead of hunting a corpus that no longer
+    has any. `EMPTY_ISO` is the worked example — it stopped searching for an
+    empty day and now withholds on a 2027 date past `RECORDS_REACH`. Converting
+    the remaining callers is one pass, and it is cheaper before the Russian wave
+    than during it: the last time a wave killed a fixture's premise it cost
+    three red runs. `e2e/chrome.spec.js` line 498's
+    `dayOneChurchKeeps('romanian', 'russian')` is the one surviving caller of
+    the worst of them.
+
 ### Recorded, deliberately not done
 
 - **2 hymns cite Hapgood (1906).** Everything else the corpus prints in English

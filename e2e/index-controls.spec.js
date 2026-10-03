@@ -19,6 +19,7 @@ import {
   openChooser,
   ready,
   searchMode,
+  soleMatch,
   sortChip,
   undatedCount,
   venerateUnion,
@@ -977,11 +978,15 @@ test('Random is a die at the end of the filter row, and still keeps to the filte
    * of them happen to be mounted. That is the house rule about counting the
    * DOM instead of the corpus, met in a test written the same day it was read.
    */
-  await page.locator('[data-query]').fill('Anthony the Great');
+  // The query is computed, not typed: `fill('Anthony the Great')` claimed to
+  // reach exactly one saint, and which queries do is a fact about the corpus
+  // — `soleMatch` asks the page's own search index for one that still does.
+  const { query, slug } = await soleMatch();
+  await page.locator('[data-query]').fill(query);
   await expect(page.locator('.index-card')).toHaveCount(1);
   await die.click();
-  await page.waitForURL(/\/saints\/anthony-the-great/);
-  await expect(page.locator('h1')).toContainText('Anthony the Great');
+  await page.waitForURL(new RegExp(`/saints/${slug}`));
+  await expect(page.locator('h1')).toContainText(query);
 });
 
 
@@ -1063,8 +1068,11 @@ test('the Index says its count once, as a ratio of the corpus', async ({ page })
   const rowBox = async () => (await page.locator('[data-count-row]').boundingBox()).height;
   expect(await rowBox()).toBeLessThan(2);
 
-  // A filter moves the numerator, which is what lets the second line go.
-  await page.locator('[data-query]').fill('Anthony the Great');
+  // A filter moves the numerator, which is what lets the second line go. The
+  // query is computed rather than typed, because "reaches exactly one saint"
+  // is a fact about the corpus and the numerator asserted below is 1.
+  const { query } = await soleMatch();
+  await page.locator('[data-query]').fill(query);
   await expect(line).toHaveText(`1/${CORPUS} saints listed.`);
   expect(await rowBox()).toBeLessThan(2);
 

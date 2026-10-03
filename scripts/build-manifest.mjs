@@ -390,9 +390,20 @@ export function report({ errors, warnings, manifest, gzipped, bytes }, { write =
   const perSaint = gz / Math.max(manifest.length, 1);
   console.log(`${write ? 'Built' : 'Validated'} ${manifest.length} saints.`);
   console.log(`manifest.json  ${(bytes / 1024).toFixed(1)} KB raw, ${(gz / 1024).toFixed(1)} KB gzipped`);
-  // The brief's ceiling is ~400 KB gzipped at 5,000 saints, and sharding is
-  // explicitly not to be built before it is needed. Projecting the current
-  // per-saint cost is how we find out when that stops being true.
+  /*
+   * The brief's ceiling is ~400 KB gzipped at 5,000 saints, and sharding is
+   * explicitly not to be built before it is needed. Projecting the current
+   * per-saint cost is how we find out when that stops being true.
+   *
+   * **This is a projection and a printed line, not a gate** (author, 2026-10-03).
+   * `report` returns 0 whether or not the figure is over, and no test asserts
+   * it. A sitting read it as a blocker on the image programme and planned a
+   * re-representation of the icon declarations around it; the ruling is that the
+   * programme runs on. The floors that do fail a build are
+   * `ENTRY_CSS_CEILING` in `scripts/lighthouse-floor.mjs` and
+   * `PICTURE_BUDGET` in `scripts/screenful-bytes.mjs`, and manifest growth
+   * touches neither.
+   */
   const projected = (perSaint * 5000) / 1024;
   console.log(`projected at 5,000 saints: ${projected.toFixed(0)} KB gzipped (budget ${budget / 1024} KB)`);
   if (manifest.length < 200) {

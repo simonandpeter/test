@@ -223,10 +223,26 @@ test('a cold load onto the day fills the window, and gives it back on the way ou
   await page.setViewportSize(DESK);
   await page.goto(DAY, { waitUntil: 'networkidle' });
   expect(await page.evaluate(() => document.documentElement.dataset.fillsWindow)).toBe('');
+  /*
+   * **The window, not 300 px.** The claim is the one `data-fills-window`
+   * makes — the stage is the room between the chrome and the foot of the
+   * window — and a floor of 300 is a number that stands in for it: a stage
+   * sized to half the window clears it. So what is measured is the state:
+   * the foot of the stage reaches the foot of the window, less the chrome's
+   * own padding below it (base.css sizes `main.chrome` to `100dvh` less the
+   * header and keeps a `--space-4` under it, and every box here is
+   * border-box).
+   */
+  const stageBox = await page.evaluate(() => {
+    const r = document.querySelector('.face-stage').getBoundingClientRect();
+    const pad = parseFloat(getComputedStyle(document.querySelector('main.chrome')).paddingBottom);
+    return { below: Math.round(window.innerHeight - r.bottom), pad: Math.round(pad), height: Math.round(r.height) };
+  });
+  expect(stageBox.height, 'a stage with no height is a day with nowhere to draw').toBeGreaterThan(0);
   expect(
-    await page.evaluate(() => Math.round(document.querySelector('.face-stage').getBoundingClientRect().height)),
-    'a stage with no height is a day with nowhere to draw',
-  ).toBeGreaterThan(300);
+    stageBox.below,
+    `the stage stops ${stageBox.below} px short of the window against ${stageBox.pad} px of padding`,
+  ).toBeLessThanOrEqual(stageBox.pad + 1);
 
   await toSaints(page);
   await expect(page.locator('.face-stage[data-face="saints"]')).toBeVisible();

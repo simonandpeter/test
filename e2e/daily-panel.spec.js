@@ -1,11 +1,14 @@
 import { CHURCHES } from '../src/data/churches.js';
+// Where the day records stop, from the records themselves: the horizon a
+// reading wave moves, and the test of what lies past it asks for the day after.
+import { RECORDS_REACH } from '../src/data/liturgical-days.js';
 import { STRINGS } from '../src/ui/strings.js';
 import { test, expect } from './fixtures.js';
 import {
   EMPTY,
   EMPTY_ISO,
   dayOneElsewhereMade,
-  dayKeptOnlyElsewhere,
+  dayHeroWithoutIcon,
   dayWithoutHymns,
   POPULATED,
   aDayThatIsNotToday,
@@ -62,7 +65,12 @@ test.beforeEach(async ({ page }) => {
 test('a populated day renders the hero, and each tradition in its own reckoning', async ({ page }) => {
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
+  // A hero, and Anthony named on the day — not Anthony *as* the hero: he
+  // leads 30 January only because the Russian calendar sings for nobody else
+  // there yet (he is sung in the Romanian), and a sung saint arriving on that
+  // day would outrank him by the hero rule without touching this claim.
+  await expect(page.locator('.hero')).toHaveCount(1);
+  await expect(page.locator('main')).toContainText('Anthony the Great');
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // One calendar at a time (author, 2026-08-22; one church of three): the
@@ -70,7 +78,11 @@ test('a populated day renders the hero, and each tradition in its own reckoning'
   // January; change to the Greek and the same civil day holds nothing of his,
   // because the New Calendar keeps 17 January on the 17th — the same menologion
   // date, two civil days, and never the same saint listed twice.
-  await expect(page.locator('[data-slot="main"] .register li')).toHaveCount(0);
+  // **Not an empty register**, which was a count of how far the Russian
+  // sourcing had got — 30 January holds him alone today and the Russian wave
+  // is free to put a dozen beside him. The claim is that he is named once:
+  // the hero above carries him, and no row repeats him.
+  await expect(page.locator('[data-slot="main"] .register a[href*="anthony-the-great"]')).toHaveCount(0);
   await openChooser(page);
   await page.locator('#church-panel [data-church="greek"]').click();
   /*
@@ -249,13 +261,18 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const link = page.locator('.hero-name a');
+  const opens = await link.getAttribute('href');
   await link.hover();
   await page.waitForTimeout(300);
   const afterHover = fetched.length;
   expect(afterHover).toBe(1);
 
   await link.click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Anthony the Great');
+  // The saint the hero happens to be, not a named one: who leads 30 January
+  // in the Russian calendar moves with the batches, and the claim is that the
+  // page the hover fetched is the page the click opened.
+  await expect(page).toHaveURL(new RegExp(`${opens}$`));
+  await expect(page.locator('h1.saint-name')).toBeVisible();
   // The click reuses what the hover fetched rather than asking again.
   expect(fetched.length).toBe(afterHover);
 });
@@ -272,17 +289,31 @@ test('the shared element is named once, on both sides of the navigation', async 
       ),
     );
 
+  /*
+   * The hero's own slug, read off its link: the transition names are built
+   * from it, and which saint leads 30 January in the Russian calendar is the
+   * hero rule's answer over whatever that calendar keeps there — one sung
+   * saint arriving outranks Anthony and this test would be asking after a
+   * name the page had no reason to write.
+   */
+  const slug = (await page.locator('.hero-name a').getAttribute('href')).split('/').pop();
+  // And it is a hero with a picture, which the image half of this needs.
+  await expect(
+    page.locator('.hero.has-media'),
+    'premise: this day’s hero carries no picture to share',
+  ).toBeVisible();
   const onCalendar = await names();
-  expect(onCalendar).toContain('s-anthony-the-great-name');
-  expect(onCalendar).toContain('s-anthony-the-great-image');
+  expect(onCalendar).toContain(`s-${slug}-name`);
+  expect(onCalendar).toContain(`s-${slug}-image`);
   // A duplicate name makes the browser skip the transition entirely, which is
   // exactly the kind of fault that shows up as "it just stopped animating".
   expect(new Set(onCalendar).size).toBe(onCalendar.length);
 
   await page.locator('.hero-name a').click();
-  await expect(page.locator('h1.saint-name')).toHaveText('Venerable Anthony the Great');
+  await expect(page).toHaveURL(new RegExp(`/saints/${slug}$`));
+  await expect(page.locator('h1.saint-name')).toBeVisible();
   const onDetail = await names();
-  expect(onDetail).toContain('s-anthony-the-great-name');
+  expect(onDetail).toContain(`s-${slug}-name`);
   expect(new Set(onDetail).size).toBe(onDetail.length);
 });
 
@@ -309,12 +340,23 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
 });
 
 
+test.describe('the roll, over a day made bare', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('clicking through days faster than the roll leaves one panel, not two', async ({ page }) => {
   // The day panel rolls for 300 ms. A second click inside that window used to
   // find the *leaving* panel and append beside the entering one, so the day
   // showed an empty-day notice and a hero at once and the orphan outlived
-  // every navigation after it. 28 June is Augustine in the Russian calendar;
-  // 24 and 27 are empty.
+  // every navigation after it. 28 June keeps saints in the reader's calendar;
+  // 24 and 27 are the silence the roll has to cross.
+  /*
+   * **The two bare days are made, not found** (`withoutSaintsOn`): they were
+   * empty in the Russian calendar when this was written, which is a fact about
+   * how far the sourcing had got and the Russian wave is free to change. 28
+   * June is withheld from nothing, and no saint of the two bare days is kept
+   * on it, so the hero there survives the withholding.
+   */
+  const bare = await withoutSaintsOn(page, '2026-06-24', '2026-06-27');
   await ready(page);
   await phone(page);
   await page.goto('/calendar/2026-06-22', { waitUntil: 'networkidle' });
@@ -327,7 +369,10 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await day('2026-06-28').click();
   await expect(page.locator('h1')).toHaveText(/28 Jun(e)? 2026/);
   await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
-  await expect(page.locator('.hero-name')).toHaveText('St Augustine of Hippo');
+  // A hero, not a named one: which saint of a day leads it is the hero rule's
+  // question and moves with every batch, and what this test is about is that
+  // the arriving panel is the only one.
+  await expect(page.locator('.hero')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(0);
 
   // And the day after the fast pair is clean too: the orphan used to persist.
@@ -336,6 +381,8 @@ test('clicking through days faster than the roll leaves one panel, not two', asy
   await expect(page.locator('[data-slot="main"] .day-panel')).toHaveCount(1);
   await expect(page.locator('.empty-day')).toHaveCount(1);
   await expect(page.locator('.hero')).toHaveCount(0);
+  expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
+});
 });
 
 
@@ -672,13 +719,22 @@ test('the hero name takes the whole line, with no mark to make room for', async 
 
 
 test('the saint name clears the fold at 360 px on a tall icon', async ({ page }) => {
-  // The reason the image came down to 85%. Augustine is the tallest icon in
-  // the corpus and 28 August is his day, so this is the worst case the corpus
-  // actually holds rather than one constructed for the test.
+  // The reason the image came down to 85%: a hero whose icon is taller than
+  // the 1:1.6 the phone holds it to, which is the worst case the clamp has to
+  // answer for. 28 June is such a day — Augustine's icon is 422 × 720 — and
+  // **the shape is read off the page rather than taken from his name**: which
+  // saint leads a day is the hero rule's answer over whatever the day holds,
+  // so a batch landing beside him could leave this measuring a wide icon and
+  // reporting that the clamp works.
   await page.setViewportSize({ width: 360, height: 780 });
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
+  // The manifest's own numbers, off the attributes the panel writes, so this
+  // does not wait on a decode to know the icon's shape.
+  const icon = await page.locator('.hero img').first()
+    .evaluate((img) => Number(img.getAttribute('height')) / Number(img.getAttribute('width')));
+  expect(icon, 'premise: this day’s hero is not a tall icon').toBeGreaterThanOrEqual(1.6);
   const name = await page.locator('.hero-name').boundingBox();
   expect(name.y).toBeLessThan(780);
 });
@@ -731,7 +787,8 @@ test('the rolling day leaves an inert copy behind it', async ({ page }) => {
   // reach, or its links swallow the click meant for the arriving day.
   await answered(page);
   await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  // That the day painted a hero to leave behind, not which saint it chose.
+  await expect(page.locator('.hero-name')).toBeVisible();
 
   const marked = await page.evaluate(() => {
     document.querySelector('.week-strip [data-iso="2026-06-26"]').click();
@@ -755,12 +812,20 @@ test('the × returns to the Daily page when the saint was opened from it, not to
   // that day rather than in All Saints, a page they never asked to visit.
   await ready(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
+  /*
+   * **Whichever saint the day's hero is, read off the link rather than
+   * named.** Anthony leads 30 January for a Russian reader because nobody that
+   * calendar sings for is there to outrank him, and a wave filling the Russian
+   * year is free to send one — the claim is about where the × lands, not about
+   * who was opened.
+   */
+  const opened = await page.locator('.hero-name a').getAttribute('href');
   await page.locator('.hero-name a').click();
-  await expect(page).toHaveURL(/\/saints\/anthony-the-great$/);
+  await expect(page).toHaveURL(new RegExp(`${opened}$`));
   await expect(page.locator('[data-back]')).toHaveAttribute('aria-label', 'Back to Daily');
   await page.locator('[data-back]').click();
   await expect(page).toHaveURL(new RegExp(`${POPULATED}$`));
-  await expect(page.locator('.hero-name')).toHaveText('Venerable Anthony the Great');
+  await expect(page.locator('.hero-name a')).toHaveAttribute('href', opened);
 
   // Opened from All Saints instead, the × still returns there.
   await page.goto('/saints', { waitUntil: 'networkidle' });
@@ -1102,8 +1167,11 @@ test('the three weeks after the first are in the calendars: readings, feast hymn
   await openChooser(page);
   await page.locator('#church-panel [data-church="serbian"]').click();
   await page.goto('/calendar/2026-09-18', { waitUntil: 'networkidle' });
-  // Serbian calendar, Romanian page: «Proorocul Zaharia», from the Romanian form.
-  await expect(page.locator('.hero-name')).toContainText('Proorocul Zaharia');
+  // Serbian calendar, Romanian page: «Proorocul Zaharia», from the Romanian
+  // form. Named on the day, not at its head: the Serbian calendar holds 44 of
+  // the 366 days and is on its way to all of them, so which of 18 September's
+  // saints leads it is not what this line is about.
+  await expect(page.locator('main')).toContainText('Proorocul Zaharia');
   await expect(page.locator('[data-hymns] .hymn-text[lang="sr"]').first()).toContainText('Обучен у свештеничке одежде');
   await expect(page.locator('[data-readings] .readings a').first()).toHaveText('Efeseni 1:7-17');
 
@@ -1703,15 +1771,22 @@ test('the corpus dates a saint its own sources date, and says Lived where they o
    */
   await ready(page, { church: 'russian' });
   await page.goto('/calendar/2026-09-08', { waitUntil: 'networkidle' });
-  // Adrian is the day's hero and Natalia is in the register beneath him, so
-  // the pair is read off both places at once. Both said Undated until
-  // 2026-08-26, and both are dated by the same sentence of the same life:
-  // "lived at Nicomedia in Bithynia under Maximian (305-311)".
-  await expect(page.locator('.hero-name')).toContainText('Adrian of Nicomedia');
-  await expect(page.locator('.hero-dates')).toHaveText('Reposed under Maximian');
-  const natalia = page.locator('.reg-card', { hasText: 'Natalia of Nicomedia' }).first();
-  await expect(natalia.locator('.reg-sub')).toHaveText('Reposed under Maximian');
-  await expect(page.locator('.hero')).not.toContainText('Undated');
+  /*
+   * Adrian and Natalia are both on this day, and both said Undated until
+   * 2026-08-26; both are dated by the same sentence of the same life, "lived
+   * at Nicomedia in Bithynia under Maximian (305-311)".
+   *
+   * **Each is read in whichever box the day gives them** — the hero's, or a
+   * register row's. Adrian led the day when this was written, which is the
+   * hero rule's answer over the saints the Russian calendar then kept on 8
+   * September; the wave filling that calendar is free to change it, and the
+   * dating is the claim either way.
+   */
+  const dated = (name) => page.locator('.hero, .reg-card').filter({ hasText: name }).first();
+  for (const name of ['Adrian of Nicomedia', 'Natalia of Nicomedia']) {
+    await expect(dated(name), name).toContainText('Reposed under Maximian');
+    await expect(dated(name), name).not.toContainText('Undated');
+  }
 
   /*
    * And the other half of the instruction — "or at least centuries for every
@@ -2052,7 +2127,13 @@ test('a day whose calendar is recorded but whose saints are not says which half 
    * Both days are made bare by `withoutSaintsOn` (2026-09-16): they were bare
    * in the corpus, and the batches starting that day reach both of them.
    */
-  const bare = await withoutSaintsOn(page, '2026-10-14', '2027-03-01');
+  /*
+   * **And the second day is `EMPTY_ISO`, not a typed 2027 date**: "past every
+   * source's horizon" is a claim about where the records stop, and a reading
+   * wave moves that. `EMPTY_ISO` is the day past `RECORDS_REACH` that is no
+   * great feast in any calendar, which is the pair this half needs.
+   */
+  const bare = await withoutSaintsOn(page, '2026-10-14', EMPTY_ISO);
   await ready(page, { church: 'russian', language: 'en' });
   await page.goto('/calendar/2026-10-14', { waitUntil: 'networkidle' });
   const note = page.locator('.empty-day p');
@@ -2063,7 +2144,7 @@ test('a day whose calendar is recorded but whose saints are not says which half 
   await expect(page.locator('[data-readings] .readings li')).toHaveCount(2);
 
   // Past every source's horizon the day really is empty, and says so plainly.
-  await page.goto('/calendar/2027-03-01', { waitUntil: 'networkidle' });
+  await page.goto(EMPTY, { waitUntil: 'networkidle' });
   await expect(page.locator('.empty-day p')).toContainText('No commemorations are recorded');
   await expect(page.locator('[data-readings]')).toHaveCount(0);
   expect(bare.served(), 'the withholding route never served the page').toBeGreaterThan(0);
@@ -2095,8 +2176,16 @@ test('the Romanian months carry Romanian book names, and stop where doxologia st
   await page.locator('#church-panel [data-church="russian"]').click();
   await page.goto('/calendar/2027-01-01', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings] .readings li').first()).toBeVisible();
-  // and one day past its own end, nothing
-  await page.goto('/calendar/2027-01-14', { waitUntil: 'networkidle' });
+  /*
+   * And one day past its own end, nothing — **read off the records rather
+   * than typed as 14 January 2027**, which was where they stopped on the day
+   * this was written and is the first thing a reading wave moves. The day
+   * after `RECORDS_REACH` is past every church's, which is what makes it the
+   * day no calendar prints.
+   */
+  const pastRecords = new Date(`${RECORDS_REACH}T00:00:00Z`);
+  pastRecords.setUTCDate(pastRecords.getUTCDate() + 1);
+  await page.goto(`/calendar/${pastRecords.toISOString().slice(0, 10)}`, { waitUntil: 'networkidle' });
   await expect(page.locator('[data-readings]')).toHaveCount(0);
 });
 
@@ -2121,9 +2210,12 @@ test('the first day past the runway has its saints, and the eight the corpus alr
 
   // the day is no longer bare of saints, and no longer says it is
   await expect(page.locator('.empty-day')).toHaveCount(0);
-  await expect(page.locator('.hero-name')).toContainText('Sozon of Pompeiopolis');
   const also = page.locator('[data-also] a, .also-list a, .day-list a');
   const listed = await page.locator('main').textContent();
+  // Named on the day, not standing at its head: the hero is chosen over the
+  // whole day and the Russian wave is still adding to this one, so who leads
+  // is not the claim. That the thirteen new folders are *there* is.
+  expect(listed).toContain('Sozon of Pompeiopolis');
   // one new folder and one the corpus already held, on the same day
   expect(listed).toContain('Macarius of Kanev');
   // The see is on the subtext line rather than in the name since 2026-08-27,
@@ -2542,10 +2634,16 @@ test('the Daily page carries no bookmark, at any width and whatever the name doe
         const h2 = document.querySelector('.hero-name');
         // `.hero-body` below 1024 px, the reading column's pinned head past it.
         const body = h2.parentElement;
+        // The lines the name itself takes, from the text's own boxes rather
+        // than the heading's: a range over the contents reports one rect per
+        // line, and a heading reports one whatever it holds.
+        const range = document.createRange();
+        range.selectNodeContents(h2);
         return {
           nameWidth: h2.getBoundingClientRect().width,
           bodyWidth: body.getBoundingClientRect().width,
           rows: document.querySelectorAll('.register .reg-card').length,
+          lines: new Set([...range.getClientRects()].filter((b) => b.height > 0).map((b) => Math.round(b.top))).size,
         };
       });
       // The name's box is the whole column. A reserved slot is 32 px of mark
@@ -2555,6 +2653,19 @@ test('the Daily page carries no bookmark, at any width and whatever the name doe
       // The register is on the page in both shapes, so the count above is a
       // real zero rather than an empty list agreeing with itself.
       expect(m.rows, where).toBeGreaterThan(0);
+      /*
+       * **The shape is measured rather than taken on the date's word.** The
+       * days are the ones the wandering mark was found on, but what makes them
+       * two cases is the *name* the hero rule put at the head of each, and
+       * that rule answers over whatever the calendar keeps that day: a batch
+       * landing on either would leave the pair indistinguishable with every
+       * assertion above still passing. The wrapping day has to wrap, and it is
+       * asked at 360 px, the width where a reserved slot would show and where
+       * any name long enough to be the long case takes two lines.
+       */
+      if (day === '2026-09-06' && width === 360) {
+        expect(m.lines, `${where}: premise — this day’s hero name no longer wraps`).toBeGreaterThan(1);
+      }
     }
   }
 });
@@ -2583,8 +2694,17 @@ test('a Great Feast the corpus cannot hold is the day\u2019s whole subject', asy
    */
   await ready(page, { church: 'russian', language: 'en', reckoning: null });
 
+  /*
+   * **The day is found, not typed.** `dayHero` paints the feast whether or not
+   * the day has folders, so a Russian batch landing on 28 August would leave
+   * every assertion below passing over a day that is no longer "a feast the
+   * corpus cannot hold". `recorded` is what makes the day this half's: the
+   * readings and the hymns asserted further down are the day records', so a
+   * feast before the records begin would be the wrong shape of answer.
+   */
+  const bare = feastWithoutFolders('russian', { record: true, recorded: true });
   await desk(page);
-  await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  await page.goto(bare.route, { waitUntil: 'networkidle' });
 
   /* The article and the name are two boxes past 1024 px: the picture stands in
      the saint column and the name is pinned over the reading column, which is
@@ -2593,14 +2713,14 @@ test('a Great Feast the corpus cannot hold is the day\u2019s whole subject', asy
   const feastHero = page.locator('.hero-feast');
   const feastName = page.locator('.feast-name');
   await expect(feastHero).toHaveCount(1);
-  await expect(feastName).toHaveText('The Dormition of the Theotokos');
+  await expect(feastName).toHaveText(bare.feast.title.en);
   await expect(page.locator('.hero-dates').first()).toHaveText(STRINGS.calendar.fixedFeast.label);
   // No note at all, rather than a note that reads better.
   await expect(page.locator('.empty-day')).toHaveCount(0);
   await expect(page.locator('main')).not.toContainText('Nothing in the Russian calendar today');
   // And it was standing in the middle of the feast's own record all along.
   await expect(page.locator('[data-hymns] .hymn')).not.toHaveCount(0);
-  await expect(page.locator('.feast-chip')).toContainText('Dormition');
+  await expect(page.locator('.feast-chip')).toContainText(STRINGS.calendar.feasts.names[bare.key]);
   /*
    * There is no page behind a feast, so the hero offers nothing to press \u2014
    * `panel.js`'s own rule for why the feast markup is not the saint markup
@@ -2667,9 +2787,22 @@ test('a Great Feast is the day’s main card on a phone too, at a saint card’s
   await phone(page);
 
   await page.goto('/calendar/2026-08-30', { waitUntil: 'networkidle' });
+  // The card this one is measured against has to be a card with a picture in
+  // it, and which saint leads 30 August is the hero rule's answer over
+  // whatever the day holds: a batch beside them can hand the day to a saint
+  // with no icon, and `.hero-media` would then be a box that is not there.
+  await expect(
+    page.locator('.hero.has-media'),
+    'premise: this day’s hero carries no picture to measure',
+  ).toBeVisible();
   const saintBox = await page.locator('.hero .hero-media').first().boundingBox();
 
   await page.goto('/calendar/2026-08-28', { waitUntil: 'networkidle' });
+  // The same premise as the desk test above: a feast the corpus cannot hold.
+  await expect(
+    page.locator('.reg-card'),
+    'premise: the corpus now holds folders for this feast’s day',
+  ).toHaveCount(0);
   await expect(page.locator('.hero-feast')).toHaveCount(1);
   await expect(page.locator('.feast-name')).toHaveText('The Dormition of the Theotokos');
   // Where a saint's hero prints the office and the years, a feast prints what
@@ -3700,10 +3833,11 @@ test('past 1024 px the picture is the saint column’s width in its own shape, a
    * picture was a fixed 3:2 inside a 14 px dark mat and the name was under it
    * in column 2.
    *
-   * Three saints, one per shape the rule treats differently: Theodora of
-   * Alexandria (landscape, drawn whole), Symeon the Stylite (taller than A4,
-   * cut to it) and Euphrosynus the Cook (no icon). Each premise is read off
-   * the manifest's own numbers, not assumed.
+   * Three shapes the rule treats differently: a landscape icon drawn whole
+   * (Theodora of Alexandria), one taller than A4 and cut to it (Symeon the
+   * Stylite), and a saint with no icon, who is found on the day's shelf
+   * rather than named. Each premise is read off what the page was served —
+   * the icons' own numbers — not assumed.
    */
   await ready(page, { church: 'romanian' });
   const A4 = 0.7071;
@@ -3776,11 +3910,23 @@ test('past 1024 px the picture is the saint column’s width in its own shape, a
     expect(Math.abs(p.media.width / p.media.height - A4), `${width}: the tall icon is not cut to A4`).toBeLessThan(0.01);
     expect(p.media.height, `${width}: the picture is taller than half the window`).toBeLessThanOrEqual(height * 0.5 + 1);
 
-    // Euphrosynus the Cook: no icon, so no box at all — not a blank one.
+    /*
+     * A saint with no icon: no box at all, not a blank one. **Chosen off the
+     * day's own shelf rather than named** — this was `[data-choose*=
+     * "euphrosynus"]`, and the icon programme is adding three hundred of them,
+     * so the saint who stood for "no icon" is one batch from carrying one and
+     * the test would then be asking about a picture box of a saint who has a
+     * picture. The row whose thumbnail holds no image is the premise, and if
+     * the day has none left the choice fails rather than the assertion passing.
+     */
     await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
-    const row = page.locator('.cal-bubble [data-choose*="euphrosynus"]');
+    const iconless = await page.evaluate(() =>
+      [...document.querySelectorAll('.cal-bubble [data-choose]')]
+        .find((r) => !r.querySelector('.reg-thumb img'))?.dataset.choose ?? null);
+    expect(iconless, `${width}: premise — every saint of this day carries an icon`).not.toBe(null);
+    const row = page.locator(`.cal-bubble [data-choose="${iconless}"]`);
     await row.evaluate((r) => r.querySelector('.reg-sub').click());
-    await expect(page.locator('.cal-read .hero-name')).toContainText('Euphrosynus');
+    await expect(page.locator('.cal-read [data-read-life]')).toHaveAttribute('data-read-life', iconless);
     p = await picture();
     expect(p.figure, `${width}: a saint with no icon is drawn a picture box`).toBe(null);
     expect(p.names, `${width}: the saint column carries the name`).toBe(0);
@@ -4821,9 +4967,14 @@ test('a hero with no picture offers one way into the life, not two', async ({ pa
    * was, and the standalone one was showing too, because the rule that hides
    * that one asks for `.has-media`.
    *
-   * 6 September in the Romanian calendar is the author's own case: Eudoxius of
-   * Melitene, who has no icon.
+   * The author's own case was 6 September in the Romanian calendar, whose
+   * hero — Eudoxius of Melitene — had no icon. **Found now rather than typed**
+   * (`dayHeroWithoutIcon`): three hundred icons are on their way, and a day
+   * named for its hero having none is a day one batch from having one. The
+   * calendar stays Romanian because that is the case this was reported on, and
+   * because every Russian day's hero already carries an icon.
    */
+  const heroless = dayHeroWithoutIcon('romanian');
   await ready(page, { church: 'romanian' });
   /*
    * **900 px since stage E**: past 1024 px the reading column prints the whole
@@ -4831,7 +4982,7 @@ test('a hero with no picture offers one way into the life, not two', async ({ pa
    * so this preview and its way in are the 760–1023 px card's.
    */
   await page.setViewportSize({ width: 900, height: 900 });
-  await page.goto('/calendar/2026-09-06', { waitUntil: 'networkidle' });
+  await page.goto(heroless.route, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const hero = page.locator('.hero');

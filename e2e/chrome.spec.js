@@ -14,6 +14,7 @@ import {
   searchMode,
   swipe,
   dayOneChurchKeeps,
+  dayOneSaint,
 } from './helpers.js';
 
 /**
@@ -31,6 +32,26 @@ import {
  * tests below say so.
  */
 const NAV_KEYS = ['calendar', 'saints', 'prayer', 'texts', 'map', 'about'];
+
+/**
+ * **The day a first visit opens on, and the one saint the guess names there.**
+ *
+ * These contexts are en-US, which none of the four churches claims, so the
+ * guess falls through to Russian and the hero is whoever the Russian keeps
+ * that day. Both halves are read off the corpus: this was `/calendar/2026-06-28`
+ * with `Augustine` typed into two tests, which holds only while the Russian
+ * keeps him alone there — and the Russian reading wave is on its way from 63
+ * days of the year to all 366, so a second saint on the day takes the hero
+ * away from him with no defect behind it. The same reason
+ * `dayOneChurchKeeps('romanian', 'russian')` is computed below.
+ *
+ * `dayOneSaint` rather than `dayOneChurchKeeps`: these three tests need one
+ * Russian saint on the day and nothing about a second church being silent on
+ * it, and the Russian and Serbian reading waves delete every such silence —
+ * `dayOneChurchKeeps('russian', 'greek')` and `('russian', 'romanian')` already
+ * throw. It throws rather than hand back a day of the wrong shape.
+ */
+const GUESSED = dayOneSaint('russian');
 
 // **Every spec file needs this**: dropping it hands these tests the carousel
 // instead of the search face they were written about (`searchMode`, helpers.js).
@@ -116,17 +137,43 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
    * touch half has a test of its own below, on a real touch device, because a
    * branch asserted only where it cannot run is not asserted at all.
    */
+  /*
+   * **The hit-test is viewport-relative, so the row has to be in the viewport.**
+   * `elementFromPoint` answers about the visible page, not the document: with
+   * the shelf below the fold it returns whatever is at that coordinate near the
+   * top of the screen, or null, and `aimed` then reads as "the control cannot be
+   * reached" for a control a press reaches perfectly well — the test below that
+   * presses the × and watches the row clear is the proof of that. Scrolling
+   * first is what makes the reading be about the control.
+   */
+  await shelfRow.scrollIntoViewIfNeeded();
   const placed = await shelfRow.evaluate((row) => {
     const card = row.getBoundingClientRect();
     const quiet = row.querySelector('.shelf-remove');
     const q = quiet.getBoundingClientRect();
+    const under = document.elementFromPoint(
+      Math.round(q.left + q.width / 2),
+      Math.round(q.top + q.height / 2),
+    );
     return {
       card,
-      quietWidth: q.width,
       quietRight: q.right,
       quietMid: q.top + q.height / 2,
       quietText: quiet.textContent.trim(),
       glyph: getComputedStyle(quiet, '::after').content,
+      /*
+       * **The state, not its width.** The × is hidden by being lifted out of
+       * the picture — `clip-path: inset(50%)` over a 1px box, `saint.css` —
+       * and shown by being put back in the row, so a bound on the width was
+       * reading the 1px of the clip and calling it hidden. The two things the
+       * claim is actually about: whether the clip is on, and whether a cursor
+       * aimed at the control's own middle reaches it.
+       */
+      clip: getComputedStyle(quiet).clipPath,
+      aimed: quiet === under || quiet.contains(under),
+      // What a press would land on instead, so a failure names it rather than
+      // only denying the claim.
+      under: under ? `${under.tagName.toLowerCase()}.${under.className}` : 'nothing',
       hovers: matchMedia('(hover: hover) and (pointer: fine)').matches,
     };
   });
@@ -138,7 +185,8 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
   // cursor to aim it, centred on the row, at the trailing edge, carrying the
   // whole sentence as its name.
   if (placed.hovers) {
-    expect(placed.quietWidth).toBeGreaterThan(8);
+    expect(placed.clip, 'the × is still clipped out where there is a cursor to aim it').toBe('none');
+    expect(placed.aimed, `a press at the middle of the × lands on ${placed.under}`).toBe(true);
     expect(placed.glyph).toContain('×');
     expect(Math.abs(placed.quietMid - cardMid)).toBeLessThan(2);
     expect(placed.card.right - placed.quietRight).toBeLessThan(20);
@@ -146,7 +194,8 @@ test('Continue reading reappears after a saint has been opened', async ({ page }
     // Not reached by either project today; kept so this test still says the
     // truth if one ever runs on a touch device. The touch case is asserted
     // properly below.
-    expect(placed.quietWidth).toBeLessThan(3);
+    expect(placed.clip, 'the × is in the picture on a touch device').not.toBe('none');
+    expect(placed.aimed).toBe(false);
   }
 
   // And it can still be dismissed without a gesture: a shelf the reader
@@ -211,8 +260,9 @@ test('a Continue reading row is swiped away, and a short push springs back', asy
   // Home again, not left hanging where the hand let go.
   expect(await rows.first().evaluate((r) => r.style.transform || 'none')).toBe('none');
   // The swipe did not open the saint whose row it was pushed across: this is
-  // still Christopher's page, which is the page the shelf is standing on.
-  await expect(page).toHaveURL(/\/saints\/christopher/);
+  // still the page the shelf is standing on, named from the constant so the
+  // two cannot drift apart.
+  await expect(page).toHaveURL(new RegExp(`${SHELF_HOST}$`));
 
   await push(420, 30);
   await expect(rows).toHaveCount(1);
@@ -241,14 +291,23 @@ test('on a touch device the shelf row carries no ×, and the swipe still clears 
   await expect(row).toBeVisible();
   const seen = await row.evaluate((r) => {
     const quiet = r.querySelector('.shelf-remove');
+    const q = quiet.getBoundingClientRect();
+    const under = document.elementFromPoint(
+      Math.round(q.left + q.width / 2),
+      Math.round(q.top + q.height / 2),
+    );
     return {
       hovers: matchMedia('(hover: hover) and (pointer: fine)').matches,
-      width: quiet.getBoundingClientRect().width,
+      // The clip itself, not the 1px box it leaves behind: the claim is that a
+      // finger meets no × here, and a width is only the shape of its hiding.
+      clip: getComputedStyle(quiet).clipPath,
+      aimed: quiet === under || quiet.contains(under),
       name: quiet.textContent.trim(),
     };
   });
   expect(seen.hovers).toBe(false);
-  expect(seen.width).toBeLessThan(3);
+  expect(seen.clip, 'the × is in the picture on a touch device').not.toBe('none');
+  expect(seen.aimed, 'a finger at the middle of the row still lands on the ×').toBe(false);
   // Still named in full for the screen reader that meets it.
   expect(seen.name).toBe('Remove Moses the Hungarian from Continue reading');
 
@@ -560,7 +619,7 @@ test('a first visit is shown where the two controls are, and the day is not held
    * it. `hasChosen()` is untouched: the marks come back next visit, and the
    * three pages that can do without a calendar still do (`chosenChurch`).
    */
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await page.goto(GUESSED.route, { waitUntil: 'networkidle' });
   // The gate itself, gone: no panel, no blocks, and nothing hidden behind them.
   await expect(page.locator('[data-ask]')).toHaveCount(0);
   await expect(page.locator('.cal-gate')).toHaveCount(0);
@@ -571,7 +630,7 @@ test('a first visit is shown where the two controls are, and the day is not held
      * the day is not held back behind a gate, which is true of either.
      */
     await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('.hero-name')).toContainText(GUESSED.name);
 
   // Two marks, each under the control it names, each with a way out.
   const marks = page.locator('.coachmark');
@@ -669,7 +728,7 @@ test('on a first visit the two marks clear the fold, and so does the day', async
    * drawn first. Found by rendering it and looking; kept honest here.
    */
   await page.setViewportSize({ width: 360, height: 780 });
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await page.goto(GUESSED.route, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const boxes = [];
@@ -701,7 +760,7 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
    * folders and day records running to January where the Greek and Serbian stop
    * in September.
    */
-  await page.goto('/calendar/2026-06-28', { waitUntil: 'networkidle' });
+  await page.goto(GUESSED.route, { waitUntil: 'networkidle' });
   /*
      * The picker, whichever grain this width shows: the rail on a phone, the
      * month grid on a desktop since 2026-09-02 ("just display monthly only on
@@ -709,7 +768,7 @@ test('a first visit opens on a calendar it did not choose, and is told which', a
      * the day is not held back behind a gate, which is true of either.
      */
     await expect(page.locator('.week-strip:visible, .cal-month:visible').first()).toBeVisible();
-  await expect(page.locator('.hero-name')).toContainText('Augustine');
+  await expect(page.locator('.hero-name')).toContainText(GUESSED.name);
   await expect(page.locator('#church-open')).toHaveText('Russian');
   // And it is a guess, not an answer: nothing is written until the reader says.
   const before = await page.evaluate(() => JSON.parse(localStorage.getItem('gos-settings') ?? '{}'));

@@ -32,53 +32,60 @@ import { state } from './state.js';
  * to be answered the moment it lands, and that is the only reason this needs
  * it at all.
  */
+/**
+ * The index's shape, exported so a test can build the *same* index rather than
+ * a second one that agrees with it by coincidence. `e2e/helpers.js` needs a
+ * query that reaches exactly one saint, and a hand-rolled matcher would promise
+ * something the page does not do.
+ */
+export const SEARCH_FIELDS = ['name', 'types', 'churches', 'regions'];
+export const SEARCH_OPTIONS = { prefix: true, fuzzy: 0.2, combineWith: 'AND' };
+
+/**
+ * One card as the index holds it. The comments on each field are below, in the
+ * call that was its only caller until this was lifted out.
+ */
+export const searchDoc = (card) => ({
+  slug: card.slug,
+  name: [card.display_name, ...Object.values(card.names ?? {})].join(' '),
+  types: (card.types ?? []).flatMap(allNames).join(' '),
+  churches: [
+    ...new Set(
+      (card.attestations ?? [])
+        .filter((a) => a.status === 'venerated')
+        .map((a) => CHURCHES_BY_ID[a.church]?.display_name ?? ''),
+    ),
+  ].join(' '),
+  regions: (card.locations ?? []).map((l) => REGIONS_BY_ID[l.region]?.display_name ?? '').join(' '),
+});
+
 export async function loadSearch(cards, { onChange: update }) {
   /* Every language's names go into the index, not the chosen one, so a reader
      typing «игумен» finds the abbots whatever the chrome is set to. Since the
      packs are fetched per language (2026-08-27) this is the one caller that
      genuinely needs all four, and it is already async. */
   const [{ default: MiniSearch }] = await Promise.all([import('minisearch'), ensureAllPacks()]);
-  const index = new MiniSearch({
-    idField: 'slug',
-    fields: ['name', 'types', 'churches', 'regions'],
-    searchOptions: { prefix: true, fuzzy: 0.2, combineWith: 'AND' },
-  });
-  index.addAll(
-    cards.map((card) => ({
-      slug: card.slug,
-      /*
-       * The English name and every recorded form (2026-08-26). A reader is
-       * shown «Феврония Муромская» and must be able to type it; a reader who
-       * knows the English must keep finding it. Same reasoning as the types
-       * below, and the same reason it is every language at once rather than
-       * the chosen one: the index is built once and the chrome can change
-       * under it.
-       */
-      name: [card.display_name, ...Object.values(card.names ?? {})].join(' '),
-      /*
-       * Every language's name for the type, not the chosen one (author,
-       * 2026-08-25 evening: "add the other language equivalents of the search
-       * terms"). The index is built once and the chrome's language can change
-       * under it, so indexing the current language would leave a reader who
-       * switched searching a Russian grid with Romanian words. The slug is in
-       * there too, so an old bookmarked query still matches.
-       */
-      types: (card.types ?? []).flatMap(allNames).join(' '),
-      // Each church's name once: a church that keeps the saint on two days
-      // (2026-10-03, TODO item 1) would otherwise weight this field twice
-      // against every other, and the index is scored on what it holds.
-      churches: [
-        ...new Set(
-          card.attestations
-            .filter((a) => a.status === 'venerated')
-            .map((a) => CHURCHES_BY_ID[a.church]?.display_name ?? ''),
-        ),
-      ].join(' '),
-      regions: (card.locations ?? [])
-        .map((l) => REGIONS_BY_ID[l.region]?.display_name ?? '')
-        .join(' '),
-    })),
-  );
+  const index = new MiniSearch({ idField: 'slug', fields: SEARCH_FIELDS, searchOptions: SEARCH_OPTIONS });
+  /*
+   * `searchDoc`'s four fields, and why each is every language at once rather
+   * than the chosen one: the index is built once and the chrome's language can
+   * change under it.
+   *
+   * `name` — the English name and every recorded form (2026-08-26). A reader is
+   * shown «Феврония Муромская» and must be able to type it; a reader who knows
+   * the English must keep finding it.
+   *
+   * `types` — every language's name for the type (author, 2026-08-25 evening:
+   * "add the other language equivalents of the search terms"). Indexing the
+   * current language would leave a reader who switched searching a Russian grid
+   * with Romanian words. The slug is in there too, so an old bookmarked query
+   * still matches.
+   *
+   * `churches` — each church's name once: a church that keeps the saint on two
+   * days (2026-10-03, TODO item 1) would otherwise weight this field twice
+   * against every other, and the index is scored on what it holds.
+   */
+  index.addAll(cards.map(searchDoc));
   if (!state || state.cards !== cards) return;
   state.search = index;
   if (state.filters.query.trim()) update({ animate: true });

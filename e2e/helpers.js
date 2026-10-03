@@ -1,13 +1,15 @@
 import { readFileSync } from 'node:fs';
 import { expect } from '@playwright/test';
 import { applyFilters } from '../src/lib/index-filters.js';
-import { monthsBySlugFor } from '../src/views/index/search.js';
+import { monthsBySlugFor, SEARCH_FIELDS, SEARCH_OPTIONS, searchDoc } from '../src/views/index/search.js';
 import { saintName } from '../src/lib/honorific.js';
 import { readCorpus, feastIndex, onCivilDay, CHURCH_IDS } from '../scripts/corpus-index.mjs';
 import { greatFeast } from '../src/lib/liturgy.js';
 import { fixedFeastOn } from '../src/lib/fixed-feasts.js';
-import { RECORDS_REACH } from '../src/data/liturgical-days.js';
+import { RECORDS_REACH, recordedDay } from '../src/data/liturgical-days.js';
 import { chooseLanguage, ensureAllPacks } from '../src/lib/i18n.js';
+import { nameDays } from '../src/lib/name-days.js';
+import { pickHero } from '../src/lib/calendar-page.js';
 
 /**
  * The fixtures every browser spec shares: the routes the suite keeps returning
@@ -61,6 +63,19 @@ export const leaderBySort = (sort) => saintName(applyFilters(CARDS, { sort }).ma
  * order — he has no Serbian form, so the page rightly prints his English.
  */
 await ensureAllPacks();
+/**
+ * The name the **last** card in a sort carries, as the grid prints it — the
+ * other end of `leaderBySort`. Who is last alphabetically is whoever the newest
+ * batch left there: "Zoticus of Tomis" was last when that test was written and
+ * four saints now sort after him, so the test passed on the ~20-card window
+ * rather than on its premise. Throws rather than return nothing.
+ */
+export const lastBySort = (sort) => {
+  const { matched } = applyFilters(CARDS, { sort });
+  if (!matched.length) throw new Error(`no saint matches the ${sort} order`);
+  return saintName(matched.at(-1));
+};
+
 export const leaderBySortIn = (sort, language) => {
   chooseLanguage(language);
   const said = saintName(applyFilters(CARDS, { sort }).matched[0]);
@@ -128,6 +143,38 @@ export const carryingWord = (word) => {
   return String(
     CARDS.filter((s) => [s.display_name, ...Object.values(s.names ?? {}), ...(s.types ?? [])].some((t) => re.test(String(t)))).length,
   );
+};
+
+/**
+ * A query that reaches **exactly one** saint, and the slug it reaches.
+ *
+ * Built over the same MiniSearch index `views/index/search.js` builds — its own
+ * `SEARCH_FIELDS`, `SEARCH_OPTIONS` and `searchDoc`, imported rather than
+ * restated — so what this promises is what the page does. A hand-rolled matcher
+ * could not: the index is prefix and fuzzy over four fields, combined with AND.
+ *
+ * `fill('Anthony the Great')` was typed in `index-controls.spec.js` for exactly
+ * this premise, and the Greek wave had already broken the same assumption in
+ * the sibling file when Anthousa gained a folder. A saint's own printed name is
+ * tried first, in slug order so the answer is stable between sittings.
+ *
+ * Throws rather than hand back a query two saints answer: a die with two places
+ * to land is not a deterministic test.
+ *
+ * @returns `{ query, slug }`
+ */
+export const soleMatch = async () => {
+  const { default: MiniSearch } = await import('minisearch');
+  await ensureAllPacks();
+  const index = new MiniSearch({ idField: 'slug', fields: SEARCH_FIELDS, searchOptions: SEARCH_OPTIONS });
+  index.addAll(CARDS.map(searchDoc));
+  for (const card of [...CARDS].sort((a, b) => a.slug.localeCompare(b.slug))) {
+    const query = String(card.display_name ?? '');
+    if (!query) continue;
+    const hits = index.search(query);
+    if (hits.length === 1 && hits[0].id === card.slug) return { query, slug: card.slug };
+  }
+  throw new Error('no saint in the corpus has a printed name that reaches only itself');
 };
 
 /** How many each church venerates, as the Calendar facet narrows to. */
@@ -406,22 +453,32 @@ export const dayOneChurchKeeps = (keeper, empty) => {
  * that does not say which it wants gets either, which is what every caller
  * before that commit meant.
  *
+ * **`recorded` is the second split** (2026-10-03). The day records do not cover
+ * the whole of 2026 — they begin partway through it — so the first great feast
+ * without folders is months before the first recorded day, and a test that also
+ * asserts the feast's own readings and hymns gets a day that has none. A caller
+ * that needs those asks for `recorded: true`; one that does not says nothing
+ * and gets either, which is what every caller before this meant.
+ *
  * @param church the church whose calendar is read
  * @param record `true` for a day one of the eight covers, `false` for one it
  *   does not, omitted for either
+ * @param recorded `true` to restrict to a day the records reach, omitted for any
  * @returns `{ route, iso, key, feast }`, `key` being `greatFeast`'s own and
  *   `feast` the fixed record where there is one
  */
-export const feastWithoutFolders = (church, { record } = {}) => {
+export const feastWithoutFolders = (church, { record, recorded } = {}) => {
   const iso = CIVIL_2026.find(
     (d) => greatFeast(d, church)
       && kept(church, d).length === 0
-      && (record === undefined || !!fixedFeastOn(d, church) === record),
+      && (record === undefined || !!fixedFeastOn(d, church) === record)
+      && (recorded === undefined || !!recordedDay(d, church) === recorded),
   );
   if (!iso) {
     throw new Error(
       `no great feast of 2026 in the ${church} calendar is without folders`
-        + (record === undefined ? '' : ` and ${record ? 'with' : 'without'} a record of its own`),
+        + (record === undefined ? '' : ` and ${record ? 'with' : 'without'} a record of its own`)
+        + (recorded === undefined ? '' : ` and ${recorded ? 'inside' : 'outside'} the day records`),
     );
   }
   return {
@@ -496,6 +553,166 @@ export const dayWithoutHymns = (church) => {
   const iso = CIVIL_2026.find((d) => kept(church, d).length > 0 && HYMNED_ON(church, d).length === 0);
   if (!iso) throw new Error(`every day ${church} keeps has a hymn on it`);
   return `/calendar/2027${iso.slice(4)}`;
+};
+
+/** The manifest card for a slug, which the fixtures below read the day off. */
+const cardOf = (slug) => CARDS.find((s) => s.slug === slug);
+const BY_SLUG = new Map(CARDS.map((s) => [s.slug, s]));
+
+/**
+ * A civil day of 2026 where `church` keeps **exactly one** saint and no
+ * calendar has a great feast — the premise behind every "a first visit lands on
+ * one name" test.
+ *
+ * Narrower than `dayOneChurchKeeps`, deliberately: that fixture also demands a
+ * *second* church that keeps nobody, which is a constraint these tests do not
+ * need and which the Russian and Serbian reading waves delete outright. A day
+ * one church answers for alone survives those waves; a day another church is
+ * silent on does not.
+ *
+ * @returns `{ route, iso, name }` — the name through `saintName`, so a rank in
+ *   front of it is the page's own
+ */
+export const dayOneSaint = (church) => {
+  const iso = CIVIL_2026.find(
+    (d) => kept(church, d).length === 1 && CHURCH_IDS.every((c) => !greatFeast(d, c)),
+  );
+  if (!iso) throw new Error(`no civil day of 2026 has exactly one ${church} saint and no great feast in any calendar`);
+  return { route: `/calendar/${iso}`, iso, name: saintName(cardOf(kept(church, iso)[0])) };
+};
+
+/**
+ * The slugs resting on one coordinate that between `min` and `max` saints
+ * share — `sharingPlace`'s search with nothing anchoring it.
+ *
+ * A map test that typed a crowd's anchor typed a corpus property twice over:
+ * the saint, and how many stand with them. A batch of new martyrs lands on an
+ * existing city, and the blob the test chose crosses `BLOB_MAX` for a saint
+ * added rather than a defect found. Throws rather than return a crowd of the
+ * wrong size.
+ */
+export const aCrowd = ({ min, max }) => {
+  const seen = new Set();
+  for (const card of CARDS) {
+    if (seen.has(card.slug)) continue;
+    let crowd;
+    try {
+      crowd = sharingPlace(card.slug);
+    } catch {
+      continue; // no place on the map, so no crowd
+    }
+    for (const s of crowd) seen.add(s);
+    if (crowd.length >= min && crowd.length <= max) return crowd;
+  }
+  throw new Error(`no coordinate in the corpus is shared by between ${min} and ${max} saints`);
+};
+
+/**
+ * A civil day of 2026 whose `church` register draws at least `pictured` cards
+ * with an icon and at least `blank` without — **and whose hero carries one**,
+ * so the hero's own row is a pictured one and every blank card is drawn in the
+ * register rather than standing in the hero's place.
+ *
+ * `pickHero` is read rather than restated: the hero rule has a tie-break on the
+ * icon, and a fixture that guessed it would choose a day whose blank cards are
+ * one fewer than it counted.
+ *
+ * @returns the day's route
+ */
+export const dayOfMixedCards = (church, { pictured, blank }) => {
+  const iso = CIVIL_2026.find((d) => {
+    const slugs = kept(church, d);
+    if (slugs.filter((s) => ICONED.has(s)).length < pictured) return false;
+    if (slugs.filter((s) => !ICONED.has(s)).length < blank) return false;
+    const hero = pickHero(d, slugs.map((slug) => ({ slug })), BY_SLUG, church);
+    return hero && ICONED.has(hero);
+  });
+  if (!iso) {
+    throw new Error(`no civil day of 2026 gives ${church} ${pictured} pictured and ${blank} blank cards under a pictured hero`);
+  }
+  return `/calendar/${iso}`;
+};
+
+/**
+ * A civil day of 2026 whose `church` commemorations yield **exactly one** name
+ * day, through `lib/name-days.js` — the page's own arithmetic, so a name form
+ * added to a folder moves the fixture with it rather than against it.
+ *
+ * @returns `{ route, name }`
+ */
+export const dayOneNameDay = (church) => {
+  for (const iso of CIVIL_2026) {
+    const days = nameDays(kept(church, iso).map(cardOf).filter(Boolean));
+    if (days.length === 1) return { route: `/calendar/${iso}`, name: days[0].name };
+  }
+  throw new Error(`no civil day of 2026 gives ${church} exactly one name day`);
+};
+
+/**
+ * A civil day whose name days hold both shapes the register draws: a name two
+ * or more of that day's saints carry, which the page spans, and a name exactly
+ * one carries, which it anchors. Typed slugs could not hold this premise — one
+ * more saint of the same name on the day turns the anchor into a span.
+ *
+ * @returns `{ route, shared, unique }`, `unique` being `{ name, slug }`
+ */
+export const dayWithSharedNameDay = (church) => {
+  for (const iso of CIVIL_2026) {
+    const cards = kept(church, iso).map(cardOf).filter(Boolean);
+    const days = nameDays(cards);
+    // `nameDays` says it in the slug: null where more than one of the day's
+    // commemorations bears the name, which is exactly the span the page draws.
+    const shared = days.find((d) => d.slug === null);
+    const one = days.find((d) => d.slug !== null);
+    if (shared && one) {
+      return {
+        route: `/calendar/${iso}`,
+        shared: shared.name,
+        unique: { name: one.name, slug: one.slug },
+      };
+    }
+  }
+  throw new Error(`no civil day of 2026 gives ${church} both a shared and a unique name day`);
+};
+
+/**
+ * A civil day of 2026 whose `church` hero carries **no icon** — the page's
+ * "a hero with no picture" state, which the ~300 queued icons can take away
+ * from any named saint. `pickHero` is imported rather than restated: the hero
+ * rule prefers the sung, then the imaged, and breaks the tie on an icon, so a
+ * fixture that guessed it would hand back a day whose hero does have one.
+ *
+ * No fixed feast on the day, because a feast paints its own hero instead.
+ *
+ * @returns `{ route, iso, slug }`
+ */
+export const dayHeroWithoutIcon = (church) => {
+  for (const iso of CIVIL_2026) {
+    const slugs = kept(church, iso);
+    if (!slugs.length || fixedFeastOn(iso, church)) continue;
+    const hero = pickHero(iso, slugs.map((slug) => ({ slug })), BY_SLUG, church);
+    if (hero && !ICONED.has(hero)) return { route: `/calendar/${iso}`, iso, slug: hero };
+  }
+  throw new Error(`every day ${church} keeps leads with a hero carrying an icon`);
+};
+
+/**
+ * A name token fewer than `max` saints carry — the short search row, without
+ * typing a name the corpus is free to give to somebody else. `carryingWord` is
+ * the counter, so this and the assertion read the same number.
+ */
+export const narrowQuery = (max) => {
+  const words = new Set();
+  for (const card of CARDS) {
+    for (const part of String(card.display_name ?? '').split(/[^A-Za-z]+/)) {
+      if (part.length >= 5) words.add(part);
+    }
+  }
+  for (const word of [...words].sort()) {
+    const n = Number(carryingWord(word));
+    if (n > 0 && n < max) return word;
+  }
+  throw new Error(`no name token in the corpus is carried by fewer than ${max} saints`);
 };
 
 export // Anthony carries an image, all three churches' attestations, Greek and Coptic

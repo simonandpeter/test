@@ -2822,7 +2822,15 @@ test('choosing a saint pushes every other saint back', async ({ page }) => {
     'a saint was already dimmed before anyone was chosen',
   ).toBe(true);
 
-  const pick = atRest.find((d) => d.n === 1 && d.slug !== 'moses-the-hungarian');
+  /*
+   * **A saint with no rail, read off the manifest rather than named.** This
+   * excluded Moses the Hungarian by slug while he was the only saint carrying
+   * a track; others carry one now, and a press on any of them flies the map
+   * out to frame the whole rail — which re-aims the picture this test then
+   * reads the dimming off. `TRACKED` is the thing the exclusion was about,
+   * exactly as in "the chosen saint is named whatever the zoom" above.
+   */
+  const pick = atRest.find((d) => d.n === 1 && !TRACKED.has(d.slug));
   expect(pick, 'premise: every mark on the resting map stands for a crowd').toBeTruthy();
   await pressAt(page, pick.x, pick.y);
   await expect(canvas).toHaveAttribute('data-selected', pick.slug);
@@ -2877,28 +2885,17 @@ test('a saint moving along their rail is named while they move', async ({ page }
    * corpus's own geography and about the window this test happens to run in.
    */
   /*
-   * Every saint the manifest actually records as hymned somewhere within
-   * reach of Kyiv at this zoom band (`data/manifest.json`, checked directly
-   * rather than guessed — 2026-09-04). The original seven were the ones
-   * geography put on the picture when this test was written; the crowd a
-   * label pass draws from the same search is a different ten now that
-   * placement is stricter (`layoutLabels`'s `obstacles`, same day), and two
-   * of *those* — Babylas of Antioch, Heraclides of Tamasos — are hymned
-   * saints the original list simply never had reason to name. The premise
-   * this list is checking (a hymned saint outranks a standing Moses) held
-   * throughout; the list naming who was the stale part.
+   * **Whoever the manifest records a hymn for, rather than the nine it
+   * recorded then.** This was a written-out list, twice: seven when the test
+   * was written, nine after a stricter label pass changed which saints
+   * geography put on the picture — and the list, not the premise, was the
+   * stale part both times. `HYMNED` is the same question asked of the build,
+   * and the Russian and Serbian reading waves are recording troparia for days
+   * neither calendar has reached yet. Moses himself is hymned now, so he is
+   * excluded by name: the premise is that *somebody else* on the picture
+   * leads a day, and he would satisfy it alone.
    */
-  const sung = [
-    'adrian-of-nicomedia',
-    'agathonicus-of-nicomedia',
-    'alexander-patriarch-of-constantinople',
-    'anicetas-of-nicomedia',
-    'babylas-of-antioch',
-    'eustathius-kataphloros-archbishop-of-thessalonica',
-    'heraclides-of-tamasos',
-    'natalia-of-nicomedia',
-    'photius-of-nicomedia',
-  ];
+  const sings = (slug) => slug !== 'moses-the-hungarian' && HYMNED.has(slug);
   await searchBox(page).fill('kyiv');
   await expect(searchRows(page).first()).toContainText('Kyiv');
   await searchBox(page).press('Enter');
@@ -2906,7 +2903,7 @@ test('a saint moving along their rail is named while they move', async ({ page }
   let contest = [];
   for (let i = 0; i < 10; i++) {
     contest = await namedOn(page);
-    if (contest.includes('moses-the-hungarian') && contest.some((slug) => sung.includes(slug))) break;
+    if (contest.includes('moses-the-hungarian') && contest.some(sings)) break;
     // A press eases now (2026-09-04); wait for it to land before reading the
     // picture again, or the next press re-targets from a view that has
     // barely moved from the last one.
@@ -2914,7 +2911,7 @@ test('a saint moving along their rail is named while they move', async ({ page }
     await settledZoom(page);
   }
   expect(
-    contest.some((slug) => sung.includes(slug)),
+    contest.some(sings),
     'premise: no saint who leads a day is named here, so there is no crowd to lead',
   ).toBe(true);
 

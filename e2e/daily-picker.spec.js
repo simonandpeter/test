@@ -12,6 +12,9 @@ import {
   throwRail,
   tokenColours,
 } from './helpers.js';
+// The records the month reads its feast mark from, so the unmarked day below is
+// found in the same place the page finds it.
+import { recordedDay } from '../src/data/liturgical-days.js';
 
 /**
  * The Daily page, the picker: the week strip and its rail, the month, the full-screen calendar, the reckoning, and the keys and swipes that turn the day.
@@ -185,8 +188,16 @@ test('the one jump control holds the left edge, carries a name, and fills the ro
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   const jump = page.locator('.cal-jump button');
   await expect(jump).toHaveCount(1);
+  /*
+   * **The state, not the string's length.** This asked for more than three
+   * characters, which is a measurement standing in for the claim: the control
+   * draws a glyph and nothing readable, so its name has to come from the
+   * label. Both halves are asserted — it says nothing itself, and the label
+   * says something.
+   */
   const name = await jump.getAttribute('aria-label');
-  expect(name?.length).toBeGreaterThan(3);
+  expect((await jump.textContent())?.trim(), 'premise: the control draws words of its own').toBe('');
+  expect((name ?? '').trim(), 'the icon-only control has no name but its glyph').not.toBe('');
   const [stack, strip, span] = [
     await page.locator('.cal-jump').boundingBox(),
     await page.locator('.week-strip').boundingBox(),
@@ -2472,6 +2483,25 @@ test('the day the reader is on is told apart from the box it sits in', async ({ 
   }
 });
 
+/**
+ * A day of September 2026 the month leaves unmarked: its own record carries no
+ * hymns for `church`, which is the fact `hasFeast` reads (`views/daily/picker.js`).
+ *
+ * **Computed, because the reading waves move it.** 22 September was typed here
+ * as the unmarked half of the pair below; the Russian wave is taking that
+ * calendar from 63 recorded days to all 366, and a record arriving on that day
+ * would have failed this test with the page unchanged and nothing found. Read
+ * off the same module the page reads, and it throws rather than returning a day
+ * of the wrong shape: a test that has lost its premise must not pass.
+ */
+const unmarkedInSeptember = (church, except) => {
+  const iso = Array.from({ length: 30 }, (unused, k) => `2026-09-${String(k + 1).padStart(2, '0')}`).find(
+    (d) => d !== except && !recordedDay(d, church)?.hymns?.length,
+  );
+  if (!iso) throw new Error(`every day of September 2026 carries hymns in the ${church} record`);
+  return iso;
+};
+
 test('the month marks a feast, in the rail’s own gold and with the word beside it', async ({ page }) => {
   /*
    * The month has never carried one. It reads the same fact from the same
@@ -2481,8 +2511,9 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
    * about the fast tone applied to the other mark.
    *
    * 21 September is the Nativity of the Theotokos in the Russian calendar and
-   * its record carries the day's hymns; 22 September carries none. Both halves
-   * are asserted, because a mark on every cell would satisfy the first alone.
+   * its record carries the day's hymns; the day without a mark is found rather
+   * than typed (`unmarkedInSeptember` above). Both halves are asserted, because
+   * a mark on every cell would satisfy the first alone.
    *
    * **`--feast`, and the word as well as the mark.** A diamond is nothing to a
    * screen reader, so the day's accessible name says it — the rule the rail's
@@ -2495,7 +2526,8 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
 
   const feast = page.locator('.month-grid [data-iso="2026-09-21"] .month-feast');
   await expect(feast).toHaveCount(1);
-  await expect(page.locator('.month-grid [data-iso="2026-09-22"] .month-feast')).toHaveCount(0);
+  const plain = unmarkedInSeptember('russian', '2026-09-21');
+  await expect(page.locator(`.month-grid [data-iso="${plain}"] .month-feast`)).toHaveCount(0);
   await expect(page.locator('.month-grid [data-iso="2026-09-21"]')).toHaveAttribute(
     'aria-label',
     /a feast$/,

@@ -1,5 +1,5 @@
 import { test, expect } from './fixtures.js';
-import { phone, ready, searchMode, tokenColours } from './helpers.js';
+import { dayOfMixedCards, dayOneNameDay, phone, ready, searchMode, tokenColours } from './helpers.js';
 
 /**
  * The Daily page, the register: the also-commemorated cards and rows, and the name days under their heading.
@@ -139,8 +139,15 @@ test('name days stand in two columns at a desk and run on with dots on a phone',
    * put the names in 1 2 / 3 4 order, where reading down a column reads every
    * other name. A test that counted columns would pass on both.
    *
-   * Nine names on 25 September in the Russian calendar, which is also the odd
-   * count: five in the first column and four in the second.
+   * 25 September in the Russian calendar is the day asked, and **how many
+   * names it gives is read off the page rather than typed**: this said nine,
+   * five in the first column and four in the second, which is a fact about
+   * which saints the Russian calendar keeps on one day and not about the
+   * layout — the Russian reading wave is taking that calendar from 63 days to
+   * 366 and a name added would have failed the premise with nothing wrong.
+   * What the prefix claim needs is only that there are enough names to tell a
+   * filled column from a two-track grid, so that is what is asserted, and the
+   * leading column is the prefix `columns: 2` makes of whatever count arrives.
    */
   await ready(page, { church: 'russian' });
 
@@ -174,19 +181,24 @@ test('name days stand in two columns at a desk and run on with dots on a phone',
   await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
   const desk = await read();
-  expect(desk.n, 'premise: 25 September no longer gives nine name days').toBe(9);
+  expect(desk.n, 'premise: 25 September gives too few names to fill two columns').toBeGreaterThan(2);
   expect(desk.columns, 'the name days are not in two columns').toBe(2);
-  expect(desk.leading, 'the columns are filled across rather than down').toEqual([0, 1, 2, 3, 4]);
+  // The prefix the day's own count makes: `columns: 2` fills the first column
+  // and then the second, so the leading column holds the first ceil(n / 2).
+  expect(desk.leading, 'the columns are filled across rather than down').toEqual(
+    Array.from({ length: Math.ceil(desk.n / 2) }, (unused, k) => k),
+  );
   expect(desk.dots.filter((d) => d !== 'none'), 'a separator dot survived in the columns').toEqual([]);
 
   /*
    * **One name, which is a column of one and not a layout that has failed.**
-   * 11 September gives exactly John, and it is asked because `columns: 2` has
-   * to be allowed to draw one.
+   * `columns: 2` has to be allowed to draw one, so a day giving exactly one
+   * name is asked for rather than typed: 11 September was that day until a
+   * reading wave gave it a second saint with a second name.
    */
-  await page.goto('/calendar/2026-09-11', { waitUntil: 'networkidle' });
+  await page.goto(dayOneNameDay('russian').route, { waitUntil: 'networkidle' });
   const alone = await read();
-  expect(alone.n, 'premise: 11 September no longer gives exactly one name').toBe(1);
+  expect(alone.n, 'premise: the day no longer gives exactly one name').toBe(1);
   expect(alone.columns, 'a single name did not take the leading column').toBe(1);
 
   /*
@@ -212,11 +224,12 @@ test('name days stand in two columns at a desk and run on with dots on a phone',
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-09-25', { waitUntil: 'networkidle' });
   const phone = await read();
-  // Eight dots between nine names: every item but the last carries one.
+  // Every item but the last carries one, counted off the names the day gave
+  // rather than off the nine it gave when this was written.
   expect(
     phone.dots.filter((d) => d.includes('·')).length,
     'the phone lost the separator the desktop rule gave up',
-  ).toBe(8);
+  ).toBe(phone.n - 1);
   expect(phone.dots.at(-1), 'the last name carries a dot after it').toBe('none');
 });
 
@@ -261,7 +274,9 @@ test('the also-commemorated cards run tallest picture first, imageless last', as
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
-  await page.goto('/calendar/2026-09-05', { waitUntil: 'networkidle' });
+  // The day is computed: an order of pictures then blanks needs both on one
+  // day, and which days hold both is what the image programme keeps changing.
+  await page.goto(dayOfMixedCards('russian', { pictured: 2, blank: 1 }), { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
   const ratios = await page.evaluate(() =>
