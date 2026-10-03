@@ -15,6 +15,12 @@
       "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Παχώμιος ο Αναχωρητής», with the rank word and the epithet left off. Its life page adds the place and the name in the world: «Ο Όσιος Παχώμιος, της Νερέκτα, κατά κόσμον Ιάκωβος»."
     }
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [],
   "dates": {
     "death": {

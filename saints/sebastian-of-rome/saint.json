@@ -78,6 +78,12 @@
       "note": "saint.gr's page head, «Αγιος Σεβαστιανος (; - 287)». Its narrative dates nothing: it has Carinus favour him, Diocletian make him head of the praetorians and order his death, and after Lucina nursed him back it has him scourged to death, with no year for any of it."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "nicostratus-18-december",
     "zoe-18-december",

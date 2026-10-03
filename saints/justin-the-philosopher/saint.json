@@ -129,5 +129,11 @@
       "basis": "traditional",
       "note": "saint.gr: «ο μέγας φιλόσοφος και ευσεβής χριστιανός συνελήφθη και αφού υπέστη διάφορα βασανιστήρια, αποκεφαλίστηκε το 165 μ.X. αναδεικνυόμενος όχι μόνο απολογητής της ορθόδοξης πίστης αλλά και αθλοφόρος μάρτυρας.» The page's own distich gives a different death, hemlock rather than the sword, and the disagreement is recorded in the attestation note rather than resolved here."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }
