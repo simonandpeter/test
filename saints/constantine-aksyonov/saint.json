@@ -1,0 +1,67 @@
+{
+  "slug": "constantine-aksyonov",
+  "display_name": "Constantine (Aksyonov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Константин (Аксёнов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9656, «Константин (Аксёнов), иерей, сщмч.», with the office and the rank word left off. The site writes the surname with the ё; the day line gives no surname at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Константина пресвитера (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Сщмч. Константина пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is the second of the day's third paragraph, which carries no icon. The day's two icons are both in the first paragraph: a polyeleos immediately before the apostle James, and the plain service immediately before Andronicus and his wife."
+      },
+      "note": "He is the second Constantine of the same paragraph and nineteen years later than the first, and the surnames on the two index pages — Сухов and Аксёнов — are the only thing that separates two otherwise identical lines. Beyond the name, the rank, the office and 1937 nothing is printed."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 22 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/22 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 22 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "constantine-sukhov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

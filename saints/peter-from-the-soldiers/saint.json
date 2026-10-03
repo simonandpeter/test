@@ -6,6 +6,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Όσιος Πέτρος «ο από στρατιωτών»», with the rank word left off; the epithet «ο από στρατιωτών» is the page's own. It glosses the name from πέτρα, the rock."
+    },
+    {
+      "form": "Петр",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1773, headed «Петр Галатийский, Константинопольский, прп.», with the rank word and the two epithets left off."
     }
   ],
   "sex": "male",
@@ -26,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Прп. Петра Галатийского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line closes the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to the apostle James and to Andronicus and his wife."
+      },
+      "note": "The Russian names him for his province where the Greek names him for the soldiers: «Прп. Петра Галатийского», and its index page heads him «Петр Галатийский, Константинопольский, прп.», adding Constantinople. The Greek life gives both — a man of the province of the Galatians who was made a count and became a monk — so the two entries are one man and the epithets are two readings of the same life. Its «(IX)» agrees with the `floruit` the Greek page's years gave this folder, 829 to 867. The Russian carries no life for him. He is **not** the `peter-of-galatia` this corpus already holds, whom all four churches keep on 1 February: that one lived in the fourth and fifth centuries, shut himself in a tomb at Antioch and died in 429. Two men, four centuries apart, whom one English epithet would merge — which is why the English name of this folder stays the Greek one and the life says «Peter the Galatian» where it translates the Russian line."
     },
     {
       "church": "romanian",

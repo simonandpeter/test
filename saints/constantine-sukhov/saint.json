@@ -1,0 +1,67 @@
+{
+  "slug": "constantine-sukhov",
+  "display_name": "Constantine (Sukhov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Константин (Сухов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13824, «Константин (Сухов), иерей, сщмч.», with the office and the rank word left off. The day line gives neither the surname nor the office beyond «пресвитеров»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the pair it names him in: «Сщмчч. Константина и Петра пресвитеров (1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Сщмчч. Константина и Петра пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line opens the day's third paragraph, which carries no icon. The day's two icons are both in the first paragraph: a polyeleos immediately before the apostle James, and the plain service immediately before Andronicus and his wife."
+      },
+      "note": "«Сщмч.» marks a hieromartyr, a priest killed for the faith, and 1918 is the first year of that. The calendar prints him and Peter (Vyatkin) as one pair on one line and says nothing more about either of them: no birth, no diocese, no parish, no charge, no place of death."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 22 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/22 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 22 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "peter-vyatkin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

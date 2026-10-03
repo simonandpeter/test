@@ -11,6 +11,11 @@
       "form": "Αθανασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Όσιοι Ανδρόνικος και Αθανασία η συμβία του», with the rank word left off; the page calls her «η συμβία του», his wife."
+    },
+    {
+      "form": "Афанасия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2421, headed «Афанасия Тавенская, прп.», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -23,8 +28,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Прпп. Андроника и супруги его Афанасии (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the second of the day's two icons, the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком», which stands immediately before this line and so belongs to the pair the line names. The day's other icon, a polyeleos, is the apostle James's."
+      },
+      "note": "The Russian puts the pair in the fifth century, «(V)», against saint.gr's 540; the `floruit` is left as the Greek page set it and the disagreement is recorded here. The day line names her as «супруги его», his wife, and her own index page gives her the epithet the day line does not: «Афанасия Тавенская», of Tabennisi, which is the convent her life puts her in."
     },
     {
       "church": "romanian",

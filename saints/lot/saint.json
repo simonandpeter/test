@@ -6,6 +6,11 @@
       "form": "Λωτ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Οκτωβρίου, «Δικαίων Αβραάμ και Λωτ του ανεψιού του», with the rank word left off; the page's own heading for him is «Δικαιος Λωτ»."
+    },
+    {
+      "form": "Лот",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 1370, which is headed with the name alone, «Лот»."
     }
   ],
   "sex": "male",
@@ -18,8 +23,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 9 октября ст. ст. — «Прав. Авраама праотца и племянника его Лота (2000 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261009.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line opens the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to the apostle James and to Andronicus and his wife."
+      },
+      "note": "The Russian keeps him on the same day as the Greek and names him the same way, as Abraham's nephew. His index page keeps him on this one day, and the page it sends the reader to is the one he shares with Abraham — on this site as on saint.gr, he has no life of his own. The «(2000 до Р.Х.)» of the day line is an era and no `dates` are proposed from it."
     },
     {
       "church": "romanian",
