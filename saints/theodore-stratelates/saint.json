@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιος Θεόδωρος ο Στρατηλάτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Феодор Стратилат",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 февраля ст. ст., «Великомученик Феодор Стратилат», with the rank word left off; «Стратилат» is the calendar's own by-name for his command and is kept with the name."
     }
   ],
   "sex": "male",
@@ -68,13 +73,38 @@
         "text": "Having armed the faith with courage of soul, and wielded the word of God as a spear, you wounded the enemy, Theodore, glory of the martyrs; with them do not cease to intercede with Christ our God for us all.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мужеством души в веру оболкийся/ и глагол Божий, аки копие, в руку взем,/ врага победил еси,/ мучеников превелий Феодоре,// с ними Христу Богу моляся не престай о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Кондак великомученика Феодора»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having clothed thyself in the faith by the courage of thy soul, and having taken the word of God in thy hand as a spear, thou didst overcome the enemy, O Theodore, greatest of martyrs. Cease not to pray with them to Christ God for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Вмч. Феодора Стратилата (319).»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

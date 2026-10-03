@@ -6,4 +6,4 @@ The one thing it adds is where he lies: his body, it says, is at the Patriarchat
 
 He is not [Sava of Serbia](/saints/sava-of-serbia), the first archbishop and the son of Stephen Nemanja, whom the Greek calendar keeps on 14 January and this corpus keeps with him; and he is not [Sava III](/saints/sava-the-third) either, whom the Romanian calendar keeps on 26 July. The number on this page and the year 1271 are what set him apart from both, and nothing on the page joins him to either.
 
-*After saint.gr's calendar for 8 Φεβρουαρίου — [the day](https://www.saint.gr/02/08/index.aspx) and [the life](https://www.saint.gr/537/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 8 Φεβρουαρίου — [the day](https://www.saint.gr/02/08/index.aspx) and [the life](https://www.saint.gr/537/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 8 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260208.html), read 3 October 2026.*

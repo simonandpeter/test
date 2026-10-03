@@ -11,6 +11,11 @@
       "form": "Σάββας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Άγιος Σάββας Αρχιεπίσκοπος Σερβίας», with the rank word and the see left off. The life page numbers him «Σάββας Β'», the second of the name."
+    },
+    {
+      "form": "Савва II Сербский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 февраля ст. ст., «Святитель Савва II Сербский, архиепископ», with the rank word and the office left off."
     }
   ],
   "related": [
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Свт. Саввы II, архиеп. Сербского (1269).»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Исправление веры и образ кротости,/ и якоже сад посреде рая,/ преподобными делы твоими мир просвещаеши,/ сего ради к честней раце мощей твоих любовию прикасаемся,/ лобызаем их и верно вопием:/ предстани в помощь воспевающим память святую твою и светоносную,/ святителю отче Савво пребогате, молимся,/ Христу Богу молися/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Тропарь святителя Саввы II, архиепископа Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness, and as a garden in the midst of paradise, thou enlightenest the world by thy holy works. Therefore we touch with love the honoured shrine of thy relics, we kiss them and faithfully cry out: stand as a help to those who sing thy holy and light-bearing memory. O most rich hierarch and father Sava, we pray thee, entreat Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко архиереем сопрестольник/ и святителем изрядный поборник был еси, святителю Савво,/ сохраняли отечество, обитель, град же и люди, почитающия тя верою/ и честным твоим мощем покланяющияся,/ да велегласно тебе вопием:/ радуйся, Савво Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Кондак святителя Саввы II, архиепископа Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who shared the throne of the high priests, and an excellent champion among the hierarchs, wast thou, O hierarch Sava. Guard the fatherland, the monastery, the city and the people who honour thee in faith and bow before thy honoured relics, that we may cry aloud to thee: rejoice, O Sava, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

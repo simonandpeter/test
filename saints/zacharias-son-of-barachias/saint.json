@@ -11,6 +11,11 @@
       "form": "Ζαχαρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Φεβρουαρίου, «Προφήτης Ζαχαρίας», with the rank word left off."
+    },
+    {
+      "form": "Захария Серповидец",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 8 февраля ст. ст., «Захария Серповидец, пророк, из 12 малых пророков», with the rank word and the note of his place among the twelve left off. «Серповидец» — the sickle-seer — is the calendar's own by-name, after the flying sickle of his fifth vision, and is kept with the name."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 февраля ст. ст. — «Прор. Захарии Серповидца из 12-ти (ок. 520 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260208.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
