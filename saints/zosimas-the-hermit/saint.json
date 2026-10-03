@@ -11,12 +11,18 @@
       "form": "Зосим пустињак",
       "lang": "sr",
       "note": "Read out of «Св. муч. Зосим пустињак» in this folder’s Serbian citation."
+    },
+    {
+      "form": "Zosima",
+      "lang": "ro",
+      "note": "Read out of doxologia.ro's line for 4 ianuarie."
     }
   ],
   "sex": "male",
   "types": [
     "martyr",
-    "hermit"
+    "hermit",
+    "monk"
   ],
   "dates": {
     "death": {
@@ -34,7 +40,8 @@
       "feast": {
         "day": 19,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Sretensky day prints «Мч. Зосимы пустынника (IV)». Its name page lists this life under Zosimas of Cilicia beside a second life, of a venerable martyr Zosimas of Cilicia, and that second life is the Romanian 4 January row below; the author ruled on 3 October 2026 that the two are one man and this record is the merge of the two folders the corpus held."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 сентября ст. ст. — «Мч. Зосимы пустынника (IV)»",
@@ -44,13 +51,23 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 2 octombrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 1,
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps him on this day and not on 2 octombrie, the civil day of the Russian and Serbian 19 September, where doxologia.ro’s list does not name him (checked 2026-09-17). Its line is no more than „Sfântul Mucenic Zosima” and its life is the one the Sretensky name page files beside the hermit’s: the monk of Cilicia among the beasts, the governor Dom(e)tian, and the lion — which is why the two are one record."
+      },
+      "source": {
+        "text": "doxologia.ro, calendarul zilei pentru 4 ianuarie — «Sfântul Mucenic Zosima»",
+        "url": "https://doxologia.ro/4-ianuarie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
       "status": "undocumented",
-      "note": "Not on saint.gr’s list for 2 Οκτωβρίου (checked 2026-09-17); no other day checked."
+      "note": "Not on saint.gr’s list for 2 Οκτωβρίου, the civil day of the Russian and Serbian 19 September (checked 2026-09-17), nor read for 4 Ιανουαρίου, the Romanian day."
     },
     {
       "church": "serbian",
@@ -69,5 +86,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "aliases": [
+    "zosimas-of-cilicia"
+  ],
+  "related": [
+    "athanasius-the-commentarisius"
+  ]
 }

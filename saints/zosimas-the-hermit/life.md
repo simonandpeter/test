@@ -6,6 +6,21 @@ At Nazareth he was hung head downwards with a great stone tied to his neck and t
 
 The Ohrid Prologue, for the Serbian calendar, tells it with differences of its own. Its Dometian is a prince of Cilicia and himself a fierce persecutor of Christians; the old man says he has long lived with the beasts, who are better than the persecutors of Christians in the city; he is bound and sent ahead to Nazareth, beaten until he is covered in blood, and hoisted onto a tree with the stone at his neck, and the lion puts its own head under the stone to ease him. The frightened prince sets him free, and he gives up his spirit to the Lord soon afterwards. Its verses make him a man who fled early into the dry desert to talk with God, loved by the beasts and killed by men.
 
-The Russian calendar keeps him on 19 September old style. Its name page lists this life under Zosimas of Cilicia beside a second life, of a venerable martyr Zosimas of Cilicia; that life was not read for this folder, and whether the two are one man is left open.
+The Romanian calendar keeps him on 4 January, under a line that is no more
+than „Sfântul Mucenic Zosima”, and tells the story a third way: the lion
+that ran out of the desert to the spectacle spoke with a human voice and put
+fear on everyone standing there, and
+[Athanasius the Commentarisius](/saints/athanasius-the-commentarisius), the
+officer who kept the prison register, saw it, knew the power of Christ and
+believed; the two of them made their end in the mountains, where a rock split
+open and they went into it and gave up their souls to the Lord.
 
-*After the life printed by the Sretensky calendar (days.pravoslavie.ru), 19 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life1566.htm); the Ohrid Prologue for 2 October 2026 (19. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-02&prolog=1), read 17 September 2026.*
+The Russian calendar keeps him on 19 September old style, and its name page
+lists this life under Zosimas of Cilicia beside a second life, of a venerable
+martyr Zosimas of Cilicia — which is the Romanian 4 January. This corpus held
+the two as two folders and left the question open; the author ruled on
+3 October 2026 that they are one man, and this record is the two. What the
+pages do not do is reconcile themselves: one has him die where he was hung and
+the other in a rock in the mountains, and that is left standing.
+
+*After the life printed by the Sretensky calendar (days.pravoslavie.ru), 19 сентября ст. ст. — [the entry](https://days.pravoslavie.ru/Life/life1566.htm); the Ohrid Prologue for 2 October 2026 (19. септембар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs) — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-02&prolog=1), read 17 September 2026; and doxologia.ro’s calendar for 4 ianuarie — [the day](https://doxologia.ro/4-ianuarie) and [the life](https://doxologia.ro/viata-sfantului-mucenic-zosima), read 19 September 2026.*
