@@ -6,4 +6,6 @@ Of Gerasimus in particular the page records nothing more: no year of birth, no b
 
 The Russian calendar, which keeps these three bishops of Perm with their own accounts, is where this entry could be finished, and it has not been read for this folder.
 
-*After saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/3556/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day as «Свт. Герасима Великопермского, Устьвымского (ок. 1449)», and it gives him the service that was missing. His troparion says what his episcopate was for — «землю Зырянскую озарил еси», thou didst enlighten the land of the Zyryans, and brought many of its people to Christ — and his kontakion has the Russian Church honouring him as a most great priest.
+
+*After saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/3556/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 24 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260124.html), read 3 October 2026.*

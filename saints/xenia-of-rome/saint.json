@@ -11,6 +11,11 @@
       "form": "Ξένη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Οσίες Ξένη και οι δύο θεραπαινίδες της», with the rank word left off."
+    },
+    {
+      "form": "Ксения (в миру Евсевия) Миласская",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Ксения (в миру Евсевия) Миласская, диакониса», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Прп. Ксении (ок. 457)»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -152,6 +166,54 @@
       },
       "english": {
         "text": "Keeping thy strange-fashioned memorial, O Xenia, we who honour thee with longing hymn Christ, who in all things gives thee the strength of healings; entreat him without ceasing for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, мати, известно спасеся, еже по образу:/ приимши бо крест, последовала еси Христу/ и, деющи, учила еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней.// Темже и со Ангелы срадуется, преподобная Ксение, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Тропарь преподобной Ксении»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In thee, O mother, that which is according to the image was surely saved; for taking up the cross thou didst follow Christ, and by thy deeds thou didst teach that the flesh is to be despised, since it passes away, and that the soul, a thing immortal, is to be cared for. Therefore, O venerable Xenia, thy spirit rejoices together with the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твою страннонравную, Ксение, память совершающе,/ любовию почитающии тя, поем Христа,/ во всех тебе подающаго крепость исцелений,// Емуже всегда молися о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Кондак преподобной Ксении»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of thee whose manner of life was that of a stranger, O Xenia, we who honour thee with love sing of Christ, who in all things gives thee the strength of healings; pray to him always for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже во святых святая/ Христа Преблагаго всем сердцем возлюбила еси, Богомудрая Ксение славная,/ того ради омерзила еси мирскую сладость./ Крест же Его вземши честный,/ возлюби пети присно: аллилуйя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Ин кондак преподобной Ксении Миласской»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy among the saints, thou didst love Christ the most good with thy whole heart, O God-wise and glorious Xenia, and for his sake thou didst loathe the sweetness of the world; and taking up his honoured cross thou didst love to sing always: alleluia.",
         "rendered": "site"
       }
     }

@@ -6,6 +6,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιος Ιωάννης ο Μάρτυρας εκ Καζάν», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Казанский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Мученик Иоанн Казанский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Мч. Иоанна Казанского (1529)»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +70,39 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Страстотерпче святый Иоанне, блаженна земля, напившаяся крове твоея, Христа бо со дерзновением проповедав, многия муки от неверных агарян приял еси, страданьми своими противных дерзости низложив, Троицы поборник явился еси, Юже и моли даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Тропарь мученика Иоанна Казанского»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy passion-bearer John, blessed is the earth that drank thy blood; for having preached Christ with boldness thou didst receive many torments from the unbelieving Hagarenes, and casting down by thy sufferings the insolence of the adversaries thou wast shown to be a champion of the Trinity. Pray to her to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Звезда светла среди неверных явился еси, многострадальне Иоанне, зарями твоими Солнце Христа возвещающи, прелесть агарянскую посрамил еси и нам подаеши свет, моля непрестанно Христа Бога о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Кондак мученика Иоанна Казанского»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown to be a bright star among the unbelievers, O much-suffering John, proclaiming by thy rays Christ the Sun; thou didst put the Hagarene delusion to shame and thou givest light to us, praying unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

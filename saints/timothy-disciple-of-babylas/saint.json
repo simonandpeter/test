@@ -11,11 +11,17 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Άγιοι Βαβύλας ο εν Σικελία και Αγάπιος και Τιμόθεος οι μαθητές του», with the rank word left off."
+    },
+    {
+      "form": "Тимофей Сицилийский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Тимофей Сицилийский, прмч.», with the rank words left off."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "venerable-martyr"
   ],
   "related": [
     "babylas-of-sicily",
@@ -24,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Мчч. Вавилы Сицилийского и учеников его Тимофея и Агапия (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -64,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Вавилы Сицилийского и учеников его Тимофея и Агапия (III)»."
+    }
   }
 }

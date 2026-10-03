@@ -7,6 +7,11 @@
       "form": "Γεράσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Άγιοι Γεράσιμος, Ιωνάς και Πιτιρίμ εκ Ρωσίας», with the rank word left off; his own heading on the life page is «Αγιος Γερασιμος Εκ Ρωσιας»."
+    },
+    {
+      "form": "Герасим Великопермский (Устьвымский)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Святитель Герасим, епископ Великопермский (Устьвымский)», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Свт. Герасима Великопермского, Устьвымского (ок. 1449)»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "note": "The same calendar keeps him again on 29 января ст. ст., with the two other bishops of Great Perm in one line — «Свтт. Герасима (ок. 1441-1467), Питирима (1455) и Ионы (1470), епископов Великопермских, Устьвымских». This row records the day whose line names him alone; the second day is noted and the saint is not rendered on it."
     },
     {
       "church": "romanian",
@@ -60,5 +75,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Божественныя веры проповеданием землю Зырянскую озарил еси и ко Христу люди многия привел еси. Возопиет еже с тобою и Авель ко Господу и Захариина кровь праведная, отче Герасиме, моли Христа Бога пастве твоей и всем, любовию память твою совершающим, даровати велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Тропарь святителя Герасима, святителя Великопермского, Устьвымского»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the preaching of the divine faith thou didst enlighten the land of the Zyryans and didst bring many people to Christ. Abel will cry out to the Lord together with thee, and the righteous blood of Zachariah; O father Gerasimus, pray to Christ God to grant great mercy to thy flock and to all who keep thy memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священника превелика и апостолов и мучеников совесельника, Церковь Русская почитает тя, святителю Герасиме. Сию твоими мо­литвами соблюдай, блаженне, непобедиму, и необуреваему, и несквер­ну, и всем нам испроси у Бога мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Кондак святителя Герасима, святителя Великопермского, Устьвымского»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most great priest and a sharer in the gladness of the apostles and the martyrs, the Russian Church honours thee, O hierarch Gerasimus. Keep her by thy prayers, O blessed one, unconquered, untroubled by storm and undefiled, and ask of God for us all peace and great mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -8,4 +8,6 @@ One of his many miracles is this. A woman was brought to him who, by the working
 
 Theodoret, the page adds, reports that because he lived in pits he was also called the venerable Gouvas, γούβα being the Syriac word for a pit, and that he was called Kritophagos, the barley-eater, because barley was his food. No hymn is printed for him.
 
-*After saint.gr's calendar for 24 Ιανουαρίου — [the day](https://www.saint.gr/01/24/index.aspx) and [the life](https://www.saint.gr/3517/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day as «Прп. Македония, сирийского пустынника (ок. 420)», the Syrian hermit, with the same year of his repose, and its name link calls him пресвитер as well. It does not print the barley by which the Greek calendar names him, and it prints no hymn.
+
+*After saint.gr's calendar for 24 Ιανουαρίου — [the day](https://www.saint.gr/01/24/index.aspx) and [the life](https://www.saint.gr/3517/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 24 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260124.html), read 3 October 2026.*

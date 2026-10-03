@@ -11,6 +11,11 @@
       "form": "Ξένη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Οσία Ξένη η Διά Χριστόν Σαλή», with the rank word left off."
+    },
+    {
+      "form": "Ксения Петербургская",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Святая блаженная Ксения Петербургская», with the rank words left off."
     }
   ],
   "sex": "female",
@@ -91,13 +96,54 @@
         "text": "A stranger wandering in a strange land, always sighing for the heavenly homeland, known as a fool and faithless, but to the faithful most wise and holy, crowned by God with glory and honour: O Xenia, brave in mind and divinely wise. Therefore we cry to thee: Rejoice, thou who after thy earthly wandering hast come to dwell in the house of God.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Нищету Христову возлюбивши,/ безсмертныя трапезы ныне наслаждаешися,/ безумием мнимым безумие мира обличивши,/ смирением крестным силу Божию восприяла еси,/ сего ради дар чудодейственныя помощи стяжавшая,/ Ксение блаженная, моли Христа Бога// избавитися нам от всякаго зла покаянием.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Тропарь блаженной Ксении Петербургской»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved the poverty of Christ, thou now delightest in the immortal banquet; by a madness that was only seeming thou didst rebuke the madness of the world, and by the humility of the cross thou didst receive the power of God. Therefore, having gained the gift of wonder-working help, O blessed Xenia, pray to Christ God that we may be delivered from every evil by repentance.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Днесь светло ликует град святаго Петра,/ яко множество скорбящих обретают утешение,/ на твоя молитвы надеющеся,/ Ксение всеблаженная,// ты бо еси граду сему похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Кондак блаженной Ксении Петербургской»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the city of Saint Peter rejoices brightly, for a multitude of the sorrowing find consolation, hoping in thy prayers, O all-blessed Xenia; for thou art the praise and the stronghold of this city.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 января ст. ст. — «Блж. Ксении Петербургской (XIX)»",
+        "url": "https://days.pravoslavie.ru/Days/20260124.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
