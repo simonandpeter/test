@@ -1,0 +1,60 @@
+{
+  "slug": "john-confessor-hieroschemamonk-1961",
+  "display_name": "John (Kevroletin)",
+  "office": "Hieroschemamonk",
+  "names": [
+    {
+      "form": "Иоанн (Кевролетин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 января ст. ст., «Иоанн (Кевролетин), иеросхимонах, исп.», with the rank words left off; the line itself gives him in the genitive, «Прп. Иоанна Кевролетина исп»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "hieromonk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1961,
+      "latest": 1961,
+      "display": "1961",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 14 января ст. ст., «Прп. Иоанна Кевролетина исп (1961)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст. — «Прп. Иоанна Кевролетина исп (1961)»",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

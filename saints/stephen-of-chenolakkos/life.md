@@ -6,4 +6,4 @@ What it comes to is this: Stephen founded the monastery called that of Chenolakk
 
 The page gives no year at all, and prints no hymn. The couplet it sets over him plays on the monastery's name: that for the divine Stephen, who built the house of Chenolakkos — the goose-pit — a pit was dug for a grave.
 
-*After saint.gr's calendar for 14 Ιανουαρίου — [the day](https://www.saint.gr/01/14/index.aspx) and [the life](https://www.saint.gr/221/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 14 Ιανουαρίου — [the day](https://www.saint.gr/01/14/index.aspx) and [the life](https://www.saint.gr/221/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 14 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260114.html), read 3 October 2026, which keeps him as «Прп. Стефана, основателя обители Хиннолакковой (VIII)» and names him «Стефан Вифинский (Халкидонский)».*

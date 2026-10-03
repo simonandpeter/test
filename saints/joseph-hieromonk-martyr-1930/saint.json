@@ -1,0 +1,67 @@
+{
+  "slug": "joseph-hieromonk-martyr-1930",
+  "display_name": "Joseph (Gavrilov)",
+  "office": "Hieromonk of Raifa",
+  "names": [
+    {
+      "form": "Иосиф (Гаврилов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 января ст. ст., «Иосиф (Гаврилов), иеромонах, прмч.», with the rank words left off; the line itself gives the name without the surname and in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 14 января ст. ст., «Прмчч. Раифских: Антония, Варлаама, Иова, Иосифа, Сергия и Петра (1930)»."
+    }
+  },
+  "related": [
+    "anthony-hieromonk-martyr-1930",
+    "barlaam-hieromonk-martyr-1930",
+    "job-hieromonk-martyr-1930",
+    "sergius-hieromonk-martyr-1930",
+    "peter-novice-martyr-1930"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст. — «Прмчч. Раифских: Антония, Варлаама, Иова, Иосифа, Сергия и Петра (1930)»",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

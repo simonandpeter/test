@@ -6,4 +6,4 @@ The page's account of the years between is longer than what is set down here, an
 
 The page prints no hymn for Theodulus.
 
-*After saint.gr's calendar for 14 Ιανουαρίου — [the day](https://www.saint.gr/01/14/index.aspx) and [the life](https://www.saint.gr/220/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 14 Ιανουαρίου — [the day](https://www.saint.gr/01/14/index.aspx) and [the life](https://www.saint.gr/220/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 14 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260114.html), read 3 October 2026, which keeps him as «Прп. Феодула Синайского (V)» and calls him a hieromonk.*

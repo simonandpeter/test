@@ -11,6 +11,11 @@
       "form": "Νίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Αγία Νίνα Ισαπόστολος», with the rank words left off. The page adds a second Greek form of the name in brackets, «ή Νίνω»."
+    },
+    {
+      "form": "Нина, просветительница Грузии",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 января ст. ст., «Равноапостольная Нина, просветительница Грузии», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст. — «Равноап. Нины, просветительницы Грузии (335)»",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -92,6 +106,38 @@
       },
       "english": {
         "text": "Handmaid of the divine word, equal to the apostles, Nina, thou wast made like to Andrew the First-called and to the other apostles in apostolic preaching, enlightener of Iberia and harp of the Holy Spirit: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Слова Божия служительнице,/ во апостольстей проповеди первозванному Андрею/ и прочим апостолом подражавшая,/ просветительнице Иверии и Духа Святаго цевнице,/ святая равноапостольная Нино,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст., «Тропарь равноапостольной Нины», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O handmaid of the Word of God, who in the apostles' preaching didst imitate Andrew the First-called and the rest of the apostles, enlightener of Iberia and harp of the Holy Spirit, holy Nina equal to the apostles: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Приидите днесь вси,/ воспоим избранную от Христа/ равноапостольную проповедницу Божия слова,/ мудрую благовестницу,/ люди Карталинии приведшу на путь живота и истины,/ Богоматере ученицу,/ усердную заступницу и неусыпающую хранительницу нашу,// Нину прехвальную.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст., «Кондак равноапостольной Нины», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come all ye today, and let us hymn her whom Christ chose, the preacher of God's word equal to the apostles, the wise bringer of good tidings, who led the people of Kartli into the way of life and of truth, the disciple of the Mother of God, our fervent intercessor and unsleeping guardian, the all-praised Nina.",
         "rendered": "site"
       }
     }

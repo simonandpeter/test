@@ -11,13 +11,27 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιανουαρίου, «Όσιος Στέφανος, κτήτωρ Μονής Χηνολάκκου», with the rank word left off."
+    },
+    {
+      "form": "Стефан Вифинский (Халкидонский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 января ст. ст., «Стефан Вифинский (Халкидонский), прп.», with the rank word left off; the line itself names him instead by his monastery, «основателя обители Хиннолакковой»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст. — «Прп. Стефана, основателя обители Хиннолакковой (VIII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 14 января ст. ст., «Прп. Стефана, основателя обители Хиннолакковой (VIII)»."
+    }
   }
 }

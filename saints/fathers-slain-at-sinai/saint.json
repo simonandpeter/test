@@ -22,13 +22,23 @@
     }
   },
   "related": [
-    "fathers-slain-at-raithu"
+    "fathers-slain-at-raithu",
+    "joseph-analytinus-of-raithu"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 января ст. ст. — «Преподобных отец, в Синае и Раифе избиенных: Исаии, Саввы, Моисея и ученика его Моисея, Иеремии, Павла, Адама, Сергия, Домна, Прокла, Ипатия, Исаака, Макария, Марка, Вениамина, Евсевия, Илии и иных с ними (IV-V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260114.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
