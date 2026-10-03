@@ -158,6 +158,15 @@
 
 /* The row's height is declared rather than left to the type's metrics, because
    --mpick-row is the window's arithmetic and the roll's pitch both. */
+/* The row's height is declared rather than left to the type's metrics, because
+   --mpick-row is the window's arithmetic and the roll's pitch both.
+
+   **And the text is centred by this rule rather than by the element.** Four of
+   the five rows are buttons, which centre their own content, and the middle one
+   is a span, which does not: the names were on a 24px pitch by their boxes and
+   a 21.8 / 26.2 one by their words, so the month being read sat 2.2px high
+   between its neighbours. One box model for all five is what makes them
+   equidistant. */
 .mpick {
   box-sizing: border-box;
   width: 100%;
@@ -165,6 +174,9 @@
   padding: 0;
   border: 0;
   background: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -3532,8 +3544,15 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    element rather than the anchor, because a name day that is not a link is a
    span and the two have to look alike - which is what the paragraph above is
    about. */
+/* The also commemorated saints' own size and weight (author, 2026-10-03: "they
+   should be matching the also commemorated saints font and bold sizes"). The
+   weight came off with the hymns' on the same day and should not have: that
+   instruction was the hymns' alone. On the element rather than the anchor,
+   because a name day that is not a link is a span and the two have to look
+   alike. */
 .name-day {
   font-size: var(--text-base);
+  font-weight: 600;
 }
 
 a.name-day {
