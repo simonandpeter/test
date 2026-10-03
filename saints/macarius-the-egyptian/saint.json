@@ -16,6 +16,11 @@
       "form": "Макарий Великий, Египетский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Преподобный Макарий Великий, Египетский», with the rank word left off."
+    },
+    {
+      "form": "Макарије Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 19. јануар ст. ст. (civil 2026-02-01), „Преподобни Макарије Велики“. The rank word „Преподобни“ is left off; „Велики“ is kept, being the epithet the Great and not a rank."
     }
   ],
   "sex": "male",
@@ -175,8 +180,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.02.2026 (19. јануар ст. ст.) — „Преподобни Макарије Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-01&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

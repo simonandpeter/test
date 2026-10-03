@@ -11,6 +11,11 @@
       "form": "Феодор Новгородский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Блаженный Феодор Новгородский», with the rank word left off; the line adds «Христа ради юродивого»."
+    },
+    {
+      "form": "Теодор Новгородски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue for 19. јануар ст. ст. (civil 2026-02-01). The heading is bare, „Блажени Теодор“, and the entry's own first sentence gives him in full: „Блажени Теодор, Христа ради јуродиви Новгородски“. The rank words „Блажени“ and „Христа ради јуродиви“ are left off; „Новгородски“ is kept, being what distinguishes him — and the bare form would be a third folder carrying „Теодор“ alone."
     }
   ],
   "sex": "male",
@@ -62,8 +67,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.02.2026 (19. јануар ст. ст.) — „Блажени Теодор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-01&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
