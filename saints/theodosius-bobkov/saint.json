@@ -1,0 +1,60 @@
+{
+  "slug": "theodosius-bobkov",
+  "display_name": "Theodosius (Bobkov)",
+  "names": [
+    {
+      "form": "Феодосий (Бобков)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 февраля ст. ст., «Феодосий (Бобков), иеромонах, прмч.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 февраля ст. ст. — «Сщмчч. Евстафия, Иоанна, Александра, Сергия, Иоанна, Александра, Николая, Алексия, Николая, Алексия, Александра, Аркадия, Бориса, Михаила, Николая, Алексия, Андрея, Димитрия, Иоанна, Петра пресвитеров, прмч. Серафима, Феодосия, прмцц. Рафаилы, Екатерины, Марии и Анны, мчч. Иоанна, Василия, Димитрия, Димитрия и Феодора (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260204.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 4 февраля ст. ст.: «Сщмчч. Евстафия, Иоанна, Александра, Сергия, Иоанна, Александра, Николая, Алексия, Николая, Алексия, Александра, Аркадия, Бориса, Михаила, Николая, Алексия, Андрея, Димитрия, Иоанна, Петра пресвитеров, прмч. Серафима, Феодосия, прмцц. Рафаилы, Екатерины, Марии и Анны, мчч. Иоанна, Василия, Димитрия, Димитрия и Феодора (1938).»."
+    }
+  },
+  "office": "Hieromonk",
+  "text": {
+    "life": "life.md"
+  }
+}
