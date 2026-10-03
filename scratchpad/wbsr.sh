@@ -4,25 +4,25 @@
 # commit are the writer's, not a script's.
 set -u
 day="$1"
-batch="ru-$day"
+batch="sr-$day"
 cd "$(dirname "$0")/.." || exit 1
 
 # Up to eight splits, inherited from wbel.sh, which stopped at four and let a
 # file go unwritten with its batch record missing rather than red. A Russian
 # day needs the headroom more than a Greek one: the synaxes of the new martyrs
 # enumerate dozens of names.
-drafts=(.tmp/ru-drafts/"$day".json)
-for n in 1 2 3 4 5 6 7 8; do drafts+=(.tmp/ru-drafts/"$day"-$n.json); done
+drafts=(.tmp/sr-drafts/"$day".json)
+for n in 1 2 3 4 5 6 7 8; do drafts+=(.tmp/sr-drafts/"$day"-$n.json); done
 found=()
 for f in "${drafts[@]}"; do [ -f "$f" ] && found+=("$f"); done
-if [ ${#found[@]} -eq 0 ] && [ ! -f .tmp/ru-drafts/up-"$day".json ]; then echo "NO DRAFT for $day"; exit 1; fi
+if [ ${#found[@]} -eq 0 ] && [ ! -f .tmp/sr-drafts/up-"$day".json ]; then echo "NO DRAFT for $day"; exit 1; fi
 
 # Every reader on this wave has reached for a `note` on a hymn, because the
 # brief asks them to say when a troparion is a common and the schema has
 # nowhere to put it. Twenty-six such keys in three rounds, each one refused by
 # `build:manifest` after the folders were already written. So it is a step.
 echo "=== hymn keys the schema refuses"
-PYTHONIOENCODING=utf-8 node .tmp/ru-hymnstrip.mjs .tmp/ru-drafts
+PYTHONIOENCODING=utf-8 node .tmp/ru-hymnstrip.mjs .tmp/sr-drafts
 
 for f in "${found[@]}"; do
   echo "=== dry $f"
@@ -31,7 +31,7 @@ for f in "${found[@]}"; do
   node scripts/draft-saint.mjs "$f" --write 2>&1 | tail -4 || exit 1
 done
 
-up=".tmp/ru-drafts/up-$day.json"
+up=".tmp/sr-drafts/up-$day.json"
 if [ -f "$up" ]; then
   n=$(node -e "console.log(JSON.parse(require('fs').readFileSync('$up','utf8')).length)")
   if [ "$n" != "0" ]; then
