@@ -11,6 +11,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's page for the company listed on 16 Φεβρουαρίου as «Άγιος Πάμφιλος και οι συν αυτώ Μάρτυρες», which names its twelve one by one; the rank word is left off. Beside the gloss the page prints a note that is not about a saint at all: besides the foremost Apostle Paul, it says, many hierarchs and rulers took the name."
+    },
+    {
+      "form": "Павел Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Павел Кесарийский (Палестинский), мч.», with the rank word left off. The day's own line gives the twelve of them in one list and this name bare inside it."
     }
   ],
   "sex": "male",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Мчч. Памфила пресвитера, Валента диакона, Павла, Порфирия, Селевкия, Феодула, Иулиана, Самуила, Илии, Даниила, Иеремии, Исаии (307-309).»",
+        "url": "https://days.pravoslavie.ru/Days/20260216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

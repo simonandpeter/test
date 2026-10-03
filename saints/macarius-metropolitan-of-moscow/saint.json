@@ -11,6 +11,11 @@
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Μακάριος Μητροπολίτης Μόσχας», with the rank word and the see left off. No Russian form is printed on the page, and none is invented here."
+    },
+    {
+      "form": "Макарий (Невский, Парвицкий)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Святитель Макарий (Невский, Парвицкий), митрополит Московский и Коломенский», with the rank word and the see left off. The calendar gives two surnames in the brackets and the day's own line gives none."
     }
   ],
   "related": [
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). This is the row that would be expected to carry a metropolitan of Moscow; it was not read, and no absence is claimed."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Свт. Макария митр. Московского и Коломенского (1926).»",
+        "url": "https://days.pravoslavie.ru/Days/20260216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

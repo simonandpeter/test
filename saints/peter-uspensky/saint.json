@@ -1,0 +1,60 @@
+{
+  "slug": "peter-uspensky",
+  "display_name": "Peter (Uspensky)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Петр (Успенский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Петр (Успенский), иерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Сщмч. Петра пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260216.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 March 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 16 февраля ст. ст.: «Сщмч. Петра пресвитера (1938).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

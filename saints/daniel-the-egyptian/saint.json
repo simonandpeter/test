@@ -10,6 +10,11 @@
       "form": "Δανιήλ",
       "lang": "el",
       "note": "Read out of saint.gr's page for the company listed on 16 Φεβρουαρίου as «Άγιος Πάμφιλος και οι συν αυτώ Μάρτυρες», which names its twelve one by one; the rank word is left off. The page glosses the name, a Hebrew word, as the divine judgement, and its line for him adds the epithet «ο Αιγύπτιος», the Egyptian."
+    },
+    {
+      "form": "Даниил Египтянин, Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Даниил Египтянин, Кесарийский (Палестинский), мч.», with the rank word left off. The day's own line gives the twelve of them in one list and this name bare inside it."
     }
   ],
   "related": [
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Мчч. Памфила пресвитера, Валента диакона, Павла, Порфирия, Селевкия, Феодула, Иулиана, Самуила, Илии, Даниила, Иеремии, Исаии (307-309).»",
+        "url": "https://days.pravoslavie.ru/Days/20260216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

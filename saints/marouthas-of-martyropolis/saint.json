@@ -11,6 +11,11 @@
       "form": "Μαρουθάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Όσιος Μαρουθάς ο επίσκοπος συν των Αγίων Μαρτύρων εν Μαρτυροπόλει», with the rank word, the see and the martyrs beside him left off."
+    },
+    {
+      "form": "Маруф Мартиропольский (Тигритский), Месопотамский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Святитель Маруф Мартиропольский (Тигритский), Месопотамский, епископ», with the rank word and the office left off. The day's own line keeps only the last of the three epithets, «еп. Месопотамского»."
     }
   ],
   "related": [
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 февраля ст. ст. — «Прп. Маруфа, еп. Месопотамского (422).»",
+        "url": "https://days.pravoslavie.ru/Days/20260216.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
