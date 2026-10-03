@@ -11,8 +11,27 @@
       "form": "Λουκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος της Εκκλησίας της Αντιοχείας», with the rank word and the see left off."
+    },
+    {
+      "form": "Лукиан Антиохийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1381, «Лукиан Антиохийский, пресвитер, сщмч.», with the two rank words left off; the day line gives «Лукиана, пресвитера Антиохийского»."
+    },
+    {
+      "form": "Лукијан Антиохијски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first entry for 15 October old style as the Православни подсетник prints it, «1. Преп. муч. Лукијан презв. Антиохијски», with the rank words left off."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 312,
+      "display": "311 or 312",
+      "basis": "attested",
+      "note": "Two calendars print two years and nothing chooses between them. The Russian day line gives «Прмч. Лукиана, пресвитера Антиохийского (312)»; the Ohrid Prologue closes its paragraph «Пострада 7. јануара 311. године», he suffered on 7 January 311. The Greek and Romanian pages give no year at all. Both calendars agree that he died the day after communing at Theophany, which is 7 January old style, so the disagreement is about the year and not about the day."
+    }
+  },
   "sex": "male",
   "types": [
     "martyr",
@@ -26,13 +45,27 @@
   ],
   "related": [
     "anthimus-of-nicomedia",
+    "constantine-the-great",
+    "john-chrysostom",
     "peter-of-alexandria"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Прмч. Лукиана , пресвитера Антиохийского (312).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The space before the comma is the page's own. The day's polyeleos icon stands before the next entry, Athanasius of Kovrov, and is that line's alone."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Romanian, and the same man. Three things stand on this page and on no other the folder cites. **Edessa**: orphaned at twelve, he gave his property to the poor and went to Edessa to the confessor Macarius, under whose guidance he read the Scriptures diligently and learned the ascetic life — neither the Romanian nor the Greek account has that stage. **The hidden Bible**: the complete corrected Greek text he made was, during his confession, walled up, and was found under Saint Constantine the Great. **Nine years**: he is put in the Nicomedia prison under Diocletian's persecution and strengthens the Christians there «в течение 9 лет», for nine years, before dying of torture and hunger. It gives the year 312 against the Ohrid Prologue's 311, and the two are now in `dates`. It agrees with the Romanian life on the Liturgy served on his own breast and on the thirty days in the sea and the dolphins, and differs from the Greek page in naming Diocletian's persecution rather than Diocletian as his arrester."
     },
     {
       "church": "romanian",
@@ -65,8 +98,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.10.2026 (15. октобар ст. ст.) — „1. Преп. муч. Лукијан презв. Антиохијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-28&prolog=1",
+        "year": 2026,
+        "note": "The Prologue is the first of the day's two entries and runs to a full paragraph; the page gives no typikon rank, so none is recorded. It also carries a hymn of its own, the Prologue's verses («Лукијан премудри, подвижник и књижник…»), which are the Prologue's poem for the day rather than a service text, and are not drafted as a troparion."
+      },
+      "note": "The Ohrid Prologue tells the same passion as the Romanian life and adds four things to it. **The forty soldiers**: on the road to Nicomedia he turned forty soldiers to the faith of Christ by his counsels, «И сви мученички скончаше», and all of them ended as martyrs. **The two boys**: in that persecution not even small children were spared, and two boys who would not eat of the idol sacrifices were thrown into a scalding bath and gave up their souls in the torment. **The living altar in his own words**: «Окружите мене, и будите црква» — surround me and be the church — and then «На прси моје положите, нека буде живи престо живоме Богу!». **The year and the day**: «Пострада 7. јануара 311. године». It also quotes John Chrysostom on his despising of hunger, names Pancratius the envious heretical priest who betrayed him, and names Anthimus of Nicomedia and Peter of Alexandria as the two already tortured when his own name went on the emperor's list — which is where the folder's two existing `related` rows come from on this calendar as well. It gives Maximian as the persecuting emperor, as the Romanian life does, where the Greek page gives Diocletian."
     }
   ],
   "hymns": [
