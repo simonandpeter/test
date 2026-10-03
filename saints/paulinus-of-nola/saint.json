@@ -7,6 +7,11 @@
       "form": "Павлин Милостивый, Ноланский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Святитель Павлин Милостивый, Ноланский, епископ», with the rank words left off."
+    },
+    {
+      "form": "Павлин Милостиви",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 23. јануар ст. ст. (civil 2026-02-05), „Свети Павлин Милостиви“. The word „Свети“ is left off; „Милостиви“ — the Merciful — is kept, being the epithet the folder's own display name carries and not a rank."
     }
   ],
   "sex": "male",
@@ -51,8 +56,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.02.2026 (23. јануар ст. ст.) — „Свети Павлин Милостиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [

@@ -17,6 +17,11 @@
       "form": "Климент Анкирский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 23 января ст. ст., «Священномученик Климент Анкирский», with the rank words left off."
+    },
+    {
+      "form": "Климент",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 23. јануар ст. ст. (civil 2026-02-05), „Свештеномученик Климент, епископ анкирски“. The rank word „Свештеномученик“ is left off and so is the see „епископ анкирски“, which follows the name after a comma; the folder already keeps the see in `office`."
     }
   ],
   "sex": "male",
@@ -79,8 +84,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.02.2026 (23. јануар ст. ст.) — „Свештеномученик Климент, епископ анкирски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
