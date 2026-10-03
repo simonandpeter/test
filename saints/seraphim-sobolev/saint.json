@@ -6,6 +6,11 @@
       "form": "Serafim (Sobolev)",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 13 februarie."
+    },
+    {
+      "form": "Серафим (Соболев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Серафим (Соболев), архиеп. Богучарский», with the rank and the see left off."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Свт. Серафима (Соболева), архиеп. Богучарского (1950).»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -64,5 +78,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Божественною ревностию присно распалаемь,/ Православия столп явился еси/ в Софии граде возсияв,/ и благочестием твоим многия люди ко Христу привел еси,/ пастырю добрый, святителю Серафиме,/ моли Христа Бога, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Тропарь» printed under his name among the day's prayers",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ever aflame with divine zeal, you were shown to be a pillar of Orthodoxy, shining out in the city of Sofia, and by your godliness you brought many people to Christ. Good shepherd, hierarch Seraphim, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Сосуд Божественных даров/ и дом Святыя Троицы явился еси,/ чудотворче святителю отче Серафиме,/ темже, имея дерзновение ко Господу,/ не остави нас сирых/ и, якоже обещался еси,/ испроси нам молитвами твоими/ мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Ин тропарь» printed under his name among the day's prayers",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a vessel of divine gifts and a house of the Holy Trinity, wonderworking hierarch, father Seraphim. Therefore, having boldness before the Lord, do not leave us orphaned, but as you promised, ask for us by your prayers peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Вознесыйся на высоту смиренномудрия,/ благочестия учитель явился еси,/ Православия поборниче и странных предстателю,/ монашествующих похвало и пастырю изрядный./ Темже любовию зовем ти:/ радуйся, Серафиме, чудотворче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Кондак (глас 4. Подобен: Вознесыйся на Крест:)» printed under his name among the day's prayers",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lifted up to the height of humble wisdom, you were shown to be a teacher of godliness, a champion of Orthodoxy and an advocate of strangers, the praise of monastics and a shepherd surpassing others. Therefore we call to you in love: Rejoice, Seraphim, wonderworker.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

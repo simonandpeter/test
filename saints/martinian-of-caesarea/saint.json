@@ -11,6 +11,11 @@
       "form": "Μαρτινιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Φεβρουαρίου, «Όσιος Μαρτινιανός», with the rank word left off."
+    },
+    {
+      "form": "Мартиниан Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Мартиниан Кесарийский (Палестинский), прп.», with the rank word left off. The day's own line gives the name bare, «Прп. Мартиниана (V).», and the day's hymns head him «преподобного Мартиниана Палестинского»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Прп. Мартиниана (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -110,6 +124,38 @@
       },
       "english": {
         "text": "As an ascetic proved in piety, and an athlete honourable by his own choosing, and a stout-souled citizen and witness of the desert, let us worthily praise in hymns the ever-revered Martinian; for he it was who trampled down the serpent.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Пламень искушений слез теченьми погасил еси, блаженне,/ и, морская волнения, и зверей стремления обуздавый, взывал еси:/ препрославлен еси, Всесильне, огня и бури спасый мя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Тропарь преподобного Мартиниана Палестинского»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You quenched the flame of temptations with the flowing of your tears, O blessed one, and bridling the surgings of the sea and the onsets of beasts you cried out: Most glorified are you, Almighty One, who saved me from fire and from storm.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко подвижника благочестия искусна,/ и страдальца произволением честнаго,/ и пустыни жителя и всельника,/ в песнех достойно восхвалим Мартиниана присночестнаго:// той бо змия попра.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Кондак преподобного Мартиниана»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a tried ascetic of godliness, a sufferer honoured for suffering by his own will, a dweller and settler of the desert, let us worthily praise in hymns Martinian the ever-honoured, for he trod the serpent down.",
         "rendered": "site"
       }
     }
