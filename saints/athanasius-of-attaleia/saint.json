@@ -6,6 +6,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Ιανουαρίου, «Άγιος Αθανάσιος εξ Ατταλείας», with the rank word left off."
+    },
+    {
+      "form": "Атанасије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 7. јануар ст. ст., „Свети мученик Атанасије.“, with the rank words «Свети мученик» left off."
     }
   ],
   "sex": "male",
@@ -49,8 +54,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.01.2026 (7. јануар ст. ст.) — „Свети мученик Атанасије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-20&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

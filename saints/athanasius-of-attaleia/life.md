@@ -6,4 +6,4 @@ He was arrested by the same men on the charge that by saying it he had confessed
 
 The page's two-line verse turns on his name: this is not the Athanasius of old, it says, but a new one, and a martyr of the Lord. saint.gr counts him among the new martyrs who bore witness after the fall of Constantinople, and prints no hymn for him.
 
-*After saint.gr's calendar for 7 Ιανουαρίου — [the day](https://www.saint.gr/01/07/index.aspx) and [the life](https://www.saint.gr/109/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 7 Ιανουαρίου — [the day](https://www.saint.gr/01/07/index.aspx) and [the life](https://www.saint.gr/109/saint.aspx); read 30 September 2026; the Ohrid Prologue for 20 January 2026 (7. јануар ст. ст.), as printed by the Православни подсетник (pravoslavno.rs), tells it for the Serbian calendar — [the day’s page](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-20&prolog=1), read 3 October 2026.*
