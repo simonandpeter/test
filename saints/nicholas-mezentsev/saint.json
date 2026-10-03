@@ -1,0 +1,60 @@
+{
+  "slug": "nicholas-mezentsev",
+  "display_name": "Nicholas (Mezentsev)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Николай (Мезенцев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Николай (Мезенцев), протоиерей, сщмч.», with the rank word and the office left off. The surname in brackets is part of the name the calendar's own link gives and is kept."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Сщмч. Николая пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 1 февраля ст. ст.: «Сщмч. Николая пресвитера (1938).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

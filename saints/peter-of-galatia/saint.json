@@ -11,6 +11,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Όσιος Πέτρος ο εν Γαλατία», with the rank word left off."
+    },
+    {
+      "form": "Петр Галатийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Петр Галатийский, Антиохийский, Молчальник, прп.», with the rank word and the office left off. The link also carries «Антиохийский» and «Молчальник», the Silent; the first epithet is the one the day's own line prints and the one taken here."
     }
   ],
   "sex": "male",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Прп. Петра Галатийского (429).»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -6,4 +6,4 @@ After his teacher's death Vendimianos went into the cleft of a great rock, where
 
 The page gives no year for his birth, and prints no apolytikion and no kontakion. Its couplet makes him a tree: Vendimianos, a great tree of virtue, planted in earth and carried over into heaven.
 
-*After saint.gr's calendar for 1 Φεβρουαρίου — [the day](https://www.saint.gr/02/01/index.aspx) and [the life](https://www.saint.gr/556/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 1 Φεβρουαρίου — [the day](https://www.saint.gr/02/01/index.aspx) and [the life](https://www.saint.gr/556/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 1 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260201.html), read 3 October 2026.*

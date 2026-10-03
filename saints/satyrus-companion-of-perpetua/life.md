@@ -6,4 +6,4 @@ Perpetua, it says, was a married woman and the mother of a small child, marked o
 
 That is the whole of what the Greek calendar records of him: the name, the number of the company, the year, and the manner of the men's deaths. There is no homeland of his own, no year of birth, no trial and no burial, and the page prints no apolytikion and no kontakion for the six. Its couplet counts them: Perpetua exchanged the five who were slain, being slain with them into a company of six.
 
-*After saint.gr's calendar for 1 Φεβρουαρίου — [the day](https://www.saint.gr/02/01/index.aspx) and [the life](https://www.saint.gr/561/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 1 Φεβρουαρίου — [the day](https://www.saint.gr/02/01/index.aspx) and [the life](https://www.saint.gr/561/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 1 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260201.html), read 3 October 2026.*

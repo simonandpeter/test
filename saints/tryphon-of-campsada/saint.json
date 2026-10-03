@@ -10,6 +10,11 @@
       "form": "Τρύφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Φεβρουαρίου, «Άγιος Τρύφων ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Трифон",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Святой мученик Трифон», with the rank word and the office left off. The link gives the rank words and the bare forename and nothing further — no surname, no epithet, no see — so the form is bare; the day’s own line has it in the genitive, «Мч. Трифона»."
     }
   ],
   "sex": "male",
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was not read for this saint; doxologia.ro also keeps him on 1 February, and no calendar’s 1 February has been read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Мч. Трифона (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -88,6 +102,54 @@
       "model": "Ca pe o pârgă a firii...",
       "english": {
         "text": "By the strength of the Most Holy Trinity thou didst destroy the multitude of the idols to the ends of the earth, O thou worthy of remembrance, being honoured in Christ; and conquering the tyrants in God the Saviour, thou didst receive the crown of thy martyrdom and the gifts of divine healings, as one unconquered.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Трифон,/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Тропарь мученика Трифона»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Tryphon, O Lord, in his contest received an incorruptible crown from thee, our God; for having thy strength, he cast down the tormentors and broke also the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Пищи Божественныя, треблаженне,/наслаждаяся на Небесех неоскудно,/ славящих песньми память твою покрый/и сохрани от всякия нужды,/ отженй вредящих нивам животных,/ да тебе от любве вопием всегда:/ радуйся, Трифоне, мучеников укрепление.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Ин тропарь мученика Трифона»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Delighting without stint in the divine food of heaven, O thrice-blessed one, shelter those who glorify thy memory with hymns and keep them from every need; drive off the creatures that harm the fields, that out of love we may cry to thee always: rejoice, O Tryphon, strength of the martyrs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Тройческою твердостию/ многобожие разрушил еси от конец, всеславне,/ честен во Христе быв, и, победив мучители во Христе Спасителе,/ венец приял еси мученичества твоего/ и дарования Божественных исцелений,// яко непобедим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Кондак мученика Трифона»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the firmness of the Trinity thou didst destroy the worship of many gods from the ends of the earth, O all-glorious one; honoured in Christ, and having overcome the tormentors in Christ the Saviour, thou didst receive the crown of thy martyrdom and the gifts of divine healings, as one unconquered.",
         "rendered": "site"
       }
     }

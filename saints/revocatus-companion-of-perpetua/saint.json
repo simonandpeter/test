@@ -6,6 +6,11 @@
       "form": "Ρευκάτος",
       "lang": "el",
       "note": "Read out of saint.gr's own heading for him on the page for 1 Φεβρουαρίου, «Αγιος Ρευκατος ο Μαρτυρας», with the rank word left off; the day's line keeps the six of them together as «Άγιοι Περπέτουα, Σάτυρος, Ρευκάτος, Σατουρνίλος, Σεκούνδος και Φιλικητάτη οι Μάρτυρες». The page's own caption to its illustration spells some of the six differently."
+    },
+    {
+      "form": "Ревокат Карфагенский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 1 февраля ст. ст., «Ревокат Карфагенский, мч.», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 февраля ст. ст. — «Мц. Перпетуи, мчч. Сатира, Ревоката, Саторнила, Секунда и мц. Филицитаты (202-203).»",
+        "url": "https://days.pravoslavie.ru/Days/20260201.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
