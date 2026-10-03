@@ -27,6 +27,12 @@
       "note": "saint.gr: «Ο Όσιος Μακάριος έζησε μεταξύ 13ου και 14ου αιώνα μ.Χ.»"
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "theodosius-of-the-kyiv-caves",
     "macarius-the-faster"

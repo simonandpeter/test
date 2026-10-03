@@ -121,5 +121,11 @@
       "basis": "traditional",
       "note": "saint.gr: «γεννήθηκε στη Ρώμη στα χρόνια του αυτοκράτορα Αντωνίνου (138 - 160 μ.Χ.)» — the reign is the page's own and is taken as the interval of her birth, the page giving no year of its own. It gives no year for her martyrdom at Tempe, so no death interval is recorded. The folder's Romanian source gave no year at all."
     }
-  }
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ]
 }

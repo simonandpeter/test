@@ -89,5 +89,11 @@
   },
   "aliases": [
     "titus-27-january"
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
   ]
 }
