@@ -60,22 +60,36 @@ Romanian and Greek still lead with an imageless hero on most days; the Russian
 reading wave (`days.pravoslavie.ru`, julian) has not started. Counts are in
 HANDOFF.md and go stale — re-measure, do not quote them.
 
-**Measured 3 October 2026** (`node scripts/heroless.mjs romanian greek`):
-Romanian 141 of 357 days and 140 distinct saints, Greek 168 of 364 and 168, nine
-saints in both — **299 distinct saints** want an icon. `scratchpad/geticon.py`
-is the instrument; it reads the licence off Commons' own `imageinfo` and refuses
-anything Commons does not state as PD or CC, so a sourcer cannot get a licence
-wrong. **A historical painting may fill a hero slot where no icon exists**
-(author, same day), said so in the draft's `why`.
+**Measured 3 October 2026, before the wave** (`node scripts/heroless.mjs
+romanian greek`): Romanian 141 of 357 days and 140 distinct saints, Greek 168 of
+364 and 168, nine saints in both — 299 distinct saints wanted an icon.
+`scratchpad/geticon.py` is the instrument; it reads the licence off Commons' own
+`imageinfo` and refuses anything Commons does not state as PD or CC, so a
+sourcer cannot get a licence wrong. **A historical painting may fill a hero slot
+where no icon exists** (author, same day), said so in the draft's `why`.
 
-**The manifest is the reason the corpus's size is not free.** The first paint
-waits for the whole of it, so every saint added costs FCP on the Lighthouse
-floor: the growth to 419 KB gzipped put FCP at 1,507 ms against a 1,500 ms line
-on every route, which is what sent `mentionedIn` into its own file
-(`aafc2470`, 419 -> 347 KB). An icon costs the manifest almost nothing — 14 KB
-gzipped for all 5,393 rows' `image` fields — but a reading wave's attestations
-and dates do, and the next thing to come off that path when it binds again is
-`attestations` at 62 KB.
+**The Greek pass is in (`6a095e3f`): 60 icons, and the list reads Greek 108 and
+Romanian 113** — Romanian fell without its own pass, because many of these
+saints lead a day in both calendars. Re-measure after `npm run build:manifest`,
+not before: `heroless.mjs` reads the manifest, and on a stale one it reports the
+numbers the wave started from.
+
+**What the remaining ~108 are is the thing to decide before another pass.** Of
+the Greek 95 that were skipped, about 70 have nothing on Commons at all under
+any of their names — the local Cypriot, Athonite and Thessalian saints and the
+Ottoman-era neomartyrs — and 13 were refused because only a namesake was on
+offer. More searching of Commons will not move those; a different source will,
+or the hero rule will have to be content with a day that leads without a
+picture.
+
+**The corpus's size is not free, but the manifest is not where it costs.** The
+reverse links came off the boot path on 2026-10-03 (`aafc2470`, 419 -> 347 KB
+gzipped) on the reasoning that the manifest's growth was the 150 ms of FCP CI
+had just gone red on. **It was not**: FCP measured 1,506 ms after the split
+against 1,507 before it. What the step actually is, and the gate that now holds
+it, are in `scripts/lighthouse-floor.mjs`'s `BOOT_CEILING` — the entry script
+plus the entry stylesheet, measured. An icon costs the first paint nothing at
+all.
 
 ## 6. One search bar, with Advanced as an option, on both pages
 
