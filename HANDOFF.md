@@ -380,7 +380,63 @@ two thousand folders should expect this floor, not the e2e suite, to be what
 stops them — and the lever is the manifest's size on the first paint, not the
 corpus's size.
 
-## Where this sitting stands (3 October 2026, overnight)
+## Where this sitting stands (3 October 2026, the third manager)
+
+`main` is green and deployed at **`24f69c8f`**, run 37078215403: 1,101 passed,
+4 flaky, 1 skipped. Nothing is uncommitted.
+
+**Item 8's work list is finished** — see TODO item 8 for what is left of the
+item, which is not another slice of it. **Item 1's apostolic tail is written**
+and STRUCTURE.md §6 item 13 now states the pass honestly: 33 notes, not two
+apostles. **The image programme has taken Russian to 1 imageless day of 63 and
+Serbian to 2 of 44**, Romanian 236 to 141 and Greek 268 to 172, on 109 icons.
+
+### Three fixtures died of the icons, and all three the same way
+
+**A fixture selected by a proxy for its premise goes red when the corpus moves,
+and finds nothing.** This cost two red runs, `e223292e` and `cab93377`, and both
+were mine.
+
+- `e2e/saint.spec.js`'s sparse page was **named**: `/saints/christopher`. The
+  first icon batch gave Christopher a picture and the test that asks what a page
+  with no picture looks like was asking it of a page with one. `SPARSE_DETAIL`
+  is read off the manifest now, with `SPARSE_NAME` beside it.
+- That computed fixture then opened its table with "Undocumented", because **the
+  page draws one row per church in `CHURCH_IDS` order whether that church
+  records anything or not** — so `.att` first is Russian's, and the premise has
+  to be the Russian status, not any status.
+- `e2e/prayer.spec.js` walks the hymned saints with icons until the preview is
+  full, and walked with `scrollHeight > 120`. 44 new icons moved the head of
+  that list to Abercius of Hierapolis, whose 4,157-character life draws five of
+  the clamp's six lines. The walk measures six-and-clamped now, which is what the
+  assertion measures. **Clamped alone is not enough**: a lede can overflow its
+  box at five lines.
+
+The class is worth a sweep before the next image batch: any e2e premise that
+names a slug, or reads a pixel where it means a state, is the next red run.
+
+### The flake list has two new members, and they are consistent
+
+`chrome.spec.js`'s **"on a touch device the shelf row carries no ×"** and
+**"under reduced motion a swiped row goes without flying"** went flaky at *both*
+projects in all three runs of this sitting, failing on
+`expect(locator('.shelf-row')).toHaveCount(0)` and passing on retry. Four of the
+run's four flakies. That is a different pattern from the three recorded above —
+those are one project, one in six — and it has not been measured for a rate.
+`daily-stage`'s restore race showed once and is the old one.
+
+### The manifest's headroom is the next ceiling, not the test suite
+
+**389.4 KB gzipped against the 400 KB budget, 10.6 KB left**, from 376 before
+the icons. 109 declarations cost 13 KB, so **a batch of this size again lands
+within about 2 KB of the ceiling** and the one after it does not fit. Finishing
+Greek and Romanian means roughly 300 more. Whoever plans that prices the
+manifest first — and the Lighthouse FCP floor, bimodal at about 1360 or 1760 ms
+against a 1500 ms floor, is what it trips, not the e2e suite. **The local floor
+is not a reading of the runner's**: all four routes fail it on this desk at
+1756-1871 ms while CI passes.
+
+## Where the second sitting stood (3 October 2026, overnight)
 
 `772a6c36`'s run was green — 1,096 passed, 1 skipped, 1 flaky, and the flaky is
 `daily-stage`'s restore race this file already records at 1 in 6 on this tree
