@@ -14,10 +14,13 @@ import {
   facet,
   ready,
   searchMode,
+  withMentions,
 } from './helpers.js';
 
 const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
-const MANIFEST_CARDS = MANIFEST.saints ?? MANIFEST;
+/* `mentionedIn` is its own file since 3 October 2026 and the page merges it
+   onto these same cards (`src/lib/manifest.js`), so the fixture does too. */
+const MANIFEST_CARDS = withMentions(MANIFEST.saints ?? MANIFEST);
 const folder = (slug) => JSON.parse(readFileSync(new URL(`../saints/${slug}/saint.json`, import.meta.url), 'utf8'));
 const EUSTATHIUS = folder('eustathius-the-great-martyr');
 

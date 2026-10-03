@@ -1,5 +1,6 @@
 import { facetsOf } from '../lib/index-filters.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
+import { loadMentions } from '../lib/manifest.js';
 import { stepOrder } from '../lib/prayer-order.js';
 import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
 import { indexSheet } from '../ui/sheets.js';
@@ -59,6 +60,13 @@ let onPress = null;
 /** `ui/grain-drag.js`'s own teardown for the page-turning swipe. */
 let unswipe = null;
 
+/**
+ * `mentionedIn` is off the boot path (lib/manifest.js) and this page reads it
+ * twice — the search index's `companions` field and `relatedFor`'s order — so
+ * it is asked for on mount and the page is redrawn once it lands. Both readers
+ * degrade to "this saint is recorded with nobody" without it, which is a
+ * narrower page rather than a broken one, so nothing here blocks on it.
+ */
 export function render(el, { data, router } = {}) {
   const P = STRINGS.prayer;
   /* Opened before the markup is written, so `findMarkup` can read which face
@@ -106,6 +114,16 @@ export function render(el, { data, router } = {}) {
       const card = state?.order[state.at];
       if (card) drawAsides(el, card);
     },
+  });
+
+  /* And again once the reverse links land, which is what orders the Recorded
+     with column (`lib/prayer-order.js`). The columns are drawn above without
+     them rather than held back for them: the names a hymn's own `related`
+     gives are most of the list and are there from the first paint. */
+  loadMentions().then((got) => {
+    if (!got || state?.el !== el) return;
+    const card = state.order[state.at];
+    if (card) drawAsides(el, card);
   });
 
   /*

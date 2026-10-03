@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Discovers every folder under /saints, validates it, and regenerates
- * data/manifest.json and data/manifest.meta.json.
+ * data/manifest.json, data/manifest.meta.json and data/mentions.json.
  *
  * The contract this enforces: adding a saint means adding one folder, and
  * nothing else is ever edited by hand. The corollary is that this script must
@@ -323,12 +323,21 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
    * is a fact that can disagree with itself.
    */
   const inbound = reverseRelated(loaded.map(({ saint }) => saint));
+  /*
+   * **In its own file, not on the card** (3 October 2026). It was a field on
+   * every card, and at 2,971 of them it was 51 kB gzipped of the 419 kB the
+   * first paint waits for — the single largest line after the attestations.
+   * Nothing drawn before a reader asks for a saint reads it: the Prayer page's
+   * companions and the saint page's Related do, and both run long after boot.
+   * `loadManifestMeta` was split off this path for the same reason and says so.
+   *
+   * Still not written into the saints' own folders: a fact held in two folders
+   * is a fact that can disagree with itself.
+   */
+  const mentions = {};
   for (const card of manifest) {
     const from = inbound.get(card.slug);
-    // On the card rather than in the saint's own folder: the app already has
-    // the manifest, and a reverse index written back into 862 files is one
-    // fact kept in two places.
-    if (from?.length) card.mentionedIn = from;
+    if (from?.length) mentions[card.slug] = from;
   }
   const meta = buildMeta(manifest, warnings, loaded);
   const manifestJson = JSON.stringify(manifest);
@@ -337,6 +346,7 @@ export async function build({ saintsDir = SAINTS_DIR, dataDir = DATA_DIR, write 
     await mkdir(dataDir, { recursive: true });
     await writeFile(path.join(dataDir, 'manifest.json'), manifestJson);
     await writeFile(path.join(dataDir, 'manifest.meta.json'), JSON.stringify(meta, null, 2));
+    await writeFile(path.join(dataDir, 'mentions.json'), JSON.stringify(mentions));
   }
 
   return { errors, warnings, manifest, meta, bytes: manifestJson.length, gzipped: gzipSync(manifestJson).length };

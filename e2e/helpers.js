@@ -184,6 +184,25 @@ export const VENERATED = Object.fromEntries(
 
 const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
 const CARDS = Array.isArray(MANIFEST.saints) ? MANIFEST.saints : Object.values(MANIFEST.saints ?? MANIFEST);
+/*
+ * **`mentionedIn` is its own file since 3 October 2026** and is merged back on
+ * here, because the page merges it onto the same cards (`lib/manifest.js`): it
+ * came off the manifest to get 71 kB off the path that blocks first paint, and
+ * a fixture that read only the manifest would say every saint is recorded with
+ * nobody.
+ */
+export const MENTIONS = JSON.parse(readFileSync(new URL('../data/mentions.json', import.meta.url), 'utf8'));
+
+/** The merge, for the two specs that read the manifest for themselves. */
+export function withMentions(cards) {
+  for (const card of cards) {
+    const from = MENTIONS[card.slug];
+    if (from) card.mentionedIn = from;
+  }
+  return cards;
+}
+
+withMentions(CARDS);
 
 /**
  * How many saints at least one of `churches` venerates — the *union*. Russian

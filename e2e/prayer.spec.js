@@ -5,7 +5,7 @@ import { formatSubtext } from '../src/lib/calendar-page.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
 import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
 import { STRINGS, fill } from '../src/ui/strings.js';
-import { INDEX as SAINTS_ROUTE, desk, dragGrain, phone, ready } from './helpers.js';
+import { INDEX as SAINTS_ROUTE, desk, dragGrain, phone, ready, withMentions } from './helpers.js';
 
 /**
  * Prayer: the hymns the corpus holds, one saint at a time, with the two ways
@@ -18,7 +18,11 @@ import { INDEX as SAINTS_ROUTE, desk, dragGrain, phone, ready } from './helpers.
  */
 
 const MANIFEST = JSON.parse(readFileSync(new URL('../data/manifest.json', import.meta.url), 'utf8'));
-const CARDS = Array.isArray(MANIFEST.saints) ? MANIFEST.saints : Object.values(MANIFEST.saints ?? MANIFEST);
+/* `mentionedIn` is its own file since 3 October 2026 and the page merges it
+   onto these same cards (`src/lib/manifest.js`), so the fixture does too. */
+const CARDS = withMentions(
+  Array.isArray(MANIFEST.saints) ? MANIFEST.saints : Object.values(MANIFEST.saints ?? MANIFEST),
+);
 
 /**
  * The page's own order, derived the same way `lib/prayer-order.js` derives it

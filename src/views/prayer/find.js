@@ -2,6 +2,7 @@ import { formatSubtext } from '../../lib/calendar-page.js';
 import { applyFilters } from '../../lib/index-filters.js';
 import { readerHasFiltered } from '../index/filter.js';
 import { controls, LAYOUTS, syncCalendarFacet, wireControls } from '../index/controls.js';
+import { loadMentions } from '../../lib/manifest.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { goToSlug, refreshEnds, showCard } from './card.js';
 import { state } from './state.js';
@@ -81,7 +82,11 @@ async function loadSearch(el) {
      page would be the first page's words. Comparing the array identity is how
      `views/index/search.js` asks the same question. */
   const all = state?.all;
-  const { default: MiniSearch } = await import('minisearch');
+  /* The `companions` field is built from `mentionedIn`, which is fetched on
+     demand (lib/manifest.js), so it is awaited here — before the documents are
+     written rather than after, or a query for a companion's name would miss
+     until the next render. This path is already off the first paint. */
+  const [{ default: MiniSearch }] = await Promise.all([import('minisearch'), loadMentions()]);
   if (!state || state.all !== all) return;
   const index = new MiniSearch({
     idField: 'slug',

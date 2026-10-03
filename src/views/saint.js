@@ -34,6 +34,7 @@ import { formatLifespan } from '../lib/calendar-page.js';
 import { saintName, typesBeside } from '../lib/honorific.js';
 import { escapeHtml as esc, renderMarkdown, stripLeadingHeading } from '../lib/markdown.js';
 import { loadDetail, loadSource, observePrefetch } from '../lib/detail.js';
+import { loadMentions } from '../lib/manifest.js';
 import { linkSaintNames } from '../lib/cross-link.js';
 import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
 import { reducedMotion } from '../lib/motion.js';
@@ -161,8 +162,15 @@ export function render(el, { data, params, router, cameFrom }) {
 
   store.visit(slug);
 
-  loadDetail(slug).then(
-    (payload) => {
+  /*
+   * The reverse half of Related — `mentionedIn` — is fetched on demand rather
+   * than carried in the manifest (lib/manifest.js), so it is asked for beside
+   * the payload and not after it: `relatedCards` reads it synchronously while
+   * the life is being filled in, and a page that drew Related before it landed
+   * would print half the list and then grow.
+   */
+  Promise.all([loadDetail(slug), loadMentions()]).then(
+    ([payload]) => {
       if (mine === generation) fillIn(el, payload, { data, router });
     },
     (error) => {
