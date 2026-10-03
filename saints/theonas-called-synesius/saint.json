@@ -16,6 +16,11 @@
       "form": "Феона Никомидийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Феона (в крещении Синесий) Никомидийский, мч.»; the rank word is left off, and the parenthesis is the calendar saying what he was named at his baptism rather than a second part of the form, so it is recorded in this note and not in the name. The line on the day page itself gives «Феоны волхва», Theonas the sorcerer."
+    },
+    {
+      "form": "Теона",
+      "lang": "sr",
+      "note": "The heading names two men; this is his own name, read out of it, with the rank word «Свештеномученик» left off."
     }
   ],
   "sex": "male",
@@ -80,8 +85,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.01.2026 (5. јануар ст. ст.) — „Свештеномученик Теопемт и Теона.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

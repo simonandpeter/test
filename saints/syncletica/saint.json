@@ -16,6 +16,11 @@
       "form": "Синклитикия Александрийская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., which gives the calendar's own nominative «Синклитикия Александрийская, прп.»; the rank word is left off."
+    },
+    {
+      "form": "Синклитикија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 5. јануар ст. ст., „Преподобна мати Синклитикија.“, with the rank words «Преподобна мати» left off."
     }
   ],
   "sex": "female",
@@ -69,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.01.2026 (5. јануар ст. ст.) — „Преподобна мати Синклитикија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

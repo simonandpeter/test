@@ -6,6 +6,11 @@
       "form": "Михей",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 января ст. ст., «Пророк Михей», and the title of its life page; the rank word is left off. The calendar gives him no epithet and no surname, and the clause by which it tells him from the writing prophet of the same name — «Сын Иемвлая» — is a description and not part of the form, so the form it prints is the bare name."
+    },
+    {
+      "form": "Михеј I",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s heading for 5. јануар ст. ст., „Свети пророк Михеј I.“, with the rank words «Свети пророк»; the numeral the Prologue prints is kept, because it is what tells him from the other Micah left off."
     }
   ],
   "sex": "male",
@@ -48,8 +53,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.01.2026 (5. јануар ст. ст.) — „Свети пророк Михеј I.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
