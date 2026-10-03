@@ -1,8 +1,5 @@
 {
   "slug": "charitina-the-martyr-5-october",
-  "aliases": [
-    "charitina-the-martyr-4-september"
-  ],
   "display_name": "Charitina",
   "names": [
     {
@@ -14,6 +11,10 @@
       "form": "Haritina",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Haritina” for 5 octombrie."
+    },
+    {
+      "form": "Св. муч. Харитина",
+      "lang": "sr"
     },
     {
       "form": "Харитина Амисийская",
@@ -51,7 +52,7 @@
         "year": 2026,
         "note": "The rank is the alt text of the icon the page sets before the day's first line, which is this one: «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's one higher rank belongs to the synaxis of the hierarchs of Moscow, which follows."
       },
-      "note": "The year agrees with saint.gr's 304. The Russian index of names gives her a city the Greek entry does not, and gives it twice over: «Харитина Амисийская (Понтийская), мц.» — of Amisus, of Pontus. The same day keeps a second Charitina, the princess of Lithuania who died in 1281, and the page distinguishes them by title alone, «мц.» against «прп.»"
+      "note": "The year agrees with saint.gr's 304. The Russian index of names gives her a city the Greek entry does not, and gives it twice over: «Харитина Амисийская (Понтийская), мц.» — of Amisus, of Pontus. The same day keeps a second Charitina, the princess of Lithuania who died in 1281, and the page distinguishes them by title alone, «мц.» against «прп.» The same day line keeps a second and different Charitina — «Прп. Харитины, кн. Литовской, в Новгороде подвизавшейся (1281)», the Lithuanian princess who struggled at Novgorod. She is not this saint, is not in the Ohrid Prologue, and has no folder; dedupe on the date finds them both on this day and the name is what would conflate them."
     },
     {
       "church": "romanian",
@@ -84,32 +85,19 @@
       }
     },
     {
-      "church": "greek",
+      "church": "serbian",
       "status": "venerated",
       "feast": {
         "day": 5,
         "month": 10,
-        "calendar": "revised-julian"
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day, and much the fullest of them. Its account of her contest is longer than either of the other two calendars’."
       },
       "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 5 Οκτωβρίου — «Αγία Χαριτίνη»",
-        "url": "https://www.saint.gr/10/05/index.aspx",
+        "text": "Охридски пролог, 5. октобар ст. к. — «1. Св. муч. Харитина. Као сироче у детињству би посвојена од некога угледна човека и хришћанина Клаудија, који је васпита као своју рођену кћер.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-18&prolog=1",
         "year": 2026
       }
-    },
-    {
-      "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 5. октобар ст. ст. (civil 18 October) was not read (2026-09-17); and she is on neither the Православни подсетник’s calendar line for 17.09.2026 (4. септембар ст. ст.) nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
-    }
-  ],
-  "text": {
-    "life": "life.md"
-  },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -180,5 +168,17 @@
         "rendered": "site"
       }
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "aliases": [
+    "charitina-the-martyr-4-september"
   ]
 }

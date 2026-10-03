@@ -152,6 +152,27 @@ new martyrs, who are most of a Russian day in these months — 13 of one night's
 biggest open question on Russian quality**, and CORPUS.md §2 was deliberately
 left unamended until someone measures it.
 
+**The two shelf-swipe tests are the whole of CI's flake list, three runs
+running.** `chrome.spec.js:273` (`on a touch device the shelf row carries no x`)
+and `:328` (`under reduced motion a swiped row goes without flying`), at both
+widths, 4 to 6 flaky per run and nothing else in the list. Measured 4 October:
+**24 of 24 pass run alone** with `--repeat-each=6 --workers=1`, so it is a
+budget under load rather than a bug - CLAUDE.md's own distinction.
+
+Both drive the gesture with eight `page.mouse.move` calls, which is eight round
+trips, and that is the documented trap the week rail already escaped by
+dispatching its moves inside the page on a spin. Two candidate mechanisms, in
+order: the shelf is built from two IndexedDB reads *after* paint, so a rebuild
+mid-gesture replaces the row and the `pointerup` lands on a detached node; or
+the drag stretches past the 120 ms sample window and loses the flick while
+`dx` is also short because the moves run off the right edge of a 360 px window
+(the test drags 300 and 420 px from the row's centre). The dismissal needs
+`|dx| >= width * 0.25` **or** a flick - `SWIPE_OUT` and `SWIPE_FLICK` in
+`ui/shelf.js` - so either alone is enough and both have to fail together.
+
+Reproduce with `Emulation.setCPUThrottlingRate` after the `goto` and prove it
+bit before changing anything; do not guess between the two.
+
 **One Russian name is blocked on a naming decision, not on a source.** Macarius
 metropolitan of Moscow, d. 1563 - compiler of the Great Menologion, patron of
 Ivan Fedorov's press - cannot be written while `macarius-metropolitan-of-moscow`

@@ -8,6 +8,10 @@
       "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»."
     },
     {
+      "form": "Свешт. муч. Дионисије еп. Александријски",
+      "lang": "sr"
+    },
+    {
       "form": "Дионисий Александрийский",
       "lang": "ru",
       "note": "days.pravoslavie.ru's name page 617 heads him «Святитель Дионисий Александрийский, епископ, исповедник»; the name and its epithet are all of it that is neither rank nor office."
@@ -24,7 +28,7 @@
       "latest": 265,
       "display": "254, or 264–265",
       "basis": "traditional",
-      "note": "Two sources and a decade between them, recorded as the disagreement rather than resolved: saint.gr has him martyred in the reign of Valerian and gives 254, and days.pravoslavie.ru's 5 октября ст. ст. gives «(264-265)»."
+      "note": "Three sources and two readings a decade apart; the interval is their union and neither is preferred. saint.gr: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died. days.pravoslavie.ru's 5 октября ст. ст., read 4 October 2026, prints «(264-265)». The Serbian Ohrid Prologue, read the same day, agrees with the Russian and says how it arrives there: «247. год. постане епископ» and «Управљао црквом 17 година и упокојио се 265. год.» — bishop from 247 and seventeen years in office, which comes out at 264. The basis is no longer `attested`, because the two readings cannot both be right."
     }
   },
   "attestations": [
@@ -66,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day. The Serbian church and the Russian keep him on 5 October where the Greek keeps him on 3 October; the days are not reconciled here, each church’s row carrying its own. The Prologue has him repose in peace where the Greek entry has him martyred, and that disagreement is recorded in his life."
+      },
+      "source": {
+        "text": "Охридски пролог, 5. октобар ст. к. — «2. Свешт. муч. Дионисије еп. Александријски. Рођен у Александрији од знаменитих незнабожачких родитеља и васпитан на грчкој философији, по том и код Оригена. … Управљао црквом 17 година и упокојио се 265. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-18&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [
@@ -76,7 +90,8 @@
     "peter-disciple-of-dionysius-of-alexandria",
     "paul-disciple-of-dionysius-of-alexandria",
     "eusebius-disciple-of-dionysius-of-alexandria",
-    "chaeremon-disciple-of-dionysius-of-alexandria"
+    "chaeremon-disciple-of-dionysius-of-alexandria",
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"
