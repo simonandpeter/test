@@ -15,8 +15,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The day commemorates the finding of her relics, which her name page marks «(Обретение мощей)»; the «(1918)» in the day line is the year of her death, not of the finding. That page lists four other days — «26 января (Новомуч.)», «8 июня (Петерб.)», «5 июля», her repose, and «24 августа (Моск.)». One row per church is the schema, so they are recorded here and she does not render on them; the Romanian row on this folder keeps her repose, 18 July new style."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Обретение мощей прмц. вел. кн. Елисаветы (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

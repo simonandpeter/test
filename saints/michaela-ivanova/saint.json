@@ -1,0 +1,64 @@
+{
+  "slug": "michaela-ivanova",
+  "display_name": "Michaela (Ivanova)",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "nun"
+  ],
+  "names": [
+    {
+      "form": "Михаила (Иванова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13808, «Михаила (Иванова), схимонахиня, прмц.», with the rank words left off. Михаила is the feminine of Михаил and is her name in religion."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints for the two of them together: «Прмч. Илариона, прмц. Михаилы (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прмч. Илариона, прмц. Михаилы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 28 septembrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/28 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 28 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "hilarion-gromov"
+  ]
+}

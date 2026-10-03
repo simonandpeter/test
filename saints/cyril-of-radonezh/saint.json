@@ -1,0 +1,75 @@
+{
+  "slug": "cyril-of-radonezh",
+  "display_name": "Cyril of Radonezh, father of Sergius",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Кирилл Радонежский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Кирилл Радонежский, схимонах», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1337,
+      "latest": 1337,
+      "display": "1337",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, Life/life6670.htm: «В 1337 г. они с миром отошли ко Господу», of him and his wife together. The day line prints «(ок. 1337)», about 1337; the life page prints it without the qualifier, and the bounds here are the one year both give."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The same page lists a second memorial, «18 января». One row per church is the schema, so the second day is recorded here and he does not render on it. The page also dates the canonisation: the Council of Bishops of 3 April 1992, in the six hundredth year after Sergius's death."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прпп. схимонаха Кирилла и схимонахини Марии, родителей прп. Сергия Радонежского (ок. 1337).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 28 septembrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/28 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 28 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Khotkovo monastery of the Protection, near Radonezh",
+      "modern_name": "Khotkovo, Moscow Oblast, Russia",
+      "lat": 56.2531,
+      "lon": 37.9872,
+      "uncertainty_km": 5
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "maria-of-radonezh",
+    "sergius-of-radonezh"
+  ]
+}
