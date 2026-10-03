@@ -206,6 +206,17 @@ html[data-route~='prayer'] .hy-pic {
 /* The picture takes the manifest's own clamped shape (`lib/hero-crop.js`), the
    same silhouette the Daily rows and the Index's cards give it, and stands in
    the mat every icon on this site stands in. */
+/* The icon is a door to the saint's own page, and the door is the flex item the
+   frame used to be: the frame is allowed to shrink against the column's height
+   (below), so the link has to be the thing that shrinks and the frame has to
+   stay a flex item inside it. */
+html[data-route~='prayer'] .hy-pic-link {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  min-height: 0;
+}
+
 html[data-route~='prayer'] .hy-pic-frame {
   display: block;
   flex: 0 1 auto;
@@ -259,6 +270,10 @@ html[data-route~='prayer'] .hy-line {
    not the life. `--hy-lede-lines` carries no pixel, so it is a count and not a
    measure — `calendar.css`'s own `--lede-lines` is the same idea. */
 html[data-route~='prayer'] .hy-line[data-hy-lede] {
+  /* A door and not a link in prose: the name above it carries the hover mark
+     for all three, and an underline struck through four clamped lines would
+     read as the preview being a citation. */
+  text-decoration: none;
   --hy-lede-lines: 4;
   display: -webkit-box;
   -webkit-box-orient: vertical;
