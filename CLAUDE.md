@@ -550,6 +550,14 @@ The codebase already holds this line. The rule is to keep it there.
   slug. It reads `pickHero` and the manifest, so it says what the page would
   show today rather than counting imageless folders, of which there are
   thousands and which no reader meets.
+- **`node scripts/date-citation-audit.mjs [church …] [--all]`** — years a folder
+  has already **cited and never recorded**. A calendar line is quoted into an
+  attestation whole and carries that church's year with it, while `dates` is
+  written from whichever source the batch read first; the two then disagree in
+  silence and nothing fails. Seven of seven folders on one February batch had
+  it. Every row is a question — the cited year may be the worse reading, or a
+  different event, which is why a glorification or a translation of relics
+  shows up here as loudly as a real disagreement.
 - `node scripts/language-audit.mjs`, `date-audit.mjs`, `place-candidates.mjs`,
   `track-candidates.mjs`, `related-from-links.mjs` — all **propose, never
   write**; every row needs a reading.
