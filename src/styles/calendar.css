@@ -1,56 +1,256 @@
 /* Calendar page (STRUCTURE.md). The hero holds one scale whatever the day's
-   density; the register carries the rest; the month's red-letter numerals are
-   the idiom doing literal work. */
+   density; the register carries the rest; the week strip is the red-letter
+   idiom doing literal work. */
 
-/* The picker is one month grid, at every width (author, 2026-10-03: "I want
-   the same calendar look between mobile and desktop now"). An icon button held
-   the row's left edge and a week rail filled the rest of it until then; the
-   grid is the row now, so the row needs nothing of its own but the gap under
-   it. */
+/* One icon button holds the left edge — open the month — and the week or the
+   month fills the rest of the row. A second, stacked button used to recentre
+   the rail on today; it is gone (author, 2026-08-26: "remove the old button
+   and stretch the monthly toggle to take up the extra space"), because today
+   now carries its own mark in both grains and a reader who has stepped away
+   from it can see it rather than needing a button back to it. Keeping the
+   toggle out of the strip means the strip's own edges are unambiguously about
+   the week. */
 .cal-controls {
+  /* Every control in the row is this tall. Shaved from 53 to 51 (author,
+     2026-08-26: "condense the weekly display vertically a bit more, shave a
+     few more pixels off of margins") — measured against the rail's own
+     content after its padding and gaps were trimmed below, not derived from
+     the CSS numbers alone: a line-height multiplier does not predict a real
+     font's ascent and descent, and the two were a couple of pixels apart the
+     first time this was tried by arithmetic. */
+  --cal-row-h: 51px;
+  /* Pinned rather than intrinsic, because the gutter below is derived from it
+     and an edge that sized itself to its content would move the month's name
+     whenever a two-digit date became a one-digit one.
+
+     Widened 30 -> 44 px (author, 2026-08-25 evening: "more of the Sunday to
+     the left is peaking out and more of the Monday to the right is peaking
+     out from the fade"). The peek, not the gap, is the lever: the seven day
+     buttons divide what is left *after* both insets, so tightening the gap
+     between columns hands the width back to the seven and shows the
+     neighbours no more of themselves. 14 px more of each neighbour costs each
+     of the seven about 4 px, and a day button is a two-line stack of "Mon"
+     over "24" — 34 px of glyph in a 65 px column. Below 560 px the peek is
+     overridden to 24 px, so a phone is untouched: there the rail is scrolled,
+     not read across. */
+  --cal-peek: 44px;
+  /* Where the rail's snapped day comes to rest, measured from the strip's
+     edge: the peek column plus the gap the month row puts after it. It lined
+     the rail's seven columns up with the month's while the month had peeked
+     columns of its own; since 2026-10-03 the month fills its own width and
+     this is the rail's inset alone. */
+  --rail-inset: calc(var(--cal-peek) + var(--space-2));
   position: relative;
-  /* The date heading used to stand a full space-6 below the picker; brought up
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  /* The date heading used to stand a full space-6 below the strip; brought up
      to space-3 (author, 2026-08-26: "move today's date on daily page further
      up the page closer to the weekly display"). */
   margin-bottom: var(--space-3);
 }
 
-/* One cell, and the month fills it. Two grains were stacked in it — the week
-   fading out exactly where the month faded in, the day names never moving
-   between them — until the week went on 2026-10-03. */
+.cal-jump {
+  display: flex;
+  flex-direction: column;
+  flex: none;
+}
+
+.cal-jump button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Derived from the row height, so the button stands exactly as tall as the
+     strip beside it. It took half of this, stacked over the button that
+     recentred on today, until that button was removed and this one stretched
+     to take the space it left (author, 2026-08-26). */
+  width: 34px;
+  height: var(--cal-row-h);
+  padding: 0;
+  color: var(--ink-soft);
+}
+
+.cal-jump button:hover {
+  color: var(--ink);
+}
+
+/* The month toggle stays lit while the month is showing: with the week gone
+   there is nothing else on screen saying which grain you are in. */
+.cal-jump button.is-on {
+  color: var(--ink);
+  background: var(--field);
+  border-color: var(--ink-soft);
+}
+
+/* The two grains share one cell rather than following one another down the
+   page. Stacked, the week can fade out exactly where the month fades in, the
+   day names never move between them, and the row's height is whichever grain
+   is currently taller — so the page below follows the month's growth instead
+   of jumping the moment it is toggled. */
 .cal-span {
+  flex: 1 1 auto;
   min-width: 0;
   display: grid;
+  /* minmax(0, 1fr), not the auto track: the rail inside holds 121 days and an
+     auto track would size itself to all of them, carrying the cell to 4600 px
+     and the buttons' percentage widths with it (2026-08-24). */
   grid-template-columns: minmax(0, 1fr);
 }
 
+.cal-week,
 .cal-month {
   grid-area: 1 / 1;
-  /* The grid is dragged up and down, so the browser is given the *other* axis:
-     `pan-x` leaves the vertical to the pointer events this grain reads.
-     Without it a swipe on the grid is a page scroll and the month never moves.
-     The cost is stated rather than discovered: below 1024 px the page can no
-     longer be scrolled by a finger that starts on the grid. It scrolls from
-     everywhere else on the page — `.cal` keeps `pan-y`. */
+}
+
+/* The browser keeps sending pointer events for a sideways drag, and still
+   scrolls the page on a vertical one. Without this a swipe on the rail is a
+   scroll. */
+.cal-week {
+  touch-action: pan-y;
+}
+
+/* The month is dragged up and down (2026-10-03), so it is given the *other*
+   axis: `pan-x` leaves the vertical to the pointer events this grain reads.
+   The cost, stated rather than discovered later: below 1024 px the page can no
+   longer be scrolled by a finger that starts on the open month. It scrolls
+   from everywhere else, `.cal` keeps `pan-y`, and the week rail — which is
+   what the phone shows unless the reader opens the month — is untouched. */
+.cal-month {
   touch-action: pan-x;
 }
 
-/* The month travels as a whole row, and its day names are the one thing that
-   does not travel: they stand on their own line above the body (author,
-   2026-08-21). Both were flex rows with a peeked column at each end until
-   2026-10-03; each holds one child now. */
+/* The month travels as a whole row — leading peek, dates, trailing peek —
+   because the peek is the grain continuing and an edge that repainted in place
+   while the dates between them slid read as the edges switching rather than as
+   the grain moving (author, 2026-08-21). Its day names are the one thing that
+   does not travel: they stand on their own line above the body, with a gap at
+   each end standing in for the peeked column. The week had a row of its own
+   here until 2026-08-24, when it became the scrolling rail below and stopped
+   travelling at all. */
 .month-row,
 .month-days-line {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-2);
   width: 100%;
+}
+
+/* Also the week's own viewport, which is why it is the positioned ancestor. */
+.cal-week {
+  position: relative;
+  min-height: var(--cal-row-h);
+}
+
+/* ---- arrows over the fading ends (2026-09-02) --------------------------- */
+
+/*
+ * Author: "add arrows left and right over the week display and monthly display
+ * edges, don't resize anything just put them over the left and right ends
+ * where the dates just outside of the week are fading out."
+ *
+ * "Don't resize anything" is the constraint that decides the shape: the arrows
+ * are absolutely positioned over the rail's own dissolve rather than laid out
+ * beside it, so the seven day buttons keep every pixel of the width they were
+ * measured at and the month grid still shares their column centres.
+ *
+ * Hidden below the breakpoint, and not by width alone: a phone swipes the rail
+ * — which is the gesture the fade exists to hint at — and a target sitting on
+ * the edge day would be in the way of it.
+ */
+.week-arrow {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  /*
+   * A chip rather than a bare glyph, and the first version is why: a 19 px
+   * chevron in `--ink-soft` laid straight over the dissolving numerals read as
+   * a stray character in the rail rather than as a control — the eye had two
+   * marks in one place and no way to tell which was the date. The disc gives
+   * it a ground of its own, and the ground is the page's, so it reads as
+   * standing over the rail rather than as a box drawn in it.
+   */
+  .week-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* Centred on the row of dates, not on the box: the row carries a line of
+       density dots under it and an arrow centred on the pair sits low. */
+    top: calc(var(--cal-row-h, 52px) / 2);
+    transform: translateY(-50%);
+    width: 22px;
+    height: 22px;
+    padding: 0;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    background: var(--gesso);
+    font-family: var(--font-utility);
+    font-size: var(--text-base);
+    line-height: 1;
+    color: var(--ink-soft);
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .week-arrow-prev {
+    left: 0;
+  }
+
+  .week-arrow-next {
+    right: 0;
+  }
+
+  .week-arrow:hover {
+    color: var(--ink);
+    border-color: var(--ink-soft);
+  }
+
+}
+
+/* The two grains cross-fade in place over --dur-month. Whichever is on its way
+   out is also out of reach for the length of it: they occupy one cell, so a
+   click landing on the leaving grain would be a click on a date the reader can
+   no longer see. Reduced motion drops both transitions through the global rule
+   in base.css, and the JS skips the matching wait rather than holding the row
+   blank for 420 ms with no animation behind it: removed, not shortened. */
+.cal-month {
+  opacity: 0;
+  transition: opacity var(--dur-travel) var(--ease);
+}
+
+.cal-month.is-open {
+  opacity: 1;
+}
+
+.cal-month:not(.is-open),
+.cal-week.is-out {
+  pointer-events: none;
+}
+
+.cal-week {
+  transition: opacity var(--dur-travel) var(--ease);
+}
+
+.cal-week.is-out {
+  opacity: 0;
+}
+
+/* A class selector outranks the user agent's [hidden] rule, so display: flex
+   would keep the week on screen underneath the month. The month replaces the
+   week; it does not open below it. */
+.cal-week[hidden],
+.cal-month[hidden] {
+  display: none;
 }
 
 /* ---- the grain track --------------------------------------------------- */
 
-/* The grain sits on a track inside a viewport — the month inside
-   `.month-body` — and the track is what moves, whether the reader is dragging
-   it or a step is carrying it. Clipping is switched on only while it moves: at
-   rest a day's focus ring reaches 4 px outside its button and must not be
-   cropped. */
+/* Each grain sits on a track inside a viewport — the week inside `.cal-week`,
+   the month inside `.month-body` — and the track is what moves, whether the
+   reader is dragging it or a peek is carrying it. Clipping is switched on only
+   while it moves: at rest a day's focus ring reaches 4 px outside its button
+   and must not be cropped. */
 .is-moving {
   overflow: hidden;
 }
@@ -74,14 +274,296 @@
   pointer-events: none;
 }
 
+/* The rail (author, 2026-08-24; this supersedes the grain-track for the week
+   — see §5b's marked paragraphs). A scroll container of days: the browser owns
+   the pan on touch and pen, wireRail gives a mouse the same movement by hand,
+   and proximity snap is what "locks into place when it slows down" — any day,
+   not only a Monday, and a slow deliberate drag is left exactly where the
+   reader put it.
+
+   The days either side of the seven on screen are real days in full ink —
+   what stood there before was a masked copy of one day, a button dressed as
+   the grain continuing. Now it is the grain continuing. The seven-plus-edges
+   geometry survives: each button is a seventh of the width between the two
+   peek insets, so the eighth and ninth days show half-cut at the edges
+   exactly where the peeks stood. */
+/* The edges fade (author, 2026-08-25: "add a fade on the edges so the half
+   cropped 'Sun' or 'Mon' don't read as accidental"), which reverses Amendment
+   35's "the rail's edge days are ordinary buttons at full strength with no
+   mask at all" — recorded in place in STRUCTURE.md. The reason 35 gave still
+   holds where it was aimed: the edge day is a *real* day, clickable and in
+   full ink, and nothing here dims a glyph a reader might try to read. What
+   the mask does is end the run, so a half-cut column reads as the grain
+   continuing rather than as a clipped mistake.
+
+   A mask, never an opacity — §5b's rule, and the reason is the quality
+   floor's own: a wash over --ink-soft is 2.1:1 on gesso. The dissolve happens
+   in the outer 12 px, which is inside the peek inset, so it begins only after
+   the neighbouring day's name is whole. */
+.week-strip {
+  display: flex;
+  flex: 1 1 auto;
+  min-width: 0;
+  /* Tightened from space-1 (author, same instruction: "reduce the spacing
+     between the days a touch so that you see the full Sun / Mon edges before
+     the fade is applied") — 2 px between columns instead of 4 gives each day
+     button a fraction more width, which is what carries the edge day's own
+     name clear of the dissolve. The button width formula below follows the
+     gap, and the month grid follows the same two constants, so the week and
+     the month keep sharing their column centres to the pixel. */
+  gap: 2px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  --rail-fade: 12px;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 var(--rail-fade),
+    #000 calc(100% - var(--rail-fade)),
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 var(--rail-fade),
+    #000 calc(100% - var(--rail-fade)),
+    transparent 100%
+  );
+  /* Where a snapped day comes to rest: one peek in from the edge, which is
+     the column the old peeked edge held. */
+  scroll-padding-left: var(--rail-inset);
+  scroll-padding-right: var(--rail-inset);
+  /* The rail is its own scrollbar: a second one under the dates would say
+     "this is a pane", and the snap already does the wayfinding. The pair that
+     hides the bar is base.css's, under "scrollers that draw no bar". */
+  overscroll-behavior-x: contain;
+}
+
+/* Snapping is suspended while a mouse holds the rail — mandatory-adjacent
+   snap fights a scrollLeft written every frame, and the rail stutters under
+   the hand — and stays suspended while a released throw coasts (Amendment
+   37), or the browser would snatch the rail mid-glide. Only the hold wears
+   the grabbing cursor; a coasting rail is not being held. */
+.week-strip.is-dragging,
+.week-strip.is-coasting {
+  scroll-snap-type: none;
+}
+
+.week-strip.is-dragging {
+  cursor: grabbing;
+  user-select: none;
+}
+
+.week-strip button {
+  flex: none;
+  scroll-snap-align: start;
+  /* The month's own column width — a seventh of what is between the two
+     insets — so a snapped day and a month cell share their centres to the
+     pixel, and the neighbours show themselves in the inset at each edge. */
+  width: calc((100% - 2 * var(--rail-inset) - 6 * 2px) / 7);
+  min-width: 34px;
+  /* Shaved from --space-1 (author, 2026-08-26: "condense the weekly display
+     vertically a bit more, shave a few more pixels off of margins"). */
+  padding: 3px 0;
+  border: 1px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  font-family: var(--font-utility);
+  font-size: var(--text-2xs);
+  line-height: 1.3;
+  color: var(--ink-soft);
+  font-variant-numeric: tabular-nums;
+}
+
+.week-strip button:hover {
+  border-color: var(--rule);
+}
+
+/* The row no longer wraps — wrapping would drop the jump buttons off their
+   left edge, which is the whole arrangement. So at narrow widths everything in
+   it gives up a little instead: the peeks narrow and the day buttons give up
+   their comfortable minimum. Seven days, two peeks and the stack still fit
+   360 px, and the quality floor's overflow check holds the line if any of them
+   grow again. */
+/* 559.98, not 560 (found in review, 2026-08-27). base.css opens the desktop
+   header at `min-width: 560px`, so a viewport of exactly 560 was matching both
+   this and that - the phone's chrome and the desk's, at the same width, with
+   source order deciding. The site's ladder is 400 / 480 / 560 / 620 / 760, and
+   every pair on it is written the same way: `max-width` takes the hundredth
+   under, `min-width` takes the number itself. 620 is the calendar's own rung
+   and stays its own: the month grid needs its gutter back before the header
+   needs its second column, and folding the two would move one of them. */
+@media (max-width: 559.98px) {
+  .cal-controls {
+    --cal-peek: 24px;
+    --rail-inset: calc(var(--cal-peek) + var(--space-1));
+    gap: var(--space-2);
+  }
+  .month-row,
+  .month-days-line {
+    gap: var(--space-1);
+  }
+  .week-strip button {
+    min-width: 26px;
+  }
+}
+
+.week-strip .day-num {
+  font-size: var(--text-base);
+  color: var(--ink);
+}
+
+/* The rail itself takes focus (the day buttons are tabindex="-1"): one tab
+   stop for the whole run of days, stepped by the arrow keys, instead of a
+   button per day between the reader and the rest of the page. */
+.week-strip:focus-visible {
+  outline-offset: 2px;
+}
+
+/* The selected day is a red letter; underline so colour never stands alone. */
+.week-strip button[aria-current='date'] {
+  border-color: var(--rule);
+  background: var(--field);
+}
+
+.week-strip button[aria-current='date'] .day-num {
+  color: var(--rubric);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.week-strip .is-today .day-name {
+  color: var(--rubric);
+}
+
+/* A bubble around today's own numeral, so it keeps reading as today even once
+   a different day is selected and wears the field and the underline instead
+   (author, 2026-08-26: "put a bubble around today's date in the weekly and
+   monthly display so even when selecting a different day you still recognise
+   today's date"). Drawn as a ring around the numeral rather than a filled
+   disc — gold and a flat fill both belong to other things (STRUCTURE.md) —
+   and as an absolutely positioned ::before rather than a box on `.day-num`
+   itself, so it costs the row no width or height of its own and cannot be the
+   thing that nudges the rail's column measurements. */
+.week-strip .day-num {
+  position: relative;
+}
+
+.week-strip .is-today .day-num::before {
+  content: '';
+  position: absolute;
+  /* The bottom edge sits *on* the selected day's underline rather than below
+     it (author, 2026-08-26: "make it line up perfectly with the underline so
+     it blends in"), which is what `bottom: 0` buys: the underline is drawn at
+     `text-underline-offset: 3px` from the baseline, which lands inside the
+     last pixel of this span's own line box. The two rubric lines then read as
+     one edge on the day that is both today and the day being read, instead of
+     a pill hanging 3 px past it. It also lifts the ring clear of the fast and
+     feast dots, which the old -3px bottom cut 1 px into. */
+  /* -2px at the top, not 1 (author, 2026-08-26 evening: "move the bubble over
+     the current date slightly higher, currently the top of the bubble and the
+     top of the number are too close"). Only the top moves: the bottom stays
+     at 0 because that is what lands it on the selected day's underline, which
+     is the whole of the morning's fix. */
+  inset: -2px -5px 0;
+  /* Sharper than the pill it was (author, same instruction). A soft rectangle
+     shares the underline's own straight run; a 999px pill met it at a curve. */
+  border: 1px solid var(--rubric);
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* ---- the two marks under a date (author, 2026-08-26) -------------------- */
+
+/* A fast and a feast, and nothing else — views/calendar.js says why these two
+   and not the density dots the author removed on 2026-08-25. The row is a
+   fixed 5 px whether or not it holds anything, so a week with one fast in it
+   does not sit 5 px taller than the week beside it and the rail's column
+   height never changes under a scroll.
+
+   Colour alone carries nothing here: each mark is named in the day button's
+   accessible label, and the day's own chip says the fast in words the moment
+   the reader opens it. */
+.week-strip .day-marks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  height: 5px;
+  margin-top: 1px;
+}
+
+.week-strip button:not(:has(.day-marks))::after {
+  content: '';
+  display: block;
+  height: 5px;
+  margin-top: 1px;
+}
+
+.day-mark {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+/* Three marks, three silhouettes, and that is brief §13's doing rather than a
+   flourish: "all colour information duplicated in text or shape". These were
+   one disc in three hues until 2026-08-28 — same size, same radius, differing
+   in `background` and in nothing else. The words are on the button's
+   `aria-label` and the dots are `aria-hidden`, so a screen reader was told
+   which mark it was and a sighted reader who cannot separate red from teal
+   from gold was not. That reader is the one the criterion is written for.
+
+   Read as a scale of strictness rather than three arbitrary tokens: the strict
+   fast is the disc filled, fish-permitted is the same disc opened up, and a
+   feast is a different figure because it is a different kind of fact — not a
+   grade of fasting at all. All three stay inside the 5 px box, so the rail's
+   row height and the `::after` spacer that stands in for a missing mark are
+   untouched.
+
+   The shapes are the smallest thing that satisfies the criterion, not a
+   drawing decision defended on its merits; the author may want to redraw them.
+   Two marks the same shape is the part that must not come back. */
+.mark-fast {
+  background: var(--fast-strict);
+}
+
+.mark-fish {
+  background: none;
+  /* box-sizing is border-box globally, so this opens a 2 px hole in the same
+     5 px footprint rather than growing the mark. */
+  border: 1.5px solid var(--fast-fish);
+}
+
+/* The one place the site spends gold on the calendar (author, 2026-08-26:
+   "Gold is almost unused … gold for the feast-day marker on the week strip").
+   It is the leaf under the icon, and a feast is what it is for.
+
+   `--feast` and not `--gold` since 2026-09-10: the month grid grows a feast
+   mark of its own in the same commit, and the two grains cannot say one thing
+   in two golds. `--gold` here was **2.62:1 on the field**, which is worse than
+   the token that replaced it — see `tokens.css` for why this dot takes the 3:1
+   graphic floor when `--gold` itself does not. */
+.mark-feast {
+  background: var(--feast);
+  /* A diamond by clip-path rather than a rotated square: a 5 px square turned
+     45 degrees measures 7.07 px corner to corner and would push the 5 px row
+     it sits in. This stays in the box. */
+  border-radius: 0;
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
 /*
  * **The reckoning control is the desktop's, and so is its row** (author,
  * 2026-09-02: "have the ability only on desktop to click on this").
  *
- * Below the breakpoint it is not drawn at all, and the month's name has the
- * head's first line to itself. It is the one thing in the month's head that
- * differs between the two widths; everything else about the picker is one
- * drawing (author, 2026-10-03).
+ * Below the breakpoint neither is drawn at all. The month's name keeps the
+ * gutter it has always printed into there — `.month-head` is a plain box in
+ * the flow, and an unstyled control inside it pushed the month's day-name line
+ * 31 px out of step with the week's, which is the one alignment this picker
+ * has always been held to ("the month is the week grown taller").
  */
 @media (max-width: 1023.98px) {
   /* **The day swipe is only live where this is declared** (author, 2026-09-02:
@@ -99,10 +581,9 @@
      computed value rather than only dispatching events, because that is the
      half a dispatched gesture cannot see.
 
-     Safe to hang on the whole page: nothing under it scrolls horizontally,
-     and the one box with a gesture of its own — `.cal-month`, dragged up and
-     down — is excluded from the page swipe by `wireDaySwipe`'s own `ignore`
-     rather than by this declaration. */
+     Safe to hang on the whole page: the only horizontal scroller under it is
+     `.week-strip`, which already inherits `pan-y` from `.cal-week` and is
+     dragged by `onGrainDrag` rather than by native panning. */
   .cal {
     touch-action: pan-y;
   }
@@ -112,26 +593,42 @@
   }
 }
 
-/* ---- the month --------------------------------------------------------- */
 
-/* The month carries no frame of its own: seven columns filled to their own
-   corners, with the month's name and its two steps stacked over and under
-   them. */
+/* The density dots — one per commemoration, capped at five — stood under every
+   date at both grains from the first calendar until the author removed them
+   (2026-08-25 evening: "remove the dots under each date in the calendar").
+   STRUCTURE.md's "Dense against sparse" argued them as density made legible
+   before arrival; that paragraph now records the reversal in place. What
+   survives is the *count*, in the day button's accessible name, said plainly
+   here because it is a divergence: a reader who cannot glance at the register
+   has no other way to learn a day's weight, and the number is the day's own
+   rather than a description of a mark that is gone. */
+
+/* ---- month view ------------------------------------------------------- */
+
+/* The month is the week grown taller, not a panel that replaces it: the same
+   seven columns and the same gap. What the reader sees toggle is rows
+   arriving. Since 2026-10-03 it carries a head of its own — the month's name
+   between its two steps, stacked — so it no longer prints its name into the
+   week's gutter, and the grid runs the full width of the control rather than
+   between two peeked columns. That is the one place the two grains no longer
+   line up column for column, and it is what the phone's month and the desk's
+   being one drawing costs. */
 
 /*
  * **The head is a column, and the two steps are its ends** (author,
  * 2026-10-03: "from Oct to Sep is an arrow or swipe up above the Oct 2026
  * print, and conversely an arrow down underneath it").
  *
- * It was a row with a stepper either side of the words from 2026-09-10, and
- * the pieces each stepper is made of are unchanged - a hairline closed by a
- * diamond, pointing away from the month it leaves. Turning the pair a quarter
- * is the whole of the change: `flex-direction: column` here, and the marks'
- * own order in the markup does the rest, the diamond leading on the step up
- * and trailing on the step down.
+ * It was a row with a stepper either side of the words from 2026-09-10, drawn
+ * past 1024 px only, and the pieces each stepper is made of are unchanged — a
+ * hairline closed by a diamond, pointing away from the month it leaves.
+ * Turning the pair a quarter is the whole of the change: `flex-direction:
+ * column` here, and the marks' own order in the markup does the rest, the
+ * diamond leading on the step up and trailing on the step down.
  *
  * `align-items: flex-start` rather than centred: the month's name is left
- * justified to the column's own margin (author, 2026-09-02) and a mark that
+ * justified to the control's own margin (author, 2026-09-02) and a mark that
  * points at the name stands over the name, not over the middle of the grid.
  */
 .month-head {
@@ -150,10 +647,10 @@
 
 /*
  * The month's two steps. `--accent` is the rebuild's rule-and-mark colour and
- * is never asked to carry a word - the button's `aria-label` is what says which
+ * is never asked to carry a word — the button's `aria-label` is what says which
  * month this reaches.
  *
- * **The button is the column's full width and the mark sits at its start.**
+ * **The button is the control's full width and the mark sits at its start.**
  * The target is the one thing a thumb and a pointer want differently here, and
  * it differs by one declaration: `--mstep-h` is 32 px, and 24 px past 1024 px
  * where there is a pointer to aim.
@@ -189,8 +686,8 @@
 
 /* A diamond by clip-path, never a rotated square: a rotated 5 px square
    measures 7.07 px corner to corner and would set the step's height from a
-   mark instead of from the 5 px box it is given. `.month-feast` below is the
-   same shape for the same reason. */
+   mark instead of from the 5 px box it is given. `.mark-feast` above carries
+   the same note for the rail's own dot. */
 .mstep-dot {
   flex: none;
   width: 5px;
@@ -199,10 +696,11 @@
   clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
 }
 
-/* The name, on the column's own left margin (author, 2026-09-02: it "should be
-   left justified to the left margin of the right hand column"). It was
-   absolutely placed in a gutter beside the grid below 1024 px, where the
-   toggle's 34 px column plus a peeked column made one; both are gone. */
+/* The month's name, on the control's own left margin (author, 2026-09-02: it
+   "should be left justified to the left margin of the right hand column"). It
+   was absolutely placed in the gutter beside the grid below 1024 px, where the
+   jump button's 34 px column plus a peeked column made one; the head has a
+   line of its own at both widths now. */
 .cal-month .month-name {
   font-family: var(--font-serif);
   font-weight: 500;
@@ -211,143 +709,10 @@
   color: var(--ink);
 }
 
-/*
- * The feast mark, in the cell's own corner. `--feast` rather than `--gold` —
- * tokens.css carries the reasoning and `tests/contrast.test.mjs` the 3:1
- * floor, which this mark takes because it is the only thing on the cell saying
- * the day holds one. A diamond by clip-path for `.mstep-dot`'s reason: a
- * rotated 5 px square measures 7.07 px corner to corner and would push the row
- * it sits in.
- */
-html[data-route~='calendar'] .month-feast {
-  position: absolute;
-  top: 2px;
-  right: 4px;
-  width: 5px;
-  height: 5px;
-  background: var(--feast);
-  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
-}
-
-/*
- * **The selected day, which the bubble made invisible** (found by the
- * sweep, 2026-09-10).
- *
- * The rule this replaces gives it `background: var(--field)` and a `--rule`
- * border, and says in as many words that "the selected day keeps its field
- * and its rule, which are what carry the selection without a colour". Both
- * halves stopped being true when the month moved into the bubble in step 5:
- * `--bub` *is* `--field` in day and one step off it in vigil, so the field
- * came out at **1.00:1** against the box it sits in (measured, rendered,
- * `rgb(230 221 202)` either side) and 1.02:1 in vigil, and what was left of
- * the mark was a `--rule` hairline at 1.31:1 — on a numeral whose own colour
- * is the fast's and therefore says nothing about being chosen.
- *
- * This is the same trap §10.15 found on `.church-open[aria-expanded]` and
- * solved with `--gesso`; that answer is not this one's, and the measurement
- * says why. A gesso hole is 1.08:1 and ΔL* 2.8 against the bubble — *fainter*
- * than the hairline already there. The mockup's own `.mgrid b.on` is
- * `border-color: var(--accent)` and no background at all, and that is the
- * mark that reads: **2.64:1 and ΔL* 31.8 in day, 2.84:1 and ΔL* 32.1 in
- * vigil**, three times the separation of the border it replaces.
- *
- * **The ground under it changed on 2026-09-16 and the mark did not.** The
- * month moved out of the bubble into the day's own column, so the surround
- * is `--gesso` here as it is on a phone rather than `--bub`; `--accent` is
- * the ground's own hue shifted away from itself and reads against either.
- * The field-hole this rule refuses would have been fainter still on gesso.
- * `daily-picker.spec.js` asserts the mark against whatever box it actually
- * stands on, in both themes, rather than against a number written here.
- */
-html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
-  background: none;
-  border-color: var(--accent);
-}
-
-/*
- * **One mark in the month, not two** (author, 2026-09-11: "The highlight
- * over today on the monthly display is not what the mockup had … whatever
- * that bubble is trying to do is residual from mobile and needs to be
- * adjusted to this desktop view").
- *
- * It is residual, and the code says so in its own words: the ring is
- * `.month-grid button.is-today .day-num::before`, whose comment is "the same
- * shape at the month's grain … see the week strip's own copy of this rule"
- * — the week strip being the phone's control. It came in on 2026-08-26, two
- * weeks before the reference was drawn, and the reference's month has no
- * such ring: one cell carries `border: 1px solid var(--accent)` at radius 0
- * with its numeral in rubric, and that is the whole of the month's marking.
- *
- * On the default view — today, selected — the two landed on the same cell
- * and nested, a 4 px rounded rubric bubble inside a square accent one, which
- * is the squeeze the author photographed.
- *
- * **The consequence, stated rather than discovered later**: a reader who
- * steps to another day no longer sees today marked in the month. The
- * reference does not draw that state, so it is the reference's silence being
- * followed, not a decision this file is making on its own. It held at every
- * width from 2026-10-03, when the week rail that kept its own ring below
- * 1024 px went and left this the only grain there is.
- */
-html[data-route~='calendar'] .cal-main .month-grid button.is-today .day-num::before {
-  content: none;
-}
-
-/*
- * **And the cell it marks is square.** `base.css:215` gives every `button`
- * on the site `--radius-panel`, 4 px, and the month's cells took it without
- * anyone choosing it for them; the reference draws its month on plain `<b>`
- * elements with `border: 1px solid transparent` and no radius at all, so the
- * selected day's mark there is a rectangle. With the phone ring gone this is
- * the whole of what the month draws, and a 4 px round on a 38 × 25 cell is
- * visible — it is half the difference the author was pointing at.
- *
- * Here and not in the base rule: a rounded button is right everywhere else
- * on the site, and the month's cells are not really buttons in the sense
- * that rule means — they are a ruled grid, which is the register's own
- * shape.
- */
-html[data-route~='calendar'] .cal-main .month-grid button,
-html[data-route~='calendar'] .cal-main .month-grid .month-out {
-  border-radius: 0;
-}
-
-/*
- * The days either side of the month, on the grid's own rows: present,
- * numbered, out of reach, and **one step back in ink rather than tinted** —
- * which is the "half colour strength or opacity or whatever it currently
- * uses" the author asked the phone to adopt on 2026-10-03.
- *
- *
- * §3.3 drew them tinted 38% toward the field and carrying their fast tone,
- * on §10.6's reasoning that `aria-hidden` keeps a tint out of axe's reach.
- * **Measured, it does not**: axe's colour-contrast rule matches on whether a
- * node is visible *on screen*, not on whether a screen reader can see it, so
- * five tinted numerals raised 128 violations at 1.71–2.61:1 — and the
- * Lighthouse floor gates CI on accessibility 100 besides, where a
- * spec-level exclusion could not reach.
- *
- * `--ink-soft` is what the peeked columns these replaced already used, for
- * the reason those were written with: text a sighted reader might try to
- * read has to clear 4.5:1 wherever it is legible at all. 5.92:1 on gesso and
- * 5.53:1 on the field. The fast hue goes with the tint, and that is what
- * buys the reading back — **a coloured numeral is this month's**.
- */
-html[data-route~='calendar'] .month-grid .month-out {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border: 1px solid transparent;
-  font-family: var(--font-utility);
-  font-size: var(--text-sm);
-  line-height: 1.2;
-  font-variant-numeric: tabular-nums;
-  color: var(--ink-soft);
-}
-
 .month-days,
 .month-grid {
   display: grid;
+  flex: 1 1 auto;
   min-width: 0;
   grid-template-columns: repeat(7, minmax(0, 1fr));
   /* 2 px, following the rail (author, 2026-08-25, who asked for the *week's*
@@ -471,6 +836,145 @@ html[data-route~='calendar'] .month-grid .month-out {
   border: 1px solid var(--rubric);
   border-radius: 4px;
   pointer-events: none;
+}
+
+/*
+ * The feast mark, in the cell's own corner: the same fact and the same shape as
+ * the rail's dot. `--feast` rather than `--gold` — tokens.css carries the
+ * reasoning and `tests/contrast.test.mjs` the 3:1 floor, which this mark takes
+ * because it is the only thing on the cell saying the day holds one. A diamond
+ * by clip-path for `.mark-feast`'s reason: a rotated 5 px square measures
+ * 7.07 px corner to corner and would push the row it sits in.
+ *
+ * **At both widths since 2026-10-03**, with the rest of what the phone's month
+ * and the desk's did not share.
+ */
+html[data-route~='calendar'] .month-feast {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  width: 5px;
+  height: 5px;
+  background: var(--feast);
+  clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+}
+
+/*
+ * **The selected day, which the bubble made invisible** (found by the
+ * sweep, 2026-09-10).
+ *
+ * The rule this replaces gives it `background: var(--field)` and a `--rule`
+ * border, and says in as many words that "the selected day keeps its field
+ * and its rule, which are what carry the selection without a colour". Both
+ * halves stopped being true when the month moved into the bubble in step 5:
+ * `--bub` *is* `--field` in day and one step off it in vigil, so the field
+ * came out at **1.00:1** against the box it sits in (measured, rendered,
+ * `rgb(230 221 202)` either side) and 1.02:1 in vigil, and what was left of
+ * the mark was a `--rule` hairline at 1.31:1 — on a numeral whose own colour
+ * is the fast's and therefore says nothing about being chosen.
+ *
+ * This is the same trap §10.15 found on `.church-open[aria-expanded]` and
+ * solved with `--gesso`; that answer is not this one's, and the measurement
+ * says why. A gesso hole is 1.08:1 and ΔL* 2.8 against the bubble — *fainter*
+ * than the hairline already there. The mockup's own `.mgrid b.on` is
+ * `border-color: var(--accent)` and no background at all, and that is the
+ * mark that reads: **2.64:1 and ΔL* 31.8 in day, 2.84:1 and ΔL* 32.1 in
+ * vigil**, three times the separation of the border it replaces.
+ *
+ * **The ground under it changed on 2026-09-16 and the mark did not.** The
+ * month moved out of the bubble into the day's own column, so the surround
+ * is `--gesso` here as it is on a phone rather than `--bub`; `--accent` is
+ * the ground's own hue shifted away from itself and reads against either.
+ * The field-hole this rule refuses would have been fainter still on gesso.
+ * `daily-picker.spec.js` asserts the mark against whatever box it actually
+ * stands on, in both themes, rather than against a number written here.
+ */
+html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
+  background: none;
+  border-color: var(--accent);
+}
+
+/*
+ * **One mark in the month, not two** (author, 2026-09-11: "The highlight
+ * over today on the monthly display is not what the mockup had … whatever
+ * that bubble is trying to do is residual from mobile and needs to be
+ * adjusted to this desktop view").
+ *
+ * It is residual, and the code says so in its own words: the ring is
+ * `.month-grid button.is-today .day-num::before`, whose comment is "the same
+ * shape at the month's grain … see the week strip's own copy of this rule"
+ * — the week strip being the phone's control. It came in on 2026-08-26, two
+ * weeks before the reference was drawn, and the reference's month has no
+ * such ring: one cell carries `border: 1px solid var(--accent)` at radius 0
+ * with its numeral in rubric, and that is the whole of the month's marking.
+ *
+ * On the default view — today, selected — the two landed on the same cell
+ * and nested, a 4 px rounded rubric bubble inside a square accent one, which
+ * is the squeeze the author photographed. Dropped from the *month* at both
+ * widths since 2026-10-03, because the two monthly views are one drawing now.
+ * The **week rail keeps its own ring**, which is what the 2026-08-26
+ * instruction was actually about: a different grain, and the one the phone
+ * shows unless the reader opens the month.
+ *
+ * **The consequence, stated rather than discovered later**: a reader who
+ * steps to another day no longer sees today marked in the month. The
+ * reference does not draw that state, so it is the reference's silence being
+ * followed, not a decision this file is making on its own.
+ */
+html[data-route~='calendar'] .cal-main .month-grid button.is-today .day-num::before {
+  content: none;
+}
+
+/*
+ * **And the cell it marks is square.** `base.css:215` gives every `button`
+ * on the site `--radius-panel`, 4 px, and the month's cells took it without
+ * anyone choosing it for them; the reference draws its month on plain `<b>`
+ * elements with `border: 1px solid transparent` and no radius at all, so the
+ * selected day's mark there is a rectangle. With the phone ring gone this is
+ * the whole of what the month draws, and a 4 px round on a 38 × 25 cell is
+ * visible — it is half the difference the author was pointing at.
+ *
+ * Here and not in the base rule: a rounded button is right everywhere else
+ * on the site, and the month's cells are not really buttons in the sense
+ * that rule means — they are a ruled grid, which is the register's own
+ * shape.
+ */
+html[data-route~='calendar'] .cal-main .month-grid button,
+html[data-route~='calendar'] .cal-main .month-grid .month-out {
+  border-radius: 0;
+}
+
+/*
+ * The days either side of the month, on the grid's own rows: present,
+ * numbered, out of reach, and **one step back in ink rather than tinted** —
+ * which is the "reduced strength desktop already uses" the author asked the
+ * phone's own month to adopt on 2026-10-03.
+ *
+ *
+ * §3.3 drew them tinted 38% toward the field and carrying their fast tone,
+ * on §10.6's reasoning that `aria-hidden` keeps a tint out of axe's reach.
+ * **Measured, it does not**: axe's colour-contrast rule matches on whether a
+ * node is visible *on screen*, not on whether a screen reader can see it, so
+ * five tinted numerals raised 128 violations at 1.71–2.61:1 — and the
+ * Lighthouse floor gates CI on accessibility 100 besides, where a
+ * spec-level exclusion could not reach.
+ *
+ * `--ink-soft` is what the peeked columns these replaced already used, for the
+ * reason those were written with: text a sighted reader might try to read has
+ * to clear 4.5:1 wherever it is legible at all. 5.92:1 on gesso and 5.53:1 on
+ * the field. The fast hue goes with the tint, and that is what buys the
+ * reading back — **a coloured numeral is this month's**.
+ */
+html[data-route~='calendar'] .month-grid .month-out {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid transparent;
+  font-family: var(--font-utility);
+  font-size: var(--text-sm);
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-soft);
 }
 
 /* ---- the day ---------------------------------------------------------- */
@@ -1031,10 +1535,39 @@ html[data-route~='calendar'] .month-grid .month-out {
    * the spacer the mockup keeps there (§3.1); it was `--space-3` inherited
    * from the phone.
    *
+   * **`--cal-peek`, `--rail-inset` and a flex `gap` were declared here and are
+   * not any more.** All three fed boxes this width does not draw: the week
+   * rail and the month toggle went on 2026-09-02, and the peeked columns the
+   * month had are gone from both widths since 2026-10-03. Numbers nothing
+   * reads are numbers the next reader has to disprove before touching anything
+   * near them.
    */
   .cal-controls {
     margin-bottom: var(--space-4);
   }
+
+  /*
+   * **The month is the picker here, and the only one** (author, 2026-09-02:
+   * "just display monthly only on desktop, no weekly display").
+   *
+   * The button that swapped them goes with the choice it offered — a control
+   * for a decision the page has already made is a control that can only ever
+   * agree with itself. `wireGrainForWidth` in views/calendar.js opens the
+   * month at this width and closes it again below, so nothing is left showing
+   * a grain the stylesheet has hidden.
+   *
+   * The week's own rail is untouched below 1024 px, where it is still the
+   * whole picker: a month grid over the day on a 360 px screen is the day
+   * pushed off the first screen, which is what the rail was built to avoid.
+   */
+  .cal-jump {
+    display: none;
+  }
+
+  .cal-week {
+    display: none;
+  }
+
 
   /* Opposite it, on the column's right margin: which arithmetic the grid is
      read by, and the control that changes it. */
@@ -1119,6 +1652,9 @@ html[data-route~='calendar'] .month-grid .month-out {
     min-width: 0;
   }
 
+  .week-strip button {
+    min-width: 26px;
+  }
 
   /* Inside the bubble's scroller, under the picker. It keeps a box of its own
      — the desktop rules below reach the day panel through it — and has nothing
@@ -3246,13 +3782,17 @@ a.name-day:hover {
 /* ---- the month, redesigned for the desk (2026-09-10) -------------------- */
 
 /*
- * The month is the whole of the date control here, in a column that narrows to
- * 19rem two steps from here, and **what is left in this block after
- * 2026-10-03 is only what a desk genuinely wants differently**: the reckoning
- * control, the way out to the full screen, and a cell one pixel tighter in
- * both directions than the one a thumb has to hit. The head, the two steps,
- * the out-of-month days and the cell's own marking all moved up to the base
- * rules, because the author asked for one calendar at both widths.
+ * The month is the only
+ * picker past 1024 px — the rail and its toggle went on 2026-09-02 — so this
+ * is the whole of the date control on a desktop, and it is being rebuilt to
+ * fit a column that narrows to 19rem two steps from here.
+ *
+ * **The peeked columns are what this buys back.** The comment on `--day-cols`
+ * records that the right column could not go below 400 px because "at 330 the
+ * rail showed six days and the month grid would not unfurl at all", and the
+ * peek is most of that: two columns of a neighbouring month standing *outside*
+ * the seven. They go, the days either side come inside the grid on its own
+ * rows, and the two steps they carried become a pair of marks in the head.
  *
  * Everything here is scoped to the route as well as the width. The `.cal-*`
  * selectors could not match anywhere else, but the reckoning, the fullscreen
@@ -3260,6 +3800,7 @@ a.name-day:hover {
  * desktop reading and not for a width.
  */
 @media (min-width: 1024px) {
+
   /*
    * The reckoning stands in brackets beside the month it counts —
    * "September 2026 (R. Julian)" — rather than out on the column's right
@@ -3315,11 +3856,6 @@ a.name-day:hover {
    * they already were: the type collapse of 2026-09-09 folded 14 into 15 with
    * the sheet open and 14 is not coming back for a calendar cell.
    */
-  /* A pointer hits a smaller target than a thumb, and the column is tight. */
-  html[data-route~='calendar'] .mstep {
-    --mstep-h: 24px;
-  }
-
   html[data-route~='calendar'] .month-days,
   html[data-route~='calendar'] .month-grid {
     column-gap: 1px;
@@ -3329,10 +3865,16 @@ a.name-day:hover {
     row-gap: 1px;
   }
 
+  /* A pointer hits a smaller target than a thumb, and the column is tight. */
+  html[data-route~='calendar'] .mstep {
+    --mstep-h: 24px;
+  }
+
   html[data-route~='calendar'] .month-grid button,
   html[data-route~='calendar'] .month-grid .month-out {
     padding: 1px 0;
   }
+
 }
 
 /* ---- the phone's own margins (2026-09-02) ------------------------------- */

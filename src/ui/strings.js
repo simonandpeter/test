@@ -73,8 +73,11 @@ export const STRINGS = {
      * showing a day three weeks back is the wrong word for the thing the
      * button does.
      */
+    prevWeek: 'Previous week',
+    nextWeek: 'Next week',
     prevMonth: 'Previous month',
     nextMonth: 'Next month',
+    monthView: 'Month view',
     /*
      * The reckoning the page reads a fixed day by. The button prints the
      * answer — "Revised Julian" — and this label is what a screen reader is
@@ -134,6 +137,7 @@ export const STRINGS = {
     fullCount: '{n} saints',
     fullCountOne: '1 saint',
     closeMonth: 'Close month view',
+    weekLabel: 'Choose a day',
     /*
      * The name of the strip the day's saints stand in (`views/calendar.js`).
      * Not drawn: the sidebar heads the day where a reader can see it, and this

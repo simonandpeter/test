@@ -404,6 +404,9 @@ breakpoint are two decisions.
 | `--chrome-h-reserve` | `52.5px` | `base.css` |
 | `--chrome-h-reserve` | `75.5625px` | `base.css` |
 | `--side-w` | `clamp(240px, 21vw, 310px)` | `base.css` |
+| `--cal-peek` | `24px` | `calendar.css` |
+| `--cal-peek` | `44px` | `calendar.css` |
+| `--cal-row-h` | `51px` | `calendar.css` |
 | `--card-h` | `calc(18 * 1.65 * 17px)` | `calendar.css` |
 | `--card-pic` | `clamp(200px, calc((100% - var(--card-gap)) * 5 / 12), 40rem)` | `calendar.css` |
 | `--hero-mat` | `14px` | `calendar.css` |
@@ -412,6 +415,7 @@ breakpoint are two decisions.
 | `--saint-w` | `clamp(230px, 23vw, 360px)` | `calendar.css` |
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
+| `--rail-fade` | `12px` | `calendar.css` |
 | `--cx-w` | `150px` | `index.css` |
 | `--cx-w` | `clamp(150px, calc(var(--cx-max-h) * 0.58), 300px)` | `index.css` |
 | `--cx-w-text` | `clamp(150px, calc(var(--cx-w) * 0.62), 190px)` | `index.css` |
