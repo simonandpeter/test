@@ -96,8 +96,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.01.2026 (14. јануар ст. ст.) — „Свети Сава, архиепископ српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "historicity": "attested",

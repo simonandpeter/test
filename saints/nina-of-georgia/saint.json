@@ -16,6 +16,11 @@
       "form": "Нина, просветительница Грузии",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 января ст. ст., «Равноапостольная Нина, просветительница Грузии», with the rank word left off."
+    },
+    {
+      "form": "Нина",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 14. јануар ст. ст. (civil 2026-01-27), „Света Нина, просветитељка Грузије“. The word „Света“ and the clause „просветитељка Грузије“ are left off; the second is a description of her work, which the folder's `types` already carries as equal-to-the-apostles."
     }
   ],
   "sex": "female",
@@ -85,8 +90,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.01.2026 (14. јануар ст. ст.) — „Света Нина, просветитељка Грузије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

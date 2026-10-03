@@ -61,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.01.2026 (14. јануар ст. ст.) — „Преподобни мученици Оци Синајски и Раитски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-27&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
