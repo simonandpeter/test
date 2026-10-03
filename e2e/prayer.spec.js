@@ -1867,3 +1867,43 @@ test("Prayer stands on All Saints' margin, not a wider one", async ({ page }) =>
     expect(prayer, `at ${width} px`).toEqual(saints);
   }
 });
+
+test('the icon, the name and the preview all open the saint’s own page', async ({ page }) => {
+  /*
+   * Author, 2026-10-04: "make the icon of the saint, the name and preview text
+   * in Prayer clickable and it takes you to their profile page". The card is
+   * the one place on this site where a saint was drawn whole with no way out of
+   * it except the two columns beside it.
+   *
+   * A pictured saint, found rather than named, because the icon is one of the
+   * three doors and a saint with no icon has two.
+   */
+  const pictured = HYMNED.findIndex((c) => c.image);
+  expect(pictured, 'some hymned saint carries an icon').toBeGreaterThanOrEqual(0);
+  const { slug } = HYMNED[pictured];
+  await ready(page);
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await goTo(page, pictured);
+
+  const door = new RegExp(`/saints/${slug}$`);
+  for (const sel of ['.hy-pic-link', '.hy-name a', '.hy-line[data-hy-lede]']) {
+    await expect(page.locator(`.hy-saint ${sel}`), sel).toHaveAttribute('href', door);
+  }
+  /*
+   * One tab stop and one announcement for the three. The icon's `alt` is empty
+   * because it is this name's picture, and the preview is the first paragraph
+   * of the life the name leads to — so a keyboard or a screen reader is offered
+   * the destination once.
+   */
+  await expect(page.locator('.hy-saint .hy-pic-link')).toHaveAttribute('tabindex', '-1');
+  await expect(page.locator('.hy-saint .hy-pic-link')).toHaveAttribute('aria-hidden', 'true');
+  await expect(page.locator('.hy-saint .hy-line[data-hy-lede]')).toHaveAttribute('tabindex', '-1');
+  await expect(page.locator('.hy-saint .hy-name a')).not.toHaveAttribute('tabindex', '-1');
+
+  /* And the door opens: pressed, it is that saint's own page and not a step.
+     The landing is read off the URL rather than the heading: the profile prints
+     the honorific name and the manifest's card does not. */
+  await page.locator('.hy-saint .hy-name a').click();
+  await expect(page).toHaveURL(door);
+  await expect(page.locator('h1.saint-name')).not.toHaveText('');
+});

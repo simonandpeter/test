@@ -197,11 +197,13 @@ a:hover {
    Where a name sits inside prose it keeps the underline: a life's link to
    another saint is a link in running text and has no card to be the target. */
 .hero-name a,
+.hy-name a,
 .reg-name {
   text-decoration: none;
 }
 
 .hero-name a:hover,
+.hy-name a:hover,
 .reg-name:hover {
   text-decoration: underline;
   text-underline-offset: 2px;

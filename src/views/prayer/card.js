@@ -47,11 +47,28 @@ const picture = (card) =>
  * and the dates. The life's opening line and the hymns are a fetch away and
  * are filled into the two boxes this leaves empty — which are drawn rather than
  * added later so the column does not change width as the payload lands.
+ *
+ * **The icon, the name and the lede are one door** (author, 2026-10-04: "make
+ * the icon of the saint, the name and preview text in Prayer clickable and it
+ * takes you to their profile page"). Real hrefs, so the page opens in a new tab
+ * from the middle button like every other name on this site — `asides.js`
+ * writes the same one for a saint the hymnal does not hold.
+ *
+ * Only the name is a tab stop and only the name is announced. The three are one
+ * destination, and a reader stepping through the card with a keyboard or a
+ * screen reader does not need to be offered it three times: the picture's `alt`
+ * is empty because it is the name's picture, and the lede is the first
+ * paragraph of the life the name leads to.
  */
 export function cardMarkup(card) {
+  const href = state?.router?.href(`/saints/${card.slug}`) ?? null;
+  const door = href ? ` href="${esc(href)}"` : '';
+  const quiet = href ? ` tabindex="-1"` : '';
   return `<article class="hy-saint" data-slug="${esc(card.slug)}">
     <div class="hy-pic">
-      ${picture(card)}
+      ${href && card.image
+        ? `<a class="hy-pic-link"${door}${quiet} aria-hidden="true">${picture(card)}</a>`
+        : picture(card)}
       <!--
         Where the picture came from, under it and over the name, as the mockup
         prints it (../mockup-review/REVIEW-2.md N3). It is Daily's column-2
@@ -65,9 +82,9 @@ export function cardMarkup(card) {
         credit and no line to keep.
       -->
       ${card.image ? '<p class="hy-credit utility" data-hy-credit></p>' : ''}
-      <h2 class="hy-name">${esc(saintName(card))}</h2>
+      <h2 class="hy-name">${href ? `<a${door}>${esc(saintName(card))}</a>` : esc(saintName(card))}</h2>
       <p class="hy-sub utility">${esc(formatSubtext(card))}</p>
-      <p class="hy-line" data-hy-lede></p>
+      ${href ? `<a class="hy-line" data-hy-lede${door}${quiet}></a>` : '<p class="hy-line" data-hy-lede></p>'}
     </div>
     <div class="hy-hymns" data-hy-hymns tabindex="0" role="region"
       aria-label="${esc(STRINGS.calendar.hymns.heading)}"></div>
