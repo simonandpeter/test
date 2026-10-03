@@ -1,0 +1,74 @@
+{
+  "slug": "tikhon-arkhangelsky",
+  "display_name": "Tikhon (Arkhangelsky)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Тихон (Архангельский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9808, «Тихон (Архангельский), иерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «родился 30 мая 1875 года в селе Больше-Попово Воронежской губернии в семье священника Иоанна Архангельского»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives both dates: «4 октября 1937 года Тройка НКВД приговорила отца Тихона к расстрелу … был расстрелян 17 октября 1937 года и погребен в общей ныне безвестной могиле»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The day the calendar keeps him on is the day he was sentenced, not the day he died: his life gives 4 October 1937 for the troika's sentence and 17 October for the shooting. His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and one row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Сщмчч. Николая, Михаила, Иакова и Тихона пресвитеров, прмч. Василия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The day line and the index both make him «иерей», a priest; his own life on the same site twice makes him an archpriest — «За безупречное и ревностное служение священник был возведен в сан протоиерея» and «Протоиерей Тихон Архангельский был расстрелян». The office here follows the life and the disagreement is left standing. The rank is the alt text of the icon over the group of lines his stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 17 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/17 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 17 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "chionia-arkhangelskaya"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

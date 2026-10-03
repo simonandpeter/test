@@ -6,6 +6,11 @@
       "form": "Κασσιανός ο Έλληνας",
       "lang": "el",
       "note": "Read out of «Όσιος Κασσιανός ο Έλληνας και Θαυματουργός», whose «και Θαυματουργός» makes the whole line read as two titles joined by “and”, which the name picker will not print."
+    },
+    {
+      "form": "Кассиан Угличский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 1179 heads him «Кассиан грек, Угличский, Учемский, прп.»; the day line's shorter «Кассиана Угличского» is the form taken here and the rest is in this note."
     }
   ],
   "sex": "male",
@@ -24,8 +29,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «21 мая» and «23 мая (Ростов.)» — the second an abbreviation the page does not expand. One row per church is the schema, so the other two days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Прп. Кассиана Угличского (1504).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The year agrees with saint.gr's 1504, which also gives this very day for his repose. The Russian names him for Uglich where the Greek names him the Greek, and its index of names carries three epithets at once, «Кассиан грек, Угличский, Учемский, прп.» — the Greek, of Uglich, of Uchma."
     },
     {
       "church": "romanian",
@@ -52,10 +70,10 @@
       "note": "Not checked: pravoslavno.rs’s page for 2. октобар ст. ст. (civil 15 October) was not read (2026-09-17)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "constantine-the-great"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

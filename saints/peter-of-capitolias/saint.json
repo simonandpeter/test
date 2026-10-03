@@ -6,17 +6,43 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Άγιος Πέτρος Ιερομάρτυρας, από την Καπιτώλιο»."
+    },
+    {
+      "form": "Петр Капетолийский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 1775 heads him «Петр Капетолийский, Дамасский, пресвитер, сщмч.»; the day line's shorter form is the one taken here and the second place is in this note."
     }
   ],
   "sex": "male",
   "types": [
     "hieromartyr"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd or 4th century",
+      "basis": "traditional",
+      "note": "The two centuries the Russian calendar prints after his name, «Сщмч. Петра Капетолийского (III-IV)», without choosing between them. The folder held no date at all before this reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Сщмч. Петра Капетолийского (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The Russian gives this folder its first date and a second place: its index of names heads him «Петр Капетолийский, Дамасский, пресвитер, сщмч.» — of Capitolias and of Damascus, presbyter, hieromartyr."
     },
     {
       "church": "romanian",

@@ -20,6 +20,11 @@
       "form": "Дионисије Ареопагит",
       "lang": "sr",
       "note": "His own name, read out of «Свешт. муч. Дионисије Ареопагит» — the line already recorded here, with the rank words left off."
+    },
+    {
+      "form": "Дионисий Ареопагит",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 618 is «Святитель Дионисий Ареопагит, епископ Афинский, апостол от 70-ти, сщмч.»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -33,38 +38,34 @@
       "latest": 96,
       "display": "96",
       "basis": "traditional",
-      "note": "Two sources; the narrower reading is taken and both are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». The Serbian Ohrid Prologue, read 4 October 2026, gives the year inside that reign: «Пострадао у време Дометијана 96. год.»"
+      "note": "Three sources, and two of them give the same year inside the reign the third gives, so the narrower reading is taken and all three are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». doxologia.ro: «a pătimit în al nouăzecilea an al vieții sale, iar de la nașterea lui Hristos în al nouăzeci și șaselea an». The Serbian Ohrid Prologue, read 4 October 2026: «Пострадао у време Дометијана 96. год.» Separately, saint.gr quotes Galanos against the martyrdom having happened at Paris, which the Romanian life and the Prologue both place there; that disagreement is about the place and not the year, and it is recorded in the life."
     },
     "birth": {
       "earliest": 6,
       "latest": 6,
       "display": "c. 6",
       "basis": "inferred",
-      "note": "Not printed by any source; worked out from two statements in the one entry that makes them. The Serbian Ohrid Prologue, read 4 October 2026, says «Када му беше 90 година, би ухваћен и мучен за Христа» and «Пострадао у време Дометијана 96. год.», which puts his birth about the year 6 — consistent with the same entry having him a student in Egypt at the hour of the Crucifixion. The basis is `inferred` because the arithmetic is this corpus’s and not the page’s."
+      "note": "Not printed as a year by any source; worked out from the age two of them give beside the year of the martyrdom. doxologia.ro: «a pătimit în al nouăzecilea an al vieții sale, iar de la nașterea lui Hristos în al nouăzeci și șaselea an» — in the ninetieth year of his life and the ninety-sixth from the birth of Christ. The Serbian Ohrid Prologue, read 4 October 2026, says the same two things in its own words: «Када му беше 90 година, би ухваћен и мучен за Христа» and «Пострадао у време Дометијана 96. год.» Ninety years back from 96 is about the year 6, which is consistent with the same two entries having him a student in Egypt at the hour of the Crucifixion. The basis is `inferred` because the subtraction is this corpus’s and not the page’s."
     }
   },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "carpus-the-apostle",
-    "damaris-of-athens",
-    "eleutherius-disciple-of-dionysius",
-    "hierotheus-of-athens",
-    "john-philosopher-of-georgia",
-    "john-the-theologian",
-    "philothei-of-athens",
-    "rusticus-disciple-of-dionysius",
-    "paul-the-apostle"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «4 января (70 ап.)», the synaxis of the Seventy Apostles. One row per church is the schema, so the January day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Сщмч. Дионисия Ареопагита, еп. Афинского (96).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian names one year, 96, inside the 81–96 the Greek gives as Domitian's reign, so it narrows without contradicting and the interval is left as it stood. Its index of names counts him among the Seventy, «апостол от 70-ти», which the Greek entry does not. The day also gives him his own epistle and gospel, «Сщмч. Дионисия: Деян., 40 зач., XVII, 16-34. Мф., 55 зач., XIII, 44-54» — the Areopagus sermon of Acts 17."
     },
     {
       "church": "romanian",
@@ -211,6 +212,23 @@
         "rendered": "site"
       }
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "carpus-the-apostle",
+    "damaris-of-athens",
+    "eleutherius-disciple-of-dionysius",
+    "hierotheus-of-athens",
+    "john-philosopher-of-georgia",
+    "john-the-theologian",
+    "philothei-of-athens",
+    "rusticus-disciple-of-dionysius",
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"

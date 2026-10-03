@@ -11,6 +11,11 @@
       "form": "Elefterie",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s life of Dionysius the Areopagite, «cu diaconul Elefterie»."
+    },
+    {
+      "form": "Елевферий Парижский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 760, «Елевферий Парижский, диакон, сщмч.», with the rank and office words left off."
     }
   ],
   "sex": "male",
@@ -27,16 +32,23 @@
       "note": "Two sources; the narrower reading is taken and both are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». The Serbian Ohrid Prologue, read 4 October 2026, gives the year inside that reign: «Пострадао у време Дометијана 96. год.»"
     }
   },
-  "related": [
-    "clement-of-rome",
-    "dionysius-the-areopagite",
-    "rusticus-disciple-of-dionysius"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Сщмч. Рустика пресвитера и Елевферия диакона (96).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "Two readings of his rank, both kept: saint.gr makes him a martyr and a deacon, and days.pravoslavie.ru makes him «сщмч.», a hieromartyr, while agreeing that he was a deacon. The folder's types are still the Greek reading and the Russian one is recorded here. Its index of names also gives him a place the Greek does not, «Елевферий Парижский», Eleutherius of Paris."
     },
     {
       "church": "romanian",
@@ -72,6 +84,11 @@
         "year": 2026
       }
     }
+  ],
+  "related": [
+    "clement-of-rome",
+    "dionysius-the-areopagite",
+    "rusticus-disciple-of-dionysius"
   ],
   "text": {
     "life": "life.md"

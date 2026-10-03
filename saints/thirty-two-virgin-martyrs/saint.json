@@ -34,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Мцц. Рипсимии, Гаиании и с ними 35-ти святых дев (начало IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "Three numbers for the one company, all left standing: saint.gr counts thirty-two virgin martyrs with Rhipsime and Gaiane, this day line counts «35-ти святых дев», and the article the same site links from the day is headed «Житие и страдание святого священномученика Григория, епископа великой Армении, и с ним тридцати семи дев» — thirty-seven. The folder keeps the Greek count it was built on and does not reconcile them. The Russian dates them «начало IV» against saint.gr's 292."
     },
     {
       "church": "romanian",

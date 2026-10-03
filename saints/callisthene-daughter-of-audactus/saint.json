@@ -11,21 +11,43 @@
       "form": "Calistena",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfânta Muceniță Calistena” for 4 octombrie."
+    },
+    {
+      "form": "Каллисфения Ефесская",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 2546 heads her «Каллисфения Ефесская», with no rank word to leave off."
     }
   ],
   "sex": "female",
   "types": [
     "martyr"
   ],
-  "related": [
-    "audactus-of-ephesus",
-    "constantine-the-great"
-  ],
+  "dates": {
+    "death": {
+      "earliest": 318,
+      "latest": 318,
+      "display": "c. 318",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's 4 октября ст. ст.: «и дщери его Каллисфении (ок. 318)» — about 318. The folder held no date at all before this reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «и дщери его Каллисфении (ок. 318).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "She gets her own clause and her own year on the page, «и дщери его Каллисфении (ок. 318)» — and his daughter Callisthene, about 318 — which is five to thirteen years after the reign her father's death is placed in. That is the one chronological fact the Russian adds to this family and it is theirs rather than a guess."
     },
     {
       "church": "romanian",
@@ -60,6 +82,10 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "audactus-of-ephesus",
+    "constantine-the-great"
   ],
   "text": {
     "life": "life.md"

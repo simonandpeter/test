@@ -1,0 +1,65 @@
+{
+  "slug": "theoctistus-of-nicomedia",
+  "display_name": "Theoctistus of Nicomedia",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Феоктист Никомидийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2236, «Феоктист Никомидийский, мч.», with the rank word left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "The year his own life on days.pravoslavie.ru states for all three of them: «Священномученик Киприан, святая мученица Иустина и святой мученик Феоктист умерщвлены в Никомидии в 304 году», and the year the day line prints after the three names."
+    }
+  },
+  "related": [
+    "cyprian-of-antioch",
+    "justina-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Сщмч. Киприана, мц. Иустины и мч. Феоктиста (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба на шесть» — a service of six stichera. The next line on the page carries a different icon, «служба, не отмеченная в Типиконе никаким знаком»."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked for this man: doxologia.ro's own 15 octombrie was not read (2026-10-04). The Greek and the Romanian both keep a Theoctistus on 3 October with no year and no place, and whether he is this soldier was not settled — see the life."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked for this man: saint.gr/10/15 was not read (2026-10-04). saint.gr keeps a Theoctistus martyred by the sword on 3 October with no year and no place, and whether he is this soldier was not settled — see the life."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 15 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

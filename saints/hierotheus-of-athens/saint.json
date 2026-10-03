@@ -11,6 +11,11 @@
       "form": "Ierotei",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s line „Sfântul Sfințit Mucenic Ierotei, Episcopul Atenei” for 4 octombrie."
+    },
+    {
+      "form": "Иерофей Афинский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 920 heads him «Святитель Иерофей Афинский, епископ, сщмч.»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -27,20 +32,23 @@
       "note": "saint.gr’s entry heads its page «Αγιος Ιεροθεος Επισκοπος Αθηνων (; - 52)»; its life has him die in peace in deep old age."
     }
   },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "dionysius-the-areopagite"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Сщмч. Иерофея, еп. Афинского (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the day's first line, «Cовершается служба, не отмеченная в Типиконе никаким знаком»."
+      },
+      "note": "The Russian gives the first century, which contains the year 52 the folder already carried, and makes him a hieromartyr and bishop of Athens as the Greek does."
     },
     {
       "church": "romanian",
@@ -74,6 +82,18 @@
       "church": "serbian",
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+    }
+  ],
+  "related": [
+    "dionysius-the-areopagite"
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
     }
   ],
   "hymns": [
@@ -177,8 +197,5 @@
         "rendered": "site"
       }
     }
-  ],
-  "text": {
-    "life": "life.md"
-  }
+  ]
 }

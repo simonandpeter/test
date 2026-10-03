@@ -21,15 +21,11 @@
       "note": "saint.gr: «Ο Όσιος Θεόδωρος έζησε τον πρώτο αιώνα μ.Χ.»."
     }
   },
-  "related": [
-    "heraclides-of-tamasos",
-    "john-the-theologian"
-  ],
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 4 октября ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "note": "Read and not found: days.pravoslavie.ru's 4 октября ст. ст. (civil 17 October 2026) was read on 2026-10-04 and prints sixteen lines, none of them his. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -55,6 +51,10 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "heraclides-of-tamasos",
+    "john-the-theologian"
   ],
   "text": {
     "life": "life.md"

@@ -19,6 +19,11 @@
       "form": "Кипријан",
       "lang": "sr",
       "note": "His own name, read out of «Свешт. муч. Кипријан и Јустина девица» — the line already recorded here, which names two saints, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Киприан",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 1205 heads him «Священномученик Киприан»; the bare name is all of it that is not rank."
     }
   ],
   "sex": "male",
@@ -29,28 +34,29 @@
   "dates": {
     "floruit": {
       "earliest": 249,
-      "latest": 300,
-      "display": "249–251, or the end of the 3rd century",
+      "latest": 304,
+      "display": "249–251, or 304",
       "basis": "traditional",
-      "note": "Two readings, and the interval is their union. saint.gr: «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and Claudius beheaded him with Justina at Nicomedia; doxologia.ro: «Pe vremea împărăției lui Deciu», and condemned at Nicomedia by «împăratul Claudiu». The Serbian Ohrid Prologue, read 4 October 2026, instead puts the beheading at Nicomedia «крајем III столећа», at the end of the third century. Neither reading is preferred."
+      "note": "Four sources, three readings, and the interval is their union; none is preferred. saint.gr puts the martyrdom under Decius, «Έζησε στα χρόνια του Δεκίου (249 - 251 μ.Χ.)», and has Claudius behead the two at Nicomedia; doxologia.ro agrees, «Pe vremea împărăției lui Deciu», and also names «împăratul Claudiu» at Nicomedia. days.pravoslavie.ru instead puts it under Diocletian and names the year — «умерщвлены в Никомидии в 304 году». The Serbian Ohrid Prologue, read 4 October 2026, gives neither reign nor year but an era: beheaded at Nicomedia «крајем III столећа», at the end of the third century, which lies between the other two. The display names the two year-bearing readings, because a display is parsed for the reader's language and an era written into it as prose cannot be read; the era is here in the note."
     }
   },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "cyprian-30-may",
-    "cyprian-martyr-10-may",
-    "justina-of-antioch"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Сщмч. Киприана, мц. Иустины и мч. Феоктиста (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian life for the three of them is much the fuller: thirty years a pagan priest from the age of seven, trained on Olympus and at Argos, Tauropolis, Memphis and Babylon, a legion of demons at his service, beaten by the devil himself when he first used the sign of the Cross, his books burnt before Bishop Anthimus, reader at seven days from his baptism, subdeacon at twenty, deacon at thirty, presbyter within the year and bishop soon after. It also dates the martyrdom to 304 against saint.gr's Decius."
     },
     {
       "church": "romanian",
@@ -214,6 +220,18 @@
         "rendered": "site"
       }
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "cyprian-30-may",
+    "cyprian-martyr-10-may",
+    "justina-of-antioch",
+    "theoctistus-of-nicomedia"
   ],
   "text": {
     "life": "life.md"

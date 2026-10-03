@@ -1,11 +1,6 @@
 {
   "slug": "andrew-the-fool-for-christ",
   "display_name": "Andrew the Fool for Christ",
-  "sex": "male",
-  "types": [
-    "venerable",
-    "fool-for-christ"
-  ],
   "names": [
     {
       "form": "Ανδρέας",
@@ -15,13 +10,45 @@
     {
       "form": "Св. Андреј Јуродиви",
       "lang": "sr"
+    },
+    {
+      "form": "Андрей Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 180, «Андрей Константинопольский, Христа ради юродивый», with the epithet left to the display name."
     }
   ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "fool-for-christ"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 911,
+      "latest": 936,
+      "display": "911 or 936",
+      "basis": "traditional",
+      "note": "Two calendars, two years a quarter-century apart, and neither is preferred. The Serbian Ohrid Prologue, read 4 October 2026: «После нечувено тешких подвига упокојио се 911. год. и преселио у вечну славу Господа свога.» days.pravoslavie.ru prints the other after his name: «Блж. Андрея, Христа ради юродивого (936)». saint.gr gives no year at all and says only that he reposed at sixty-six, setting him in the reign of Leo VI, which it dates 886–912; it also puts the writing of his life under Constantine VII. The folder held no date before either reading."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek keeps him on 28 May and the Russian on 2 October, two days for one man. The Russian day is the eve of the Protection of the Mother of God, which is his vision in the church at Blachernae, and that is why it sits where it does."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Блж. Андрея, Христа ради юродивого (936).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The Russian gives the year the Greek page does not: 936. It also marks him «блж.», blessed, where the Greek has ὅσιος."
     },
     {
       "church": "romanian",
@@ -60,15 +87,6 @@
       "note": "The Prologue's entry for 2 October ст. к. is the fullest account of him in the corpus's four calendars and is the only one to give a year for his repose."
     }
   ],
-  "dates": {
-    "death": {
-      "earliest": 911,
-      "latest": 911,
-      "display": "911",
-      "basis": "traditional",
-      "note": "One of the two sources gives a year. The Serbian Ohrid Prologue, read 4 October 2026: «После нечувено тешких подвига упокојио се 911. год. и преселио у вечну славу Господа свога.» saint.gr gives no year and says only that he reposed at sixty-six, inside the reign of Leo VI it dates 886–912."
-    }
-  },
   "related": [
     "basil-the-macedonian"
   ],

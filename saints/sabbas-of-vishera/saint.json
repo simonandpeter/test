@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Σάββας ο εν Βησερία ο Θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Савва Вишерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1893, «Преподобный Савва Вишерский», with the rank left off; its life page adds «чудотворец» and its day line adds «Новгородского»."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Прп. Саввы Вишерского, Новгородского (1461).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The year agrees with saint.gr's 1461. The Russian names him for Novgorod as well as for the Vishera, and the day carries a troparion for him which this batch did not take."
     },
     {
       "church": "romanian",
@@ -58,10 +73,10 @@
       "note": "Not checked: pravoslavno.rs’s page for 1. октобар ст. ст. (civil 14 October) was not read (2026-09-17)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "related": [
     "ephraim-of-russia"
-  ]
+  ],
+  "text": {
+    "life": "life.md"
+  }
 }

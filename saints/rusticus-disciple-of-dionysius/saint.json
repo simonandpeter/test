@@ -11,6 +11,11 @@
       "form": "Rustic",
       "lang": "ro",
       "note": "Read out of doxologia.ro’s life of Dionysius the Areopagite, «cu preotul Rustic»."
+    },
+    {
+      "form": "Рустик Парижский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1884, «Рустик Парижский, пресвитер, сщмч.», with the rank and office words left off."
     }
   ],
   "sex": "male",
@@ -27,16 +32,23 @@
       "note": "Two sources; the narrower reading is taken and both are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». The Serbian Ohrid Prologue, read 4 October 2026, gives the year inside that reign: «Пострадао у време Дометијана 96. год.»"
     }
   },
-  "related": [
-    "clement-of-rome",
-    "dionysius-the-areopagite",
-    "eleutherius-disciple-of-dionysius"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Сщмч. Рустика пресвитера и Елевферия диакона (96).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian names one year, 96, inside the 81–96 the Greek gives, and adds a place the Greek does not: its index of names heads him «Рустик Парижский», Rusticus of Paris, which puts the martyrdom of the three in Gaul rather than at Athens."
     },
     {
       "church": "romanian",
@@ -72,6 +84,11 @@
         "year": 2026
       }
     }
+  ],
+  "related": [
+    "clement-of-rome",
+    "dionysius-the-areopagite",
+    "eleutherius-disciple-of-dionysius"
   ],
   "text": {
     "life": "life.md"

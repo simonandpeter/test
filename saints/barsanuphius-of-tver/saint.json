@@ -13,11 +13,20 @@
     "venerable",
     "ascetic"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "saint.gr: «Οι Όσιοι Βαρσανούφιος, Σάββας, Σαββάτιος και Ευφρόσυνος έζησαν στη Ρωσία κατά τον 15ο αιώνα μ.Χ. και ασκήτεψαν στην περιοχή Τβερ» — the century is the page's and it gives it for all four."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
       "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls the four of them «εκ Ρωσίας», so that calendar is the one most likely to hold them, and it was not read."
+      "note": "Read and not found, and the near-miss is the point: days.pravoslavie.ru's 4 октября ст. ст. (civil 17 October 2026) was read on 2026-10-04 and prints «Обретение мощей свтт. Гурия, архиеп. Казанского, и Варсонофия, еп. Тверского (1595)». That Barsanuphius is the bishop of Tver and Kazan the Greek keeps on 11 April, who is `barsanuphius-of-tver-and-kazan` here and now carries the Russian row; this folder is the venerable Barsanuphius the Greek keeps on 2 March with Sabbas and Sabbatius, and he is not on the Russian day. This stands undocumented rather than as a refusal."
     },
     {
       "church": "romanian",
@@ -45,15 +54,6 @@
       "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
     }
   ],
-  "dates": {
-    "floruit": {
-      "earliest": 1401,
-      "latest": 1500,
-      "display": "15th century",
-      "basis": "traditional",
-      "note": "saint.gr: «Οι Όσιοι Βαρσανούφιος, Σάββας, Σαββάτιος και Ευφρόσυνος έζησαν στη Ρωσία κατά τον 15ο αιώνα μ.Χ. και ασκήτεψαν στην περιοχή Τβερ» — the century is the page's and it gives it for all four."
-    }
-  },
   "related": [
     "sabbas-of-tver",
     "sabbatius-of-tver",

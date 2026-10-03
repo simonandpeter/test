@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Γρηγόριος του Πελσέμσκιϋ",
       "lang": "el"
+    },
+    {
+      "form": "Григорий Вологодский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 544, «Преподобный Григорий Вологодский, чудотворец», with the rank left off. Its index names him for Vologda where its own day line names him for the Pelshma first, «Прп. Григория Пельшемского, Вологодского чудотворца»."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Прп. Григория Пельшемского, Вологодского чудотворца (1442).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "The year agrees with saint.gr's 1442. The day carries a troparion and a kontakion for him which this batch did not take."
     },
     {
       "church": "romanian",

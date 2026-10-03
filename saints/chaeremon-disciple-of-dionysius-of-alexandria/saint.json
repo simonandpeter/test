@@ -6,6 +6,11 @@
       "form": "Χαιρήμων",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Άγιος Διονύσιος Ιερομάρτυρας και οι μαρτυρήσαντες μαζί μ' αυτόν Φαύστος, Γάιος, Πέτρος, Παύλος, Ευσέβιος, Χαιρήμων και άλλοι δύο μάρτυρες»."
+    },
+    {
+      "form": "Херимон Александрийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2348, «Херимон Александрийский, диакон, сщмч.», with the rank and office words left off."
     }
   ],
   "sex": "male",
@@ -22,14 +27,24 @@
       "note": "saint.gr’s 3 October entry: «μαρτύρησε όταν αυτοκράτορας ήταν ο Ουαλεριανός (254 μ.Χ.)», of Dionysius, with whom his disciples died; its 4 October entry prints «(; - 264)» for each of the four deacons."
     }
   },
-  "related": [
-    "dionysius-of-alexandria"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Russian keeps him on 4 October where the Greek keeps the company of Dionysius of Alexandria on 3 October — one day apart, and the Russian 3 October names none of them."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 4 октября ст. ст. — «Мчч. Гаия, Фавста, Евсевия и Херимона (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261004.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "**The Russian keeps these four on 4 October, not on the 3rd.** The Greek keeps Dionysius of Alexandria and his company on the menologion's 3 October; the Russian page for that day names none of them and this one names four. The century it gives, the third, contains the 254–264 the folder already carried. Its index of names makes him a deacon of Alexandria and a hieromartyr, «Херимон Александрийский, диакон, сщмч.», where the folder had him only a martyr."
     },
     {
       "church": "romanian",
@@ -56,6 +71,9 @@
       "status": "undocumented",
       "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
     }
+  ],
+  "related": [
+    "dionysius-of-alexandria"
   ],
   "text": {
     "life": "life.md"

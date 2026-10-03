@@ -13,6 +13,11 @@
     {
       "form": "Преп. Јован Кукузељ",
       "lang": "sr"
+    },
+    {
+      "form": "Иоанн Кукузель",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6858, «Иоанн Кукузель, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -28,15 +33,21 @@
       "note": "saint.gr: «έζησε στα χρόνια των Κομνηνών» and «απεβίωσε ειρηνικά στις αρχές του 15ου μ.Χ. αιώνα»; doxologia.ro’s life puts him at the court of «împăratul Ioan al II-lea Comnenul (1118-1143)» before he went to Athos. The sources disagree by centuries, so the interval runs from the Romanian’s reign to the Greek’s early fifteenth century. The Serbian Ohrid Prologue, read 4 October 2026, is a third reading and takes the earlier side: «Упокојио се у XII столећу.» It falls inside the interval and does not change it."
     }
   },
-  "related": [
-    "gregory-the-domestikos",
-    "nectarius-the-protopsaltes-of-prodromou"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 1 октября ст. ст. (civil 14 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 1 октября ст. ст. — «Прп. Иоанна Кукузеля (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261001.html",
+        "year": 2026
+      },
+      "note": "The Russian prints «(XIV)», the fourteenth century, which falls inside the span the folder already carries from saint.gr and doxologia.ro — the Komnenian twelfth at one end, the early fifteenth at the other — without closing it. The reading is recorded and the interval left open."
     },
     {
       "church": "romanian",
@@ -151,6 +162,10 @@
         "rendered": "site"
       }
     }
+  ],
+  "related": [
+    "gregory-the-domestikos",
+    "nectarius-the-protopsaltes-of-prodromou"
   ],
   "text": {
     "life": "life.md"

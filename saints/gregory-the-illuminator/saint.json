@@ -13,6 +13,11 @@
     {
       "form": "Св. Григорије Просветитељ еп. Јерменски",
       "lang": "sr"
+    },
+    {
+      "form": "Григорий Армянский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 534, «Святитель Григорий Армянский, епископ, сщмч.», with the rank and office words left off. The Russian index names him for Armenia where the Greek and Romanian name him Illuminator of Greater Armenia."
     }
   ],
   "sex": "male",
@@ -31,27 +36,26 @@
     "death": {
       "earliest": 331,
       "latest": 335,
-      "display": "331 or c. 335",
+      "display": "331 or 335",
       "basis": "traditional",
-      "note": "Two calendars, two years, and neither is preferred. saint.gr’s heading for the entry: «Αγιος Γρηγοριος ο Ιερομαρτυρας Επισκοπος Της Μεγαλης Αρμενιας (257 - 331)». The Serbian Ohrid Prologue, read 4 October 2026: «И сконча св. Григорије свој многотрудни живот у старости, око 335. год.» The Romanian life gives no year."
+      "note": "Three sources and two years, recorded as the disagreement rather than resolved. saint.gr's heading for the entry gives «Αγιος Γρηγοριος ο Ιερομαρτυρας Επισκοπος Της Μεγαλης Αρμενιας (257 - 331)». days.pravoslavie.ru's 30 сентября ст. ст. gives «просветителя Великой Армении (ок. 335)», and the Serbian Ohrid Prologue, read 4 October 2026, agrees with it and not with the Greek: «И сконча св. Григорије свој многотрудни живот у старости, око 335. год.» Both of those say *about* 335 rather than 335; the display carries the bare year because that is what a date display can be read as, and the two «ок.»/«око» stand here. The Romanian life gives no year at all."
     }
   },
-  "images": [
-    {
-      "file": "images/icon.jpg",
-      "meta": "images/icon.meta.json"
-    }
-  ],
-  "related": [
-    "rhipsime",
-    "gaiane-companion-of-rhipsime",
-    "thirty-two-virgin-martyrs"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Сщмч. Григория еп., просветителя Великой Армении (ок. 335).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar prints «ок. 335» where saint.gr's heading gives 331; the death interval now spans both and says so. Its index of names heads him «Святитель Григорий Армянский, епископ, сщмч.» and the day carries a troparion and a kontakion for him which this batch did not take."
     },
     {
       "church": "romanian",
@@ -181,6 +185,17 @@
         "rendered": "site"
       }
     }
+  ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
+  "related": [
+    "rhipsime",
+    "gaiane-companion-of-rhipsime",
+    "thirty-two-virgin-martyrs"
   ],
   "text": {
     "life": "life.md"

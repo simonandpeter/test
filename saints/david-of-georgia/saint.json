@@ -15,6 +15,11 @@
       "form": "Давид",
       "lang": "sr",
       "note": "His own name, read out of «Св. муч. Давид и Константин» — the line already recorded here, which names two saints, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
+    },
+    {
+      "form": "Давид Арагветский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 555, «Давид Арагветский, князь, мч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -31,14 +36,23 @@
       "note": "Two sources, two years, and neither is preferred. doxologia.ro: «să-i înece în Râul Rioni, aceasta petrecându-se în anul 740». The Serbian Ohrid Prologue, read 4 October 2026: «На смрт осуђени за Христа у Имеретији од калифа Емил-ел-Муменима и потопљени у реци 730. год.»"
     }
   },
-  "related": [
-    "constantine-of-georgia"
-  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 2 октября ст. ст. (civil 15 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 2,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 2 октября ст. ст. — «Мчч. Давида и Константина, князей Арагветских (740) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261002.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before the group of lines this one stands in, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all."
+      },
+      "note": "The year agrees with doxologia.ro's 740. The «(Груз.)» marks this as one of the Georgian commemorations the Russian calendar keeps, and its index of names gives him the princely house, «Давид Арагветский, князь, мч.» — of Argveti."
     },
     {
       "church": "romanian",
@@ -74,6 +88,9 @@
         "year": 2026
       }
     }
+  ],
+  "related": [
+    "constantine-of-georgia"
   ],
   "text": {
     "life": "life.md"

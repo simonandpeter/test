@@ -4,4 +4,6 @@ The Romanian calendar keeps Nana and [Mirian](/saints/mirian-of-georgia), rulers
 
 He made Christianity the religion of the state. On Nina’s advice he sent envoys to Constantine the Great asking for priests, and Constantine sent the archbishop Eustathius of Antioch, who baptized the royal family, the soldiers and the nobles, and the whole of Kartli was baptized quickly and peacefully, save the mountain people of the Caucasus. Mirian was buried in the church of the monastery of Samtavro, and two years later Nana was buried beside him. The life gives no years.
 
-*After doxologia.ro, [Viața Sfinților Împărați ai Georgiei, Mirian și Nana](https://doxologia.ro/viata-sfintilor-imparati-ai-georgiei-mirian-nana); read 17 September 2026.*
+The Russian church calendar keeps her on the Julian 1 October, marked «(Груз.)» as one of the Georgian commemorations it carries, and it gives this folder its first date: «и царицы Иверской Наны (ок. 364)» — about 364. Her husband is named immediately before her on the same line, dated only «после 361», so the calendar is more definite about her death than about his.
+
+*After doxologia.ro, [Viața Sfinților Împărați ai Georgiei, Mirian și Nana](https://doxologia.ro/viata-sfintilor-imparati-ai-georgiei-mirian-nana); read 17 September 2026; the Russian church calendar keeps her on the Julian 1 October — [the day](https://days.pravoslavie.ru/Days/20261001.html); read 4 October 2026.*

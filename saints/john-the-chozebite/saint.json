@@ -1,7 +1,6 @@
 {
   "slug": "john-the-chozebite",
   "display_name": "John the Chozebite",
-  "office": "Bishop of Caesarea",
   "names": [
     {
       "form": "Ιωάννης ο Χοζεβίτης",
@@ -11,6 +10,11 @@
     {
       "form": "Преп. Јован Хозевит",
       "lang": "sr"
+    },
+    {
+      "form": "Иоанн Хозевит",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1024 is «Святитель Иоанн Хозевит, Кесарийский, епископ»; the name and its epithet are all of it that is neither rank nor office."
     }
   ],
   "sex": "male",
@@ -18,11 +22,34 @@
     "venerable",
     "bishop"
   ],
+  "office": "Bishop of Caesarea",
+  "dates": {
+    "floruit": {
+      "earliest": 451,
+      "latest": 600,
+      "display": "5th or 6th century",
+      "basis": "traditional",
+      "note": "Three sources across two centuries, and the interval is their union; none is preferred. saint.gr sets him under the empress Pulcheria, refusing the Fourth Ecumenical Council at Chalcedon, which met in 451 and whose judgement he came to accept. The Serbian Ohrid Prologue, read 4 October 2026, has him in the Chozebite monastery «у време цара Јустинијана», in the days of Justinian, whose reign ran 527–565. days.pravoslavie.ru prints the century after his name: «Прп. Иоанна Хозевита, еп. Кесарийского (VI)». The folder held no date before any of these readings, and the span across two centuries is why the basis is `traditional`."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 3 октября ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "rank": "six-stichera",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 октября». One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 3 октября ст. ст. — «Прп. Иоанна Хозевита, еп. Кесарийского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261003.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the one icon the page sets over the whole day, «Совершается служба на шесть» — a service of six stichera."
+      },
+      "note": "The Russian agrees with the folder's office, bishop of Caesarea, and gives it the century the folder had no date without."
     },
     {
       "church": "romanian",
@@ -61,14 +88,5 @@
   ],
   "text": {
     "life": "life.md"
-  },
-  "dates": {
-    "floruit": {
-      "earliest": 451,
-      "latest": 565,
-      "display": "5th or 6th century",
-      "basis": "traditional",
-      "note": "Two sources about a century apart, and the interval is their union. saint.gr sets him under the empress Pulcheria, refusing the Fourth Ecumenical Council at Chalcedon, which met in 451 and whose decision he came to accept. The Serbian Ohrid Prologue, read 4 October 2026, has him in the Chozebite monastery «у време цара Јустинијана», in the days of Justinian, whose reign ran 527–565. Neither is preferred, and the span across two centuries is why the basis is `traditional`."
-    }
   }
 }
