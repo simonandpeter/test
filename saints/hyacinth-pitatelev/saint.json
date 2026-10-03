@@ -1,0 +1,67 @@
+{
+  "slug": "hyacinth-pitatelev",
+  "display_name": "Hyacinth (Pitatelev)",
+  "names": [
+    {
+      "form": "Иакинф (Питателев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13833, «Иакинф (Питателев), прмч.», with the rank word left off; the day line gives «Иакинфа» without the surname, and the surname is the index's."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk",
+    "new-martyr"
+  ],
+  "related": [
+    "neophytus-lyubimov",
+    "anatolius-ivanovsky",
+    "callistus-oparin"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "The Russian day line, which gives one year for all four of the day's martyrs of that year: «Сщмчч. Неофита и Анатолия пресвитеров, прмчч. Иакинфа и Каллиста (1918)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Сщмчч. Неофита и Анатолия пресвитеров, прмчч. Иакинфа и Каллиста (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's two icons stand in the paragraph above this one, before Hosea and before Andrew of Crete."
+      },
+      "note": "**The line enumerates four and so it is four folders.** He is the first of the two the calendar calls прмч., a venerable-martyr — a monk who died a martyr — against the two presbyters named before him. His page in the index, 13833, gives the surname Pitatelev and the second day he is kept on, «26 января (Новомуч.)», and nothing more; the January day was not read. **There is no life anywhere**: no life link on the day line and none on the name page. His index number stands immediately beside Callistus (Oparin)'s 13834, so the two monks' entries were added to the calendar together; that is the calendar's own numbering and nothing is inferred from it. azbyka.ru answered **403** to the corpus's own fetcher on 28 October 2026 and was not asked again."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 17 octombrie, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 17 Οκτωβρίου, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 17 October old style as the Православни подсетник prints it (pravoslavno.rs for 30.10.2026, read 30 October 2026); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
