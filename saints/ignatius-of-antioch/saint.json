@@ -12,6 +12,11 @@
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Δεκεμβρίου, «Άγιος Ιγνάτιος ο Θεοφόρος και Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Игнатий Богоносец",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Священномученик Игнатий Богоносец», with the rank word left off. That day's line is the translation of his relics and not a commemoration of him, so no attestation row is taken from it."
     }
   ],
   "sex": "male",
@@ -131,6 +136,22 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "И нравом причастник,/ и престолом наместник апостолом быв,/ деяние обрел еси, Богодохновенне,/ в видения восход,/ сего ради слово истины исправляя,/ и веры ради пострадал еси даже до крове,/ священномучениче Игнатие./ Моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Тропарь священномученика Игнатия Богоносца»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A sharer in their way and a successor on their throne with the apostles, O God-inspired one, thou didst find in action the ascent to contemplation; and therefore, rightly ordering the word of truth, thou didst suffer even unto blood for the faith, O hieromartyr Ignatius. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

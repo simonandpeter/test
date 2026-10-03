@@ -1,0 +1,64 @@
+{
+  "slug": "john-granitov",
+  "display_name": "John (Granitov)",
+  "names": [
+    {
+      "form": "Иоанн (Гранитов)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Иоанн (Гранитов), протоиерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru: «Сщмчч. Иоанна и Леонтия пресвитеров, Константина диакона и с ними 5 мучеников (1920)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Сщмчч. Иоанна и Леонтия пресвитеров, Константина диакона и с ними 5 мучеников (1920)»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life page behind his name, only the day's line and the name link."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "leontius-klimenko",
+    "constantine-zverev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

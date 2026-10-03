@@ -41,7 +41,8 @@
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 августа ст. ст. — «Свт. Питирима, еп. Великопермского (1456)»",
         "url": "https://days.pravoslavie.ru/Days/20260819.html",
         "year": 2026
-      }
+      },
+      "note": "The same calendar keeps him again on 29 января ст. ст., with the two other bishops of Great Perm in one line — «Свтт. Герасима (ок. 1441-1467), Питирима (1455) и Ионы (1470), епископов Великопермских, Устьвымских» — where it gives his year as 1455 against the 1456 of the line this row quotes. The second day is recorded here and the saint is not rendered on it; the row and its source are unchanged otherwise."
     },
     {
       "church": "romanian",
@@ -101,6 +102,70 @@
       },
       "english": {
         "text": "Having first been adorned with the virtues of monks in the monastery of the hierarch Alexis, and having served for his glorification, thou wast shown to be a shepherd unto the Zyrian people; and as a spotless lamb thou wast offered up unto the Word, the chief Shepherd, being made a martyr, O all-praised hierarch Pitirim. Wherefore we all keep festival with love upon thy divine memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Равноапостольному святителю Стефану наследовавшии/ и Православия светом страну Зырянскую озарившии,/ святителие Христовы Герасиме, Питириме и Ионо,/ Престолу Пресвятыя Троицы ныне предстояще,/ молитеся пастве вашей от врагов ненаветованней быти/ и всем православным людем в мире спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Тропарь святителей Герасима, Питирима и Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Successors of the hierarch Stephen, the equal of the apostles, who enlightened the land of the Zyryans with the light of Orthodoxy, O hierarchs of Christ Gerasimus, Pitirim and Jonas, standing now before the throne of the Most Holy Trinity, pray that your flock be unassailed by its enemies and that all Orthodox people be saved in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Первопрестольницы Пермстии/ и истиннии хранителие апостольских преданий,/ столпи непоколебимии,/ благочестия учителие, Пермстии наставницы,/ Герасиме, Питириме и Ионо,/ Владыку всех молите мир вселенней даровати/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Ин тропарь святителей Герасима, Питирима и Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "First occupants of the throne of Perm and true keepers of the apostolic traditions, unshaken pillars, teachers of godliness, guides of Perm, O Gerasimus, Pitirim and Jonas, entreat the Master of all to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставницы,/ благочестия учителие и милости сокровища,/ архиереом украшение,/ души своя за паству свою положивший,/ Герасиме, Питириме и Ионо,/ святителие Церкве Пермския,/ со равноапостольным Стефаном молите Христа Бога/ мир вселенней даровати/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Ин тропарь святителей Герасима, Питирима и Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guides of Orthodoxy, teachers of godliness and treasuries of mercy, adornment of the hierarchs, who laid down your lives for your flock, O Gerasimus, Pitirim and Jonas, hierarchs of the Church of Perm, with Stephen the equal of the apostles entreat Christ God to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Во святителех благочестно поживше/ и Пермския люди к Богоразумию наставивше,/ добре Богу угодисте./ Сего ради Устьвымь и земля Зырянская хвалятся,/ имеюще мощи ваша/ яко источник исцелений/ всем, с верою притекающим к вам,/ вы бо чудесы прославистеся,/ яко ученицы Божия благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Кондак святителей Герасима, Питирима и Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived in godliness among the hierarchs and led the people of Perm to the knowledge of God, you pleased God well. Therefore Ustvym and the land of the Zyryans boast, having your relics as a fountain of healings for all who come to you with faith; for you were glorified with miracles, as disciples of the grace of God.",
         "rendered": "site"
       }
     }

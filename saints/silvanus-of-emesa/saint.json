@@ -12,12 +12,18 @@
       "form": "Σιλουανός",
       "lang": "el",
       "note": "Read out of saint.gr's own heading for him on the page for the three martyrs of 29 Ιανουαρίου, «Αγιος Σιλουανος ο Επισκοπος», with the rank words left off; the day's line keeps the three together as «Άγιοι Σιλουανός ο Επίσκοπος, Λουκάς ο Διάκονος και Μώκιος ο Αναγνώστης»."
+    },
+    {
+      "form": "Сильван Эмесский (Емисский)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Святитель Сильван Эмесский (Емисский), епископ, сщмч.», with the rank words left off."
     }
   ],
   "sex": "male",
   "types": [
     "martyr",
-    "bishop"
+    "bishop",
+    "hieromartyr"
   ],
   "related": [
     "luke-of-emesa",
@@ -36,8 +42,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Мчч. Сильвана епископа, Луки диакона и Мокия чтеца (312)»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

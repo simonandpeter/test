@@ -7,12 +7,18 @@
       "form": "Λαυρέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιανουαρίου, «Όσιος Λαυρέντιος εκ Κιέβου», with the rank word left off."
+    },
+    {
+      "form": "Лаврентий Печерский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 29 января ст. ст., «Преподобный Лаврентий, затворник Печерский», with the rank words left off."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "venerable"
   ],
   "dates": {
     "death": {
@@ -26,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Свт. Лаврентия, затворника Печерского, еп. Туровского (1194)»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Всеблаженне Лаврентие, / затворивый себе Господа ради в месте тесне / и в нем многа лета трудолюбне поживый, / молися о нас ко Господу, / яко да и мы от всякаго греха чувства затворше, / получим отверзение дверей милости Господни в День судный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Тропарь святителя Лаврентия, затворника Печерского, еп. Туровского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O all-blessed Laurence, who for the Lord's sake shut thyself in a narrow place and lived there many years in labour, pray for us to the Lord, that we too, shutting our senses against every sin, may find the doors of the Lord's mercy opened to us on the day of judgement.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Усердие Лавре Печерстей желая от чудес прославления,/ себе же самаго смиряя,/ отреклся еси онаго,/ бедне диаволом мучима, исцелити,/ отслав его ко пещере,/ идеже он исцелившися,/ блаженне Лаврентие,/ прослави с тобою Господа,/ прославляющаго святых Своих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 января ст. ст. — «Кондак святителя Лаврентия, затворника Печерского, еп. Туровского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Earnestly desiring that the Lavra of the Caves be glorified by miracles, and humbling thyself, thou didst refuse to heal a man grievously tormented by the devil and sent him away to the cave, where he was healed, O blessed Laurence, and glorified with thee the Lord who glorifies his saints.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

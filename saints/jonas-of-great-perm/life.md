@@ -6,4 +6,6 @@ Of Jonas in particular the page records nothing more: no year of birth, no birth
 
 He is the last of the three by the years the page gives, thirty years after Gerasimus and sixteen after Pitirim. The Russian calendar, which keeps these three bishops of Perm with their own accounts, is where this entry could be finished, and it has not been read for this folder.
 
-*After saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/3556/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day, third of the three bishops of Great Perm whom one line holds, and with the year 1470 beside his name. It gives the three of them four hymns together: three troparia and a kontakion, which call them the first occupants of the throne of Perm, successors of the hierarch Stephen who was equal to the apostles, and say that Ustvym and the land of the Zyryans boast of having their relics as a fountain of healings.
+
+*After saint.gr's calendar for 29 Ιανουαρίου — [the day](https://www.saint.gr/01/29/index.aspx) and [the life](https://www.saint.gr/3556/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 29 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260129.html), read 3 October 2026.*
