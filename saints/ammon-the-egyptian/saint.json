@@ -11,6 +11,10 @@
       "form": "Аммон Нитрийский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 144, «Аммон (Аммун) Нитрийский, Египетский, прп.», with the rank word left off and the second form of the name and the second place left to this note."
+    },
+    {
+      "form": "Преп. Амон",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -72,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day. Its account of the marriage differs from the Greek entry’s — eighteen years in the house and then a convent in it, against a parting in the desert of Nitria — and both stand in his life. The entry list prints two of the four and drops this one, whose heading opens «Преп.»"
+      },
+      "source": {
+        "text": "Охридски пролог, 4. октобар ст. к. — «3. Преп. Амон. Мисирац родом, и по занимању виноградар. … И тако би са женом 18 пуних година. После, по договору, жена основа женски манастир у дому њиховом, а Амон оде у Нитријску пустињу, где се преда подвигу отшелничком.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [

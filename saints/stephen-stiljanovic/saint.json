@@ -11,6 +11,10 @@
       "form": "Стефан Щилянович",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 2076, «Святой Стефан Щилянович», with the rank word left off. The same site's other life page for him spells it «Стефан Шилянович», with ш for щ."
+    },
+    {
+      "form": "Св. Стефан Штиљановић",
+      "lang": "sr"
     }
   ],
   "dates": {
@@ -19,7 +23,7 @@
       "latest": 1515,
       "display": "1515",
       "basis": "attested",
-      "note": "His life on days.pravoslavie.ru gives the day: «Святой отошел ко Господу 4 октября 1515 года», and the day line prints «(1515)» after his name."
+      "note": "Two sources, and the narrower reading is taken. His life on days.pravoslavie.ru gives the day: «Святой отошел ко Господу 4 октября 1515 года», and the day line prints «(1515)» after his name. The Serbian Ohrid Prologue, read 4 October 2026, is less certain and names the same year as one report among others: «Упокојио се почетком XVI века (по некима 1515. год.)» — at the beginning of the sixteenth century, by some in 1515. The hedge is recorded here rather than widened into the interval, because the year it hedges about is the year the other source states outright."
     }
   },
   "attestations": [
@@ -52,11 +56,26 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked, and this is the row that most needs it: the Russian calendar marks him «(Серб.)» and his name page gives «30 августа (Серб.)» as his other day, so the Serbian church plainly keeps him, but pravoslavno.rs's own Prologue page was not read (2026-10-04) and an attestation for a church is cited from that church's calendar and no other."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day, and the first source this folder has in his own church — it held only the Russian calendar before. Its hedge about his year is recorded in the note on his death rather than taken as a second year."
+      },
+      "source": {
+        "text": "Охридски пролог, 4. октобар ст. к. — «2. Св. Стефан Штиљановић. Деспот српски. Родом из Паштровића. Управљао српским народом у претешким приликама борећи се храбро против Турака и Латина. … Упокојио се почетком XVI века (по некима 1515. год.).»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "alexander-nevsky",
+    "john-vladimir",
+    "lazar-of-serbia"
+  ]
 }

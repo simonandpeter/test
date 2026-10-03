@@ -16,6 +16,10 @@
       "form": "Иерофей Афинский",
       "lang": "ru",
       "note": "days.pravoslavie.ru's name page 920 heads him «Святитель Иерофей Афинский, епископ, сщмч.»; the name and its epithet are all of it that is neither rank nor office."
+    },
+    {
+      "form": "Свешт. муч. Јеротеј",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -80,12 +84,23 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 4. октобар ст. ст. (civil 17 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day. It ends him as a martyr where the Greek entry has him die in peace in deep old age, and the disagreement is recorded in his life rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 4. октобар ст. к. — «1. Свешт. муч. Јеротеј. Био друг св. Дионисију Ареопагиту, и нешто после Дионисија примио веру Христову од апостола Павла. … најзад мученички сконча за Христа, који му даде двојак венац у царству Свом небеском: венац јерарха и венац мученика.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [
-    "dionysius-the-areopagite"
+    "dionysius-the-areopagite",
+    "paul-the-apostle"
   ],
   "text": {
     "life": "life.md"

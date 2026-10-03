@@ -16,6 +16,10 @@
       "form": "Павел Препростый",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1697, «Павел Препростый, прп.», with the rank word left off."
+    },
+    {
+      "form": "Преп. Павле Препрости",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -29,6 +33,13 @@
       "display": "4th century",
       "basis": "traditional",
       "note": "The century the Russian calendar prints after his name, «Прп. Павла Препростого (IV)». The folder held no date at all before this reading."
+    },
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "340",
+      "basis": "traditional",
+      "note": "One source of the four gives a year. The Serbian Ohrid Prologue, read 4 October 2026: «Скончао у дубокој старости, 340. год., и преселио се у радост ангелску.» days.pravoslavie.ru gives only the century, «Прп. Павла Препростого (IV)», which contains it; the Greek and Romanian entries for 7 March give none. The folder held the century and no year."
     }
   },
   "attestations": [
@@ -81,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Fourth of the four the Ohrid Prologue enumerates for this day. The Serbian church keeps him on 4 October with the Russian, where the Greek and Romanian keep him on 7 March; the days are not reconciled here, each church’s row carrying its own. The entry list drops this heading, which opens «Преп.»"
+      },
+      "source": {
+        "text": "Охридски пролог, 4. октобар ст. к. — «4. Преп. Павле Препрости. До своје 60. године живео у свету као жењен човек. … Скончао у дубокој старости, 340. год., и преселио се у радост ангелску.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-17&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "related": [
