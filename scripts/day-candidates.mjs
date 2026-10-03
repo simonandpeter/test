@@ -302,7 +302,26 @@ async function serbian() {
     url,
     own: `${day}/${month} ст. ст.`,
     entries,
-    note: entries.length ? null : 'pravoslavno.rs publishes about 30 days ahead and renders much of the page in script; read it by hand.',
+    /*
+     * **This entry list is not to be trusted, and the Serbian wave does not use
+     * it.** Measured 3 October 2026: the heading is guessed at from the full
+     * stops in stripped text, so «Св. вел. муч. Евстатије Плакида» comes back
+     * as «Св. вел» — `вел.` is not in `RS_ABBREV` — and the segment split
+     * requires `\d{1,2}\.\s+Св`, so an entry opening «Преподобни», «Монах» or
+     * «Четири стотине» is dropped outright. Civil 2026-09-10 printed one of its
+     * five entries that way and 2026-03-15 one of five. The Prologue's heading
+     * is a `<strong>` element on every day tried, and reading it off the markup
+     * instead is what `.tmp/sr-cand.mjs` does; that is the Serbian wave's
+     * instrument. Porting it here needs the markup reader to move out of
+     * `.tmp/`, which is gitignored, so this says so rather than pretending.
+     *
+     * The old note also claimed the page "renders much of the page in script",
+     * which is false: the whole Prologue, every heading and life and the verse,
+     * is in the HTML the server sends. What is true is the thirty-day horizon —
+     * and it does not matter, because the Prologue is a fixed annual cycle and
+     * any Julian day is reachable through an already-published civil date.
+     */
+    note: 'Its entry list is unreliable — headings are cut and whole entries dropped. Use the Prologue reader instead; `scripts/day-candidates.mjs` says where in this function. pravoslavno.rs publishes about 30 days ahead, and the Prologue repeats annually, so an earlier civil year serves the same Julian day.',
   };
 }
 
