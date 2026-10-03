@@ -232,11 +232,20 @@ export function render(el, { data, params, router }) {
               -->
               <div class="month-pick" hidden>
                 <div class="mpick-track">
-                  <button type="button" class="mpick" data-mstepper="-2"></button>
-                  <button type="button" class="mpick" data-mstepper="-1"></button>
+                  <!--
+                    The outer pair are drawn and nothing else: the window shows
+                    three rows and they live outside it, so they exist only so a
+                    roll has a name arriving rather than a gap. A button there
+                    would be a focus stop on a word no one can see, which is
+                    what the quality floor's keyboard pass is for.
+                  -->
+                  <span class="mpick" data-mdelta="-2" aria-hidden="true"></span>
+                  <button type="button" class="mpick mpick-prev" data-mdelta="-1" data-mstepper="-1"
+                    aria-label="${esc(STRINGS.calendar.prevMonth)}"></button>
                   <span class="mpick mpick-now"><span class="month-name"></span></span>
-                  <button type="button" class="mpick" data-mstepper="1"></button>
-                  <button type="button" class="mpick" data-mstepper="2"></button>
+                  <button type="button" class="mpick mpick-next" data-mdelta="1" data-mstepper="1"
+                    aria-label="${esc(STRINGS.calendar.nextMonth)}"></button>
+                  <span class="mpick" data-mdelta="2" aria-hidden="true"></span>
                 </div>
               </div>
             </div>

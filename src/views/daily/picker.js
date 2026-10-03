@@ -896,8 +896,8 @@ export function paintMonth() {
    * step by two for the same reason the inner pair step by one - a name in
    * this column is the month it says, whether or not it is fully lit.
    */
-  for (const b of el.querySelectorAll('.mpick[data-mstepper]')) {
-    b.textContent = tag(stepCursor(cursor, Number(b.dataset.mstepper)));
+  for (const b of el.querySelectorAll('.mpick[data-mdelta]')) {
+    b.textContent = tag(stepCursor(cursor, Number(b.dataset.mdelta)));
   }
 
   // They say nothing a date's own label does not — the button below each of

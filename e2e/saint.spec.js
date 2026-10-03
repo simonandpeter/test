@@ -1770,15 +1770,19 @@ test('a saint named in a life is a link in it and a row under Related', async ({
   await expect(related.locator('a[href*="/saints/sergius-of-radonezh"]')).toHaveCount(1);
 
   /*
-   * The other half, and the half a derivation gets wrong: Zenobius (Mazhuga)
-   * spent thirty-five years at the Alexander Nevsky *church*, so the name is a
-   * link — a reader may well want to know who that was — and is not a
-   * relation. Nothing under Related at all on that page, since it is the only
-   * name his life carries.
+   * **And a dedication is a relation, which this said the opposite of**
+   * (author, 2026-10-03: "no idea where CORPUS.md got that idea. Certainly not
+   * from me. The rule of thumb was the more connections the better").
+   *
+   * Zenobius (Mazhuga) spent thirty-five years at the Alexander Nevsky
+   * *church*, and the rule written here held that this made the name a link
+   * and not a relation. The author overturned it: the 89 dedications that had
+   * been excluded were flipped in, and the derivation that this test called
+   * wrong is the one that was right.
    */
   await page.goto('/saints/zenobius-mazhuga', { waitUntil: 'networkidle' });
   await expect(page.locator('[data-life] a[href*="/saints/alexander-nevsky"]')).toHaveCount(1);
-  await expect(page.locator('[data-related] a[href*="/saints/alexander-nevsky"]')).toHaveCount(0);
+  await expect(page.locator('[data-related] a[href*="/saints/alexander-nevsky"]')).toHaveCount(1);
 
   /*
    * **And the case the automatic linker cannot reach** (author, twice, most

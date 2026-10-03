@@ -186,7 +186,11 @@ test('the one jump control holds the left edge, carries a name, and fills the ro
   await ready(page);
   await phone(page);
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
-  const jump = page.locator('.cal-jump button');
+  /* `> button`, not every button in the column: since 2026-10-03 the gutter
+     also holds the month and the four names either side of it, which are
+     buttons too. The claim is about the toggle, and the toggle is the direct
+     child. */
+  const jump = page.locator('.cal-jump > button');
   await expect(jump).toHaveCount(1);
   /*
    * **The state, not the string's length.** This asked for more than three
@@ -271,7 +275,7 @@ test('today carries its own bubble in the week and the month, apart from the sel
 });
 
 
-test('past 1024 px the month carries one mark, not the phone ring as well', async ({ page }) => {
+test('past 1024 px the month carries the rail’s own two marks, as the phone does', async ({ page }) => {
   /*
    * Author, 2026-09-11: "The highlight over today on the monthly display is
    * not what the mockup had … whatever that bubble is trying to do is residual
@@ -290,6 +294,15 @@ test('past 1024 px the month carries one mark, not the phone ring as well', asyn
    * The test above this one is the phone's, and keeps the ring: the 2026-08-26
    * instruction is about the week strip and still holds where the week strip
    * is the control. This is the pair to it, which is why they are neighbours.
+   *
+   * **Overruled 2026-10-03**: "In weekly display I like how the current day is
+   * shown and also how the selected day is shown. Match that in the calendar
+   * view. And of course make sure this goes to desktop as well because desktop
+   * uses the same calendar look." So the ring is drawn here too, and the cell
+   * keeps the square edge the reference gave it. The one piece of the rail's
+   * mark that did not come across is its `--rule` hairline, which measures
+   * 1.41:1 on this ground; the border is `--accent` at both widths, which is
+   * the paragraph above's own finding kept rather than re-learned.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 1000 });
@@ -321,7 +334,7 @@ test('past 1024 px the month carries one mark, not the phone ring as well', asyn
    * been an instrument reading what the code says about itself — the trap
    * CLAUDE.md numbers 14 — and it was written that way first.
    */
-  expect(m.ringContent, 'the phone ring is still drawn in the desktop month').toBe('none');
+  expect(m.ringContent, 'today’s ring is missing from the desktop month').not.toBe('none');
   // And the mark that stays is the reference's: a square cell border, no
   // radius anywhere near it.
   expect(m.cellRadius, 'the month cell has picked up a radius').toBe('0px');
@@ -359,23 +372,30 @@ test('the week takes a sideways swipe and the month an up-and-down one', async (
   await expect(page.locator('h1')).toHaveText(/28 Aug(ust)? 2026/);
 
   /*
-   * **The month's own gesture turned on 2026-10-03** (author: "from Oct to Sep
-   * is an arrow or swipe up above the Oct 2026 print"). Up is back, and the
-   * grid is a spinner for it: the month before arrives from below, which is
-   * the only arrangement where the arrow above the name and a swipe up agree
-   * and the grid still follows the finger.
+   * **The month's own gesture turned on 2026-10-03**, and turned again the
+   * same day. The two arrows above and below the heading were replaced by the
+   * months themselves, stacked in the gutter in order down the column
+   * (author: "replace the arrows with faded months above and below ... make
+   * them animated, the month abbreviations move down the same way the calendar
+   * days move down or up").
+   *
+   * That settles the sign for the finger too: the stack runs forward in time
+   * downward, so a drag upward brings the month *after* this one into view,
+   * the way a scroll does, and the names roll with the grid rather than
+   * against it. `SPIN` in views/daily/picker.js is the one place it is
+   * written.
    */
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await swipe(page, '.cal-month', 0, -120);
-  await expect(page.locator('.month-name')).toHaveText('July 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sep');
   await swipe(page, '.cal-month', 0, 120);
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await expect(page.locator('.month-name')).toHaveText('Aug');
 
   // A short drag is a mistap, and a mostly-sideways one belongs to the day.
   await swipe(page, '.cal-month', 0, -20);
   await swipe(page, '.cal-month', 200, -120);
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await expect(page.locator('.month-name')).toHaveText('Aug');
 });
 
 
@@ -423,19 +443,29 @@ test('the month runs the control\'s full width, and its name heads its own line'
   expect(Math.round(grid.x + grid.width)).toBe(Math.round(strip.x + strip.width));
 
   /*
-   * The name was printed into the gutter beside the grid, where it cost the
-   * row no height; it heads a line of its own between the two steps now. The
-   * order down the control is the instruction's: the step up, the name, the
-   * step down, the grid.
+   * **The name went back to the gutter on 2026-10-03** (author: "Reformat
+   * October 2026 to just Oct, then move it to the left-side space under the
+   * button that toggles calendar and weekly displays"), and took its stepping
+   * with it: the month before and the month after stand above and below it in
+   * the same column, and the two hairline marks are gone.
+   *
+   * So the three are stacked beside the grid rather than above it, which is
+   * what takes the head's height out of the row — and out of the close, where
+   * it used to be dropped on one tick. The grid's own top is above all three.
    */
   const name = await box('.month-name');
-  const up = await box('.mstep-prev');
-  const down = await box('.mstep-next');
+  const up = await box('.mpick-prev');
+  const down = await box('.mpick-next');
   expect(up.y + up.height).toBeLessThanOrEqual(name.y + 1);
   expect(name.y + name.height).toBeLessThanOrEqual(down.y + 1);
-  expect(down.y + down.height).toBeLessThanOrEqual(grid.y + 1);
-  // All three start on the control's own left margin.
-  expect(Math.round(name.x)).toBe(Math.round(up.x));
+  // Beside the grid, not above it: the gutter is left of the column.
+  expect(up.x + up.width).toBeLessThanOrEqual(grid.x + 1);
+  expect(grid.y).toBeLessThanOrEqual(up.y + 1);
+  /* Measured on the rows, not on `.month-name`: that is the inner span the
+     month's own word sits in, centred inside its row, so its x is the text's
+     and not the column's. */
+  const now = await box('.mpick-now');
+  expect(Math.round(now.x)).toBe(Math.round(up.x));
   expect(Math.round(up.x)).toBe(Math.round(down.x));
 });
 
@@ -681,18 +711,20 @@ test('a month travels up and down, and its day names do not', async ({ page }) =
     );
   const before = await names();
 
-  const during = await duringMove(page, '.month-body', 'month-row', '.mstep-next');
+  const during = await duringMove(page, '.month-body', 'month-row', '.mpick-next');
   expect(during.rows).toBe(2);
-  // Parked in pixels and by `top`, not by a percentage of `left`: the step
-  // down brings September from above, so the month being left is parked below.
+  /* Parked in pixels and by `top`, not by a percentage of `left`. The step
+     *down* the stack is the month after this one, and since 2026-10-03 it
+     arrives from below — the stack runs forward in time downward and the grid
+     travels with it — so the month being left is parked above. */
   expect(during.sides).toEqual(['']);
   expect(during.sideTops).toHaveLength(1);
-  expect(parseFloat(during.sideTops[0])).toBeGreaterThan(0);
+  expect(parseFloat(during.sideTops[0])).toBeLessThan(0);
   expect(during.hidden).toBe('true');
   expect(during.reach).toBe('none');
   expect(during.clipped).toBe(true);
 
-  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  await expect(page.locator('.month-name')).toHaveText('Sep');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   // The names stayed exactly where they were while the grid moved under them.
   expect(await names()).toEqual(before);
@@ -826,8 +858,8 @@ test('a mouse holds the rail and slides it, and letting go settles on a day', as
 
 
 test('the month follows the finger too, and takes its height with it', async ({ page }) => {
-  // September 2026 is five rows and August is six, so dragging back from one to
-  // the other is the case where the month arriving is taller than the viewport
+  // September 2026 is five rows and August is six, so dragging between them is
+  // the case where the month arriving is taller than the viewport
   // holding it and would be cut off at the bottom for the length of the drag.
   await ready(page);
   await phone(page);
@@ -838,7 +870,10 @@ test('the month follows the finger too, and takes its height with it', async ({ 
 
   // Up is back: September to August, and the finger goes the way the arrow
   // above the name points (author, 2026-10-03).
-  await dragGrain(page, '.cal-month', -60, { release: false, axis: 'y' });
+  /* **Downward, which is backward in time** since 2026-10-03: the stack runs
+     forward down the gutter and the grid travels with it, so August - the
+     six-row month this test needs arriving - is reached by dragging down. */
+  await dragGrain(page, '.cal-month', 60, { release: false, axis: 'y' });
   const held = await page.evaluate(() => {
     const body = document.querySelector('.month-body');
     return {
@@ -848,13 +883,14 @@ test('the month follows the finger too, and takes its height with it', async ({ 
     };
   });
   expect(held.rows).toBe(3);
-  expect(held.transform).toMatch(/^translateY\(-\d/);
+  // The grid goes where the finger goes.
+  expect(held.transform).toMatch(/^translateY\(\d/);
   // The body takes the tallest of the three and holds it for as long as the
   // reader does, so August's sixth row is there to be dragged into view.
   expect(parseFloat(held.pinned)).toBeGreaterThan(fiveRows);
 
-  await releaseGrain(page, '.cal-month', -60, { axis: 'y' });
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await releaseGrain(page, '.cal-month', 60, { axis: 'y' });
+  await expect(page.locator('.month-name')).toHaveText('Aug');
   await expect(page.locator('.grain-side')).toHaveCount(0);
   await page.waitForTimeout(600);
   // Six rows now, and the height was released rather than left pinned.
@@ -904,8 +940,8 @@ test('a month steps up and down and carries its height with it', async ({ page }
   await page.waitForTimeout(600);
   const six = await page.locator('.month-body').boundingBox();
 
-  await page.locator('.mstep-next').click();
-  await expect(page.locator('.month-name')).toHaveText('September 2026');
+  await page.locator('.mpick-next').click();
+  await expect(page.locator('.month-name')).toHaveText('Sep');
   const held = await page.locator('.month-body').evaluate((el) => el.style.height);
   expect(parseFloat(held)).toBeGreaterThan(0);
 
@@ -1448,7 +1484,7 @@ test('a date picked in the month is where the week opens, however far it was scr
   // Three months out, which is past the rail's own radius and well past the
   // seven days it was showing.
   for (let i = 0; i < 3; i += 1) {
-    await page.locator('.mstep-next').click();
+    await page.locator('.mpick-next').click();
     await page.waitForTimeout(500);
   }
   await page.locator('.month-grid [data-iso="2026-12-14"]').click();
@@ -1715,7 +1751,7 @@ test('two months of the same height do not move the page between them', async ({
     const out = [];
     for (let i = 0; i < 3; i += 1) {
       growing = false;
-      document.querySelector('.mstep-prev').click();
+      document.querySelector('.mpick-prev').click();
       await sleep(250);
       out.push({ month: document.querySelector('.month-name').textContent.trim(), grew: growing });
     }
@@ -1968,7 +2004,7 @@ test('a desktop shows the month alone, across the column, with no toggle', async
   await expect(page.locator('[data-month]'), 'the month toggle is still on the page').toBeHidden();
   await expect(page.locator('.cal-week'), 'the week is still drawn on a desktop').toBeHidden();
   await expect(page.locator('.cal-month')).toBeVisible();
-  await expect(page.locator('.month-grid [data-iso]').first()).toBeVisible();
+  await expect(page.locator('.month-grid [data-iso]:not(.month-out)').first()).toBeVisible();
 
   const m = await page.evaluate(() => {
     const controls = document.querySelector('.cal-controls').getBoundingClientRect();
@@ -1985,8 +2021,19 @@ test('a desktop shows the month alone, across the column, with no toggle', async
       fullAboveGrid: fullBox.bottom <= grid.top + 1,
     };
   });
-  // No column held open for the button that is gone.
-  expect(m.spare, 'a column is still being kept for the old toggle').toBeLessThan(4);
+  /*
+   * **A column is held open, and it is no longer the toggle's** (author,
+   * 2026-10-03: "move it to the left-side space under the button that toggles
+   * calendar and weekly displays ... replace the arrows with faded months
+   * above and below"). The toggle itself is hidden at this width - there is no
+   * week to toggle to - and what stands in the gutter is the month's name
+   * between the two it steps to. The 2026-09-02 instruction this test carries
+   * was about not reserving space for a control that had been removed; the
+   * space is occupied again, by the control that replaced it.
+   */
+  expect(m.spare, 'the gutter is not holding the month names').toBeGreaterThan(4);
+  await expect(page.locator('.mpick-prev'), 'the step back is not in the gutter').toBeVisible();
+  await expect(page.locator('.mpick-next'), 'the step on is not in the gutter').toBeVisible();
   /*
    * **It moved into the month's own head on 2026-09-10**
    *, from the column's right margin under
@@ -2070,28 +2117,44 @@ test('the calendar names its own reckoning, and the reader may change it', async
   const head = await page.evaluate(() => {
     const nameEl = document.querySelector('.month-name');
     const recEl = document.querySelector('[data-reckoning]');
+    const grid = document.querySelector('.month-grid').getBoundingClientRect();
     const name = nameEl.getBoundingClientRect();
     const rec = recEl.getBoundingClientRect();
     const btn = document.querySelector('[data-reckoning-btn]');
     const before = getComputedStyle(btn, '::before').content;
     const after = getComputedStyle(btn, '::after').content;
     return {
-      sameRow: Math.abs(name.top - rec.top) < 20,
+      /* **The name left this row on 2026-10-03** for the gutter beside the
+         grid (author: "move it to the left-side space under the button that
+         toggles calendar and weekly displays"), so "on the same row" is no
+         longer true of these two and asserting it would be asserting the old
+         arrangement. What the 2026-09-02 instruction was for survives: the
+         reckoning is drawn with the month it counts, at the head of that
+         month's own column, and the two do not collide. */
+      headsTheGrid: rec.top < grid.top + 1 && Math.round(rec.left) === Math.round(grid.left),
       gap: Math.round(rec.left - name.right),
       brackets: `${before}${after}`,
       size: getComputedStyle(btn).fontSize,
       fullName: nameEl.textContent.trim(),
     };
   });
-  expect(head.sameRow, 'the name and the reckoning are not on one row').toBe(true);
-  expect(head.gap, 'the reckoning does not follow the month it counts').toBeLessThan(20);
+  expect(head.headsTheGrid, 'the reckoning does not head the month it counts').toBe(true);
+  /* The gutter is 34 px and sits left of the grid, so the distance from the
+     name to the reckoning is now a column's width rather than a word's. What
+     must not happen is the two overlapping. */
   expect(head.gap, 'the reckoning is on top of the month name').toBeGreaterThan(0);
   expect(head.brackets, 'the reckoning is not in brackets').toBe('"("")"');
   // 12 px, --text-2xs: the quietest fact in the head (§10.8). Never 14.
   expect(head.size, 'the reckoning is not at --text-2xs').toBe('12px');
   // The civil 14 September is the Julian 1 September, by the church's own
   // default reckoning now in force before any explicit choice.
-  expect(head.fullName, 'the month is abbreviated on a desktop').toContain('September');
+  /* **Abbreviated at both widths since 2026-10-03** (author: "Reformat October
+     2026 to just Oct"). The claim this was making — the desk has room for the
+     whole word and should print it — was overturned when the name moved into a
+     34 px gutter, where the whole word does not fit and the year says nothing
+     the three rows around it do not. What is still asserted is that it is this
+     month's name and not another's. */
+  expect(head.fullName, 'the gutter is not naming the month the grid draws').toBe('Sep');
 
   // What the day says before the change: the fast already followed the
   // church by way of `calendarFor`, unaffected by any of this — only the
@@ -2193,14 +2256,14 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
   // reader's own reckoning.
   await pick('julian');
   await expect(heading).toHaveText(/Wednesday, 20 Aug(ust)? 2026/);
-  await expect(monthName).toHaveText('August 2026');
+  await expect(monthName).toHaveText('Aug');
   await expect(hero).toHaveText(civilHero);
 
   // The month grid is the Julian month, and the cell for the day the reader is
   // standing on carries the Julian numeral against the civil date the URL and
   // every link on the page are still written in.
   const grid = await page.evaluate(() => {
-    const cells = [...document.querySelectorAll('.month-grid [data-iso]')];
+    const cells = [...document.querySelectorAll('.month-grid [data-iso]:not(.month-out)')];
     const here = document.querySelector('.month-grid [aria-current="date"]');
     return {
       count: cells.length,
@@ -2237,7 +2300,7 @@ test('a chosen reckoning renames the day and moves nothing it names', async ({ p
    */
   await pick('');
   await expect(heading).toHaveText(/Wednesday, 20 Aug(ust)? 2026/);
-  await expect(monthName).toHaveText('August 2026');
+  await expect(monthName).toHaveText('Aug');
   await expect(hero).toHaveText(civilHero);
 });
 
@@ -2262,7 +2325,7 @@ test('a phone is told the reckoning without being offered the choice', async ({ 
  * the control that steps it. Each was backed out and watched to fail.
  */
 
-test('the month fills its own corners and keeps the days there out of reach', async ({ page }) => {
+test('the month fills its own corners, and the days there are days like any other', async ({ page }) => {
   /*
    * The peeked columns — two columns of a neighbouring month standing
    * *outside* the seven, there since 2026-08-21 — are what kept the right
@@ -2271,12 +2334,13 @@ test('the month fills its own corners and keeps the days there out of reach', as
    * desk's one drawing; the days either side come inside the grid on its own
    * rows instead: numbered, marked, tinted toward the field.
    *
-   * **And out of the accessibility tree, deliberately** (§10.6). The tint
-   * lands at 1.71–2.60:1 on visible numerals; axe reads contrast on text and
-   * Lighthouse gates CI on accessibility 100. These are `aria-hidden` spans
-   * rather than buttons, following the peek cells' own precedent, so the tint
-   * carries no information to anybody — the month either side is one press of
-   * a stepper away and every day in it has a real button there.
+   * **And they are buttons, since 2026-10-03** (author: "They are unclickable.
+   * Retarded mistake - fix"). They were `aria-hidden` spans on §10.6's
+   * reasoning that the tint they then carried would be out of axe's reach;
+   * measured, it is not — axe matches on `isVisibleOnScreen` — so the tint
+   * went and `--ink-soft` took its place, and with the tint gone the
+   * `aria-hidden` was buying nothing but unreachability. Picking one selects
+   * that date and carries the grid to the month it belongs to.
    *
    * The premise is checked rather than assumed: September 2026 by the
    * Gregorian reckoning `ready` sets starts on a Tuesday and ends on a
@@ -2292,13 +2356,13 @@ test('the month fills its own corners and keeps the days there out of reach', as
   // marks in its own head at both widths now.
   await expect(page.locator('.cal-month .peek')).toHaveCount(0);
 
-  await expect(page.locator('.month-grid [data-iso]'), 'September is 30 days').toHaveCount(30);
+  await expect(page.locator('.month-grid [data-iso]:not(.month-out)'), 'September is 30 days').toHaveCount(30);
   const out = page.locator('.month-grid .month-out');
   await expect(out).toHaveText(['31', '1', '2', '3', '4']);
 
   const shape = await page.evaluate(() => {
     const cells = [...document.querySelectorAll('.month-grid .month-out')];
-    const inMonth = document.querySelector('.month-grid [data-iso] .day-num');
+    const inMonth = document.querySelector('.month-grid [data-iso]:not(.month-out) .day-num');
     /*
      * **Through a canvas, because `color-mix` does not compute to `rgb()`.**
      * Chrome resolves a mix declared `in oklab` to an `oklab(...)` computed
@@ -2354,9 +2418,9 @@ test('the month fills its own corners and keeps the days there out of reach', as
       })(),
     };
   });
-  expect(shape.tags, 'an out-of-month day is a button').toEqual(['SPAN']);
-  expect(shape.hidden, 'an out-of-month day is in the accessibility tree').toBe(true);
-  expect(shape.focusable, 'an out-of-month day can be reached by the keyboard').toBe(false);
+  expect(shape.tags, 'an out-of-month day is not a button').toEqual(['BUTTON']);
+  expect(shape.hidden, 'an out-of-month day is still hidden from the accessibility tree').toBe(false);
+  expect(shape.focusable, 'an out-of-month day cannot be reached by the keyboard').toBe(true);
   expect(shape.sameRow, 'the out-of-month days are not on the grid’s own rows').toBe(true);
   /*
    * **Stepped back, and still legible — and the second half is the assertion
@@ -2377,12 +2441,22 @@ test('the month fills its own corners and keeps the days there out of reach', as
   expect(shape.outColours, 'an out-of-month day wears more than one ink').toHaveLength(1);
   expect(shape.outColours[0], 'an out-of-month day is not --ink-soft').toBe(shape.softColour);
 
-  // Pressing one does nothing at all: the day under the reader does not move.
+  /* **Pressing one is the whole of what changed** (author, 2026-10-03: "They
+     are unclickable. Retarded mistake - fix"): it selects that date and
+     carries the grid to the month the date belongs to, so the selection and
+     the grid cannot disagree. */
   const before = await page.locator('.cal-date').textContent();
   const box = await out.first().boundingBox();
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
   await page.waitForTimeout(300);
-  expect(await page.locator('.cal-date').textContent(), 'an out-of-month day changed the day').toBe(before);
+  expect(
+    await page.locator('.cal-date').textContent(),
+    'an out-of-month day did not change the day',
+  ).not.toBe(before);
+  // And the grid followed it: the 31st of August belongs to August.
+  await expect(page.locator('.month-name'), 'the grid stayed on the month it left').toHaveText('Aug');
+  await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
 
   /*
    * **And the phone's month is the same month** (author, 2026-10-03: "Mobile
@@ -2396,7 +2470,7 @@ test('the month fills its own corners and keeps the days there out of reach', as
   await expect(page.locator('.cal-month')).toBeVisible();
   await page.waitForTimeout(600);
   await expect(page.locator('.cal-month .peek')).toHaveCount(0);
-  await expect(page.locator('.month-grid [data-iso]')).toHaveCount(30);
+  await expect(page.locator('.month-grid [data-iso]:not(.month-out)')).toHaveCount(30);
   await expect(page.locator('.month-grid .month-out')).toHaveText(['31', '1', '2', '3', '4']);
   const phoneOut = await page.evaluate(() => {
     const cell = document.querySelector('.month-grid .month-out');
@@ -2404,11 +2478,11 @@ test('the month fills its own corners and keeps the days there out of reach', as
       tag: cell.tagName,
       hidden: cell.getAttribute('aria-hidden'),
       colour: getComputedStyle(cell).color,
-      ink: getComputedStyle(document.querySelector('.month-grid [data-iso] .day-num')).color,
+      ink: getComputedStyle(document.querySelector('.month-grid [data-iso]:not(.month-out) .day-num')).color,
     };
   });
-  expect(phoneOut.tag).toBe('SPAN');
-  expect(phoneOut.hidden).toBe('true');
+  expect(phoneOut.tag).toBe('BUTTON');
+  expect(phoneOut.hidden).toBe(null);
   expect(phoneOut.colour, 'the phone out-day is not one step back in ink').not.toBe(phoneOut.ink);
 });
 
@@ -2590,7 +2664,7 @@ test('the month marks a feast, in the rail’s own gold and with the word beside
   expect(paint.size).toEqual(['5px', '5px']);
 });
 
-test('the month steps from the two marks above and below its name', async ({ page }) => {
+test('the month steps from the two names above and below its own', async ({ page }) => {
   /*
    * The peeked columns were the month's step control as well as its edge, and
    * both go together. What replaces them is a mark above the month's name and
@@ -2600,11 +2674,12 @@ test('the month steps from the two marks above and below its name', async ({ pag
    * swipe up above the Oct 2026 print, and conversely an arrow down underneath
    * it" — and the pieces are the same five, rotated.
    *
-   * `--accent` is the rebuild's rule-and-mark colour and takes no contrast
-   * floor, on `--gold`'s own exemption — never text, never the only carrier of
-   * a fact. So the word is asserted here beside the colour: what says which
-   * month this reaches is the button's accessible name, and it has to be
-   * there for the exemption to hold.
+   * **And on 2026-10-03 the marks were replaced by the months themselves**
+   * (author: "replace the arrows with faded months above and below"). There is
+   * nothing left that needs an exemption: the control is a word, it says which
+   * month it reaches, and it is `--ink-soft` — the same step back the days
+   * either side of the month take, and legible on its own account rather than
+   * by the rule that lets a mark be faint.
    */
   await ready(page);
   await page.setViewportSize({ width: 1440, height: 900 });
@@ -2612,16 +2687,16 @@ test('the month steps from the two marks above and below its name', async ({ pag
   await page.evaluate(() => document.fonts.ready);
 
   const name = page.locator('.month-name');
-  await expect(name).toHaveText('September 2026');
-  await expect(page.locator('.mstep-prev')).toHaveAttribute('aria-label', 'Previous month');
-  await expect(page.locator('.mstep-next')).toHaveAttribute('aria-label', 'Next month');
+  await expect(name).toHaveText('Sep');
+  await expect(page.locator('.mpick-prev')).toHaveAttribute('aria-label', 'Previous month');
+  await expect(page.locator('.mpick-next')).toHaveAttribute('aria-label', 'Next month');
 
-  await page.locator('.mstep-next').click();
+  await page.locator('.mpick-next').click();
   await page.waitForTimeout(600);
-  await expect(name).toHaveText('October 2026');
-  await page.locator('.mstep-prev').click();
+  await expect(name).toHaveText('Oct');
+  await page.locator('.mpick-prev').click();
   await page.waitForTimeout(600);
-  await expect(name).toHaveText('September 2026');
+  await expect(name).toHaveText('Sep');
 
   /*
    * Off the control before reading its colour: `.mstep:hover` is `--ink-soft`,
@@ -2636,60 +2711,73 @@ test('the month steps from the two marks above and below its name', async ({ pag
     probe.style.color = root.getPropertyValue('--accent').trim();
     const accent = getComputedStyle(probe).color;
     probe.remove();
-    const dot = getComputedStyle(document.querySelector('.mstep-prev .mstep-dot'));
-    const line = getComputedStyle(document.querySelector('.mstep-prev .mstep-line'));
-    const head = document.querySelector('.month-head').getBoundingClientRect();
-    const title = document.querySelector('.month-title').getBoundingClientRect();
+    probe.style.color = root.getPropertyValue('--ink-soft').trim();
+    document.body.append(probe);
+    const soft = getComputedStyle(probe).color;
+    probe.remove();
+    const prev = document.querySelector('.mpick-prev');
+    const now = document.querySelector('.mpick-now');
+    const next = document.querySelector('.mpick-next');
+    const r = (el) => el.getBoundingClientRect();
     return {
       accent,
-      dot: dot.backgroundColor,
-      line: line.backgroundColor,
-      // The hairline is vertical since 2026-10-03, so its hair is its width and
-      // its length is its height.
-      lineWidth: line.width,
-      lineHeight: line.height,
-      // One above and one below, with the words between them, and all three
-      // starting on the control's own left margin.
-      prevReachesEdge: Math.round(document.querySelector('.mstep-prev').getBoundingClientRect().left - head.left),
-      titleIsBetween: title.top > head.top && title.bottom < head.bottom,
+      soft,
+      prevInk: getComputedStyle(prev).color,
+      nextInk: getComputedStyle(next).color,
+      nowInk: getComputedStyle(now).color,
+      // One above and one below, with this month between them, on one column.
+      stacked: r(prev).bottom <= r(now).top + 1 && r(now).bottom <= r(next).top + 1,
+      oneColumn: Math.round(r(prev).left) === Math.round(r(next).left),
+      // Equidistant by their words, which is what a reader sees - the boxes
+      // were on a 24 px pitch while the text was on 21.8 / 26.2 for one commit.
+      pitchTop: Math.round(r(now).top - r(prev).top),
+      pitchBottom: Math.round(r(next).top - r(now).top),
     };
   });
-  expect(marks.dot, 'the stepper’s diamond is not --accent').toBe(marks.accent);
-  expect(marks.line, 'the stepper’s hairline is not --accent').toBe(marks.accent);
-  expect(marks.lineWidth, 'the stepper’s hairline is not a hairline').toBe('1px');
-  expect(parseFloat(marks.lineHeight), 'the stepper’s hairline has no length').toBeGreaterThan(4);
-  expect(marks.prevReachesEdge).toBe(0);
-  expect(marks.titleIsBetween, 'the month’s words are not between the two marks').toBe(true);
+  expect(marks.prevInk, 'the month before is not one step back in ink').toBe(marks.soft);
+  expect(marks.nextInk, 'the month after is not one step back in ink').toBe(marks.soft);
+  expect(marks.nowInk, 'the month being read is as faint as its neighbours').not.toBe(marks.soft);
+  expect(marks.stacked, 'the three months are not stacked in order').toBe(true);
+  expect(marks.oneColumn, 'the three months do not share a column').toBe(true);
+  expect(marks.pitchTop, 'the three months are not equidistant').toBe(marks.pitchBottom);
 
   /*
    * **The step up is the month before.** It is the whole of the instruction's
    * direction and the one thing a spinner can get backwards, so it is asserted
    * rather than inferred from the markup's order.
    */
-  await page.locator('.mstep-prev').click();
+  await page.locator('.mpick-prev').click();
   await page.waitForTimeout(600);
-  await expect(name).toHaveText('August 2026');
+  await expect(name).toHaveText('Aug');
 
-  // And the phone's month wears the same pair, at a thumb's target rather than
-  // a pointer's: the peeked columns that stepped it there are gone.
+  // And the phone's month wears the same pair, in the same gutter: one drawing
+  // at both widths (author, 2026-10-03, "I want the same calendar look between
+  // mobile and desktop now").
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto('/calendar/2026-09-14', { waitUntil: 'networkidle' });
   await page.locator('[data-month]').click();
   await expect(page.locator('.cal-month')).toBeVisible();
   await page.waitForTimeout(600);
   await expect(page.locator('.cal-month .peek')).toHaveCount(0);
-  await expect(page.locator('.mstep-prev')).toBeVisible();
-  await expect(page.locator('.mstep-next')).toBeVisible();
+  await expect(page.locator('.mpick-prev')).toBeVisible();
+  await expect(page.locator('.mpick-next')).toBeVisible();
   const phoneStep = await page.evaluate(() => {
-    const up = document.querySelector('.mstep-prev').getBoundingClientRect();
-    const down = document.querySelector('.mstep-next').getBoundingClientRect();
-    const title = document.querySelector('.month-title').getBoundingClientRect();
-    return { up: Math.round(up.height), down: Math.round(down.height), between: up.bottom <= title.top + 1 && down.top >= title.bottom - 1 };
+    const up = document.querySelector('.mpick-prev').getBoundingClientRect();
+    const down = document.querySelector('.mpick-next').getBoundingClientRect();
+    const now = document.querySelector('.mpick-now').getBoundingClientRect();
+    return {
+      up: Math.round(up.height),
+      down: Math.round(down.height),
+      between: up.bottom <= now.top + 1 && down.top >= now.bottom - 1,
+    };
   });
-  expect(phoneStep.up, 'the phone step is not a thumb’s target').toBe(32);
-  expect(phoneStep.down).toBe(32);
-  expect(phoneStep.between).toBe(true);
-  await page.locator('.mstep-prev').click();
+  /* One row each, the same row the desk draws: the target is the whole width
+     of the gutter rather than a 32 px box built for a thumb, because the
+     control is a word now and the word is the same at both widths. */
+  expect(phoneStep.up, 'the phone step is not one row').toBe(20);
+  expect(phoneStep.down).toBe(20);
+  expect(phoneStep.between, 'this month is not between the two it steps to').toBe(true);
+  await page.locator('.mpick-prev').click();
   await page.waitForTimeout(600);
-  await expect(page.locator('.month-name')).toHaveText('August 2026');
+  await expect(page.locator('.month-name')).toHaveText('Aug');
 });

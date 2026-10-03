@@ -70,10 +70,16 @@ test("a register row is the register's own, tighter than the Index's and with no
     name: li.querySelector('.reg-name').getBoundingClientRect(),
     thumb: li.querySelector('.reg-thumb').getBoundingClientRect(),
   }));
-  // Square, and trailing the name rather than standing before it.
+  /* **Square, and leading the name since 2026-10-03** (author: "add a small
+     ornamental cross dot point next to each also commemorated saint and
+     instead of the cross make it a tiny thumbnail of their image if they have
+     an image"). It trailed the name from 2026-08-27, where it was the plate's
+     picture hung at the row's end; what it is now is a bullet, and a bullet
+     goes before the thing it marks. The picture is the row's last child in the
+     DOM still - the plate's order - and `order: -1` is what moves it. */
   expect(Math.round(m.thumb.width)).toBe(Math.round(m.thumb.height));
-  expect(m.thumb.left).toBeGreaterThanOrEqual(m.name.right - 1);
-  expect(m.card.right - m.thumb.right).toBeLessThan(8);
+  expect(m.thumb.right).toBeLessThanOrEqual(m.name.left + 1);
+  expect(m.thumb.left - m.card.left).toBeLessThan(8);
   // Tighter than the row it used to be, which is 83 px since the same
   // afternoon. This is the whole of "pack them more tightly" as a number.
   expect(m.card.height).toBeLessThan(66);
@@ -298,14 +304,20 @@ test('the also-commemorated cards run tallest picture first, imageless last', as
 });
 
 
-test('a phone keeps the calendar’s own order for the also-commemorated', async ({ page }) => {
+test('a phone reads the also-commemorated in the register’s own order', async ({ page }) => {
   /*
    * The reordering above is the desktop's, in the author's own words. The rows
-   * arrive sorted because the desktop lays them out in a block container that
-   * ignores `order`; below 1024 px the register is a flex column and
-   * `--reg-seq` puts the calendar's order back. Asserted by the laid-out
-   * geometry rather than by the DOM, since the DOM is deliberately not the
-   * reading order here.
+   * arrive sorted tallest-picture-first because the desktop lays them out in a
+   * block container that ignores `order`; below 1024 px the register is a flex
+   * column and `--reg-seq` puts the register's own order back. Asserted by the
+   * laid-out geometry rather than by the DOM, since the DOM is deliberately
+   * not the reading order here.
+   *
+   * **That order is the corpus's years since 2026-10-03** (author: "order them
+   * not alphabetically but by year"), applied in `registerOrder` before
+   * `--reg-seq` is handed out — so it is the order at both widths and this
+   * test is what holds it on the phone. A saint the corpus cannot date sorts
+   * last rather than at year zero.
    */
   await ready(page);
   await page.setViewportSize({ width: 390, height: 900 });

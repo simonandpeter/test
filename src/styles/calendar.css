@@ -185,9 +185,12 @@
    present and reachable, and they are not this month. */
 /* Every name that is not this month: one step back in ink, the same distance
    `.month-out` puts the days either side of the month at, and for the same
-   reason - they are present and reachable, and they are not this month. */
-button.mpick {
+   reason - they are present and, where they are a control, reachable. */
+.mpick:not(.mpick-now) {
   color: var(--ink-soft);
+}
+
+button.mpick {
   cursor: pointer;
 }
 
@@ -1052,9 +1055,16 @@ html[data-route~='calendar'] .month-feast {
  * `daily-picker.spec.js` asserts the mark against whatever box it actually
  * stands on, in both themes, rather than against a number written here.
  */
-html[data-route~='calendar'] .cal-main .month-grid button[aria-current='date'] {
-  background: var(--field);
-  border-color: var(--rule);
+/* **The rail's shape, the accent's edge.** "Match that in the calendar view"
+   gave the month the rail's field, rubric numeral and underline, and it also
+   gave it the rail's `--rule` hairline - which on the desk measures 1.41:1
+   against the ground it stands on, the defect the paragraphs above moved to
+   `--accent` to escape in the first place. The hairline is the one piece of
+   that mark that is not legible here, so it alone keeps `--accent`: 2.64:1 in
+   day and 2.84:1 in vigil, and the same at both widths, which is what "the
+   same calendar look between mobile and desktop" asks for. */
+.month-grid button[aria-current='date'] {
+  border-color: var(--accent);
 }
 
 /*
@@ -1742,9 +1752,24 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
      width, so nothing to toggle to - but the month's name and the two either
      side of it are the stepping at both widths now (author, 2026-10-03: "I
      want the same calendar look between mobile and desktop"), and they live in
-     this column. */
+     this column.
+
+     **So the column needs a width of its own here.** `.month-pick` is
+     positioned out of flow, so with the toggle gone the gutter had nothing
+     in it to measure and collapsed to zero: the names were drawn 0 px wide
+     and the desk had no month stepping at all. 34 px is the toggle's own
+     width, which is what the phone's gutter measures. */
   .cal-jump > button {
     display: none;
+  }
+
+  .cal-jump {
+    width: 34px;
+  }
+
+  /* No toggle above them here, so the stack starts at the column's top. */
+  .month-pick {
+    top: 0;
   }
 
   .cal-week {
@@ -2953,7 +2978,15 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    * which means `order` does work, and `--reg-seq` is each saint's place in
    * the order the calendar gave them. The author scoped the reordering to the
    * desktop; this is what holds it there.
+   *
+   * Since 2026-10-03 that order is the corpus's own years rather than the
+   * calendar's listing (author: "order them not alphabetically but by year"),
+   * which `registerOrder` applies before `--reg-seq` is handed out - so this
+   * rule is what carries the year order to the phone as well.
    */
+  .register-cards li.reg-card {
+    order: var(--reg-seq, 0);
+  }
 
   /*
    * **The row is a line of text with a mark beside it** (author, 2026-10-03:

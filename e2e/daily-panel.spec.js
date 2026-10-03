@@ -3693,7 +3693,18 @@ test('the right column is a plain column: no fill, no corners, a rule at its edg
   expect(seen.rule, 'the shelf’s hairline is not the other columns’').toBe(seen.readRule);
   expect(seen.headGround, 'the pinned head does not stand on the page’s ground').toBe(seen.bodyGround);
 
-  expect(seen.gridWidth, 'the month grid is not the width of the column it stands in').toBe(seen.monthColumn);
+  /* **Less the gutter, since 2026-10-03.** The month's name and the two it
+     steps to stand in a 34 px column to the left of the grid at both widths
+     (author: "move it to the left-side space under the button that toggles
+     calendar and weekly displays ... And of course make sure this goes to
+     desktop as well because desktop uses the same calendar look"), so the grid
+     no longer takes the column whole. What is still asserted is that it takes
+     all of what is left: nothing is reserved beside it. */
+  expect(
+    seen.monthColumn - seen.gridWidth,
+    'the month grid is not filling the column beside the gutter',
+  ).toBeLessThanOrEqual(48);
+  expect(seen.gridWidth, 'the month grid has collapsed').toBeGreaterThan(seen.monthColumn / 2);
   expect(seen.cellWidths.length, 'the month cells are not one width').toBe(1);
   expect(seen.numeralWidth, 'premise: the month draws no numerals to measure').toBeGreaterThan(0);
   expect(
