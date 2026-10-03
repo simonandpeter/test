@@ -12,6 +12,11 @@
       "form": "Λέων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Άγιος Λέων Πάπας Ρώμης», with the rank word and the see left off."
+    },
+    {
+      "form": "Лев",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Святитель Лев, папа Римский», with the rank word and the see left off. The calendar gives the name alone, with no surname and no epithet; everything after it is the see."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Свт. Льва, Папы Римского (461).»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -92,6 +106,38 @@
       },
       "english": {
         "text": "Having sat, glorious one, upon the throne of the priesthood, and stopped the mouths of the reasoning lions by God-inspired teachings of the venerable Trinity, you shone out upon your flock the light of the knowledge of God; and therefore you were glorified as a divine initiate of the grace of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче, архиереев Богодухновенное удобрение,/ Льве премудре,/ ученьми твоими вся просветил еси, цевнице духовная./ Моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Тропарь святителя Льва, папы Римского»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of Orthodoxy, instructor in godliness and in purity, lamp of the inhabited earth, God-inspired adornment of bishops, most wise Leo: by your teachings you enlightened all, O spiritual harp. Entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "На престоле, славне, священства сед/ и львов уста словесных заградив,/ догматы богодухновенными Честныя Троицы/ озарил еси свет богоразумия твоему стаду./ Сего ради прославился еси// яко Божественный таинник Божия благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Кондак святителя Льва»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seated, O glorious one, on the throne of the priesthood, and having shut the mouths of the rational lions, you lit up for your flock the light of the knowledge of God by your God-inspired dogmas of the Honoured Trinity. Therefore you were glorified as a divine initiate of the grace of God.",
         "rendered": "site"
       }
     }

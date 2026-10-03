@@ -12,6 +12,11 @@
       "form": "Κοσμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Όσιος Κοσμάς του Γιαχρόμ», with the rank word and the place left off. No Russian form is printed on the page, and none is invented here; the place is spelled «Γιαχρόμ» there."
+    },
+    {
+      "form": "Косма Яхромский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Косма Яхромский, прп.», with the rank word left off."
     }
   ],
   "related": [],
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Прп. Космы Яхромского (1492).»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Горняго желая премирнаго жития,/ дольняя возненавидел еси,/ и, взем крест свой, последовал еси Христу,/ и в пустыню вселился еси, досточудне,/ в ней подвизася в пениих, в бдениих и пощениих./ Темже в тя вселися Пресвятый Дух,/ но яко имея дерзновение ко Христу Богу,/ испроси людем православным здравие и спасение/ и не забуди посещая чад своих,/ совершающих священную память твою,/ Космо, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Тропарь преподобного Космы Яхромского»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the life on high, beyond this world, you came to hate the things below, and taking up your cross you followed Christ and settled in the wilderness, O most wonderful one, struggling there in singing, in vigils and in fastings; and so the All-Holy Spirit made his dwelling in you. Having boldness before Christ God, ask health and salvation for Orthodox people, and do not forget to visit your children, who keep your sacred memory, O Cosmas, our venerable father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Душевныя страсти из корене исторгая,/ в пустыню вселился еси, преподобне,/ и неболезненную жизнь в болезнех восприял еси,/ болезнем же лютым уставлявши озлобления просящим у тебе с верою./ Темже разреши болезни наша душевныя и телесныя, да зовем ти:/ радуйся, Космо Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Кондак преподобного Космы Яхромского»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Tearing the passions of the soul up by the root, you settled in the wilderness, O venerable one, and through sicknesses you received a life free of sickness; and you still the rage of cruel sicknesses for those who ask of you in faith. Loose, then, our sicknesses of soul and of body, that we may cry to you: Rejoice, Cosmas, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

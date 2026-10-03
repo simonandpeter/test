@@ -12,6 +12,11 @@
       "form": "Αγαπητός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Φεβρουαρίου, «Όσιος Αγαπητός ο Ομολογητής και θαυματουργός Επίσκοπος Συναού», with the rank word, the two epithets and the see left off."
+    },
+    {
+      "form": "Агапит Синадский (Фригийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Святитель Агапит Синадский (Фригийский), епископ, исповедник», with the rank word, the office and «исповедник» left off."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Свт. Агапита исп., еп. Синадского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

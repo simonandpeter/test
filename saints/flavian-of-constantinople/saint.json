@@ -12,6 +12,11 @@
       "form": "Φλαβιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Φεβρουαρίου, «Άγιος Φλαβιανός Πατριάρχης Κωνσταντινουπόλεως», with the rank word and the see left off."
+    },
+    {
+      "form": "Флавиан Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 18 февраля ст. ст., «Святитель Флавиан Константинопольский, патриарх, исповедник», with the rank word, the office and «исповедник» left off. The day's own line uses the older name of the city, «патриарха Цареградского»."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps him on 18 февраля, where the Greek and Romanian rows on this folder are 16 February. saint.gr's own note, quoted on the Greek row, says he was kept on 18 February until the twelfth century; days.pravoslavie.ru still is, and its 16 февраля day page does not name him (read 3 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 февраля ст. ст. — «Свт. Флавиана исп., патриарха Цареградского (449-450).»",
+        "url": "https://days.pravoslavie.ru/Days/20260218.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
