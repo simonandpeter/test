@@ -12,6 +12,11 @@
       "form": "Ερμογένης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Ερμογένης ο Ιερομάρτυρας Πατριάρχης Μόσχας», with the rank words and the see left off. The page gives his baptismal name in Greek as «Ερμόλαος»; no Russian form is printed on it, and none is invented here."
+    },
+    {
+      "form": "Ермоген",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Священномученик Ермоген, патриарх Московский и всея Руси», with the rank word and the see left off. The calendar gives the name alone, with no surname and no epithet; everything after it is the see."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Сщмч. Ермогена, Патриарха Московского и всея России, чудотворца (1612).»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -79,5 +93,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Российския земли первопрестольниче/ и неусыпный о ней к Богу молитвенниче,/ за веру Христову и паству твою душу свою положив,/ страну нашу от нечестия избавил еси./ Темже вопием ти:/ спасай нас молитвами твоими,// священномучениче Ермогене, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Тропарь священномученика Ермогена»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "First on the throne of the Russian land and its unsleeping intercessor before God, you laid down your life for the faith of Christ and for your flock, and delivered our country from ungodliness. Therefore we cry to you: save us by your prayers, hieromartyr Hermogenes, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Темницею и гладом изнуряем,/ даже до смерти верен пребыл еси, блаженне Ермогене,/ малодушие от сердец людей твоих отгоняя/ и на общий подвиг вся призывая./ Темже и нечестивых мятеж низложил еси и страну нашу утвердил еси,/ да вси зовем ти:// радуйся, заступниче Российския земли.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Кондак священномученика Ермогена»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Worn down by prison and by hunger, you remained faithful even to death, blessed Hermogenes, driving faint-heartedness out of your people's hearts and calling them all to a common struggle. So you overthrew the revolt of the ungodly and made our country firm, that we might all cry to you: Rejoice, advocate of the Russian land.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Μαριάμνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Αγία Μαριάμνη η Ισαπόστολος αδελφή του Αγίου Φιλίππου του Αποστόλου», with the rank word, the title and the kinship left off."
+    },
+    {
+      "form": "Мариамна (Мария)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Мариамна (Мария)», which carries no rank word at all and gives the second name in brackets as the calendar prints it. The day's own line names her by her brother, «сестры ап. Филиппа»."
     }
   ],
   "sex": "female",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Прав. Мариамны, сестры ап. Филиппа (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

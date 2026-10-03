@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Άγιος Θεόδωρος ο Τήρων», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Феодор Тирон",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Великомученик Феодор Тирон», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -67,13 +72,39 @@
         "text": "Having taken the faith of Christ within your heart as a breastplate, you trampled down the opposing powers, much-contending one, and were crowned eternally with a heavenly crown, as one unconquered.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Веру Христову, яко щит, внутрь приим в сердце твоем,/ противныя силы попрал еси, многострадальче,/ и венцем Небесным венчался еси вечно, Феодоре,// яко непобедимый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Кондак великомученика Феодора Тирона»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking the faith of Christ within your heart as a shield, you trod down the hostile powers, O greatly suffering one, and you were crowned eternally with a heavenly crown, Theodore, as one unconquered.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian",
+        "note": "Both of his life pages at days.pravoslavie.ru head themselves «Дни памяти: 15 февраля, 17 февраля», and the calendar's 15 февраля day page prints his line and his kontakion as well as this one. His own life says what that other day is: «Православная церковь до сих пор ежегодно отмечает память великомученика Феодора Тирона в первую субботу Великого поста» — the first Saturday of the Great Fast, which in 2026 fell on the civil 28 February, the calendar's 15 февраля. The corpus keeps one feast to a church and cannot hold a moveable one, so the row is this fixed day, which is also the day the Greek and Romanian calendars keep him on."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Вмч. Феодора Тирона (306).»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

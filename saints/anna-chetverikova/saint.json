@@ -1,0 +1,58 @@
+{
+  "slug": "anna-chetverikova",
+  "display_name": "Anna (Chetverikova)",
+  "names": [
+    {
+      "form": "Анна (Четверикова)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Анна (Четверикова), мц.», with the rank word left off. The day's own line gives the name without the surname."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Мц. Анны (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 martie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Μαρτίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 March 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 17 февраля ст. ст.: «Мц. Анны (1940).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

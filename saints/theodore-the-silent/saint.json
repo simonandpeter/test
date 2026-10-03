@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Φεβρουαρίου, «Όσιος Θεόδωρος ο Σιωπηλός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Феодор Печерский, Молчаливый",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 февраля ст. ст., «Феодор Печерский, Молчаливый», with no rank word to leave off. The day's own line puts the epithets the other way round and prints its rank word without a full stop, «Прп Феодора молчаливого, Печерского (XIII).»"
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 февраля ст. ст. — «Прп Феодора молчаливого, Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260217.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
