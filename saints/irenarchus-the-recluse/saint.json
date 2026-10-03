@@ -12,6 +12,11 @@
       "form": "Ειρήναρχος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ειρήναρχος ο Έγκλειστος», with the rank word left off."
+    },
+    {
+      "form": "Иринарх Ростовский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Иринарх Ростовский, затворник», with the rank word left off."
     }
   ],
   "dates": {
@@ -33,8 +38,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Прп. Иринарха, затворника Ростовского (1616)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,5 +77,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко мученика добропроизвольна / и преподобных удобрение, / звезду Ростовскую, / в затворе, узах и веригах Господеви благоугодившаго / и чудес благодать от Него приемшаго, / Иринарха предивнаго песньми хвалебными почтим / и, к нему припадающе, умильно глаголем: / отче преподобне, моли Христа Бога / спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Тропарь преподобного Иринарха, затворника Ростовского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A willing martyr and an adornment of the venerable, the star of Rostov, who in enclosure, in bonds and in fetters was well-pleasing to the Lord and received from him the grace of wonders — the most wondrous Irenarchus — let us honour with hymns of praise; and falling down before him let us say with compunction: venerable father, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Волнений множество жестоким житием преходя,/ изгнание, затвор и узы железный претерпел еси мужески, Иринарше терпеливодушне,/ нам оставль образ злострадания и терпения твоего,/ озаряя чудес блистаньми с верою приходящих к честному гробу твоему,/ у негоже, яко почесть победную, вериги твоя тяжкия видим,/ от нихже подаеши исцеления недужным./ Сего ради зовем ти:/ радуйся, Иринарше, отче предивный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Кондак преподобного Иринарха, затворника Ростовского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Passing through a multitude of waves by thy hard manner of life, thou didst manfully endure banishment, enclosure and iron bonds, O long-suffering Irenarchus, leaving us the image of thine affliction and thy patience, and shining with the lightnings of wonders upon those who come in faith to thy honoured tomb, at which we see thy heavy fetters as a trophy of victory, and from them thou givest healings to the sick. Therefore we cry to thee: rejoice, O most wondrous father Irenarchus.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

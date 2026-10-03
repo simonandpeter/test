@@ -4,4 +4,4 @@ The Greek calendar keeps him on 13 Ιανουαρίου as «Όσιος Ειρή
 
 That is all it prints. The epithet «ο Έγκλειστος» — the enclosed, the recluse — it does not explain, and it tells nothing of the enclosure, the cell or the years in it. The page links him to the synaxis of all the saints who shone in Rostov and Yaroslavl, and it prints no hymn.
 
-*After saint.gr's calendar for 13 Ιανουαρίου — [the day](https://www.saint.gr/01/13/index.aspx) and [the life](https://www.saint.gr/1417/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 13 Ιανουαρίου — [the day](https://www.saint.gr/01/13/index.aspx) and [the life](https://www.saint.gr/1417/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 13 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260113.html), read 3 October 2026, which keeps him as «Прп. Иринарха, затворника Ростовского (1616)».*

@@ -11,6 +11,11 @@
       "form": "Στρατόνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Άγιοι Έρμυλος και Στρατόνικος», with the rank word left off."
+    },
+    {
+      "form": "Стратоник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Мученик Стратоник», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -44,8 +49,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Мчч. Ермила и Стратоника (ок. 315)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -127,6 +141,38 @@
       },
       "english": {
         "text": "Thy martyrs, O Lord, in their contending received the crown of incorruption from thee our God; for having thy strength they cast down the tyrants, and broke also the powerless insolence of the demons. By their entreaties, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Тропарь мучеников», глас 4 — the common of martyrs, printed on the day for Hermylus and Stratonicus",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings received from thee, our God, incorruptible crowns; for having thy strength they cast down the tormentors and broke in pieces the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "От мирския молвы избегосте и к тихому пристанищу преставистеся,/ мученичества кровьми и постничества трудами венчаеми./ Темже и показастеся мучеников и преподобных единовсельницы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Кондак мучеников Ермила и Стратоника», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye fled the tumult of the world and passed over to a quiet haven, crowned with the blood of martyrdom and with the labours of the ascetic life. Therefore ye were shown to be fellow dwellers with the martyrs and with the venerable alike.",
         "rendered": "site"
       }
     }

@@ -11,6 +11,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ιάκωβος Επίσκοπος Νισίβεως», with the rank words left off."
+    },
+    {
+      "form": "Иаков Низибийский (Нисивийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Святитель Иаков Низибийский (Нисивийский), епископ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Прп. Иакова, еп. Низибийского (350)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,5 +77,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 350,
+      "latest": 350,
+      "display": "350",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 13 января ст. ст., «Прп. Иакова, еп. Низибийского (350)»."
+    }
   }
 }

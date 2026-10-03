@@ -16,6 +16,11 @@
       "form": "Μάξιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Μάξιμος ο Καυσοκαλυβίτης», with the rank word left off."
+    },
+    {
+      "form": "Максим Кавсокаливит",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Максим Кавсокаливит, прп.», with the rank word left off; the line itself writes «Максима Кавсокалива»."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Прп. Максима Кавсокалива (ок. 1365)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

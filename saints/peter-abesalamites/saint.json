@@ -10,13 +10,27 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Άγιος Πέτρος ο Αβεσαλαμίτης», with the rank word left off."
+    },
+    {
+      "form": "Петр Авессаломит (Анийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Петр Авессаломит (Анийский), мч.», with the rank word left off."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Мч. Петра Анийского (309-310)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -45,5 +59,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 309,
+      "latest": 310,
+      "display": "309–310",
+      "basis": "traditional",
+      "note": "The years in the calendar's own bracket: days.pravoslavie.ru, 13 января ст. ст., «Мч. Петра Анийского (309-310)»."
+    }
+  },
+  "related": [
+    "peter-of-aneia"
+  ]
 }

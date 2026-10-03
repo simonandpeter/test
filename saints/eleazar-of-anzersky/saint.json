@@ -11,6 +11,11 @@
       "form": "Ελεάζαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιανουαρίου, «Όσιος Ελεάζαρος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Елеазар (Севрюков) Анзерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Елеазар (Севрюков) Анзерский, прп.», with the rank word left off."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст. — «Прп. Елеазара Анзерского (1656)»",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +69,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Отверг плоти тленная, / нетленных потщался еси достигнути, / и, мира удалився, / вселился еси в морский остров, / и на нем усердно многа лета Господеви поработал еси, / сего ради и дары прозрения и чудес обогатился еси,/ отче преподобне Елеазаре. / Христа Бога моли даровати нам мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Тропарь преподобного Елеазара Анзерского», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Casting away the corruptible things of the flesh, thou didst hasten to attain the incorruptible; and withdrawing from the world thou didst settle on an island of the sea, and there didst labour zealously for the Lord many years. Wherefore thou wast enriched with the gifts of foresight and of wonders, O venerable father Eleazar. Pray Christ God to grant us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Яко лучу тя солнечную, Христос показа, преподобне,/ сияющу во стране приморстей чудес благодатию,/ уставлявши бо плавающим тишину морскую, верою молящимся тебе и вопиющим:/ радуйся, Елеазаре, отче наш,/ страны Беломорския похвало и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 января ст. ст., «Кондак преподобного Елеазара Анзерского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ showed thee as a ray of the sun, O venerable one, shining in the land beside the sea with the grace of wonders; for thou dost still the sea for them that sail, who pray to thee in faith and cry: rejoice, Eleazar our father, the praise and the strength of the land of the White Sea.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
