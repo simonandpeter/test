@@ -1,0 +1,11 @@
+# Paul (Kozlov)
+
+The one life the 1938 line carries is his, and it heads him by the name he took in religion, not the one the calendar's line gives: «Преподобномученик Петр (Павел Козлов), иеромонах Ниловой Пустыни». He was born Pavel Fyodorovich Kozlov on 24 June 1879 in the village of Zuyevo in the Zubtsov district of the Tver province, to the peasants Fyodor and Maria. From childhood he wanted to be a monk, and at twenty he left his parents and the farm and entered Nilova Pustyn as a novice; he was tonsured there with the name Peter.
+
+The revolution came and with it the time of persecutions, but having chosen the cross of church service he asked for the priesthood and was ordained hieromonk. In the mid-twenties the authorities closed Nilova Pustyn and he served in a parish church. In 1930, taking hold of his failure to pay his taxes on time, they sentenced him to five years' exile, which he served at Yeniseysk; taught every kind of work in the monastery, he kept himself by mending boots and sawing and splitting firewood, and after four years, his health failing, his term was shortened on his own application.
+
+His last interrogation is printed as question and answer. He was told the investigation knew he had carried on counter-revolutionary agitation against the collective farms and the Soviet power, that he had said life was hard now and the Bolsheviks had taken everything and crushed people with taxes; that in the summer of 1937 he had said nothing was left under Soviet rule; that at the December 1937 elections to the Supreme Soviet he had said there was nobody to choose. He denied each charge, allowing only that he had said at a pre-election meeting that he did not know whom to vote for, because he read no newspapers.
+
+The calendar's line for the day gives him under his lay name and marks him «прмч.», a venerable-martyr, with the year 1938; the name link behind it reads «Павел (Козлов), иеромонах Ниловой пустыни», and it is that form the name below is read from.
+
+*After the Православный церковный календарь of the Сретенский monastery for 15 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260215.html) and [the life](https://days.pravoslavie.ru/Life/life4886.htm); read 3 October 2026.*

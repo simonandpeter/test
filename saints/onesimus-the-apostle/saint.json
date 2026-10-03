@@ -11,6 +11,11 @@
       "form": "Ονήσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Άγιος Ονήσιμος ο Απόστολος», with the rank words left off."
+    },
+    {
+      "form": "Онисим",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Онисим, апостол от 70-ти, сщмч.», with the rank words left off. The calendar gives the name alone, with no surname and no epithet; «от 70-ти» counts him among the Seventy."
     }
   ],
   "sex": "male",
@@ -69,6 +74,38 @@
         "text": "Like a ray thou didst shine out upon the world, lit by the beams of the all-radiant sun, blessed one — of Paul, who enlightened the world; and therefore we all honour thee, O Onesimus.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоле святый Онисиме,/ моли Милостиваго Бога,/ да прегрешений оставление/ подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Тропарь апостола Онисима»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostle Onesimus, entreat the merciful God to grant our souls the forgiveness of our offences.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко луча, возсиял еси вселенней,/ зарями сияя солнца, блаженне,/ всесветлаго Павла, мир просветившаго:/ темже тя почитаем,// Онисиме славне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Кондак апостола Онисима»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You rose upon the inhabited earth like a ray, O blessed one, shining with the dawnings of that sun, the all-radiant Paul who enlightened the world; and therefore we honour you, glorious Onesimus.",
+        "rendered": "site"
+      }
     }
   ],
   "images": [
@@ -85,8 +122,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Ап. от 70-ти Онисима (ок. 109).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

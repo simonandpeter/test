@@ -9,6 +9,11 @@
     {
       "form": "Οσία Ευφροσύνη Θυγατέρα Παφνουτίου του Αιγυπτίου",
       "lang": "el"
+    },
+    {
+      "form": "Евфросиния Александрийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Евфросиния Александрийская, прп.», with the rank word left off. The day's own line names her as her father's daughter, «и дщери его Евфросинии»."
     }
   ],
   "sex": "female",
@@ -19,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 12 сентября ст. ст. (civil 25 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian",
+        "note": "Her life page at days.pravoslavie.ru heads itself «Дни памяти: 15 февраля, 25 сентября», so the Russian calendar keeps her twice; the corpus keeps one feast to a church, and this row is the day page that printed her line, the 15 февраля the Greek and Romanian calendars do not have."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Прп. Пафнутия и дщери его Евфросинии (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

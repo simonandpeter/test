@@ -5,6 +5,11 @@
     {
       "form": "Όσιος Παφνούτιος",
       "lang": "el"
+    },
+    {
+      "form": "Пафнутий Александрийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Пафнутий Александрийский, прп.», with the rank word left off. His daughter's life page, which is the only life the calendar carries for the pair, names him inside her story: «Воспитывал девочку отец, Пафнутий»."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 25 сентября ст. ст. (civil 8 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page days.pravoslavie.ru carries for the two of them, his daughter's, heads itself «Дни памяти: 15 февраля, 25 сентября»; the corpus keeps one feast to a church, and this row is the day page that printed their line."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Прп. Пафнутия и дщери его Евфросинии (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

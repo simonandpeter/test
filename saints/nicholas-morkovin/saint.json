@@ -1,0 +1,60 @@
+{
+  "slug": "nicholas-morkovin",
+  "display_name": "Nicholas (Morkovin)",
+  "names": [
+    {
+      "form": "Николай (Морковин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Николай (Морковин), иерей, сщмч.», with the rank words left off. The day's own line gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Сщмч. Николая, Алексия, Алексия пресвитеров, Симеона диакона, прмч. Павла и прмц. Софии (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 28 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 February 2026 (3 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 15 февраля ст. ст.: «… прмч. Павла и прмц. Софии (1938).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

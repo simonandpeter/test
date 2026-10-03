@@ -1,0 +1,67 @@
+{
+  "slug": "paul-kozlov",
+  "display_name": "Paul (Kozlov)",
+  "names": [
+    {
+      "form": "Павел (Козлов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Павел (Козлов), иеромонах Ниловой пустыни, сщмч.», with the rank word and the monastery left off. His own life page gives his name in religion instead, and the lay name in brackets: «Преподобномученик Петр (Павел Козлов), иеромонах Ниловой Пустыни»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page days.pravoslavie.ru carries for him also lists «26 января (Новомуч.)» among his days, the day the calendar keeps the Synaxis of the New Martyrs; the day page for that day does not repeat this line and the corpus keeps one feast to a church, so he renders on 15 февраля only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Сщмч. Николая, Алексия, Алексия пресвитеров, Симеона диакона, прмч. Павла и прмц. Софии (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 28 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "24 June 1879",
+      "basis": "attested",
+      "note": "His life page at days.pravoslavie.ru: «родился 24 июня 1879 года в деревне Зуево Зубцовского уезда Тверской губернии»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 15 февраля ст. ст.: «… прмч. Павла и прмц. Софии (1938).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

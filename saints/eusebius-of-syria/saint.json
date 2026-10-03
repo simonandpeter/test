@@ -11,6 +11,11 @@
       "form": "Ευσέβιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Ευσέβιος», with the rank words left off."
+    },
+    {
+      "form": "Евсевий Сирийский, пустынник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Евсевий Сирийский, пустынник», with the rank word left off. The calendar keeps the word «пустынник», hermit, inside the form itself, as its own line for the day does."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Прп. Евсевия, пустынника Сирийского (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

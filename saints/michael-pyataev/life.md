@@ -1,0 +1,11 @@
+# Michael (Pyataev)
+
+He and [John (Kuminov)](/saints/john-kuminov) took holy orders in the years of the persecution of the church, undeterred, his life page says, by the cruelty they had watched the godless authorities use on believers. Father Michael served in the cathedral of Omsk in 1917 and 1918 and had a family of eight children. After the arrest of [Silvester of Omsk](/saints/silvester-of-omsk) he was sent out to a village parish in what is now the Novosibirsk region.
+
+His standing there was such that people came to him from thirty villages round about, although each had a church of its own, and that irritated the authorities. He was arrested first in 1929 and got out through an old acquaintance from his Moscow student years who by then worked in the Moscow criminal police; the man offered to settle him as a schoolteacher, so that he could keep so large a family, if he would leave the priesthood. His answer was that he was a pastor and served God, and that his family would not perish.
+
+He was arrested again on 19 January 1930 and tried the next day. By sentence of a GPU troika he was shot on 15 (28 n. st.) February 1930 at Kainsk, now Kuybyshev in the Novosibirsk region, together with the priest John Kuminov. Under interrogation he was offered the same bargain again and refused it. His last word, the page records, was that to believe in God is men's joy and happiness, and that this does not mean he was committing a crime.
+
+The page sets his death inside the planning of those weeks — twenty-four thousand three hundred people marked for shooting, twenty-eight thousand seven hundred shot between 1 January and 2 March 1930 — and notes that the photograph his daughter obtained from the KGB archive carries the number 28337. He was canonised as a locally venerated saint of the Omsk diocese in 1999, and numbered among the New Martyrs and Confessors of Russia by the Jubilee Council of Bishops in August 2000, for veneration throughout the church.
+
+*After the Православный церковный календарь of the Сретенский monastery for 15 февраля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260215.html) and [the life](https://days.pravoslavie.ru/Life/life4856.htm); read 3 October 2026.*

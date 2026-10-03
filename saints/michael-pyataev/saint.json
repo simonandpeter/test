@@ -1,0 +1,65 @@
+{
+  "slug": "michael-pyataev",
+  "display_name": "Michael (Pyataev)",
+  "names": [
+    {
+      "form": "Михаил (Пятаев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Михаил (Пятаев), иерей, сщмч.», with the rank words left off. His life page heads the two of them «Священномученики иереи Михаил Пятаев и Иоанн Куминов»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian",
+        "note": "The life page days.pravoslavie.ru carries for him also lists «26 января (Новомуч.)» among his days, the day the calendar keeps the Synaxis of the New Martyrs; the day page for that day does not repeat this line and the corpus keeps one feast to a church, so he renders on 15 февраля only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Сщмчч. Михаила и Иоанна пресвитеров (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 28 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 February 2026 (3 October 2026)."
+    }
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "28 February 1930",
+      "basis": "attested",
+      "note": "His life page at days.pravoslavie.ru: «15 (28 н. ст.) февраля 1930 года батюшка вместе с иереем Иоанном Куминовым был расстрелян в город Каинск»; the day's line prints «(1930)». The display takes the new-style date, because date-display.js cannot read the old-style/new-style pair the source prints."
+    }
+  },
+  "related": [
+    "john-kuminov",
+    "silvester-of-omsk"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

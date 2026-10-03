@@ -10,6 +10,11 @@
       "form": "Antim din Chios",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 februarie."
+    },
+    {
+      "form": "Анфим Хиосский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Анфим Хиосский, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not on the Moscow Patriarchate’s list for 3 September (Julian) — days.pravoslavie.ru, read 2026-08-23; no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Прп. Анфима Хиосского (1960).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

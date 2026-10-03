@@ -6,6 +6,11 @@
       "form": "Παφνούτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Φεβρουαρίου, «Όσιος Παφνούτιος ο Έγκλειστος», with the rank words left off."
+    },
+    {
+      "form": "Пафнутий Печерский, затворник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 февраля ст. ст., «Пафнутий Печерский, затворник», with the rank word left off. The day's hymns place him «в Дальних пещерах», in the Far Caves."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Прп. Пафнутия, затворника Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +60,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Велия веры исправления,/ в пещернем затворе, яко на воде упокоения,/ преподобне отче Пафнутие, радовался еси,/ огнем бо любве Божественныя распаляемь,/ бдением и молитвою безстрастия достигл еси/ и явился еси равноангельный на земли,/ того молитвами, Христе Боже, спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Тропарь преподобного Пафнутия, затворника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great are the achievements of faith: shut up in a cave, as though beside the water of rest, you rejoiced, venerable father Paphnutius, for being set alight by the fire of divine love you attained dispassion by vigil and by prayer, and you were shown on earth to be the equal of the angels. By his prayers, Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Помышляя исход души твоея/ и праведное мздовоздаяние по делом,/ непрестанными слезами умолил еси Господа/ даровати тебе неизреченных радостей наследие,/ яже уже со святыми предвкушая, Пафнутие преподобне,/ поминай и нас пред Богом, чтущих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 февраля ст. ст. — «Кондак преподобного Пафнутия, затворника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260215.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Considering the going out of your soul and the just recompense according to deeds, you besought the Lord with unceasing tears to grant you the inheritance of joys unutterable; and already tasting them with the saints, venerable Paphnutius, remember before God us also, who honour you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
