@@ -1,0 +1,75 @@
+{
+  "slug": "jonah-of-hankou",
+  "display_name": "Jonah of Hankou",
+  "office": "Bishop of Hankou",
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Иона",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 13624, whose heading is «Святитель Иона Ханькоуский, Чудотворец, епископ Маньчжурский» — the rank, the epithet and the office left off. The day line writes the office as «еп. Ханькоуского»; the index page writes it «епископ Маньчжурский», and the two are the same man's see named twice."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "traditional",
+      "note": "The life the day links: «Родился будущий еп. Иона в Калуге в 1888 году»."
+    },
+    "death": {
+      "earliest": 1925,
+      "latest": 1925,
+      "display": "1925",
+      "basis": "traditional",
+      "note": "The year the day line prints after his name, «Свт. Ионы , еп. Ханькоуского (1925)». The life sets the night of it after a doctor's visit at ten in the evening of 19 October and says he died in his thirty-seventh year, three years into his episcopate."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Свт. Ионы , еп. Ханькоуского (1925).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded for him. The day carries one icon, «Совершается служба на шесть» — a service of six stichera — and it stands immediately before the first line of the day, the martyrs Sergius and Bacchus, who are also the pair the day's own service and its troparion and kontakion belong to. Reading that rank onto the second line of the same paragraph would be an inference rather than the source's statement."
+      },
+      "note": "His name page lists this one day and no other."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 20 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian hierarchs of the emigration."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/20 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 20 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "ambrose-of-optina",
+    "nicholas-kazansky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "slug": "nicholas-kazansky",
+  "display_name": "Nicholas (Kazansky)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Николай (Казанский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9372, «Николай (Казанский), протоиерей, сщмч.», with the office and the rank word left off. The day line gives neither the surname nor the archpriesthood, only «Сщмч. Николая пресвитера»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Николая пресвитера (1942)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 7 октября ст. ст. — «Сщмч. Николая пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261007.html",
+        "year": 2026,
+        "note": "No rank is recorded. His line is a paragraph of its own and carries no icon; the day's one icon, «Совершается служба на шесть», stands before the martyrs Sergius and Bacchus in the first paragraph."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 20 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs of the Soviet period."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/20 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 20 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "related": [
+    "jonah-of-hankou"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

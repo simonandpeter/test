@@ -880,6 +880,7 @@ export const el = {
     'Bishop of Glazov': 'Επίσκοπος Γκλαζόφ',
     'Bishop of Gortyna': 'Επίσκοπος Γορτύνης',
     'Bishop of Great Perm': 'Επίσκοπος Μεγάλης Περμ',
+    'Bishop of Hankou': 'Επίσκοπος Χανκόου',
     'Bishop of Helenopolis': 'Επίσκοπος Ελενουπόλεως',
     'Bishop of Heraclea': 'Επίσκοπος Ηρακλείας',
     'Bishop of Heraclea in Egypt': 'Επίσκοπος Ηρακλείας Αιγύπτου',

@@ -898,6 +898,7 @@ export const ru = {
     'Bishop of Glazov': 'Епископ Глазовский',
     'Bishop of Gortyna': 'Епископ Гортинский',
     'Bishop of Great Perm': 'Епископ Великопермский',
+    'Bishop of Hankou': 'Епископ Ханькоуский',
     'Bishop of Helenopolis': 'Епископ Еленопольский',
     'Bishop of Heraclea': 'Епископ Ираклийский',
     'Bishop of Heraclea in Egypt': 'Епископ Ираклийский в Египте',
