@@ -14,6 +14,10 @@
       "form": "Καλλίστρατος",
       "lang": "el",
       "note": "Read out of «Άγιος Καλλίστρατος και οι μαζί μ' αυτόν Σαράντα εννέα Μάρτυρες» in this folder’s Greek citation."
+    },
+    {
+      "form": "Св. муч. Калистрат",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -66,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the four the Ohrid Prologue enumerates for this day, and it keeps the forty-nine with him as the Greek and Romanian do. Read off the Prologue text on the page and not off its entry list, which prints three of the four and cuts the third heading to «Св. новомуч»."
+      },
+      "source": {
+        "text": "Охридски пролог, 27. септембар ст. к. — «1. Св. муч. Калистрат. … Опаки мучитељ посла војнике у тамницу ноћу, те убише св. Калистрата и 49 његових другова. Пострадаше за истину 304. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
@@ -76,7 +90,7 @@
       "latest": 304,
       "display": "304",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru's day line for 27 сентября ст. ст. prints «(304)». doxologia.ro's life, read 30 August 2026, sets the contest under Diocletian (284–305) and Maximian (286–305), which contains it; the Russian year is the narrower reading and is taken."
+      "note": "days.pravoslavie.ru's day line for 27 сентября ст. ст. prints «(304)». doxologia.ro's life, read 30 August 2026, sets the contest under Diocletian (284–305) and Maximian (286–305), which contains it; the Russian year is the narrower reading and is taken. The Serbian Ohrid Prologue, read 4 October 2026, prints the same year: «Пострадаше за истину 304. год.»"
     }
   },
   "text": {

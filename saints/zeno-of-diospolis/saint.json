@@ -15,6 +15,15 @@
       "form": "Zinon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 aprilie, «Sfântul Apostol Zinon»."
+    },
+    {
+      "form": "Св. апостоли: Марко, Аристарх и Зинон",
+      "lang": "sr"
+    },
+    {
+      "form": "Зинон",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. апостоли: Марко, Аристарх и Зинон» — the line already recorded here, which names more than this saint, so `pickNameForms` refuses to print it for one person and the reader was shown English instead. The entry's body also gives «Зина», the form the Russian calendar prints."
     }
   ],
   "sex": "male",
@@ -24,7 +33,8 @@
   "related": [
     "mark-of-byblos",
     "aristarchus-of-apamea",
-    "titus-the-apostle"
+    "titus-the-apostle",
+    "paul-the-apostle"
   ],
   "attestations": [
     {
@@ -71,8 +81,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day, which keeps the three of the Seventy under one heading as the Greek and the Russian do. Read off the Prologue text on the page and not off its entry list, which prints three of the four."
+      },
+      "source": {
+        "text": "Охридски пролог, 27. септембар ст. к. — «2. Св. апостоли: Марко, Аристарх и Зинон. Од Седамдесеторице. … Св. Зинон, или Зина назван од ап. Павла закоником (Тит. 3, 13), био епископом у Лиду Палестинском.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

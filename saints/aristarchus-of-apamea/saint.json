@@ -15,6 +15,15 @@
       "form": "Aristarh",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 aprilie, «Sfântul Apostol Aristarh»."
+    },
+    {
+      "form": "Св. апостоли: Марко, Аристарх и Зинон",
+      "lang": "sr"
+    },
+    {
+      "form": "Аристарх",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. апостоли: Марко, Аристарх и Зинон» — the line already recorded here, which names more than this saint, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",
@@ -25,7 +34,8 @@
     "mark-of-byblos",
     "zeno-of-diospolis",
     "trophimus-companion-of-paul",
-    "pudens-of-rome"
+    "pudens-of-rome",
+    "paul-the-apostle"
   ],
   "office": "Bishop of Apamea",
   "attestations": [
@@ -74,8 +84,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the four the Ohrid Prologue enumerates for this day, which keeps the three of the Seventy under one heading as the Greek and the Russian do. Read off the Prologue text on the page and not off its entry list, which prints three of the four."
+      },
+      "source": {
+        "text": "Охридски пролог, 27. септембар ст. к. — «2. Св. апостоли: Марко, Аристарх и Зинон. Од Седамдесеторице. … Св. Аристарх, сапутник ап. Павла (Дела Ап. 16, 29), био епископом у Апамеји Сиријској.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

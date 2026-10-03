@@ -9,6 +9,10 @@
     {
       "form": "Αγία Ακυλίνα",
       "lang": "el"
+    },
+    {
+      "form": "Св. новомуч. Акилина",
+      "lang": "sr"
     }
   ],
   "sex": "female",
@@ -51,24 +55,34 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the four the Ohrid Prologue enumerates for this day. The entry list cuts this heading to «Св. новомуч» and drops the name, which is why the Prologue text is read instead. The Prologue disagrees with the other three calendars about her age and about where Zagliveri lies, and both disagreements are recorded in her life rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 27. септембар ст. к. — «3. Св. новомуч. Акилина. Из села Закливери у епархији Једренској; осамнаестогодишња девојка. … прими венац мучеништва 27. септ. 1764. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
     "birth": {
       "earliest": 1744,
-      "latest": 1745,
+      "latest": 1746,
       "display": "c. 1745",
       "basis": "attested",
-      "note": "The life: she was martyred on 27 September 1764 at the age of nineteen."
+      "note": "Three sources, three readings, and the interval is their union. The Romanian and Greek lives have her martyred on 27 September 1764 „la vârsta de 19 ani”, at nineteen, which gives 1744–1745. The Russian life printed at azbyka.ru says she was born, it is thought, in 1746. The Serbian Ohrid Prologue for the Julian 27 September, read 4 October 2026, calls her «осамнаестогодишња девојка», an eighteen-year-old girl, which gives 1745–1746. None is preferred."
     },
     "death": {
       "earliest": 1764,
       "latest": 1764,
       "display": "1764",
       "basis": "attested",
-      "note": "The life on doxologia.ro: „martirizată de turci după câteva zile de tortură pe 27 septembrie 1764, la vârsta de 19 ani”."
+      "note": "The life on doxologia.ro: „martirizată de turci după câteva zile de tortură pe 27 septembrie 1764, la vârsta de 19 ani”. The Serbian Ohrid Prologue, read 4 October 2026, prints the same day and year: «прими венац мучеништва 27. септ. 1764. год.»"
     }
   },
   "text": {

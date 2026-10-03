@@ -5,6 +5,10 @@
     {
       "form": "Όσιος Σαββάτιος «ὁ ἐν Σολοβέτσκῃ»",
       "lang": "el"
+    },
+    {
+      "form": "Преп. Саватије Соловецки",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -17,7 +21,7 @@
       "latest": 1435,
       "display": "1435",
       "basis": "traditional",
-      "note": "saint.gr’s heading: „Οσιος Σαββατιος «ο Εν Σολοβετσκη» (; - 1435)”."
+      "note": "saint.gr’s heading: „Οσιος Σαββατιος «ο Εν Σολοβετσκη» (; - 1435)”. The Russian calendar's day line for 27 сентября ст. ст. prints the same year, and the Serbian Ohrid Prologue, read 4 October 2026, is the only one of the three to give the day with it: «Упокојио се у Господу 27. септ. 1435. год.»"
     }
   },
   "attestations": [
@@ -56,9 +60,22 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 27. септембар ст. ст. (civil 10 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Fourth of the four the Ohrid Prologue enumerates for this day. The same entry records a second commemoration — «Спомиње се са св. Зосимом 17. априла», with Zosimas on 17 April — which is not this row's day; one row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Охридски пролог, 27. септембар ст. к. — «4. Преп. Саватије Соловецки. Спомиње се са св. Зосимом 17. априла. Упокојио се у Господу 27. септ. 1435. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-10&prolog=1",
+        "year": 2026
+      }
     }
+  ],
+  "related": [
+    "zosimas-of-solovki"
   ],
   "text": {
     "life": "life.md"
