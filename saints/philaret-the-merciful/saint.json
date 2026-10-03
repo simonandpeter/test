@@ -71,6 +71,12 @@
       "note": "saint.gr's heading for him reads «Αγιος Φιλαρετος ο Ελεημων (; - 792)», and it places his life «στους χρόνους του Κωνσταντίνου Πορφυρογέννητου και της μητέρας αυτού Ειρήνης της Αττικής (780 - 797 μ.Χ.)»."
     }
   },
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "tarasius-of-constantinople",
     "tatiana-grimblit"

@@ -19,6 +19,12 @@
     "apostle",
     "bishop"
   ],
+  "images": [
+    {
+      "file": "images/icon.jpg",
+      "meta": "images/icon.meta.json"
+    }
+  ],
   "related": [
     "dorotheus-of-tyre",
     "euphrasius-of-corfu",
