@@ -1,0 +1,9 @@
+# John (Zasedatelev)
+
+The Russian calendar prints one line for him and no life at all. On 16 October old style it has «Сщмч. Иоанна пресвитера (1942)» — the hieromartyr John, presbyter, 1942 — and that is the whole of the entry. His page in the calendar's own index of names adds his surname, «Иоанн (Заседателев), иерей, сщмч.», John Zasedatelev, priest and hieromartyr, and the second day he is kept on, 26 January, among the new martyrs and confessors of Russia; and then it stops too.
+
+So what is known here is a parish priest who died in 1942, remembered by name on the Julian 16 October and in the January synaxis. He is the last of four priests of the twentieth century on this one day — 1931, 1937, 1938 and 1942 — and the only one of them to die in the war years. The priest of 1942 whom the same calendar keeps on the day before, 15 October, is a different man with a different surname and a different number in the index. Where he served and how he died this page does not say, and nothing is supplied for it.
+
+azbyka.ru is the source that carries lives for the new martyrs of the twentieth century, and it would not be read: asked for its page for this run of days, it answered 403 to the fetcher this corpus uses, on 28 October 2026. The refusal is recorded because it is the reason this page is short rather than a judgement about the man.
+
+*After the Russian church calendar of the Sretensky monastery (days.pravoslavie.ru) for 16 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261016.html) and [his name page](https://days.pravoslavie.ru/name/9609.html), which is all there is; read 29 October 2026. The same menologion day was read in the other three calendars and does not keep him — [saint.gr](https://www.saint.gr/10/16/index.aspx), [doxologia.ro](https://doxologia.ro/16-octombrie) and the [Ohrid Prologue](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-29&prolog=1).*

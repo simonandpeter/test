@@ -13,6 +13,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουνίου, «Άγιος Ιωάννης Μαξίμοβιτς Μητροπολίτης Τομπόλσκ της Σιβηρίας», with the rank words and the see left off. The surname «Μαξίμοβιτς» the page prints is left off the stored form."
+    },
+    {
+      "form": "Иоанн Тобольский",
+      "lang": "ru",
+      "note": "The second heading days.pravoslavie.ru's life page prints over his portrait, «Святитель Иоанн Тобольский», with the rank word left off. The page's own title is fuller — «Святитель Иоанн, митрополит Тобольский и всея Сибири», of Tobolsk and all Siberia — and his name in the world, which the same page gives, is Иоанн Максимович, the surname saint.gr prints in Greek."
     }
   ],
   "dates": {
@@ -20,27 +25,39 @@
       "earliest": 1651,
       "latest": 1651,
       "display": "1651",
-      "basis": "traditional",
-      "note": "saint.gr's head line reads «Αγιος Ιωαννης Μαξιμοβιτς Μητροπολιτης Τομπολσκ Της Σιβηριας (1651 - 1715)», and the notice repeats «γεννήθηκε το 1651 μ.Χ. στην πόλη Νεζίν»."
+      "basis": "attested",
+      "note": "Both calendars give the year and they disagree about the town. saint.gr's head line reads «Αγιος Ιωαννης Μαξιμοβιτς Μητροπολιτης Τομπολσκ Της Σιβηριας (1651 - 1715)» and the notice repeats «γεννήθηκε το 1651 μ.Χ. στην πόλη Νεζίν», in the city of Nezhin; days.pravoslavie.ru's life says «родился в городе Пежине в 1651 году», in the city of Pezhin. The year is not in question, so the interval is unchanged; the two spellings of the town are recorded in the life and neither is corrected."
     },
     "death": {
       "earliest": 1715,
       "latest": 1715,
-      "display": "1715",
-      "basis": "traditional",
-      "note": "saint.gr: «κοιμήθηκε το 1715 μ.Χ. Αγιοκατατάχθηκε στις 10 Ιουνίου του 1916 μ.Χ.» — the page gives the year of his death and the date of his canonisation, and no day for the death itself."
+      "display": "10 June 1715",
+      "basis": "attested",
+      "note": "The day comes from the Russian life, which the Greek page could not supply: «Даже в день преставления, 10 июня 1715 года, святитель Иоанн после Божественной литургии … устроил в своем доме трапезу для духовенства и бедняков и сам прислуживал за столом», and he died that evening at the ringing for vespers, kneeling in prayer. saint.gr gives only «κοιμήθηκε το 1715 μ.Χ. Αγιοκατατάχθηκε στις 10 Ιουνίου του 1916 μ.Χ.» — the year of the death and the date of the canonisation — and the two agree once the Russian page is read, because the all-Russian feast of 1916 was set on the day of his repose."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr makes him a Russian hierarch canonised in 1916, so a Russian row is very likely to exist; it was not looked for and nothing is claimed about it."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian",
+        "note": "**This day is the finding of his relics, not his repose.** The Russian line for 16 October old style is «Обретение мощей свт. Иоанна , митр. Тобольского (1914)», and his own name page gives the pair of days as «Дни памяти: 10 июня , 16 октября (обретение мощей)». The row carries the October day because that is the day whose page was read, and because the 1916 all-Russian feast on 10 June has its own page which was not read; the precedent for a row on a translation or finding with the event named in the feast is the corpus's `theodosius-of-chernigov`."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Обретение мощей свт. Иоанна , митр. Тобольского (1914).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's one service icon stands before Longinus the Centurion at the head of the paragraph and is that line's alone. The space before the comma is the page's own. `day-candidates.mjs` marks this line `[~]` because «обретение мощей» is one of the phrases that usually means a feast and not a person; here the subject is a person the corpus already holds, so the line is a row on his folder with the event named in the feast, and not a new folder."
+      },
+      "note": "**The Russian page is the first full life this folder has had**, and it answers the Greek page on the day of his death, gives the book that is his monument, and names the hierarch whose healing of him began that hierarch's veneration. Of his life: born at Pezhin in 1651, eldest of the seven sons of Maxim Vasilievich and Euphrosyne; kept on at the Kyiv-Mohyla Collegium as a teacher of Latin after finishing there; tonsured at the Kyiv Caves in 1680 and given the obedience of preacher by common consent of the brotherhood; sent with an embassy to Moscow in 1685 and made by Patriarch Joachim the superior of the Bryansk Svensky monastery; made archimandrite of the Yeletsky monastery at Chernigov in 1695 by Theodosius, archbishop of Chernigov, who marked him as his successor; consecrated bishop of Chernigov on 10 January 1697 by Patriarch Adrian in the Great Dormition cathedral of the Moscow Kremlin; raised metropolitan and arrived at the see of Tobolsk and all Siberia on 14 August 1711. **The question of his life**, which the page states twice, was «Как человек должен свою волю согласовывать с волей Божией?» — how is a man to bring his will into agreement with the will of God — and the answer is his «Илиотропион», the Sunflower, written in Latin and first printed at Chernigov in 1714, then issued by him in Slavonic-Russian the same year so that Siberians could read it. **The healing**: at the height of a grave illness Theodosius of Chernigov appeared to him and said «Служи завтра – и будешь здоров», serve tomorrow and you will be well; he served the Liturgy the next day in full health, and the page says that this wonder was the beginning of Theodosius's own veneration. Also on the page: the Chernigov Collegium, which it calls in substance the first seminary in Russia and the model for the others; the printing house he founded there and carried to Tobolsk; the mission he sent to Peking in 1714 under the archimandrite Hilarion (Lezhaisky); his help to the Russians of Mount Athos, with his hierarch's charter surviving in the Panteleimon monastery; and the chronicler's four words for him in Siberia — «Был тих, скромен, благорассудлив, о бедных сострадателен, милостив». His office here is left as the folder already had it, Metropolitan of Tobolsk, although this page's own title is fuller, of Tobolsk and all Siberia."
     },
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+      "note": "Not checked: doxologia.ro's calendar for either of his two days (read neither; 29 October 2026 was spent on the Russian 16 October, which is the finding of his relics)."
     },
     {
       "church": "greek",
@@ -60,13 +77,15 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "note": "Not in the Ohrid Prologue for 16 October old style as the Православни подсетник prints it (pravoslavno.rs for 29.10.2026, read 29 October 2026); its two entries that day are Longinus the martyr and Longinus the Labour-loving of the Kyiv Caves. His other day, 10 June, was not checked."
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "theodore-martyr-1937-30-august"
+    "john-chrysostom",
+    "theodore-martyr-1937-30-august",
+    "theodosius-of-chernigov"
   ]
 }

@@ -11,6 +11,16 @@
       "form": "Λογγίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιος Λογγίνος ο Εκατόνταρχος», with the rank word left off."
+    },
+    {
+      "form": "Лонгин Сотник",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1368, «Мученик Лонгин Сотник», with the rank word left off; Сотник is the centurion, the same epithet the Greek and Romanian lines carry. The day line gives «Лонгина сотника, иже при Кресте Господни», Longinus the centurion who was at the Lord's Cross."
+    },
+    {
+      "form": "Лонгин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first entry for 16 October old style as the Православни подсетник prints it, «Св. муч. Лонгин», with the rank words left off; the Prologue gives him no epithet, calling him only «овај капетан», this centurion."
     }
   ],
   "sex": "male",
@@ -18,11 +28,32 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "No calendar gives a year. The Russian day line dates him by century alone, «Мч. Лонгина сотника, иже при Кресте Господни (I)», and the whole of his story in every account is set in the generation of the Passion, so the interval is that century and nothing narrower."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Мч. Лонгина сотника, иже при Кресте Господни (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. It is the day's only service icon, and it belongs to this line: every other entry of the day stands without one."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Romanian, and the same man — the centurion under Pontius Pilate whose detachment stood round Golgotha and then guarded the tomb. The Russian life adds three things the folder did not hold. **The lance**: «по церковному преданию», by church tradition, Longinus was the soldier who pierced the crucified Saviour's side with the spear and was healed of diseased eyes by the blood and water that flowed out — and the page marks it as tradition, in its own parenthesis, which is how it is recorded here. **The meal**: the detachment Pilate sent to Cappadocia came to Longinus's own village, and the former centurion went out to meet the soldiers and brought them into his house, and it was at table, not knowing their host was the man they were looking for, that they said what they had come for; then he named himself and asked them, unembarrassed, to do their soldierly duty. **The blind woman**: Pilate had the heads thrown on a rubbish heap outside the walls, and a blind woman who came to Jerusalem to venerate the holy places was told by Longinus in a dream to find his head and bury it; touching it she saw, and carried the honoured head reverently to Cappadocia and buried it there. The day's reading for the martyr is given as 2 Tim. 2.1–10 and Matt. 27.33–54."
     },
     {
       "church": "romanian",
@@ -55,8 +86,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.10.2026 (16. октобар ст. ст.) — „1. Св. муч. Лонгин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-29&prolog=1",
+        "year": 2026,
+        "note": "The first of the day's two entries, and the longer; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "The Prologue opens on Matthew 27.54 and identifies the centurion of the Gospel with this Longinus outright — «Тај капетан беше овај блажени Лонгин». It agrees with the Russian life on the two fellow soldiers, the bribe refused, the baptism by the apostles, Cappadocia and the beheading, and it gives three details of its own. **The belt**: learning that the Jewish elders had decided to kill him, «Лонгин скиде свој војнички појас», he took off his soldier's belt, was baptised, and left Jerusalem secretly with his two companions. **The night of prayer**: his executioners, well entertained, lay down to sleep, and he stood at prayer the whole night, preparing himself for death. **The white clothes and the hill**: in the morning he fetched his two companions, put on white burial clothes, instructed his household and showed them the little hill where they were to bury him, and then told the soldiers that he was the Longinus they were looking for; they were confounded and ashamed and would not strike, and he pressed them to carry out their commander's order. It makes no mention of the lance, which the Russian page gives as tradition, and none of the blind woman."
     }
   ],
   "hymns": [

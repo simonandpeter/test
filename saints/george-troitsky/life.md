@@ -1,0 +1,9 @@
+# George (Troitsky)
+
+The Russian calendar prints one line for him and no life at all. On 16 October old style it has «Св. Георгия исп., пресвитера (1931)» — the holy George, confessor, presbyter, 1931 — and that is the whole of the entry. His page in the calendar's own index of names adds his surname, Troitsky, and the second day he is kept on, 26 January, among the new martyrs and confessors of Russia; and then it stops too. There is no life link on either page.
+
+The two pages do not agree about what he was. The day line calls him a confessor, исповедник, which is the word for one who suffered for the faith and did not die of it; the index page calls him «иерей, сщмч.», priest and hieromartyr. Those are two different findings, and this folder keeps the day page's, because the day page is the one that was read for this day; the index's reading is written down and not claimed.
+
+So what is known here is a priest of the Russian church who suffered in 1931 and is remembered by name on the Julian 16 October and in the January synaxis. Where he served, what was done to him and how he died the calendar does not say. azbyka.ru carries lives for the new martyrs of the twentieth century and would not be read: it answered 403 to this corpus's fetcher on 28 October 2026, and the refusal is why this page is short.
+
+*After the Russian church calendar of the Sretensky monastery (days.pravoslavie.ru) for 16 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261016.html) and [his name page](https://days.pravoslavie.ru/name/13831.html), which is all there is; read 29 October 2026. The same menologion day was read in the other three calendars and does not keep him — [saint.gr](https://www.saint.gr/10/16/index.aspx), [doxologia.ro](https://doxologia.ro/16-octombrie) and the [Ohrid Prologue](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-29&prolog=1).*

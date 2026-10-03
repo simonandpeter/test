@@ -1,0 +1,61 @@
+{
+  "slug": "longinus-of-yarenga",
+  "display_name": "Longinus of Yarenga",
+  "names": [
+    {
+      "form": "Лонгин Яренгский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14400, «Лонгин Яренгский, прп.», with the rank word left off; the day line gives «Лонгина Яренгского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1544,
+      "latest": 1561,
+      "display": "1544–1561",
+      "basis": "attested",
+      "note": "**The calendar disagrees with itself about this, and the interval carries both readings.** Its day line for 16 October gives «Прп. Лонгина Яренгского (1544-1545)»; the life it links says the two monks set out for the Tver land «в 1561 году» on monastery business and were drowned on the way back. No third source was read, so the interval runs from the earlier of the day line's two years to the life's, and nothing is chosen."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Прп. Лонгина Яренгского (1544-1545).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day has exactly one, «Cовершается служба, не отмеченная в Типиконе никаким знаком», standing before Longinus the Centurion at the head of the paragraph, and it is that line's alone."
+      },
+      "note": "**The life the day links is a joint life of two monks and only one of them is on this day's line.** It is headed «Преподобные Иоанн и Лонгин Яренгские», John and Longinus of Yarenga, and tells them as one story throughout; the 16 October line names Longinus alone, so no folder is made here for John, whose own day the calendar gives as 3 July and which was not read. The name page keeps Longinus on four days — «8 июня (Новг.) , 3 июля , 9 августа (Солов.) , 16 октября» — the Novgorod synaxis, the July translation, the Solovki synaxis and this one; only 16 October was read, and the row records that day. **Not the corpus's `longinus-of-koryazhemka`**, who is a hermit of 1540 kept by the same calendar on 10 February, nor any of the corpus's other men of the name; this one is a Solovki monk drowned in the White Sea."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 16 octombrie, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 16 Οκτωβρίου, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 16 October old style as the Православни подсетник prints it (pravoslavno.rs for 29.10.2026, read 29 October 2026); its two entries that day are Longinus the martyr and Longinus the Labour-loving of the Kyiv Caves, and neither is this man. No other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
