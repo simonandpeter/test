@@ -19,6 +19,11 @@
       "form": "Никита Печерский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Святитель Никита Печерский, епископ Новгородский, затворник», with the rank word and the office left off."
+    },
+    {
+      "form": "Никита Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 31. јануар ст. ст. (civil 2026-02-13), „Преподобни Никита Печерски“. The rank word „Преподобни“ is left off; „Печерски“ is kept, being what distinguishes him. The Prologue keeps him by the Caves and not by the see, and gives the year of his repose as 1108."
     }
   ],
   "dates": {
@@ -68,8 +73,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.02.2026 (31. јануар ст. ст.) — „Преподобни Никита Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

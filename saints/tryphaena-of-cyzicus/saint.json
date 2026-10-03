@@ -16,6 +16,11 @@
       "form": "Трифена Кизическая",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 31 января ст. ст., «Трифена Кизическая, мц.», with the rank word and the office left off."
+    },
+    {
+      "form": "Трифена",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 31. јануар ст. ст. (civil 2026-02-13), „Света мученица Трифена“. The words „Света мученица“ are left off: the site composes the rank itself. The heading gives no epithet, so the form is bare — the Prologue names no city for her at all."
     }
   ],
   "sex": "female",
@@ -67,8 +72,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.02.2026 (31. јануар ст. ст.) — „Света мученица Трифена.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
