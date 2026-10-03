@@ -6,6 +6,11 @@
       "form": "Фотиния (Светлана) Палестинская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Преподобная Фотиния (Светлана) Палестинская», with the rank word left off. The calendar carries the Russian gloss of the name, «Светлана», inside the form itself, as its own line for the day does."
+    },
+    {
+      "form": "Фотонија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 13. фебруар ст. ст., „Света Зоа и Фотонија.“, with Света left off, which is not a rank. The heading spells her Фотонија and the body of the same entry spells her Фотинија twice; the heading's spelling is the one quoted in the attestation and so the one stored, and the variant is recorded here rather than chosen between."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 February 2026 (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.02.2026 (13. фебруар ст. ст.) — „Света Зоа и Фотонија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's third heading names the two women together and its body treats them in one entry, so this row and `zoe-of-bethlehem`'s quote the same line."
     }
   ],
   "dates": {

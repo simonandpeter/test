@@ -6,6 +6,11 @@
       "form": "Зоя Вифлеемская",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Зоя Вифлеемская, прп.», with the rank word left off."
+    },
+    {
+      "form": "Зоа",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 13. фебруар ст. ст., „Света Зоа и Фотонија.“, with Света left off, which is not a rank. The heading names the two women together and gives neither an epithet; Витлејем, the Bethlehem of her Russian form, is in the body and not in the heading."
     }
   ],
   "sex": "female",
@@ -39,8 +44,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 February 2026 (3 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.02.2026 (13. фебруар ст. ст.) — „Света Зоа и Фотонија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's third heading names the two women together and its body treats them in one entry, so this row and `photina-of-palestine`'s quote the same line."
     }
   ],
   "dates": {
