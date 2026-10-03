@@ -256,6 +256,25 @@ function fillHeroCredit(panel, payload) {
  * share a ratio — and all the imageless ones, who share `Infinity` — keep the
  * calendar's own order among themselves.
  */
+/**
+ * The year a saint is placed at, for the register's own order, or `Infinity`
+ * for one the corpus cannot date.
+ *
+ * Death first because it is what the day commemorates and what the corpus
+ * records most often; then the floruit, then birth, each taking its earliest
+ * bound before its latest so a span sorts from where it opens. A saint with
+ * none of the three sorts last rather than at year zero - undated is not
+ * ancient, and 2,021 of the corpus are undated as this is written.
+ */
+const registerYear = (person) => {
+  const d = person?.dates;
+  for (const field of ['death', 'floruit', 'birth']) {
+    const year = d?.[field]?.earliest ?? d?.[field]?.latest;
+    if (typeof year === 'number') return year;
+  }
+  return Infinity;
+};
+
 function registerOrder(entries, data) {
   const drawnRatio = (entry) => {
     const image = data.bySlug.get(entry.slug)?.image;
@@ -264,7 +283,20 @@ function registerOrder(entries, data) {
     // number and an imageless saint sorts past every picture there is.
     return image.aspect || 1;
   };
-  return entries
+  /*
+   * **By year, not by name** (author, 2026-10-03: "order them not
+   * alphabetically but by year"). It is applied before `seq` is handed out, so
+   * it is the order at *both* widths: `seq` is what the phone's flex column
+   * reads to undo the picture sort below, and the picture sort is the desktop
+   * cards' alone.
+   */
+  const byYear = [...entries].sort((a, b) => {
+    const diff = registerYear(data.bySlug.get(a.slug)) - registerYear(data.bySlug.get(b.slug));
+    // Undated saints share `Infinity`, whose difference is NaN; they keep the
+    // calendar's own order among themselves rather than being shuffled.
+    return Number.isNaN(diff) ? 0 : diff;
+  });
+  return byYear
     .map((entry, seq) => ({ entry, seq }))
     .sort((a, b) => drawnRatio(a.entry) - drawnRatio(b.entry));
 }

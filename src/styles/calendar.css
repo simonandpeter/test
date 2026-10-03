@@ -2925,9 +2925,6 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    * the order the calendar gave them. The author scoped the reordering to the
    * desktop; this is what holds it there.
    */
-  .register-cards li.reg-card {
-    order: var(--reg-seq, 0);
-  }
 
   /*
    * **The row is a line of text with a mark beside it** (author, 2026-10-03:
@@ -2990,10 +2987,25 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
     height: 18px;
   }
 
+  /* **A box each, and air between them** (author, 2026-10-03: "space out each
+     dot point entry a bit more, they look a bit too packed, and make each have
+     a bounding box / text bubble around them"), which loosens the 2px 4px the
+     paragraph above set under "move them closer together" a day earlier. What
+     that instruction was about was the 48 px picture mat, and the mat is still
+     gone: this is a line of text in a box, not a plate.
+
+     The hairline is `--rule`, the same edge the selected day in the picker
+     above wears, so the page has one way of drawing a bounded thing. */
   .register-cards li.reg-card {
     align-items: center;
     gap: var(--space-2);
-    padding: 2px 4px;
+    padding: var(--space-2);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-panel);
+  }
+
+  .register-cards li.reg-card + li.reg-card {
+    margin-top: var(--space-2);
   }
 
   /* The picture is the row's last child — the plate hangs it on the right —
@@ -3505,6 +3517,15 @@ html[data-route~='calendar'] .month-grid .month-out:hover {
    have to look alike: the difference between them is that two saints of the
    day share the name, which is a fact about the calendar and not something to
    put a reader's eye on. */
+/* The same size and weight the hymns take, under the same instruction. On the
+   element rather than the anchor, because a name day that is not a link is a
+   span and the two have to look alike - which is what the paragraph above is
+   about. */
+.name-day {
+  font-size: var(--text-base);
+  font-weight: 600;
+}
+
 a.name-day {
   text-decoration: none;
 }
@@ -3769,8 +3790,15 @@ a.name-day:hover {
 /* The hymn is text, in the reading face and the church's own language; its
    line is bounded so a fallback face with taller metrics cannot move what is
    below it (Addendum C3, as for the name forms). */
+/* **One size, and the register's** (author, 2026-10-03: "the font size for the
+   hymns should be the same font size as the also commemorated, and should be
+   bold too ... There are too many slightly different font sizes around").
+   `--text-base` is what `.reg-card .reg-name` sets, so the two lists on this
+   page are read at one size. */
 .hymn-text {
   font-family: var(--font-serif);
+  font-size: var(--text-base);
+  font-weight: 600;
   max-width: 65ch;
   line-height: 1.55;
   margin-bottom: var(--space-1);
