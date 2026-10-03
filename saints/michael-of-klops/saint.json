@@ -17,6 +17,11 @@
       "form": "Михаил Клопский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 января ст. ст., «Преподобный Михаил Клопский», with the rank word left off; the line itself adds «Новгородского»."
+    },
+    {
+      "form": "Михаил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 11. јануар ст. ст. (civil 2026-01-24), „Блажени Михаил“. The word „Блажени“ is left off."
     }
   ],
   "dates": {
@@ -64,8 +69,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.01.2026 (11. јануар ст. ст.) — „Блажени Михаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

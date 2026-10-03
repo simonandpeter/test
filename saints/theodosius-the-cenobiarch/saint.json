@@ -16,6 +16,11 @@
       "form": "Феодосий Великий",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 января ст. ст., «Преподобный Феодосий Великий», with the rank word left off."
+    },
+    {
+      "form": "Теодосије Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 11. јануар ст. ст. (civil 2026-01-24), „Преподобни Теодосије Велики“. The rank word „Преподобни“ is left off. „Велики“ is kept: it is the epithet “the Great” and not a rank."
     }
   ],
   "sex": "male",
@@ -68,8 +73,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.01.2026 (11. јануар ст. ст.) — „Преподобни Теодосије Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-24&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
