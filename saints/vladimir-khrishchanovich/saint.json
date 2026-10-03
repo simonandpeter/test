@@ -1,0 +1,67 @@
+{
+  "slug": "vladimir-khrishchanovich",
+  "display_name": "Vladimir (Khrishchanovich)",
+  "names": [
+    {
+      "form": "Владимир (Хрищенович)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Владимир (Хрищенович), иерей, сщмч.», with the rank words left off. The collective account the link leads to spells the surname Хрищанович."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's collective account of the twenty-three hieromartyrs of Minsk: «родился в 1875 году в деревне Гезгалы Лидского уезда Виленской губернии»."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "The same account: «12 Февраля 1933 года отец Владимир был приговорен к расстрелу»; the day line prints the year as (1933)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Сщмч. Владимира пресвитера (1933)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "note": "The page behind his name is not a life of him but a collective account of the twenty-three hieromartyrs of Minsk, in which he is one entry; that account spells his surname Хрищанович where the day's name link spells it Хрищенович."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

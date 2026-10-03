@@ -67,7 +67,7 @@
         "url": "https://days.pravoslavie.ru/Days/20261113.html",
         "year": 2026
       },
-      "note": "All-night vigil: «Совершается всенощное бдение»."
+      "note": "All-night vigil: «Совершается всенощное бдение». The same calendar keeps him again on 30 января ст. ст., in the Synaxis of the Ecumenical Teachers and Hierarchs — «Собор Вселенских учителей и святителей Василия Великого, Григория Богослова и Иоанна Златоустого» — which names the three of them and no one else. That is a joint commemoration and not a feast of his own, so this row stands on his own day and the second day is recorded here; the saint is not rendered on it."
     },
     {
       "church": "romanian",
@@ -260,6 +260,38 @@
       },
       "english": {
         "text": "The honourable Church rejoiced in a mystery at the return of thy honourable relics, and having hidden them away like gold of great price she gives without stinting, to those who sing of thee, the grace of healings by thy prayers, O John Chrysostom.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко апостолов единонравнии/ и вселенныя учителие,/ Владыку всех молите/ мир вселенней даровати// и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Тропарь святителей»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As those of one mind with the apostles and teachers of the whole world, entreat the Master of all to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Священныя и боговещанныя проповедники,/ верх учителей, Господи,/ приял еси в наслаждение благих Твоих и упокоение:/ труды бо онех и смерть приял еси паче всякаго всеплодия,// Едине прославляяй святыя Твоя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Кондак святителей»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The sacred and God-proclaiming preachers, the chief of teachers, thou hast received, O Lord, into the enjoyment of thy good things and into rest; for thou hast accepted their labours and their death above every whole burnt offering, O thou who alone glorifiest thy saints.",
         "rendered": "site"
       }
     }

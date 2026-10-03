@@ -6,4 +6,6 @@ From the wonders he worked in that prison, the page says, twenty soldiers came t
 
 The page gives him no year of birth, no city, and no apolytikion and no kontakion. Its couplet makes his neck the whetstone of his fellow-contestants: Censorinus, stretching out his neck to the sword, is as a hone to the razor for those who contend beside him.
 
-*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/3567/saint.aspx) and, for the year his own page does not give, [Chryse's](https://www.saint.gr/3565/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps the company on the same menologion day, in one line and in the third century: «Сщмч. Ипполита, папы Римского и с ним мчч. Кенсорина, Савина, Хрисии девы и прочих 20-ти мучеников (III)». Its name links place all three of the named martyrs at Rome, and the twenty others the line counts without naming, so they have no folder. No hymn is printed for them.
+
+*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/3567/saint.aspx) and, for the year his own page does not give, [Chryse's](https://www.saint.gr/3565/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 30 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260130.html), read 3 October 2026.*

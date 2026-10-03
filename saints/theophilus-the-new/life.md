@@ -6,4 +6,6 @@ In a sea battle with the Saracens off Cyprus, about the year 800, the two other 
 
 The page gives him no year of birth and no year for his death beyond the «about 800» of the sea battle. It prints an apolytikion and a kontakion for him, both copied here; both of them speak of his end as a crossing of the sea, and the second calls him a ship sealed with Christ.
 
-*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/3564/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps him on the same menologion day as «Мч. Феофила Нового (784)», with the same year, and its name link places him at Constantinople. It prints no hymn under his name.
+
+*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/3564/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 30 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260130.html), read 3 October 2026.*

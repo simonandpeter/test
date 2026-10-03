@@ -6,6 +6,11 @@
       "form": "Θεόφιλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Άγιος Θεόφιλος ο Νέος», with the rank word left off."
+    },
+    {
+      "form": "Феофил Новый, Константинопольский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Феофил Новый, Константинопольский, мч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Мч. Феофила Нового (784)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

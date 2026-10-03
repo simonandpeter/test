@@ -1,0 +1,15 @@
+# Stephen (Nalivaiko)
+
+The Russian calendar keeps him on this day as «Мч. Стефана (1945)», and the life behind that line is long. Stepan Pimenovich Nalivaiko was born in 1898 in the village of Konstantinovka in the Melitopol district of the Kherson province, to a devout peasant family, Pimen and Euphrosyne. His mother taught him most: by her efforts he had a good church education, knew the scriptures well and came to love reading spiritual books.
+
+When the Soviet power came and the persecution of the Church began, she went about the neighbouring villages preaching, and was warned to stop. In the winter of 1927 they came to arrest her, and she told the lad sent to take her to bring two sheepskin coats, because he would have to drive her back again; he answered that she knew too much, and left the second coat behind — and after the interrogation she was let go, and the same lad drove her home. She died in her own house in 1929.
+
+At nine he was put to the parish school, and after three years went on to the school at the Grigorie-Bizyukov monastery, which was known for the piety of its monks and for its missionaries; there he first felt the beauty and depth of the services, and was blessed to serve in the altar. At fourteen he came home to help his father, who rented five to ten desyatinas and kept two horses and a cow. In 1914 he went to the town of Genichesk, lived at the monastery metochion and sang in its choir, and spent two months studying the typikon at another monastery before returning home to sing in his own village church.
+
+In February 1917 he was mobilised, trained three months at Yekaterinoslav and sent to the Romanian front, where in July that year his regiment was taken prisoner; he worked some two months near the front line and was then sent as a forced labourer to the Lamsdorf camp. The account of the years that follow is long, and what is set down here is its beginning and its end.
+
+On 7 April 1941 a Special Conference sentenced him to five years in a corrective labour camp. Before he was sent away he was allowed to see his daughter, and told her that the charge was an invention, that the man he had been accused over was an officer of the NKVD, and that he had been sentenced because he had been sentenced before. He was sent to the camp at Norilsk, and when the war began the letters stopped. At the beginning of 1945 his family had one more letter: «До окончания моего срока остается три месяца», three months of my term are left, God willing we shall live together again.
+
+They sent a letter, money and a parcel, and nothing came back. The camp administration later answered his daughter that Stepan Pimenovich Nalivaiko had died on 12 February 1945 — of hunger. He was numbered among the New Martyrs and Confessors of Russia at the Jubilee Council of Bishops in August 2000, for veneration throughout the church.
+
+*After the Православный церковный календарь of the Сретенский monastery for 30 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260130.html) and [the life](https://days.pravoslavie.ru/Life/life4917.htm); read 3 October 2026.*

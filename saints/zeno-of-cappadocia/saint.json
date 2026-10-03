@@ -1,0 +1,61 @@
+{
+  "slug": "zeno-of-cappadocia",
+  "display_name": "Zeno of Cappadocia",
+  "names": [
+    {
+      "form": "Зинон Каппадокийский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Зинон Каппадокийский, прп.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 425,
+      "display": "early 5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life of him: «Скончался преподобный Зинон в начале V века»; the day line prints only (V)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Прп. Зинона, ученика свт. Василия Великого (V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "related": [
+    "basil-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

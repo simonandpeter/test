@@ -20,4 +20,6 @@ After twenty years of that hard life Seraphim of Sarov appeared to her in sleep 
 
 They dressed her in the clothes she had liked to wear — a white blouse, a sarafan, a woollen shawl, and a white silk kerchief about her head — laid her in a cypress coffin, and kept her nine days in her cell, with thirty or forty memorial services a day and the psalter chanted without ceasing. They buried her behind the sanctuary of the church of the Holy Trinity, as she had herself foretold seven years before. Her relics, the page says, are at the monastery of Diveyevo in Russia.
 
-*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/1111/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps her on the same menologion day as «Блж. Пелагии Дивеевской (1884)», with the same year, and its name link adds her surname and her calling in full: «Пелагия (Серебренникова) Дивеевская, Христа ради юродивая», the fool for Christ's sake. There is no life page behind that line and no hymn for her on the day.
+
+*After saint.gr's calendar for 30 Ιανουαρίου — [the day](https://www.saint.gr/01/30/index.aspx) and [the life](https://www.saint.gr/1111/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 30 января ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260130.html), read 3 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Κενσουρίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Άγιος Κενσουρίνος», with the rank word left off."
+    },
+    {
+      "form": "Кенсорин Римский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Кенсорин Римский, мч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Сщмч. Ипполита, папы Римского и с ним мчч. Кенсорина, Савина, Хрисии девы и прочих 20-ти мучеников (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

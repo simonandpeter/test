@@ -1,0 +1,66 @@
+{
+  "slug": "stephen-nalivaiko",
+  "display_name": "Stephen (Nalivaiko)",
+  "names": [
+    {
+      "form": "Стефан (Наливайко)",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Стефан (Наливайко), мч.», with the rank words left off."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1898,
+      "latest": 1898,
+      "display": "1898",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life of him: «родился в 1898 году в селе Константиновка Мелитопольского уезда Херсонской губернии»."
+    },
+    "death": {
+      "earliest": 1945,
+      "latest": 1945,
+      "display": "1945",
+      "basis": "attested",
+      "note": "The same life: «Степан Пименович Наливайко умер 12 февраля 1945 года. От голода»; the day line prints the year as (1945)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Мч. Стефана (1945)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "note": "His life page lists his days as «Дни памяти: 26 января (Новомуч.), 30 января». The first is the general commemoration of the new martyrs and not a proper feast of his own, so the row records the day whose calendar line names him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

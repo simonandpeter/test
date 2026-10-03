@@ -6,6 +6,11 @@
       "form": "Ζήνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιανουαρίου, «Όσιος Ζήνων ο Νηστευτής εκ Κιέβου», with the rank word left off."
+    },
+    {
+      "form": "Зинон Печерский",
+      "lang": "ru",
+      "note": "Read out of days.pravoslavie.ru's name link for 30 января ст. ст., «Преподобный Зинон, постник Печерский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Прп. Зинона, постника Печерского (XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +69,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преподобне отче Зиноне, / преподобне и честне житие твое на земли препроводивый / и тем Богови по премногу благоугодивый, / моли о нас, / чтущих память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Тропарь преподобного Зинона, постника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O venerable father Zeno, who didst pass thy life on earth in holiness and honour and thereby pleased God exceedingly, pray for us who honour thy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Восхвалялся днесь, преподобне Зиноне,/ яко преподобен во славе,/ и радуяся давидски на ложи своем во Царствии Небеснем,/ не премолчи о нас мольбу принести ко Господу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 января ст. ст. — «Кондак преподобного Зинона, постника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou art praised today, O venerable Zeno, as one holy in glory; and rejoicing as David did upon thy bed in the kingdom of heaven, be not silent in bringing our petition before the Lord.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
