@@ -6,6 +6,10 @@
     {
       "form": "Άγιος Μιχαήλ πρώτος Μητροπολίτης Κιέβου και πάσης Ρωσίας ο θαυματουργός",
       "lang": "el"
+    },
+    {
+      "form": "Св. Михаил први митрополит Кијевски",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -19,7 +23,7 @@
       "latest": 992,
       "display": "992",
       "basis": "traditional",
-      "note": "saint.gr’s heading for the entry: «Αγιος Μιχαηλ Πρωτος Μητροπολιτης Κιεβου Και Πασης Ρωσιας ο Θαυματουργος (; - 992)»."
+      "note": "saint.gr’s heading for the entry: «Αγιος Μιχαηλ Πρωτος Μητροπολιτης Κιεβου Και Πασης Ρωσιας ο Θαυματουργος (; - 992)». The Serbian Ohrid Prologue, read 4 October 2026, prints the same year: «Упокоји се мирно 992. год.»"
     }
   },
   "attestations": [
@@ -49,14 +53,25 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the three the Ohrid Prologue enumerates for this day, and the only source this folder has for anything but his year — the Greek entry says outright that it has no details of his life."
+      },
+      "source": {
+        "text": "Охридски пролог, 30. септембар ст. к. — «3. Св. Михаил први митрополит Кијевски. На молбу великог кнеза Владимира послат од патријарха Цариградског у Русију … Упокоји се мирно 992. год. Мошти му почивају у лаври Печерској.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "niphon-of-novgorod"
+    "niphon-of-novgorod",
+    "vladimir-the-great"
   ]
 }

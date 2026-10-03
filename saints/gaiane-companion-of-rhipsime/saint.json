@@ -9,6 +9,15 @@
     {
       "form": "Sfânta Muceniță Gaiani",
       "lang": "ro"
+    },
+    {
+      "form": "Св. муч. Гајанија, Рипсимија, и осталих 35 монахиња",
+      "lang": "sr"
+    },
+    {
+      "form": "Гајанија",
+      "lang": "sr",
+      "note": "Her own name, read out of «Св. муч. Гајанија, Рипсимија, и осталих 35 монахиња» — the line already recorded here, which names more than this saint, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "female",
@@ -66,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue enumerates for this day, under one heading with her companions. The Prologue names Gaiane before Rhipsime, where the Greek line names Rhipsime first."
+      },
+      "source": {
+        "text": "Охридски пролог, 30. септембар ст. к. — «2. Св. муч. Гајанија, Рипсимија, и осталих 35 монахиња, које погуби Тиридат због вере у Христа. … Над моштима ових св. мученица подигнут је знаменити манастир Ечмиадзински, близу Еривана, главни духовни центар Јерменски кроз многе векове.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

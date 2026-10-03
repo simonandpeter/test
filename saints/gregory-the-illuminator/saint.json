@@ -9,6 +9,10 @@
     {
       "form": "Sfântul Ierarh Grigorie Luminătorul, Arhiepiscopul Armeniei celei Mari",
       "lang": "ro"
+    },
+    {
+      "form": "Св. Григорије Просветитељ еп. Јерменски",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -26,10 +30,10 @@
     },
     "death": {
       "earliest": 331,
-      "latest": 331,
-      "display": "331",
+      "latest": 335,
+      "display": "331 or c. 335",
       "basis": "traditional",
-      "note": "saint.gr’s heading for the entry: «(257 - 331)»."
+      "note": "Two calendars, two years, and neither is preferred. saint.gr’s heading for the entry: «Αγιος Γρηγοριος ο Ιερομαρτυρας Επισκοπος Της Μεγαλης Αρμενιας (257 - 331)». The Serbian Ohrid Prologue, read 4 October 2026: «И сконча св. Григорије свој многотрудни живот у старости, око 335. год.» The Romanian life gives no year."
     }
   },
   "images": [
@@ -79,8 +83,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the three the Ohrid Prologue enumerates for this day. It gives his year of repose as about 335 where the Greek heading gives 331, and the disagreement is recorded rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 30. септембар ст. к. — «1. Св. Григорије Просветитељ еп. Јерменски. Рођен у знаменитој фамилији, која је била сродна царској кући Персијској (цару Артабану) и Јерменској (цару Курсару). … И сконча св. Григорије свој многотрудни живот у старости, око 335. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

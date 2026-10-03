@@ -5,6 +5,10 @@
     {
       "form": "Άγιες Ριψιμιά, Γαϊάνη και Άλλες Τριακονταδύο Παρθενομάρτυρες",
       "lang": "el"
+    },
+    {
+      "form": "Св. муч. Гајанија, Рипсимија, и осталих 35 монахиња",
+      "lang": "sr"
     }
   ],
   "sex": "female",
@@ -54,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 30. септембар ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue enumerates for this day. Its heading counts thirty-five others beside Gaiane and Rhipsime, thirty-seven in all, where the Greek heading this folder is named for counts thirty-two; the Romanian life of Gregory the Illuminator already gave thirty-seven, and the disagreement over the number stands recorded on this folder rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 30. септембар ст. к. — «2. Св. муч. Гајанија, Рипсимија, и осталих 35 монахиња, које погуби Тиридат због вере у Христа. … Над моштима ових св. мученица подигнут је знаменити манастир Ечмиадзински, близу Еривана, главни духовни центар Јерменски кроз многе векове.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
