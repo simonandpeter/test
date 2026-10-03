@@ -1400,11 +1400,31 @@ sentence and the map's own credit are asked of `router.has`, so dropping a
 route is the only edit the split will need on this page.
 
 **Nothing ships until all four calendars are filled** (author, 4 October
-2026). Measured that morning, by days carrying at least one venerated
-attestation with a feast day: greek 364 of 365, romanian 358, **russian 103**,
-**serbian 75**. The two Slavic calendars are the work, and they are corpus
-work rather than image work - `heroless.mjs` reports almost nothing imageless
-for them only because they have so few days to lead. `docs/CORPUS.md` is the
-protocol; `scripts/day-coverage.mjs` says where to go next.
+2026). `scripts/ship-gate-days.mjs` is the gate's own instrument and the only
+number anyone should quote, because a day is covered by *either* a venerated
+attestation carrying a feast day or one of the eight records in
+`data/feasts-fixed.js` - those eight cannot be saint folders, their subject is
+not a person who lived on earth, and `lib/fixed-feasts.js` makes the feast lead
+its day over any saint of it. A count taken from `saints/` alone reports the
+Nativity, Theophany, Annunciation, Transfiguration, Dormition, the Theotokos's
+Nativity and Entry and the Synaxis of the Archangels as empty days, which is
+how the first figures written here came to be wrong by eight.
+
+Measured on the evening of 4 October, after the first corpus batches:
+
+| church | days carrying somebody | empty |
+| --- | --- | --- |
+| romanian | 366 of 366 | **0 - closed** |
+| greek | 365 of 366 | **1** |
+| russian | 115 of 366 | 251 |
+| serbian | 84 of 366 | 282 |
+
+Greek's one is **29 February**, which no civil year in Daily's runway prints;
+saint.gr/02/29 exists for whoever wants to close it. The two Slavic calendars
+are the work, and they are corpus work rather than image work -
+`heroless.mjs` reports almost nothing imageless for them only because they have
+so few days to lead. `docs/CORPUS.md` is the protocol; the gate script prints
+each church's remaining days in that church's own reckoning, Julian for the
+Russian and the Serbian.
 
 `docs/APP.md` is the store-submission procedure for both shells.
