@@ -14,7 +14,20 @@
  * cached once would be served forever; the honest failure is to fail.
  */
 
-const VERSION = 'v1';
+/*
+ * **Bump this when a file already cached changes under a URL that did not.**
+ *
+ * `/assets/` is hashed and immutable by name, so it never needs this; an icon
+ * is not. `saints/<slug>/images/icon.jpg` is a stable URL whose *contents* the
+ * corpus replaces — 145 of them on 2026-10-03 — and images are cache-first, so
+ * a device that had the old one went on showing it through any number of
+ * reloads. Activation deletes every cache this version does not own, which is
+ * the only thing that reaches it.
+ *
+ * v2, 2026-10-03: the Greek and Romanian icon waves (author, seeing Dionysius
+ * the Areopagite still wearing the icon he was replaced with).
+ */
+const VERSION = 'v2';
 const SHELL = `shell-${VERSION}`; // index.html, data/manifest.json - stale-while-revalidate
 const ASSETS = `assets-${VERSION}`; // hashed /assets/ - cache-first, immutable by name
 const SAINTS = `saints-${VERSION}`; // saint.json, life.md, meta - cache on read

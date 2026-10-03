@@ -1001,9 +1001,20 @@ html.is-rolling #view {
   position: sticky;
   top: var(--chrome-h, 0px);
   z-index: 12;
-  /* Transparent, and the *row* carries the ground — see the fold below for
-     why the block's own height must never change. */
-  background: none;
+  /* **The whole block carries the ground, not the search row alone.**
+
+     It was `none` here with the ground on `.index-row`, on the reading that
+     the block around that row is "mostly transparent" — true when the facets
+     were closed `<details>` opened one at a time, false since the chips became
+     a row drawn at every width on both pages. The block is two bars and a gap
+     tall, and only the top bar had a ground: measured at 446 px on Prayer,
+     scrolled 260, the saint's name read straight through the chips at 127-194
+     and through the gap above them.
+
+     A background changes no height, so the fold below — the block's outer
+     height must never move, or a border's pixel nudges the page — is not
+     touched by this. */
+  background: var(--gesso);
 }
 
 /* The ground belongs to the search row, which is the part that is actually a
@@ -1023,7 +1034,8 @@ html.is-rolling #view {
 
 /* The hairline and the shadow that separate the stuck bar from the register
    running under it. On the row, not the block: the block is taller than the
-   bar and mostly transparent. */
+   bar, and the line belongs where the bar ends rather than where the chips
+   do. The block's own ground is above. */
 .index-controls.is-stuck .index-row {
   box-shadow: 0 6px 12px -10px rgb(0 0 0 / 0.5);
   border-bottom-color: var(--rule);

@@ -1473,3 +1473,114 @@ test('below the desk the margins open on the names and keep the door they had', 
   );
   expect(await page.locator('.hy-body a.index-name').count(), 'and none of them is a link out').toBe(0);
 });
+
+/**
+ * **The sticky controls block is opaque where the page passes under it.**
+ *
+ * Author, 2026-10-03, with a screenshot: the saint's name read straight
+ * through the facet chips. `.index-controls` carried `background: none` and the
+ * ground was on `.index-row` alone, which is the search bar — so the chips
+ * below that bar, and the gap above them, were a window onto whatever the page
+ * had scrolled under them.
+ *
+ * **Nothing in the suite saw it, and the reason is a shape.** Every assertion
+ * about this block is about where a thing *is*: the block sticks, the chips are
+ * in it, the register runs under it, the outer height never moves. A
+ * transparent band is in exactly the right place. So is an opaque one.
+ *
+ * `elementFromPoint` cannot answer this either, and that is trap 14 in one
+ * line: hit-testing does not care what was painted, so the block wins every
+ * point in its own band whether it has a ground or not — an instrument that
+ * returns the same answer with the fix backed out.
+ *
+ * What a reader sees is pixels, so the instrument is pixels, and the claim is
+ * made **differentially**: the block is stuck, the page is scrolled under it
+ * twice, and the band it occupies has to come back byte for byte the same. A
+ * ground that is there cannot be scrolled; one that is not, cannot be anything
+ * else. Three premises are asserted beside it, because each one of them would
+ * make the comparison pass while measuring nothing: the block is stuck and has
+ * not moved between the two shots, the page *did* move under it, and the same
+ * comparison **fails** with `background: none` put back.
+ */
+test('the sticky controls block is opaque where the page scrolls under it', async ({ page }) => {
+  /* 446, which is the width the report was made at — and a phone width, where
+     the document is the scroller. Past 1024 the page does not scroll at all. */
+  await page.setViewportSize({ width: 446, height: 800 });
+  await ready(page);
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await page.evaluate(() => document.fonts.ready);
+
+  /* Two frames and the stuck shadow's own duration: the hairline and shadow
+     arrive with a transition, and a shot taken mid-way through one differs
+     from the next for a reason that is not the page showing through. */
+  const settle = () =>
+    page.evaluate(
+      () =>
+        new Promise((r) => requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(r, 160)))),
+    );
+
+  const band = async () => {
+    const box = await page.evaluate(() => {
+      const r = document.querySelector('.index-controls').getBoundingClientRect();
+      return { x: Math.round(r.left), y: Math.round(r.top), width: Math.round(r.width), height: Math.round(r.height) };
+    });
+    return { box, shot: await page.screenshot({ clip: box }) };
+  };
+
+  /* The strip of page immediately below the block, which is the control: it has
+     to differ between the two scrolls or nothing moved under the band either. */
+  const below = async () => {
+    const box = await page.evaluate(() => {
+      const r = document.querySelector('.index-controls').getBoundingClientRect();
+      return { x: Math.round(r.left), y: Math.round(r.bottom) + 2, width: Math.round(r.width), height: 60 };
+    });
+    return page.screenshot({ clip: box });
+  };
+
+  const at = async (y) => {
+    await page.evaluate((to) => window.scrollTo(0, to), y);
+    await settle();
+    return { ...(await band()), under: await below() };
+  };
+
+  const first = await at(260);
+  /* `is-stuck` is All Saints' own class and `views/index/sticky.js` is not
+     mounted here (STRUCTURE.md: the sentinel is inert on this page), so the
+     premise is the one this page does keep — the block is sticky, and the page
+     has actually scrolled. */
+  expect(
+    await page.evaluate(() => getComputedStyle(document.querySelector('.index-controls')).position),
+    'premise: the block is not sticky, so nothing passes under it',
+  ).toBe('sticky');
+  expect(
+    await page.evaluate(() => window.scrollY),
+    'premise: the page did not scroll, so there is nothing under the block',
+  ).toBeGreaterThan(100);
+  expect(first.box.height, 'premise: the block has no band to be opaque in').toBeGreaterThan(40);
+
+  const second = await at(320);
+  // Premise: the block held still, so the two shots are of the same band.
+  expect(second.box, 'premise: the sticky block moved between the two shots').toEqual(first.box);
+  // Premise: the page moved under it, so there was something to show through.
+  expect(
+    second.under.equals(first.under),
+    'premise: the page did not move under the block, so this proves nothing',
+  ).toBe(false);
+
+  expect(
+    second.shot.equals(first.shot),
+    'the page shows through the sticky controls block: its band changed when the page scrolled under it',
+  ).toBe(true);
+
+  /*
+   * And the back-out, in the test: with the block's own ground taken away the
+   * comparison above has to fail, or it was never reading the ground.
+   */
+  await page.addStyleTag({ content: '.index-controls { background: none !important; }' });
+  const bare = await at(260);
+  const bareAgain = await at(320);
+  expect(
+    bareAgain.shot.equals(bare.shot),
+    'the instrument: with `background: none` back the band still did not change, so it measures nothing',
+  ).toBe(false);
+});

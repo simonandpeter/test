@@ -29,7 +29,7 @@ import {
  * `main.js` is not importable from a spec — it boots the app on evaluation — and
  * a copy is what this file already was, in three hand-written rotation arrays.
  * Kept as one list so a page added to the site is one edit here, and still a
- * claim rather than a derivation: if this disagrees with `main.js`, the strip
+ * claim rather than a derivation: if this disagrees with `main.js`, the bar
  * tests below say so.
  */
 const NAV_KEYS = ['calendar', 'saints', 'prayer', 'texts', 'map', 'about'];
@@ -383,9 +383,12 @@ test('toggling the theme does not move the header, and the toggle is two-way', a
 test('the header carries no date, and the controls keep their places at both widths', async ({ page }) => {
   /*
    * Wide, the row is one line: the calendar control, then the language control
-   * and the icon toggle. Narrow, it is **one line of chrome** — calendar, name,
-   * language, theme — with the four pages centred on a row beneath, down to a
-   * 320 px phone. So the "one line" assertion is the wide branch's alone.
+   * and the icon toggle. Narrow, it is **one line of chrome and nothing else**
+   * — calendar, name, language, theme — down to a 320 px phone, with the pages
+   * a bar at the foot of the window rather than a second row here (author,
+   * 2026-10-03, "Please build this in"). So the "one line" assertion is the
+   * wide branch's alone, and the narrow branch's `navBelowChrome` is now a
+   * claim about the whole page rather than about the row beneath.
    *
    * **The wide branch is measured in a wide utility face** (trap 2).
    * `--font-utility` is the reader's own system stack, so the same row is a
@@ -438,8 +441,13 @@ test('the header carries no date, and the controls keep their places at both wid
         Math.abs(mid(open) - mid(theme)) < 6,
       chromeInOrder: open.right <= name.left + 1 && name.right <= lang.left + 1 && lang.right <= theme.left + 1,
       nameCentred: Math.abs((name.left + name.right) / 2 - (header.left + header.right) / 2) < 12,
-      navBelowChrome: nav.top >= open.bottom - 1,
-      navCentred: Math.abs((nav.left + nav.right) / 2 - (header.left + header.right) / 2) < 12,
+      /* Narrow, the pages are out of the header altogether and spanning the
+         window at its foot. `nav.top >= open.bottom` was the old claim and is
+         still true of a bar, which is why it is not the one made here: a nav
+         row left on a second line of the header would satisfy it. */
+      navOutOfHeader: nav.top >= header.bottom - 1,
+      navSpansWindow: Math.round(nav.left) === 0 && Math.round(nav.right) === innerWidth,
+      navAtFoot: Math.abs(nav.bottom - innerHeight) < 1,
     };
   });
   if (m.wide) {
@@ -450,8 +458,9 @@ test('the header carries no date, and the controls keep their places at both wid
     expect(m.chromeOneLine).toBe(true);
     expect(m.chromeInOrder).toBe(true);
     expect(m.nameCentred).toBe(true);
-    expect(m.navBelowChrome).toBe(true);
-    expect(m.navCentred).toBe(true);
+    expect(m.navOutOfHeader).toBe(true);
+    expect(m.navSpansWindow).toBe(true);
+    expect(m.navAtFoot).toBe(true);
   }
 });
 
@@ -1018,6 +1027,42 @@ test('About states the privacy policy, and states it as the code behaves', async
   await expect(privacy).toContainText('Bible Gateway');
 });
 
+test('About answers what a store asks of the app, and its two controls are thumb-sized', async ({ page }) => {
+  /*
+   * The About page is the app's privacy policy and its content-rights answer
+   * (docs/APP.md, STRUCTURE.md §7), so three paragraphs on it are now
+   * submissions rather than editorial: that nobody here speaks for the
+   * churches named on every page, where the pictures come from and under what
+   * licences, and what the software is built out of. Each is read as text a
+   * reviewer would look for.
+   */
+  await ready(page);
+  await page.goto('/about', { waitUntil: 'networkidle' });
+
+  await expect(page.locator('section[aria-labelledby="policy"]')).toContainText(
+    'not affiliated with, endorsed by, or published by any of the churches',
+  );
+
+  const pictures = page.locator('section[aria-labelledby="pictures"]');
+  await expect(pictures).toContainText('Wikimedia Commons');
+  // The tally is read from manifest.meta.json after first paint, so it is
+  // polled rather than asserted on the markup the view wrote.
+  await expect(pictures.locator('[data-licences]')).toContainText('public domain');
+
+  /*
+   * And the page no longer offers to export or import anything (author,
+   * 2026-10-03). Brief §11 asked for it; nothing legally does, because a
+   * portability right is a right against whoever holds the data and nobody
+   * here holds any. The libraries' own notices ship as a file instead of as a
+   * section, which is what their licences actually ask for.
+   */
+  await expect(page.locator('[data-export]')).toHaveCount(0);
+  await expect(page.locator('[data-import]')).toHaveCount(0);
+  const notices = await page.request.get('/third-party-licences.txt');
+  expect(notices.ok()).toBe(true);
+  expect(await notices.text()).toContain('MiniSearch');
+});
+
 /* ---- the site's language --------------------------------- */
 
 test('the language control offers five, each naming itself in its own tongue', async ({ page }) => {
@@ -1200,12 +1245,16 @@ test('the four pages hold one line in every pack, at every width', async ({ brow
       expect(seen.rows, where).toBe(1);
       expect(seen.tallest, where).toBeLessThan(seen.line * 1.6);
       /*
-       * Below the nav's own breakpoint (759.98px, base.css) the row is
-       * `ui/nav-scroll.js`'s endless strip, and its links legitimately run past
-       * the track's right edge — that overflow is contained rather than absent,
-       * which `seen.doc` below still catches if it ever leaked onto the page.
+       * **At every width, including the narrow ones** (author, 2026-10-03,
+       * "Please build this in", on seeing the A5 preview's bar). Below 760 px
+       * this was exempted, because the row was `ui/nav-scroll.js`'s endless
+       * strip and its links legitimately ran past the track's right edge with
+       * the overflow contained. The bar that replaced it has no runway and
+       * nothing to swipe to, so a link past the edge is a page nobody can
+       * reach — and the exemption was what let the first cut of the bar ship
+       * with four of its six cells off the screen.
        */
-      if (width >= 760) expect(seen.overhang, where).toBeLessThan(1);
+      expect(seen.overhang, where).toBeLessThan(1);
       /*
        * Not `toBe(0)`: past 1024 px the root holds the scrollbar's room open on
        * every route (`scrollbar-gutter: stable`), which leaves the content
@@ -1652,11 +1701,12 @@ test('the Daily button offers Today when the reader has left it, and only there'
   await expect(page.locator('.week-strip button.is-today')).toHaveAttribute('aria-current', 'date');
 });
 
-test('the header is sticky, shorter, and the phone gets an endless centred nav', async ({ page }) => {
+test('the header is sticky, shorter, and the phone keeps its pages at the foot', async ({ page }) => {
   /*
-   * Three instructions, which are one bar: sticky, shorter, and — on a phone —
-   * an endless centred strip. Desktop keeps the plain row.
-   *
+   * Three instructions: the header sticks, it is shorter, and on a phone the
+   * pages are a bar fixed to the foot of the window (author, 2026-10-03,
+   * "Please build this in", on seeing the A5 preview's bar). Desktop keeps the
+   * plain row in the header.
    */
   /*
    * 900 rather than 1280: past 1024 the chrome is deliberately twice the size,
@@ -1688,96 +1738,123 @@ test('the header is sticky, shorter, and the phone gets an endless centred nav',
   // And it is opaque, or the page reads straight through it.
   await expect(header).not.toHaveCSS('background-color', 'rgba(0, 0, 0, 0)');
 
-  // The phone's nav: a strip, edge to edge, with the current page centred on
-  // it — the same links the wide row has and no more, never cloned. The count
-  // is read off the desk rather than typed, so adding a page to the site is one
-  // edit and not two. That the clones are never `/saints` is held by `the
-  // suite's positional nav selectors match exactly one link, at every width`
-  // below.
+  /*
+   * **The phone's pages are a bar at the foot of the window** (author,
+   * 2026-10-03, on seeing the A5 preview's own imitation of one: "Please build
+   * this in"). Until that day they were an endless centred strip on a second
+   * row of the header, and everything from here down asserted that strip: edge
+   * to edge with the current page on the midline, a scrollable track, a ring
+   * that turned. What a bar has to be instead is fixed, at the foot, the full
+   * width of the window, with every page whole inside it and the document
+   * ending above it rather than under it.
+   *
+   * The count is read off the desk rather than typed, so adding a page to the
+   * site is one edit and not two. That no link is ever cloned is held by `the
+   * suite's positional nav selectors match exactly one link, at every width`
+   * below.
+   */
   const wideLinks = await page.evaluate(() => document.querySelectorAll('.site-nav a').length);
   await page.setViewportSize({ width: 360, height: 780 });
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
-  const nav = await page.evaluate(() => {
+  const bar = await page.evaluate(() => {
     const track = document.querySelector('.site-nav');
     const box = track.getBoundingClientRect();
-    const currents = [...track.querySelectorAll('a[aria-current="page"]')];
-    const c = currents[0]?.getBoundingClientRect();
+    const style = getComputedStyle(track);
+    const links = [...track.querySelectorAll('a')];
+    const currents = links.filter((a) => a.getAttribute('aria-current') === 'page');
     return {
+      position: style.position,
+      ground: style.backgroundColor,
       left: Math.round(box.left),
       right: Math.round(box.right),
+      bottom: Math.round(box.bottom),
+      barHeight: Math.round(box.height),
       viewport: document.documentElement.clientWidth,
+      windowHeight: innerHeight,
+      linkCount: links.length,
       currentCount: currents.length,
-      currentMid: c ? Math.round(c.left + c.width / 2) : null,
-      trackMid: Math.round(box.left + box.width / 2),
-      height: c ? Math.round(c.height) : null,
-      weight: currents[0] ? getComputedStyle(currents[0]).fontWeight : null,
-      field: currents[0] ? getComputedStyle(currents[0]).backgroundColor : null,
-      linkCount: track.querySelectorAll('a').length,
-      // The generous `padding-inline` (base.css) is what makes even a short
-      // row wider than the box, so the strip has somewhere to swipe to.
-      canScroll: track.scrollWidth > track.clientWidth,
+      rows: new Set(links.map((a) => Math.round(a.getBoundingClientRect().top))).size,
+      height: currents[0] ? Math.round(currents[0].getBoundingClientRect().height) : null,
+      underline: currents[0] ? getComputedStyle(currents[0]).textDecorationLine : null,
+      /*
+       * What a reader can see of each page, as a fraction of that page's own
+       * cell. **This is the assertion the first instrument did not make**
+       * (trap 14): it asked whether a label was clipped *inside its own box*
+       * and whether all six shared one line, and six cells of `min-width:
+       * 25vw` behind a `padding-inline: 50vw` answered yes to both while four
+       * of them stood off the side of the screen. A bar clips rather than
+       * scrolls, so a cell outside the bar's box is a page nobody can reach.
+       */
+      shown: links.map((a) => {
+        const r = a.getBoundingClientRect();
+        return Math.round(((Math.min(r.right, box.right) - Math.max(r.left, box.left)) / r.width) * 100);
+      }),
+      /* The whole word, or the ellipsis the three widest packs cost at 320 px
+         (base.css). English at 360 is nowhere near it. */
+      elided: links.map((a) => a.scrollWidth - a.clientWidth),
+      /* Left to right on the screen, which the strip's `order` rotation used to
+         make different from the DOM. A bar reads in the site's own order, and
+         that is now a thing to assert rather than a thing to compensate for. */
+      seen: links
+        .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
+        .sort((p, q) => p.x - q.x)
+        .map((p) => p.k),
+      reserved: parseFloat(getComputedStyle(document.body).paddingBottom),
     };
   });
-  expect(nav.left, 'the strip starts at the screen edge').toBe(0);
-  expect(nav.right, 'and ends at it').toBe(nav.viewport);
-  expect(nav.currentCount, 'more than one link claimed to be current').toBe(1);
-  expect(Math.abs(nav.currentMid - nav.trackMid), 'the current page is not centred').toBeLessThan(6);
-  expect(nav.linkCount, 'a phone sees a different number of pages than the desk').toBe(wideLinks);
-  expect(nav.canScroll, 'the strip does not scroll').toBe(true);
+  expect(bar.position, 'the pages are not a bar').toBe('fixed');
+  expect(bar.left, 'the bar starts at the screen edge').toBe(0);
+  expect(bar.right, 'and ends at it').toBe(bar.viewport);
+  expect(bar.bottom, 'the bar does not stand at the foot of the window').toBe(bar.windowHeight);
+  expect(bar.currentCount, 'more than one link claimed to be current').toBe(1);
+  expect(bar.linkCount, 'a phone sees a different number of pages than the desk').toBe(wideLinks);
+  expect(bar.rows, 'the bar wrapped to a second line').toBe(1);
+  expect(bar.seen, 'the bar does not read in the site’s own order').toEqual(NAV_KEYS);
+  for (const [i, pct] of bar.shown.entries()) {
+    expect(pct, `page ${i} of ${bar.linkCount} shows ${pct}% of its own cell`).toBe(100);
+  }
+  for (const [i, over] of bar.elided.entries()) {
+    expect(over, `page ${i} of ${bar.linkCount} is ${over} px wider than its cell in English`).toBe(0);
+  }
   // Shorter than the comfortable row a desktop's own padding gives, and
-  // shorter than the 28 px the four-pages test allowed at 320.
-  expect(nav.height, `the current page reads ${nav.height} px tall`).toBeLessThan(28);
-  // The current page carries weight and a field — never colour alone — and
-  // `aria-current` says it besides.
-  expect(Number(nav.weight)).toBeGreaterThanOrEqual(700);
-  expect(nav.field).not.toBe('rgba(0, 0, 0, 0)');
+  // shorter than the 28 px the pages test allowed at 320.
+  expect(bar.height, `the current page reads ${bar.height} px tall`).toBeLessThan(28);
+  // Opaque, or the page reads straight through the bar it scrolls under.
+  expect(bar.ground, 'the bar has no ground of its own').not.toBe('rgba(0, 0, 0, 0)');
+  /* The current page keeps the site's own rubric-and-underline, which is what
+     the A5 preview showed the author: colour never carries "you are here"
+     alone, and `aria-current` says it besides. */
+  expect(bar.underline, 'the current page is marked by colour alone').toContain('underline');
+  // And the document ends above the bar rather than under it.
+  expect(
+    bar.reserved,
+    `the page reserves ${bar.reserved} px under a bar ${bar.barHeight} px tall`,
+  ).toBeGreaterThanOrEqual(bar.barHeight);
 
-  // A tap on a neighbour — not the centred page — still opens it, same as
-  // any other link on the site. Exactly one match, or this throws.
-  const map = page.locator('.site-nav a[href$="/map"]');
-  await map.scrollIntoViewIfNeeded();
-  await map.click();
+  /*
+   * **Fixed, not sticky** — the whole of why it is a bar and not a row that
+   * happens to be at the bottom of a long page: a reader's thumb finds it
+   * wherever the page has got to.
+   */
+  await page.evaluate(() => window.scrollTo(0, 1200));
+  await expect.poll(() => page.evaluate(() => window.scrollY)).toBeGreaterThan(100);
+  expect(
+    await page.evaluate(() => {
+      const r = document.querySelector('.site-nav').getBoundingClientRect();
+      return Math.round(r.bottom) === innerHeight && Math.round(r.left) === 0;
+    }),
+    'the bar left the foot of the window when the page scrolled',
+  ).toBe(true);
+
+  /*
+   * A tap on a page other than the current one opens it, same as any other
+   * link on the site. Exactly one match, or this throws — and no
+   * `scrollIntoViewIfNeeded` before it, because a fixed bar is never out of
+   * view and asking would scroll the page under it for nothing (trap 3).
+   */
+  await page.locator('.site-nav a[href$="/map"]').click();
   await expect(page).toHaveURL(/\/map$/);
-
-  // And the loop is real: swiping the strip one page brings a fifth page across
-  // the ring to sit beside it rather than leaving a blank run-off.
-  await page.goto('/map', { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
-  const before = await page.evaluate(() => document.querySelector('.site-nav').outerHTML);
-  await page.evaluate(() => {
-    /*
-     * `ui/nav-scroll.js` moves this row itself now — `overflow-x` is `hidden`,
-     * so a `scrollLeft` write alone reaches nothing and there is no native
-     * scroll to provoke. The gesture is the whole instrument. Dispatched
-     * pointer events are enough here because the file takes its moves off
-     * `window` and never asks for pointer capture, which a synthetic pointer
-     * would refuse (trap 11); the fling test below uses a real touch.
-     */
-    const track = document.querySelector('.site-nav');
-    const y = track.getBoundingClientRect().top + 4;
-    const at = (type, x, target) =>
-      target.dispatchEvent(
-        new PointerEvent(type, { clientX: x, clientY: y, bubbles: true, pointerId: 1, pointerType: 'touch' }),
-      );
-    at('pointerdown', 300, track);
-    for (let x = 280; x >= 120; x -= 20) at('pointermove', x, window);
-    at('pointerup', 120, window);
-  });
-  await expect
-    .poll(() => page.evaluate(() => document.querySelector('.site-nav').outerHTML))
-    .not.toBe(before);
-  const after2 = await page.evaluate(() => {
-    const track = document.querySelector('.site-nav');
-    return {
-      count: track.querySelectorAll('a').length,
-      keys: new Set([...track.querySelectorAll('a')].map((a) => new URL(a.href).pathname)).size,
-      inBounds: track.scrollLeft >= 0 && track.scrollLeft <= track.scrollWidth - track.clientWidth,
-    };
-  });
-  expect(after2.count, 'the rotation dropped or duplicated a link').toBe(wideLinks);
-  expect(after2.keys, 'the rotation lost one of the distinct pages').toBe(wideLinks);
-  expect(after2.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
 });
 
 test('the suite’s positional nav selectors match exactly one link, at every width', async ({ page }) => {
@@ -1819,27 +1896,25 @@ test('the suite’s positional nav selectors match exactly one link, at every wi
   }
 });
 
-test('a swipe carries the nav strip one page, however hard it is thrown', async ({ browser }) => {
-  /*
-   * Author, 2026-09-15: "Either you swipe left or right and it takes you one
-   * spot left or right, to the next one, or you click and it takes you there.
-   * Currently you can swipe multiple and this isn't working."
-   *
-   * A 320 px fling is the hardest thing this row is ever asked for, and it has
-   * to mean the same as a 40 px one: the next page, and only the next page.
-   * The strip's own `overflow-x` is `hidden` for it (base.css) — momentum
-   * belongs to whoever owns the scroller, and this row cannot let the
-   * compositor spend it.
-   *
-   * **A real touch fling, through CDP** (trap 11): a dispatched `PointerEvent`
-   * is not an active pointer, so a synthetic gesture cannot tell a row that
-   * refuses momentum from one that never had any to refuse.
-   *
-   * The assertions are on travel and on arrival, which are independent (trap
-   * 14): the row has to *go*, past a threshold no snap-back can reach, and it
-   * has to *arrive* somewhere else with the ring turned.
-   *
-   */
+/**
+ * **A swipe across the page bar does nothing, and that is the instruction**
+ * (author, 2026-10-03, "Please build this in", on seeing the A5 preview's
+ * bar). Until that day this row was an endless centred ring and a swipe moved
+ * it exactly one page (author, 2026-09-15); `ui/nav-scroll.js` is what did
+ * that, and it stands down where the nav is the bar — its own header has why,
+ * and `main.js` takes `null` back from it.
+ *
+ * Which makes this the test that would catch the strip being re-armed: a bar
+ * that answers a finger is a bar with a scroller behind it, and the three
+ * things the strip could not help doing are all asserted — the box moves, a
+ * `scrollLeft` appears, or a flex `order` is written on a child.
+ *
+ * **A real touch fling, through CDP** (trap 11): a dispatched `PointerEvent`
+ * is not an active pointer, and `nav-scroll.js` takes its moves off `window`,
+ * so a synthetic gesture is the one thing that could tell a row which refuses
+ * a finger from one that never saw it.
+ */
+test('a swipe across the page bar moves nothing and opens nothing', async ({ browser }) => {
   const ctx = await browser.newContext({
     viewport: { width: 360, height: 780 },
     hasTouch: true,
@@ -1851,43 +1926,36 @@ test('a swipe carries the nav strip one page, however hard it is thrown', async 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  const start = await page.evaluate(() => {
-    const t = document.querySelector('.site-nav');
-    const b = t.getBoundingClientRect();
-    // Traced in the page: a before/after pair cannot tell a fling that was cut
-    // short from one that never started.
-    window.__trace = [];
-    const tick = () => {
-      window.__trace.push(Math.round(t.scrollLeft));
-      window.__raf = requestAnimationFrame(tick);
-    };
-    window.__raf = requestAnimationFrame(tick);
-    return {
-      y: Math.round(b.top + b.height / 2),
-      at: Math.round(t.scrollLeft),
-      range: Math.round(t.scrollWidth - t.clientWidth),
-      centred: [...t.querySelectorAll('a')]
-        .map((a) => {
-          const r = a.getBoundingClientRect();
-          return { k: a.dataset.navKey, d: Math.abs(r.left + r.width / 2 - (b.left + t.clientWidth / 2)) };
-        })
-        .sort((p, q) => p.d - q.d)[0].k,
-      // The ring as it reads left to right, so "one spot" can be named rather
-      // than assumed: the next page is the one standing to the right of the
-      // centred one before the finger went down.
-      order: [...t.querySelectorAll('a')]
-        .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
-        .sort((p, q) => p.x - q.x)
-        .map((p) => p.k),
-    };
-  });
-  expect(start.range, 'the strip has nowhere to be flung').toBeGreaterThan(300);
+  const read = () =>
+    page.evaluate(() => {
+      const track = document.querySelector('.site-nav');
+      const r = track.getBoundingClientRect();
+      const links = [...track.querySelectorAll('a')];
+      return {
+        box: [Math.round(r.left), Math.round(r.top), Math.round(r.width), Math.round(r.height)],
+        scrollLeft: Math.round(track.scrollLeft),
+        /* The site's own order, read off the screen rather than the DOM: the
+           ring turned by writing `order`, so a rotation shows here and a bar
+           reading in document order does not. */
+        seen: links
+          .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
+          .sort((p, q) => p.x - q.x)
+          .map((p) => p.k),
+        orders: links.map((a) => getComputedStyle(a).order),
+        url: location.pathname,
+      };
+    });
+
+  const before = await read();
+  const y = Math.round(before.box[1] + before.box[3] / 2);
+  // Premise: the gesture lands on the bar, not past the window's own bottom.
+  expect(y, 'premise: the bar is not on the screen to be swiped').toBeGreaterThan(0);
 
   const cdp = await ctx.newCDPSession(page);
   const touch = (type, x) =>
     cdp.send('Input.dispatchTouchEvent', {
       type,
-      touchPoints: type === 'touchEnd' ? [] : [{ x, y: start.y, id: 1 }],
+      touchPoints: type === 'touchEnd' ? [] : [{ x, y, id: 1 }],
     });
   let x = 330;
   await touch('touchStart', x);
@@ -1897,270 +1965,88 @@ test('a swipe carries the nav strip one page, however hard it is thrown', async 
     await page.waitForTimeout(8);
   }
   await touch('touchEnd', x);
-  await page.waitForTimeout(1400);
+  // Long enough for a glide to have run and settled, had one been armed.
+  await page.waitForTimeout(1200);
 
-  const after = await page.evaluate(() => {
-    cancelAnimationFrame(window.__raf);
-    const t = document.querySelector('.site-nav');
-    const b = t.getBoundingClientRect();
-    const seen = [...t.querySelectorAll('a')]
-      .map((a) => ({ k: a.dataset.navKey, x: a.getBoundingClientRect().left }))
-      .sort((p, q) => p.x - q.x);
-    const mid = b.left + t.clientWidth / 2;
-    const centred = [...t.querySelectorAll('a')]
-      .map((a) => {
-        const r = a.getBoundingClientRect();
-        return { k: a.dataset.navKey, d: Math.abs(r.left + r.width / 2 - mid) };
-      })
-      .sort((p, q) => p.d - q.d)[0];
-    return {
-      reached: Math.max(...window.__trace),
-      centred: centred.k,
-      offMid: Math.round(centred.d),
-      order: seen.map((s) => s.k),
-      links: t.querySelectorAll('a').length,
-      keys: new Set([...t.querySelectorAll('a')].map((a) => new URL(a.href).pathname)).size,
-      inBounds: t.scrollLeft >= -1 && t.scrollLeft <= t.scrollWidth - t.clientWidth + 1,
-    };
-  });
-
-  // It answered the finger: the row moved rather than sitting still under it.
+  const after = await read();
+  expect(after.box, 'the bar moved under a swipe').toEqual(before.box);
+  expect(after.scrollLeft, 'something scrolled the bar').toBe(0);
+  expect(after.seen, 'the bar re-ordered itself under a swipe').toEqual(before.seen);
   expect(
-    after.reached - start.at,
-    `the fling moved the strip ${after.reached - start.at} px of a ${start.range} px range`,
-  ).toBeGreaterThan(20);
-  /*
-   * And it arrived one page along, not three. The 320 px thrown at it is more
-   * than three labels wide, so this is the assertion the old free-scrolling row
-   * fails: it is not "a different page" but "the next one".
-   */
-  const next = start.order[start.order.indexOf(start.centred) + 1];
-  expect(next, 'premise: the page the gesture started on was at the end of the ring').toBeTruthy();
-  expect(after.centred, `the strip travelled to ${after.centred} rather than one spot, to ${next}`).toBe(next);
-  expect(after.offMid, 'the strip settled off its own midline').toBeLessThan(6);
-  expect(after.inBounds, 'the compensated scrollLeft left the scrollable range').toBe(true);
-  // The ring turned with it, so the page it landed on still has neighbours on
-  // both sides — the whole of what "endless" means here.
-  expect(after.links, 'the turn dropped or duplicated a link').toBe(NAV_KEYS.length);
-  expect(after.keys, 'the turn lost one of the distinct pages').toBe(NAV_KEYS.length);
-  /*
-   * **`Math.floor(n / 2)`, which is where `ui/nav-scroll.js` puts the centred
-   * page** — the third of five and the fourth of six. Written as the same
-   * expression the file uses rather than as the number it currently comes to,
-   * because what this asserts is that the strip balanced, not how many pages
-   * the site has.
-   */
-  const landed = after.order.indexOf(after.centred);
-  const middle = Math.floor(NAV_KEYS.length / 2);
-  expect(landed, `the strip landed at position ${landed} of ${NAV_KEYS.length}, not the middle`).toBe(middle);
+    new Set(after.orders),
+    'a flex `order` was written on the bar, so the swipe strip is still wired',
+  ).toEqual(new Set(['0']));
+  // And a swipe is not a press: it opens nothing.
+  expect(after.url, 'a swipe across the bar opened a page').toBe(before.url);
   await ctx.close();
 });
 
 /**
- * The strip as read left to right on the screen, which is *not* the DOM order:
- * `ui/nav-scroll.js` turns the ring with a flex `order` per link, so the
- * document keeps the site's own order — and with it the tab ring and every
- * positional selector in this suite — while the picture rotates.
- */
-const stripOrder = (page) =>
-  page.evaluate(() =>
-    [...document.querySelectorAll('.site-nav a')]
-      .map((a) => ({ key: a.dataset.navKey, x: a.getBoundingClientRect().left }))
-      .sort((a, b) => a.x - b.x)
-      .map((s) => s.key),
-  );
-
-/**
- * Presses a page on the strip and counts the *distinct positions the track
- * passed through*, per frame. Read in the page rather than over the wire
- * because that is the only place the frames are: a before/after pair cannot
- * tell a travel from an assignment.
+ * **A press on the bar opens its page, the bar holds still, and the page
+ * cross-fades again.**
  *
- * The press is `el.click()` rather than `locator.click()` because the latter
- * scrolls its target into view first (trap 3) — on this strip that is the very
- * scroll under test.
+ * The last of those is the half that changed with the bar. The strip's press
+ * skipped the view transition on purpose (author, 2026-09-08: "I want the
+ * animation to be separate from the loading below") — a header animating under
+ * a transition's snapshot is a header nobody can see, and the strip's glide
+ * *was* the response to the press. A bar has no glide, so there is nothing for
+ * the fade to hide, and `main.js` arms `skipFade` only when it holds a strip.
+ * Every navigation on the site cross-fades again, this one included.
+ *
+ * Measured in the page rather than over the wire, because the claim is about
+ * frames: a before-and-after pair cannot tell a bar that held still from one
+ * that travelled and came back.
  */
-const watchPress = async (href) => {
-  const track = document.querySelector('.site-nav');
-  /*
-   * Whether the press ran a view transition — the half `movedAt` cannot see
-   * (trap 14): a transition covers the document with a snapshot for its
-   * duration, so the strip's `scrollLeft` moves on time and the reader watches
-   * a still picture.
-   */
-  let transitions = 0;
-  if (document.startViewTransition) {
-    const orig = document.startViewTransition.bind(document);
-    document.startViewTransition = (cb) => {
-      transitions += 1;
-      return orig(cb);
-    };
-  }
-  const seen = [Math.round(track.scrollLeft)];
-  /*
-   * And the widest blank strip beyond whichever links are on screen, per frame
-   * — the author's second report on this row is exactly that number ("they
-   * should be visible as the animation is happening").
-   */
-  let gap = 0;
-  let movedAt = null;
-  const began = performance.now();
-  const from = track.scrollLeft;
-  let running = true;
-  const tick = () => {
-    seen.push(Math.round(track.scrollLeft));
-    if (movedAt === null && Math.abs(track.scrollLeft - from) > 2) movedAt = performance.now() - began;
-    const box = track.getBoundingClientRect();
-    const on = [...track.children]
-      .map((a) => a.getBoundingClientRect())
-      .filter((r) => r.right > box.left && r.left < box.right)
-      .sort((a, b) => a.left - b.left);
-    if (on.length) gap = Math.max(gap, on[0].left - box.left, box.right - on[on.length - 1].right);
-    if (running) requestAnimationFrame(tick);
-  };
-  requestAnimationFrame(tick);
-  document.querySelector(`.site-nav a[href$="${href}"]`).click();
-  await new Promise((r) => setTimeout(r, 900));
-  running = false;
-  const cur = track.querySelector('a[aria-current="page"]').getBoundingClientRect();
-  const box = track.getBoundingClientRect();
-  return {
-    steps: [...new Set(seen)].length,
-    gap: Math.round(gap),
-    movedAt: Math.round(movedAt ?? 9999),
-    transitions,
-    offCentre: Math.abs(cur.left + cur.width / 2 - (box.left + box.width / 2)),
-  };
-};
-
-test('the phone strip is balanced at rest, and a press glides into the centre', async ({ page }) => {
-  /*
-  /*
-   * The row only rotated once a swipe had *already* settled with an edge page
-   * centred, so at rest the current page stood at one end of the row with blank
-   * strip beside it. Balancing every settle so the centred page sits at the
-   * ring's own middle is what makes its neighbours the ones a reader meets.
-   */
+test('a press on the page bar opens its page, and the chrome does not move', async ({ page }) => {
   await page.setViewportSize({ width: 360, height: 780 });
   await ready(page);
   await page.goto('/', { waitUntil: 'networkidle' });
   await page.evaluate(() => document.fonts.ready);
 
-  /*
-   * The ring read from three pages before Daily — `Math.floor(6 / 2)`. Written
-   * out rather than computed from `NAV_KEYS`: a test that derives the rotation
-   * the same way the code does passes whatever the two agree on, and this is
-   * the one place the whole turn is claimed independently. It is also the claim
-   * that the ring wraps rather than running out.
-   */
-  await expect
-    .poll(() => stripOrder(page))
-    .toEqual(['texts', 'map', 'about', 'calendar', 'saints', 'prayer']);
-  // And the DOM is untouched by that rotation, which is what lets the rest of
-  // this file address `.site-nav a` by position at all.
-  expect(
-    await page.evaluate(() => [...document.querySelectorAll('.site-nav a')].map((a) => a.dataset.navKey)),
-    'the ring turned the DOM rather than the picture',
-  ).toEqual(NAV_KEYS);
-
-  const glided = await page.evaluate(watchPress, '/about');
-  // Five or more distinct positions is a journey; a jump is two — where it
-  // started and where it landed. The measured run is nineteen.
-  expect(glided.steps, `the strip moved through ${glided.steps} positions`).toBeGreaterThan(4);
-  /*
-   * **And the row is never seen to run out.** Two things together give this and
-   * either alone fails it: the ring turns on every frame of the journey rather
-   * than at the end of it, and every link is `min-width: 25vw` so the ring is
-   * longer than the window.
-   */
-  expect(glided.gap, `${glided.gap} px of empty strip showed during the press`).toBeLessThan(2);
-  expect(glided.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
-  /*
-   * **And the strip answers the press itself, not the navigation behind it.**
-   * It used to be armed in `renderNav` and let go from `show()` once the view
-   * transition's `finished` settled, so a press bought a quarter-second of
-   * nothing. Both numbers are read from the same clock as the press, and the
-   * assertion is that *neither waits for the other*.
-   *
-   */
-  expect(glided.movedAt, `the strip did not move until ${glided.movedAt} ms`).toBeLessThan(120);
-  expect(glided.transitions, 'the press ran a view transition, which freezes the strip under a snapshot').toBe(0);
-  // And the ring is balanced again around the page that was pressed, which is
-  // the rebalance being silent: the glide's own landing and this are the same
-  // pixel for About, and only the four pages around it have moved.
-  await expect
-    .poll(() => stripOrder(page))
-    .toEqual(['prayer', 'texts', 'map', 'about', 'calendar', 'saints']);
-
-  /*
-   * **Three pages stand whole and the two beside them show about half.** Half
-   * the *box* and half the *word* are the same thing only at `min-width: 25vw`,
-   * which is why the number is what it is: a label is centred in its box, so at
-   * 26vw what shows is the box's outer edge and the last few letters of the
-   * word. base.css carries the arithmetic.
-   *
-   * **Read as a shape rather than by index**, because the row is longer than
-   * the window by design and a sixth page put a whole link off the leading edge
-   * as runway. What a reader sees is unchanged: the same three whole and the
-   * same two halves, and anything further out is off screen entirely — which is
-   * asserted rather than allowed for, since a link half off the *wrong* edge
-   * would be a gap.
-   */
-  const seen = await page.evaluate(() => {
+  const pressed = await page.evaluate(async () => {
     const track = document.querySelector('.site-nav');
-    const box = track.getBoundingClientRect();
-    const parts = [...track.children]
-      .map((a) => ({ key: a.dataset.navKey, r: a.getBoundingClientRect() }))
-      .sort((a, b) => a.r.left - b.r.left)
-      .map((k) => Math.round(((Math.min(k.r.right, box.right) - Math.max(k.r.left, box.left)) / k.r.width) * 100));
-    const style = getComputedStyle(track);
-    return { parts, masked: (style.maskImage || style.webkitMaskImage || 'none') !== 'none' };
-  });
-  expect(seen.parts.length, 'a page went missing from the strip').toBe(NAV_KEYS.length);
-  expect(seen.parts.filter((p) => p === 100).length, 'three pages do not stand whole').toBe(3);
-  const first = seen.parts.indexOf(100);
-  const last = seen.parts.lastIndexOf(100);
-  expect(last - first, 'the whole pages are not three in a row').toBe(2);
-  for (const shown of [seen.parts[first - 1], seen.parts[last + 1]]) {
-    expect(shown, `a page beside the whole three shows ${shown}% of itself`).toBeGreaterThan(35);
-  }
-  /* Zero or less: the overlap is measured rather than clamped, so a link wholly
-     past an edge reports how far past it is as a negative. What matters is that
-     none of it is on screen. */
-  for (const [i, shown] of seen.parts.entries()) {
-    if (i < first - 1 || i > last + 1) {
-      expect(shown, `the ring's runway shows ${shown}% at position ${i} rather than nothing`).toBeLessThanOrEqual(0);
+    const supported = typeof document.startViewTransition === 'function';
+    let transitions = 0;
+    if (supported) {
+      const orig = document.startViewTransition.bind(document);
+      document.startViewTransition = (cb) => {
+        transitions += 1;
+        return orig(cb);
+      };
     }
-  }
-  // And they run off the edge rather than stopping at it.
-  expect(seen.masked, 'the strip has no edge fade').toBe(true);
-});
-
-test('under reduced motion the strip is simply centred, with no journey', async ({ browser }) => {
-  // Removed, not shortened (STRUCTURE.md). The press still puts the page on
-  // the midline; there is nothing to watch it get there.
-  const ctx = await browser.newContext({
-    ...devices['Desktop Chrome'],
-    viewport: { width: 360, height: 780 },
-    reducedMotion: 'reduce',
+    const boxes = new Set();
+    const scrolls = new Set();
+    let running = true;
+    const tick = () => {
+      const r = track.getBoundingClientRect();
+      boxes.add(`${Math.round(r.left)},${Math.round(r.top)},${Math.round(r.width)}`);
+      scrolls.add(Math.round(track.scrollLeft));
+      if (running) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+    /* `el.click()` rather than `locator.click()`: the latter scrolls its target
+       into view first (trap 3), and the page moving is the one thing this is
+       trying not to confuse the bar's own stillness with. */
+    document.querySelector('.site-nav a[href$="/about"]').click();
+    await new Promise((r) => setTimeout(r, 900));
+    running = false;
+    return { supported, transitions, boxes: [...boxes], scrolls: [...scrolls] };
   });
-  const page = await ctx.newPage();
-  // A context opened by hand is one the fixture never saw, so the rehearsal
-  // has to be applied here or `COLD_FACE=1` exempts this test silently
-  // (`fixtures.js` argues it at length).
-  await coldFace(page);
-  await searchMode(page);
-  await ready(page);
-  await page.goto('/', { waitUntil: 'networkidle' });
-  await page.evaluate(() => document.fonts.ready);
 
-  const still = await page.evaluate(watchPress, '/about');
-  // Two: where it stood before the press, and where the press put it. The
-  // strip is centred on a different page than it was, and passed through
-  // nothing to get there.
-  expect(still.steps, `the strip moved through ${still.steps} positions under reduced motion`).toBeLessThan(3);
-  expect(still.offCentre, 'the pressed page did not land on the midline').toBeLessThan(6);
-  await ctx.close();
+  await expect(page).toHaveURL(/\/about$/);
+  expect(pressed.boxes, `the bar stood at ${pressed.boxes.length} places during the press`).toHaveLength(1);
+  expect(pressed.scrolls, 'the bar scrolled during the press').toEqual([0]);
+  expect(
+    pressed.supported,
+    'premise: this browser has no view transitions, so nothing below is being measured',
+  ).toBe(true);
+  expect(
+    pressed.transitions,
+    'the press skipped the page cross-fade, which only a strip with a glide to show ever wanted',
+  ).toBeGreaterThan(0);
+  // The page it opened wears the mark, and alone.
+  await expect(page.locator('.site-nav a[aria-current="page"]')).toHaveCount(1);
+  await expect(page.locator('.site-nav a[href$="/about"]')).toHaveAttribute('aria-current', 'page');
 });
 
 test('a coachmark is shown once, and a guess is still not an answer', async ({ page }) => {
@@ -2404,11 +2290,13 @@ test('the die is square, and the header rule sits on the buttons', async ({ page
   expect(parseFloat(die.radius)).toBeGreaterThan(die.w / 2 - 1);
 
   /*
-   * Nothing between the bar's contents and its rule. On a phone the page
-   * buttons are the header's own last row, so the two coincide to the pixel; on
-   * a desk the nav shares a line with the taller calendar control and what
-   * touches the rule is whichever is tallest. So the padding is asserted at
-   * both widths and the coincidence only where the buttons are in question.
+   * **Nothing between the bar's contents and its rule**, at both widths. The
+   * narrow half used to name the page buttons as the thing the rule sat on,
+   * because they were the header's own last row; since 2026-10-03 they are a
+   * bar at the foot of the window (author: "Please build this in") and the
+   * header is the control line alone, so what the rule has to sit on is
+   * whichever of *those* reaches lowest — the same claim the desk already
+   * made, now the only one there is.
    */
   await expect(page.locator('header.chrome')).toHaveCSS('padding-bottom', '0px');
   await page.setViewportSize({ width: 360, height: 780 });
@@ -2417,14 +2305,26 @@ test('the die is square, and the header rule sits on the buttons', async ({ page
     const header = document.querySelector('header.chrome');
     const nav = document.querySelector('nav.site-nav');
     const box = header.getBoundingClientRect();
+    /* The header's own in-flow children: the pages are `position: fixed` now,
+       so the nav's box says nothing about the header's height and is asserted
+       separately, below. */
+    const inFlow = [...header.children].filter((el) => getComputedStyle(el).position !== 'fixed');
     return {
       // The rule is the header's own bottom border, so its top edge is the
       // header's bottom less the border's width.
       rule: box.bottom - parseFloat(getComputedStyle(header).borderBottomWidth),
-      buttons: nav.getBoundingClientRect().bottom,
+      lowest: Math.max(...inFlow.map((el) => el.getBoundingClientRect().bottom)),
+      kept: inFlow.length,
+      navTop: nav.getBoundingClientRect().top,
     };
   });
-  expect(Math.abs(edge.rule - edge.buttons), `rule at ${edge.rule}, buttons end at ${edge.buttons}`).toBeLessThan(1);
+  expect(edge.kept, 'premise: the header has no in-flow children to sit on its rule').toBeGreaterThan(1);
+  expect(
+    Math.abs(edge.rule - edge.lowest),
+    `rule at ${edge.rule}, the lowest control ends at ${edge.lowest}`,
+  ).toBeLessThan(1);
+  // And the pages are not in the header at all any more.
+  expect(edge.navTop, 'the pages are still a row inside the header').toBeGreaterThan(edge.rule);
 });
 
 test('the calendar panel follows a language change while it is open', async ({ page }) => {
@@ -2725,11 +2625,15 @@ test('the two Latin subsets are preloaded, and only those', async ({ page }) => 
  * wrong number restores the shift when it is short and leaves a permanent strip
  * of dead air when it is long, and neither says anything on the page.
  *
- * All three breakpoints, because the narrow header is two rows and the wide one
- * is one — and it is the *narrow* value that no desktop-only run would check.
+ * All three widths, and the narrow one is still asserted separately although
+ * it now reserves the same 41 px the wide one does: the pages left the header
+ * for a bar at the foot of the window (author, 2026-10-03, "Please build this
+ * in"), the second row went with them, and a *measured* 41 at 360 is what says
+ * so. A rung dropped because two numbers happen to agree is a rung nobody
+ * would notice disagreeing again.
  */
 for (const [label, width, expected] of [
-  ['narrow, two rows', 360, 75.5625],
+  ['narrow, one row', 360, 41],
   ['wide, one row', 900, 41],
   ['very wide, the doubled mark', 1440, 52.5],
 ]) {
@@ -2839,47 +2743,6 @@ test('About no longer promises the page it now is', async ({ page }) => {
   await page.goto('/about', { waitUntil: 'networkidle' });
   await expect(page.locator('#view')).not.toContainText('Session 9');
   await expect(page.locator('#view')).not.toContainText('boilerplate');
-});
-
-/* ---- export / import (Session 8's surviving third, 2026-08-29) ---------- */
-
-test('the reader can take their data with them, and bring it back', async ({ page }) => {
-  // Brief §11: "Export / Import as JSON ... real cross-device portability for
-  // zero backend." The store's merge rules have unit tests; this is the round
-  // trip through the real controls, as a reader meets it.
-  await ready(page);
-  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await page.locator('[data-save]').first().click();
-  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'true');
-
-  await page.goto('/about', { waitUntil: 'networkidle' });
-  const download = page.waitForEvent('download');
-  await page.locator('[data-export]').click();
-  const exported = await (await download).path();
-
-  // A different reader's device: storage cleared, nothing saved.
-  await page.evaluate(() => indexedDB.deleteDatabase('gallery-of-saints'));
-  await page.reload({ waitUntil: 'networkidle' });
-  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'false');
-
-  await page.goto('/about', { waitUntil: 'networkidle' });
-  await page.locator('[data-import-file]').setInputFiles(exported);
-  await expect(page.locator('[data-import-note]')).toContainText(/Imported/);
-
-  await page.goto('/saints/anthony-the-great', { waitUntil: 'networkidle' });
-  await expect(page.locator('[data-save]').first()).toHaveAttribute('aria-pressed', 'true');
-});
-
-test('a file that is not an export changes nothing and says so', async ({ page }) => {
-  await ready(page);
-  await page.goto('/about', { waitUntil: 'networkidle' });
-  await page.locator('[data-import-file]').setInputFiles({
-    name: 'not-an-export.json',
-    mimeType: 'application/json',
-    buffer: Buffer.from('{"schema":99}'),
-  });
-  await expect(page.locator('[data-import-note]')).toContainText('nothing was changed');
 });
 
 test('the header takes one measure on every route, Daily included', async ({ page }) => {

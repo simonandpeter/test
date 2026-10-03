@@ -342,14 +342,13 @@ button:hover {
  * 75.5625 px reporting itself as 76. One name, one direction: this one is
  * declared and read by CSS, that one is measured and written by JS.
  */
+/* **One row at every width below 1024 px since 2026-10-03**, where the narrow
+   header reserved 75.5625 px for its second row — the one the pages used to
+   stand on, now a bar at the foot of the window. Measured with the min-height
+   lifted: 41 px at 320, 360, 445 and 759, which is what the wide rung already
+   declared, so the two rungs are one number. */
 :root {
-  --chrome-h-reserve: 75.5625px;
-}
-
-@media (min-width: 760px) {
-  :root {
-    --chrome-h-reserve: 41px;
-  }
+  --chrome-h-reserve: 41px;
 }
 
 header.chrome {
@@ -371,9 +370,12 @@ header.chrome {
      guard for a longer name arriving, and the same trap caught the month's
      own span then. */
   grid-template-columns: auto minmax(0, 1fr) auto;
-  grid-template-areas:
-    'cal name theme'
-    'nav nav nav';
+  /* One row at every width since 2026-10-03. It was two below 760 px — the
+     controls, then the pages on their own line — and the pages are a bar at
+     the foot of the window now, so the row they had here is gone and the
+     header is the control line alone. `nav` stays in the areas because the
+     wide layout below places it; below 760 px the element is out of flow. */
+  grid-template-areas: 'cal name theme';
   align-items: center;
   /* space-4, not space-6 (2026-08-24, after CI): the header is one row of
      five things now — name, four nav links, calendar, language, theme — and
@@ -864,197 +866,109 @@ nav.site-nav a[aria-current='page'] {
 }
 
 /*
- * On a phone the five pages are an endless, centred strip rather than a fixed
- * row (author, 2026-09-07: adding Texts between All Saints and Map, "make the
- * header a horizontal scroll header where the selected one is in the centre,
- * and you can swipe across to the next or click on it. Infinite scroll
- * header"). This replaces the equal five-across grid the four-page row used
- * (author, 2026-08-26 evening) — five labels at one fixed width apiece no
- * longer read as buttons, they read as a ledger, and the reason for equal
- * columns (no page favoured over another by width) is kept a different way
- * here: every page gets the same turn in the centre, not the same box.
+ * **The pages are a bar at the foot of the window on a phone** (author,
+ * 2026-10-03, on seeing the A5 preview's own imitation of one: "Please build
+ * this in").
  *
- * `main.js`'s `renderNav` supplies the content this reads: the same five
- * `<a>` the wide row uses, one of them wearing `aria-current`, nothing
- * cloned. The swipe itself is `ui/nav-scroll.js`'s and not the platform's —
- * `overflow-x` below has what that bought and what it cost. It also turns
- * the ring — a flex `order` per link, so the DOM and the tab ring keep the
- * site's own order and only the picture rotates — until whichever page is
- * centred stands in the *middle* of the five, on load and again every time a
- * swipe settles. That is what makes the row endless at rest rather than only
- * after a gesture: there are always two pages either side of the centred one,
- * which is why About stands to the left of Daily (author, 2026-09-08). A
- * reader who keeps swiping one way keeps meeting a new page for as long as
- * they keep swiping, and `document.querySelectorAll('.site-nav a')` stays five
- * long, in one order, throughout — the rest of the suite already holds
- * `.site-nav a[href$="/saints"]` and its like to be exactly one element in a
- * dozen places, and a cloned loop (this row's first version) broke every one
- * of them the moment a phone-width test ran.
+ * `public/a5.html` has faked this since the frame was written — it moved the
+ * nav to `body` and forced these rules with `!important` — so the preview has
+ * been showing a bar the site did not have. This is that bar, built.
  *
- * **The rung is 760, not the 560 this shipped on** (2026-09-07, second cut,
- * and CI is what said so). Five labels do fit one wide row at 560 in Segoe
- * UI, which is why the first cut passed here; on the runner's own DejaVu
- * Sans the Russian row ran the page 10 px off its side, and Greek and
- * Serbian were only inside it because the masthead had been squeezed to
- * nothing — the name's track is the one a shortfall comes out of, and it had
- * given everything it had. The arithmetic, measured in Verdana at 560 and
- * scaled for DejaVu: the widest pack's row wants about 680 px before the
- * name gets a single pixel. So the wide row starts where it fits, at the
- * site's own 760 rung (the map's `isDesktop`, the two-column layouts), and
- * everything under it gets the strip — which is what the strip is *for*, and
- * why a fifth page needed one at all.
+ * **It replaces the swipe strip** (author, 2026-09-15: "Either you swipe left
+ * or right and it takes you one spot left or right"), and the strip's own
+ * rules — `padding-inline: 50vw`, `min-width: 25vw` a link, the edge mask,
+ * `overflow-x: hidden`, the current page's field — are **deleted** rather than
+ * overridden here. They were written for this same breakpoint and in the same
+ * element's name, so a bar built on top of them was the strip's arithmetic
+ * wearing a bar's position: measured at 320, 360, 445 and 759, the row still
+ * began 50vw in, every label still claimed a quarter of the window, and Texts
+ * stood wholly off the right-hand edge with Prayer and Map cut in half. The
+ * labels were on one line and none of them was clipped *inside its own box*,
+ * which is what the first instrument asked and why it said yes (trap 14).
  *
- * Full-bleed exactly as the old grid was, breaking out of the header's own
- * inline padding so the strip's own edges — not any one link's — reach the
- * screen's sides. The `padding-inline` is not a margin of comfort here the way
- * it would be on a wide row: it is what lets a page reach the track's centre
- * at all, since centring one nearer the true edge than half a viewport would
- * ask for a negative `scrollLeft`, which a scroller simply refuses.
+ * `ui/nav-scroll.js` stands down rather than being deleted — its own header
+ * says why, and `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js` keeps the
+ * measurements that say a native scroller was the wrong instrument for a ring.
  *
- * **A round `50vw`, not `calc(50vw - 3rem)`** (2026-09-08). The old value left
- * about 48 px short, which is more than half of most of these labels — so the
- * strip's own first and last page could never quite be centred, and a *gentle*
- * glide to one of them (author, same day: "animated to click into the centre
- * gently instead of just jumping") landed short, with the rebalance behind it
- * showing as exactly the jump being removed. At 50vw every one of the five is
- * centrable exactly, whichever way the ring has been turned.
+ * Fixed rather than sticky: a bar a reader reaches for with a thumb has to be
+ * under the thumb wherever the page has got to. Nothing gives it a containing
+ * block — measured, `scratchpad/fixedprobe.mjs` — so it spans the window from
+ * where it stands in the header's markup, and the one `<a>` per page the suite
+ * holds each of these to be is untouched.
  */
 @media (max-width: 759.98px) {
+  /* The bar's height, which `body` reserves so the page ends above it rather
+     than under it. Declared rather than measured off the element: a
+     reservation that waited for a measurement would be the header's own CLS
+     over again (see `--chrome-h-reserve`). 7 + 1 + the label's line + 7. */
+  :root {
+    --nav-bar-h: 52px;
+  }
+
   nav.site-nav {
-    display: flex;
-    flex-wrap: nowrap;
+    position: fixed;
+    inset: auto 0 0 0;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    box-sizing: border-box;
+    /* Over the page, under the chrome bar's chooser panels (z 20), which open
+       downward from the top and must not be covered by it. */
+    z-index: 15;
+    justify-content: space-between;
+    align-items: center;
     gap: 0;
-    width: 100vw;
-    margin-inline: calc(50% - 50vw);
+    /* The safe area is the home indicator's: inside the app the window runs to
+       the bottom edge (`viewport-fit=cover`), and a bar that ignored it would
+       put its labels under the indicator. */
+    padding: 7px 2px calc(7px + env(safe-area-inset-bottom, 0px));
+    background: var(--gesso);
     border-top: 1px solid var(--rule);
-    /*
-     * **The platform does not move this row; `ui/nav-scroll.js` does** (author,
-     * 2026-09-15: "Either you swipe left or right and it takes you one spot
-     * left or right ... Currently you can swipe multiple and this isn't
-     * working"). `auto` plus `scroll-snap-type: x mandatory` gave a phone its
-     * own swipe, momentum and snap for free, and free was the problem: a fling
-     * spends its momentum wherever it likes, which is several pages. `hidden`
-     * keeps the box scrollable to script and not to the compositor, so one
-     * gesture can be made to mean exactly one page. `touch-action` says the
-     * same thing to the finger: the page still pans under it, the row does not.
-     */
-    overflow-x: hidden;
-    touch-action: pan-y;
-    /* No visible scrollbar on a strip that is never meant to look like a
-       list with two ends — a reader is meant to read it as a wheel. */
-    scrollbar-width: none;
-    padding-inline: 50vw;
-    /*
-     * **And the ends fade into the screen's own edges** (author, 2026-09-08:
-     * "have a fade on the edges so it looks like they're fading out into the
-     * edges of the screen").
-     *
-     * A mask rather than a pair of gradient overlays, because an overlay would
-     * have to be painted in `--gesso` and this row sits on two themes and on a
-     * bar that is deliberately translucent at its own edge; a mask takes the
-     * *pixels* out and lets whatever is behind stay behind. It is fixed to the
-     * element's own box rather than to its scrolled content, which is what
-     * makes it read as the screen's edge and not as a mark travelling with the
-     * row.
-     *
-     * **The fade spans exactly the sliver, and no more** (measured, after a
-     * first cut at 16% swallowed the thing it was meant to show). With the
-     * centred page on the midline the outermost pages show `V/2 - 1.5w` of
-     * themselves, which at `w = 26vw` is 11% of the screen at every width the
-     * strip is used at — both terms are in vw, so the fraction is a constant.
-     * **9%, which is shorter than the sliver on purpose.** At 25vw the
-     * outermost page shows 12.5% of the screen, and a ramp across all of it
-     * would leave every pixel of that half-word under half opacity — a smudge,
-     * which is what a first cut at 16% produced and what this is corrected
-     * from. At 9% the ramp is 32 px of a 45 px sliver: the word fades as it
-     * runs off the edge, and does not start the run already faint.
-     */
-    -webkit-mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
-    mask-image: linear-gradient(to right, transparent 0, #000 9%, #000 91%, transparent 100%);
-    /*
-     * `overflow-anchor: none` already sits on `html` for the reason
-     * base.css's own §5c note gives — Chromium nudging `scrollY` to hold
-     * late-arriving content still — and this strip needs its own copy: each
-     * scrollable element keeps its own anchor, so the document's rule does
-     * not reach inside this one. Found the same way: a label's width moves
-     * once the real face swaps in for the fallback it opened in, the browser
-     * quietly held the reader's read of the row steady by moving
-     * `scrollLeft`, and `ui/nav-scroll.js` read that as a swipe and rotated
-     * the row on a load nobody had touched.
-     */
-    overflow-anchor: none;
+    /* The floor under a pack whose labels are wider than the window: six
+       cells share the width evenly and a long one is cut off rather than
+       pushing the row past the screen's edge. */
+    overflow: hidden;
   }
 
-  nav.site-nav::-webkit-scrollbar {
-    display: none;
-  }
-
+  /* `nav.site-nav a`, not `nav.site-nav > *`, and this block stands **after**
+     `nav.site-nav a, .utility` above rather than beside the nav's layout
+     rules: the utility voice is declared through that same selector, so a
+     child selector one element less specific loses the font size to it at any
+     source position, and the same selector written earlier loses it on order.
+     Both were true of the first cut, which is how `--text-nav` came to be
+     declared and not applied, with the bar reading at 13 px. */
   nav.site-nav a {
-    flex: none;
+    flex: 1 1 0;
+    min-width: 0;
+    margin: 0;
+    padding: 4px 0;
     text-align: center;
+    font-size: var(--text-nav);
     /*
-     * **Wide enough that the ring is longer than the screen** (2026-09-08).
-     * The labels — five of them then — measured 339 px against a 360 px
-     * viewport, so the whole row was *shorter than the window*: blank strip
-     * showed at one end or the other at every position, balanced or not, and no
-     * amount of turning the ring could hide it. `ui/nav-scroll.js` keeps
-     * whichever page is centred at the ring's own middle on every frame, and
-     * for that to leave no gap the ring has to span the window plus one more
-     * page — `n·w >= V + w`. Written in `vw`, both sides scale together, so it
-     * holds at every width the strip is used at.
+     * **Six equal cells cannot hold the longest packs' words at 320 px**, and
+     * an ellipsis is what that costs. Measured in Literata at 11 px: a cell is
+     * 53 px at 320, and «Сви светитељи» wants 75, «Όλοι οι άγιοι» 64,
+     * «Ежедневно» 56. At 360 only Serbian and Greek are over; past 445 only
+     * Serbian, by a pixel. The strip this replaced had no such limit — a link
+     * took its own width and the reader swiped to it — so the bar is where the
+     * constraint arrives.
      *
-     * A `min-width`, not a width: a label longer than this keeps its own size,
-     * which only makes the ring longer still. It is also what the old
-     * five-across grid was reaching for (author, 2026-08-26 evening: no page
-     * favoured over another by width) without the ledger look that killed it.
-     *
-     * **25vw, which is exactly half** (author, 2026-09-08: "you should be able
-     * to see the other 2 header buttons even if its just half of them"). With
-     * the centred page on the midline the pages two along start at `1.5w` from
-     * centre and the screen ends at `V/2`, so a reader sees `(V/2 - 1.5w)/w` of
-     * each: 28% at 28vw, 42% at 26vw, and **half at exactly `V/4`**, which is
-     * 25vw at every width because both terms are in vw.
-     *
-     * Half the *box* and half the *word* are the same thing only here, and that
-     * is what settled it: a label is centred in its box, so at 26vw the 42% that
-     * showed was the box's outer edge and only the last few letters of the word
-     * — 13 px of a 40 px "Map". At 25vw the visible half of the box holds the
-     * visible half of the word.
-     *
-     * The cost is the movement margin, and **it is the runway to the *right* of
-     * the centred page that binds** — `nav-scroll.js` puts that page at
-     * `Math.floor(n/2)`, which leaves `n - 1 - floor(n/2)` links after it, and
-     * that is 2 at five links and 2 at six. So the trailing edge needs
-     * `2.5w >= V/2 + w/2` whichever of the two the row holds: 25vw meets it
-     * exactly and with nothing to spare, and the extra link a sixth page adds
-     * lands on the leading side as runway that is off screen entirely. No gap
-     * *at rest* needs only `2.5w >= V/2`, which 25vw clears by 45 px.
-     *
-     * Meeting the moving case exactly is affordable only because of the mask
-     * below: a hairline that opens at the very edge mid-glide opens inside the
-     * band that is faded to nothing.
-     *
-     * **Six links are not slacker than five here**, which is the arithmetic
-     * above and was worth writing down: the total-length inequality does relax
-     * with `n`, and reading only that one would have said the strip had gained
-     * margin it has not. What six buys is a longer ring, not a wider gap
-     * budget.
+     * Elided rather than sliced: `overflow: hidden` alone cuts «Сви светите»
+     * through the glyph, which reads as a bug rather than as a shortfall. The
+     * whole word stays in the DOM, so the accessible name is untouched.
+     * **Whether those three packs get shorter nav words instead is the
+     * author's to rule on** — `ui/strings.js` and `ui/locales/*` are where it
+     * would be answered, and nothing here should pretend to have answered it.
      */
-    min-width: 25vw;
-    /* Shorter than the comfortable row above it (author, 2026-08-26
-       evening): the label's own line plus 3 px either side, which is 25.6 px
-       against the 28 the four-pages test allowed at 320 px, kept for this
-       row too. 5 px read as a button and measured 29.6 — taller than the
-       bare links it replaced, which is the opposite of what was asked. */
-    padding: 3px var(--space-4);
-    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
-  nav.site-nav a[aria-current='page'] {
-    font-weight: 700;
-    background: var(--field);
-    text-decoration: none;
-    border-radius: var(--radius-panel);
+  /* The page ends above the bar rather than under it. On `body`, because every
+     route's scroller is the document here — the desk's three columns are the
+     only scrollers of their own and they are past this width. */
+  body {
+    padding-bottom: var(--nav-bar-h);
   }
 }
 

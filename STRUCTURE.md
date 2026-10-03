@@ -229,6 +229,7 @@ rather than a step in the reading scale.
 | `--text-3xs` | `9` | the smallest mark on the site |
 | `--text-2xs` | `12` | the map's atlas layer, the smallest apparatus |
 | `--text-sm` | `13` | the utility voice: nav, chips, counts, captions |
+| `--text-nav` | `11` | the page bar at the foot of a phone |
 | `--text-base` | `15` | apparatus at reading weight: labels, chips, subtext |
 | `--text-lg` | `17` | the reading voice: lives, prose |
 | `--text-lede` | `19` | a page's opening paragraph |
@@ -403,7 +404,6 @@ breakpoint are two decisions.
 | `--page-max` | `2000px` | `base.css` |
 | `--chrome-h-reserve` | `41px` | `base.css` |
 | `--chrome-h-reserve` | `52.5px` | `base.css` |
-| `--chrome-h-reserve` | `75.5625px` | `base.css` |
 | `--side-w` | `clamp(240px, 21vw, 310px)` | `base.css` |
 | `--cal-peek` | `24px` | `calendar.css` |
 | `--cal-peek` | `44px` | `calendar.css` |
@@ -414,6 +414,7 @@ breakpoint are two decisions.
 | `--mstep-h` | `24px` | `calendar.css` |
 | `--mstep-h` | `32px` | `calendar.css` |
 | `--saint-w` | `clamp(230px, 23vw, 360px)` | `calendar.css` |
+| `--nav-bar-h` | `52px` | `base.css` |
 | `--ox` | `10px` | `calendar.css` |
 | `--ox` | `14px` | `calendar.css` |
 | `--rail-fade` | `12px` | `calendar.css` |
@@ -429,9 +430,11 @@ breakpoint are two decisions.
 | `--hy-side-w` | `clamp(180px, 16vw, 250px)` | `prayer.css` |
 <!-- /copied -->
 
-`--chrome-h-reserve` is declared three times with three values, none of which
-round to another — the header's reserved height at three widths. `--facet-font`
-is a **type size standing outside the type scale**, which
+`--chrome-h-reserve` is declared twice — the header's reserved height at the
+two heights it has. One row at every width under 1024 px, measured at 41 px at
+320, 360, 445 and 759; the doubled mark past it reserves 52.5.
+
+`--facet-font` is a **type size standing outside the type scale**, which
 `design-tokens.test.mjs` cannot see: the rule it enforces is about `font-size`
 declarations and this is a custom property that one then reads.
 
@@ -448,8 +451,8 @@ four boundaries: ~480–560, ~700–768, 900, and 1024.
 | `max-width: 699.98px` | `calendar.css` | the full-screen calendar drops to one column — seven columns stop holding a phrase |
 | `min-width: 700px` | `calendar.css`, `index.css` | the full-screen calendar's weekday heads; the carousel's own card measure. `views/index/controls.js` opens on cards rather than rows at the same width |
 | `max-width: 759px` | `calendar.css` | the day's own chrome gives up its gaps |
-| `max-width: 759.98px` | `base.css` | the chrome line gives up its gaps rather than wrapping |
-| `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and `main.js` turns the nav strip at the same number |
+| `max-width: 759.98px` | `base.css` | the chrome line gives up its gaps rather than wrapping, and the pages are the bar at the foot of the window |
+| `min-width: 760px` | `base.css`, `calendar.css`, `saint.css` | the complement: the masthead returns to the left, and the pages leave the bar at the foot of the window for a row in the header |
 | `min-width: 900px` | `calendar.css` | the full-screen calendar gains its periods column beside the month |
 | `max-width: 1023.98px` | `calendar.css`, `saint.css` | the day's strip stops being its own scroller; the saint's columns take `pan-y` for the swipe |
 | `min-width: 1024px` | `base.css`, `calendar.css`, `prayer.css`, `saint.css` | Daily's four columns, Prayer's three, and every other desk arrangement |
@@ -505,7 +508,7 @@ what there is.
 
 ```
 html[data-route~='calendar'][data-fills-window]
-└ body
+└ body                               padding-bottom --nav-bar-h (<760), for the page bar
   └ main.chrome                      100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                          height 100%
       └ .cal                         grid: --side-w --saint-w minmax(0,1fr)
@@ -902,7 +905,7 @@ is a fetch per saint. `scripts/build-manifest.mjs` prints how many that is.
 
 ```
 html[data-route~='prayer'][data-fills-window]
-└ body
+└ body                             padding-bottom --nav-bar-h (<760), for the page bar
   └ main.chrome                    100dvh − --chrome-h, overflow hidden (≥1024)
     └ #view                        height 100%
       └ .hymnal                    flex column; height 100%, full bleed (≥1024)
@@ -1149,12 +1152,11 @@ one only if the author asks.
   marker.
 
 **The chrome**
-- Below 760 px the nav is an endless centred strip; at 760 and above, a plain
-  row.
-- The strip is five real links rotated by flex `order` — **never cloned**, and
-  never reordered in the DOM.
-- The strip's glide starts on the press and that press skips the page
-  cross-fade; every other navigation still fades.
+- Below 760 px the pages are a **bar fixed to the foot of the window**, six
+  equal cells in the site's own order; at 760 and above, a plain row in the
+  header. The header is one row at every width.
+- One real link per page — **never cloned**, and never reordered in the DOM.
+- `body` reserves the bar's height below 760 px, so no page ends under it.
 
 **Names and pages**
 - No "Also called" multi-script block on a saint page.
@@ -1338,7 +1340,35 @@ until there is: `npm run app:sync` is `npm run build && cap sync`, one build,
 all five languages and all six routes.
 
 What the app is to ship with: **Romanian and English only**, and **Daily, All
-Saints, Prayer, Texts and About** — the Map stays out until it is further
-developed. The Prayer tab does not exist yet.
+Saints, Prayer and About** (author, 3 October 2026) — the Map and Texts both
+stay out of the first release.
+
+**About answers for the app, not only for the site.** It is the privacy policy
+both consoles are pointed at and the content-rights answer both ask for, so it
+carries: that the project is not affiliated with any church it reports on;
+where the pictures come from and under which licences, counted from the
+corpus; and a privacy section that names the app beside the website.
+`tests/about-claims.test.mjs` pins the two sentences that are claims about
+what the corpus does *not* hold, because no number on the page can keep those
+true.
+
+**Export and import are gone, and brief §11 is overruled** (author, 3 October
+2026). Nothing requires them: a portability right runs against whoever holds
+the data, and the reader's own browser holds all of it. `store.exportData` and
+`importData` stay in `lib/store.js`, tested and uncalled. The libraries'
+notices moved to `public/third-party-licences.txt`, which is what MIT and ISC
+ask for - the notice travels with the software, not on a page.
+
+**A paragraph about a page the build does not ship is not printed.** The Texts
+sentence and the map's own credit are asked of `router.has`, so dropping a
+route is the only edit the split will need on this page.
+
+**Nothing ships until all four calendars are filled** (author, 4 October
+2026). Measured that morning, by days carrying at least one venerated
+attestation with a feast day: greek 364 of 365, romanian 358, **russian 103**,
+**serbian 75**. The two Slavic calendars are the work, and they are corpus
+work rather than image work - `heroless.mjs` reports almost nothing imageless
+for them only because they have so few days to lead. `docs/CORPUS.md` is the
+protocol; `scripts/day-coverage.mjs` says where to go next.
 
 `docs/APP.md` is the store-submission procedure for both shells.

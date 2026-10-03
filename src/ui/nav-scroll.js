@@ -20,26 +20,49 @@
  * scroller is the wrong instrument for a five-page ring, not a design to be put
  * back a piece at a time. `node scripts/nav-swipe.mjs` still films the strip.
  *
- * **Exactly five `<a>`, one per page, never cloned and never reordered in the
- * DOM** (STRUCTURE.md §6) — the loop is a flex `order` rotation. A dozen places in
+ * **One `<a>` per page, never cloned and never reordered in the DOM**
+ * (STRUCTURE.md §6) — the loop is a flex `order` rotation. A dozen places in
  * the suite hold `.site-nav a[href$="/saints"]` to be one element;
  * `tests/nav-strip.test.mjs` fails if this file learns to clone or to move a
- * node. The one-page rule is held by `a swipe carries the nav strip one page,
- * however hard it is thrown` in `e2e/chrome.spec.js`.
+ * node.
+ *
+ * **And it stands down where the pages are the bar at the foot of the window**
+ * (author, 2026-10-03, on seeing the A5 preview's own imitation of one:
+ * "Please build this in"). A bar is six fixed cells across the window's foot,
+ * in the site's own order; there is no strip to centre, nothing to swipe to,
+ * and every write below — the `order` rotation, the `scrollLeft` journey —
+ * would be a file moving a row that is not there. `public/a5.html` had to stub
+ * `scrollIntoView`, `scrollTo` and `scrollLeft` to stop exactly that.
+ *
+ * It is not deleted, because the strip is what a narrow window whose nav is
+ * still a *row* wants, and `docs/SRC-DECISIONS.md § src/ui/nav-scroll.js`
+ * keeps the measurements that say why a native scroller was the wrong
+ * instrument for it. With the bar built, the site has no such width — so this
+ * file is held by `tests/nav-strip.test.mjs` and by its own stand-down, and
+ * nothing in the browser suite exercises the strip itself.
  */
 
 import { reducedMotion, DUR } from '../lib/motion.js';
 
 /**
- * `track` already holds the nav's five real `<a>`, one of them wearing
+ * `track` already holds the nav's real `<a>`, one of them wearing
  * `aria-current="page"` — `renderNav` in `main.js` builds it, nothing buffered.
  *
  * **Caller obligation: the track needs `padding-inline: 50vw`** (base.css).
  * Anything less and a page standing nearer an edge than about half a label can
  * only be centred by asking for a negative `scrollLeft`, which a scroller
  * refuses — so every centring below lands short and shows as a jump.
+ *
+ * **Returns `null` where the pages are the bar at the foot of the window**, so
+ * the caller's own `navScroll?.glide()`, `navScroll?.recentre()` and
+ * `if (navScroll)` are the whole of the stand-down and there is no inert
+ * handle pretending a strip is there. The signal is the track's computed
+ * `position`: `fixed` is the bar and nothing else on the site makes this
+ * element fixed, which is a reading of what the page *is* rather than a second
+ * copy of base.css's breakpoint in JS.
  */
 export function wireNavScroll(track) {
+  if (typeof getComputedStyle === 'function' && getComputedStyle(track).position === 'fixed') return null;
   let dead = false;
   /*
    * The five links in the site's own order, read once — safe because

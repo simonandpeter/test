@@ -271,7 +271,8 @@ no module keeps a copy, and that rule is what makes the split safe. `paint.js`
 ### Shared
 
 **`src/ui/`** — `strings.js` (English base), `locales/{ru,ro,el,sr}.js`,
-`nav-scroll.js` (the phone's nav strip), `loop-scroll.js` (the carousel's endless
+`nav-scroll.js` (the nav swipe strip, stood down since the phone's pages became
+a bar at the foot of the window), `loop-scroll.js` (the carousel's endless
 engine and its image queue), `panel-control.js` (both chooser disclosures),
 `fly.js`, `shelf.js`, `save.js`, `coachmark.js`, `hymns.js`, `datefacts.js`,
 `grain-drag.js` (gesture primitive), `wordmark.js` (generated).

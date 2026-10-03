@@ -236,13 +236,16 @@ function navLinkHTML(key, current) {
 }
 
 /**
- * Whatever `wireNavScroll` set up for the current render, if any — a phone's
- * own strip only. `renderNav` always builds the same five links at every width
- * (author, 2026-09-07, "an infinite scroll header" on a phone):
- * `ui/nav-scroll.js`'s own loop rotates a flex `order`, not the DOM and not
- * buffered clones, precisely so `.site-nav a[href$="/saints"]` and its like
- * stay the one element, in the one place, the rest of this file — and the
- * whole suite — already hold them to be.
+ * Whatever `wireNavScroll` set up for the current render, if any — the swipe
+ * strip's handle, and `null` wherever there is no strip to drive, which since
+ * 2026-10-03 is every width the site has: a phone's pages are the bar at the
+ * foot of the window and a desk's are a plain row. `ui/nav-scroll.js`'s header
+ * has the stand-down.
+ *
+ * `renderNav` builds the same links at every width either way, and the strip's
+ * own loop rotated a flex `order` rather than the DOM — precisely so
+ * `.site-nav a[href$="/saints"]` and its like stay the one element, in the one
+ * place, the rest of this file and the whole suite already hold them to be.
  */
 let navScroll = null;
 
@@ -306,9 +309,15 @@ function renderNav(current) {
   navScroll = null;
 
   navEl.innerHTML = NAV_KEYS.map((key) => navLinkHTML(key, current)).join('');
-  // Below the nav's own breakpoint (759.98px, base.css) the row is a
-  // horizontal strip rather than a plain line; wiring it outside that width
-  // would measure a track CSS never made scrollable.
+  /*
+   * The strip is a narrow window's instrument and never a wide one's: past
+   * 759.98px (base.css) the row is a plain line, and wiring it there would
+   * measure a track CSS never made scrollable and rotate a row nobody asked
+   * to turn. Below that width `wireNavScroll` hands back `null`, because below
+   * that width the pages are the bar at the foot of the window — so `navScroll`
+   * is null at every width the site currently has, and every `navScroll?.` and
+   * `if (navScroll)` below is the stand-down.
+   */
   if (narrow) navScroll = wireNavScroll(navEl);
   // Leaving the Daily page puts the word back without a fade: the button the
   // reader pressed has already gone somewhere, and a word changing after the
@@ -317,10 +326,12 @@ function renderNav(current) {
 }
 
 // A window crossing the nav's own breakpoint without a navigation — a
-// rotation, a resized devtools pane — still has to wire or unwire the strip;
-// a navigation rebuilds the row from scratch anyway, so this only checks for
-// the one thing that changes the row's own shape rather than rebuilding on
-// every pixel of a live drag-resize.
+// rotation, a resized devtools pane — changes the row from the bar at the foot
+// of the window to a line in the header, and `renderNav` is the nav's only
+// writer. A navigation rebuilds the row from scratch anyway, so this only
+// checks for the one thing that changes the row's own shape rather than
+// rebuilding on every pixel of a live drag-resize. It is also what would wire
+// or unwire the strip, if a width ever wanted one again.
 let navNarrow = matchMedia('(max-width: 759.98px)').matches;
 window.addEventListener('resize', () => {
   const narrow = matchMedia('(max-width: 759.98px)').matches;

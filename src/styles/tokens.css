@@ -140,6 +140,9 @@
   --text-3xs: 9px; /* the smallest mark on the site */
   --text-2xs: 12px; /* the map's atlas layer, the smallest apparatus */
   --text-sm: 13px; /* the utility voice: nav, chips, counts, captions */
+  /* Six of them have to read on one line at 320 px, which is the width the
+     chrome has always been held to, so this sits below the utility voice. */
+  --text-nav: 11px; /* the page bar at the foot of a phone */
   --text-base: 15px; /* apparatus at reading weight: labels, chips, subtext */
   --text-lg: 17px; /* the reading voice: lives, prose */
   --text-lede: 19px; /* a page's opening paragraph */
