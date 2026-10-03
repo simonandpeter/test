@@ -122,6 +122,22 @@
         "text": "Let all of us that are in troubles and in sicknesses hymn the swift-hearkening helper, the holy Juliana; for she lived in the world in a manner pleasing unto God and showed boundless mercy unto the poor, and therefore, by the knowledge that is of God, she obtained the grace of wonders.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "На рамо вземши крест свой,/ последовала еси Христу милостынею, постом и молитвою,/ всехвальная Иулиания милостивая,/ и всем, в мире живущим, правило явилася еси жития,/ темже Вышнее Царствие наследовавши,/ непрестанно моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Ин тропарь праведной Иулиании Лазаревской, Муромской»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking thy cross upon thy shoulder, thou didst follow Christ with almsgiving, with fasting and with prayer, O all-praised Juliana the merciful, and thou wast shown to be a rule of life to all who live in the world. Wherefore, having inherited the Kingdom on high, pray without ceasing that our souls may be saved.",
+        "rendered": "site"
+      }
     }
   ]
 }

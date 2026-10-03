@@ -11,6 +11,11 @@
       "form": "Σεραφείμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Όσιος Σεραφείμ του Σαρώφ», with the rank word left off."
+    },
+    {
+      "form": "Серафим Саровский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., «Преподобный Серафим, Саровский чудотворец»; the rank word «Преподобный» and the rank «чудотворец» are left off, leaving the name and the place."
     }
   ],
   "sex": "male",
@@ -37,8 +42,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Преставление (1833), второе обретение (1991) мощей прп. Серафима, Саровского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "note": "The calendar's line for this day is his falling asleep in 1833 together with the second finding of his relics in 1991; it is the day on which the Russian church keeps him, and the day page prints his troparion and kontakion under his name."
     },
     {
       "church": "romanian",
@@ -126,6 +141,38 @@
       },
       "english": {
         "text": "Having lived in Sarov like an angel, blessed Seraphim, you were shown a chosen vessel of the gifts of the Spirit, making the better things plain with a word that was rich.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности Христа возлюбил еси, блаженне,/ и, Тому Единому работати пламенне вожделев,/ непрестанною молитвою и трудом в пустыни подвизался еси,/ умиленным же сердцем любовь Христову стяжав,/ избранник возлюблен Божия Матере явился еси./ Сего ради вопием ти:// спасай нас молитвами твоими, Серафиме, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Тропарь преподобного Серафима»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth thou didst love Christ, O blessed one, and burning to serve him alone, thou didst struggle in the wilderness with unceasing prayer and labour; and having gained the love of Christ with a contrite heart, thou wast shown to be the beloved chosen one of the Mother of God. Therefore we cry to thee: save us by thy prayers, O Seraphim, our venerable father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мира красоту и яже в нем тленная оставив, преподобне,/ в Саровскую обитель вселился еси/ и, тамо ангельски пожив,/ многим путь был еси ко спасению,/ сего ради и Христос тебе, отче Серафиме, прослави/ и даром исцелений и чудес обогати./ Темже вопием ти:// радуйся, Серафиме, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Кондак преподобного Серафима»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having left the beauty of the world and all in it that perishes, O venerable one, thou didst settle in the monastery of Sarov; and living there as an angel lives, thou wast the way of salvation to many. Therefore Christ also glorified thee, O father Seraphim, and enriched thee with the gift of healings and of wonders. And so we cry to thee: rejoice, O Seraphim, our venerable father.",
         "rendered": "site"
       }
     }

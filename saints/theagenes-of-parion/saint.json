@@ -7,6 +7,11 @@
       "form": "Θεαγένης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Άγιος Θεαγένης ιερομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Феоген Парийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., «Святитель Феоген Парийский, епископ, сщмч.»; the rank words and the office are left off."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Сщмч. Феогена, еп Парийского (ок. 320)»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "note": "The same bishop of Parion the folder's Greek row keeps on 2 January: the life page days.pravoslavie.ru/Life/life141.htm names him «Cвященномученик Феоген, епископ Парийский», heads «День памяти: 2 января», and gives the drowning the Greek page gives. The day page prints no hymn for him."
     },
     {
       "church": "romanian",
@@ -47,5 +62,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 320,
+      "latest": 320,
+      "display": "c. 320",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Святитель Феоген воспринял мученическую кончину около 320 года»; the day page prints «(ок. 320)»."
+    }
+  },
+  "related": [
+    "constantine-the-great"
+  ]
 }

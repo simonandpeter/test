@@ -12,6 +12,11 @@
       "form": "Σίλβεστρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Άγιος Σίλβεστρος Πάπας Ρώμης», with the rank word and the see left off."
+    },
+    {
+      "form": "Сильвестр I Римский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., «Святитель Сильвестр I Римский, папа»; the rank word and the office are left off."
     }
   ],
   "sex": "male",
@@ -26,13 +31,30 @@
       "display": "314–335",
       "basis": "traditional",
       "note": "doxologia.ro: «În episcopie a petrecut 23 de ani și 10 luni (314-335)». The page gives no year of birth and none of death; this is the episcopate it states."
+    },
+    "death": {
+      "earliest": 335,
+      "latest": 335,
+      "display": "335",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Он мирно скончался в глубокой старости в 335 году»; the day page prints «Свт. Сильвестра, Папы Римского (335)»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Свт. Сильвестра, Папы Римского (335)»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      },
+      "note": "The life page days.pravoslavie.ru/Life/life137.htm heads «День памяти: 2 января», the same day the day page gives, and names him «Святитель Сильвестр, папа Римский». The day page prints no hymn for him."
     },
     {
       "church": "romanian",
@@ -106,5 +128,9 @@
         "rendered": "site"
       }
     }
+  ],
+  "related": [
+    "constantine-the-great",
+    "helen-the-empress"
   ]
 }

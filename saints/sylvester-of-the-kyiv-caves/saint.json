@@ -6,6 +6,11 @@
       "form": "Σιλβέστρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιανουαρίου, «Όσιος Σίλβεστρος Ρώσος της Λαύρας του Κιέβου», with the rank word left off."
+    },
+    {
+      "form": "Сильвестр Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 2 января ст. ст., «Преподобный Сильвестр Печерский»; the rank word is left off."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 1,
+        "calendar": "julian",
+        "note": "The day page for 2 января ст. ст. names him; his life pages head «Дни памяти: 2 января, 28 сентября (Печер.(Б))» and add the second Sunday of Great Lent, which are the synaxes of the fathers in the Near Caves and not a second proper feast, so neither is recorded as his day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 января ст. ст. — «Прп. Сильвестра Печерского (XII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260102.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -49,5 +64,14 @@
   },
   "related": [
     "nestor-the-chronicler"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 2 января ст. ст.: «Прп. Сильвестра Печерского (XII)»; its life page: «Жил и подвизался в Киево-Печерском монастыре в XII в.» No year is given."
+    }
+  }
 }
