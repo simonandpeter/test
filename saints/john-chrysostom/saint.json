@@ -230,6 +230,38 @@
         "text": "Grace shining forth from thy mouth like a torch of fire has enlightened the world; it has won for the world the treasures of freedom from the love of money, and has shown us the height of humility of mind. Instructing us by thy words, father John Chrysostom, pray to the Word, Christ God, that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Уст твоих, якоже светлость огня возсиявши, благодать/ вселенную просвети:/ не сребролюбия мирови сокровища сниска,/ высоту нам смиренномудрия показа./ Но твоими словесы наказуя, отче Иоанне Златоусте,// моли Слова, Христа Бога, спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 января ст. ст. — «Тропарь святителя Иоанна Златоуста»",
+        "url": "https://days.pravoslavie.ru/Days/20260127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The grace that shone forth from thy lips like the brightness of fire has enlightened the whole world; it gained for the world treasures that are not those of the love of money, and showed us the height of humility of mind. But teaching us by thy words, O father John Chrysostom, entreat the Word, Christ God, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Возвеселися таинственно честная Церковь/ возвращением честных твоих мощей,/ и, сия сокрывши, яко злато многоценное,/ поющим тя неоскудно подавает/ молитвами твоими исцелений благодать,// Иоанне Златоусте.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 января ст. ст. — «Кондак святителя Иоанна Златоуста»",
+        "url": "https://days.pravoslavie.ru/Days/20260127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The honourable Church rejoiced in a mystery at the return of thy honourable relics, and having hidden them away like gold of great price she gives without stinting, to those who sing of thee, the grace of healings by thy prayers, O John Chrysostom.",
+        "rendered": "site"
+      }
     }
   ]
 }
