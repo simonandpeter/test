@@ -16,6 +16,11 @@
       "form": "Антоний Константинопольский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 февраля ст. ст., «Святитель Антоний Константинопольский, патриарх», with the rank word and the office left off."
+    },
+    {
+      "form": "Антоније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 12. фебруар ст. ст., „Свети Антоније, патријарх цариградски.“, with Свети and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -70,8 +75,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.02.2026 (12. фебруар ст. ст.) — „Свети Антоније, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-25&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -94,6 +108,7 @@
     }
   },
   "related": [
-    "nicodemus-the-hagiorite"
+    "nicodemus-the-hagiorite",
+    "kalia-12-february"
   ]
 }
