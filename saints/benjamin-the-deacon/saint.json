@@ -11,6 +11,11 @@
       "form": "Βενιαμίν",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαρτίου, «… Βενιαμίν ο Διάκονος …», with the rank word left off."
+    },
+    {
+      "form": "Вениамин Персидский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 406, «Священномученик Вениамин Персидский», with the rank word left off. The day line gives «Вениамина диакона» and the two lives behind the page head him «Мученик Вениамин диакон»."
     }
   ],
   "sex": "male",
@@ -26,8 +31,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page keeps two days, «31 марта» — the day the Greek and the Romanian keep him on, with Abdas bishop of Persia — and this one. One row per church is the schema, so the March day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Мч. Вениамина диакона (421-424).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph: a polyeleos before the Iveron icon of the Theotokos, and the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the company of 251. Neither reaches a later line. The day's readings do name one further polyeleos service, and it is Thaddeus of Tver's, not this one's."
+      },
+      "note": "The same man the Greek and the Romanian keep on 31 March, and his own index page proves it: it keeps both days and links the life of «Священномученики Авда, епископ Персидский, и Вениамин диакон», which is the 31 March commemoration. What the Russian adds is the place, Susa, the king — Yazdegerd, whose reign it dates 401 to 402 — the thirty days between Abdas's beheading and the others' execution, and the manner of his own death, which neither of the other calendars gives."
     },
     {
       "church": "romanian",
@@ -64,16 +81,16 @@
       "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
     }
   ],
-  "text": {
-    "life": "life.md"
-  },
   "dates": {
     "death": {
-      "earliest": 442,
+      "earliest": 418,
       "latest": 442,
-      "display": "442",
+      "display": "between 418 and 442",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Βενιαμιν ο Διακονος (; - 442)», and its narrative agrees with the year: the persecution in which he died is the one that began «Μετά 30 χρόνια» after the persecution of 412. This folder held no `dates` before."
+      "note": "Three readings, and nothing chooses between them, so the interval carries all three. saint.gr heads him «Αγιος Βενιαμιν ο Διακονος (; - 442)» and reaches 442 by putting his persecution «Μετά 30 χρόνια» after the persecution of 412. days.pravoslavie.ru disagrees with itself: its day line for 13 October prints «Мч. Вениамина диакона (421-424)», while the life its own index page links closes «Священномученики скончались в 418 или 424 гг. в древнем персидском городе Сузе». The folder held 442 alone before the Russian was read."
     }
+  },
+  "text": {
+    "life": "life.md"
   }
 }

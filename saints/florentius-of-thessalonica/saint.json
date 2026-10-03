@@ -11,6 +11,11 @@
       "form": "Φλωρέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Οκτωβρίου, «Άγιος Φλωρέντιος», with the rank word left off."
+    },
+    {
+      "form": "Флорентий Солунянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2317, «Флорентий Солунянин, мч.», with the rank word left off. «Солунянин» is the man of Thessalonica; the day line gives «Флорентия» alone."
     }
   ],
   "sex": "male",
@@ -20,8 +25,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 октября ст. ст. — «Мч. Флорентия (I-II).»",
+        "url": "https://days.pravoslavie.ru/Days/20261013.html",
+        "year": 2026,
+        "note": "No rank is read onto this line. The day prints two icons and both stand in its first paragraph: a polyeleos before the Iveron icon of the Theotokos, and the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all, before the company of 251. Neither reaches a later line. The day's readings do name one further polyeleos service, and it is Thaddeus of Tver's, not this one's."
+      },
+      "note": "The Russian gives this folder its first date and then disagrees with itself about it — «I-II» on the day line against «+ II век» at the end of its own life. Its life is three sentences and says what he did: a native of Thessalonica, he rebuked the darkness of idol-worship without fear, brought many to the light of the true knowledge of God and taught faith in Christ and the doing of God's will; for that the pagans put him to cruel torments and then burned him."
     },
     {
       "church": "romanian",
@@ -58,6 +74,15 @@
       "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st or 2nd century",
+      "basis": "traditional",
+      "note": "One page disagreeing with itself is read exactly as two churches disagreeing are. days.pravoslavie.ru's day line prints «Мч. Флорентия (I-II)» and its own life for him closes «(+ II век)», the second century alone. Nothing chooses between them, so the interval carries both. Neither doxologia.ro nor saint.gr gives a date, and this folder held none."
+    }
+  },
   "text": {
     "life": "life.md"
   }
