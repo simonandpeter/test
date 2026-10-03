@@ -1,7 +1,7 @@
 import { formatSubtext } from '../../lib/calendar-page.js';
 import { applyFilters } from '../../lib/index-filters.js';
 import { readerHasFiltered } from '../index/filter.js';
-import { controls, syncCalendarFacet, wireControls } from '../index/controls.js';
+import { controls, LAYOUTS, syncCalendarFacet, wireControls } from '../index/controls.js';
 import { fill, STRINGS } from '../../ui/strings.js';
 import { goToSlug, refreshEnds, showCard } from './card.js';
 import { state } from './state.js';
@@ -29,6 +29,10 @@ import { state } from './state.js';
  * hymnal, and there is no grid to detail. The one control that means something
  * in that row is the face the two asides are listed in, and it takes the slot
  * All Saints gives View.
+ *
+ * **And not even that one below 1024 px** (TODO item 7): the asides draw the
+ * row card at that width whatever the chip says, so the chip switched between
+ * one shape and itself. `syncFace` is what holds it.
  */
 
 /* ---- the index ----------------------------------------------------------- */
@@ -204,6 +208,32 @@ export function findMarkup() {
 }
 
 /**
+ * The face below 1024 px is `rows` and there is no control over it.
+ *
+ * `asides.js` draws the row card at that width regardless — stage G's mat is
+ * still there on a phone, so a Pictures face would be a column of empty mats —
+ * which left the chip offering a choice it could not keep. The chip is removed
+ * rather than hidden, so it is gone from the reading order too, and it comes
+ * back with the reader's own value when the window is wide again.
+ *
+ * Called on every crossing of the breakpoint, not only at the first paint: a
+ * reader who chose Pictures at a desk and narrowed the window kept a face the
+ * page would no longer draw and had nothing left to change it with.
+ */
+function syncFace(el) {
+  const desk = window.matchMedia?.(DESK).matches ?? true;
+  const chip = el.querySelector('.index-foot [data-facet="layout"]');
+  if (chip) chip.hidden = !desk;
+  if (!desk && state.layout !== LAYOUTS[1]) {
+    state.layout = LAYOUTS[1];
+    return true;
+  }
+  return false;
+}
+
+const DESK = '(min-width: 1024px)';
+
+/**
  * Wires the shell and paints the count for the first time.
  *
  * The face chip is All Saints' View chip, over the same two values, so nothing
@@ -230,6 +260,15 @@ export function wireFind(el, { redrawAsides }) {
     detailed: false,
     modeToggle: false,
   });
+  syncFace(el);
+  const mq = window.matchMedia?.(DESK);
+  if (mq) {
+    const onWidth = () => {
+      if (syncFace(el)) redrawAsides();
+    };
+    mq.addEventListener('change', onWidth);
+    state.cleanups.push(() => mq.removeEventListener('change', onWidth));
+  }
   apply(el);
   loadSearch(el).catch(() => {
     /* MiniSearch did not arrive. The field then narrows nothing and the page is

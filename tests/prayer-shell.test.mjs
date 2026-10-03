@@ -53,7 +53,13 @@ test('the host and the flags arrive together, so a page cannot wire a chip it di
 
 test('Prayer mounts the shell rather than drawing one', () => {
   const code = src('views/prayer/find.js');
-  assert.match(code, /import \{ controls, syncCalendarFacet, wireControls \} from '\.\.\/index\/controls\.js'/);
+  /* `LAYOUTS` joined the three on 2026-10-03 (TODO item 7): the page forces
+     the rows face below 1024 px and takes the word for it from the shell
+     rather than writing 'rows' out again. */
+  assert.match(
+    code,
+    /import \{ controls, LAYOUTS, syncCalendarFacet, wireControls \} from '\.\.\/index\/controls\.js'/,
+  );
   // No Sort chip and no Detailed box, said twice because `controls` and
   // `wireControls` are told separately.
   assert.equal((code.match(/sort: false/g) ?? []).length, 2);
