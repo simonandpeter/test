@@ -16,6 +16,11 @@
       "form": "Валент Кесарийский (Палестинский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Валент Кесарийский (Палестинский), диакон, сщмч.», with the rank words and the order of service left off. The day's own line gives the twelve of them in one list and this name bare inside it."
+    },
+    {
+      "form": "Валент",
+      "lang": "sr",
+      "note": "Read out of the body of the Prologue's entry for the twelve martyrs of 16. фебруар ст. ст., where the heading names nobody. The body gives the bare forename with the rank ђакон before it, which the folder's `types` already holds."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.03.2026 (16. фебруар ст. ст.) — „Светих дванаест мученика.“ … „Други би ђакон Валент, стар годинама и сед мудрошћу. Он би одличан познавалац Светог Писма, и знађаше ово готово наизуст.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading enumerates nobody; the twelve are named in the body of the same entry, and the quoted line is the heading followed by the body's own words for this man. Twelve folders carry this row."
     }
   ],
   "text": {

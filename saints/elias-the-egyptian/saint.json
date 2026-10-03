@@ -15,6 +15,11 @@
       "form": "Илия Египтянин, Кесарийский (Палестинский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Илия Египтянин, Кесарийский (Палестинский), мч.», with the rank word left off. The day's own line gives the twelve of them in one list and this name bare inside it."
+    },
+    {
+      "form": "Илија",
+      "lang": "sr",
+      "note": "Read out of the body of the Prologue's entry for the twelve martyrs of 16. фебруар ст. ст., where the heading names nobody. One of the five brothers, whose five chosen names the body prints together in their own answer to the court; the form is taken from that list and the folder's Egyptian epithet is not in it."
     }
   ],
   "related": [
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.03.2026 (16. фебруар ст. ст.) — „Светих дванаест мученика.“ … „На питању како им је име, рекоше: „Незнабожачка имена која нам је мајка дала, одбацили смо и назвали смо се Илија, Исаија, Јеремија, Самуил и Данило“.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading enumerates nobody; the twelve are named in the body of the same entry, and the quoted line is the heading followed by the body's own words for this man. Twelve folders carry this row."
     }
   ],
   "text": {

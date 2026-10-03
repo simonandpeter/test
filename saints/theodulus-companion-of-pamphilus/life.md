@@ -4,4 +4,6 @@ saint.gr's calendar for 16 February prints one line for the whole company, «Ά�
 
 Theodulus did not die by the sword with the nine. Him, the page says, they crucified upon a tree; and it prints him a couplet of his own which turns that on its head — the slaves of error crucify on a tree, it says, and Theodulus too, slaves of the Crucified. The name itself, from Θεός and δούλος, it reads as the man devoted to God, so that the couplet's play is on his name as well as on his death. The page gives him no homeland, no age, no office and no separate hymn.
 
-*After saint.gr's calendar for 16 Φεβρουαρίου — [the day](https://www.saint.gr/02/16/index.aspx) and [the company's life](https://www.saint.gr/3724/saint.aspx); read 30 September 2026.*
+The Serbian church keeps him on the same day, in one entry for the whole company: the Ohrid Prologue of Bishop Nikolai Velimirović heads it „Светих дванаест мученика.“ — the holy twelve martyrs who suffered in the time of the emperor Diocletian — and then names all twelve in its body. Then the old man Theodulus, a servant of the Roman judge, who kissed one of the martyrs as they were led out.
+
+*After saint.gr's calendar for 16 Φεβρουαρίου — [the day](https://www.saint.gr/02/16/index.aspx) and [the company's life](https://www.saint.gr/3724/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 16. фебруар ст. ст. — [the Serbian day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-01&prolog=1), read 4 October 2026.*

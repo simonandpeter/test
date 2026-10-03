@@ -6,6 +6,11 @@
       "form": "Ρωμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιανουαρίου, «Άγιος Ρωμανός ο νέος Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Роман",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 16. фебруар ст. ст., „Свети преподобномученик Роман.“, with Свети and the rank word преподобномученик left off; the rank is in the folder's `types`. The heading gives no epithet, and Карпениси, which the folder's English name carries, is in the body."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.03.2026 (16. фебруар ст. ст.) — „Свети преподобномученик Роман.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The Greek row on this folder keeps him on 5 Ιανουαρίου and the Prologue on the Julian 16 February; the two churches are recorded on their own days, as the registry's one row per church requires."
     }
   ],
   "hymns": [

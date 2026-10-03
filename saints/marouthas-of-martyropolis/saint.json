@@ -16,6 +16,11 @@
       "form": "Маруф Мартиропольский (Тигритский), Месопотамский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 февраля ст. ст., «Святитель Маруф Мартиропольский (Тигритский), Месопотамский, епископ», with the rank word and the office left off. The day's own line keeps only the last of the three epithets, «еп. Месопотамского»."
+    },
+    {
+      "form": "Марут",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 16. фебруар ст. ст., „Свети Марут.“, with Свети left off, which is not a rank. The heading gives no see; the body supplies Тагрит in Mesopotamia, which is the folder's `office` and not part of the name."
     }
   ],
   "related": [
@@ -57,11 +62,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.03.2026 (16. фебруар ст. ст.) — „Свети Марут.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-01&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 422,
+      "latest": 422,
+      "display": "422",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 16 February: „У томе граду и он сконча свој земаљски пут 422. године и пресели се ка Господу.“ The city is Martyropolis, which the same sentence says he founded. The folder carried no dates at all before this reading."
+    }
   }
 }
