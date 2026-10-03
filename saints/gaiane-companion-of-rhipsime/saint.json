@@ -9,6 +9,11 @@
     {
       "form": "Sfânta Muceniță Gaiani",
       "lang": "ro"
+    },
+    {
+      "form": "Гаиания Армянская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2440, «Гаиания Армянская, прмц.», with the rank word left off."
     }
   ],
   "sex": "female",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 30 сентября ст. ст. (civil 13 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Мцц. Рипсимии, Гаиании и с ними 35-ти святых дев (начало IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      },
+      "note": "The Russian dates the martyrdom «начало IV», the beginning of the fourth century, where saint.gr gives 292. That is a weaker reading rather than a competing year, so it is recorded here and the folder's date is left as the Greek source stated it."
     },
     {
       "church": "romanian",

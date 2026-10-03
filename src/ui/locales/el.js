@@ -1160,6 +1160,7 @@ export const el = {
     'Recluse': 'Έγκλειστος',
     'Schema-archimandrite': 'Σχιαρχιμανδρίτης',
     'Schemamonk': 'Σχημοναχός',
+    'Schemanun': 'Σχημομοναχή',
     'Senator': 'Συγκλητικός',
     'Steward of the monastery of Christ the Saviour of Bathys Ryax': 'Οικονόμος της μονής του Σωτήρος Βαθέος Ρύακος',
     'Stylite': 'Στυλίτης',

@@ -1,0 +1,66 @@
+{
+  "slug": "peter-solovyov",
+  "display_name": "Peter (Solovyov)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Петр (Соловьев)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9391, «Петр (Соловьев), протоиерей, сщмч.», with the rank words left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after the eleven names it keeps together: «… мц. Аполлинарии (1937)»."
+    }
+  },
+  "related": [
+    "matthew-solovyov",
+    "peter-pushkinsky"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 30 сентября ст. ст. — «Сщмчч. Петра, Вячеслава, Петра, Симеона, Василия, Александра пресвитеров, Серафима диакона, прмц. Александры, мчч. Алексия и Матфея, мц. Аполлинарии (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260930.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 13 octombrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/13 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 13 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

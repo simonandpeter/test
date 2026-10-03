@@ -1159,6 +1159,7 @@ export const ro = {
     'Recluse': 'Zăvorât',
     'Schema-archimandrite': 'Schiarhimandrit',
     'Schemamonk': 'Schimonah',
+    'Schemanun': 'Schimonahie',
     'Senator': 'Senator roman',
     'Steward of the monastery of Christ the Saviour of Bathys Ryax': 'Econom al mănăstirii Mântuitorului din Vathys Ryax',
     'Stylite': 'Stâlpnic',

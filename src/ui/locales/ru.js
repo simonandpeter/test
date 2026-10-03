@@ -1178,6 +1178,7 @@ export const ru = {
     'Recluse': 'Затворник',
     'Schema-archimandrite': 'Схиархимандрит',
     'Schemamonk': 'Схимонах',
+    'Schemanun': 'Схимонахиня',
     'Senator': 'Сенатор',
     'Steward of the monastery of Christ the Saviour of Bathys Ryax': 'Эконом монастыря Спаса Вафиса Риака',
     'Stylite': 'Столпник',
