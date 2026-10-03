@@ -11,6 +11,11 @@
       "form": "Αυξέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Αυξέντιος ὁ ἐν τῷ Ὄρει», with the rank words left off."
+    },
+    {
+      "form": "Авксентий Вифинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Авксентий Вифинский, пресвитер, отшельник», with the rank words left off. The day's own line gives the name bare, «Прп. Авксентия (ок. 470).»"
     }
   ],
   "sex": "male",
@@ -80,13 +85,54 @@
         "text": "Having taken thy delight, O God-minded one, in abstinence, and having bridled the appetites of the flesh, thou wast seen to grow by thy faith, and like a plant in the midst of Paradise thou didst blossom, O Auxentius, most holy Father.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Пустынный житель, и в телеси Ангел,/ и чудотворец явился еси, Богоносе отче наш Авксентие,/ постом, бдением, молитвою Небесная дарования приим,/ исцелявши недужныя и души верою притекающих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Тропарь преподобного Авксентия»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the desert, an angel in the body and a wonderworker you were shown to be, our God-bearing father Auxentius: by fasting, by vigil and by prayer you received the gifts of heaven, and you heal the sick and the souls of those who come to you in faith. Glory to him who gave you strength, glory to him who crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Насладився, богомудре, воздержания/ и желания плоти твоея обуздав,/ явился еси, верою сияя,/ якоже сад посреди рая, процвел еси,// Авксентие отче священне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Кондак преподобного Авксентия»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having taken your delight in abstinence, O wise in God, and having bridled the desires of your flesh, you were shown shining with faith, and you flowered like a garden in the midst of paradise, Auxentius, sacred father.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Прп. Авксентия (ок. 470).»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

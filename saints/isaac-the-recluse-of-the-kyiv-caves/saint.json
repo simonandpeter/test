@@ -6,6 +6,11 @@
       "form": "Ισαάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Όσιος Ισαάκιος ο Έγκλειστος ο εκ Ρωσίας», with the rank words left off. The page prints a by-name in brackets in the life, «ο Όσιος Ισαάκιος (Τοροπτσάνιν)»."
+    },
+    {
+      "form": "Исаакий, Затворник Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Преподобный Исаакий, Затворник Печерский», with the rank word left off. The day's hymns place him «в Ближних пещерах», in the Near Caves."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Прп. Исаакия, затворника Печерского (ок. 1090).»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светлости святых насладитися вожделев,/ в темную вселился еси пещеру, прехвальне,/ и добре подвизался еси, Исаакие,/ прельщен же быв от врага,/ паки крепко попрал еси того вся коварства./ И ныне, яко победитель,/ в веселии предстоя Христу Богу,/ проси нам мира и велия милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Тропарь преподобного Исаакия, затворника Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing to take your delight in the brightness of the saints, you settled in a dark cave, O greatly praised one, and you struggled well, Isaac; and when the enemy had deceived you, you trod down all his cunning again with strength. Now, standing in gladness before Christ God as a conqueror, ask for us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Вражию прелесть низложивша и в постничестве светло просиявша,/ приидите, вернии, восхвалим Исаакия победоноснаго,/ иже, яко злато, во искушениих просил/ и просвещает сердца верно к нему притекающих,/ моляся Господеви непрестанно о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Кондак преподобного Исаакия, затворника Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, you faithful, let us praise Isaac the victorious, who overthrew the enemy's delusion and shone brightly in the ascetic life, who was tried in temptations like gold and enlightens the hearts of those who come to him in faith, praying to the Lord unceasingly for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

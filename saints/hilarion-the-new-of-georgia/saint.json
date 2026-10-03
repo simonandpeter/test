@@ -11,6 +11,11 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Φεβρουαρίου, «Οσίος Ιλαρίων ο Ιβηρίτης», with the rank words left off. The page gives the name in the world separately, «το κατά κόσμον όνομά του ήταν Ιεσσαί (Ise Qanchaveli)», and Ιλαρίων as the name taken at the great habit in 1821."
+    },
+    {
+      "form": "Иларион Грузин, новый, Имеретийский и Афонский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Иларион Грузин, новый, Имеретийский и Афонский, прп.», with the rank word left off. The day's own line shortens it to «Илариона Грузина, Святогорца» and marks the entry «(Груз.)», a saint of the Georgian church."
     }
   ],
   "sex": "male",
@@ -37,8 +42,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Прп. Илариона Грузина, Святогорца (1864) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -21,6 +21,11 @@
       "form": "Κωνσταντίνος",
       "lang": "el",
       "note": "His name in the world, as saint.gr prints it on the same page: «Οι Άγιοι Κύριλλος και Μεθόδιος, κατά κόσμον Κωνσταντίνος και Μιχαήλ». The folder already keeps the Romanian «Constantin» for the same name."
+    },
+    {
+      "form": "Кирилл, учитель Словенский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Равноапостольный Кирилл, учитель Словенский», with the rank word left off. The Russian calendar keeps him on this day, the year of his repose being the «(869)» the line prints, where the Greek and Romanian calendars keep him with his brother on 11 May."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Равноап. Кирилла, учителя Словенского (869).»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -110,6 +124,38 @@
       },
       "english": {
         "text": "Having received the radiance of the Apostles, ye were seen to be lights and teachers of the Slavs, preaching to all the word of grace. But, O all-blessed Cyril and Methodius, deliver from all harm and affliction those who cry: rejoice, blessed pair.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От пелен прилежно Премудрость сестру себе сотворив, Богогласе,/ пресветлую видев, яко девицу чисту,/ юже приемь, приведе,/ яко монисты златыми, сею украсив свою душу и ум,/ и обретеся яко другий Кирилл,/ блаженне, разумом и именем мудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Тропарь равноапостольного Кирилла, учителя Словенского»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your swaddling clothes you diligently made Wisdom your sister, O voice of God, for you saw her most radiant, as a pure maiden, and receiving her you brought her home, and with her, as with chains of gold, you adorned your soul and your mind; and you were found to be a second Cyril, O blessed one, wise in understanding as in name.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Твердым и Богодохновенным учением/ просвещая мир пресветлыми зарями,/ обтече, яко молния вселенную, Кирилле блаженне,/ разсевая пресветлое Божие слово,/ на западе, и севере, и юзе, мир просвещая чудесы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 февраля ст. ст. — «Кондак равноапостольного Кирилла, учителя Словенского»",
+        "url": "https://days.pravoslavie.ru/Days/20260214.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightening the world with most radiant dawnings by your firm and God-inspired teaching, you ran about the inhabited earth like lightning, blessed Cyril, sowing the most radiant word of God in the west and the north and the south, and enlightening the world with wonders.",
         "rendered": "site"
       }
     }
