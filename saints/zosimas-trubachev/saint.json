@@ -1,0 +1,68 @@
+{
+  "slug": "zosimas-trubachev",
+  "display_name": "Zosimas (Trubachev)",
+  "names": [
+    {
+      "form": "Зосима (Трубачев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Зосима (Трубачев), протоиерей, сщмч.», with the rank words left off. His own life page spells the surname with ё and gives the patronymic too: «Священномученик протоиерей Зосима Васильевич Трубачёв»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian",
+        "note": "His life page at days.pravoslavie.ru also lists «26 января (Новомуч.)» among his days, the day of his last arrest, kept with the Synaxis of the New Martyrs; the day page for that day does not name him and the corpus keeps one feast to a church, so he renders on 13 февраля only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Сщмч. Зосимы, Николая, Василия, Иоанна, Леонтия, Владимира, Парфения, Иоанна, Иоанна, Михаила пресвитеров и Евгения диакона, мч. Павла, прмцц. Анны, Веры и Ирины (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 February 2026 (3 October 2026)."
+    }
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "birth": {
+      "earliest": 1893,
+      "latest": 1893,
+      "display": "24 December 1893",
+      "basis": "attested",
+      "note": "His life page at days.pravoslavie.ru: «родился 24 декабря 1893 года в селе Пучуга на Северной Двине»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "26 February 1938",
+      "basis": "attested",
+      "note": "His life page at days.pravoslavie.ru: «13 (26) февраля 1938 года отец Зосима был расстрелян и погребён в общем могильнике Бутовского полигона под Москвой»; the day's line prints «(1938)». The display takes the new-style 26 February, because date-display.js cannot read the old-style/new-style pair and the source's own «13 (26) февраля» is quoted here instead."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

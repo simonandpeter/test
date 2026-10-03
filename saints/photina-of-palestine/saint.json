@@ -1,0 +1,61 @@
+{
+  "slug": "photina-of-palestine",
+  "display_name": "Photina of Palestine",
+  "names": [
+    {
+      "form": "Фотиния (Светлана) Палестинская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 февраля ст. ст., «Преподобная Фотиния (Светлана) Палестинская», with the rank word left off. The calendar carries the Russian gloss of the name, «Светлана», inside the form itself, as its own line for the day does."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 февраля ст. ст. — «Прпп. Зои и Фотинии (Светланы) (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260213.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 26 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 26 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 26 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints beside the two names for 13 февраля ст. ст.: «Прпп. Зои и Фотинии (Светланы) (V).»"
+    }
+  },
+  "related": [
+    "martinian-of-caesarea"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
