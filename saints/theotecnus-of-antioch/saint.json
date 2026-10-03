@@ -1,0 +1,61 @@
+{
+  "slug": "theotecnus-of-antioch",
+  "display_name": "Theotecnus of Antioch",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Феотекн",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2250, headed «Феотекн Антиохийский, мч.», with the rank word and the epithet left off."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 311,
+      "display": "284–311",
+      "basis": "traditional",
+      "note": "The calendar's day line prints «ок. 284-305» and the life it reaches dates the same emperor's reign «при императоре Максимиане (305 - 311)»; the two spans overlap only at 305 and the page does not reconcile them, so the interval carries both ends."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Мч. Феотекна (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line opens the day's second paragraph, which carries no icon. The day's two icons are both in the first paragraph: the plain service before the martyrs Eulampius and Eulampia, and a polyeleos immediately before Ambrose of Optina."
+      },
+      "note": "He is **not** either of the two the corpus already holds under this name: `theotecnus-the-martyr`, whom the Greek keeps on 3 October and says was stoned, and `theoteknos`, whom the Greek keeps on 10 December and says was killed by the sword. This one is the commander at Antioch under Maximian, kept on the Russian 10 October and drowned with a stone round his neck. Three entries, three days, three deaths. His name page keeps him on this day and no other."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 23 octombrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/10/23 was not read for him (2026-10-04). Its 3 Οκτωβρίου and 10 Δεκεμβρίου each keep a Theotecnus, and both are other men; see the Russian row."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for civil 23 October 2026 was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

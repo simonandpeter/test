@@ -4169,6 +4169,8 @@ const READ_FOLDS = {
     'one of the Seventy, kept on 10 September by the Russian, Greek and Serbian, against the bishop of Ancyra the Romanian keeps on 23 January — twenty-eight years of torments and a death at the altar. Two men (read 19 September 2026)',
   'teoctist theoctistus-of-kucumia theoctistus-the-martyr':
     'the abbot of Kucumia in Sicily, Romanian 4 January, against the martyr by the sword the Greek and Romanian keep on 3 October; doxologia’s own page for 4 January is a note saying which Theoctistus the day is not (read 19 September 2026)',
+  'амфилохии amphilochius-of-vladimir-volynsky amphilochius-skvortsov':
+    'the third bishop of Vladimir in Volhynia, consecrated in 1105 and dead in a cave of the Kyiv Caves monastery in 1122, against the Kazan academic of Lamaism born in 1885 and shot in the Soviet years. Eight centuries, and the bare forename is all they share (read 4 October 2026)',
   'иоанн рыбин john-rybin john-rybin-8-october':
     'two index entries of the same site, two ranks and two days: name page 9635, «Иоанн (Рыбин), иерей, сщмч.», a priest kept on the Russian 6 October, against name page 13820, «Иоанн (Рыбин), мч.», a layman kept on the 8th in the company of Jonah of Velizh. Two men who share a surname, and the second folder carries the day in its display name because nothing else tells the names apart (read 4 October 2026)',
   'досифеи dositheia-the-recluse-of-kyiv dositheus-of-verkhny-ostrov':

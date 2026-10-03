@@ -11,17 +11,35 @@
       "form": "Βασιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιος Βασιανός», with the rank word left off."
+    },
+    {
+      "form": "Вассиан",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 395, headed «Вассиан (Василий) Константинопольский, чудотворец, игумен, прп.», with the alternative form, the two epithets, the office and the rank word left off."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "abbot",
+    "wonderworker"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Прп. Вассиана , чудотворца (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "No rank is read onto him. His line is in the day's second paragraph, which carries no icon; the day's two icons are both in the first, and belong to Eulampius and Eulampia and to Ambrose of Optina."
+      },
+      "note": "The Russian's «(V)» agrees with the fifth century the Greek page's Marcian gives, so the `floruit` stands as it was. Its index page adds the second name and the office the day line does not, «Вассиан (Василий) Константинопольский, чудотворец, игумен», and its life adds eastern Syria for his birth, the three hundred monks of his house, and Matrona in men's clothes among them."
     },
     {
       "church": "romanian",
@@ -69,5 +87,9 @@
       "basis": "traditional",
       "note": "saint.gr: «έζησε στα χρόνια που βασιλέας ήταν ο Μαρκιανός (περί το 450 μ.Χ.)»"
     }
-  }
+  },
+  "office": "Abbot",
+  "related": [
+    "matrona-of-constantinople"
+  ]
 }

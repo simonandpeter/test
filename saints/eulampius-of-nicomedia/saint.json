@@ -11,6 +11,11 @@
       "form": "Ευλάμπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια», with the rank word left off. The page glosses the name from ευ and λάμπω — the radiant."
+    },
+    {
+      "form": "Евлампий",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 681, headed «Евлампий Никомидийский, мч.», with the rank word and the epithet left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Мчч. Евлампия и Евлампии (303-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the first of the day's two icons, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — the plain service — which stands immediately before this line and so belongs to the pair it names. The day's other icon is a polyeleos and stands a few words later, immediately before Ambrose of Optina, and is his."
+      },
+      "note": "The page disagrees with itself about when: the day line prints «(303-311)» and its life dates the emperor «Максимиана (284–305)», and the two spans meet only at 305. The folder's `dates` carry both ends and the note says so. Its life adds what the Greek does not — the decree he read and his retort that the emperor was arming against his own subjects instead of the enemies of his country, the idol of Mars that fell at his word, and the crowd crying that the Christian God is one, great and strong."
     },
     {
       "church": "romanian",
@@ -122,5 +139,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 311,
+      "display": "284–311",
+      "basis": "traditional",
+      "note": "The Russian calendar's day line prints «Мчч. Евлампия и Евлампии (303-311)» while the life it reaches dates the persecuting emperor «Максимиана (284–305)». The two spans overlap only at 305, the page reconciles them nowhere, and the interval carries both ends rather than choosing. Neither saint.gr nor doxologia.ro was read for a year."
+    }
   }
 }

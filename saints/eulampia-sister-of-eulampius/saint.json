@@ -11,6 +11,11 @@
       "form": "Ευλαμπία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Οκτωβρίου, «Άγιοι Ευλάμπιος και Ευλαμπία τα αδέλφια», with the rank word left off."
+    },
+    {
+      "form": "Евлампия",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2471, headed «Евлампия Никомидийская, мц.», with the rank word and the epithet left off."
     }
   ],
   "sex": "female",
@@ -24,8 +29,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 10 октября ст. ст. — «Мчч. Евлампия и Евлампии (303-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20261010.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the first of the day's two icons, the plain service, «Cовершается служба, не отмеченная в Типиконе никаким знаком», which stands immediately before the one line that names them both. The day's other icon is a polyeleos and belongs to Ambrose of Optina."
+      },
+      "note": "The page's day line and its life do not agree on the years, «(303-311)» against «Максимиана (284–305)», and the folder's `dates` carry both ends. The life gives her the shorter half of the account and the harder end of it: she came before the judges of her own accord, and where her brother was beheaded she died of the torments."
     },
     {
       "church": "romanian",
@@ -116,5 +133,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 311,
+      "display": "284–311",
+      "basis": "traditional",
+      "note": "The Russian calendar's day line prints «Мчч. Евлампия и Евлампии (303-311)» while the life it reaches dates the persecuting emperor «Максимиана (284–305)». The two spans overlap only at 305 and the page reconciles them nowhere, so the interval carries both ends. Neither saint.gr nor doxologia.ro was read for a year."
+    }
   }
 }

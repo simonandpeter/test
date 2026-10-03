@@ -1011,6 +1011,7 @@ export const ro = {
     'Bishop of Urbnisi': 'Episcop de Urbnisi',
     'Bishop of Volsk': 'Episcop de Volsk',
     'Bishop of Vannes': 'Episcop de Vannes',
+    'Bishop of Vladimir-Volynsky': 'Episcop de Vladimir-Volînsk',
     'Bishop of Velikiye Luki': 'Episcop de Velikie Luki',
     'Bishop of Verny': 'Episcop de Vernîi',
     'Bishop of Veroia': 'Episcop de Veria',
