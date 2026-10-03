@@ -16,6 +16,11 @@
       "form": "Иаков Низибийский (Нисивийский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Святитель Иаков Низибийский (Нисивийский), епископ», with the rank words left off."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 13. јануар ст. ст. (civil 2026-01-26), „Свети Јаков, епископ нисибијски“. The word „Свети“ and the see „епископ нисибијски“ are left off; the folder already keeps the see in `office`."
     }
   ],
   "sex": "male",
@@ -71,8 +76,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.01.2026 (13. јануар ст. ст.) — „Свети Јаков, епископ нисибијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-26&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -16,6 +16,11 @@
       "form": "Стратоник",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 января ст. ст., «Мученик Стратоник», with the rank word left off."
+    },
+    {
+      "form": "Стратоник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 13. јануар ст. ст. (civil 2026-01-26), „Свети мученици Ермил и Стратоник“. The heading names the two martyrs together. The words „Свети мученици“ and his companion's name are left off, leaving his own."
     }
   ],
   "sex": "male",
@@ -91,8 +96,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.01.2026 (13. јануар ст. ст.) — „Свети мученици Ермил и Стратоник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-26&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
