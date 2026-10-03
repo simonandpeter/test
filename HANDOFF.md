@@ -38,6 +38,17 @@ here, because a PAT push never updates `origin/main`.
 
 ## In flight
 
+**The calendar's two monthly views are one drawing** (`1aaed1fd`, `facb0608`).
+The phone keeps its week rail and the toggle that opens the month; the month it
+opens into is the desk's month, stepped up and down from two marks above and
+below its name. Two things are consequences rather than requests, so read them
+before building on them: an open month below 1024 px takes the vertical gesture
+(`touch-action: pan-x`), so the page does not scroll from a finger that starts
+inside the grid; and the rail's seven columns no longer share centres with the
+month's, because the month gave up the peeked columns that used to inset it to
+match. `86fa2b75` is the commit that went too far — it took the rail out
+entirely — and `1aaed1fd` put it back.
+
 **The Greek calendar wave.** `../ro-run/ORCHESTRATION.md` is the whole
 protocol and its state block is what has been written; `../ro-run/FINDINGS.md`
 holds what is settled and what is the author's. One writer, readers out five
