@@ -11,6 +11,11 @@
       "form": "Λουκάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Όσιος Λουκάς ὁ ἐν Στειρίῳ ὄρει ἄσκησας», with the rank word and the relative clause left off."
+    },
+    {
+      "form": "Лука Елладский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 февраля ст. ст., «Лука Елладский, отшельник», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Прп. Луки Елладского (ок. 946).»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -127,6 +141,38 @@
       },
       "english": {
         "text": "God, who chose you before you were fashioned for his own good pleasure, by the judgements he knows, took you from the womb and hallowed you, and showed you to be his own servant, directing your steps, Luke, in his love for mankind — he before whom you now stand rejoicing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Тропарь святителя Парфения и преподобного Луки»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to thy gentleness, take not thy mercy from us, but by their prayers order our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Избравый Тя Бог прежде создания во Свое благоугодие,/ имиже ведяше судьбами, присно от утробы освящает/ и Своего раба показа тя, исправляя твоя стопы, Луко, яко Человеколюбец.// Ему ныне, радуяся, предстоиши.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Кондак преподобного Луки»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "God, who chose thee before thy making for his own good pleasure, sanctified thee from the womb by the judgements he knew and showed thee forth as his own servant, setting thy steps straight, O Luke, as the lover of mankind. Before him thou now standest, rejoicing.",
         "rendered": "site"
       }
     }

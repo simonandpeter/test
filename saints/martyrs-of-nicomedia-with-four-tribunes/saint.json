@@ -20,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Мчч. 1003 Никомидийских (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

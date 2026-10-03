@@ -12,6 +12,11 @@
       "form": "Παρθένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Φεβρουαρίου, «Όσιος Παρθένιος επίσκοπος Λαμψάκου», with the rank word and the see left off."
+    },
+    {
+      "form": "Парфений Лампсакийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 февраля ст. ст., «Святитель Парфений Лампсакийский, епископ», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Прп. Парфения, еп. Лампсакийского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -96,6 +110,38 @@
       },
       "english": {
         "text": "You have received the divine grace of wonders, God-minded and holy Parthenius, God-bearing worker of miracles, cleansing away all the sufferings of the faithful and driving off the spirits of wickedness, father; and therefore we sing of you as a great initiate of the grace of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Тропарь святителя Парфения и преподобного Луки»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to thy gentleness, take not thy mercy from us, but by their prayers order our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Чудес приял еси Божественную благодать,/ богомудре священне Парфение, чудотворче богоносе,/ вся верных страсти очищая,/ духи лукавства, отче, изгоняя,/ сего ради тя воспеваем,// яко велия таинника Божия благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Кондак преподобного Парфения»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst receive the divine grace of wonders, O Parthenius, wise in God and consecrated, God-bearing wonderworker, cleansing all the passions of the faithful and driving out the spirits of wickedness, O father. Therefore we sing thy praise, as a great initiate of the grace of God.",
         "rendered": "site"
       }
     }

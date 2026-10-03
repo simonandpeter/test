@@ -1,0 +1,60 @@
+{
+  "slug": "alexander-talyzin",
+  "display_name": "Alexander (Talyzin)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр (Талызин)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 февраля ст. ст., «Александр (Талызин), иерей, сщмч.», with the rank word and the office left off. The day's line declines the forename and leaves the surname out; the surname comes from the name link behind it and is part of the name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 февраля ст. ст. — «Сщмч. Александра пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260207.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 februarie, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Φεβρουαρίου, the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 February 2026 (3 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "As printed by days.pravoslavie.ru for 7 февраля ст. ст.: «Сщмч. Александра пресвитера (1938).»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
