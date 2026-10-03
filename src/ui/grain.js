@@ -1,7 +1,8 @@
 /**
- * A grain — the week, or the month, or anything else that lives on a
- * horizontal track and follows a finger — sits inside a viewport, and the
- * track is what moves. It moves two ways, and they are deliberately the same
+ * A grain — the month, or anything else that lives on a track and follows a
+ * finger — sits inside a viewport, and the track is what moves. `axis` says
+ * which way: `'x'` by default, `'y'` for the calendar's month since
+ * 2026-10-03. It moves two ways, and they are deliberately the same
  * movement:
  *
  * **Travel**, from a peeked edge, an arrow key off the end of the strip, or
@@ -37,22 +38,32 @@ import { reducedMotion, DUR } from '../lib/motion.js';
 /** Matches --dur-settle in tokens.css: the sideways step of a grain. */
 export const STRIP_SLIDE = DUR.settle;
 
-export function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
+export function makeGrain({ viewport, row, paint, settle, flick, onSides, axis = 'x' }) {
   const track = viewport.querySelector('.grain-track');
+  const vertical = axis === 'y';
   let sides = [];
   let timer = null;
   let holding = false;
 
-  const width = () => viewport.getBoundingClientRect().width;
-  const shift = (dx) => {
-    track.style.transform = dx ? `translateX(${dx}px)` : '';
+  const size = () => {
+    const box = viewport.getBoundingClientRect();
+    return vertical ? box.height : box.width;
+  };
+  const shift = (d) => {
+    track.style.transform = d ? (vertical ? `translateY(${d}px)` : `translateX(${d}px)`) : '';
   };
 
-  /** A neighbouring grain, parked one viewport width away on its own side. */
+  /** A neighbouring grain, parked one viewport away on its own side. */
   function addSide(offset) {
     const side = document.createElement(row.tagName);
     side.className = `${row.className} grain-side`;
-    side.style.left = `${offset * 100}%`;
+    /* A vertical grain is parked in pixels rather than by a percentage: `top`
+       resolves a percentage against the track's own height, which is the live
+       row's, so a five-row month parked beside a six-row one would start a
+       row short of the seam and the glide would not close it. One viewport is
+       exactly what the glide travels. */
+    if (vertical) side.style.top = `${offset * size()}px`;
+    else side.style.left = `${offset * 100}%`;
     // The live row's own skeleton, then repainted for the grain beside it —
     // so a change to what a row is made of cannot reach the copies and miss.
     side.innerHTML = row.innerHTML;
@@ -105,7 +116,7 @@ export function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
       addSide(-dir);
       viewport.classList.add('is-moving');
       track.style.transition = 'none';
-      shift(dir * width());
+      shift(dir * size());
       void track.offsetHeight;
       glide(0, () => {});
     },
@@ -133,7 +144,7 @@ export function makeGrain({ viewport, row, paint, settle, flick, onSides }) {
           return;
         }
         holding = false;
-        const w = width();
+        const w = size();
         // Far enough to have meant it is a finger's worth of travel, not a
         // fraction of the grain (author, 2026-08-21): a third of the width read
         // as a haul on a wide screen and snapped back from any real swipe.

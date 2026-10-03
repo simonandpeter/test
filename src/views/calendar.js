@@ -1,6 +1,6 @@
 /**
  * The calendar — the habit page (brief §8.1, STRUCTURE.md). Opens on today
- * in the reader's local date; week strip and month view to move; deep links
+ * in the reader's local date; a month grid to move, at every width; deep links
  * at /calendar/YYYY-MM-DD; one church's calendar at a time (author,
  * 2026-08-22): the church the reader keeps, chosen once and changed from the header.
  *
@@ -14,7 +14,7 @@ import { CALENDAR_LABELS } from '../data/calendars.js';
 import { toIsoDate } from '../lib/feasts.js';
 import { gregorianToJdn } from '../lib/jdn.js';
 
-import { addDaysIso, parseIso, todayIso, weekOf } from '../lib/calendar-page.js';
+import { addDaysIso, parseIso, todayIso } from '../lib/calendar-page.js';
 import { observePrefetch } from '../lib/detail.js';
 import { REGISTER_LAYOUTS } from '../lib/settings.js';
 import * as store from '../lib/store.js';
@@ -23,7 +23,7 @@ import { escapeHtml as esc } from '../lib/markdown.js';
 
 import { onGrainDrag } from '../ui/grain-drag.js';
 import { makeGrain } from '../ui/grain.js';
-import { beginSwap, landSwap, restore, setAside } from '../ui/swap.js';
+import { beginSwap, landSwap, setAside } from '../ui/swap.js';
 import { wireSaveButtons } from '../ui/save.js';
 import { mountShelves } from '../ui/shelf.js';
 
@@ -34,9 +34,9 @@ import { formatDate, translateReason } from '../lib/i18n.js';
 import { state, open as openState, close as closeState } from './daily/state.js';
 import { reducedMotion } from '../lib/motion.js';
 import { onWideChange } from '../lib/viewport.js';
-import { buildRail, growMonthBody, markRail, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, revealSelected, stepCursor, stepMonth, toggleMonth, wireDayKeys, wireDaySwipe, wireRail } from './daily/picker.js';
+import { growMonthBody, measure, monthCursor, moveMonth, paintMonth, paintMonthInto, SPIN, stepCursor, stepMonth, wireDayKeys, wireDaySwipe } from './daily/picker.js';
 import { countFor, dayRecordFor } from './daily/entries.js';
-import { monthFmt, reckonedHeading, relativeDayWord, weekdayFmt } from './daily/format.js';
+import { reckonedHeading, relativeDayWord } from './daily/format.js';
 import { markChosen, paintChosen, paintDay, showReadTab } from './daily/panel.js';
 import { fullCalButton, wireFullCal } from './daily/fullcal.js';
 
@@ -49,21 +49,6 @@ export const title = () => STRINGS.calendar.title;
 
 const BASE = import.meta.env.BASE_URL;
 
-
-/* One icon button stood beside this until 2026-08-26 — a crosshair that
-   jumped the rail back to today (author: "remove the old button and stretch
-   the monthly toggle to take up the extra space"). It is withdrawn now that
-   today carries its own mark at both grains (below, "the two marks a date can
-   carry"): a reader who has stepped away from today can see it rather than
-   needing a button to return to it. What is left is stroked in currentColor
-   and carries its name on the button's aria-label, so it introduces no colour
-   and depends on nothing but the label to be understood. */
-const ICON_MONTH = `<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor"
-  stroke-width="1.6" aria-hidden="true" focusable="false">
-  <rect x="3.25" y="5" width="17.5" height="15.75" rx="2.5"/>
-  <path d="M3.25 9.75h17.5"/>
-  <path d="M8 2.75v4M16 2.75v4" stroke-linecap="round"/>
-</svg>`;
 
 /*
  * **Half a cross**, and the day steps are the two halves
@@ -114,7 +99,7 @@ export function render(el, { data, params, router }) {
        says why. It is the page's one funnel for changing the day. */
     select,
     calendar: currentChurch(),
-    monthCursor: null, monthOpen: false,
+    monthCursor: null,
     /* Which saint of the day the two middle columns are showing, past 1024 px
        (2026-09-16). Null is "the one the day chose for itself" — `pickHero` —
        and the day step puts it back to null, because a choice is about a day
@@ -127,7 +112,7 @@ export function render(el, { data, params, router }) {
     readTab: 'life',
     cleanups: [], dayCleanups: [],
     sizeTimer: null,
-    monthGrain: null, railAnchor: null,
+    monthGrain: null,
     /* Compact or expanded under the register's heading (author, 2026-09-01;
        the second face and the loss of the third, 2026-09-10), read from the
        reader's last answer. views/daily/panel.js writes it onto the list as a
@@ -208,39 +193,8 @@ export function render(el, { data, params, router }) {
         <div class="slot-viewport" data-slot="main"><div class="day-panel day-main"></div></div>
         <div class="shelves" data-shelves></div>
         <div class="cal-controls">
-            <div class="cal-jump">
-              <button type="button" data-month aria-expanded="false"
-                aria-label="${STRINGS.calendar.monthView}">${ICON_MONTH}</button>
-            </div>
             <div class="cal-span">
-              <div class="cal-week">
-                <div class="week-strip" role="group" tabindex="0"
-                  aria-label="${STRINGS.calendar.weekLabel}"></div>
-                <!--
-                  **Arrows over the rail's own fading ends** (author, 2026-09-02:
-                  "add arrows left and right over the week display and monthly
-                  display edges, don't resize anything just put them over the
-                  left and right ends where the dates just outside of the week
-                  are fading out").
-
-                  Over, in the literal sense: they are absolutely positioned on
-                  top of the dissolve, so the rail keeps every pixel it had and
-                  the seven days are the width they were. Desktop only, where
-                  there is a pointer to aim at them — a phone swipes the rail,
-                  which is the gesture the fade is hinting at in the first
-                  place, and two 24 px targets over the edge days would be in
-                  the way of it.
-
-                  The month's own two edges already are buttons (peek-prev and
-                  peek-next below); they get the same glyph in calendar.css
-                  rather than a second control drawn over them.
-                -->
-                <button type="button" class="week-arrow week-arrow-prev" data-wstep="-1"
-                  aria-label="${STRINGS.calendar.prevWeek}">&lsaquo;</button>
-                <button type="button" class="week-arrow week-arrow-next" data-wstep="1"
-                  aria-label="${STRINGS.calendar.nextWeek}">&rsaquo;</button>
-              </div>
-              <div class="cal-month" hidden>
+              <div class="cal-month">
                 <!--
                   **The calendar's own header row** (author, 2026-09-02): the
                   month's whole name on the left margin of the column, and the
@@ -253,14 +207,19 @@ export function render(el, { data, params, router }) {
                 -->
                 <div class="month-head">
                   <!--
-                    **The month's two steps, past 1024 px**: a hairline closed by a
-                    diamond, pointing away from the month it leaves. They replace
-                    the peeked columns, which is what buys the grid its width —
-                    and they are a *second* control on stepMonth, not the same
-                    one moved, because the phone keeps its peeks. Hence
-                    data-mstepper beside data-mstep: two names for two controls,
-                    so neither a querySelector here nor a locator in the suite
-                    can pick up the wrong one.
+                    **The month's two steps, above and below its own words**
+                    (author, 2026-10-03: "from Oct to Sep is an arrow or swipe
+                    up above the Oct 2026 print, and conversely an arrow down
+                    underneath it"). Each is a hairline closed by a diamond,
+                    pointing away from the month it leaves — the same five
+                    pieces they were when they stood either side of the name,
+                    turned a quarter and stacked, because the grid now moves on
+                    the other axis.
+
+                    They are the whole of the stepping at every width: the
+                    peeked columns that stepped it on a phone went with the week
+                    rail, so data-mstep is gone and data-mstepper is the one
+                    name left.
                   -->
                   <button type="button" class="mstep mstep-prev" data-mstepper="-1"
                     aria-label="${esc(STRINGS.calendar.prevMonth)}">
@@ -281,31 +240,23 @@ export function render(el, { data, params, router }) {
                     <i class="mstep-line"></i><i class="mstep-dot"></i></button>
                 </div>
                 <div class="month-days-line" aria-hidden="true">
-                  <span class="peek-gap"></span>
                   <div class="month-days"></div>
-                  <span class="peek-gap"></span>
                 </div>
                 <div class="month-body">
                   <div class="grain-track">
                     <div class="month-row">
-                      <button type="button" class="peek peek-prev" data-mstep="-1"
-                        aria-label="${STRINGS.calendar.prevMonth}"></button>
                       <div class="month-grid"></div>
-                      <button type="button" class="peek peek-next" data-mstep="1"
-                        aria-label="${STRINGS.calendar.nextMonth}"></button>
                     </div>
                   </div>
                 </div>
               </div>
               <!--
                 **The full-screen control moved into the month's own head on
-                2026-09-10**, to the right
-                of the month and its reckoning. It stood here, in a second row
-                of the span under whichever grain was showing, from 2026-09-01;
-                it is a desktop control only (calendar.css hides it below
-                1024 px, author 2026-09-02) and the desktop's picker is the
-                month, so the calendar's own way out now sits on the calendar's
-                own heading rather than a row below it. Its words are unchanged.
+                2026-09-10**, to the right of the month and its reckoning. It
+                stood here, in a second row of the span, from 2026-09-01; it is
+                a desktop control only (calendar.css hides it below 1024 px,
+                author 2026-09-02), so the calendar's own way out sits on the
+                calendar's own heading rather than a row below it.
               -->
             </div>
         </div>
@@ -349,7 +300,6 @@ export function render(el, { data, params, router }) {
       </div>
     </div>`;
 
-  el.querySelector('[data-month]').addEventListener('click', toggleMonth);
   // Through `select`, like every other way of changing the day, so the two
   // panels roll and the rail follows rather than the page being repainted
   // underneath the reader.
@@ -440,34 +390,10 @@ export function render(el, { data, params, router }) {
    * the last day-step left. `onWideChange`'s own reasoning is the same.
    */
   state.cleanups.push(onWideChange(() => repaintDay()));
-  /* Two controls, one function: the phone's peeked columns and the desktop
-     head's two marks both step a month, and neither exists at the other's
-     width. */
-  for (const b of el.querySelectorAll('[data-mstep], [data-mstepper]')) {
-    b.addEventListener('click', () => stepMonth(Number(b.dataset.mstep ?? b.dataset.mstepper)));
+  /* The month's two steps, up and down, and the only stepping on the page. */
+  for (const b of el.querySelectorAll('[data-mstepper]')) {
+    b.addEventListener('click', () => stepMonth(Number(b.dataset.mstepper)));
   }
-
-  /*
-   * The week's own two arrows (author, 2026-09-02). They scroll the rail by
-   * what it is showing rather than by a counted seven days: the rail is a
-   * scroller of real days whose visible width is the week, so a page of it is
-   * a week by construction and stays one at any column width. Smooth unless
-   * the reader asked for no motion, in which case it is a jump — removed, not
-   * shortened.
-   */
-  const onWeekArrow = (e) => {
-    const button = e.target.closest('[data-wstep]');
-    if (!button) return;
-    const strip = el.querySelector('.week-strip');
-    if (!strip) return;
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    strip.scrollBy({
-      left: Number(button.dataset.wstep) * strip.clientWidth,
-      behavior: reduced ? 'auto' : 'smooth',
-    });
-  };
-  el.addEventListener('click', onWeekArrow);
-  state.cleanups.push(() => el.removeEventListener('click', onWeekArrow));
 
   // The header's control can change the church while this page is open: the
   // question goes once it has been answered, and everything that counts
@@ -476,28 +402,33 @@ export function render(el, { data, params, router }) {
     subscribeChurch(() => {
       if (!state) return;
       paintGate();
-      // Every date's own count is the chosen church's — it is read into the
-      // day button's accessible name — so the rail is rebuilt, not just
-      // re-marked, carrying its anchor and then re-revealing the selected day
-      // so the reader's place holds. (It drew dots under each date until the
-      // author removed them, 2026-08-25 evening; the count survives them.)
-      buildRail(state.railAnchor ?? state.selected);
+      // Every cell's fast tone and feast mark is the chosen church's, and both
+      // are read into its accessible name, so the grid is repainted rather
+      // than re-marked. `paintChrome` is what does it.
       paintChrome();
-      revealSelected();
       repaintDay();
     }),
   );
 
-  // The month still travels a whole month at a time on a track it is thrown
-  // along; the week does not travel at all any more — it scrolls (see
-  // wireRail). Its viewport is the body under the day-name line, because those
-  // names are the one thing that must not move.
+  /*
+   * The month travels a whole month at a time on a track it is thrown along,
+   * and since 2026-10-03 the track is vertical. Its viewport is the body under
+   * the day-name line, because those names are the one thing that must not
+   * move.
+   *
+   * **`SPIN` on all three callbacks** (picker.js says why): the grain is given
+   * geometry and hands geometry back, and up the screen is back in time, so
+   * every direction crossing this boundary is negated. Getting one of the
+   * three and not the others wrong would drag the right month in and settle on
+   * the wrong one.
+   */
   state.monthGrain = makeGrain({
     viewport: el.querySelector('.month-body'),
     row: el.querySelector('.month-row'),
-    paint: (row, offset, opts) => paintMonthInto(row, stepCursor(monthCursor(), offset), opts),
-    settle: (offset) => moveMonth(offset, { travelled: true }),
-    flick: (dir) => stepMonth(dir),
+    axis: 'y',
+    paint: (row, offset, opts) => paintMonthInto(row, stepCursor(monthCursor(), SPIN * offset), opts),
+    settle: (offset) => moveMonth(SPIN * offset, { travelled: true }),
+    flick: (dir) => stepMonth(SPIN * dir),
     // A six-row month dragged in beside a five-row one would be cut off at the
     // bottom for the length of the drag, so the body takes the tallest of the
     // three and holds it until the reader lets go.
@@ -512,8 +443,7 @@ export function render(el, { data, params, router }) {
     () => state.monthGrain?.land(),
     () => el.querySelectorAll('.slot-viewport').forEach((v) => landSwap(v)),
     () => landSwap(el.querySelector('.cal-span')),
-    onGrainDrag(el.querySelector('.cal-month'), state.monthGrain.handlers),
-    wireRail(el.querySelector('.week-strip')),
+    onGrainDrag(el.querySelector('.cal-month'), { ...state.monthGrain.handlers, axis: 'y' }),
     wireDayKeys(),
     wireDaySwipe(el),
     wireFastBubble(el),
@@ -521,12 +451,8 @@ export function render(el, { data, params, router }) {
   );
 
   paintGate();
-  buildRail(selected);
   paintChrome();
-  state.cleanups.push(wireGrainForWidth(el), wireReckoning(el));
-  // The whole week the day sits in, not the day pinned to an edge: a reader
-  // arriving by deep link gets the same first picture the old strip gave.
-  revealSelected({ week: true });
+  state.cleanups.push(wireReckoning(el));
   paintDay(panelsIn(el));
   wireDay(panelsIn(el));
   state.cleanups.push(mountShelves(el.querySelector('[data-shelves]'), { data, router }));
@@ -672,70 +598,6 @@ function wireReckoning(el) {
   };
 }
 
-/**
- * Which grain the page shows, decided by the width (author, 2026-09-02: "on
- * desktop daily page (ONLY ON DESKTOP), rework the weekly/monthly display:
- * remove the monthly button completely and just display monthly only on
- * desktop, no weekly display").
- *
- * So past 1024 px there is no choice to make: the month is the picker, the
- * week is not drawn, and the toggle that used to swap them is gone from the
- * page (calendar.css hides it, and this makes sure nothing is left half
- * swapped behind it). A phone keeps both and keeps the button — there is no
- * room for a month grid above the day there, which is the whole reason the
- * week rail exists.
- *
- * Written as the *reduced-motion* branch of `toggleMonth` rather than by
- * calling it: this is not a reader asking to change grain, it is the page
- * arriving in the shape the window asks for, and a fade between two grains
- * nobody has seen yet is an animation of nothing.
- *
- * Watched rather than read once, because a window crosses the breakpoint when
- * a desk is resized and a page left showing a hidden grain shows nothing.
- */
-function wireGrainForWidth(el) {
-  const mq = window.matchMedia('(min-width: 1024px)');
-  const apply = () => {
-    const month = el.querySelector('.cal-month');
-    const week = el.querySelector('.cal-week');
-    const button = el.querySelector('[data-month]');
-    if (!month || !week) return;
-    if (mq.matches) {
-      /* Repainted on the way in even when it is already open, which a reader
-         who opened the month on a narrow window and then widened it is: the
-         grid's out-days and feast marks are this width's and would otherwise
-         be missing from a month painted at the other one. */
-      if (state.monthOpen) paintMonth();
-      if (!state.monthOpen) {
-        state.monthOpen = true;
-        paintMonth();
-        month.hidden = false;
-        month.classList.add('is-open');
-        week.hidden = true;
-        restore(month);
-        setAside(week);
-      }
-      button?.setAttribute('aria-expanded', 'true');
-    } else if (state.monthOpen) {
-      // Back to a phone: the week is the picker again, and the month closes
-      // behind it rather than being left open under a button that says shut.
-      state.monthOpen = false;
-      month.hidden = true;
-      month.classList.remove('is-open');
-      week.hidden = false;
-      restore(week);
-      setAside(month);
-      button?.setAttribute('aria-expanded', 'false');
-      button?.classList.remove('is-on');
-    }
-    // The month grid is sized from its own box, which has just changed.
-    if (state.monthOpen) revealSelected({ week: false });
-  };
-  apply();
-  mq.addEventListener('change', apply);
-  return () => mq.removeEventListener('change', apply);
-}
-
 
 /**
  * Per-paint wiring for the day panel. The panel is replaced wholesale on every
@@ -815,12 +677,9 @@ function select(iso, swipeDx) {
   state.picked = null;
   history.replaceState(null, '', state.router.href(iso === todayIso() ? '/' : `/calendar/${iso}`));
   announceDay(iso);
+  // `state.monthCursor` was cleared above, so the grid paints the month the
+  // new day falls in: a step off the end of October is November's grid.
   paintChrome();
-  // The rail does not travel — it is scrolled, and only as far as it has to be
-  // (author, 2026-08-24). A day picked inside the days already showing moves
-  // nothing at all; a day stepped off the end brings itself into view by one
-  // column, not by a week, because the rail has no weeks in it to step by.
-  revealSelected();
   slotSwap(forward, swipeDx);
 }
 
@@ -929,7 +788,6 @@ function chooseSaint(slug) {
 
 function paintChrome() {
   const { el, selected } = state;
-  markRail();
   /*
    * **The short month wherever the date's column is narrow** (author,
    * 2026-09-02, for the phone; widened to the desk 2026-09-18 for REVIEW-2
@@ -971,7 +829,7 @@ function paintChrome() {
   const label = el.querySelector('[data-cal-today]');
   if (label) label.textContent = relativeDayWord(selected);
   paintLiturgy();
-  if (state.monthOpen) paintMonth();
+  paintMonth();
 }
 
 /**
