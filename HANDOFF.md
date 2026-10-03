@@ -262,9 +262,10 @@ including the **deliberate-folds table** — a shared name form recorded there i
 not a duplicate, and `corpus-gate.mjs` is never passed silently without a row
 in it.
 
-**The Russian January is finished**, 01-01 to 01-31, one commit per Julian day,
-except 01-06 and 01-07 which owe nothing. **Serbian 01-01 to 01-16 is
-finished.** Both sources are Julian and the civil date is the Julian day plus
+**Russian 01-01 to 02-19 is written**, one commit per Julian day, except
+01-06, 01-07 and 02-02, which owe nothing — 02-02 is the Meeting plus a
+synaxis heading that enumerates nobody. **Serbian 01-01 to 02-01 is written.**
+Both sources are Julian and the civil date is the Julian day plus
 thirteen; `.tmp/ru-civil.mjs` and `.tmp/sr-civil.mjs` do that conversion and
 also know which URL year each host serves — days.pravoslavie.ru 404s on 2027,
 and pravoslavno.rs publishes only about thirty days ahead but repeats annually.
@@ -278,15 +279,79 @@ and `sr-cand.mjs`, `srbody.mjs`, `sr-namesweep.mjs`, `sr-civil.mjs`,
 `sr-dupscan.mjs`, `sr-deepdup.mjs`. Writers: `scratchpad/wbru.sh` and
 `wbsr.sh`, neither idempotent.
 
+**`scratchpad/boup.sh <civil date> <slug> <church>` is the back-out for an
+upgrade**, and the reason it exists is worth reading before reaching for
+`git checkout`: on an upgrade the folder is tracked, so `git checkout`
+succeeds — and restores it to `HEAD`, throwing the upgrade away along with the
+back-out. It did that to `blaise-of-sebaste` on `ru-02-11`, and the row had to
+be re-applied from a one-entry copy of the upgrade file. `bo.sh` stays the
+tool for a batch of new folders.
+
+**`scratchpad/fixdual.py <batch-id>` is wanted about every other Russian day.**
+days.pravoslavie.ru dates a twentieth-century death «13 (26) февраля 1938
+года», readers copy that pair into `dates.*.display`, and `lib/date-display.js`
+cannot read it in any of the four languages, so `tests/date-display.test.mjs`
+goes red naming one folder. The script takes the new-style number, moves the
+source's own pair into the note, and refreshes the batch record's sha256 so
+`--undo` still accepts the batch. Three folders over two days wanted it, so it
+is the readers' habit and not an accident — say so to the next Russian reader.
+
+**`.tmp/ru-officescan.mjs` before the batch, not after it.**
+`tests/i18n.test.mjs` names one unreadable office per run; that script reads
+every pending draft and names the whole class, which is one four-pack edit
+instead of several. It also catches a reader minting an office the packs
+already read — two drafts for the Russian 22 and 27 февраля mint
+«Psalm-reader» where «Psalmist» exists, and those want the existing key.
+
+**`scratchpad/csearch.py` and `scratchpad/cdesc.py` are the icon sourcer's two
+instruments.** The first searches Commons for candidate files, serially and
+paced; the second prints a file's description, categories and licence, which
+`geticon.py`'s dry run does **not** — it prints the licence alone, so a bare
+title like «Saint Pancratius» cannot be read from it. Two of the nine icons of
+3 October were settled on the description and one of those would have been the
+wrong saint on the title.
+
 **`day-candidates.mjs --church serbian` is not to be trusted for its entry
 list** and says so in its own `note`; the Serbian wave uses `.tmp/sr-cand.mjs`.
 The Prologue prints **no hymns at all**, so Serbian folders take none. Julian
 02-29 has no Serbian source.
 
-**Read and waiting for a writer: Russian 02-03 to 02-11**, nineteen draft files
-under `.tmp/ru-drafts`. Run them with `bash scratchpad/wbru.sh MM-DD` in date
-order. **No icons have been fetched for either church** — that is the back half
-of item 9 and item 5, and it wants one Commons fetcher with nothing beside it.
+**Read and waiting for a writer, and this is the queue:**
+
+- **Russian 02-20 to 02-27**, 79 new folders in thirteen draft files and 34
+  upgrade rows in seven, every one dry-clean. 02-20 is the thirty-four of
+  Valaam, enumerated, one folder per man, across three files plus an upgrade;
+  02-22 is twenty-one new martyrs in three files; 02-24 has no upgrade file.
+  Run them with `bash scratchpad/wbru.sh MM-DD` in date order. Expect
+  `corpus-gate.mjs` to ask for fold readings — the Valaam repeats share one
+  `ru` form, because the calendar prints one name link per forename — and
+  three offices to place, of which «Psalm-reader» is the one to refuse.
+- **Serbian 02-02 to 02-09**, one new folder (`mastridia`, `sr-02-07`) and 24
+  upgrades in seven files, all dry-clean. Run with `wbsr.sh`.
+
+**Serbian Julian 02-03 is read as a tooling finding and is still owed.** The
+civil 2026-02-16 page serves a full Prologue, but that day's entry headings
+sit in no `<b>` or `<strong>` element at all — a third failure mode beside the
+two in `reports/sr/TOOLING.md` — so `.tmp/sr-cand.mjs` returns zero entries
+and cannot even print its stub note. It wants an `N.`-numbering fallback and
+then a re-read. The reader stopped rather than reading the day by hand, which
+is right. A count of parser entries against the raw `N.` numbering cleared the
+other seven days as complete.
+
+**The icons have started.** Ten fetched on 3 October, all for hero slots off
+`node scripts/heroless.mjs russian serbian`: Russian imageless hero-days 16 of
+103 to **6**, Serbian 8 of 75 to **6**. **Nothing has ever been refused on a
+licence** in this programme; every refusal is identity. Twelve hero slots
+remain and the twelve are hard — `leo-the-great` (Commons has Raphael's Attila
+and Latin doctor-of-the-church groups, no portrait), `maximus-of-totma`,
+`macarius-the-deacon`, `elias-the-egyptian`, `titus-the-soldier`,
+`peter-of-bulgaria`, `athanasius-of-attaleia`, `ammonius-10-january`, and the
+three already on file from the earlier slice. **The lever left for the
+Russians is the Zhitiya Svyatykh plate series and text search cannot reach
+it**: the day-numbered titles do not tokenise, so «Жития Святых икона 0618»
+finds nothing whether or not the plate exists. A prefix listing
+(`list=allimages` with `aiprefix`) is the next instrument and is unbuilt.
+One Commons fetcher and nothing beside it, always.
 
 ## Three things git cannot tell you
 
