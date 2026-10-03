@@ -30,6 +30,11 @@
       "form": "Antonie cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 ianuarie, «✝) Sfântul Cuvios Antonie cel Mare»."
+    },
+    {
+      "form": "Антоније Велики",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 17. јануар ст. ст. (civil 2026-01-30), „Преподобни Антоније Велики“. The rank word „Преподобни“ is left off; „Велики“ is kept, being the epithet the Great and not a rank."
     }
   ],
   "sex": "male",
@@ -111,8 +116,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.01.2026 (17. јануар ст. ст.) — „Преподобни Антоније Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-30&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [

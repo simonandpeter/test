@@ -11,6 +11,11 @@
       "form": "Γεώργιος ο Νέος εξ Ιωαννίνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιος Γεώργιος ο Νέος εξ Ιωαννίνων», with the rank word left off."
+    },
+    {
+      "form": "Георгије Нови, јањински",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 17. јануар ст. ст. (civil 2026-01-30), „Свети мученик Георгије Нови, јањински“. The rank words „Свети мученик“ are left off; „Нови, јањински“ — the New, of Ioannina — is kept, being what distinguishes him."
     }
   ],
   "sex": "male",
@@ -64,8 +69,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.01.2026 (17. јануар ст. ст.) — „Свети мученик Георгије Нови, јањински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-01-30&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
