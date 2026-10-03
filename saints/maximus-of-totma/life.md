@@ -4,4 +4,4 @@ saint.gr's calendar keeps Maximus on 16 January, and tells his life in four sent
 
 The local community, the page goes on, began to honour him from the year 1715, on account of the many miracles that were happening at his tomb. That is the whole of what saint.gr prints: no verses, no hymn, and nothing of what the folly for Christ's sake consisted in.
 
-*After saint.gr's calendar for 16 Ιανουαρίου — [the day](https://www.saint.gr/01/16/index.aspx) and [the life](https://www.saint.gr/3314/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 16 Ιανουαρίου — [the day](https://www.saint.gr/01/16/index.aspx) and [the life](https://www.saint.gr/3314/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 16 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260116.html), read 3 October 2026, which keeps him as «Прав. Максима, иерея Тотемского, Христа ради юродивого (1650)».*

@@ -6,6 +6,11 @@
       "form": "Ιουνίλλα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Ιανουαρίου, «Άγιοι Ιουνίλλα και Τουρβών», with the rank word left off."
+    },
+    {
+      "form": "Иовилла Лангонийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Иовилла Лангонийская, мц.», with the rank word left off; the Greek calendar spells her «Ιουνίλλα» and the Russian «Иовилла»."
     }
   ],
   "sex": "female",
@@ -14,13 +19,23 @@
   ],
   "related": [
     "turbo-of-cappadocia",
-    "neonilla"
+    "neonilla",
+    "neon-of-langonia"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Мчч. Спевсиппа, Елевсиппа, Мелевсиппа, бабки их Леониллы и с ними Неона, Турвона и Иовиллы (161-180)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -49,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 161,
+      "latest": 180,
+      "display": "between 161 and 180",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 16 января ст. ст. dates the whole company «(161-180)», and its life page gives the persecution of Marcus Aurelius, «(161 - 180)» — the reign, not a year of death."
+    }
   }
 }

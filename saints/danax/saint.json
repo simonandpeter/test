@@ -11,6 +11,11 @@
       "form": "Δάναξ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Δάναξ ο Αναγνώστης», with the rank word left off."
+    },
+    {
+      "form": "Данакт Иллирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Данакт Иллирийский, чтец, мч.», with the rank words left off; the line itself names him only «Данакта чтеца», Danax the reader."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Мч. Данакта чтеца (II)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

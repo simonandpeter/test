@@ -11,6 +11,11 @@
       "form": "Μάξιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιος Μάξιμος της Τότμα», with the rank word left off."
+    },
+    {
+      "form": "Максим Тотемский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Праведный Максим, иерей Тотемский», with the rank words left off; the line adds «Христа ради юродивого»."
     }
   ],
   "dates": {
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Прав. Максима, иерея Тотемского, Христа ради юродивого (1650)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -62,5 +76,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Непорочным священством Богови послужив,/ посреде мирскаго мятежа юродство избрал еси,/ взем бо крест, последовал еси Христу невозвратным помыслом/ и, с любовию к Нему добродетельми приближался,/ земная оставив, Небесная восприял еси,/ блаженне Максиме, отче наш,/ моли Христа Бога/ сохранитися граду Тотьме невредиму/ и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст., «Тропарь праведнаго Максима», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having served God in an unblemished priesthood, thou didst choose folly in the midst of the world's tumult; for taking up the cross thou didst follow Christ with a mind that never turned back, and drawing near to him in love by thy virtues, thou didst leave the things of earth and receive the things of heaven, O blessed Maximus our father. Pray to Christ God that the town of Totma be kept unharmed and that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Божественному гласу последуя,/ возревновал еси наставляти паству свою/ не мудростию слова, но буйством жития безмятежнаго,/ непрестанными молитвами и слезными струями/ душу и тело омывая,/ воздушными стихиями плоть изнуряя,/ темже и по смерти чудесы тя Господь прослави,/ да с верою зовем к тебе:/ радуйся, Богомудре отче наш Максиме.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст., «Кондак праведнаго Максима», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following the divine voice, thou wast zealous to teach thy flock not by the wisdom of speech but by the folly of an untroubled life, washing soul and body with unceasing prayers and streams of tears and wearing out thy flesh in the open air. Therefore after thy death also the Lord glorified thee with wonders, that we might cry to thee in faith: rejoice, O God-wise father Maximus.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -4,4 +4,8 @@ saint.gr's calendar keeps her on 17 Ιανουαρίου together with [Turbo](/
 
 Of Junilla herself the page says one thing only, and it says it in one clause: she threw the infant down from her arms, confessed Christ, and was beheaded. It gives no year, names no emperor and no judge, and tells nothing of her before that hour. What is written here is the whole of what saint.gr prints about her, and this folder claims nothing further.
 
-*After saint.gr's calendar for 17 Ιανουαρίου — [the day](https://www.saint.gr/01/17/index.aspx) and [the life](https://www.saint.gr/1117/saint.aspx); read 30 September 2026.*
+The Russian calendar keeps her on 16 января ст. ст., a day earlier than the Greek, and in the same line as the grandmother and her grandsons: «Мчч. Спевсиппа, Елевсиппа, Мелевсиппа, бабки их Леониллы и с ними Неона, Турвона и Иовиллы (161-180)». Its name for her is «Иовилла Лангонийская», of Langonia, where the Greek has «Ιουνίλλα» and makes her Cappadocian; the Russian life says the company suffered in Gaul, or by another account in Cappadocia, and that the emperor Zeno later gave their relics to Langres.
+
+Of her it tells a story the Greek page does not. She suffered together with the grandmother: she had seen the unshakeable faith of the holy martyrs and confessed herself a Christian, leaving her husband and her little son; and the torturers hung her up by the hair, wounded her body and beheaded her. The company's seventh member, [Neon](/saints/neon-of-langonia), is the one who wrote their sufferings down.
+
+*After saint.gr's calendar for 17 Ιανουαρίου — [the day](https://www.saint.gr/01/17/index.aspx) and [the life](https://www.saint.gr/1117/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 16 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260116.html) and [the Russian life](https://days.pravoslavie.ru/Life/life229.htm), read 3 October 2026.*

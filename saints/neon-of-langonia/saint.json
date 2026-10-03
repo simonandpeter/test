@@ -1,0 +1,66 @@
+{
+  "slug": "neon-of-langonia",
+  "display_name": "Neon of Langonia",
+  "names": [
+    {
+      "form": "Неон Лангонийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Неон Лангонийский, мч.», with the rank word left off; the line itself gives him in the genitive, «и с ними Неона»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 161,
+      "latest": 180,
+      "display": "between 161 and 180",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 16 января ст. ст. dates the whole company «(161-180)», and its life page: «пострадали в Галлии (по другому сказанию, в Каппадокии) во втором веке, во время гонения Марка Аврелия (161 - 180)» — the reign, not a year of death."
+    }
+  },
+  "related": [
+    "speusippus",
+    "eleusippus",
+    "meleusippus",
+    "neonilla",
+    "turbo-of-cappadocia",
+    "junilla-of-cappadocia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Мчч. Спевсиппа, Елевсиппа, Мелевсиппа, бабки их Леониллы и с ними Неона, Турвона и Иовиллы (161-180)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Νεονίλλη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Άγιοι Πεύσιππος, Ελάσιππος, Μέσιππος οι αυτάδελφοι και Νεονίλλη η μαμμή αυτών», with the rank word left off."
+    },
+    {
+      "form": "Леонилла (Неонилла) Лангонийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Леонилла (Неонилла) Лангонийская, мц.», with the rank word left off; the day line itself calls her «Леониллы», the grandmother of the three brothers."
     }
   ],
   "sex": "female",
@@ -21,7 +26,8 @@
     "eleusippus",
     "meleusippus",
     "polycarp-of-smyrna",
-    "speusippus"
+    "speusippus",
+    "neon-of-langonia"
   ],
   "dates": {
     "death": {
@@ -35,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Мчч. Спевсиппа, Елевсиппа, Мелевсиппа, бабки их Леониллы и с ними Неона, Турвона и Иовиллы (161-180)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

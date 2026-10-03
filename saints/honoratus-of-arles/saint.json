@@ -12,6 +12,11 @@
       "form": "Ονωράτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιανουαρίου, «Όσιος Ονωράτος Αρχιεπίσκοπος Αρελάτης», with the rank words and the see left off."
+    },
+    {
+      "form": "Гонорат Арльский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Святитель Гонорат епископ Арльский, архиепископ Арльскиц, свт.», with the rank words left off; the link's second epithet is printed with that misspelling at the source."
     }
   ],
   "dates": {
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Свт. Гонората, епископа Арльского (429)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

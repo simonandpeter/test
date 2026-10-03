@@ -6,4 +6,4 @@ That house, the page says, contributed most greatly to the christening of Proven
 
 He fell asleep in peace in the year 429, the year in which Aetius beat back the Visigoths at Arles. That is the whole of what saint.gr prints of him: no verses, and no hymn.
 
-*After saint.gr's calendar for 16 Ιανουαρίου — [the day](https://www.saint.gr/01/16/index.aspx) and [the life](https://www.saint.gr/2317/saint.aspx); read 30 September 2026.*
+*After saint.gr's calendar for 16 Ιανουαρίου — [the day](https://www.saint.gr/01/16/index.aspx) and [the life](https://www.saint.gr/2317/saint.aspx); read 30 September 2026; and the Православный церковный календарь of the Сретенский monastery for 16 января ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20260116.html), read 3 October 2026, which keeps him as «Свт. Гонората, епископа Арльского (429)».*

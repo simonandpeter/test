@@ -6,17 +6,32 @@
       "form": "Ιωάννης Πεττάι",
       "lang": "el",
       "note": "Read out of saint.gr's page for «Άγιος Ιωάννης ο Ιερομάρτυρας» on 20 Ιανουαρίου, «Ο Άγιος Ιερομάρτυς Ιωάννης Πεττάι», with the rank words left off."
+    },
+    {
+      "form": "Иоанн (Петтайя)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 января ст. ст., «Иоанн (Петтайя), иерей, сщмч.», with the rank words left off; the line itself gives him only as «Сщмч. Иоанна пресвитера». The Greek calendar spells the surname «Πεττάι»."
     }
   ],
   "sex": "male",
   "types": [
-    "hieromartyr"
+    "hieromartyr",
+    "presbyter"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 января ст. ст. — «Сщмч. Иоанна пресвитера (1919)»",
+        "url": "https://days.pravoslavie.ru/Days/20260116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -45,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 16 января ст. ст., «Сщмч. Иоанна пресвитера (1919)». The Greek page that first gave this folder its name prints no year."
+    }
   }
 }
