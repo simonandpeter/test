@@ -245,7 +245,13 @@ A precise date has equal bounds; a null bound is a real finding ("no later than
 than a century is a contradiction the gate refuses. Where two sources disagree,
 record the disagreement as an interval and say so in the note — Vladimir
 Tsedrinsky is 1918–1920, "1918 or 1920", because pravoslavie prints one and
-azbyka the other. Where the calendar prints a reign rather than a year
+azbyka the other. **One page disagreeing with itself is read the same way two
+churches disagreeing are**: the interval carries both readings and nothing is
+chosen. Theophilus of Selention is the case — days.pravoslavie.ru's life for
+him dates Leo the Isaurian's reign from 717, has him stand up against that
+emperor's iconoclasm, and then closes by killing him in 716, a year before the
+reign began. No third source exists to break it, so his death is 716–741 and
+the note says why. Where the calendar prints a reign rather than a year
 ("305–313"), that is the interval. *Verified by:* the gate; and
 `node scripts/date-audit.mjs` for whether a finding is weaker than its sources
 allow.
