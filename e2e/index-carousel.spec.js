@@ -255,6 +255,12 @@ test('the carousel is a real loop: periodic content, and no dead end at either e
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  /* The whole corpus is in the row, and it arrives in slices: the prefix is
+     dealt in the press's own task and the rest is measured and packed from idle
+     time. The periodicity below is a claim about the finished deal, so it waits
+     for one — `packedRow` is this suite's own wait and the paragraph over it
+     records the three cheaper waits that measure nothing. */
+  await packedRow(page);
 
   const shape = await page.evaluate(() => {
     const track = document.querySelector('[data-carousel-track]');
