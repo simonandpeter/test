@@ -11,6 +11,11 @@
       "form": "Μακάριος ο Αιγύπτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιοι Μακάριος ο Αιγύπτιος και Μακάριος ο Αλεξανδρεύς», with the rank word left off."
+    },
+    {
+      "form": "Макарий Великий, Египетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Преподобный Макарий Великий, Египетский», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -90,13 +95,54 @@
         "text": "Truly the Lord set thee in the house of abstinence as a star that does not wander, lighting the ends of the earth, O father of fathers, venerable Macarius.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Пустынный житель, и во плоти Ангел,/ и чудотворец явился еси, богоносе отче наш Макарие,/ постом, бдением, молитвою Небесная дарования приим,/ исцеляеши недужныя и души верою приходящих ти./ Слава Давшему тебе крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь преподобного Макария Великого», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A dweller of the wilderness, an angel in the body and a wonderworker thou wast shown to be, O our God-bearing father Macarius. By fasting, vigil and prayer thou didst receive heavenly gifts, and thou healest the sick and the souls of them that come to thee in faith. Glory to him who gave thee strength, glory to him who crowned thee, glory to him who worketh healings for all through thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Блаженную жизнь скончав в житии с мученическими лики,/ в земли кротких достойно водворяешися, богоносне Макарие,/ и пустыню, якоже град, населив, благодать приял еси от Бога чудес,// темже тя почитаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак преподобного Макария Великого», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having ended a blessed life in a manner of living with the companies of the martyrs, thou art worthily settled in the land of the meek, O God-bearing Macarius; and having peopled the wilderness as a city, thou didst receive from God the grace of wonders. Therefore we honour thee.",
+        "rendered": "site"
+      }
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Прп. Макария Великого, Египетского (390-391)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

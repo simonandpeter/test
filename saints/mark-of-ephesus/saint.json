@@ -12,6 +12,11 @@
       "form": "Μάρκος ο Ευγενικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Μάρκος ο Ευγενικός», with the rank word left off."
+    },
+    {
+      "form": "Марк Евгеник, Ефесский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Святитель Марк Евгеник, архиепископ Ефесский», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Свт. Марка Евгеника, архиеп. Ефесского (1444)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -94,6 +108,55 @@
       },
       "english": {
         "text": "In the confession of the divine faith the Church found thee a great zealot, O divine and all-lauded Mark, championing the mind of the fathers and pulling down the high towers of darkness. Wherefore entreat Christ God to grant forgiveness to us who honour thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Православия наставниче, новшеств противоборниче,/ степень веры, Церкве светильниче,/ учителей Богодухновенная печате, Марко всемудре,/ писании твоими вся просветил еси, цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь святителя Марка Эфесского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O teacher of Orthodoxy, fighter against novelties, measure of the faith, lamp of the Church, God-inspired seal of the teachers, all-wise Mark: by thy writings thou hast enlightened all, O spiritual harp. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Богословов Богомудрая писания,/ яко Богоглагольник истинен, прием в сердцы,/ исхождение Духа Святаго возвестил еси, яко должно есть, приснохвальне,/ и всесвятый запечатлел еси Символ,/ сего ради поем:// радуйся, Марко Богоглаголиве.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак святителя Марка Эфесского», глас 8, which the page ascribes to «Иоанна Евгеника»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received in thy heart the God-wise writings of the theologians, as a true speaker of God thou didst proclaim the procession of the Holy Spirit as it must be, O ever-praised one, and didst set thy seal upon the all-holy Creed. Therefore we sing: rejoice, O Mark who speakest of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "model": "Мануилово",
+      "text": "Премудрыми словес твоих исплетении, всеблаженне,/ всякая уста хульная заградил еси/ и верныя Боговещании просветил еси чести Троицу в тождестве естества.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак святителя Марка Евгеника, архиепископа Ефесского», глас 4, подобие «Мануилово»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the most wise weavings of thy words, O all-blessed one, thou didst stop every blasphemous mouth, and didst enlighten the faithful with the utterances of God to honour the Trinity in the identity of its nature.",
         "rendered": "site"
       }
     }

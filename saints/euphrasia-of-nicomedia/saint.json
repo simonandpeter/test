@@ -11,6 +11,11 @@
       "form": "Ευφρασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Αγία Ευφρασία», with the rank word left off."
+    },
+    {
+      "form": "Евфрасия Никомидийская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Евфрасия Никомидийская, дева, мц.», with the rank words left off; the day line names her only «Евфрасии девы»."
     }
   ],
   "sex": "female",
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Мц. Евфрасии девы (303)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

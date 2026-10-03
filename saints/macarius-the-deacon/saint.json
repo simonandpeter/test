@@ -6,6 +6,11 @@
       "form": "Μακάριος ο Διάκονος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιος Μακάριος ο Διάκονος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Макарий Печерский, диакон",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Преподобный Макарий Печерский, диакон», with the rank word «Преподобный» left off. «диакон» is kept in the form because it is the only thing the calendar uses to tell him from the faster Macarius of the same house, whom the same day keeps."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Прп. Макария, диакона Печерского (XIII-XIV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 7",
+      "text": "От юности Христа усердне возлюбив, вдался еси Тому весь, яко непорочна жертва, и иго Его благое на себе взем, работал в нем, всечестне Макарие, спешне, темже убо молим тя: молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь преподобного Макария, диакона Печерского», глас 7",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving Christ zealously from thy youth, thou didst give thyself wholly to him as an unblemished sacrifice; and taking his good yoke upon thee thou didst labour in it readily, all-honoured Macarius. Therefore we entreat thee: pray for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Вдавшагося Христу Богу на служение от младенства и Тому во иночестве и диаконстве послуживша священнолепно, восхва­ляем тя любовию, Макарие священне, и молим: яко имый дерзнове­ние, моли Христа Бога о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак преподобного Макария, диакона Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thee who gavest thyself from infancy to the service of Christ God, and didst serve him in the monastic state and in the diaconate in a manner befitting holy things, we praise with love, O consecrated Macarius, and we entreat: having boldness, pray Christ God for us who sing of thee.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

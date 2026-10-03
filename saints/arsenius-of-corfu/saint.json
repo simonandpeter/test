@@ -12,6 +12,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Αρσένιος Αρχιεπίσκοπος Κερκύρας», with the rank words left off."
+    },
+    {
+      "form": "Арсений Керкирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Святитель Арсений Керкирский, архиепископ», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Свт. Арсения, архиеп. Керкирского (VIII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -942,6 +942,7 @@ export const sr = {
     'Bishop of Penza': 'Епископ пензански',
     'Bishop of Pereyaslavl': 'Епископ перејаславски',
     'Bishop of Perm': 'Епископ пермски',
+    'Bishop of Petropavlovsk': 'Епископ петропавловски',
     'Bishop of Philippi in Macedonia': 'Епископ филипски у Македонији',
     'Bishop of Pisidia': 'Епископ писидијски',
     'Bishop of Prokonnesos': 'Епископ проконески',

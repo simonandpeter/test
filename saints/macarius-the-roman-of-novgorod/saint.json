@@ -1,0 +1,134 @@
+{
+  "slug": "macarius-the-roman-of-novgorod",
+  "display_name": "Macarius the Roman of Novgorod",
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Макарий Римлянин, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Макарий Римлянин, Новгородский, прп.», with the rank word left off; the line itself gives him in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot",
+    "hermit"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1476,
+      "latest": 1500,
+      "display": "late 15th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life page: «Родился в Риме в конце XV в. от благочестивых родителей»."
+    },
+    "death": {
+      "earliest": 1551,
+      "latest": 1700,
+      "display": "16th–17th century",
+      "basis": "traditional",
+      "note": "The source gives two readings and they are recorded here as one interval: its life page says «Мирная кончина преподобного Макария последовала 15 августа во второй половине XVI в.», while its own day line for 19 января ст. ст. brackets him «(XVI-XVII)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Прп. Макария Римлянина, Новгородского (XVI-XVII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (3 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for the corresponding day (3 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (3 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Рим, отечество твое, оставив, в пустыню вселился еси, и тамо, в пусте месте обрет жилище себе, отбегл еси суеты мира сего, и в безмолвнем пристанищи добре направлял еси себе ко Господу. Сего ради и мы, чтущии тя, притекающе, молим тя, отче Макарие: моли о нас Господа, да помилует нас в день судный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь преподобного Макария Римлянина, Новгородского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving Rome thy fatherland, thou didst settle in the wilderness; and finding there, in a desert place, a dwelling for thyself, thou didst flee the vanity of this world, and in a haven of silence didst guide thyself well towards the Lord. Therefore we also who honour thee come and entreat thee, father Macarius: pray the Lord for us, that he have mercy on us in the day of judgement.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Отечество твое, ветхий Рим, оставив, во страну Российскую пришел еси, преподобне, и в пустыне блатней вселився, тамо пристанище тихое ко спасению обрел еси и безмолвное житие благоугодно провождал еси, направляя себе ко Господу молитвами непрестанными. Сего ради Христос тя возлюби и чудесы прослави, отче Макарие, явив тя пастыря добра словеснаго стада Своего. Темже и мы, притекающе к тебе, умильно глаголем: моли Прославльшаго тя спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Ин тропарь преподобного Макария Римлянина, Новгородского», глас 4 — the day page prints two troparia for him",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving thy fatherland, old Rome, thou didst come to the Russian land, O venerable one; and settling in a marshy wilderness thou didst find there a quiet haven for salvation and didst pass a life of silence well-pleasing to God, guiding thyself towards the Lord with unceasing prayers. Therefore Christ loved thee and glorified thee with wonders, O father Macarius, showing thee a good shepherd of his rational flock. And so we also, coming to thee, say with compunction: pray him who glorified thee that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 7",
+      "text": "От Рима возсиял еси, якоже звезда пресветлая, преподобне отче наш Макарие, и в пустыни вселився, просветил еси чистым жи­тием твоим верно притекающия к тебе. Темже и мы, прославляюще свет­лую память твою, вопием ти: радуйся, преподобне отче Макарие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак преподобного Макария Римлянина, Новгородского», глас 7",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From Rome thou didst shine out as a most radiant star, O venerable father Macarius; and settling in the wilderness thou didst enlighten by thy pure life those who came to thee in faith. And so we also, glorifying thy bright memory, cry to thee: rejoice, O venerable father Macarius.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Якоже пресветлая звезда, от Рима возсиял еси, преподобне, и Богом наставляемь, Российскую страну светом чудес твоих озарил еси духовно, созывая верный к мощем твоим, от нихже исцеления недужным подаеши. Темже молимся тебе: научи нас, отче, твоему богоразумию и уврачуй недуги наша душевныя и телесныя, да зовем ти: радуйся, преподобне отче Макарие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Ин кондак преподобного Макария Римлянина, Новгородского», глас 8 — the day page prints two kontakia for him",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most radiant star thou didst shine out from Rome, O venerable one; and taught by God, thou didst light up the Russian land spiritually with the light of thy wonders, calling the faithful to thy relics, from which thou givest healings to the sick. Therefore we pray thee: teach us, father, thy knowledge of God, and heal our sicknesses of soul and body, that we may cry to thee: rejoice, O venerable father Macarius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

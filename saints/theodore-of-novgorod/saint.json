@@ -6,6 +6,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Άγιος Θεόδωρος του Νόβγκοροντ», with the rank word left off."
+    },
+    {
+      "form": "Феодор Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Блаженный Феодор Новгородский», with the rank word left off; the line adds «Христа ради юродивого»."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Блж. Феодора, Христа ради юродивого, Новгородского (1392)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -54,5 +68,87 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Иже на земли Христа ради волею в буйство преложився,/ мира сего красоты отнюд возненавидел еси/ и, плотская играния увядив постом и жаждею и на земли леганием,/ от зноя же и студени, от дождя и снега/ и от прочил воздушныя тягости никогдаже уклонился еси,/ душу же очистил еси добродетельми, яко злато в горниле,/ отче преблаженне Феодоре,/ и ныне на Небесех предстойши Престолу Пресвятыя Троицы,/ но яко имея дерзновение многое,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь блаженного Феодора Христа ради юродивого, Новгородского», глас 8 — a common of the fools for Christ, printed under his name and all but word for word the one the same calendar prints on 11 января for Michael of Klops",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having of thine own will turned to folly upon earth for Christ's sake, thou didst utterly hate the beauties of this world; and withering the sportings of the flesh by fasting and thirst and by lying on the ground, thou didst never turn aside from heat or frost, from rain or snow or any other hardship of the open air, but didst cleanse thy soul with virtues as gold in the furnace, O most blessed father Theodore, and now in the heavens thou standest before the throne of the Most Holy Trinity. But as one having great boldness, pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Православно проповедав, изъяснил еси догматы, Бога милостива сотвори, и Его ради во юродство претворися, и шибание великое сотворил еси, и снег и зной приим на своем телеси, по преставлении же своем даеши многа исцеления с верою приходящим к раце мо­щей твоих: сего ради вопием ти, Феодоре блаженне, моли Христа Бога непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь блаженного Феодора Христа ради юродивого, Новгородского», глас 4 — the second of the three troparia the day page prints for him",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Preaching in the Orthodox manner, thou didst expound the dogmas and didst make God merciful; and for his sake thou wast turned to folly and didst suffer great buffeting, and tookest snow and heat upon thy body; and after thy repose thou givest many healings to them that come in faith to the shrine of thy relics. Therefore we cry to thee: blessed Theodore, pray Christ God unceasingly for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "На земли Христа ради в буйство преложився,/ мира сего красоты отнюд возненавидел еси,/ плотская взыграния увядив,/ от дождя и снега и от прочия воздушныя тягости никогда же уклонился еси,/ от неразумных человек поругание, радуяся, претерпел еси,/ подобяся Творцу твоему и вопия:/ Господи, не постави им греха сего;/ душу же предочистил еси, яко злато в горниле,/ и сию Христос прият/ и, яко светозарную звезду, Своей славе причастну содела./ Предстоя ныне Святей Троице, преблаженне Феодоре,/ моли за град же и люди,/ почитающия любовию пречестную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Ин тропарь блаженного Феодора Христа ради юродивого, Новгородского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Turned to folly upon earth for Christ's sake, thou didst utterly hate the beauties of this world; and withering the leapings of the flesh, thou didst never turn aside from rain or snow or any other hardship of the open air, and didst endure with joy the mockery of men without understanding, likening thyself to thy Creator and crying: Lord, lay not this sin to their charge. Thy soul thou didst cleanse beforehand as gold in the furnace, and Christ received it and made it, as a star full of light, a sharer in his glory. Standing now before the Holy Trinity, most blessed Theodore, pray for the city and for the people who honour thy most precious memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Вышния красоты желая,/ нижния сладости и телесная одеяния тощно оставил еси/ и нестяжание паче суетнаго мира возлюбил еси,/ ангельское житие проходя, скончался еси, Феодоре блаженне,/ с нимиже Христа Бога моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак блаженного Феодора Христа ради юродивого, Новгородского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the beauty on high, thou didst eagerly leave the sweetness and the clothing of the body below, and didst love poverty more than the vain world; and walking the angelic life thou didst end thy days, O blessed Theodore. With them pray Christ God unceasingly for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Яко злато в горниле, Феодоре блаженне, мира сего красоту отнюд возненавидев, плоть свою зноем и жаждою увядил еси и от прочия воздушныя тягости никогда же уклонился еси, и сего ради волею в юродство претворися, Феодоре блаженне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак блаженного Феодора Христа ради юродивого, Новгородского», глас 3 — the second of the two kontakia the day page prints for him",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As gold in the furnace, O blessed Theodore, having utterly hated the beauty of this world, thou didst wither thy flesh with heat and thirst and didst never turn aside from any other hardship of the open air; and for this cause thou wast of thine own will turned to folly, O blessed Theodore.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

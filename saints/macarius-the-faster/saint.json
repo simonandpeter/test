@@ -6,6 +6,11 @@
       "form": "Μακάριος ο Νηστευτής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιανουαρίου, «Όσιος Μακάριος ο Νηστευτής εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Макарий Печерский, постник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Преподобный Макарий Печерский, постник», with the rank word left off. «постник» is kept in the form because it is the only thing the calendar uses to tell him from the deacon Macarius of the same house, whom the same day keeps."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Прп. Макария, постника Печерского (XII)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +73,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Бывший нестяжателем Христа ради и Того за многия твоя добродетели в сердце твое вселивый, блаженне Макарие, молися о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Тропарь преподобного Макария, постника Печерского», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou who wast a man of no possessions for Christ's sake, and who for thy many virtues didst lodge him within thy heart, O blessed Macarius: pray for us who sing of thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вышних ища, нижних не стяжал еси и нестяжание, яко колесницу огненну к небеси, себе уготовав, со Ангелы жити сподобился еси, Макарие славне, с нимиже Христа Бога моли о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст., «Кондак преподобного Макария, постника Печерского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking the things above, thou didst get for thyself none of the things below; and making thy poverty a chariot of fire to heaven, thou wast counted worthy to dwell with the angels, O glorious Macarius. With them pray Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

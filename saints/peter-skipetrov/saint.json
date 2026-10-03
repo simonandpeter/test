@@ -6,6 +6,11 @@
       "form": "Πέτρος Σκιπετρώφ",
       "lang": "el",
       "note": "Read out of saint.gr's own sentence on his page for 1 Φεβρουαρίου, «Ο Άγιος Πέτρος (Σκιπετρώφ) ήταν Πρεσβύτερος»; the day's line gives him only as «Άγιος Πέτρος ο Ιερομάρτυρας»."
+    },
+    {
+      "form": "Петр (Скипетров)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 января ст. ст., «Петр (Скипетров), пресвитер, сщмч.», with the rank words left off; the line itself gives the name without the surname and in the genitive."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 января ст. ст. — «Сщмч. Петра пресвитера (1918)»",
+        "url": "https://days.pravoslavie.ru/Days/20260119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
