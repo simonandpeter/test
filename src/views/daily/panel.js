@@ -1,4 +1,4 @@
-import { centuryLabel, formatSubtext, todayIso } from '../../lib/calendar-page.js';
+import { formatSubtext, todayIso } from '../../lib/calendar-page.js';
 import { attestationsIn, churchName, entriesInChurch } from '../../lib/church.js';
 import { loadDetail, loadSource } from '../../lib/detail.js';
 import { dayHero, fixedFeastOn } from '../../lib/fixed-feasts.js';
@@ -382,21 +382,17 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
   const href = state.router.href(`/saints/${saint.slug}`);
   const name = esc(saintName(saint));
   /*
-   * **The phone trades the dates line for a century on the name** (author,
-   * 2026-10-03: "remove the date under each Also Commemorated saint ... instead,
-   * at the end of their name, add in grey text the century"). `chosen === null`
-   * is this panel's name for below 1024 px, and the panel repaints when that
-   * boundary is crossed, so the two faces never share a render.
+   * **The phone's register row is the name and nothing else** (author,
+   * 2026-10-03: "just remove the date completely"). `chosen === null` is this
+   * panel's name for below 1024 px, and the panel repaints when that boundary
+   * is crossed, so the two faces never share a render.
    *
-   * It stays out of the link text: a screen reader reading the row still gets
-   * `.reg-sub`'s full lifespan, which is the sr-only line below, so the century
-   * is the sighted reader's shorthand and not the only record of when.
+   * `.reg-sub` is still written, sr-only: a screen reader keeps the lifespan a
+   * sighted reader no longer sees.
    */
-  const century = chosen === null ? centuryLabel(saint.dates) : null;
-  const centuryEl = century ? ` <span class="reg-century">${esc(century)}</span>` : '';
   const nameEl =
     chosen === null
-      ? `<a class="reg-name" href="${href}" data-prefetch="${saint.slug}"${transition}>${name}${centuryEl}</a>`
+      ? `<a class="reg-name" href="${href}" data-prefetch="${saint.slug}"${transition}>${name}</a>`
       : `<button type="button" class="reg-name" data-prefetch="${saint.slug}"${transition}>${name}</button>`;
   return `<li class="reg-card${picked ? ' is-picked' : ''}" style="--reg-seq:${seq}"${picks}>
     <span class="reg-body">

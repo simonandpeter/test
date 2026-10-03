@@ -279,25 +279,6 @@ export function formatLifespan(dates) {
 }
 
 /**
- * The century a saint belongs to, as "12c" or "4c BC", or null when the corpus
- * places them nowhere at all. Death first, then floruit, then birth: the day
- * commemorates a repose, and a life known only by when it ended still answers
- * the question the mark is asked.
- *
- * `earliest` and `latest` may straddle a boundary (a life given as 390-410);
- * the earlier century is taken rather than averaging two integers into a year
- * nobody recorded. Years are astronomical, so a negative is BC.
- */
-export function centuryLabel(dates) {
-  const year = [dates?.death, dates?.floruit, dates?.birth]
-    .map((span) => span?.earliest ?? span?.latest)
-    .find((y) => Number.isFinite(y));
-  if (!Number.isFinite(year) || year === 0) return null;
-  const n = Math.ceil(Math.abs(year) / 100);
-  return year < 0 ? `${n}c BC` : `${n}c`;
-}
-
-/**
  * The line under a saint's name: what they held, then when they lived
  * (2026-08-27). The rank moved into the name with the naming addendum, and
  * the office moved out of it; this is where the office landed.

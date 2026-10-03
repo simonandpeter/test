@@ -350,3 +350,43 @@ So this pass is a re-sourcing, not a filling:
 Dionysius is done and is the shape of the rest: the old icon is parked at
 `scratchpad/old-dionysius/` rather than deleted, because nothing yet proves the
 new one is better for every face it has to fill.
+
+## 16. Date the corpus, and date it one way
+
+**The author has asked for this before and it did not get written down**
+(2026-08-26: "find dates or at least centuries for every saint"; again
+2026-10-03: "there is always some marker at least a century that can be
+listed"). It is written down now.
+
+`dates` is `null` outright for **2,021 of 5,231 folders — 38.6%**. Not vague,
+not approximate: absent. Apostle Ananias, Mirian and Nana of Georgia and Joseph
+of Bisericani all sit on 1 October with nothing, and the first three are placed
+to a century by any source that mentions them. The register printed "Undated"
+over them, which is a statement about this corpus rather than about the saint.
+
+The rule the author states: **something can always be said, at least a
+century.** A life names a reign, a council, a persecution, a see, a founder, a
+translation of relics; the 20th-century martyrs carry an arrest year in their
+own prose. So the pass reads what each folder already holds before it reaches
+for anything outside.
+
+Two things it has to settle, because they are why the gap persists:
+
+- **One format, used everywhere.** `dates` holds `birth`, `death` and
+  `floruit`, each an interval of `earliest` / `latest` / `basis`, and
+  `formatLifespan` (`lib/calendar-page.js:251`) already reads all three — the
+  `floruit` branch exists precisely because a saint known only by a council he
+  sat at still read Undated. The schema is not the problem; the filling is.
+  Whatever a date is inferred from goes in `basis`, so a reader can tell a
+  recorded year from a reasoned century.
+- **A century is a real answer, not a placeholder.** `earliest` and `latest`
+  spanning a century is how the schema says "sometime in the 4th", and that is
+  the answer for most of the 2,021. Do not invent a year to fill a field.
+
+Where a source genuinely places a saint nowhere, that stays empty and is
+reported as a count — but the claim that a saint cannot be placed at all needs
+the same evidence as any other, and the expectation is that it will be rare.
+
+Not to be confused with how the date is *shown*: the phone's register prints no
+date at all now (item 15's commit), which is a display decision and does not
+reduce what the corpus should record.
