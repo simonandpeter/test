@@ -4,6 +4,7 @@ import { CHURCHES_BY_ID } from '../src/data/churches.js';
 import {
   hymnedSaints,
   neighboursAt,
+  openingAt,
   relatedFor,
   SAME_DAY_MAX,
   sameDayFor,
@@ -206,4 +207,101 @@ test('a saint with no feast in this church has no day, rather than the wrong one
     total: 0,
   });
   assert.deepEqual(sameDayFor(null), { iso: null, slugs: [], total: 0 });
+});
+
+/*
+ * **Where the book opens** (author, 2026-10-03: "the default opening page is
+ * saint of the day"). The fixture keeps to the Greek church, whose
+ * revised-julian 17 January is the civil 17 January, so the day under test is
+ * readable in the assertions rather than being a second piece of arithmetic to
+ * check. That the resolution is per church and per year is `sameDayFor`'s own
+ * fixture above, and `openingAt` reads the same index.
+ */
+const onJan17 = (slug, extra = {}) =>
+  card(slug, {
+    ...extra,
+    attestations: [
+      { church: 'greek', status: 'venerated', feast: { calendar: 'revised-julian', month: 1, day: 17 } },
+    ],
+  });
+
+const opens = (cards) =>
+  openingAt(stepOrder(cards), {
+    saints: cards,
+    bySlug: new Map(cards.map((c) => [c.slug, c])),
+    churchId: 'greek',
+    churchesById: CHURCHES_BY_ID,
+    iso: '2026-01-17',
+  });
+
+test('the book opens on the day’s hero, and not at its own first page', () => {
+  const cards = [
+    /* Alphabetically first and on another day, so an answer of 0 is a failure
+       rather than a coincidence. */
+    card('aaron', {
+      display_name: 'Aaron',
+      hymned: ['greek'],
+      attestations: [
+        { church: 'greek', status: 'venerated', feast: { calendar: 'revised-julian', month: 7, day: 4 } },
+      ],
+    }),
+    onJan17('zeno', { display_name: 'Zeno', hymned: ['greek'] }),
+    onJan17('yves', { display_name: 'Yves' }),
+  ];
+  assert.deepEqual(
+    stepOrder(cards).map((c) => c.slug),
+    ['aaron', 'zeno'],
+  );
+  // The saint the church sings for that day is `pickHero`'s own first pool, so
+  // the hero and the hymnal agree here — which is the 821 of 899 case.
+  assert.equal(opens(cards), 1);
+});
+
+test('a hero with no hymn hands the day to the first saint of it that has one', () => {
+  const cards = [
+    card('aaron', { display_name: 'Aaron', hymned: ['greek'] }),
+    /* Nobody on this day is sung by the Greek church, so `pickHero` falls to
+       the imaged saint — who is not in the hymnal at all. */
+    onJan17('yves', { display_name: 'Yves', image: { src: 'y.jpg' } }),
+    onJan17('zeno', { display_name: 'Zeno', hymned: ['russian'] }),
+  ];
+  assert.deepEqual(
+    stepOrder(cards).map((c) => c.slug),
+    ['aaron', 'zeno'],
+  );
+  assert.equal(opens(cards), 1);
+});
+
+test('a day the hymnal has nothing for opens the book at its first page', () => {
+  const cards = [
+    card('aaron', { display_name: 'Aaron', hymned: ['greek'] }),
+    onJan17('yves', { display_name: 'Yves' }),
+    onJan17('zeno', { display_name: 'Zeno' }),
+  ];
+  // The honest answer: no hymn exists for anybody kept today, and a saint of
+  // some other day shown as today's would be a claim the page cannot keep.
+  assert.equal(opens(cards), 0);
+});
+
+test('openingAt answers 0 rather than throwing when it is handed nothing', () => {
+  assert.equal(openingAt([], {}), 0);
+  assert.equal(openingAt(undefined), 0);
+  const cards = [card('aaron', { display_name: 'Aaron', hymned: ['greek'] })];
+  // A church or a date missing is the state the page is in before the reader
+  // has one, and it is the book's first page and not an exception.
+  assert.equal(
+    openingAt(stepOrder(cards), { saints: cards, bySlug: new Map(), churchesById: CHURCHES_BY_ID }),
+    0,
+  );
+  // A date with no entry at all in this church — every day outside the corpus.
+  assert.equal(
+    openingAt(stepOrder(cards), {
+      saints: cards,
+      bySlug: new Map(cards.map((c) => [c.slug, c])),
+      churchId: 'greek',
+      churchesById: CHURCHES_BY_ID,
+      iso: '2026-03-03',
+    }),
+    0,
+  );
 });

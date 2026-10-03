@@ -70,6 +70,49 @@ test('Prayer mounts the shell rather than drawing one', () => {
   );
 });
 
+/**
+ * **Advanced is an option on this page too, and it is All Saints' option**
+ * (author, 2026-10-03: "the carousel mode is just normal mode i.e. Advanced
+ * search OFF"; TODO item 6). Three ways this could have become a second
+ * implementation, and each is refused here:
+ *
+ *  - a fold of its own in `prayer.css`, where `index.css` already folds
+ *    `.filter-drop` under `.is-carousel` for All Saints;
+ *  - a word of its own, where "Advanced search" is already in all five packs;
+ *  - `switchMode`, which is the other page's two faces and its state singleton.
+ */
+test('Advanced folds with All Saints’ own class names, its own word and no second rule', () => {
+  const find = src('views/prayer/find.js');
+  const code = nocomments(find);
+  assert.match(code, /classList\.toggle\('is-search'/);
+  assert.match(code, /classList\.toggle\('is-carousel'/);
+  assert.match(code, /STRINGS\.saints\.modeToSearch/);
+  assert.match(code, /STRINGS\.saints\.modeToNormal/);
+  assert.ok(
+    !/switchMode/.test(code),
+    'Prayer reaches for All Saints’ mode switch, which reads that page’s state singleton',
+  );
+  // The panel is folded, never emptied: the facets are the filter set's source
+  // of truth, so a reader who narrows and then folds is still reading the book
+  // they asked for.
+  assert.match(find, /Folding is not clearing/);
+  const sheet = nocomments(readFileSync(new URL('../src/styles/prayer.css', import.meta.url), 'utf8'));
+  assert.ok(
+    !/\.filter-drop[^{,]*\{[^}]*display:\s*none/.test(sheet),
+    'prayer.css folds the panel itself, where index.css already has the rule',
+  );
+});
+
+test('the page draws its own name, where it used to hide it', () => {
+  const code = src('views/prayer.js');
+  // All Saints' head row, so the heading and the word beside it are dressed by
+  // `index.css` and this page says only where the row sits.
+  assert.match(code, /<div class="index-head">/);
+  assert.match(code, /<h1>\$\{esc\(P\.title\)\}<\/h1>/);
+  assert.ok(!/<h1 class="sr-only">/.test(code), 'the heading is hidden again');
+  assert.match(code, /data-mode-toggle/);
+});
+
 test('the asides draw the All Saints row card and nothing of their own', () => {
   const code = src('views/prayer/asides.js');
   /* Comments off for the dead-name sweep: the module's own doc names the row

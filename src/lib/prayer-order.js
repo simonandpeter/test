@@ -1,3 +1,4 @@
+import { dayOrder, pickHero } from './calendar-page.js';
 import { entriesInChurch } from './church.js';
 import { feastIndexFor } from './feasts.js';
 import { sortCards } from './index-filters.js';
@@ -9,6 +10,11 @@ import { sortCards } from './index-filters.js';
  * no fetch, and no `data/days.js` — which pulls `liturgical-days.js` onto the
  * chunk this module's caller is imported into. Everything here is arithmetic
  * over what the manifest already carries.
+ *
+ * `calendar-page.js` is allowed, and `openingAt` is why: the day's saint is the
+ * Daily page's own `pickHero`, and the alternative to importing it is a second
+ * copy of that rule on this page. It is pure too, and it is already on this
+ * route's chunk — `views/prayer/find.js` reads `formatSubtext` from it.
  */
 
 /**
@@ -28,6 +34,54 @@ export const hymnedSaints = (cards) => cards.filter((card) => card.hymned?.lengt
  * met once.
  */
 export const stepOrder = (cards) => sortCards(hymnedSaints(cards), 'name');
+
+/**
+ * **Where the book opens: the saint of the day** (author, 2026-10-03: "And the
+ * default opening page is saint of the day").
+ *
+ * The day's saint is not this page's own idea of one. It is `pickHero` over the
+ * reader's church and today's civil date — the Daily page's rule, read from the
+ * same module rather than restated, so the two pages never disagree about whose
+ * day it is.
+ *
+ * **A hero the hymnal does not hold is answered in two steps, and the step
+ * order is measured.** Over calendar year 2026 × the four enabled churches —
+ * the 899 day-and-church combinations that carry an entry at all
+ * (`scratchpad/prayer-hero-rate.mjs`):
+ *
+ * | the day's hero | combinations |
+ * | --- | --- |
+ * | is in the hymnal | 821 |
+ * | is not, but another saint of that day is | 25 |
+ * | and no saint of that day is | 53 |
+ *
+ * So the hero itself answers nine days in ten, because `pickHero` already
+ * prefers a saint the reader's church *sings* for and a sung saint is one the
+ * hymnal holds. For the 25 the page opens on the first saint of that day the
+ * hymnal does hold, in `dayOrder`'s order — the day's own order on Daily, so
+ * the two pages lead with the same name wherever they can.
+ *
+ * For the 53 it opens at the book's first page, which is where it opened before
+ * this rule and is the honest answer: the corpus has no hymn for anybody
+ * commemorated today, and a saint of some other day shown as today's would be a
+ * claim the page cannot keep.
+ *
+ * `order` is `stepOrder`'s output. Returns an index into it, never a slug, so
+ * the caller has nothing left to look up.
+ */
+export function openingAt(order, { saints, bySlug, churchId, iso, churchesById } = {}) {
+  if (!order?.length || !saints || !bySlug || !churchId || !iso) return 0;
+  const index = feastIndexFor(saints, Number(iso.slice(0, 4)), churchesById);
+  const entries = entriesInChurch(index.get(iso) ?? [], churchId);
+  if (!entries.length) return 0;
+  const hero = pickHero(iso, entries, bySlug, churchId);
+  const held = new Map(order.map((card, at) => [card.slug, at]));
+  if (held.has(hero)) return held.get(hero);
+  for (const entry of dayOrder(entries, iso, bySlug, churchId)) {
+    if (held.has(entry.slug)) return held.get(entry.slug);
+  }
+  return 0;
+}
 
 /**
  * The saint before and the saint after, as cards, or `null` at either end.

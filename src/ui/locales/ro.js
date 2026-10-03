@@ -356,6 +356,7 @@ export const ro = {
     searchHint: 'nume, tip, biserică, regiune',
     modeToSearch: 'Căutare avansată',
     modeToCarousel: 'Mod carusel',
+    modeToNormal: 'Mod normal',
     carouselLabel: 'Sfinți, în trecere',
     shuffle: 'Amestecă',
     carouselKeys: 'Săgețile mută rândul.',

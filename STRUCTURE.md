@@ -860,6 +860,27 @@ page's state — the same field, the same six facet chips, the same date range,
 the same die, the same `.filter-drop`, and `index.css` loaded for it through
 `ui/sheets.js`.
 
+**And it opens with Advanced off, as All Saints does** (author, 2026-10-03: "we
+need the exact same search function as saints except the carousel mode is just
+normal mode i.e. Advanced search OFF… instead of Saints it says Prayer as the
+text at the top"). All Saints has two faces and the word beside its heading
+names the one a press would take you to; its off face is the carousel, and
+`index.css` folds `.filter-drop` away under `.is-carousel` so that face is the
+field and nothing else. **"Just normal mode" is that off face on a page with no
+carousel in it**: the hymnal itself, with the facets folded behind one word.
+
+So the fold is one rule for both pages — `find.js`'s `paintAdvanced` writes All
+Saints' own `is-carousel` / `is-search` onto the view's box — and the word is
+one word: `saints.modeToSearch`, "Advanced search". Only the way back needed a
+string of its own, `saints.modeToNormal`, because "Carousel mode" names
+something this page does not have. **The panel keeps its DOM folded**, as All
+Saints' does: the facets are the filter set's source of truth, so folding is not
+clearing, and Clear filters stands outside the fold.
+
+**The page's own name is drawn**, in All Saints' `.index-head` with that word
+beside it. It is still the `h1` `main.js` moves focus to; it is no longer
+`sr-only`.
+
 **What Prayer's shell deliberately lacks** is the Sort chip and the Detailed
 box. The order *is* the book, so a sort control here would mean reordering the
 hymnal — `find.js`'s `narrowed` uses `applyFilters`' matched set as a
@@ -884,6 +905,15 @@ first (author, 2026-09-17: "the search bar should be the exact same as the All
 Saints page, not any different. SSOT, repeating designed elements"). Below 1024
 px it keeps the taller dress it shipped with — the one exception, and it lives
 in the component's own sheet.
+
+**The book opens at the saint of the day** (author, 2026-10-03: "the default
+opening page is saint of the day"), which is Daily's own hero — `pickHero` over
+the reader's church and today's civil date, read from `lib/calendar-page.js`
+rather than restated, so the two pages never disagree about whose day it is.
+`lib/prayer-order.js`'s `openingAt` is the rule and carries the measurement
+behind its two fallbacks: a hero the hymnal has no hymn for hands the day to the
+first saint of it that it does hold, and a day it holds nobody for at all opens
+the book at its first page. It opened at that first page until this ruling.
 
 **The page is the saints the corpus has a hymn for, one at a time.** A card
 keys `hymned: [...churches]` and the hymn text stays in the saint's own folder,
@@ -910,7 +940,10 @@ html[data-route~='prayer'][data-fills-window]
     └ #view                        height 100%
       └ .hymnal                    flex column; height 100%, full bleed (≥1024)
         │                          touch-action: pan-y — the swipe
-        ├ h1.sr-only               the route's focus target; never drawn
+        ├ .index-head              All Saints' head row, drawn since 2026-10-03
+        │ ├ h1                     the page's name, and the route's focus target
+        │ └ button[data-mode-toggle]  the one word that opens the facets; no
+        │                          Shuffle beside it, there being no sort here
         ├ .sticky-sentinel         All Saints' own, and inert here: this page
         │                          does not scroll past its own shell
         ├ .index-controls          All Saints' advanced search, mounted whole
@@ -919,7 +952,9 @@ html[data-route~='prayer'][data-fills-window]
         │ │                        page's own side gutter
         │ ├ .index-row             the field and Clear filters
         │ │ └ input.search-field   `[data-query]` (`ui/search-field.js`)
-        │ └ .filter-drop           .facets — Calendar, Feast month, Type,
+        │ └ .filter-drop           **folded unless Advanced is on**, by
+        │                          `index.css`'s own `.is-carousel` rule.
+        │                          .facets — Calendar, Feast month, Type,
         │                          Gender, Region, Historicity, Dates, the die
         │                          — and .index-foot, which holds **only** the
         │                          View chip: no Sort, because the order is the
@@ -1120,6 +1155,7 @@ The two widths are free to diverge except here.
 | `data-desc` | `views/index/grid.js`'s `card()`, on a detailed row's description box | `asides.js`'s `fillLives` here, which fills it from the saint's folder four at a time under the page's generation guard and leaves it `hidden` if nothing arrives; All Saints' own `fillDescription` there |
 | `data-iso` | `asides.js` on `#hy-sameday` | the civil day the aside resolved, for the year it resolved it in |
 | `data-query`, `data-clear`, `data-random`, `name="layout"` | `views/index/controls.js` | the shell's own field, Clear filters, the die and the View chip. `find.js` reads none of them directly — `wireControls` is handed this page's state and calls back |
+| `data-mode-toggle`, `data-mode-label` | `views/prayer.js`'s own markup | `find.js`'s `paintAdvanced`. All Saints' own two attributes, wired here rather than through `wireControls`'s `modeToggle`: that one calls `switchMode`, which is the other page's two faces and its state singleton |
 
 #### Breakpoints
 
