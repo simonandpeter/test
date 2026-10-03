@@ -5,6 +5,10 @@
     {
       "form": "Άγιος Νείλος ο νεότερος από την Καλαβρία",
       "lang": "el"
+    },
+    {
+      "form": "Преп. Нил Калабријски",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -24,7 +28,7 @@
       "latest": 1005,
       "display": "1003 or 1005",
       "basis": "traditional",
-      "note": "saint.gr’s life: „Λίγο πριν παραδώσει την αγία του ψυχή στον Θεό, το έτος 1003 μ.Χ.”; its heading prints „(910 - 1005)”. The interval holds both."
+      "note": "saint.gr’s life: „Λίγο πριν παραδώσει την αγία του ψυχή στον Θεό, το έτος 1003 μ.Χ.”; its heading prints „(910 - 1005)”. The Serbian Ohrid Prologue for the Julian 26 September gives the second of those: «Упокојио се 1005. год.» The interval holds both."
     }
   },
   "related": [
@@ -57,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 26. септембар ст. ст. (civil 9 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the two the Ohrid Prologue enumerates for this day. Read off the Prologue text on the page and not off its entry list, which prints only the first of the two."
+      },
+      "source": {
+        "text": "Охридски пролог, 26. септембар ст. к. — «2. Преп. Нил Калабријски.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-09&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

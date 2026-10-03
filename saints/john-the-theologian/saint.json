@@ -15,6 +15,15 @@
       "form": "Άγιος Ιωάννης ο Θεολόγος",
       "lang": "el",
       "note": "Read out of «Άγιος Ιωάννης ο Θεολόγος (Μετάσταση)» in this folder’s Greek citation."
+    },
+    {
+      "form": "Св. Јован Богослов, апостол и јеванђелист",
+      "lang": "sr"
+    },
+    {
+      "form": "Јован Богослов",
+      "lang": "sr",
+      "note": "His own name, read out of «Св. Јован Богослов, апостол и јеванђелист» — the line already recorded here, which joins two of the titles with “and”, so `pickNameForms` refuses to print it for one person and the reader was shown English instead."
     }
   ],
   "sex": "male",
@@ -78,8 +87,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the two the Ohrid Prologue enumerates for this day. Read off the Prologue text on the page and not off its entry list, which prints one of the two."
+      },
+      "source": {
+        "text": "Охридски пролог, 26. септембар ст. к. — «1. Св. Јован Богослов, апостол и јеванђелист.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-09&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "locations": [
