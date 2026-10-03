@@ -16,6 +16,11 @@
       "form": "Ксения (в миру Евсевия) Миласская",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 24 января ст. ст., «Ксения (в миру Евсевия) Миласская, диакониса», with the rank words left off."
+    },
+    {
+      "form": "Ксенија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 24. јануар ст. ст. (civil 2026-02-06), „Преподобна Ксенија“. The rank word „Преподобна“ is left off and the heading gives no epithet, so the form is bare; the entry's „Рођена у Риму“ is the life and not part of her name."
     }
   ],
   "sex": "female",
@@ -78,8 +83,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.02.2026 (24. јануар ст. ст.) — „Преподобна Ксенија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

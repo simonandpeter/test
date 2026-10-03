@@ -11,6 +11,11 @@
       "form": "Φίλων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Ιανουαρίου, «Όσιος Φίλων ο Θαυματουργός Επίσκοπος Καρπασίας της Κύπρου», with the rank words and the see left off."
+    },
+    {
+      "form": "Филон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 24. јануар ст. ст. (civil 2026-02-06), „Преподобни Филон, епископ кипарски“. The rank word „Преподобни“ is left off and so is the see, which follows the name after a comma. The Prologue gives the see loosely, as „епископ кипарски“ — bishop in Cyprus — where the folder's `office` has the Romanian and Greek calendars' Carpasia; the folder's office is left as it stands."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.02.2026 (24. јануар ст. ст.) — „Преподобни Филон, епископ кипарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

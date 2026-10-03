@@ -11,6 +11,11 @@
       "form": "Διονύσιος ο εν Ολύμπω",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιανουαρίου, «Άγιος Διονύσιος ο εν Ολύμπω», with the rank word left off."
+    },
+    {
+      "form": "Дионисије Олимпијски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 24. јануар ст. ст. (civil 2026-02-06), „Преподобни Дионисије Олимпијски, чудотворац“. The rank words „Преподобни“ and „чудотворац“ are left off — the folder can carry the second in `types` — and „Олимпијски“ is kept, being what distinguishes him."
     }
   ],
   "sex": "male",
@@ -69,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.02.2026 (24. јануар ст. ст.) — „Преподобни Дионисије Олимпијски, чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
