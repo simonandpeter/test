@@ -11,6 +11,15 @@
       "form": "Dionisie Areopagitul",
       "lang": "ro",
       "note": "From «Sfântul Sfințit Mucenic Dionisie Areopagitul» in this folder’s Romanian citation, without the rank."
+    },
+    {
+      "form": "Свешт. муч. Дионисије Ареопагит",
+      "lang": "sr"
+    },
+    {
+      "form": "Дионисије Ареопагит",
+      "lang": "sr",
+      "note": "His own name, read out of «Свешт. муч. Дионисије Ареопагит» — the line already recorded here, with the rank words left off."
     }
   ],
   "sex": "male",
@@ -20,11 +29,18 @@
   ],
   "dates": {
     "death": {
-      "earliest": 81,
+      "earliest": 96,
       "latest": 96,
-      "display": "81–96",
+      "display": "96",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)»; doxologia.ro: «a pătimit în al nouăzecilea an al vieții sale, iar de la nașterea lui Hristos în al nouăzeci și șaselea an». saint.gr quotes Galanos against the martyrdom at Paris."
+      "note": "Two sources; the narrower reading is taken and both are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». The Serbian Ohrid Prologue, read 4 October 2026, gives the year inside that reign: «Пострадао у време Дометијана 96. год.»"
+    },
+    "birth": {
+      "earliest": 6,
+      "latest": 6,
+      "display": "c. 6",
+      "basis": "inferred",
+      "note": "Not printed by any source; worked out from two statements in the one entry that makes them. The Serbian Ohrid Prologue, read 4 October 2026, says «Када му беше 90 година, би ухваћен и мучен за Христа» and «Пострадао у време Дометијана 96. год.», which puts his birth about the year 6 — consistent with the same entry having him a student in Egypt at the hour of the Crucifixion. The basis is `inferred` because the arithmetic is this corpus’s and not the page’s."
     }
   },
   "images": [
@@ -41,7 +57,8 @@
     "john-philosopher-of-georgia",
     "john-the-theologian",
     "philothei-of-athens",
-    "rusticus-disciple-of-dionysius"
+    "rusticus-disciple-of-dionysius",
+    "paul-the-apostle"
   ],
   "attestations": [
     {
@@ -79,8 +96,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "First of the three the Ohrid Prologue enumerates for this day, and the fullest account of him in these four calendars. It is the only one to give the year inside Domitian’s reign, the age at which he suffered, and the woman who buried him."
+      },
+      "source": {
+        "text": "Охридски пролог, 3. октобар ст. к. — «1. Свешт. муч. Дионисије Ареопагит. Убраја се у седамдесет мањих апостола. … Када му беше 90 година, би ухваћен и мучен за Христа, заједно са Рустиком и Елевтеријем, док их сву тројицу најзад мачем не посекоше. … Пострадао у време Дометијана 96. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

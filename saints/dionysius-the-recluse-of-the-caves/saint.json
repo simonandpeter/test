@@ -7,11 +7,16 @@
       "form": "Διονύσιος ο Έγκλειστος",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Διονύσιος ο Έγκλειστος «εν τω Σπηλαίω»»."
+    },
+    {
+      "form": "Преп. Дионисије Печерски Јеромонах и затворник",
+      "lang": "sr"
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "hieromonk"
   ],
   "dates": {
     "floruit": {
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Third of the three the Ohrid Prologue enumerates for this day. It agrees with the Greek entry on the Pascha of 1463 and on the words spoken, and adds the rank the Greek heading leaves out."
+      },
+      "source": {
+        "text": "Охридски пролог, 3. октобар ст. к. — «3. Преп. Дионисије Печерски Јеромонах и затворник. О Васкрсу 1463. год. … „Свети оци и братије: „Христос воскресе!“ У том тренутку разлеже се глас из гробова силан као гром: „Ваистину воскресе!“»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

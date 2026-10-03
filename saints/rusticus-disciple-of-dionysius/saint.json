@@ -20,11 +20,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 81,
+      "earliest": 96,
       "latest": 96,
-      "display": "81–96",
+      "display": "96",
       "basis": "traditional",
-      "note": "saint.gr: «Μαρτύρησαν δια ξίφους μαζί με τον Άγιο Διονύσιο, κατά τον επί Δομετιανού διωγμό (81 - 96 μ.Χ.)»."
+      "note": "Two sources; the narrower reading is taken and both are recorded. saint.gr: «Έζησε και μαρτύρησε τα χρόνια που αυτοκράτορας ήταν ο Δομετιανός», and its entry for Rusticus and Eleutherius dates Domitian’s persecution «(81 - 96 μ.Χ.)». The Serbian Ohrid Prologue, read 4 October 2026, gives the year inside that reign: «Пострадао у време Дометијана 96. год.»"
     }
   },
   "related": [
@@ -59,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Named inside the Prologue’s first entry for this day, which is Dionysius the Areopagite’s: the three went to Gaul together and were beheaded together."
+      },
+      "source": {
+        "text": "Охридски пролог, 3. октобар ст. к. — «1. Свешт. муч. Дионисије Ареопагит. Убраја се у седамдесет мањих апостола. … Када му беше 90 година, би ухваћен и мучен за Христа, заједно са Рустиком и Елевтеријем, док их сву тројицу најзад мачем не посекоше. … Пострадао у време Дометијана 96. год.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

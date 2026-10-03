@@ -7,6 +7,10 @@
       "form": "Ιωάννης ο Χοζεβίτης",
       "lang": "el",
       "note": "Read out of saint.gr’s heading «Όσιος Ιωάννης ο Χοζεβίτης επίσκοπος Καισαρείας»."
+    },
+    {
+      "form": "Преп. Јован Хозевит",
+      "lang": "sr"
     }
   ],
   "sex": "male",
@@ -41,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs’s page for 3. октобар ст. ст. (civil 16 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue enumerates for this day. It puts him under Justinian where the Greek entry puts him under Pulcheria and Chalcedon, and the disagreement is recorded in his life rather than resolved."
+      },
+      "source": {
+        "text": "Охридски пролог, 3. октобар ст. к. — «2. Преп. Јован Хозевит. Мисирац. Подвизавао се у Хозевитској обитељи у време цара Јустинијана. Кад год је служио литургију виђао је светлост небеску у олтару.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-16&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 451,
+      "latest": 565,
+      "display": "5th or 6th century",
+      "basis": "traditional",
+      "note": "Two sources about a century apart, and the interval is their union. saint.gr sets him under the empress Pulcheria, refusing the Fourth Ecumenical Council at Chalcedon, which met in 451 and whose decision he came to accept. The Serbian Ohrid Prologue, read 4 October 2026, has him in the Chozebite monastery «у време цара Јустинијана», in the days of Justinian, whose reign ran 527–565. Neither is preferred, and the span across two centuries is why the basis is `traditional`."
+    }
   }
 }
