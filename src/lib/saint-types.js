@@ -73,13 +73,13 @@ export function allNames(id) {
 }
 
 /**
- * Which of the register's six marks a saint's types call for, or `null`
+ * Which of the register's seven marks a saint's types call for, or `null`
  * A row with no icon shows a type glyph
  * where one of these fits, so a reader still gets *what kind of saint this is*
  * rather than a hole where a picture would be.
  *
- * **Six marks, more than six keys.** The vocabulary the corpus writes down is
- * wider than the marks are — `new-martyr` and `great-martyr` are martyrs,
+ * **Seven marks, more than seven keys.** The vocabulary the corpus writes down
+ * is wider than the marks are — `new-martyr` and `great-martyr` are martyrs,
  * `bishop` and `metropolitan` are hierarchs — so each mark carries the ids it
  * stands for. Exact ids and not prefixes: `patriarch-of-israel` is not a
  * patriarch of the church, and a `startsWith` would have made him one.
@@ -89,11 +89,11 @@ export function allNames(id) {
  * him is the one he should get. `venerable-martyr` goes with the venerable for
  * the same reason — the monastic reading is the narrower of the two.
  *
- * **702 of the corpus's 732 imageless saints** are covered (2026-09-10,
- * measured over `saints/`). The thirty that are not — ten `righteous`, four
- * `confessor`, three `prophet`, nine with no types at all — show no mark, and
- * that is the right answer rather than a gap: a mark invented for a category
- * of one says less than the space it takes.
+ * **4,636 of the corpus's 4,898 imageless saints** are covered (2026-10-03,
+ * measured over `saints/`). The largest uncovered groups are 42 `righteous`,
+ * 25 `apostle`, 21 `confessor`, 21 `fool-for-christ` and 50 with no types at
+ * all; each shows no mark, which is the right answer for a reading nobody has
+ * drawn rather than a gap.
  */
 const GLYPH_TYPES = [
   ['hieromartyr', ['hieromartyr']],

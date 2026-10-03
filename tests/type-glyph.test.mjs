@@ -18,8 +18,16 @@ import { typeGlyph } from '../src/lib/saint-types.js';
  * the *corpus*, which is what stops the table going stale as types are added.
  */
 
-test('each of the six marks answers to its own name', () => {
-  for (const id of ['martyr', 'hieromartyr', 'venerable', 'hierarch', 'presbyter', 'prince']) {
+test('each of the seven marks answers to its own name', () => {
+  for (const id of [
+    'martyr',
+    'hieromartyr',
+    'venerable',
+    'hierarch',
+    'presbyter',
+    'prince',
+    'prophet',
+  ]) {
     assert.equal(typeGlyph([id]), id, `${id} does not answer to itself`);
   }
 });
@@ -36,6 +44,8 @@ test('the vocabulary is wider than the marks are', () => {
   assert.equal(typeGlyph(['hermit']), 'venerable');
   // And a ruler is a prince.
   assert.equal(typeGlyph(['king']), 'prince');
+  // The Forerunner is read as a prophet, the corpus's own pairing.
+  assert.equal(typeGlyph(['forerunner']), 'prophet');
 });
 
 test('the most specific mark wins where a saint holds several', () => {
@@ -52,13 +62,13 @@ test('the most specific mark wins where a saint holds several', () => {
   assert.equal(typeGlyph(['martyr', 'venerable']), 'venerable');
 });
 
-test('a type outside the six shows no mark at all, and neither does no type', () => {
+test('a type outside the seven shows no mark at all, and neither does no type', () => {
   /*
    * A mark invented for a category of one says less than the space it takes,
-   * so `righteous`, `confessor` and `prophet` fall through on purpose — the
-   * row keeps the shape it has today.
+   * so `righteous` and `confessor` fall through on purpose — the row keeps the
+   * shape it has today.
    */
-  for (const ids of [['righteous'], ['confessor'], ['prophet'], [], undefined, null]) {
+  for (const ids of [['righteous'], ['confessor'], [], undefined, null]) {
     assert.equal(typeGlyph(ids), null, `${JSON.stringify(ids)} was given a mark`);
   }
 });
@@ -72,7 +82,7 @@ test('an id is matched whole, never by its opening', () => {
 
 test('the marks still cover the corpus they were measured against', () => {
   /*
-   * The claim in `saint-types.js` is a number — 702 of 732 imageless saints —
+   * The claim in `saint-types.js` is a number — 4,636 of 4,898 imageless saints —
    * and a number in a comment goes stale silently. This is the number, read
    * off `saints/` rather than off the manifest, which `npm test` cannot see
    * (CLAUDE.md: `/data/` is gitignored and the unit run happens before the
