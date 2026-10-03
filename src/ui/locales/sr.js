@@ -356,6 +356,7 @@ export const sr = {
     searchHint: 'име, тип, црква, регион',
     modeToSearch: 'Напредна претрага',
     modeToCarousel: 'Режим вртешке',
+    modeToNormal: 'Обичан режим',
     carouselLabel: 'Светитељи, у смени',
     shuffle: 'Промешај',
     carouselKeys: 'Стрелице померају ред.',

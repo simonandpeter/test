@@ -794,6 +794,16 @@ export const STRINGS = {
      */
     modeToSearch: 'Advanced search',
     modeToCarousel: 'Carousel mode',
+    /*
+     * The same button on Prayer, whose off state is not a carousel but the page
+     * itself (author, 2026-10-03: "the carousel mode is just normal mode i.e.
+     * Advanced search OFF"). `modeToSearch` is shared — the word for opening
+     * the facets is one word on both pages — and only the way back needed a
+     * second one, because "Carousel mode" names something Prayer does not have.
+     * It lives in the `saints` branch with its pair rather than in `prayer`:
+     * the vocabulary belongs to the shell, and the shell is All Saints'.
+     */
+    modeToNormal: 'Normal mode',
     carouselLabel: 'Saints, drifting',
     /*
      * The three survivors of cancelled Session 6, taken on their merits

@@ -362,6 +362,7 @@ export const ru = {
     searchHint: 'имя, тип, церковь, регион',
     modeToSearch: 'Расширенный поиск',
     modeToCarousel: 'Режим карусели',
+    modeToNormal: 'Обычный режим',
     carouselLabel: 'Святые, чередой',
     shuffle: 'Перемешать',
     carouselKeys: 'Стрелки сдвигают ряд.',

@@ -1,9 +1,9 @@
 import { readFileSync } from 'node:fs';
 import { test, expect } from './fixtures.js';
 import { CHURCHES_BY_ID } from '../src/data/churches.js';
-import { formatSubtext } from '../src/lib/calendar-page.js';
+import { formatSubtext, todayIso } from '../src/lib/calendar-page.js';
 import { feastIndexFor } from '../src/lib/feasts.js';
-import { SAME_DAY_MAX } from '../src/lib/prayer-order.js';
+import { openingAt, SAME_DAY_MAX } from '../src/lib/prayer-order.js';
 import { STRINGS, fill } from '../src/ui/strings.js';
 import { INDEX as SAINTS_ROUTE, desk, dragGrain, phone, ready, withMentions } from './helpers.js';
 
@@ -57,16 +57,83 @@ const DOOR = '.index-name';
 const CHURCH = 'russian';
 
 /**
- * Steps to a named saint without a search field, which this page does not have
- * yet: the presses are dispatched rather than clicked (trap 3) and `stepBy`
- * refuses to run past either end, so a loop is safe to overshoot.
+ * **Where the book opens, computed the way the page computes it** (author,
+ * 2026-10-03: "the default opening page is saint of the day"). `openingAt` is
+ * imported rather than restated — the whole rule, including what it does with a
+ * day the hymnal has no hymn for, is `lib/prayer-order.js`'s and is unit-tested
+ * there; a copy of it here would be a second opinion to keep in step.
+ *
+ * It is today's date, so this moves every day and is nobody's literal. Trap 4
+ * does not apply: the page reads the clock on purpose, and the premise each
+ * test makes of this is asserted beside the reading.
  */
-async function stepTo(page, index) {
-  if (index === 0) return;
-  await page.evaluate((n) => {
-    const next = document.querySelector('#hy-next');
-    for (let i = 0; i < n; i += 1) next.click();
-  }, index);
+const OPENS_AT = openingAt(HYMNED, {
+  saints: CARDS,
+  bySlug: new Map(CARDS.map((c) => [c.slug, c])),
+  churchId: CHURCH,
+  churchesById: CHURCHES_BY_ID,
+  iso: todayIso(),
+});
+
+/**
+ * Where a test that needs a page *after* the one in hand starts from. The day's
+ * saint is almost never the last page of the book, but "almost never" is one
+ * day somewhere in the corpus and a book does not wrap.
+ */
+const STEP_FROM = OPENS_AT < HYMNED.length - 1 ? OPENS_AT : 0;
+
+/**
+ * Puts the saint at an index of the whole book in hand, from wherever the book
+ * opened.
+ *
+ * **It was a count of presses from the first page until 2026-10-03**, when the
+ * page began opening on the saint of the day (author: "the default opening page
+ * is saint of the day"). A count from page one is now both the wrong arithmetic
+ * and, at this corpus's length, several hundred redraws — so the field does the
+ * travelling: the query narrows the book to something an arrow can walk, the
+ * walk finds the saint, and the field is then emptied. `setOrder`
+ * (`views/prayer/find.js`) holds the saint in hand across a change that still
+ * contains them, so what this leaves behind is the whole book with the
+ * asked-for saint showing, which is exactly what the press count left.
+ *
+ * **Each press waits for the saint to change** rather than for a fixed delay,
+ * for `walkBook`'s own reason: the card swaps when its fade's `finished`
+ * resolves, so a press sent too early is a press into a fade the next one
+ * cancels. The presses are dispatched rather than clicked (trap 3).
+ */
+async function goTo(page, index) {
+  const want = HYMNED[index];
+  if ((await page.locator(`.hy-saint[data-slug="${want.slug}"]`).count()) === 1) return;
+  await type(page, want.display_name);
+  await expect
+    .poll(() => page.locator('#hy-count').textContent())
+    .not.toBe(fill(STRINGS.prayer.count, { n: HYMNED.length }));
+  const landed = await page.evaluate(async ({ slug, limit }) => {
+    const at = () => document.querySelector('.hy-saint')?.dataset.slug;
+    const press = async (id) => {
+      const from = at();
+      document.querySelector(id).click();
+      for (let t = 0; t < 60 && at() === from; t += 1) await new Promise((r) => setTimeout(r, 50));
+    };
+    for (let i = 0; i < limit && !document.querySelector('#hy-prev').disabled; i += 1) {
+      await press('#hy-prev');
+    }
+    for (let i = 0; i < limit && at() !== slug; i += 1) {
+      if (document.querySelector('#hy-next').disabled) break;
+      await press('#hy-next');
+    }
+    return at();
+  }, { slug: want.slug, limit: 200 });
+  expect(landed, `the query for ${want.display_name} left a book holding them`).toBe(want.slug);
+  await type(page, '');
+  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', want.slug);
+}
+
+/** One press onward, waited out the same way. */
+async function stepOn(page) {
+  const from = await page.locator('.hy-saint').getAttribute('data-slug');
+  await page.evaluate(() => document.querySelector('#hy-next').click());
+  await expect(page.locator('.hy-saint')).not.toHaveAttribute('data-slug', from);
 }
 
 test.beforeEach(async ({ page }) => {
@@ -189,20 +256,48 @@ for (const width of [1440, 1280]) {
   });
 }
 
-test('the page opens on the first saint the hymnal holds', async ({ page }) => {
+/*
+ * **It opened on the hymnal's own first page until 2026-10-03.** The author:
+ * "And the default opening page is saint of the day" — so the assertion below
+ * is `OPENS_AT` and not 0, and the two arrows are read against where that
+ * lands rather than against the ends of the book.
+ */
+test('the page opens on the saint of the day', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   const article = page.locator('.hy-saint');
   await expect(article).toBeVisible();
-  // The pin's premise: the corpus's own first hymned saint by name.
-  await expect(article).toHaveAttribute('data-slug', HYMNED[0].slug);
-  await expect(page.locator('#hy-prev')).toBeDisabled();
-  await expect(page.locator('#hy-next')).toBeEnabled();
+  await expect(article).toHaveAttribute('data-slug', HYMNED[OPENS_AT].slug);
+  /* The arrows say where in the book that is, which is the second, independent
+     reading of the same fact (trap 14): a page that published the right slug
+     while standing somewhere else would pass the line above and fail these. */
+  await expect(page.locator('#hy-prev')).toBeEnabled({ enabled: OPENS_AT > 0 });
+  await expect(page.locator('#hy-next')).toBeEnabled({ enabled: OPENS_AT < HYMNED.length - 1 });
+});
+
+/*
+ * And the day's saint is the day's, not a saint of some other day: whoever the
+ * book opens on is either commemorated today in this reader's church, or — on a
+ * day no hymn in the corpus answers — the book's own first page.
+ * `lib/prayer-order.js` carries the measurement of how often each happens.
+ */
+test('the saint the page opens on is kept today, or the book opened at page one', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  const slug = await page.locator('.hy-saint').getAttribute('data-slug');
+  const iso = todayIso();
+  const today = feastIndexFor(CARDS, Number(iso.slice(0, 4)), CHURCHES_BY_ID).get(iso) ?? [];
+  const kept = today.filter((e) => e.church === CHURCH).map((e) => e.slug);
+  const hymnedToday = kept.filter((s) => HYMNED.some((c) => c.slug === s));
+  if (hymnedToday.length) expect(hymnedToday).toContain(slug);
+  else expect(slug).toBe(HYMNED[0].slug);
 });
 
 test('stepping on changes the saint, and the drawn heading says so too', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   const article = page.locator('.hy-saint');
   await expect(article).toBeVisible();
+  // A page with a page after it: see `STEP_FROM`. A no-op on all but one day.
+  await goTo(page, STEP_FROM);
   const before = {
     slug: await article.getAttribute('data-slug'),
     name: (await page.locator('.hy-name').textContent())?.trim(),
@@ -241,7 +336,9 @@ test('stepping on changes the saint, and the drawn heading says so too', async (
   await expect(page.locator('.hy-name')).not.toHaveText(before.name);
   // The heading is `saintName`, which puts the rank in front of the recorded
   // name — so the name is contained in it rather than equal to it.
-  await expect(page.locator('.hy-name')).toContainText(HYMNED[1].display_name);
+  // One page on from wherever the day put the reader (2026-10-03: the page
+  // opens on the saint of the day, so this was `HYMNED[1]`).
+  await expect(page.locator('.hy-name')).toContainText(HYMNED[STEP_FROM + 1].display_name);
   await expect.poll(() => page.evaluate(() => getComputedStyle(document.querySelector('#hy-hold')).opacity)).toBe('1');
   await expect(page.locator('#hy-prev')).toBeEnabled();
 
@@ -462,7 +559,7 @@ test('recorded-with names the saints the corpus records this one with', async ({
 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await stepTo(page, WITH_MENTIONS);
+  await goTo(page, WITH_MENTIONS);
   await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', subject.slug);
 
   const aside = page.locator('#hy-related');
@@ -506,10 +603,15 @@ test('pressing a reachable name in an aside turns to that saint', async ({ page 
    * rather than named, since which saints have hymned company is a fact about
    * the corpus. The walk is bounded so a corpus with none fails the premise
    * rather than hanging.
+   *
+   * **The walk is sent to page one first** (2026-10-03: the page opens on the
+   * saint of the day, so the first forty of the book is no longer where it
+   * opens), which keeps the pin on every step.
    */
+  await goTo(page, 0);
   let target = null;
   for (let i = 0; i < Math.min(HYMNED.length, 40) && !target; i += 1) {
-    if (i > 0) await stepTo(page, 1);
+    if (i > 0) await stepOn(page);
     await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[i].slug);
     await expect.poll(() => page.locator(`.hy-body ${ROW}`).count()).toBeGreaterThanOrEqual(0);
     target = await page.evaluate(() => document.querySelector('[data-go]')?.dataset.go ?? null);
@@ -539,7 +641,7 @@ test('the same day holds only the saints this reader’s church keeps that day',
 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await stepTo(page, SPLIT_DAY);
+  await goTo(page, SPLIT_DAY);
   await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', subject);
 
   const aside = page.locator('#hy-sameday');
@@ -706,7 +808,7 @@ test('a name pressed in an aside is reached even when the query is hiding it', a
   await expect(page.locator('.hy-saint')).toBeVisible();
   expect(HIDDEN_MENTION, 'the corpus holds a hymned saint whose margin their own name hides').not.toBeNull();
   const subject = HYMNED[HIDDEN_MENTION.at];
-  await stepTo(page, HIDDEN_MENTION.at);
+  await goTo(page, HIDDEN_MENTION.at);
   await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', subject.slug);
 
   const target = HIDDEN_MENTION.slug;
@@ -730,7 +832,7 @@ test('a name pressed in an aside is reached even when the query is hiding it', a
 test('the two faces are two drawings, not two class names', async ({ page }) => {
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
-  await stepTo(page, WITH_MENTIONS);
+  await goTo(page, WITH_MENTIONS);
   await expect(page.locator(`#hy-related ${ROW}`).first()).toBeVisible();
 
   /* The face chip is All Saints' own View chip since 2026-10-02 — the same
@@ -790,7 +892,7 @@ test('every name in a margin opens something past 1024 px', async ({ page }) => 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const hymned = new Set(HYMNED.map((c) => c.slug));
@@ -816,8 +918,18 @@ test('every name in a margin opens something past 1024 px', async ({ page }) => 
   /* Six consecutive saints rather than one, because "most names are inert" was
      a claim about a walk and not about a page. */
   for (let step = 0; step < 6; step += 1) {
-    if (step > 0) await stepTo(page, 1);
-    await expect.poll(async () => (await read()).length).toBeGreaterThan(0);
+    if (step > 0) await stepOn(page);
+    /*
+     * **Waited for by the heading, not by the row count.** The columns are
+     * emptied on a step and redrawn when the saint's own folder answers
+     * (`clearAsides` / `fillAsides`), so the `<h2>` is exactly the signal that
+     * what is being read belongs to the saint in hand — and it is a signal a
+     * saint with no company at all still gives. One such saint is three steps
+     * into this walk, which is a fact about the corpus and not a defect: the
+     * claim here is that every name that *is* drawn opens something, and the
+     * floor on how many names that was is `seen` at the end.
+     */
+    await expect(page.locator('#hy-related h2')).toBeVisible();
     for (const r of await read()) {
       seen += 1;
       expect(r.drawn, `${r.slug} is drawn`).toBe(true);
@@ -840,14 +952,14 @@ test('a name the hymnal does not hold opens that saint’s own page', async ({ p
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
   expect(WITH_SAME_DAY, 'the corpus holds a hymned saint with company on his day').toBeGreaterThanOrEqual(0);
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   /* The first dimmed row in either column, found by walking: which saints have
      un-hymned company is a fact about the corpus and not a literal. */
   let target = null;
   for (let i = 0; i < 8 && !target; i += 1) {
-    if (i > 0) await stepTo(page, 1);
+    if (i > 0) await stepOn(page);
     await expect.poll(() => page.locator(`.hy-body ${ROW}`).count()).toBeGreaterThanOrEqual(0);
     target = await page.evaluate(
       () => document.querySelector('.hy-body .hy-links .index-card.is-dim')?.dataset.slug ?? null,
@@ -883,14 +995,14 @@ test('a tile with no icon has no box, and one with an icon has a plate', async (
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
   expect(WITH_SAME_DAY, 'the corpus holds a hymned saint with company on his day').toBeGreaterThanOrEqual(0);
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(page.locator('#hy-sameday .index-card:not(.is-row)').first()).toBeVisible();
 
   /* A walk, because whether the day in hand holds both a pictured and an
      unpictured saint is a fact about the corpus. */
   let both = null;
   for (let i = 0; i < 10 && !both; i += 1) {
-    if (i > 0) await stepTo(page, 1);
+    if (i > 0) await stepOn(page);
     both = await page.evaluate(() => {
       const rows = [...document.querySelectorAll('.hy-body .index-card:not(.is-row)')];
       /* `present: false` rather than `null`, because the absence of the
@@ -949,7 +1061,7 @@ test('a tile in the same-day column prints the day, not the lifespan', async ({ 
   await expect(page.locator('.hy-saint')).toBeVisible();
   const aside = page.locator('#hy-sameday');
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(aside.locator('.index-card:not(.is-row)').first()).toBeVisible();
   await expect.poll(() => aside.getAttribute('data-iso')).not.toBeNull();
 
@@ -997,7 +1109,7 @@ test('a dimmed name is faded, not faint: it clears 4.5:1 in both themes', async 
   await expect(page.locator('.hy-saint')).toBeVisible();
 
   expect(WITH_UNHYMNED_COMPANY, 'the corpus holds a hymned saint with un-hymned company').toBeGreaterThanOrEqual(0);
-  await stepTo(page, WITH_UNHYMNED_COMPANY);
+  await goTo(page, WITH_UNHYMNED_COMPANY);
   await expect
     .poll(() => page.locator('.hy-body .index-card.is-dim').count())
     .toBeGreaterThan(0);
@@ -1085,7 +1197,7 @@ test('the saint in hand wears the mockup’s hymn, preview and credit', async ({
        hymnal behind it is built, so a press before this line is swallowed and
        the walk reads the first saint twelve times over. */
     await expect(page.locator('.hy-saint')).toBeVisible();
-    await stepTo(page, at);
+    await goTo(page, at);
     await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[at].slug);
     found = await page
       .locator('.hy-saint .hy-pic-frame')
@@ -1204,7 +1316,7 @@ test('every name in a margin is a keyboard stop, and Enter opens it', async ({ p
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(page.locator(`#hy-sameday ${ROW}`).first()).toBeVisible();
 
   const stops = await page.evaluate(() => {
@@ -1269,7 +1381,7 @@ test.describe('at 360 px', () => {
   test('the three regions are one column, in the order they are written', async ({ page }) => {
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
     await expect(page.locator('.hy-saint')).toBeVisible();
-    await stepTo(page, WITH_MENTIONS);
+    await goTo(page, WITH_MENTIONS);
     await expect(page.locator('#hy-related .index-card.is-row').first()).toBeVisible();
 
     const boxes = await page.evaluate(() =>
@@ -1313,36 +1425,43 @@ test.describe('at 360 px', () => {
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
     const article = page.locator('.hy-saint');
     await expect(article).toBeVisible();
-    await expect(article).toHaveAttribute('data-slug', HYMNED[0].slug);
+    /* The page opens on the saint of the day since 2026-10-03, which on one day
+       of the corpus is the book's last page and has nothing after it to swipe
+       to — so the swipe is made from `STEP_FROM`, which is that page on every
+       other day and page one on that one. */
+    await goTo(page, STEP_FROM);
+    await expect(article).toHaveAttribute('data-slug', HYMNED[STEP_FROM].slug);
     const first = (await page.locator('.hy-name').textContent())?.trim();
 
     // Leftward is onward, which is the direction the Daily page turns a day.
     await dragGrain(page, '.hymnal', -80);
     // Two independent things (trap 14): the published slug and a drawn glyph.
-    await expect(article).toHaveAttribute('data-slug', HYMNED[1].slug);
+    await expect(article).toHaveAttribute('data-slug', HYMNED[STEP_FROM + 1].slug);
     await expect
       .poll(async () => (await page.locator('.hy-name').textContent())?.trim())
       .not.toBe(first);
 
     await dragGrain(page, '.hymnal', 80);
-    await expect(article).toHaveAttribute('data-slug', HYMNED[0].slug);
+    await expect(article).toHaveAttribute('data-slug', HYMNED[STEP_FROM].slug);
   });
 
   test('a swipe inside the field is not a page turn', async ({ page }) => {
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
-    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[0].slug);
+    // The page the day opened on (2026-10-03), which is the thing that must
+    // still be in hand afterwards.
+    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[OPENS_AT].slug);
     /* A finger dragging through the field is selecting text in it. The gesture
        is refused there by name (`ignore`), and this is the reading that says so
        rather than the absence of a complaint. */
     await dragGrain(page, '[data-query]', -80);
     await page.waitForTimeout(150);
-    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[0].slug);
+    await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', HYMNED[OPENS_AT].slug);
   });
 
   test('nothing in the page reaches past its own width', async ({ page }) => {
     await page.goto(PRAYER, { waitUntil: 'networkidle' });
     await expect(page.locator('.hy-saint')).toBeVisible();
-    await stepTo(page, WITH_MENTIONS);
+    await goTo(page, WITH_MENTIONS);
     /* The floor `quality-floor.spec.js` walks every route with, asserted here
        too because `/prayer` is the route whose three columns become one and the
        one width at which a column that failed to dissolve would show. */
@@ -1429,6 +1548,150 @@ test('on a phone it is the same field, which it was not until 2026-10-02', async
   expect(prayer).toEqual(saints);
 });
 
+/* ---- the page's name, and Advanced as an option ---------------------------
+   The author, 2026-10-03: "In Prayer tab, we need the exact same search
+   function as saints except the carousel mode is just normal mode i.e. Advanced
+   search OFF. So instead of Saints it says Prayer as the text at the top, and
+   when you search you get a search exactly like Saints, but when you click in
+   this mode it just shows the hymns thats the idea."
+
+   Two readings are made of "normal mode". All Saints has two faces and the
+   button beside its heading names the one a press would take you to; its off
+   face is the carousel, and `index.css` folds the facet panel away under
+   `.is-carousel` so that face is the field and nothing else. **"Just normal
+   mode" is that off face on a page with no carousel in it**: the hymnal itself,
+   with the facets folded and one word to open them. So the class names, the
+   fold and the word are All Saints' own — TODO item 6's "Advanced is an
+   *option*, not the default… Same control, same wording, same place on both
+   pages" — and what Prayer adds is only the word for the way back. */
+
+const FACETS = '.index-controls .filter-drop';
+
+test('the page says its own name at the top, where All Saints says its', async ({ page }) => {
+  await page.goto(SAINTS_ROUTE, { waitUntil: 'networkidle' });
+  /**
+   * **A box as tall as its own line**, which is the reading that separates a
+   * drawn heading from an `sr-only` one. `clientWidth > 0` does not: the
+   * `sr-only` recipe clips the element to a single pixel rather than removing
+   * it, so a hidden heading answers 1 and passes. The line height is the
+   * element's own, so this is a mechanism and not a layout number.
+   */
+  const measure = () =>
+    page.evaluate(() => {
+      const h1 = document.querySelector('.index-head h1');
+      if (!h1) return { text: null, drawn: false };
+      const box = h1.getBoundingClientRect();
+      const size = parseFloat(getComputedStyle(h1).fontSize);
+      return { text: h1.textContent.trim(), drawn: box.height >= size && box.width > size };
+    });
+  const saintsHead = await measure();
+
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  /* Two independent things (trap 14): the word the page publishes, and that the
+     box holding it has width — an `sr-only` heading reads the same and is the
+     state this page was in until 2026-10-03. */
+  await expect(page.locator('.hymnal .index-head h1')).toHaveText(STRINGS.prayer.title);
+  expect(await measure()).toEqual({ text: STRINGS.prayer.title, drawn: true });
+  // It is still the element `main.js` moves focus to, so it has to be the first.
+  expect(await page.evaluate(() => document.querySelector('#view h1')?.textContent.trim())).toBe(
+    STRINGS.prayer.title,
+  );
+  // The same row, drawn the same way, with the other page's own name in it.
+  expect(saintsHead.drawn).toBe(true);
+  expect(saintsHead.text).toBe(STRINGS.saints.title);
+});
+
+test('Advanced is off when the page opens, and one word opens it', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+
+  // Off: the field is there and the facets are not. The panel keeps its DOM —
+  // folded is not emptied — so this is `toBeHidden` and not `toHaveCount(0)`.
+  await expect(page.locator('.search-field')).toBeVisible();
+  await expect(page.locator(FACETS)).toBeHidden();
+  const word = page.locator('[data-mode-toggle]');
+  await expect(word).toHaveText(STRINGS.saints.modeToSearch);
+
+  await word.click();
+  await expect(page.locator(FACETS)).toBeVisible();
+  // Every chip All Saints offers, and the die with them.
+  await expect(page.locator('.index-controls .facets .facet')).toHaveCount(7);
+  await expect(page.locator('.index-controls [data-random]')).toBeVisible();
+  await expect(word).toHaveText(STRINGS.saints.modeToNormal);
+
+  await word.click();
+  await expect(page.locator(FACETS)).toBeHidden();
+  await expect(word).toHaveText(STRINGS.saints.modeToSearch);
+});
+
+test('the word that opens the facets is All Saints’ own word', async ({ page }) => {
+  await page.goto(SAINTS_ROUTE, { waitUntil: 'networkidle' });
+  const saints = await page.locator('[data-mode-toggle]').textContent();
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  /* Read off the two pages rather than off the pack, for `fieldDress`'s reason:
+     two tests each reading one page would agree only by a copied literal. All
+     Saints opens on its carousel, so both are in their off face here. */
+  expect((await page.locator('[data-mode-toggle]').textContent())?.trim()).toBe(saints?.trim());
+});
+
+test('folding the facets does not clear what they narrowed', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  const whole = fill(STRINGS.prayer.count, { n: HYMNED.length });
+  await expect(page.locator('#hy-count')).toHaveText(whole);
+
+  await page.locator('[data-mode-toggle]').click();
+  /* One month of the twelve, which narrows the book whatever the corpus holds —
+     where a single church would not, with the Romanian year written in full.
+     The chip is a `<details>`, so it is opened before its box can be ticked,
+     and the box is read back: a facet that did not take fails the premise
+     rather than the assertion. */
+  await page.locator('.index-controls .facet[data-facet="months"] > summary').click();
+  const box = page.locator('.index-controls input[name="months"][value="1"]');
+  await box.check();
+  await expect(box).toBeChecked();
+  await expect.poll(() => page.locator('#hy-count').textContent()).not.toBe(whole);
+  const narrowed = await page.locator('#hy-count').textContent();
+
+  await page.locator('[data-mode-toggle]').click();
+  await expect(page.locator(FACETS)).toBeHidden();
+  // The facets are the filter set's source of truth, so folding the panel must
+  // not hand the reader a book they did not ask for.
+  await expect(page.locator('#hy-count')).toHaveText(narrowed);
+  // And the way back is outside the fold, as it is on All Saints.
+  await expect(page.locator('[data-clear]')).toBeVisible();
+});
+
+test('with Advanced folded, a press in a margin still opens the hymns here', async ({ page }) => {
+  await page.goto(PRAYER, { waitUntil: 'networkidle' });
+  await expect(page.locator('.hy-saint')).toBeVisible();
+  await expect(page.locator(FACETS)).toBeHidden();
+
+  /* A saint with a reachable name in a margin, found by walking from page one:
+     which saints have hymned company is a fact about the corpus. The same walk
+     `pressing a reachable name in an aside turns to that saint` makes. */
+  await goTo(page, 0);
+  let target = null;
+  for (let i = 0; i < 40 && !target; i += 1) {
+    if (i > 0) await stepOn(page);
+    await expect.poll(() => page.locator(`.hy-body ${ROW}`).count()).toBeGreaterThanOrEqual(0);
+    target = await page.evaluate(() => document.querySelector('[data-go]')?.dataset.go ?? null);
+  }
+  /* The whole of this page's idea (author: "when you click in this mode it just
+     shows the hymns"): a saint the hymnal holds opens *here*, with the hymns,
+     and the address does not move to their profile. */
+  expect(target, 'some saint in the first forty has reachable company').not.toBeNull();
+  const where = new URL(page.url()).pathname;
+  await page.evaluate((slug) => document.querySelector(`[data-go="${slug}"]`).click(), target);
+  await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', target);
+  // Two independent things: the card is theirs, and it is carrying a hymn.
+  await expect(page.locator('.hy-hymns .hymn-text').first()).toBeVisible();
+  expect(new URL(page.url()).pathname, 'the press left the page').toBe(where);
+  await expect(page.locator(FACETS)).toBeHidden();
+});
+
 /**
  * **The phone keeps the face it opens on and the door it had.** The review, the
  * mockup and the author's instruction are all the desk, so below 1024 px a
@@ -1444,7 +1707,7 @@ test('below the desk the margins open on the names and keep the door they had', 
   await page.goto(PRAYER, { waitUntil: 'networkidle' });
   await expect(page.locator('.hy-saint')).toBeVisible();
   // Stepped to off the manifest: see `WITH_SAME_DAY`.
-  await stepTo(page, WITH_SAME_DAY);
+  await goTo(page, WITH_SAME_DAY);
   await expect(page.locator('#hy-sameday .index-card.is-row').first()).toBeVisible();
 
   await expect(page.locator('.index-foot input[name="layout"][value="rows"]')).toBeChecked();

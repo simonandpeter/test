@@ -1,7 +1,10 @@
+import { todayIso } from '../lib/calendar-page.js';
+import { currentChurch } from '../lib/church.js';
+import { CHURCHES_BY_ID } from '../data/churches.js';
 import { facetsOf } from '../lib/index-filters.js';
 import { escapeHtml as esc } from '../lib/markdown.js';
 import { loadMentions } from '../lib/manifest.js';
-import { stepOrder } from '../lib/prayer-order.js';
+import { openingAt, stepOrder } from '../lib/prayer-order.js';
 import { SETTLE, onGrainDrag } from '../ui/grain-drag.js';
 import { indexSheet } from '../ui/sheets.js';
 import { STRINGS } from '../ui/strings.js';
@@ -49,9 +52,11 @@ export const styles = indexSheet;
  * desk `prayer.css` puts `#hy-related` back into the first column by hand — the
  * same trade the Daily page makes for `.cal-bubble`.
  *
- * The heading is `sr-only`: `main.js` moves focus to a route's `h1` on every
- * navigation, so one has to exist, and the page's own name is already in the
- * masthead and the tab.
+ * The heading is drawn, in All Saints' own head row beside the word that opens
+ * the facets (author, 2026-10-03). It was `sr-only` until then, on the
+ * reasoning that `main.js` needs an `h1` to move focus to and the page's name
+ * is already in the masthead and the tab; both halves of that are still true
+ * and neither was an argument for hiding it.
  */
 
 /** The box the two arrows are delegated on, and the handler, between renders. */
@@ -84,10 +89,30 @@ export function render(el, { data, router } = {}) {
     all,
     facets: facetsOf(all),
     monthsBySlug: monthsBySlugFor(all),
+    /* **The book opens at the saint of the day** (author, 2026-10-03), which is
+       the Daily page's own hero over the reader's church and today's civil
+       date. `lib/prayer-order.js` holds the rule and what it does with a day
+       the hymnal has no hymn for. */
+    at: openingAt(all, {
+      saints: data?.saints ?? [],
+      bySlug: data?.bySlug,
+      churchId: currentChurch(),
+      churchesById: CHURCHES_BY_ID,
+      iso: todayIso(),
+    }),
   });
   el.innerHTML = `
     <div class="hymnal">
-      <h1 class="sr-only">${esc(P.title)}</h1>
+      <!-- **The page's own name, drawn** (author, 2026-10-03: "instead of
+           Saints it says Prayer as the text at the top"), in All Saints' own
+           head row and wearing its dress: the heading on the left and the one
+           word that opens the facets on the right. It is still the h1 main.js
+           moves focus to on every navigation; it is simply no longer sr-only. -->
+      <div class="index-head">
+        <h1>${esc(P.title)}</h1>
+        <button type="button" class="mode-toggle utility" data-mode-toggle
+          ><span class="mode-label" data-mode-label></span></button>
+      </div>
       ${findMarkup()}
       <div class="hy-body">
         <div class="hy-view" id="hy-view">
@@ -169,9 +194,11 @@ export function render(el, { data, router } = {}) {
    * The whole shell is excluded — a finger dragging through the field is
    * selecting text in it, and a facet panel is a sheet to scroll, so a gesture
    * that turned the page from either would take the reader's narrowing with it.
+   * The head row joins it for the same reason: the word in it is a control, and
+   * a thumb that misses it should not turn the page instead.
    */
   unswipe = onGrainDrag(el, {
-    ignore: (target) => !!target.closest?.('.index-controls, .hy-count'),
+    ignore: (target) => !!target.closest?.('.index-head, .index-controls, .hy-count'),
     end(dx) {
       if (Math.abs(dx) >= SETTLE) stepBy(el, dx < 0 ? 1 : -1);
     },

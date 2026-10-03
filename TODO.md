@@ -117,6 +117,13 @@ all.
 
 ## 6. One search bar, with Advanced as an option, on both pages
 
+**Done, 4 October 2026** (`git log --grep="Advanced search OFF"`). Prayer was
+the half that was open: the shell was already mounted whole, so what was left
+was that it opened folded. It folds with All Saints' own `.is-carousel` rule and
+its own word — one new string, `saints.modeToNormal`, because "Carousel mode"
+names something Prayer does not have. The page's name is drawn in All Saints'
+`.index-head` beside that word. `STRUCTURE.md` §4 Prayer is the record.
+
 **The ask (2 October 2026):** rebuild the search bar on All Saints and Prayer so
 both carry an **Advanced** option, and the advanced panel is the same thing on
 both pages. In-flight work already covers part of this (the Prayer page gaining

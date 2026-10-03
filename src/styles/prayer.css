@@ -68,6 +68,17 @@ html[data-route~='prayer'] .index-controls {
   padding-inline: var(--space-4);
 }
 
+/* **The head row is All Saints' own too** (author, 2026-10-03: "instead of
+   Saints it says Prayer as the text at the top"): `index.css` draws
+   `.index-head` and dresses the word in it, and this says only that it keeps
+   the page's gutter — the same one the shell and the count line pay, so the
+   name, the field and the first aside stand on one line — and that it spends no
+   height the book could have. */
+html[data-route~='prayer'] .index-head {
+  flex: none;
+  padding-inline: var(--space-4);
+}
+
 /* The line that says how long the book now is. Visible, where All Saints'
    tweened line is `sr-only`: there it sits over a grid the reader can count
    for themselves, and here it is the only thing on the page that says what the
@@ -342,6 +353,7 @@ html[data-route~='prayer'] .hy-arrow.is-next {
 
   /* The shell takes the same side margin the three columns under it take, so
      the field's left edge and the first aside's stand on one line. */
+  html[data-route~='prayer'] .index-head,
   html[data-route~='prayer'] .index-controls,
   html[data-route~='prayer'] .hy-count {
     padding-inline: var(--space-8);

@@ -59,6 +59,11 @@ import { LAYOUTS } from '../index/controls.js';
  *   search     the MiniSearch index, or null until it has been built
  *   generation bumped on every step, so an answer that arrives after the
  *              reader has moved on knows it is stale and says nothing
+ *   advanced   whether the facet panel is showing. **False on arrival**
+ *              (author, 2026-10-03: "the carousel mode is just normal mode
+ *              i.e. Advanced search OFF") — the field alone is what a reader
+ *              meets, exactly as on All Saints, where the same boolean is that
+ *              page's `mode` and its off state is the carousel
  */
 
 /** The open page, or null between views. */
@@ -84,6 +89,7 @@ export function open(next) {
     detail: null,
     filters: { ...EMPTY_FILTERS },
     layout: openingLayout(),
+    advanced: false,
     search: null,
     generation: 0,
     cleanups: [],

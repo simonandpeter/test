@@ -25,6 +25,9 @@ import { state } from './state.js';
  * sticky block and wires it over whatever state it is handed; there is no
  * second sheet and no second set of chips.
  *
+ * **And it opens folded, as All Saints' does** — the field alone, with the
+ * facets behind one word (author, 2026-10-03; `paintAdvanced` below).
+ *
  * **No Sort chip and no Detailed box.** All Saints sorts a grid; this page's
  * order *is* the book, so a sort control here would mean reordering the
  * hymnal, and there is no grid to detail. The one control that means something
@@ -238,6 +241,42 @@ function syncFace(el) {
 
 const DESK = '(min-width: 1024px)';
 
+/* ---- Advanced, which is an option and not the default -------------------- */
+
+/**
+ * **The facets are folded away until a reader asks for them** (author,
+ * 2026-10-03: "the carousel mode is just normal mode i.e. Advanced search OFF";
+ * TODO item 6: "Advanced is an *option*, not the default: the field alone is
+ * what a reader meets, and Advanced opens the facets").
+ *
+ * **It is All Saints' own switch, down to the two class names.** That page puts
+ * `is-carousel` or `is-search` on the view's box and `index.css` folds
+ * `.filter-drop` away under the first of them; this page is on that same sheet,
+ * so there is one rule hiding the panel on both pages rather than a second one
+ * saying the same thing in `prayer.css`. The word in the button is that page's
+ * word too — `modeToSearch`, "Advanced search", already in all five packs.
+ *
+ * What differs is only what the off state *is*. All Saints' off state is the
+ * carousel, so its other word is "Carousel mode"; this page's off state is the
+ * page itself — the author's "just normal mode" — so its other word is
+ * `modeToNormal`.
+ *
+ * **The panel keeps its DOM either way**, exactly as All Saints' does: the
+ * facets are the source of truth for the filter set (`views/index/controls.js`
+ * reads the inputs), so a reader who narrows the book, folds the panel and
+ * steps on is still reading the book they asked for. Folding is not clearing,
+ * and `[data-clear]` stands outside the fold so the way back is always drawn.
+ */
+function paintAdvanced(el) {
+  const on = state.advanced;
+  el.classList.toggle('is-search', on);
+  el.classList.toggle('is-carousel', !on);
+  const label = el.querySelector('[data-mode-label]');
+  if (label) label.textContent = on ? STRINGS.saints.modeToNormal : STRINGS.saints.modeToSearch;
+  const button = el.querySelector('[data-mode-toggle]');
+  if (button) button.setAttribute('aria-expanded', String(on));
+}
+
 /**
  * Wires the shell and paints the count for the first time.
  *
@@ -265,6 +304,18 @@ export function wireFind(el, { redrawAsides }) {
     detailed: false,
     modeToggle: false,
   });
+  /* The toggle is wired here and not through `wireControls`'s own
+     `modeToggle` — that one calls `switchMode`, which is All Saints' two faces
+     and its state singleton. The button is the same button; what it switches
+     is this page's. */
+  const toggle = el.querySelector('[data-mode-toggle]');
+  const onToggle = () => {
+    state.advanced = !state.advanced;
+    paintAdvanced(el);
+  };
+  toggle?.addEventListener('click', onToggle);
+  state.cleanups.push(() => toggle?.removeEventListener('click', onToggle));
+  paintAdvanced(el);
   syncFace(el);
   const mq = window.matchMedia?.(DESK);
   if (mq) {

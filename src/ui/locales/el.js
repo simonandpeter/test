@@ -356,6 +356,7 @@ export const el = {
     searchHint: 'όνομα, τύπος, εκκλησία, περιοχή',
     modeToSearch: 'Σύνθετη αναζήτηση',
     modeToCarousel: 'Λειτουργία καρουζέλ',
+    modeToNormal: 'Κανονική λειτουργία',
     carouselLabel: 'Άγιοι, σε ροή',
     shuffle: 'Ανακάτεμα',
     carouselKeys: 'Τα βέλη μετακινούν τη σειρά.',
