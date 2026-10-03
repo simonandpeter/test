@@ -999,15 +999,18 @@ export function paintMonthInto(row, cursor, { live }) {
   // Picking a date does not close the month: only the toggle does.
   for (const b of row.querySelectorAll('.month-grid [data-iso]')) {
     b.addEventListener('click', () => {
-      state.select(b.dataset.iso);
       /*
-       * A day outside the month is a day in the month either side of it, so
-       * the grid follows the selection there - otherwise the chosen day sits
-       * in the corner of a month it does not belong to, marked current in a
-       * grid that disagrees with it.
+       * **The step goes first, and that order is the whole of it.** A day
+       * outside the month is a day in the month either side of it, so the grid
+       * has to travel there - but `select` clears `monthCursor` and lets the
+       * month re-derive from the chosen day, so a step taken *after* it would
+       * be a second step and land a month too far. Stepping first animates the
+       * trip; the select that follows re-derives the month it just arrived at
+       * and agrees with it.
        */
       const out = Number(b.dataset.mout);
       if (out) moveMonth(out);
+      state.select(b.dataset.iso);
     });
   }
 }
