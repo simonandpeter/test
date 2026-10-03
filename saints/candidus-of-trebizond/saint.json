@@ -11,6 +11,11 @@
       "form": "Κάνδιδος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιοι Ευγένιος, Ουαλεριανός, Κάνδιδος και Ακύλας οι εκ Τραπεζούντας», with the rank word left off."
+    },
+    {
+      "form": "Кандид Трапезундский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Кандид Трапезундский, мч.», with the rank word left off; the line itself gives him in the genitive."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст. — «Мчч. Евгения, Кандида, Валериана и Акилы (III-IV)»",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -65,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "The centuries in the calendar's own bracket: days.pravoslavie.ru, 21 января ст. ст., «Мчч. Евгения, Кандида, Валериана и Акилы (III-IV)»."
+    }
   }
 }

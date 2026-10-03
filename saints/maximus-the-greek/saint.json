@@ -11,6 +11,11 @@
       "form": "Μάξιμος ο Γραικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Άγιος Μάξιμος ο Γραικός», with the rank word left off."
+    },
+    {
+      "form": "Максим Грек",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Максим Грек, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст. — «Прп. Максима Грека (1556)»",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -68,5 +82,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Зарею Духа облистаем,/ витийствующих богомудренно сподобился еси разумения,/ неведением омраченная сердца человеков светом благочестия просвещая,/ пресветел явился еси Православия светильник, Максиме преподобне,/ отонудуже ревности ради Всевидящаго/ отечества чужд и странен, Российския страны был еси пресельник,/ страдания темниц и заточения от самодержавнаго претерпев,/ десницею Вышняго венчаешися и чудодействуеши преславная./ И о нас ходатай буди непреложен,// чтущих любовию святую памятъ твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст., «Тропарь преподобного Максима Грека», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lit about by the dawn of the Spirit, thou wast counted worthy of the understanding of those who speak with God's wisdom; and enlightening with the light of godliness the hearts of men darkened by ignorance, thou wast shown a most radiant lamp of Orthodoxy, O venerable Maximus. Thence, for the zeal of him who seeth all, thou wast made a stranger and an exile from thy fatherland and a sojourner in the Russian land; and having endured the sufferings of prisons and imprisonment from the sovereign, thou art crowned by the right hand of the Most High and workest most glorious wonders. Be thou also an unfailing advocate for us, who honour thy holy memory with love.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Богодухновенным Писанием и богословия проповеданием/ неверствующих суемудрие обличил еси, всебогате,/ паче же, в Православии исправляя, на стезю истиннаго познания наставил еси,/ якоже свирель богогласная, услаждая слышащих разумы,/ непрестанно веселиши, Максиме досточудне,/ сего ради молим Тя:/ моли Христа Бога грехов оставление низпослати// верою поющим всесвятое твое успение, Максиме, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст., «Кондак преподобного Максима Грека», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the God-inspired Scriptures and by the preaching of theology thou didst confute the vain wisdom of unbelievers, O all-rich one; and still more, setting them right in Orthodoxy, thou didst lead them to the path of true knowledge. As a pipe sounding with God's voice, sweetening the minds of them that hear, thou givest unceasing gladness, O most wondrous Maximus. Therefore we entreat thee: pray Christ God to send down forgiveness of sins upon those who sing in faith of thy all-holy falling asleep, Maximus our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

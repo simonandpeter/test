@@ -15,6 +15,11 @@
       "form": "Μάξιμος ο Ομολογητής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Όσιος Μάξιμος ο Ομολογητής», with the rank word left off."
+    },
+    {
+      "form": "Максим Исповедник",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Максим Исповедник, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -259,6 +264,54 @@
       },
       "english": {
         "text": "Guide of Orthodoxy, teacher of true worship and of holiness, luminary of the inhabited world, God-inspired adornment of monastics, O wise Maximus, by thy teachings thou hast enlightened all, lyre of the Spirit. Intercede with Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ монашествующих Богодухновенное удобрение,/ Максиме премудре,/ ученьми твоими вся просветил еси,/ цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст., «Тропарь преподобного Максима исповедника», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O teacher of Orthodoxy, master of piety and of purity, lamp of the world, God-inspired adornment of monastics, all-wise Maximus: by thy teachings thou hast enlightened all, O spiritual harp. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Свет Трисиянный, всельшийся в душу твою,/ сосуд избран показа тя, всеблаженне,/ являюща Божественная концем,/ неудобопостижных разумений ты сказуяй, блаженне,/ и Троицу всем, Максиме, возпроповедуяй ясно,// Пресущную, Безначальную.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст., «Кондак преподобного Максима исповедника», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The thrice-radiant Light, which took up its dwelling in thy soul, showed thee a chosen vessel, O all-blessed one, making divine things plain to the ends of the earth; for thou didst expound meanings hard to grasp, O blessed one, and didst preach the Trinity clearly to all, Maximus — the Trinity beyond being and without beginning.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Троицы рачителя и великаго Максима,/ научающа ясно вере Божественней,/ еже славити Христа, во дву естествах, волях же и действах суща,/ в песнех достойных, вернии, почтим, взывающе:/ радуйся, проповедниче веры.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст., «Кондак преподобного Максима Исповедника», глас 8 — the second of the two kontakia the day page prints for him",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The lover of the Trinity and great Maximus, who teacheth clearly the divine faith, that Christ is to be glorified as existing in two natures, two wills and two operations — him let us honour, O faithful, with worthy hymns, crying: rejoice, O preacher of the faith.",
         "rendered": "site"
       }
     }

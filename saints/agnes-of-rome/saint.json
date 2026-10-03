@@ -11,6 +11,11 @@
       "form": "Αγνή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιανουαρίου, «Αγία Αγνή», with the rank word left off."
+    },
+    {
+      "form": "Агния Римская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 21 января ст. ст., «Мученица Агния Римская», with the rank word left off; the day line names her only «Агнии девы»."
     }
   ],
   "sex": "female",
@@ -37,8 +42,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 января ст. ст. — «Мц. Агнии девы (ок. 305)»",
+        "url": "https://days.pravoslavie.ru/Days/20260121.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
