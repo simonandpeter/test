@@ -19,6 +19,15 @@
     "confessor",
     "hymnographer"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 838,
+      "latest": 838,
+      "display": "838",
+      "basis": "attested",
+      "note": "The one year the page fixes him by, and it is not his own death: «In 838, it says, he buried his brother Theodore with great grief when he died in exile», after which Theophanes was himself exiled to Thessalonica. No year of his repose is printed."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

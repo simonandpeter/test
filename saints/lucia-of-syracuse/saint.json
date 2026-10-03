@@ -22,6 +22,15 @@
     "agatha-of-catania",
     "leo-of-catania"
   ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «martyred in the year 304 when Paschasios was governor of Sicily and Diocletian emperor of Rome»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

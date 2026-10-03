@@ -19,6 +19,22 @@
     "confessor",
     "monk"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 760,
+      "latest": 760,
+      "display": "760",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «saint.gr heads him 760 to 815 and names his parents Isaac and Theodotia»."
+    },
+    "death": {
+      "earliest": 815,
+      "latest": 815,
+      "display": "815",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «saint.gr heads him 760 to 815 and names his parents Isaac and Theodotia»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

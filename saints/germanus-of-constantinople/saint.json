@@ -21,6 +21,22 @@
     "hymnographer"
   ],
   "office": "Patriarch of Constantinople",
+  "dates": {
+    "birth": {
+      "earliest": 640,
+      "latest": 640,
+      "display": "640",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «saint.gr has him born at Constantinople in 640, the son of the patrician Justinian»."
+    },
+    "death": {
+      "earliest": 740,
+      "latest": 740,
+      "display": "12 May 740",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: he withdrew to Platania and «died there at the age of a hundred on 12 May 740»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

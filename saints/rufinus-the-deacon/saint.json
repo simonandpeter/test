@@ -18,6 +18,15 @@
     "aquilina-the-martyr-7-april",
     "two-hundred-martyrs-of-sinope"
   ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "saint.gr's whole account of him in its own voice, as the folder's own life quotes it: «Ο Άγιος Ρουφίνος ο Διάκονος μαρτύρησε επί της βασιλείας του Δεκίου (249 - 251 μ.Χ.) αφού τον έσφαξαν με μαχαίρι»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

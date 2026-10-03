@@ -12,6 +12,15 @@
       "note": "Read out of saint.gr's page for 19 Μαΐου, whose head line for him is «Αγιος Παυλος ο Ιερομαρτυς» and whose list names him «Παύλος Μιχαήλοβιτς Κρασνοκούτσκιυ», with the rank words left off."
     }
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "The one year the source gives him, and it is not a death year: saint.gr's line in its list of the Kharkov new martyrs, «Ο Άγιος Ιερομάρτυς Παύλος Μιχαήλοβιτς Κρασνοκούτσκιυ, ο οποίος φυλακίσθηκε το 1930.» — imprisoned in 1930. The list says of the company that they died between 1937 and 1941, but says it of all but one and does not say which, so no death year is recorded here."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

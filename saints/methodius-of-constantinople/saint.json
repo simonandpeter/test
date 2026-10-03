@@ -20,6 +20,15 @@
     "patriarch",
     "confessor"
   ],
+  "dates": {
+    "death": {
+      "earliest": 846,
+      "latest": 846,
+      "display": "846",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «(; - 846)». He became patriarch after the death of Theophilos on 12 February 842."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

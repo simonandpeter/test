@@ -20,6 +20,15 @@
     "wonderworker"
   ],
   "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "361",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «(; - 361)». The same page puts the martyrdom in the years of Julian the Apostate, «360 to 363», so the bracketed year falls inside the reign it gives."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

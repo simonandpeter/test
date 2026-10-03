@@ -15,6 +15,15 @@
   "related": [
     "maximus-companion-of-olympias"
   ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "The reign the page prints as the date, as the folder's own life has it: «martyred in Persia in the years of the emperor Decius, which it dates 249 to 251»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

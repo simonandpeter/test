@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «the page sets the year 298 beside the governor's name», Urbanus of Palestine, in the years of the emperor Maximian."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -13,6 +13,15 @@
     "new-martyr",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1805,
+      "latest": 1805,
+      "display": "5 March 1805",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «killed Parthenius, on the fifth of March 1805 — which is the day the Greek calendar keeps him on»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

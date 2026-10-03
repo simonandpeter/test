@@ -19,6 +19,22 @@
     "abbot",
     "monk"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 292,
+      "latest": 292,
+      "display": "292",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «he was born in 292 in the Lower Thebaid of Egypt of pagan parents»."
+    },
+    "death": {
+      "earliest": 348,
+      "latest": 348,
+      "display": "348",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «The page gives his death as 348 in its head line»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

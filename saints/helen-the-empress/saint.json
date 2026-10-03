@@ -28,6 +28,15 @@
     "constantine-the-great",
     "sylvester-of-rome"
   ],
+  "dates": {
+    "death": {
+      "earliest": 327,
+      "latest": 327,
+      "display": "c. 327",
+      "basis": "traditional",
+      "note": "saint.gr, with the page's own hedge kept: «It puts her falling asleep in peace at 327» — «μάλλον», probably, is the page's own word."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

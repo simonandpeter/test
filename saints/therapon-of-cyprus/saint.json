@@ -20,6 +20,15 @@
     "bishop",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 601,
+      "latest": 740,
+      "display": "7th–8th century",
+      "basis": "inferred",
+      "note": "The page reasons rather than states, and says so: from his action against theopaschism and against iconoclasm «it reasons that he lived in the seventh century or the beginning of the eighth, but not later than 740, the year Andrew of Crete, the Jerusalemite, fell asleep», who praised him in an encomium late in his own life. The later bound is that argument's, not a recorded year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

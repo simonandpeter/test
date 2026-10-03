@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «he was martyred at Ancyra in the year 304, in the years of the emperor Maximian, who reigned from 285 to 305»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
