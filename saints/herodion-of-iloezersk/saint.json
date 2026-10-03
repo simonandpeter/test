@@ -1,0 +1,74 @@
+{
+  "slug": "herodion-of-iloezersk",
+  "display_name": "Herodion of Iloezersk",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Иродион Илоезерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Иродион (Родион) Илоезерский, схимонах», with the rank word left off; the page gives Родион as the other form of the same name."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1541,
+      "latest": 1541,
+      "display": "28 September 1541",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, Life/life1621.htm: «Скончался он в схиме 28 сентября 1541 года и был похоронен в устроенной им часовне». The day line prints «(1541)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists this day and no other. The page dates the keeping of it: Archimandrite Mitrophan of the Belozersk monastery examined the wonders at his relics in 1653, by the blessing of Metropolitan Nikon of Novgorod, afterwards patriarch, and the commemoration was established then."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прп. Иродиона Илоезерского (1541).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 28 septembrie was not read (2026-10-04)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/28 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 28 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Iloezersk Ozad hermitage, on a peninsula of Lake Iloozero",
+      "modern_name": "Lake Iloozero, near Belozersk, Vologda Oblast, Russia",
+      "lat": 60.0333,
+      "lon": 37.9,
+      "uncertainty_km": 15
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "cornelius-of-komel"
+  ]
+}

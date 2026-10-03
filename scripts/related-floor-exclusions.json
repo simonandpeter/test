@@ -40,6 +40,11 @@
       "reason": "the life says the two are not the same person",
       "quote": "hurch in America. He is not the great-martyr «Aretas of Nagran», whom the corpus keeps in Oct"
     },
+    "barsanuphius-of-optina -> macarius-metropolitan-of-moscow": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "913 he fell ill again and asked Metropolitan «Macarius of Moscow» to bless his retirement to Op"
+    },
     "basil-of-mirozh -> basil-of-rostov": {
       "category": "denial",
       "reason": "the life says the two are not the same person",
@@ -59,6 +64,11 @@
       "category": "denial",
       "reason": "the life says the two are not the same person",
       "quote": "ober, which is not the day this corpus keeps «Cyprian of Carthage» on; the man named in the page"
+    },
+    "chariton-of-syanzhema -> chariton-the-confessor": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person — one Chariton on this day is of 1509 and the other of about 350",
+      "quote": "f Syanzhema the Simple, abbot. It also keeps «Chariton the Confessor» on the same day, a different"
     },
     "claudius-martyr-9-november -> claudius-of-corinth": {
       "category": "denial",
@@ -139,6 +149,11 @@
       "category": "denial",
       "reason": "the life says the two are not the same person",
       "quote": "no wonder, no relics and no hymn. He is not «Honoratus of Arles», the founder of Lérins, whom"
+    },
+    "irenaeus-of-lyon -> john-the-theologian": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "f Smyrna, who had himself been a disciple of «John the Theologian»; whose pupil he was afterward"
     },
     "john-the-sinaite-venerable-martyr -> john-of-the-ladder": {
       "category": "denial",
@@ -259,6 +274,11 @@
       "category": "denial",
       "reason": "the life says the two are not the same person",
       "quote": "sed with him in the same rain. He is not the «Theodulus of Myropolis» whom this corpus keeps elsewh"
+    },
+    "theonas-of-thessalonica -> nicodemus-the-hagiorite": {
+      "category": "denial",
+      "reason": "the life says the two are not the same person",
+      "quote": "r than most about what is not known. Quoting «Nicodemus the Hagiorite», who wrote his life, it says"
     }
   }
 }

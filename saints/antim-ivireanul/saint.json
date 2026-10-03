@@ -16,8 +16,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 14 сентября ст. ст. (civil 27 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian calendar marks the line «(Рум.)» — a Romanian saint it keeps rather than one of its own."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 27 сентября ст. ст. — «Сщмч. Анфима Иверянина, митр. Валашского (1716) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260927.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

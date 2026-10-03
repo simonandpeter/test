@@ -39,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line gathers two companies into one: the three brothers of Caluta and the four of Claudiopolis. Its index of names separates them by place."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Мчч. Александра, Алфея, Зосимы, Марка пастыря, Никона, Неона, Илиодора и прочих (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,100 @@
+{
+  "slug": "euphrosyne-of-suzdal",
+  "display_name": "Euphrosyne of Suzdal",
+  "office": "Abbess of a convent in Suzdal",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "princess",
+    "abbess"
+  ],
+  "names": [
+    {
+      "form": "Евфросиния Суздальская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's life page, «Преподобная Евфросиния Суздальская», with the rank word left off."
+    },
+    {
+      "form": "Феодулия",
+      "lang": "ru",
+      "note": "Her baptismal name, as the calendar's day line gives it: «Прп. Евфросинии Суздальской, в миру Феодулии (1250)»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1212,
+      "latest": 1212,
+      "display": "1212",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, Life/life1603.htm: «Преподобная Евфросиния, княжна Суздальская, родилась в 1212 году»."
+    },
+    "death": {
+      "earliest": 1250,
+      "latest": 1250,
+      "display": "1250",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru, Life/life1603.htm: «Преподобная преставилась к Богу 25 сентября 1250 года»; the day line prints «(1250)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The same page lists a second memorial, «18 сентября (Прославление)» — her glorification at Suzdal in 1698. One row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Прп. Евфросинии Суздальской, в миру Феодулии (1250).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 25 septembrie, which is the civil day her Julian 25 September falls on in that calendar, was not read (2026-10-04). doxologia.ro/8-octombrie was read for this civil day and does not name her."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/25, the Greek calendar's own 25 September, was not read (2026-10-04). saint.gr/10/08 was read for this civil day and does not name her."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Third of the three the Ohrid Prologue enumerates for this day. The Prologue and the Russian calendar disagree about her betrothal, and the disagreement is recorded in her life rather than resolved. pravoslavno.rs publishes about thirty days ahead and the Prologue repeats annually, so the page for civil 8 October 2025 serves the same Julian day; its own entry list for civil 8 October 2026 prints one of the three and is known to drop entries."
+      },
+      "source": {
+        "text": "Охридски пролог, 25. септембар ст. к. — «3. Преп. Ефросинија Суздаљска. Крштено јој име Теодула.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-10-08&prolog=1",
+        "year": 2025
+      }
+    }
+  ],
+  "locations": [
+    {
+      "kind": "death",
+      "historical_name": "the Suzdal convent in honour of the Deposition of the Robe of the Mother of God",
+      "modern_name": "Suzdal, Russia",
+      "lat": 56.4194,
+      "lon": 40.4492,
+      "uncertainty_km": 15
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "alexander-nevsky",
+    "euphrosyne-of-alexandria",
+    "michael-of-chernigov",
+    "theodore-boyar-of-chernigov"
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "tatiana-chekmazova",
+  "display_name": "Tatiana (Chekmazova)",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "nun"
+  ],
+  "names": [
+    {
+      "form": "Татиана (Чекмазова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14334, «Татиана (Чекмазова), послушница, прмц.», with the rank words left off. «Послушница» is a novice — she had not been tonsured."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after her name: «Прмц. Татианы (1942)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прмц. Татианы (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 28 septembrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/28 was not read (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 28 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

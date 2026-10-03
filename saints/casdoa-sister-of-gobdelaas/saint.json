@@ -25,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line names three where the Greek names four. She is «Каздои» in it, and its index of names calls her «Каздоя Персидская, царевна, мц.», the Persian princess — which matches Κασδόα and not Κάσδοος. `casdoos-companion-of-gobdelaas` is the other Greek name and is not printed by the Russian, so no Russian row was written for him."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 29 сентября ст. ст. — «Мчч. Дады, Гаведдая и Каздои (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260929.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -23,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 14 сентября ст. ст. (civil 27 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line names one companion, Gimnasius, where the Romanian life counts forty-nine unnamed; `gimnasius-of-byzantium` is that name."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 27 сентября ст. ст. — «Мч. Каллистрата и дружины его: Гимнасия и иных (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260927.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -62,11 +72,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 284,
-      "latest": 305,
-      "display": "under Diocletian (284-305)",
-      "basis": "attested",
-      "note": "The life on doxologia.ro sets his contest under Diocletian (284-305) and Maximian (286-305)."
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's day line for 27 сентября ст. ст. prints «(304)». doxologia.ro's life, read 30 August 2026, sets the contest under Diocletian (284–305) and Maximian (286–305), which contains it; the Russian year is the narrower reading and is taken."
     }
   },
   "text": {
@@ -129,5 +139,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "gimnasius-of-byzantium"
   ]
 }

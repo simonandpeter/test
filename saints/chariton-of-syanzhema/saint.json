@@ -12,6 +12,11 @@
       "form": "Χαρίτων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιοι Ευθύμιος και Χαρίτων», with the rank word left off."
+    },
+    {
+      "form": "Харитон Сянжемский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page, «Харитон Сянжемский, Простой, игумен», with the rank and the office left off."
     }
   ],
   "related": [
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прп. Харитона Сянжемского (1509).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

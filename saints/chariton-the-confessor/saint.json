@@ -19,8 +19,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 15 сентября ст. ст. (civil 28 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps a second Chariton on this same day, `chariton-of-syanzhema`, who died in 1509 — which is why its line for this one has to carry «Исповедника» and the other the place."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 28 сентября ст. ст. — «Прп. Харитона Исповедника (ок. 350).»",
+        "url": "https://days.pravoslavie.ru/Days/20260928.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

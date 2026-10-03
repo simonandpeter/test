@@ -1,0 +1,62 @@
+{
+  "slug": "theodore-bogoyavlensky-27-september",
+  "display_name": "Theodore (Bogoyavlensky, 27 September)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Феодор (Богоявленский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13806, «Феодор (Богоявленский), иерей, сщмч.», with the rank words left off. This is not the folder `theodore-bogoyavlensky`: that man is name page 10402, «Феодор (Богоявленский), иерей, исповедник», a confessor who died in 1933 and is kept on the Julian 28 January. The calendar holds two priests of this name and separates them by rank, by year and by day — сщмч. against исповедник, 1937 against 1933, 27 September against 28 January — so this folder is disambiguated by its day, and no row claims the two are one man."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the calendar's day line prints after his name: «Сщмч. Феодора пресвитера (1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 9,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 27 сентября ст. ст. — «Сщмч. Феодора пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20260927.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's own 27 septembrie was not read (2026-10-04); the Romanian calendar does not generally keep the Russian new martyrs."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr/09/27 was not read for him (2026-10-04)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs's Prologue page for the civil day this Julian 27 September falls on was not read (2026-10-04)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

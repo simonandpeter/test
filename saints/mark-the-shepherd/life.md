@@ -6,4 +6,6 @@ Mark was an old man who kept sheep. Because he confessed that he was a Christian
 
 The other martyrs, Heliodorus, Nikon and Neon, died the same death with many virgins and children, all of them beheaded at a place called Moromilion. The synaxarion names none of the virgins and children.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/2468/saint.aspx); read 17 September 2026.*
+The Russian calendar keeps him on the same 28 September and keeps the epithet: «Марка пастыря», Mark the shepherd, in a line that runs his company together with the three brothers of Caluta and ends «и прочих (IV)», and the rest, fourth century. Its index of names places him and his three companions at Claudiopolis: «Марк Клавдиопольский, мч.»
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/2468/saint.aspx); read 17 September 2026; and the Russian church calendar's [28 September](https://days.pravoslavie.ru/Days/20260928.html), read 4 October 2026.*

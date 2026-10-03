@@ -6,4 +6,6 @@ The Greek synaxarion keeps him on 28 September too. Truthful and bold, Baruch �
 
 Baruch was imprisoned too, because the Jews hated him for his truthful and bold tongue and accused him of setting Jeremiah against them; and when they fled in fear to Egypt, Baruch went there with Jeremiah. A rabbinic tradition, the synaxarion says, has him return to Babylon after Jeremiah’s death. In the book that bears his name he foretells plainly the incarnation of the Lord Jesus Christ. The Greek calendar keeps him with an apolytikion and a kontakion.
 
-*After doxologia.ro, [Viața Sfântului Proroc Baruh](https://doxologia.ro/viata-sfantului-proroc-baruh); read 30 August 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/2467/saint.aspx), read 17 September 2026.*
+The Russian calendar keeps him on the same 28 September, as «Прор. Варуха», and dates him by century rather than by year: «VI до Р.Х.», the sixth before Christ.
+
+*After doxologia.ro, [Viața Sfântului Proroc Baruh](https://doxologia.ro/viata-sfantului-proroc-baruh); read 30 August 2026; the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/2467/saint.aspx), read 17 September 2026; and the Russian church calendar's [28 September](https://days.pravoslavie.ru/Days/20260928.html), read 4 October 2026.*

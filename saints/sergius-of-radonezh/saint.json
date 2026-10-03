@@ -27,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 12 сентября ст. ст. (civil 25 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line is «Преставление», his repose. The same calendar prints a troparion and kontakion for him on the day, and a common troparion to him and Nicon together."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Преставление прп. Сергия, игумена Радонежского, всея России чудотворца (1392).»",
+        "url": "https://days.pravoslavie.ru/Days/20260925.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "Second of the three the Ohrid Prologue enumerates for this day. It dates his repose 1391, where the Russian calendar has 1392 and saint.gr's heading 1329; the three readings stand together on this folder and none is preferred. pravoslavno.rs publishes about thirty days ahead and the Prologue repeats annually, so the page for civil 8 October 2025 serves the same Julian day; its own entry list for civil 8 October 2026 prints one of the three and is known to drop entries."
+      },
+      "source": {
+        "text": "Охридски пролог, 25. септембар ст. к. — «2. Преп. Сергије Радонежски. Велики подвижник и светилник руске цркве.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-10-08&prolog=1",
+        "year": 2025
+      }
     }
   ],
   "locations": [
@@ -114,9 +134,11 @@
     "alexander-peresvet",
     "arsenius-of-komel",
     "athanasius-of-vysotsk",
+    "cyril-of-radonezh",
     "ignatius-monk-martyr-1938",
     "james-of-zheleznyi-borok",
     "luke-of-crimea",
+    "maria-of-radonezh",
     "savva-of-storozhevsk",
     "seraphim-of-sarov"
   ]

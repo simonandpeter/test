@@ -4,4 +4,6 @@ Gobdelaas was the son of King Sapor, the Greek synaxarion says, and became a Chr
 
 Casdoa was the king’s daughter and the sister of Gobdelaas: she visited her brother in prison and he made her a Christian, and when it became known the king arrested her and, unable to change her faith, tortured her cruelly to death. The verses add that Gobdelaas was pierced with reeds for honouring Christ, who was struck with a reed; that Dadas was cut limb from limb by the sword; and that Casdoos was put to the sword and Casdoa crushed with wood. The entry gives no date.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the entry](https://www.saint.gr/2403/saint.aspx); read 17 September 2026.*
+The Russian calendar keeps her on the same 29 September, last of the three it names, and its index of names settles what the Greek line leaves open. Where saint.gr prints «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» — four names, two of them so close that the corpus holds a folder for each — the Russian prints three and calls her «Каздоя Персидская, царевна, мц.», the Persian princess, sister of the king's son. So she is Κασδόα. Of Κάσδοος the Russian says nothing at all, and that silence is recorded rather than read either way.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the entry](https://www.saint.gr/2403/saint.aspx); read 17 September 2026; and the Russian church calendar's [29 September](https://days.pravoslavie.ru/Days/20260929.html), read 4 October 2026.*

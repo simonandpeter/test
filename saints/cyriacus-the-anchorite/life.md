@@ -6,4 +6,6 @@ What marked him among his fellow monks was the calm with which he met them, and 
 
 The Romanian calendar keeps him on the same day with a troparion, which is that common, and two kontakia, and says of him in a line that however old he grew he loved labours and struggles, standing at the services with zeal, and was never found sitting idle, but either praying or working at something.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the entry](https://www.saint.gr/2398/saint.aspx); read 17 September 2026; the Romanian entry is at doxologia.ro — [the page](https://doxologia.ro/sfantul-cuvios-chiriac-sihastrul).*
+The Russian calendar keeps him on the same 29 September, as «Прп. Кириака отшельника», and dates his repose 556. Its index of names places him: «Кириак Палестинский, отшельник», Cyriacus of Palestine, the anchorite.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the entry](https://www.saint.gr/2398/saint.aspx); read 17 September 2026; the Romanian entry is at doxologia.ro — [the page](https://doxologia.ro/sfantul-cuvios-chiriac-sihastrul); and the Russian church calendar's [29 September](https://days.pravoslavie.ru/Days/20260929.html), read 4 October 2026.*

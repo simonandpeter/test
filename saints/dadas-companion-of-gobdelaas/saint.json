@@ -24,8 +24,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 29 сентября ст. ст. (civil 12 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line names three where the Greek names four — «Мчч. Дады, Гаведдая и Каздои» against «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα». Κάσδοος, who has his own folder here as `casdoos-companion-of-gobdelaas`, is not among the names the Russian prints, so no Russian row was written for him."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 29 сентября ст. ст. — «Мчч. Дады, Гаведдая и Каздои (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260929.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

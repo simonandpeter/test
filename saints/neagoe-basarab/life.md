@@ -4,4 +4,6 @@ Born probably in 1481 or 1482, of the Basarabs on his father's side and the Crai
 
 In 1517 he sought and obtained from the Ecumenical Patriarchate the canonization of his own teacher Niphon, and on the reliquary at Dionysiou the Romanian ruler is painted bowing to his saint. He gave generously to the Orthodox monasteries of Wallachia and all the Balkan lands, and in his reign the monastery of Curtea de Argeș was built, where his own relics now rest. To his son he left the Teachings of Neagoe Basarab to his son Theodosie - the first Romanian creation of universal standing, as the Synod's own tomos calls it, a testament spiritual, pedagogical and encyclopedic at once. The Romanian Church canonized him in 2008.
 
-*After doxologia.ro, [Viața Sfântului Voievod Neagoe Basarab](https://doxologia.ro/viata-sfantului-voievod-neagoe-basarab); read 30 August 2026.*
+The Russian calendar keeps him too, on the same 26 September, with the year the Romanian gives — «Блгв. кн. Нягу Басарабского (1521)» — and marks the line «(Рум.)», a Romanian saint it keeps rather than one of its own. Its index of names renders him «Благоверный князь Нягу Басарбский».
+
+*After doxologia.ro, [Viața Sfântului Voievod Neagoe Basarab](https://doxologia.ro/viata-sfantului-voievod-neagoe-basarab); read 30 August 2026; and the Russian church calendar's [26 September](https://days.pravoslavie.ru/Days/20260926.html), read 4 October 2026.*

@@ -34,8 +34,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 13 сентября ст. ст. (civil 26 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian line is «Преставление», his falling asleep, and puts it at the beginning of the second century."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 26 сентября ст. ст. — «Преставление апостола и евангелиста Иоанна Богослова (начало II).»",
+        "url": "https://days.pravoslavie.ru/Days/20260926.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

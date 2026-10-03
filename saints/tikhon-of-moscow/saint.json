@@ -39,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026). The Romanian life page names 22 februarie, 7 aprilie, 5 and 9 octombrie and 18 noiembrie as his days, but that is doxologia's list and not a reading of the Russian calendar."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "This day is not his repose but his glorification, which the day line dates 1989: «Свт. Тихона, патриарха Московского и всея Руси (прославление, 1989)». His own calendar's name page lists seven days — «26 января», «26 января (Новомуч.)», «9 февраля (обретение мощей)», «25 марта (преставление)», this one, «5 октября (Моск. Свт.)» and «5 ноября (избрание на Патриарший престол)». One row per church is the schema, so the rest are recorded here and he does not render on them; the Greek and Romanian rows on this folder keep his repose, 25 March old style."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 26 сентября ст. ст. — «Свт. Тихона, патриарха Московского и всея Руси (прославление, 1989).»",
+        "url": "https://days.pravoslavie.ru/Days/20260926.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -82,8 +92,9 @@
     "life": "life.md"
   },
   "related": [
-    "tikhon-of-zadonsk",
     "alexius-presbyter-martyr-1918-30-august",
-    "leontius-stasevich"
+    "leontius-stasevich",
+    "peter-of-moscow-27-september",
+    "tikhon-of-zadonsk"
   ]
 }

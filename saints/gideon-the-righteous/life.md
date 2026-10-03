@@ -71,4 +71,6 @@ September.
 
 The Greek synaxarion keeps him on 26 September as well, and says only that the righteous Gideon is known in the Church’s hymnography, which likens Christ — the birth of Christ — to the dew on the fleece; its verse says that though Gideon did not see Christ’s birth, he foresaw its type.
 
-*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-gedeon-sudija-izrailskij), read 6 September 2026; the Romanian line at doxologia.ro — [Viaţa Dreptului Ghedeon](https://doxologia.ro/viata-dreptului-ghedeon), read 30 August 2026, was all this entry had until then; the Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — [the entry](https://www.saint.gr/2503/saint.aspx), read 17 September 2026.*
+The Russian calendar keeps him on the same 26 September, as «Прав. Гедеона, судии Израильского», Gideon the righteous, judge of Israel, and puts him in the fourteenth century before Christ.
+
+*After the life printed by the Russian church calendar at azbyka.ru — [the entry](https://azbyka.ru/days/sv-gedeon-sudija-izrailskij), read 6 September 2026; the Romanian line at doxologia.ro — [Viaţa Dreptului Ghedeon](https://doxologia.ro/viata-dreptului-ghedeon), read 30 August 2026, was all this entry had until then; the Ορθόδοξος Συναξαριστής (saint.gr), 26 Σεπτεμβρίου — [the entry](https://www.saint.gr/2503/saint.aspx), read 17 September 2026; and the Russian church calendar's [26 September](https://days.pravoslavie.ru/Days/20260926.html), read 4 October 2026.*

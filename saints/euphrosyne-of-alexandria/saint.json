@@ -67,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for this day was not read (2026-08-30)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 9,
+        "calendar": "julian",
+        "note": "First of the three the Ohrid Prologue enumerates for this day. pravoslavno.rs publishes about thirty days ahead and the Prologue repeats annually, so the page for civil 8 October 2025 serves the same Julian day; its own entry list for civil 8 October 2026 prints one of the three and is known to drop entries."
+      },
+      "source": {
+        "text": "Охридски пролог, 25. септембар ст. к. — «1. Преп. Ефросинија. Кћи богатог и знаменитог човека Пафнутија из Александрије.»",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-10-08&prolog=1",
+        "year": 2025
+      }
     }
   ],
   "text": {
@@ -84,6 +94,7 @@
     }
   },
   "related": [
+    "euphrosyne-of-suzdal",
     "paphnutius-father-of-euphrosyne",
     "theodosius-the-younger"
   ],

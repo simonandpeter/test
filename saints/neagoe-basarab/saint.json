@@ -31,8 +31,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 13 сентября ст. ст. (civil 26 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 9,
+        "calendar": "julian",
+        "note": "The Russian calendar marks the line «(Рум.)» — a Romanian saint it keeps rather than one of its own."
+      },
+      "source": {
+        "text": "days.pravoslavie.ru, 26 сентября ст. ст. — «Блгв. кн. Нягу Басарабского (1521) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260926.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
