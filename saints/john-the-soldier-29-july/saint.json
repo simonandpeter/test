@@ -1,6 +1,6 @@
 {
   "slug": "john-the-soldier-29-july",
-  "display_name": "John (29 July)",
+  "display_name": "John the Soldier",
   "sex": "male",
   "types": [
     "soldier"
@@ -9,20 +9,10 @@
     {
       "form": "Ιωάννης",
       "lang": "el",
-      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Ιωάννης ο στρατιώτης», with the rank word and the trade left off."
+      "note": "Read out of saint.gr's line for 29 Ιουλίου, «Άγιος Ιωάννης ο στρατιώτης», with the rank word and the trade left off. The 12 Ιουνίου line prints the same name with the epithet capitalised, «ο Στρατιώτης»."
     }
   ],
   "attestations": [
-    {
-      "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
-    },
-    {
-      "church": "romanian",
-      "status": "undocumented",
-      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
-    },
     {
       "church": "greek",
       "status": "venerated",
@@ -36,7 +26,32 @@
         "url": "https://www.saint.gr/07/29/index.aspx",
         "year": 2026
       },
-      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day as the listing. saint.gr also keeps a «Άγιος Ιωάννης ο Στρατιώτης» on 12 Ιουνίου, on its own page https://www.saint.gr/466/saint.aspx, whose whole notice is «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου Ιωάννη του Στρατιώτη» — and the corpus already keeps that entry as `john-the-soldier-12-june`, with a venerated greek row on 12 June. These are two entries on one calendar, each with its own day page and its own life page, so by the corpus's settled rule they are two commemorations and two men; this folder is the 29 Ιουλίου one, the soldier of the Taifali under Julian the Apostate, buried in the Pandektes. Nothing here claims they are the same man and nothing here moves the other row. No asterisk and no «Δεν είναι διασταυρωμένη» sentence on the life page. The page prints no hymn."
+      "note": "The life page heads «Τύπος εορτής: Σταθερή. Εορτάζει στις 29 Ιουλίου εκάστου έτους», the same day as the listing, and carries the only life either day has: the soldier of the Taifali under Julian the Apostate who hunted Christians in appearance and helped them in secret, buried in the Pandektes. No asterisk, no «Δεν είναι διασταυρωμένη» sentence, no hymn."
+    },
+    {
+      "church": "greek",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "revised-julian"
+      },
+      "source": {
+        "text": "saint.gr, το εορτολόγιο της 12ης Ιουνίου — «Άγιος Ιωάννης ο Στρατιώτης»",
+        "url": "https://www.saint.gr/06/12/index.aspx",
+        "year": 2026
+      },
+      "note": "The second Greek day, kept as «Άγιος Ιωάννης ο Στρατιώτης». Its page prints no life at all — «Δεν έχουμε λεπτομέρειες για τον βίο του Αγίου Ιωάννη του Στρατιώτη», we have no details of the life of Saint John the Soldier — only the name, the trade and a couplet. The corpus held it as a second folder, and the 29 Ιουλίου folder said outright that it “says nothing about whether the two are one man”. The author ruled on 3 October 2026 that they are one, and this record is the merge; no year, no place, no emperor and no hymn come with the day, because the page has none to give."
+    },
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
     },
     {
       "church": "serbian",
@@ -58,5 +73,8 @@
   },
   "related": [
     "john-the-theologian"
+  ],
+  "aliases": [
+    "john-the-soldier-12-june"
   ]
 }
