@@ -137,8 +137,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.02.2026 (8. фебруар ст. ст.) — „1. Свети великомученик Теодор Стратилат. … Пострада свети Теодор 8. фебруара 319. године у три часа по подне, и пресели се у царство Христово. Он се сматра заштитником војника који га призивају у помоћ.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list; he is its first numbered entry and the list printed his heading. Four things stand only here: the hour, three in the afternoon; the count of the lashes, six hundred on the back and five hundred on the belly; that he broke the idols of silver and gold and shared the pieces out among the poor; and that he is held the protector of soldiers who call on him for help. The year is 319, which is also the Russian line's «(319)» and is not saint.gr's 320; dates.death now holds the interval between the two readings, where it had held saint.gr's alone although the Russian figure was already cited on this folder. The Prologue also sends his relics the other way from the Greek page: from Euchaita to Constantinople and the church of the Blachernae, where saint.gr moves them on 8 June from Herakleia to Euchaita. Neither is preferred."
     }
   ],
   "text": {
@@ -146,11 +156,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 320,
+      "earliest": 319,
       "latest": 320,
-      "display": "320",
+      "display": "319 or 320",
       "basis": "attested",
-      "note": "saint.gr heads his page «Άγιος Θεόδωρος ο Στρατηλάτης (; - 320)» and dates the arrest to that year: «Όταν το 320 μ.Χ. ο Λικίνιος διέτριβε στη Νικομήδεια, άκουσε περί του Θεοδώρου ότι είναι Χριστιανός»."
+      "note": "Two readings against one, and the interval is the disagreement. days.pravoslavie.ru for 8 февраля ст. ст.: «Вмч. Феодора Стратилата (319).»; the Ohrid Prologue at pravoslavno.rs for the Julian 8 February: „Пострада свети Теодор 8. фебруара 319. године у три часа по подне.“; and saint.gr heads his page «Άγιος Θεόδωρος ο Στρατηλάτης (; - 320)» and dates the arrest to that year: «Όταν το 320 μ.Χ. ο Λικίνιος διέτριβε στη Νικομήδεια, άκουσε περί του Θεοδώρου ότι είναι Χριστιανός». The Russian figure was cited on this folder before this batch and had not been carried into the date, which stood at saint.gr's 320 alone. doxologia.ro gives no year."
     }
   }
 }

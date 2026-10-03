@@ -33,11 +33,11 @@
       "note": "saint.gr: «Ο Όσιος Λουκάς γεννήθηκε το καλοκαίρι του 896 μ.Χ. από τον Στέφανο και την Ευφροσύνη.»"
     },
     "death": {
-      "earliest": 953,
+      "earliest": 946,
       "latest": 953,
-      "display": "953",
+      "display": "946 or 953",
       "basis": "attested",
-      "note": "saint.gr: «Πέθανε στις 7 Φεβρουαρίου του 953 μ.Χ.»"
+      "note": "Two readings against one, and the interval is the disagreement. saint.gr: «Πέθανε στις 7 Φεβρουαρίου του 953 μ.Χ.»; days.pravoslavie.ru for 7 февраля ст. ст.: «Прп. Луки Елладского (ок. 946).»; and the Ohrid Prologue at pravoslavno.rs for the Julian 7 February: „Упокојио се мирно 946. године.“ The Romanian life gives no year. The Russian figure was cited on this folder before this batch and had not been carried into the date, which stood at saint.gr's 953 alone."
     }
   },
   "attestations": [
@@ -86,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.02.2026 (7. фебруар ст. ст.) — „2. Преподобни Лука Јеладски. Родом из Касторије. … Упокојио се мирно 946. године. Из моштију његових с времена на време истицало миро.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-20&prolog=1",
+        "year": 2026
+      },
+      "note": "Read from the Prologue text on the page, not from its entry list, which printed one heading for the day's four entries and not his. He is its second numbered entry. Two things in it are in none of the other three: the seed he was sent to sow, most of which he gave away to the poor on the road, so that the little he sowed gave a greater harvest than all of it had given before; and the abbot who dreamed three nights running of a woman reproaching him sharply for taking her only son, and so sent Luke back to his mother. It calls him a man of Kastoria, which is the second of the two names the Romanian life gives his village. Its year of repose is 946, which is also the Russian line's «ок. 946» and is not saint.gr's 7 February 953; dates.death now holds the interval between the two readings, where it had held saint.gr's alone although the Russian figure was already cited on this folder."
     }
   ],
   "text": {
