@@ -293,6 +293,9 @@ const GLYPH_PATHS = {
   hierarch: '<path d="M12 2v4M10.5 4h3"/><path d="M6 20v-5a6 6 0 0 1 12 0v5z"/>',
   presbyter: '<path d="M8 5h8l-1 5a3 3 0 0 1-6 0z"/><path d="M12 13v5M9 19h6"/>',
   prince: '<path d="M5 17l1.6-8 3.4 4 2-6 2 6 3.4-4L19 17z"/><path d="M5 19.5h14"/>',
+  /* Not a type, unlike every other glyph here: this is what a saint with no
+     picture gets on the phone, so it has to read at 16 px. */
+  cross: '<path d="M12 3v18M9 7h6M5.5 11h13M9.5 16.5l5-2.5"/>',
 };
 
 const glyphMarkup = (kind) =>
@@ -332,8 +335,17 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
    * 3:2 plate does. calendar.css reads the property in both places and the
    * plate face overrides it; nothing computes differently below 1024 px.
    */
+  /*
+   * **A bullet on the phone, a plate past 1024 px** (author, 2026-10-03: "add a
+   * small ornamental cross dot point next to each also commemorated saint and
+   * instead of the cross make it a tiny thumbnail of their image if they have
+   * an image"). The box is the same either way and `.is-bullet` is the phone's
+   * size; what changes inside a blank one is the glyph, because a type mark is
+   * unreadable at bullet size and the cross is what the row asked for.
+   */
+  const bullet = chosen === null ? ' is-bullet' : '';
   const image = saint.image
-    ? `<span class="reg-thumb">
+    ? `<span class="reg-thumb${bullet}">
         <span class="reg-pic" style="background-image:url('${BASE + saint.image.lqip}');--reg-aspect:${
           cardCrop(saint.image).aspect
         };--reg-focus:${cardCrop(saint.image).focus}">
@@ -341,7 +353,9 @@ function registerRow(saint, title, transition, seq = 0, chosen = null) {
             loading="lazy" decoding="async" />
         </span>
       </span>`
-    : `<span class="reg-thumb is-blank" aria-hidden="true">${glyphMarkup(typeGlyph(saint.types))}</span>`;
+    : `<span class="reg-thumb is-blank${bullet}" aria-hidden="true">${glyphMarkup(
+        chosen === null ? 'cross' : typeGlyph(saint.types),
+      )}</span>`;
   /*
    * **The word the mark stands for, where the row does not already print it**
    * (§10.10). `formatSubtext` carries the *office*, which only 337 of the 862
