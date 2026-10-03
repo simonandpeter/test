@@ -16,6 +16,11 @@
       "form": "Тимофей Ефесский",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Святитель Тимофей, епископ Ефесский, апостол от 70-ти, сщмч.», with the rank words left off."
+    },
+    {
+      "form": "Тимотеј",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 22. јануар ст. ст. (civil 2026-02-04), „Свети апостол Тимотеј“. The word „Свети“ and the rank „апостол“ are left off; the heading gives no epithet, so the form is bare."
     }
   ],
   "sex": "male",
@@ -173,11 +178,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.02.2026 (22. јануар ст. ст.) — „Свети апостол Тимотеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-04&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 93,
+      "latest": 97,
+      "display": "c. 93–97",
+      "basis": "traditional",
+      "note": "Two of the folder's own sources disagree and neither is firm. The Ohrid Prologue says the heathen killed him at Ephesus during the idol feast called Catagogium „(око 93. године)“; days.pravoslavie.ru prints his day as «Ап. Тимофея (ок. 97)», as the folder's Russian attestation quotes it. The interval is the two readings together."
+    }
   }
 }

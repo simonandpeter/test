@@ -16,6 +16,11 @@
       "form": "Анастасий Персиянин",
       "lang": "ru",
       "note": "Read out of days.pravoslavie.ru's name link for 22 января ст. ст., «Преподобномученик Анастасий Персиянин», with the rank words left off."
+    },
+    {
+      "form": "Анастасије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's own heading for 22. јануар ст. ст. (civil 2026-02-04), „Преподобни мученик Анастасије“. The rank words „Преподобни мученик“ are left off; the heading gives no epithet, so the form is bare. The entry says his heathen name was „Магундат“ and that he was given „Анастасије“ at his baptism in Jerusalem; the baptismal name is the one stored."
     }
   ],
   "sex": "male",
@@ -69,8 +74,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 1,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.02.2026 (22. јануар ст. ст.) — „Преподобни мученик Анастасије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-02-04&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -183,5 +197,14 @@
   ],
   "related": [
     "timothy-of-ephesus"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 628,
+      "latest": 628,
+      "display": "22 January 628",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue: „Пострада 22. јануара 628. године у граду Бетсалое, близу Ниниве.“ — he suffered on 22 January 628 in the town of Bethsaloe, near Nineveh. The folder held no date before."
+    }
+  }
 }
