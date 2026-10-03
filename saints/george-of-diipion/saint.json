@@ -54,7 +54,9 @@
       "note": "saint.gr gives two readings and the interval is both of them: «Κατά τον Παρισινό Κώδικα ήκμασε επί Ιωάννου Α' του Τσιμισκή (969 - 976 μ.Χ.), κατά δε τον Κώδικα της Βιέννης επί Ρωμανού και Κωνσταντίνου των Πορφυρογέννητων (956 - 963 μ.Χ.)». The page also says only that he lived «κατά τον 10ο αιώνα μ.Χ.»."
     }
   },
-  "related": [],
+  "related": [
+    "john-the-theologian"
+  ],
   "text": {
     "life": "life.md"
   }

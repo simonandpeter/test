@@ -14,17 +14,12 @@
  * `related` says *these two saints have to do with each other*, and
  * "he was ordained at the Alexander Nevsky Lavra" says nothing of the kind.
  *
- * Twenty-three of the first 86 links were exactly that: a monastery, a lavra,
- * a cathedral or a parish church named for a saint the priest never met, often
- * eight centuries after; a feast day; a warship. Carried into `related` unread
- * they would have made Alexander Nevsky the associate of six twentieth-century
- * martyrs and John the Theologian the associate of five more.
- *
- * So every link is printed with the words around it, and the ones that read as
- * a dedication are set aside rather than proposed. That test is deliberately
- * generous in the direction of setting aside: a link wrongly held back costs a
- * `related` entry somebody can add by hand, and a link wrongly proposed costs
- * a claim about two people.
+ * **A dedication is not the exception** (author, 2026-10-03: "the more
+ * connections the better"): a monastery, a lavra, a cathedral, a feast day or
+ * a warship named for a saint puts that saint in the life, and the page
+ * hyperlinks the name either way. So every link is printed with the words
+ * around it and proposed; `life-links.mjs`'s `REFUSED` is the only reading
+ * that holds one back, and it holds one row.
  *
  * **Three tiers.** The first is not an inference at all: a life that writes
  * `[Natalia](/saints/natalia-of-nicomedia)` has already named the person and
@@ -63,7 +58,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 import { buildNameIndex, matchableName, usableName } from '../src/lib/cross-link.js';
-import { writtenLinks, setAside, BEFORE, AFTER } from './life-links.mjs';
+import { writtenLinks, setAside } from './life-links.mjs';
 
 const WRITE = process.argv.includes('--write');
 const WRITE_LOOSE = process.argv.includes('--write-loose');
@@ -172,13 +167,11 @@ for (const dir of fs.readdirSync('saints')) {
       seen.add(slug);
       const before = text.slice(Math.max(0, m.index - 60), m.index);
       const after = text.slice(m.index + form.length, m.index + form.length + 30);
-      const dedication = BEFORE.test(before) || AFTER.test(after);
       rows.push({
         dir,
         form,
         slug,
         kind,
-        dedication,
         quote: (before.slice(-45) + `«${form}»` + after).replace(/\s+/g, ' ').trim(),
       });
     }
@@ -207,7 +200,7 @@ const tier = (k) => rows.filter((r) => r.kind === k).length;
 
 console.log(`links in lives                   : ${rows.length} (${tier('written')} written, ${tier('exact')} exact, ${tier('loose')} loose)`);
 console.log(`already in related               : ${have.length}`);
-console.log(`set aside, dedication or refused : ${held.length}`);
+console.log(`set aside by a reading           : ${held.length}`);
 console.log(`proposed, written                : ${writtenProposed.length}`);
 console.log(`proposed, exact                  : ${exactProposed.length}`);
 console.log(`proposed, loose — read twice     : ${looseProposed.length}\n`);
@@ -218,7 +211,7 @@ console.log('\n-- proposed, exact ----------------------------------------------
 for (const r of exactProposed) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
 console.log('\n-- proposed, loose (a word was dropped to match) — read twice -----');
 for (const r of looseProposed) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
-console.log('\n-- set aside as a dedication, read these ----------------------------');
+console.log('\n-- set aside by a reading, read these -------------------------------');
 for (const r of held) console.log(`  ${r.dir}\n      -> ${r.slug}   ${r.quote}`);
 
 if (!WRITE) {

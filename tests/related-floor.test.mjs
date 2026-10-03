@@ -65,7 +65,7 @@ test('every exclusion still describes a match the index makes', () => {
    * The point of the list is that the gap is visible. A line that no longer
    * matches anything — the life rewritten, the folder renamed — is a reading
    * nobody can check, and leaving it there hides the next real one under it.
-   * The same bargain `life-links.test.mjs` strikes with `KEPT`.
+   * The same bargain `life-links.test.mjs` strikes with `REFUSED`.
    */
   const found = new Set(rows.map(key));
   const stale = Object.keys(excluded).filter((k) => !found.has(k));

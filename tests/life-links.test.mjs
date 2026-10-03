@@ -4,7 +4,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { writtenLinks, setAside, KEPT, REFUSED } from '../scripts/life-links.mjs';
+import { writtenLinks, setAside, REFUSED } from '../scripts/life-links.mjs';
 
 /**
  * **A saint named in a life gets a hyperlink and a `related` row** — `STRUCTURE.md`
@@ -16,9 +16,10 @@ import { writtenLinks, setAside, KEPT, REFUSED } from '../scripts/life-links.mjs
  * markdown link on its first line and looked at the bare prose underneath. A
  * rule with no test is a rule that is true until somebody writes a life.
  *
- * This is the half of the rule a machine can settle. The other half — whether
- * a life meant a person or a building named for one — is a reading, and lives
- * in `related-from-links.mjs`'s two tables.
+ * **A dedication is a relation** (author, 2026-10-03), so a link that names a
+ * building named for a saint is one of these rows like any other. What is left
+ * to a reading is `life-links.mjs`'s `REFUSED`, a name the sentence does not
+ * use for a person met.
  */
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -63,25 +64,13 @@ test('every link points at a folder that exists', () => {
   assert.deepEqual(broken, [], `dead saint link(s): ${broken.join(', ')}`);
 });
 
-test('a table entry names a row that is really there', () => {
+test('REFUSED still holds the reading behind it', () => {
   /*
-   * `REFUSED` and `KEPT` are readings, and a reading that no longer matches
-   * anything is a claim nobody can check. Both are load-bearing in opposite
-   * directions — a stale `REFUSED` line silently stops proposing a row it no
-   * longer describes, and a stale `KEPT` line is a dedication guard someone
-   * disabled for a link that has since been rewritten.
+   * Not checked for staleness here, because its one row is a *prose* match
+   * rather than a hand-written link and `writtenLinks` cannot see it. The
+   * staleness check it needs is `related-floor.test.mjs`'s, over
+   * `scripts/related-floor-exclusions.json`, which carries the same reading
+   * under `quotation`.
    */
-  const written = new Set(rows.map((r) => `${r.dir} -> ${r.slug}`));
-  const stale = [...KEPT].filter((k) => !written.has(k));
-  assert.deepEqual(stale, [], `KEPT names a link no life writes: ${stale.join(', ')}`);
   assert.ok(REFUSED.size > 0, 'REFUSED emptied — the readings behind it were lost');
-});
-
-test('a KEPT row is one the dedication rule would otherwise hold', () => {
-  // Without this the table grows entries that do nothing, and the next person
-  // to read it cannot tell which lines are still carrying weight.
-  for (const key of KEPT) {
-    const row = rows.find((r) => `${r.dir} -> ${r.slug}` === key);
-    assert.ok(row?.dedication, `${key} is in KEPT but the rule does not hold it`);
-  }
 });

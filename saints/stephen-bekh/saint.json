@@ -15,7 +15,9 @@
       "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιος Στέφανος ο Νέος ο Ιερομάρτυρας», with the rank words and the epithet left off."
     }
   ],
-  "related": [],
+  "related": [
+    "alexander-nevsky"
+  ],
   "dates": {
     "birth": {
       "earliest": 1872,

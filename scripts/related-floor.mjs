@@ -27,14 +27,26 @@
  *
  * **The exclusions are the honest part of it.**
  * `scripts/related-floor-exclusions.json` lists every match deliberately left
- * out, each with its category, its reason and the words it was read in; the
- * two categories are below. `tests/related-floor.test.mjs` reads that same
- * file, so the gap is one a reader can see rather than one buried in a rule,
- * and it fails on an entry that no longer describes anything.
+ * out, each with its category, its reason and the words it was read in.
+ * `tests/related-floor.test.mjs` reads that same file, so the gap is one a
+ * reader can see rather than one buried in a rule, and it fails on an entry
+ * that no longer describes anything.
  *
- * A wrong `related` row is a claim that two people have to do with each other,
- * and no test can see it. A missing one costs a line somebody can add. The
- * exclusion categories lean the second way on purpose.
+ * **A dedication is a relation** (author, 2026-10-03: "the more connections
+ * the better"), so this proposes no exclusion for one. 89 were on file on that
+ * reading's strength and all 89 are flipped in; the shape of them is "entered
+ * the monastery of St «John the Theologian»" and "relics at the Lavra of St
+ * «Alexander Nevsky»", every one of which the page already hyperlinks, so
+ * excluding them left page and data disagreeing for exactly those edges.
+ *
+ * What is still excluded is a match that asserts the *opposite* of a relation
+ * or no relation at all: `denial`, the corpus's own "He is not the «Laurence of
+ * Chernigov» whom the Romanian calendar keeps", where a row would contradict
+ * the life and no test could see it; and two singletons a reading settled, a
+ * saying quoted seven centuries later and an emperor named to date a life.
+ *
+ * A wrong `denial` row is a claim no test can see. A missing row costs a line
+ * somebody can add. `DENIAL` leans the second way on purpose.
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -42,7 +54,6 @@ import { fileURLToPath } from 'node:url';
 
 import { readCorpus, SAINTS_DIR, ROOT } from './corpus-index.mjs';
 import { buildNameIndex, matchableName } from '../src/lib/cross-link.js';
-import { BEFORE, AFTER } from './life-links.mjs';
 
 export const EXCLUSIONS = path.join(ROOT, 'scripts', 'related-floor-exclusions.json');
 
@@ -76,7 +87,7 @@ export const prose = (life) =>
 
 /**
  * Every match the page's own index makes in every life's prose, with the words
- * around it and the two flags a reading is proposed from.
+ * around it and the one flag a reading is proposed from.
  *
  * The three refusals `cross-link-audit.mjs` makes, in its words: the saint's
  * own form, a form two folders share (`buildNameIndex` poisons it to `null`),
@@ -104,7 +115,6 @@ export function proseMatches(corpus) {
         dir: slug,
         slug: target,
         form: m[1],
-        dedication: BEFORE.test(before) || AFTER.test(after),
         denial:
           DENIAL.test(text.slice(Math.max(0, m.index - 90), m.index)) ||
           DENIAL.test(text.slice(end, end + 90)),
@@ -159,8 +169,6 @@ if (process.argv[1] && fileURLToPath(import.meta.url) === path.resolve(process.a
       if (out[key(r)]) continue;
       if (r.denial) {
         out[key(r)] = { category: 'denial', reason: 'the life says the two are not the same person', quote: r.quote };
-      } else if (r.dedication) {
-        out[key(r)] = { category: 'dedication', reason: 'a church, lavra, monastery, chapel or feast named for the saint', quote: r.quote };
       }
     }
     const sorted = Object.fromEntries(Object.keys(out).sort().map((k) => [k, out[k]]));

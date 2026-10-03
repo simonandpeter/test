@@ -13,7 +13,9 @@
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Ιωνάς ο Λέριος», with the rank word and the epithet left off."
     }
   ],
-  "related": [],
+  "related": [
+    "john-the-theologian"
+  ],
   "attestations": [
     {
       "church": "russian",

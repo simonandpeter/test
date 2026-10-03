@@ -241,8 +241,13 @@ before it writes.
 **`related` and links in a life** — a saint named in a life gets a hyperlink
 `[Name](/saints/slug)` and a `related` row on the page whose life names them;
 the reverse is derived in `build-manifest.mjs` and never stored. **A dedication
-is not a relation**: a church, lavra, chapel, feast or ship named for a saint
-is not an association with them. *Verified by:* `tests/life-links.test.mjs`,
+is a relation**: a church, lavra, chapel, feast or ship named for a saint puts
+that saint in the life, and the rule of thumb is **the more connections the
+better** (author, 2026-10-03). What is *not* a relation is a life's own denial
+— "He is not the «Laurence of Chernigov» whom the Romanian calendar keeps" —
+where a row would assert the opposite of the text and no test could see it;
+`scripts/related-floor-exclusions.json` carries those with the words they were
+read in. *Verified by:* `tests/life-links.test.mjs`,
 which fails on a written link with no `related` row, and
 `node scripts/related-from-links.mjs` (proposes; `--write` applies the read
 rows).
@@ -579,8 +584,8 @@ a fact, and where the whole value of the corpus is the difference.
    admission that the source says one line.
 6. **Any year.** Off the page, with the page's words in the note.
 7. **Any coordinate.** No point beats a wrong one.
-8. **A `related` row.** A dedication is not a relation, and the tool that
-   proposes them proposes; the reading is the work.
+8. **A `related` row.** A dedication is a relation and a denial is not, and
+   the tool that proposes them proposes; the reading is the work.
 9. **Deciding a licence.** If it cannot be established it is not one.
 
 What *is* safe to automate, and is: fetching and decoding a page, building the

@@ -15,7 +15,9 @@
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Βίκτωρ ο Ιερομάρτυρας Επίσκοπος Γκλαζώφ», with the rank words and the see left off; the page gives his name in the world as Constantine Alexandrovich Ostrovidov, in Greek letters."
     }
   ],
-  "related": [],
+  "related": [
+    "alexander-nevsky"
+  ],
   "dates": {
     "birth": {
       "earliest": 1875,

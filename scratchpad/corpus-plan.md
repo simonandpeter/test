@@ -108,7 +108,7 @@ Two consequences:
 | `dates` | interval + `note` quoting the page + `basis` | **yes** | **yes** (§10.6) |
 | `locations` | only where named, with `uncertainty_km` | **yes** | **yes** (§10.7) |
 | `life.md` | paraphrase, 1–3 paragraphs, closes with a linked, dated source line; or says the source has one line | **yes** — the whole cost | **yes** (§10.5) |
-| `related` | the life names them, and not as a dedication | **yes** | **yes** (§10.8) |
+| `related` | the life names them, a dedication included | **yes** | **yes** (§10.8) |
 | `hymns[]` + `english` | copied original; Orloff/Hapgood or the site's own rendering | yes (translation) | licence decision (§10.9) |
 | `images` | Commons + `icon.meta.json` + `npm run thumbs` | licence | **yes** (§10.9); keep out of day batches |
 
@@ -224,7 +224,7 @@ Where a literal moved, also run `npm run build && npm run test:e2e` for those sp
   - The saint page shows one "Related to" list: `related ∪ mentionedIn`, deduplicated.
 - **Sourced vs guessed** [M, CORPUS §3 and §10.8; `related-from-links.mjs` header]:
   - A relation is **sourced** when the life, itself a paraphrase of a cited page, names the person *as a person*: family, fellow martyr, teacher or disciple, cellmate, the same synaxis.
-  - **A dedication is not a relation**: a church, lavra, chapel, feast or ship named for a saint. 23 of the first 86 prose links were dedications.
+  - **A dedication is a relation** (author, 2026-10-03, "the more connections the better"): a church, lavra, chapel, feast or ship named for a saint puts that saint in the life. A life's own *denial* of an identity is what is not a relation.
   - A written `[Name](/saints/slug)` link is tier 1. The prose tiers are proposals, and `--write-loose` is never run unread.
 - **How links fire** [M, `src/lib/cross-link.js`]:
   - **Display-name index** over the whole manifest: the name cut at the first comma or bracket, at least two words, no Roman numerals. **A form two saints share links to neither** (rule 4).
