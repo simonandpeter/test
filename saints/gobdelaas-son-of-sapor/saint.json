@@ -10,6 +10,19 @@
       "form": "Γοβδέλαος",
       "lang": "el",
       "note": "Read out of «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» in this folder’s Greek citation."
+    },
+    {
+      "form": "Αγία Γουδελία",
+      "lang": "el"
+    },
+    {
+      "form": "Sfânta Muceniță Gudelia",
+      "lang": "ro"
+    },
+    {
+      "form": "Γοβδελία",
+      "lang": "el",
+      "note": "The other form saint.gr’s entry gives: «Η Αγία Γουδελία (ή Γοβδελία)»."
     }
   ],
   "sex": "male",
@@ -18,10 +31,9 @@
     "prince"
   ],
   "related": [
-    "dadas-companion-of-gobdelaas",
-    "casdoos-companion-of-gobdelaas",
     "casdoa-sister-of-gobdelaas",
-    "goudelia"
+    "casdoos-companion-of-gobdelaas",
+    "dadas-companion-of-gobdelaas"
   ],
   "attestations": [
     {
@@ -31,8 +43,18 @@
     },
     {
       "church": "romanian",
-      "status": "undocumented",
-      "note": "Not on doxologia.ro’s list for 29 septembrie (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 9,
+        "calendar": "revised-julian",
+        "note": "The Romanian calendar keeps him on this day under the Goudelia name alone, „Sfânta Muceniță Gudelia”, and does not list Gobdelaas: doxologia.ro’s 29 septembrie has no Γοβδέλαος line (checked 2026-09-17). Its life is the Goudelia one — the Persian who turned many to the faith, taken by Sapor, imprisoned and starved for years, flayed of the skin of her head and nailed to a post."
+      },
+      "source": {
+        "text": "doxologia.ro, 29 septembrie — „Sfânta Muceniță Gudelia”",
+        "url": "https://doxologia.ro/29-septembrie",
+        "year": 2026
+      }
     },
     {
       "church": "greek",
@@ -43,10 +65,11 @@
         "calendar": "revised-julian"
       },
       "source": {
-        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα»",
+        "text": "Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» and, on the same day, «Αγία Γουδελία»",
         "url": "https://www.saint.gr/09/29/index.aspx",
         "year": 2026
-      }
+      },
+      "note": "**One row, because it is one day, and two entries of the Greek calendar stand on it.** The first is the company «Άγιοι Γοβδέλαος, Δάδας, Κάσδοος και Κασδόα» and the second is «Η Αγία Γουδελία (ή Γοβδελία)», whose entry wonders whether the sources were confused over time and Gobdelaas became Goudelia or Gobdelia through copyists’ errors, with an identical life — and then says that other sources hold there really was a martyr Goudelia who died by the sword, «and it calls that the more likely and the more accepted». **So the source leans against the identification.** The author ruled on 3 October 2026 that the two entries are one (TODO item 13 row 9) and this record is the merge of the two folders the corpus held; both readings are in the life in the synaxarion’s own terms, and the one the synaxarion prefers is named as the one it prefers. `sex` stays `male`: the reading that joins them is that Goudelia is a corruption of Gobdelaas, not the other way about."
     },
     {
       "church": "serbian",
@@ -109,5 +132,17 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "aliases": [
+    "goudelia"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 340,
+      "latest": 340,
+      "display": "c. 340",
+      "basis": "traditional",
+      "note": "From the Goudelia entry, which is the only one of the two that dates anything: under Shapur, king of Persia, «περί το 340 μ.Χ.». The company’s own entry gives no date at all."
+    }
   }
 }

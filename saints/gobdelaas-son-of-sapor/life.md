@@ -4,6 +4,30 @@ Gobdelaas was the son of King Sapor, the Greek synaxarion says, and became a Chr
 
 [Casdoa](/saints/casdoa-sister-of-gobdelaas) was the king’s daughter and the sister of Gobdelaas: she visited her brother in prison and he made her a Christian, and when it became known the king arrested her and, unable to change her faith, tortured her cruelly to death. The verses add that Gobdelaas was pierced with reeds for honouring Christ, who was struck with a reed; that Dadas was cut limb from limb by the sword; and that Casdoos was put to the sword and Casdoa crushed with wood. The entry gives no date.
 
-The same day’s entry for [Goudelia](/saints/goudelia) wonders whether she and Gobdelaas were once one person, turned into two by copyists, and thinks it more likely that she was a martyr of her own.
+The same day carries a second entry of the Greek calendar, «Η Αγία Γουδελία
+(ή Γοβδελία)» — Goudelia, or Gobdelia, a Persian Christian and an apostle to
+her people who brought many unbelievers to salvation in Christ, in the fourth
+century when Shapur was king of Persia, about 340. For carrying on that work so
+boldly she was arrested and shut up in prison for many years and suffered
+terribly there, kept only by divine grace through the damp, the dark and the
+frequent want even of water; then they flayed her head, and at last she died on
+a cross. The Romanian calendar keeps that entry and not this company's, and its
+life has her refuse to sacrifice to fire, be tormented with hunger for years,
+be flayed of the skin of her head and be nailed fast to a post.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the entry](https://www.saint.gr/2403/saint.aspx); read 17 September 2026.*
+**The synaxarion gives two readings of that entry and prefers the second.**
+Perhaps, it says, the sources were confused over time and Gobdelaas became
+Goudelia or Gobdelia through copyists' errors, with an identical life; but other
+sources say that there really was a martyr Goudelia, who died by the sword with
+no other details of her life, and it calls that the more likely and the more
+accepted. Its verse has her head brought by the sword to Christ, the head of
+all.
+
+So the source leans against the identification. The author ruled on 3 October
+2026 that the two entries are one, and this record is the two; the reading that
+joins them is the one that makes Goudelia a copyist's Gobdelaas, which is why
+this record stands under his name and his sex, and the reading the synaxarion
+itself prefers is set down beside it, unresolved, because the source has not
+resolved it.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 29 Σεπτεμβρίου — [the company's entry](https://www.saint.gr/2403/saint.aspx) and [Goudelia's](https://www.saint.gr/2402/saint.aspx); read 17 September 2026; and the Romanian life at doxologia.ro — [the page](https://doxologia.ro/viata-sfintei-mucenite-gudelia).*
