@@ -11,6 +11,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Ευθύμιος ο Πελοποννήσιος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Јевтимије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 22 March on pravoslavno.rs, „Преподобномученик Јевтимије.“, with the rank word Преподобномученик left off. The heading gives no epithet and no place — Dimitsana is the body's first word — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.04.2026 (22. март ст. ст.) — „Преподобномученик Јевтимије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same new-martyr: born in the village of Dimitsana in the Peloponnese, a Turk by apostasy and a monk of the Holy Mountain by repentance, beheaded at Constantinople. Its „22. марта 1814. години“ is the day and the year this folder already holds, and it adds that the day was Palm Sunday and that he was twenty years old. It says he went to Romania and gave himself to great dissipation there, and that his head is in the Russian monastery of Saint Panteleimon on the Holy Mountain. The stored form is the bare forename, because Преподобномученик is a rank this folder's `types` already carry; it does not fold with `euthymius-the-great` or `euthymius-the-new`, which both keep a by-name in their Serbian forms. The Prologue prints no troparion and no kontakion; the two hymns here are the other calendars'."
     }
   ],
   "text": {

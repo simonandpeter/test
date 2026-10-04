@@ -22,7 +22,9 @@
     "chrysanthus",
     "daria",
     "jason-son-of-claudius",
-    "maurus-son-of-claudius"
+    "maurus-son-of-claudius",
+    "diodorus-the-presbyter",
+    "marianus-the-deacon"
   ],
   "dates": {
     "death": {
@@ -70,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.04.2026 (19. март ст. ст.) — „Свети мученици Хрисант и Дарија, и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the other calendars already keep in these folders, and the same company: Rome, the reign of Numerian, the torturer who was converted by what he saw and died with his household, and Chrysanthus and Daria buried alive under stones. The heading names two and then „и други с њима“, and the body names three more — Claudius, Diodorus the priest and Marianus the deacon — and describes, without naming, Claudius's wife and his two sons. All eight folders the corpus already holds on this day take a row, which is how the rows already in them were written: saint.gr's own line for this family names all four of them together, and its line for the clergy names the other two. The Prologue's „283. и 284. године“ is the pair of years these folders already hold, so no date was touched. The Prologue prints no troparion and no kontakion. **No Serbian name form was stored for this saint.** The Prologue does not name her or him at all: the heading reaches this folder through „и други с њима“, and the body says only that Claudius's wife said a prayer and breathed her last at the place of execution and that his two sons were beheaded. A form taken from another calendar and spelt Serbian would be one this corpus composed."
     }
   ],
   "text": {

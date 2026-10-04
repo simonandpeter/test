@@ -8,4 +8,6 @@ The letter, the page says, brought the young man back to himself: he understood 
 
 The page's guess at his homeland is its own and has not been made a coordinate here; no relic is named, and no hymn stands under his name. It adds that a church of St Pancharius existed in Constantinople before the tenth century, which is a dedication and not a relation.
 
-*After saint.gr's calendar for 19 Μαρτίου — [the day](https://www.saint.gr/03/19/index.aspx) and [the life](https://www.saint.gr/3920/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps him on the same menologion day and says in four sentences rather more than the Greek page did. He was from Villapate in Germania. He was a high official at the court of the emperors Diocletian and Maximian. He denied Christ first; but counselled by his mother and his sister he came back to the faith of Christ, and for it he perished in 302 — three years earlier than the year this folder holds from saint.gr, which is left as it stands. The entry names neither the mother nor the sister, and gives no manner of death.
+
+*After saint.gr's calendar for 19 Μαρτίου — [the day](https://www.saint.gr/03/19/index.aspx) and [the life](https://www.saint.gr/3920/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 19. март ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-01&prolog=1), read 4 October 2026.*

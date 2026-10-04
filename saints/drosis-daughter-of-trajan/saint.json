@@ -11,6 +11,11 @@
       "form": "Δροσίδα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαρτίου, «Αγία Δροσίδα και των συν αυτη πέντε Παρθένων», with the rank word and the companions left off."
+    },
+    {
+      "form": "Дросида",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 22 March on pravoslavno.rs, „Света Дросида.“, with Света left off, which is not a rank. The heading carries nothing else — her father's name is the body's first clause and not part of her name — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Дросида."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.04.2026 (22. март ст. ст.) — „Света Дросида.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same woman: the daughter of the emperor Trajan, taken while gathering by night the bodies of those who had suffered for Christ. The entry gives no year at all, so the reign this folder already holds as a `floruit` is untouched. The five women taken with her take no row: the Prologue names none of them, exactly as the Greek line already in this folder names none — «και των συν αυτη πέντε Παρθένων» — and it says only that they were severely tortured and thrown at the last into molten copper. The Prologue adds what neither other page did: that Drosis was kept under strict imperial guard, escaped from the palace, baptised herself in a river, and gave up her soul to God eight days later. The stored form is the bare forename, because Света is not a rank and the heading carries no title at all; the daughter of Trajan is the body's first clause and not part of the name. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

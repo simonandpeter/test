@@ -6,6 +6,11 @@
       "form": "Alexandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 martie, «Sfântul Sfințit Mucenic Alexandru preotul»."
+    },
+    {
+      "form": "Александар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Александар.“, with the rank words Свети мученик left off. The heading gives no city — Side of Pamphylia is the body's first sentence — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.03.2026 (15. март ст. ст.) — „Свети мученик Александар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and plainly this presbyter: he is from the city of Side in Pamphylia, he is questioned by a governor of the emperor Aurelian, he answers that he is a shepherd of the flock of Christ, and the entry closes „Пострада свети Александар између 270. и 275. године“ — which is the same interval, and the same reign, that this folder already holds from doxologia. The two calendars keep him on two days: doxologia on 14 March, which this folder's Romanian row carries, and the Prologue on 15 March. Two churches keeping one man on two days is ordinary and is not a second feast on one church. The entry adds what doxologia did not: the ox sinews, the furnace that did not harm him, the flesh scraped off him, and the judge who was seized by an evil spirit the moment he had passed sentence and vomited out his own soul on the way to his idol. The stored form is the bare forename, because Свети мученик is the rank and the heading gives no city. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

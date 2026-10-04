@@ -6,6 +6,11 @@
       "form": "Ευστράτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαρτίου, «Άγιος Ευστράτιος ο Νηστευτής ο Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Евстратије Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 28 March on pravoslavno.rs, „Преподобни мученик Евстратије Печерски.“, with both rank words left off — Преподобни and мученик, which are what this folder's `venerable-martyr` carries. Печерски is kept: it is not a rank but the by-name the heading gives him, of the Caves, and a bare Евстратије would fold with `eustratius-of-mount-olympus`."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.04.2026 (28. март ст. ст.) — „Преподобни мученик Евстратије Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Greek already keeps in this folder, and the same monk of the Caves: sold into slavery to a Jew at Korsun after the raid, the fast unto death the captives chose together rather than apostatise, the fourteen days he lasted alone, the crucifixion, the spear, the body thrown into the sea and floating. **It dates the raid 1097 where this folder holds 1096, and that year is `attested`** — saint.gr gives 20 July 1096 — so nothing was touched and the disagreement is recorded here; displacing an attested year is the author's call and not a reader's. The stored form keeps Печерски, the by-name the heading gives him, of the Caves; a bare Евстратије would fold with `eustratius-of-mount-olympus`, which holds that form. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {

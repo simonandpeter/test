@@ -11,6 +11,11 @@
       "form": "Ενραβωτά",
       "lang": "el",
       "note": "The second of the two bracketed Greek forms on the same page; it renders the byname the page gives as Enravota."
+    },
+    {
+      "form": "Бојан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 28 March on pravoslavno.rs, „Свети мученик Бојан, кнез бугарски.“, with Свети left off, which is not a rank, with the rank word мученик left off, and with кнез бугарски left off as well, which is the office. The heading gives no second name — the Enravota this folder carries from saint.gr is not on the page — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Бојан."
     }
   ],
   "sex": "male",
@@ -46,8 +51,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.04.2026 (28. март ст. ст.) — „Свети мученик Бојан, кнез бугарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, on the same menologion day the Greek already keeps in this folder, and the same prince of the Bulgars, beheaded at his own brother's order for confessing Christ. **It dates the beheading 827 where this folder holds about 833 from saint.gr**, and 827 falls outside that; the sourced year is left standing and the disagreement is recorded here rather than resolved. It gives the family the Greek page did not: his father Krutogon, his grandfather Gruboš, and the brother who gave the order, Milomir, who was a heathen. None of the three was read as any folder in this corpus and none takes a row. The stored form is the bare forename, because Свети is not a rank and мученик and кнез бугарски are the rank and the office this folder keeps in `types`; Enravota, the second name this folder carries from saint.gr, is nowhere on the Prologue's page. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {

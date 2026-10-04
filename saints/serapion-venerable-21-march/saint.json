@@ -11,6 +11,11 @@
       "form": "Σεραπίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαρτίου, «Όσιος Σεραπίων ο Σιδώνιος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Серапион",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 21 March on pravoslavno.rs, „Преподобни Серапион.“, with the rank word Преподобни left off. The heading gives no epithet and no place, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Серапион."
     }
   ],
   "sex": "male",
@@ -55,11 +60,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.04.2026 (21. март ст. ст.) — „Преподобни Серапион.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth and last entry, on the same menologion day the Romanian and the Greek already keep in this folder, and read as the same man on the strength of the day and the bare name, which is all three calendars give in common. **The by-names do not agree and were not reconciled**: saint.gr calls him «ο Σιδώνιος», the Sidonian, while the Prologue puts him in the Nitrian desert as superior of the Arsinoite monasteries, with about eleven thousand monks in them, and says that Palladius and Sozomen call him the Great. Neither by-name was stored, because the Prologue's heading carries none. This folder's `dates` object was **empty** — neither doxologia nor saint.gr gave it a year — and the Prologue gives one: about 366, which is now its death, written as the page writes it. `abbot` was considered and not added: настојатељ is not one of the rank words BRIEF-SERBIAN.md §5 lists, and the entry gives it as what he did rather than as a title before his name. The saying of his own that the entry quotes is Bishop Nikolai's text and is paraphrased in the life, never copied. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 366,
+      "latest": 366,
+      "display": "about 366",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 21 March: „Упокојио се око 366. године.“ The page says about the year 366, not 366, and it is the only source read for him that gives a year of any kind — doxologia and saint.gr both print him in a bare calendar line and this folder's `dates` object was empty before this reading."
+    }
+  },
+  "related": [
+    "anthony-the-great"
+  ]
 }

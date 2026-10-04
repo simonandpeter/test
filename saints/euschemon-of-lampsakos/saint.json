@@ -6,6 +6,11 @@
       "form": "Εύσχημος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Εύσχημος ή Ευσχήμων ο Ομολογητής επίσκοπος Λαμψάκου», with the rank words left off. The line prints two forms, «Εύσχημος ή Ευσχήμων»; the head form is the one taken and the second is the one the English name follows."
+    },
+    {
+      "form": "Евсхимон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 14 March on pravoslavno.rs, „Свети Евсхимон, епископ лампсакијски.“, with Свети left off, which is not a rank, and with the see епископ лампсакијски left off as well. The heading gives no epithet, so the bare forename is what the source gives. saint.gr prints the Greek form two ways, «Εύσχημος ή Ευσχήμων»; the Serbian spelling is the second of those and is copied as the Prologue prints it."
     }
   ],
   "sex": "male",
@@ -42,12 +47,31 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.03.2026 (14. март ст. ст.) — „Свети Евсхимон, епископ лампсакијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and two sentences long: he bore persecution and imprisonment in the time of the war on the icons, and reposed in the reign of the iconoclast emperor Theophilus, whose years the entry itself prints as (829-842). The folder carried no date of any kind before this reading and now carries that reign as the interval for his repose, which is what BRIEF.md §3 does with a calendar that prints a reign rather than a year. The stored Serbian form is the bare forename: Свети is not a rank and епископ лампсакијски is the see, which this folder keeps in `office`. `sr-namesweep.mjs` returned no corpus folder for Евсхимон although this folder is the man — the alias table does not carry the Serbian spelling against the Greek Εύσχημος — and the identification came from the candidate file's menologion-day list instead. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 829,
+      "latest": 842,
+      "display": "reign of Theophilus, 829–842",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for the Julian 14 March: „Упокојио се у време цара Теофила иконоборца (829-842).“ The entry gives no year within the reign, so the interval is the reign it prints. saint.gr, which this folder was built from, gave no date at all."
+    }
   }
 }

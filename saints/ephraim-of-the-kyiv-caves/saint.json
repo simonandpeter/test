@@ -13,7 +13,9 @@
       "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Εφραίμ ο εν σπηλαίω (Ρώσος)», with the rank word, the epithet and the country left off."
     }
   ],
-  "related": [],
+  "related": [
+    "nikon-of-the-kyiv-caves"
+  ],
   "attestations": [
     {
       "church": "russian",

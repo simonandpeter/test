@@ -6,6 +6,11 @@
       "form": "Πούπλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιος Πούπλιος, Ιερομάρτυρας Επίσκοπος Αθηνών», with the rank words left off."
+    },
+    {
+      "form": "Публије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 March on pravoslavno.rs, „Свештеномученик Публије.“, with the rank word Свештеномученик left off. The heading gives no see and no epithet, and the body's Athens belongs to the sentence and not to the name, so the bare forename is what the source gives and it folds with `publius-of-zeugma`."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.03.2026 (13. март ст. ст.) — „Свештеномученик Публије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, read as this bishop and not as the other Publius the Greek keeps on this same day: the Prologue makes him a bishop at Athens in the second century, killed by unbelievers, which is what saint.gr makes this folder, while the Publius of the trio with Africanus and Terentius is a lay martyr with companions and the Prologue names no companions here. The two pages disagree over whose see he took: the Prologue makes him successor in the episcopate of the glorious Dionysius the Areopagite, where saint.gr puts him next after the holy Narcissus. The disagreement is recorded and neither reading is preferred; the identification does not rest on it, since both make him the second-century bishop of Athens. The Prologue adds the manner of death saint.gr withheld — he was beheaded — and dates him only to the second century, which is wider than the reign of Marcus Aurelius this folder already holds from saint.gr, so the sourced interval is not widened. The stored Serbian form is the bare forename: the heading gives the rank word Свештеномученик and nothing else, no see and no epithet, so it folds with `publius-of-zeugma`, which holds the same bare form off its own Julian 25 January heading, and that fold is recorded as deliberate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
@@ -56,7 +71,8 @@
     }
   },
   "related": [
-    "quadratus-the-apostle"
+    "quadratus-the-apostle",
+    "dionysius-the-areopagite"
   ],
   "text": {
     "life": "life.md"

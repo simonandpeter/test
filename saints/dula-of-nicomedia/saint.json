@@ -1,0 +1,50 @@
+{
+  "slug": "dula-of-nicomedia",
+  "display_name": "Dula of Nicomedia",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Дула",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 25 March on pravoslavno.rs, „Свети мученици Пелагија, Теодосија и Дула.“, where it is the third and last of the three names. The rank words Свети мученици stand at the head of the three and are left off, and the heading gives her no epithet and no city — Nicomedia is in the body — so the bare forename is what the source gives. The corpus holds no other Serbian Дула, and `doulas-of-cilicia` is a man with a different name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding menologion day (4 October 2026). Its line for this menologion day, already quoted in `pelagia-of-caesarea-in-palestine`, names two women and not three — «Αγίες Πελαγία και Θεοδοσία» — so this woman is not in it."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.04.2026 (25. март ст. ст.) — „Свети мученици Пелагија, Теодосија и Дула.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The third of the three names in the day's second entry, and the only one of them the corpus held no folder for. The Greek line already quoted in the other two folders names those two and nobody else, and the corpus's `doulas-of-cilicia` is a man commemorated on another day; the thing the Prologue says of this woman is that she was a servant, that she suffered alone, and that she died in the city of Nicomedia. **She takes no `related` row to the two she is headed with, deliberately.** The entry heads three holy women together and then separates this one from the other two in its own words — „пострада сама“, she suffered alone, where Pelagia and Theodosia were beheaded together after prison — so a relation would be asserting what the page denies, and sharing a day is not a relation. It is the kind of reading the author may want to overturn, and it is named in the range's report. **No `dates`**: the entry gives the other two no year either, and gives this one neither a year nor a reign nor a persecutor. No `locations`: Nicomedia is where she died and the entry says nothing else of her life. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

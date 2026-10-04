@@ -1,0 +1,59 @@
+{
+  "slug": "basil-the-new-of-constantinople",
+  "display_name": "Basil the New of Constantinople",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Василије Нови",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 26 March on pravoslavno.rs, „Преподобни Василије Нови.“, with the rank word Преподобни left off. Нови is kept: it is not a rank word but the by-name the heading gives him, the New, and a bare Василије would fold with `basil-the-confessor`, `basileus-of-cherson` and `basil-of-ancyra`, which hold that bare form already."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding menologion day (4 October 2026). Its line for that day names a venerable Basil the New who is **not** this man: `basil-the-new-of-latros` is the brother of Paul of Latros and an ascetic of Mount Latros in Caria, and that folder's own life already carries the caution that the Greek calendar's Basil the New is not the far better known ascetic of Constantinople in whose life the vision of Theodora is told. This folder is that other man, and nothing of either was taken into the other."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.04.2026 (26. март ст. ст.) — „Преподобни Василије Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth and last entry, and a new folder rather than an upgrade of `basil-the-new-of-latros`. The two are read as two men, on that folder's own written caution and on everything in this entry: this Basil lived in a forest without roof or hearth, was taken for a spy and much tortured, then spent many years free at Constantinople, saw into all the secrets of men and foretold the future, and had as his disciple the eldress Theodora, who after her death appeared to another of his disciples and described to him the twenty toll-houses every soul must pass. None of that is on the Greek page, which identifies its Basil only by Mount Latros and by his brother Paul. **The entry commemorates him on 26 March and dates his repose 25 March**, which is recorded in `dates` and not reconciled; this row stands on the day the Prologue heads him. `wonderworker` was not taken as a `type`: the entry says he worked great wonders, which is a sentence about him and not the title Чудотворац, and `basil-the-new-of-latros` carries `venerable` alone for the same reason. The eldress Theodora and the disciple to whom she appeared, whom the entry names Григорије, were **not** identified with any folder in this corpus: it keeps a dozen Theodoras and more Gregories, the entry gives neither a see, a monastery nor a by-name, and naming one would be a guess. No `locations`: Constantinople is where he lived free for many years, and the entry gives no other place than an unnamed forest. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 944,
+      "latest": 944,
+      "display": "944",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 26 March: „Свети Василије мирно сконча 25. марта 944. године“ — he reposed in peace on 25 March 944. The entry heads him on 26 March and dates the repose to the day before, and neither reading was altered to fit the other. It is the only source read for this folder."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ιλαρίων ο Νέος», with the rank word left off."
+    },
+    {
+      "form": "Иларион Нови",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 28 March on pravoslavno.rs, „Преподобни Иларион Нови, исповедник.“, with the rank words Преподобни and исповедник left off. Нови is kept: it is not a rank but the by-name the heading gives him, and it is what this folder's English and Romanian names already carry. A bare Иларион would fold with `hilarion-the-new-monk-martyr-of-crete` and with ten folders holding that spelling as a Russian form."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.04.2026 (28. март ст. ст.) — „Преподобни Иларион Нови, исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same abbot of the monastery of Pelecete by the Hellespont. **The entry bears on the disagreement this folder's `dates` note already records and does not settle it — it contradicts itself in the same breath.** It sets the persecution „у време Лава Јерменина“, in the time of Leo the Armenian, and then has him die in prison near Ephesus „754. године“, which is two generations before that emperor; the Romanian life this folder was built from sets out the same disagreement between Leo the Armenian's reign and an earlier one and leaves it open, and the interval here is 717–820 for that reason. 754 falls inside it, so nothing was narrowed and nothing was touched. The entry adds the forty monks sent into exile with him, which neither other page had. The stored form keeps Нови, the by-name the heading gives him, the New, and leaves off Преподобни and исповедник, which are both ranks this folder's `types` carry; a bare Иларион would fold with `hilarion-the-new-monk-martyr-of-crete` and with ten Russian forms of the same spelling. The Prologue prints no troparion and no kontakion; the three hymns here are the other calendars'."
     }
   ],
   "hymns": [

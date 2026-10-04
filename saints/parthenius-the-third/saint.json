@@ -18,6 +18,11 @@
       "form": "Παρθενάκης",
       "lang": "el",
       "note": "The second form saint.gr's own line offers in its parenthesis, «Άγιος Παρθένιος ο Γ (ή Παρθενάκης)» — Parthenius III, or Parthenakis. Read out of its calendar line for 24 Μαρτίου."
+    },
+    {
+      "form": "Партеније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 24 March on pravoslavno.rs, „Свештеномученик Партеније, патријарх цариградски.“, with the rank word Свештеномученик left off and with the see патријарх цариградски left off as well. The heading gives no ordinal and no epithet, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Партеније."
     }
   ],
   "related": [],
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.04.2026 (24. март ст. ст.) — „Свештеномученик Партеније, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek already keeps in this folder, and the same patriarch: from the island of Mytilene, long bishop of Chios, afterwards chosen patriarch, denounced falsely as working against the state, offered conversion to Islam and hanged when he refused. Its 1657 is the year this folder already holds, so no date was touched. The stored form is the bare forename, because Свештеномученик is a rank this folder's `types` already carry and патријарх цариградски is the see it keeps in `office`; the ordinal Third is the corpus's own way of telling him from the other patriarchs of the name and is nowhere on the Prologue's page, and the second Greek form this folder holds, Παρθενάκης, has no Serbian counterpart on it either. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

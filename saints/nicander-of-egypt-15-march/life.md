@@ -6,4 +6,6 @@ Because he stayed faithful to his confession of Christ he was condemned to the h
 
 The corpus keeps another Nicander of Egypt, whom the Romanian calendar has on 5 June among ten martyrs tormented by the ruler of Egypt with hunger, thirst and cold; that is a different account on a different day, and this folder is the man the Greek calendar sets on 15 March, for burying the martyrs of Diocletian's last year.
 
-*After saint.gr's calendar for 15 Μαρτίου — [the day](https://www.saint.gr/03/15/index.aspx) and [the life](https://www.saint.gr/62/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps him on the same menologion day and says the whole of it in three sentences. His skin was flayed off him and then he was beheaded for the faith of Christ. His guilt was this: that as a physician he helped the Christian martyrs and buried the bodies of the executed honourably. He suffered honourably in 302 — three years earlier than the year saint.gr gives, which is the year this folder keeps.
+
+*After saint.gr's calendar for 15 Μαρτίου — [the day](https://www.saint.gr/03/15/index.aspx) and [the life](https://www.saint.gr/62/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 15. март ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-28&prolog=1), read 4 October 2026.*

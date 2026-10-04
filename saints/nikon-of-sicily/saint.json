@@ -6,6 +6,11 @@
       "form": "Nicon",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 23 martie, «Sfântul Cuvios Mucenic Nicon și cei 199 de ucenici ai lui»."
+    },
+    {
+      "form": "Никон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 23 March on pravoslavno.rs, „Свештеномученик Никон.“, with the rank word Свештеномученик left off. The heading gives no epithet and no city — Neapolis and Sicily are both in the body — so the bare forename is what the source gives. It does not fold with `nikon-of-the-kyiv-caves`, whose own heading on this same day carries the by-name Печерски."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.04.2026 (23. март ст. ст.) — „Свештеномученик Никон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian already keeps in this folder, and the same man: the Roman officer of Neapolis, a Christian mother's son, baptised in Asia and made bishop there, who went to Sicily with his old comrades and was killed with them under the prince Quintian. **The folder's `dates` object was empty** — doxologia gave it no year and no reign — and the Prologue closes „Пострада свети Никон у време цара Декија“, so it now holds that reign as its interval, on the convention this corpus already uses for a bare emperor's name. **The page disagrees with itself on the number of his companions, and nothing was reconciled**: it has him withdraw to Sicily „са девет ученика“, with nine disciples, and then has „стотину деведесет ученика и другова“, a hundred and ninety disciples and companions, beheaded. doxologia's own calendar line, already quoted in this folder, says 199 — «Nicon și cei 199 de ucenici ai lui» — and nine plus a hundred and ninety is that number, but the Prologue does not say so and neither does this row. No folder was made for the companions: neither calendar heads them and the Prologue names not one of them. The stored form is the bare forename, because Свештеномученик is the rank and the heading carries nothing else. The Prologue prints no troparion and no kontakion; the one hymn here is doxologia's."
     }
   ],
   "hymns": [
@@ -70,5 +85,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "under Decius",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 23 March closes „Пострада свети Никон у време цара Декија“ — he suffered in the time of the emperor Decius — and gives no year at all; the bounds are that reign, as this corpus's other folders written off a bare emperor's name carry his. It is the only date any source read for this folder gives: doxologia, which the folder was built from, named no emperor and no year, and its `dates` object was empty."
+    }
+  }
 }

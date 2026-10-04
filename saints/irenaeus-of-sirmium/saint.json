@@ -11,6 +11,11 @@
       "form": "Irineu",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 aprilie, «Sfântul Sfințit Mucenic Irineu, Episcop de Sirmium»."
+    },
+    {
+      "form": "Иринеј",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 26 March on pravoslavno.rs, „Свештеномученик Иринеј епископ сремски.“, with the rank word Свештеномученик left off and with the see епископ сремски left off as well. The heading gives no epithet beyond the see, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Иринеј."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.04.2026 (26. март ст. ст.) — „Свештеномученик Иринеј епископ сремски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and plainly this bishop: the heading gives the see itself, епископ сремски, the bishop of Srem, which is Sirmium and is the see this folder already carries; the entry sets his passion under Maximian, has the prince Probus throw him from a bridge into the river Sava, and dates it 304 — a year inside the «288 or 304» this folder already holds, so nothing was narrowed and no date was touched. Three churches now keep him on three days and none of them is moved by this row: doxologia on 6 April, saint.gr on 23 August, the Prologue on the Julian 26 March. The entry supposes he was a Slav and that before his episcopate he was married and had children, and it has his kinsfolk standing round him under torture begging him to spare himself and them; all of that is new to the folder and none of it is a year. Two men who suffered at the same time are named in it and take nothing: a gardener of Srem called Serenus, and an Afer at Regium. Neither was read as any folder in this corpus — the corpus holds no Serenus at all — and the entry gives neither a day of his own. The stored form is the bare forename, because Свештеномученик is a rank this folder's `types` already carry and епископ сремски is the see it keeps in `office`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "locations": [

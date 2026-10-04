@@ -10,6 +10,11 @@
       "form": "Παγχάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιος Παγχάριος», with the rank word left off."
+    },
+    {
+      "form": "Панхарије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 19 March on pravoslavno.rs, „Свети мученик Панхарије.“, with the rank words Свети мученик left off. The heading gives no epithet and no city — Villapate is in the body — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Панхарије."
     }
   ],
   "related": [],
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.04.2026 (19. март ст. ст.) — „Свети мученик Панхарије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, four sentences long, on the same menologion day the Greek already keeps in this folder. The Prologue dates his death 302, where this folder holds 305 from saint.gr; the sourced year is left standing and the disagreement is recorded here rather than resolved. It gives what saint.gr did not: that he was from Villapate in Germania, that he was a high official at the court of the emperors Diocletian and Maximian, and that he denied Christ first and was brought back to the faith by the counsel of his mother and his sister, and died for it. Villapate was not taken as a `location`: it is a place-name this corpus's gazetteer does not hold and no coordinate was read for it. The stored form is the bare forename, because Свети мученик is the rank and the heading gives nothing else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

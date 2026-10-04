@@ -11,6 +11,11 @@
       "form": "Φωτεινή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Αγία Φωτεινή η Μεγαλομάρτυς η Σαμαρείτιδα», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Фотина",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 20 March on pravoslavno.rs, „Света мученица Фотина.“, with Света left off, which is not a rank, and with the rank word мученица left off. The heading gives no epithet — the Samaritan woman is the body's first clause and not part of the name — so the bare forename is what the source gives. Note the spelling: the Prologue has Фотина where the Greek form already in this folder is Φωτεινή."
     }
   ],
   "sex": "female",
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.04.2026 (20. март ст. ст.) — „Света мученица Фотина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, and plainly this woman: the Samaritan who spoke with the Lord at Jacob's well by Shechem, whom the entry places by the Gospel reference itself (Јн 4, 1-42), and who died in the reign of Nero, which is the interval this folder already holds. The Prologue keeps her on the Julian 20 March, where the Romanian and the Greek keep her on 26 February; the churches differ and nothing here moves either. **The row is hers alone.** The body names her two sons and her five sisters, and says that after the imprisonment they all suffered for Christ — but the heading names only Фотина, with no „и други“ to reach them, and the seven are recorded in this note and in the life rather than given rows, as the senator Asterius was on the Julian 17 March. All seven are folders this corpus already holds on the Greek and Romanian 26 February, and all seven are already `related` to this folder in both directions. One of the seven is a name question: the Prologue calls the first son **Виктор** where the Greek calendar calls him Φωτεινός and this corpus keeps him as `photinos-son-of-photini`. Recorded, not resolved, and no Serbian form was stored on his folder. Nero's daughter Домнина, whom the entry has converted by Photina in prison, was not read as any of the corpus's Domninas and takes nothing. The stored form is the bare forename — Света мученица is the rank and the heading carries no Самарјанка — and no other folder in the corpus holds a Serbian Фотина. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

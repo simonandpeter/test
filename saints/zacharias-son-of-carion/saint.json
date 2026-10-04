@@ -11,6 +11,11 @@
       "form": "Ζαχαρίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Ζαχαρίας», with the rank word left off."
+    },
+    {
+      "form": "Захарија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 24 March on pravoslavno.rs, „Преподобни Захарија.“, with the rank word Преподобни left off. The heading gives no epithet and no parentage — his father Carion is the body's first word — so the bare forename is what the source gives. The corpus keeps a second Zacharias on this same menologion day, the Faster of the Kyiv Caves, who holds no Serbian form, and this one is distinguished from him by `display_name` and by slug."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.04.2026 (24. март ст. ст.) — „Преподобни Захарија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fifth and last entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same monk: the son of Carion the Egyptian, taken into the desert by his father because his mother could not feed him, younger than many of the elders of Scetis and given greater gifts than many of them, and dead young. The entry gives no year, no century and no reign, so this folder's `dates` object stays empty, as it was. It carries two sayings, one answering a Macarius on who is a true monk and one answering Abba Moses with the camelaucion trodden underfoot; both are Bishop Nikolai's text and are paraphrased in the life rather than copied. `moses-the-ethiopian` is already `related` here in both directions, which is where this corpus has read that Abba Moses, and no row was added. **The Macarius of the first saying was not identified**: the corpus keeps many, the entry gives him no by-name, and naming one would be a guess, so the life leaves him as the page leaves him. The stored form is the bare forename, because Преподобни is the rank and the heading carries nothing else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

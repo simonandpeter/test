@@ -1,0 +1,56 @@
+{
+  "slug": "cyril-of-catania",
+  "display_name": "Cyril of Catania",
+  "office": "Bishop of Catania",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 21 March on pravoslavno.rs, „Преподобни Кирил, епископ катански, у Сицилији.“, with the rank word Преподобни left off and with the see епископ катански, у Сицилији left off as well. The heading gives no epithet beyond the see, so the bare forename is what the source gives; it folds with `cyril-of-jerusalem`, which took the same bare form off its own Julian 18 March heading, and the fold is recorded as deliberate."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding menologion day (4 October 2026). The Greek keeps another bishop of Catania on this same menologion day, `beryllus-of-catania`, who is a different man with a different name."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.04.2026 (21. март ст. ст.) — „Преподобни Кирил, епископ катански, у Сицилији.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, of four, and the only one of the four the corpus held no folder for. The other three are upgrades in this same batch. The corpus holds twenty-six Cyrils and not one of them is a bishop of Catania: checked by listing every `cyril-*` folder and by reading the only other Catanian on this menologion day, `beryllus-of-catania`, who has a different name. `wonderworker` was not taken as a `type`: the entry says he had the gift of working wonders by prayer, which is a sentence about him and not the title Чудотворац that BRIEF-SERBIAN.md §5 maps to that type. No `dates` and no `locations`: the entry gives no year and no century at all, and it names Antioch and Catania without dating a life in either, so a coordinate would be the better-than-nothing kind this corpus refuses. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "related": [
+    "peter-the-apostle",
+    "beryllus-of-catania"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
