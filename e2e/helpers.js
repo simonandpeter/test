@@ -604,6 +604,40 @@ export const dayWithoutHymns = (church) => {
   return `/calendar/2027${iso.slice(4)}`;
 };
 
+/**
+ * **Wait for the whole run to be in the track before reading the run.**
+ *
+ * The first paint packs only `CX_PREFIX` and the rest arrives on
+ * `requestIdleCallback` (STRUCTURE.md item 2), so when `.cx-card` first becomes
+ * visible the track holds a prefix, and *which* saints are in it is not the
+ * membership the settled row has. Anything asserting the row's contents, its
+ * length or its order has to wait for the repack; anything asserting one card's
+ * geometry does not. Re-derive the three quantities, at four CPU rates:
+ * `scratchpad/row-reads-probe.mjs`.
+ *
+ * **Two waits that look right and measure as useless**, both tried before this
+ * one — this suite's history is explanations written into the code and later
+ * disproved:
+ *
+ * - The row wider than its own viewport — `the carousel drifts on its own`
+ *   waits for exactly that, and it is already true of the prefix.
+ * - Two consecutive equal readings, which trap 7's resize case teaches. It
+ *   **settles on the prefix**, because above 1x the repack has not begun, the
+ *   count sits still, and the poll exits inside 250 ms.
+ *
+ * A fixed sleep is the third, and it hid this longest: the 700 ms in `the
+ * carousel holds only the pictures near it` was doing two jobs at once. It keeps
+ * the sleep, for the picture-release settle it was actually for, and waits for
+ * the pack first.
+ */
+export const packedRow = (page) =>
+  expect
+    .poll(
+      () => page.evaluate(() => document.querySelectorAll('[data-carousel-track] > .cx-cell').length),
+      { timeout: 20000, message: 'the idle repack never put the whole run in the track' },
+    )
+    .toBeGreaterThan(100);
+
 /** The manifest card for a slug, which the fixtures below read the day off. */
 const cardOf = (slug) => CARDS.find((s) => s.slug === slug);
 const BY_SLUG = new Map(CARDS.map((s) => [s.slug, s]));

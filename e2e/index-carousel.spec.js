@@ -5,6 +5,7 @@ import {
   carouselMode,
   facet,
   narrowQuery,
+  packedRow,
   ready,
   searchMode,
 } from './helpers.js';
@@ -1098,39 +1099,6 @@ test('a phone pairs the wide icons and stands the row at varied heights', async 
 /* ---- Session 6's three survivors (2026-08-29) --------------------------- */
 
 
-/**
- * **Wait for the whole run to be in the track before reading the run.**
- *
- * The first paint packs only `CX_PREFIX` and the rest arrives on
- * `requestIdleCallback` (STRUCTURE.md item 2), so when `.cx-card` first becomes
- * visible the track holds a prefix, and *which* saints are in it is not the
- * membership the settled row has. Anything asserting the row's contents, its
- * length or its order has to wait for the repack; anything asserting one card's
- * geometry does not. Re-derive the three quantities, at four CPU rates:
- * `scratchpad/row-reads-probe.mjs`.
- *
- * **Two waits that look right and measure as useless**, both tried before this
- * one — this suite's history is explanations written into the code and later
- * disproved:
- *
- * - The row wider than its own viewport — `the carousel drifts on its own`
- *   waits for exactly that, and it is already true of the prefix.
- * - Two consecutive equal readings, which trap 7's resize case teaches. It
- *   **settles on the prefix**, because above 1x the repack has not begun, the
- *   count sits still, and the poll exits inside 250 ms.
- *
- * A fixed sleep is the third, and it hid this longest: the 700 ms in `the
- * carousel holds only the pictures near it` was doing two jobs at once. It keeps
- * the sleep, for the picture-release settle it was actually for, and waits for
- * the pack first.
- */
-const packedRow = (page) =>
-  expect
-    .poll(
-      () => page.evaluate(() => document.querySelectorAll('[data-carousel-track] > .cx-cell').length),
-      { timeout: 20000, message: 'the idle repack never put the whole run in the track' },
-    )
-    .toBeGreaterThan(100);
 
 /** The row's order, read as the first several slugs in DOM order. */
 const dealtOrder = (page, n = 10) =>
@@ -2132,6 +2100,9 @@ test('the second pack continues the row rather than replacing it', async ({ page
         const img = card.querySelector('.cx-media img');
         out.push({
           name: name?.textContent ?? '',
+          // When, because the row is always drifting and the budget below has
+          // to know how much of a card's movement is simply time passing.
+          t: performance.now(),
           x: Math.round(r.left),
           a: name ? Number(getComputedStyle(name).getPropertyValue('--cx-cap-a')) : 0,
           io: img ? Number(getComputedStyle(img).opacity) : null,
@@ -2221,11 +2192,24 @@ test('the second pack continues the row rather than replacing it', async ({ page
   for (const was of kept) {
     const now = seen.get(was.name);
     /*
-     * 40 px is a quarter of the narrowest column and well past the ~26 px/s the
-     * row drifts in the three frames this spans. The defect it stands against
-     * moved the whole row by 111 px.
+     * 40 px is a quarter of the narrowest column, **and the drift is paid for
+     * on top of it**, because this spans three or four frames of a row that is
+     * always moving and the defect and the drift are the same shape: both move
+     * the whole row at once. The only thing that separates them is the rate —
+     * the drift cruises at `speed` in `ui/loop-scroll.js`, 26 px/s, and the
+     * defect this stands against jumped 111 px between two frames.
+     *
+     * Without the allowance the span is the budget's whole premise, and at 6x
+     * on a loaded runner three frames took 1.6 s: the row had drifted 42 px
+     * and the test went red on CI for the one thing it is not about. Keeping
+     * 26 here rather than a looser bound is deliberate — change `speed` and
+     * this goes red saying so.
      */
-    expect(Math.abs(now.x - was.x), `${was.name} moved ${now.x - was.x} px`).toBeLessThan(40);
+    const span = (now.t - was.t) / 1000;
+    expect(
+      Math.abs(now.x - was.x),
+      `${was.name} moved ${now.x - was.x} px over ${span.toFixed(2)} s of a row that drifts 26 px/s`,
+    ).toBeLessThan(40 + 26 * span);
   }
 
   /*

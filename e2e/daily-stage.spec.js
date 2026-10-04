@@ -1,5 +1,5 @@
 import { coldFace, test, expect } from './fixtures.js';
-import { carouselMode, phone, ready, searchMode } from './helpers.js';
+import { carouselMode, packedRow, phone, ready, searchMode } from './helpers.js';
 
 /**
  * The two faces of one page: Daily and All Saints in one clipped box, sliding
@@ -686,6 +686,15 @@ test('the reader’s own work is still there on the way back', async ({ page }) 
    * the same count taken after the round trip is the filtered one. That is a
    * test reporting a defect in the stage for a race of its own making.
    */
+  /*
+   * **And counted on the settled row, not on its prefix.** The first paint
+   * deals `CX_PREFIX` and the rest is packed from idle time, so a count taken
+   * here reads about 317 cards of a corpus of 5,500 — and `martyr` narrows the
+   * corpus to 2,872, which is *more*. The poll below then waited out its ten
+   * seconds for a row that had already narrowed. Red on CI twice; the premise
+   * was wrong, not the stage.
+   */
+  await packedRow(page);
   const whole = await page.evaluate(() => document.querySelectorAll('.cx-card').length);
   await page.locator('[data-query]').fill(BROAD);
   await expect
@@ -697,13 +706,36 @@ test('the reader’s own work is still there on the way back', async ({ page }) 
   await rowReady(page);
   await page.waitForTimeout(500);
 
-  const before = await page.evaluate(() => ({
-    scrollLeft: document.querySelector('[data-carousel-track]').scrollLeft,
-    cx: document.querySelectorAll('.cx-card').length,
-    cards: document.querySelectorAll('.index-card').length,
-    query: document.querySelector('[data-query]').value,
-  }));
+  /*
+   * `head` is the row's identity and `cx` is only its length. The row packs a
+   * prefix and then repacks the whole narrowed run from idle time — 54 cells
+   * then 478, about four seconds apart at 6x CPU (`scratchpad/rowgrow.mjs`) —
+   * and it goes on doing that while it is parked under the day, because an idle
+   * callback does not care which face is showing. So its *length* across the
+   * round trip is not the stage's to keep, and asserting it compared a prefix
+   * with a settled run: red on CI twice while passing six of six alone.
+   *
+   * What the stage owes the reader is that the row is the same row. A rebuilt
+   * one deals a fresh hand from a new seed, so the saints at its head are the
+   * claim, and they cannot survive a rebuild by accident.
+   */
+  const read = () =>
+    page.evaluate(() => ({
+      scrollLeft: document.querySelector('[data-carousel-track]').scrollLeft,
+      cx: document.querySelectorAll('.cx-card').length,
+      // The named ones, because the leading column can be a clone the loop has
+      // not yet given a slug to and a `undefined` in the list would compare
+      // equal across the trip for the wrong reason.
+      head: [...document.querySelectorAll('.cx-card')]
+        .map((c) => c.dataset.prefetch)
+        .filter(Boolean)
+        .slice(0, 8),
+      cards: document.querySelectorAll('.index-card').length,
+      query: document.querySelector('[data-query]').value,
+    }));
+  const before = await read();
   expect(before.cx, 'premise: the row is empty, so there is nothing to keep').toBeGreaterThan(20);
+  expect(before.head.length, 'premise: the row names nobody').toBeGreaterThanOrEqual(4);
 
   await toDaily(page);
   await expect(page.locator('.face-stage[data-face="calendar"]')).toBeVisible();
@@ -714,15 +746,15 @@ test('the reader’s own work is still there on the way back', async ({ page }) 
 
   await toSaints(page);
   await expect(page.locator('.face-stage[data-face="saints"]')).toBeVisible();
-  const after = await page.evaluate(() => ({
-    scrollLeft: document.querySelector('[data-carousel-track]').scrollLeft,
-    cx: document.querySelectorAll('.cx-card').length,
-    cards: document.querySelectorAll('.index-card').length,
-    query: document.querySelector('[data-query]').value,
-  }));
+  const after = await read();
 
   expect(after.query, 'the reader’s query did not survive the round trip').toBe(before.query);
-  expect(after.cx, 'the row came back with a different set of cards').toBe(before.cx);
+  expect(after.head, 'the row came back dealing a different hand').toEqual(before.head);
+  // Longer is the repack landing while the row was parked; shorter would be a
+  // row that had been thrown away and dealt again from its prefix.
+  expect(after.cx, 'the row came back holding fewer cards than it had').toBeGreaterThanOrEqual(
+    before.cx,
+  );
   expect(after.cards, 'the grid came back with a different set of cards').toBe(before.cards);
   // Where it had drifted to, not where it starts: a rebuilt row opens at 0.
   expect(after.scrollLeft, 'the row came back at its own beginning').toBeGreaterThan(0);
