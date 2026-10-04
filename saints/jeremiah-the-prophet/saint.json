@@ -11,6 +11,11 @@
       "form": "Ιερεμίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Προφήτης Ιερεμίας», with the rank word left off."
+    },
+    {
+      "form": "Јеремија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 1. мај ст. ст., „Свети пророк Јеремија.“, with Свети left off as no rank and пророк left off as the `prophet` this folder already carries in `types` and `honorific.js` composes back. The heading offers no epithet and no patronymic, so the bare forename is the whole of the Serbian form; Anathoth and the priest Helkias are the body's and the other calendars', and this corpus keeps neither in a name form. Two other folders already hold the same bare form; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.05.2026 (1. мај ст. ст.) — „Свети пророк Јеремија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-14&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 1 May, the same menologion day the Romanian and the Greek keep him on.** This is the third account read for this folder and it is the longest of the three, with **six things neither of the other two tells**: the prophecy against Јоаким that „ће његов погреб бити као погреб магарца“, cast out dead beyond Jerusalem and dragged long on the ground unburied, **and that it was for this prophecy that he was thrown into prison**; that unable to write there he called Baruch, who „стаде код прозорчића тамнице“, stood at the prison's little window while he dictated; the word to Јехонија that he would be carried to Babylon with his whole family and die there; the letter to the captives telling them not to hope for a return, „јер ће остати у Вавилону седамдесет година“; the sound pot broken before the people in the valley of Тотеф, where the Jews had offered their children to the idols, and the enormous number of Jews cut down in that same valley when the city fell; and **the fire out of the temple hidden in a deep well**, beside the ark hidden in a cave on Mount Nebo. It also has him foretell to the Egyptians „сокрушење њихових идола и долазак у Мисир Дјеве са Младенцем“ — the coming into Egypt of the Virgin with the Child — and preserves a tradition that **Alexander himself visited the prophet's grave** and that the body was carried to Alexandria by his order, where the Romanian life has only the later translation. **A birth widened and neither reading chosen**: „Рођен на шест стотина година пре Христа“ against saint.gr's «πιθανώς κατά το 650 π.Χ.», so `birth` is now −650 to −600 and reads „650 or 600 BC“. **No death year was added**: this book gives the four years in Egypt and the stoning with no year, as the other two do. **One slip of the book is recorded and not corrected**: the vessel broken in the valley is „лонац“, a pot, in the sentence that breaks it and „ланац“, a chain, in the sentence that recalls it four lines later — the same object under two words, and a copied source is not corrected by a reader. The Prologue prints no troparion and no kontakion; doxologia's troparion for him is already on this folder from the Romanian reading."
     }
   ],
   "hymns": [
@@ -108,10 +123,10 @@
   "dates": {
     "birth": {
       "earliest": -650,
-      "latest": -650,
-      "display": "c. 650 BC",
+      "latest": -600,
+      "display": "650 or 600 BC",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Προφήτης Ιερεμίας γεννήθηκε πιθανώς κατά το 650 π.Χ., στην μικρή πόλη της φυλής Βενιαμίν Αναθώθ, βορειοανατολικά της Ιερουσαλήμ», and the page heads him «(-650 - ;)». The «πιθανώς» is the page's own. No year of death is printed: the page offers stoning at Taphnas or captivity with Baruch in 568 BC in the alternative."
+      "note": "The Охридски пролог for 1. мај ст. ст. opens „Рођен на шест стотина година пре Христа у селу Анатоту, недалеко од Јерусалима.“ — six hundred years before Christ — where saint.gr has «Ο Προφήτης Ιερεμίας γεννήθηκε πιθανώς κατά το 650 π.Χ., στην μικρή πόλη της φυλής Βενιαμίν Αναθώθ» and heads him «(-650 - ;)». Two sources fifty years apart, both of them round numbers and one of them hedged; neither was chosen and the interval carries both. The Greek page's «πιθανώς», which this folder's display used to carry as „c.“, is recorded here instead: `node .tmp/dd.mjs` reads „650 or 600 BC“ in both packs — «650 или 600 до Р. Х.» and «650 ή 600 π.Χ.» — and reads neither „c. 650 BC or 600 BC“ nor „650 BC or 600 BC“ at all, so the hedge could not stay in the display. No year of death is printed on any of the three pages: this book gives four years in Egypt and a stoning with no year, doxologia gives none for any of it, and saint.gr offers the stoning at Taphnas or captivity with Baruch in 568 BC in the alternative."
     }
   }
 }
