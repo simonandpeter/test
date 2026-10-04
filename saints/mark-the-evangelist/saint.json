@@ -11,6 +11,11 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιος Μάρκος ο Απόστολος και Ευαγγελιστής», with the rank words left off."
+    },
+    {
+      "form": "Марко",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 25. април ст. ст., „Св. апостол и јеванђелист Марко.“ Св. is not a rank, and апостол and јеванђелист are two ranks this folder already carries in `types`, which `honorific.js` composes back; the heading gives no epithet, no city and no see, so the bare forename is the whole of the Serbian form. Three other folders already hold the same bare form; whether the gate reads them as one was measured rather than assumed, and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.05.2026 (25. април ст. ст.) — „Св. апостол и јеванђелист Марко.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's first entry of the day is this man beyond question: the apostle and evangelist whom Peter calls his son in his first epistle, who wrote the Gospel at Rome and showed it to Peter, who was first bishop in Egypt and died at Alexandria dragged over the cobbles. **It gives no year**, so this folder's empty `dates` were left empty, as the Romanian and Greek readings also left them. It adds what neither of those gave: that Peter both consecrated him bishop and sent him to Egypt, so that he was the first preacher of the Gospel and the first bishop there; the sowing through Libya, **Амоникија** and the Pentapolis; the Spirit of God leading him from the Pentapolis to Alexandria; his founding the Church there and appointing it a bishop, priests and deacons; **the flight back to the Pentapolis when the city governor began to hunt for him, and the return two years later**; the angel and then Christ Himself in the prison, with Mark's own answer to Christ; and centuries of healing at his relics. The Prologue prints no troparion and no kontakion — the day's ПЕСМА is Bishop Nikolai's own verse and is not a liturgical hymn — so this folder gains no hymn from it."
     }
   ],
   "text": {
