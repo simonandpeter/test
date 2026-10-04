@@ -1,0 +1,112 @@
+{
+  "slug": "paraskeva-of-iconium",
+  "display_name": "Paraskeva of Iconium",
+  "sex": "female",
+  "types": [
+    "great-martyr",
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Параскева Пятница",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 28 октября ст. ст., «Параскева Пятница, вмц.», with the rank word left off. The line itself declines the name and splits the byname away from it — «Вмц. Параскевы, нареченной Пятница» — so the nominative pair is the link's."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "The day's line gives «(III)», and the first of her two life pages agrees: «жила в III веке в Иконии». The second dates the persecution she died in to a year inside that century — «В 300 году пришел в город военачальник императора Диоклетиана, которому было поручено истребить христиан» — and gives her beheading to that visit. Nothing is chosen between the century and the year: the interval is the century the calendar prints, and the note keeps the year the second life gives."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "rank": "great-doxology",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Вмц. Параскевы , нареченной Пятница (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets over her line, «Совершается служба со славословием» — a service with the doxology. Her name page lists this day and no other."
+      },
+      "note": "Not the martyr of Rome the same calendar keeps on 26 июля, whom this corpus holds as `paraskevi-of-rome`: that one is a nun of Rome under Antoninus, this one a virgin of Iconium of the third century, and the two are separate commemorations on one calendar. Nor the Serbian ascetic of 14 октября (`parascheva-of-iasi`) nor the fool-for-Christ of Diveyevo of 22 сентября (`paraskeva-of-diveyevo`), both of which already carry Russian rows on their own days. Five `parask*` folders were listed and none is of Iconium."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 November 2026 (4 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Премудрая и всехвальная Христова мученица Параскева,/ мужескую крепость приимши,/ женскую же немощь отвергши,/ диавола победи и мучителя посрами,/ вопиющи и глаголющи:/ приидите, тело мое мечем ссецыте и огнем сожгите,/ аз бо, радующися, иду ко Христу, Жениху моему./ Тоя молитвами, Христе Боже,/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Тропарь великомученицы Параскевы Пятницы»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O all-wise and all-praised Paraskeva, martyr of Christ, you took on the strength of a man and cast off the weakness of a woman; you conquered the devil and put the tormentor to shame, crying aloud and saying: come, cut my body with the sword and burn it with fire, for I go rejoicing to Christ my Bridegroom. By her prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Иже веруя и мужеством душевным, тезоименитне,/ диавола посрамила еси/ и мучительское прещение и раны доблественне победила еси,/ мученице Параскево, вопия:/ мечем сосецайте и огнем сожизайте тело мое,/ яко да, радуюся, прииду Жениху моему Христу Богу./ Егоже моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Ин тропарь святой великомученицы Параскевы»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By faith and by courage of soul, you who bear the day's own name, you put the devil to shame and nobly overcame the tormentor's threats and wounds, O martyr Paraskeva, crying out: cut my body with the sword and burn it with fire, that I may come rejoicing to my Bridegroom, Christ God. Pray to Him that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Всесвятое и непорочное мучение принесши,/ яко вено пречестное, безсмертному Жениху Христу,/ Ангельское ликостояние возвеселила еси/ и победила еси демонския козни./ Сего ради тя честно верою чтим,/ мученице Параскево многострадальная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Кондак великомученицы Параскевы Пятницы»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having brought your all-holy and unblemished martyrdom as a most precious dowry to Christ the immortal Bridegroom, you gladdened the choir of the angels and overcame the wiles of the demons. For this we honour you with reverence and faith, O long-suffering martyr Paraskeva.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
