@@ -137,20 +137,50 @@ filled** (STRUCTURE.md §7). Run `node scripts/ship-gate-days.mjs` for the
 answer — it counts the eight `data/feasts-fixed.js` records as covering their
 own day, which a count over `saints/` alone does not, and that undercount is
 how the first figures were wrong by eight in every church. As of the evening of
-4 October: **romanian closed** at 366 of 366, **greek one day** (29 February,
-which no civil year in Daily's runway prints), **russian 115 of 366**,
-**serbian 84 of 366**. The script prints each church's remaining days in that
-church's own reckoning — Julian for the Russian and the Serbian. The Russian run
-from Julian 30 September and the Serbian from Julian 26 September are where the
-night of 3 October stopped, and both are contiguous from there.
+5 October: **romanian closed** at 366 of 366, **greek one day** (29 February,
+which no civil year in Daily's runway prints), **russian 135 of 366**,
+**serbian 126 of 366**. The script prints each church's remaining days in that
+church's own reckoning — Julian for the Russian and the Serbian. The Russian
+run is contiguous to Julian 18 October and resumes at **19 October**; the
+Serbian is contiguous to Julian 03-01 and resumes at **03-02**, with Julian
+01-06 owing nothing, 02-29 having no source, and **02-03 still owed as the
+parser finding below**.
 
 **azbyka.ru answered 403 on 4 October**, to the repo fetcher's user-agent and
 to a full Chrome one. `docs/CORPUS.md` §2 records it answering 200 on
 10 September and names it the only workable source for the twentieth-century
 new martyrs, who are most of a Russian day in these months — 13 of one night's
-21 new folders. **Whether the in-app browser still reads it is the single
-biggest open question on Russian quality**, and CORPUS.md §2 was deliberately
-left unamended until someone measures it.
+21 new folders. The in-app browser reads it (measured 4 October, 200), which is
+what settled CORPUS.md §2's amendment to a browser source.
+
+**And the block is on the user-agent string, not on the address or the IP**
+(measured 4 October, minutes apart): `/days/2026-10-28` answered 403 to
+`Mozilla/5.0 (agios-corpus; one page at a time)` and **200 to a bare
+`Mozilla/5.0`**. Nobody has acted on that and nobody should without the
+author: the protocol asks for honest identification, and sending a browser's
+string to get past a host's own refusal is the author's call. **It is the
+difference between thin folders and full lives for every twentieth-century new
+martyr left in the Russian calendar, and there are many** — seven folders of
+the Julian 15–17 October batches carry one calendar line each because of it,
+and each life names the refusal and the date.
+
+**The Advanced-search press is 300 ms of curtain, not of work** (measured
+5 October, and two earlier diagnoses of it were wrong). `switchMode` waits out
+`DUR.settle` before `applyMode` runs at all, so the grid is not built until the
+fade ends: press → first card is 408, 412 and 381 ms as shipped against 134,
+126 and 108 ms with the fade's length rewritten to 0 (`scratchpad/adv-curtain.mjs`,
+interleaved on the dev server at 1x). Inside that, `layout()` is **21 ms over 25
+calls** and no task exceeds 50 ms (`scratchpad/adv-press.mjs`,
+`scratchpad/adv-prof.mjs`). So the grid's measuring is not the cost and the
+earlier "it measures 22,000 times to mount 11 cards" is withdrawn. Shortening
+the fade is a taste decision and was left to the author.
+
+**A hymn the day and its hero both sing is dropped at the reading** since
+`462a1050`, keyed on the published source URL. 67 of the day records' hymns are
+a folder's hymn under the same URL, over 25 day-and-church rows, Russian and
+Romanian — `scratchpad/hymn-dup.mjs` prints them. Do not fix this in the data:
+the day record's hymns drive the calendar's own rank cross, and the folder is
+what a saint's page and the hymnal draw from.
 
 **The two shelf-swipe tests are the whole of CI's flake list, three runs
 running.** `chrome.spec.js:273` (`on a touch device the shelf row carries no x`)
