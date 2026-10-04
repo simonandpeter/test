@@ -30,11 +30,17 @@
       "form": "Hristofor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 9 mai, «Sfântul Mucenic Hristofor»."
+    },
+    {
+      "form": "Христифор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's heading for the Julian 9 May, „Свети мученик Христифор.“ — Свети left off, which is not a rank, and мученик left off, which is the `martyr` this folder already carries in `types`. The heading gives no epithet, no city and no year; Spain, the plagues and the 249 are all in the body. **The spelling is the book's own and was not corrected**: Христифор with an и, where this folder's Russian form and `christopher-20-april`'s Serbian form are both Христофор with an о. A direct walk of every `names` entry in `saints/` finds no folder holding Христифор, so the form folds with nothing and the one-letter difference is what keeps it out of the fold the two Христофор forms already make."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "wonderworker"
   ],
   "dates": {
     "birth": {
@@ -106,8 +112,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.05.2026 (9. мај ст. ст.) — „Свети мученик Христифор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, four sentences long, and the same menologion day the Russian, the Romanian and the Greek already keep him on, so nothing moved. **The 249 was read and refused.** „Намучен за Христа и прослављен од Христа 249. године.“ lies inside the 249–251 this folder already holds for his death, and taking it would narrow a three-year interval to a single year on one book's word — the refusal the coordinator has standing over `silvanus-of-gaza`'s 311 inside «(IV)» and `pelagia-of-tarsus`'s 287 inside 287–290. `dates` are untouched. **`wonderworker` is added to `types`**: „Велики чудотворац.“ is the entry's opening sentence, Чудотворац is the rank word BRIEF-SERBIAN.md §5 reads as `wonderworker`, and it does not conflict with the `martyr` this folder already carries — it stands beside it as it does on `nicholas-of-myra`. Велики is left off everywhere, being the epithet \"the Great\" which §5 says is no rank, and this folder's display name is the bare forename. **New here and in no other book read for this folder**: that he is especially honoured in Spain, and that the people pray to him most of all against infectious diseases and great mortality. **The Serbian spells him Христифор with an и**, where the Russian line on this same folder and the Serbian line on `christopher-20-april` both give Христофор, so the new form folds with nothing. The Prologue prints no troparion and no kontakion."
     }
   ],
   "locations": [],
