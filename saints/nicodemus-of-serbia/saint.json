@@ -14,10 +14,16 @@
       "form": "Νικόδημος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαΐου, «Όσιος Νικόδημος Αρχιεπίσκοπος Σερβίας», with the rank word and the see left off. No Serbian form is recorded: saint.gr prints none."
+    },
+    {
+      "form": "Никодим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 11 May, „Свети Никодим, архиепископ пећки.“ — Свети left off, which is not a rank, and „архиепископ пећки“ left off, which is the `archbishop` this folder carries in `types` and the see this corpus puts in `office`. **This is the folder's first Slavonic form in any script**: its Greek name note says saint.gr prints no Serbian form, and until now «Νικόδημος» was all it had. The heading gives no epithet; the Holy Mountain, Hilandar, Sava III, Milutin, the Typikon, the Bogomils, the 1317 and the 1325 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Никодим, so the form folds with nothing, although the corpus keeps four other Nicodemi — of the Cave, of Tismana, the Hagiorite and Shchapkov — none of whom has a Serbian form."
     }
   ],
   "related": [
-    "sabbas-the-sanctified"
+    "sabbas-the-sanctified",
+    "stephen-milutin"
   ],
   "dates": {
     "death": {
@@ -56,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026). He is a Serbian saint and that calendar is the one that would settle his own day and rank; it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.05.2026 (11. мај ст. ст.) — „Свети Никодим, архиепископ пећки.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and **this is the row this folder was waiting for**: its own `serbian` note said „He is a Serbian saint and that calendar is the one that would settle his own day and rank; it was not read.“ It has now been read, and it keeps him on the same menologion day saint.gr does, so nothing moved. **IT ALSO GIVES HIM HIS FIRST SLAVONIC NAME FORM IN ANY SCRIPT**: the folder held only «Νικόδημος», its own note saying saint.gr prints no Serbian form, and it now holds «Никодим». **THE SEE IS NAMED DIFFERENTLY BY THE TWO BOOKS AND `office` WAS NOT CHANGED.** This heading reads „архиепископ пећки“, Archbishop of Peć, and the body gives the full style he was elected to — „всеја сербскија и поморскија земљи“, of all the Serbian and the maritime land — where saint.gr gives «Αρχιεπίσκοπος Σερβίας» and the folder's `office` is „Archbishop of Serbia“. The two are the same see under two names, the Serbian archbishops having sat at Peć; **`office` is recorded data and an upgrade has no key for it**, so it stands as it is and both of the book's forms are in the life and here. **A YEAR OF ELECTION THAT DISAGREES, AND IT IS NOT A `dates` FIELD**: „буде изабран за архиепископа ... 1317. године“ against saint.gr's „consecrated bishop in 1316“. Neither is a birth, a death or a floruit, so `dates` has no place for it and the disagreement is recorded in the life and here. **THE DEATH AGREES EXACTLY**: „Упокојио се у Господу 1325. године“ is the 1325 this folder already holds, so nothing was added, widened or narrowed, and `date-audit.mjs` is unmoved. **New here, and all of it**: that he was a Serb by birth; that he struggled on the Holy Mountain and **was abbot of Hilandar**, which the Greek gave as Chilandar and which is the `abbot` already in `types`; that he was elected after the death of Sava III; **that he crowned King Milutin in 1321**; that he translated the Jerusalem Typikon into Serbian, which agrees with the Greek's naming it the Typikon of Sabbas the Sanctified; **the sentence from his own preface to it** — „Свемогући Бог, који зна немоћ нашу, даће нам моћ духовну, но ако ми прво труд покажемо“; that he sincerely loved the ascetic life and **laboured at rooting out the Bogomil heresy** and establishing the Orthodox faith; and that his **wonderworking** relics rest in the monastery at Peć, where the Greek had the relics at the Patriarchate of Peć without the wonders. **`related_add: [\"stephen-milutin\"]` and the reciprocal row in the same file**: the crowning is this man's act and that king's crowning, so the relation is the entry's own and is owed in both directions; neither folder carried the other. **Sava III takes nothing and has no folder.** The corpus holds `sava-of-serbia` and `stefan-the-first-crowned` but no third Sava of that see, and by the coordinator's third ruling a man with no folder anywhere has nothing for a row to attach to and a new folder would be the extension inventing a saint. He is named in the life instead, unlinked and with no `related` row. **`types` untouched**: Свети is no rank, „велики јерарх“ is the `hierarch` the folder carries, архиепископ the `archbishop`, игуман the `abbot`, and „Искрено је волео подвижнички живот“ is a narrative and not a rank word, so the `venerable` stands as it is. **No `locations`**: the Holy Mountain, Hilandar and Peć are all named and the folder has never claimed a point. **Чудотворне** is a word about the relics and not a `wonderworker` type claimed for the man. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
