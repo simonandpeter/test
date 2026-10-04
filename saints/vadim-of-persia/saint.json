@@ -12,6 +12,11 @@
       "form": "Βάδιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Βάδιμος οσιομάρτυρας και οι επτά Μαθητές του», with the rank word and the clause naming his disciples left off."
+    },
+    {
+      "form": "Вадим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 9 April on pravoslavno.rs, „Преп. муч. Вадим.“, with Преп. муч. left off — the rank words this source uses for a venerable-martyr, which this folder already carries in `types`. The heading leaves no epithet and names neither the monastery nor the country, so the bare forename is what the source gives; it folds with nothing, no other folder holding a Serbian Вадим."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.04.2026 (9. април ст. ст.) — „Преп. муч. Вадим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian and the Greek both keep him on. The man is the same beyond doubt: the abbot famed for piety, thrown into prison with seven disciples under the Persian king Shapur; the prince Nirsan imprisoned with them, who lost his faith and promised to worship the sun; the offer of Vadim's monastery if he would do the beheading with his own hand; the trembling arm and the many blows; and the year. The **376 agrees exactly** with the 376 this folder holds off saint.gr's heading, so **no date was touched**. **A second witness on how Nirsan died, and it settles nothing but moves the balance.** This entry says he soon fell into despair and **ran himself through with the sword**, receiving from his own hand the punishment for the murder of a righteous man; doxologia says he «came to a bad end and died by the sword, his own killer in despair», which reads the same way; saint.gr says an idolater grew angry with him one day and killed him with a knife. Two readings to one for the suicide, nothing changed, and the disagreement is now recorded in the life from both sides. New besides: that it was Nirsan's **promise to worship the sun** that pleased Shapur and drew the offer, where doxologia has him simply offer to do whatever was commanded; and that what stayed his hand was **the dignified face of the saint**. **The Prologue's rank word is игуман, abbot, and no type was added for it**: `BRIEF-SERBIAN.md` §5 maps игуман to `abbot`, but this folder already records «Archimandrite» in `office` from doxologia, and adding `abbot` to `types` would change what `lib/honorific.js` prints over a martyr whose other two sources call him a priest and an archimandrite — a visible change for no new fact. The rank word is recorded here instead. **The seven disciples are named by no source read for this folder**, this one included, and no folder was made for any of them. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {
