@@ -1,0 +1,62 @@
+{
+  "slug": "conon-father-of-conon",
+  "display_name": "Conon, father of Conon",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Конон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 6 March on pravoslavno.rs, „Свети мученици Конон отац и Конон син.“, with the rank word мученици left off and Свети, which is not a rank. The heading distinguishes the two men only as father and son, so the bare forename is all it gives either of them; the kinship is in this folder's English name, where this corpus puts such clauses, and not in the Serbian form."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 275,
+      "latest": 275,
+      "display": "275",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 6 March: „Чесно пострадали 275. године.“ The same three sentences also say they suffered „У време Дометијана“ — in the time of Dometian — without saying who Dometian was; the page calls him neither emperor nor governor, and nothing was read that would identify him, so the year stated is recorded and the name is left as the page leaves it."
+    }
+  },
+  "related": [
+    "conon-son-of-conon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 6 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 6 martie, which is the page for this menologion number — not 19 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 6 Μαρτίου, which is the page for this menologion number. The corpus holds six other folders for men of this name and none of them is on this menologion day: `conon-of-isauria` and `conon-the-gardener` are the day before, and `conon-of-cyprus`, `conon-of-kantara`, `conon-of-penthucla` and `conon-martyr-5-june` are other days again. None of the six is a father martyred with a son."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.03.2026 (6. март ст. ст.) — „Свети мученици Конон отац и Конон син.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, three sentences long. The heading names two people, so it is an enumerated company of two and therefore two folders, and it is quoted whole by both of them. The Prologue is the only one of the four calendars read for him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

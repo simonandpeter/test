@@ -6,6 +6,11 @@
       "form": "Ιώβ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαρτίου, «Όσιος Ιώβ ο Ερημίτης», with the rank word left off. The body of the page gives his name in the world as John, «κατά κόσμον Ιωάννης»."
+    },
+    {
+      "form": "Јов",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 6 March on pravoslavno.rs, „Блажени Јов.“, with Блажени left off. The heading gives no epithet, no place and no name in the world; `Јов` is held by no other folder."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.03.2026 (6. март ст. ст.) — „Блажени Јов.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. It is read as this folder's saint on the day, the city, the monastery and both years: born at Moscow in 1635, at Solovetsky, reposed in 1720 — the same three facts saint.gr gives, and the Prologue adds the age of eighty-five, which agrees with them. Nothing was taken from the heading's Блажени: `BRIEF-SERBIAN.md` §5 leaves it to be read as fool-for-christ or as righteous, and this entry has nothing in it that reads as folly for Christ, so no type was added and the word is recorded here instead."
     }
   ],
   "dates": {
