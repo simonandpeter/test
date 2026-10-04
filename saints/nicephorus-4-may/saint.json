@@ -6,6 +6,11 @@
       "form": "Nichifor",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 4 mai, «Sfântul Cuvios Nichifor»."
+    },
+    {
+      "form": "Никифор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 4. мај ст. ст., „Преподобни Никифор.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, so it is stripped, and the heading offers no epithet, no house and no country — the Holy Mountain and the work on prayer are the body's. The bare forename is therefore the whole of the Serbian form, and it makes a third folder for a fold already in the findings table; the superseding row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -39,11 +44,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.05.2026 (4. мај ст. ст.) — „Преподобни Никифор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-17&prolog=1",
+        "year": 2026
+      },
+      "note": "**This folder was a bare rank and a day, and this entry gives it a man — which makes it the thinnest identification of my five days and the one most worth the author's eye.** The folder exists because doxologia's 4 mai prints «Sfântul Cuvios Nichifor» and its own page opens no Viață tab at all; its life says in so many words that the rank is all that is recorded, with no century, no country and no monastery. The Prologue's 4. мај ст. ст. heads „Преподобни Никифор.“ — **the same menologion day, the same rank word, the same bare forename** — and then gives a specific man: first a Roman Catholic and afterwards come over to Orthodoxy, an ascetic monk on the Holy Mountain with the wise Theoliptos, **the teacher of the renowned Gregory Palamas**, the author of a work on noetic prayer, reposed in the fourteenth century. **The identification rests on day, rank and name alone**, which this corpus calls a thin call and has made before — `theoctistus` on the Greek and Romanian one-liners of 3 October is the standing case — with the one difference that here **the Romanian side carries no content whatever**, so there is nothing for the Serbian reading to contradict. **What the author may want to change and a reader may not**: `display_name` is `Nicephorus (4 May)` and the slug matches it, both of them a reader's construction from before this man was known; if this reading is right the folder is Nicephorus the Hesychast and wants a name and a slug to say so, and that is one of the nine things a machine may not decide. **Nothing was renamed here.** **A first date**: „Представио се мирно Господу у XIV веку“ → `death` 1301–1400, `display: \"14th century\"`, `traditional`, where doxologia prints no year at all. `node .tmp/dd.mjs \"14th century\"` reads «XIV в.» and «14ος αι.» **`related_add: [\"gregory-palamas\"]`, with the reciprocal row written into the same batch**: the entry's own words are „Био је учитељ славноме Григорију Палами“, which is this man's story and not furniture, and `gregory-palamas` carried twenty-one relations and not this one. **Theoliptos is named in the life and takes no row**: this corpus has no folder for him — `theolepte` is a woman martyr of 1 November and a different person, checked — so there is nobody to relate him to. **The teaching quoted in the entry is paraphrased and not copied.** The Prologue prints a long passage of his own words on the prayer of the heart; a life here is a paraphrase in the house voice and the one place a source's words are copied verbatim is an attestation's `source.text`, so the life gives the substance and quotes one clause. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 4. мај ст. ст.: „Представио се мирно Господу у XIV веку.“ — the first date any calendar read for this folder has given, doxologia printing no year, no century and no country. It is consistent with the rest of the same entry, which makes him the teacher of Gregory Palamas; no narrower bound was taken from that, because an inference from a pupil's dates is not a year the book prints."
+    }
+  },
+  "related": [
+    "gregory-palamas"
+  ]
 }

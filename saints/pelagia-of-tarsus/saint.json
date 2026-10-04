@@ -16,6 +16,11 @@
       "form": "Пелагия",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2643 and the heading of both of its lives for her, «Мученица Пелагия Тарсийская», with the rank word and the epithet left off. The longer life gives «Пелагея» in the same breath as «Пелагия» and is not followed."
+    },
+    {
+      "form": "Пелагија Тарсанка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 4. мај ст. ст., „Света мученица Пелагија Тарсанка.“ Света is no rank and мученица is the `martyr` this folder already carries in `types` and `honorific.js` composes back, so both are stripped; **Тарсанка is kept** — the woman of Tarsus, an ethnic by-name and not a rank the composer adds back, as Острошки, Боровски and Кијево-Печерски were kept on earlier days of this wave. Keeping it is what holds this folder **out** of the bare «Пелагија» that `pelagia-of-caesarea-in-palestine` holds, which was measured and not assumed."
     }
   ],
   "sex": "female",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.05.2026 (4. мај ст. ст.) — „Света мученица Пелагија Тарсанка.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-17&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 4 May, with the Romanian and the Greek; the Russian keeps her on 7 октября, and that row was not moved.** **No date was changed, and the reason is that the interval already holds this book's year.** Her `death` is 287–290, „287 or 290“, because the Sretensky site's two lives disagree with each other; „Пострада чесно 287. године“ is the earlier of those two readings, so the Prologue is now **a second source for 287 against 290** and **the interval was deliberately not narrowed to it** — narrowing a sourced interval is not a reader's act, and the disagreement the Russian reader recorded is still a disagreement. New besides, and this is the fullest account of her read for this folder: that her parents were pagan but **notable and rich**; that **Diocletian himself halted at Tarsus** and that it was during that stay that his son fell mortally in love with her; that she answered the prince **through her own wicked mother**, that she was already promised to her heavenly Bridegroom; that fleeing both of them she sought out and found **the bishop Clinon**, a man notable for his holiness, who taught her the faith and baptised her; that she then gave away her sumptuous clothes and much wealth, went home and confessed the baptism to her mother; that **the emperor's son ran himself through with a sword** when he lost all hope of her; that **her own mother laid the accusation** before the emperor and handed her over to judgement; that the emperor, forgetting his son, burned with an unclean passion for her himself and, when she would not be moved, condemned her to be burnt **in a metal ox heated by fire**; that when the torturers stripped her she crossed herself and **walked into the glowing ox of her own accord**, with a prayer of thanksgiving on her lips, and in the twinkling of an eye melted away in it like wax; that **the bishop Clinon obtained what was left of her bones and buried them on a hill under a stone**; and that in the time of „цара Константина Копронима (741-775)“ a beautiful church was built on that spot in her honour. The bishop Clinon has **no folder in this corpus** — checked by listing every folder whose name reads like it — so he is named in the life with no `related` row, and the emperor Constantine Copronymus is a persecuting reign and no saint. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
