@@ -6,6 +6,11 @@
       "form": "Macrina cea Bătrână",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 mai, «Sfânta Macrina cea Bătrână»."
+    },
+    {
+      "form": "Макрина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. мај ст. ст., „Света Макрина“ — Света is not a rank, so the heading gives the bare personal name and nothing is stripped. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Макрина», so this is the first folder to hold it; the corpus keeps one other Macrina, `macrina-sister-of-basil-the-great`, who holds only «Macrina» in Romanian and «Μακρίνα» in Greek and no `sr` form — **so the elder and her granddaughter of the same name are not folded by this write, and the next reader to meet «Макрина» in this book must say which of the two it is.** **„cea Bătrână“ is not in this form** although the Romanian one carries it and the display name is built on it: **this heading does not print the epithet at all**, and a form is copied and never composed. That is the same refusal made for „Ветеран“ on `julius-the-veteran` on 25 May and „Дервиш“ on `alexander-the-dervish` on 26 May."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.06.2026 (30. мај ст. ст.) — „Света Макрина“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 30/5 the Romanian row already carries; the Greek and Russian rows are `undocumented`. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 30 May is. **THE ROW IS WRITTEN ON THE BOOK THIS FOLDER WAS ALREADY QUOTING AT ONE REMOVE, AND THAT HAS NOT HAPPENED BEFORE IN THIS WAVE.** The existing life says so in its second sentence — „Doxologia prints her life from the Ohrid Prologue of Saint Nikolai Velimirović, and it is short“ — and the closing source line says the doxologia page „prints the Ohrid Prologue’s entry“. **So the Serbian source read today is the original of the Romanian text the folder has carried since 24 September, and the two were compared sentence by sentence.** **NOTHING IS NEW. NOT ONE FACT.** The grandmother of Basil the Great; wonderful in mind and in piety; a disciple of Saint Gregory of Neocaesarea the wonderworker; leaving her house in the time of Diocletian and hiding with her husband Basil in forests and wildernesses; the confiscation of their property and their not regretting it; stripped of everything but the love of God; seven years in an ancient forest; the goats coming down from the mountain by God’s providence and giving themselves, and so feeding them; and both reposing in peace in the fourth century after very many sufferings for the faith of Christ. **Every clause of the Serbian entry is in the Romanian life, in the same order.** **WHICH IS WORTH A ROW AND NOTHING ELSE.** The Serbian church keeps her on this day and this is the citation for it; the `life_para` appended says only that the source has been read at first hand and what the two differences of wording are, because a paragraph repeating the life above it would be padding. **`dates` UNTOUCHED AND EXACTLY CORROBORATED**: „Скончали су обоје мирно у IV веку“ is the `death` of 301 to 400, „4th century“, the folder already holds — which is the same sentence read twice, so it is corroboration of the translation and not of the fact. **There is nothing narrower in either text**, and the reign of Diocletian is used for nothing. `types` untouched at `righteous`: „Света Макрина“ gives no rank word at all, and Света is not one. **`related` UNTOUCHED, AND ALL THREE PEOPLE IN THE ENTRY WERE CHECKED.** `basil-the-great` her grandson, `basil-the-elder` her husband and `gregory-the-wonderworker-of-neocaesarea` her teacher are **all three already in this folder’s `related`**, together with `peter-of-sebaste`, so the three kinships and the discipleship this entry narrates are all recorded in both directions already. Nothing to add. **Diocletian gains nothing**, a persecutor and no saint this corpus keeps. No `locations`, although Neocaesarea is named at one remove and the forest is not a place. The Prologue prints no troparion and no kontakion, and this folder has none."
     }
   ],
   "text": {
