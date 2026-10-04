@@ -12,6 +12,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαρτίου, «Άγιος Βασίλειος Ιερομάρτυρας Πρεσβύτερος Άγκυρας», with the rank words and the see left off."
+    },
+    {
+      "form": "Василије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 22 March on pravoslavno.rs, „Свештеномученик Василије, презвитер анкирски.“, with the rank word Свештеномученик left off and with презвитер анкирски left off as well — a rank and a see this folder already keeps in `types` and `office`. The heading gives no epithet, so the bare forename is what the source gives, and it folds with `basil-the-confessor` and `basileus-of-cherson`."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.04.2026 (22. март ст. ст.) — „Свештеномученик Василије, презвитер анкирски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same presbyter of Ancyra: a zealot for Orthodoxy who suffered much from the Arians under Constantius and was killed under Julian the Apostate. The Prologue dates his death 363, where this folder holds 362 from the other calendars; the sourced year is left standing and the disagreement is recorded here rather than resolved. It gives the trial and the two speeches the other pages did not, and the seven strips of skin flayed from him daily. The stored form is the bare forename, because Свештеномученик is a rank this folder's `types` already carry and презвитер анкирски is the rank and the see it keeps in `types` and `office`; the bare „Василије“ therefore folds with `basil-the-confessor` and `basileus-of-cherson`, which hold the same bare form, and that fold is recorded as deliberate. The Prologue prints no troparion and no kontakion; the two hymns here are the other calendars'."
     }
   ],
   "hymns": [
