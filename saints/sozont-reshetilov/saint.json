@@ -1,0 +1,69 @@
+{
+  "slug": "sozont-reshetilov",
+  "display_name": "Sozont (Reshetilov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Созонт (Решетилов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 23 октября ст. ст., «Созонт (Решетилов), иерей, сщмч.», with the rank words left off. The line declines the name and gives it without the surname, as «Сщмчч. ... и Созонта пресвитеров»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Сщмчч. Николая , Владимира , Александра , Николая , Емилиана и Созонта пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "note": "He is the last of the six, the name «пресвитеров» follows, which is what fixes the grade of the five before him. The link behind his place says иерей, the same grade. His name page carries no life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the company line it names him in on 23 октября ст. ст. The calendar carries no life page for him and gives no day."
+    }
+  },
+  "related": [
+    "vladimir-ambartsumov",
+    "nicholas-agafonnikov",
+    "alexander-solovyov",
+    "nicholas-arkhangelsky",
+    "emilian-goncharov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

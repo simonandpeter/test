@@ -1,0 +1,76 @@
+{
+  "slug": "vladimir-ambartsumov",
+  "display_name": "Vladimir (Ambartsumov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Владимир (Амбарцумов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 23 октября ст. ст., «Владимир (Амбарцумов), протоиерей, сщмч.», with the rank words left off. The line declines the name and gives it without the surname, as «Сщмчч. ... Владимира ... пресвитеров»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Сщмчч. Николая , Владимира , Александра , Николая , Емилиана и Созонта пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "note": "He is the only one of the six on this line for whom the calendar carries a life. The cached day page was parsed to be sure of it: a `Life/` href follows the name it belongs to, and `life4789.htm` follows his name alone. The line calls the six of them пресвитеров together; the link behind his place says протоиерей, so his office says archpriest and his types keep the line's word."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1892,
+      "latest": 1892,
+      "display": "20 September 1892",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Священномученик Владимир Амбарцумов родился 20 сентября 1892 года в Саратове»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "5 November 1937",
+      "basis": "attested",
+      "note": "The same life: the troika of the NKVD administration for the Moscow region resolved on «3 ноября 1937 года» that he be shot, and «5 ноября священномученик Владимир был расстрелян на Бутовском полигоне под Москвой». 5 November 1937 is the civil date of the 23 октября ст. ст. this row keeps him on. The page also records what the family was told in 1956 — that he had died on «21 декабря 1942 года» in a camp of kidney disease — and says that date was never accepted as the day of his death and that in 1989 the state security office gave them the sentence and the shooting; so the 1942 year is a reading the source itself sets aside, not an interval."
+    }
+  },
+  "related": [
+    "nicholas-agafonnikov",
+    "alexander-solovyov",
+    "nicholas-arkhangelsky",
+    "emilian-goncharov",
+    "sozont-reshetilov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

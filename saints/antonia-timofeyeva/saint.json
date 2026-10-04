@@ -1,0 +1,60 @@
+{
+  "slug": "antonia-timofeyeva",
+  "display_name": "Antonia (Timofeyeva)",
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Антония (Тимофеева)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 23 октября ст. ст., «Антония (Тимофеева), прмц.», with the rank word left off. The line declines the name and gives it without the surname, as «Прмц. Антонии»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Прмц. Антонии (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "note": "Her line is her own and not part of the day's company of six priests: a different rank word, «Прмц.», and a different year, 1942. «Преподобномученица» is the rank of a monastic who died a martyr, which is the whole of what the calendar says about her state of life; it gives her no office, no monastery and no habit name beside this one. Her name page carries no life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after her name on 23 октября ст. ст., «Прмц. Антонии (1942).» The calendar carries no life page for her and gives no day."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
