@@ -11,6 +11,11 @@
       "form": "Άβιβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Γουρίας, Σαμωνάς και Άβιβος οι Ομολογητές», with the rank words left off. The line keeps the three together; the bare personal name is taken out of it."
+    },
+    {
+      "form": "Авив Едесский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Мученик Авив Едесский», with the rank word left off. The line itself gives the name in the genitive and without the toponymic."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Мучеников и исповедников Гурия , Самона (299-306) и Авива (322).»",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -121,9 +135,50 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Чудеса святых Твоих мученик/ стену необориму нам даровавый, Христе Боже,/ тех молитвами советы языков разори,/ Церковь святую укрепи,// яко един Благ и Человеколюбец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Тропарь мучеников и исповедников Гурия Самона и Авива», глас 5. It is the one troparion the three share, and it names none of them: a common of martyrs printed under their three names.",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ God, who have given us the wonders of your holy martyrs for a wall that cannot be thrown down: by their prayers scatter the counsels of the nations and strengthen your holy Church, for you alone are good and the lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "С высоты, мудрии, благодать приемше,/ сущим во искушениих предстоите, всехвальнии./ Темже отроковицу, святии, от смерти горькия избависте,// вы бо воистинну есте Едесу слава и миру радость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Кондак мучеников и исповедников Гурия Самона и Авива», глас 2. It names no one of the three, but it is their proper and not a common: it names Edessa and the girl of their own miracle. It is the Slavonic of the kontakion saint.gr prints in Greek on the same three.",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received grace from on high, O wise ones, you stand by those in trials, all-praised; and therefore, holy ones, you delivered the young girl from a bitter death. For you are truly the glory of Edessa and the joy of the world.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 322,
+      "latest": 322,
+      "display": "322",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, 15 ноября ст. ст.: «Мученик сам вошел в огонь и с молитвой предал дух свой Господу (+ 322)», and the calendar’s own line sets 322 against his name."
+    }
   }
 }
