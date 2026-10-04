@@ -1,0 +1,69 @@
+{
+  "slug": "joseph-schensnovich",
+  "display_name": "Joseph (Schensnovich)",
+  "names": [
+    {
+      "form": "Иосиф (Сченснович)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page, «Иосиф (Сченснович), диакон, сщмч.», with the grade and the rank word left off; the surname is part of the name and stays. The day's line gives the forename alone and in the genitive, with no surname at all. azbyka.ru writes the surname without the brackets, «Иосифа Сченсновича»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "office": "Deacon",
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "7 June 1886",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «родился 7 июня 1886 года в местечке Жировицы Слонимского уезда Гродненской губернии в семье белорусского крестьянина Антония Сченсновича»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "21 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «Диакон Иосиф Сченснович был расстрелян 21 ноября 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой». days.pravoslavie.ru's line for 9 ноября ст. ст. gives the year alone."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists three synaxes beside this day — «29 мая (переходящая) - Собор новомучеников, в Бутове пострадавших», «11 июля (переходящая) - Собор Белорусских святых» and «5 сентября (переходящая) - Собор Московских святых» — and days.pravoslavie.ru's name page 12950 lists «26 января (Новомуч.)». A synaxis is not a second feast, and this folder renders on 9 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Сщмчч. Парфения , еп. Ананьевского, Константина , Димитрия , Нестора , Феодора , Константина , Виктора , Илии , Павла пресвитеров, Иосифа диакона и прмч. Алексия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 22 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 9 November (5 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
