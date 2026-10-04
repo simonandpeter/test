@@ -7,6 +7,11 @@
       "form": "Прокопий",
       "lang": "ru",
       "note": "Read out of the life’s heading «Преподобный Прокопий»."
+    },
+    {
+      "form": "Прокопије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 1 April on pravoslavno.rs, „Преп. Прокопије Чех“, with the rank word Преп. left off, which is what this folder's `venerable` carries. **Чех was left off as well, and that is a reading**: it is not a by-name of place like Печерски or Јерусалимски but the word for a Czech, the people he belonged to, which this corpus would put in no name field; the heading offers no other epithet, so the bare forename is what it gives him."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.04.2026 (1. април ст. ст.) — „Преп. Прокопије Чех“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and **a second menologion day for a man the Russian calendar keeps on the Julian 16 September**; the Serbian day is not that one, so the row carries the Serbian day and nothing was moved. The identification is not on the name: the entry gives the village — Хотиш in Bohemia — the priesthood, the monastery of St John the Forerunner on the river Sázava and the year 1053, and the Sretensky life this folder was written from gives Chotouň in Bohemia, the priest's work of planting Christianity in the Czech land, the same monastery on the same river and the same 1053. Its year agrees exactly with the one this folder holds, so nothing was touched. New to the folder: that his parents were people of note; that he withdrew to a mountain to live after the pattern of the Eastern desert fathers; and that the duke Ulrich came upon him there by chance and helped him found the monastery. The duke was not read as any folder in this corpus and takes nothing. The Prologue prints no troparion and no kontakion, and this folder has none. The stored form Прокопије folds with nothing: no other folder in the corpus holds a Serbian form of this spelling, though seventeen hold the name in another language."
     }
   ],
   "text": {
