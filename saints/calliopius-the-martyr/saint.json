@@ -11,6 +11,11 @@
       "form": "Καλλιόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Καλλιόπιος», with the rank word left off."
+    },
+    {
+      "form": "Калиопије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 7 April on pravoslavno.rs, „Св. муч. Калиопије.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.04.2026 (7. април ст. ст.) — „Св. муч. Калиопије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day as the Romanian and the Greek, so nothing moves. The man is the same beyond doubt: the only son of a senator of Perga in Pamphylia, the devout mother Theoclia who taught him the fear of God in his early youth, the persecution that made her put him on a ship with money to save him, the landing in the middle of a pagan festival, the refusal to join the feast, the commander Maximus, the prison, the crucifixion head downward on Great Thursday for the five gold pieces she gave the executioners out of humility, and the mother dying on her son's body when they brought it down. **A death of 304 was added where this folder had none** — „Чесно пострадаше 304. год.“ — and it is the only year any source read for this folder gives it: neither doxologia.ro's life nor saint.gr's prints one. `node .tmp/dd.mjs 304` reads in Russian and Greek. New besides that: the city of refuge is **Помпеопољ, Pompeiopolis**, where the folder's Romanian life has «Pempropolis, a city of Cilicia» — a variant recorded and not reconciled, since neither page gives a way to choose; that the pagan festival he landed in was a stormy one and the crowd pressed him to take part; that he was **beaten with leaden staves and roasted on fire** before being thrown wounded into prison, where neither other page names the instruments; that his mother, hearing of the torture, **gave away her whole property to the poor and the needy**, hurried to the prison with a little money, **bowed down before her son** and bound up his wounds; and that in the mother's heart joy was mingled with pain as they led him out. **Theoclia is named as the entry names her and identified with nobody**: this corpus holds no folder for her, and the folders whose names read near hers — `theokleto`, `theoclitus`, `theocles` — are other people. The Prologue names the emperor **Maximian** where saint.gr sets the martyrdom in the years of Diocletian; both stand, and no date rests on either reign. The Prologue prints no troparion and no kontakion; the two hymns on this folder are the other calendars'."
     }
   ],
   "hymns": [
@@ -101,5 +116,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 7 April closes its entry „Чесно пострадаше 304. год.“ — they suffered honourably in the year 304, said of the martyr and of his mother together. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro's life prints none and saint.gr's sets him in the years of Diocletian without a number, which is consistent with it. The Prologue names the emperor as Maximian, and no year is inferred from either reign. `node .tmp/dd.mjs 304` reads in Russian and Greek."
+    }
+  }
 }

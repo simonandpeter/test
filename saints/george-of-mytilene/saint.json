@@ -12,6 +12,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Γεώργιος επίσκοπος Μυτιλήνης», with the rank word and the see left off."
+    },
+    {
+      "form": "Георгије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 7 April on pravoslavno.rs, „Св. Георгије исповедник.“, with Св. left off — it is not a rank — and with исповедник left off as well, the rank word this source uses for a confessor, which this folder already carries in `types`. The heading leaves no epithet and names neither the see nor the island, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.04.2026 (7. април ст. ст.) — „Св. Георгије исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of five entries, and the Prologue keeps him on the same menologion day as the Romanian and the Greek, 7 April, so nothing moves. The man is the same beyond doubt: the metropolitan of Mytilene, called by the emperor to the council of bishops which was to destroy the veneration of the icons under Leo the Armenian, who refused and stood with some other brave bishops in the icons' defence, was mocked and banished to the region of Cherson, and spent the rest of his life there in bodily want — the folder's Romanian and Greek material has all of this. New to the folder: that it was **for the great virtue he gained by long ascetic struggle** that he was chosen and set as metropolitan; that he governed his flock zealously and wisely **into his old age**; that he was **called to the council by the emperor himself**; and that he was a wonderworker **both in his life and after his death**, for his great righteousness and his love of the Lord Jesus. **A year in conflict, and nothing was changed.** The Prologue closes „Сконча и пресели се у бесмртни живот око 816. год.“ — about 816 — where this folder holds `death` 821, `basis: traditional`, off saint.gr's «όταν πέθανε το 821 μ.Χ.» and its heading «(; - 821)». A reader does not displace a sourced year, and widening the interval to 816–821 would be as much a choice as replacing it, which is the ruling already recorded for `hypatius-of-gangra` on the Julian 31 March. The 816 is recorded here and in the life and the date block was not touched. The Prologue also gives only the Leo the Armenian persecution, where the folder's Romanian life has him a confessor under Leo the Isaurian first and raised to the see under Constantine and Irene — shorter, not contradictory. The Prologue prints no troparion and no kontakion; the three hymns on this folder are the other calendars'."
     }
   ],
   "hymns": [

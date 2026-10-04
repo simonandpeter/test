@@ -16,6 +16,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Απριλίου, «Όσιος Γρηγόριος ο Σιναΐτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Григорије Синаит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 7 April on pravoslavno.rs, „Преп. Григорије Синаит.“, with the rank word Преп. left off. The by-name Синаит is kept: it is what the heading gives beyond the forename, and `gregory-of-nyssa` and `gregory-of-moesia` already hold the bare Григорије, which a bare form here would fold onto."
     }
   ],
   "sex": "male",
@@ -87,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.04.2026 (7. април ст. ст.) — „Преп. Григорије Синаит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fifth and shortest entry, and **it is a cross-reference**: the whole of it is „Велики светитељ и подвижник Синајски и Атонски. (Види 8. август).“ — a great saint and ascetic of Sinai and of Athos, see 8 August. The identity is beyond doubt and nothing is added: no year, no place beyond Sinai and Athos, no fact this folder does not already carry from doxologia.ro and saint.gr. **The row carries the day that was read, 7 April, because this folder had no Serbian row at all and this is the first; the Julian 8 August is where the Prologue prints the account, and the reader who reaches that day must add `BRIEF.md` §4's second-day note rather than move this row.** That is named in the run's findings, with the reason: the first Serbian day read wins the row by the settled rule, and the order of reading is what decides it. The folder now carries three days on three calendars — the Romanian 6 April, the Greek 11 February and the Serbian 7 April — and a fourth owed as a note; all of them are the sources' own and none was computed. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {
