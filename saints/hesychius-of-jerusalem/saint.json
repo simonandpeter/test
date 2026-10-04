@@ -6,6 +6,11 @@
       "form": "Ησύχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαρτίου, «Όσιος Ησύχιος ο Ιεροσολυμίτης», with the rank word left off."
+    },
+    {
+      "form": "Исихије Јерусалимски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 28 March on pravoslavno.rs, „Преподобни Исихије Јерусалимски.“, with the rank word Преподобни left off. Јерусалимски is kept: he is a presbyter and not a bishop, so it is a by-name of place and not a see, and it is what this folder's English name already carries. A bare Исихије would stand too close to `hesychius-the-faster`'s «Исихије Посник»."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.04.2026 (28. март ст. ст.) — „Преподобни Исихије Јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek already keeps in this folder, and the same presbyter and theologian of Palestine. This folder held a `floruit` of the fifth century and **no death at all**, and the entry gives one: „Упокојио се мирно око 434. године“, about 434, which falls inside that century, so the century stands untouched and the death is recorded beside it, on the shape `piamoun` already uses. It makes him a disciple of Gregory the Theologian, which neither other page did, and `related` goes both ways for that; `euthymius-the-great`, whose contemporary it also calls him, was already related here. It names a work of his on sobriety and prayer and recommends reading it; nothing was taken from that, because a title in a recommendation is not a folder's data. The stored form keeps Јерусалимски, the by-name the heading gives him; a bare Исихије would stand against `hesychius-the-faster`'s «Исихије Посник» with nothing to tell them apart. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
@@ -52,14 +67,22 @@
       "latest": 500,
       "display": "5th century",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Ησύχιος έζησε και ασκήτεψε στην Παλαιστίνη κατά τον 5ο αιώνα μ.Χ.» The page gives no year of birth and none of death; the years it does give belong to other men's acts — Cyril's accession in 412, Juvenal's patriarchate from 422 to 458, the consecration in 428 or 429, the council of 553, the tomb still shown about 570."
+      "note": "saint.gr: «Ο Όσιος Ησύχιος έζησε και ασκήτεψε στην Παλαιστίνη κατά τον 5ο αιώνα μ.Χ.» The page gives no year of birth and none of death; the years it does give belong to other men's acts — Cyril's accession in 412, Juvenal's patriarchate — and are not his."
+    },
+    "death": {
+      "earliest": 434,
+      "latest": 434,
+      "display": "about 434",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 28 March: „Упокојио се мирно око 434. године.“ The page says about the year 434, not 434, and it is the only source read for this folder that gives a year of any kind; the floruit beside this is saint.gr's century. The two do not conflict: 434 falls inside the century, and nothing of the century's interval was narrowed."
     }
   },
   "related": [
     "cyril-of-alexandria",
     "euthymius-the-great",
     "hesychius-the-sinaite",
-    "juvenal-of-jerusalem"
+    "juvenal-of-jerusalem",
+    "gregory-the-theologian"
   ],
   "text": {
     "life": "life.md"
