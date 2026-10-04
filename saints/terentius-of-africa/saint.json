@@ -11,6 +11,11 @@
       "form": "Τερέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Теренције",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 10 April on pravoslavno.rs, „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“, where Св. муч. heads the whole company and belongs to no one of them, so each of the four named forenames stands bare. The heading gives him no epithet and no country; Africa is in the body, as the governor's province, and this corpus keeps such a thing in the display name."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.04.2026 (10. април ст. ст.) — „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek both keep him on. **The heading enumerates four and no more** — Теренције, Африкан, Максим, Помпије — and then says only „и осталих 36 с њима“, and the other thirty-six with them; the body names nobody further. So this entry is **four rows and not forty**, and the other thirty-six took none: the corpus holds forty-five `*-companion-of-terentius` folders off the Greek and Romanian lists, which do enumerate, and giving each of them a row off a collective «other thirty-six» would identify a named man with one of an unnamed thirty-six on nothing but the day — the more plainly so because the counts do not agree, this source making the company forty in all against the corpus's forty-six folders. That is written up in the run's findings. The man is the same beyond doubt: Terentius under Decius, the governor of Africa's proclamation, the forty who stood firm, and the year. **The 250 agrees exactly** with what this folder holds off saint.gr, so **no date was touched**. New to the folder, and a great deal of it: that the governor **divided them into two groups**, beheading the thirty-six after scourging, scraping and the salting of their open wounds, and keeping **these four** in prison in heavy irons at the neck, the hands and the feet; that **an angel of God appeared in the prison, touched the irons so that they fell off, and then set them an abundant table and fed them**; that they were brought out, tortured and shut up again; that the governor had his **sorcerers gather as many venomous creatures, snakes and scorpions, as they could and shut them in the same room**, and that the creatures would not touch the servants of God but huddled in one corner and lay there three days, and when the prison was opened on the third day **rushed at the sorcerers and bit them**; and that the four **sang psalms joyfully** on the way to the beheading. And it gives Terentius's own words to his companions: let us take care, brothers, not to deny Christ our God, lest He deny us before His heavenly Father and the holy angels. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

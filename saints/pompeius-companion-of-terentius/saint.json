@@ -11,6 +11,11 @@
       "form": "Πομπήιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Помпије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 10 April on pravoslavno.rs, „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“, where Св. муч. heads the whole company and belongs to no one of them, so each of the four named forenames stands bare. The heading gives him no epithet; the companionship clause this corpus keeps in his display name is not part of the name the source prints. No other folder holds a Serbian Помпије."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.04.2026 (10. април ст. ст.) — „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-23&prolog=1",
+        "year": 2026
+      },
+      "note": "Fourth of the **four** the day's heading enumerates by name, the other thirty-six being left unnamed by both the heading and the body — see `terentius-of-africa`'s row for why that means four rows and not forty. Same menologion day as the Romanian and the Greek, and the **250 agrees exactly** with what this folder holds, so **no date was touched**. New: that this source makes the four named men **the four who were kept** when the company was divided, and gives them the irons at neck and hands and feet, the angel who struck them off and set them a table, the snakes and scorpions that huddled in a corner for three days and then turned on the sorcerers, and the psalms sung on the way to the sword. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

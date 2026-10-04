@@ -6,6 +6,11 @@
       "form": "Cei șase mii de mucenici de la Mănăstirea Sfântul David Gareji, Georgia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 aprilie."
+    },
+    {
+      "form": "6000 мученика у Грузији",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 April on pravoslavno.rs, „Св. 6000 мученика у Грузији.“, with Св. left off — it is not a rank. The rest is kept whole, number and rank word and country together, because **the page names not one of the six thousand** and the whole designation is the only name it gives them: the same reading `hundred-and-twenty-martyrs-of-persia` carries for «Εκατόν είκοσι Μάρτυρες». David Gareji, which the corpus keeps in the display name, is in the body and not in the heading."
     }
   ],
   "sex": "male",
@@ -40,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.04.2026 (10. април ст. ст.) — „Св. 6000 мученика у Грузији.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and **the largest single gain of this sitting**: this folder's whole content was one caption sentence from doxologia, which gave it no year, no ruler, no commander and no account, and the Prologue gives the history. **The Prologue keeps them on a day the Romanian does not**: doxologia has them on 26 April and this is the Julian 10 April, a fortnight and more off and not a style conversion. One row per church, so nothing was moved. The company is the same beyond doubt: the fathers of the David Gareji desert in Georgia, cut to pieces at a signal, which is exactly doxologia's one sentence. **It is not the company `martyrs-of-kamptakouia` keeps** on the Greek 10 April: those died in Tamerlane's raid at the monastery of Kamptakouia in 1386, and these under Shah Abbas I in 1615 at David Gareji — different ruler, different century, different monastery, and that folder took no row from this entry. **A death of 1615 was added where this folder had none**; `node .tmp/dd.mjs 1615` reads in Russian and Greek. New besides the year: the **twelve monasteries** of the David Gareji desert where monks had struggled for centuries; **Shah Abbas I's invasion of 1615** and the laying waste of the whole country; the hunt at the very dawn of Pascha and the many lights the shah saw on the mountain, which were the monks of all twelve houses in procession round the church of the Resurrection of Christ with candles in their hands; his question, «Is not all Georgia given over to the sword yet?», and the order to go at once and cut down every monk; the angel of God who appeared to **the abbot Arsenius** and announced his near death, and the abbot's telling of it to the brethren, and the communion of the pure Mysteries and the preparing for death; the abbot cut to pieces first, going out before them, and then all the rest; that only **two of the monasteries now remain**, of Saint David and of Saint John the Forerunner; and that the **king Archil of Georgia** gathered all the martyrs' relics and buried them honourably, and that the relics give out healing myrrh and heal the sick to this day. **Arsenius and Archil are named as the entry names them and identified with nobody**: the entry gives the abbot no see, no by-name and no monastery of his own among the twelve, and the corpus holds twenty-two folders of his name; of the king it gives nothing but the name and the title. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1615,
+      "latest": 1615,
+      "display": "1615",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 10 April: „Чесно пострадаше сви, и неувелим венцима се увенчаше 1615. год.“ — all suffered honourably and were crowned with unfading crowns in the year 1615; and the entry opens by dating Shah Abbas I's invasion of Georgia to the same year. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro prints a single caption sentence for the company and names no year, no ruler and no commander at all. `node .tmp/dd.mjs 1615` reads in Russian and Greek."
+    }
   }
 }
