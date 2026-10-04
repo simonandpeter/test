@@ -1,0 +1,11 @@
+# Basil (Nikolsky, 14 November)
+
+The Православный церковный календарь of the Сретенский monastery names him twentieth of twenty-seven on 14 ноября ст. ст., in a line of twenty-three presbyters, a deacon, a hieromonk, a lay martyr and a woman who all died in 1937. The line declines his name to «Василия» and gives it without a surname; the title on the name link behind his place, name page 14348, supplies both the surname and the grade: «Василий (Никольский), протоиерей, сщмч.». He is the third of three men the line calls «Василия», and the others are of other surnames.
+
+Ten of the twenty-seven have life pages on this calendar and he is not one of them: the name link behind his place carries no life, and the day page says nothing of him beyond the rank, the name and the company's year. The ten whose lives are given were tried separately, in the prisons of Rzhev, Bezhetsk, Tver and Kimry, sentenced by NKVD troikas on 25 November 1937 and shot on 27 November, which is 14 November old style and the day the calendar keeps them on; nothing on the page says whether he died with them.
+
+He is not the Basil Nikolsky the same calendar keeps on the Julian 21 октября, in another company line of 1937, whose name link gives the grade «иерей». Both died in 1937 and both stored Russian forms are «Василий (Никольский)», so the year does not separate them; what does is that the calendar keeps two commemorations, on two days, with two grades — a priest there and an archpriest here. Two commemorations are two men by the rule this corpus follows. Neither page gives either man a life, so there is nothing more to set one against the other.
+
+Nothing further is written here — not a birth, not a parish, not a charge, not a place of death. The long lives of the twentieth-century Russian new martyrs are on azbyka.ru, which this reading did not open for him. The day page's troparia and kontakia all belong to other saints it heads and none to this company of 1937. The twenty-seven share a date, a year and a line, which is proximity and not a company, so no relation is recorded between them here.
+
+*After the Православный церковный календарь of the Сретенский monastery for 14 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261114.html); read 5 October 2026.*

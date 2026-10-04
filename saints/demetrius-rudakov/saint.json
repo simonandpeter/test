@@ -1,0 +1,60 @@
+{
+  "slug": "demetrius-rudakov",
+  "display_name": "Demetrius (Rudakov)",
+  "names": [
+    {
+      "form": "Димитрий (Рудаков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 13599, «Димитрий (Рудаков), иерей, сщмч.», with the grade word and the rank word left off. The day's own line declines the name to «Димитрия» and gives it without a surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Сщмчч. Димитрия , Александра , Виктора , Алексия , Михаила , Михаила , Феодора , Петра , Алексия , Сергия , Николая , Василия , Александра , Николая , Димитрия , Димитрия , Порфирия , Василия , Георгия , Василия , Сергия , Александра , Сергия пресвитеров, Николая диакона, прмч. Аристарха , мч. Гавриила и мц. Анны (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 14 ноября ст. ст. The calendar carries no life page, so the year it prints at the end of that line is the whole of what is recorded here. No day, no place and no manner of death are given, and none is inferred."
+    }
+  },
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
