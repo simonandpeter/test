@@ -64,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.04.2026 (20. март ст. ст.) — „Преподобни мученици Јован и други.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same company: the monks of the monastery of Saint Sabbas the Sanctified near Jerusalem, killed by Arabs who shot some with arrows and smothered the rest with smoke in the cave of Saint Sabbas. **The Prologue takes doxologia's side of the disagreement recorded in this folder's Greek row**, and that is the most useful thing in the entry: it puts the raid in the reign of Constantine and Irene with Elias patriarch of Jerusalem, exactly as doxologia's life did, and nowhere near the reign of Heraclius that saint.gr prints. It dates it before Pascha 796, which falls inside the 780–797 this folder already holds; a sourced interval is not narrowed on a reading, so no date was touched. The entry names the abbot Thomas, whose words to the brethren it quotes, and says the raiders quarrelled on the way back to their tents and killed one another to the last man, also in 796. **No Serbian name form was stored.** The heading is „Преподобни мученици Јован и други“ — one forename and then the others, naming nobody else — and the corpus holds no folder for a John of this company, so that heading is neither a name for the company nor a form for any one man, and composing one would be writing what the page does not print. No new folder was made for that John either: the other two calendars fold every member into this one company folder, and splitting one man out of it on a forename is not a reading a reader should make alone. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -125,6 +135,7 @@
   },
   "related": [
     "john-of-damascus",
-    "stephen-the-sabbaite"
+    "stephen-the-sabbaite",
+    "sabbas-the-sanctified"
   ]
 }
