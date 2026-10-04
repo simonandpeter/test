@@ -11,17 +11,34 @@
       "form": "Βαρλαάμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Όσιος Βαρλαάμ «ὁ ἐν Χουτινῇ»», with the rank word left off."
+    },
+    {
+      "form": "Варлаам Хутынский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Преподобный Варлаам Хутынский», with the rank word left off. The line itself gives the name in the genitive. One of his two life pages is headed «Преподобный Варлаам Хутынский, Новгородский чудотворец» and adds that second epithet."
     }
   ],
   "sex": "male",
   "types": [
-    "monk"
+    "monk",
+    "venerable",
+    "wonderworker"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page and both life pages also list «30 мая», which the 30 мая day page was not read for; it is recorded here as a note and not as a feast, and this folder renders on 6 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Прп. Варлаама Хутынского (1192).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -65,9 +82,59 @@
     "death": {
       "earliest": 1192,
       "latest": 1192,
-      "display": "1192",
-      "basis": "traditional",
-      "note": "saint.gr's own head line for him: «Οσιος Βαρλααμ «ο Εν Χουτινη» (; - 1192)». The same page says it has no details of his life."
+      "display": "6 November 1192",
+      "basis": "attested",
+      "note": "The year saint.gr's head line gave is now confirmed with its day by both of this calendar's life pages for him: «мирно скончался в 6-й день ноября 1192 года» and «преставился ко Господу 6 ноября 1192 года», and the line for 6 ноября ст. ст. prints «(1192)». The day is the Julian 6 November, which is this feast."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Иже на земли леганием,/ пощением же и бдением/ тело твое изнуряя, преподобне,/ вся плотская мудрования умертвил еси,/ и исцелений струя независтная явился еси/ верою притекающим к тебе, Варлааме отче наш,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Тропарь преподобного Варлаама Хутынского»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wearing thy body down by lying on the bare earth, by fasting and by vigil, O venerable one, thou didst put to death all the wisdom of the flesh, and wast shown to be an ungrudging stream of healings for those who run to thee in faith. O Barlaam our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Богодуховныя благодати исполнився/ и разжегся любовию Животворящия Троицы,/ млад явися Богу угождаяй,/ ревнуя святым отцем преподобным,/ великия труды возлюбив,/ и понесл еси, и демонския посрамив, множкества низложил еси,/ и преставися в вечный покой,/ и ныне подаеши просящим неоскудное исцеление,/ исцеляя многоразличныя недуги,/ молимтися, святый преподобне отче Варлааме,/ непрестанно молися ко Господу о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Ин тропарь преподобного Варлаама Хутынского»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Filled with the grace breathed by God and set afire with love for the Life-giving Trinity, thou wast shown while still young to be one who pleases God, emulating the holy venerable fathers; thou didst love great labours and didst bear them, and putting the demons to shame thou didst lay their multitudes low, and didst pass over into eternal rest. Now thou givest unfailing healing to those who ask, curing sicknesses of many kinds. We entreat thee, holy and venerable father Barlaam: pray unceasingly to the Lord for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Якоже другий Илия, отче, дождь с небесе свел еси,/ он убо огнь сведе и царя удиви,/ ты же люди твоя возвеселил еси и торжествовати устроил еси./ Великий бо Новград вельми тобою хвалится, имея мощи твоя в себе,/ Егоже сохраняй от враг непоколебима, да зовем ти:// радуйся, преподобне Варлааме, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Кондак преподобного Варлаама Хутынского»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Like a second Elijah, O father, thou didst bring down rain from heaven — he brought down fire and astonished the king, but thou didst gladden thy people and set them keeping festival. For great Novgorod boasts greatly of thee, having thy relics within it; keep it unshaken by its enemies, that we may cry to thee: rejoice, venerable Barlaam, our father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

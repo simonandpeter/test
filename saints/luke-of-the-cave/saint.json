@@ -6,17 +6,33 @@
       "form": "Λουκάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Όσιος Λουκάς «ὁ ἐν Σπηλαίῳ»», with the rank word left off."
+    },
+    {
+      "form": "Лука Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Лука Печерский, эконом», with the office word left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "monk"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). saint.gr calls him a Russian saint and gives no life, so his own church's calendar is the source a later reader will want."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page and the life page also list «28 сентября (Печер.(Б))», the synaxis of the fathers of the Near Caves, which is a synaxis and not a second feast; this folder renders on 6 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Прп. Луки , эконома Печерского (XIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of its line for 6 ноября ст. ст., «Прп. Луки , эконома Печерского (XIII).», and repeats in his life page: «Подвизался в Киево-Печерском монастыре в XIII в.» Neither saint.gr nor this page gives a year, so this is the first date this folder carries."
+    }
   }
 }

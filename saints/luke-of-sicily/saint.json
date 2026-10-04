@@ -11,6 +11,11 @@
       "form": "Λουκάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Όσιος Λουκάς», with the rank word left off."
+    },
+    {
+      "form": "Лука Тавроменийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Лука Тавроменийский, прп.», with the rank word left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Прп. Луки Тавроменийского (800-820).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -62,5 +76,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 800,
+      "latest": 820,
+      "display": "800-820",
+      "basis": "traditional",
+      "note": "The interval days.pravoslavie.ru prints at the end of its line for 6 ноября ст. ст., «Прп. Луки Тавроменийского (800-820).». The page does not say whether those are the years of his life, his abbacy or his death; its life page says only that he died at Corinth «в начале IX века», at the beginning of the ninth century, which the interval's upper end agrees with. Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }

@@ -12,6 +12,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Νοεμβρίου, «Άγιος Παύλος Α' ο Ομολογητής και Ιερομάρτυρας Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank words left off."
+    },
+    {
+      "form": "Павел I Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Святитель Павел I Константинопольский, патриарх, сщмч.», with the rank words and the grade left off; the see is recorded as the office. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Свт. Павла исп., патриарха Константинопольского (350).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -123,6 +137,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Божественныя веры исповеданием/ другаго Павла тя Церковь, ревнителя во священницех, показа,/ свозопиет ти и Авель ко Господу,/ и 3ахариина кровь праведная./ Отче преподобне,/ Христа Бога моли// дароватися нам велией милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Тропарь святителя Павла»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The confession of the divine faith showed you to the Church as another Paul, a zealot among priests; and Abel cries out to the Lord together with you, and the righteous blood of Zacharias. Venerable father, entreat Christ our God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Облиставый на земли, яко звезда небосветлая,/ Кафолическую просвещаеши Церковь ныне,/ о нейже и страдальчествовал еси,/ душу твою, Павле, предложив,/ и, якоже 3ахариина и Авелева,// ясно вопиет твоя кровь ко Господу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Кондак святителя Павла»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having flashed upon the earth like a star lit from heaven, you now give light to the catholic Church, for which you contended, setting down your own soul, Paul; and like the blood of Zacharias and of Abel, your blood cries aloud to the Lord.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -130,11 +176,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 351,
+      "earliest": 350,
       "latest": 351,
-      "display": "351",
+      "display": "350 or 351",
       "basis": "traditional",
-      "note": "saint.gr's own head line for him: «Αγιος Παυλος Α' ο Ομολογητης Και Ιερομαρτυρας Αρχιεπισκοπος Κωνσταντινουπολης (; - 351)». The same page's text says Alexander died «το 377 μ.Χ.» and that Paul was elected then, which cannot stand with 351; the head line's year is taken and the disagreement is left as the page's own."
+      "note": "Two readings, and neither is chosen. saint.gr's head line gives «(; - 351)» and days.pravoslavie.ru prints «(350)» at the end of its line for 6 ноября ст. ст. and says the same in words in his life: «Произошло это в 350 году». The Greek page's own text separately dates the death of the patriarch Alexander to 377, which cannot stand with either year, and the Russian life dates it «(+340)»."
     }
   }
 }

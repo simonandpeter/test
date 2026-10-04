@@ -1,0 +1,93 @@
+{
+  "slug": "barlaam-of-keret",
+  "display_name": "Barlaam of Keret",
+  "names": [
+    {
+      "form": "Варлаам Керетский, Архангельский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Варлаам Керетский, Архангельский, иеромонах», with the grade word left off; both epithets are kept, because the calendar gives both and his life page names the Keret district and the Arkhangelsk province it lay in. The line itself gives the name in the genitive with one epithet only."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Прп. Варлаама Керетского (XVI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1501,
+      "latest": 1600,
+      "display": "16th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of its line for 6 ноября ст. ст., «Прп. Варлаама Керетского (XVI).», and repeats in the first words of his life page: «Жил в XVI веке». The page gives no year for his birth or his death."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною свыше просветився благодатию, преподобне,/ мир оставил еси,/ житейскую печаль и всяк мятеж мира сего/ любве ради Христовы со дерзновением отвергл еси,/ евангельски Христу последовал еси,/ и, Того ярем взем, во всем воли Его повинулся еси,/ и весь разум и сердце к Нему неуклонно возложил еси,/ Христа ради тело свое изнуряя постом и бдением, в молитвах своих не усыпая,/ Бога милостива творя и Пречистую Богородицу Молебницу предлагая,/ и сего ради от Бога восприем власть и силу на сопротивнаго врага,/ не убояся воздушныя и морския тяготы и студени, ниже уклонися,/ и морскою пучиною в мале ладиице по водам шествие творя,/ против зельнаго обуревания плаваше,/ промышлением Божественнаго разума направляем,/ и около Святаго Носа непроходимый путь морский/ от ядовитаго червия/ благопроходен человеком без вреда сотворил еси молитвами своими,/ и многим терпением во временней жизни подвиг совершил еси,/ и, равноангельное житие пожив,/ темже и по преставлении источаеши чудес благодать/ иже верою приходящим к тебе, Варлааме, преблаженне отче наш,/ вопием ти: моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Тропарь преподобного Варлаама Керетскаго»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened from above by divine grace, O venerable one, thou didst leave the world, and for the love of Christ didst boldly cast off the cares of this life and all its turmoil; thou didst follow Christ as the Gospel teaches, and taking up his yoke wast obedient to his will in all things, setting thy whole mind and heart unswervingly upon him. For Christ's sake thou didst wear thy body down with fasting and vigil, never slumbering in thy prayers, making God merciful to thee and setting the most pure Theotokos forward as thine intercessor; and having therefore received from God authority and strength against the adversary, thou didst not fear the burden and the cold of the air and of the sea, nor turn aside, but making thy way over the waters of the ocean deep in a little boat thou didst sail against the fiercest of storms, guided by the providence of the divine Wisdom; and by thy prayers thou didst make the impassable sea road about the Holy Nose passable for men without harm from the poisonous worm. With much patience thou didst accomplish thy struggle in this temporal life, and having lived a life equal to the angels thou dost pour out the grace of wonders even after thy departure upon those who come to thee in faith, O Barlaam, our most blessed father. We cry to thee: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Все умное свое желание к Богу вперив,/ и Тому невозвратно от души последовал еси,/ и житейския молвы отринув,/ в молитвах, и слезах, и злостраданиих плоть свою изнуряя,/ добре подвизався противу невидимаго врага кознем,/ и, победив я, веселяся, прешел еси к Небесным чертогом,/ и ныне со Ангелы Святей Троице предстоя,/ отнюду же и Всевидящее око, твоя труды видев,/ даром чудес по преставлении обогатило тя есть,/ иже тебе с верою почитающим/ исцеление подаваеши невидимо/ и молишися непрестанно, сохраняя отечество свое и люди/ от враг видимых и невидимых ненаветны,/ да вси тебе вопием:/ преподобне отче наш Варлааме,/ моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Кондак преподобного Варлаама Керетскаго»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having fixed all the desire of thy mind upon God, thou didst follow after him from thy soul and never turn back; and casting off the noise of this life, wearing thy flesh down with prayers and tears and hard suffering, thou didst contend well against the wiles of the invisible enemy, and having conquered them thou didst pass rejoicing to the heavenly mansions. Now, standing with the angels before the Holy Trinity, thou art enriched after thy departure with the gift of wonders by the All-seeing Eye, which saw thy labours; and invisibly thou givest healing to those who honour thee in faith, and prayest without ceasing, keeping thy fatherland and its people unassailed by enemies seen and unseen, that we all may cry to thee: venerable father Barlaam, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
