@@ -12,6 +12,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Θεόδωρος ο Ιερομάρτυρας Επίσκοπος Βρσακ», with the rank word and the see left off."
+    },
+    {
+      "form": "Теодор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 16. мај ст. ст., „Свети свештеномученик Теодор, епископ вршачки.“ Свети is not a rank; свештеномученик is the `hieromartyr` this folder carries in `types`; „епископ вршачки“ is the second rank and the see, which this corpus puts in `types` as `bishop` and in `office` as Bishop of Vršac. **Stripping a rank and a see to reach the bare form is the reading BRIEF-SERBIAN.md §6 asks be said in the note, and here it leaves a bare forename with nothing beside it.** The body repeats it twice, „Епископ Теодор“ and „владику Теодора“, and offers no epithet and no form of Вршац that is part of the name — **«Теодор Вршачки» is nowhere on the page and would be a form invented by a reader**, which §6 forbids. **So this is a deliberate four-way exact-form fold, measured with `foldchk.py` before drafting**: `theodore-boyar-of-chernigov`, `theodore-of-perga` and `theodore-prince-of-yaroslavl` already carry „Теодор“, each off this same book on a different Julian day. The fold is read in this batch's commit message."
     }
   ],
   "dates": {
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.05.2026 (16. мај ст. ст.) — „Свети свештеномученик Теодор, епископ вршачки.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's sixth and last entry, on the same menologion 16/5 the Greek row already carries, and the same man: the hieromartyr Theodore bishop of Vršac, flayed alive. **This is the Serbian church's own saint and this is the Serbian book, so the entry is the nearest thing to a primary source this folder will get** — and it is three sentences long. **A YEAR READ AND DELIBERATELY NOT WRITTEN.** „Епископ Теодор се 1594. године нашао на челу устаника у Банату“ gives **1594**, and the book gives it for **the rising**, not for his death; the flaying follows in the next sentence with no year of its own, and the „Исте године“ of the third sentence attaches to the burning of the relics of Saint Sava on Vračar. **To put 1594 in `death` would be inferring a year the page does not state**, which BRIEF.md §4 forbids without qualification, and **to narrow the `floruit` of 1501–1600 to 1593–1594 would be narrowing a sourced interval**, which the coordinator's ruling forbids. So `dates` is **untouched** and both years are recorded here and in the prose. **The two books now give two adjacent years for the same episcopate** — saint.gr's «το 1593 αναφέρεται ως Επίσκοπος» and this book's 1594 for the rising — and whether the folder should carry a death of 1594 is the author's, in one commit. **New here**: that **he stood at the head of the insurgents in the Banat**, where saint.gr says only that he led his people towards Hungary to save them from slaughter; that **the insurgents carried the image of Saint Sava on their banners**; that it was **the pasha of Timișoara** who seized him, and **at Vršac**, where saint.gr has him arrested after returning there; and that **the relics of Saint Sava were brought from the monastery of Mileševa and burned on Vračar in the same year**. **Saint Sava takes no row and no folder is minted.** `sava-of-serbia` is in the corpus, and neither the image on a banner nor the burning of his relics in the year of this man's death is a relation: BRIEF.md §4's ruling is that a dedication is not a relation, and the rulings of this wave add that the object of an event is not its subject. The two men are three and a half centuries apart and the entry narrates no kinship and no companionship between them; he is named in the prose, unlinked, with no `related` row. `types` untouched — свештеномученик is the `hieromartyr` the folder carries and „епископ“ the `bishop`. No `locations`: Vršac, the Banat, Timișoara, Mileševa and Vračar are all named and this folder has never carried coordinates. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
