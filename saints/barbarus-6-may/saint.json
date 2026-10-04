@@ -11,6 +11,11 @@
       "form": "Βάρβαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαΐου, «Άγιος Βάρβαρος», with the rank word left off."
+    },
+    {
+      "form": "Варвар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети мученик Варвар.“ Свети is no rank and мученик is the `martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping them leaves the bare forename and nothing else: the heading gives no epithet, no country, no emperor and no company, and Julian the Apostate, the Franks and the commander are all in the body. **The day's other Barbarus keeps разбојник and is therefore not folded with this form** — which is the reason he keeps it; see `barbarus-the-myrrh-streamer`'s form in this same batch."
     }
   ],
   "sex": "male",
@@ -54,11 +59,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.05.2026 (6. мај ст. ст.) — „Свети мученик Варвар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-19&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 6 May, the same menologion day the Romanian and the Greek keep him on, and this is the first account of him this corpus has read at all** — doxologia names him and opens no Viață tab, and saint.gr gives one clause, that he was martyred by the sword. **The Prologue's two Barbari on this one day map onto the corpus's two Barbari, and that is how each was identified.** This entry is the soldier: „Свети мученик Варвар.“ against doxologia's «Sfântul Mucenic Varvar» and saint.gr's «Άγιος Βάρβαρος» — same day, same rank word, same bare name, and a death by beheading, which is saint.gr's «μαρτύρησε δια ξίφους». The day's third entry, „Свети Варвар разбојник.“, is the penitent robber and is `barbarus-the-myrrh-streamer`, upgraded in this same batch. **A FIRST DATE**: „Сва тројица њих беху посечени за име Христово, а за њима и Варвар, 362. године.“ → `death` 362, where this folder held no `dates` at all; `node .tmp/dd.mjs \"362\"` reads it in both packs. New besides, and all of it new: that he was **a soldier under Julian the Apostate** and a secret Christian; that the emperor's commander led the Roman army **against the Franks**; the duel with the Frankish champion „сличан древном Голијату“ at the commander's own advice, and the rout that followed; the feast and the sacrifice at which he was found standing apart; his own declaration; the torments borne „са ретком храброшћу и присебношћу“; and the wonders at his torturing that converted soldiers who were watching. **THREE NAMES IN THE BODY TAKE NO FOLDER, and the refusal is named.** The entry says the commander himself, with two others, believed and that all three were beheaded for the name of Christ before him — so they are subjects of the commemoration and not furniture, and under the first ruling a company the heading enumerates would be a row each. **But this heading enumerates nobody, and the standing third ruling is that the body does not mint folders.** Measured: `ls saints | grep -i bacch` returns the companion of Sergius and an eighth-century monk of Saint Sabbas's lavra, neither of them a commander of Julian's; `ls saints | grep -i callimach` returns **no folder at all**, and the only mention of the name anywhere in `saints/` is in `paphnutius-the-egyptian`'s life; and of the thirty-three `dionysius-*` folders not one is a soldier of this company. **So no folder was made for any of the three, and all three are named here and in the report for the author.** `types` was not touched: мученик is the `martyr` the folder already holds. The Prologue prints no troparion and no kontakion. **The English display name is a reader's construction and is now contradicted by content**: `Barbarus (6 May)` was chosen when nothing but a day and a rank was recorded, and this man is the soldier-martyr under Julian the Apostate — a rename and a reslug are the author's, as `nicephorus-4-may`'s are, and nothing was renamed."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 362,
+      "display": "362",
+      "basis": "traditional",
+      "note": "Охридски пролог за 6. мај ст. ст.: „Сва тројица њих беху посечени за име Христово, а за њима и Варвар, 362. године.“ — the book prints the year plainly and this folder held no date at all before it; doxologia gives him no life and saint.gr gives only the sword. `node .tmp/dd.mjs \"362\"` reads it in both packs. No year of birth is printed anywhere."
+    }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Ιώβ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαΐου, «Δίκαιος Ιώβ ο Προφήτης», with the rank words left off."
+    },
+    {
+      "form": "Јов",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети праведни и многострадални Јов.“ Свети is no rank and праведни is the `righteous` this folder already carries in `types` and `honorific.js` composes back. **„и многострадални“ was read as an epithet and deliberately NOT kept, and it is the one reading in this form.** It is the very epithet the English display name carries, the Long-Suffering, and keeping it would have held this folder out of the fold with `job-the-hermit-6-march`'s bare Јов — but the heading conjoins it to the rank word with „и“, two attributive adjectives of one kind standing before the name, and splitting that conjunction to keep the second half, then giving it the initial capital the page puts on Свети alone, and then leaving it before the name where no other Serbian form in this corpus puts its epithet, is three corrections to a copied script form. A copied form is never corrected by a reader, so the bare forename is stored and the fold is declared. The question is named in this batch's commit message for the author and is one commit either way."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.05.2026 (6. мај ст. ст.) — „Свети праведни и многострадални Јов.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-19&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 6 May, the same menologion day the Romanian and the Greek keep him on**, and this is the third account of him read for this folder. No existing row was moved. The identification is beyond doubt: the Book of Job's man, the estate and the children lost in one day, the sores from crown to sole, the dunghill outside the city and the piece of broken pot, the patience, and the restoration of health, wealth and seven sons and three daughters. **NO YEAR WAS TAKEN, and this is the reason.** „живљаше у Арабији око две хиљаде година пре Христа“ is a round approximation of when he lived, not a death; this folder's `death` is saint.gr's „about 1650 BC“, and **that same Greek page already carries two flourishing readings which disagree — «άκμασε περί το 1900 π.Χ. (κατ' άλλους το 1400 π.Χ.)» — which the folder deliberately leaves in its note rather than storing**. A third round approximation cannot narrow or correct that, and storing it would make the folder vaguer than its own sources allow. New to the corpus from this page: that he was **a descendant of Esau**, whom this book calls „унука Аврамова“, the patriarch's grandson — the patriarch is named only here and not in the life, because a great-grandson's genealogy is not a `related` relation and `related-floor.test.mjs` would ask for one in both directions; that he lived **in Arabia**; that his **father was Zaret and his mother Vosora**; that **his full name was Jovav**; that the trials began **in the seventy-ninth year of his life**; and that he lived **two hundred and forty-eight** years in all, where saint.gr gives two hundred and forty — a second disagreement, also recorded and not settled. **One deliberate fold**: the heading's bare Јов is already held by `job-the-hermit-6-march`, and the row is in this batch's commit message. **No `locations` were taken**: Arabia is a region and not a town, and `docs/CORPUS.md` §3's „no point beats a wrong one“ decides it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
