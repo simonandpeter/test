@@ -12,6 +12,11 @@
       "form": "Αρτέμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαρτίου, «Όσιος Αρτέμων επίσκοπος Σελευκείας της Πισιδίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Артемон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 24 March on pravoslavno.rs, „Свети Артемон, епископ селевкијски.“, with Свети left off, which is not a rank, and with the see епископ селевкијски left off as well. The heading gives no epithet, so the bare forename is what the source gives. The corpus keeps a second Artemon, of Laodicea, on this same menologion day; he holds no Serbian form, and this one is distinguished from him in the corpus by `display_name` and by slug."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.04.2026 (24. март ст. ст.) — „Свети Артемон, епископ селевкијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same bishop: born and brought up at Seleucia, made bishop of that city by the apostle Paul, and dead in deep old age. `paul-the-apostle` is already `related` here in both directions and no row was added. The entry gives no year, no century and no reign, so this folder's `dates` object stays empty, as it was. It calls him a physician of the souls and the bodies of men, and `physician` was **not** taken as a `type` from it: the phrase is a figure for a bishop's care and not the title Лекар that BRIEF-SERBIAN.md §5 maps to that type, and nothing on the page says he practised medicine. saint.gr puts his Seleucia in Pisidia, which the Prologue does not name; nothing was made of that and no `locations` was added. The stored form is the bare forename, because Свети is not a rank and епископ селевкијски is the see this folder keeps in `office`. The Prologue prints no troparion and no kontakion; the one hymn here is doxologia's."
     }
   ],
   "text": {

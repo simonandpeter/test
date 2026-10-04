@@ -1,0 +1,55 @@
+{
+  "slug": "james-of-studion",
+  "display_name": "James of Studion",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 24 March on pravoslavno.rs, „Преподобни Јаков Исповедник.“, with both rank words left off — Преподобни and Исповедник, which are two of the three this folder's `types` carry. The heading gives no epithet and no monastery; the Studion is the body's second sentence. So the bare forename is what the source gives, and it folds with `james-the-confessor`, whose own Serbian form was read three days earlier in this same wave off an equally bare heading. The fold is recorded as deliberate."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding menologion day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.04.2026 (24. март ст. ст.) — „Преподобни Јаков Исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, of five, and a new folder rather than an upgrade of `james-the-confessor`, which this same wave gave a Serbian row three days earlier. The two are read as two men. That folder is a bishop whose birthplace and see the Prologue itself says are unknown, kept by the Romanian and the Greek on 21 March and suffering under Copronymus; this one is a monk and a brother of the monastery of Studion, suffering under Leo the Armenian two generations later, tortured while Theodore the Studite was in exile, brought back to the monastery when that emperor came to his bad end and dying there of his beatings. Different day, different rank, different reign. The corpus's thirty `james-*` and `jacob-*` folders were listed and none of them is of the Studion; `grep -ril 'studite\\|studion' saints/*/saint.json` names twenty folders and this man is not among them. **No `dates`**: the entry gives no year of any kind. It names Leo the Armenian for the persecution, and this folder does not turn an emperor's name into an interval, because the one display that would say so in English cannot be read by the Russian and Greek locale packs — `tests/date-display.test.mjs` is the instrument — and a century taken from a reign would be an inference, which BRIEF.md forbids. The emperor is in the life instead. No `locations`: the Studion is a monastery the entry names without dating a life in it. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "related": [
+    "theodore-the-studite"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
