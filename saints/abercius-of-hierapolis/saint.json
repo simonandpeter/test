@@ -12,6 +12,11 @@
       "form": "Αβέρκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Όσιος Αβέρκιος ο Ισαπόστολος και θαυματουργός επίσκοπος Ιεράπολης», with the rank words and the see left off."
+    },
+    {
+      "form": "Аверкий Иерапольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 22 октября ст. ст., «Святитель Аверкий Иерапольский, епископ, равноапостольный», with the rank words and the see left off."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Равноап. Аверкия , еп. Иерапольского, чудотворца (ок. 167).»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -112,6 +126,38 @@
         "text": "The whole Church of the faithful honours you, Abercius, as a greatest priest and a companion of the apostles; guard her by your entreaties, blessed one, unconquered by every heresy and unshaken, you of the many wonders.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Истины проповедник и чудотворец дивен показался еси,/ сирот отец и нищих заступник,/ бодрый пастырь словеснаго стада, бесом страшен,/ всех убо от тех нападений заступай, вопиющих ти:/ Аверкие отче наш,/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Тропарь равноапостольного Аверкия, епископа Иерапольского, чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a preacher of the truth and a wonderful worker of miracles, a father of orphans and a defender of the poor, a watchful shepherd of the rational flock, and terrible to demons. Defend from their assaults all who cry to you: Abercius our father, pray to Christ God that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священника превелиикаго и апостолов совсельника,/ Церковь почитает тя, вся верных, Аверкие:/ юже твоими молитвами соблюдай, блаженне,/ непобедиму и необуреваему от всякия ереси, и нескверну,/ яко приснопамятный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Кондак равноапостольного Аверкия, епископа Иерапольско»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a most great priest and a fellow-dweller of the apostles the Church of all the faithful honours you, Abercius: keep her by your prayers, blessed one, unconquered and untroubled by every heresy and undefiled, you of ever-blessed memory.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -122,5 +168,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 167,
+      "latest": 167,
+      "display": "c. 167",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 22 октября ст. ст. «(ок. 167)», and its life places him in the second century in Phrygia; the «ок.» is the source's own approximation and the bounds are its one year. saint.gr, read for this folder's Greek row, says he died in peace at seventy-two and gives no year. Read 4 October 2026."
+    }
+  }
 }

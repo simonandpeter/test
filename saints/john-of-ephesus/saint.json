@@ -6,6 +6,11 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of the roll of the seven in doxologia.ro's life for the day, «Maximilian, Iamvlih, Martinian, Ioan, Dionisie, Exacustodian și Antonin»; the calendar's own line for 4 august names none of them, only «Sfinții 7 tineri din Efes»."
+    },
+    {
+      "form": "Иоанн Ефесский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 22 октября ст. ст., which carries no rank word. The day's own line declines the name."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The life page behind the day's line heads him «Дни памяти: 4 августа , 22 октября» and says in so many words that the Russian church keeps the seven twice; this is the day page that listed him, so it is the row's feast, and the 4 августа of the same calendar — the day the Greek and Romanian rows already carry — is recorded here and does not render him a second time. Read 4 October 2026."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Семи отроков, иже во Ефесе: Максимилиана , Иамвлиха , Мартиниана , Дионисия , Антонина , Константина (Ексакустодиана) и Иоанна (ок. 250; 408-450).»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -79,6 +94,70 @@
       },
       "english": {
         "text": "Great are the achievements of faith! In the cave, as in a royal chamber, the seven holy youths dwelt, and died without corruption; and after a long time they rose as out of sleep, for the assurance of the resurrection of all men. At their prayers, Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Велия веры чудесе,/ в пещере, яко в чертозе царском,/ святии седмь отроцы пребыша,/ и умроша без тли,/ и по мнозех временех восташа, яко от сна,/ во уверение воскресения всех человеков.// Тех молитвами, Христе Боже, помилуй нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Тропарь семи отроков Ефесских — one of four hymns the day page prints to the seven together»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Great is the wonder of faith: in the cave, as in a royal chamber, the seven holy youths dwelt, and they died without corruption; and after many years they rose as from sleep, for the assurance of the resurrection of all men. At their prayers, Christ God, have mercy on us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Благочестия проповедники и Воскресения умерших изобразители,/ Церкви столпы седмочисленныя,/ отроки всеблаженныя песньми восхвалим:/ тии бо по многих летех нетления, аки от сна воставше,/ всем возвестиша яве мертвых востание.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Ин тропарь семи отроков Ефесских — one of four hymns the day page prints to the seven together»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in song the all-blessed youths, preachers of godliness and images of the resurrection of the dead, the sevenfold pillars of the Church; for after many years of incorruption, rising as from sleep, they declared plainly to all the raising of the dead.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мира сущая тленная презревше/ и нетленныя дары приемше,/ умерше, кроме тления пребыша./ Темже востают по многих летех,/ все погребше лютых неверие,/ яже во хвалении днесь, вернии, восхваляюще,// Христа воспоим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Кондак семи отроков Ефесских — one of four hymns the day page prints to the seven together»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Despising the corruptible things of the world and receiving incorruptible gifts, they died and yet remained free of corruption. And so they rise after many years, having buried all the unbelief of the cruel; and praising them today in our praise, faithful, let us sing to Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Прославивый на земли святыя Твоя/ прежде втораго и страшнаго пришествия Твоего, Христе,/ преславным востанием отроков/ показал еси Воскресение неведящим е,/ нетленна одеяния и телеса явив,/ и царя уверил еси вопити:/ воистинну есть мертвых востание.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Ин кондак семи отроков Ефесских — one of four hymns the day page prints to the seven together»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ, who glorified your saints upon earth before your second and dread coming: by the most glorious rising of the youths you showed the Resurrection to those who did not know it, making their garments and their bodies appear incorrupt, and you assured the emperor, so that he cried out: truly there is a raising of the dead.",
         "rendered": "site"
       }
     }
