@@ -11,6 +11,11 @@
       "form": "Μαρία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος και Μαρία η ανεψιά του», with the rank word left off."
+    },
+    {
+      "form": "Мария Хиданская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind the line for 29 октября ст. ст., «Мария Хиданская, прп.», with the rank word left off. The line itself declines the name and gives no village."
     }
   ],
   "sex": "female",
@@ -20,8 +25,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Прп. Аврамия затворника и блж. Марии , племянницы его (ок. 360).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the second of the day and carries no typikon icon, so no rank is recorded. The line's word for her is «блж.», blessed, where it calls her uncle «прп.», venerable; her own name link titles her «Мария Хиданская, прп.», venerable, so the two disagree and neither is read into `types`, which keep the `ascetic` the Romanian page gave her."
+      },
+      "note": "The Russian agrees with the Romanian and Greek days this folder was written from, names the village — «Мария Хиданская», of Hidana — and gives the folder the first date it has had. It is the uncle's year that the line prints; her own is five years later by the life's own words, and the folder's interval says so and is marked `inferred` for that reason."
     },
     {
       "church": "romanian",
@@ -63,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 360,
+      "latest": 370,
+      "display": "about 365",
+      "basis": "inferred",
+      "note": "No page prints a year for her. days.pravoslavie.ru's line gives the pair «(ок. 360)», which is her uncle's death — its life closes him «отошел ко Господу († около 360 года)» — and then says of her «Скончалась она через пять лет после преподобного Аврамия», five years after him. The display is that arithmetic and is labelled `inferred` because it is arithmetic and not a year any page prints; the bounds are kept wide enough to hold the «около» on both halves of it."
+    }
   }
 }

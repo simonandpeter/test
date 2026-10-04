@@ -1,0 +1,61 @@
+{
+  "slug": "john-vilensky",
+  "display_name": "John (Vilensky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Виленский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 28 октября ст. ст., «Иоанн (Виленский), иерей, сщмч.», with the rank word and the grade left off. The line on the day page itself gives only the forename, in the genitive, and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1918)» after his name on 28 октября ст. ст. Nothing else on the calendar dates him: there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Сщмч. Иоанна пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and goes in `types`; the link's «иерей» is the grade and goes in `office`, and both are said in the life. The surname «Виленский» returns one folder, `vladimir-khrishchanovich`, and there it is a place and not a name — «Виленской губернии» inside his life. No other John in the corpus is kept on 28 October in any calendar. azbyka.ru, which has carried a full life for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

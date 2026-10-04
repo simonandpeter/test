@@ -6,6 +6,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Αρσένιος Αρχιεπίσκοπος Σερβίας», with the rank words and the see left off."
+    },
+    {
+      "form": "Арсений I Сербский",
+      "lang": "ru",
+      "note": "Read out of the heading both of his life pages carry, «Святитель Арсений I Сербский», with the rank word left off. The day line declines it and abbreviates the see — «Свт. Арсения I, архиеп. Сербского» — and the name link's title, «Святитель Арсений, архиепископ Сербский», drops the numeral; the heading is the fullest form the calendar gives."
     }
   ],
   "sex": "male",
@@ -17,8 +22,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "rank": "great-doxology",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of his life pages head him «Дни памяти: 30 августа (Серб.) , 28 октября» — the second day is the synaxis of the Serbian saints, marked as the Serbian church's. One row per church is the schema, so the August day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Свт. Арсения I, архиеп. Сербского (1266).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon the page sets before this line, «Совершается служба со славословием» — a service with the doxology."
+      },
+      "note": "The Russian agrees with the Greek day this folder was written from and adds the year, the monastery, the length of his rule and two hymns. **Its two life pages disagree with each other** about how long he governed — «После 30-летнего мудрого управления паствой» on one and «После тридцатитрехлетнего мудрого управления» on the other — and also spell the monastery «Жигском» against «Жичском» and his resting place «Печерской обители» against «Печской обители». Nothing is chosen between them; both readings are said in the life."
     },
     {
       "church": "romanian",
@@ -51,5 +69,48 @@
   },
   "related": [
     "sava-the-second"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1266,
+      "latest": 1266,
+      "display": "1266",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1266)» after his name on 28 октября ст. ст., and both of his life pages give the year in words: «святитель мирно скончался в 1266 г.» and «святой отошел ко Господу в 1266 году». The Greek page this folder was written from gives no year."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Милости наставниче и благоутробия сокровище,/ еже всем отверзл еси,/ правоверия учителю и архиереев Божественное удобрение,/ отче наш, иерарше Арсение,/ нищих был еси заступник:/ тем моли Христа Бога,/ просветити души наша, да не когда уснем в смерть.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Тропарь святителя Арсения, архиепископа Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of mercy and treasury of compassion, which you opened to all; teacher of right belief and divine adornment of bishops, our father, hierarch Arsenius, you were the defender of the poor. Therefore pray to Christ God to enlighten our souls, that we never fall asleep in death.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В пищи словес твоих, Богоносе Арсение,/ разумно чада твоя питая,/ языком хваля, устнами же пение принося, вещанием зовый:/ Христе, Ты еси Свет неизреченный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Кондак святителя Арсения, архиепископа Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Feeding your children with understanding on the food of your words, God-bearing Arsenius, praising with your tongue and offering up song with your lips, you called aloud: Christ, you are the Light unutterable.",
+        "rendered": "site"
+      }
+    }
   ]
 }

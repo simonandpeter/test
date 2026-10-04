@@ -1,0 +1,62 @@
+{
+  "slug": "leonid-muravyev",
+  "display_name": "Leonid (Muravyev)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Леонид (Муравьев)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 29 октября ст. ст., «Леонид (Муравьев), иерей, сщмч.», with the rank word and the grade left off. The line on the day page gives only the forename, in the genitive, and no surname: «Сщмч. Леонида пресвитера (1941).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1941)» after his name on 29 октября ст. ст. Nothing else on the calendar dates him: there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Сщмч. Леонида пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the last of the day and carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and goes in `types`; the link's «иерей» is the grade and goes in `office`. The surname «Муравьев» returns no other folder, and the corpus's one other Leonid of these years, `leonid-nikolsky`, is kept on another day. azbyka.ru, which has carried a full life for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

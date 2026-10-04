@@ -11,6 +11,11 @@
       "form": "Αβράμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος και Μαρία η ανεψιά του», with the rank word left off."
+    },
+    {
+      "form": "Аврамий Затворник, Хиданский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 29 октября ст. ст., «Аврамий Затворник, Хиданский, пресвитер, прп.», with the rank word and the grade left off. «Затворник», the recluse, is kept because it is the by-name the calendar uses for him throughout and not a rank in the list this corpus reads ranks from; the village of Hidana is the second by-name. The line itself declines the name and gives neither."
     }
   ],
   "sex": "male",
@@ -22,8 +27,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Прп. Аврамия затворника и блж. Марии , племянницы его (ок. 360).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the second of the day and carries no typikon icon, so no rank is recorded. The one life page behind it serves him and his niece together, and his life page lists this day and no other."
+      },
+      "note": "The Russian agrees with the Romanian and Greek days this folder was written from and adds the year it had not, the village, the attribution of the life, two hymns and the name of his see of mission. The name link titles him «Аврамий Затворник, Хиданский, пресвитер, прп.» — of Hidana, the village near Edessa the life names — which the folder's `types` already carry as `presbyter` and `hermit`."
     },
     {
       "church": "romanian",
@@ -61,7 +77,8 @@
     }
   ],
   "related": [
-    "mary-niece-of-abraham"
+    "mary-niece-of-abraham",
+    "ephrem-the-syrian"
   ],
   "hymns": [
     {
@@ -113,9 +130,51 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся еже по образу:/ приим бо крест, последовал еси Христу/ и дея учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней.// Темже и со Ангелы срадуется, преподобне Авраамие, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Тропарь преподобнаго Авраамия затворника»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The common of a venerable father, with his name set into its last line, printed under his own heading, which makes it his (BRIEF.md §4)."
+      },
+      "english": {
+        "text": "In you, father, what is according to the image was surely saved; for taking up the cross you followed Christ, and by your deeds you taught us to despise the flesh, which passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices with the angels, venerable Abraham.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Во плоти яко Ангел на земли явился еси,/ и пощением был еси яко древо насажденное,/ водою воздержания добре возрастився,/ и теченьми твоих слез скверну омыв:/ сего ради явился еси// приятелище Божественное, Авраамие, Духа.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Кондак преподобнаго Авраамия затворника»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the flesh you appeared on earth as an angel, and by fasting you became like a planted tree, grown well by the water of abstinence and washed clean of defilement by the streams of your tears. Therefore you were shown to be a divine dwelling of the Spirit, Abraham.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 360,
+      "latest": 360,
+      "display": "about 360",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 29 октября ст. ст. gives the pair «(ок. 360)», and its life closes on him «После пятидесятилетней подвижнической жизни он мирно отошел ко Господу († около 360 года)» — fifty years of ascetic life and a peaceful death about 360. Neither the Romanian nor the Greek page this folder was written from gave any year."
+    }
   }
 }

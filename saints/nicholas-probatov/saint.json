@@ -1,0 +1,69 @@
+{
+  "slug": "nicholas-probatov",
+  "display_name": "Nicholas (Probatov)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Николай (Пробатов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 29 октября ст. ст., «Николай (Пробатов), иерей, сщмч.», with the rank word and the grade left off. The line on the day page gives only the forename, in the genitive, and no surname: «Сщмч. Николая пресвитера и с ним.»"
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "The Сретенский calendar's life: «Священномученик Николай родился в 1874 году в селе Игнатьеве близ города Кадома Тамбовской губернии». It gives the year and not the day."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1918)» at the end of the company's line for 29 октября ст. ст., and its life has the whole killing follow the February 1918 mobilisation. The life gives no calendar date for the shooting: it says only that his last liturgy before the arrest was on the feast of the Kazan icon and that the eighteen were brought out at the seventh hour of the evening. The menologion day is 29 October and the folder reads no date off it."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Every one of these thirteen name pages lists the same other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Сщмч. Николая пресвитера и с ним.»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's third paragraph, which carries no typikon icon, so no rank is recorded. «и с ним» is the company the next line enumerates, and it enumerates it, so it is twelve folders beside this one."
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and goes in `types`; the link's «иерей» is the grade and goes in `office`, and both are said in the life. The surname «Пробатов» returns no other folder. The life names his father, also a priest of that village, his brother the archpriest Vasily, his wife Varvara, his eldest son Alexander and the two priests who buried him; none of them has a folder in this corpus and none is made here. The company was glorified for general church veneration by the Jubilee Council of Bishops of August 2000, which the life's closing line states."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

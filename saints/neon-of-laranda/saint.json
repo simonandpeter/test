@@ -6,6 +6,11 @@
       "form": "Νέων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Αστέριος, Κλαύδιος, Νέων και Νεονίλλη τα αδέλφια», with the rank word left off."
+    },
+    {
+      "form": "Неон Киликийский",
+      "lang": "ru",
+      "note": "Read out of the title on this one's name link behind the company's line for 29 октября ст. ст., «Неон Киликийский, мч.», with the rank word left off. The line itself declines the name and gives no province; the province is the link's, and it is Cilicia and not the Laranda the Greek page gave this folder."
     }
   ],
   "sex": "male",
@@ -14,22 +19,35 @@
   ],
   "related": [
     "asterius-of-laranda",
-    "claudius-of-laranda"
+    "claudius-of-laranda",
+    "theonilla-of-cilicia"
   ],
   "dates": {
     "death": {
-      "earliest": 288,
+      "earliest": 285,
       "latest": 288,
-      "display": "about 288",
+      "display": "285 or about 288",
       "basis": "traditional",
-      "note": "saint.gr: «στα χρόνια του Διοκλητιανού και Λυσίου ηγεμόνος της Κιλικίας (περί το 288 μ.Χ.)» — the page's own year, written «περί», about, and the beheading follows in the same notice with no further date."
+      "note": "Two calendars, two years, and neither is preferred. saint.gr: «στα χρόνια του Διοκλητιανού και Λυσίου ηγεμόνος της Κιλικίας (περί το 288 μ.Χ.)». days.pravoslavie.ru's line for 29 октября ст. ст. closes the company with «(285)». Both describe the same martyrdom under the same governor of Cilicia, so the interval is the union of the two."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "saint.gr keeps this company on 30 October; this is the Russian calendar's own day for it and not a second day on one calendar. Both are kept because they are different churches."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Мчч. Клавдия , Астерия , Неона и Феониллы (285).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian calendar keeps this company on the Julian 29 October, where saint.gr keeps it on 30 October, and it adds a fourth name the Greek page did not give this corpus: «Феониллы», now `theonilla-of-cilicia`, written in the same batch. That the two lines are one company is read off the persecutor both name — saint.gr's «Λυσίου ηγεμόνος της Κιλικίας» and the Russian name page's «правителю Киликии Лисию» — together with three names agreeing out of four. No life page follows any of the four; the narrative is the opening paragraph of an article on the fourth one's name page, and it makes the four **children of one house**, denounced to Lysias by a stepmother who wanted the family's wealth. The Russian calls all four Cilician where the Greek gave this folder the by-name of Laranda; neither is changed."
     },
     {
       "church": "romanian",

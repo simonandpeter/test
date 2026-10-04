@@ -11,6 +11,11 @@
       "form": "Αφρικανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Африкан",
+      "lang": "ru",
+      "note": "Read out of the title on this one's name link behind the company's line for 28 октября ст. ст., «Африкан, мч.», with the rank word left off. The line itself declines the name, and neither the line nor the link gives a surname, a see or a place — the forename is the whole of what the Russian calendar prints."
     }
   ],
   "sex": "male",
@@ -25,8 +30,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian rows on this folder keep the company on 10 April; this is the Russian calendar's own day for it and not a second day on one calendar. Both are kept because they are different churches."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Мчч. Африкана , Терентия , Максима , Помпия и иных 36-ти (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "**This row is a reading and is named as one.** The Russian calendar keeps this company on the Julian 28 October, where the Greek and the Romanian pages this folder was written from keep it on 10 April. That they are one company rests on four things read off the pages: the four names the Russian line prints are the four this corpus holds together off saint.gr «Οι Άγιοι Μάρτυρες Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος και Τερέντιος»; both lines are a few named men followed by a number of unnamed companions, 36 here and 33 there; both set the martyrdom in the same persecution, «(III)» against saint.gr's 250; and the four `/name/` pages behind this line each list **28 октября and no other day**, so the Russian calendar has only this one commemoration for them and the two-commemorations-two-men rule is not in play. No place is named on the Russian line, so nothing is read from it onto the Africa this folder's English name carries. Separate from the company of Publius the Greek keeps on 13 March, which this corpus holds in its own folders."
     },
     {
       "church": "romanian",

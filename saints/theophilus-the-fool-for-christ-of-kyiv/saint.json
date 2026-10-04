@@ -11,6 +11,11 @@
       "form": "Θεόφιλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Ιερομάρτυρας Θεόφιλος, της Λαύρας των Σπηλαίων Κιέβου», with the rank words left off."
+    },
+    {
+      "form": "Феофил Киевский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 28 октября ст. ст., «Феофил Киевский, Христа ради юродивый, прп.», with the rank word and the words for his manner of life left off. The line itself declines the name."
     }
   ],
   "sex": "male",
@@ -38,8 +43,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Прп. Феофила Киевского, Христа ради юродивого (1853).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian line agrees with the Romanian and Greek days this folder was written from on the city, the manner of life and the year of his death, 1853. It is not the recluse of the Kyiv Caves the same calendar keeps on 24 октября as `theophilus-of-the-kyiv-caves`: that one is a monk of the twelfth or thirteenth century and already carries a Russian row of his own. No life page follows this line; the name page carries the parish that keeps him and an article."
     },
     {
       "church": "romanian",

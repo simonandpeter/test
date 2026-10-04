@@ -11,6 +11,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Όσιος Αρσένιος ο Καππαδόκης», with the rank word left off."
+    },
+    {
+      "form": "Арсений Капподакийский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 28 октября ст. ст., «Арсений Капподакийский, прп.», with the rank word left off. The name page spells the by-name «Капподакийский» where the day line spells it «Каппадокийского»; the form is stored as the link prints it, which is how every other form in this corpus is stored."
     }
   ],
   "sex": "male",
@@ -50,8 +55,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Прп. Арсения Каппадокийского (1924).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian keeps him on the Julian 28 October, which is the civil 10 November the Greek and Romanian pages already gave this folder; the day is the same day and the calendars differ, not the reading. It agrees on the year of his death, 1924. No life page follows the line. His name page carries this day alone and two articles, one of them reporting that an icon of him with a portion of his relics was given to the Сретенский monastery at Moscow on 17 July."
     },
     {
       "church": "romanian",

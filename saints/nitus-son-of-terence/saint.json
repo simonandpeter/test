@@ -11,6 +11,11 @@
       "form": "Νίτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιοι Τερέντιος και Νεονίλλη οι σύζυγοι και τα παιδιά τους Σάρβηλος, Νίτας, Ιέραξ, Θεόδουλος, Φώτιος, Βήλη και Ευνίκη», with the rank words left off."
+    },
+    {
+      "form": "Нит Сирийский",
+      "lang": "ru",
+      "note": "Read out of the title on this one's name link behind the household's line for 28 октября ст. ст., «Нит Сирийский, мч.», with the rank word left off. The line itself gives the name in the genitive and without the province."
     }
   ],
   "sex": "male",
@@ -30,8 +35,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Мчч. Терентия и Неониллы и чад их: Сарвила , Фота , Феодула , Иеракса , Нита , Вила , Евникии (ок. 249-250).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The icon the page sets before this line is «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service with no typikon mark — so no rank is recorded."
+      },
+      "note": "The Russian calendar keeps the whole household on this day in one line and gives each of the nine a name link of its own; this is the fifth of the seven children the line enumerates. The link's title is «Нит Сирийский, мч.», and the stored form is that title with the rank word left off — it adds the province the Romanian and Greek pages do not name. The line itself declines the name, so the nominative is the link's. The year «(ок. 249-250)» is the line's and is new to this folder, which had no date at all."
     },
     {
       "church": "romanian",
@@ -102,9 +118,52 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего:/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости,/ тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Тропарь мучеников Терентия и Неонилы и чад их»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The common of martyrs, printed under the household's name, which makes it theirs (BRIEF.md §4); it names none of them."
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their sufferings received incorruptible crowns from you, our God; for having your strength they cast down the tormentors and broke the feeble daring of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученическая честная память прииде днесь,/ веселящи всяческая,/ Терентия премудраго и подружии его,/ тепле убо стецемся,/ да приимем исцеление,/ сии бо благодать приемше от Духа Святаго// исцеляти недуги и болезни душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Кондак мучеников Терентия и Неонилы и чад их»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The household's own kontakion, and the only hymn on the day that names any of them: «Терентия премудраго и подружии его»."
+      },
+      "english": {
+        "text": "The honoured memory of the martyrs has come today, gladdening all things — of Terence the most wise and of his consort. Let us run to them with warmth, that we may receive healing; for they have received grace from the Holy Spirit to heal the infirmities and the sicknesses of our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 250,
+      "display": "about 249 or 250",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 октября ст. ст. closes the household with «(ок. 249-250)» — about 249 to 250. The Romanian and Greek pages this folder was written from give no year at all, so the interval is the Russian calendar's alone and is the household's and not this one person's."
+    }
   }
 }

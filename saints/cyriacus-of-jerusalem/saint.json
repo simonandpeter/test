@@ -6,6 +6,11 @@
       "form": "Κυριάκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Άγιος Κυριάκος ο Ιερομάρτυρας», with the rank words left off. The page glosses the name from κύριος, the one dedicated to the Lord."
+    },
+    {
+      "form": "Кириак Иерусалимский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 28 октября ст. ст., «Святитель Кириак Иерусалимский, патриарх, сщмч.», with the rank words and the grade left off. The line itself declines the name and spells the see out in Russian rather than as a by-name."
     }
   ],
   "sex": "male",
@@ -21,17 +26,28 @@
   "dates": {
     "death": {
       "earliest": 361,
-      "latest": 361,
-      "display": "361",
+      "latest": 363,
+      "display": "361 or 363",
       "basis": "traditional",
-      "note": "saint.gr: «Όταν το 361 μ.Χ. ο Ιουλιανός ο Παραβάτης εκστράτευσε κατά των Περσών και πέρασε από την Ιερουσαλήμ, έμαθε για τον Κυριάκο…» — the page's year for Julian's passage through Jerusalem, and the arrest, the torments and the death follow in the same notice with no further date."
+      "note": "Two calendars, two years, and neither is preferred. saint.gr: «Όταν το 361 μ.Χ. ο Ιουλιανός ο Παραβάτης εκστράτευσε κατά των Περσών και πέρασε από την Ιερουσαλήμ, έμαθε για τον Κυριάκο…» — its year for Julian's passage through Jerusalem, with the arrest, the torments and the death following in the same notice and no further date. days.pravoslavie.ru's line for 28 октября ст. ст. prints «(363)» after his name, which is the year Julian died in Persia. The interval is the union of the two."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Сщмч. Кириака , Патриарха Иерусалимского (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek day this folder was written from and with its reading of the man — a bishop of Jerusalem killed under Julian — **but not with its year**: the Greek page dates him 361, from Julian's passage through Jerusalem, and this line prints «(363)», the year of that emperor's death on the Persian campaign. Neither is preferred and the interval now carries both. The Russian also calls the see a patriarchate where the Greek calls it a bishopric; the folder's `office` is left as it was. No life page follows his name; his name page carries three icons, this day alone, and no text."
     },
     {
       "church": "romanian",

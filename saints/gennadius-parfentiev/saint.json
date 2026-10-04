@@ -1,0 +1,60 @@
+{
+  "slug": "gennadius-parfentiev",
+  "display_name": "Gennadius (Parfentiev)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Геннадий (Парфентьев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 28 октября ст. ст., «Геннадий (Парфентьев), прмч.», with the rank word left off. The line on the day page itself gives only the forename, in the genitive, and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1919)» after his name on 28 октября ст. ст. Nothing else on the calendar dates him: there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Прмч. Геннадия (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "note": "The line's «Прмч.» is venerable-martyr, which makes him a monastic; the link adds the surname and no grade, so the folder carries no `office`. The surname «Парфентьев» returns no folder, and the three other Gennadii the corpus holds — of Kostroma, of the Svir desert, and the patriarch of Constantinople — are kept on other days in other calendars. azbyka.ru, which has carried a full life for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
