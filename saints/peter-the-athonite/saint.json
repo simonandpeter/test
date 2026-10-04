@@ -11,6 +11,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουνίου, «Όσιος Πέτρος ο Θεοφόρος ο εν Άθω ασκήσας», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Петар Атонски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јун ст. ст., „Преподобни Петар Атонски“ — Преподобни is the rank and comes off, and the by-name Атонски stays. **THE FOLD IS DELIBERATELY AVOIDED**: `foldchk.py` returns `peter-of-bulgaria` and `peter-of-lampsacus`, both `sr`, for a bare «Петар», and nothing at all for «Петар Атонски». The heading gives the by-name, so §6’s rule to keep it decides the form and no third folder joins that string."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.06.2026 (12. јун ст. ст.) — „Преподобни Петар Атонски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 12 June is the same menologion number the folder’s `romanian` and `greek` rows already carry, so there is no second day and no §4 note is owed. A THIRD BOOK, A THIRD CENTURY, AND `dates` STAYS EMPTY. The folder deliberately holds no `dates`, and its `greek` note says why: saint.gr brackets him «(; - 734)» while its own narrative puts him in the ninth century and has him tonsured by a pope who was not pope until the ninth. This book states a year flat and it is neither: „Скончао 374. године“. Three books, three centuries, irreconcilable — so `dates` is **not** touched, and the Prologue’s year is stated in the life where a reader can weigh it against the note. Widening would reach from the fourth century to the ninth and would say nothing true. TWO VISITANTS IN THE PRISON, AND NEITHER IS NAMED IN THE PROSE. The wonder is that „свети Симеон Богопримац са светим Николом“ appeared to him in the gaol and touched the fetters with a staff, so that they melted like wax and he found himself outside the city. `symeon-the-god-receiver` **is** the man the epithet Богопримац names, and so the identification is not the difficulty; the second is a bare «свети Никола» with no see, no day and no epithet, and the corpus keeps many. Rather than name one visitant and leave his companion a blank in the same sentence, **both are left out of the paragraph** — `related-floor` reads a prose name as well as a linked one, and no `related` row is written in either direction. A refused identification and a deliberate omission, both recorded here. The Most Holy Богородица, who in a dream appointed him the Holy Mountain, takes no row either. WHAT ELSE IS NEW. That he was a Greek by birth and a soldier by trade; the war against the Arabs and his capture, the fetters and the gaol in the city of Samara on the Euphrates; his one prayer, to be let out into some desert; the escape; the road to Rome and the tonsure **at the tomb of the Apostle Peter by the pope himself**, whom this book does not name; the ship back east; that he had not so much as heard of the Holy Mountain before the dream; the cave and the fifty-three years in it, against hunger and thirst, heat and frost, and most of all the demons; the bread an angel brought every forty days once he had passed the first trials; the tempter appearing several times as an angel of light and driven off by the sign of the cross and the name of the Пресвета Богородица; the hunter who was hunting deer on Athos and found him a year before his death and had the life from his own mouth. And the entry’s last sentence, „Мошти му пренете у Македонију“ — his relics were translated to Macedonia. **That is a translation of relics and §5 makes it a feast and not a folder**; it is narrated in the life and takes no row and no second day. `types` UNTOUCHED: `venerable` and `hermit` are both there already; Преподобни is `venerable` and the fifty-three years in a cave are the hermit the folder already states. The soldiering is in the body as a trade and `soldier` is not added, because **a rank in the heading is written and a rank read off a sentence of the body is not** — the heading says Преподобни and nothing else. No `office`, no `locations`, no `related`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

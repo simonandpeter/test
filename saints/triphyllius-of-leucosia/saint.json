@@ -12,6 +12,11 @@
       "form": "Τριφύλλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουνίου, «Άγιος Τριφύλλιος Επίσκοπος Λήδρας», with the rank word and the see left off."
+    },
+    {
+      "form": "Трифилије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Свети Трифилије, епископ Леквусије Кипарске“ — Свети is not a rank, and „епископ Леквусије Кипарске“ is the rank with its see, which `types`, `office` and the display name already carry between them; all of it comes off and the bare forename is left. `foldchk.py` holds no folder on «Трифилије», so there is no fold."
     }
   ],
   "sex": "male",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.06.2026 (13. јун ст. ст.) — „Свети Трифилије, епископ Леквусије Кипарске“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 13 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. A THIRD BOOK AGREEING, AND `dates` LEFT AS IT STOOD. The folder holds `death` 370 off doxologia, «Sfântul Trifilie a trecut la cele veșnice în anul 370». This book states the same year flat — „Упокојио се мирно 370. године“ — so there is nothing to widen and nothing to choose; `dates` is not touched and the agreement is recorded here rather than written as a change. The Council of Sardica in 347, which the Romanian page gives, this book does not mention. THE SEE, AND THE TWO BOOKS THAT DISAGREE ABOUT IT. The heading is „епископ Леквусије Кипарске“ — bishop of Leucosia in Cyprus — which is the see the folder’s own display name already carries, while saint.gr prints «Άγιος Τριφύλλιος Επίσκοπος Λήδρας», Ledra. **This book agrees with the Romanian reading and the display name stands**; `office` is the bare scalar «Bishop» and takes no see, so there is no scalar with two values here and nothing to write. §10 reserves display names and none is proposed. A DISCIPLESHIP THE ENTRY STATES AND THE ROW ALREADY EXISTS. „Ученик светог Спиридона, и доцније његов саслужитељ на острву Кипарском“ — a disciple of Saint Spyridon and later his concelebrant on Cyprus. `spyridon-of-trimythous` is already in this folder’s `related` and the folder is already in his, so nothing is added; the statement is written into the life with its link, which is what `life-links` wants. TWO RANK WORDS IN THE BODY, BOTH REFUSED. The body calls him „девствен целога живота“ and „велики испосник“, and §5 maps Девица to `virgin` and Испосник to `ascetic`. **Neither is written**: the rule this wave works to is that a rank word in the heading is written and a rank read off the body is not, and the heading gives only епископ, which `types` already holds as `hierarch` and `bishop`. The same rule refused `monk` on `igor-of-chernigov` and is the reason `virgin` stands on Aquilina today, where her heading does the work. WHAT ELSE IS NEW. That he was merciful, pure in his thoughts, a „живи извор суза“ — a living spring of tears — that he ruled the flock of Christ well, and that in his repose he received a crown among the great hierarchs in heaven. No `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

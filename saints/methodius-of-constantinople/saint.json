@@ -12,6 +12,11 @@
       "form": "Μεθόδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουνίου, «Άγιος Μεθόδιος ο ομολογητής Πατριάρχης Κωνσταντινούπολης», with the rank words and the see left off."
+    },
+    {
+      "form": "Методије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. јун ст. ст., „Свети Методије, патријарх цариградски“ — Свети is not a rank and „патријарх цариградски“ is the rank with its see, which `types`, `office` and the display name already carry between them; all of it comes off and the bare forename is left. **The fold is deliberate**: `foldchk.py` returns `methodius-of-moravia`, `sr`, for «Методије», so this is the second folder on the string. The heading offers nothing fuller than the see, which §6 takes off, so there is nothing left to break the fold with; the two are told apart by their sees and their days."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.06.2026 (14. јун ст. ст.) — „Свети Методије, патријарх цариградски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 14 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. A THIRD BOOK AGREEING, AND `dates` LEFT AS IT STOOD. The folder holds `death` 846 off saint.gr’s head line «(; - 846)». This book states the same year flat — „мирно је скончао 846. године“ — so there is nothing to widen and nothing to choose; `dates` is not touched and the agreement is recorded here rather than written as a change. No `birth`: the entry gives none. A BIRTHPLACE THE OTHER BOOKS DID NOT GIVE. „Родом из града Сиракузе у Сицилији“ — of the city of Syracuse in Sicily. It is written into the life and **no `locations` is written**, because one clause of birth with nothing to bound it is not a coordinate and a located saint who reads as alive over a century fails `map-span`. THE PROPHECY, AND ITS ROW IS ALREADY THERE. He was freed and chosen patriarch „по ранијем пророчанству светог Јоаникија Великог“ — by the earlier prophecy of Joannicius the Great. `joannicius-the-great` is already in this folder’s `related` and nothing is added; the prophecy is written into the life with its link. WHAT ELSE IS NEW, AND IT IS THE WHOLE OF HIS CONFESSION. Tonsured after his secular schooling and struggling in a monastery; taken into service by Patriarch Nicephorus; known everywhere under the iconoclast emperors as a decided defender of the veneration of icons; shut up by the wicked emperor on an island, in a prison, **with two common robbers**, where he spent seven full years in the damp, without light and without enough food, as in a grave; freed under the pious empress and her son; **bringing the icons solemnly into the church on the first Sunday of the Great Fast and writing a canon in honour of the icon**; and the slander, which is the length of the entry — heretics who could get at him no other way hiring a woman to declare that the patriarch had unclean bodily relations with her, the whole of Constantinople in an uproar, and the patriarch, knowing no other way to prove his innocence, going past shame and stripping naked before the court he had himself demanded, to show his dry body wasted with fasting; the court plainly convinced, the people glad, the heretics ashamed, and the woman confessing that she had been put up to it and paid. **So those who meant to shame him increased his glory without meaning to**, which is the entry’s own sentence and the point of it. A CANON WRITTEN AND NOTHING PUT IN `hymns`. The canon in honour of the icon is an authorship the entry states and not the text of anything; §3 of this wave’s brief is absolute that this source prints no liturgical text, and `hymns` is untouched. NO ROWS, AND THREE NAMES KEPT OUT OF THE PROSE. **Patriarch Nicephorus**, who took him into his service, is refused by ruling 3: `ls saints | grep -i nicephorus` holds no patriarch of Constantinople of that name, but it holds some twenty other men of it, so **the name is kept out of the prose as well** — `related-floor` reads a prose name as well as a linked one, and the life says «the patriarch then in the city».**The empress and her son**, named here as „благочестиве царице Теодоре и сина јој Михаила“, are written in the life without their names: `theodora-the-empress` exists and is very probably her, but that is an identification off a name in another man’s life, an empress in a life takes no row for being one, and naming her in prose would demand rows in both directions that nothing here establishes. **The wicked emperor Теофило**, the woman, the two robbers and the heretics take no rows; the first is an emperor, the rest are unnamed or not persons the corpus keeps. `types` UNTOUCHED: `hierarch`, `patriarch` and `confessor` are all there, патријарх цариградски is the `office` the folder already states, and „овај велики исповедник вере“ is the `confessor` it already holds. No `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
