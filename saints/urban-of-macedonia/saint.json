@@ -12,6 +12,11 @@
       "form": "Ουρβανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Урван",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Урван, епископ Македонский, апостол от 70-ти, сщмч.», with the rank words and the see left off. The line itself declines the name, «Урвана»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep the same six apostles on their own 31 October; this is the Russian calendar's own day and not a second day on one calendar."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Апп. от 70-ти Стахия , Амплия , Урвана , Наркисса , Апеллия и Аристовула (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the first of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the other two calendars that his see was in Macedonia — «святой Урван - в Македонии» — and adds that he held it with the blessing of the Apostle Andrew the First-Called, and that he and Ampliatus were given over to a martyr's death by Jews and by Greek pagans for the preaching of the Gospel. The folder's `hieromartyr` was already there; the hands are new. His name link titles him «сщмч.» as well."
     },
     {
       "church": "romanian",
@@ -110,9 +127,53 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь апостолов». The text is the common of the apostles and names none of the six; it is the same text the Romanian page prints for the day, and it is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, pray to the merciful God that He may grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священная сокровища Всесвятаго Духа/ и Солнца Славы сияния,/ по долгу воспоим мудрыя апостолы,/ Апеллия, Урвана же и Аристовула,/ Амплия, Наркисса и Стахия,// яже благодать собра Бога нашего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак апостолов». It is the Slavonic of the Greek kontakion this folder already holds, and it names all six of the day's apostles.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sacred treasuries of the All-Holy Spirit and rays of the Sun of Glory, let us sing as we ought of the wise apostles — Apelles, Urban and Aristobulus, Ampliatus, Narcissus and Stachys — whom the grace of our God gathered in.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes the six apostles with «(I)», and its life for them is titled with the same «(I)» — the first century. The folder held no `dates` before this; neither doxologia.ro nor saint.gr dated him."
+    }
+  },
+  "related": [
+    "andrew-the-first-called"
+  ]
 }

@@ -12,6 +12,11 @@
       "form": "Απελλής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Апеллий",
+      "lang": "ru",
+      "note": "Read out of the day's own kontakion for the six, which prints the name in the Slavonic — «Апеллия, Урвана же и Аристовула» — and out of the line, which declines it the same way. **Not read off the name link**, which is titled for another man of a like name, «Апостол от 70-ти Аполлос Александриец»; the nominative «Апеллий» is the form the calendar's separate life for him is headed with, «Апостол Апеллий из числа 70-ти»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep the same six apostles on their own 31 October; this is the Russian calendar's own day and not a second day on one calendar. The days his name link lists are not all his: see the row's note."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Апп. от 70-ти Стахия , Амплия , Урвана , Наркисса , Апеллия и Аристовула (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the first of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the see the other two calendars gave him — «Святой Апеллий святительствовал в Ираклии» — and adds the century and the two hymns. **Its name link is not his name**: the link behind «Апеллия» is `/name/244.html`, titled «Апостол от 70-ти Аполлос Александриец», and its «Дни памяти» are «4 января (70 ап.) , 30 марта , 10 сентября , 31 октября , 8 декабря». That 8 декабря is the day the Greek calendar keeps this corpus's `apollos-the-apostle`, Apollos of Caesarea, on — so **the page is an index of a name and holds two men**, and it lists among its own lives both the six's life and a separate «Апостол Апеллий из числа 70-ти». The folder takes the see from the day's life and the name from the day's line and its kontakion, which prints «Апеллия» in the Slavonic and not «Аполлоса», and nothing is read off the link's title. The same shape was met on 30 октября with «Марка», where the name link titles the Evangelist and the day's life makes him bishop of Apollonias; there no hymn named the man, and the row was refused and reported."
     },
     {
       "church": "romanian",
@@ -110,9 +127,50 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь апостолов». The text is the common of the apostles and names none of the six; it is the same text the Romanian page prints for the day, and it is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, pray to the merciful God that He may grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священная сокровища Всесвятаго Духа/ и Солнца Славы сияния,/ по долгу воспоим мудрыя апостолы,/ Апеллия, Урвана же и Аристовула,/ Амплия, Наркисса и Стахия,// яже благодать собра Бога нашего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак апостолов». It is the Slavonic of the Greek kontakion this folder already holds, and it names all six of the day's apostles, this one first.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sacred treasuries of the All-Holy Spirit and rays of the Sun of Glory, let us sing as we ought of the wise apostles — Apelles, Urban and Aristobulus, Ampliatus, Narcissus and Stachys — whom the grace of our God gathered in.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes the six apostles with «(I)», and its life for them is titled with the same «(I)» — the first century. The folder held no `dates` before this; neither doxologia.ro nor saint.gr dated him."
+    }
   }
 }
