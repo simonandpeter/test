@@ -14,6 +14,11 @@
       "form": "Νήφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Νήφων ο Ρώσος ο θαυματουργός», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Нифонт",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 8 April on pravoslavno.rs, „Св. Нифонт еп. Новгородски.“, with Св. left off — it is not a rank — and with еп. Новгородски left off as well, the rank word for a bishop and the see, both of which this folder already carries in `types` and in `office`. The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "related": [
@@ -59,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. Нифонт еп. Новгородски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Greek keeps him on; the Russian and the Romanian rows stay `undocumented`, since neither source was read for him. The man is the same beyond doubt: the bishop of Novgorod to whom Saint Theodosius appeared thirteen days before his death to tell him of his coming passage, and who reposed in 1156 — the thirteen days and the year both agree exactly with what this folder holds off saint.gr, so **no date was touched**. New to the folder, in four sentences: that he was marked by **a great zeal in the building and the repairing of the churches of God**, and by **a great courage in standing up to violent princes**. **The Theodosius of the appearance is the one this folder already identifies** — `theodosius-of-the-kyiv-caves`, whose `related` row was already here and whom the existing paragraph already links, read off saint.gr; the Prologue gives him no epithet of its own and nothing new was identified on a forename. This is also the folder's **second** name form of any kind: it held only the Greek Νήφων. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

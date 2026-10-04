@@ -12,6 +12,11 @@
       "form": "Ηρωδίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαρτίου, «Άγιος Ηρωδίων ο Απόστολος», with the rank word left off."
+    },
+    {
+      "form": "Иродион",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The heading gives him no epithet and no see."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry is **an enumerated company of six**, and the heading names all six, so it is six rows and not one: Иродион, Агав, Руф, Асинкрит, Флегонт, Ермије. All six are folders the corpus already keeps and all six already relate to one another, so there is no new folder. The Prologue keeps the company on the Julian 8 April, the same menologion day the Romanian keeps all six on; the Greek keeps this man on 28 March and Hermes on 8 March, and neither was moved. The man is the same beyond doubt: of the Seventy, Paul's kinsman by Romans 16, 11, bishop of Neopatras, beaten over the head with staves, struck on the mouth with stones and stabbed with knives, left for dead and rising to serve the apostles again, and beheaded at Rome on the day Peter was crucified. **A second witness for the Romanian see.** The Prologue makes him bishop of **Neopatras**, as doxologia's life does, where saint.gr's prose makes him bishop of Patras after Andrew and its own apolytikion calls him the shepherd of Hypata — a disagreement this folder already records and does not mend; the Prologue now stands with the Romanian reading, which is worth the author's eye but changes nothing here. The Prologue names no Olympas with him, saying only «са многим другим хришћанима», with many other Christians. No year anywhere in the entry, and this folder has none. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

@@ -12,6 +12,11 @@
       "form": "Ερμής",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Άγιος Ερμής ο Απόστολος», with the rank word and the title left off."
+    },
+    {
+      "form": "Ермије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The heading's form is Ермије and the body's is Ермија; the heading's is the one stored, as the quoted line is the heading. Dalmatia is in the body and not in the heading, and this corpus keeps a see in `office`."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Sixth of the six the day's first heading enumerates. **The Prologue keeps him on the Romanian calendar's day and not the Greek one**: doxologia has him on 8 April with the rest of the company and saint.gr on 8 March, and the Prologue's menologion 8 April is the Romanian's number. One row per church, so the Greek row keeps its own day and nothing was moved. The man is the same beyond doubt: of the Seventy, mentioned with the others by Paul, and bishop in Dalmatia, which is this folder's own see and display name and agrees with both other calendars. The entry adds nothing else about him. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
