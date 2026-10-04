@@ -1,0 +1,63 @@
+{
+  "slug": "constantine-yurganov",
+  "display_name": "Constantine (Yurganov)",
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Константин (Юрганов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name page, «Константин (Юрганов), иерей, сщмч.», with the grade and the rank word left off. The day's line declines the forename and gives no surname: «Сщмчч. Константина и Анании пресвитеров (1918).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 2 ноября ст. ст. The calendar carries no life page for him and his name page holds two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 ноября ст. ст. — «Сщмчч. Константина и Анании пресвитеров (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261102.html",
+        "year": 2026
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and its «пресвитеров» presbyter, both in `types`; his name page's «иерей» is the grade and goes in `office` as Priest. The surname «Юрганов» returns no other folder in the corpus. The day's only typikon sign belongs to its first line, the Persian martyrs, so no rank is recorded for him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
