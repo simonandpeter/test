@@ -11,6 +11,11 @@
       "form": "Ματρώνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Μαρτίου, «Αγία Ματρώνα η εν Θεσσαλονίκη», with the rank word left off."
+    },
+    {
+      "form": "Матрона",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 27 March on pravoslavno.rs, „Света мученица Матрона.“, with Света left off, which is not a rank, and with the rank word мученица left off. The heading gives no epithet and no city — Thessalonica is in the body's first sentence — so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Матрона."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.04.2026 (27. март ст. ст.) — „Света мученица Матрона.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same woman: an orphan girl who was a servant in a Jewish household at Thessalonica, starved to death for going to church instead of the synagogue and thrown from the roof of the house. The entry gives no year, no century, no reign and no persecutor, so this folder's empty `dates` object stays empty, as it was. Two things in it are new to the folder and one of them is a reading left open. It has her mistress die by falling from the same place on the house from which she had thrown Matrona's body. And it says that a bishop Alexander, learning of the many wonders at her grave, built a church over it. **That bishop was not identified and takes no row and no relation.** The corpus holds `alexander-of-thessalonica`, archbishop of that city in the third and fourth centuries and a father of the First Council, who may well be the man; but the Prologue gives this Alexander no see at all, and an identification on a bare forename and a city the entry gives the martyr rather than the bishop is a guess. It is named in the range's report for the author. The stored form is the bare forename, because Света is not a rank and мученица is the rank this folder's `types` carry; Thessalonica is the corpus's own way of telling her from the other Matronas and is not in the heading. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
