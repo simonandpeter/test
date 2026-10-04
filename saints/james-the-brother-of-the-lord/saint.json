@@ -12,6 +12,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Οκτωβρίου, «Άγιος Ιάκωβος ο Απόστολος και Αδελφόθεος πρώτος επίσκοπος Ιεροσολύμων», with the rank words and the see left off."
+    },
+    {
+      "form": "Иаков, брат Господень",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Апостол Иаков, брат Господень», with the rank word left off; the kinship clause is part of the name the calendar gives him, and the line itself declines it as «Апостола Иакова , брата Господня по плоти»."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life pages head «Дни памяти: 4 января (70 ап.) , 23 октября , 28 декабря» — the synaxis of the Seventy Apostles and the Sunday after the Nativity beside this day. One row per church is the schema, so the two other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Апостола Иакова , брата Господня по плоти (ок. 63).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -121,6 +136,38 @@
         "text": "The only-begotten God the Word of the Father, having come to dwell among us in the last of the days, declared you, divinely-spoken James, the first shepherd and teacher of Jerusalem, and a faithful steward of the spiritual mysteries; and so we all honour you, apostle.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко Господень ученик восприял еси, праведне, Евангелие,/ яко мученик имаши еже неописанное,/ дерзновение яко брат Божий,/ еже молитися яко иерарх:// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Тропарь апостола Иакова»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the Lord's disciple you received the Gospel, O righteous one; as a martyr you have what cannot be set aside; as the brother of God, boldness; as a hierarch, the office of prayer. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Отчее Единородное Бог Слово,/ пришедшее к нам в последния дни,/ Иакове Божественне,/ перваго тя показа/ иерусалимлян пастыря и учителя,/ и вернаго строителя таинств духовных:// темже тя вси чтим, апостоле.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Кондак апостола Иакова»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Father's Only-begotten, God the Word, who came to us in the last days, declared you, divine James, the first shepherd and teacher of the people of Jerusalem and a faithful steward of the spiritual mysteries; therefore we all honour you, apostle.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -129,10 +176,10 @@
   "dates": {
     "death": {
       "earliest": 62,
-      "latest": 62,
-      "display": "62",
+      "latest": 63,
+      "display": "62 or 63",
       "basis": "traditional",
-      "note": "saint.gr heads his page «Αγιος Ιακωβος ο Αποστολος Και Αδελφοθεος Πρωτος Επισκοπος Ιεροσολυμων (; - 62)»; the narrative gives no year, only the manner of his death."
+      "note": "Two sources, one year apart, and neither is chosen. saint.gr heads his page «(; - 62)». days.pravoslavie.ru closes his line for 23 октября ст. ст. «(ок. 63)» and one of its three lives for him says «Мученическая кончина святителя Иакова произошла около 63 года»; another dates the killing by the interval between the departure of the procurator Festus and the arrival of Albinus, «(62 г. после Р. X. )». Read 4 October 2026."
     }
   }
 }
