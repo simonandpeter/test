@@ -26,6 +26,15 @@
     "confessor",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Свт. Агапита исп., еп. Синадского (IV).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

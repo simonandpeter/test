@@ -49,6 +49,15 @@
     "symeon-the-stylite",
     "theodosius-the-cenobiarch"
   ],
+  "dates": {
+    "death": {
+      "earliest": 461,
+      "latest": 461,
+      "display": "461",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Свт. Льва, Папы Римского (461).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

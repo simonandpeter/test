@@ -20,6 +20,15 @@
     "confessor"
   ],
   "office": "Bishop",
+  "dates": {
+    "death": {
+      "earliest": 780,
+      "latest": 780,
+      "display": "780",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «there he stayed four years and died in 780, doing good to the last moment»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

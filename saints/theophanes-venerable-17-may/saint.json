@@ -17,6 +17,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1544,
+      "latest": 1544,
+      "display": "1544",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «its head line dates Theophanes's death to 1544». The Romanian line that gives this folder its day prints no century at all."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

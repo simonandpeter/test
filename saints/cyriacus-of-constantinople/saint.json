@@ -13,6 +13,15 @@
     }
   ],
   "office": "Patriarch of Constantinople",
+  "dates": {
+    "death": {
+      "earliest": 606,
+      "latest": 606,
+      "display": "606",
+      "basis": "traditional",
+      "note": "saint.gr's page, after the Ecumenical Patriarchate's own list: he succeeded John the Faster in 595 and «he died in peace in 606». The same page reports Nicodemus the Hagiorite's view that this is instead a third-century Cyriacus the First; that is a disagreement about which man, not about the year, and it is left standing in the life."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -27,6 +27,15 @@
     "venerable",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 700,
+      "display": "6th–7th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Исаака Сирина, еп. Ниневийского (VI-VII)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

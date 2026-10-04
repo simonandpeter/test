@@ -25,6 +25,15 @@
     "bishop",
     "wonderworker"
   ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Парфения, еп. Лампсакийского (IV).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

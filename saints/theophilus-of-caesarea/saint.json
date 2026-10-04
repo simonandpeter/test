@@ -14,6 +14,15 @@
     "hieromartyr",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 180,
+      "latest": 192,
+      "display": "180–192",
+      "basis": "traditional",
+      "note": "The reign the page prints as the date, as the folder's own life has it: «he was martyred under the emperor Commodus, whose reign the page gives as 180 to 192»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

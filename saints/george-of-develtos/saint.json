@@ -22,6 +22,15 @@
     "manuel-of-adrianople",
     "peter-companion-of-manuel"
   ],
+  "dates": {
+    "death": {
+      "earliest": 812,
+      "latest": 822,
+      "display": "c. 817",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Мануила, Георгия, Петра, Леонтия епископов, Сиония, Гавриила, Иоанна, Леонта, Парода пресвитера и прочих 377-ми (ок. 817)». The 377 is the company's number, not a year; 817 is the year the line brackets."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

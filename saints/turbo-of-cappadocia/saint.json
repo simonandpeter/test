@@ -22,6 +22,15 @@
     "neonilla",
     "neon-of-langonia"
   ],
+  "dates": {
+    "death": {
+      "earliest": 161,
+      "latest": 180,
+      "display": "161–180",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Спевсиппа, Елевсиппа, Мелевсиппа, бабки их Леониллы и с ними Неона, Турвона и Иовиллы (161-180)» — the bracket is a reign, and it is the interval."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

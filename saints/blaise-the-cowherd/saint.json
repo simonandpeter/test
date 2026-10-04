@@ -17,6 +17,15 @@
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 февраля ст. ст., «Власий (Вукол) Кесарийский (Капподакийский), исповедник», with the rank word and the office left off. The link prints «Вукол» as a variant of the forename and «(Капподакийский)» as a second epithet; the head forms are the ones taken here."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мч. Власия Кесарийского, пастуха (III).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

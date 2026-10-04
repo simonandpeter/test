@@ -18,6 +18,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Панкратия Печерского, в Дальних пещерах (XIII).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

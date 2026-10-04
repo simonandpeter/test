@@ -28,6 +28,15 @@
     "venerable",
     "abbot"
   ],
+  "dates": {
+    "death": {
+      "earliest": 529,
+      "latest": 529,
+      "display": "529",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Феодосия Великого, общих житий начальника (529)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

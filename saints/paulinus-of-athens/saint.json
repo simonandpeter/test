@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 251,
+      "display": "249–251",
+      "basis": "traditional",
+      "note": "The reign the page prints as the date, as the folder's own life has it: «saint.gr says all eight were martyred in the years of the emperor Decius, who reigned from 249 to 251»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -149,6 +149,15 @@
       }
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 600,
+      "display": "5th–6th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прпп. Ксенофонта, супруги его Марии и сыновей их Аркадия и Иоанна (V-VI)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

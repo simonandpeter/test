@@ -27,6 +27,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Апп. От 70-ти Архиппа и Филимона и мц. равноап. Апфии (I).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

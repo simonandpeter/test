@@ -12,6 +12,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 270,
+      "latest": 275,
+      "display": "270–275",
+      "basis": "traditional",
+      "note": "The reign is the only date the page gives for the martyrdom, so the reign is the interval. The folder's own life: «the only date on the page is the reign it gives Aurelian, 270 to 275». days.pravoslavie.ru brackets Paul and Juliana, whom he was killed with, at c. 273."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

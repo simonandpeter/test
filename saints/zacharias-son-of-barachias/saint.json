@@ -22,6 +22,15 @@
   "types": [
     "prophet"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": -520,
+      "latest": -520,
+      "display": "c. 520 BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прор. Захарии Серповидца из 12-ти (ок. 520 до Р.Х.).» Recorded as a floruit, the shape malachi holds for the same kind of bracket."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

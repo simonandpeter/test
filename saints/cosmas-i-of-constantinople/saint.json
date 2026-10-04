@@ -15,6 +15,15 @@
     "hierarch",
     "monk"
   ],
+  "dates": {
+    "floruit": {
+      "earliest": 1075,
+      "latest": 1081,
+      "display": "1075–1081",
+      "basis": "traditional",
+      "note": "His patriarchate, which is what saint.gr's page dates: «the emperor Michael Doukas brought Cosmas to the throne» after John VIII died on 2 August 1075, and «So on 8 May 1081» he withdrew to the monastery of Kallias. The page gives no year for his repose."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

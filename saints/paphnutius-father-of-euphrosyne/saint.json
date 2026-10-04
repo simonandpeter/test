@@ -19,6 +19,15 @@
   "related": [
     "euphrosyne-of-alexandria"
   ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Пафнутия и дщери его Евфросинии (V).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

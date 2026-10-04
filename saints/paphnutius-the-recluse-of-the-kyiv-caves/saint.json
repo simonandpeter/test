@@ -17,6 +17,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1300,
+      "display": "13th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Пафнутия, затворника Печерского (XIII).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

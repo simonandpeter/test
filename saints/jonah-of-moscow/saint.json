@@ -29,6 +29,15 @@
     "hierarch",
     "metropolitan"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1461,
+      "latest": 1461,
+      "display": "1461",
+      "basis": "traditional",
+      "note": "saint.gr's head line, which is all it has: «(; - 1461)» — no birth year and 1461 for the repose. The folder's own life notes that this is «the same year in which it puts Mark's death», Mark Eugenicus being the comparison the page offers in place of a life, so the year is the page's and the coincidence is left visible."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

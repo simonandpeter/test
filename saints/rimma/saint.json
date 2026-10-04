@@ -27,6 +27,15 @@
     "pinna",
     "andrew-the-first-called"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st–2nd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мчч. Инны, Пинны и Риммы (I-II)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

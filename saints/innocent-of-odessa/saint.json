@@ -17,6 +17,22 @@
   "types": [
     "hierarch"
   ],
+  "dates": {
+    "birth": {
+      "earliest": 1800,
+      "latest": 1800,
+      "display": "15 December 1800",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «born on 15 December 1800 in the village of Yelets in the province of Orel, of a priestly family»."
+    },
+    "death": {
+      "earliest": 1857,
+      "latest": 1857,
+      "display": "1857",
+      "basis": "traditional",
+      "note": "saint.gr, as the folder's own life has it: «He fell asleep in peace in 1857.»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

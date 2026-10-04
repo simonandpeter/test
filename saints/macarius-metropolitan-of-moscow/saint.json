@@ -18,6 +18,15 @@
     "metropolitan",
     "hierarch"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1926,
+      "latest": 1926,
+      "display": "1926",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Свт. Макария митр. Московского и Коломенского (1926).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -15,6 +15,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мч. Варипсава (II)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

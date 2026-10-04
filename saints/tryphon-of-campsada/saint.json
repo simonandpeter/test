@@ -26,6 +26,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мч. Трифона (250).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -27,6 +27,15 @@
   "types": [
     "venerable"
   ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Маркиана пресвитера (V)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

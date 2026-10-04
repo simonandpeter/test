@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 299,
+      "latest": 309,
+      "display": "c. 304",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мц. Феодулии и мчч. Елладия, Макария и Евагрия (ок. 304).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

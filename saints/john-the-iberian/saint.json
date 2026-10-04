@@ -30,6 +30,15 @@
     "athanasius-the-athonite",
     "gabriel-the-iberian"
   ],
+  "dates": {
+    "death": {
+      "earliest": 998,
+      "latest": 1003,
+      "display": "998–1003",
+      "basis": "traditional",
+      "note": "doxologia.ro's life, as the folder's own life has it: «He fell asleep in peace between the years 998 and 1003.»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

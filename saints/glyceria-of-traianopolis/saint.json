@@ -23,6 +23,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 141,
+      "latest": 141,
+      "display": "141",
+      "basis": "traditional",
+      "note": "saint.gr's head line, as the folder's own life has it: «Her head line dates her death to 141»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

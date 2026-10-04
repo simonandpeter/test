@@ -27,6 +27,15 @@
     "valentina-of-caesarea",
     "paul-with-valentina-and-ennatha"
   ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мцц. дев Еннафы, Валентины и Павлы (308).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -14,6 +14,22 @@
     }
   ],
   "sex": "male",
+  "dates": {
+    "birth": {
+      "earliest": 1722,
+      "latest": 1722,
+      "display": "1722",
+      "basis": "traditional",
+      "note": "saint.gr's life, as the folder's own life has it: «born at Kostos on Paros in 1722»."
+    },
+    "death": {
+      "earliest": 1813,
+      "latest": 1813,
+      "display": "24 June 1813",
+      "basis": "traditional",
+      "note": "saint.gr's life, as the folder's own life has it: «he died on 24 June 1813»."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

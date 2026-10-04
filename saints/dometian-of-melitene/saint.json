@@ -24,6 +24,15 @@
     "venerable",
     "bishop"
   ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 602,
+      "display": "601 or 602",
+      "basis": "traditional",
+      "note": "The two sources disagree by a year and the interval records the disagreement. days.pravoslavie.ru: «Прп. Дометиана, еп. Мелитинского (601)»; saint.gr's life has him die at Constantinople in January 602."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -24,6 +24,15 @@
     "hermit",
     "abbot"
   ],
+  "dates": {
+    "death": {
+      "earliest": 390,
+      "latest": 390,
+      "display": "390",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Симеона Ветхого (390)»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

@@ -23,6 +23,15 @@
     "venerable",
     "monk"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1085,
+      "latest": 1095,
+      "display": "c. 1090",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Прп. Исаакия, затворника Печерского (ок. 1090).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

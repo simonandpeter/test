@@ -12,6 +12,15 @@
     "martyr",
     "virgin"
   ],
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 305,
+      "display": "286–305",
+      "basis": "inferred",
+      "note": "A reign, and the page's own «ίσως» — perhaps — kept with it: «Οι Άγιες Δέκα Παρθένες μαρτύρησαν στη Νικομήδεια (ίσως επί Μαξιμιανού (286 - 305 μ.Χ.), τότε που πλήθος χριστιανών μαρτύρησε σ' αυτή την πόλη)». Inferred rather than traditional because the source hedges the reign it offers."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

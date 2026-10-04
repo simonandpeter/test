@@ -23,6 +23,15 @@
     "martyr",
     "soldier"
   ],
+  "dates": {
+    "death": {
+      "earliest": 202,
+      "latest": 202,
+      "display": "202",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Сщмч. Харалампия и с ним мчч. Порфирия, Ваптоса и трех мучениц (202).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",

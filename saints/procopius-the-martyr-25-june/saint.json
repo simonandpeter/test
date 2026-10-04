@@ -17,6 +17,15 @@
   "types": [
     "martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 1810,
+      "latest": 1810,
+      "display": "25 June 1810",
+      "basis": "traditional",
+      "note": "saint.gr's entry for this day, head line and life agreeing: «(; - 1810)», and the beheading «on Saturday 25 June 1810». The Romanian line that gives this folder its day carries no biography and no year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",

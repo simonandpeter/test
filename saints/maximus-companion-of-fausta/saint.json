@@ -26,6 +26,15 @@
     "fausta-of-cyzicus",
     "evilasius-companion-of-fausta"
   ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 311,
+      "display": "305–311",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru: «Мц. Фавсты девы и мчч. Евиласия и Максима (305-311).»"
+    }
+  },
   "attestations": [
     {
       "church": "russian",
