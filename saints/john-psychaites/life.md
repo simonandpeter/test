@@ -4,4 +4,8 @@ saint.gr sets him in the years of the hard struggle for the holy icons, and says
 
 He was gifted, the page adds, with the grace of working wonders. Death found him upright in the stadium of the sacred contests, and carried him to the immortal dwellings of the righteous. That is the whole of the notice: no country, no monastery, no emperor named, no year, no relics and no hymn. His epithet is all that distinguishes him, and the page's couplet turns on it — bearing the relation of the soul alone, it says, father, you are justly called Psychaites.
 
-*After saint.gr's calendar for 7 Μαΐου — [the day](https://www.saint.gr/05/07/index.aspx) and [the life](https://www.saint.gr/4005/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps him on the Julian 26 May, not on the 7 May the Greek calendar keeps, and it supplies three of the things that page says it does not have. In his early youth, it says, he withdrew from the world and drew back into the Psychaite lavra at Constantinople — the house his epithet is made of, which the Greek notice never names — and there he struggled many years for the love of Christ.
+
+And in the eighth century, it says, he suffered exile for the veneration of the icons. That is the first date any calendar read for him gives, and it is the date of the exile and not of his death; it is held as a floruit for that reason, and no year of his birth or his repose is stated by anybody. The Prologue names no emperor either.
+
+*After saint.gr's calendar for 7 Μαΐου — [the day](https://www.saint.gr/05/07/index.aspx) and [the life](https://www.saint.gr/4005/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 26. мај ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-08&prolog=1), read 5 October 2026.*

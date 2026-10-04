@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Ιωάννης ο Ψυχαΐτης», with the rank word left off; the epithet ο Ψυχαΐτης is kept in the display name and not in this form."
+    },
+    {
+      "form": "Јован Психаит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Преподобни Јован Психаит“ — Преподобни is the `venerable` this corpus puts in `types` and is the only word stripped. **Психаит is kept, and keeping it is what keeps this folder out of the bare-«Јован» fold**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Психаит» and nine holders of a bare «Јован», which `john-of-gothia` had to join on 19 May and which `john-vladimir` was kept out of on 22 May for the same reason. **The epithet is not a rank**: the Greek page’s own couplet turns on it as a description of the man, and the body makes it the lavra’s name, so it is part of the name and not a word `honorific.js` would compose. The Greek form on this folder, «Ιωάννης», is the bare one and is left alone."
     }
   ],
   "attestations": [
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.06.2026 (26. мај ст. ст.) — „Преподобни Јован Психаит“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 26 May is. **A DAY NO OTHER CALENDAR KEEPS HIM ON**: saint.gr keeps him on 7 May, this book on 26 May, and the Romanian and Russian rows are `undocumented`. So the row is written on the 26/5 and the Greek row is left on the 7/5. The day list for the menologion 26/5 could not see him for that reason, and **`sr-namesweep.mjs` found him because the heading carries his epithet** — which is the clean division this wave works by, the sweep scoring a heading and finding a folder kept on another menologion day. **THREE THINGS SAINT.GR SAYS IT DOES NOT HAVE, THIS BOOK HAS.** The existing life ends „That is the whole of the notice: no country, no monastery, no emperor named, no year, no relics and no hymn.“ The Prologue gives **the monastery** — „повукао у лавру Психаитску“, the Psychaite lavra, which is the lavra his epithet is made of and which the Greek page never names — **the city**, Constantinople, and **the century**, the eighth. It still names no emperor and no year of birth or death. **A FIRST DATE, AND IT IS A FLORUIT AND NOT A DEATH.** „У VIII веку трпео изгнанство због иконопоштовања“ — in the eighth century he suffered exile for the veneration of icons. **A century stated for an event in a man’s life is a `floruit`, not a `death`**, and it is written as one: `earliest` 701, `latest` 800, display `8th century`, `basis: \"traditional\"`, with the book’s own words in the note. **No death year is derived from it and none is invented**; the folder had no `dates` object at all before this. **The exile is the event dated, not his repose**, and that is said in the note so that no later reader reads the interval as a lifespan. **New besides**: that **he withdrew from the world in his early youth** and **struggled in that lavra many years for the love of Christ**. `venerable` and `confessor` are both corroborated — the ascetic years and the exile for the icons — and **no type was added**. `related` stays empty: the entry names nobody. No `locations`, although Constantinople is named — and the Prologue naming it is the one thing that would make a `locations` possible on this folder, which is left for the author. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 08.06.2026 (26. мај ст. ст.): „У VIII веку трпео изгнанство због иконопоштовања“. The century is stated for his exile, which is an event in his life, so it is held as a floruit and not as a death; no year of birth or death is stated by any calendar read for this folder, and none is derived here. saint.gr sets him „in the years of the hard struggle for the holy icons“ and says nothing narrower."
+    }
   }
 }
