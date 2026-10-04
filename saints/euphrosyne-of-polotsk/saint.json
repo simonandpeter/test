@@ -4,13 +4,19 @@
   "sex": "female",
   "types": [
     "venerable",
-    "monastic"
+    "monastic",
+    "princess"
   ],
   "names": [
     {
       "form": "Ευφροσύνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Μαΐου, «Οσία Ευφροσύνη του Πολώκ», with the rank words left off."
+    },
+    {
+      "form": "Ефросинија Полоцка",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. мај ст. ст., „Преподобна Ефросинија кнегиња Полоцка“ — Преподобна is the `venerable` this corpus puts in `types` and кнегиња the `princess` added with this upgrade; strip the two and „Ефросинија Полоцка“ is left, the personal name with the place that distinguishes her. **Полоцка is kept because it is what tells her from the other five of her name**, and it was measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both «Ефросинија» and «Ефросинија Полоцка», while `ls saints | grep euphrosyn` returns Alexandria, Lesvos, Mega Spileo, Suzdal and the cook beside her. **A bare «Ефросинија» would have been the thinner form and is refused for that reason**, the heading printing more than the bare name. The Greek form on this folder, «Ευφροσύνη», is the bare one."
     }
   ],
   "dates": {
@@ -57,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.06.2026 (23. мај ст. ст.) — „Преподобна Ефросинија кнегиња Полоцка“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 23/5 the Greek row already carries. **The heading is quoted as the Prologue prints it, without a closing full stop**: all three headings on this day end bare, where the 22 May and 3 March headings quoted on other folders in this wave carry one. The string is the `<strong>` element whole and nothing was added to it. **`dates` UNTOUCHED, AND THE BOOK AGREES TO THE DAY.** „И би сахрањена у манастиру светог Теодосија 23. маја 1173. године“ — the 1173 is exactly the `death` this folder already holds off saint.gr’s head line, so there is nothing to widen and nothing to narrow; and the `birth` of about 1105 is left as saint.gr gave it, this book giving no year of birth at all. **A DAY OF DEATH, AND IT IS HER OWN FEAST.** The Prologue states the day as well as the year, and it is the 23 May this row is written on — unlike the day of death thirteen days off its feast met on 21 May in this wave. **There is no field for a day of death**, so it stands in the prose. **`princess` ADDED, AND IT CANNOT CHANGE WHAT PRINTS OVER HER.** The heading is „кнегиња Полоцка“ and Кнегиња maps to `princess` in BRIEF-SERBIAN.md §5. `princess` is **not in `src/lib/honorific.js`’s `PRECEDENCE` at all**, so the page goes on reading *Venerable Euphrosyne* off the `venerable` she already carries and the new word appears only in the facts line, where a reader finds out what she was — the opposite of the `virgin` refused on `john-vladimir` on 22 May, which `PRECEDENCE` would have turned into a printed title. `venerable` and `monastic` are both corroborated: „одбеже у женски манастир и замонаши се“. **A FLAT DISAGREEMENT ON HER FATHER, RECORDED AND NOT RESOLVED.** The Prologue opens „Ћерка Всеслава, кнеза Полоцког“ — the daughter of Vseslav, prince of Polotsk. **saint.gr makes Vseslav not her father but the generation above**: daughter of Svyatoslav George Vseslavovich, niece of the royal prince Vseslav Bryachislavich. One book has her Vseslav’s daughter and the other his granddaughter, and **no kinship is corrected on the strength of either**. **New here**: that when her parents wished to betroth her she **fled to a women’s monastery and was tonsured**; that **an angel of the Lord appeared to her three times and showed her the place where she was to build a new convent for virgins**; that she **drew her own sister Eudokia into the monastic life, and many other girls of the noble class**; that **a kinswoman of hers, Zvenislava, a princess Borisovna by birth, brought all her treasure, her garments and her precious stones** and said „Све красоте овога света сматрам ништавним…“, counting the beauties of this world as nothing and giving the ornaments made ready for her marriage to the church of the Saviour, wishing to be betrothed to Him in a spiritual marriage; that **Euphrosyne tonsured her too and named her Eupraxia**; and that **in old age she longed to die in Jerusalem and prayed God for it, and God heard her: she visited Jerusalem and died there**, and was buried in the monastery of Saint Theodosius. **That last is the whole of her end and saint.gr does not have it** — that page goes from the year 1173 straight to the history of her relics in Polotsk, and the two readings are consistent, the relics having been brought to Polotsk afterwards. **FOUR PEOPLE NAMED AND NOT ONE GAINS A FOLDER OR A ROW, BY RULING 3.** Vseslav, the sister Eudokia, Zvenislava and the name Eupraxia given her are a father, a sister and a kinswoman, **and a sister tonsured by her own sister is a kinship the body narrates, which is the test that owes a row** — but no calendar read for this corpus keeps any of them. `ls saints | grep -iE 'zvenis|predisl'` returns nothing; `eudoxia-daughter-of-athanasia` is a different woman and the existing life already names this Eudoxia without owing a row; `eupraxia-of-the-thebaid` is a fourth-century Egyptian and not a twelfth-century Polotsk princess. **Two commemorations on one calendar means two women, and here there is not even one.** So all four stand in the prose unlinked, with no rows, and nothing is minted. **And Saint Theodosius takes no row**: the monastery she was buried in is named for him, and a dedication is not a relation — BRIEF.md §4’s ruling, as it was applied to the church raised at the monastery of Saint Naum for `john-vladimir` on 22 May. The corpus keeps two Theodosii who could be meant, `theodosius-the-great` and `theodosius-the-cenobiarch`, **and the Prologue names neither of them, only the house** — which is a second reason to write no row. No `locations`, although Polotsk and Jerusalem are both named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

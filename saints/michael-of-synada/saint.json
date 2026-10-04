@@ -11,6 +11,11 @@
       "form": "Μιχαήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Μαΐου, «Όσιος Μιχαήλ επίσκοπος Συνάδων ο Ομολογητής», with the rank words and the see left off."
+    },
+    {
+      "form": "Михаил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. мај ст. ст., „Свети Михаил епископ синадски“ — Свети is not a rank, епископ is the `bishop` this corpus puts in `types` and the `Bishop` it puts in `office`, and „синадски“ is the see, which `honorific.js` composes and the display name already carries. Strip all three and the fullest form this calendar gives is the bare personal name. **THIS IS A DELIBERATE FOLD AND IT WAS MEASURED, NOT ASSUMED.** `foldchk.py` returns eleven folders already holding a bare «Михаил» — `michael-of-chernigov`, `michael-of-klops` and `michael-of-ulumbo` on `sr` forms and eight twentieth-century Russian confessors on `ru` ones — so storing it here makes a twelfth, exactly as the bare «Стефан» took a twelfth holder on 17 May and the «Силуан» fold was entered on purpose on 15 May. **There is no fuller form to prefer**: the heading prints nothing between the name and the see, and a see is not part of the stored form. `corpus-gate.mjs` will print the fold as a `?` row and it is the right answer."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.06.2026 (23. мај ст. ст.) — „Свети Михаил епископ синадски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 23/5 the Romanian and Greek rows already carry. **The heading is quoted as the Prologue prints it, without a closing full stop**: all three headings on this day end bare, where the 22 May and 3 March headings quoted on other folders in this wave carry one. The string is the `<strong>` element whole and nothing was added to it. **A FIRST DATE, AND IT IS THE ONE THING TWO CALENDARS COULD NOT GIVE HIM.** doxologia’s life closes „The page gives no year for his birth or his death“ and saint.gr gives none either, so this folder has stood undated. The Prologue states one outright — „и 818. године пресели се у царство Христа Цара“ — and it is his own death, stated as a year and not derived from a reign, a lifespan or a duration, so `dates.death` is written 818 to 818, `basis: \"traditional\"`, with the book’s own words in the `note`. **Nothing was narrowed and nothing was widened**: there was no interval here to narrow. **No `birth`**, the book giving none. **`types` UNTOUCHED, AND DELIBERATELY.** „Због свог подвижничког и девственог живота“ — for his ascetic and virginal life — would map to `ascetic` and `virgin` by BRIEF-SERBIAN.md §5, **but both words are adjectives on his manner of life in the body and neither is a rank in the heading**, which prints only „епископ“; the folder already holds `hierarch`, `bishop` and `confessor`, all three corroborated here. Both are in the prose instead. `office` untouched at `Bishop`, the heading’s „синадски“ saying no more than the stored `Bishop` plus the display name already say. **TWO THINGS NO PAGE READ FOR HIM BEFORE SAYS, AND ONE FLAT DISAGREEMENT.** New: that **he took part in the Seventh Ecumenical Council** — „Участвовао на VII васељенском сабору“, which the doxologia life mentions only as the council whose anathema the heresy broke, never as something he attended; and that **at the emperor’s wish he went to the caliph Harun al-Rashid to negotiate peace**. The disagreement is the wonder. doxologia has the two friends at harvest time, in heat and without water, making a dry copper vessel pour out water; **the Prologue has them in a time of drought bringing abundant rain down on the earth by their prayers** — „у сушно време, ова два светитеља својим молитвама низведоше обилан дажд на земљу“. Thirst answered from a vessel and a drought answered from the sky are not the same wonder told twice, and **both are recorded and neither is resolved**, which is what this corpus does with a disagreement between two books. The Prologue also confirms what both other books say and adds nothing to: the companionship with Theophylact, the consecration by Tarasius, the deposition under Leo the Armenian for the icons, and the death in exile in want. **A COUNCIL IS NOT A FOLDER AND A CALIPH HAS NONE.** The Seventh Ecumenical Council is not a person; `harun-al-rashid` is nobody the corpus keeps and `ls saints | grep -i harun` returns nothing, so by the coordinator’s third ruling nothing is minted for him and he stands in the prose unlinked. **No new `related` rows**: Theophylact and Tarasius are the only people in the entry who have folders and both are already in this folder’s `related`, in both directions. No `locations`, although Synada and the Euxine are named elsewhere on the folder. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -126,5 +141,14 @@
     "theophylact-of-nicomedia",
     "tarasius-of-constantinople",
     "gregory-of-akritas"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 818,
+      "latest": 818,
+      "display": "818",
+      "basis": "traditional",
+      "note": "Охридски пролог за 05.06.2026 (23. мај ст. ст.): „и 818. године пресели се у царство Христа Цара“. The first year any calendar read for this folder states; doxologia and saint.gr both give none."
+    }
+  }
 }
