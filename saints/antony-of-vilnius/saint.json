@@ -10,6 +10,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αντώνιος, Ιωάννης οι αυτάδελφοι και Ευστάθιος οι Μάρτυρες», with the rank words left off; the life page heads him «Αγιος Αντώνιος (; - 1347)»."
+    },
+    {
+      "form": "Антоније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 14 April on pravoslavno.rs, „Св. муч. Антоније, Јован и Евстатије.“, where Св. муч. heads the three and belongs to no one of them, so each forename stands bare. The heading gives no epithet and does not name Vilnius, which is in the body and which this corpus keeps in the display name. This is also the folder's second name form of any kind: it held only the Greek Αντώνιος."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.04.2026 (14. април ст. ст.) — „Св. муч. Антоније, Јован и Евстатије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, **an enumerated company of three, so three rows**, on the same menologion day the Greek keeps all three on; the Russian and Romanian rows stay `undocumented`. The three are the same men beyond doubt — Vilnius, the Lithuanian prince's court, the one oak, 1347 — and the **1347 agrees exactly** with what all three folders hold off saint.gr, so **no date was touched**. New to the folders, and the entry is five sentences of it: that all three were **first pagans and worshippers of fire**; that they were **servants at the court of the Lithuanian prince Olgard at Vilnius**; that they were **named before Kruglec, Kumec and Nezhilo**; that they were **baptised by a priest the entry names Нестор**; that they were **hanged one after another on one and the same oak**; and that **the Christians cut that oak down and built a church to the glory of the Holy Trinity, laid the martyrs' honourable relics in it, and made the holy table out of the stump**, the relics being at Vilnius. **The three pagan names are given as a set and not assigned**: the entry lists them in one clause, „Раније се именоваху: Круглец, Кумец и Нежило“, and does not say which belonged to which man, so none was matched to a folder by its position in the list — that would be an attribution and not a reading. **The priest and the prince are identified with nobody**, and the priest's name stands in the entry's own form because a bare English «Nestor» is the exact display name of `nestor-the-martyr-2-march`, which `tests/related-floor.test.mjs` would read as a relation. **The fold on the stored form is deliberate**: `anthony-of-constantinople` holds the same bare Антоније, and this heading, which puts Св. муч. over three names, gives no epithet and no city — recorded in the run's findings. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

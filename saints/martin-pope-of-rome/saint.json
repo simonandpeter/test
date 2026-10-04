@@ -11,6 +11,11 @@
       "form": "Martin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 14 aprilie, «Sfântul Ierarh Martin Mărturisitorul, Episcopul Romei»; the bare personal name, without the rank the line carries."
+    },
+    {
+      "form": "Мартин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 14 April on pravoslavno.rs, „Св. Мартин исповедник, папа Римски.“, with Св. left off — it is not a rank — and with исповедник and папа Римски left off as well: the first is the rank word this folder already carries in `types`, and the second is the see, which this corpus keeps in `office` and which this folder already has there. The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026; its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.04.2026 (14. април ст. ст.) — „Св. Мартин исповедник, папа Римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of three entries, and **on the Romanian calendar's day and not the Greek one**: doxologia keeps him on 14 April and saint.gr on 20 September, and the Prologue's menologion 14 April is the Romanian's number; one row per church, so the Greek row kept its day and nothing moved. The man is the same beyond doubt, and the **655 agrees exactly** with what this folder holds, so **no date was touched**. The entry is long and almost all of it is new to the folder: that he **became pope on 5 July 649**, in the thick of the quarrel with the Monothelites; that the emperor was **Constans II, Heraclius's grandson**, and the patriarch of Constantinople Paul; that the emperor wrote the **Typos** himself to make peace and it pleased the heretics; that Martin called **a council of 105 bishops** which condemned it; that he wrote to the patriarch asking him to hold the pure Orthodox faith and to counsel the emperor off the heretical subtleties, and that the letter angered patriarch and emperor both; that the commander **Olympius** was sent to bring the pope bound and **did not dare to bind him, but suborned a soldier to kill him in church with a hidden sword — and the soldier went blind the moment he came in**; that Olympius then went to Sicily against the Saracens and died there; that a second commander was sent on the charge that the pope **colluded with the Saracens and did not honour the most pure Mother of God**, and the pope's answer, that the first was slander and that **«as for the most pure Mother of God, if anyone does not honour and confess her and does not bow to her, let him be accursed in this age and in the age to come»**; the long sickness in prison at Constantinople, in narrowness and hunger; the sentence of exile to **Cherson**, where he lived two years; and that **the patriarch died two years before him and, visited by the emperor on his deathbed, turned his head to the wall and wept, confessing that he had sinned much against Martin and begging the emperor to set him free**. **Three names are given in the entry's own Serbian forms in the life rather than in English, and the reason is a measurement**: a bare English «Paul» is the exact display name of two folders, `paul-the-apostle` and `paul-bishop-of-nicaea`, neither of whom is this Monothelite patriarch, and `tests/related-floor.test.mjs` reads the names a life prints in prose, so the English form would have asked for a `related` row false in both directions. The same holds for the second commander, whose bare English form is two other folders' display name. The entry's own forms stand instead and the men are identified with nobody. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

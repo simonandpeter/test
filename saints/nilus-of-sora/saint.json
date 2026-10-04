@@ -11,6 +11,11 @@
       "form": "Νείλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Νείλος εκ Ρωσίας», with the rank word left off."
+    },
+    {
+      "form": "Нил Сорски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 7 April on pravoslavno.rs, „Преп. Нил Сорски.“, with the rank word Преп. left off. The by-name Сорски is kept, because it is what the heading gives beyond the forename and what distinguishes him from the seven other folders of the name."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.04.2026 (7. април ст. ст.) — „Преп. Нил Сорски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and **the Prologue keeps him on a day neither other calendar keeps him on**: doxologia.ro and saint.gr both have him on 7 May, and this is the Julian 7 April, a month off and not a style conversion. One row per church is the schema, so the Serbian row carries the Prologue's own day, nothing was moved and nothing was displaced; the divergence is recorded here and in the life rather than reconciled. The man is the same beyond doubt — Nilus of Sora, one of the great fathers of the Russian church, the founder of the skete life of monks in Russia, reposed 1508 — and the 1508 agrees exactly with the `attested` 1508 this folder holds off doxologia's own «La 7 mai 1508 și-a dat sufletul său în mâinile lui Hristos», so **no date was touched**. New to the folder, and all of it in four sentences: that the Prologue calls him **one of the great fathers of the Russian church** and **the founder of the skete monastic life in Russia**; that **his relics rest in the Sora monastery** — worth noting beside the testament this folder already records, in which he asked that his body be thrown into a waste place for the beasts and the birds, since no source read before this one said where the relics are; and that his **Устав скитског живота, his Rule of the skete life, is a spiritual and practical work of the first order**. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {

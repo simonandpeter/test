@@ -11,6 +11,11 @@
       "form": "Άγαβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος από τους 70 Αποστόλους», with the rank words left off."
+    },
+    {
+      "form": "Агав",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The heading gives him no epithet."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Second of the six the day's first heading enumerates, on the same menologion day the Romanian and the Greek both keep him on. The man is the same beyond doubt: of the Seventy, the prophetic spirit, the famine foretold under Claudius Caesar, and the binding of his own hands and feet with Paul's girdle at Caesarea. **The entry adds nothing this folder does not hold**: both prophecies and both scripture references are already in its life from doxologia and saint.gr, and the Prologue gives him no year, no see and no manner of death. Where a source adds nothing the life says so, which is what the appended paragraph does. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

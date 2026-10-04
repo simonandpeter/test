@@ -11,6 +11,11 @@
       "form": "Ευψύχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Ευψύχιος που μαρτύρησε στην Καισαρεία», with the rank word and the clause naming where he was martyred left off."
+    },
+    {
+      "form": "Евпсихије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 9 April on pravoslavno.rs, „Св. муч. Евпсихије.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and names neither the city nor the reign, so the bare forename is all the source gives; it is the identical form, off an identical heading, that `eupsychius-of-caesarea-under-hadrian` carries for the Julian 7 September, and that fold is deliberate and recorded."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.04.2026 (9. април ст. ст.) — „Св. муч. Евпсихије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of two entries, on the same menologion day the Romanian and the Greek both keep him on. **This is the Eupsychius of Julian's reign and not the other one**: the entry sets him «у време цара Јулијана Оступника», names the idol Fortune, the wedding, the pulling down of the temple and the renaming of the city, and dates the death 362 — every mark of this folder and none of `eupsychius-of-caesarea-under-hadrian`, whom the corpus keeps on 7 September and who is already linked from this folder's life as a different man. **A death of 362 was added where this folder had none** — „посечен, 362. год.“, printed flat — and it is the only year any source read for this folder gives it: doxologia's life sets him in Julian's reign without a number and saint.gr does the same. `node .tmp/dd.mjs 362` reads in Russian and Greek. New besides that: that **not a single day of married life was given him**, the pagan feast falling at the time of his own wedding; that Julian's decree included **rebuilding the temple of Fortune at the Christians' own expense**; that he was **first bound to a tree and cruelly tortured** before the beheading, where doxologia has the rack and the iron combs — a variant recorded and not reconciled; and the **words** of the exchange with Basil, which this folder's life had only in summary: «You mock us, O emperor; we brought you bread, which we eat, and you give us cattle fodder, which you cannot by your own authority turn into food for men», and the emperor's «Know that I will feed you with that hay when I return from Persia!» — the apostate never came back alive from Persia, the entry closes, but perished there by a deserved and unnatural death. **The fold is deliberate**: the stored form Евпсихије is the same bare forename `eupsychius-of-caesarea-under-hadrian` holds, and the two Prologue headings are word for word identical — „Св. муч. Евпсихије.“ for the Julian 7 September and for the Julian 9 April alike — so this source offers no way to tell them apart at all. Recorded in the run's findings before this was committed. The Prologue prints no troparion and no kontakion; the hymn on this folder is the Romanian calendar's."
     }
   ],
   "hymns": [
@@ -116,5 +131,14 @@
   "related": [
     "basil-the-great",
     "eupsychius-of-caesarea-under-hadrian"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 362,
+      "display": "362",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 9 April: „Св. Евписхије беше најпре везан за дрво и мучен љуто, а по том посечен, 362. год.“ — first bound to a tree and cruelly tortured, and then beheaded, in the year 362. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro's life sets the martyrdom in the reign of Julian the Apostate without a number and saint.gr does the same, and 362 falls inside that reign. `node .tmp/dd.mjs 362` reads in Russian and Greek."
+    }
+  }
 }

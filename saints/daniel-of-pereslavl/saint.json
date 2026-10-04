@@ -12,6 +12,11 @@
       "form": "Δανιήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Όσιος Δανιήλ ο θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Данило Перејаславски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 7 April on pravoslavno.rs, „Преп. Данило Перејаславски.“, with the rank word Преп. left off. The by-name Перејаславски is kept, because it is what the heading gives beyond the forename and what distinguishes him from `daniel-the-egyptian`, which holds the bare Данило."
     }
   ],
   "related": [
@@ -61,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.04.2026 (7. април ст. ст.) — „Преп. Данило Перејаславски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, on the same menologion day the Greek keeps him on; the Russian and the Romanian rows stay `undocumented`, since neither source was read for him. The man is the same beyond doubt: Daniel of Pereslavl, whose care was the burial of the dead and who reposed in peace in 1540 — and the 1540 agrees exactly with the 1540 this folder holds off saint.gr, so **no date was touched**. New to the folder, out of four sentences: that **his particular ascetic labour was the care of the dead** — whenever he heard that somebody had been found frozen to death or killed in some other way, he would hurry to bury him decently and to pray to God for him, which is the specific behind saint.gr's general «gave himself to the poor and to the burial of the homeless»; and that **his relics rest whole**, where saint.gr knew only of a portion at the Alexander Nevsky Lavra in Saint Petersburg. This is also the folder's **second** name form of any kind: it held only the Greek Δανιήλ. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {

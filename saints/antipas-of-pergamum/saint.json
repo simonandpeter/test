@@ -12,6 +12,11 @@
       "form": "Αντίπας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Άγιος Αντίπας Επίσκοπος Περγάμου», with the rank word and the see left off."
+    },
+    {
+      "form": "Антипа",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 April on pravoslavno.rs, „Свешт. муч. Антипа епископ Пергамски, у Азији.“, with Свешт. муч. left off — the rank words this source uses for a hieromartyr, which this folder already carries in `types` — and with епископ Пергамски, у Азији left off as well: a second rank word and the see with its province, both of which this folder already keeps in `types` and in `office`. The heading leaves no epithet, so the bare forename is what the source gives, and no other folder holds a Serbian Антипа."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.04.2026 (11. април ст. ст.) — „Свешт. муч. Антипа епископ Пергамски, у Азији.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of two entries, on the same menologion day the Romanian and the Greek both keep him on. The man is the same beyond doubt: the Antipas of the Apocalypse, bishop of Pergamum, burned to death inside the brazen bull — and the **92 agrees exactly** with the 92 this folder holds off saint.gr, so **no date was touched**. New to the folder, and the entry is mostly new: the Apocalypse verse given as the Prologue gives it, «Antipas my faithful witness, who was slain among you, where Satan dwells» (2, 13), with the gloss that the place is the city of Pergamum; the state of that city, whose people lived in the dark of idolatry and in utter uncleanness, slaves of the passions, slanderers, violent men, incestuous, in a word the servants of Satan, and where **a man was counted good and righteous who had caught a Christian and killed him**; that their whole religion consisted in divination, the interpretation of dreams, the service of demons and utter debauchery; that **the demons, terrified of Antipas as of fire, appeared to the pagan priests in their sleep and confessed that they feared him and must flee the city because of him**, and that it was the priests who then raised the mob against him; the saint's own answer — when your so-called gods, the masters of the universe, are afraid of me, a mortal man, and must flee this city, do you not know by that alone that your whole religion is a delusion?; that they dragged the old man **before the temple of Artemis**, in front of which stood a bull cast in bronze, heated it with fire and threw the servant of God inside; and that **inside the burning bull he glorified God with thanksgiving, as Jonah once did in the whale and the three youths in the fiery furnace, and prayed for his flock and for the whole world** until his soul parted from the body. The Prologue's own words for him in the city are quoted in quotation marks on the page — „као светлост посред таме, као ружа посред трња, као злато посред блата“, as a light in the midst of darkness, a rose among thorns, gold in the mud. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

@@ -12,6 +12,11 @@
       "form": "Ασύγκριτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Απριλίου, «Άγιοι Άγαβος, Ρούφος, Φλέγων και Ασύγκριτος από τους 70 Αποστόλους», with the rank words left off."
+    },
+    {
+      "form": "Асинкрит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The heading is the only place on the page his name appears at all."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "Fourth of the six the day's first heading enumerates, and **the row rests on the heading, which names him, and not on the body, which does not.** The body never writes his name: where his notice should stand there is a sentence with no subject — „Беше епископ у Ирканији Азијској.“, he was bishop in Hyrcania of Asia — falling between the notice of Rufus, who has already been given Thebes of Greece, and the notice of Phlegon, who is introduced by name and said to be mentioned «in the same place» of the epistle. Asyncritus is the only one of the six the body otherwise passes over. **So the sentence reads as his by position and by what is missing, and that is a reading of a defective sentence and not something the page states**; it is recorded in the life as a reading and is written up in the run's findings. **Nothing was changed on the strength of it**: the see this folder carries is doxologia's, which ordains him bishop **in Heraclea of Pontus**, and the Prologue's Hyrcania in Asia is a different place; both stand, neither was chosen, and no `locations` was added by this batch to any folder. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

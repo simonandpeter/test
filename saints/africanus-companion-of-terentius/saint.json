@@ -16,6 +16,11 @@
       "form": "Африкан",
       "lang": "ru",
       "note": "Read out of the title on this one's name link behind the company's line for 28 октября ст. ст., «Африкан, мч.», with the rank word left off. The line itself declines the name, and neither the line nor the link gives a surname, a see or a place — the forename is the whole of what the Russian calendar prints."
+    },
+    {
+      "form": "Африкан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 10 April on pravoslavno.rs, „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“, where Св. муч. heads the whole company and belongs to no one of them, so each of the four named forenames stands bare. The heading gives him no epithet; the companionship clause this corpus keeps in his display name is not part of the name the source prints."
     }
   ],
   "sex": "male",
@@ -76,8 +81,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.04.2026 (10. април ст. ст.) — „Св. муч. Теренције, Африкан, Максим, Помпије и осталих 36 с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-23&prolog=1",
+        "year": 2026
+      },
+      "note": "Second of the **four** the day's heading enumerates by name, the other thirty-six of the company being left unnamed by both the heading and the body — see `terentius-of-africa`'s row for why that means four rows and not forty. Same menologion day as the Romanian and the Greek. The **250 agrees exactly** with what this folder holds, so **no date was touched**. What is new is that this source makes the four named men precisely **the four who were kept** when the company was divided: the thirty-six were beheaded after scourging, scraping and the salting of their wounds, and these four were put in prison in heavy irons, visited by an angel who struck the irons off and fed them at a table he set, exposed to snakes and scorpions that would not touch them and turned on the sorcerers instead, and beheaded at the last, singing psalms on the way. None of that is in the other two calendars' entries for him. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

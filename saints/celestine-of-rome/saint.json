@@ -12,6 +12,11 @@
       "form": "Κελεστίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Κελεστίνος Πάπας Ρώμης», with the rank word and the see left off."
+    },
+    {
+      "form": "Келестин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 8 April on pravoslavno.rs, „Св. Келестин папа Римски.“, with Св. left off — it is not a rank — and with папа Римски left off as well: the see is what this corpus keeps in `office`, where this folder already has «Bishop of Rome». The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.04.2026 (8. април ст. ст.) — „Св. Келестин папа Римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Romanian and the Greek both keep him on. The man is the same beyond doubt: the pope of Rome who acted against Nestorius at the time of the Third Ecumenical Council and reposed in 432 — and the 432 agrees exactly with what this folder holds off saint.gr, so **no date was touched**. New to the folder, in three sentences: that he was **a great zealot of the Orthodox faith**, and that **he wrote an epistle against the heretic Nestorius** at the time of the Third Ecumenical Council. **The epistle is the Prologue's own and does not contradict the Greek page**, which has the pope condemn the error of Nestorius at that council through a delegation of his and says nothing of a letter; both stand. The Prologue gives no see beyond Rome, which this folder keeps in `office`, no birthplace and no father, where saint.gr names Priscus. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "text": {

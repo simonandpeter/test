@@ -11,6 +11,11 @@
       "form": "Αρτέμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαρτίου, «Άγιος Αρτέμων Ιερομάρτυρας, πρεσβύτερος Λαοδικείας», with the rank word and the office left off."
+    },
+    {
+      "form": "Артемон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 13 April on pravoslavno.rs, „Свешт. муч. Артемон.“, with Свешт. муч. left off — the rank words this source uses for a hieromartyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Laodicea, which is in the body. The bare form is shared with `artemon-of-seleucia` and that fold is deliberate and recorded."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.04.2026 (13. април ст. ст.) — „Свешт. муч. Артемон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of three entries, and **on the Romanian calendar's day and not the Greek one**: doxologia keeps him on 13 April and saint.gr on 24 March, and the Prologue's menologion 13 April is the Romanian's number. One row per church, so the Greek row kept its own day and nothing was moved. The man is the same beyond doubt: the presbyter of Laodicea under Diocletian. **A death of 303 was added where this folder had none** — „поново би ухваћен и посечен 303. год.“, printed flat — and it is the only year any source read for this folder gives it. `node .tmp/dd.mjs 303` reads in Russian and Greek. The entry is almost all new: **his own words before the judge**, counting his service out in years — I am named Artemon, the servant of Christ my God; sixteen years I was a reader and read the books in the church of my God; twenty-eight years I was a deacon and read the holy Gospel; thirty-three years I have filled as a presbyter, teaching the people and setting them on the way of salvation with Christ's help; **the temple of Asclepius**, where the pagan priests kept great serpents consecrated to that «god», and the saint crossing himself and pinning every serpent to the ground by the power of the cross so that none could move, then leading them out into the courtyard, breathing on them and killing them all at a stroke; **the chief priest of that temple falling on his knees and crying «great is the Christian God!», and being baptised by the martyr with some friends of his**; the judge who meant to throw him into boiling pitch and **was thrown into it himself, two eagles having been seen to fall on him and lift him from his horse**; and the time of freedom afterwards, when he went about teaching the people **followed always by two deer he loved**. **The convert's Latin name is deliberately not written into the life**, and the reason is a measurement: the corpus's only `vitalis` is a bare-line venerable of the Romanian and Greek 11 January with no life, no place and no century, who cannot be the chief priest of Asclepius at Laodicea — and `tests/related-floor.test.mjs` reads the names a life prints in prose, linked or not, so putting the Latin form in would have asked for a `related` row that is false in both directions. The entry's own Serbian form stands in the life instead, and he is identified with nobody. **The two deer and the two eagles are the entry's and are recorded as such.** The Prologue prints no troparion and no kontakion. The stored form Артемон folds with `artemon-of-seleucia`, which holds the same bare forename; the fold is deliberate and recorded in the run's findings."
     }
   ],
   "hymns": [
@@ -79,5 +94,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 13 April: „Но поново би ухваћен и посечен 303. год.“ — he was taken again and beheaded in the year 303. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro's line prints none, and the reign of Diocletian the entry names him under is consistent with it. `node .tmp/dd.mjs 303` reads in Russian and Greek."
+    }
   }
 }

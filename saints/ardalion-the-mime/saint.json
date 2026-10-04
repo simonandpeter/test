@@ -10,6 +10,11 @@
       "form": "Αρδαλίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιος Αρδαλίων ο Μίμος», with the rank word and the epithet left off; the life page heads him «Αγιος Αρδαλιων ο Μιμος (; - 298)»."
+    },
+    {
+      "form": "Ардалион Глумац",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 14 April on pravoslavno.rs, „Св. муч. Ардалион Глумац.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. **Глумац is kept**: it is not a rank word in `BRIEF-SERBIAN.md` §5's table but the trade the entry's whole account turns on, the player of parts, and it is the by-name this folder's own English display name carries as «the Mime». This is also the folder's second name form of any kind: it held only the Greek Αρδαλίων."
     }
   ],
   "related": [],
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.04.2026 (14. април ст. ст.) — „Св. муч. Ардалион Глумац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek keeps him on; the Russian and Romanian rows stay `undocumented`. The man is the same beyond doubt: the actor who played the martyr for the crowd's amusement and then became one. **No date was touched and none was added**: this folder holds `death` 298 off saint.gr's heading «(; - 298)» and its «στα χρόνια του Διοκλητιανού (298)», and **the Prologue names the persecution under Maximian instead and prints no year at all** — so there is nothing to add and nothing to displace, and the difference of emperor is recorded here. New to the folder: that he was a **comedian**, and that **of all parts he liked best to play the martyr for the faith, mocking the Christians in every way he could**; that **when the persecution came his spirit was entirely changed**; that he **cried out aloud before the people that he was a Christian and was not joking**; and that he was **tied to a white-hot iron grid and died on it, having played at last the true and honourable part of a martyr** — which is the entry's own closing figure. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source. The stored form keeps the by-name Глумац and folds with nothing."
     }
   ],
   "text": {

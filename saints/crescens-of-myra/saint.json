@@ -11,6 +11,11 @@
       "form": "Κρήσκης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Κρήσκης ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Крискент",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 13 April on pravoslavno.rs, „Св. муч. Крискент.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Myra, which is the first thing the body says. The bare form is shared with `crescens-companion-of-quadratus` and that fold is deliberate and recorded."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.04.2026 (13. април ст. ст.) — „Св. муч. Крискент.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and **the city in its first line is what identifies him**: „Из града Мира Ликијског“, from the city of Myra in Lycia, which is this folder's own see-city and display name. **The Prologue keeps him on a day neither other calendar does**: doxologia and saint.gr both have him on 15 April and this is the Julian 13 April, two days off and not a style conversion. One row per church, so nothing was moved and nothing displaced. **No date**: the entry gives no year and none was inferred; this folder still has none from any source. New to the folder, out of four sentences: that he was **an honourable and famous citizen** of that city; that he **confessed his faith in Christ publicly and mocked the dead idols**; and that **the pagans put him to death by fire**. The stored form Крискент folds with `crescens-companion-of-quadratus`, which holds the same bare forename and which this folder already relates to; the fold is deliberate and recorded in the run's findings. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "hymns": [
