@@ -11,6 +11,11 @@
       "form": "Βαρνάβας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουνίου, «Άγιοι Βαρθολομαίος και Βαρνάβας», with the rank word left off."
+    },
+    {
+      "form": "Варнава",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. јун ст. ст., „Свети Варнава апостол“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder, although `barnabas-of-the-vetluga` stands on this same menologion day in another calendar and will fold onto this string when somebody writes his Serbian form."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.06.2026 (11. јун ст. ст.) — „Свети Варнава апостол“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A THIRD BOOK ON A TWELVE-KILOBYTE LIFE, AND IT ADDS TWO THINGS AND A NAME. Everything else in the entry is already here at length: Cyprus and the rich parents, the schooling with Saul under Gamaliel, the name Joseph changed by the apostles to Barnabas, his introducing Saul to the apostles after the conversion, the preaching with Paul and Mark at Antioch and elsewhere, the suffering on Cyprus, the burial by Mark at the western gate of Salamis with the Gospel of Matthew on his breast which he had copied with his own hand, the grave unknown for centuries, the place called «the place of health», the appearance to archbishop Anthimus of Cyprus, the emperor Zeno, the Council, the patriarch of Antioch’s claim, and the autocephaly that came of it. **A reader who finds nothing new should say so.** WHAT IS NEW: that his parents were **of the tribe of Levi**, which no page read for this folder says; that the apostle appeared to Anthimus **three times in three nights**, where the earlier account has one vision; and that the ambitious patriarch of Antioch is **named, Peter**, where the earlier account calls him only the patriarch of Antioch. The Prologue also glosses the new name in its own words, „Сином Утехе“, Son of Consolation, «since he knew extraordinarily well how to comfort human souls». NO `dates`, AND BOTH BOOKS AGREE IN GIVING NONE. The folder holds `dates: null` and this entry prints no year for anything in his life; the emperor Zeno and the Council are the only fixed points and they belong to the finding of the relics four centuries after him. **The appended paragraph carries no four-digit year at all**, deliberately: this folder has neither a birth nor a death, so `date-audit`’s `stated` reads its prose for both. Measured: `stated` 153, unmoved. `types` untouched at `apostle`, corroborated by апостол and by „Један од Седамдесеторице“ — and **the book is explicit that he is of the Seventy and not of the Twelve**, which this corpus’s single `apostle` type does not distinguish; said here because the day’s other entry opens «one of the twelve great apostles» and the two folders carry the identical `types`. `related` UNTOUCHED: `bartholomew-the-apostle`, `paul-the-apostle`, `mark-the-evangelist` and `aristobulus-of-britain` are all four already there, and the entry names nobody else who has a folder — Gamaliel’s folder exists and the existing prose already names him without a row, which `related-floor.test.mjs` does not match, and a teacher shared with Saul is a schooling and not a martyrdom or a kinship; the patriarch Peter is the adversary of the story. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Варнава», although the corpus keeps a Barnabas of the Vetluga on this same menologion day. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
