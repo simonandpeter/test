@@ -11,13 +11,19 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, «Όσιος Συμεών ο Θαυμαστορείτης», with the rank word left off and the epithet kept, as the page's own head line prints it."
+    },
+    {
+      "form": "Симеон Столпник Дивногорац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Преподобни Симеон Столпник Дивногорац“ — Преподобни is the `venerable` this corpus puts in `types`, and it is the only word stripped. **Столпник is kept although `stylite` is in `types`, and that is a reading to say out loud**: the body makes it the name he is known by rather than a rank laid on him — „затвори се у један столп, због чега се и прозва Столпником“ is the other stylite of this same day, and here „По имену ове горе и сам Симеон прозват је Дивногорац“ does the same work for the second epithet. The heading prints the three words as one name and the fullest form is all three. **It was measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Симеон Столпник Дивногорац», and a bare «Симеон» would have folded onto the corpus’s other Symeons for nothing. The Greek form on this folder, «Συμεών», is the bare one and is left alone; the Romanian, «Simeon cel din Muntele Minunat», is the same mountain by its Romanian name."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "stylite",
-    "monk"
+    "monk",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -56,14 +62,41 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.06.2026 (24. мај ст. ст.) — „Преподобни Симеон Столпник Дивногорац“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 24/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as all three of this day’s and all three of the 23 May’s do. **TWO FIRST DATES, BOTH STATED AND NEITHER DERIVED.** This folder has stood undated: the doxologia source line on it records that the page „prints no troparion for him and no year anywhere in the text“, and saint.gr gave none. The Prologue states both ends outright — „родио се у Антиохији 522. године“ and „Лета Господњег 596. … представи се Симеон Господу“ — so `dates` is written `birth` 522 to 522 and `death` 596 to 596, `basis: \"traditional\"`. **THE LIFESPAN IS USED FOR NOTHING.** „а у седамдесет петој години живота свога“ — in the seventy-fifth year of his life — is a duration, and this corpus refuses a lifespan used to derive a year; it is not needed, both years being stated, and it agrees with them (522 to 596 is a man in his seventy-fifth year). It stands in the prose. **THE REIGN IS USED FOR NOTHING EITHER**: „у време цара Јустина Старијега“ is an emperor’s reign and no year comes off it. **A DISAGREEMENT THIS CORPUS ALREADY CONTAINED, AND IT IS NAMED AND NOT RESOLVED.** `martha-mother-of-symeon`’s life — written off the Russian and Greek calendars for 1 September, to tell that Martha from this one’s — says in prose that the stylite of the Wonderful Mountain „died in 551“. **The Prologue says 596.** That 551 is prose in another folder’s life, taken from a calendar never read for this folder, so **it is not a source for these dates and `dates` was not widened to 551–596 on the strength of it**; widening on another folder’s prose would be inventing an interval no book read here states. **It is left for the author or a later reader**, and it is the one thing on this day somebody else must decide. **`wonderworker` ADDED, AND IT CANNOT CHANGE WHAT PRINTS OVER HIM.** The heading gives no Чудотворац, but the body gives the gift in a sentence of nothing else — „дата му је била ретка благодат, помоћу које је исцељивао сваку болест, укроћавао зверове, прозирао у далеке крајеве света и у срца људска“ — and Чудотворац maps to `wonderworker` in BRIEF-SERBIAN.md §5. `wonderworker` is **not in `src/lib/honorific.js`’s `PRECEDENCE`**, so the page goes on reading *Venerable Symeon* off the `venerable` he already carries and the word shows only in the facts line; this is the same reading made on 15 May, where it was added „where it changes nothing in print“. `venerable`, `stylite` and `monk` are all corroborated here: „Многе године провео је на столпу“. **New here, and the Prologue is fuller on his beginning than either other book**: that he was **born at Antioch**; that **his father perished in an earthquake and he was left alone with his mother Martha**; that **in the sixth year of his life he withdrew into the desert to a spiritual father named John**, under whose guidance he took up great fasting and prayer to the astonishment of all who saw him; that after terrible demonic temptations **the Lord Christ appeared to him in the form of a beautiful boy**, and that after the vision a great love for Christ burned up in his heart; that **the mountain was called Дивна, the Wonderful, by the Lord Himself, and that he is called Дивногорац after the mountain’s name**; the whole list of his gifts, down to **thirty days without sleep and longer without food, and food received from the hands of angels**; and that the Saviour’s words at John 14:12 were fulfilled in him entirely. **ONE RECIPROCAL `related` ROW, AND IT WAS ALREADY HALF THERE.** `martha-of-antioch` is „Martha, mother of Symeon of the Wonderful Mountain“, kept on the Romanian and Greek 4 July, and **her folder already carries `symeon-of-the-wonderful-mountain` in `related` while this folder carried no row back to her** — the existing life never named her, so `related-floor.test.mjs` had nothing to catch. The Prologue names her, „он остане сам с матером Мартом“, which is a kinship the body narrates and the test that owes a row, so `martha-of-antioch` is added here and the pair now reads in both directions. **`martha-mother-of-symeon` is NOT that row**: her own life says in so many words that she is the elder Symeon’s mother and that the two Marthas „are easily run together“. **The spiritual father John and the emperor Justin the Elder gain nothing**, by the coordinator’s third ruling: a bare «Јован» in a desert cannot be told from the nine folders holding that form, and no calendar read for this corpus keeps Justin I. No `locations`, although Antioch and the Wonderful Mountain are both named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "david-of-thessalonica"
-  ]
+    "david-of-thessalonica",
+    "martha-of-antioch"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 522,
+      "latest": 522,
+      "display": "522",
+      "basis": "traditional",
+      "note": "Охридски пролог за 06.06.2026 (24. мај ст. ст.): „Овај дивни светитељ родио се у Антиохији 522. године, у време цара Јустина Старијега“. The first year of birth any calendar read for this folder states; doxologia prints no year anywhere in its text and saint.gr gives none."
+    },
+    "death": {
+      "earliest": 596,
+      "latest": 596,
+      "display": "596",
+      "basis": "traditional",
+      "note": "Охридски пролог за 06.06.2026 (24. мај ст. ст.): „Лета Господњег 596. а у седамдесет петој години живота свога, представи се Симеон Господу“. The seventy-fifth year is a duration and is used for nothing; it agrees with the stated 522. `martha-mother-of-symeon`’s life says in prose, off calendars never read for this folder, that this Symeon died in 551; that is recorded as a disagreement and nothing here was widened to meet it."
+    }
+  }
 }
