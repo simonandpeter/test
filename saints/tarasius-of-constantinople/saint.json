@@ -12,6 +12,11 @@
       "form": "Ταράσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Φεβρουαρίου, «Άγιος Ταράσιος Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Тарасије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 25. фебруар ст. ст., „Свети Тарасије, патријарх цариградски.“, with Свети, the rank word патријарх and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -55,8 +60,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.03.2026 (25. фебруар ст. ст.) — „Свети Тарасије, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-10&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
