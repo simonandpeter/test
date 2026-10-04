@@ -834,6 +834,7 @@ export const el = {
     'Bishop of Athens': 'Επίσκοπος Αθηνών',
     'Bishop of Auxerre': 'Επίσκοπος Ωξέρ',
     'Bishop of Azkuri': 'Επίσκοπος Αζκούρι',
+    'Bishop of Balakhna': 'Επίσκοπος Μπαλάχνα',
     'Bishop of Banja Luka': 'Επίσκοπος Μπάνια Λούκα',
     'Bishop of Barcelona': 'Επίσκοπος Βαρκελώνης',
     'Bishop of Belgorod': 'Επίσκοπος Μπελγκορόντ',

@@ -1,0 +1,66 @@
+{
+  "slug": "alexis-porfiryev",
+  "display_name": "Alexis (Porfiryev)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Алексий (Порфирьев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Алексий (Порфирьев), протоиерей, сщмч.», with the rank words left off. The line itself declines the name and gives it without the surname, as «Сщмчч. ... Алексия пресвитера»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 24 октября», the January day being the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Сщмчч. Лаврентия , еп. Балахнинского, Алексия пресвитера и мч. Алексия (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "He is the second of the three on the line and the first of its two men called Алексий, told from the second by the line itself, which calls him пресвитера and the other мч. The link behind his place says протоиерей, so his office says archpriest and his types keep the line's word. No `Life/` href follows his name, but the calendar is not silent about him: the bishop's own life names him as the man who was shot beside him, and his name page carries a link to an article on Православие.Ru, «Свечи на воде», with a sentence of its own."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "6 November 1918",
+      "basis": "attested",
+      "note": "The bishop's life, which is the only narrative the calendar carries for this line, has the two of them led out together: «24 октября (6 ноября н. ст.) 1918 года их повели в сад, где уже была вырыта могила». The source's own pair of styles is recorded here and the new-style number is the display, because `lib/date-display.js` cannot read a pair. 6 November 1918 is the civil date of the 24 октября ст. ст. this row keeps him on."
+    }
+  },
+  "related": [
+    "laurence-knyazev",
+    "alexis-neidgardt"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

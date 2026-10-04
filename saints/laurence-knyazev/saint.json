@@ -1,0 +1,73 @@
+{
+  "slug": "laurence-knyazev",
+  "display_name": "Laurence (Knyazev)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Balakhna",
+  "names": [
+    {
+      "form": "Лаврентий (Князев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Святитель Лаврентий (Князев), епископ Балахнинский, сщмч.», with the rank words and the see left off. The line itself declines it, as «Сщмчч. Лаврентия , еп. Балахнинского»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page and his name page both head «Дни памяти: 26 января (Новомуч.) , 24 октября», the January day being the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Сщмчч. Лаврентия , еп. Балахнинского, Алексия пресвитера и мч. Алексия (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "He is the only one of the three on this line for whom the calendar carries a life, and that life is the source for the second of them too. The cached day page was parsed to be sure of it: a `Life/` href follows the name it belongs to, and `life4843.htm` follows Лаврентия and nothing follows either Алексий."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился в 1877 году в городе Кашире»; the page gives the year and no day."
+    },
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "6 November 1918",
+      "basis": "attested",
+      "note": "The same life: «24 октября (6 ноября н. ст.) 1918 года их повели в сад, где уже была вырыта могила». The source's own pair of styles is recorded here and the new-style number is the display, because `lib/date-display.js` cannot read a pair in any of the four languages. 6 November 1918 is the civil date of the 24 октября ст. ст. this row keeps him on."
+    }
+  },
+  "related": [
+    "alexis-porfiryev",
+    "alexis-neidgardt"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

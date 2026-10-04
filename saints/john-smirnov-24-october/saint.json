@@ -1,0 +1,65 @@
+{
+  "slug": "john-smirnov-24-october",
+  "display_name": "John (Smirnov) (24 October)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Иоанн (Смирнов), иерей, сщмч.», with the rank words left off. The line itself declines the name and gives it without the surname, as «Сщмчч. Иоанна ... пресвитеров»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 24 октября», the January day being the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Сщмчч. Иоанна и Николая пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "**He is not the corpus's `john-presbyter-martyr-1937-27-august-a`, who also stores «Иоанн Смирнов».** That one is an archpriest of Zaraysk whom this same calendar keeps on 27 августа ст. ст., in the line «Сщмчч. Иоанна, Иоанна пресвитеров и прмч. Мефодия (1937)»; this one is a иерей, a priest, whose name page is 9639 and whose day is 24 октября. Two grades, two days, two name pages, so two men by the rule this wave has settled, and the slug and the display name carry the day, as `alexander-orlov-20-october` does. The year 1937 is the same for both. The calendar carries no life for this one."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 24 октября ст. ст. The calendar carries no life page for him and gives no day."
+    }
+  },
+  "related": [
+    "nicholas-nikolsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
