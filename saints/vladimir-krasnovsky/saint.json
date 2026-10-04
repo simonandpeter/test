@@ -1,0 +1,67 @@
+{
+  "slug": "vladimir-krasnovsky",
+  "display_name": "Vladimir (Krasnovsky)",
+  "names": [
+    {
+      "form": "Владимир (Красновский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 12 ноября ст. ст., «Владимир (Красновский), иерей, сщмч.», with the rank word and the grade word left off. The day's own line declines the name and gives the forename alone, «Сщмчч. ... Владимира ... пресвитеров». azbyka.ru prints the surname on its own line, «Владимира Красновского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Сщмчч. Константина , Владимира , Александра , Матфея , Димитрия , Петра ,пресвитеров и Симеона диакона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "5 July 1889",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Священномученик Владимир родился 5 июля 1889 года в селе Измайлово под Москвой в семье псаломщика Платона Красновского; мать его была при храме просвирней.»"
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "25 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Священник Владимир Красновский был расстрелян 25 ноября 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой», the NKVD troika having sentenced him on 17 November. days.pravoslavie.ru's line for 12 ноября ст. ст. closes with the year 1937, and 25 November 1937 is 12 November old style."
+    }
+  },
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

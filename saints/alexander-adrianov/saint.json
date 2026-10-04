@@ -1,0 +1,60 @@
+{
+  "slug": "alexander-adrianov",
+  "display_name": "Alexander (Adrianov)",
+  "names": [
+    {
+      "form": "Александр (Адрианов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 12 ноября ст. ст., «Александр (Адрианов), иерей, сщмч.», with the rank word and the grade word left off. The day's own line declines the name and gives it without the surname, «Сщмч. Александра пресвитера». azbyka.ru prints the surname on its own line, «Сщмч. Александра Адрианова, пресвитера (1918)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Сщмч. Александра пресвитера (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "25 November 1918",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him gives the day in both styles, «12/25 ноября отец Александр был расстрелян», and the new-style number is what is displayed here. The same page records that on 7 March 2018 the Holy Synod entered him in the menologion «с определением празднования дня памяти 25 ноября», and days.pravoslavie.ru's line for 12 ноября ст. ст. closes with the year 1918. 12 ноября ст. ст. is the civil 25 November, so the day the calendar keeps him on is the day he was shot."
+    }
+  },
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
