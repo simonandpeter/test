@@ -11,6 +11,11 @@
       "form": "Βασιλεύς",
       "lang": "el",
       "note": "Read out of saint.gr's page for 26 Απριλίου, which heads him «Άγιος Βασιλέας Ιερομάρτυρας Επίσκοπος Αμασείας» and then writes the name throughout as Βασιλεύς — «Ο Άγιος Ιερομάρτυς Βασιλεύς έζησε κατά τους χρόνους του βασιλέως Λικινίου» — with the rank words and the see left off; the page glosses it «ΒΑΣΙΛΕΥΣ (βάσις + λαός) = ο θεμελιωτής της ευτυχίας του λαού»."
+    },
+    {
+      "form": "Василије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Свешт. муч. Василије еп. Амасијски.“ Свешт. муч. is the `hieromartyr` this folder already carries in `types`, and еп. Амасијски is the see, which it keeps in `office`; `honorific.js` composes both back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Four other folders already hold it; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.05.2026 (26. април ст. ст.) — „Свешт. муч. Василије еп. Амасијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The same passion the Romanian and Greek readings of this folder tell, in far fewer words and told from the emperor's side: Licinius, Constantine's brother-in-law, feigning Christianity until the whole East was given him to govern; the maiden of the empress's household he set out to defile; her flight to Amasea and her welcome by this bishop; the intercepted letter; and the bishop taken alone because she had died first. **It gives „322. год.“ for the beheading**, and since this folder carried no date at all, that is the date it now carries. The number agrees with saint.gr's and does not mean the same thing there: that page puts the persecuting measures and the denunciation of the bishop of Amasea in 322 and gives no year for the martyrdom. New from this book: the empress grieving and unable to turn her husband; the recovery of the body near **Sinope**, drawn out of the water with fishermen's nets at the showing of an angel; and the end of Licinius himself — beaten by Constantine, taken, and exiled to Gaul. The Prologue prints no troparion and no kontakion, so this folder gains no hymn."
     }
   ],
   "text": {
@@ -91,5 +106,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 322,
+      "latest": 322,
+      "display": "322",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 26. април ст. ст.: „После мука и тамнице блажени овај муж би посечен и бачен у море, 322. год.“ — the first year this folder has carried. saint.gr prints the same number for a different thing, the persecuting measures and the denunciation of the bishop, and gives no year for the martyrdom itself; doxologia's life dates him only by the reign of Licinius in the East."
+    }
+  }
 }

@@ -1,0 +1,50 @@
+{
+  "slug": "tibalus-of-cibalae",
+  "display_name": "Tibalus of Cibalae",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Тибал",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. муч. Тибал.“, with Св. left off as no rank and муч. left off as the `martyr` this folder carries in `types`. The heading gives nothing else — no see, no epithet and no city — so the bare forename is the whole of it. **This is the only form any calendar read for this corpus prints for him**; the English name restores the Latin ending the Serbian drops, as this same page's Фаустијан and Квинтилијан drop the endings of Faustianus and Quintilianus, and Cibalae is the place the body names as where he suffered."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. муч. Тибал.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "A new folder, and the day's only one. The whole entry is two sentences: „Словенин из Паноније. У време Диоклецијана беше страшно мучен за веру Христову, и пострада у месту Цибалу.“ **No other calendar read for this corpus names him**, measured rather than assumed: `ls saints | grep -iE 'thi|tib|tibal'` names only the two Tiburtii; `grep -ril 'pannonia\\|cibalae'` over `saints/*/saint.json` and `saints/*/life.md` names twenty folders and not one of them is a Tibalus — the three the corpus keeps who suffered at Cibalae are a presbyter and two deacons on the Romanian 21 august, different men with different names; and `.tmp/sr-namesweep.mjs` proposes nothing but a column of Tobolsk hierarchs. **No date**: „У време Диоклецијана“ is a reign without printed bounds, which BRIEF-SERBIAN.md's standing rule does not let a reader turn into an interval, so this folder carries none. **No `locations`**: the page names Pannonia and Cibalae, but an undated located saint has to go on `map-span.test.mjs`'s UNDATED list, and nothing here needs a point. **The English display name is a reading and the author may want to change it** — the Serbian form is all that is printed, and the Latin ending is restored by the same pattern this page's own Фаустијан and Квинтилијан show. The Prologue prints no hymn."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

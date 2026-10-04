@@ -12,6 +12,11 @@
       "form": "Αννιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Απριλίου, «Άγιος Αννιανός Επίσκοπος Αλεξανδρείας», with the rank word and the see left off."
+    },
+    {
+      "form": "Аниан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 25. април ст. ст., „Св. Аниан, други епископ Александријски.“ Св. is not a rank, and the appositive clause after the comma — други епископ Александријски, the second bishop of Alexandria — is the grade and the see, which this folder keeps in `types` and in `office` and which `honorific.js` composes back. The heading gives no epithet, so the bare forename is the whole of the Serbian form."
     }
   ],
   "related": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.05.2026 (25. април ст. ст.) — „Св. Аниан, други епископ Александријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading names him the second bishop of Alexandria and the entry is the same meeting saint.gr tells — the cobbler who wounded his own left hand mending Mark's shoe, the healing with spittle, the baptism, the succession — so this is that man and not a second folder. **It gives no year**, so the three readings this folder already carries for his death, 82, 85 or 86, were left exactly as they stood and nothing was narrowed. New from this book: that Mark's shoe split on one foot as he stepped from the ship onto dry land; that the tool was **шило**, an awl, driven through the left hand, and that the cobbler cried out with the pain; that Mark mixed **прашину с пљувачком**, dust with his own spittle, rather than clay; that the cobbler marvelled and asked Mark home; that **he was baptized with his whole household**; and that it was the devoutness and the zeal he then showed in the work of God for which Mark ordained him bishop. The Prologue prints no hymn of any kind."
     }
   ],
   "text": {

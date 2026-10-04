@@ -11,6 +11,11 @@
       "form": "Θεόγνις",
       "lang": "el",
       "note": "Read out of saint.gr's heading on the page of «Άγιοι Εννέα Μάρτυρες εν Κυζίκω», «Άγιος Θεόγνις Μάρτυρας Εν Κυζίκω», with the rank word and the place left off."
+    },
+    {
+      "form": "Теогоније",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's entry for 29. април ст. ст., out of the naming clause „Имена су њихова Теогоније, Руф, Антипатер, Теостих, Артем, Магн, Теодот, Тавмасије и Филимон.“ — a bare list with no rank word on any of them and no epithet; the heading names nobody, so there is no heading form to take, and Cyzicus, which this corpus's English name keeps, is in the heading and not in the list. The book prints Теогоније, where the Greek gives Θεόγνις and doxologia Teognid; a copied script form is never corrected by a reader, so it is stored exactly as printed although it is the furthest of the nine from the Greek."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.05.2026 (29. април ст. ст.) — „Св. Девет мученика у Кизику.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-12&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading names nobody — „Св. Девет мученика у Кизику.“ counts them and stops — and the body is where this book names them**, so the citation above is that heading whole, per BRIEF-SERBIAN.md §4 and the coordinator's ruling for a heading that enumerates its members in the body. The body's own naming clause is „Имена су њихова Теогоније, Руф, Антипатер, Теостих, Артем, Магн, Теодот, Тавмасије и Филимон.“ — nine names, in the same order as doxologia's long life and as saint.gr's notice, with the same city, the same refusal, the same beheading and the same incorrupt relics, so they are the same nine. **The form is the furthest of the nine from the Greek** — Теогоније against Θεόγνις — and is stored as printed. He is first in this list as he is first in both of the others', which is part of the identification. **A first date**: „Чесно пострадаше и прославише се у III веку“ → `death` 201–300, `display: \"3rd century\"`, `traditional`, where doxologia says only that it happened before Constantine's reign and saint.gr gives no year and names no emperor. `node .tmp/dd.mjs \"3rd century\"` reads «III в.» and «3ος αι.» New besides: that the church at Cyzicus was built **in the emperor Constantine's own time** and that the relics were laid in it — doxologia has the Christians of the city raise it after the persecution ceased, without putting it in the reign — and the sentence about despising the temporal for the eternal. The Prologue prints no hymn; saint.gr's apolytikion of the nine together was taken by neither reading."
     }
   ],
   "text": {
@@ -90,5 +105,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 29. април ст. ст.: „Чесно пострадаше и прославише се у III веку.“ — the first century any calendar read for these nine has given. doxologia's life places the martyrdom only before the reign of Constantine the Great, which the third century satisfies, and saint.gr gives no year and names no emperor."
+    }
+  }
 }

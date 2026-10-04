@@ -13,6 +13,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Απριλίου, «Όσιος Ιωάννης ο Ομολογητής ηγούμενος Μονής Καθαρών», with the rank word, the epithet and the office left off."
+    },
+    {
+      "form": "Јован",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 27. април ст. ст., „Преп. Јован исповедник.“ Преп. is the `venerable` and исповедник the `confessor` this folder already carries in `types`, both of which `honorific.js` composes back; the heading gives no epithet and no house — the Kathara is the body's and this corpus's English name's — so the bare forename is the whole of the Serbian form. Seven other folders already hold it, which makes this the widest fold of the wave; the row is in the batch's commit message."
     }
   ],
   "related": [
@@ -27,11 +32,11 @@
       "note": "saint.gr: «Ο Όσιος Ιωάννης γεννήθηκε περί το 778 μ.Χ. στην Ειρηνούπολη» — about the year 778 — and the page heads him «(778 - 839)». The single year is the page's; the hedge «περί» is the page's too and is kept in the display."
     },
     "death": {
-      "earliest": 839,
+      "earliest": 832,
       "latest": 839,
-      "display": "probably 839",
+      "display": "832 or 839",
       "basis": "traditional",
-      "note": "saint.gr: «Εκεί ο Όσιος Ιωάννης, μετά από δυόμισι χρόνια, πιθανώς το έτος 839 μ.Χ., κοιμήθηκε με ειρήνη» — probably in the year 839 — and the page heads him «(778 - 839)». The «πιθανώς» is the page's own and is kept in the display."
+      "note": "Two sources seven years apart, each hedging its own number, and the interval carries both rather than choosing. The Охридски пролог for 27. април ст. ст.: „сконча у прогонству, око 832. год.“ — he ended in exile about the year 832. saint.gr: «Εκεί ο Όσιος Ιωάννης, μετά από δυόμισι χρόνια, πιθανώς το έτος 839 μ.Χ., κοιμήθηκε με ειρήνη» — probably in the year 839 — reached by its own narrative, which exiles him to the island of Aphousia in 836 and has him die two and a half years later; and the page heads him «(778 - 839)». Both have him die in exile, so the disagreement is in the number alone; the earlier reading of 839, and its «πιθανώς», were neither narrowed nor displaced."
     }
   },
   "attestations": [
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.05.2026 (27. април ст. ст.) — „Преп. Јован исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man: the abbot of the Kathara who suffered for the icons under Leo and under Theophilus and died in exile. **The year is where this book and saint.gr part** — „сконча у прогонству, око 832. год.“ against saint.gr's exile to Aphousia in 836 and a death there two and a half years after, «πιθανώς το έτος 839 μ.Χ.», with the page heading him «(778 - 839)». Neither was displaced and neither chosen: the death is now the interval **832 or 839** with both readings and both of their hedges quoted in its note, and the birth of about 778 stands untouched. New from this book, and the thing the Greek notice does not say although it is far longer: **the monastery of the Pure Ones, the Kathara, was built near Nicaea in the reign of Justin, in the sixth century**. The Prologue prints no hymn."
     }
   ],
   "text": {

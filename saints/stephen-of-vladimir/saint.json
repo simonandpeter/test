@@ -5,7 +5,8 @@
   "types": [
     "monk",
     "abbot",
-    "bishop"
+    "bishop",
+    "venerable"
   ],
   "office": "Bishop of Vladimir",
   "names": [
@@ -13,6 +14,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Στέφανος Επίσκοπος Βλαντιμίρ», with the rank word and the see left off."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 27. април ст. ст., „Преп. Стефан еп. Владимирски.“ Преп. is the `venerable` this upgrade adds to `types`, and еп. Владимирски is the grade and the see this folder keeps in `types` and in `office` as Bishop of Vladimir; `honorific.js` composes all of it back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Nine other folders already hold the same bare spelling across Serbian and Russian; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "related": [
@@ -55,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.05.2026 (27. април ст. ст.) — „Преп. Стефан еп. Владимирски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man saint.gr keeps on this day: the abbot of the Caves of Kyiv driven out of his own monastery and afterwards bishop of Vladimir, dead in 1094. **The year agrees exactly**, so this folder's dates were not touched. New from this book: that he was a **disciple of Theodosius of the Caves** — where the Greek notice says only that he became abbot after Theodosius fell asleep; that his labour was over the good ordering of the monastic life and over **the adorning of the churches**; that the brethren not only deposed him from the abbacy but **drove him out of the monastery**; and the sentence the whole entry turns on, „Бог који не оставља праведника дуго под понижењем од неправедника“ — God, who does not leave the righteous long under humiliation from the unrighteous. It does not have saint.gr's daily liturgy for the founders, its monastery at Klov, or John the metropolitan who consecrated him. **`venerable` was added to `types`**: the heading's rank word is Преп., which BRIEF-SERBIAN.md §5 reads as venerable, and no calendar read for this folder before gave him a rank word at all — so the rank is recorded where `honorific.js` can compose it rather than kept inside the name form. The Prologue prints no hymn."
     }
   ],
   "text": {

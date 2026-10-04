@@ -10,6 +10,11 @@
       "form": "Μαρσάλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Επτά Μάρτυρες Σατορνίνος, Ιακισχόλος, Φαυστιανός, Ιανουάριος, Μαρσάλιος, Ευφράσιος και Μάμμινος»; its own page heads him «Άγιος Μαρσάλιος ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Марсалије",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's entry for 28. април ст. ст., the fifth of the seven in a bare list with no rank word and no epithet."
     }
   ],
   "related": [
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. апостоли Јасон и Сосипатер, и Керкира девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The fifth of the seven the body enumerates; the heading names the apostles and the king's daughter, so the citation is that heading whole, per §4 and the coordinator's ruling. Same count, same order and same story as saint.gr's seven. New: the lambs made of wolves, and the king's own order for the boiling pitch. **No year**, so this folder's empty `dates` stay empty. The Prologue prints no hymn."
     }
   ],
   "text": {

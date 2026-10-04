@@ -10,6 +10,11 @@
       "form": "Κέρκυρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Αγία Κέρκυρα η Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Керкира",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“, with Св. left off as no rank and девица, the `virgin` rank word that follows her name, left off as a rank — although this folder's `types` carry `martyr` and not `virgin`, so the stripping removes a rank the composer will not put back. The heading gives her no father's name and no island, both of which are the body's. The bare forename is the whole of the Serbian form, and it is the island's own name."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. апостоли Јасон и Сосипатер, и Керкира девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The third name of an enumerated heading of three — „и Керкира девица“ — so a row off the heading itself and no company note needed. The same woman: the daughter of the king of Corfu, converted by the sufferings of the two apostles, who gave her ornaments to the poor and was killed with arrows. **It gives no year**, so the first century this folder carries from saint.gr stands untouched. **Two differences from the Greek page are recorded and neither is resolved.** First, **this book has no Ethiopian**: her father shuts her in a prison of her own, fails to turn her, has the prison **burned** — and she lives through it, so that many of the people are baptized at the wonder — and only then has her tied to a tree and shot. saint.gr instead hands her to an Ethiopian to be corrupted, who believes through her and is killed for it. Second, this book drowns her father at sea, „као негда фараон“, and gives the name Севастијан to a **new** king who takes the faith, where saint.gr has Kerkyllinos himself repent, be baptized and be renamed Sebastianos. Nothing was chosen and no folder made for either reading. The Prologue prints no hymn."
     }
   ],
   "text": {
