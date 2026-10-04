@@ -11,6 +11,11 @@
       "form": "Ακυλίνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουνίου, «Αγία Ακυλίνη», with the rank word left off."
+    },
+    {
+      "form": "Аквилина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Света мученица Аквилина“ — Света is not a rank and мученица is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. `foldchk.py` holds no folder on «Аквилина», so there is no fold."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.06.2026 (13. јун ст. ст.) — „Света мученица Аквилина“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 13 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. A FIRST DATE ON A FOLDER THAT HELD NONE. The folder carried no `dates` object at all. This book states one flat and last: „А пострада и увенча се венцем мученичким 293. године“. `death` 293 to 293, display «293», basis traditional, the Prologue’s own sentence in the note. **No `birth`, and the entry hands one over almost ready**: it says „Беше светој Аквилини дванаест година од рођења када пострада за Господа“ — she was twelve when she suffered. Twelve from two hundred and ninety-three is a year reached by arithmetic and a lifespan besides, and both are refused; the twelve years are stated in the life as the book states them and no year of birth is written. WHAT ELSE IS NEW, AND IT IS THE WHOLE OF HER PASSION. Born in the Palestinian city of Byblos of honourable Christian parents, which is the place the folder’s display name already carries; fully taught the Christian life in her seventh year and in her tenth so full of divine understanding and the grace of the Holy Spirit that she preached Christ to her companions with great force; informed against to the imperial governor Volusian when Diocletian’s persecution began; scourged, then a red-hot rod driven through her ears and her brain; confessing Christ freely and openly to the last hour, and falling as dead when brain and blood ran from her head; carried out of the city and thrown on a dunghill for the dogs; an angel of God raising her in the night with „Устани, буди здрава!“; her prayer not to be denied the finishing of her contest and the voice from heaven „Иди, биће ти, како молиш!“; the city gate opening of itself before her; her coming in like a spirit to the governor’s own bedside and his unspeakable terror at a living girl he held for dead; the executioners led out next day, her kneeling prayer, and that **she gave up her spirit before the stroke and the executioner beheaded her dead** — which is why the entry’s own order is kept in the life. And that her relics gave healing to many sick. `types` UNTOUCHED: `martyr` and `virgin` are both there already, мученица in the heading is the first and девица in the body is the second, which the folder had from elsewhere. NO ROWS for Volusian, a pagan governor with no folder, nor for Diocletian, an emperor in a life taking no row for being one, nor for the parents or the companions, who are unnamed. No `office`, no `locations`, no `related`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -119,5 +134,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 293,
+      "latest": 293,
+      "display": "293",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 13. јун ст. ст. ends the entry „А пострада и увенча се венцем мученичким 293. године“. The folder held no date of any kind before this: neither doxologia.ro nor saint.gr gave a year. The same entry says she was twelve years old when she suffered; no year of birth is taken from that, because it would be both a lifespan and a year reached by arithmetic (5 October 2026)."
+    }
+  }
 }

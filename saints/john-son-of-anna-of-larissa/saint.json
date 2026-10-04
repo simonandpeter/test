@@ -10,6 +10,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Άννα και Ιωάννης ο γιος της», with the rank word left off. The page says the name is handed down by the Synaxaria selecta and by Nikodemos the Hagiorite, and that Paul of Monemvasia's narrative and her synaxarion do not give it."
+    },
+    {
+      "form": "Јован",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Светa Ана и син јој Јован“ — „Светa Ана и син јој“ is his mother and the relation, not part of his name, and it comes off, leaving the bare forename, which is the only word this book gives him. **THE FOLD IS DELIBERATE AND THE WIDEST THIS WAVE HAS WRITTEN**: `foldchk.py` returns nine folders already holding «Јован» as an `sr` form — `john-disciple-of-gregory-the-decapolite`, `john-of-edessa`, `john-of-gothia`, `john-of-konitsa`, `john-of-novgorod`, `john-of-sfakia-new-martyr`, `john-of-vilnius`, `john-son-of-xenophon`, `john-the-confessor-of-kathara` — so this is the tenth on the string. It is written anyway, because §6 takes the fullest form the calendar gives and this calendar gives one word: the heading has no by-name, no see and no place to break the fold with, and building «Јован Ларисински» out of saint.gr’s page would be inventing a form this book does not print. The ten are told apart by their folders and their days."
     }
   ],
   "dates": {
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.06.2026 (13. јун ст. ст.) — „Светa Ана и син јој Јован“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, the son. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 13 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. ONE ENTRY, TWO MEN, TWO ROWS. The heading is „Светa Ана и син јој Јован“ and the corpus keeps both, `anna-of-larissa` and `john-son-of-anna-of-larissa`, already `related` to each other in both directions. The entry is therefore two upgrades off one heading, and each row quotes the whole heading, which is the only form the book prints for either of them. THE IDENTIFICATION IS MADE ON THE SCENE AND NOT ON THE NAME. The Prologue names neither Larissa nor Monemvasia, so the place cannot carry it; what carries it is the scene, which is the same in every particular as the one the `greek` rows already stand on — an orphan girl taken into a great man’s house and brought up there, married to that man’s son, the relatives pressing him after the old man’s death to put her away for her low birth and marry better, the husband fearing God and refusing, the wife leaving him secretly rather than let him stand against his kin, the flight to a far island with no living soul on it, the child born there, thirty years of fasting and prayer, and a hieromonk put ashore by God’s providence who baptises the boy and gives him the name John. The feast is the same Julian 13 June and the heading is the same pairing as saint.gr’s «Οσία Άννα και Ιωάννης ο γιος της». A FIFTH CENTURY AGAINST A NINTH, AND `dates` IS NOT TOUCHED. The entry ends „Подвизавала се ова света душа у V веку и мирно скончала“ — the fifth century. The folders hold `floruit` 801 to 950 off saint.gr, which puts her in the middle Byzantine period, ninth century to the middle of the tenth, and dates its own source, Paul of Monemvasia’s narrative, to the tenth. **Four hundred years apart and irreconcilable**: widening would give a floruit six centuries wide, which would say nothing, and narrowing to either would choose between two books. `dates` is left exactly as it stood and both readings are stated in the life. NO NEW ROWS AND NO NEW TYPES. The great man, his son, the son’s kin and the hieromonk who baptised the boy are all unnamed in this book and take no rows; the mother and son are `related` to each other already. The heading carries no rank word for either of them — Света and Свети are not ranks — so nothing is added to `types`, and the thirty years of fasting and prayer are a sentence of the body, which does not write a rank. The Prologue prints no troparion and no kontakion; the day carries only the verse. This book says of him only that he was born on the island and that the hieromonk baptised him and gave him the name John; it gives him no age, where saint.gr says he was about thirty when he was baptised."
     }
   ],
   "text": {

@@ -12,6 +12,11 @@
       "form": "Άννα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουνίου, «Οσία Άννα και Ιωάννης ο γιος της», with the rank word left off."
+    },
+    {
+      "form": "Ана",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. јун ст. ст., „Светa Ана и син јој Јован“ — Светa is not a rank and „и син јој Јован“ is the other saint of the same entry, not part of her name; both come off and the bare forename is left, which is all this book gives her. **The fold is deliberate**: `foldchk.py` returns `anna-the-righteous`, `sr`, for «Ана», so this is the second folder on the string, and the heading offers nothing fuller — it names no Larissa and no by-name at all, and a form may not be built out of a body or out of another calendar’s page."
     }
   ],
   "dates": {
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.06.2026 (13. јун ст. ст.) — „Светa Ана и син јој Јован“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, the mother. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 13 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. ONE ENTRY, TWO MEN, TWO ROWS. The heading is „Светa Ана и син јој Јован“ and the corpus keeps both, `anna-of-larissa` and `john-son-of-anna-of-larissa`, already `related` to each other in both directions. The entry is therefore two upgrades off one heading, and each row quotes the whole heading, which is the only form the book prints for either of them. THE IDENTIFICATION IS MADE ON THE SCENE AND NOT ON THE NAME. The Prologue names neither Larissa nor Monemvasia, so the place cannot carry it; what carries it is the scene, which is the same in every particular as the one the `greek` rows already stand on — an orphan girl taken into a great man’s house and brought up there, married to that man’s son, the relatives pressing him after the old man’s death to put her away for her low birth and marry better, the husband fearing God and refusing, the wife leaving him secretly rather than let him stand against his kin, the flight to a far island with no living soul on it, the child born there, thirty years of fasting and prayer, and a hieromonk put ashore by God’s providence who baptises the boy and gives him the name John. The feast is the same Julian 13 June and the heading is the same pairing as saint.gr’s «Οσία Άννα και Ιωάννης ο γιος της». A FIFTH CENTURY AGAINST A NINTH, AND `dates` IS NOT TOUCHED. The entry ends „Подвизавала се ова света душа у V веку и мирно скончала“ — the fifth century. The folders hold `floruit` 801 to 950 off saint.gr, which puts her in the middle Byzantine period, ninth century to the middle of the tenth, and dates its own source, Paul of Monemvasia’s narrative, to the tenth. **Four hundred years apart and irreconcilable**: widening would give a floruit six centuries wide, which would say nothing, and narrowing to either would choose between two books. `dates` is left exactly as it stood and both readings are stated in the life. NO NEW ROWS AND NO NEW TYPES. The great man, his son, the son’s kin and the hieromonk who baptised the boy are all unnamed in this book and take no rows; the mother and son are `related` to each other already. The heading carries no rank word for either of them — Света and Свети are not ranks — so nothing is added to `types`, and the thirty years of fasting and prayer are a sentence of the body, which does not write a rank. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
