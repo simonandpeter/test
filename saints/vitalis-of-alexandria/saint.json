@@ -1,0 +1,54 @@
+{
+  "slug": "vitalis-of-alexandria",
+  "display_name": "Vitalis of Alexandria",
+  "names": [
+    {
+      "form": "Виталије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. април ст. ст., „Преп. монах Виталије.“, with the rank word Преп. and the rank монах both left off; монах is the `monk` this folder carries in `types`. The heading gives no city — Alexandria is the body's word — so the bare forename is the whole of what this calendar gives, and no other folder in this corpus holds it: the one Russian Виталий is `vitaly-kokorev`'s fuller «Виталий (Кокорев)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.05.2026 (22. април ст. ст.) — „Преп. монах Виталије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-05&prolog=1",
+        "year": 2026
+      },
+      "note": "A new folder and deliberately not a row on `vitalis`, the corpus's bare 11 January venerable. That folder's own life records why: saint.gr says of its Vitalis that «δεν υπάρχει ιδιαίτερο βιογραφικό υπόμνημα γι' αυτόν τον Όσιο», there is no particular biographical memoir of him, and then mentions separately, on Nicodemus the Hagiorite's authority, a certain ascetic Vitalis of the monastery of Abba Seridus who gave his earnings to a harlot — adding that it does not say the two are one man, which that folder repeats and does not claim either. This Prologue entry is unmistakably that ascetic, told in full; so he becomes his own folder here rather than an identification the two calendars already read declined to make. If the author reads them as one man, this folder is the one to merge into `vitalis`, and the merge is not a reader's call."
+    }
+  ],
+  "related": [
+    "john-the-merciful-of-alexandria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
