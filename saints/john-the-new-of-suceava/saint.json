@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουνίου, «Άγιος Ιωάννης ο Τραπεζούντιος ο εν Ασπροκάστρω αθλήσας, ο Νεομάρτυρας», with the rank words and the epithets left off."
+    },
+    {
+      "form": "Јован Нови Сочавски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. јун ст. ст., „Свети мученик Јован Нови Сочавски“ — Свети is not a rank and мученик is a rank word this corpus puts in `types`, so both are stripped; Нови and Сочавски are the epithet and the house, not ranks, so both stay and the form is the fullest the heading gives. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`. A note for §7: the sweep’s known trouble with Јован against John did not bite here, because the day list for the menologion 2/6 already held the folder and no name scan was needed."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.06.2026 (2. јун ст. ст.) — „Свети мученик Јован Нови Сочавски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, six lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A THIRD CALENDAR AND A THIRD READING OF THE SAME MARTYRDOM, AND IT DIFFERS FROM BOTH AT NEARLY EVERY TURN. doxologia keeps him on 2 June and saint.gr on 12 June; this book keeps the 2 June, so the Serbian row and the Romanian row carry the same menologion number and the Greek one does not, and each row carries its own day as the schema intends. New or contradictory here: THE ACCUSER IS „некога завидљивога Латина“, some envious Latin, where both earlier pages have the Turkish captain of the ship he travelled on; THE CREED HE REFUSED IS „веру персијску“, the Persian faith, the governor of Akkerman being of that religion, where both earlier pages have him pressed to become a Mohammedan; HE IS TIED BY THE FEET TO A HORSE AND DRAGGED THROUGH THE CITY, which neither earlier page has; and A JEW WHO SAW HIM RAN UP AND CUT HIS THROAT, which neither earlier page has either and which is the book’s own sentence, quoted and not resolved. Also new: the pillar of fire over the body that night and the three light-bearing men about it. A FIRST DATE, AND IT IS THE AGREEMENT OF TWO BOOKS ON A FLAT YEAR. This folder held `dates: null` and its life says why — «doxologia’s life prints no year for the martyrdom itself, only for the journeys of the relics». The Prologue states 1492 TWICE, once in the body and once in its closing sentence, with no „око“; saint.gr’s head line gives «(; - 1492)», which this folder’s own life had already quoted without recording. Two books, one flat year, no approximation: `death` 1492 to 1492, `basis: \"traditional\"`. THE LESSER RANK IS NOT WRITTEN. The heading says Свети мученик, plain `martyr`, where this folder is kept as a `great-martyr` off doxologia’s «Sfântul Mare Mucenic». Adding `martyr` beside `great-martyr` would demote what two calendars already grade higher, which is the 28 May refusal of `monk` for a Confessor made again. `types` untouched. NO `related` AND NO `locations`. The voievod who translated the body is named „Јоалександар“ here and «Alexandru cel Bun» on doxologia; no calendar read for this corpus keeps him, a translation of relics is not a kinship and not a martyrdom, and the accuser, the governor and the man who killed him are all unnamed. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -78,5 +93,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1492,
+      "latest": 1492,
+      "display": "1492",
+      "basis": "traditional",
+      "note": "Two books state it flat and the third gives none. Охридски пролог for 2. јун ст. ст., twice over: „пострада за Христа 1492. године у граду Акерману“ and „Чесно пострада и прослави се 2. јуна 1492. године“. saint.gr's head line reads «(; - 1492)». doxologia.ro's life, which this folder was built from, prints no year for the martyrdom at all and only the years of the journeys of the relics, 1686 and 1783. Neither statement is approximate and the two agree, so the interval is the year itself (5 October 2026)."
+    }
   }
 }

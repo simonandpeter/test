@@ -10,6 +10,11 @@
       "form": "Κωνσταντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Κωνσταντίνος ο εξ Αγαρηνών», with the rank word and the phrase «ο εξ Αγαρηνών» left off."
+    },
+    {
+      "form": "Константин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. јун ст. ст., „Свети новомученик Константин“ — Свети is not a rank and новомученик is the `new-martyr` this corpus puts in `types`, so both are stripped and the bare forename is the whole of what the heading leaves. THE SOURCE OFFERS NO FULLER FORM: the island is in the body and not in the heading, so «Mytilene» cannot be carried into the form. The fold is live and deliberate — `foldchk.py` returns `[('constantine-brancoveanu', 'ru'), ('constantine-of-georgia', 'sr'), ('constantine-presbyter-martyr-1918', 'ru'), ('constantine-the-great', 'sr')]` — and the four are told apart by their days, their centuries and their calendars."
     }
   ],
   "dates": {
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.06.2026 (2. јун ст. ст.) — „Свети новомученик Константин“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, four lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A SECOND BOOK ON A FOLDER THAT HAD ONE, AND IT GIVES THE BEGINNING THE FIRST DID NOT. saint.gr had the Smyrna fruit shop, the cathedral where he learned the tongue and the religion, the refusal on the Holy Mountain and Patriarch Gregory V’s test. New here: THE HEALING THAT STARTED IT — „Будући исцељен од тешке болести помоћу свете водице у цркви и видећи друга чудеса вере Христове“, healed of a grave illness by the holy water of a church — and THE FORTY DAYS of torment, which the Greek page does not count. `dates` UNTOUCHED AND THE TWO BOOKS AGREE TO THE DAY: saint.gr’s «τον απαγχόνισαν στις 2 Ιουνίου 1819 μ.Χ.» against „обесе у Цариграду 2. јуна 1819. године“. Nothing to widen and nothing to choose; both books give no birth. `types` untouched: новомученик is the `new-martyr` already there and is the only rank word in the heading. The baptism at Kapsokalyvia is corroborated outright, the skete named in both books. No `locations`, no `related` — Patriarch Gregory V is in the prose off saint.gr and is the subject of no martyrdom and no kinship here, and this entry does not name him. A FOLD, DELIBERATE AND ON THE BAREST OF FORMS: `foldchk.py` returns four holders of «Константин», two of them `sr` (`constantine-of-georgia`, `constantine-the-great`), and the heading offers nothing fuller to prefer — no island, no epithet, no see. Stored anyway, as `nikephoros-patriarch-of-constantinople` stored a bare Никифор on this same day, and the fold is recorded as deliberate. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

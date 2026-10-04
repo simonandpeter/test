@@ -40,8 +40,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.06.2026 (2. јун ст. ст.) — „Свештеномученик Еразмо Охридски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-15&prolog=1",
+        "year": 2026
+      },
+      "note": "THE HEADING QUOTED IS THE PREACHER’S, AND THE COMPANY IS NAMED IN THE BODY. The day’s fourth and fullest entry is headed „Свештеномученик Еразмо Охридски“ and this company has no heading of its own; the twenty thousand stand inside that life, as „двадесет хиљада душа“ baptised and then „се посекоше свих ових двадесет хиљада“, cut down on the emperor’s order. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A row is owed because the body narrates their martyrdom, which is the test, and the 25 May precedent is exact: rows were written there for two men named only in the body with the heading quoted as it stands. THE IDENTIFICATION IS THE CORPUS’S OWN AND NEEDED NO INSTRUMENT. This folder’s own life, off saint.gr, says «all these saints believed in Christ through Saint Erasmus, whom the same day keeps, and bore witness by the sword» — and the Prologue’s fourth entry is that Erasmus and that preaching, at Ohrid, with the sword as the manner. Two books, one menologion day, one preacher, one manner. NO NAME FORM IS STORED, AND THAT IS A READING. The Prologue gives this company no heading, so there is no heading to strip a rank from; „двадесет хиљада душа“ is a phrase in a sentence about somebody else and not a name the calendar prints for them. §6 asks for the fullest form the calendar gives; here it gives none, and inventing «Двадесет хиљада мученика» would be transliterating a heading into existence. NO `dates`, AND THE REFUSAL IS THE `stated` TRAP SEEN COMING. The only year the entry prints is „око 303. године“ and it is the PREACHER’S OWN REPOSE in a cave in Hermelia, years after this company died under Maximian in Illyricum — a year stated of somebody else, and approximate besides. It is therefore kept out of the folder AND out of the life: the appended paragraphs carry no digits at all, so no death verb of theirs can sit beside a year this folder refuses. `types` untouched at `martyr`, corroborated by the sword. No `locations`: the entry puts the preaching at Ohrid and the accusation before Maximian in Illyricum, but the company is undated and a located undated folder goes on `map-span.test.mjs`’s list. NO `related`: THE ONE ROW THIS FOLDER OBVIOUSLY WANTS CANNOT BE WRITTEN, because the preacher has no folder — see the commit message. The man whose son was raised at Ohrid is named Анастас and is the object of a wonder, not its subject, and no calendar read for this corpus keeps him. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
