@@ -10,6 +10,11 @@
       "form": "Λάζαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Λάζαρος ο Βοσκός από τη Βουλγαρία», with the rank word and the country left off."
+    },
+    {
+      "form": "Лазар Нови",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 23. април ст. ст., „Св. муч. Лазар Нови.“, with „Св.“ and the rank муч. left off. **Нови is kept and is not read as a rank**: the rank word for what this folder is would be Новомученик, which this book writes out in full where it means it and which the body here gives as „овај новомученик“ in a sentence; Нови in the heading is the epithet that tells him from the Lazarus of the Gospel, whom this same corpus holds as `lazarus-the-four-days-dead` with the Serbian form «Лазар Четвородневни». The shepherding this corpus's English name keeps is the body's."
     }
   ],
   "related": [
@@ -59,8 +64,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.05.2026 (23. април ст. ст.) — „Св. муч. Лазар Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-06&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

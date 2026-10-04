@@ -11,6 +11,11 @@
       "form": "Ουαλέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Απριλίου, «Άγιος Ουαλέριος ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Валерије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's entry for 23. април ст. ст., „и Валерије, Донат и Терина“ — **out of the entry's body and not out of its heading**, which names the great martyr alone. The form is the nominative the entry itself prints, in a list of those who received the faith; the trade or station named beside it is left off, as is the companionship or day clause this corpus keeps in the English display name."
     }
   ],
   "sex": "male",
@@ -54,11 +59,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.05.2026 (23. април ст. ст.) — „Св. вел. муч. Ђорђе.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's heading for this entry names the great martyr alone, „Св. вел. муч. Ђорђе.“, and the body then names those who received the faith of Christ at his wonders: „Међу овима беше и жена царева Александра, и главни жрец Атанасије, и земљоделац Гликерије, и Валерије, Донат и Терина.“ So this row rests on the entry's enumeration of the company and not on the heading, which does not name him; the quoted line is the heading whole, as BRIEF-SERBIAN.md §4 requires. The Julian 04-21 of this wave set the precedent for a company the body enumerates and the heading does not."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "george-the-trophy-bearer",
+    "alexandra-the-empress",
+    "athanasius-once-a-magician",
+    "glycerius-the-farmer",
+    "donatus-23-april",
+    "therinus"
+  ]
 }
