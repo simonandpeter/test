@@ -12,6 +12,11 @@
       "form": "Νήφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουνίου, «Όσιος Νήφων ο Αθωνίτης», with the rank word left off."
+    },
+    {
+      "form": "Нифонт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. јун ст. ст., „Преподобни Нифонт“ — Преподобни is the rank and comes off, leaving the bare forename, which is the only word the heading gives; the Athonite of the display name is not in this heading and is not added to the form. **The fold is deliberate**: `foldchk.py` returns `niphon-of-novgorod`, `sr`, for «Нифонт», so this is the second folder on the string. The heading gives one word and nothing to break the fold with, and the Athonite may not be built onto a form this book does not print that way."
     }
   ],
   "dates": {
@@ -21,6 +26,13 @@
       "display": "about 1330",
       "basis": "traditional",
       "note": "saint.gr: «κατέληξε στα Βουλευτήρια και εκεί ασκήτευε περί το 1330 μ.Χ.» — the year is the page's own, and the bracket is that one year because it is the only date the page gives. It adds «Έζησε συνολικά 96 χρόνια», that he lived ninety-six years in all, and gives no year of birth or death."
+    },
+    "death": {
+      "earliest": 1330,
+      "latest": 1330,
+      "display": "1330",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 14. јун ст. ст. ends the entry „И предаде свету душу своју Богу 14. јуна 1330. године“ — the day and the year together, and the day is this row's feast. The folder had only the saint.gr `floruit` before, which is a year he was living and not a year he died; the two agree and both are kept. No year of birth is taken from saint.gr's ninety-six years, because that would be both a lifespan and a year reached by arithmetic (5 October 2026)."
     }
   },
   "related": [
@@ -54,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.06.2026 (14. јун ст. ст.) — „Преподобни Нифонт“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 14 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. A FLOruit THAT WAS ALL THE FOLDER HAD, AND A DAY OF DEATH BESIDE IT. The folder held `floruit` about 1330 and nothing else, off saint.gr’s «ασκήτευε περί το 1330 μ.Χ.», which is a year he was living, not a year he died. This book states the death outright, with the day: „предаде свету душу своју Богу 14. јуна 1330. године“. `death` 1330 to 1330, display «1330», basis traditional, the sentence in the note; the `floruit` is kept exactly as it stood, with its own note, because it is a different claim off a different book and the two agree. **The day in that sentence is the feast this row writes**, 14 June, which is the first time any of this folder’s books has given the day inside a life. **NO `birth`, AND THE FOLDER’S OWN NOTE ALREADY HOLDS THE TRAP**: saint.gr says «Έζησε συνολικά 96 χρόνια», ninety-six years in all. Ninety-six from thirteen hundred and thirty is a lifespan and a year reached by arithmetic, and both are refused. A PROPHECY HE MADE ABOUT HIMSELF, AND IT IS NOT A DATE. „Прорекао за себе да ће умрети уз Петров пост“ — he foretold that he would die at the Fast of the Apostles. **That is a moveable reckoning tied to Pascha and it is not written as anything**: the feast is the fixed Julian 14 June the same sentence gives, and the fast is in the life as a prophecy fulfilled. WHAT ELSE IS NEW. Born in the region of Argyrokastro, in the village of Lukovo, of a priest for a father — **a birthplace and a father’s rank, and no `locations` is written for either**, one clause of birth with nothing to bound it not being a coordinate; drawn from his youth by a longing for solitude and prayer, which brought him at last to the Holy Mountain; **struggling first in the cave of Saint Peter the Athonite and then in the desert of Saint Anna** — and **a cave called after a man is a dedication and not a relation**, so no row is written to `peter-the-athonite`, whose own row this wave wrote two days ago, nor to any Anna; that he would not even eat bread but fed on grass and roots, and that some envious men accused him of loathing bread, of which he cleared himself easily and quickly. THE ONE COMPANIONSHIP, AND ITS ROW IS ALREADY THERE. „Најзад се здружи са светим Максимом на Капсокаливи“ — at last he joined himself to Saint Maximus at Kapsokalyvia. `maximus-of-kapsokalyvia` is already in this folder’s `related` and nothing is added; the companionship is written into the life with its link. THE GIFTS AND THE END. For his sincere love of God he was given the gift of wonder-working and of clear sight, healing the sick by prayer and by anointing with oil and seeing into things done and things to come. And at daybreak on the day of his repose he said to the brethren about him, „Не плачите него радујте се, јер ћете у мени имати молитвеника пред Богом за спасење ваше“, and at last, „Време је да идем!“ `types` UNTOUCHED: `venerable`, `hieromonk` and `ascetic` are all there, and Преподобни is `venerable`; **`wonderworker` is refused** although the body says the gift was given him, because a rank word in the heading is written and a rank read off the body is not, and this heading gives one word. No `office`, no `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
