@@ -11,6 +11,11 @@
       "form": "Ισίδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ισίδωρος που μαρτύρησε στη Χίο», with the rank word and the place of martyrdom left off."
+    },
+    {
+      "form": "Исидор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 14 May, „Свети мученик Исидор.“ — Свети left off, which is not a rank, and мученик left off, which is the `martyr` this folder already carries in `types`. The heading gives no epithet, no island and no year: Chios, Decius, the army, the ox sinews, the tongue, the dumb commander, Ammonius and the 251 are all in the body. **The form folds with `isidore-of-rostov`, and the fold is made by this one day**: the Prologue's third entry for the same 14 May is the fool for Christ of Rostov, whose heading strips to the same bare Исидор. Recorded as deliberate in the run's findings."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.05.2026 (14. мај ст. ст.) — „Свети мученик Исидор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Greek keeps him on, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NONE**: „где му глава би одсечена 251. године“ → `death` 251, where this folder had no `dates` object at all. It sits inside the reign the entry names — „У време царовања Декијева“ — and the reign was given no bounds and nothing was built on it. **New here, and almost the whole of the account**: that he was taken **by force into the army** from the island of Chios, which is the `soldier` this folder already carries read from the other side; that from childhood he held the faith of Christ and passed his life in fasting, prayer and good works; **his answer to the commander** — that though you kill my body you have no power over my soul, that he has the true and living God Jesus Christ who lives in him now and will be with him after his death, that he is in Him and will remain in Him and will not cease to confess His holy name while the breath is in his body; that he was beaten **with ox sinews** and then **had his tongue cut out, and yet without a tongue spoke by the Spirit of God and went on confessing the name of Christ**; **that the commander was then struck dumb by the punishment of God**, and gave the sign for the beheading without being able to speak it; and that Isidore rejoiced at the sentence and went out praising God to the place of execution. **AMMONIUS IS NAMED AND TAKES NO ROW, ON THE COORDINATOR'S THIRD RULING.** „Његов друг Амоније погребе тело његово, но зато и сам пострада и прими венац мученички.“ — his comrade Ammonius buried his body, and suffered for it himself and received the martyr's crown. **That is a martyrdom narrated, which is the test that earned `laodicius-the-jailer` a row on the Julian 13 May the day before — but Laodicius had a folder and Ammonius has none.** The corpus's two Ammonii were read and he is neither: `ammonius-10-january` is a venerable ascetic, a companion of Anthony the Great, and `ammonius-of-pentapolis` a martyr of Libya in 304 with three named companions. **No folder anywhere, so the row has nothing to attach to and a new folder would be the extension inventing a saint.** He is named in the life, unlinked, with no `related` row — and **this folder's existing life already names him that way**, from doxologia or saint.gr, so nothing about him changed. **`myrope` was already a `related` row** and nothing was added; she is not in this entry at all. `types` untouched: Свети is no rank and мученик is the `martyr` the folder carries. **No `locations`**: Chios is named and this folder has never claimed a point. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -105,5 +120,14 @@
   ],
   "related": [
     "myrope"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 14 May: „изађе на губилиште, где му глава би одсечена 251. године.“ saint.gr's line for 14 Μαΐου, which this folder was read from, gave no year. The entry also sets the whole account „У време царовања Декијева“, in the reign of Decius, and gives that reign no bounds, so nothing was built on it; the 251 is the only number on the page. No birth is printed."
+    }
+  }
 }
