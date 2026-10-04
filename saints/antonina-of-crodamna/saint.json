@@ -11,6 +11,11 @@
       "form": "Αντωνίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουνίου, «Άγιοι Αλέξανδρος και Αντωνίνα», with the rank word left off."
+    },
+    {
+      "form": "Антонина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. јун ст. ст., „Свети мученик Александар и Антонина“, which names the two of them. Свети is not a rank and мученик is the `martyr` this corpus puts in `types` — and the heading uses it in the singular for a pair, which is the book’s own looseness and not a reading — so both come off and the bare personal name is the whole of the form. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('antonina-of-nicaea', 'sr')]`, so this makes a fold of two; the heading gives the bare forename and the city is in the body, which §6 does not let into a form."
     }
   ],
   "sex": "female",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.06.2026 (10. јун ст. ст.) — „Свети мученик Александар и Антонина“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, whose heading names them both. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A FIRST DATE, AND IT IS A YEAR TWO BOOKS HAD CITED AND NEITHER HAD RECORDED. Both folders held `dates: null`. `antonina-of-crodamna`’s own life says doxologia «gives no year» and then quotes saint.gr’s head line, «(; - 313)», **without that year ever reaching `dates`** — which is `date-citation-audit.mjs`’s shape exactly, a year cited and never written down. This book states it flat and adds a day: „Чесно пострадаше ради љубави Христове и преселише се у дворе Цара небескога 3. маја 313. године“. Two books, one flat year, no approximation: `death` 313 to 313, `basis` `traditional`. **THE 3 MAY IS NOT WRITTEN AS A FEAST AND THAT IS DELIBERATE.** The book gives it as the date they passed, not as a day it keeps them on — it keeps them on the Julian 10 June, which is the heading this row quotes and the menologion number the Romanian and Greek rows carry. **No second day, no §4 note, nothing moved**; the 3 May is in the life as the book’s own statement and in this note, and a later reader who meets a 3 May commemoration elsewhere should read this before deciding anything. ONE DIFFERENCE OF PLACE, RECORDED AND NOT RESOLVED. This book says „Беху обоје из Александрије“ — both of them were from ALEXANDRIA — where doxologia’s long life calls her «a Christian virgin named Antonina, of the city called CRODAMNA», which is the name this folder is kept under. **The display name was not touched**: §10 reserves display names and a sourced correction to one is the author’s. Both readings are in the life. EVERYTHING ELSE CORROBORATES, DOWN TO THE SEVEN DAYS. The angel’s command, the soldier’s cloak thrown over her, the lowered head, the walk out through the guards, the exchange of places, the hands cut off, the beating on the bare body, the wounds burnt with candles, the pit of fire and the earth heaped over it, and the judge struck dumb at the hour of the martyrs’ death and tormented by an evil spirit **seven days** before it killed him — all of it is on these folders already, and this book names the judge «Фист» as doxologia names him Festus. **A third book agreeing to the seventh day is worth recording and changes nothing else.** `types` untouched on both and both corroborated: „Антонина чесна девица“ is her `virgin`, and „Александар царски војник“ is his `soldier`. `related` untouched, the two already pointing at each other and the entry naming nobody else but the judge, who has no folder and is the persecutor besides. No `locations`, the two cities disagreeing. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('antonina-of-nicaea', 'sr')]`, so this makes a fold of two; the heading gives the bare forename and the city is in the body, which §6 does not let into a form."
     }
   ],
   "hymns": [
@@ -116,5 +131,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 313,
+      "latest": 313,
+      "display": "313",
+      "basis": "traditional",
+      "note": "Two books on one flat year, and the folder held none. doxologia.ro's long life prints no year, and this folder's own life quotes saint.gr's head line «(; - 313)» without that year ever having reached `dates`. The Охридски пролог for 10. јун ст. ст. states it with a day: „преселише се у дворе Цара небескога 3. маја 313. године“. The 3 May is the date of the passing as this book gives it and not a day it keeps them on, which is the Julian 10 June; no feast was written on it (5 October 2026)."
+    }
   }
 }

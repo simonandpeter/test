@@ -11,6 +11,11 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουνίου, «Άγιος Τιμόθεος επίσκοπος Προύσας», with the rank word and the see left off."
+    },
+    {
+      "form": "Тимотеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. јун ст. ст., „Свештеномученик Тимотеј, епископ бруски“ — Свештеномученик is the `hieromartyr`, епископ the `bishop` and the `Bishop` in `office`, and „бруски“ is the see, which the display name already carries; strip them and the bare personal name is left. `foldchk.py` returns `[('timothy-of-ephesus', 'sr'), ('timothy-of-symbola', 'sr')]`: a fold of three, deliberate, told apart by the sees."
     }
   ],
   "sex": "male",
@@ -23,10 +28,10 @@
   "dates": {
     "death": {
       "earliest": 361,
-      "latest": 361,
-      "display": "361",
+      "latest": 362,
+      "display": "361 or 362",
       "basis": "traditional",
-      "note": "saint.gr's head line, as the folder's own life has it: «(; - 361)». The same page puts the martyrdom in the years of Julian the Apostate, «360 to 363», so the bracketed year falls inside the reign it gives."
+      "note": "saint.gr's head line, as the folder's own life has it: «(; - 361)». The same page puts the martyrdom in the years of Julian the Apostate, «360 to 363», so the bracketed year falls inside the reign it gives. The Охридски пролог for 10. јун ст. ст. states one year later, flat: „Јулијан нареди те му џелат одсече главу у тамници 362. године“. The interval is widened to hold both years, which both fall inside the one reign; the reign itself was used for nothing (5 October 2026)."
     }
   },
   "attestations": [
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.06.2026 (10. јун ст. ст.) — „Свештеномученик Тимотеј, епископ бруски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A DEATH WIDENED BY ONE YEAR. The folder held `death` 361, off saint.gr’s head line «(; - 361)», with that page putting the martyrdom in the years of Julian the Apostate, «360 to 363», so its bracketed year falls inside the reign it gives. This book states „Јулијан нареди те му џелат одсече главу у тамници 362. године“. Two books, two flat years, both inside the same reign: `death` 361 to 362, display «361 or 362», neither chosen. **The reign is used for nothing** — it is the fifth time in this wave a reign has been read and left alone — and it is worth saying that both years sit inside it, so the widening does not stretch past anything either book allows. THE NARRATIVE IS ALREADY HERE AND THE ORDER OF IT DIFFERS. Both earlier books have Julian’s persecution, the prison, the faithful coming to be taught in bonds, Julian’s order and the beheading in the prison. **New is the reason given for the gift**: „Због велике чистоће душевне Бог му дао дар чудотворства, те лечаше све болести и муке на људима“ — for his great purity of soul God gave him the gift of wonderworking, so that he healed every sickness. **That corroborates the `wonderworker` this folder carries off a different story**, the Greek page’s dragon between Prusa and the hot waters, which this book does not have at all. And new: that his relics remained wonderworking. `types` and `office` untouched, all three corroborated — Свештеномученик the `hieromartyr`, епископ the `bishop` and the `Bishop` in `office`, and the healings the `wonderworker`. `wonderworker` ON THE LIVING MAN AND NOT ON THE RELICS, WHICH IS THE 31 MAY DISTINCTION: he is the subject of the healings in his life, and the relics’ own wonders in the last sentence are the relics’ and were not the warrant. NO `related` — the entry names only Julian, and an emperor in a life is not a relation. No `locations`, the see being in the display name. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('timothy-of-ephesus', 'sr'), ('timothy-of-symbola', 'sr')]`, so the bare form makes a fold of three; the see came off as §6 requires and the three are told apart by their sees. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
