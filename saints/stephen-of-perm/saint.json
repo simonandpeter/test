@@ -12,6 +12,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Απριλίου, «Άγιος Στέφανος Επίσκοπος Περμ», with the rank word and the see left off."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Св. Стефан еп. Пермски.“ Св. is not a rank, and еп. Пермски is the see, which this folder keeps in `office` as Bishop of Perm and in `types` as `bishop`; `honorific.js` composes both back. The heading gives no epithet, so the bare forename is the whole of the Serbian form. Two other folders already hold it and several hold the same bare spelling in Russian; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "related": [
@@ -28,10 +33,10 @@
     },
     "death": {
       "earliest": 1395,
-      "latest": 1395,
-      "display": "1395",
+      "latest": 1396,
+      "display": "1395 or 1396",
       "basis": "traditional",
-      "note": "saint.gr: «Το έτος 1395 ο Άγιος Στέφανος πήγε πάλι στη Μόσχα για υποθέσεις του ποιμνίου του. Εκεί ασθένησε και μετά από λίγες ημέρες κοιμήθηκε με ειρήνη», and the page heads him «(1345 - 1395)»."
+      "note": "Two sources one year apart, and the interval carries both rather than choosing. saint.gr: «Το έτος 1395 ο Άγιος Στέφανος πήγε πάλι στη Μόσχα για υποθέσεις του ποιμνίου του. Εκεί ασθένησε και μετά από λίγες ημέρες κοιμήθηκε με ειρήνη», and the page heads him «(1345 - 1395)». The Охридски пролог for 26. април ст. ст.: „У старости оде још једном у Москву, но тамо и сконча земни живот свој и пресели се ка Господу, 1396. год.“ Both have him die at Moscow in old age on a last journey there, so the disagreement is in the number alone; the earlier reading of 1395 was neither narrowed nor displaced."
     }
   },
   "attestations": [
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.05.2026 (26. април ст. ст.) — „Св. Стефан еп. Пермски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man saint.gr keeps on this day: a Russian who learned the Permian tongue, made it an alphabet, translated the church books into it, built a church in Perm and was consecrated its bishop, and died at Moscow in old age. **The year is where the two part**: this book closes „пресели се ка Господу, 1396. год.“ and saint.gr gives 1395 both in its prose and in its heading «(1345 - 1395)». Neither was displaced and neither was chosen — the death is now the interval **1395 or 1396** with both pages named in its note, and the birth of 1345 stands untouched. New from this book: the tonsure at **Rostov, in the monastery of Gregory the Theologian**; that it was learning of the land of Perm, all overgrown with the weeds of heathenism, that gave him the wish to be a missionary; that he **composed an alphabet** for the language and translated the church books before he went; that he set out as a **presbyter** with the blessing of the Metropolitan of Moscow; that the church he built in Perm was of the **Holy Annunciation**; and that the episcopate came only after the Church there had multiplied. The Prologue prints no hymn."
     }
   ],
   "text": {

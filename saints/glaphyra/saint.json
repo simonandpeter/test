@@ -11,6 +11,11 @@
       "form": "Γλαφυρή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Απριλίου, «Αγία Γλαφυρή», with the rank word left off; the page's couplet and the page for Basileus write the name Γλαφύρα."
+    },
+    {
+      "form": "Глафира",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's entry for 26. април ст. ст., „девицу Глафиру“ and „умре Глафира“ — the heading names only the bishop, so there is no heading form to take. The accusative девицу Глафиру is restored to the nominative the second mention prints, and девица is the `virgin` this folder already carries in `types`. The body gives her no epithet, no family and no city, so the bare forename is the whole of the Serbian form; Italy, which doxologia gives her, is nowhere on this page."
     }
   ],
   "sex": "female",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.05.2026 (26. април ст. ст.) — „Свешт. муч. Василије еп. Амасијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-09&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading names the bishop of Amasea alone and the body is where this book puts her**, so the citation above is that heading whole, per BRIEF-SERBIAN.md §4, and this row is written on the ruling the coordinator gave for a heading that names one man while the body names more. The body's own words are „При нападу ове нечисте страсти он хтеде оскврнити девицу Глафиру, која стајаше у служби царичиној“ and, at the end, „У међувремену умре Глафира“. **This is an extension of that ruling and is flagged as one**: Glaphyra is not an enumerated companion in the martyrdom but a person whose story this entry tells at length, and whom the corpus already keeps on this same menologion day under the Romanian and the Greek. Refusing the row would lose a saint the source names on the day it names her; the author can revert it in one commit. **The entry gives her no year** — she dies „у међувремену“, before the order reached the governor — so this folder's empty `dates` were left empty, as doxologia's and saint.gr's readings also left them. The Prologue prints no hymn."
     }
   ],
   "text": {

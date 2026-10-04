@@ -6,6 +6,11 @@
       "form": "Ιωαννίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Ιωαννίκιος ο εν Σερβία», with the rank word left off. The page's own epithet is «ο εν Σερβία»; the monastery in this folder's name is the Devič it says holds his relics."
+    },
+    {
+      "form": "Јанићије Девички",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 26. април ст. ст., „Св. Јанићије Девички.“, with Св. left off as no rank. Девички — of Devič, the monastery raised where he struggled — is an epithet and not a rank `honorific.js` composes, so it is kept, and this is the fullest form the book gives. It is also the Serbian vernacular form of a name the corpus otherwise holds as Иоанникий and Ιωαννίκιος, which is why no fold arises with the five other Joannicius folders."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.05.2026 (26. април ст. ст.) — „Св. Јанићије Девички.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man beyond question — a Serb of Zeta, the cave of the Crna Rijeka where Petar Koriški had been before him, the flight to Drenica, the despot Đurađ Branković's daughter healed, the monastery of Devič raised in thanks and holding his relics — so this is an upgrade and not a folder. **The Serbian day is not the Greek day**: saint.gr keeps him on 2 Δεκεμβρίου and this book on 26. април ст. ст., two churches and two days, which is the ordinary shape and not a conflict. New from this book: the region of the **Ibar** and the gorge of the Crna Rijeka, and that the cave was a narrow one; that Đurađ is called the **Serbian prince** rather than the despot; that the daughter had **lost her mind**, where saint.gr says only that she was sick; the years passed in solitude, in silence and in prayer; and that the relics are wonderworking. **It gives no year of any kind**, so it offers nothing to settle the century saint.gr's page contradicts itself about, and this folder's empty `dates` stay empty. The entry closes with a woman it does not head and this corpus does not hold — the nun Ефимија, better known in the Kosovo country as Блажена Стојна, who struggled in that monastery almost into our own days and fell asleep in the Lord in 1895. **No folder was made for her**: the heading names only Joannicius, and whether she belongs in this corpus is a reading for its author. The Prologue prints no hymn."
     }
   ],
   "text": {
