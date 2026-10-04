@@ -13,6 +13,11 @@
       "form": "Αγαπητός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αγαπητός πάπας Ρώμης», with the rank word and the see left off."
+    },
+    {
+      "form": "Агапит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 17 April, „Св. Агапит папа Римски.“, with Св. left off — it is not a rank — and with папа Римски left off: this corpus keeps the see in `office`, where this folder already has Bishop of Rome, and the rank in `types`. The heading gives no epithet beyond the see, so the bare forename is left. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"агапит\" — agapitus-of-rome, agapitus-the-deacon`, and `agapitus-the-deacon` holds a bare **Russian** Агапит of the same spelling, so the fold crosses languages and no check of Serbian forms could have seen it. A deliberate fold, recorded in the run's findings."
     }
   ],
   "dates": {
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.04.2026 (17. април ст. ст.) — „Св. Агапит папа Римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek keeps him on. **The 536 agrees exactly** with what the folder already holds off saint.gr, so no date was added and none changed. New: that he was **sent by Theodotus, king of the Goths, to the emperor Justinian at Constantinople, to turn him from his campaign against the Goths** — an embassy neither other page read for this folder mentions, where saint.gr sends him over the monophysite heresy; both reasons stand and neither was chosen. The healings on the road, of a mute and of a blind man, are the Greek page's two wonders in the same order, the second of which it places at the Golden Gate of Constantinople rather than on the journey. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -11,16 +11,21 @@
       "form": "Τρύφων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Τρύφων Πατριάρχης Κωνσταντινούπολης», with the rank words left off; the life page heads him «Αγιος Τρυφων Πατριαρχης Κωνσταντινουπολης (; - 931)»."
+    },
+    {
+      "form": "Трифун",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 19 April, „Св. Трифун патријарх Цариградски.“, with Св. left off — it is not a rank — and with патријарх Цариградски left off, a rank this folder already carries in `types` and a see this corpus keeps in `office`. The heading gives no epithet beyond the see, so the bare forename is left. `tryphon-of-campsada` already holds this same bare Serbian form, so the two fold, and the fold is recorded as deliberate in the run's findings."
     }
   ],
   "related": [],
   "dates": {
     "death": {
       "earliest": 931,
-      "latest": 931,
-      "display": "931",
+      "latest": 933,
+      "display": "931 or 933",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Τρυφων Πατριαρχης Κωνσταντινουπολης (; - 931)»; its narrative has him elected in December 928, forced out in 931, and living three months more in a monastery, and gives no year of birth."
+      "note": "Two sources that disagree, recorded as one interval with nothing chosen, on docs/CORPUS.md §3's rule. saint.gr heads him «Αγιος Τρυφων Πατριαρχης Κωνσταντινουπολης (; - 931)» and its narrative has him elected in December 928, forced out in 931 and living three months more in a monastery. The Ohrid Prologue for 19. април ст. ст. has him hold the throne three years, live in the monastery as an ascetic „2 године и 5 месеци“ and depart „933. год.“ The two accounts differ both in the year and in the length of the retirement, and neither was narrowed away. No year of birth is recorded anywhere read."
     }
   },
   "attestations": [
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.05.2026 (19. април ст. ст.) — „Св. Трифун патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek keeps him on. It is the fullest account of him read for this folder and it **disagrees with saint.gr about the year of his death and about how long he lived after he was put out**. The entry: under the emperor Romanus, who ruled Byzantium at the beginning of the tenth century, the emperor's son Theophylact was sixteen when patriarch Стефан died; the emperor, who had vowed the boy to the spiritual calling from infancy, was ashamed to raise him to the throne so young, and **Tryphon took it instead — a simple but pure and devout old man — and held it three years**; when the son entered his twentieth year the emperor resolved to remove Tryphon at any cost, and Tryphon would not go of his own will, for no other reason than that he thought it a great scandal for so young a man to be raised to so responsible and heavy a place; then **by the intrigue of some evil bishop his signature was coaxed onto a clean sheet of paper, and a supposed resignation was written in above it at the palace** and published by the emperor; great trouble followed in the church, the people and the clergy standing by Tryphon; the emperor removed him by force and sent him to a monastery and raised his son; and **Tryphon lived in the monastery as an ascetic two years and five months and departed to the Lord in 933**. saint.gr has him elected in December 928, forced out in 931, living three months more in a monastery, and dead in 931. Neither reading is chosen and neither is displaced: `dates.death` now carries the whole disagreement as one interval, 931–933, with both named in its note. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

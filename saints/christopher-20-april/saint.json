@@ -11,6 +11,11 @@
       "form": "Χριστόφορος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιοι Βίκτωρ, Ζωτικός, Ακίνδυνος, Καισάριος, Σεβηριανός, Χριστόφορος, Ζήνων, Θεωνάς και Αντωνίνος», with the rank word left off; the life page heads him «Αγιος Χριστόφορος (; - 303)»."
+    },
+    {
+      "form": "Христофор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 19 April, „Св. муч. Христофор, Теона и Антонин.“, with Св. left off — it is not a rank — and муч. left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year, and the day in this folder's display name is the corpus's own way of telling the company's members from their namesakes, not part of any source's name for him. `christopher` holds a bare **Russian** Христофор of the same spelling, so the fold crosses languages and no check of Serbian forms could have seen it; it is recorded as deliberate in the run's findings."
     }
   ],
   "related": [
@@ -61,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.05.2026 (19. април ст. ст.) — „Св. муч. Христофор, Теона и Антонин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated company of three, so one row each. **The Prologue keeps them on the Julian 19 April where saint.gr keeps them on 20 April**, and one row per church, so the Greek row kept its day and nothing moved. These three are the remaining named members of the same company of nine whose other five — Victor, Zoticus, Zeno, Acindynus and Severian — the Prologue printed on the Julian 18 April, read the day before this one: eight of the nine, over two consecutive days, in one book. **The identification is a reading and is stated as one**: the entry makes all three young officers under the emperor Diocletian who watched the torments of George the Great Martyr and the wonders that happened then, came before the emperor, threw down their weapons, took off their soldiers' belts and confessed the name of the Lord Jesus, were put to great torments and at last cast into fire where their bodies burned — which is saint.gr's account of its nine, and `soldier` is already in this folder's `types`. **The ninth, `caesarius-20-april`, is named on neither Prologue day and took no row.** New here, and in no other source read for this folder: that they suffered **at Nicomedia**, and the soldiers' belts. **The 303 agrees exactly**, so no date was added and none changed. **No `locations`**: Nicomedia is one calendar's word for a death place and this folder claims no point. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

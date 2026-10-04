@@ -10,6 +10,11 @@
       "form": "Ζήνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιοι Βίκτωρ, Ζωτικός, Ακίνδυνος, Καισάριος, Σεβηριανός, Χριστόφορος, Ζήνων, Θεωνάς και Αντωνίνος», with the rank word left off; the life page heads him «Αγιος Ζήνων (; - 303)»."
+    },
+    {
+      "form": "Зинон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 18 April, „Св. муч. Виктор, Зотик, Зинон, Акиндин и Северијан.“, with Св. left off — it is not a rank — and муч. left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all five names and belongs to none of them, and the heading gives no epithet, no city and no year to any of them, so the bare forename is the whole of what the source gives; the day in this folder's display name is the corpus's own way of telling the company's members from their namesakes and is not part of any source's name. Four folders already hold this same bare form, two of them in Serbian and three in Russian; the fold is recorded as deliberate in the run's findings."
     }
   ],
   "related": [
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.05.2026 (18. април ст. ст.) — „Св. муч. Виктор, Зотик, Зинон, Акиндин и Северијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated company of five, so one row each. **The Prologue keeps them on the Julian 18 April where saint.gr keeps them on 20 April**, and one row per church means the Greek row kept its day and nothing moved. **The identification is a reading and is stated as one**: the entry says all five were tortured in the time of the emperor Diocletian, that they were pagans until they saw the torments of George the Great Martyr, and that seeing those torments, his courage and the many wonders that appeared then they received the Christian faith, for which they soon suffered and were crowned. saint.gr's company of nine on 20 April is the same account — nine pagans converted at George's trial, dead 303 — and the Prologue's five names are five of those nine, spelling for spelling. **The other four the Greek page names — Christopher, Theonas, Caesarius and Antoninus — are not in this heading and took no row.** No date was added and none changed: the entry names Diocletian and prints no year, where the folder already holds saint.gr's 303, so there was nothing to add and nothing to displace. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -6,6 +6,11 @@
       "form": "Ioan din Ianina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 aprilie, «Sfântul Mucenic Ioan din Ianina»."
+    },
+    {
+      "form": "Јован Нови Јањински",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 18 April, „Св. муч. Јован Нови Јањински.“, with Св. left off — it is not a rank — and Св. муч. left off, which is the `martyr` this folder already carries in `types`. **Нови Јањински is kept**: Нови is not in `BRIEF-SERBIAN.md` §5's table of rank words but the by-name the new martyrs carry, and Јањински is the city, which this corpus keeps in the display name as «of Ioannina». Keeping both is what holds this form out of the seven-folder bare «Јован» fold, on the same reading that kept `Ардалион Глумац` and `Марија Египћанка` out of theirs."
     }
   ],
   "sex": "male",
@@ -16,10 +21,10 @@
   "dates": {
     "death": {
       "earliest": 1500,
-      "latest": 1500,
-      "display": "1500",
-      "basis": "attested",
-      "note": "doxologia.ro dates his confession «în ziua Vinerii celei Mari, în anul 1500» and says he was killed «în 18 zile ale lunii aprilie» of that same Paschal season, the beatings falling in «zilele Paștilor»; the year is the page's, given at the confession."
+      "latest": 1526,
+      "display": "1500 or 1526",
+      "basis": "traditional",
+      "note": "Two sources that disagree, recorded as one interval with nothing chosen, on docs/CORPUS.md §3's rule and the Vladimir Tsedrinsky precedent. doxologia.ro dates his confession «în ziua Vinerii celei Mari, în anul 1500» and says he was killed «în 18 zile ale lunii aprilie» of that same Paschal season; the Ohrid Prologue for 18. април ст. ст. closes „Тако сконча смрћу мученичком и прими славни мученички венац свети Јован Јањински 18. априла 1526. г.“ — the same day of the same month, twenty-six years later. The folder held 1500 alone and as `attested`; the basis is now `traditional`, because a year two calendars print differently is not an attested one. Neither reading was narrowed away. No year of birth is recorded anywhere read."
     }
   },
   "attestations": [
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.05.2026 (18. април ст. ст.) — „Св. муч. Јован Нови Јањински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian keeps him on, and **it gives the day in its own words with the year**: „свети Јован Јањински 18. априла 1526. г.“ **That year disagrees with the year this folder held.** doxologia dates his confession to the first priest of the Church of Constantinople «în ziua Vinerii celei Mari, în anul 1500» and the folder recorded 1500 as `attested`; the Prologue gives 1526 for the martyrdom itself. Neither is chosen and neither is displaced: `dates.death` now carries the whole of the disagreement as one interval, 1500–1526, with both readings named in its note, and the `basis` is `traditional` because no page read settles it. The entry agrees with the Romanian life in everything else and adds two things: that the charge was that he **had earlier accepted Islam and had now returned to Christianity**, where doxologia puts the alleged apostasy at Trikke in Thessaly and the Prologue names no place; and that Christians afterwards **raked the ashes, gathered some remains of his wonderworking relics and buried them in the Great Church in Constantinople**, where the Romanian life says only that the faithful gathered some of the bones and kept them with reverence. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

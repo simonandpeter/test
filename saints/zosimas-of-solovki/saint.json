@@ -12,6 +12,11 @@
       "form": "Ζωσιμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Όσιος Ζωσιμάς», with the rank word left off."
+    },
+    {
+      "form": "Зосим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 17 April, „Преп. Саватије и Зосим.“, with Преп. left off, which is the venerable the rank table reads out of it and which this folder's `types` and the site's own honorific carry. One rank word stands over the pair and belongs to neither name, and the heading gives him no epithet and no monastery — Solovki is in the body, and this corpus keeps it in the display name and in `office`. So the bare forename is left, and the Prologue's form is Зосим and not Зосима. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"зосим\" — zosimas-of-palestine, zosimas-of-solovki`, and `zosimas-of-palestine` already held this same bare Serbian form, Зосим and not Зосима, off its own Prologue heading. A deliberate fold, recorded in the run's findings."
     }
   ],
   "dates": {
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.04.2026 (17. април ст. ст.) — „Преп. Саватије и Зосим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, an enumerated pair, on the same menologion day the Greek keeps him on. **The 1478 agrees exactly** with what the folder already holds off saint.gr, so no date was added and none changed. The entry is two sentences: that he and Sabbatius were the founders of the ascetic community on the Solovetsky island in the White Sea, and that many great saints were glorified in that community. **Sabbatius, the first name in the heading, took no row**: his `serbian` row is already `venerated`, on the Julian 27 September and off this same book, so the second day he is owed is a reading for the report and not a draft — `BRIEF-SERBIAN.md` §1 — and it is in the run's findings, unwritten. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

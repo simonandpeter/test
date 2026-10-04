@@ -11,6 +11,11 @@
       "form": "Αγάπη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Απριλίου, «Αγίες Αγάπη, Ειρήνη και Χιονία», with the rank word left off."
+    },
+    {
+      "form": "Агапија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's heading for the Julian 16 April, „Св. муч. Агапија, Хионија и Ирина.“, with Св. left off — it is not a rank — and without муч., which is the `martyr` this folder already carries in `types`. One rank word stands over the whole company and belongs to none of them, so what is left for this saint is the bare forename; the heading gives no epithet, no city and no see, and the companionship clause this corpus keeps in some of these display names is not part of the source's name for anybody. No other folder in the corpus holds this Serbian form."
     }
   ],
   "sex": "female",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.04.2026 (16. април ст. ст.) — „Св. муч. Агапија, Хионија и Ирина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, an enumerated company of three sisters, so one row per woman, on the same menologion day the Romanian and the Greek both keep them on. The entry is the fullest account of them in any source read for this folder and four things in it are new to the corpus: that Irene answered the emperor to his face that it is foolish to bow to things of stone and wood, ordered for an agreed price and made by the hands of some mortal man; that the commander Dulcitius, meaning to defile the virgins, lost his mind at the door of their prison while they were praying and embraced and kissed the black cauldrons and pots standing there, going away sooty and black; that angels turned back the soldiers taking Irene to the brothel and set her on a hill the commander could not climb; and that Anastasia gathered all three bodies into one place and buried them honourably. It calls the trial a trial before the emperor himself, where the Romanian notice has the governor alone. **The year is new to this folder**: „Све чесно пострадаше за Христа Цара и Господа око 304. год.“, about 304, and it agrees with the 304 the Greek page gives for the arrest, so nothing was displaced. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -139,5 +154,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "about 304",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 16. април ст. ст.: „Све чесно пострадаше за Христа Цара и Господа око 304. год.“ — all suffered honourably for Christ the King and Lord about the year 304. The folder held no `dates` before this. It agrees with saint.gr, which this folder's own Greek citation records as putting the arrest in 304; doxologia's notice gives no year at all, naming only Diocletian. No year of birth is recorded anywhere read."
+    }
   }
 }

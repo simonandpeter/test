@@ -12,6 +12,11 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαρτίου, «Όσιος Ακάκιος ο Ομολογητής επίσκοπος Μελιτηνής», with the rank word and the see left off."
+    },
+    {
+      "form": "Акакије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 17 April, „Св. Акакије еп. Мелитински.“, with Св. left off — it is not a rank — and with еп. Мелитински left off, a rank this folder already carries in `types` and a see this corpus keeps in `office`. The heading gives no epithet beyond the see, so the bare forename is what is left. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"акакије\" — acacius-of-melitene, acacius-the-kausokalyvite`, and `acacius-the-kausokalyvite` already held this same bare Serbian form. A deliberate fold, recorded in the run's findings; the thirteen other folders of this spelling carry no Serbian form."
     }
   ],
   "sex": "male",
@@ -25,7 +30,8 @@
     "euthymius-the-great",
     "gregory-the-theologian",
     "polyeuctus-of-melitene",
-    "theodosius-the-younger"
+    "theodosius-the-younger",
+    "cyril-of-alexandria"
   ],
   "attestations": [
     {
@@ -65,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.04.2026 (17. април ст. ст.) — „Св. Акакије еп. Мелитински.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, **on the Romanian calendar's day and not the Greek one**: doxologia keeps him on 17 April and saint.gr on 31 March; one row per church, so the Greek row kept its day and nothing moved. The entry is the fullest account of him read for this folder and almost all of it is new: that he struggled in the city he was born in, Melitene in Armenia; that **blessed Otrius, bishop of that city, who took part in the Second Ecumenical Council, ordained him presbyter**, and that he became bishop on Otrius's death; that he took part in the Third Ecumenical Council at Ephesus, which condemned Nestorius's blasphemy against the Mother of God, and **was zealous there for the purity of the Orthodox faith together with Cyril of Alexandria**; that he had great grace from God and worked many wonders; and that after a long and zealous service of God he **reposed peacefully in 435**. **That year is a contradiction and is recorded as one, not resolved**: this folder's only date is saint.gr's «γεννήθηκε περί το 431», a birth about 431, which the folder's own note already says cannot be reconciled with his preaching at Ephesus in that same year — and a death in 435 cannot stand beside a birth in 431 either. The Prologue's year is therefore recorded in `dates` as the death it is, and the note names the contradiction; no reader here chose between the two pages. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -96,7 +112,14 @@
       "latest": 431,
       "display": "about 431",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Ακάκιος έζησε τον πέμπτο αιώνα μ.Χ. (γεννήθηκε περί το 431 μ.Χ.)» — the page's «περί», about, is why the display says about 431. The same page has him write against Nestorius and preach a surviving homily at Ephesus, where the council met in 431, which the year as printed cannot be reconciled with; the page's figure is recorded because it is the page's, and the contradiction is recorded with it rather than resolved. This folder held no `dates` before."
+      "note": "saint.gr: «Ο Όσιος Ακάκιος έζησε τον πέμπτο αιώνα μ.Χ. (γεννήθηκε περί το 431 μ.Χ.)» — the page's «περί», about, is why the display says about 431. The same page has him write against Nestorius and preach a surviving homily at Ephesus, where the council met in 431, which the year as printed cannot be reconciled with; the page's figure is recorded because it is the page's, and the contradiction is recorded with it rather than resolved. The Ohrid Prologue's death year, 435, cannot be reconciled with it either, and is recorded beside it for the same reason."
+    },
+    "death": {
+      "earliest": 435,
+      "latest": 435,
+      "display": "435",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 17. април ст. ст.: „После дуге и ревносне службе Богу сконча мирно, 435. год.“ — after a long and zealous service of God he reposed peacefully in 435. The folder held no death year before. **It contradicts the birth year recorded above**, saint.gr's about 431, which that page itself cannot reconcile with the council of 431 it has him preach at. Neither reading is chosen and neither is displaced: both stand as their pages print them, and each note names the other, which is how docs/CORPUS.md §3 asks a disagreement to be kept. doxologia, which keeps him on this day, gives no year either way."
     }
   }
 }
