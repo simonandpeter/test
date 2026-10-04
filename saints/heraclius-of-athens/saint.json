@@ -10,6 +10,11 @@
       "form": "Ηράκλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες», with the rank word left off; the life page carries «Αγιος Ηρακλειος ο Μαρτυρας» as its own head name."
+    },
+    {
+      "form": "Ираклије",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s third entry for 18. мај ст. ст., „Свети мученици Ираклије, Павлин, Венедим.“ — Свети is not a rank and мученици the `martyr` in `types`, and the body is three sentences that add no by-name. Measured with `foldchk.py` before drafting: `[('heraclius-of-illyria', 'sr')]`. The fold is read in this batch’s commit message."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.05.2026 (18. мај ст. ст.) — „Свети мученици Ираклије, Павлин, Венедим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third and last entry, three sentences long, on the same menologion 18/5 the Greek row already carries. **A FLAT CONTRADICTION ON THE MANNER OF DEATH, RECORDED AND NOT RESOLVED.** „За име Христово беху сажежени у пећи огњеној“ — burned in a fiery furnace — against saint.gr, which has the three seized, tortured and **beheaded**, «συλλήφθηκαν» and the couplet for Heraclius turning on the sword. **Neither is a date and neither is chosen**; the added paragraph says both and nothing on the folder was changed. **Беху Атињани corroborates the Athens all three display names carry.** **NO YEAR.** „У време Декијево“ names the reign and **gives it no bounds**, so nothing is built on it — the same refusal this wave made of „У време царовања Декијева“ for `isidore-of-chios` on the Julian 14 May. `types` untouched. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

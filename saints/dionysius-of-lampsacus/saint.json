@@ -11,6 +11,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Дионисије",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s second entry for 18. мај ст. ст., „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“ — Свети is not a rank and мученици the `martyr` this corpus puts in `types`, so the heading leaves five bare forenames and the body adds nothing to any of them but a description. Measured with `foldchk.py` before drafting: `[('dionysius-companion-of-quadratus', 'sr'), ('dionysius-companion-of-socrates', 'sr')]`. The folds are read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -20,7 +25,8 @@
   "related": [
     "peter-of-lampsacus",
     "andrew-companion-of-paul",
-    "paul-companion-of-andrew"
+    "paul-companion-of-andrew",
+    "christina-martyr-18-may"
   ],
   "attestations": [
     {
@@ -59,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.05.2026 (18. мај ст. ст.) — „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 18/5 the Romanian and Greek rows already carry. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „То је било 250. године“ → `death` 250. **The year is given of the whole episode and not of one man** — the sentence closes an entry about all five and about Nicomachus — which is why it is written here and why Solochon’s 298 was withheld from Pamphamer and Pamphylon on the Julian 17 May: there the year was given of one man in a sentence about him. 250 falls inside the reign of Decius, 249 to 251, which saint.gr gives for the whole company, so there is no disagreement. **New here**: that the Prologue calls him a man of standing, and above all **the end of Nicomachus**, which no other book read for this company carries: „одрече се Христа усред мука, и наедном сиђе с ума, па као бесан гризаше своје тело и бацаше пену на уста докле не издахну“ — he denied Christ in the middle of the tortures, went out of his mind at once, and gnawed his own flesh and foamed at the mouth until he expired. `peter-of-lampsacus`’s life already records the denial off doxologia; **the madness and the death are this book’s**. **Nicomachus gains no folder and no row**: he is an apostate and no calendar read for this corpus keeps him, `ls saints | grep -iE 'nicomach'` returns nothing, and by the coordinator’s third ruling nothing is minted for him. `types` untouched. No `locations`; this entry names no place at all, where the Romanian has Lampsacus and the Greek has Athens. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -117,5 +133,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 18. мај ст. ст., closing its second entry: „То је било 250. године.“ The year is given of the episode, which is the whole company and Nicomachus with them, and not of one man. This folder held no `dates` object at all until now; saint.gr gave only the reign of Decius, 249 to 251, inside which 250 falls."
+    }
   }
 }

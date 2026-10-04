@@ -16,6 +16,11 @@
       "form": "Χριστίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιοι Πέτρος, Διονύσιος, Ανδρέας, Παύλος, Χριστίνα, Ηράκλειος, Παυλίνος και Βενέδιμος οι Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Христина",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s second entry for 18. мај ст. ст., „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“ — Свети is not a rank and мученици the `martyr` this corpus puts in `types`, so the heading leaves five bare forenames and the body adds nothing to any of them but a description. Measured with `foldchk.py` before drafting: `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "female",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.05.2026 (18. мај ст. ст.) — „Свети мученици Петар, Дионисије, Андреј, Павле и Христина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 18/5 the Romanian and Greek rows already carry. **A YEAR READ AND REFUSED BECAUSE IT WOULD NARROW.** „То је било 250. године“ gives **250**, and this folder’s `death` already holds the wider interval its own source gave — so writing 250 would narrow a sourced interval, which the coordinator’s ruling forbids. `dates` is **untouched** and the Prologue is recorded here as a book that puts the year inside that bracket. **Two of this company got a first date from this entry and three did not, and the difference is only which folders already carried an interval** — `peter-of-lampsacus` and `dionysius-of-lampsacus` had no `dates` object at all. **New here**: that the Prologue calls him a virgin of sixteen years, and above all **the end of Nicomachus**, which no other book read for this company carries: „одрече се Христа усред мука, и наедном сиђе с ума, па као бесан гризаше своје тело и бацаше пену на уста докле не издахну“ — he denied Christ in the middle of the tortures, went out of his mind at once, and gnawed his own flesh and foamed at the mouth until he expired. `peter-of-lampsacus`’s life already records the denial off doxologia; **the madness and the death are this book’s**. **Nicomachus gains no folder and no row**: he is an apostate and no calendar read for this corpus keeps him, `ls saints | grep -iE 'nicomach'` returns nothing, and by the coordinator’s third ruling nothing is minted for him. `types` untouched. No `locations`; this entry names no place at all, where the Romanian has Lampsacus and the Greek has Athens. The Prologue prints no troparion and no kontakion. **Her age is new and is not a date**: „шеснаестогодишња девица“, a virgin of sixteen years, which corroborates the `virgin` this folder carries and from which no year of birth is reckoned."
     }
   ],
   "hymns": [

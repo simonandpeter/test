@@ -16,6 +16,11 @@
       "form": "Феодот Анкирский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Мученик Феодот Анкирский», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Феодота корчемника»."
+    },
+    {
+      "form": "Теодот",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s first entry for 18. мај ст. ст., „Свети мученици Теодот и седам девојака мученица, Текуса, Александра, Клавдија, Фаина, Ефрасија, Матрона, и Јулија.“ — Свети is not a rank and мученици/мученица the `martyr` this corpus puts in `types`, so the heading leaves a bare forename for every one of the eight. **An enumerated company is a fold factory, and this one made eight folds in a day**; every form here was measured with `foldchk.py` before a line was drafted and the folds are read in this batch’s commit message. For this form `foldchk.py` returned three holders — `theodotus-of-cyzicus`, `theodotus-of-kyrenia` and `theodotus-of-marcianopolis`, all three `sr` forms from this same book on three other Julian days — so the fold is four wide and the heading offers nothing to break it: „Теодот и седам девојака“ is a company and not a by-name, and Ancyra and the inn are both in the body."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.05.2026 (18. мај ст. ст.) — „Свети мученици Теодот и седам девојака мученица, Текуса, Александра, Клавдија, Фаина, Ефрасија, Матрона, и Јулија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 18/5 the Romanian and Greek rows already carry, so nothing moved. **A YEAR READ AND REFUSED BECAUSE IT WOULD NARROW.** „би посечен 303. године“ gives **303**, and this folder’s `death` is already **303–304**, „303 or 304“, read off days.pravoslavie.ru, which disagrees with itself between «(303)» and «7 июня 303 или 304 года». **303 falls inside that interval**, so writing it would narrow a sourced interval, which the coordinator’s ruling forbids without qualification. `dates` is **untouched**, and the Prologue is recorded here as a second book for the earlier of the two years. **THE PROLOGUE SENDS HIM TO A SECOND DAY AND THE NOTE IS WRITTEN NOW SO THAT A LATER READER IS NOT SURPRISED BY IT.** The entry closes „(в. 7. јун)“ — see 7 June — which is the day the Russian life gives for his death, «7 июня 303 или 304 года», while the Russian calendar keeps him on 7 ноября. **This row is the Julian 18 May, the day of the full entry**, and one attestation row per church is the schema; **the reader who reaches the Julian 7 June will find this row already venerated and must leave it**, recording that day as a second-day note here rather than moving anything. **New here, and the Prologue has the whole of it alone**: that he was **married and lived by the apostle’s word, „Одсада и они који имају жене да буду као да их немају“ (1 Cor 7:29)**, as if he had no wife; that **he kept the inn precisely so that he could help Christians without being suspected**, and that **his inn was the refuge of the persecuted faithful**; that he secretly sent help to the Christians scattered in the mountains and secretly gathered and buried the bodies of the killed; that he bore the tortures **as though he were in another’s body**, his whole mind sunk in the Lord; that **his teeth were crushed with stones**; **his words on the scaffold** — „Не плачите, браће, за мном него прославите Господа нашег Исуса Христа, који ми поможе свршити подвиг и душмана победити“ — and that he laid his own head on the block; and that **a priest buried him honourably on a rise outside the city, where a church was later raised in his name**. **TWO DIFFERENCES FROM THE ROMANIAN LIFE, BOTH RECORDED AND NEITHER RESOLVED.** The Prologue has him go to the lake **with one companion, whom it does not name, and that companion betrayed him to the judge**; doxologia’s life, signed by Saint Nilus, has him go with Polychronius and Theocharides and has Polychronius betray the burial afterwards. And the Prologue has him **arrested on the betrayal**, where doxologia has him **give himself up**. The added paragraphs say what this book says and nothing was altered on the other folders. `types` untouched — мученици is the `martyr` he carries, and крчмар, an innkeeper, is a trade and no rank. No `locations`, although Ancyra is named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

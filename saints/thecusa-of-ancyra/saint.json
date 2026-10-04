@@ -16,6 +16,11 @@
       "form": "Текуса Анкирская (Коринфская)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Текуса Анкирская (Коринфская), дева, мц.», with the rank and state words left off; the epithets the page gives are kept. The line itself gives the name in the genitive, «Текусы»."
+    },
+    {
+      "form": "Текуса",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s first entry for 18. мај ст. ст., „Свети мученици Теодот и седам девојака мученица, Текуса, Александра, Клавдија, Фаина, Ефрасија, Матрона, и Јулија.“ — Свети is not a rank and мученици/мученица the `martyr` this corpus puts in `types`, so the heading leaves a bare forename for every one of the eight. **An enumerated company is a fold factory, and this one made eight folds in a day**; every form here was measured with `foldchk.py` before a line was drafted and the folds are read in this batch’s commit message. For this form `foldchk.py` returned `NO FOLDER HOLDS THIS FORM`. She is the only one of the seven the body names as well as the heading, „света Текуса“, and the form is the same in both."
     }
   ],
   "sex": "female",
@@ -81,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.05.2026 (18. мај ст. ст.) — „Свети мученици Теодот и седам девојака мученица, Текуса, Александра, Клавдија, Фаина, Ефрасија, Матрона, и Јулија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
+        "year": 2026
+      },
+      "note": "One of the seven maidens of Ancyra, **named in the heading of the day’s first entry and nowhere else in it** — the body speaks of them only together, as „седам девојака“, and names only Thecusa. Same menologion 18/5 the Romanian and Greek rows already carry. **THE PROLOGUE’S SEVEN ARE THE CORPUS’S SEVEN, AND THAT SETTLES A LIST THE RUSSIAN CALENDAR GIVES DIFFERENTLY.** days.pravoslavie.ru’s line for 6 ноября ст. ст., quoted on five of these folders, reads «Мцц. Текусы , Александры , Полактии , Клавдии , Евфросинии , Афанасии и Матроны (III).» — with **Polactia and Athanasia** where this book has **Фаина and Јулија**, and Euphrosyne where it has Ефрасија. The Prologue’s list agrees name for name with the Greek and Romanian seven these folders were built from, so **this reading is a third book for the corpus’s membership and against the Russian line’s**. Nothing was changed on the strength of it and no folder was renamed; **which seven the Russian calendar means is the author’s and is one commit.** **NO YEAR.** The Prologue gives the maidens none: the only year in the entry is the 303 of Theodotus’s beheading, which is given of him in a later sentence, and the maidens died before him. Taking it for them would be inferring a year the page does not state of them, which BRIEF.md §4 forbids — the same refusal this wave made for Pamphamer and Pamphylon on the Julian 17 May. **New from this book**: that they were brought to trial and tortured and **mocked** before they were drowned in the lake, and that Thecusa appeared to Theodotus **in a dream** and told him to take the bodies out and bury them. `types` untouched — мученица is the `martyr` and девојака the `virgin`, both held. No `locations`; the entry names Ancyra for Theodotus and no place for them. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
