@@ -10,13 +10,27 @@
       "form": "Δημήτριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιος Δημήτριος», with the rank words left off."
+    },
+    {
+      "form": "Димитрий Дабудский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 15 ноября ст. ст., «Димитрий Дабудский, мч.», with the rank word left off. The line itself gives the bare forename in the genitive and no toponymic; the toponymic is the link’s and is what tells him from the corpus’s other Demetrii."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Мч. Димитрия (ок. 307).»",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 307,
+      "latest": 307,
+      "display": "about 307",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 15 ноября ст. ст. with «(ок. 307)», about 307, and carries no life page to say more. saint.gr gave 298 on the same day, with the reign of Maximian and the ruler Publius, and this folder’s earlier reading held that year for the reign’s and the governor’s rather than his; the Russian line is the first year any calendar sets against his name alone. The two are not folded into one interval, and the difference is stated in the life."
+    }
   }
 }
