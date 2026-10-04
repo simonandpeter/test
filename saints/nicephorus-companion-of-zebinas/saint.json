@@ -10,22 +10,36 @@
       "form": "Νικηφόρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Άγιοι Ζεβινάς, Γερμανός, Νικηφόρος και Αντωνίνος», with the rank word left off."
+    },
+    {
+      "form": "Никифор Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind his place in the line for 13 ноября ст. ст., page 1624, «Никифор Кесарийский (Палестинский), мч.», with the rank word left off; the bracketed word is the calendar's own, the province behind the city. The line itself declines the name and gives no by-name at all, «Мчч. Антонина , Никифора и Германа»."
     }
   ],
   "dates": {
     "death": {
       "earliest": 286,
-      "latest": 305,
-      "display": "between 286 and 305",
+      "latest": 308,
+      "display": "286–305 or about 308",
       "basis": "traditional",
-      "note": "saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν επί Μαξιμιανού (286-305)» — the page gives the reign and no year."
+      "note": "Two calendars, two readings, and the interval holds both. saint.gr: «Οι Άγιοι αυτοί μαρτύρησαν επί Μαξιμιανού (286-305)» — the reign and no year. days.pravoslavie.ru's line for 13 ноября ст. ст. closes «(ок. 308)», which is outside that reign; neither is preferred here."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 ноября ст. ст. — «Мчч. Антонина , Никифора и Германа (ок. 308).»",
+        "url": "https://days.pravoslavie.ru/Days/20261113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
