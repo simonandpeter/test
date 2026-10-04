@@ -1,0 +1,66 @@
+{
+  "slug": "matthew-aloin",
+  "display_name": "Matthew (Aloin)",
+  "names": [
+    {
+      "form": "Матфей (Алоин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 12 ноября ст. ст., name page 13850, «Матфей (Алоин), иерей, сщмч.», with the rank word and the grade word left off; the surname is part of the name and stays. The day's own line declines the name and gives the forename alone, «Сщмчч. ... Матфея ... пресвитеров». azbyka.ru heads its life «Священномученик Матфей Алоин, пресвитер» and prints the surname without the brackets."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Сщмчч. Константина , Владимира , Александра , Матфея , Димитрия , Петра ,пресвитеров и Симеона диакона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1 August 1879",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Священномученик Матфей родился 1 августа 1879 года в селе Стенькино недалеко от Рязани в семье священника Александра Алоина.»"
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "25 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Протоиерей Матфей Алоин был расстрелян 25 ноября 1937 года на полигоне Бутово под Москвой и погребен в безвестной общей могиле», the NKVD troika having sentenced him on 14 November. days.pravoslavie.ru's line for 12 ноября ст. ст. closes with the year 1937, and 25 November 1937 is 12 November old style."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

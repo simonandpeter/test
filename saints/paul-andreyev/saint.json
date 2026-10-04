@@ -57,5 +57,9 @@
   "office": "Archpriest",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "demetrius-rozanov-12-november",
+    "alexander-zverev"
+  ]
 }

@@ -1,0 +1,71 @@
+{
+  "slug": "demetrius-rozanov-12-november",
+  "display_name": "Demetrius (Rozanov) (12 November)",
+  "names": [
+    {
+      "form": "Димитрий (Розанов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 12 ноября ст. ст., name page 13704, «Димитрий (Розанов), иерей, сщмч.», with the rank word and the grade word left off. The day's own line declines the name and gives the forename alone, «Сщмчч. ... Димитрия ... пресвитеров». The same calendar keeps a second man of this name and surname on 26 сентября ст. ст., an archpriest on name page 14333, and strips to the same bare form; the two are told apart by day, by grade and by slug, and the fold is deliberate. azbyka.ru heads its life «Священномученик Димитрий Розанов, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Сщмчч. Константина , Владимира , Александра , Матфея , Димитрия , Петра ,пресвитеров и Симеона диакона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1890,
+      "latest": 1890,
+      "display": "15 August 1890",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Священномученик Димитрий родился 15 августа 1890 года в Москве в семье священника Иоанна Петровича Розанова.»"
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "25 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Священник Димитрий Розанов был расстрелян 25 ноября 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой», the NKVD troika having sentenced him on 14 November. days.pravoslavie.ru's line for 12 ноября ст. ст. closes with the year 1937, and 25 November 1937 is 12 November old style."
+    }
+  },
+  "office": "Priest",
+  "related": [
+    "alexander-zverev",
+    "paul-andreyev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
