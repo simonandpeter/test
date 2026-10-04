@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Ιωάννης ο Ίβηρας», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Јован Иверски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is not a rank but the epithet \"the Iberian\" that the heading sets after all four names and that the entry's first sentence confirms belongs to all four, they being the founders of the Iberian monastery. **Reading it as distributing over the four is this day's naming decision, and the alternative was measured**: bare forenames would have put «Јован» into a fold of **eight** folders, «Јевтимије» into one with `euthymius-of-dimitsana` and «Георгије» into one with `george-of-mytilene`, where all four kept forms fold with nothing at all. The Romanian forms on these folders already carry the epithet — «Ioan Ivirul», «Eftimie Ivirul», «Gheorghe Ivirul», «Gavriil Ivirul» — where the Greek ones do not, so the fuller reading is the one two calendars support. BRIEF-SERBIAN.md §6's \"one form, the fullest\" decides it. Athanasius's lavra and the 998 are in the body."
     }
   ],
   "sex": "male",
@@ -22,7 +27,8 @@
   "related": [
     "euthymius-the-iberian",
     "george-the-iberian",
-    "athanasius-the-athonite"
+    "athanasius-the-athonite",
+    "gabriel-the-iberian"
   ],
   "attestations": [
     {
@@ -61,11 +67,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated company of four, so one row each, on the same menologion day the Romanian and the Greek keep all four on, so nothing moved. The heading's missing comma between Јевтимије and Георгије is the book's and is quoted as printed. **A FIRST DATE FOR A FOLDER THAT HELD NONE**: „Свети Јован подвизавао се најпре у Атанасијевој лаври, потом основао свој манастир, Ивер. Упокојио се 998. године.“ → `death` 998, where this folder had no `dates` object at all; neither doxologia's line nor saint.gr's gave him a year, although both gave his three companions theirs. **New here**: that he struggled first **in the lavra of Athanasius** and only then founded his own monastery, Iver. **`athanasius-the-athonite` was already a `related` row** on this folder and is linked in the appended paragraph; nothing was added to him. **`related_add: [\"gabriel-the-iberian\"]`**, who is the one of the four this folder did not carry and whom the heading enumerates beside it; the reciprocal is in the same file. `types` untouched: Преподобни is the `venerable` the folder carries, and founding and governing a monastery is the `abbot` it carries too. **No `locations`**: the Holy Mountain is named and this folder has never claimed a point. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 998,
+      "latest": 998,
+      "display": "998",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Упокојио се 998. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave him any year, although the same two pages dated his companions — Euthymius 1028, George 1066, Gabriel 1028 — and this book agrees exactly with the first two of those three. No birth is printed."
+    }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Γαβριήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Γαβριήλ ο Ίβηρας», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Гаврил Иверски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. **His is the name the epithet stands immediately after**, so it is the one of the four where the reading needs least argument; it was read as distributing over all four for the reason given on his companions' forms. Measured: a bare «Гаврил» would have folded with nothing, so for him the kept epithet buys consistency with his three companions rather than a fold avoided. The icon is in the body and the book gives him no year."
     }
   ],
   "sex": "male",
@@ -65,11 +70,26 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated company of four, so one row each. **NO DATE WAS TOUCHED AND NONE COULD BE**: this book dates John, Euthymius and George and **gives Gabriel no year at all**, so the 1028 this folder holds off doxologia's „Cuviosul Gavriil și-a încheiat viața lui în pace (1028)“ stands alone and unchanged. **New here**: that he was the one **counted worthy to receive the wonderworking icon of the Mother of God which came to the monastery over the sea** — the Portaitissa, which the entry does not name, and which is the whole of what this book says of him. **The icon is not a `related` row and not a folder**: an icon of the Mother of God is not a person, and BRIEF.md §3 says an icon is no folder. **`related_add` of the other three**: this folder carried **no `related` key at all**, and the heading enumerates it beside them while the entry makes the four of them one company of founders — so John, Euthymius and George are added here and this folder is added to each of theirs in the same file. **Four reciprocal relations written where one folder had none.** `types` untouched: Преподобни is the `venerable` the folder carries. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-the-iberian",
+    "euthymius-the-iberian",
+    "george-the-iberian"
+  ]
 }

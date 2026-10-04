@@ -11,6 +11,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Ευθύμιος ο Νέος κτήτορας της Μονής Ιβήρων Αγίου Όρους», with the rank word, the epithet and the house left off."
+    },
+    {
+      "form": "Јевтимије Иверски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, which is not a rank but the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. Measured: a bare «Јевтимије» would fold with `euthymius-of-dimitsana`, where this form folds with nothing. The body spells his name Јефтимије in its second sentence and Јевтимије in the heading and the third; **the heading's spelling is what is stored**, and the book's own variation is recorded here rather than corrected. The translation of the Scriptures and the 1028 are in the body."
     }
   ],
   "sex": "male",
@@ -23,7 +28,8 @@
   "related": [
     "john-the-iberian",
     "george-the-iberian",
-    "athanasius-the-athonite"
+    "athanasius-the-athonite",
+    "gabriel-the-iberian"
   ],
   "dates": {
     "death": {
@@ -71,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated company of four, so one row each, on the same menologion day the Romanian and the Greek keep all four on, so nothing moved. **THE 1028 AGREES EXACTLY AND NOTHING IN `dates` WAS TOUCHED**: „Јевтимије се упокојио 1028.“ is the year this folder already holds off the title of doxologia's page, «Viața Cuviosului Eftimie Ivirul (†1028)», whose body gave none — so a year that stood on a page title alone now has a second book behind it. **New here**: that **he and George translated the Holy Scriptures into the Georgian tongue**, which is the plainest statement of what he did that this folder holds and is what its `hymnographer` type stands beside. **`related_add: [\"gabriel-the-iberian\"]`**, the one of the four this folder did not carry; the reciprocal is in the same file. `types` untouched: Преподобни is the `venerable` the folder carries. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -10,6 +10,11 @@
       "form": "Λαοδίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Άγιος Λαοδίκιος ο δεσμοφύλακας», with the rank word left off."
+    },
+    {
+      "form": "Лаодикије",
+      "lang": "sr",
+      "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 13 May, „Тамничар Лаодикије, видевши то чудо, и сам исповеди Христа Господа, и одмах би посечен.“ — the bare forename, with Тамничар left off, which is the jailer's trade standing before the name as a common noun and not part of it; this folder's display name and its Greek form both carry that word where this corpus would otherwise put it in `office`. The day's heading names only Glyceria, so there is no heading form for him at all. A direct walk of every `names` entry in `saints/` finds no folder holding Лаодикије, so the form folds with nothing."
     }
   ],
   "related": [
@@ -43,8 +48,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Света мученица Гликерија.“ … „Тамничар Лаодикије, видевши то чудо, и сам исповеди Христа Господа, и одмах би посечен.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "**He is named in the body of the day's first entry and not in any heading, and the row IS owed** — which is the coordinator's second ruling applied, and the opposite answer from the one `callitropos` got on the Julian 12 May the day before. The test there and here is whether the entry treats the man as a subject of the commemoration. **His is one sentence, but the sentence is his martyrdom entire**: seeing the wonder of the sealed prison he confessed Christ the Lord himself and was beheaded on the spot — the confession, the death and the reason for all three, which is the whole of what any calendar commemorates him for. Callitropos's clause was that her brother was baptised along with her, a kinship and not a passion. **And the other calendars settle it**: saint.gr keeps him by name on this same menologion day as «Άγιος Λαοδίκιος ο δεσμοφύλακας», which is the row this folder already holds, so the Serbian day is his day too and not a day he merely appears on. The quoted source is the heading followed by the body's own sentence for him, as this wave has quoted a body's naming clause before. **No date**: the entry's 177 is Glyceria's year of suffering — „Чесно пострада 177. године“ stands in her part of the account and is said of her — and although his death is in the same scene, **attaching her year to him would be an inference and not a reading**, so `dates` stays null. The reading is named for the author; one commit would add it if the author reads the scene as one year. **`glyceria-of-traianopolis` was already a `related` row in both directions** and nothing was added. `types` untouched: the entry gives him no rank word at all, and the `martyr` the folder carries is what the beheading says; **Тамничар is his trade and not a rank**, and this corpus puts such a word in `office`, which an upgrade cannot write, so it stays in the display name where the Greek already put it. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

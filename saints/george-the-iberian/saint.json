@@ -11,6 +11,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Όσιος Γεώργιος ο Ίβηρας», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Георгије Иверски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 May, „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“ — Преподобни left off, which is the `venerable` this folder already carries in `types`, and **Иверски kept**, the epithet \"the Iberian\" the heading sets after all four names and which the entry's first sentence confirms belongs to all four. Measured: a bare «Георгије» would fold with `george-of-mytilene`, where this form folds with nothing. The heading prints no comma between Јевтимије and Георгије; that is the book's and is quoted as it stands rather than corrected. The translation of the Scriptures and the 1066 are in the body."
     }
   ],
   "sex": "male",
@@ -21,7 +26,8 @@
   ],
   "related": [
     "euthymius-the-iberian",
-    "john-the-iberian"
+    "john-the-iberian",
+    "gabriel-the-iberian"
   ],
   "dates": {
     "death": {
@@ -70,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Преподобни Јован, Јевтимије Георгије и Гаврил Иверски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated company of four, so one row each. **THE 1066 AGREES EXACTLY AND NOTHING IN `dates` WAS TOUCHED**: „а Георгије 1066. године“ is the year this folder already holds off the title of doxologia's page, «Viața Cuviosului Gheorghe Ivirul (†1066)», whose body gave none. **AND THIS BOOK ADDS NO FOURTH DAY.** That Romanian page names three days for him — 24 May, when he fell asleep; 30 June, when the Georgians keep him with the Apostles; and 13 May, which it settles on — and this folder's Romanian row already carries all three in a note. **The Prologue keeps him on the 13 May the Romanian settled on**, which is corroboration of that choice from a fourth book and not a new day; nothing moved and no second-day note is owed. **New here**: that **he and Euthymius translated the Holy Scriptures into the Georgian tongue**. **`related_add: [\"gabriel-the-iberian\"]`**, the one of the four this folder did not carry; the reciprocal is in the same file. **`athanasius-the-athonite` was NOT added**: the lavra is John's part of the entry and not his, and a `related` row is owed for a person's own story. `types` untouched. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

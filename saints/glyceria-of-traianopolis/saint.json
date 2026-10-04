@@ -11,6 +11,11 @@
       "form": "Γλυκερία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαΐου, «Αγία Γλυκερία», with the rank word left off."
+    },
+    {
+      "form": "Гликерија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 13 May, „Света мученица Гликерија.“ — Света left off, which is not a rank, and мученица left off, which is the `martyr` this folder already carries in `types`. The heading gives no epithet and no city: Rome, Traianopolis, Thrace, Antoninus and the 177 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Гликерија, so the form folds with nothing — neither `glyceria-of-adrianople` nor `glyceria-of-novgorod` nor `glycerius-the-farmer`, the three the name sweep raised, has a Serbian form."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Света мученица Гликерија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek both keep her on, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NONE**: „Чесно пострада 177. године“ → `death` 177, where this folder had no `dates` object at all and neither the Romanian nor the Greek line gave a year. It sits inside the reign the entry itself names — „У време нечестивог цара Антонина“ — and nothing was reckoned from that reign, which the book gives with no bounds. **New here, and the whole of the account**: that she was the daughter of a governor of Rome and settled at Traianopolis in Thrace when her father died and left her an orphan; that she drew a cross on her own forehead, and when the emperor's deputy asked where her lamp was — for all of them carried lamps in their hands — showed him the cross and said „Ово је моја лампада“, this is my lamp; that at her prayer thunder struck the idol of Zeus and broke it in pieces; that she was beaten and thrown into prison, and the deputy **sealed the prison doors** meaning to kill her by hunger, and an angel of God came to her and gave her heavenly food, so that when he opened the prison he was astonished to find her healthy, bright and cheerful; that she was cast into a fiery furnace and stood unhurt in the middle of it praising God and **recalling the three youths in the Babylonian furnace**; that she was at last thrown before lions and gave up her soul after praying; and that **healing myrrh flowed from her relics**, which cured the sick of the gravest diseases. **`related_add` is not used and nothing was invented**: `laodicius-the-jailer` was already a `related` row on this folder in both directions, and the three youths are named as a company and not individually, so no row is owed for them. `types` untouched: Света is no rank, мученица is the `martyr` the folder carries, and `virgin` is corroborated by „ова света дева“. **No `locations`**: Rome and Traianopolis are named and this folder has never claimed a point. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -105,5 +120,14 @@
   ],
   "related": [
     "laodicius-the-jailer"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "177",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 13 May: „Чесно пострада 177. године.“ Neither doxologia.ro's line for 13 mai nor saint.gr's gave any year at all. The entry also sets her „У време нечестивог цара Антонина“, in the time of the impious emperor Antoninus, and gives that reign no bounds, so nothing was built on it; the 177 is the only number on the page. No birth is recorded and none is printed."
+    }
+  }
 }

@@ -11,6 +11,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Φεβρουαρίου, «Άγιος Αλέξανδρος ο Μάρτυρας ο εν Δριζιπάρω της Θράκης», with the rank word and the place clause left off."
+    },
+    {
+      "form": "Александар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 13 May, „Свети мученик Александар.“ — Свети left off, which is not a rank, and мученик left off, which is the `martyr` this folder already carries in `types`. **The heading gives no epithet, no city and no year, and the body's „Словен“ is a nation and not a by-name**, so there is nothing fuller to store: Cartagena, which this folder's display name carries from the Greek, is nowhere on this page, and the Slav, the eighteen years, Tiberian, Carassura, the Ergine and the 298 are all in the body. The form folds with `alexander-of-side`, which holds the same bare «Александар», and that fold is recorded as deliberate in the run's findings."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.05.2026 (13. мај ст. ст.) — „Свети мученик Александар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. **AN IDENTIFICATION MADE ON FOUR MARKS WITH THREE DIFFERENCES LEFT STANDING, AND IT IS NAMED FOR THE AUTHOR** — the shape `nicetas-of-epirus` took on the Serbian 4 April, and the reason this entry is an upgrade and not an arrival. **The marks**: the name Alexander; **the governor Tiberian**, an uncommon name, whom this entry calls „капетану Тиверијану“ and whom doxologia names as the governor in this folder's own life; **the emperor Maximian** — „цара Максимилијана“ here, Maximian in doxologia — against saint.gr's persecution of Diocletian, which is the same persecution; and **the death by beheading in Thrace**, this entry putting it „На обали реке Ергине“, on the bank of the river Ergine, which is the river that runs past Drizipara, the town saint.gr's own line names him for: «Άγιος Αλέξανδρος ο Μάρτυρας ο εν Δριζιπάρω της Θράκης». **The differences, recorded and not resolved**: this book makes him **„Словен“, a Slav**, where saint.gr has him come from Cartagena; it leads him „преко Македоније у Цариград“ where saint.gr tortures him at Marcianopolis; and it keeps him on the Julian 13 May where the Romanian and the Greek keep him on 25 February. **The rule that would have made two men does not fire**: two commemorations on *one* calendar are two men by this corpus's settled rule, and these are two days on **different** calendars. It was checked: **the Ohrid Prologue's own Julian 25 February is already written in this wave and prints two entries, Tarasius and a Paphnutius identity question, and no Alexander at all** — so this book keeps one Alexander of this kind and keeps him here. One row per church, so the Romanian and Greek rows stand on 25 February and nothing moved. **THE 298 WAS READ AND REFUSED, AND THE REASON IS NEW.** „И тако џелат сврши свој посао 298. године.“ — and this folder holds a `floruit` of 301–325, saint.gr's „στις αρχές του 4ου αιώνα“. **298 is three years before that interval, not inside it**, so it is not the narrowing the coordinator refuses; it is worse placed than that. Taking it as a death would leave the folder dying in 298 and flourishing from 301, and making the two agree would mean editing a bound the Prologue never speaks to. **And the identification above is itself a reading**: writing a year onto a folder whose identity with this entry is open would compound one reading with another. So `dates` are untouched and the year is in the life and here. **If the author settles the identification, the 298 is one commit away.** **New here, and none of it in the Romanian or the Greek account this folder was built from**: that he was a Slav; **that he was an eighteen-year-old soldier** in that emperor's army; that he refused to honour the Roman idols and was handed to Tiberian either to talk him out of Christ or to torture and kill him; that Tiberian, having to make the journey himself, took him along through Macedonia towards Constantinople, and that **he was cruelly tortured in every place and in every place Christians came out to meet him, begging his blessing and heartening him**; **that his mother Pimenia followed him the whole way**; that an angel of God appeared to him more than once on the road, easing his torments; **that at a place called Carassura, when thirst distressed him and the soldiers escorting him, he brought a spring of cold water out of dry ground**; **that when the executioner swung at his neck he saw bright angels of God all round him and his arm went slack**, and that Alexander, asking why and being told he saw bright young men about him, prayed God that the angels withdraw so the executioner should not be afraid; that Pimenia took up her son's body and buried it honourably, and that there were many healings at his grave; and that **after his death he appeared to his mother and told her of her own near passing**. **Pimenia takes nothing and has no folder** — checked against `saints/` — so by the coordinator's third ruling the row has nothing to attach to and no folder is minted; she is named in the life, unlinked. **No `locations`**: Macedonia, Carassura, the Ergine and Constantinople are all named and this folder has never claimed a point, and its own life says doxologia's one sentence is loose enough that even Cartagena may be the governor's city. `types` untouched: Свети is no rank and мученик is the `martyr` the folder carries; **`soldier` was refused**, „Осамнаестогодишњи војник“ being what he was before the confession and the whole of his commemoration being the passion, and the folder's Greek and Romanian lines giving him no such word. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
