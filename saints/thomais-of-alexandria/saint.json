@@ -11,6 +11,11 @@
       "form": "Θωμαΐς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Αγία Θωμαΐς», with the rank word left off; the life page heads her «Αγια Θωμαϊς»."
+    },
+    {
+      "form": "Томаида",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 13 April on pravoslavno.rs, „Св. муч. Томаида.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and does not name Alexandria, which is the first word of the body; the city is what distinguishes her from `thomais-of-lesbos`, and this corpus keeps such a thing in the display name. No other folder holds a Serbian Томаида."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.04.2026 (13. април ст. ст.) — „Св. муч. Томаида.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and **the Alexandrian Thomais and not the Lesbian one**: the entry's first words are „Рођена у Александрији“, and `thomais-of-lesbos` is another woman the corpus keeps on another day. **The Prologue keeps her a day earlier than either other calendar**: doxologia and saint.gr both have her on 14 April and this is the Julian 13 April. One row per church, so nothing was moved. **A death of 476 was added where this folder had none** — „Пострада св. Томаида 476. год.“, printed flat — and it is the only year any source read for this folder gives her. `node .tmp/dd.mjs 476` reads in Russian and Greek. The entry is almost all new: that she was taught piety from childhood by honourable parents and **married at fifteen**; that her father-in-law was an unclean old man who in his son's absence attacked her and meant to dishonour her; that **she warned him of the law of God even in her fear** and kept slipping out of his hands, and that after a long struggle he took a knife and killed her and **cut her in two halves**; that **God's punishment reached him in that hour — he went blind at once and could not find the door to get out**, and was caught there in the room and handed over to the court, which condemned him to death; that **many afterwards who were tormented by the passion of fornication raised prayers to her and had strong help from her**; and that **the great ascetic Daniel carried her relics to the Skete and laid them in the burial ground of the hieromonks**. **Daniel is named as the entry names him and identified with nobody**: it gives him no see, no epithet and no monastery of his own, and the corpus holds many folders of the name. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source. The stored form Томаида folds with nothing."
     }
   ],
   "text": {
@@ -63,5 +78,14 @@
   },
   "related": [
     "nicodemus-the-hagiorite"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 476,
+      "latest": 476,
+      "display": "476",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 13 April closes its entry „Пострада св. Томаида 476. год.“ — Saint Thomais suffered in the year 476. The year is printed flat and not as «about». It is the only year any source read for this folder gives: neither doxologia.ro's notice nor saint.gr's prints one. `node .tmp/dd.mjs 476` reads in Russian and Greek."
+    }
+  }
 }
