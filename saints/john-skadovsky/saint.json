@@ -1,0 +1,71 @@
+{
+  "slug": "john-skadovsky",
+  "display_name": "John (Skadovsky)",
+  "names": [
+    {
+      "form": "Иоанн (Скадовский)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9636, «Иоанн (Скадовский), иерей, сщмч.», with the grade and the rank word left off; the day's line gives the forename alone and in the genitive, in the company of the archbishop of Kaluga rather than in this man's own, and azbyka.ru writes «Иоанна Скадовского» in the company of the archbishop of Kherson."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Он родился в Херсоне в 1875 году в дворянской семье». No day or month is given."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life says only «в ноябре 1937 года расстрелян»; the longer life azbyka.ru prints gives the day, «23 ноября 1937 года архиепископ Одесский и Херсонский Прокопий (Титов) и священник Иоанн Скадовский были расстреляны и погребены в безвестной общей могиле». 10 ноября ст. ст. is that civil day."
+    }
+  },
+  "related": [
+    "procopius-titov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day, and azbyka.ru adds the synaxis of the saints of the Central Asian metropolitan district. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Августина , архиеп. Калужского, и с ним Иоанна пресвитера, прмч. Иоанникия и Серафима , мчч. Алексия , Аполлона , Михаила (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

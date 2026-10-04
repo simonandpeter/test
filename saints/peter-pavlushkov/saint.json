@@ -1,0 +1,68 @@
+{
+  "slug": "peter-pavlushkov",
+  "display_name": "Peter (Pavlushkov)",
+  "names": [
+    {
+      "form": "Петр (Павлушков)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 12970, «Петр (Павлушков), протоиерей, сщмч.», with the grade and the rank word left off; the day's line gives the forename alone and in the genitive, «и Петра пресвитеров». azbyka.ru writes the surname unbracketed, «Петра Павлушкова»."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "birth": {
+      "earliest": 1865,
+      "latest": 1865,
+      "display": "1865",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Павлушков Петр Иванович родился в 1865 году в г. Владимире в семье священника». No day or month is given, and days.pravoslavie.ru gives no date at all."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «19 ноября 1937 года отцу Петру был вынесен смертный приговор. Он был расстрелян в Тесницком лесу 23 ноября 1937 года». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died; days.pravoslavie.ru's line gives the year alone, «(1937)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day; azbyka.ru keeps that synaxis on the moveable 7 February instead and adds the synaxis of the Tula saints on 5 October. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Прокопия , архиеп. Одесского, Дионисия , Иоанна и Петра пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
