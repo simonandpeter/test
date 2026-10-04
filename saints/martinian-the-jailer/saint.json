@@ -1,0 +1,55 @@
+{
+  "slug": "martinian-the-jailer",
+  "display_name": "Martinian the Jailer",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Мартинијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 April on pravoslavno.rs, „Св. муч. Прокес и Мартинијан.“, where Св. муч. heads the pair and belongs to neither name, so each forename stands bare. The heading gives him no epithet; «the Jailer» in the English name is what the entry's first sentence says the two men were, and the corpus keeps such a clause in the display name. It is the same bare form `martinian-of-caesarea` holds off this same Prologue's heading for 13. фебруар ст. ст., „Преподобни Мартинијан.“, and that fold is deliberate and recorded in the run's findings."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.04.2026 (11. април ст. ст.) — „Св. муч. Прокес и Мартинијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated pair of two names, so two folders. **This is a new folder and not an upgrade of any Martinian the corpus holds, checked one by one.** `martinian-of-caesarea` is the ascetic the same Prologue keeps on 13 February, tempted by Zoe and dated to the early fifth century; `martinian-of-ephesus` belongs to the Seven Sleepers' company; `martinian-of-white-lake` and `martinian-of-zographou` are later monastics; `martinianus-of-areobindus` is the Greek 18 May; and `galaction-disciple-of-martinian` is named for yet another man. **None is a jailer, none is Roman, and none is a martyr of the apostles' own day.** **The whole of what this source gives the pair is five sentences**, and the life says so: jailers at the Roman prison holding Peter and Paul; baptised on hearing the apostles' words and seeing their wonders; they let the apostles out; the Lord met Peter on the road out of Rome and told him He was going there to be crucified again; the apostles turned back, were seized and killed, and these two were beheaded with them. **No year**: the entry gives none and none was inferred from the apostles' deaths. **No `locations`**, for the reason on the other folder's row. **The fold on the stored form is deliberate**: `martinian-of-caesarea` holds the same bare Мартинијан off this Prologue's own 13 February heading, and neither heading offers anything fuller — recorded in the run's findings before this was committed, and `corpus-gate.mjs` is expected to stop on it, this batch adding a new folder. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "related": [
+    "processus-the-jailer",
+    "peter-the-apostle",
+    "paul-the-apostle"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
