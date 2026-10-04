@@ -11,6 +11,11 @@
       "form": "Θεράπων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Θεράπων επίσκοπος Κύπρου», with the rank word and the see left off."
+    },
+    {
+      "form": "Терапонт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. мај ст. ст., „Свештеномученик Терапонт епископ кипарски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „кипарски“ the see, which the display name already carries. Strip them and the bare personal name is what is left. **Measured, and the fold is the one to watch on this name**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Терапонт», so this is the first folder to hold it — but **the Prologue prints the identical string for a different man on the Julian 27 May**, the bishop of Sardis, so a later reader working that day will fold onto this form and must keep `therapon-of-sardis` apart from `therapon-of-cyprus` by the see and not by the name. That is said here so the fold is a known one when it happens."
     }
   ],
   "sex": "male",
@@ -18,7 +23,8 @@
   "types": [
     "hieromartyr",
     "bishop",
-    "monk"
+    "monk",
+    "ascetic"
   ],
   "dates": {
     "floruit": {
@@ -66,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.06.2026 (25. мај ст. ст.) — „Свештеномученик Терапонт епископ кипарски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. **A DAY NEITHER OTHER CALENDAR KEEPS HIM ON**: doxologia and saint.gr both keep him on 14 May and this book on 25 May, so the row is written on the 25/5 and the other two rows are left where they are. The day list for the menologion 25/5 could not see him for that reason, and `sr-namesweep.mjs` found him because the heading carries his see. **AND THE PROLOGUE ITSELF PROVES THERE ARE TWO THERAPONS.** Two days later, on the Julian 27 May, it prints „Свештеномученик Терапонт, епископ сардијски“ — the same rank, a different see. The corpus keeps both, `therapon-of-cyprus` and `therapon-of-sardis`, and **two commemorations on one calendar means two men**, so this row belongs to the Cypriot alone and the 27 May is a different folder’s business. **`ascetic` ADDED; `wonderworker` REFUSED, AND THE DIFFERENCE IS WHO THE WORD IS SAID OF.** „Монах и подвижник на острву Кипру“ — Подвижник is a noun said of the man and maps to `ascetic` in BRIEF-SERBIAN.md §5, and `ascetic` is **not in `src/lib/honorific.js`’s `PRECEDENCE`**, so the page goes on reading *Hieromartyr Therapon* and the word shows only in the facts line. **Чудотворац is never said of him**: what the entry calls чудотворне are his **relics** — „мошти ове чудотворне“ — and the object of a wonder is not its subject, so `wonderworker` is not added. `hieromartyr`, `bishop` and `monk` are all three corroborated: „Свештеномученик“, „епископ кипарски“, „Монах“. **`dates` UNTOUCHED, AND THE ONE YEAR HERE HAS NO FIELD TO HOLD IT.** The folder holds `floruit` 601 to 740, `inferred`, which saint.gr reasons from Andrew of Crete’s death. **The Prologue gives 806** — „у време цара Никифора године 806, ударише Агарјани на острво Кипар“ — **but that is the year his relics were moved, not a year of his life**, and there is no field for a translation of relics. It is the sixth such year in this wave and it stands in the prose. **It does not contradict the floruit**: a man who died not later than 740 can have his relics carried off in 806, and the two readings sit together. The reign of Nicephorus is used for nothing. **New here, and most of the entry is new.** doxologia already had the Agarenes taking counsel against Cyprus and the saint ordering his own translation by a revelation; this book says **to whom** he appeared — **the warden of the church where his body lay** — and what followed: that **when the ship with the reliquary put to sea a great storm rose, while around the ship the sea was calm**; that **a sweet fragrance poured out of the reliquary over the whole ship and all about it**; that **the warden opened it and all saw it filled with myrrh flowing from the relics**, with which **many sick were anointed and made well**; that **a church was built over these wonderworking relics at Constantinople**; and that by the grace of God the gravest sick were healed at them **of palsy, of cancer, of haemorrhage, of madness, of blindness, of withering, and of various other torments**. saint.gr has the myrrh-streaming shrine inside the walls; this is the myrrh at sea that began it. **The emperor Nicephorus and the church warden gain nothing** by the coordinator’s third ruling: no calendar read for this corpus keeps either, and the warden is not even named. `related` untouched at `andrew-of-crete`, whom this entry does not name. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
