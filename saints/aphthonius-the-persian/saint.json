@@ -11,6 +11,11 @@
       "form": "Αφθόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Ακίνδυνος, Αφθόνιος, Πηγάσιος, Ελπιδηφόρος και Ανεμπόδιστος», with the rank word left off."
+    },
+    {
+      "form": "Аффоний Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 2 ноября ст. ст., «Аффоний Персидский, мч.», with the rank word left off. The day's own line declines it as «Аффония»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists this day and no other."
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 ноября ст. ст. — «Мчч. Акиндина , Пигасия , Аффония , Елпидифора , Анемподиста и иже с ними (ок. 341-345).»",
+        "url": "https://days.pravoslavie.ru/Days/20261102.html",
+        "year": 2026,
+        "note": "The day's typikon sign is «Совершается служба, не отмеченная в Типиконе никаким знаком» and it hangs on this line, the day's first; the other three lines carry none."
+      },
+      "note": "The line's «Мч.» is martyr, which this folder already held. The name page gives him the by-name «Персидский», the Persian, which is the epithet this corpus's English form already carried. The line closes «и иже с ними», and those others — the king's mother and the up-to-seven-thousand Christians of the procession — are named by the life and not by the calendar, so they take no folder."
     },
     {
       "church": "romanian",
@@ -120,6 +138,38 @@
       },
       "tone": "Ήχος δ’.",
       "model": "Ο υψωθείς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Страстотерпцы Господни,/ блаженна земля, напившаяся кровьми вашими,/ и свята селения, приимшая телеса ваша,/ в тризнищи бо врага победисте/ и Христа со дерзновением проповедасте:/ Того яко блага молите// спастися, молимся, душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 ноября ст. ст. — «Тропарь мучеников». The text names none of the five and is the common of martyrs, printed under their line and copied whole, as the brief directs; it is the Slavonic of the troparion these folders already hold in Romanian, and not the Greek one, which puns on all five names.",
+        "url": "https://days.pravoslavie.ru/Days/20261102.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Passion-bearers of the Lord, blessed is the earth that drank your blood, and holy are the dwellings that received your bodies; for in the arena you overcame the enemy and preached Christ with boldness. Pray to him, as to the Good One, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благочестивыя и богоносныя мученики,/ яко на земли оставльшия вся,/ приял еси в наслаждение благих Твоих и упокоение,/ Акиндина, Пигасия, Анемподиста,/ с нимиже Аффония и Елпидифора же,// Едине сый Преблагий.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 ноября ст. ст. — «Кондак мучеников». The text names all five men and is theirs; it is not the kontakion these folders already hold in Greek, which is a different composition on the same five names.",
+        "url": "https://days.pravoslavie.ru/Days/20261102.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The pious and God-bearing martyrs, who left all things on earth, you have received into the delight of your good things and into rest — Acindynus, Pegasius, Anempodistus, and with them Aphthonius and Elpidephorus — you who alone are most good.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -128,10 +178,10 @@
   "dates": {
     "death": {
       "earliest": 330,
-      "latest": 330,
-      "display": "330",
+      "latest": 345,
+      "display": "330–345",
       "basis": "traditional",
-      "note": "saint.gr's heading for each of the five, «(; - 330)», and in the notice «Το 330 μ.Χ., επειδή, ομολόγησαν ότι, είναι χριστιανοί, συνελήφθησαν…». No year of birth is given."
+      "note": "Two calendars fifteen years apart, and the interval holds both. saint.gr gave «(; - 330)» for each of the five, which these folders carried as a flat 330; days.pravoslavie.ru closes the same company's line «(ок. 341-345)», about 341 to 345, and its life sets the whole story in the reign of «Сапора II (310 - 381)», which contains both readings and settles neither. Nothing is chosen."
     }
   }
 }

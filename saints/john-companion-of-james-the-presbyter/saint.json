@@ -6,6 +6,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιωάννης ο Επίσκοπος και Ιάκωβος ο Πρεσβύτερος», with the rank words left off."
+    },
+    {
+      "form": "Иоанн Бет-Селевкийский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Иоанн Бет-Селевкийский (Персидский), сщмч.», with the rank word left off. The day's own line declines the forename and gives no by-name, as «Иоанна епископа»."
     }
   ],
   "sex": "male",
@@ -19,17 +24,28 @@
   "dates": {
     "death": {
       "earliest": 332,
-      "latest": 332,
-      "display": "about 332",
+      "latest": 345,
+      "display": "332–345",
       "basis": "traditional",
-      "note": "saint.gr: «έζησαν στα χρόνια του βασιλιά των Περσών Σαβωρίου (332 μ.Χ.)» — the page's own year, attached to the reign it sets the two men in, and the beheading follows in the same notice with no further date."
+      "note": "Two calendars a dozen years apart on one man, and the interval holds both. saint.gr gave «έζησαν στα χρόνια του βασιλιά των Περσών Σαβωρίου (332 μ.Χ.)», which this folder carried as about 332; days.pravoslavie.ru's line for the same pair on the same day closes «(ок. 345)», about 345. Nothing is chosen. The Russian life that the calendar hangs behind his name closes «(+ 343)», but that is the company of the Greek 20 November, whose identity with this man is refused here, so 343 is recorded and is not a bound."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «20 ноября». That is the day the Greek calendar keeps the company of Persian bishops and martyrs on, and this corpus already holds a separate John there, `john-martyr-20-november`, off saint.gr's «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος». Deciding that two commemorations are one man is not a reader's, so nothing is folded: the row is written for the day page that listed him, 20 ноября is recorded here and was not read, and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Сщмчч. Иоанна епископа и Иакова пресвитера, в Персии пострадавших (ок. 345).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and its «епископа» bishop, both of which this folder already held from saint.gr; the pairing with James the presbyter and the day are the Greek's too. The name link gives him a see the Greek page does not, «Иоанн Бет-Селевкийский (Персидский)», John of Bet-Seleucia. The life the calendar hangs behind his name is the company killed under Shapur II, in which a bishop John is stoned; that company is the Greek 20 November's, and because the fold is refused no narrative is taken from it and no `office` is written from a see that reaches this folder only through the fold."
     },
     {
       "church": "romanian",

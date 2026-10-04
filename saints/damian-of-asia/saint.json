@@ -11,6 +11,11 @@
       "form": "Δαμιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι και θαυματουργοί», with the rank words left off."
+    },
+    {
+      "form": "Дамиан Азийский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Святой бессребренник Дамиан Азийский», with the rank words left off. The day's own line declines it as «Дамиана»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,21 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists this day and no other."
+      },
+      "rank": "six-stichera",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Бессребреников и чудотворцев Космы и Дамиана Азийских и матери их прп. Феодотии (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026,
+        "note": "The typikon sign on the day's first line is «Cовершается служба на шесть», the six-stichera rank."
+      },
+      "note": "The line's «Бессребреников и чудотворцев» is unmercenary and wonderworker, both of which this folder already held from the other two calendars. The name page titles him «Святой бессребренник Дамиан Азийский» and carries this day alone."
     },
     {
       "church": "romanian",
@@ -61,7 +79,8 @@
     }
   ],
   "related": [
-    "cosmas-of-asia"
+    "cosmas-of-asia",
+    "theodotia-of-asia"
   ],
   "hymns": [
     {
@@ -113,9 +132,50 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ὁ ὑψωθεὶς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Святии безсребреницы и чудотворцы, Космо и Дамиане,/ посетите немощи наша:// туне приясте, туне дадите нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Тропарь святых бессребреников». The text names both brothers and is theirs; it is the Slavonic of the troparion this folder already holds in Romanian.",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy unmercenaries and wonderworkers, Cosmas and Damian, visit our infirmities: freely you received, freely give to us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благодать приимше исцелений,/ простираете здравие сущим в нуждах,/ врачеве, чудотворцы преславнии,/ но вашим посещением ратников дерзости низложите,// мир исцеляюще чудесы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Кондак святых бессребреников». The text names neither brother and is headed for the unmercenaries whose day it is; it is not the kontakion this folder holds in Greek.",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the grace of healings, you stretch out health to those in need, physicians, most glorious wonderworkers; but by your visitation cast down the insolence of our enemies, healing the world by wonders.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "The first date this folder has held, and it holds two readings one page gives without choosing between them. The day's line closes the entry «(III)», the third century; the life the same calendar serves opens «Ни время их рождения, ни время смерти неизвестно. Несомненно только то, что они жили не позднее IV века» — neither the time of their birth nor the time of their death is known, and only that they lived no later than the fourth century is certain — and argues that ceiling from the churches raised in their name in the first half of the fifth century and from the Copts, who hold them saints while receiving no saint of later date. Neither doxologia.ro nor saint.gr dated him at all."
+    }
   }
 }

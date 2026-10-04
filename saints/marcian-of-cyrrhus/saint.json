@@ -6,6 +6,11 @@
       "form": "Μαρκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Όσιος Μαρκιανός», with the rank word left off."
+    },
+    {
+      "form": "Маркиан Кирский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 2 ноября ст. ст., «Преподобный Маркиан Кирский», with the rank word left off, and repeated as the title of both of his life pages. The day's own line declines the name and gives a different by-name, «Маркиана Киринейского»."
     }
   ],
   "sex": "male",
@@ -16,8 +21,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Both of his life pages head themselves «Дни памяти: 18 января , 2 ноября», and the 18 января is the day saint.gr keeps him on. One row per church is the schema, so the second day is recorded here and he does not render on it. days.pravoslavie.ru's own page for 18 января ст. ст. was not read (4 October 2026), and the Julian 18 January of this corpus was written by an earlier reader without a row for him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 ноября ст. ст. — «Прп. Маркиана Киринейского (388).»",
+        "url": "https://days.pravoslavie.ru/Days/20261102.html",
+        "year": 2026
+      },
+      "note": "The line's «Прп.» is venerable, which this folder already held from saint.gr's «Όσιος». **The line's by-name and the name link's disagree**: the line reads «Маркиана Киринейского», of Cyrene, while the name page and both of its life pages read «Маркиан Кирский», of Cyrrhus, and the second life opens with the desert «близ города Кира». The fuller and repeated form is kept and the line's word is recorded here; that this is the man saint.gr gave the corpus is read off the see, the solitude, the two disciples and the shared 18 January. The place is a by-name and not a rank, so neither word reaches `office`."
     },
     {
       "church": "romanian",
@@ -47,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 388,
+      "latest": 388,
+      "display": "388",
+      "basis": "traditional",
+      "note": "The first date this folder has held: saint.gr gave no year of birth and none of death. days.pravoslavie.ru prints «(388)» on the line and its first life closes «Скончался в 388 г.»; its second life, of the same man on the same page, closes «Скончался в мире около 388 года», about 388. The flat year is the one printed on the day line and is taken; the hedge is recorded here and the basis is traditional rather than attested because of it. Both lives open him in the fourth century."
+    }
   }
 }

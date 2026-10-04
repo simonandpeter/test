@@ -6,6 +6,11 @@
       "form": "Ιουλιανή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Αγίες Κυριαίνα και Ιουλιανή», with the rank word left off."
+    },
+    {
+      "form": "Иулиания Россонская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind the line for 1 ноября ст. ст., «Иулиания Россонская, мц.», with the rank word left off. The day's own line declines it as «Иулиании» and gives no by-name."
     }
   ],
   "sex": "female",
@@ -18,17 +23,28 @@
   "dates": {
     "death": {
       "earliest": 298,
-      "latest": 298,
-      "display": "about 298",
+      "latest": 311,
+      "display": "298–311",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησαν στα χρόνια του αυτοκράτορα Μαξιμιανού (298 μ.Χ.)» — the page's own year, attached to the reign it sets the two women in, and the burning follows in the same notice with no further date."
+      "note": "Two calendars on two different emperors of one name, and the interval holds both. saint.gr gave «Έζησαν στα χρόνια του αυτοκράτορα Μαξιμιανού (298 μ.Χ.)», which this folder carried as about 298 and which falls in the reign of Maximian Herculius; days.pravoslavie.ru's life sets the arrest «при императоре Максимиане Галерии (305 - 311)», under Maximian Galerius, and its day line prints that reign as the entry's date. Nothing is chosen."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Her name page lists this day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Мцц. Кириены и Иулиании (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "The line's «Мц.» is martyr, which this folder already held. The name link gives her the by-name «Иулиания Россонская», of Rhosus, which is the place the Greek life has the burning happen at and from which this folder's English form was already made."
     },
     {
       "church": "romanian",
