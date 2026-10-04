@@ -252,6 +252,13 @@ test('the hero is its own shape on the desk up to A4, its own shape up to 1:1.6 
 });
 
 
+/* Its own describe only so it can block the service worker: the whole claim is
+   a count of `page.route` hits, and the worker precaches `saint.json` and serves
+   it without the route seeing it (helpers.js, trap 13), which reads as 0 or as a
+   payload too many. */
+test.describe('the prefetched payload', () => {
+test.use({ serviceWorkers: 'block' });
+
 test('opening from the calendar goes through the prefetched payload', async ({ page }) => {
   const fetched = [];
   await page.route('**/saints/*/saint.json', (route) => {
@@ -282,6 +289,7 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
   await expect(page.locator('h1.saint-name')).toBeVisible();
   // The click reuses what the hover fetched rather than asking again.
   expect(fetched.length).toBe(afterHover);
+});
 });
 
 
