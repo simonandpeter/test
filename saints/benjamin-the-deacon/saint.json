@@ -16,6 +16,11 @@
       "form": "Вениамин Персидский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 406, «Священномученик Вениамин Персидский», with the rank word left off. The day line gives «Вениамина диакона» and the two lives behind the page head him «Мученик Вениамин диакон»."
+    },
+    {
+      "form": "Венијамин",
+      "lang": "sr",
+      "note": "Read out of the body of the Ohrid Prologue's third entry for the Julian 31 March on pravoslavno.rs, „Његов ђакон свети Венијамин буде пуштен од мучитеља под условом да више не проповеда Јеванђеље.“ The rank word ђакон and Свети are left off, and the clause gives him no epithet and no city, so the bare forename is all the page gives him."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.04.2026 (31. март ст. ст.) — „Свештеномученик Авда, епископ града Сузе“ … „Његов ђакон свети Венијамин буде пуштен од мучитеља под условом да више не проповеда Јеванђеље.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, headed for Abda and naming this man in its own body, so the citation carries the heading and then his own clause, as the companions of the Julian 10, 19 and 29 March did. He is the man this folder already holds: the deacon of the Persian bishop, released on the condition that he preach no more, unable to keep to it, seized again and killed. **A fourth reading of his year, and it was not taken**: the entry says he died „на три године после светог Авде, 421. године“, three years after Abda and in 421, which falls inside the «between 418 and 442» this folder carries and is narrower than it, so the interval was not narrowed. It is worth noting against the other three readings that this page's 421 is three years after its own 418 for Abda, so the two years are one reckoning and not two. The Prologue prints no troparion and no kontakion. The stored form Венијамин folds with nothing: no other folder in the corpus holds a Serbian form of this spelling."
     }
   ],
   "dates": {
