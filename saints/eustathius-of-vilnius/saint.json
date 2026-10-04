@@ -10,6 +10,11 @@
       "form": "Ευστάθιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αντώνιος, Ιωάννης οι αυτάδελφοι και Ευστάθιος οι Μάρτυρες», with the rank words left off; the life page heads him «Αγιος Ευστάθιος (; - 1347)»."
+    },
+    {
+      "form": "Евстатије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 14 April on pravoslavno.rs, „Св. муч. Антоније, Јован и Евстатије.“, where Св. муч. heads the three and belongs to no one of them, so each forename stands bare. The heading gives no epithet and does not name Vilnius, which is in the body and which this corpus keeps in the display name. The bare form is shared with `eustathius-of-antioch` and that fold is deliberate and recorded. This is also the folder's second name form of any kind: it held only the Greek Ευστάθιος."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.04.2026 (14. април ст. ст.) — „Св. муч. Антоније, Јован и Евстатије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-27&prolog=1",
+        "year": 2026
+      },
+      "note": "Third of the three the day's second heading enumerates, on the same menologion day the Greek keeps all three on; the Russian and Romanian rows stay `undocumented`. The **1347 agrees exactly** with what this folder holds, so **no date was touched**. New: the three as **pagans and worshippers of fire** and **servants at the court of the Lithuanian prince Olgard at Vilnius**; the three pagan names **Kruglec, Kumec and Nezhilo**, given as a set and **not assigned**, the entry listing them in one clause without saying whose was whose; the **baptism by a priest the entry names Нестор**; the **hanging of all three on one and the same oak, one after another**; and the **oak cut down, the church of the Holy Trinity built, the relics laid in it and the holy table made out of the stump**, the relics being at Vilnius. **The fold on the stored form is deliberate**: `eustathius-of-antioch` holds the same bare Евстатије, and this heading gives no epithet and no city. Recorded in the run's findings. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
