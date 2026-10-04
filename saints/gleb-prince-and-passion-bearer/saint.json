@@ -21,12 +21,18 @@
       "form": "Δαβίδ",
       "lang": "el",
       "note": "The baptismal name as the same page prints it: «δια του αγίου Βαπτίσματος μετονομάσθηκαν Ρωμανός και Δαβίδ», David being the younger brother's; the folder already holds it in Cyrillic as «Давид»."
+    },
+    {
+      "form": "Гљеб",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети мученици Борис и Гљеб.“ Свети мученици heads both brothers and belongs to neither name alone, and мученици is a rank word `honorific.js` composes, so stripping it leaves the bare forename; the heading offers no patronymic and no epithet, and „синови великога кнеза Владимира“ is the body's first words, which this corpus keeps in the English display name and not in a name form. The form meets no other folder in any language, which was measured rather than assumed. The spelling is this book's own, Гљеб, and is stored as printed."
     }
   ],
   "sex": "male",
   "types": [
     "passion-bearer",
-    "prince"
+    "prince",
+    "martyr"
   ],
   "dates": {
     "death": {
@@ -74,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.05.2026 (2. мај ст. ст.) — „Свети мученици Борис и Гљеб.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-15&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading enumerates both brothers — „Свети мученици Борис и Гљеб.“ — so the citation above is that heading whole**, per BRIEF-SERBIAN.md §4 and the coordinator's ruling, and both names are folders this corpus already keeps. **The day is a third one for these two and is not a conflict**: the Greek keeps them on 24 Ιουλίου, the Russian keeps Gleb on 5 сентября, and the Prologue keeps them on 2. мај ст. ст.; no existing row was moved. The identification is beyond doubt — sons of the great prince Vladimir who baptised the Russian people, brothers by one mother, the inheritance divided before their father's death, the eldest brother Svyatopolk of Kyiv sending men who killed them in two different places, and the incorrupt and fragrant bodies at Vyshgorod healing to this day. **The Prologue gives no year for either**, so nothing was added to `dates`. New to the corpus from this page: that **Vladimir had many wives and children by them before his own baptism**, which is the reason this entry gives for the two being „браћа од једне мајке“; that the state was divided **among all his sons**; and that the two were killed „на једном месту“ and „на другом“, in two separate places rather than one. The Prologue prints no troparion and no kontakion. **`types_add: [\"martyr\"]`**: this heading calls him a martyr where the Russian and Greek lines this folder was built from gave only `passion-bearer` and `prince`, and `honorific.js`'s contract puts a rank no calendar had recorded into `types` rather than leaving it inside a name form — the same move `stephen-of-vladimir` gained `venerable` by on the Julian 04-27."
     }
   ],
   "text": {

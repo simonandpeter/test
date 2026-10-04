@@ -11,6 +11,11 @@
       "form": "Παφνούτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Όσιος Παφνούτιος ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Пафнутије Боровски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 1. мај ст. ст., „Преподобни Пафнутије Боровски.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, so it is stripped; **Боровски is kept**, because it is the by-name of the house and the town and not a rank the composer adds back, as Острошки was kept on `basil-of-ostrog` for the same reason. Keeping it is what holds this folder **out** of the bare «Пафнутије» that `paphnutius-of-the-thebaid` holds, which was measured and not assumed. The Greek page's Παρθένιος, the name he was born with, and the office of abbot are not in this heading and were not brought into the form."
     }
   ],
   "sex": "male",
@@ -21,10 +26,10 @@
   "dates": {
     "death": {
       "earliest": 1477,
-      "latest": 1477,
-      "display": "1477",
+      "latest": 1478,
+      "display": "1477 or 1478",
       "basis": "attested",
-      "note": "doxologia.ro, Viața Sfântului Cuvios Pafnutie, egumenul mănăstirii Borovsk: he died «în anul 1477, în întâia zi a lunii mai, mai înainte de apusul soarelui cu un ceas»."
+      "note": "The Охридски пролог for 1. мај ст. ст.: „Скончао 1478. године.“ — 1478, against doxologia's life, which has him die „în anul 1477, în întâia zi a lunii mai, mai înainte de apusul soarelui cu un ceas“, and saint.gr, which also gives 1477. Two books against one and a year between them; neither was chosen and the interval carries both, which is what this corpus does with a disagreement. The precise day and hour remain doxologia's and are in the life. The Prologue also has him live in the monastery to his ninety-fourth year, which squares with neither a tonsure in 1414 at the age of twenty nor a death in 1477 or 1478; no birth was derived from that age, and none of the three pages prints a year of birth."
     }
   },
   "attestations": [
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.05.2026 (1. мај ст. ст.) — „Преподобни Пафнутије Боровски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-14&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 1 May, the same menologion day the Romanian and the Greek keep him on.** Four sentences, and **three of them disagree with the two accounts already on this folder**, all three recorded and none resolved. **A death widened and neither reading chosen**: „Скончао 1478. године“ against doxologia's 1477 „în întâia zi a lunii mai, mai înainte de apusul soarelui cu un ceas“ and saint.gr's 1477, so `death` is now 1477–1478 and reads „1477 or 1478“. **The `basis` was left at `attested`, which was measured rather than argued**: 54 folders of this corpus already hold an `attested` interval of five years or less, `agathangelus-of-esphigmenou`'s „1818 or 1819“ among them, so a one-year interval under that basis is this corpus's own habit and not a weakening invented here. `node .tmp/dd.mjs \"1477 or 1478\"` reads it in both packs. **He is „син татарског великаша, који доцније прими веру хришћанску“ — the son of a Tatar magnate, where the Romanian life makes the baskak his grandfather**, and the relative clause leaves it open whether it is the magnate or Paphnutius who later received the faith; both readings are in the life and neither is chosen. **And it has him live in the monastery „до своје деведесет четврте године“, to his ninety-fourth year**, which will not sit with saint.gr's tonsure in 1414 at the age of twenty against a death in 1477, and which is also the number the Romanian life gives for the *brethren* at his death, ninety-five. **No birth was derived from it**: an age is not a year, and nothing was computed. New besides, and the whole of what this book makes of him: „Био је девственик и подвижник, због чега и велики чудотворац и прозорљивац“ — a virgin and an ascetic, and therefore a great wonderworker and clairvoyant. **This is not the Пафнутије the Julian 02-25 left open**: that heading is „Преподобни Пафнутије Кефалас“, a different by-name on a different day, and it stays open. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

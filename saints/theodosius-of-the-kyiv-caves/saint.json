@@ -15,6 +15,11 @@
       "form": "Teodosie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 3 mai, «Sfântul Cuvios Teodosie de la Lavra Pecerska»."
+    },
+    {
+      "form": "Теодосије Кијево-Печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 3. мај ст. ст., „Преподобни Теодосије Кијево-Печерски.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, so it is stripped; **Кијево-Печерски is kept**, because the house is a by-name and not a rank the composer adds back, as Боровски was kept on `paphnutius-of-borovsk` and Острошки on `basil-of-ostrog`. The form meets no other folder in any language in either shape, bare or full, which was measured rather than assumed."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.05.2026 (3. мај ст. ст.) — „Преподобни Теодосије Кијево-Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-16&prolog=1",
+        "year": 2026
+      },
+      "note": "**A fourth church and a fourth day for this folder, and none of them is a conflict**: the Russian row is Julian 14 August for the translation of 1091, the Romanian 3 mai for the repose, the Greek 2 Σεπτεμβρίου, and the Prologue keeps him on 3. мај ст. ст. with the Romanian. No existing row was moved. **The year this folder already carried now has a citation.** Its `death` was 1074 with **no note at all**, which `docs/CORPUS.md` §3 says a stated year may not be; „Упокојио се мирно 1074. године“ is the same year, so nothing was narrowed or displaced and the interval simply gained the quoted source it was missing. **The pivot of this entry is a verse the other two accounts do not quote**: having read in the Gospel „Ко љуби оца или матер већма него мене, није мене достојан“, he left his parents' house and fled to the Kyiv cave to the venerable Anthony. **Three readings differ from what this folder holds, and all three are recorded and none resolved.** This book has **Anthony appoint him abbot**, where the Sretensky life has him elected igumen in 1057. It says that in his time „богатство се у манастиру јако умножи“, the monastery's wealth greatly increased, where that life has him keep no stores at all and the brethren sometimes want bread. And it says his healing relics „почивају поред моштију Антонијевих“, rest **beside Anthony's**, where both other accounts have them laid in the new cathedral of the Mother of God on 14 August 1091. New besides: that from earliest youth he avoided laughter and merriment; that **his mother beat him often** for it, and most of all the day she saw the iron belt round his bare body and his shirt bloody from it — the belt is doxologia's, the beating is this book's; that God endowed him for his virginal purity, his very great labour of prayer and his love of his neighbours with **great power over unclean spirits**, the healing of sicknesses and the seeing into men's destinies; and that **with Anthony he is reckoned the founder and orderer of monasticism in Russia**, where the other accounts make him its father alone. **`related_add: [\"anthony-of-the-caves\"]`**: this entry is substantially Anthony's as well — he receives him, tonsures him, sets him over the house, and the relics lie together — and `anthony-of-the-caves` already carried the reverse row, so the relation was one-way until now and is two-way after. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -169,11 +184,13 @@
       "earliest": 1074,
       "latest": 1074,
       "display": "1074",
-      "basis": "traditional"
+      "basis": "traditional",
+      "note": "The Охридски пролог for 3. мај ст. ст.: „Упокојио се мирно 1074. године.“ The year is the one this folder already carried, which until now stood with no note of its own; the Sretensky life and doxologia both give 1074 as well, and all three agree. Nothing was narrowed and nothing displaced. No year of birth is recorded here: doxologia gives 1029 and the Sretensky life gives none, and that reading was left where the Romanian reader left it, in the life."
     }
   },
   "related": [
     "nestor-the-chronicler",
-    "erasmus-of-the-caves"
+    "erasmus-of-the-caves",
+    "anthony-of-the-caves"
   ]
 }

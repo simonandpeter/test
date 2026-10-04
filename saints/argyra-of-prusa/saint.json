@@ -11,6 +11,11 @@
       "form": "Αργυρή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Απριλίου, «Αγία Αργυρή η Νεομάρτυς», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Аргира",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 30. април ст. ст., „Св. муч. Аргира.“ Св. is not a rank and муч. is the `martyr` this folder already carries in `types` and `honorific.js` composes back; the heading gives no city and no epithet, so the bare forename is the whole of the Serbian form. Brusa — „беше родом из Брусе“ — is the body's and is where this corpus's English display name keeps it. The form meets no other folder in any language, which was measured rather than assumed."
     }
   ],
   "sex": "female",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.05.2026 (30. април ст. ст.) — „Св. муч. Аргира.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-13&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 30 April, the day the Romanian calendar keeps her on**; the Greek keeps her on 5 Απριλίου and the finding of her relics on 30 April, and neither of those rows was moved. **No date was changed, and that is this reading's finding: it is the first of the three accounts to agree with a year the folder already carries.** „Најзад сконча у тамници у Цариграду, 1725. год.“ is doxologia's 1725 exactly, so the recorded death stands untouched and the Greek page's 1721 — which is in this folder's life and was never in the interval — is now **two sources against one**. **Where this book does not agree is elsewhere, and every disagreement is recorded in the life and resolved nowhere**: the persecutor is „неки Турчин из комшилука“, a Turk from the neighbourhood, which is the Greek's reading against doxologia's pasha and eparch of Bursa; the charge is „како је хтела примити ислам, па после одрекла“, that she had meant to accept Islam and afterwards recanted, which is again the Greek's charge and not doxologia's revolt and insult to Islam; the suffering lasted „пуних 15 година“, fifteen full years, against doxologia's sixteen; and the husband is „један хришћанин“ where doxologia makes him a young Greek. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

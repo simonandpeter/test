@@ -11,6 +11,11 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιοι Ακάκιος ο Οσιομάρτυρας από το Νεοχώρι Θεσσαλονίκης, Ευθύμιος ο Πελοποννήσιος και Ιγνάτιος ο νέος Οσιομάρτυρας», with the rank word and the place left off."
+    },
+    {
+      "form": "Акакије Папучар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 1. мај ст. ст., „Преподобни мученик Акакије Папучар.“ Преподобни мученик is the `venerable-martyr` this folder already carries in `types` and `honorific.js` composes back, so it is stripped; **Папучар is kept**, because the slipper-maker is his trade and a by-name and not a rank the composer adds back — doxologia calls him Pantofarul in the same place. Keeping it is what holds this folder **out** of the bare «Акакије» fold that `acacius-of-melitene` and `acacius-the-kausokalyvite` share, which was measured and not assumed."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.05.2026 (1. мај ст. ст.) — „Преподобни мученик Акакије Папучар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-14&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 1 May, the same menologion day the Romanian and the Greek keep him on.** **No date was changed, and that is this reading's finding**: „оде у Цариград, где буде посечен од Турака 1. маја 1816. године“ gives the same year, the same day and the same city as doxologia's life, which argues 1816 against the sources that print 1815 on the strength of a letter of his dated 27 April 1816. So the recorded `attested` 1816 stands untouched and now has a second book behind it. **This is the shortest of the three accounts and it is the one a Serbian bishop writes**, which is why it keeps the Serbian house: the penitence and the monastic life are „у Хиландару“, the Serbian monastery of the Holy Mountain, which the folder's other two accounts also name. Its own new matter is **his mother's counsel in her own words** — „Као што си се добровољно одрекао Господа, тако сад мораш добровољно и храбро примити мучеништво за слаткога Исуса“ — and that the beating which made him turn Turk was „од свог мајстора у Серезу“, from his own master at Serres. It says the head „се чува у манастиру Пантелејмону“, which is where this folder already has it, and it names neither Daktyloporta nor the hour nor the burial at the Kalyve of Saint Nicholas. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

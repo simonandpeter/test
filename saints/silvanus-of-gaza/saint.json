@@ -16,6 +16,11 @@
       "form": "Сильван Газский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1991, «Сильван Газский, пресвитер, сщмч.», with the office and the rank word left off. The day line gives «Сильвана, пресвитера Газского»."
+    },
+    {
+      "form": "Силуан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 4. мај ст. ст., „Свештеномученик Силуан, епископ гаски.“ Свештеномученик is the hieromartyr rank and „епископ гаски“ the second rank and the see, which this corpus puts in `types` and in `office`; strip them and the bare forename is left. **The spelling is this book's own, Силуан and not Силван**, and is stored exactly as printed — a copied script form is never corrected by a reader, and the Russian form on this folder is Сильван Газский. The form meets no other folder in any language in either spelling, which was measured rather than assumed."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.05.2026 (4. мај ст. ст.) — „Свештеномученик Силуан, епископ гаски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-17&prolog=1",
+        "year": 2026
+      },
+      "note": "**`sr-cand.mjs`'s day list could not see this folder, because the three calendars that had read him all keep him on 14 October and the Prologue keeps him on 4. мај ст. ст.** `ls saints | grep -iE 'silvan|silouan|siluan'` found him at once, which is the fourth day in five on which that command has caught what the day list could not. **Two days and four churches, and that is not a conflict**: the Russian, Romanian and Greek rows stay on 14 October and none of them was moved. The identification is Gaza, the rank and the martyrdom: „Свештеномученик Силуан, епископ гаски“ against doxologia's «Sfântul Silvan, Episcopul Gazei» and saint.gr's «Όσιος Σιλβανός ο Γέρων Ιερομάρτυρας», all three a hieromartyr of Gaza, which this folder already holds as `martyr` and `bishop`. **This book is a second source for the episcopate**, against the Sretensky line's «пресвитера Газского». **A year was read and deliberately NOT written, and this is the sharpest open date of my five days.** „посечен са четрдесет других војника 311. године“ gives **311**, where this folder's `death` is `301–400`, „4th century“, taken from the Sretensky line's «(IV)». 311 falls **inside** that century, so there is no disagreement at all — and replacing the century with the year would still be **narrowing a sourced interval**, which the coordinator's ruling forbids without qualification. The tension is real and is the author's: `date-audit.mjs` exists to find a finding weaker than its sources allow, and after this reading this folder is one. **Nothing was touched**, and one commit takes the year if the author wants it. New besides: that he was **first in military service** and crossed to the spiritual service driven by the force of his own faith; that the charge was **converting pagans to Christians**; and that he was **bitterly tortured first and then beheaded with forty other soldiers**, „и тако сви посташе грађани небески“. **The forty take no folder**: the entry names not one of them, so by the coordinator's ruling the company that enumerates nobody is one entry, and it is said here. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {

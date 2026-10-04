@@ -11,6 +11,11 @@
       "form": "Δονάτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Δονάτος επίσκοπος Ευροίας Ηπείρου», with the rank word and the see left off."
+    },
+    {
+      "form": "Донат",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 30. април ст. ст., „Св. Донат.“ Св. is not a rank, so there is nothing to strip and the bare forename is the whole of the heading. The see is the body's opening words, „Епископ у Еврији Албанској“, and this corpus keeps a see in `office` and in the English display name. One other folder already holds the same bare Serbian form; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.05.2026 (30. април ст. ст.) — „Св. Донат.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-13&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 30 April, the same menologion day the Romanian and the Greek keep him on.** This is the third account read for this folder and it carries **a wonder neither of the other two tells at all** — „васкрсну мртваца“, he raised a dead man, and the whole of the entry's middle is that dead man's debt: the moneylender who meant to collect twice, the widow's complaint, the corpse called up to say when and where it had paid, and the written bond torn up before it lay down again. **And it has nothing of the dragon at the poisoned spring**, which is what both the other books lead with and which saint.gr tells at most length. **A year widened and neither reading chosen**: „Мирно сконча св. Донат у дубокој старости и оде ка Господу, 387. год.“ against saint.gr's «μάλλον το 388 μ.Χ.», so `death` is now 387–388 and reads „387 or 388“; the birth of about 330 was not touched. **Two geographical readings are recorded and neither is resolved**: this book puts Euroea in **Albania** — „Епископ у Еврији Албанској“, and at the close „у Еврији у Албанији“ — where doxologia puts it in old Epirus and saint.gr in Thesprotia; and it says the relics **rest there still**, „Његове мошти и сад почивају на корист вернима“, where saint.gr's page has the body carried out of Euroea to Kassiope in Corfu in 604, on to Murano in Venice in 1125, and only a part of it brought back to Paramythia in 2000. **No `locations` were taken for either reading.** The emperor whose daughter he healed is not named in this entry — „исцели од сумашествија кћер цареву“ — so nothing was added to `related` on its account. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -73,11 +88,11 @@
       "note": "saint.gr: «Γεννήθηκε περί το 330 μ.Χ. στην Εύροια και μορφώθηκε στο Βουθρωτό της Ηπείρου». The hedge «περί» is the page's and is kept in the display."
     },
     "death": {
-      "earliest": 388,
+      "earliest": 387,
       "latest": 388,
-      "display": "probably 388",
+      "display": "387 or 388",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Δονάτος «εἰς μακρὸν γῆρας ἐλάσας, ἀπῆλθε», μάλλον το 388 μ.Χ. και ενταφιάσθηκε πλησίον του ανωτέρου ναού σε μνημείο, το οποίο κατά την παράδοση είχε ο ίδιος ετοιμάσει». The «μάλλον» is the page's. The same page says he was ordained bishop at thirty and was hierarch for sixty years, which does not square with 330 and 388; the disagreement is the source's and is not reconciled here."
+      "note": "The Охридски пролог for 30. април ст. ст.: „Мирно сконча св. Донат у дубокој старости и оде ка Господу, 387. год.“ — 387, where saint.gr has him «εἰς μακρὸν γῆρας ἐλάσας, ἀπῆλθε», «μάλλον το 388 μ.Χ.». Two sources one year apart, both of them putting the death at the end of a great old age; neither was chosen, the interval carries both, and the Greek page's hedge «μάλλον» is recorded here rather than in the display. doxologia's life gives no year and dates him only by the reign of Theodosius. The same Greek page also says he was ordained bishop at thirty and was hierarch for sixty years, which squares with neither 387 nor 388 against a birth of about 330; that disagreement is the source's and is still not reconciled here."
     }
   },
   "hymns": [

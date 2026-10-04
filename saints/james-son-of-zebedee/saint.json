@@ -11,6 +11,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Απριλίου, «Άγιος Ιάκωβος ο Απόστολος αδελφός Ιωάννου του Θεολόγου», with the rank word and the kinship clause left off."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 30. април ст. ст., „Св. апостол Јаков.“, with Св. left off as no rank and апостол left off as the `apostle` this folder already carries in `types` and `honorific.js` composes back. The heading carries no kinship clause and no epithet, so the bare forename is the whole of the Serbian form; „Син Заведејев и брат Јованов“ is the body's first sentence, and this corpus keeps such a clause in the English display name and not in a name form. Four other folders already hold the same bare form; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.05.2026 (30. април ст. ст.) — „Св. апостол Јаков.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-13&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 30 April, the same menologion day the Romanian and the Greek calendars keep him on**, so nothing moved and no second-day note is owed. This is the third account read for this folder, and it is the one that **supplies what the Romanian life elided**: that life has the contest with the hired sorcerer „fill the middle“ and does not say how it ended, where this book does — „Но и Хермоген, и Филип, ученик Хермогенов, бише побеђени силом истине, коју Јаков проповедаше, и обојица се крстише“, the magician and his disciple both overcome by the power of the truth James preached, and both baptized. **A year widened and neither reading chosen**: „Пострада Јаков свети 45. год. у Јерусалиму“ against saint.gr's «το έτος 44 μ.Χ.» and its heading «(; - 44)», so `death` is now 44–45 and reads „44 or 45“. This book is also the first of the three to name **Jerusalem** as the place of the martyrdom; no `locations` were taken for it, because the folder has none and a located saint brings `map-span.test.mjs` into play. **The refusal of the day is in this entry**: Јосија, the suborned slanderer who repented and was beheaded with him, took no folder — the reasons are in the batch's commit message. The Prologue prints no troparion and no kontakion, so this folder gains no hymn from it."
     }
   ],
   "text": {
@@ -69,10 +84,10 @@
   "dates": {
     "death": {
       "earliest": 44,
-      "latest": 44,
-      "display": "44",
+      "latest": 45,
+      "display": "44 or 45",
       "basis": "traditional",
-      "note": "saint.gr: «οι άρχοντες των Ιουδαίων, οι οποίοι, το έτος 44 μ.Χ. τον συνέλαβαν και τον αποκεφάλισαν, ως αμνόν, με διαταγή του Ηρώδου του Αγρίππα», and the page heads him «(; - 44)». No year of birth is printed."
+      "note": "The Охридски пролог for 30. април ст. ст.: „Пострада Јаков свети 45. год. у Јерусалиму.“ — the forty-fifth year, where saint.gr has «οι άρχοντες των Ιουδαίων, οι οποίοι, το έτος 44 μ.Χ. τον συνέλαβαν και τον αποκεφάλισαν» and heads him «(; - 44)». Two sources one year apart; neither was chosen and the interval carries both. doxologia's life gives no year at all and dates him only by Herod. No year of birth is printed on any of the three pages."
     }
   },
   "hymns": [
