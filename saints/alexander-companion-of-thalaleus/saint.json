@@ -11,6 +11,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιοι Αλέξανδρος και Αστέριος», with the rank word left off."
+    },
+    {
+      "form": "Александар",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог’s first entry for 20. мај ст. ст., „нареди овај двојици џелата, Александру и Астерију“, which is a dative, **with the nominative printed four sentences later in the same body**, „Тада Александар и Астерије усред шибе повикаше“ — so unlike the three presbyters of 19 May **this form is a string copied off the page and not a nominative restored by a reader.** џелат is a trade and no rank. Measured before drafting with `foldchk.py`: `[('alexander-of-cartagena', 'sr'), ('alexander-of-side', 'sr')]`, so the fold is three wide and is read in this batch’s commit message."
     }
   ],
   "attestations": [
@@ -41,11 +46,25 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.06.2026 (20. мај ст. ст.) — „Свети мученик Талалеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-02&prolog=1",
+        "year": 2026
+      },
+      "note": "**A ROW OWED OUT OF A COMPANION’S HEADING, and the body does not merely mention him — it is the scene.** The entry is headed „Свети мученик Талалеј.“ and names him twice: as one of the two executioners ordered to bore the martyr’s knees, „двојици џелата, Александру и Астерију“, and as one of the two who **cried out under the lash that they were Christians and were beheaded for it**. **A martyrdom narrated is the test that owes a row**, as `laodicius-the-jailer`’s was on 13 May, Junia’s and the two presbyters’ of Lampsacus on 17 May. Same menologion 20/5 the Greek row already carries. **This is the first Serbian row this folder has had and the second calendar of any kind to keep him**: its Romanian and Russian rows are `undocumented` and only the Greek was venerated. **THE WHOLE OF HIS STORY IS THIS ENTRY’S AND IT IS NEW.** That the two of them were the **executioners set to drill Thalaleus’s knees**; that **the unseen power of God took their sight, so that they bored a plank and hung that from the tree instead**; that **the torturer took it for deliberate disobedience and had them flogged**; and that **in the middle of the flogging they cried „Жив нам Господ, од сада и ми постајемо хришћани, верујемо у Христа, и страдамо за Њега!“** and were cut down with the sword. **A YEAR READ AND DELIBERATELY WITHHELD.** The 284 the entry gives stands in its last sentence and is given of **Thalaleus**, who outlived the two of them by several tortures; **the Prologue gives these two no year of their own**, so `dates` is untouched and this folder stays `undated` — the same refusal made for Pamphamer and Pamphylon on 17 May and for the seven maidens of Ancyra on 18 May. **`types` untouched, and the џелат is deliberately not read as a type**: the Prologue calls them executioners, for which this corpus has no `types` slug, and the `soldier` both folders carry came off the Greek page and is neither contradicted nor corroborated here. **`related` ROWS ADDED, FILLING A COMPANY THAT RELATED NOBODY.** `thalaleus-the-physician`, `alexander-companion-of-thalaleus` and `asterius-companion-of-thalaleus` all carried **`related: None`** — three folders of one martyrdom, two of them named after Thalaleus in their own display names, relating nobody at all, exactly as Patrick of Prusa’s four did on the Julian 19 May. This entry narrates the three in one scene, so **each now relates the other two**. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "thalaleus-the-physician",
+    "asterius-companion-of-thalaleus"
+  ]
 }

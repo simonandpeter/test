@@ -10,6 +10,11 @@
       "form": "Ασκλάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Ασκλάς», with the rank word left off; the life page gives two further forms for the same man, «ο Άγιος Ασκλάς (ή Ακλάς ή Ασκαλάς)»."
+    },
+    {
+      "form": "Аскалон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. мај ст. ст., „Свети мученик Аскалон.“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`. **This is not a spelling of the «Ασκλάς» this folder is named for, and it is stored exactly as printed all the same** — a copied script form is never corrected towards another language’s. **It is also not a reader’s guess that the two are one name**: this folder’s own life records that saint.gr prints three forms, «ή Ακλάς ή Ασκαλάς», and **Ασκαλάς is this form**. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — and the three `*-of-ascalon` folders the corpus holds are named for the **city** of Ascalon and not for this man, which was checked rather than assumed."
     }
   ],
   "attestations": [
@@ -40,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.06.2026 (20. мај ст. ст.) — „Свети мученик Аскалон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 20/5 the Greek row already carries. **THE NAME IS NOT A SPELLING OF THE GREEK ONE AND THE IDENTIFICATION DOES NOT REST ON IT — BUT THE GREEK PAGE SETTLES IT ANYWAY.** The Prologue heads him „Свети мученик Аскалон.“, where this folder is named for «Ασκλάς»; and this folder’s own life records that **saint.gr prints the name in three forms, «ή Ακλάς ή Ασκαλάς»** — and Ασκαλάς is the Prologue’s Аскалон. **The narrative is the same point for point**: Antinoe in Egypt, the persecutor **Аријан** against the Greek page’s prefect **Arrianus**, the scraping and the burning with candles, **a stone tied to his neck and the body thrown into the Nile**. Same man, and the day is the same. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „чесно га сахране 287. године“ → `death` 287. **The year is given of the burial, three days after the drowning, and therefore of the same year as the death**, which is said in the `dates` note rather than passed over. saint.gr gave **no year and no emperor**, so there is nothing to widen; the reign this entry names, „у време Диоклецијана“, is given no bounds and nothing is built on it. **New here, and the Prologue has the wonder alone**: that he was flogged, scraped and **burned with candles** and stayed unshaken; that when the torturer Arrianus was crossing the Nile by boat **Asclas stopped the boat by prayer in midstream and would not let it move until Arrianus had written that he believed in Christ as the one and almighty God**; that **Arrianus then put the wonder down to magic, forgot what he had written and went on torturing him**; and that **the Christians found the body on the bank on the third day with the stone still at its neck, as the martyr had foretold before his death**. **TWO PEOPLE REFUSED FOLDERS BY RULING 3, AND THE SECOND IS THE SHARPEST REFUSAL OF THESE SIX DAYS.** (1) „С њим пострада и свети мученик Леонид“ — a martyrdom narrated, and **no folder that can be shown to be him**: `foldchk.py` returns three holders of «Леонид» and `ls saints | grep -iE 'leonid'` twenty folders, of which `leonidas-of-egypt` is the only Egyptian — and **he is kept on the menologion 5/6 with a company of nine other Egyptians**, Marcian, Nicander, Hyperechius, Apollo, Arius and the rest, which is a different company on a different day. **Two commemorations are two men by this corpus’s settled rule, so no row was written on him and no folder was minted.** (2) **Аријан, THE PERSECUTOR, IS GIVEN A MARTYR’S CROWN BY THIS ENTRY AND HAS NO FOLDER ANYWHERE.** „А мучитељ њихов, Аријан, покаја се доцније, поверова у Христа од свег срца и јавно почне исказивати своју веру пред незнабошцима. Тада незнабошци и њега убише, те се и Аријан, негдашњи мучитељ хришћана, удостоји мученичког венца за Христа.“ — he repented, believed with his whole heart, confessed publicly before the pagans, and **they killed him, so that the former torturer of Christians was himself counted worthy of a martyr’s crown for Christ.** **`foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Аријан» and `ls saints | grep -iE 'arrian'` returns nothing**; `arius-of-egypt` is a different man in the 5 June company. **So the clearest martyrdom this entry narrates belongs to the one person on the page with no folder to put it on, and Ruling 3 forbids minting one.** He is named in the prose, unlinked, with no row — and **a folder for him is one commit whenever the author wants it**, the whole entry being recorded here so the reading needs no second fetch. `types` untouched. No `locations`, although Antinoe and the Nile are both named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 287,
+      "latest": 287,
+      "display": "287",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 20. мај ст. ст.: „хришћани нађу тело Аскалоново на обали заједно са каменом о врату … и чесно га сахране 287. године.“ **The year is given of the burial**, which the same sentence places on the third day after the drowning, so it is the year of the death too; nothing is shifted and nothing is reckoned. This folder held no `dates` object at all until now, and saint.gr gave it no year and no emperor. The reign the entry names, „у време Диоклецијана“, is given no bounds and nothing is built on it."
+    }
   }
 }
