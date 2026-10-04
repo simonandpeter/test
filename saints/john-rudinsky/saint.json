@@ -1,0 +1,62 @@
+{
+  "slug": "john-rudinsky",
+  "display_name": "John (Rudinsky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr"
+  ],
+  "names": [
+    {
+      "form": "Иоанн (Рудинский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 29 октября ст. ст., «Иоанн (Рудинский), иерей, сщмч.», with the rank word and the grade left off. The line on the day page gives only the forename, in the genitive, and no surname: «Сщмч. Иоанна пресвитера (1930).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1930,
+      "latest": 1930,
+      "display": "1930",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1930)» after his name on 29 октября ст. ст. Nothing else on the calendar dates him: there is no life page behind the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Сщмч. Иоанна пресвитера (1930).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's third paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and goes in `types`; the link's «иерей» is the grade and goes in `office`. The surname «Рудинский» returns no other folder. He is not either of the two men named John the same day's enumerated company of Aglomazovo holds: those two are peasants shot in 1918 with bare forenames on their name pages, and this is a priest of 1930 with a surname on his. azbyka.ru, which has carried a full life for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "slug": "anastasia-lebedeva",
+  "display_name": "Anastasia (Lebedeva)",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Анастасия (Лебедева)",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind her line for 29 октября ст. ст., «Анастасия (Лебедева), мц.», with the rank word left off. The line on the day page gives only the forename, in the genitive, and no surname: «Мц. Анастасии (после 1937).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": null,
+      "display": "after 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(после 1937)» after her name on 29 октября ст. ст. — after 1937, which is a finding and not a year: the calendar is saying that it does not know when she died, only that it was not before that. The upper bound is left open for that reason. There is no life page behind the line, and her name page carries three days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her name page lists two other days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «23 мая (Ростов.)», the synaxis of the Rostov saints — three days in all, which is one more than any other of this day's twentieth-century entries. One row per church is the schema, so both other days are recorded here and she does not render on either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Мц. Анастасии (после 1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's third paragraph, which carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The line's «Мц.» is martyr and it gives no grade and no state of life, so the folder carries no `office`; that she is a laywoman rather than a nun the calendar nowhere says, and nothing is read into it. The surname «Лебедева» returns no other folder. **She is not `anastasia-the-roman`**, whom the same day page heads: that one is a third-century virgin of Rome with two lives and three hymns, and this is a woman of the Soviet years whom the calendar will not even date. The Rostov synaxis on her page is the one thing about her beyond her name, her rank word and her years, and it places her in that diocese. azbyka.ru, which has carried a full life for others of these years, answered 403 to this corpus's fetcher on the day she was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

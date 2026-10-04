@@ -1,0 +1,7 @@
+# John (Rudinsky)
+
+The Russian church calendar of the Сретенский monastery names him for 29 октября ст. ст. in five words — «Сщмч. Иоанна пресвитера (1930)» — and the name link behind the line adds the surname the line leaves out and the grade it does not: «Иоанн (Рудинский), иерей, сщмч.», a priest of that name, one of the new martyrs of the Russian church. The abbreviation on the line is hieromartyr; the word on the link is the grade he held, priest rather than archpriest. The calendar carries no life for him, and his name page carries no text, no icon and no hymn — only his name and his days.
+
+So the year is the whole of what is recorded, and the year is 1930, when the mass arrests of clergy came. His name page lists a second day, 26 января, the synaxis of the new martyrs and confessors of Russia, on which he is commemorated with the rest of that company rather than alone. The day page he stands on also carries an enumerated company of twelve shot in 1918, two of them named John; he is not either of them, and nothing but his surname and his year distinguishes him from them on the page. The second Russian calendar, azbyka.ru, which has given this corpus five paragraphs and their archival references for others of these men, refused the request on the day he was read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 29 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261029.html) and [his name page](https://days.pravoslavie.ru/name/9633.html); read 4 October 2026.*
