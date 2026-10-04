@@ -6,6 +6,11 @@
       "form": "Νέστωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Νέστωρ ο αμαθής», with the rank word left off; the epithet «ο Αμαθής» is the page's own and is what the English form keeps."
+    },
+    {
+      "form": "Нестор Печерский, Некнижный",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 27 октября ст. ст. The page titles him «Нестор Печерский. Некнижный», with its own full stop between the by-name and the epithet; only that full stop was changed to a comma and no word was added or dropped. The line on the day page itself declines the name, as «Нестора Некнижного, Печерского»."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a saint the Greek page calls Russian, and it has not been read here."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 августа (Печер.(Д))», the synaxis of the fathers in the Far caves. One row per church is the schema, so the second day is recorded here and he does not render on it. The Greek row keeps him on 29 Οκτωβρίου, two days later in the menologion than this calendar does; neither page explains the difference and neither row was moved."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Нестора Некнижного, Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(XIV)» after his name on 27 октября ст. ст., and azbyka.ru's line for the same day repeats it. A floruit and not a death, because neither page gives a year or a manner of death and both place him by century alone. This folder held no date before. Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Чист и прав сый сердцем,/ и свят, преподобне Несторе, душею,/ прост же паки и не умея сам чести книг,/ сего ради чтущим я прилежне внимал еси/ и, оная в себе соблюдая, спешно тщался еси исправляти,/ яже яко разумен исполнив, обрел еси Царствие Небесное.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Тропарь преподобного Нестора Некнижного»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clean and upright in heart and holy in soul, venerable Nestor, and simple besides, and not able to read books yourself, you listened for that reason with great attention to those who read them; and keeping what you heard within you, you made haste to put it into practice, and having fulfilled it as an understanding man you found the Kingdom of heaven.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Дивный во святых Своих Господь/ удивися изрядне в сем святем Несторе,/ иже аще и безкнижен сый и прост,/ но превзыде премудрых и посрами книжников,/ чтущих и не творящих,/ наследи блага вечная/ и молит присно еже спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Кондак преподобного Нестора Некнижного»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Lord, who is wonderful in his saints, was wonderful in a particular way in this holy Nestor, who though bookless and simple surpassed the learned and put to shame the scribes who read and do not do. He has inherited the eternal good things, and prays without ceasing that we may be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

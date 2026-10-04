@@ -11,6 +11,11 @@
       "form": "Νέστωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Όσιος Νέστωρ ο Χρονογράφος «ὃ ἐν τῷ Σπηλαίῳ»», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Нестор Летописец",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 27 октября ст. ст., «Преподобный Нестор Летописец», with the rank word left off. The line on the day page itself declines the name; the day page's hymn headings give the fuller «Нестор Летописец, Печерский, в Ближних пещерах», which is the monastery and the caves and not more of the name."
     }
   ],
   "dates": {
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «28 сентября (Печер.(Б))», the synaxis of the fathers in the Near caves, and his longer life adds the second Sunday of Great Lent, the synaxis of all the fathers of the Kyiv Caves. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Прп. Нестора Летописца (1114).»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -70,5 +85,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Великих князей русских деяния/ и преподобных отец Печерских жития и чудеса написавый,/ свое же, Богомудре Несторе, многих ти ради добродетелей имя/ написано на небеси стяжавый, моли и нам написатися в Книги Животныя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Тропарь преподобного Нестора Летописца, Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who wrote the deeds of the great princes of Rus' and the lives and wonders of the venerable fathers of the Caves, and who for your many virtues, God-wise Nestor, gained your own name written in heaven: pray that we too may be written in the Books of Life.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Времена и лета достопамятных деяний,/ подвиги и труды Богоносных отец,/ Несторе премудре, написуя,/ любовию возгорелся еси последовати стопам первоначальных,/ с нимиже не престай молитися Христу Богу,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Ин тропарь преподобного Нестора Летописца, Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Writing down the times and the years of deeds worth remembering, and the labours and struggles of the God-bearing fathers, most wise Nestor, you were set on fire with love to follow the steps of the first founders. With them do not cease praying to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко сый Богоноснаго Феодосия ученик/ и истинный жития того подражатель,/ первый честных его мощей самовидец быти сподобился еси,/ яже с прочиими святолепно пренес,/ наследил еси с темиже Царство Небесное,/ еже получити и нам, чтущим тя, Господеви молися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Кондак преподобного Нестора Летописца, Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being the disciple of the God-bearing Theodosius and a true imitator of his life, you were counted worthy to be the first to see his honoured relics with your own eyes; and having translated them with the others in a manner befitting the holy, you inherited with them the Kingdom of heaven. Pray to the Lord that we who honour you may obtain it too.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

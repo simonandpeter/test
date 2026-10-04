@@ -1,0 +1,59 @@
+{
+  "slug": "mark-of-the-thebaid",
+  "display_name": "Mark of the Thebaid",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Марк Фиваидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 27 октября ст. ст., «Марк Фиваидский, мч.», with the rank word left off; azbyka.ru heads him «Мученик Марк Фиваидский» for the same day, which gives the same bare form. The line on the day page itself declines the name and gives it without the province, as «Мч. Марка и иже с ним»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after his name on 27 октября ст. ст., «Мч. Марка и иже с ним (304).» Neither it nor azbyka.ru carries a life page that gives a year; azbyka's own line for 9 ноября prints no year at all. Read 4 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Мч. Марка и иже с ним (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "note": "His name page lists this one day and no other, and carries no life, no icon and no hymn; azbyka.ru keeps him on the same day and gives two sentences. «И иже с ним» names nobody, so this is one entry and not a company of folders. Twenty-one other `mark-*` folders were listed and not one of them is kept on 27 October in any calendar or carries the Thebaid; the nearest, `mark-companion-of-soterichus`, is Greek and Romanian 24 October and has his companions named."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

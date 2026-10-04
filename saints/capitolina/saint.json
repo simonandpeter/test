@@ -10,22 +10,36 @@
       "form": "Καπετωλίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Αγίες Καπετωλίνα και Ερωτηΐδα», with the rank word left off."
+    },
+    {
+      "form": "Капитолина Каппадокийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 27 октября ст. ст., «Капитолина Каппадокийская, мц.», with the rank word left off. The line on the day page itself declines the name and gives it without the province."
     }
   ],
   "dates": {
     "death": {
       "earliest": 284,
-      "latest": 294,
-      "display": "c. 289",
+      "latest": 304,
+      "display": "c. 289 or 304",
       "basis": "traditional",
-      "note": "saint.gr: «ζούσαν στην εποχή του αυτοκράτορα Διοκληριανού, όταν άρχοντας στην Καππαδοκία ήταν ο Ζιλικίνθιος (περί το 289 μ.Χ.)» — the page says about 289 and names no exact year; the interval is the five years either side that «περί» allows."
+      "note": "Two calendars disagree and neither reading is chosen. days.pravoslavie.ru prints «(304)» on its line for 27 октября ст. ст. and closes its life «Святые мученицы пострадали в 304 г.»; saint.gr says «ζούσαν στην εποχή του αυτοκράτορα Διοκληριανού, όταν άρχοντας στην Καππαδοκία ήταν ο Ζιλικίνθιος (περί το 289 μ.Χ.)», about 289, from the reign and the governor and not from a year of its own. The interval runs from the earliest the Greek «περί» allows to the Russian year. Read 4 October 2026."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Мцц. Капитолины и Еротииды (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
