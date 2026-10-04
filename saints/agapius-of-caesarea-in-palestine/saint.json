@@ -6,6 +6,11 @@
       "form": "Agapie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 martie."
+    },
+    {
+      "form": "Агапије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Агапије и седморица с њим: Публије, Тимолај, Ромил, два Александра и два Дионисија.“, where it is the first name the heading prints, and the only one of the eight the Prologue gives a sentence of his own. The rank words Свети мученик stand at the head of the whole company and are left off, and the heading gives this man no epithet and no city, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.03.2026 (15. март ст. ст.) — „Свети мученик Агапије и седморица с њим: Публије, Тимолај, Ромил, два Александра и два Дионисија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, an enumerated company of eight: the heading names Agapius and then the seven with him, „Публије, Тимолај, Ромил, два Александра и два Дионисија“. It is the same company the Greek and the Romanian already keep in this folder — Caesarea in Palestine, the prince Urban, Diocletian's persecution, eight men, all beheaded — and the Greek line already quoted here names the same seven beside Agapius in the same order but for the first. The Prologue dates the beheading 303, which falls inside the reign this folder already holds; a sourced interval is not narrowed on a reading, so no date was touched. Its own reading of the seven is unlike either other page: it makes them not yet Christians and never baptised with water, baptised instead in their blood, where doxologia makes them six young men already confessing and saint.gr gives each of them a country. That is recorded in the life and not reconciled. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

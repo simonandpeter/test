@@ -6,11 +6,17 @@
       "form": "Νίκανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαρτίου, «Άγιος Νίκανδρος ο εν Αιγύπτου», with the rank words left off."
+    },
+    {
+      "form": "Никандар Мисирац",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Никандар Мисирац.“, with the rank words Свети мученик left off. Мисирац is kept: it is not a rank but the epithet the heading gives him — Misir is Egypt — and it is what this folder's English name already carries."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "physician"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.03.2026 (15. март ст. ст.) — „Свети мученик Никандар Мисирац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, three sentences long, and the same man saint.gr keeps on this day: the charge against him was that as a physician he helped the Christian martyrs and buried the bodies of the executed honourably, and he was flayed and then beheaded. The Prologue dates his passion 302, where this folder holds 305 from saint.gr; the sourced year is left standing and the disagreement is recorded here rather than resolved. `physician` is added to `types` from the entry's own word — it calls him лекар, a physician, which is BRIEF-SERBIAN.md §5's mapping and is also what saint.gr's life makes him. The stored form keeps Мисирац, which is not a rank but the epithet the heading itself gives him, the Egyptian, and it is what this folder's English name already carries. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
