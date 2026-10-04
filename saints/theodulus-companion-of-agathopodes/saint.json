@@ -11,6 +11,11 @@
       "form": "Θεόδουλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Άγιοι Θεόδουλος και Αγαθάπους», with the rank word left off."
+    },
+    {
+      "form": "Теодул",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 5 April on pravoslavno.rs, „Св. муч. Агатопод и Теодул“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city — Thessalonica is in the body — so the bare forename is what the source gives, and two other folders already hold it."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.04.2026 (5. април ст. ст.) — „Св. муч. Агатопод и Теодул“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, one heading naming both men, **on the Romanian calendar's day and not the Greek one**, and the same man this folder holds: the reader of the church at Thessalonica, the younger of the two, drowned with his deacon. **A death of 303 was added where this folder had none**, said of the two together, and it is the only year any source read for this folder gives. New besides that: the chastity the entry sets against his companion's grey hairs; the two going to trial hand in hand crying that they were Christians; the imprisonment and starving; and **his appearance after death — „Св. Теодул се јави својим познаницима, као ангел светао, у белом оделу, и нареди им да све његово заостало имање разделе сиромасима“** — he appeared to his acquaintances as a shining angel, in white clothing, and told them to divide all the property he had left among the poor. **His grade has no slug here**: the entry calls him чтец, a reader, and this corpus's `types` vocabulary holds no word for it, so nothing was added and nothing was invented. The Prologue prints no troparion and no kontakion. The stored form Теодул folds with `theodulus-companion-of-pamphilus` and `theodulus-of-myropolis`, which hold the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [
@@ -81,5 +96,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 5 April, of the two men together: „Ови дивни Христови војници чесно пострадаше у време цара Диоклецијана и солунског кнеза Фаустина, 303. године“ — in the time of the emperor Diocletian and of Faustinus, prince of Thessalonica, in the year 303. The year is printed flat and not as «about». It is the only year any source read for these two folders gives them: neither doxologia.ro's notice nor saint.gr's prints one, and the persecution of Diocletian they both name is consistent with it. `node .tmp/dd.mjs 303` reads in Russian and Greek."
+    }
   }
 }

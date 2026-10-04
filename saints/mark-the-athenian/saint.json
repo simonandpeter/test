@@ -1,0 +1,63 @@
+{
+  "slug": "mark-the-athenian",
+  "display_name": "Mark the Athenian",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "mark-the-ascetic"
+  ],
+  "names": [
+    {
+      "form": "Марко Трачески",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 5 April on pravoslavno.rs, „Преп. Марко Трачески“, with the rank word Преп. left off. Трачески is kept: it is not a rank but the by-name the heading gives him, and the body explains it — the mountain he lived on, in Libya or Ethiopia, was called Траческа. The body gives a second by-name as well, „Назива се још и Атинским јер му Атина беше родно место“, he is also called the Athenian because Athens was his birthplace, and that is the one this folder's English name carries, because it is the one the entry explains and it cannot be read as the country of Thrace. One Serbian form is stored, the fullest the heading gives; a bare Марко would fold with `mark-of-arethusa`, `mark-of-byblos` and `mark-of-ephesus`."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 400,
+      "latest": 400,
+      "display": "about 400",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 5. април ст. ст.: „Поживе св. Марко 130 година и упокоји се око 400. год.“ — he lived 130 years and reposed about the year 400. The page says about, not 400 flat. The 130 years are not recorded as a birth: subtracting them from a year the source itself calls approximate would be a reader's arithmetic and not a reading, so the age is in this note and in the life and no `birth` was written. No other source was read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 5 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 5 aprilie, which is the page for this menologion number — not 18 aprilie, which merely shares his civil date in 2026 (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 5 Απριλίου (4 October 2026). **But the corpus already records something about this man from a Greek page, and it is why the next note names two folders rather than one.** `mark-the-ascetic`'s life, written off saint.gr's 5 Μαρτίου, says in its own words that «the same Greek day carries a second page, for a Mark the Athenian, which says the information about him is confused and that he may perhaps be this same man», and that the hymns the site prints under both names — **which name Athens and the abba Serapion** — were deliberately not taken into that folder, because the life that page tells knows nothing of either. Athens and Serapion are the two marks of this Prologue entry. So a Greek page for this man exists, on the Greek 5 March and not on 5 April; it was not read here, and what is recorded above is the corpus's own record of it and not a reading of saint.gr."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.04.2026 (5. април ст. ст.) — „Преп. Марко Трачески“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and the Prologue is the only source read for him. **Why a folder and not a row on one of the corpus's twenty-two Marks.** Every `mark-*` folder was listed and the ones that could be this man were read: not one of them is an Athenian who crossed the sea on a plank and spent ninety-five years on a mountain in Libya. `mark-the-ascetic` is the Romanian and Greek 5 March and already carries a Serbian row from this same wave; `mark-of-the-thebaid` is a martyr of 304 on the Russian 27 October; `mark-the-deaf` is the Greek 2 January. **Two folders cannot be ruled out and both are named here rather than quietly passed over.** `mark-the-hermit-20-may`'s whole saint.gr entry says in its own words that the place he came from and the time when he was active are unknown, so there is nothing in it either to join to this entry or to separate from it; it is kept on a different day and carries no country, no century, no teacher and no wonder. And `mark-the-ascetic`, the Romanian and Greek 5 March, **is called an Athenian by saint.gr too** — a fourth-century Athenian who left Athens for Antioch and was a disciple of John Chrysostom — and that folder's own life records that saint.gr's same day carries a second page for a Mark the Athenian which says the information is confused and that he may perhaps be that same man, and that the hymns under both names, naming Athens and the abba Serapion, were deliberately left out of it. **So the Greek calendar is itself undecided, and this corpus has already declined once to decide for it.** This entry keeps a folder of its own because its life is not that folder's life at any point — no Antioch, no Chrysostom, no Nitria, no hyena, and ninety-five years alone on a mountain in Libya instead — and because deciding a confusion the source calls a confusion is the author's and not a reader's. A `related` row goes both ways between the two folders, which is what `tests/related-floor.test.mjs` demanded as soon as this folder existed, since the older life names this name in prose. If the author joins them, everything here moves onto that folder and this one goes. **Serapion is named and not identified**: the entry says a Saint Serapion visited Mark before his death and afterwards published his life, and gives him no see, no monastery and no by-name, where the corpus holds nine folders of that name; an identification on a forename is not one, so no `related` row was written. **No `locations`**: the entry is itself unsure of the country — „у Ливију (или Етиопију)“, Libya or Ethiopia — and a point cannot be put on that. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
