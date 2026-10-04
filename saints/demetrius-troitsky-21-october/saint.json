@@ -1,0 +1,76 @@
+{
+  "slug": "demetrius-troitsky-21-october",
+  "display_name": "Demetrius (Troitsky) (21 October)",
+  "names": [
+    {
+      "form": "Димитрий (Троицкий)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 21 октября ст. ст., «Димитрий (Троицкий), иерей, сщмч.», with the rank word left off. The day's own line declines the name and gives it without the surname, as «Димитрия ... пресвитеров»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Сщмчч. Константина , Сергия , Василия , Феодора , Владимира , Николая , Иоанна , Василия , Александра , Димитрия и Алексия пресвитеров, Сергия и Иоанна диаконов, прмчч. Софрония и Неофита (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1905,
+      "latest": 1905,
+      "display": "20 July 1905",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: born 20 July 1905, the youngest of the four sons of Ivan Troitsky, an official of the excise administration."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "3 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: shot on 3 November 1937, two days after the NKVD troika's sentence of 1 November. The company line on 21 октября ст. ст. closes with the year 1937, and 3 November 1937 is 21 October old style."
+    }
+  },
+  "related": [
+    "sergius-smirnov",
+    "theodore-belyaev",
+    "vladimir-vvedensky",
+    "nicholas-raevsky",
+    "alexander-bogoyavlensky",
+    "sergius-kazansky",
+    "john-melnitsky"
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
