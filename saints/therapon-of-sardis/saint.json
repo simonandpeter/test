@@ -7,6 +7,11 @@
       "form": "Terapont",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 27 mai, «Sfântul Sfințit Mucenic Terapont, Episcopul Sardei»."
+    },
+    {
+      "form": "Терапонт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. мај ст. ст., „Свештеномученик Терапонт, епископ сардијски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there, and „сардијски“ the see, which `office` and the display name both already carry. **This is the deliberate second holder of a fold named in advance**: `foldchk.py` returned `NO FOLDER HOLDS THIS FORM` for «Терапонт» earlier on 5 October 2026, before `therapon-of-cyprus` was written, and now returns that folder, because the Prologue prints the same bare name for the bishop of Cyprus on its 25 May and for the bishop of Sardis on its 27 May. **There is no fuller form to prefer on either**: each heading gives the name and then the see, and a see is not part of a stored form. The two are told apart by their days, their sees and their `office`. The Romanian form on this folder, «Terapont», is the same bare name."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.06.2026 (27. мај ст. ст.) — „Свештеномученик Терапонт, епископ сардијски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 27/5 the Romanian row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 27 May is — note that the 7 May and 24 April headings quoted elsewhere in this wave do carry one, so this is the page and not a transcription habit. **THE FOLD PREDICTED TWO DAYS AGO HAPPENED HERE.** The `sr` note written on `therapon-of-cyprus` for the 25 May said that the Prologue prints the identical string «Терапонт» for a different man on this day, and that a reader working it would fold onto that form and must keep the two apart by the see and not by the name. **That is exactly what this row does.** This heading says „епископ сардијски“ and that one said „епископ кипарски“; **two commemorations on one calendar means two men**, the corpus keeps both folders, and the fold is entered knowingly. **A FIRST DATE, AND IT IS STATED AND NOT TAKEN OFF THE REIGN.** The existing life records „The life gives no year, and none is recorded here“, and the Greek and Russian rows are `undocumented`, so this folder has stood undated. The Prologue closes „Чесно пострада 259. године“ — he suffered honourably in the year 259 — so `dates.death` is 259 to 259, `basis: \"traditional\"`. **„у време Валеријана“ is a reign and is used for nothing**, and no year was derived from it; the stated 259 needed no help from it. **MOST OF THE ENTRY CORROBORATES WHAT DOXOLOGIA ALREADY GAVE, AND THAT IS WORTH SAYING FOR A WONDER THIS STRANGE.** The four dry stakes he was stretched naked and bound to, the beating until the flesh came away from the bones, and **the stakes greening and growing into tall trees from which many sick received healing** are both books’ — the Serbian one in two sentences where doxologia takes a paragraph and adds the river Astalin, Synaon and Ankyra. **New here**: that he turned many **Jelini**, Greeks, to the faith of Christ, and was tormented with hunger, prison and beating for it; and that **he was slaughtered at the last like a lamb** — „би заклан као јагње“ — where doxologia has him slaughtered for Christ without the image. **Doxologia names the ruler Julian and the Prologue names no persecutor at all**, only the emperor; nothing was reconciled. **`wonderworker` REFUSED, ON THE SAME READING AS TWO DAYS AGO.** The healings come „од којих“ — from the trees — not from him, and the object of a wonder is not its subject; `wonderworker` was refused on `therapon-of-cyprus` for the same reason, where the word чудотворне was said of his relics. `hieromartyr` and `bishop` are both corroborated and **no type was added**. `office` untouched at `Bishop of Sardis`, which the heading says in its own words. `related` untouched at `helladius-27-may`, a day companion this entry does not name; the entry names nobody with a folder. No `locations`. The Prologue prints no troparion and no kontakion; the Romanian common of hieromartyrs on this folder stays, and stays labelled a common."
     }
   ],
   "hymns": [
@@ -74,5 +89,14 @@
   ],
   "related": [
     "helladius-27-may"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 259,
+      "latest": 259,
+      "display": "259",
+      "basis": "traditional",
+      "note": "Охридски пролог за 09.06.2026 (27. мај ст. ст.): „Најзад свети Терапонт би заклан као јагње, у време Валеријана … Чесно пострада 259. године“. The first year any calendar read for this folder states; doxologia gives none. The reign of Valerian stands in the same sentence and no year was derived from it."
+    }
+  }
 }
