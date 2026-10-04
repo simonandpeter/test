@@ -1,0 +1,63 @@
+{
+  "slug": "basil-arkhangelsky-31-october",
+  "display_name": "Basil (Arkhangelsky)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Василий (Архангельский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the company's line for 31 октября ст. ст., «Василий (Архангельский), протоиерей, сщмч.», with the grade and the rank word left off. **The corpus's `basil-arkhangelsky` stores the same form**, read off the same calendar's 8 января ст. ст., where the link gives «иерей» for the grade and the year is 1939; the calendar gives no fuller form for either man, and the fold is recorded in `FINDINGS.md`."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1937)» after the line of ten people he is the seventh of. Nothing else on the calendar dates him: no life page follows his name, and his name page carries two days and no text. The corpus's other Basil Arkhangelsky is dated 1939 by the same calendar on another day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Сщмчч. Всеволода , Александра , Сергия и Алексия и Василия , Петра , Василия пресвитеров, прмч. Анатолия , Евфросина и мч. Иакова (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the seventh of the day and names ten people with one year for all of them. **It prints «Василия» twice**, fifth and seventh in its order, with two different links behind the two places: `/name/12808.html`, «Василий (Колоколов), иерей, сщмч.», and `/name/13841.html`, «Василий (Архангельский), протоиерей, сщмч.» This folder is the second of the two. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The line's «Сщмчч.» and «пресвитеров» are hieromartyr and presbyter and go in `types`; the link's «протоиерей» is the grade and goes in `office` as Archpriest. **He is not the corpus's `basil-arkhangelsky`, and the two folders carry the same `display_name` and the same `ru` form because the calendar gives no way out of it.** That folder was read off this same calendar's 8 января ст. ст., where the link reads «Василий (Архангельский), иерей, сщмч.» and the year is 1939: a priest dead 1939 against an archpriest dead 1937, two commemorations on one calendar and therefore two men by the settled rule, told apart by day, by grade and by year and by nothing else. The slug carries this day as its tail, on the `john-popov-26-january` precedent, and the fold is recorded in `FINDINGS.md`. The ten on this line are not recorded as a company: no page read says they were tried together, and sharing a day of death is not a relation."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
