@@ -342,10 +342,13 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name a')).toBeVisible();
   /* Polled for the same reason as the hover above: the wait was a sleep, and a
-     sleep that is long enough here is not long enough under load. */
+     sleep that is long enough here is not long enough under load. The ceiling
+     is generous because the claim is that the viewport prefetches at all, not
+     that it does so promptly: at 5 s this failed twice on a loaded runner while
+     the same test passed in under a second in the other project. */
   await expect
     .poll(() => fetched.some((url) => url.includes('anthony-the-great')), {
-      timeout: 5000,
+      timeout: 20_000,
       message: 'the viewport never prefetched the hero',
     })
     .toBe(true);
