@@ -1,0 +1,71 @@
+{
+  "slug": "sergius-konstantinov",
+  "display_name": "Sergius (Konstantinov)",
+  "names": [
+    {
+      "form": "Сергий (Константинов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 13853, «Сергий (Константинов), протоиерей, сщмч.», with the grade word and the rank word left off. The day's own line declines the name to «Сергия» and gives it without a surname. azbyka.ru heads its life «Священномученик Сергий Константинов, пресвитер» but calls him протоиерей throughout its text, which agrees with the name link."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists four synaxes beside this day — the new martyrs and confessors of the Russian Church, the saints of Tver, the saints of Moscow, and the new martyrs of the land of Vladimir on 1 October — all of them synaxis headings and none a second proper feast. His death fell on 26 November 1941, which is 13 November old style, a day before the day the calendar keeps him on."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Сщмч. Сергия пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "15 August 1877",
+      "basis": "attested",
+      "note": "azbyka.ru's life of him: «Священномученик Сергий родился 15 августа 1877 года в селе Рогачево Дмитровского уезда Московской губернии в семье протоиерея Вячеслава Константинова и его супруги Елены.»"
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "26 November 1941",
+      "basis": "attested",
+      "note": "azbyka.ru's life of him: «Протоиерей Сергий Константинов скончался 26 ноября 1941 года. Причиной смерти стали непосильный труд и голод», buried the same day in grave 226 of the camp cemetery near Sergeitsevo in the Kovrov district. days.pravoslavie.ru's line closes him with «(1941)» and keeps him on 14 ноября ст. ст., which is 27 November; the death is the day before that, and the difference is left as it stands."
+    }
+  },
+  "office": "Archpriest",
+  "related": [
+    "thaddeus-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
