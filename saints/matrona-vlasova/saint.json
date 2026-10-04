@@ -1,0 +1,61 @@
+{
+  "slug": "matrona-vlasova",
+  "display_name": "Matrona (Vlasova)",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Матрона (Власова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 25 октября ст. ст., «Матрона (Власова), исповедница», with the rank word left off. The line itself declines the name and gives it without the surname, as «Прп. Матроны исп»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Прп. Матроны исп (1963).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life for her: no `Life/` href follows her name on the day page, and her name page gives the two days and a link to an article on Православие.Ru and nothing else. The line's «Прп.» is venerable and its «исп» a confessor, which the link's «исповедница» repeats; it gives her no monastery, no office and no name in religion beside the one it prints. She is none of the eight other women of this name the corpus keeps, all of whom are told from her by day and by epithet, and the surname «Власова» returns no other folder."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1963,
+      "latest": 1963,
+      "display": "1963",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after her name on 25 октября ст. ст., «Прп. Матроны исп (1963).» The calendar carries no life page for her and gives no day. Read 4 October 2026."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
