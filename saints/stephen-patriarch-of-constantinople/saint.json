@@ -12,6 +12,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Άγιος Στέφανος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети Стефан, патријарх цариградски.“ Свети is not a rank; „патријарх цариградски“ is the rank and the see, which this corpus puts in `types` as `patriarch` and in `office` as Patriarch of Constantinople, and **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note** — here it leaves a bare forename with nothing beside it, the father, the brother, Photius and the years all being in the body. **So this is a deliberate twelfth joining of the largest fold this corpus has in Cyrillic**: `foldchk.py` returned eleven folders holding „Стефан“ before a line was drafted, and the plain gate run already prints them as one `?` row. There is no fuller form on the page to prefer, and a form a reader builds is what §6 forbids. The fold is read in this batch's commit message."
     }
   ],
   "related": [
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети Стефан, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day list could not see this folder**, because the Greek row keeps him on the menologion **18/5** and the Prologue keeps him on the **17/5**, and the list matches on the menologion number; it offered fifteen folders and not this one. He was found by `ls saints | grep -iE 'stephen|stefan'` and by reading the two Constantinopolitan Stephens, which is the third day running that command has caught what the list could not. **The identification is exact and leaves nothing open**: „Син цара Василија Македонца и брат цара Лава Мудрог. На престо патријаршијски дошао је после Фотија“ against a folder whose life has him the son of Basil the Macedonian and of Eudokia, pupil and synkellos of Photius, patriarch under his brother Leo the Wise — and whose `related` already holds `basil-the-macedonian` and `photius-of-constantinople`. **He is not `stephen-ii-of-constantinople`**, who is kept on 18 July, came from Amaseia, and died in 928. **Two days and two churches, and it is not a conflict**: the Greek row stays on 18 May and was not moved. **A DISAGREEMENT OF THREE YEARS THAT HAS NO FIELD.** „управљао Црквом Божјом од 889-893. године“ gives **889** for the start of the patriarchate, where saint.gr says „he took the patriarchal throne, in the year 886“. **It is neither a birth nor a death, so there is no `dates` field for it** — the schema has `birth`, `death` and `floruit` and nothing for an office held — and `dates` is therefore **untouched**: `birth` 867 and `death` „May 893“ both stand, and **the two books agree on the 893**. Both years for the accession are in the added paragraph and neither is chosen. **New besides**: only that he **reposed in peace and stood before the Lord whom he greatly loved**, where saint.gr says he died at twenty-six and was buried in the monastery of Saint George; this is a three-sentence entry and the honest account of it is that it corroborates and adds one year that cannot be stored. `types` untouched — Свети is no rank and „патријарх цариградски“ is the `patriarch` in `types` and the `office` the folder already holds. **His father and his brother take no rows of their own from this entry**: `basil-the-macedonian` is a `related` row already, and the emperor Leo the Wise has no folder, as the 16 May entry for `nicholas-the-mystikos` also found. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

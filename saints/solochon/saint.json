@@ -11,6 +11,11 @@
       "form": "Σολόχων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Σολόχων, Παμφαμήρ και Παμφυλών», with the rank word left off; the life page carries «Αγιος Σολοχων» as its own head name."
+    },
+    {
+      "form": "Солохон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети мученик Солохон.“ Свети is not a rank; мученик is the `martyr` this folder carries in `types`; strip them and the bare forename is left, which is all the heading gives. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
     }
   ],
   "related": [
@@ -45,11 +50,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети мученик Солохон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion 17/5 the Greek row already carries, and the same three men: an Egyptian and a Roman soldier under the commander Campanus in the reign of Maximian, with Pamphamer and Pamphylon beside him. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „предста Господу у Царству небеском 298. године“ → `death` 298, where saint.gr gave only the reign, «ο Μαξιμιανός (286 - 305 μ.Χ.)», which an earlier reader recorded and refused to build on. **298 falls inside that reign**, so there is no disagreement and nothing to widen. **New here, and the Prologue is the only book that has it**: that the commander ordered the soldiers **to force his teeth apart with a sword and pour the idol-sacrifice into his mouth, and that the martyr broke the iron with his teeth** and did not take the sacrifice in. **Two differences from the Greek page, both recorded and neither resolved.** The instrument: the Prologue has **a writing-reed driven through both his ears**, saint.gr an iron instrument from the ear through to the brain — and „кроз оба уха“ is two ears where the Greek has one. And the end: saint.gr has him left senseless and paralysed, dying in the widow's house; the Prologue has him **revive a little there with food and drink and go on counselling the faithful to be steadfast in the faith and in sufferings for the faith**, and only then raise praise to God and end his life. **The added paragraph says both and chooses neither**; nothing on the folder was changed on the strength of either. The Prologue calls Campanus „војвода“, a commander, where saint.gr calls him a tribune, and it names no place, where saint.gr has Chalcedon; neither is written as a correction. `types` untouched — мученик is the `martyr` and „војник римски“ the `soldier`, both held. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 298,
+      "latest": 298,
+      "display": "298",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 17. мај ст. ст.: „После тога уздиже хвалу Богу, сконча свој земни живот, и предста Господу у Царству небеском 298. године.“ This folder held no `dates` object at all until now; saint.gr gave only the reign of Maximian, 286 to 305, inside which 298 falls, and neither doxologia nor the Russian calendar has been read for him. The Prologue gives this year for Solochon alone, and not for Pamphamer and Pamphylon, who died earlier in the same torture."
+    }
   }
 }

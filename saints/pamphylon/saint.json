@@ -11,6 +11,11 @@
       "form": "Παμφυλών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Σολόχων, Παμφαμήρ και Παμφυλών», with the rank word left off; the life page carries «Αγιος Παμφυλων» as its own head name and adds two further forms, «ή Παμφαλών ή Παμφαλιών»."
+    },
+    {
+      "form": "Памфалон",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's second entry for 17. мај ст. ст., „То исто учинише и два његова друга: Памфамир и Памфалон“; свети, which the next sentence puts before it, is not a rank. **It is a different form of the name from the one this folder is named for** — Памфалон against the Greek «Παμφυλών» — and it is the very variant this folder's life already records saint.gr as giving, „also written Pamphalon or Pamphalion“. Stored exactly as the Prologue prints it. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language, and the only neighbouring fold in the gate's rows is `? \"памфил\" — pamphilus-of-caesarea, pamphilus-the-martyr`, which this form does not join."
     }
   ],
   "related": [
@@ -45,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети мученик Солохон.“ — „То исто учинише и два његова друга: Памфамир и Памфалон … под којима издахнуше свети Памфамир и Памфалон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "**A ROW OWED OUT OF A COMPANION'S HEADING**, on the same ground as Pamphamer's: the entry is headed for Solochon and the body narrates this man's martyrdom, which is the test that owes a row. Same menologion 17/5 the Greek row already carries. **THE SPELLING IS A THIRD FORM OF THIS NAME AND IT IS THE ONE THIS FOLDER'S LIFE ALREADY PREDICTED.** That life opens „the last name also written Pamphalon or Pamphalion“, off saint.gr; the Prologue writes **Памфалон**, which is that second form, against the Greek «Παμφυλών» this folder is named for. **The `sr` form stored is Памфалон, as printed, and the folder's `display_name` and slug are not touched** — a copied script form is never corrected towards another language's, and the display name is a settled English choice. **A YEAR READ AND DELIBERATELY NOT WRITTEN**, exactly as on Pamphamer: the 298 is Solochon's, given in the sentence after his revival, and the Prologue gives these two no year, so `dates` is untouched and this folder stays `undated`. **New here**: that he declared himself a Christian when the order came that all soldiers sacrifice, and that the officer was a commander and not a tribune. `types` untouched. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
