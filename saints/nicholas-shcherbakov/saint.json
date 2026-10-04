@@ -1,0 +1,60 @@
+{
+  "slug": "nicholas-shcherbakov",
+  "display_name": "Nicholas (Shcherbakov)",
+  "names": [
+    {
+      "form": "Николай (Щербаков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 15 ноября ст. ст., name page 9739, «Николай (Щербаков), иерей, сщмч.», with the grade word and the rank word left off. The day's own line declines the name to «Николая» and gives it without a surname. No other folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Сщмчч. Николая и Петра пресвитеров, Григория и Никиты диаконов (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 28 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 28 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 28 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 15 ноября ст. ст. The calendar carries no life page, so that year is the whole of what is recorded here; no day, no place and no manner of death are given, and none is inferred."
+    }
+  },
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
