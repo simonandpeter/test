@@ -1,0 +1,62 @@
+{
+  "slug": "sabbas-the-goth",
+  "display_name": "Sabbas the Goth",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Сава Готски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 15 April on pravoslavno.rs, „Св. муч. Сава Готски.“, with Св. left off — it is not a rank — and with муч. left off, which is the `martyr` this folder carries in `types`. Готски is kept: it is not a rank word but the people he belonged to as the heading itself names him, and it is what this folder's English name carries as «the Goth». Keeping it is what holds the form out of a fold — the corpus keeps seven other folders whose forename reads as this one, among them `sava-of-serbia`, `sava-of-buzau` and `sabbas-of-krypetsk`."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 372,
+      "latest": 372,
+      "display": "372",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 15. април ст. ст.: „Пострада Сава свети у својој 31. години, 372. године.“ — he suffered in his thirty-first year, in the year 372. The same entry puts the recovery of his body under the emperor Valens. No year of birth is recorded here: the entry gives his age and not his birth, and subtracting the one from the other would be this reader's arithmetic and not the source's."
+    }
+  },
+  "related": [
+    "bretanion-of-tomis"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 15 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 15 aprilie, which is the page for this menologion number (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 15 Απριλίου (4 October 2026). The corpus already keeps `sabbas-stratelates`, a Goth by descent who was drowned in the Tiber in 272 under Aurelian and is kept on the Greek and Romanian 24 April, and he is **not** this man: the Prologue's Sabbas is a poor villager of the Gothic land drowned in a river there in 372 under Valens, in his thirty-first year, whose body a Greek commander carried off to Cappadocia. Two drownings, two centuries, two emperors and two days, so this is a folder and not a row on his."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.04.2026 (15. април ст. ст.) — „Св. муч. Сава Готски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and the Prologue is the only source read for him: the persecution in the Gothic land, the prince who came asking after Christians and the villagers who swore there were none, Sabbas standing out to say that no one was to swear for him, the prince letting a poor man go as one who could neither harm nor help, the priest the entry names Сансал who kept Pascha with him the following year, the beating with staves and the dragging naked through thorns, the refusal of the idol meat, the soldiers who would have let him go on the road and whom he told to do as the prince had ordered, the stone tied to his neck, the body cast up on the bank, and the Greek commander the entry names Јуније Соранос who found it and carried it to Cappadocia under the emperor Valens. **No `locations`**: the entry names the Gothic land, an unnamed river and Cappadocia, and not one of them is a point this folder can claim. The Prologue prints no troparion and no kontakion, so this folder has no hymn."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

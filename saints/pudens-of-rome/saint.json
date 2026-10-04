@@ -11,6 +11,11 @@
       "form": "Πούδης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα», with the rank words left off; the life page heads him «Αγιος Πουδης Αποστολος Απο Τους Εβδομηκοντα»."
+    },
+    {
+      "form": "Пуд",
+      "lang": "sr",
+      "note": "His own name, read out of the Ohrid Prologue's first heading for the Julian 15 April, „Св. апостоли Аристарх, Пуд и Трофим.“, with Св. left off — it is not a rank — and апостоли left off, which is the `apostle` this folder carries in `types`. One rank word stands over three names and belongs to none of them, so what is left for this man is the bare forename, with no epithet and no see anywhere on the heading or in the body. No other folder in the corpus holds this Serbian form, so it folds with nothing."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.04.2026 (15. април ст. ст.) — „Св. апостоли Аристарх, Пуд и Трофим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, an enumerated company of three, so one row per man — the same menologion day the Romanian keeps the three on, where the Greek keeps them on 14 April; one row per church, so nothing moved. The entry puts all three among the Seventy, and has them beheaded in the persecution under Nero when the apostle Paul was beheaded. It prints no year, so nothing was added here and nothing displaced. Aristarchus, the first name in this heading, is the one man of the three whose `serbian` row is already `venerated` — on the Julian 27 September, off this same book — so his row was left alone and the second day he is owed is in the run's findings, unwritten."
     }
   ],
   "hymns": [

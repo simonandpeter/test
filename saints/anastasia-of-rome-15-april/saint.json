@@ -11,6 +11,11 @@
       "form": "Αναστασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Απριλίου, «Αγίες Αναστασία και Βασιλίσσα», with the rank word left off."
+    },
+    {
+      "form": "Анастасија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 15 April, „Св. муч. Василиса и Анастасија.“, with Св. left off — it is not a rank — and муч. left off, which is the `martyr` this folder carries in `types`. One rank word stands over two names and belongs to neither, so what is left is the bare forename; Rome is in the body and this corpus keeps it in the display name, and the heading carries no epithet at all. `anastasia-the-patrician` already holds this same bare form, so the two fold, and the fold is recorded as deliberate in the run's findings."
     }
   ],
   "sex": "female",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.04.2026 (15. април ст. ст.) — „Св. муч. Василиса и Анастасија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, an enumerated pair, so one row per woman, on the same menologion day the Romanian and the Greek both keep them on. The entry is four lines and prints no year. **It disagrees with the other two sources about whose bodies they buried**: the Prologue has them gathering and honourably burying the beheaded bodies of the disciples of the apostles, where doxologia's notice has them gather the relics of the Apostles themselves and saint.gr names those relics as the chief Apostles' — a disagreement recorded here and in the life, and not resolved. Its account of the tortures is the breasts and the tongue cut off, where the Romanian notice adds the hands and the feet. `anastasia-the-patrician` already holds this same bare Serbian form, so the two fold, and the fold is recorded as deliberate in the run's findings."
     }
   ],
   "text": {

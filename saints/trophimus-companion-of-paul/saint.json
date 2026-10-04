@@ -11,6 +11,11 @@
       "form": "Τρόφιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Απριλίου, «Άγιοι Αρίσταρχος, Πούδης και Τρόφιμος Απόστολοι από τους εβδομήντα», with the rank words left off; the life page heads him «Αγιος Τροφιμος Αποστολος Απο Τους Εβδομηκοντα»."
+    },
+    {
+      "form": "Трофим",
+      "lang": "sr",
+      "note": "His own name, read out of the Ohrid Prologue's first heading for the Julian 15 April, „Св. апостоли Аристарх, Пуд и Трофим.“, with Св. left off — it is not a rank — and апостоли left off, which is the `apostle` this folder carries in `types`. One rank word stands over three names and belongs to none of them, so what is left is the bare forename; the companionship clause this corpus keeps in his display name is not part of the source's name for him, and the heading gives no epithet and no city. `trophimus-of-antioch` already holds this same bare form, so the two fold, and the fold is recorded as deliberate in the run's findings."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.04.2026 (15. април ст. ст.) — „Св. апостоли Аристарх, Пуд и Трофим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, an enumerated company of three, so one row per man — the same menologion day the Romanian keeps the three on, where the Greek keeps them on 14 April; one row per church, so nothing moved. The entry puts all three among the Seventy and has them beheaded in the persecution under Nero when the apostle Paul was beheaded, and it prints no year, so nothing was added here and nothing displaced. Its one new fact about this man is that he was from Asia, with the Acts of the Apostles at chapter twenty, verse four, cited for it. This is not `trophimus-of-antioch`, the martyr under Probus whom the corpus keeps on 19 September and whose Serbian form is the same bare forename; the two are a deliberate fold recorded in the run's findings."
     }
   ],
   "hymns": [
