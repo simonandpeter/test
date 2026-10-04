@@ -328,7 +328,16 @@ test('the shared element is named once, on both sides of the navigation', async 
 test('without a pointer to hover with, prefetch follows the viewport', async ({ browser }) => {
   // The mobile branch of the prefetch budget has no hover to trigger it, so it
   // is the half that can rot unnoticed while the desktop half keeps passing.
-  const ctx = await browser.newContext({ viewport: { width: 360, height: 780 }, isMobile: true, hasTouch: true });
+  /* `serviceWorkers: 'block'` because this test's claim is read off a
+     `page.route`, and the worker precaches `saint.json` and serves it on a
+     later visit without the route ever seeing it (helpers.js, trap 13). The
+     prefetch then fires and the test still fails. */
+  const ctx = await browser.newContext({
+    viewport: { width: 360, height: 780 },
+    isMobile: true,
+    hasTouch: true,
+    serviceWorkers: 'block',
+  });
   const page = await ctx.newPage();
   await searchMode(page);
   const fetched = [];
@@ -344,8 +353,7 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
   /* Polled for the same reason as the hover above: the wait was a sleep, and a
      sleep that is long enough here is not long enough under load. The ceiling
      is generous because the claim is that the viewport prefetches at all, not
-     that it does so promptly: at 5 s this failed twice on a loaded runner while
-     the same test passed in under a second in the other project. */
+     that it does so promptly. */
   await expect
     .poll(() => fetched.some((url) => url.includes('anthony-the-great')), {
       timeout: 20_000,
