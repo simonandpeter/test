@@ -11,6 +11,11 @@
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Ανδρέας ο Αργέντης», with the rank word left off."
+    },
+    {
+      "form": "Андреј Хиоски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Свети мученик Андреј Хиоски“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; strip the two and „Андреј Хиоски“ is left. **Хиоски is the island and is kept, and it is what keeps this folder out of a fold**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Андреј Хиоски» and three holders of a bare «Андреј» — `andrew-companion-of-paul`, `andrew-the-monk-martyr-of-crete` and `andrew-the-presbyter-confessor`. **The family name Argentis is not in the stored form** although the display name is built on it: this heading does not print it, and a form is copied and never composed. The Greek form on this folder, «Ανδρέας», is the bare one."
     }
   ],
   "dates": {
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Свети мученик Андреј Хиоски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s seventh entry, on the same menologion 29/5 the Greek row already carries, and one sentence long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **ONE SENTENCE, AND IT CORROBORATES THE YEAR AND THE CITY.** „Пострадао за веру од Турака 1465. године у Цариграду“ — he suffered for the faith at the hands of the Turks in the year 1465 at Constantinople. The folder holds `death` 1465 off saint.gr, which also gives Constantinople, so **`dates` is untouched**. **AND IT CALLS HIM BY HIS ISLAND WHERE THE GREEK PAGE CALLS HIM BY HIS FAMILY.** „Андреј Хиоски“, Andrew of Chios, against «Ανδρέας ο Αργέντης» — and the existing life already records saint.gr’s own note that **Argentis is a Chiot family name and not a title**, and that he came from Chios. **So the two headings are the same man said two ways and neither contradicts the other**: the display name keeps the family name, the `sr` form keeps the island, and no identification had to be made because saint.gr had already joined the two. `new-martyr` and `martyr` are both corroborated. **THE DAY PUTS HIM TWELVE YEARS AFTER ITS OWN LAST ENTRY, AND THAT IS NOT A FOLDER.** „Пад Цариграда“ is the eighth entry, the fall of the City on 29 May 1453, and the existing life already sets this martyr under the synaxis of the new martyrs who suffered after it. **The fall is an event and takes no row**, and the emperor Constantine XI and Sultan Mehmed II in it are not saints this corpus keeps. **Nobody in this entry gains a row**, it naming only the Turks. `related` stays empty; George of Trebizond, who wrote his martyrdom, is saint.gr’s and has no folder. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

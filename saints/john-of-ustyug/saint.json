@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "fool-for-christ",
-    "ascetic"
+    "ascetic",
+    "wonderworker"
   ],
   "names": [
     {
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαΐου, «Άγιος Ιωάννης ο διά Χριστόν σαλός», with the rank word and the clause «ο διά Χριστόν σαλός» left off."
+    },
+    {
+      "form": "Јован Устјужски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Свети Јован Јуродиви, Устјужски чудотворац“ — Свети is not a rank, Јуродиви is the `fool-for-christ` this corpus puts in `types`, and чудотворац is the `wonderworker` added with this upgrade. **Јуродиви stands between the two words that are kept, and taking it out is a reading that is said here rather than hidden**: it is a rank and nothing else, the corpus composes it, and what is left on either side of it — „Јован … Устјужски“ — is the name and the place that distinguishes him. **Устјужски is kept because without it this would be a tenth bare «Јован»**, measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Устјужски» and nine holders of a bare «Јован», the fold `john-of-gothia` had to join on 19 May, `john-vladimir` was kept out of on 22 May and `john-psychaites` was kept out of on 26 May. The Greek form on this folder, «Ιωάννης», is the bare one."
     }
   ],
   "dates": {
@@ -50,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Свети Јован Јуродиви, Устјужски чудотворац“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, on the same menologion 29/5 the Greek row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **THE PROLOGUE PRINTS HIS HEADING AND NO LIFE AT ALL, AND THAT WAS VERIFIED AGAINST THE PAGE AND NOT INFERRED FROM THE PARSER.** `srbody.mjs` printed an empty body for this entry, which could have been a parse failure, so the cached page itself was opened: the markup reads `5. <strong>Свети Јован Јуродиви, Устјужски чудотворац. </strong><br /><br /> 6. ` — **heading, then straight on to the sixth entry.** It is the only entry of the wave with no body, and the life says so rather than concluding anything from the silence. **So nothing was taken from this entry except what its heading says.** **`wonderworker` ADDED, AND IT IS IN THE HEADING.** „Устјужски чудотворац“ — the wonderworker of Ustyug — and Чудотворац maps to `wonderworker` in BRIEF-SERBIAN.md §5. **This is the first time in the wave the word has been taken out of a heading rather than argued from a body**: on 24 May it came from a sentence listing the gifts, and on 25 and 27 May it was refused twice because the word was said of relics and of trees. **Here the calendar puts it on the man, in the line it keeps him by.** `wonderworker` is **not in `src/lib/honorific.js`’s `PRECEDENCE`**, so the page goes on reading *Blessed John* off the `fool-for-christ` he carries and the new word shows in the facts line. `fool-for-christ` is corroborated by „Јуродиви“ in the same heading; `ascetic` is not in it and was left alone. **`dates` UNTOUCHED**: the heading gives no year, so the `death` of 1494 this folder holds off saint.gr stands unchanged and uncorroborated. **No `related` and no `locations`**: the heading names no person, and his parents Savva and Maria, his village and his hut are all saint.gr’s and are not repeated. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

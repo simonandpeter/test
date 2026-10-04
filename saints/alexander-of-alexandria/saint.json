@@ -7,6 +7,11 @@
       "form": "Alexandru",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 mai, «Sfântul Ierarh Alexandru, Arhiepiscopul Alexandriei»."
+    },
+    {
+      "form": "Александар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Свети Александар, епископ александријски“ — Свети is not a rank, епископ is the `bishop` this corpus puts in `types`, and „александријски“ is the see, which `office` and the display name both carry. Strip them and the bare personal name is left. **A FOURTH HOLDER, ENTERED ON PURPOSE AND MEASURED**: `foldchk.py` returns `alexander-companion-of-thalaleus`, `alexander-of-cartagena` and `alexander-of-side` for «Александар». **There is nothing fuller to prefer**, the heading printing nothing between the name and the rank — unlike `alexander-the-dervish` three days earlier in this wave, whose heading gave „Александар Солунски“ and which therefore raised no fold."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Свети Александар, епископ александријски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, on the same menologion 29/5 the Romanian row already carries; the Greek and Russian rows are `undocumented`. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **TWO SENTENCES, AND THEY ARE THE FIRST LIFE AND THE FIRST YEAR THIS FOLDER HAS HAD.** doxologia’s calendar names him and gives no life: its own page carries no Viață tab, and the existing life says so and says that „the rank and the see are the whole of what this source states“. The Prologue says „Први повео борбу против Арија. Упокојио се 326. године“ — he was the first to lead the fight against Arius; he reposed in the year 326. **So `dates.death` is 326 to 326, `basis: \"traditional\"`, the first year any calendar read for this folder states**, and the one act is the first thing said of him anywhere on it. **AND THE DAY’S FIRST ENTRY NAMES HIM AGAIN.** The commemoration of the First Ecumenical Council lists „Александар Александријски“ among the Fathers who stood out at Nicaea in 325, which is the same man on the same page a few lines above. **That is recorded in one clause and the other fifteen Fathers it names are not named in this life**, because a name in prose owes a `related` row and sharing a Council is not a relation — the ruling that sharing a day is not one, applied to a synod. **THE DAY’S FIRST ENTRY IS THE COMMEMORATION OF THE FIRST ECUMENICAL COUNCIL AND IS NOT A FOLDER**, by `BRIEF.md` §4’s ruling that the Fathers of a Council are not folders and that a Council is not a person. It enumerates sixteen of the three hundred and eighteen Fathers by name, many of whom the corpus keeps, **and not one row was written off it** — the enumerated-synaxis ruling does not reach a Council, and the entry itself says the commemoration „врши се у недељу пред Духове“, is kept on the Sunday before Pentecost, so it is a moveable feast printed on a fixed day and could not be held even if it were a person. **The day’s eighth entry, „Пад Цариграда“, is the fall of Constantinople in 1453 and is an event**, with Sultan Mehmed II and the emperor Constantine XI in it and neither a saint this corpus keeps. **Arius gains no folder and no row**: he is the heresiarch the entry names to be fought, no calendar read for this corpus keeps him, and he is in the prose unlinked. `hierarch` and `bishop` are both corroborated by „епископ александријски“ — **and note that the heading says епископ where doxologia’s line and this folder’s `office` say Archbishop. `office` is untouched**: a scalar field takes no „X or Y“, the two books give different grades, and the folder keeps the grade it was written with while both stand in the prose. `related` stays at `alexander-of-thessalonica`. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -50,5 +65,14 @@
   },
   "related": [
     "alexander-of-thessalonica"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 326,
+      "latest": 326,
+      "display": "326",
+      "basis": "traditional",
+      "note": "Охридски пролог за 11.06.2026 (29. мај ст. ст.): „Први повео борбу против Арија. Упокојио се 326. године“. The first year any calendar read for this folder states; doxologia’s calendar names him and prints no life and no year."
+    }
+  }
 }

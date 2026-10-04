@@ -6,4 +6,6 @@ After his father's death his mother went to live in the monastery of the Holy Tr
 
 He fell asleep in peace in the year 1494 and was buried near the cathedral church of the Dormition of the Mother of God. That is the whole of what the page prints: no wonder, no saying of his, and no hymn.
 
-*After saint.gr's calendar for 29 Μαΐου — [the day](https://www.saint.gr/05/29/index.aspx) and [the life](https://www.saint.gr/1660/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps him on the same day and prints his heading with no life under it at all — „Свети Јован Јуродиви, Устјужски чудотворац“, and then the next entry. The page was read to be sure of it, and the silence is the page’s own and not a fault of reading. So what the Serbian calendar adds is the line itself, and the line calls him two things: a fool for Christ’s sake, which the Greek page also says, and the wonderworker of Ustyug, which it does not. No year is given here, and the year this folder holds is still the Greek page’s alone.
+
+*After saint.gr's calendar for 29 Μαΐου — [the day](https://www.saint.gr/05/29/index.aspx) and [the life](https://www.saint.gr/1660/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 29. мај ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1), read 5 October 2026.*
