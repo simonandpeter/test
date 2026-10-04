@@ -10,6 +10,11 @@
       "form": "Ζωή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιοι Έσπερος, Ζωή και τα τέκνα τους Κυριάκος και Θεόδουλος», with the rank word left off."
+    },
+    {
+      "form": "Зоа",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети мученици Еспер, Зоа, Кириак и Теодул.“ Свети мученици heads the whole company of four and belongs to no one name — мученици is the `martyr` this folder already carries in `types` and `honorific.js` composes back — so stripping it leaves the bare forename and nothing else. The kinship clauses this corpus keeps in the English display name are the body's, not the heading's, and Pamphylia is saint.gr's and is on no part of this page. One other folder already holds the same bare form; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "related": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.05.2026 (2. мај ст. ст.) — „Свети мученици Еспер, Зоа, Кириак и Теодул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-15&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading enumerates the whole company — „Свети мученици Еспер, Зоа, Кириак и Теодул.“ — so the citation above is that heading whole**, per BRIEF-SERBIAN.md §4 and the coordinator's ruling for an enumerated company, and the four names are the four folders this corpus already keeps. The day is Julian 2 May, the same menologion day the Greek keeps them on. The identification is the household entire: a pagan master who buys them as slaves, a father, his wife and their two sons, the refusal of the idol-food, the furnace, and bodies left unburnt — the Prologue's seven sentences and saint.gr's notice are the same four people. **No year was taken, although this page prints the bounds of the reign**: „У време цара Адријана (117-138)“ contains the 125 saint.gr gives, so widening this folder's death to the reign would make it vaguer than its own source allows and nothing was touched. New besides: **the master's name as this book spells it, Катал**, against saint.gr's Catallus and his wife Petradia, whom this page does not mention; that he **tortured all his slaves** grievously, not only this household; that **the children were tortured first and asked for heavier torments**; and that the four gave up their spirits „после благодарне молитве“, after a prayer of thanksgiving, where the Greek page has them simply found dead in the morning. **And the dogs are put to a different use in each book**: here the household throws its own food to them and starves, where saint.gr has Zoe quiet them with a little bread and give the rest to the poor. Both readings are in the life and neither is chosen. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -121,7 +121,8 @@
       "feast": {
         "day": 18,
         "month": 1,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "The Ohrid Prologue keeps him twice, and the second day is recorded here because one attestation row per church is the schema. Its Julian 2. мај ст. ст. carries the **identical heading** — „Свети Атанасије Велики, архиепископ александријски.“, the same words as the 18. јануар entry this row was read from — and its whole body is a cross-reference: „У данашњи дан празнује се пренос његових моштију и чудеса од истих. А живот и рад овога великог светитеља описан је под 18. јануаром.“ So the May day is **the translation of his relics and the wonders from them**, and the book itself sends the reader back to the January day, which is the day this row holds. Nothing was moved, no second row was made, and the saint does not render on 2 May. Read 4 October 2026 at https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-15&prolog=1"
       },
       "source": {
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.01.2026 (18. јануар ст. ст.) — „Свети Атанасије Велики, архиепископ александријски.“",

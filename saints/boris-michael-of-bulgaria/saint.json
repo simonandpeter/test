@@ -12,6 +12,11 @@
       "form": "Μιχαήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαΐου, «Άγιος Boris - Μιχαήλ ο πρίγκιπας, Ισαπόστολος και Φωτιστής», with the rank words and the epithets left off. The page prints the first name in Latin letters, Boris, and glosses only the baptismal Μιχαήλ."
+    },
+    {
+      "form": "Михаил (Борис)",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 2. мај ст. ст., „Свети Михаил (Борис), цар Бугарски.“ Свети is no rank; „цар Бугарски“ is the rank and the people, which this corpus puts in `types` and in the English display name, and it is stripped. **The bracketed Борис is kept, because it is his second name and not a rank** — the name he was born with, which the body gives as „Борис се покрсти... На крштењу добије име Михаил“ — and the Russian wave already stores a bracketed second name this way, as `peter-uspensky`'s «Петр (Успенский)». Keeping it is also what holds this folder **out** of the bare «Михаил» that `michael-of-chernigov` and `michael-of-klops` share, which was measured and not assumed."
     }
   ],
   "related": [
@@ -19,11 +24,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 907,
+      "earliest": 906,
       "latest": 907,
-      "display": "907",
+      "display": "906 or 907",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Βόρις-Μιχαήλ κοιμήθηκε με ειρήνη το 907 μ.Χ.», and the page heads him «(; - 907)». No year of birth is printed."
+      "note": "The Охридски пролог for 2. мај ст. ст.: „...и пресели се у небески живот 2. маја 906. године.“ — 906, and the day, where saint.gr has «Ο Άγιος Βόρις-Μιχαήλ κοιμήθηκε με ειρήνη το 907 μ.Χ.» and heads him «(; - 907)». Two sources one year apart; neither was chosen and the interval carries both. `node .tmp/dd.mjs \"906 or 907\"` reads it in both packs. No year of birth is printed on either page."
     }
   },
   "attestations": [
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.05.2026 (2. мај ст. ст.) — „Свети Михаил (Борис), цар Бугарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-15&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 2 May, the same menologion day the Greek keeps him on, and this is the first account of him read for this folder that is not saint.gr's.** **A death widened and neither reading chosen**: „пресели се у небески живот 2. маја 906. године“ against saint.gr's «κοιμήθηκε με ειρήνη το 907 μ.Χ.» and its heading «(; - 907)», so `death` is now 906–907 and reads „906 or 907“; this book also gives the **day**, 2 May, which saint.gr does not. **A rank the two books disagree about was NOT written.** This heading calls him „цар Бугарски“, which BRIEF-SERBIAN.md §5 maps to `king`, where this folder holds `prince` from the Greek reading; `honorific.js` would compose a different word to the reader out of the change, and a conflicting rank is not the missing rank that `types_add` is for. **So `types` was left exactly as it was and the disagreement is recorded here for the author** — reversible in one commit either way. New to the corpus from this page: that he was baptised **under the influence of his uncle and his sister**, where saint.gr credits the captive sister and the monk Theodore Kouphara and has the uncle only prophesy; that the patriarch's priests baptised **the whole Bulgarian people by degrees**; that **many magnates opposed the new faith** and were overcome, and that the cross then shone on the many churches he raised; that he **girded a sword and put his own son off the throne** before returning to the habit, where saint.gr has him seize and punish him; and the book's own closing words for his end, „у благој вери, у правом исповедању Господа нашега Исуса Христа, велик, чесан и благоверан“. **Three names on this page were deliberately left out of the life, and one of them is an open identity.** The Prologue names the uncle **Бојан** — this corpus holds `boyan-enravota`, the Bulgarian prince-martyr, and whether he is this man's стриц is a reading nobody here has made, so **no `related` row was written and the question goes to the author**. It names „светих Кирила и Методија“ and the Петочисленици Охридски, the Five of Ohrid, as those who established the faith among the Bulgarians **and among the Serbs**, preaching in the people's own Slavonic tongue; that sentence is about the mission and not about this man's story, so the names are furniture by BRIEF-SERBIAN.md §6 and are not in the appended paragraph, and no `related` row was written for `clement-of-ohrid`, `naum-of-ohrid` or either brother. Photius, who is already in this folder's `related` and already linked in its life, is named and linked as before. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
