@@ -12,6 +12,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαρτίου, «Όσιος Γρηγόριος ο Α' Διάλογος Πάπας Ρώμης», with the rank words left off."
+    },
+    {
+      "form": "Григорије Двојеслов",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 12 March on pravoslavno.rs, „Свети Григорије Двојеслов, папа римски.“, with Свети left off, which is not a rank, and the see папа римски left off as well. Двојеслов is kept: the body explains the by-name — he is called Двојеслов, or Сабеседник, the Dialogist, because of the book he wrote under that name — and it is what this folder's English name already carries."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.03.2026 (12. март ст. ст.) — „Свети Григорије Двојеслов, папа римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry. The heading carries the see, which is left out of the stored form, and the by-name Двојеслов, which is kept because the body explains it: he is so called, or Сабеседник, because he wrote the book of that name on the virtues and wonders of the saints of Italy. A bare Григорије would fold with `gregory-of-moesia` and `gregory-of-nyssa`. The Prologue dates his repose 604, which falls inside the interval this folder already holds from doxologia, 602 to 610, and narrower than it; a sourced interval is not narrowed on a reading. His father Gordian, his mother Silvia, the pope Pelagius before him and his archdeacon Peter are all named in the entry and none of them is a folder in this corpus that was read as these people, so none took a row. This is the same folder that took a `related` row to `four-hundred-forty-martyrs-of-italy` on the Julian 2 March, where the Prologue names him as the writer who reports them."
     }
   ],
   "text": {

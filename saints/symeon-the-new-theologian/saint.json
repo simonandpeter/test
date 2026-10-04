@@ -11,6 +11,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Όσιος Συμεών ο Νέος Θεολόγος», with the rank word left off."
+    },
+    {
+      "form": "Симеон Нови Богослов",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 12 March on pravoslavno.rs, „Преподобни Симеон Нови Богослов.“, with the rank word Преподобни left off. Нови Богослов is kept whole, although Богослов is in the rank table: it is the by-name the Church knows him by and the one this folder's English name carries, and a bare Симеон would fold with a great many folders."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.03.2026 (12. март ст. ст.) — „Преподобни Симеон Нови Богослов.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, eight short sentences. It dates his repose 1032, where this folder holds saint.gr's 1022 as an **attested** death beside an attested birth of 949; overturning an attested year on a Prologue sentence is the author's call and not a reader's, so the interval stands and the life records the disagreement. The entry also calls him the greatest theologian after Gregory the Theologian, which is a comparison and not a relation, so that name is here and not in the life, where it would imply a `related` row that is not true. Its Симеон старац is this corpus's `symeon-the-pious`, to whom the folder already relates."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Θεοφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαρτίου, «Όσιος Θεοφάνης ο Ομολογητής της Συγριανής», with the rank words left off."
+    },
+    {
+      "form": "Теофан Сигријан",
+      "lang": "sr",
+      "note": "The forename is read out of the Ohrid Prologue's first heading for the Julian 12 March on pravoslavno.rs, „Преподобни Теофан Исповедник.“, with both rank words left off — Преподобни and Исповедник, which are the two the folder's `types` carry. The by-name is read out of the body's first sentence, which gives it and explains it: he was called Sigrian because of the place Sigria where he was born. It is kept rather than stripped, as Тирон and Двојеслов are kept elsewhere in this wave, and it is what this folder's English name already carries."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.03.2026 (12. март ст. ст.) — „Преподобни Теофан Исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. The heading's two words are both rank words, so the bare forename it leaves would fold with `theophanes-the-confessor-9-september`; the body's own first sentence supplies and explains a by-name instead — „Прозват Сигријан због места Сигрије, где беше рођен.“ — and that is the form stored, by the settled rule that a by-name the body explains is kept. The entry gives no year of any kind: it names Leo the Isaurian and his son Copronymus as his kinsmen, the Seventh Council, Leo the Armenian's persecution, two years in prison and twenty-three days on Samothrace, and no date. The folder carried no dates before this reading and carries none after it."
     }
   ],
   "hymns": [
