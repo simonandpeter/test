@@ -13,6 +13,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Όσιος Συμεών ηγούμενος Ιεράς μονής Φιλοθέου Αγίου Όρους ο Μονοχίτων και Ανυπόδητος», with the rank word, the office and the two epithets left off."
+    },
+    {
+      "form": "Симеон Боси",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 19 April, „Преп. Симеон Боси.“, with Преп. left off, which is the `venerable` this folder already carries in `types`. **Боси is kept**: it is not in `BRIEF-SERBIAN.md` §5's table of rank words but the by-name the entry explains in so many words — he went barefoot and for that he was called Боси — and it is what this folder's English name carries as «the Barefoot». Keeping it also holds the form out of a fold: `simeon-of-persia` has held a bare Serbian «Симеон» since the Julian 17 April of this wave."
     }
   ],
   "related": [],
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.05.2026 (19. април ст. ст.) — „Преп. Симеон Боси.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fifth entry, on the same menologion day the Greek keeps him on. **No date was added and none changed**: the entry says only that he reposed in Constantinople and prints no year at all, where this folder already holds saint.gr's 1594 and its «in the City». New from the entry: that he **strengthened the Christians in the faith in many Balkan lands** and **was glorified by wonderworking**, and the reason for the by-name in the Prologue's own words — **he went barefoot, and for that he was called the Barefoot**. That he was for a short time abbot of Philotheou agrees with the `office` this folder already carries. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

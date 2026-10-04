@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Ιωάννης ο Παλαιολαυρίτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Јован Ветхопешчерник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 19 April, „Преп. Јован Ветхопешчерник.“, with Преп. left off, which is the `venerable` this folder already carries in `types`. **Ветхопешчерник is kept**: it is not a rank word but the by-name the whole entry turns on — the Old Cave, which is this folder's English name as «of the Old Lavra» — and keeping it is what holds this form out of the seven-folder bare «Јован» fold, on the same reading that kept `Ардалион Глумац` and `Јован Нови Јањински` out of theirs."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.05.2026 (19. април ст. ст.) — „Преп. Јован Ветхопешчерник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian keeps him on, where the Greek keeps him on 20 April; one row per church, so the Greek row kept its day and nothing moved. The identification is on the by-name and the place both: Ветхопешчерник is the Old Cave, and the entry's first sentence puts him in the so-called Old Cave, or Lavra of Chariton the Great, in Palestine. **The century is new to this folder**: „Поживе и упокоји се у VIII столећу.“ — he lived and reposed in the eighth century, recorded as the interval a century is. New besides: that he **travelled from his youth about the holy places to hear the teaching and counsel of holy men** before he settled in Chariton's cave, and that there he gave himself to a hard struggle, passing days and years in fasting, prayer and vigil, **thinking unceasingly on death and learning humility**, and was gathered by death like well-ripened fruit. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -82,5 +97,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 19. април ст. ст.: „Поживе и упокоји се у VIII столећу.“ — he lived and reposed in the eighth century. A century is an interval and is recorded as one, 701 to 800. The folder held no `dates` before: doxologia, which keeps him on this same day, and saint.gr, which keeps him on 20 April, give no year between them. No year of birth is recorded anywhere read."
+    }
   }
 }

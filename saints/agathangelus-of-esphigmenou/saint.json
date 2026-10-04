@@ -12,6 +12,11 @@
       "form": "Αγαθάγγελος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Αγαθάγγελος ο Εσφιγμενίτης», with the rank word and the epithet left off; the life page heads him «Αγιος Αγαθαγγελος ο Εσφιγμενιτης (1799 - 1818)» and gives his name in the world as Athanasius."
+    },
+    {
+      "form": "Агатангел",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 19 April, „Преп. муч. Агатангел.“, with Св. not present and Преп. муч. left off, which is the `venerable-martyr` this folder already carries in `types`. The heading is a rank and a bare forename and nothing else: Thrace, the worldly name and Esphigmenou are all in the body, and the monastery is what this folder's display name carries. No other folder in the corpus holds this form in any language — measured off `saints/` and confirmed by the gate printing no `? \"агатангел\"` line; `agathangelus`, the folder of that bare English name, carries no Serbian or Russian form at all."
     }
   ],
   "related": [],
@@ -59,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.05.2026 (19. април ст. ст.) — „Преп. муч. Агатангел.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, on the same menologion day the Greek keeps him on. **No date was touched, and the reason is worth the words**: this folder's death is already the interval 1818–1819, because saint.gr prints both years and settles neither — «αποκεφαλίστηκε στις 19 Απριλίου 1818 … σε ηλικία 19 χρονών (κατά άλλους ο Άγιος μαρτύρησε το 1819 μ.Χ. σε ηλικία 24 χρονών)». The Prologue gives **„Посечен 19. априла 1819. год. у 19. години својој“** — the later of the two years with the earlier of the two ages, so it agrees with one half of each Greek reading and with neither whole. **It falls inside the interval the folder holds, so narrowing to 1819 would displace a sourced reading and was refused**; the split is recorded here and in the life instead. New from the entry: that he was **from Thrace**, that his worldly name was **Атанасије**, that **serving among the Turks he was forcibly made a Turk at Smyrna**, that he was tonsured as a penitent on the Holy Mountain at the monastery of **Esphigmenou** — the house this folder is already named for — that **tormented by conscience he desired to wash his sin away with his own blood** and went to Smyrna and showed the Turks the cross and the icon of Christ's Resurrection, and that **after his death he appeared alive to his spiritual father Germanus**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
