@@ -15,8 +15,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps the company on 19 октября ст. ст. and again on 20 февраля ст. ст., the two days its life page for Sadoth heads itself with. One row per church is the schema, so the October day is the one they render on."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Сщмч. Садока (Шах-Дуста), еп. Персидского, и с ним 128-ми мучеников (342).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,63 @@
+{
+  "slug": "sergius-pokrovsky",
+  "display_name": "Sergius (Pokrovsky)",
+  "names": [
+    {
+      "form": "Сергий (Покровский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind his half of days.pravoslavie.ru's line for 19 октября ст. ст., «Сергий (Покровский), протоиерей, сщмч.», with the grade and the rank word left off. The day's own line gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Сщмчч. Александра и Сергия пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after the pair it names him in on 19 октября ст. ст.: «Сщмчч. Александра и Сергия пресвитеров (1937).»"
+    }
+  },
+  "related": [
+    "alexander-nikolsky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

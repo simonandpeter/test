@@ -11,6 +11,11 @@
       "form": "Κλεοπάτρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Οσία Κλεοπάτρα», with the rank words left off."
+    },
+    {
+      "form": "Клеопатра Палестинская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Клеопатра Палестинская». The day's own line gives the name without the epithet."
     }
   ],
   "sex": "female",
@@ -18,13 +23,23 @@
     "righteous"
   ],
   "related": [
-    "varus-the-martyr"
+    "varus-the-martyr",
+    "john-son-of-cleopatra"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Блж. Клеопатры (327) и сына ее Иоанна (320).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,5 +78,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 327,
+      "latest": 327,
+      "display": "c. 327",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 19 октября ст. ст. prints «Блж. Клеопатры (327)», and its life closes «Через семь лет праведной жизни блаженная преставилась (ок. 327)» — about 327. The folder carried no date at all; neither doxologia.ro nor saint.gr gave her a year."
+    }
   }
 }

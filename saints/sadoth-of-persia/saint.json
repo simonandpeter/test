@@ -21,14 +21,31 @@
       "form": "Садок",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's second heading for 20. фебруар ст. ст., „Свети свештеномученик Садок.“, with Свети and the rank word свештеномученик left off; the rank is in the folder's `types`. The heading gives no epithet, and Persia, which the folder's English name carries, is in the body."
+    },
+    {
+      "form": "Садок Персидский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Священномученик Садок Персидский», with the rank word left off. The day's own line adds a second name in brackets, «Садока (Шах-Дуста)», which the name link does not carry."
     }
   ],
-  "related": [],
+  "related": [
+    "simeon-of-persia"
+  ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page on days.pravoslavie.ru heads itself «Дни памяти: 20 февраля , 19 октября» and the calendar keeps him on both; the Greek and the Serbian rows here hold the February day. One row per church is the schema, so the October day is the one he renders on and the February day is recorded here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Сщмч. Садока (Шах-Дуста), еп. Персидского, и с ним 128-ми мучеников (342).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,5 +93,23 @@
       "basis": "traditional",
       "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 20 February: „Пострадаше 342. или 344. године.“ The page itself offers the two years and chooses neither, so the interval carries both and the display says so. The folder carried no dates at all before this reading."
     }
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Владычню речению усердно в подобстве последова,/ яко убо пастырь добрый душу свою за Христовы овцы положил еси,/ священномучениче Садоче, молим тя, многострадальне,/ моли пастырем начальника Христа/ и нас причести деснаго овец стояния,/ да воспоем ти:/ радуйся, священный отче Садоче,/ иже за Христа кровь свою излиявый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Кондак свщенномученика Садока, епископа Персидского»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following the Master's word with zeal and in his own likeness, you laid down your life for the sheep of Christ as a good shepherd, O hieromartyr Sadoth. We entreat you, much-suffering one: pray to Christ the chief of shepherds to number us too among the sheep that stand at his right hand, that we may sing to you: rejoice, holy father Sadoth, who poured out your blood for Christ.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
