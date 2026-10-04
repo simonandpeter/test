@@ -12,6 +12,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαρτίου, «Άγιος Κύριλλος Αρχιεπίσκοπος Ιεροσολύμων», with the rank word and the see left off."
+    },
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 18 March on pravoslavno.rs, „Свети Кирил, архиепископ јерусалимски.“, with Свети left off, which is not a rank, and with the see архиепископ јерусалимски left off as well. The heading gives no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.03.2026 (18. март ст. ст.) — „Свети Кирил, архиепископ јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same archbishop. The Prologue prints his years as „(315-386)“, where this folder holds a birth of probably 313 and a death of 387 from saint.gr: both ends disagree by one or two years, the sourced interval is left standing, and the disagreement is recorded here rather than resolved. It adds the dates of his orders — ordained priest in 346, and in 350 successor on the throne of Jerusalem to the blessed patriarch Maximus — three depositions and exiles, a restoration under Theodosius and eight more years in peace; `related` goes both ways to `maximus-of-jerusalem`, the predecessor it names, whose see he took. It adds the two signs: the cross brighter than the sun that stood over Jerusalem and the Mount of Olives at Pentecost for some hours from the ninth hour of the morning, seen by all the inhabitants and written of to the emperor Constantius; and the two earthquakes that threw down the temple the Jews were rebuilding at Julian the Apostate's urging. Neither year is taken from those, because the entry attaches none to them. The stored form is the bare forename, because Свети is not a rank and архиепископ јерусалимски is the see. The Prologue prints no troparion and no kontakion; the three hymns here are the Romanian and Greek pages'."
     }
   ],
   "hymns": [
@@ -142,6 +157,7 @@
     "gerasimus-of-the-jordan",
     "meletius-of-antioch",
     "symeon-the-god-receiver",
-    "theodosius-the-great"
+    "theodosius-the-great",
+    "maximus-of-jerusalem"
   ]
 }

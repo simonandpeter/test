@@ -11,6 +11,11 @@
       "form": "Ανίνας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαρτίου, «Όσιος Ανίνας ο Θαυματουργός», with the rank words left off."
+    },
+    {
+      "form": "Анин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 18 March on pravoslavno.rs, „Анин чудотворац.“, with the rank word чудотворац left off, which this folder's `types` already carry. The heading is unusual on this source in opening on the name with no Свети or Преподобни before it, and it gives no city — Chalcedon is the body's first word — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -57,11 +62,25 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.03.2026 (18. март ст. ст.) — „Анин чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, and plainly this hermit: a man of Chalcedon who renounced the world at fifteen and settled by the Euphrates, whose prayer filled a dry well, who healed the sick and tamed wild beasts, and whom both the other calendars already call the wonderworker. The Prologue keeps him on 18 March, agreeing with the Romanian row in this folder; the Greek row here stands on 16 March, which is where saint.gr prints him, and that disagreement is the two calendars' and is not touched. The entry gives no year of any kind — only that he was a hundred and ten years old when he died, which is an age and not a date — so the folder stays undated, as it was. Its heading opens on the by-name rather than on a rank word, which is unusual on this source: „Анин чудотворац.“, with no Свети and no Преподобни before it. Чудотворац is a rank word that this folder's `types` already carry, so the stored form is the bare forename. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "moses-the-prophet",
+    "aaron"
+  ]
 }
