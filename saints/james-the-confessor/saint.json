@@ -11,6 +11,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαρτίου, «Άγιος Ιάκωβος ο Ομολογητής ο Επίσκοπος», with the rank word, the epithet and the office left off."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 21 March on pravoslavno.rs, „Свети Јаков, епископ и исповедник.“, with Свети left off, which is not a rank, and with both rank words епископ and исповедник left off as well. The heading gives no epithet and no see, and the entry says plainly that the see is not known, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.04.2026 (21. март ст. ст.) — „Свети Јаков, епископ и исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same bishop and confessor: the entry opens by saying that neither his birthplace nor the see he held is known, which is why both this folder's other rows print him with no see either. It adds the hunger, the prison and the mockery he bore from the iconoclasts. **One page disagreeing with itself, recorded and not resolved.** It names Copronymus as the emperor of the persecution and then closes „Живео и страдао у VII веку“ — lived and suffered in the seventh century, which the emperor it has just named rules out. This folder holds 740–775 from the other calendars, which is that emperor's reign; a sourced interval is neither narrowed nor widened on a reading, so nothing was touched, and the contradiction is recorded here. The stored form is the bare forename: Свети is not a rank, and епископ and исповедник are both ranks this folder's `types` carry. The Prologue prints no troparion and no kontakion; the two hymns here are the other calendars'."
     }
   ],
   "hymns": [
