@@ -18,6 +18,12 @@ test('a folder title is cut back to what a life would actually write', () => {
   assert.equal(matchableName('Ignatius (Lebedev), Schema-archimandrite, Monk-martyr (1938)'), 'Ignatius');
   assert.equal(matchableName('Athanasius of Alexandria'), 'Athanasius of Alexandria');
   assert.equal(matchableName('John, Archbishop of Novgorod'), 'John');
+  // A thousands separator is not an apposition. Cut at it and the form is
+  // "The 3", which matches any life that writes a number in the three hundreds.
+  assert.equal(
+    matchableName('The 3,628 Martyrs of Nicomedia'),
+    'The 3,628 Martyrs of Nicomedia',
+  );
 });
 
 test('one word is never distinctive enough to link on', () => {

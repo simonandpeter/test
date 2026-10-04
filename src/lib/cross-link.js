@@ -47,8 +47,17 @@
 /** Roman numerals as a word: I, V, X, L, C in the combinations these names use. */
 const ROMAN = /^[IVXLC]+$/;
 
-/** The part of a display name a life would actually write. */
-export const matchableName = (name) => String(name ?? '').split(/[(,]/)[0].trim();
+/**
+ * The part of a display name a life would actually write.
+ *
+ * The comma has to be followed by something other than a digit, because a
+ * thousands separator is not an apposition: «The 3,628 Martyrs of Nicomedia»
+ * cut to "The 3", which is two words, carries no numeral, and so went into the
+ * index as a form that matches any life writing "The 3" — it caught a Serbian
+ * reader's sentence "The 303 agrees exactly" and would have caught the next
+ * one too.
+ */
+export const matchableName = (name) => String(name ?? '').split(/\(|,(?!\d)/)[0].trim();
 
 /** Whether a form is distinctive enough to link on. Rules 2 and 3 above. */
 export function usableName(form) {
