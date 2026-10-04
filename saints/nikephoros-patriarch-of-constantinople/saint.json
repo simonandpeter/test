@@ -12,6 +12,11 @@
       "form": "Νικηφόρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουνίου, «Άγιος Νικηφόρος ο Ομολογητής Πατριάρχης Κωνσταντινούπολης», with the rank words left off."
+    },
+    {
+      "form": "Никифор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 2 June on pravoslavno.rs, „Свети Никифор Исповедник, патријарх цариградски.“, with Свети left off, which is not a rank, with the rank word Исповедник left off, and with the see патријарх цариградски left off as well. The Julian 13 March heading, „Свети Никифор, патријарх цариградски.“, leaves the same bare forename. Nothing on either page gives an epithet, so the bare form is what the source gives and it folds with `nicephorus-of-antioch`."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.06.2026 (2. јун ст. ст.) — „Свети Никифор Исповедник, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-15&prolog=1",
+        "year": 2026
+      },
+      "note": "Read while reading the Julian 13 March, whose first entry is this same patriarch — and that entry says in its own words which day is which: „Главно празновање овога великог јерарха бива 2. јуна, а 13. марта празнује се откриће и пренос његових нетљених моштију.“ So the Julian 2 June page was opened as well, and it keeps him as its first and fullest entry, „Свети Никифор Исповедник, патријарх цариградски.“, with the long life this folder's closing paragraphs now summarise. The row is therefore the Julian 2 June, the same menologion day as this folder's Romanian and Greek rows, and the Julian 13 March is the second day: the Prologue keeps there the uncovering and translation of his incorrupt relics, and by the settled rule one church gets one row, so the Serbian 13 March renders him nowhere. The Prologue adds that he was driven from Constantinople on 13 March and that his relics were brought into the capital on 13 March again, nineteen years later. It dates his repose 827, where this folder holds 822 from saint.gr; the sourced year is left standing and the disagreement is recorded here rather than resolved. The stored Serbian form is the bare forename, because both headings give only the rank words Свети and Исповедник, which this folder's `types` already carry, and the see патријарх цариградски, which belongs in `office`; the bare „Никифор“ therefore folds with `nicephorus-of-antioch`, which holds the same bare form off its own Julian 9 February heading, and that fold is recorded as deliberate. The Prologue prints no troparion and no kontakion on either day."
     }
   ],
   "hymns": [
