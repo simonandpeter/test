@@ -6,6 +6,11 @@
       "form": "Αβράμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Όσιος Αβράμιος Αρχιμανδρίτης Ροστόβ», with the rank words and the city left off."
+    },
+    {
+      "form": "Аврамий Ростовский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 29 октября ст. ст., «Аврамий Ростовский, архимандрит», with the office left off; his life page is headed «Преподобный Аврамий, архимандрит Ростовский», which gives the same form. The calendar spells the forename «Аврамий» in the title and «Авраамий» in the body of the life; the title's spelling is the one stored."
     }
   ],
   "sex": "male",
@@ -15,13 +20,26 @@
   ],
   "office": "Archimandrite of Rostov",
   "related": [
-    "abraham-the-recluse"
+    "abraham-the-recluse",
+    "john-the-theologian"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026). This is the calendar that would say most about a Russian archimandrite, and it has not been read here."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page is headed «Дни памяти: 23 мая (Ростов.) , 29 октября», the first marked as the Rostov church's own. One row per church is the schema, so the May day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Прп. Аврамия , архим. Ростовского (1073-1077).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the third of the day and carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian is the first calendar to give this folder a date, a life and a hymn: the Greek row it was written from gives the day and the title and nothing else. The line's «(1073-1077)» is a span and its life says only «(† ХI в.)», the eleventh century, so the folder takes the line's span. His baptismal name, Averky, and the staff of the apostle are the particular things the life has."
     },
     {
       "church": "romanian",
@@ -51,5 +69,49 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1073,
+      "latest": 1077,
+      "display": "between 1073 and 1077",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 29 октября ст. ст. prints «(1073-1077)» after his name, a span and not a year, and its life gives only «Преставился преподобный в глубокой старости и был погребен в храме Богоявления († ХI в.)» — the eleventh century. The folder takes the line's span, which is the narrower of the two. The Greek page this folder was written from gave no date at all."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Просветився Божественною благодатию,/ неверныя люди наставил еси к свету Богоразумия:/ и по смерти сияя светлостию жития твоего,/ источаеши исцеления притекающим с верою к тебе,/ Авраамие отче наш,/ Христа Бога моли даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Тропарь преподобного Авраамия, архимандрита Ростовского»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, you guided an unbelieving people to the light of the knowledge of God; and after your death, shining with the brightness of your life, you pour out healings on those who run to you with faith. Abraham our father, pray to Christ God to grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Иго Христово прием, Авраамие,/ и Того крест на рамо взем,/ последовал еси Ему,/ насажден быв в дому Господни / и процвел еси, яко финике и яко кедр, иже в Ливане,/ умножил еси чада твоя, муж желаний духовных:/ от возлюбленнаго же апостола Иоанна Богослова благодать восприим,/ жезлом сокрушил еси идола/ и рассыпал еси его, яко прах,/ и чудотворец убо велий явился еси, преподобне./ Темже Христа Бога моли/ непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Кондак преподобного Авраамия, архимандрита Ростовского»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "His own, and it tells the story the life tells: the staff received from the beloved apostle and the idol broken with it. The apostle is named in it; the hymn is not his."
+      },
+      "english": {
+        "text": "Taking up the yoke of Christ, Abraham, and lifting his cross upon your shoulder, you followed him; planted in the house of the Lord, you flourished like a palm and like a cedar of Lebanon, and multiplied your children, man of spiritual desires. Receiving grace from the beloved apostle John the Theologian, with a staff you broke the idol and scattered it like dust, and were shown to be a great wonderworker, venerable one. Therefore pray to Christ God without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

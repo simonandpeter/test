@@ -1,0 +1,65 @@
+{
+  "slug": "theonilla-of-cilicia",
+  "display_name": "Theonilla of Cilicia",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Феонилла Киликийская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind the company's line for 29 октября ст. ст., «Феонилла Киликийская, мц.», with the rank word left off. The line itself declines the name and gives no province: «Мчч. Клавдия , Астерия , Неона и Феониллы (285).» The article her name page carries spells the name «Неонилла» instead, with an N for the Ф; the stored form is the one the calendar's own name link prints."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 285,
+      "latest": 285,
+      "display": "285",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 29 октября ст. ст. closes the company with «(285)». It is the only year any page read for her gives. Her three companions' folders carry a different one, saint.gr's «στα χρόνια του Διοκλητιανού και Λυσίου ηγεμόνος της Κιλικίας (περί το 288 μ.Χ.)», for the same martyrdom under the same governor; the two are not reconciled here, and this folder records only the year its own source prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Мчч. Клавдия , Астерия , Неона и Феониллы (285).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded. No life page follows any of the four names; her name page lists this day and no other, and carries two icons and the first paragraph of an article."
+      },
+      "note": "The fourth of a company of four, and the only one of them this corpus had no folder for: the other three are held as `claudius-of-laranda`, `asterius-of-laranda` and `neon-of-laranda`, from saint.gr's 30 October, and this batch gives those three their Russian rows. That they are one company is not a guess — both pages name the same persecutor, saint.gr's «Λυσίου ηγεμόνος της Κιλικίας» and this name page's «правителю Киликии Лисию» — and three of the four names agree. No `theonilla-*` folder existed. The corpus's `neonilla` is a different woman: Leonilla of Langonia, kept by all four churches on 16 January under Marcus Aurelius. The by-name is the Russian link's «Киликийская», Cilician, and not the Laranda the other three carry from the Greek, which no page read here puts her at."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "related": [
+    "claudius-of-laranda",
+    "asterius-of-laranda",
+    "neon-of-laranda"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

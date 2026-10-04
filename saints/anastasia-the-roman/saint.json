@@ -11,6 +11,11 @@
       "form": "Αναστασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Αγία Αναστασία η Ρωμαία, η Οσιομάρτυς», with the rank words left off."
+    },
+    {
+      "form": "Анастасия Римляныня",
+      "lang": "ru",
+      "note": "Read out of the heading both of her life pages carry, «Преподобномученица Анастасия Римляныня», with the rank word left off. The name link's title adds «, Солунская», of Thessalonica, which nothing else read repeats; the form stored is the heading's."
     }
   ],
   "sex": "female",
@@ -22,8 +27,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of her life pages are headed «Дни памяти: 29 октября , 30 октября». The day page that lists her is the 29th; one row per church is the schema, so the 30th is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Прмц. Анастасии Римляныни (ок. 249-259).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the first of the day and carries no typikon icon, so no rank is recorded. The name link titles her «Преподобномученица Анастасия Римляныня, Солунская» — of Thessalonica as well as of Rome — which no other page read for her repeats and which is not read into the folder."
+      },
+      "note": "The Russian agrees with the Romanian and Greek days this folder was written from and adds the governor's name, two hymns, and a second Russian day. **Its two lives of her differ from each other and from the Greek.** One has her orphaned at three and brought up in a monastery near Rome, twenty-one years old under Decius «(249-251 гг.)», her nails torn out, her hands and feet cut off, her teeth knocked out and her tongue cut, and beheaded; it also names a bystander, «некто Кирилл», who pitied her and gave her water and was killed for it as a secret Christian — the man this corpus holds as `cyril-martyr-29-october` off the Greek page for the same day. The other has the abbess Sophia bring her up, the governor Probus try flattery first, the tongue cut, the crowd's anger stop the torture, the beheading, the body thrown out to the beasts and Sophia find it and bury it. Both are kept in the life; nothing is chosen. The year is now the union of saint.gr's «περί το 256» and this line's «(ок. 249-259)»."
     },
     {
       "church": "romanian",
@@ -110,6 +127,39 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Агница Твоя, Иисусе, Анастасия/ зовет велиим гласом:/ Тебе, Женише мой, люблю,/ и, Тебе ищущи, страдальчествую,/ и сраспинаюся, и спогребаюся Крещению Твоему,/ и стражду Тебе ради,/ яко да царствую в Тебе,/ и умираю за Тя, да и живу с Тобою,/ но, яко жертву непорочную, приими мя,/ с любовию пожершуюся Тебе.// Тоя молитвами яко Милостив спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Тропарь преподобномученицы Анастасии Римляныни»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The common of a woman martyr, with her name set into it, printed under her own heading, which makes it hers (BRIEF.md §4)."
+      },
+      "english": {
+        "text": "Your lamb, Jesus, Anastasia, cries out with a great voice: you, my Bridegroom, I love; and seeking you I contend, and am crucified and buried with you in your baptism; and I suffer for your sake, that I may reign in you, and I die for you that I may also live with you. Receive me as an unblemished sacrifice, offered to you in love. By her prayers, as you are merciful, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Девства водами очищенна, преподобная,/ мученичества кровьми, Анастасие, венчавшися,/ подаеши сущим в нуждах недугов исцеление и спасение,/ приступающим от сердца,/ крепость бо тебе подает Христос,// источая благодать приснотекущую.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Кондак преподобномученицы Анастасии Римляныни»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Cleansed by the waters of virginity, venerable one, and crowned with the blood of martyrdom, Anastasia, you give healing of sicknesses and salvation to those in need who come to you from the heart; for Christ grants you strength, pouring out grace that never fails.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -117,11 +167,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 256,
-      "latest": 256,
-      "display": "about 256",
+      "earliest": 249,
+      "latest": 259,
+      "display": "about 249 to 259",
       "basis": "traditional",
-      "note": "saint.gr: «Όταν τη συνέλαβε ο ηγεμόνας Πρόβος (περί το 256 μ.Χ.)» — the page's own year, written «περί», about, for her arrest, and the torments and the beheading follow in the same notice with no further date. The same page sets her «στα χρόνια του Δεκίου (κατ' άλλους του Διοκλητιανού) και Bαλλεριανού», three reigns that do not agree with one another or all with 256; the year is recorded because the page states it, and the disagreement is recorded here because the page prints it."
+      "note": "Two calendars and two readings, and neither is preferred. saint.gr: «Όταν τη συνέλαβε ο ηγεμόνας Πρόβος (περί το 256 μ.Χ.)». days.pravoslavie.ru's line for 29 октября ст. ст. prints «(ок. 249-259)», and both of its lives set the persecution under «императоре Декии (249-251 гг.)», whose reign the Greek year falls outside. The interval is the union of the two, which is the Russian line's own span."
     }
   },
   "images": [
@@ -131,6 +181,7 @@
     }
   ],
   "related": [
-    "alexander-nevsky"
+    "alexander-nevsky",
+    "cyril-martyr-29-october"
   ]
 }

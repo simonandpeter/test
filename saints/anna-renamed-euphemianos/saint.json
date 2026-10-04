@@ -11,6 +11,11 @@
       "form": "Ευφημιανός",
       "lang": "el",
       "note": "The name she took in the men's monastery, printed in the same line of saint.gr's calendar for 29 Οκτωβρίου: «η μετονομασθείσα Eυφημιανός», and in the notice «με το ψευδώνυμο: Ευφημιανός»."
+    },
+    {
+      "form": "Анна Вифинская",
+      "lang": "ru",
+      "note": "Read out of the heading on the first of her two life pages, «Преподобная Анна Вифинская», with the rank word left off; her name link carries the same title. The day line gives the forename alone with the monastic name in brackets, «Прп. Анны (Евфимиана)», and no province."
     }
   ],
   "sex": "female",
@@ -19,19 +24,31 @@
     "monastic"
   ],
   "dates": {
-    "floruit": {
-      "earliest": 716,
-      "latest": null,
-      "display": "after 716",
-      "basis": "traditional",
-      "note": "saint.gr: «ο εικονομάχος Λέων ο Ίσαυρος (περί το 716 μ.Χ.), διέλυσε τη Μονή στην οποία ανήκε η Άννα» — the page's own year, written «περί», about, for the dissolution of her monastery, after which she lived in disguise and then outlived Leo. It gives no year for her birth or her death, so the upper bound is open."
+    "death": {
+      "earliest": 826,
+      "latest": 826,
+      "display": "826",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(826)» after her name on 29 октября ст. ст., and both of its lives give the year in words: «скончалась в Константинополе в 826 г.» and «Скончалась преподобная Анна в Константинополе в 826 году». The Greek page this folder was written from gave no year."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The first of her two life pages is headed «Дни памяти: 13 июня , 29 октября». One row per church is the schema, so the June day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «Прп. Анны (Евфимиана) (826).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line is the fourth of the day and carries no typikon icon, so no rank is recorded."
+      },
+      "note": "The Russian is the first calendar to give this folder a date, and it gives the whole of her story: a deacon of the Blachernae church at Constantinople for a father, a husband dead, the man's monastic habit put on and the name Euphemianos taken, a Bithynian house near Olympus for a home, the gift of wonders in her own lifetime, and a death at Constantinople in 826. **Her son is named in both lives and in the second one's title, «Преподобная Анна и сын ее святой Иоанн», and the calendar's own line names only her**, so no folder is made for him and this is written down instead."
     },
     {
       "church": "romanian",
