@@ -1,0 +1,68 @@
+{
+  "slug": "vladimir-sobolev",
+  "display_name": "Vladimir (Sobolev)",
+  "names": [
+    {
+      "form": "Владимир (Соболев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 22 октября ст. ст., «Владимир (Соболев), иерей, сщмч.», with the rank word left off. The day's own line declines the name and gives it without the surname, as «Владимира ... пресвитеров»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Сщмчч. Серафима , архиеп. Угличского, и с ним Владимира , Александра , Василия , Александра пресвитеров и прмчч. Германа и Мины (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 4 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 4 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 4 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the company line it names him in on 22 октября ст. ст.. The calendar carries no life page for him and gives no day."
+    }
+  },
+  "related": [
+    "seraphim-samoilovich",
+    "alexander-lebedev",
+    "basil-bogoyavlensky",
+    "alexander-andreyev",
+    "germanus-polyansky",
+    "menas-shelayev"
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

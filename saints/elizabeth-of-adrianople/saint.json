@@ -11,6 +11,11 @@
       "form": "Ελισάβετ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Οκτωβρίου, «Άγιοι Αλέξανδρος ο Επίσκοπος, Ηράκλειος, Άννα, Ελισάβετ, Θεοδότη και Γλυκερία», with the rank word left off."
+    },
+    {
+      "form": "Елисавета Адрианопольская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the place in days.pravoslavie.ru's line for 22 октября ст. ст., «Елисавета Адрианопольская, мц.», with the rank word and, for the bishop, the see left off."
     }
   ],
   "sex": "female",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 октября ст. ст. — «Мчч. Александра еп., Ираклия воина и жен Анны , Елисаветы , Феодотии и Гликерии (II-III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261022.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -68,5 +82,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 300,
+      "display": "2nd or 3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru disagrees with itself: its 22 октября ст. ст. line closes «(II-III)» while its life for the company says they were put to death at Adrianople «в III веке». Both readings are kept and neither is chosen. Read 4 October 2026."
+    }
   }
 }

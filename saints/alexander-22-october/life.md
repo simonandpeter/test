@@ -6,4 +6,8 @@ A soldier named [Heraclius](/saints/heraclius-companion-of-alexander), seeing Al
 
 These women confessed their faith before the ruler and were led for it under the executioner's sword; and after all of them Alexander too was beheaded with the sword. The page sets a couplet over each group: his own says that the venerable Alexander, his neck cut through, is a martyr now and not only a priest of Christ. It prints no hymn for any of the six.
 
-*After saint.gr's calendar for 22 Οκτωβρίου — [the day](https://www.saint.gr/10/22/index.aspx) and [the life](https://www.saint.gr/2778/saint.aspx); read 1 October 2026.*
+The Russian calendar keeps the company on the same day and tells it in the same order. days.pravoslavie.ru's 22 октября ст. ст. reads «Мчч. Александра еп., Ираклия воина и жен Анны , Елисаветы , Феодотии и Гликерии (II-III).», and its life puts their death at Adrianople, in a century it calls the time when Christianity was spreading among the pagans.
+
+The bishop, it says, baptised many pagans fearlessly in spite of the persecution raised against the Christians; the governor of the province ordered his soldiers to torture him into denying Christ, and he bore the dreadful torments patiently. The soldier Heraclius, struck by what he saw, believed in the Christ for whom the bishop was suffering, and after him Anna, Elizabeth, Theodota and Glyceria declared themselves Christians. The page's heading puts the six in the third century while the day's line reads «II-III», so the folder's date now carries both readings.
+
+*After saint.gr's calendar for 22 Οκτωβρίου — [the day](https://www.saint.gr/10/22/index.aspx) and [the life](https://www.saint.gr/2778/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 22 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261022.html) and [the life](https://days.pravoslavie.ru/Life/life4574.htm), read 4 October 2026.*

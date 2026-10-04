@@ -787,6 +787,7 @@ export const sr = {
     'Archbishop of Sourozh': 'Архиепископ сурошки',
     'Archbishop of Thessalonica': 'Архиепископ солунски',
     'Archbishop of Tver': 'Архиепископ тверски',
+    'Archbishop of Uglich': 'Архиепископ углички',
     'Archbishop of Tobolsk': 'Архиепископ тоболски',
     'Archbishop of Voronezh': 'Архиепископ воронешки',
     'Archbishop of York': 'Архиепископ јоршки',
