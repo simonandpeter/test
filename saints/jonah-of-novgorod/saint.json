@@ -6,6 +6,11 @@
       "form": "Ιωνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιος Ιωνάς ο θαυματουργός Αρχιεπίσκοπος Νοβογορδίας», with the rank words left off."
+    },
+    {
+      "form": "Иона Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Иона, архиепископ Новгородский», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -19,15 +24,24 @@
       "earliest": 1470,
       "latest": 1470,
       "display": "1470",
-      "basis": "traditional",
-      "note": "saint.gr's own head line for him: «Αγιος Ιωνας ο Θαυματουργος Αρχιεπισκοπος Νοβογορδιας (; - 1470)»."
+      "basis": "attested",
+      "note": "Both of his life pages give the day and the year — «Архиепископ Иона почил о Господе 5 ноября 1470 г.» and «5 ноября 1470 года, причастившись Святых Таин, святитель отошел ко Господу» — and the calendar's line for 5 ноября ст. ст. ends «(1470)». saint.gr had given the folder the same year from its head line, «(; - 1470)», as traditional; it is now attested by two further pages that print the day as well."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Свт. Ионы , архиеп. Новгородского (1470).»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,6 +73,44 @@
     "life": "life.md"
   },
   "related": [
-    "theophilus-of-novgorod"
+    "theophilus-of-novgorod",
+    "michael-of-klops",
+    "euthymius-of-novgorod",
+    "jonah-of-moscow",
+    "zosimas-of-solovki"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Исправление веры, и образ кротости,/ и якоже сад посреде рая,/ преподобными делы твоими мир просвещаеши,/ и сего ради к мощем твоим любовию прикасаемся и верно вопием:/ предстани в помощь воспевающим/ память твою светоносную, отче Ионо,// и моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Тропарь святителя Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness, and like a garden in the midst of paradise, thou dost enlighten the world by thy holy deeds; and therefore we touch thy relics with love and cry out in faith: stand forth to help those who hymn thy light-bearing memory, O father Jonah, and pray that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Свыше приял еси Божественную благодать/ ходатайствовати Богу и человеком,/ яко архиерей возношение вознося,/ и мир людем твоим снося,/ и обилие плодов, Ионо блаженне,/ ты бо еси Великаго Новаграда похвала// и сущих о нем радость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Кондак святителя Ионы»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From on high thou didst receive divine grace to be a mediator with God for men, offering up the oblation as a hierarch and bringing down peace upon thy people and an abundance of fruits, O blessed Jonah; for thou art the boast of Great Novgorod and the joy of all that is about her.",
+        "rendered": "site"
+      }
+    }
   ]
 }

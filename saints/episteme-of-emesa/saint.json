@@ -11,6 +11,11 @@
       "form": "Επιστήμη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Γαλακτίων και Επιστήμη», with the rank words left off."
+    },
+    {
+      "form": "Епистимия Емесская (Финикийская)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Епистимия Емесская (Финикийская), мц.», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "female",
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Мчч. Галактиона и Епистимии (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -120,6 +134,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Тропарь мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings received incorruptible crowns from thee, our God; for having thy strength they cast down the tormentors and shattered the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мученик Христовых полком причтостеся,/ добре храбрствовавшим,/ светло подвизавшеся, Галактионе славне,/ с честною сопружницею и сострадавшею тебе Епистимиею,// Единому Богу непрестанно молитеся о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Кондак мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Ye were numbered with the regiments of Christ's martyrs, who warred well, and ye contended in splendour, O glorious Galaction, with thy honoured wife Episteme, who suffered together with thee: pray unceasingly to the one God for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
