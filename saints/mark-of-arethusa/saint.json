@@ -12,6 +12,11 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «Άγιος Μάρκος επίσκοπος Αρεθουσίων …», with the rank word and the see left off."
+    },
+    {
+      "form": "Марко",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 29 March on pravoslavno.rs, „Свети Марко Исповедник, епископ Аретусијски у Сирији“, with the rank words Свети and Исповедник left off and with the see епископ Аретусијски у Сирији left off as well, this folder keeping the see in `office` and the place in its English name. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -76,8 +81,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.04.2026 (29. март ст. ст.) — „Свети Марко Исповедник, епископ Аретусијски у Сирији“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same story: the temple pulled down in the reign of Constantine, the reaction under Julian, the price set on the ruined temple, the honey and the stinging insects, and the townsmen won over in the end. It names both of the writers the other two calendars draw on, свети Григорије Богослов and блажени Теодорит. New to the folder: that some of the Arethusians themselves denied Christ when Julian apostatised and that it was they who rose against Mark; that his ears were cut off with a thin strong cord; that his face was bright as an angel of God though he was very old; and that the idolaters lowered the price of their temple step by step, almost to nothing, to keep him alive, and he would not give one coin. The entry gives no year at all — it dates by the two emperors' reigns only — so the floruit this folder already holds from doxologia.ro is untouched. The heading ranks him Исповедник, confessor, and that word was **not** taken into `types`: this folder carries `hieromartyr` from the Romanian reading, the Greek row's note already records that saint.gr has him fall asleep in peace, and the Prologue's own account likewise ends with him released alive and teaching; which rank is right is a disagreement between the sources and not a reader's to settle, so it is recorded here and nothing in `types` was changed. The Prologue prints no troparion and no kontakion. The stored form Марко folds with `mark-of-byblos` and `mark-of-ephesus`, which hold the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαρτίου, «… Κύριλλος διάκονος …», with the rank word left off."
+    },
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 29 March on pravoslavno.rs, „За слично дело пострадао је у то време ђакон Кирил из града Илиопоља под гором Ливаном.“ The rank word ђакон is left off, and „из града Илиопоља под гором Ливаном“ is the clause that says where he came from and not a by-name attached to the name, so the bare forename is all the page gives him."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.04.2026 (29. март ст. ст.) — „Свети Марко Исповедник, епископ Аретусијски у Сирији“ … „За слично дело пострадао је у то време ђакон Кирил из града Илиопоља под гором Ливаном.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, headed for Mark of Arethusa, names this man in its own body and not in its heading, as the companions of the Julian 10 and 19 March were named; the citation carries the heading and then the body's own clause for him. He is the same man the other two calendars keep on this menologion day: a deacon of the city of Heliopolis under Mount Lebanon, who broke the idols there in the time of the Church's freedom and was cruelly tortured for it under Julian, and whose killers tore open his belly with their teeth. The Prologue's account of their punishment differs from the one doxologia.ro quotes out of Theodoret and both are recorded: this page has every one of their teeth fall out and an unbearable stench strike their mouths, where the Romanian notice has their tongues rot and fall away and all of them blinded. Neither was altered to fit the other. The entry gives no year for him — it dates by Julian's reign only — so the death interval this folder already holds is untouched. The Prologue prints no troparion and no kontakion. The stored form Кирил folds with `cyril-of-catania` and `cyril-of-jerusalem`, which hold the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [

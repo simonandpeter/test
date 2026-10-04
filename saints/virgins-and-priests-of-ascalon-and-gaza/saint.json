@@ -39,8 +39,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.04.2026 (29. март ст. ст.) — „Свети Марко Исповедник, епископ Аретусијски у Сирији“ … „Истога дана кад и свети Кирил пострадаше и многи други. Злобни незнабошци исекоше тела њихова на комадиће, помешаше с јечмом, и дадоше свињама.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The closing sentences of the day's first entry, and the identification is a reading of the account and not of a name, because the Prologue names nobody here and gives neither Ascalon nor Gaza, neither the virginity of the women nor the orders of the men: it says only that on the same day as Cyril many others suffered, and that their bodies were cut to pieces, mixed with barley and given to the swine. What joins it to this folder is that the entry opens by naming its own authorities, свети Григорије Богослов and блажени Теодорит, and that the barley and the swine are the distinctive mark of the Theodoret passage which doxologia.ro quotes in full for exactly this company and which this folder's own life carries from saint.gr — the same passage, in the same place, immediately after the same deacon's death, on the same menologion day the Greek already keeps here. On that ground the row goes on this folder and no new one was made; a company the source enumerates nowhere is one folder in any case. **No Serbian name form** is stored, because the page prints no designation for them at all, and a form that is not on the page is left out rather than supplied. The entry gives them no year, so the death this folder already holds from saint.gr is untouched. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
