@@ -1,0 +1,63 @@
+{
+  "slug": "matthew-kazarin",
+  "display_name": "Matthew (Kazarin)",
+  "office": "Protodeacon",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Матфей (Казарин)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 30 октября ст. ст., «Матфей (Казарин), протодиакон, сщмч.», with the grade and the rank word left off. The line on the day page gives only the forename, in the genitive, and no surname: «Сщмч. Матфея диакона (1942).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1942)» after his name on 30 октября ст. ст. Nothing else on the calendar dates him: no life page follows the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Сщмч. Матфея диакона (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The day carries one typikon sign only, and it is «Cовершается служба, не отмеченная в Типиконе никаким знаком» for the day's first line, so no rank is recorded for him."
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and goes in `types`; the two pages disagree about his grade and both are kept — the line's «диакона» in `types` as deacon, the link's «протодиакон» in `office` as Protodeacon — and neither is preferred. The surname «Казарин» returns no other folder, and the corpus's four other Matthews of the Russian calendar are `matthew-gusev`, `matthew-solovyov`, `matthew-monk-martyr-1918` and `matthew-of-yaransk`, all on other Julian days. azbyka.ru, which has carried full lives for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

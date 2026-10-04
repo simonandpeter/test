@@ -1,0 +1,70 @@
+{
+  "slug": "anatoly-botvinnikov",
+  "display_name": "Anatoly (Botvinnikov)",
+  "office": "Hieromonk",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "soldier"
+  ],
+  "names": [
+    {
+      "form": "Анатолий (Ботвинников)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the company's line for 31 октября ст. ст., «Анатолий (Ботвинников), иеромонах, сщмч.», with the grade and the rank word left off. His own life page is headed «Преподобномученик Анатолий (Ботвинников)» and gives his name in the world in its first sentence, «в миру Анатолий Иванович Ботвинников»; the monastic name is the same word, because he was tonsured with the name he already had."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «родился 15 октября 1881 года в деревне Копани Быховского уезда Могилевской губернии в крестьянской семье»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day and the decision: «11 ноября, Тройка НКВД вынесла постановление о его расстреле. Иеромонах Анатолий был расстрелян 13 ноября 1937 года.» The day line prints «(1937)» after the ten people it names. 13 November is the civil date of this menologion day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page and his name link both list one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Сщмчч. Всеволода , Александра , Сергия и Алексия и Василия , Петра , Василия пресвитеров, прмч. Анатолия , Евфросина и мч. Иакова (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the seventh of the day and names ten people with one year for all of them; «прмч.» stands before his name and his companion's, apart from the «Сщмчч.» that governs the seven presbyters before them. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "**The line's rank word and the name link's disagree about him and both are kept.** The line has «прмч.», a monastic put to death, and his own life page is headed with that same word, «Преподобномученик»; the link has «сщмч.», a hieromartyr. The line's word is in `types` as venerable-martyr, the link's grade «иеромонах» is in `office` as Hieromonk, and both are said in the life. `soldier` is in `types` on the strength of the life and not of a rank word: he was called up as a private, fought at Port Arthur in the Russo-Japanese war, was wounded and spent about a year a prisoner, and the wound left him with a restricted arm and back for the rest of his life. The ten on this line are not recorded as a company: no page read says they were tried together, and sharing a day of death is not a relation. The surname «Ботвинников» returns no other folder."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

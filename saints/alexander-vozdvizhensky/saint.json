@@ -1,0 +1,63 @@
+{
+  "slug": "alexander-vozdvizhensky",
+  "display_name": "Alexander (Vozdvizhensky)",
+  "office": "Priest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Александр (Воздвиженский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the company's line for 31 октября ст. ст., «Александр (Воздвиженский), иерей, сщмч.», with the grade and the rank word left off. The line itself gives the forename in the genitive among six others and no surname."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1937)» after the line of ten people he is the second of. Nothing else on the calendar dates him: no life page follows his name, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Сщмчч. Всеволода , Александра , Сергия и Алексия и Василия , Петра , Василия пресвитеров, прмч. Анатолия , Евфросина и мч. Иакова (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the seventh of the day and names ten people with one year for all of them. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The line's «Сщмчч.» and «пресвитеров» are hieromartyr and presbyter and go in `types`; the link's «иерей» is the grade and goes in `office` as Priest. The surname «Воздвиженский» returns no other folder in the corpus, and no other Alexander of these years is kept on this Julian day. The ten on this line are not recorded as a company: no page read says they were tried together, and sharing a day of death is not a relation. azbyka.ru answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

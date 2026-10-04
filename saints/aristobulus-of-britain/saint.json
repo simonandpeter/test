@@ -17,6 +17,11 @@
       "form": "Аристовул",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 16 March on pravoslavno.rs, „Свети апостол Аристовул.“, with Свети left off, which is not a rank, and with the rank word апостол left off. The heading gives no epithet and no see — Britain is in the body — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Аристовул",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Апостол из 70-ти Аристовул», with the rank words left off; the line declines it, «Аристовула», and the day's kontakion prints the same nominative. The folder's `sr` form from the Ohrid Prologue is the same word, «Аристовул», and the two calendars are recorded separately."
     }
   ],
   "sex": "male",
@@ -27,8 +32,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "A second day on this calendar, recorded here because one row per church is the schema. His name page gives «Дни памяти: 4 января (70 ап.) , 16 марта , 31 октября» — the synaxis of the Seventy, the day the Ohrid Prologue keeps him on and this folder's Serbian row already carries, and this one. The day page's own life for the six sends the reader to the first of them for his account, «О святом Аристовуле сведения помещены 16 марта», so 16 марта is where this calendar tells his life and 31 октября is where it lists him with the five; the row is written for the day page that lists him, per the brief, and he does not render on 16 марта."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Апп. от 70-ти Стахия , Амплия , Урвана , Наркисса , Апеллия и Аристовула (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the first of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "**The Russian is the one of the four calendars that says nothing about him on his own day.** Its life for the six closes «О святом Аристовуле сведения помещены 16 марта» — his account is placed at 16 March — and that day was not read here, because this row is for the day page that lists him. So the row brings the day, the name form, the century from the line's «(I)», and the day's two hymns, the kontakion naming him third of the six. The folder's Serbian row is on that same 16 March, from the Ohrid Prologue, and the two calendars agreeing on the second day is worth having. His name link gives him no see, where the Greek and Romanian gave him Britain."
     },
     {
       "church": "romanian",
@@ -125,6 +142,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь апостолов». The text is the common of the apostles and names none of the six; it is the same text the Romanian page prints for the day, and it is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, pray to the merciful God that He may grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священная сокровища Всесвятаго Духа/ и Солнца Славы сияния,/ по долгу воспоим мудрыя апостолы,/ Апеллия, Урвана же и Аристовула,/ Амплия, Наркисса и Стахия,// яже благодать собра Бога нашего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак апостолов». It is the Slavonic of the Greek kontakion this folder already holds, and it names all six of the day's apostles.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sacred treasuries of the All-Holy Spirit and rays of the Sun of Glory, let us sing as we ought of the wise apostles — Apelles, Urban and Aristobulus, Ampliatus, Narcissus and Stachys — whom the grace of our God gathered in.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -133,5 +182,14 @@
   "related": [
     "barnabas-the-apostle",
     "paul-the-apostle"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes the six apostles with «(I)», and its life for them is titled with the same «(I)» — the first century. The folder held no `dates` before this; none of the other three calendars dated him."
+    }
+  }
 }

@@ -11,6 +11,11 @@
       "form": "Τέρτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Τέρτιος, Μάρκος, Ιούστος και Αρτεμάς οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Тертий",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Апостол от 70-ти Тертий», with the rank words left off. The line itself declines the name, «Тертия»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps the same four apostles on its own 30 October and the Romanian keeps this one on 10 noiembrie; this is the Russian calendar's own day and not a second day on one calendar. His name page lists «4 января (70 ап.)», the synaxis of the Seventy, and «30 октября»; one row per church is the schema, so the synaxis is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Апп. от 70-ти Тертия , Марка , Иуста и Артемы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the second of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian prints the same four names as the Greek line this folder's Greek row quotes, and its one life for the four adds to his notice a people and a death: that he turned many of the pagans of Iconium to Christ, and that he ended his life there as a martyr. The see and the predecessor are the Greek page's as well. The calendar's index of lives under his name serves a third page besides the four's and his own, headed «Священномученик Терентий, епископ Иконийский», whose «Дни памяти» include this day and the Romanian's 10 November and which has that man killed by a sharpened stake; the corpus keeps no folder of that name and see, nothing here folds the two names, and the folder takes only what the four's own life says."
     },
     {
       "church": "romanian",
@@ -78,5 +95,17 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 30 октября ст. ст. closes the four apostles with «(I)», the first century, and its life for them gives no year. The folder held no `dates` before this: neither doxologia.ro nor saint.gr dated him at all."
+    }
+  },
+  "related": [
+    "sosipater-of-iconium"
+  ]
 }

@@ -6,6 +6,11 @@
       "form": "Ελένη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word left off."
+    },
+    {
+      "form": "Елена Сербская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind the family's line for 30 октября ст. ст., «Елена Сербская, королева, прп.», with the rank word and the office left off. The line itself declines the name and gives no by-name, «матери их Елены»."
     }
   ],
   "sex": "female",
@@ -21,15 +26,27 @@
       "earliest": 1306,
       "latest": 1306,
       "display": "1306",
-      "basis": "traditional",
-      "note": "saint.gr's heading for her, «Οσια Ελενη η Μητερα Των Οσιων Στεφανου Μιλιουτιν Και Θεοκτιστου (; - 1306)», and in the notice «Κοιμήθηκε το 1306 μ.Χ.». No year of birth is given."
+      "basis": "attested",
+      "note": "Two calendars and one year, and the Russian adds the day. saint.gr: «Κοιμήθηκε το 1306 μ.Χ.» days.pravoslavie.ru prints «(1306)» on the family's line for 30 октября ст. ст. and its life closes her with «отошла ко Господу 8 февраля 1306 года» — 8 February 1306. No year of birth is given by either."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps her on its own 30 October; this is the Russian calendar's own day for the same family and not a second day on one calendar. The life page the three share gives no «Дни памяти» line at all."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Св. Стефана Милютина, короля Сербского (1320), брата его Драгутина (1316) и матери их Елены (1306) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the sixth of the day and marks the three of them «(Серб.)», saints of the Serbian church. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek day and adds the whole of what this folder now says she did: that after her husband's death she gave her life to works pleasing to God, built houses for villagers who had come to poverty, founded monastic houses for those who wished to live in purity and virginity, raised the Reča monastery near the town of Spič and endowed it with lands, and took the monastic habit before her end. It adds the day of her death to the year the Greek page gave, 8 February 1306. Her name link titles her «Елена Сербская, королева, прп.», a queen and venerable, where the Greek page gave her no rank beyond «Οσια»; the folder's `types` keep `venerable` and the queenship goes nowhere, since the line itself calls her only the mother of the two. The calendar prints no hymn under her name, where it prints two under each of her sons'."
     },
     {
       "church": "romanian",

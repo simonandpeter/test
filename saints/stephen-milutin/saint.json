@@ -12,6 +12,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word and the surname left off; the page's own surname form is «Μιλιούτιν»."
+    },
+    {
+      "form": "Стефан Милютин",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the family's line for 30 октября ст. ст., «Стефан Милютин, Сербский, король», with the rank word and the people left off. The line itself declines the name, «Стефана Милютина»."
     }
   ],
   "sex": "male",
@@ -24,14 +29,26 @@
       "latest": 1320,
       "display": "1320",
       "basis": "attested",
-      "note": "doxologia.ro: «S-a săvârşit către Domnul în douăzeci şi nouă de zile ale lunii octombrie, din anul 1320.»"
+      "note": "Two calendars and one year. doxologia.ro: «S-a săvârşit către Domnul în douăzeci şi nouă de zile ale lunii octombrie, din anul 1320.» days.pravoslavie.ru prints «(1320)» on the family's line for 30 октября ст. ст. and its life gives the same day as the Romanian page: «Святой Стефан скончался 29 октября 1320 года и погребен в Баньской обители». The Russian life also gives his reign, «правил Сербией с 1275 по 1320 год», which is not a date of his own and is kept in the life."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep him on their own 30 October; this is the Russian calendar's own day for the same family and not a second day on one calendar. The life page the three share gives no «Дни памяти» line at all."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Св. Стефана Милютина, короля Сербского (1320), брата его Драгутина (1316) и матери их Елены (1306) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the sixth of the day and marks the three of them «(Серб.)», a saint of the Serbian church. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian keeps the three together on one line and one life page, as the Greek did on three separate notices, and it is the first calendar to give this folder his descent, his reign and his burial: younger son of King Stephen Uroš I, grandson of the first-crowned king the same calendar keeps on 24 сентября, ruler of Serbia from 1275 to 1320, builder of more than forty churches besides monasteries and hostels, buried in the monastery of Banjska with his relics uncovered incorrupt two years later. It also prints his troparion and kontakion, which no calendar read for him had. The line's «(1320)» and the life's «скончался 29 октября 1320 года» agree with the year doxologia gave and add the day; the day of death is the 29th and the commemoration the 30th, on all three calendars."
     },
     {
       "church": "romanian",
@@ -74,6 +91,41 @@
   },
   "related": [
     "theoctistus-brother-of-stephen-milutin",
-    "helen-mother-of-stephen-milutin"
+    "helen-mother-of-stephen-milutin",
+    "stefan-the-first-crowned"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Ты на земли вседушно Христа возлюбив/ и Того заповеди соблюдая,/ яко река, благоутробием изсохших нищетою богатно напоил еси/ и люди своя снабдел еси,/ и рака мощей твоих благоухания цельбы всем подает,/ сего ради, святе, молим тя,/ изпроси душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Тропарь святого праведного Стефана Милютина»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving Christ on earth with your whole soul and keeping His commandments, like a river you watered richly, out of the tenderness of your heart, those whom poverty had dried up, and you provided for your own people; and the shrine of your relics gives its fragrance and its healing to all. Therefore, O holy one, we pray you: ask great mercy for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси от корене благаго/ отрасль преславная отечеству своему и прародителем своим,/ новообразен подобник бывавши/ и людем своим являешися утварь прекрасная.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Кондак святого праведного Стефана Милютина»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You came forth from a good root, a most glorious branch to your own country and to your forefathers, becoming their likeness newly formed; and to your own people you are shown as an adornment of great beauty.",
+        "rendered": "site"
+      }
+    }
   ]
 }

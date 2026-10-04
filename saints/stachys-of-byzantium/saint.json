@@ -12,6 +12,11 @@
       "form": "Στάχυς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Стахий",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Стахий, епископ Византийский, апостол от 70-ти», with the rank words and the see left off. The line itself declines the name, «Стахия»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep the same six apostles on their own 31 October; this is the Russian calendar's own day and not a second day on one calendar. His name link gives «4 января (70 ап.)», the synaxis of the Seventy, as well; one row per church is the schema, so the synaxis is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Апп. от 70-ти Стахия , Амплия , Урвана , Наркисса , Апеллия и Аристовула (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the first of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian prints the same six names in the same order as the Greek and Romanian lines this folder was written from, and its one life for the six adds **who ordained him**: «Святой апостол Андрей Первозванный рукоположил Стахия в сан епископа Византийского, где он и святительствовал шестнадцать лет» — the sixteen years saint.gr also gave, now with Andrew the First-Called at the start of them, and the zeal of his preaching and the turning of pagans to the true faith. His `dates` are not touched: saint.gr's «(; - 54)» is a year, and the Russian line's «(I)» is a century, so the stronger reading stands. The day's troparion of the apostles is the common the Romanian page also prints; the kontakion is the Slavonic of the Greek kontakion this folder already holds, and names all six men."
     },
     {
       "church": "romanian",
@@ -110,6 +127,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите Милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь апостолов». The text is the common of the apostles and names none of the six; it is the same text the Romanian page prints for the day, and it is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holy apostles, pray to the merciful God that He may grant our souls forgiveness of our sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко священная сокровища Всесвятаго Духа/ и Солнца Славы сияния,/ по долгу воспоим мудрыя апостолы,/ Апеллия, Урвана же и Аристовула,/ Амплия, Наркисса и Стахия,// яже благодать собра Бога нашего.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак апостолов». It is the Slavonic of the Greek kontakion this folder already holds, «Ὡς ἱερὰ κειμήλια, τοῦ Παναγίου Πνεύματος», and it names all six of the day's apostles.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As sacred treasuries of the All-Holy Spirit and rays of the Sun of Glory, let us sing as we ought of the wise apostles — Apelles, Urban and Aristobulus, Ampliatus, Narcissus and Stachys — whom the grace of our God gathered in.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -129,5 +178,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "andrew-the-first-called"
   ]
 }

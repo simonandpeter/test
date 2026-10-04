@@ -1,0 +1,62 @@
+{
+  "slug": "leonid-molchanov",
+  "display_name": "Leonid (Molchanov)",
+  "office": "Abbot",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Леонид (Молчанов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 31 октября ст. ст., «Леонид (Молчанов), игумен, прмч.», with the grade and the rank word left off. The line on the day page gives only the forename, in the genitive, and no surname: «Прмч. Леонида (1918).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1918)» after his name on 31 октября ст. ст. Nothing else on the calendar dates him: no life page follows the line, and his name page carries two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Прмч. Леонида (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the sixth of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The line's «Прмч.» is venerable-martyr, a monastic put to death, and goes in `types`; the link's «игумен» is the office he held and goes in `office` as Abbot, a key the packs already read. The surname «Молчанов» returns no other folder. The corpus's three other Russian Leonids are other men on other days: `leonid-muravyev`, a priest of 1941 on the Julian 29 October; `leonid-presbyter-martyr-1937`, on 12 августа; and `leonid-nikolsky`. He is the only one of the four who is a monastic. azbyka.ru, which has carried full lives for others of these years, answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

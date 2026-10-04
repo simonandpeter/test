@@ -1,0 +1,61 @@
+{
+  "slug": "innocent-mazurin",
+  "display_name": "Innocent (Mazurin)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Иннокентий (Мазурин)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 31 октября ст. ст., «Иннокентий (Мазурин), иеродиакон, прмч.», with the grade and the rank word left off. The line on the day page gives only the forename, in the genitive, and no surname: «Прмч. Иннокентия (1938).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1938)» after his name on 31 октября ст. ст. Nothing else on the calendar dates him: no life page follows the line, and his name page carries three days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists two other days, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «26 апреля (Бут.)», the synaxis of the new martyrs shot at Butovo. One row per church is the schema, so both are recorded here and he does not render on either."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Прмч. Иннокентия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the eighth and last of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The line's «Прмч.» is venerable-martyr, a monastic put to death, and goes in `types`; the link's «иеродиакон» is the grade he held and **this folder carries no `office` because the packs cannot read one for it**: the four locale packs hold `Hieromonk`, `Hegumen` and a qualified `Hierodeacon of Zilantov`, and no bare `Hierodeacon`, so writing one would fail `tests/i18n.test.mjs`. `.tmp/ru-officescan.mjs` named it before this batch was written. The grade is in the life and is owed a pack key. **The Butovo day is the one thing the calendar says about him beyond his name**: the synaxis of 26 апреля is of the new martyrs shot at the Butovo range outside Moscow, so the place of his death is implied by the company he is numbered with, and it is implied and not stated, which is why it is in this note and not in a `locations` row. The surname «Мазурин» returns no other folder, and the corpus's seven other Innocents are other men: the nearest in year is `innocent-kikin`, a priest of 1937 on the Julian 13 October, and `innocent-stepanov` is an archimandrite of 1888. azbyka.ru answered 403 to this corpus's fetcher on the day he was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

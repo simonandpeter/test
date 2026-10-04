@@ -11,6 +11,11 @@
       "form": "Ζηνοβία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια», with the rank word left off."
+    },
+    {
+      "form": "Зиновия Егейская (Киликийская)",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind the line for 30 октября ст. ст., «Зиновия Егейская (Киликийская), мц.», with the rank word left off. The line itself declines the name and gives her no by-name at all; the two forms of the see are the link's."
     }
   ],
   "sex": "female",
@@ -21,8 +26,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep the pair on their own 30 October; this is the Russian calendar's own day for the same pair and not a second day on one calendar. The life page the two share is headed «День памяти: 30 октября» and lists no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Сщмч. Зиновия , еп. Егейского, и сестры его Зиновии (285).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the first of the day and names her as the bishop's sister, without a rank word of her own; the abbreviation «Мц.» for her comes from her name link. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek and Romanian days this folder was written from and adds what they did not have: that she and her brother were brought up in the faith by their parents, that she asked to share his torture when she saw it rather than being arrested with him, that she confessed before the persecutors without fear, and that the two of them survived a red-hot bed and a boiling cauldron before they were beheaded. The year is the same 285 the folder already held, now stated by a second calendar."
     },
     {
       "church": "romanian",
@@ -112,6 +129,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости,/ тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Тропарь священномученика Зиновия и мученицы Зиновии». The text is the common of martyrs and names neither of them; it is printed under their names on the day page and is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, received from You, our God, crowns that do not fade, for in their sufferings they had Your strength; they threw down their torturers and broke the feeble insolence of the demons. By their prayers, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Истины свидетели и благочестия проповедники,/ двоицу достойно почтим в богодухновенных песнех,/ Зиновия вкупе с мудрою Зиновиею,/ купно жившия и отшедшия// и мучением приимшия венец нетленный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Кондак священномученика Зиновия и мученицы Зиновии»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Witnesses of the truth and preachers of godliness, let us honour the two of them worthily in God-inspired songs: Zenobius together with the wise Zenobia, who lived together and departed together, and by their martyrdom received the crown that does not fade.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

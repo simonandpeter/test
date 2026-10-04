@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιος Ιωάννης Κοτσούρωφ ο πρωτομάρτυρας της νεότερης Ρωσίας», with the rank words left off; the page's own transliteration of the surname is «Κοτσούρωφ», which it glosses «(Kochurov)»."
+    },
+    {
+      "form": "Иоанн Кочуров",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind his line for 31 октября ст. ст., «Священномученик Иоанн Кочуров», with the rank word left off. **The line and the link name him differently**: the line gives no surname and two by-names instead, «протоиерея Иоанна Царскосельского, Петроградского» — of Tsarskoye Selo and of Petrograd, the town he served in and the city it belongs to — and the link gives the surname and no by-name. The surname is the fuller form and is what is stored."
     }
   ],
   "sex": "male",
@@ -25,21 +30,33 @@
       "latest": 1871,
       "display": "1871",
       "basis": "attested",
-      "note": "doxologia.ro: «Ioan Kochurov s-a născut la 13 iunie 1871.»"
+      "note": "Two calendars, one year and two days, and nothing chooses between them. doxologia.ro: «Ioan Kochurov s-a născut la 13 iunie 1871.» days.pravoslavie.ru: «родился 13 июля 1871 года в селе Бигильдино (Сурки) Данковского уезда Рязанской губернии» — 13 July against 13 June. The year is not in question."
     },
     "death": {
       "earliest": 1917,
       "latest": 1917,
       "display": "1917",
       "basis": "attested",
-      "note": "doxologia.ro: «La 31 octombrie 1917, bolșevicii au intrat în forță în Țarskoe Selo și l-au arestat pe Sfântul Ioan Kochurov. A fost scos de bolșevici din oraș unde a fost împușcat.»"
+      "note": "Two calendars and one year, and the Russian gives the day in both styles. doxologia.ro: «La 31 octombrie 1917, bolșevicii au intrat în forță în Țarskoe Selo și l-au arestat pe Sfântul Ioan Kochurov.» days.pravoslavie.ru: «31 октября (13 ноября н. ст.) 1917 года отряды большевиков вступили в Царское Село» — the Julian 31 October, the civil 13 November, which is this menologion day."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep him on their own 31 October; this is the Russian calendar's own day, and it is the day he was killed. His life page lists three others — «26 января (Новомуч.)» and «26 января», the synaxis of the new martyrs and confessors of Russia, and «8 июня (Петерб.)», the synaxis of the saints of St Petersburg. One row per church is the schema, so the three are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Сщмч. протоиерея Иоанна Царскосельского, Петроградского (1917).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the fifth of the day and is the only one on it that prints a grade before the name rather than after. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "**This is the first full life this folder has had from a Russian source, and it disagrees with the Romanian one about the day of his birth**: doxologia.ro has «născut la 13 iunie 1871» and days.pravoslavie.ru «родился 13 июля 1871 года», June against July. The year is the same and nothing chooses between the days, so both are in the `dates` note. What the Russian adds: the village of Bigildino (Surki) in the Dankov district of Ryazan province, the many children of the village priest Alexander Kochurov and his wife Anna, the father who was for years also the scripture teacher of the village school, the Dankov church school, the Ryazan seminary finished in 1891, the Petersburg academy entered the same year, the ordination by the bishop of the Aleutians and Alaska — «преосвященным Николаем» — the rectorship of St Vladimir's in Chicago, **86 Uniates and 5 Catholics received in his first three years and the regular congregation grown to 215 at Chicago and 88 at Streator**, the children's schools at both churches, the new Holy Trinity church built on money he raised on leave in Russia in 1900, the return home in 1907 to the clergy of the Transfiguration cathedral at Narva and the scripture teaching in its gymnasia, the appointment to the Catherine cathedral of Tsarskoye Selo in November 1916, the moleben and the procession under artillery fire on 30 октября 1917, the arrest of the priests when the Bolsheviks entered the town the next day, the beating for his fearless preaching, the dragging half-alive along the railway sleepers to the aerodrome, the shooting there in front of his schoolboy son, the son dead of the shock three days later at seventeen, the funeral in the cathedral on 4 ноября and the burial in the vault beneath it, the cathedral blown up in 1939, the monument to Lenin standing on the place of his grave when the page was written, and the canonisation by the Bishops' Council of 1994. It also prints the line of Patriarch Tikhon's letter to his widow. The line's «протоиерея» is archpriest and the folder holds no `office`; `upgrade.py` cannot set one, so it is reported and not written."
     },
     {
       "church": "romanian",
@@ -83,5 +100,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Любовию к Богу распаляем,/ жизнь свою мученически за Христа и ближних положил еси,/ сего ради венец правды от Него принял еси,/ моля всеблагаго Бога, священномучениче Иоанне,/ Церковь святую сохранити в мире/ и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь священномученика Иоанна Царскосельского»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set alight with love for God, you laid down your life as a martyr for Christ and for your neighbours, and for this you received from Him the crown of righteousness. Hieromartyr John, pray to the all-good God to keep His holy Church in peace and to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Ревностно пастырское служение свое исполняяй,/ ты яко жертву благоприятную/ душу свою Богу принесл еси,/ моли Христа Бога, отче Иоанне,/ мир миру даровати/ и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак священномученика Иоанна Царскосельского»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Fulfilling your pastoral service with zeal, you offered your own soul to God as a sacrifice well pleasing to Him. Father John, pray to Christ God to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

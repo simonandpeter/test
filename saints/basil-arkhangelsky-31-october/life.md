@@ -1,0 +1,9 @@
+# Basil (Arkhangelsky)
+
+The Russian church calendar of the Сретенский monastery names him seventh of ten people on one line for 31 октября ст. ст. and gives him no life. The line prints the forename «Василия» twice, once fifth and once seventh, for two different men; the link behind the seventh reads «Василий (Архангельский), протоиерей, сщмч.», an archpriest of that name, one of the new martyrs of the Russian church, and the link behind the fifth gives another surname altogether.
+
+So the year is the whole of what is recorded of him, and the year is 1937. There is no life page behind his name, and his name page carries no text, no icon and no hymn — only his name and his days, of which the second is 26 января, the synaxis of the new martyrs and confessors of Russia.
+
+This corpus already keeps a Basil Arkhangelsky, and he is not this man. That one was read off the same calendar's 8 января ст. ст., where his link gives his grade as priest and his year as 1939; this one is an archpriest of 1937. Two commemorations on one calendar are two men, and the calendar separates them by the day, the grade and the year and by nothing else at all: it prints the same surname and the same forename for both, and no patronymic, no see, no place and no age for either. So the two folders bear one name, which is recorded deliberately and not by accident, and this one's slug carries the day to tell them apart. The second Russian calendar, azbyka.ru, which has given this corpus full lives for others of these men, refused the request with a 403 on the day he was read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 31 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261031.html) and [his name page](https://days.pravoslavie.ru/name/13841.html); read 4 October 2026.*

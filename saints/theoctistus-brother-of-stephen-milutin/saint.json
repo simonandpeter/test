@@ -6,6 +6,11 @@
       "form": "Θεόκτιστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Όσιοι Στέφανος Μιλιούτιν, Θεόκτιστος ο αδελφός του και Ελένη η μητέρα τους», with the rank word left off."
+    },
+    {
+      "form": "Драгутин (в иночестве Феоктист)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the family's line for 30 октября ст. ст., «Драгутин (в иночестве Феоктист) Сербский, король, прп.», with the rank word, the people and the office left off. The brackets are the calendar's own and hold the name he took as a monk, which is the name this folder is kept under; the line itself declines the reigning name, «Драгутина»."
     }
   ],
   "sex": "male",
@@ -23,15 +28,27 @@
       "earliest": 1316,
       "latest": 1316,
       "display": "1316",
-      "basis": "traditional",
-      "note": "saint.gr's heading for him, «Οσιος Θεοκτιστος Αδελφος Του Στεφανου Μιλιουτιν (; - 1316)», and in the notice «ασκήτεψε στο Σρέμ μέχρι την κοίμηση του το 1316 μ.Χ.». No year of birth is given."
+      "basis": "attested",
+      "note": "Two calendars and one year, and the Russian adds the day. saint.gr: «ασκήτεψε στο Σρέμ μέχρι την κοίμηση του το 1316 μ.Χ.» days.pravoslavie.ru prints «(1316)» on the family's line for 30 октября ст. ст. and its life closes him with «Кончина его последовала 2 марта 1316 года» — 2 March 1316. No year of birth is given by either."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps him on its own 30 October; this is the Russian calendar's own day for the same family and not a second day on one calendar. The life page the three share gives no «Дни памяти» line at all."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Св. Стефана Милютина, короля Сербского (1320), брата его Драгутина (1316) и матери их Елены (1306) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the sixth of the day and marks the three of them «(Серб.)», saints of the Serbian church. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "**The Russian calendar names him by his reigning name and gives his monastic one in brackets**, which is the reverse of the Greek page the folder was written from: the line has «брата его Драгутина» and the name link «Драгутин (в иночестве Феоктист) Сербский, король, прп.», where saint.gr had «Οσιος Θεοκτιστος Αδελφος Του Στεφανου Μιλιουτιν». The folder's display name and slug keep the monastic name and are not changed. The Russian adds why he left the throne and what he did after it — he handed the power to his younger brother after a short reign, loved the hermit's life, shut himself up at Srem and laboured in secret in a grave-pit he had dug with his own hands, and worked much at turning the Bogomil heretics to the true faith — and it adds the day of his death to the year the Greek page gave. It also prints his troparion and kontakion, which the Greek page did not have, and the kontakion names the Bogomils, so the hymn and the life agree."
     },
     {
       "church": "romanian",
@@ -61,5 +78,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Божественнаго страха огнем душу свою распалил еси,/ очистився покаянием и украсився кротостию и смирением,/ востекл еси к невечернему Свету — Христу,/ преподобне отче Феоктисте,/ и ныне, трисолнечным светом озаряемь,/ на Небеси ликуеши,/ моли о нас, верою почитающих честную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Тропарь преподобного Феоктиста, бывшего Драгутина, короля Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the fire of the fear of God you set your own soul alight, and cleansed by repentance and adorned with meekness and humility you ran up to the Light that knows no evening, to Christ, O venerable father Theoctistus; and now, lit by the light of the Three Suns, you keep festival in heaven. Pray for us who honour your precious memory with faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Верою истинною украшен быв,/ просиял еси добродетельми,/ храмы и обители щедро помогал еси,/ богомилов же душетлительную ересь искоренил еси,/ сего ради вопием ти:/ преподобне Феоктисте, блаженне,/ со всеми преподобными предстоя Христу,/ молися о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Кондак преподобного Феоктиста, бывшего Драгутина, короля Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Adorned with the true faith, you shone out in the virtues; you helped churches and monasteries open-handedly, and you rooted out the soul-destroying heresy of the Bogomils. Therefore we cry to you: venerable and blessed Theoctistus, standing before Christ with all the venerable ones, pray for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
