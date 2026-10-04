@@ -6,6 +6,11 @@
       "form": "Ερμινίγγελδος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιος Ερμινίγγελδος», with the rank word left off. The notice gives a second spelling of its own, «(ή Ερμηνιγγίλδος)», and the epigram a third, «Ἑρμηνίγγελδος»."
+    },
+    {
+      "form": "Ерминингельд Готфский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Ерминингельд Готфский, царевич, мч.», with the grade and the rank word left off. The day's own line declines it as «Ерминингельда , царевича Готфского»."
     }
   ],
   "sex": "male",
@@ -16,17 +21,28 @@
   "dates": {
     "death": {
       "earliest": 585,
-      "latest": 585,
-      "display": "about 585",
+      "latest": 586,
+      "display": "585 or 586",
       "basis": "traditional",
-      "note": "saint.gr: «Στρατιώτες μπήκαν στο κελί του και τον θανάτωσαν γονατιστό όπως προσευχόταν περί το 585 μ.Χ.» — the page's own year, written «περί», about. It gives no year of birth."
+      "note": "Two calendars a year apart. saint.gr wrote «περί το 585 μ.Χ.», about 585, which this folder carried; days.pravoslavie.ru prints «(586)» flatly on the line and in the title of its life. Neither is preferred and the interval holds both."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists this day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Мч. Ерминингельда , царевича Готфского (586).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "The line's «Мч.» is martyr and its «царевича» is the prince, both of which this folder already held. The life names his father «царь Лувингильд» and his brother «Рехард», and neither has a folder here."
     },
     {
       "church": "romanian",
@@ -56,5 +72,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "leander-of-seville"
+  ]
 }

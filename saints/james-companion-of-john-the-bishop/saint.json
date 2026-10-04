@@ -6,6 +6,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιωάννης ο Επίσκοπος και Ιάκωβος ο Πρεσβύτερος», with the rank words left off."
+    },
+    {
+      "form": "Иаков Ревнитель, Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Иаков Ревнитель, Персидский, пресвитер, сщмч.», with the grade and the rank word left off. The day's own line declines the forename and gives no by-name, as «Иакова пресвитера»."
     }
   ],
   "sex": "male",
@@ -19,17 +24,28 @@
   "dates": {
     "death": {
       "earliest": 332,
-      "latest": 332,
-      "display": "about 332",
+      "latest": 345,
+      "display": "332–345",
       "basis": "traditional",
-      "note": "saint.gr: «έζησαν στα χρόνια του βασιλιά των Περσών Σαβωρίου (332 μ.Χ.)» — the page's own year, attached to the reign it sets the two men in, and the beheading follows in the same notice with no further date."
+      "note": "Two calendars a dozen years apart on one man, and the interval holds both. saint.gr gave «έζησαν στα χρόνια του βασιλιά των Περσών Σαβωρίου (332 μ.Χ.)», which this folder carried as about 332; days.pravoslavie.ru's line for the same pair on the same day closes «(ок. 345)», about 345. Nothing is chosen, and no year is taken from the life the calendar hangs behind his name, which is another man's."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists this day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Сщмчч. Иоанна епископа и Иакова пресвитера, в Персии пострадавших (ок. 345).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and its «пресвитера» presbyter, both of which this folder already held from saint.gr. The name link gives him two by-names the Greek page does not, «Иаков Ревнитель, Персидский», James the Zealot, the Persian. **The one life page the calendar hangs behind his name is another man's**: it is the life of a venerable martyr James tonsured at Dochiariou on the Holy Mountain, tortured to death with two disciples on 1 November 1520, whom this corpus holds as `james-of-kastoria` with `james-the-deacon-of-kastoria` and `dionysius-the-monk-of-kastoria` off saint.gr's own 1 November. A life that is about somebody else is not this saint's life, on the same reading BRIEF.md §4 gives for a mis-hung hymn, so no narrative is taken from it."
     },
     {
       "church": "romanian",

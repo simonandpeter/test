@@ -1,0 +1,61 @@
+{
+  "slug": "peter-ignatov",
+  "display_name": "Peter (Ignatov)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Петр (Игнатов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name page, «Петр (Игнатов), мч.», with the rank word left off. The day's line declines the forename and gives no surname: «Мч. Петра (1941).»"
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after his name on 1 ноября ст. ст. The calendar carries no life page for him and his name page holds two days and no text."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Мч. Петра (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "His «мч.» is martyr; the calendar gives him no grade and no office, so this folder records none. The surname «Игнатов» returns no other folder in the corpus, and 1941 is the latest death this day lists."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

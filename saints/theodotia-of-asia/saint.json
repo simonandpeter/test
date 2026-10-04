@@ -1,0 +1,66 @@
+{
+  "slug": "theodotia-of-asia",
+  "display_name": "Theodotia of Asia",
+  "sex": "female",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Феодотия Азийская",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page for her, «Феодотия Азийская», which carries this day and no text. The day's own line declines the name and gives it without the by-name, as «матери их прп. Феодотии»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 400,
+      "display": "3rd–4th century",
+      "basis": "traditional",
+      "note": "The interval holds the two readings one page gives and chooses neither. The day's line closes the whole entry «(III)», the third century; the life the same calendar serves for her sons opens «Ни время их рождения, ни время смерти неизвестно. Несомненно только то, что они жили не позднее IV века» — neither the time of their birth nor the time of their death is known, and only that they lived no later than the fourth century is certain — and argues that ceiling from the churches built in the brothers' name in the first half of the fifth century and from the Copts holding them saints. No year of her own is printed anywhere that was read."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Her name page lists this day and no other."
+      },
+      "rank": "six-stichera",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Бессребреников и чудотворцев Космы и Дамиана Азийских и матери их прп. Феодотии (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026,
+        "note": "The typikon sign on the day's first line is «Cовершается служба на шесть», which is the six-stichera rank and is recorded here for the three saints that line names."
+      },
+      "note": "The line's «прп.» is venerable, which the life confirms in its own words: «Святая Церковь причла ее к лику святых, наименовала преподобною и творит память ее вместе с ее чадами». Her name page gives no life of her own; everything beyond the line is read out of the life of her sons."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 November 2026 (4 October 2026)."
+    }
+  ],
+  "related": [
+    "cosmas-of-asia",
+    "damian-of-asia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -23,7 +23,7 @@
         "day": 25,
         "month": 9,
         "calendar": "julian",
-        "note": "The day commemorates the finding of his relics, which the calendar's day line dates to 1985: «Обретение мощей сщмчч. Александра и Феодора пресвитеров (1985)». His name page marks this day «(обретение мощей)» and lists two others, «26 января (Новомуч.)» and «1 ноября»; one row per church is the schema, so those are recorded here and he does not render on them. No year of death is printed anywhere that was read, so this folder carries no dates."
+        "note": "The day commemorates the finding of his relics, which the calendar's day line dates to 1985: «Обретение мощей сщмчч. Александра и Феодора пресвитеров (1985)». His name page marks this day «(обретение мощей)» and lists two others, «26 января (Новомуч.)» and «1 ноября»; one row per church is the schema, so those are recorded here and he does not render on them. The 1 ноября line was read on 4 October 2026 and it gives the year of his death, «(1918)», which this folder now carries; nothing else about him is printed there and the row stays on the day it was written for."
       },
       "source": {
         "text": "days.pravoslavie.ru, 25 сентября ст. ст. — «Обретение мощей сщмчч. Александра и Феодора пресвитеров (1985).»",
@@ -52,5 +52,14 @@
   },
   "related": [
     "alexander-smirnov"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 1 ноября ст. ст., «Сщмчч. Александра и Феодора пресвитеров (1918).» — the same pair, under the same two grades, as the 25 сентября line this folder's row rests on. It also tells this folder's Theodore from the archpriest of the Julian 12 September, who is dated 1937 on his own day. The calendar carries no life page for him on either day and prints no year of birth."
+    }
+  }
 }

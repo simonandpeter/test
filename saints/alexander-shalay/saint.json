@@ -1,0 +1,70 @@
+{
+  "slug": "alexander-shalay",
+  "display_name": "Alexander (Shalay)",
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Александр (Шалай)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Александр (Шалай), протоиерей, сщмч.», with the grade and the rank word left off. The day's line declines the forename and gives no surname: «Сщмчч. Александра и Димитрия пресвитеров, мц. Елисаветы (1937).»"
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "The collective life of the Minsk hieromartyrs: «родился 20 ноября 1879 года в городе Слуцке»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The day's line closes «(1937)», and the collective life of the Minsk hieromartyrs gives the day: «14 ноября (н. ст.) 1937 года он был расстрелян в городе Бобруйск»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it. The execution date the collective life gives, 14 November new style, is this Julian day in new style and not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 ноября ст. ст. — «Сщмчч. Александра и Димитрия пресвитеров, мц. Елисаветы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261101.html",
+        "year": 2026
+      },
+      "note": "The line's «Сщмч.» is hieromartyr and its «пресвитеров» is presbyter, both in `types`; the name link's «протоиерей» is the grade and goes in `office` as Archpriest, and neither reading is preferred. The life the calendar serves for him is not his own: it is the collective life of the twenty-three hieromartyrs of the Minsk diocese among the new martyrs of the Belarusian land, and his part of it is one paragraph."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
