@@ -11,6 +11,11 @@
       "form": "Δωρόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουνίου, «Άγιος Δωρόθεος Ιερομάρτυρας επίσκοπος Τύρου», with the rank word left off."
+    },
+    {
+      "form": "Доротеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јун ст. ст., „Свештеномученик Доротеј, епископ Тирски“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „Тирски“ is the see, which the display name already carries. `foldchk.py` returns `[('dorotheus-the-hermit-of-egypt', 'sr')]`: a fold of two on the bare form, deliberate, the other man being a hermit of Egypt kept on another day."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.06.2026 (5. јун ст. ст.) — „Свештеномученик Доротеј, епископ Тирски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, five lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A DEATH WIDENED BY ONE YEAR AND A BIRTH DELIBERATELY NOT MOVED WITH IT. The folder held `death` 362 off saint.gr («τον σκότωσαν το 362 μ.Χ.») and `birth` 255 off the same page’s head line «(255 - 362)»; doxologia gives no year at all. This book states „преселио се у живот вечни 361. године“. Two books, two flat years: `death` 361 to 362, display «361 or 362». **`birth` STAYS FLAT AT 255 AND THAT IS THE READING, NOT AN OVERSIGHT.** Both books give the same length of life, a hundred and seven years, so 361 minus 107 would make 254 and the birth would widen to 254 to 255 — **but that is a lifespan used to derive a year, which this wave has refused six times, and 255 is a figure saint.gr prints in its own head line rather than one anybody computed.** The derived year is named here so the gap is visible and is not a slip. ONE THING NEW, AND IT IS A TITLE. Both earlier pages have the learning and the writings in Greek and Latin; doxologia names the lives of the prophets and of the apostles, saint.gr a work on the seventy disciples. **This book names a different work and names it famous**: „Нарочито је чувена његова грчко-латинска Синтагма“, his Greek-Latin Syntagma. Everything else is already here: the see held from Diocletian’s day to Julian the Apostate’s, the torments under Julian, the hundred and seven years. `types` and `office` UNTOUCHED, both corroborated by Свештеномученик and епископ. No `locations`, no `related`: this entry names no person but the two emperors, and an emperor in a life is not a relation. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('dorotheus-the-hermit-of-egypt', 'sr')]`, so storing the bare form makes a fold of two; the see came off as §6 and the 25 May `therapon-of-cyprus` reading require, and the two men are told apart by a see against a desert. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -104,14 +119,14 @@
       "latest": 255,
       "display": "255",
       "basis": "traditional",
-      "note": "saint.gr's head line reads «Αγιος Δωροθεος Ιερομαρτυρας Επισκοπος Τυρου (255 - 362)», and the body gives his age at death: «τον σκότωσαν το 362 μ.Χ. ... Τότε ο Δωρόθεος ήταν 107 χρονών»."
+      "note": "saint.gr's head line reads «Αγιος Δωροθεος Ιερομαρτυρας Επισκοπος Τυρου (255 - 362)», and the body gives his age at death: «τον σκότωσαν το 362 μ.Χ. ... Τότε ο Δωρόθεος ήταν 107 χρονών». The Охридски пролог for 5. јун ст. ст. gives the same hundred and seven years and a death one year earlier, which would put the birth at 254; that year is NOT recorded, because it would be a lifespan used to derive a year, while 255 is a figure the Greek page prints itself (5 October 2026)."
     },
     "death": {
-      "earliest": 362,
+      "earliest": 361,
       "latest": 362,
-      "display": "362",
+      "display": "361 or 362",
       "basis": "traditional",
-      "note": "saint.gr: «Οι ειδωλολάτρες, όμως, που ήταν προστατευόμενοι αυτού του αυτοκράτορα, έπιασαν το Δωρόθεο και αφού τον βασάνισαν ανελέητα τον σκότωσαν το 362 μ.Χ.»"
+      "note": "saint.gr: «οι ειδωλολάτρες ... έπιασαν το Δωρόθεο και αφού τον βασάνισαν ανελέητα τον σκότωσαν το 362 μ.Χ.»; doxologia.ro's life prints no year. The Охридски пролог for 5. јун ст. ст. states one year earlier, flat: „Живео на земљи сто седам година, и угодивши Богу преселио се у живот вечни 361. године“. The interval is widened to hold both and neither is chosen (5 October 2026)."
     }
   },
   "images": [

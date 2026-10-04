@@ -11,6 +11,11 @@
       "form": "Ανούβ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουνίου, «Όσιος Ανούβ ο σημειοφόρος», with the rank word left off."
+    },
+    {
+      "form": "Анувије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јун ст. ст., „Преподобни Анувије“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped, and the heading gives nothing else. **The Serbian form is longer than the Greek one this folder stores**: «Анувије» against «Ανούβ», and the display name is built on the Greek. The two are the same name in two books and no display name was touched; §10 reserves it. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder of the Serbian string."
     }
   ],
   "attestations": [
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.06.2026 (5. јун ст. ст.) — „Преподобни Анувије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, four lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE IDENTIFICATION WAS MADE ON A SCENE AND NOT ON A NAME, AND THAT IS THE READING OF THE DAY. The heading is a bare «Анувије»; `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`; **he is not on the day list for the menologion 5/6**, because saint.gr keeps this folder on 6 June; and the day list for 5/6 offers eleven «of Egypt» folders, none of them him. `ls saints | grep -i -E 'anuv|anoub|anub'` returns `anub-the-sign-bearer`, and **what settles it is the scene both books tell**: this entry says „Када су га пред смрт посетила три старца пустињака, он, прозорливац, открије им све тајне срца њихова“, and the folder’s own life, off Nikodemos the Hagiorite by way of saint.gr, has «the abbas Sourus, Isaiah and Paul went and found abba Anub» and the five things he told them of himself, and his death three days after. **Three elders, one deathbed, one clairvoyance: the same scene in two books.** AND THE DAY WAS CHECKED, FOR THE THIRD DAY RUNNING. saint.gr keeps him on 6 June and this book on 5 June. `sr-cand.mjs 06-06` prints „Преподобни Висарион“, „Преподобни Иларион Нови“ and the venerable martyrs Archelais, Thekla and Susanna — **and not him**. So the Julian 5 June is this book’s day for him and the row carries it. A FIRST DATE, AND IT IS A CENTURY HALF WHERE THE OTHER BOOK GAVE NO CENTURY AT ALL. This folder held `dates: null`, and its life says why: saint.gr «gives him no century and names no place but the desert». This book closes „Мирно сконча у другој половини V века“. `death` 451 to 500, display «second half of the 5th century», which is a display form this corpus already uses; `basis` `traditional`. NO `locations`, THOUGH THE ENTRY GIVES A COUNTRY. „Један од великих Мисирских монаха“ puts him in Egypt, which is more than saint.gr gave — but Egypt is a country and not a place, `data/places.js` is a hand-written gazetteer, and a located folder is a claim about a point. The country is in the life and not in `locations`. `confessor` REFUSED, AND THE WORD IS NOT IN THE SOURCE. „Много пострадао за веру праву“ is a sentence about him and not a rank: Исповедник is in neither heading nor body, and §5’s table is to be read and not guessed at. `venerable` and `ascetic` both stand and Преподобни corroborates the first. NO `related`: the three elders are unnamed in this book, and the three saint.gr names have no folders. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 451,
+      "latest": 500,
+      "display": "second half of the 5th century",
+      "basis": "traditional",
+      "note": "The folder had no dates at all: saint.gr, its only source, gives him no century and names no place but the desert. The Охридски пролог for 5. јун ст. ст. closes its four-line entry: „Мирно сконча у другој половини V века“. The interval is that half-century and no narrower; nothing in either book gives a year (5 October 2026)."
+    }
   }
 }
