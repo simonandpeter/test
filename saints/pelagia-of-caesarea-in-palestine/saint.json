@@ -6,6 +6,11 @@
       "form": "Πελαγία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Μαρτίου, «Αγίες Πελαγία και Θεοδοσία», with the rank word left off."
+    },
+    {
+      "form": "Пелагија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 25 March on pravoslavno.rs, „Свети мученици Пелагија, Теодосија и Дула.“, where it is the first of the three names, with the rank words Свети мученици left off. The heading gives her no epithet and no city, so the bare forename is what the source gives."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.04.2026 (25. март ст. ст.) — „Свети мученици Пелагија, Теодосија и Дула.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The first name in the day's second entry, on the same menologion day the Greek already keeps in this folder, and the same woman: the Greek line here names two women together, «Αγίες Πελαγία και Θεοδοσία», and the Prologue heads the same two in the same order and says they were beheaded together with the sword after prison and torments. The Prologue adds a third name the Greek line does not have, a servant who it says suffered alone and died at Nicomedia; she is the new folder `dula-of-nicomedia` in this same batch, and she takes no `related` row here, because the entry separates her from these two in its own words. The entry gives no year, no reign and no persecutor, so the 361 this folder already holds is untouched, and it names no city for these two either. The stored form is the bare forename, because Свети мученици stands at the head of the three and the heading gives this woman no epithet; Caesarea in Palestine is the corpus's own way of telling her from the other Pelagias and is nowhere on the Prologue's page. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
