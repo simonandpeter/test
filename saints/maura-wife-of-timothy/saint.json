@@ -11,6 +11,11 @@
       "form": "Μαύρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαΐου, «Άγιοι Τιμόθεος και Μαύρα», with the rank word left off."
+    },
+    {
+      "form": "Мавра",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 3. мај ст. ст., „Свети мученици Тимотије и Мавра.“ Свети мученици heads both and belongs to neither name alone — мученици is the `martyr` this folder already carries in `types` and `honorific.js` composes back — so stripping it leaves the bare forename. The kinship clause this corpus keeps in the English display name is the body's, and the village the other two calendars name is on no part of this page. The form meets no other folder in any language, which was measured rather than assumed."
     }
   ],
   "sex": "female",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.05.2026 (3. мај ст. ст.) — „Свети мученици Тимотије и Мавра.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-16&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading enumerates both — „Свети мученици Тимотије и Мавра.“ — so the citation above is that heading whole**, per BRIEF-SERBIAN.md §4 and the coordinator's ruling, and both names are folders this corpus already keeps. The day is Julian 3 May, the same menologion day the Romanian and the Greek keep them on. The identification is not in doubt: a reader of the church and the bride he had been married twenty days, before Arian governor of the Thebaid under Diocletian, his ears pierced with iron and his eyes lost by it, her hair torn out and her fingers cut off, and the two crucified together. **A first date for both folders**: „Чесно пострадаше за Христа 286. године“, where doxologia's account breaks off before either death and saint.gr gives no year at all. New besides, and this is the only one of the three accounts that reaches the end: that they were crucified **facing each other**, „једно према другом“; that they hung alive **nine full days, counselling and encouraging one another**, and gave up their spirits **on the tenth**, where saint.gr has nine days pass and no tenth; and Timothy's answer about the instruments of torture, „И ти не видиш ангеле Божје који ме крепе“, which is a different exchange from doxologia's about the books and the angels. This page has **nothing** of doxologia's cauldron, its coals, its scalded governor or the father Picolpos, and nothing of the books. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -115,5 +130,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 286,
+      "latest": 286,
+      "display": "286",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 3. мај ст. ст. closes the entry „Чесно пострадаше за Христа 286. године.“ — **the first year any calendar read for this folder has given**. doxologia's account breaks off before either death and prints no year at all; saint.gr's notice ends with the nine days on the cross and says expressly nothing of a year. The Prologue's own setting agrees with both: Arian governor of the Thebaid in the time of the emperor Diocletian, whose reign began in 284, so 286 contradicts nothing either page prints. `node .tmp/dd.mjs \"286\"` reads it in both packs."
+    }
   }
 }
