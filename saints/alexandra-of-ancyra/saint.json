@@ -11,6 +11,11 @@
       "form": "Αλεξανδρία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας», with the rank words and the place left off."
+    },
+    {
+      "form": "Александра Анкирская (Коринфская)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 6 ноября ст. ст., «Александра Анкирская (Коринфская), дева, мц.», with the rank and state words left off; the epithets the page gives are kept. The line itself gives the name in the genitive, «Александры»."
     }
   ],
   "sex": "female",
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Her name page lists two days, «18 мая , 6 ноября». The 18 мая is the day the Greek and Romanian calendars keep her on and the day page for it was not read here, so it is recorded as a note and not as a second Russian feast; this folder's Russian row renders on 6 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Мцц. Текусы , Александры , Полактии , Клавдии , Евфросинии , Афанасии и Матроны (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -90,5 +105,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 304,
+      "display": "3rd or early 4th century",
+      "basis": "traditional",
+      "note": "Two readings on one page and neither is chosen. days.pravoslavie.ru prints «(III)» at the end of its line for 6 ноября ст. ст., «Мцц. Текусы , Александры , Полактии , Клавдии , Евфросинии , Афанасии и Матроны (III).», while the life behind five of the seven name pages says the company «жили во 2-й половине III века в городе Анкире» and «мученически скончались за Христа в начале IV века» — lived in the second half of the third century and died at the beginning of the fourth. The upper bound is the page's own: it dates the death of Theodotus, who took their bodies out of the lake after they were drowned, to «7 июня 303 или 304 года». Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }
