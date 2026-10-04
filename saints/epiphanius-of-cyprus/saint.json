@@ -11,6 +11,11 @@
       "form": "Επιφάνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Επιφάνιος Επίσκοπος Κωνσταντίας και Αρχιεπίσκοπος Κύπρου», with the rank words and the sees left off."
+    },
+    {
+      "form": "Епифаније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 12 May, „Свети Епифаније, епископ кипарски.“ — Свети left off, which is not a rank, and „епископ кипарски“ left off, which is the see this corpus puts in `office` and whose rank this folder already carries in `types`. The heading gives no epithet; the Jewish birth, the sister, Hilarion's monastery, Salamis, Paphnutius, Chrysostom and the Panarion are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Епифаније, so the form folds with nothing."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.05.2026 (12. мај ст. ст.) — „Свети Епифаније, епископ кипарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek both keep him on, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NONE, AND TWO BOOKS AGREE ON IT**: „Упокоји се свети Епифаније 403. године“ — and this folder's own Greek note records saint.gr putting his death at sea on 12 May 403, so the two agree exactly and `dates` gains a `death` of 403 where there was no `dates` object at all. **saint.gr's 310 and 367 were NOT lifted.** That page was not opened by this reader; the Greek note records them with their citation for whoever does open it, and a year read out of another reader's note is not a year read. The 403 is taken because **this reader read it on the page he cites**. **AND THE HUNDRED AND FIFTEEN YEARS WERE NOT MADE A BIRTH.** „У шездесетој години постане епископом у граду Саламини, и као епископ управљао је црквом Божјом педесет пет година. Свега је живео на земљи сто петнаест година.“ Sixty plus fifty-five is the hundred and fifteen, so the book is consistent with itself — but 403 less 115 is a birth of 288, and **a lifespan subtracted from a death is a calculation and not a year any book prints**, which is the coordinator's standing refusal over `arsenius-the-great`'s „сто година“. **It also contradicts the 310 the Greek note records**, which would make him ninety-three and not a hundred and fifteen; both numbers stand in the life and nothing was reckoned from either. **New here, and none of it in the Romanian or the Greek account this folder was built from**: that he was born a Jew and was baptised together with his sister; that he was tonsured in his twenty-sixth year; that he later founded a monastery of his own and became famous through all Palestine and Egypt; that fleeing human glory he withdrew into Egypt and **met the great Paphnutius on the road, who prophesied that he would be a hierarch on the island of Cyprus**; that years later he came to Cyprus and was suddenly elected bishop; the see of Salamis, the sixty years and the fifty-five; **and the exchange of letters with John Chrysostom, which is the whole of this entry's weight**. Called to Constantinople before his death by the emperor Arcadius and his wife Eudoxia for a council of bishops that was to condemn Chrysostom, he was kept long at the palace and urged to declare against him; the citizens heard, and Chrysostom heard, that he had agreed; so Chrysostom wrote „Брате Епифаније, чух да си саветовао цара, да се ја прогнам; знај да и ти више нећеш видети престола твога“, and Epiphanius wrote back „Страдалниче Јоване, одолевај увредама; знај да и ти нећеш стићи до места, у које те прогоне“ — **and both prophecies came true**: refusing to agree to the exile, Epiphanius took ship secretly for Cyprus and died aboard, and Chrysostom was sent into exile in Armenia and died on the way. It closes by naming the Panarion, „Ковчежић, по грчки: Панарион“, in which eighty heresies are set out and refuted — the number the folder's `apologist` type rests on. **`wonderworker` AND `ascetic` WERE READ AND REFUSED, and the reading is the opposite of the Julian 9 May's.** This entry has „прочуо ... због свог подвижништва, духовне мудрости, и чудотворства“ — he became famous *because of* his asceticism, his spiritual wisdom and his wonderworking: three nouns inside a causal list, which is a description of why he was known and not a title given him. On the Julian 9 May Christopher's entry opened „Велики чудотворац.“ as a standing predicate in its own sentence, and that one was taken. **`bishop` was refused too**: the heading's „епископ кипарски“ and the body's Salamis are the see, which this corpus puts in `office`, and `archbishop` is already in `types`, so adding the lesser word beside it would be a conflicting rank and not a missing one. **SAINT HILARION IS NAMED BY THE BOOK AND LEFT OUT OF THE LIFE DELIBERATELY.** „замонашио се у манастиру светог Илариона“ — he was tonsured in the monastery *of Saint Hilarion*, which is a **dedication**, and this corpus's standing rule is that a dedication is not a relation; naming him would have demanded a reciprocal `related` row, and the corpus holds twenty-odd Hilarions of whom this reader cannot say which the Palestinian house was named for. The life says „a monastery in Palestine“ and the book's own naming of it is recorded here. **THE GREAT PAPHNUTIUS IS NAMED AND TAKES NO ROW, and he is a new instance of a question already with the author.** The corpus holds ten `paphnutius-*` folders and nothing in this entry tells which of them, if any, the prophet on the Egyptian road is; the unplaced Paphnutii are already on the author's list and this is one more. **`callitropos` and `john-chrysostom` were already `related` rows on this folder and both are linked**; no `related` row was added to anybody. The emperor Arcadius, the empress Eudoxia, the sister and Hilarion are left unlinked, `arcadius-the-emperor` being a folder this entry does not commemorate, exactly as the Julian 8 May left him. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -105,5 +120,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 403,
+      "latest": 403,
+      "display": "403",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „Упокоји се свети Епифаније 403. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at sea on 12 May 403 after thirty-six years in the episcopate, so the two books agree and nothing is widened. **No birth is recorded.** The Prologue gives „Свега је живео на земљи сто петнаест година“, a hundred and fifteen years on earth, consistent with its own sixty years to the episcopate and fifty-five years in it; subtracted from 403 that is a birth of 288, and a lifespan taken off a death is a calculation and not a year any book prints. It also contradicts the 310 that the Greek note records as saint.gr's, which would make him ninety-three. Neither number was turned into a bound. saint.gr's 310 and 367 were not lifted here because that page was not opened by this reader."
+    }
   }
 }

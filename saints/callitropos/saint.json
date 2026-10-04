@@ -10,6 +10,11 @@
       "form": "Καλλίτροπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Οσία Καλλίτροπος», with the rank word left off."
+    },
+    {
+      "form": "Калитропија",
+      "lang": "sr",
+      "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 12 May, which names her in her brother's story and nowhere else: „крстио се заједно са својом сестром Калитропијом“, the name in the instrumental, whose nominative is Калитропија. The entry gives her no rank word, no epithet and no year, and the Prologue's own heading for that day names only her brother. **This is the folder's first Slavonic form in any script** — saint.gr gave only Καλλίτροπος — and the two books spell her differently, Калитропија against Καλλίτροπος. A direct walk of every `names` entry in `saints/` finds no folder holding Калитропија, so the form folds with nothing."
     }
   ],
   "related": [
@@ -44,7 +49,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "note": "The Ohrid Prologue was read for the Julian 12 May on 5 October 2026, and **it names her without commemorating her**: she stands in the body of her brother's entry — „крстио се заједно са својом сестром Калитропијом“, he was baptised together with his sister Callitropia — and the day's three headings are his, Germanus of Constantinople's and the martyr Pancratius's. **So no `venerated` row is claimed and the status stays `undocumented`.** The coordinator's second ruling — that a body telling a person's story at length owes a row where the entry treats them as a subject of the commemoration — was read against this clause and refused: one clause is not a story, and the subject of the entry is her brother. **`not-venerated` was refused too**, being a positive finding that one day's page cannot support: this book may keep her elsewhere and that has not been looked for. **The name form IS taken**, because a form is read off a page and this page prints one: it is the only Slavonic form this folder has, and the Prologue spells her Калитропија where saint.gr gives Καλλίτροπος — Callitropia against Callitropos, which is a difference worth having on the record. The reciprocal `related` rows between her and `epiphanius-of-cyprus` already stand in both directions and nothing was added."
     }
   ],
   "text": {
