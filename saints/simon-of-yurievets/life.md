@@ -1,0 +1,13 @@
+# Simon of Yurievets
+
+days.pravoslavie.ru's calendar for 4 ноября ст. ст. names «Блж. Симона , Христа ради юродивого, Юрьевецкого (1584).», and behind the name link stands an index of two separate readings of his life. Both make him a fool for Christ's sake who went barefoot winter and summer in a single linen shirt, until his skin was blackened and dried up with fasting; both say that unthinking people often beat him for it and that he bore the insults and the mockery meekly, and both make the church porches his chosen place of prayer.
+
+The two do not agree on where he came from. The first has him born in the village of Bratskoye in the Kostroma province, leaving his parents' house in his youth for the dense forests near the village of Elnat, found there by the villagers and brought in, after which he went about their houses helping with the heaviest work and taking no pay; after fifteen years at Elnat he moved to Yuryevets on the Volga. The second says only that he was born near Yuryevets Povolzhsky. Nothing on either page chooses between them, and this folder chooses neither.
+
+For his self-denial, both lives say, he was given foresight and the working of wonders. A great fire in the town died down at his prayer; a priest the first life names «Олимпий» was healed; a townsman it names «Иосиф» was saved from drowning in the Volga. The second adds that his contemporaries saw signs of various kinds when they called on his name, and that he foresaw and foretold things to come.
+
+Before his end he came to the house of a military governor who did not know what he was and in a fit of anger had him beaten. Simon fell gravely ill, called a priest, confessed, received the Holy Mysteries of Christ and died on 4 November 1584. The second life says the governor repented, that the whole town gathered for the burial, and that his body was laid in the Theophany monastery; it adds that in 1635 the patriarch ordered that monastery's abbot to write a description of his life and miracles and blessed the painting of his icon, and that his feast has been kept since that year.
+
+The day page carries a troparion and a kontakion under his name and both are in this folder. The two life pages behind the name link also list «10 мая». The day page for 10 мая ст. ст. was not read, so that day is recorded here as a note and not as a feast, and this folder renders on 4 ноября ст. ст. only.
+
+*After the Православный церковный календарь of the Сретенский monastery for 4 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261104.html) and [the two lives](https://days.pravoslavie.ru/Life/id6879.htm); read 4 October 2026.*

@@ -12,6 +12,11 @@
       "form": "Νίκανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Άγιοι Νίκανδρος επίσκοπος Μύρων και Ερμαίος ο πρεσβύτερος», with the rank word and the see left off."
+    },
+    {
+      "form": "Никандр Мирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Святитель Никандр Мирский, епископ, сщмч.», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Сщмчч. Никандра , еп. Мирского, и Ермея пресвитера (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -97,9 +111,34 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученик Твой, Господи, Никандр/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Тропарь священномученика Никандра»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Nicander, O Lord, in his suffering received an incorruptible crown from thee, our God; for having thy strength he cast down the tormentors and shattered the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of its line for 4 ноября ст. ст., «(I)», repeated in the life's own first words, «Святые священномученики Никандр, епископ Мирский, и Ермей пресвитер (I)». Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }
