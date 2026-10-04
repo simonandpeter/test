@@ -951,6 +951,7 @@ export const sr = {
     'Bishop of Nola': 'Епископ нолски',
     'Bishop of Novgorod': 'Епископ новгородски',
     'Bishop of Nyssa': 'Епископ нисијски',
+    'Bishop of Orekhovo-Zuyevo': 'Епископ орехово-зујевски',
     'Bishop of Ossory': 'Епископ осорски',
     'Bishop of Paneas': 'Епископ панејски',
     'Bishop of Parion': 'Епископ паријански',

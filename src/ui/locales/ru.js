@@ -969,6 +969,7 @@ export const ru = {
     'Bishop of Nola': 'Епископ Ноланский',
     'Bishop of Novgorod': 'Епископ Новгородский',
     'Bishop of Nyssa': 'Епископ Нисский',
+    'Bishop of Orekhovo-Zuyevo': 'Епископ Орехово-Зуевский',
     'Bishop of Ossory': 'Епископ Оссорийский',
     'Bishop of Paneas': 'Епископ Панеадский',
     'Bishop of Parion': 'Епископ Парийский',
