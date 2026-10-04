@@ -11,6 +11,11 @@
       "form": "Ιουστίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιοι Ιούστος, Ιουστίνος, Χαρίτων, Χαρίτω η παρθένος, Ευέλπιστος, Ιέραξ, Παίων και Λιβεριανός», with the rank words left off."
+    },
+    {
+      "form": "Јустин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Свети мученик Јустин, Харитон, Харита, Евелпист, Јеракс, Пеон, Валеријан и Јуст“, which enumerates eight names and puts him first. The rank words stand once at the head of the company — Свети мученик, the `martyr` this corpus puts in `types` — and nothing else in the heading is strippable, so the form is the bare personal name the heading itself prints and no fuller form exists in this source to prefer."
     }
   ],
   "sex": "male",
@@ -24,7 +29,8 @@
     "charito",
     "euelpistus",
     "hierax-1-june",
-    "paion"
+    "paion",
+    "justus-1-june"
   ],
   "attestations": [
     {
@@ -63,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.06.2026 (1. јун ст. ст.) — „Свети мученик Јустин, Харитон, Харита, Евелпист, Јеракс, Пеон, Валеријан и Јуст“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, whose heading names him first. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE COMPANY OF EIGHT, AND ALL EIGHT HAVE FOLDERS. The heading enumerates eight names and the corpus keeps every one of them, which is why this entry is eight upgrades and no new folder: four of them stand in doxologia’s own calendar lines for 1 iunie (justin-companion-of-chariton, chariton-companion-of-justin, valerian-companion-of-justin, justus-1-june) and four were written off saint.gr, which names eight where the Romanian named four (charito, euelpistus, hierax-1-june, paion). All eight were already on the menologion 1/6 day list, so the day list alone found them and no grep was needed — the first time in this wave that has happened on a company. `sr-namesweep.mjs` scores only the first name of an enumerated company, its fourth known failure mode, so it was no use here either way. THE BODY IS FOUR SENTENCES AND IT GIVES THREE THINGS NONE OF THE OTHER TWO BOOKS GIVES: the place and the reign together („Сви пострадали у Риму за време Марка Аврелија и епарха Рустика“, naming Rusticus an епарх where doxologia makes him prefect of the city); the eparch’s one question and Justin’s answer to it, „Не мислимо него знамо“ — we do not think, we know; and A YEAR, 163, which is the first year any book read for any of these eight has printed. THE YEAR IS WRITTEN AS A `death` ON ALL EIGHT, AND IT IS A FIRST DATE FOR EVERY ONE OF THEM. „После тога сви беху обезглављени, 163. године“ is stated flat, of the whole company, with no „око“ and nothing to derive it from; `basis` is `traditional`, the interval is 163 to 163, and all eight folders held `dates: null` before today. No birth, no floruit and no `locations` on any of them. `types` untouched on all eight: the heading’s Свети мученик is the `martyr` they already carry, and it is the only rank word in the heading. The Prologue prints no troparion and no kontakion; the day carries only the verse. A NEW `related` ROW, RECIPROCAL, AND THE PAIR WAS NOT HALF THERE BUT MISSING ENTIRELY. This folder related to six of the seven others and not to `justus-1-june`, because doxologia’s life does not name Justus and saint.gr’s eight-name line was read into Justus’s folder without the three doxologia folders gaining him. The Prologue’s heading enumerates all eight and its body narrates ONE martyrdom for all eight, which is the test that owes a row, so `justus-1-june` is added here and this folder is added on his. The name form is the bare «Јустин» the heading prints; `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for it, and the fuller «Јустин Философ» went to the philosopher of the entry above so that the two strings differ."
     }
   ],
   "hymns": [
@@ -87,5 +103,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 163,
+      "latest": 163,
+      "display": "163",
+      "basis": "traditional",
+      "note": "Охридски пролог for 1. јун ст. ст., of the whole enumerated company of eight: „После тога сви беху обезглављени, 163. године“. Stated flat, with no „око“ and nothing to derive it from. It is the first year any book read for this folder has printed; doxologia's life gives none and saint.gr's line gives none (5 October 2026)."
+    }
   }
 }

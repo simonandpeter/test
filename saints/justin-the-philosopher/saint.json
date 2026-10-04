@@ -11,6 +11,11 @@
       "form": "Ιουστίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουνίου, «Άγιος Ιουστίνος ο Απολογητής και φιλόσοφος», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Јустин Философ",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Свети мученик Јустин Философ“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`, so both are stripped and the bare form keeps the epithet Философ, which is the one thing in the heading that tells him from the Јустин of the company below. THE FULLER FORM IS DELIBERATE AND MEASURED: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for both «Јустин Философ» and «Јустин» today, but a bare «Јустин» here beside the bare «Јустин» the company below needs would be two folders on one string and a fold with nothing to tell them apart. One form, the fullest, as §6 requires. AND A FOLD IS NAMED IN ADVANCE: `justin-popovich` is kept on this same menologion day and his Serbian form is «Јустин Поповић», so when a later reader writes it the two will stand on adjacent strings and must be told apart by their centuries."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.06.2026 (1. јун ст. ст.) — „Свети мученик Јустин Философ“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, a line above the company and a different man. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE TWO Јустинс OF THIS DAY AND THE THIRD THE DAY LIST OFFERS. The Prologue prints Јустин twice on the Julian 1 June — once as the philosopher of this entry and once as the first name of the company below — and TWO COMMEMORATIONS ON ONE CALENDAR MEANS TWO MEN, which is also how doxologia and saint.gr keep them. The entries are told apart by everything: this one is a Samaritan-born Greek philosopher poisoned in a Roman prison, that one is a company of eight beheaded under the eparch Rusticus, and this book puts the two deaths three years apart, 166 against 163. AND THE DAY LIST’S THIRD OFFER IS REFUSED: `justin-popovich` is on the menologion 1/6 with a `greek venerated` row and an `undocumented serbian` one, and HE IS NOT THIS MAN — he is the archimandrite of Ćelije born 1894 and dead 1979, whom a Prologue of the 1920s cannot name. His `serbian` row is left `undocumented`. Taking the day list’s offer there would have put an ancient Alexandrian-school apologist’s life onto a twentieth-century Serbian theologian, which is the worst failure this job has. A BIRTH WIDENED BY FIVE YEARS AND A DEATH BY ONE. The folder held `birth` 100 off saint.gr («γεννήθηκε … το 100 μ.X.» and the heading’s «(100 - 165)») and `death` 165. This book states „105. године по Христу“ for the birth and „пресели се у блажену вечност 166. године“ for the death. Both are stated flat, so both are WIDENED and neither is chosen: `birth` 100 to 105, display «100 or 105»; `death` 165 to 166, display «165 or 166». The existing note’s own open question is answered one way by this book: saint.gr’s prose has him beheaded and its distich has hemlock take him, and THE PROLOGUE AGREES WITH THE DISTICH AND WITH DOXOLOGIA — Crescens poisons him in prison — so two books of three give poison and the manner is no longer one page’s oddity. The folder still records no manner, only the years. TWO MARTYRS HE SAW DIE GET NO ROW, NO FOLDER AND NO NAME IN THE PROSE. The entry says he was present at the martyrdom of two named Christians; the corpus keeps neither, `ls saints | grep -iE 'ptolem|luci'` returns only place-names and other men, and by the coordinator’s third ruling nothing is minted. Both names are in this note and in the commit message and in neither life. The emperors Antoninus and Marcus Aurelius get no row and are used for no year; Crescens the Cynic is already in the prose unlinked off doxologia and gains nothing — six folders share that forename, so the page’s own index poisons the form and no row is owed. `types` untouched: `martyr` and `apologist` are both corroborated, the second by the two apologies this entry counts. No `office`, no `locations`. THE EIGHT ONE-WAY `related` ROWS ON THIS FOLDER ARE LEFT FOR THE AUTHOR, AND THIS BOOK IS WHY. All eight of the company carry `justin-the-philosopher` in their `related`, on saint.gr’s «ελαβαν … μαζί» — they received the crowns together with him — and this folder’s own `related` is empty, so the reader cannot walk back. It was NOT completed here: the Prologue keeps the two as separate entries, narrates no shared martyrdom, and dates the two deaths three years apart, so its own numbers do not corroborate the «together» those eight rows rest on. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -117,17 +132,17 @@
   "dates": {
     "birth": {
       "earliest": 100,
-      "latest": 100,
-      "display": "100",
+      "latest": 105,
+      "display": "100 or 105",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ιουστίνος γεννήθηκε στη Φλαβία Νεάπολη της Παλαιστίνης το 100 μ.X. αι.» The page's heading repeats it, «Άγιος Ιουστίνος ο Απολογητής και φιλόσοφος (100 - 165)»."
+      "note": "saint.gr: «Ο Άγιος Ιουστίνος γεννήθηκε στη Φλαβία Νεάπολη της Παλαιστίνης το 100 μ.X. αι.» The page's heading repeats it, «Άγιος Ιουστίνος ο Απολογητής και φιλόσοφος (100 - 165)». The Охридски пролог for 1. јун ст. ст. gives a different year flat — „Рођен од јелинских родитеља у самаријском граду Сихему, доцније названом Наблус, 105. године по Христу“ — so the interval is widened to hold both and neither is chosen (5 October 2026)."
     },
     "death": {
       "earliest": 165,
-      "latest": 165,
-      "display": "165",
+      "latest": 166,
+      "display": "165 or 166",
       "basis": "traditional",
-      "note": "saint.gr: «ο μέγας φιλόσοφος και ευσεβής χριστιανός συνελήφθη και αφού υπέστη διάφορα βασανιστήρια, αποκεφαλίστηκε το 165 μ.X. αναδεικνυόμενος όχι μόνο απολογητής της ορθόδοξης πίστης αλλά και αθλοφόρος μάρτυρας.» The page's own distich gives a different death, hemlock rather than the sword, and the disagreement is recorded in the attestation note rather than resolved here."
+      "note": "saint.gr: «ο μέγας φιλόσοφος και ευσεβής χριστιανός συνελήφθη και αφού υπέστη διάφορα βασανιστήρια, αποκεφαλίστηκε το 165 μ.X.» The Охридски пролог for 1. јун ст. ст. gives one year later, flat: „Тако сконча свој земни живот овај велики заштитник вере хришћанске, и пресели се у блажену вечност 166. године“, so the interval is widened to hold both. The two books also disagree on the manner and this folder records none: saint.gr's prose has him beheaded, its own distich has hemlock take him, and both doxologia and the Prologue have Crescens the Cynic poison him in prison (5 October 2026)."
     }
   },
   "images": [
