@@ -12,6 +12,11 @@
       "form": "Προτέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Προτέριος ο Ιερομάρτυρας Αρχιεπίσκοπος Αλεξανδρείας», with the rank words and the see left off."
+    },
+    {
+      "form": "Протерије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. фебруар ст. ст., „Свештеномученик Протерије.“, with the rank word Свештеномученик left off; the see is the folder's `office` and the heading does not give it."
     }
   ],
   "sex": "male",
@@ -55,8 +60,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.03.2026 (28. фебруар ст. ст.) — „Свештеномученик Протерије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -12,6 +12,11 @@
       "form": "Νέστωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Νέστωρ ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Нестор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 28. фебруар ст. ст., „Свештеномученик Нестор, епископ магидијски.“, with the rank words Свештеномученик and епископ and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -55,11 +60,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.03.2026 (28. фебруар ст. ст.) — „Свештеномученик Нестор, епископ магидијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 28 February: „Би мучен од епарха Публија, и најзад на крст распет у Пергији 250. године.“ It places him in the reign of Decius, which the year falls inside. The folder carried no dates at all before this reading."
+    }
   }
 }

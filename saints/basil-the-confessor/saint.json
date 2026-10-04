@@ -11,6 +11,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Όσιος Βασίλειος ο Ομολογητής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Василије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 28. фебруар ст. ст., „Свети Василије исповедник.“, with Свети and the rank word исповедник left off; the rank is in the folder's `types`. The heading gives no epithet beyond it."
     }
   ],
   "sex": "male",
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.03.2026 (28. фебруар ст. ст.) — „Свети Василије исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -10,6 +10,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Φεβρουαρίου, «Άγιος Νικόλαος του Πσκωφ», with the rank word and the city left off."
+    },
+    {
+      "form": "Николај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fourth heading for 28. фебруар ст. ст., „Свети блажени Николај, јуродиви псковски.“, with Свети, the rank words блажени and јуродиви and the city left off; fool-for-Christ is the folder's `type` and Pskov is in its English name."
     }
   ],
   "related": [],
@@ -40,8 +45,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.03.2026 (28. фебруар ст. ст.) — „Свети блажени Николај, јуродиви псковски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-13&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "dates": {
