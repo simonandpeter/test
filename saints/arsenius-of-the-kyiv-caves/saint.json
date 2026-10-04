@@ -12,6 +12,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος ο εν τη Λαύρα του Κιέβου ασκήσας», with the rank word left off. No Slavonic form is recorded: saint.gr prints none."
+    },
+    {
+      "form": "Арсеније Трудољубиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 8. мај ст. ст., „Преподобни Арсеније Трудољубиви.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back; **Трудољубиви — the industrious, the lover of labour — is kept**, because it is not a rank word in BRIEF-SERBIAN.md §5's table, `honorific.js` does not compose it, and it is the one thing on the page that tells him from the day's other Arsenius. **Keeping it is what holds this folder out of the fold `arsenius-the-great` and `arsenius-of-corfu` now share**, which was measured and not assumed: the bare «Арсеније» would have made a third. „Монах кијевски“ is the body's second sentence and the lavra is the English name's, so neither is in the form. That is the second time in two days that the Prologue printed two men of one name on one day and gave one of them a by-name."
     }
   ],
   "dates": {
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.05.2026 (8. мај ст. ст.) — „Преподобни Арсеније Трудољубиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-21&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 8 May, the same menologion day the Greek keeps him on, and this is the second account of him this corpus has read.** No row was moved; the Romanian calendar has never held him. **The identification is the by-name, the city and the century together**: „Преподобни Арсеније Трудољубиви. Монах кијевски.“ against saint.gr's «Όσιος Αρσένιος ο εν τη Λαύρα του Κιέβου ασκήσας», whose life reads «Ο Όσιος Αρσένιος, λάτρης της εργασίας, έζησε κατά τον 14ο αιώνα μ.Χ.» — a lover of work, which is what Трудољубиви says, a monk of Kyiv, and the fourteenth century in both books. **He is not the day's other Arsenius**: the Prologue prints both on this one day, „Преподобни Арсеније Велики.“ and this one, which is two commemorations on one calendar on one day and so two men by this corpus's settled rule — and it is also how each was identified. **NO DATE WAS TOUCHED**: „Подвизавао се и упокојио у XIV веку“ gives the same fourteenth century the folder's `floruit` already holds from saint.gr, so there was nothing to add and nothing to narrow. New to the corpus from this page, and it is all of it new: that he **never gave himself any rest but laboured without ceasing**, and that he **took food only once a day, after sunset**. **This folder had no Slavonic form at all** — its own name note says saint.gr prints none — and now has a Serbian one. `types` was not touched: Преподобни is the `venerable` it already holds, and Трудољубиви is a by-name, not a rank. **No `locations`**: Kyiv is in the body as the city he was a monk of, and the folder's English name already carries the lavra. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

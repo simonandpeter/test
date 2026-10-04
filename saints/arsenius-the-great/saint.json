@@ -11,6 +11,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαΐου, «Όσιος Αρσένιος ο Μέγας», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Арсеније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 8. мај ст. ст., „Преподобни Арсеније Велики.“ Преподобни is the `venerable` this folder already carries in `types` and `honorific.js` composes back, and **Велики is left off because it is not part of the name either**: BRIEF-SERBIAN.md §5 reads it as the epithet \"the Great\", which belongs in the display name, where this folder already has it. So the bare forename is the whole of the form. One other folder already holds it — `arsenius-of-corfu`, equally bare — and the fold was measured before this draft was written rather than discovered by the gate; the row is in this batch's commit message."
     }
   ],
   "sex": "male",
@@ -26,14 +31,14 @@
       "latest": 354,
       "display": "354",
       "basis": "traditional",
-      "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». The page gives no year for his death, only that he was «o sută de ani și mai bine»."
+      "note": "doxologia.ro, Viața Sfântului Cuvios Arsenie cel Mare: «Cuviosul Arsenie s-a născut în Roma cea Veche, în anul 354, din părinți creștini și dreptcredincioși». The page gives no year for his death, only that he was «o sută de ani și mai bine». The Ohrid Prologue gives no year of birth either, only „Свега је поживео сто година“."
     },
     "death": {
       "earliest": 445,
-      "latest": 445,
-      "display": "445",
+      "latest": 448,
+      "display": "445 or 448",
       "basis": "traditional",
-      "note": "saint.gr: «κατέφυγε στην Πέτρα, κοντά στη Μέμφιδα, και μετά στην Κανώπη εκεί όπου το 445 μ.Χ. κοιμήθηκε εν ειρήνη», and the head line of the same page gives «(; - 445)». doxologia.ro, which the birth interval comes from, gives no year of death at all."
+      "note": "Two sources one three years apart and neither chosen. saint.gr: «κατέφυγε στην Πέτρα, κοντά στη Μέμφιδα, και μετά στην Κανώπη εκεί όπου το 445 μ.Χ. κοιμήθηκε εν ειρήνη», with the head line «(; - 445)»; the Охридски пролог за 8. мај ст. ст.: „скончао је мирно после дуговременог труда и добровољно наложеног на себе мучеништва 448. године.“ doxologia.ro gives no year of death at all. The interval carries both readings. `node .tmp/dd.mjs \"445 or 448\"` reads it in both packs. **The Prologue's „сто година“ was not used as a third bound**: a lifespan added to the birth of 354 would give 454, which is a calculation and not a year any book prints."
     }
   },
   "attestations": [
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.05.2026 (8. мај ст. ст.) — „Преподобни Арсеније Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-21&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 8 May, the same menologion day the Romanian and the Greek keep him on**, and this is the third account of him read for this folder. No existing row was moved. The identification is beyond doubt: a Roman of a patrician family, deacon of the great church in Rome, the tutor of Theodosius's sons Arcadius and Honorius, the flight to Egypt, Scetis, and a hundred years of life. **A DEATH WIDENED AND NEITHER YEAR CHOSEN**: „скончао је мирно ... 448. године“ against saint.gr's «στην Κανώπη εκεί όπου το 445 μ.Χ. κοιμήθηκε εν ειρήνη» and its head line «(; - 445)», so `death` is now 445–448 and reads „445 or 448“; doxologia, which the birth of 354 comes from, gives no year of death at all. `node .tmp/dd.mjs \"445 or 448\"` reads it in both packs. **The hundred years were not turned into a bound**: „Свега је поживео сто година“ with a birth of 354 would give 454, a fourth reading, and a lifespan is not a year the book prints. New to the corpus from this page: that his family was **patrician**; that Theodosius **made him a senator** and surrounded him with great wealth, honours and luxury, which pressed on his heart more than it satisfied it; that **Arcadius committed some fault and Arsenius punished him for it**, and that the offended Arcadius plotted a heavy revenge, which is why Arsenius **put on beggar's clothes**, went down to the shore, took ship and sailed to Egypt; that at Scetis he became **the disciple of the famous John Colobos**; his answer when word came that a rich kinsman had left him everything — „Па ја сам пре њега умро, како му, дакле, ја могу бити наследником?“, I died before him, so how can I be his heir; that in his desert cell, „као у гробницу“, as in a tomb, he **plaited baskets of palm leaves all day and prayed all night**, avoided men and all talk with them, and came out only on feast days for communion; and the question he kept putting to himself so as not to grow idle, „Арсеније, зашто си дошао у пустињу?“ **`related_add: [\"john-colobos\"]`**: the discipleship is this man's story and not furniture, so the row is owed, and `john-colobos` already carried `arsenius-the-great` in its own `related` while this folder did not carry him — **a one-sided row made reciprocal rather than a new relation invented**. He is linked in the appended paragraph. **Theodosius, Arcadius and Honorius were already named in this folder's life** from the Romanian reading, with a row for Theodosius and none for the two sons, and that was left exactly as it was: `arcadius-the-emperor` is a folder this entry does not commemorate, and the suite is green as it stands. `types` was not touched: Преподобни is the `venerable` the folder already holds and Велики is the epithet \"the Great\", which BRIEF-SERBIAN.md §5 says is not a rank. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -125,6 +140,7 @@
     "arsenios-of-paros",
     "gregory-palamas",
     "nicodemus-the-hagiorite",
-    "theodosius-the-great"
+    "theodosius-the-great",
+    "john-colobos"
   ]
 }
