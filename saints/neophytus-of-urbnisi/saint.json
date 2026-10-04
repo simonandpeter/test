@@ -7,6 +7,11 @@
       "form": "Neofit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Sfințit Mucenic Neofit, Episcop de Urbnisi»."
+    },
+    {
+      "form": "Неофит Урбнисский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 28 октября ст. ст., «Святитель Неофит Урбнисский, епископ, сщмч.», with the rank words and the grade left off. The line itself declines the name and abbreviates the see."
     }
   ],
   "sex": "male",
@@ -16,18 +21,29 @@
   ],
   "dates": {
     "death": {
-      "earliest": 601,
+      "earliest": 587,
       "latest": 700,
-      "display": "7th century",
+      "display": "587 or the 7th century",
       "basis": "traditional",
-      "note": "doxologia.ro: «Sfântul Sfințit Mucenic Neofit a trăit în veacul al VII-lea şi se trăgea din neamul perşilor, care se închinau înaintea focului». The page gives no year, only the century."
+      "note": "Two calendars a century apart, and neither is preferred. doxologia.ro: «Sfântul Sfințit Mucenic Neofit a trăit în veacul al VII-lea şi se trăgea din neamul perşilor, care se închinau înaintea focului», with no year. days.pravoslavie.ru's line for 28 октября ст. ст. prints «(587)», and its life ends «Это произошло в 587 году» and has him called to the see by the Catholicos «Самуил IV (582-591)», whose dates bracket that year. The interval is the union of the two readings."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Сщмч. Неофита , еп. Урбнисского (587) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The line stands in the day's second paragraph, which carries no typikon icon, so no rank is recorded. «(Груз.)» marks the commemoration as the Georgian church's, which the life's closing sentence repeats: «Грузинская Церковь празднует память священномученика Неофита, епископа Урбнисского, 28 октября»."
+      },
+      "note": "The same man as the Romanian life beyond doubt — the Persian commander Omar, the campaign under Ahmad or Ahmet, the vision of angels and of the elder over the caves, the baptism and the tonsure under a name meaning the newly converted, the see of Urbnisi, the stoning in the manner of the first martyr. **The two calendars are a century apart**: doxologia.ro puts him «în veacul al VII-lea» and the Russian line and life give 587 and set him under the Catholicos Samuel IV, «(582-591)». The interval now carries both and chooses neither. The Russian also names the superiorship the Romanian does not — he was made abbot of the house before the see — and gives the manner of his burial, under the altar of the monastery's cathedral church."
     },
     {
       "church": "romanian",

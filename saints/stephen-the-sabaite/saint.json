@@ -6,6 +6,11 @@
       "form": "Ștefan Savaitul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 28 octombrie, «Sfântul Cuvios Ştefan Savaitul, imnograful»."
+    },
+    {
+      "form": "Стефан Савваит",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 28 октября ст. ст., «Стефан Савваит, прп.», with the rank word left off; his life page is headed «Преподобный Стефан Савваит», which gives the same form. The line itself declines the name."
     }
   ],
   "sex": "male",
@@ -17,8 +22,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Прп. Стефана Савваита, творца канонов (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "The icon before this line is «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service with no typikon mark — so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Romanian day this folder was written from and adds what it lacked: the century, «(IX)», the lavra, and two hymns. His life page carries this day alone. The line's «творца канонов», a maker of canons, is the `hymnographer` the folder already holds in `types`."
     },
     {
       "church": "romanian",
@@ -61,9 +77,51 @@
         "text": "Guide of Orthodoxy, teacher of true reverence for God and of purity, light of the world, God-inspired adornment of monks, wise father Stephen: by your teachings you gave light to all. Spiritual harp, pray to Christ God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Воздержанием житие украси и страсти умертвив,/ посрамил еси вражия прилоги, отче Стефане,/ и преложися к Богу, чудотворец показася,/ в вечней славе со Ангелы ликуя,/ с ними же моли помиловати души нагла.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Тропарь преподобного Стефана Савваита, творца канонов»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026,
+        "note": "His own, and it names him. The last word is «нагла» as the page prints it, where the sense wants «наша»; it is copied as it stands, because a reading that looks wrong here is the source's and not the scrape's."
+      },
+      "english": {
+        "text": "You adorned your life with abstinence and put the passions to death, and so put the enemy's assaults to shame, father Stephen; you passed over to God and were shown to be a wonderworker, rejoicing with the angels in eternal glory. With them pray that our souls be shown mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Насадил еси добродетелей рай/ и напоил еси токами слез твоих,/ яко жизни, всеславне, древо получив,/ спаси молитвами твоими от тли стадо твое,/ избави от обстояний тепле чтущих тя, Стефане,/ тя бо предстателя величайша, мудре,/ вси верою и любовию стяжахом.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 октября ст. ст. — «Кондак преподобного Стефана Савваита»",
+        "url": "https://days.pravoslavie.ru/Days/20261028.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You planted a paradise of virtues and watered it with the streams of your tears, and so, all-glorious one, you obtained the tree of life. By your prayers save your flock from corruption and deliver from troubles those who honour you with warmth, Stephen; for we have all gained you, O wise one, as a greatest intercessor, with faith and with love.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 801,
+      "latest": 900,
+      "display": "9th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 28 октября ст. ст. gives «(IX)», and his life page — which is one sentence long — says the same: «подвизался в лавре святого Саввы в Палестине в IХ веке». Neither page gives a year, so this is the century and not a death."
+    }
   }
 }
