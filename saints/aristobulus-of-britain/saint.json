@@ -12,6 +12,11 @@
       "form": "Αριστόβουλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιοι Στάχυς, Απελλής, Αμπλίας, Ουρβανός, Νάρκισσος και Αριστόβουλος οι Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Аристовул",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 16 March on pravoslavno.rs, „Свети апостол Аристовул.“, with Свети left off, which is not a rank, and with the rank word апостол left off. The heading gives no epithet and no see — Britain is in the body — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.03.2026 (16. март ст. ст.) — „Свети апостол Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, and plainly this apostle: one of the Seventy, brother of the apostle Barnabas, born in Cyprus, a follower of the apostle Paul who mentions him in the letter to the Romans, and set by Paul over Britain as its bishop — which is the office this folder already carries. The Romanian and the Greek keep him on 31 October, in a line of six of the Seventy together; the Prologue keeps him alone on 16 March, and two churches keeping one man on two days is ordinary and is not a second feast on one church. The entry gives no year of any kind, so the folder stays undated, as it was. `related` rows go both ways to `barnabas-the-apostle`, whose brother the entry makes him, and to `paul-the-apostle`, who ordained him and names him in the epistle: both are this saint's own story and not furniture. The stored form is the bare forename, because Свети is not a rank, апостол is one this folder's `types` already carry, and the heading gives no epithet and no see. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -114,5 +129,9 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "barnabas-the-apostle",
+    "paul-the-apostle"
+  ]
 }

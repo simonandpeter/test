@@ -11,6 +11,11 @@
       "form": "Τρόφιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιοι Τρόφιμος και Θαλλός που μαρτύρησαν στη Λαοδικεία», with the rank words left off."
+    },
+    {
+      "form": "Трофин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 16 March on pravoslavno.rs, „Свештеномученик Трофин и Тал.“, with the rank word Свештеномученик left off, which stands at the head of the pair. The spelling is the page's own — Трофин, with an n, against the m every other source in this folder has — and is copied as printed rather than corrected. The heading gives no city, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.03.2026 (16. март ст. ст.) — „Свештеномученик Трофин и Тал.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, an enumerated company of two, so two rows. Read as this pair: brothers born in Syria, stoned — and the stones turned back on the throwers — then both crucified, teaching the Christians from their crosses, which is the story saint.gr already tells of the Trophimus and Thallus who were martyred at Laodicea and whose Greek and Romanian rows this folder carries on 11 March. Two things are recorded and neither is resolved. The Prologue spells the first brother's name „Трофин“, with an n, where every other source in this folder has an m: the form is stored as the page prints it. And it puts their passion „у граду Вофору“, in a city Вофор, where saint.gr puts it at Laodicea; the Prologue names no Laodicea and the two cities were not reconciled. Its 300 falls inside the reign of Diocletian this folder already holds, so no date was touched. The stored form is the bare forename: Свештеномученик heads the pair and the heading gives neither brother a city. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
