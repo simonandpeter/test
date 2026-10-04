@@ -10,13 +10,29 @@
       "form": "Μαρτύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Όσιοι Μαρτύριος ο Έγκλειστος και Μαρτύριος ο διάκονος», with the rank word and the epithet «Έγκλειστος» left off."
+    },
+    {
+      "form": "Мартирий Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 25 октября ст. ст., «Мартирий Печерский, затворник», with the state of life left off. The line itself declines it, as «Прпп. ... Мартирия затворника, Печерских»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 28 августа (Печер.(Д)) , 25 октября», the August day being the synaxis of the venerable of the Far caves. One row per church is the schema, so the August day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Прпп. Мартирия диакона и Мартирия затворника, Печерских (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "**His stored Russian form folds with the deacon's**, «Мартирий Печерский», because the calendar separates the two only by «затворник» and «диакон», a state of life and a grade, neither of which is stored in a name form; the fold is recorded in the run's deliberate-folds table. He is told from the subdeacon of Constantinople the same day keeps by the city in the form. The day page prints two hymns for the deacon and none for him. His whole page is two sentences."
     },
     {
       "church": "romanian",
@@ -49,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th or 14th century",
+      "basis": "traditional",
+      "note": "His own page says «Жил и подвизался в XIII-XIV вв. в Киево-Печерском монастыре» and the day's line gives the two of them «(XIII-XIV)» together; the two readings agree here, where they disagree for the deacon. No year of birth or death is given anywhere, so this is a floruit and not a death. Read 4 October 2026."
+    }
   }
 }

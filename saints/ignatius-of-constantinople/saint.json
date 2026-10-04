@@ -12,6 +12,11 @@
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Οκτωβρίου, «Άγιος Ιγνάτιος Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Игнатий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Святитель Игнатий Константинопольский, патриарх», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Свт. Игнатия , патриарха Константинопольского (877-878).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "note": "His life page there heads «День памяти: 23 октября» and no other day, so this row carries no second-day note. The day page prints no troparion and no kontakion for him."
     },
     {
       "church": "romanian",
@@ -78,11 +93,11 @@
       "note": "saint.gr: «Ήταν ο νεότερος γιος του βασιλιά Μιχαήλ Α' του Ραγκαβέ και της Προκοπίας… και γεννήθηκε το 799 μ.Χ.»."
     },
     "death": {
-      "earliest": 878,
+      "earliest": 877,
       "latest": 878,
-      "display": "878",
+      "display": "877 or 878",
       "basis": "traditional",
-      "note": "saint.gr: «Πέθανε το 878 μ.Χ. και τον διαδέχτηκε ένας άλλος μεγάλος αστέρας της Ορθοδοξίας, ο Μέγας Φώτιος»; the page's heading prints «(799 - 878)»."
+      "note": "Two calendars, one year apart, and neither is chosen. saint.gr says «Πέθανε το 878 μ.Χ.» and heads its page «(799 - 878)». days.pravoslavie.ru's life for 23 октября ст. ст. says «Скончался он в 877 году, в монастыре», and dates his two patriarchates «(847-857; 867-877)»; the pair «(877-878)» its day line prints after his name is that line's own and is not read here as a span of death. Read 4 October 2026."
     }
   }
 }

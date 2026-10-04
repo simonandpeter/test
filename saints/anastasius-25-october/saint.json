@@ -10,13 +10,29 @@
       "form": "Αναστάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιος Αναστάσιος», with the rank word left off."
+    },
+    {
+      "form": "Анастасий Аквилейский, Салонский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 25 октября ст. ст., «Анастасий Аквилейский, Салонский, мч.», with the rank word left off; the two epithets are both the calendar's and are kept as it gives them."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 25 октября , 5 декабря». One row per church is the schema, so the December day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Мч. Анастасия (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "**The same man, and the Russian page supplies what saint.gr's notice lacked.** saint.gr gave no place, no year and no names: a martyr who came of his own will before the tyrants, was beheaded and thrown into the sea, whose body a pious woman recovered and buried honourably, building a church over it. This page gives the century, the two cities and the woman's name: Aquileia in northern Italy, the missionary work at Salona in Dalmatia for which he was seized, and «богатая матрона Аскалопия», who found the body and buried it in her own house church. The one difference is the manner of death: saint.gr says beheading and this page says only that he was condemned to death and that the pagans threw the body into the sea, so neither is contradicted. **His `display_name` still carries the day as its tail, `Anastasius (25 October)`, although the name link now offers «Анастасий Аквилейский, Салонский»** — renaming a folder is not an upgrade tool's work, and it is flagged for the author."
     },
     {
       "church": "romanian",
@@ -46,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 25 октября ст. ст. «(III)» and opens his life «Святой мученик Анастасий жил в III веке в городе Аквилее (Северная Италия)». saint.gr, read for this folder's Greek row, gives no year at all, which is why the folder stood undated until this row. Read 4 October 2026."
+    }
   }
 }

@@ -1,0 +1,11 @@
+# Arethas of the Kyiv Caves
+
+He came of Polotsk, and the Russian church calendar of the Сретенский monastery, which keeps him on 24 октября ст. ст. with two other recluses of the Near caves, tells of him the one story the service and the icon both remember. Living in the monastery of the Kyiv caves, he kept a great deal of money in his cell; and one night thieves robbed him of it. Grieving for the lost property, he began to murmur against the Lord, and for that he was struck with a grievous illness.
+
+At the point of death he saw angels and demons come to him and begin to dispute with one another. The demons said that for his avarice and his murmuring against God he ought to be handed over to them; and the angels, turning to him, said: «Несчастный человек, если бы ты возблагодарил Бога за украденное имущество, это вменилось бы тебе в милостыню» — unhappy man, if you had given thanks to God for the stolen goods, it would have been reckoned to you as almsgiving. After the vision he was given back to life. He spent his last days in enclosure, in contrition and repentance for his sins, having renounced everything earthly.
+
+The page gives no year of his death but a bound: not later than 1190. The painters' manual describes him as «Подобием надсед, брада подоле Козмины немного, ризы преподобнические» — half grey, the beard a little longer than another saint's, in a monastic habit. His relics lie in the Near caves, which the page also calls the caves of the first of its founders, and the day page carries his own troparion and kontakion, both of them about the stolen money and the thanksgiving he did not give.
+
+He is one of three the day's line keeps together. [Sisoes](/saints/sisoes-of-the-kyiv-caves) is called in the common service to the venerable of those caves one who shone in fasting, and [Theophilus](/saints/theophilus-of-the-kyiv-caves) is named in the same service as excellent in miracles; neither has a story of his own anywhere on these pages.
+
+*After the Православный церковный календарь of the Сретенский monastery for 24 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261024.html) and [the life the three share](https://days.pravoslavie.ru/Life/life4583.htm); read 4 October 2026.*

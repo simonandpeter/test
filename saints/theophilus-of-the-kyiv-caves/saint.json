@@ -1,0 +1,65 @@
+{
+  "slug": "theophilus-of-the-kyiv-caves",
+  "display_name": "Theophilus of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "office": "Recluse",
+  "names": [
+    {
+      "form": "Феофил Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Преподобный Феофил Печерский, затворник», with the rank word and the state of life left off. The line itself declines it, as «Прпп. ... и Феофила (XII-XIII), затворников Печерских»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 28 сентября (Печер.(Б)) , 24 октября», the September day being the synaxis of the venerable of the Near caves; the life the three of them share adds the second Sunday of Great Lent, which is reckoned from Pascha and which this schema cannot hold. One row per church is the schema, so the September day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Прпп. Арефы (XII), Сисоя (XIII) и Феофила (XII-XIII), затворников Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "The day page prints no hymn for him, and his own page is three sentences long. «В чудесех изящный», the phrase the shared life quotes out of the common service, is an epithet of the service and not a rank word, so it is said in the life and kept out of `types`."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1300,
+      "display": "12th or 13th century",
+      "basis": "traditional",
+      "note": "The day's line gives him «(XII-XIII)», his own page says «Подвизался в Киево-Печерском монастыре в ХII-ХIII веках», and the life the three of them share heads all three the same way; the two readings agree here, where they disagree for the second of the three. No year of birth or death is given anywhere, so this is a floruit and not a death. Read 4 October 2026."
+    }
+  },
+  "related": [
+    "arethas-of-the-kyiv-caves",
+    "sisoes-of-the-kyiv-caves"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

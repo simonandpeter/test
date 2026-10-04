@@ -1,0 +1,61 @@
+{
+  "slug": "zosimas-verkhovsky",
+  "display_name": "Zosimas (Verkhovsky)",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "office": "Schemamonk",
+  "names": [
+    {
+      "form": "Зосима Верховской",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Зосима Верховской, схимонах, прп.», with the rank words left off. The line itself declines the name and gives it without the surname, as «Прп. Зосимы»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «24 августа (Моск.)», marked as the Moscow church's. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Прп. Зосимы (1833).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "The calendar carries no life for him: the name link behind his line points at a name page with the two days and a link to icons, and no `Life/` href follows his name on the day page. «Схимонах» is the office; the line's «Прп.» is the rank in `types`."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1833,
+      "latest": 1833,
+      "display": "1833",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after his name on 24 октября ст. ст., «Прп. Зосимы (1833).» The calendar carries no life page for him and gives no day. Read 4 October 2026."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

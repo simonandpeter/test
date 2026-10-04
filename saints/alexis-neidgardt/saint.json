@@ -1,0 +1,64 @@
+{
+  "slug": "alexis-neidgardt",
+  "display_name": "Alexis (Neidgardt)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Алексий (Нейдгардт)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Алексий (Нейдгардт), мч.», with the rank word left off. The line itself declines the name and gives it without the surname, as «и мч. Алексия»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page heads «Дни памяти: 26 января (Новомуч.) , 24 октября», the January day being the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Сщмчч. Лаврентия , еп. Балахнинского, Алексия пресвитера и мч. Алексия (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "He is the last of the three and the second of its two men called Алексий. The line sets him apart from the other by its rank words: the first two it calls Сщмчч., hieromartyrs, and him alone мч., a martyr, so he is a layman, and his link carries no grade and no office to add to that. No `Life/` href follows his name, and the bishop's life, which is the only narrative the calendar carries for this line, does not name him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 24 октября ст. ст. The calendar carries no life page for him and no narrative names him, so his year is the line's and not the attested 6 November the two who are named have."
+    }
+  },
+  "related": [
+    "laurence-knyazev",
+    "alexis-porfiryev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

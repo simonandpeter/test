@@ -1,0 +1,11 @@
+# Elisha of Lavrishevo
+
+The Russian church calendar of the Сретенский monastery keeps him on 23 октября ст. ст., and the life it carries is careful to say where its information comes from. An archimandrite's historical and statistical description of the diocese of Minsk reports that near Novogrudok, on the spot «где ныне Лавришевская приходская Успенская церковь» — where the Lavrishevo parish church of the Dormition now stands — there was once a men's monastery, founded about the year 1225 by a man called Elisha.
+
+The same description reports what an older life of him in Slavonic said, and the calendar passes it on as a report and not as a fact of its own. Elisha was a son of the prince the page calls «Тройнат» and held a high office at the court of the prince «Миндовг». When he became a Christian he left the court and withdrew into the wilderness; there a certain Orthodox monk found him, and the two of them together founded a lavra. A prince the page calls «Войшелк» was among its brethren, though he lived apart from the rest in a place of his own. Elisha was killed by his own ward, a serving youth, in the night before 23 October, about the year 1250.
+
+After his death his relics were glorified by healings, and an ancient account already told of a man possessed who was cured after touching them by accident. About 1505, when Tatars who had laid waste the country round Novogrudok came up to the Lavrishevo monastery, the page says the Lord worked a second wonder through him: it seemed to the Tatars that the monastery yard was full of picked cavalry, and they fled in fear.
+
+That is probably what occasioned his canonisation, by the metropolitan the page names as «Иосиф Солтан», at a council held in 1514 — the page is unsure enough of the place to print it with a question mark, «в Вильно(?)». His relics, which had lain open before, were hidden in the ground during one of the wars, and after the monastery was burnt they were never found again. Whether his memory was kept only locally or a general celebration was appointed for him, the calendar says plainly, is not known.
+
+*After the Православный церковный календарь of the Сретенский monastery for 23 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261023.html) and [the life](https://days.pravoslavie.ru/Life/life6576.htm); read 4 October 2026.*

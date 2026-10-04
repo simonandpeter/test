@@ -1,0 +1,11 @@
+# Alexis (Porfiryev)
+
+The Russian church calendar of the Сретенский monastery names him second of three on 24 октября ст. ст., in a line that keeps a bishop, a priest and a layman of 1918 together. The line declines his name and gives it without a surname; the title on the name link behind his place supplies both the surname and the grade, «Алексий (Порфирьев), протоиерей, сщмч.». Two of the three are called Алексий, and the line itself tells them apart: this one it calls пресвитера, the other мч. The link alone says протоиерей, an archpriest, which is why this folder's office says so and its types do not.
+
+The calendar carries no life under his name, but it is not silent about him. The life of the bishop he died with says that when the sentence of shooting had been announced to them both, the bishop communicated himself and this priest from the Holy Gifts he had with him; that on 24 October, 6 November in the new style, 1918, they were led out together into a garden where the grave was already dug; and that the two bodies were taken afterwards to the Silent Island and thrown into the Volga.
+
+His own name page adds one sentence more, out of an article it links on Православие.Ru called «Свечи на воде»: «Протоиерею Алексию объявили о расстреле и предложили публично отказаться от священного сана, чтобы сохранить жизнь. В ответ получили категорический отказ» — the archpriest Alexis was told of the shooting and offered his life for a public renunciation of his orders, and the answer they got was a flat refusal. The same offer and the same refusal are in the bishop's life, made to the bishop.
+
+Nothing on either page says where he was born or where he served, and the article itself was not followed, because it is not the calendar. The day page's thirteen troparia and kontakia belong to the four older entries it heads and to the icon it keeps, and none of them to this line of 1918. The third man of the line, [Alexis](/saints/alexis-neidgardt) the layman, is named in neither narrative.
+
+*After the Православный церковный календарь of the Сретенский monastery for 24 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261024.html), [the bishop's life](https://days.pravoslavie.ru/Life/life4843.htm) and [his own name page](https://days.pravoslavie.ru/name/9275.html); read 4 October 2026.*

@@ -11,6 +11,11 @@
       "form": "Ταβιθά",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Αγία Ταβιθά», with the rank word left off."
+    },
+    {
+      "form": "Тавифа Иоппийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 25 октября ст. ст., «Тавифа Иоппийская»; the link carries no rank word to leave off."
     }
   ],
   "sex": "female",
@@ -20,8 +25,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Her life page heads «Дни памяти: 20 апреля , 25 октября». One row per church is the schema, so the April day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Прав. Тавифы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "The line's rank word is «Прав.», righteous, where this folder's `types` holds `venerable` from the Greek calendar's reading; both are said in the life and neither is changed, because a rank is a reading of the source that gave it. The name link adds the city, «Тавифа Иоппийская»."
     },
     {
       "church": "romanian",
@@ -60,5 +76,51 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes her line for 25 октября ст. ст. «(I)» and opens her life «Святая праведная Тавифа (I), женщина добродетельная и милосердная, принадлежала к христианской общине в Иоппии». The century is the whole of what the page gives, and it gives no year of birth and none of death — the Acts account has her raised from the dead, so a death year would be the wrong shape anyway. This folder stood undated until this row. Read 4 October 2026."
+    }
+  },
+  "related": [
+    "peter-the-apostle"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Днесь вера Христова утверждается камнем веры,/ и ликовствует в веселии Иоппия,/ псаломски славословят Жизнодавца Сына Божия вернии,/ видяще совершаемо велие чудо:/ первоверховный апостол глаголет,/ и умершая востает от гроба,/ юже Низложитель смерти дарует Церкви,/ да украшаются во образ ея добродетельми люди./ Приидите убо, христиане,/ принесем ко святей моления наша:/ блаженная Тавифо и милосердная,/ вознеси наша воздыхания Пресвятей Троице/ и молися со дерзновением,/ да сынове Света Превечнаго будем,/ да сподобимся Божия милости,/ да пребываем в любви Божественней,/ и да царствует мир во вселенней.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Тропарь праведной Тавифы»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the faith of Christ is confirmed by the rock of faith, and Joppa keeps festival in gladness; the faithful glorify in psalms the Giver of life, the Son of God, seeing a great wonder accomplished: the chief apostle speaks, and the dead woman rises from the grave, whom the Overthrower of death gives to the Church, that the people may be adorned with virtues after her example. Come then, Christians, let us bring our prayers to the saint: blessed and merciful Tabitha, carry up our sighs to the Most Holy Trinity and pray with boldness, that we may be sons of the pre-eternal Light, that we may be counted worthy of God's mercy, that we may abide in the love of God, and that peace may reign in the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Ужасахуся Иоппийстии людие, и дивляхуся Ангели Божии,/ егда исцеливый Еннея воззва от мертвых серну нарицаемую, милосердием преукрашенную,/ о нейже к нему взываху вдовицы неимущыя./ И ныне, Тавифо блаженная, услыши молитвы наша, к тебе приносимыя,/ и испроси у всяческих благ Подателя милости и щедроты верным Его,/ да, блажаще тя, вопием ти:/ радуйся, добродетели нас научающая.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Кондак праведной Тавифы»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The people of Joppa were amazed and the angels of God marvelled when he who had healed Aeneas called back from the dead the woman called a gazelle, adorned with mercy, for whom the widows in their want cried out to him. And now, blessed Tabitha, hear the prayers we bring to you, and ask of the Giver of all good things mercy and compassion for His faithful, that blessing you we may cry: rejoice, you who teach us virtue.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

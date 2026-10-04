@@ -834,6 +834,7 @@ export const sr = {
     'Bishop of Athens': 'Епископ атински',
     'Bishop of Auxerre': 'Епископ оксерски',
     'Bishop of Azkuri': 'Епископ азкурски',
+    'Bishop of Balakhna': 'Епископ балахнински',
     'Bishop of Banja Luka': 'Епископ бањалучки',
     'Bishop of Barcelona': 'Епископ барселонски',
     'Bishop of Belgorod': 'Епископ белгородски',

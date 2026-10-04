@@ -1,0 +1,77 @@
+{
+  "slug": "elisha-of-lavrishevo",
+  "display_name": "Elisha of Lavrishevo",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Елисей Лавришевский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Елисей Лавришевский, прп.», with the rank word left off. The line itself declines it, as «Прп. Елисея Лавришевского»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 8 июня (Белорус.) , 8 июня , 23 октября». One row per church is the schema, so the June day — kept twice over, once marked as the Belarusian church's — is recorded here and he does not render on it. The day page's troparion for him, глас 3, is headed for two saints together, «Тропарь преподобного Елисея Лавришевского и святителя Лаврентия, затворника Печерского, епископа Туровского в Ближних пещерах»: it opens in direct address to him alone, «Преподобне отче наш Елиссее», and then speaks of both in the plural. It is taken for him on the strength of that address and of the heading's order, the way this corpus already carries for each of the seven youths of Ephesus four hymns addressed to the seven together; the sharing is said here rather than smoothed, and the other saint is not named in his life, where a prose mention would owe `related` rows both ways."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Прп. Елисея Лавришевского (ок. 1250).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1250,
+      "latest": 1250,
+      "display": "c. 1250",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 23 октября ст. ст. «(ок. 1250)» and its life says «Елисей был убит своим питомцем, юношей-слугой в ночь на 23 октября около 1250 года» — killed in the night before 23 October, about 1250, which is this day itself. The «ок.» is the source's own approximation and the bounds are its one year. The same page dates the monastery's founding to about 1225 and does not say how old he was. Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Преподобне отче наш Елиссее,/ с Лаврентием чудным подвизался еси, учителю своему подражая,/ земную славу и честь стопам Христа повергли есте,/ темже Господь увенча вас/ нетленным венцем славы Своея.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Тропарь преподобного Елисея Лавришевского и святителя Лаврентия, затворника Печерского, епископа Туровского в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Our venerable father Elisha, you struggled together with the wondrous Laurence, imitating your own teacher; you cast earthly glory and honour at the feet of Christ, and therefore the Lord has crowned you both with the incorruptible crown of His glory.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

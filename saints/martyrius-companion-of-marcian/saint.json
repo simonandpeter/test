@@ -11,6 +11,11 @@
       "form": "Μαρτύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Άγιοι Μαρκιανός και Μαρτύριος οι νοτάριοι», with the rank word and the office left off."
+    },
+    {
+      "form": "Мартирий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 25 октября ст. ст., «Мартирий Константинопольский, иподиакон, мч.», with the grade and the rank word left off."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Мчч. Маркиана и Мартирия (ок. 355).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "The life page the two of them share heads «День памяти: 25 октября» and no other day. The name link behind his place gives him the grade the other calendars did not, «Мартирий Константинопольский, иподиакон, мч.» — a subdeacon of the great church — and that is said in the life; `office` is left unset because `upgrade.py` has no key for it. **His stored Russian form is close to those of the two Martyrii of the Kyiv caves this same day keeps**, and told from them by the city: «Мартирий Константинопольский» against «Мартирий Печерский». The day page's troparion (глас 1) and kontakion (глас 4) are addressed to the two notaries together, so each folder carries both."
     },
     {
       "church": "romanian",
@@ -119,6 +134,38 @@
       },
       "english": {
         "text": "Having contended well from infancy, Marcian with the wise Martyrius, you pulled down the apostate Arius and kept the Orthodox faith unwounded, following Paul your wise teacher; and so with him you found life, as the best champions of the Trinity.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Мученик двоица единонравная,/ Маркиан с Мартирием славным,/ Ариево нечестие разрушиша/ и Соприсносущна Сына Отцу и Духови веровати научиша,/ Павлу повинующеся, истинных повелений учителю,/ темже мечем убиени, умроша,/ и присно со Христом живуще,// о нас Того молят спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Тропарь мучеников Маркиана и Мартирия»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A pair of martyrs of one mind, Marcian with the glorious Martyrius, undid the impiety of Arius and taught men to believe the Son co-eternal with the Father and the Spirit, obeying Paul, the teacher of true commandments; and so they were killed with the sword and died, and living for ever with Christ they pray Him for us, that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Подвигшеся добре от младенства,/ Маркиане с мудрым Мартирием,/ отступника Ария низложисте,/ невредно сохраньше Православную веру,/ Павлу последующе, мудрому учителю,/ темже с ним обретосте живот,// яко Троицы поборницы изряднейшии.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Кондак мучеников Маркиана и Мартирия»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven well from your infancy, Marcian with the wise Martyrius, you cast down the apostate Arius and kept the Orthodox faith unhurt, following Paul the wise teacher; and so with him you found life, as the most excellent champions of the Trinity.",
         "rendered": "site"
       }
     }

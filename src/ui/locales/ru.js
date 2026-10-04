@@ -852,6 +852,7 @@ export const ru = {
     'Bishop of Athens': 'Епископ Афинский',
     'Bishop of Auxerre': 'Епископ Осерский',
     'Bishop of Azkuri': 'Епископ Азкурский',
+    'Bishop of Balakhna': 'Епископ Балахнинский',
     'Bishop of Banja Luka': 'Епископ Банялукский',
     'Bishop of Barcelona': 'Епископ Барселонский',
     'Bishop of Belgorod': 'Епископ Белгородский',

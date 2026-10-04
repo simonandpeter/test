@@ -1,0 +1,99 @@
+{
+  "slug": "arethas-of-the-kyiv-caves",
+  "display_name": "Arethas of the Kyiv Caves",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "office": "Recluse",
+  "names": [
+    {
+      "form": "Арефа Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 24 октября ст. ст., «Арефа Печерский, затворник», with the state of life left off. The line itself declines it, as «Прпп. Арефы (XII) ... затворников Печерских»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The life page the three of them share heads «Дни памяти: 28 сентября (Печер.(Б)) , 24 октября» and closes «Память всем преподобным 28 сентября и во 2-ю Неделю Великого поста» — the synaxis of the venerable of the Near caves, and the second Sunday of Great Lent, which is reckoned from Pascha and which this schema cannot hold. One row per church is the schema, so the September day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Прпп. Арефы (XII), Сисоя (XIII) и Феофила (XII-XIII), затворников Печерских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "He is not the corpus's `arethas-the-recluse`, whom saint.gr keeps on 2 Μαρτίου: that one came of Tver, was elected bishop and laid the office down, and fell asleep in 1409, while this one came of Polotsk and died before 1190. Two centuries and two calendars apart, and the stored name forms differ."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": null,
+      "latest": 1190,
+      "display": "before 1190",
+      "basis": "traditional",
+      "note": "The life the three recluses share says «Скончался святой Арефа не позже 1190 года» — not later than 1190, which is a bound and not a year, so the lower bound is left open. The day's line puts him in the twelfth century, «Арефы (XII)», and the same life heads all three «(ХII-ХIII)». Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Богатство твое душевное погубити хотя враг,/ помрачил тя бяше богатством тленным исперва,/ но всех спасаяй Господь / богатство гибнущее окрасти попусти,/ душевное же невредно соблюд,/ Небесных сокровищ наследника тя показа, Арефо,/ тем тя чтим и ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Тропарь преподобного Арефы, затворника Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The enemy, wishing to destroy the riches of your soul, had first darkened you with riches that perish; but the Lord, who saves all men, let the perishing riches be stolen and kept the riches of your soul unhurt, and showed you an heir of the treasures of heaven, Arethas; and so we honour and bless you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Иова терпеливодушнаго ревнуя благодарению,/окра дений тленнаго своего имения претерпел еси благодарив, преподобне Арефо,/ тем с ним обрет нетленное имение на Небеси,/ моли Христа Бога о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Кондак преподобного Арефы, затворника Печерского» (copied as the page prints it, the broken word «окра дений» and all)",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Emulating the thankfulness of long-suffering Job, you bore the theft of your perishable goods with thanksgiving, venerable Arethas, and with him you found imperishable goods in heaven. Pray to Christ God for us all.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "sisoes-of-the-kyiv-caves",
+    "theophilus-of-the-kyiv-caves"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

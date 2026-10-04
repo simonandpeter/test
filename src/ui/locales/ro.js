@@ -833,6 +833,7 @@ export const ro = {
     'Bishop of Athens': 'Episcop al Atenei',
     'Bishop of Auxerre': 'Episcop de Auxerre',
     'Bishop of Azkuri': 'Episcop de Azkuri',
+    'Bishop of Balakhna': 'Episcop de Balahna',
     'Bishop of Banja Luka': 'Episcop de Banja Luka',
     'Bishop of Barcelona': 'Episcop de Barcelona',
     'Bishop of Belgorod': 'Episcop de Belgorod',

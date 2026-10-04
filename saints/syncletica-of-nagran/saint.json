@@ -1,0 +1,62 @@
+{
+  "slug": "syncletica-of-nagran",
+  "display_name": "Syncletica of Nagran",
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Синклитикия Негранская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 24 октября ст. ст., «Синклитикия Негранская, мц.», with the rank word left off. The line itself declines it, as «Мц. Синклитикии и двух дщерей ее»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Мц. Синклитикии и двух дщерей ее (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "Her life page heads «День памяти: 24 октября» and no other day. **Her two daughters are one folder short, deliberately: the line and the life both name neither of them**, and docs/CORPUS.md §10.1's rule is that a company naming nobody is one entry. She is not the corpus's `syncletica`, the amma of Alexandria whom all four calendars keep on 5 January: that one is a fourth-century ascetic, this one a sixth-century martyr of Nagran under the Arabian king, and the stored name forms differ, «Синклитикия Александрийская» against «Синклитикия Негранская». The day page prints no hymn for her."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes her line for 24 октября ст. ст. «(VI)» and opens her life «Святая мученица Синклитикия и две ее дочери (VI) пострадали от Аравийского царя Дунаана»; the century is the whole of what the page gives. Read 4 October 2026."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  },
+  "related": [
+    "aretas-of-nagran"
+  ]
+}

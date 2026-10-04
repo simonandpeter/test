@@ -1,0 +1,69 @@
+{
+  "slug": "arethas-mitrenin",
+  "display_name": "Arethas (Mitrenin)",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Арефа (Митренин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Арефа (Митренин), иеромонах, исповедник», with the rank and the grade left off. The line itself declines the name and gives it without the surname, as «Прп. Арефы исп.»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page and his name page both head «Дни памяти: 26 января (Новомуч.) , 8 июня (Петерб.) , 24 октября», and the life closes by giving the glorification's own day as «память 25 января». One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Прп. Арефы исп. (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "The line, the name link and the life page give him three different ranks, and the line's are what `types` carries. The line says «Прп. ... исп.», venerable and confessor; the link says «иеромонах, исповедник», which supplies the grade in `office` and agrees on the confessor; and the life page is titled «Священномученик Арефа Валаамский», hieromartyr, which neither of the others says and which does not fit a man the same page has die of nothing stated in exile. So the line's words stand in `types`, the link's grade in `office`, and all three readings are said in the life. He is the third of three men called Арефа on this one day, with the governor of Nagran and the recluse of the Kyiv caves."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "21 November 1879",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 21 ноября 1879 года, в городе Кронштадт»."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "The same life: «Скончался в ссылке в ноябре 1932 г., погребён в городе Ташкенте, 53-х лет» — in exile in the November of 1932, buried at Tashkent, in his fifty-third year. The page gives the month and no day, so the display is the year; the month is here. The day's line prints the same year, «(1932)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

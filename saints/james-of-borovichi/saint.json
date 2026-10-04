@@ -3,20 +3,38 @@
   "display_name": "James of Borovichi",
   "sex": "male",
   "types": [
-    "righteous"
+    "righteous",
+    "venerable",
+    "fool-for-christ"
   ],
   "names": [
     {
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Ιάκωβος ο Δίκαιος», with «Άγιος» and the rank word left off."
+    },
+    {
+      "form": "Иаков Боровичский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Праведный Иаков Боровичский», with the rank word left off."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both his life pages head «Дни памяти: 22 мая , 23 октября», and 22 Μαΐου is the day this folder already keeps for the Greek church. One row per church is the schema, so the second Russian day is recorded here and he does not render on it. This day is the day of the translation of his relics: the day page's troparion and kontakion for him both sing «честных мощей пренесение», and the Greek page read for his other row sends the translation of the relics to 23 October as well."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Прп. Иакова Боровичского, Новгородского чудотворца (ок. 1540).»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "note": "The line's rank word and the name link's disagree, as they do across this wave: the line says «Прп.», venerable, the link «Праведный Иаков Боровичский», righteous, and the day page's two hymns call him «блаженного». One of the two lives filed under his index is titled «Праведный Иаков Боровичский, Новгородский, Христа ради юродивый» and says «юродствовал Христа ради»; the other says he took up the hard labour of folly in his boyhood. So `types` gains the line's venerable and the pages' fool-for-Christ beside the righteous the Greek row already gave him, and all three readings are said here. The page also records the typikon rank: «Полиелейное празднование установлено с 1572 года»."
     },
     {
       "church": "romanian",
@@ -46,5 +64,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1540,
+      "latest": 1540,
+      "display": "c. 1540",
+      "basis": "traditional",
+      "note": "The Russian calendar gives him a year where the Greek one gave none. Its line for 23 октября ст. ст. closes «(ок. 1540)», and one of its two lives says «был убит громом около 1540 г.» — killed by lightning about 1540; the «ок.» is the source's own approximation and the bounds are its one year. Its other life and saint.gr both attach 1540 instead to what happened after him, the coming of the coffin on the ice floe and the finding of the relics, which is why this folder stood undated until this row. Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Божественною благодатию просветився,/ и по смерти даруеши исцеление/ притекающим к тебе, премудре Иакове:/ темже и мы ныне чтим честных мощей пренесение,/ веселяще вкупе души и телеса./ Тем вси вопием:/ слава Давшему ти крепость!/ Слава Венчавшему тя!/ Слава Действующему тобою всем исцеления!",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Тропарь блаженного Иакова Боровичского, Новгородского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by divine grace, even after your death you grant healing to those who run to you, most wise James; and so we now honour the translation of your honourable relics, making glad both soul and body together. Therefore we all cry out: glory to Him who gave you strength, glory to Him who crowned you, glory to Him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Верою и любовию/ твое честное пренесение празднующих, блаженне,/ сохрани и соблюди от веяния злобы и соблазна змиина,/ имаши бо дерзновение ко Владыце всех, Христу Богу./ Егоже моли спасти православныя люди,/ молящия тя, да вси вопием ти:/ радуйся, отче Иакове,/ всея Российския земли удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 октября ст. ст. — «Кондак блаженного Иакова Боровичского, Новгородского чудотворца»",
+        "url": "https://days.pravoslavie.ru/Days/20261023.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keep and preserve those who with faith and love keep the feast of your honourable translation, blessed one, from the blast of malice and from the serpent's temptation; for you have boldness before the Master of all, Christ God. Pray to Him to save the Orthodox people who pray to you, that we may all cry to you: rejoice, father James, adornment of all the Russian land.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
