@@ -10,6 +10,11 @@
       "form": "Παγκράτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Παγκράτιος ο Μάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Панкратије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 12 May, „Свети мученик Панкратије.“ — Свети left off, which is not a rank, and мученик left off, which is the `martyr` this folder already carries in `types`. The heading gives no epithet, no city and no year: Phrygia, Rome, the fourteen years, the 304, the West and the church holding his relics are all in the body, and the day in this folder's display name is the corpus's own way of telling him from its two other Pancratii and is no part of any source's name for him. A direct walk of every `names` entry in `saints/` finds no folder holding Панкратије, so the form folds with nothing — neither `pancratius-of-tauromenium` nor `pancratius-the-recluse` has a Serbian form."
     }
   ],
   "dates": {
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.05.2026 (12. мај ст. ст.) — „Свети мученик Панкратије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, three sentences long, on the same menologion day the Greek keeps him on, so nothing moved. **THE 304 AGREES EXACTLY AND NOTHING IN `dates` WAS TOUCHED**: „би намучен и убијен за Христа 304. године“ is the year this folder already holds off saint.gr's «μαρτύρησε στη Ρώμη το 304 μ.Χ.» and its head line «(; - 304)». **IT ALSO SETTLES ONE OF THE GREEK PAGE'S TWO ALTERNATIVES, AND THE SETTLING IS RECORDED RATHER THAN ADOPTED.** saint.gr offers Syria or Phrygia in the alternative and this folder's Greek note says so and refuses `locations` for it; **the Prologue says „Из Фригије дошао беше у Рим“ flatly — out of Phrygia he had come to Rome.** That is one book agreeing with one half of another book's alternative, which is a reading worth having and not a reason to put a point on the map: **`locations` is still left out**, both because the folder has never claimed one and because a place a man came *from* is not a place his life is set in. **New here**: that he was **a fourteen-year-old boy** when he was tortured and killed, which neither the Greek nor anything else read for this folder gives; that he is much honoured in the West; and that a church of his name stands in Rome in which his holy relics rest. **The relics are in the life and in this note and not in `locations`**, a resting place not being a place the page puts his life. `types` untouched: Свети is no rank and мученик is the `martyr` the folder already carries. **He is still neither of the corpus's two other Pancratii** — the first-century bishop of Tauromenium sent out by the apostles and the recluse of the Kyiv Caves — and the day in the display name is what tells him from them. No saint is named in the appended paragraph. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

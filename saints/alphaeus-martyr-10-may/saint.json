@@ -11,6 +11,11 @@
       "form": "Αλφειός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Αλφειος ο Μαρτυρας»."
+    },
+    {
+      "form": "Алфеј",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year, and the brotherhood, the father, southern Italy, Sicily and Licinius are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Алфеј, so the form folds with nothing."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Свети мученици Алфеј, Филаделф и Кирин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated company of three, so one row each, on the same menologion day the Romanian and the Greek both keep them on. **THE REIGN IS A DIFFERENT EMPEROR AND THE DATE WAS NOT TOUCHED.** This book kills the three „у време цара Ликинија“, in the time of the emperor Licinius, where saint.gr has them seized by Anengelion „επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)“ — Decius against Licinius, sixty years and two reigns apart. The folder's `death` 249–251 is saint.gr's reading of Decius's reign; **the Prologue gives Licinius with no bounds at all**, and the coordinator's standing refusal of a reign with no bounds means it cannot be turned into an interval or used to widen one. So `dates` are unchanged and the disagreement is recorded here and in the life. **A SECOND DISAGREEMENT, about his own death**: this book has his tongue cut off and „Од излива крви Алфеј умре“, he died of the flow of blood, where saint.gr has them cut out his tongue **and then behead him**. Both stand in the life. **New here**: that the three were brothers born of one womb, sons of a certain prince Vitalis in southern Italy, „Дивни у благородству, силни у вери“, judged for their faith and led from one judge to another and from one torturer to another, taken over into Sicily and killed there; **that their incorrupt relics were found in 1517**, which is a date for the relics and not for the man, so it is in the life and not in `dates`; and **that the three brothers appeared to Saint Euthalia**, with the book's own cross-reference „(в. 2. март)“. **`related_add: [\"euthalia-the-martyr\"]` is the row that appearance owes**, and the reciprocal is in the same upgrade file: her own life, written off the Prologue's Julian 2 March and off the Romanian and Greek pages, already tells the dream of these three, and her folder carried no `related` key at all. **The father Vitalis takes nothing.** This book calls him „некога кнеза Виталија“, a certain prince, and the Greek „ο άρχων των επάρχων“; the corpus's four Vitalis folders were read and he is none of them — a venerable of 11 January, a martyr at Ravenna in 62, a Sicilian monk of 994, and the Alexandrian who is the author's own open pair with `vitalis`. No folder anywhere, so by the coordinator's third ruling the row has nothing to attach to and no folder is minted. **No `locations`**: southern Italy and Sicily are places this folder has never claimed as points. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -74,6 +89,7 @@
     "cyprian-martyr-10-may",
     "philadelphus-martyr-10-may",
     "erasmus-10-may",
-    "onesimus-10-may"
+    "onesimus-10-may",
+    "euthalia-the-martyr"
   ]
 }

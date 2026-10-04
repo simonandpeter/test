@@ -11,6 +11,11 @@
       "form": "Γερμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Μαΐου, «Άγιος Γερμανός Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Герман",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 12 May, „Свети Герман, патријарх цариградски.“ — Свети left off, which is not a rank, and „патријарх цариградски“ left off, which is the `patriarch` this folder already carries in `types` and the see this corpus puts in `office`. The heading gives no epithet; the senator father, the castration, Cyzicus, Copronymus, Leo the Isaurian and the 740 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Герман, so the form folds with nothing — the corpus's four other Germani, of Dobrogea, of Novgorod, of Sagmata and of Kazan, having no Serbian form."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.05.2026 (12. мај ст. ст.) — „Свети Герман, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian and the Greek both keep him on, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NONE, AND TWO BOOKS AGREE ON IT**: „док га Господ не позва к Себи у Царство небеско 740. године“ — and this folder's own Greek note records saint.gr putting his death at Platania in 740, so `dates` gains a `death` of 740 where there was no `dates` object at all and nothing is widened. **saint.gr's 640, its thirty-seven years and its 715 were NOT lifted**: that page was not opened by this reader, and a year read out of another reader's note is not a year read. The book's own „проживе још десет година“ in the monastery after his deposition is consistent with the 740 and was not turned into a second number. **New here, and none of it in the Romanian or the Greek account this folder was built from**: **that Constantine Pogonatus, having killed his father the first imperial senator, had this son of his castrated and drove him by force into a monastery** — the Greek had the father's death and not the mutilation; that as a monk he shone like a star by his virtuous life, and was for that elected first bishop of Cyzicus and then, when Anastasius II came to the throne, patriarch of Constantinople; **that as patriarch he baptised the ill-famed Copronymus, who fouled the water at the font, and prophesied then that the child, when he became emperor, would bring some unclean heresy into the Holy Church — which came to pass, Copronymus renewing the iconoclast heresy when he reigned**; that Leo the Isaurian, Copronymus's father, began the persecution of the icons, and that when the patriarch opposed him **the overbearing Leo cried „Ја сам цар и свештеник!“ — I am emperor and priest** — and threw Germanus off his throne and drove him to a monastery, where he lived ten years more. **`monk` WAS READ AND REFUSED, AND THE REFUSAL WAS MEASURED.** „Као монах, Герман засветли као звезда“ is the book's own word for what he was, and §5's table reads Монах as `monk`; but `lib/honorific.js` counts `monk` among the monastics that compose `venerable`, which stands **above** `confessor` in its precedence — so adding it would make this folder read „Venerable Germanus of Constantinople“ where it reads „Confessor Germanus of Constantinople“. Measured with `node -e` against that file before anything was written. **That is a conflicting rank and not the missing rank `types_add` is for**, and the forced tonsure is in the life instead. `patriarch`, `hierarch`, `confessor` and `hymnographer` all stand untouched. **No saint but Epiphanius is named in the appended paragraphs**, and he was already a `related` row in both directions; Constantine Pogonatus, Anastasius II, Copronymus and Leo the Isaurian have no folders in this corpus, which was checked. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -109,5 +124,14 @@
   "related": [
     "andrew-of-crete",
     "epiphanius-of-cyprus"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 740,
+      "latest": 740,
+      "display": "740",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. The Ohrid Prologue, for the Julian 12 May: „отера у манастир, где овај светитељ проживе још десет година, док га Господ не позва к Себи у Царство небеско 740. године.“ — and the folder's own Greek attestation note records saint.gr giving the same year, a death at Platania at the age of a hundred on 12 May 740, so the two books agree and nothing is widened. **No birth is recorded**: the Prologue gives none, and saint.gr's 640 was not lifted because that page was not opened by this reader. The ten years in the monastery after his deposition are the book's own and are consistent with the 740; they were not turned into a second number."
+    }
+  }
 }

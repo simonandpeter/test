@@ -16,19 +16,26 @@
       "form": "Μιχαήλ",
       "lang": "el",
       "note": "His name in the world, as saint.gr prints it on the same page: «Οι Άγιοι Κύριλλος και Μεθόδιος, κατά κόσμον Κωνσταντίνος και Μιχαήλ»."
+    },
+    {
+      "form": "Методије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 May, „Свети Кирил и Методије Равноапостолни.“ — Свети left off, which is not a rank, and Равноапостолни left off, which is the `equal-to-the-apostles` this upgrade adds to `types` and which stands over both names and belongs to neither alone. The heading gives no epithet and no see; Thessalonica, the parents, the ten years among the Slavs, Olympus, Moravia and the Five are all in the body, and his name in the world, which saint.gr gives as Μιχαήλ, is not on this page at all. A direct walk of every `names` entry in `saints/` finds no folder holding Методије, so the form folds with nothing — the corpus's other Methodii having no Serbian form."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
     "bishop",
-    "monk"
+    "monk",
+    "equal-to-the-apostles"
   ],
   "office": "Bishop",
   "related": [
     "angelarius-of-bohemia",
     "clement-of-rome",
-    "cyril-the-philosopher"
+    "cyril-the-philosopher",
+    "clement-of-ohrid"
   ],
   "attestations": [
     {
@@ -67,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.05.2026 (11. мај ст. ст.) — „Свети Кирил и Методије Равноапостолни.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, a heading naming two men the corpus already keeps, so two rows and no folder. **Not the second-day case**: his `serbian` row was `undocumented`, so there was nothing to note on, and the Julian 6 April — the day this entry itself gives for his repose — is **already written in this wave and its Prologue page does not print him**, so this book keeps him on 11 May and nowhere else. The Romanian and the Greek keep him on 11 May too and nothing moved. **A DEATH WIDENED AND NEITHER YEAR CHOSEN**: „он се упокоји у Господу 6. априла 885. године“ against saint.gr's head line «Αγιος Μεθοδιος Φωτιστης Των Σλαβων (815 - 884)», so `death` is now 884–885 and reads „884 or 885“. `node .tmp/dd.mjs \"884 or 885\"` reads it in both packs. **This is a widening against a precise year and it is the kind the coordinator's ruling allows**, because the two books simply disagree — one year apart, as `arsenius-the-great`'s 445 or 448 was three. **The day of his repose, 6 April, is new** and goes in the life and in this note, there being no field for a day of death; the birth of 815 is untouched, this book giving no year for it. **`equal-to-the-apostles` IS ADDED TO `types`, and the rendering change was measured**: Равноапостолни is the heading's rank word, §5's table reads it as that type, and `lib/honorific.js` gives it precedence, so this folder now reads **„Equal to the Apostles Methodius of Moravia“** where it read „Venerable Methodius of Moravia“ — his `monk` having been what composed the Venerable. **The Methodius half of this rests on the joint heading alone**, where his brother's has the Russian calendar behind it as well, and that difference is named for the author; one commit reverses it. **New here**: the parents Leo and Maria, notable and rich; **that he spent ten years as an officer among the Macedonian Slavs and learned the Slavonic tongue that way**, which is where the whole mission begins and which no other book read for this folder has; Mount Olympus and the monastic struggle he withdrew to, which his brother joined later; the Khazar embassy under the emperor Michael and the Kagan's baptism; **the Slavonic alphabet of thirty-eight letters**; prince Rastislav's invitation into Moravia and the books multiplied for the priests to teach the young; the pope's invitation to Rome and his brother's death there; his own return to Moravia and his labour to the end; **and what happened after him** — „ученици његови, петочисленици, са светим Климентом као епископом на челу, пређоше Дунав и спустише се на југ, у Македонију, где, из Охрида, продужише међу Словенима посао, започети Кирилом и Методијем на северу“. **`related_add: [\"clement-of-ohrid\"]` is a one-sided row made reciprocal and not a relation invented**: `clement-of-ohrid` already carried `methodius-of-moravia` in its own `related` while this folder did not carry him, and the discipleship is this man's story. **The identification is stated and is a reading**: the book's „светим Климентом“ is given no see, and it is read as the archbishop of Ohrid because the same sentence puts the Five at Ohrid, which is the city that folder is named for. **The other four of the петочисленици take nothing**: the body names only Clement, so ruling 1's enumerated company does not arise, and `angelarius-of-bohemia`, `gorazd-of-bohemia` and `naum-of-ohrid` — three of the four the corpus holds — are neither named in the appended paragraphs nor given rows. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -80,14 +97,14 @@
       "latest": 815,
       "display": "815",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Κωνσταντίνος γεννήθηκε περί το 827, ενώ ο μεγαλύτερος αδελφός του Μιχαήλ το 815», and the head line over his name gives «(815 - 884)». The «περί» in that sentence attaches to his brother's year and not to his."
+      "note": "saint.gr: «Ο Κωνσταντίνος γεννήθηκε περί το 827, ενώ ο μεγαλύτερος αδελφός του Μιχαήλ το 815», and the head line over his name gives «(815 - 884)». The «περί» in that sentence attaches to his brother's year and not to his. The Ohrid Prologue gives no year for his birth."
     },
     "death": {
       "earliest": 884,
-      "latest": 884,
-      "display": "884",
+      "latest": 885,
+      "display": "884 or 885",
       "basis": "traditional",
-      "note": "The year stands in the head line over his name on saint.gr's page, «Αγιος Μεθοδιος Φωτιστης Των Σλαβων (815 - 884)». The middle of that page was cut by the extractor and was not read by this reader, so no place and no circumstance is recorded with it."
+      "note": "Two books one year apart and neither chosen. saint.gr's head line over his name gives «Αγιος Μεθοδιος Φωτιστης Των Σλαβων (815 - 884)», and the middle of that page, where the death is presumably narrated, was cut by the extractor and never read. The Ohrid Prologue, for the Julian 11 May, gives „а он се упокоји у Господу 6. априла 885. године“ — and so also gives the day, the sixth of April, which no other book read for this folder had and which there is no field to hold. Neither source gives a place for the death."
     }
   },
   "hymns": [

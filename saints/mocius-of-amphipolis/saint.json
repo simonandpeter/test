@@ -11,6 +11,11 @@
       "form": "Μώκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαΐου, «Άγιος Μώκιος ο Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Мокије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 May, „Свештеномученик Мокије.“ — one rank word, which is the `hieromartyr` this folder already carries in `types` and `honorific.js` composes back, and one forename. The heading gives no epithet, no city and no year: Rome, Amphipolis, Macedonia, Diocletian, the idol of Dionysus and the 295 are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Мокије, so the form folds with nothing — neither `mocius-of-emesa` nor `michaeus-of-zographou`, the two the name sweep raised for this folder once before, has a Serbian form."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.05.2026 (11. мај ст. ст.) — „Свештеномученик Мокије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, five sentences long, on the same menologion day the Romanian and the Greek both keep him on, so nothing moved. **A DEATH WIDENED AND NEITHER YEAR CHOSEN**: „Посечен за Христа 295. године“ against saint.gr's «Τότε, το έτος 288 μ.Χ. τον έστειλε δέσμιο στο Βυζάντιο, όπου τον αποκεφάλισαν» and its head line «(; - 288)», so `death` is now 288–295 and reads „288 or 295“. `node .tmp/dd.mjs \"288 or 295\"` reads it in both packs. **Both books date the same event, the beheading**, and they are seven years apart, so this is the two-books-disagree widening the coordinator's ruling allows and not a narrowing. **A SECOND DISAGREEMENT, ABOUT THE PROVINCE, RECORDED AND NOT SETTLED**: this book makes Amphipolis „граду македонском“, a Macedonian city, where saint.gr gives «την Αμφίπολη της Θράκης», Amphipolis of Thrace — and the slug and display name of this folder carry the city and not the province, so nothing had to move. Both stand in the life. **New here**: that he was a Roman by birth, which saint.gr gave only as his parents being at Rome; and **that by prayer he shattered the idol of the god Dionysus, which embittered some of the heathen against him and brought others to the faith** — a wonder in no other book read for this folder. **This book has no Byzantium in it at all**: the prefects Laodicius and Maximus, the flaying, the beasts, the sending bound to the capital and the patronage of the city are the Greek page's and are not repeated as this book's. `types` untouched: Свештеномученик is the `hieromartyr` the folder carries and „свештеник“ the `presbyter`. **No `locations`**: Amphipolis is now named by three books and two provinces, which is a reason not to put a point on it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -100,10 +115,10 @@
   "dates": {
     "death": {
       "earliest": 288,
-      "latest": 288,
-      "display": "288",
+      "latest": 295,
+      "display": "288 or 295",
       "basis": "traditional",
-      "note": "saint.gr: «Τότε, το έτος 288 μ.Χ. τον έστειλε δέσμιο στο Βυζάντιο, όπου τον αποκεφάλισαν», and the head line of the same page gives «(; - 288)». The page gives no year for his birth, only that his parents were at Rome under Diocletian, «(επί Διοκλητιανού 284 - 304 μ.Χ.)»."
+      "note": "Two books seven years apart on the same event, the beheading, and neither chosen. saint.gr: «Τότε, το έτος 288 μ.Χ. τον έστειλε δέσμιο στο Βυζάντιο, όπου τον αποκεφάλισαν», with the head line «(; - 288)»; the Ohrid Prologue, for the Julian 11 May: „Посечен за Христа 295. године.“ The Prologue names no place for it, where the Greek puts it at Byzantium. Neither page gives a year for his birth; the Greek has his parents at Rome under Diocletian, «(επί Διοκλητιανού 284 - 304 μ.Χ.)», and the Prologue has him suffer „за време Диоклецијана“ with no numbers."
     }
   },
   "images": [

@@ -11,6 +11,11 @@
       "form": "Σίμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιος Σίμων ο Απόστολος, ο Ζηλωτής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Симон Зилот",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's heading for the Julian 10 May, „Свети апостол Симон Зилот.“ — Свети left off, which is not a rank, and апостол left off, which is the `apostle` this folder already carries in `types` and `honorific.js` composes back. **Зилот is kept**: it is the epithet, not a rank — BRIEF-SERBIAN.md §5's table has no Зилот in it — and the entry glosses it in its own body, „Зилот значи ревнитељ“. Keeping it is also what holds this folder out of a fold: a direct walk of every `names` entry in `saints/` finds no folder holding either «Симон Зилот» or a bare «Симон», but the corpus keeps ten other Simons and this is the form that distinguishes him, as the Romanian «Simon Zilotul» already does where the Greek «Σίμων» does not. Cana, the wedding, Mauretania and the cross are all in the body and none of them is in the heading."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Свети апостол Симон Зилот.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion day the Romanian and the Greek already keep him on, so nothing moved. **THE ENTRY MAKES HIM THE BRIDEGROOM OF CANA, and no other book read for this folder does.** saint.gr says only that he came of Cana of Galilee; this book says the Lord Jesus came to his wedding with his Mother and the disciples, that when the wine ran out the Lord turned the water into wine, and that „Видећи ово чудо, Симон младожења остави кућу, и родитеље и невесту, па пође за Христом“ — seeing the wonder, Simon the bridegroom left house and parents and bride and went after Christ. **A DISAGREEMENT RECORDED AND NOT SETTLED**: this book sends him to preach „у Мавританију, у Африци“ and crucifies him there, where saint.gr has him in Persia, then in Africa from Egypt to Mauretania, and **last in Britain**, with the arrest and the cross there. Both readings stand in the life and neither was chosen. It also glosses the epithet — „Зилот значи ревнитељ“ — and gives the same reason for it the Greek gave, „због своје велике и огњене ревности према Спаситељу и Његовом Јеванђељу“, so that is corroboration and not news. **NO DATE**: the entry prints no year, so `dates` stays null. `types` untouched: Свети is no rank and апостол is the `apostle` the folder already carries. **No saint is named in the appended paragraph**: Christ and his Mother are outside this corpus, and the Prologue names nobody else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

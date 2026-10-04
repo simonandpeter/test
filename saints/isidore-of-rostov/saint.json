@@ -11,15 +11,20 @@
       "form": "Ισίδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαΐου, «Άγιος Ισίδωρος ο Θαυματουργός ο διά Χριστόν σαλός», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Исидор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 14 May, „Блажени Исидор Јуродиви, Христа ради.“ — Блажени, Јуродиви and „Христа ради“ all left off, which together are the `fool-for-christ` this folder already carries in `types`: BRIEF-SERBIAN.md §5's table reads Блажени as fool-for-christ or righteous and „Христа ради јуродиви“ as fool-for-christ outright, and the three words here are one formula and not an epithet. **Nothing else is in the heading**: the German birth, Rostov, the hut in the swamp, the merchant, the prince's wine and the 1484 are all in the body, and Rostov, which this folder's display name carries, the Greek page put in its body too and not in its line. **The page's by-name is not stored**: saint.gr gives «Τβερντίσλοβ», Tverdislov, faithful to the Word, which this folder's Greek note already declines to copy as a Slavonic form written in Greek letters — **and the Prologue, which is the Slavonic book, does not print it at all**, so there is still no form of it to copy. **The form folds with `isidore-of-chios`, and the fold is made by this one day**: the Prologue's first entry for the same 14 May is the martyr of Chios, whose heading strips to the same bare Исидор. Recorded as deliberate in the run's findings."
     }
   ],
   "dates": {
     "death": {
       "earliest": 1474,
-      "latest": 1474,
-      "display": "1474",
+      "latest": 1484,
+      "display": "1474 or 1484",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ισίδωρος κοιμήθηκε με ειρήνη το 1474 μ.Χ.», and its head line reads «Αγιος Ισιδωρος ο Θαυματουργος ο Δια Χριστον Σαλος (; - 1474)»."
+      "note": "Two books ten years apart and neither chosen. saint.gr: «Ο Άγιος Ισίδωρος κοιμήθηκε με ειρήνη το 1474 μ.Χ.», with the head line «Αγιος Ισιδωρος ο Θαυματουργος ο Δια Χριστον Σαλος (; - 1474)». The Ohrid Prologue, for the Julian 14 May: „Када умре, 1484. године маја 14. у својој колиби, сав Ростов замириса неким дивним мирисом.“ — which also gives the day, the fourteenth of May, the day all three calendars keep him on and a thing this schema has no field for. Neither page gives a year for his birth. His `russian` row is still `undocumented` and days.pravoslavie.ru, which would be the third book on a Russian saint, has not been opened."
     }
   },
   "attestations": [
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.05.2026 (14. мај ст. ст.) — „Блажени Исидор Јуродиви, Христа ради.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek keeps him on, so nothing moved. **A DEATH WIDENED AND NEITHER YEAR CHOSEN**: „Када умре, 1484. године маја 14. у својој колиби“ against saint.gr's «Ο Άγιος Ισίδωρος κοιμήθηκε με ειρήνη το 1474 μ.Χ.» and its head line «(; - 1474)», so `death` is now 1474–1484 and reads „1474 or 1484“. `node .tmp/dd.mjs \"1474 or 1484\"` reads it in both packs. **Ten years apart, and the kind of widening the coordinator's ruling allows**, because the two books simply disagree — as `arsenius-the-great`'s 445 or 448 and `methodius-of-moravia`'s 884 or 885 were. **The Prologue also gives the day of his death, 14 May**, which is the day all three calendars keep him on, and **there is no field for a day of death**, so it is in the life and here. **He is a Russian saint whose `russian` row is still `undocumented`**, its own note saying days.pravoslavie.ru was never opened for him; this Serbian reading does not substitute for that and no claim is made about the Russian day. **New here**: that he **loved the Orthodox faith when he came to Rostov** and not merely that he came — „заволи веру православну, па не само да постаде члан Православне цркве, него узе на се тешки подвиг јуродства“; that **he slept in a hut of branches he had made himself in a swamp**; **that a merchant thrown out of a ship and drowning in the sea saw Isidore come to him walking on the water, and was led by him to the shore**; **that all the wine vessels of the prince of Rostov dried up at once when his servants drove Isidore from the door and would not give him even the cup of water he asked for**; that **when he died in his hut the whole of Rostov was filled with a wonderful fragrance**; and that **the merchant he had saved at sea built him a church on the spot where the hut had stood**. The German origin and Rostov the Greek page already had. **`types` untouched and the `wonderworker` is corroborated, not added**: Блажени is §5's „fool-for-christ *or* righteous — read which“ and Јуродиви and „Христа ради“ settle it as the `fool-for-christ` the folder carries, and „Велика и страшна чудеса показа овај светитељ и за живота и по смрти“ is the `wonderworker` it carries too. **No `locations`**, although Germany and Rostov are both named, as the folder's own Greek note already refused. **`isidore-of-chios` was already a `related` row in both directions** and nothing was added; the two are named in each other's notes as the day's two Isidores and this book keeping both on one day is what settles them as two men. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

@@ -26,13 +26,19 @@
       "form": "Кирилл, учитель Словенский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 февраля ст. ст., «Равноапостольный Кирилл, учитель Словенский», with the rank word left off. The Russian calendar keeps him on this day, the year of his repose being the «(869)» the line prints, where the Greek and Romanian calendars keep him with his brother on 11 May."
+    },
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 May, „Свети Кирил и Методије Равноапостолни.“ — Свети left off, which is not a rank, and Равноапостолни left off, which is the `equal-to-the-apostles` this upgrade adds to `types` and which stands over both names and belongs to neither alone. The heading gives no epithet and no see; Thessalonica, the parents, Olympus, the Khazars, the alphabet, Moravia and Rome are all in the body. **The body gives his name in the world in a parenthesis, „Кирил (Константин)“**, which this folder already holds in two other languages as «Constantin» and «Κωνσταντίνος»; BRIEF-SERBIAN.md §6 allows one `sr` form, the fullest, so Кирил is stored and Константин is recorded here rather than beside it — a bare «Константин» would also have folded with the corpus's many Constantines. The form joins the three-folder «Кирил» fold already in the run's findings, which this day widens to four."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "monk",
-    "presbyter"
+    "presbyter",
+    "equal-to-the-apostles"
   ],
   "related": [
     "angelarius-of-bohemia",
@@ -86,8 +92,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.05.2026 (11. мај ст. ст.) — „Свети Кирил и Методије Равноапостолни.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, a heading naming two men the corpus already keeps, so two rows and no folder — BRIEF-SERBIAN.md §5's reading of «Света Три Јерарха» applied to a pair. **This is NOT the second-day case, and that was measured rather than assumed.** §5 says a joint day takes a second-day note where the corpus keeps the men on their own days already; this folder's `serbian` row was `undocumented`, so there was no row to note on, and **the Prologue keeps him on no other day either**: the two deaths this very entry dates, the Julian 14 February and the Julian 6 April, are **both already written in this wave**, and neither day's Prologue page prints either brother. The Julian 11 May is this book's only day for them. The Romanian and the Greek keep him on 11 May too, so nothing moved; his `russian` row stays where it is, on the Julian 14 February, by the one-row-per-church rule. **A DAY OF DEATH WHERE THE FOLDER HELD ONLY A YEAR, AND NO YEAR CHANGED**: „где се Кирил разболе и умре 14. фебруара 869. године“ — the 869 is exactly what the folder holds from saint.gr's head line, and **the day, 14 February, is new** and is the day his own Russian row keeps him on, which is corroboration between two books and not a date to widen. `dates` are untouched; the day is in the life and in this note, there being no field for a day of death. **`equal-to-the-apostles` IS ADDED TO `types`, and the rendering change was measured before it was written.** Равноапостолни is the rank word in the heading and BRIEF-SERBIAN.md §5's table reads it as `equal-to-the-apostles`; **two books give it to him**, this heading and days.pravoslavie.ru's «Равноап. Кирилла, учителя Словенского (869).» which is already quoted in this folder's own Russian row, and the Romanian «Apostolul slavilor» and Greek «Φωτιστής των Σλάβων» say the same thing as epithets. It does not conflict with `venerable`, `monk` or `presbyter`, which are a state of life and a grade; but it **outranks** them in `lib/honorific.js`'s precedence, so the folder now reads **„Equal to the Apostles Cyril the Philosopher“** where it read „Venerable Cyril the Philosopher“, and `venerable` moves into the facts line beside `monk` and `presbyter`. **That is a visible change on a prominent folder from one word in one heading, and it is named for the author as one commit's worth of reversal.** **New here, and none of it in the Romanian or the Greek account this folder was built from**: that the parents were „знаменитих и богатих“, notable and rich, and were named Leo and Maria; that Methodius spent ten years as an officer among the Macedonian Slavs and learned the Slavonic tongue that way; Mount Olympus and the monastic struggle, which Cyril joined later; the Khazar king Kagan's request to the emperor Michael for preachers, the brothers sought out by the emperor's command, and the Kagan baptised with a great number of his chief men and a greater number of the people; **the Slavonic alphabet of thirty-eight letters**; the invitation of prince Rastislav to Moravia and the books multiplied and given to the priests to teach the young; and the pope's invitation to Rome, where he fell ill. **The Greek page's middle was never read for this folder** — about 9,444 characters were cut — so this is the first account of the mission it holds at all. **No saint but his brother is named in the appended paragraphs**: the parents, the Kagan, the emperor Michael, prince Rastislav and the pope have no folders, and Methodius was already linked and already reciprocal. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

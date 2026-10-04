@@ -11,6 +11,11 @@
       "form": "Ησαΐας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Μαΐου, «Προφήτης Ησαΐας», with the rank word left off."
+    },
+    {
+      "form": "Исаија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's heading for the Julian 9 May, „Свети пророк Исаија.“ — Свети left off, which is not a rank, and пророк left off, which is the `prophet` this folder already carries in `types` and `honorific.js` composes back. Nothing else is in the heading: the royal kin, Jerusalem, Amos and the seven hundred years are all in the body. The form folds with `isaiah-the-egyptian`, which holds the same bare Исаија, and that fold is recorded as deliberate in the run's findings."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.05.2026 (9. мај ст. ст.) — „Свети пророк Исаија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the same menologion day the Romanian and the Greek already keep him on, so nothing moved. **A `floruit` is added where the folder held only a birth**: „Живео и пророковао на седам стотина година пре Христа“ — he lived and prophesied seven hundred years before Christ — which is this book's only date and names no event but the prophesying itself, so it goes in its own key and neither touches nor narrows saint.gr's birth of about 774 BC. The round number stands in the bounds and its roundness in the note, as the Julian 1 May of this wave did with Jeremiah's „шест стотина година“. **The Prologue states as fact what saint.gr calls a legend**: that this great prophet „беше од царскога рода“, born at Jerusalem of his father Amos, the brother of Amaziah king of Judah, where the Greek page calls the same kinship „θρύλοι μάλλον και όχι ιστορικές αλήθειες“. Nothing was chosen; both readings stand in the life. **New here and in no other book read for this folder**: that he walked three days wholly naked through the streets of Jerusalem, foretelling the city's imminent fall under the Assyrian king Sennacherib and warning the king and the chiefs of the people not to lean on the help of the Egyptians and the Ethiopians, since those too would soon be subdued by that same Sennacherib, but on the help of God the Most High; and that this prophecy, like all the rest, was fulfilled to the letter. The vision of the Lord of Sabaoth among the six-winged Seraphim, the spring of Siloam and its gloss „послата“, the comparison of Manasseh's generation with Sodom and Gomorrah, and the sawing in two outside Jerusalem the folder already held from the Romanian and the Greek, and they agree. `types` are not touched: Свети is no rank and пророк is the `prophet` the folder already carries. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -120,6 +135,13 @@
       "display": "about 774 BC",
       "basis": "traditional",
       "note": "saint.gr: «Ο Προφήτης Ησαΐας, υιός του Αμώς, γεννήθηκε στα Ιεροσόλυμα περί το 774 π.Χ.», and the head line of the same page gives «(-774 - ;)». The page gives no year for his death and leaves that half of the head line blank, so no death interval is recorded."
+    },
+    "floruit": {
+      "earliest": -700,
+      "latest": -700,
+      "display": "700 BC",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue, for the Julian 9 May: „Живео и пророковао на седам стотина година пре Христа.“ — a round number, and the only date this book gives him; it names no event but the living and the prophesying, so it is recorded as a floruit and not as a birth or a death. It does not conflict with the birth about 774 BC above, which saint.gr gives and which this book does not print; saint.gr puts his call about 738 BC. The hedge is the roundness of the number itself and it is recorded here rather than in the display, as the Julian 1 May of this wave did with Jeremiah's „шест стотина година“."
     }
   },
   "related": [
