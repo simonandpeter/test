@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Θεόδωρος ο Τριχινάς», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Теодор Трихина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Преп. Теодор Трихина.“, with the rank word Преп. left off. The by-name Трихина is kept: it is not a rank but the thing the entry turns on — he was called Трихин, the Hairy, for his one garment of haircloth — and `theodore-boyar-of-chernigov` and `theodore-prince-of-yaroslavl` already hold the bare «Теодор», which a bare form here would fold onto."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Преп. Теодор Трихина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [
@@ -120,5 +134,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 400,
+      "latest": 400,
+      "display": "about 400",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Мирно је скончао око 400. год.“ — the entry gives the year as an approximation and nothing else. This folder carried no dates at all before this reading."
+    }
+  }
 }

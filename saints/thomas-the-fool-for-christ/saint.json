@@ -11,6 +11,11 @@
       "form": "Θωμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Όσιος Θωμάς ο διά Χριστόν σαλός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Тома",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Преп. Тома Јуродиви.“, with the rank word Преп. and the rank Јуродиви both left off — Јуродиви is the `fool-for-christ` this folder carries in `types`, and BRIEF-SERBIAN.md §5's table reads it as a rank, so it is stripped **although stripping it leaves a bare form that folds**: `thomas-of-constantinople` already holds «Тома». The contract in `src/lib/honorific.js` is that the manifest keeps the bare name, and a fold recorded in the findings table is the sanctioned answer to a shared form, where a rank stored inside a form is a defect the corpus is already carrying in 161 older folders. The heading gives him no city, no monastery and no year besides."
     }
   ],
   "related": [],
@@ -42,11 +47,29 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Преп. Тома Јуродиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 546,
+      "latest": 560,
+      "display": "between 546 and 560",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Престави се св. Тома у Дафни код Антиохије, у време патријарха Домина (546-560 г.)“ — the interval is **the entry's own two numbers**, printed in its own parenthesis for that patriarchate, and not a reign this reader dated. The folder carried no dates at all before this reading, and saint.gr gave it none. `node .tmp/dd.mjs \"between 546 and 560\"` reads «между 546 и 560» and «μεταξύ 546 και 560»."
+    }
   }
 }

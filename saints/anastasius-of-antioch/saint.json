@@ -12,6 +12,11 @@
       "form": "Αναστάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Αναστάσιος Ιερομάρτυρας, επίσκοπος Αντιοχείας», with the rank words and the see left off."
+    },
+    {
+      "form": "Анастасије Синаит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Блажени Анастасије Синаит.“, with the rank word Блажени left off. „Патријарх Антиохијски“ is the body's first sentence and not part of the heading; the rank and the see are what this folder keeps in `types` and `office` in any case. The by-name Синаит is kept: `anastasius-the-persian` already holds the bare «Анастасије»."
     }
   ],
   "sex": "male",
@@ -66,8 +71,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Блажени Анастасије Синаит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -75,6 +89,8 @@
   },
   "related": [
     "anastasius-the-sinaite",
-    "justinian-the-great"
+    "justinian-the-great",
+    "eutychius-of-constantinople",
+    "gregory-of-antioch"
   ]
 }

@@ -1,0 +1,63 @@
+{
+  "slug": "gregory-of-antioch",
+  "display_name": "Gregory of Antioch",
+  "names": [
+    {
+      "form": "Григорије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Блажени Григорије патријарх Антиохијски.“, with the rank word Блажени, the rank патријарх and the see Антиохијски all left off; патријарх is the type this folder carries and Антиохијски the see it keeps in `office`. The heading gives no by-name, so the bare form is the fullest this calendar gives, and `gregory-of-nyssa` and `gregory-of-moesia` already hold it — a deliberate fold, recorded in the batch's commit message."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "patriarch",
+    "abbot"
+  ],
+  "office": "Patriarch",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Блажени Григорије патријарх Антиохијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 593,
+      "latest": 593,
+      "display": "593",
+      "basis": "attested",
+      "note": "Охридски пролог: „Упокојио се у Господу 593. године.“ — the entry's last sentence and the only year it gives him."
+    }
+  },
+  "related": [
+    "anastasius-of-antioch"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

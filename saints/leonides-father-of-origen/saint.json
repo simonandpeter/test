@@ -6,6 +6,11 @@
       "form": "Leonid",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 22 aprilie, «Sfântul Mucenic Leonid»."
+    },
+    {
+      "form": "Леонид",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. април ст. ст., „Св. муч. Леонид.“, with „Св.“ and the rank муч. left off. The heading gives him no city, no year and not even the fatherhood this corpus keeps in his display name — „Отац Оригенов“ is the body's first sentence — so the bare forename is all of it, and `leonid-presbyter-martyr-1937` and `leonides-of-epidaurus` already share it: a deliberate fold, recorded in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -48,8 +53,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.05.2026 (22. април ст. ст.) — „Св. муч. Леонид.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

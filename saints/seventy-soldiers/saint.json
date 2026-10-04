@@ -44,8 +44,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Сава Стратилат.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's heading for this entry names the commander alone, „Св. муч. Сава Стратилат.“, and the body counts the company that followed him: „Њих 70 на броју одмах бише по наредби царевој посечени.“ So this row rests on the body and not on the heading, which does not mention them; the quoted line is the heading whole, as BRIEF-SERBIAN.md §4 requires. **The entry gives the company no names at all, only a number**, so this folder gains no `sr` name form from it: a number is not a name, and the corpus's English display name is a count too."
     }
   ],
   "text": {

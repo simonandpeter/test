@@ -12,6 +12,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Απριλίου, «Όσιος Θεόδωρος ο Συκεώτης επίσκοπος Αναστασιουπόλεως», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Теодор Сикеот",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. април ст. ст., „Преп. Теодор Сикеот.“, with the rank word Преп. left off. The by-name Сикеот is kept: it is not a rank but the thing the entry explains in its first sentence — his birthplace was the village of Сикеа in Galatia, „због чега би прозван Сикеот“ — and `theodore-boyar-of-chernigov`, `theodore-of-perga` and `theodore-prince-of-yaroslavl` already share the bare «Теодор», which a bare form here would fold onto."
     }
   ],
   "sex": "male",
@@ -57,8 +62,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.05.2026 (22. април ст. ст.) — „Преп. Теодор Сикеот.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-05&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

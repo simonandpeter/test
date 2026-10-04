@@ -11,6 +11,11 @@
       "form": "Σάββας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Σάββας ο Στρατηλάτης, ο Γότθος», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Сава Стратилат",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Сава Стратилат.“, with „Св.“ and the rank муч. left off. Стратилат is kept: it is a military office and not a rank in the Church — none of the words `honorific.js` composes — and this corpus keeps it in his English display name as well. Keeping it also holds him out of the bare «Сава»; `sabbas-the-goth` and `sava-the-second` hold the fuller «Сава Готски» and «Сава II»."
     }
   ],
   "sex": "male",
@@ -55,8 +60,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Сава Стратилат.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

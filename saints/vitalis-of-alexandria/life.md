@@ -1,0 +1,11 @@
+# Vitalis of Alexandria
+
+The Ohrid Prologue of Bishop Nikolai Velimirović gives him a whole page and sets him in a single reign: in the time of the patriarch [John the Merciful](/saints/john-the-merciful-of-alexandria), it says, a certain young monk appeared at Alexandria who, as soon as he came, drew up a list of all the harlots in the city. His ascetic labour was singular, and the Prologue says so plainly before describing it. By day he hired himself out for the heaviest work there was; by night he went to the houses of ill fame, gave the money he had earned to one of the women, and shut himself in a room with her until morning.
+
+As soon as the door was shut he would beg the woman to lie down and sleep, and he would spend the whole night in the corner of the room praying to God for that sinner. So he kept her from sin for at least one night. The next night he went to another, the third to a third, and so on in order until he had been to them all, and then began again with the first. By his counsels many of them left their filthy trade: some married, some went into a monastery, some turned to honest work and honest earnings. And he forbade every one of these women to make known why he came to them.
+
+For that silence he became a scandal to the whole of Alexandria. Men reviled him in the street, spat on him and even beat him; and he bore it all patiently, showing his virtue to God and hiding it from men. Only when he died was the whole of it learned. Many wonderworking healings began to happen at his grave, and people brought their sick to it from various parts. Spat upon by men, the Prologue ends, he was and remained glorified by the all-seeing God.
+
+The entry gives no year, only the patriarchate it sets him in, and no interval was read out of that; it names no monastery and no birthplace, and Alexandria is the city he worked in rather than a place this folder locates him at. The Prologue is a book of selected lives and prints no hymn for any of its saints; no other calendar was read for him, and the Russian, Romanian and Greek rows of his attestation say so.
+
+*After the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 22. април ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-05&prolog=1); read 4 October 2026.*

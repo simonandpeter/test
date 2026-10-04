@@ -11,6 +11,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Όσιος Αθανάσιος κτήτωρ Μονής Μετεώρου», with the rank word and the office left off; the life page gives Andronikos as his name in the world."
+    },
+    {
+      "form": "Атанасије Метеорит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Преп. Атанасије Метеорит.“, with the rank word Преп. left off. The by-name Метеорит is kept: it is not a rank but the house this folder is named for, and `athanasius-of-attaleia` already holds the bare «Атанасије», which a bare form here would fold onto."
     }
   ],
   "sex": "male",
@@ -77,8 +82,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Преп. Атанасије Метеорит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

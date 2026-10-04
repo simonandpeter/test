@@ -10,6 +10,11 @@
       "form": "Ακούτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος», with the rank words left off; the life page heads him «Αγιος Ακούτιος (; - 305)»."
+    },
+    {
+      "form": "Акутион",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's entry for 21. април ст. ст., „два проста човека хришћанина Евтихије и Акутион“ — **out of the entry's body and not out of its heading**, which names the bishop alone. The form is the nominative the entry itself prints; the rank word beside it is left off, and the companionship clause this corpus keeps in the English display name is not part of the source's name for him. He is one of two plain Christian men there."
     }
   ],
   "related": [
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.05.2026 (21. април ст. ст.) — „Свешт. муч. Јануарије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's heading for the day names the bishop alone, „Свешт. муч. Јануарије.“, and the entry's own first words are „И други с њим.“ — and others with him. The body then names all seven: the bishop, his deacon Фауст and his reader Дисидерије, the Puteoli deacons Прокул and Сосије, and the two plain Christian men Евтихије and Акутион, and has all seven thrown to the beasts and then beheaded together. So this row rests on the entry's enumeration of the company and not on the heading, which does not name him; the quoted line is the heading whole, as BRIEF-SERBIAN.md §4 requires."
     }
   ],
   "text": {
