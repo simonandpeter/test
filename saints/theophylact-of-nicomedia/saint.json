@@ -12,6 +12,11 @@
       "form": "Θεοφύλακτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Θεοφύλακτος Επίσκοπος Νικομηδείας», with the rank word and the see left off."
+    },
+    {
+      "form": "Теофилакт",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 March on pravoslavno.rs, „Свети Теофилакт, епископ никомидијски.“, with Свети left off, which is not a rank, and the see епископ никомидијски left off as well. What remains is the bare forename, which is all the heading gives him."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.03.2026 (8. март ст. ст.) — „Свети Теофилакт, епископ никомидијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. The heading carries the see, which is left out of the stored name form; `Теофилакт` is held by no other folder. Two things in the entry are recorded rather than written over. It dates his repose „око 845. године“, about 845, where the folder holds saint.gr's 840; the thirty years of exile agree in both, and displacing a sourced year on a Prologue sentence is the author's call and not a reader's. And it names Nicephorus as the man who took the patriarchal throne after Tarasius died — which is dating and context, not a relation, so the name is here and not in the life, where it would imply a `related` row that is not true."
     }
   ],
   "hymns": [
@@ -147,6 +162,7 @@
     "euthymius-of-sardis",
     "joseph-archbishop-of-thessalonica",
     "nicetas-of-medikion",
-    "theodore-the-studite"
+    "theodore-the-studite",
+    "tarasius-of-constantinople"
   ]
 }
