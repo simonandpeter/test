@@ -1,0 +1,62 @@
+{
+  "slug": "four-hundred-forty-martyrs-of-italy",
+  "display_name": "The Four Hundred and Forty Martyrs of Italy",
+  "sex": "unknown",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Четири стотине и четрдесет мученика",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 2 March on pravoslavno.rs, „Четири стотине и четрдесет мученика.“ The heading is the whole of what the Prologue gives them: a number and the word мученика, and no personal name at all, so nothing could be stripped as a rank without leaving the form empty. The body names none of them either."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 579,
+      "latest": 579,
+      "display": "about 579",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 March: „Четири стотине и четрдесет мученика, који бише убијени од Лонгобарда у Италији око 579. године.“ The page says about the year 579, not 579, and it is the only source read for them."
+    }
+  },
+  "related": [
+    "gregory-the-dialogist"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 2 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 2 martie, which is the page for this menologion number — not 15 martie, which merely shares their civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 2 Μαρτίου, which is the page for this menologion number. The corpus holds the two other entries of that Greek day, `theodotus-of-kyrenia` and `troadius`, and neither page read for them names this company."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.03.2026 (2. март ст. ст.) — „Четири стотине и четрдесет мученика.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, three sentences long. The heading enumerates nobody and the body names nobody, so by the settled rule a company the source does not name is one folder and not four hundred and forty. The Prologue is the only one of the four calendars read for them."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

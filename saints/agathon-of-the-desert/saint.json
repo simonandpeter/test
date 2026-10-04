@@ -6,6 +6,11 @@
       "form": "Αγαθών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιανουαρίου, «Όσιος Αγαθών», with the rank word left off."
+    },
+    {
+      "form": "Агатон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 2 March on pravoslavno.rs, „Преподобни Агатон.“, with the rank word Преподобни left off. The heading gives no epithet; Egypt and the century are in the body."
     }
   ],
   "sex": "male",
@@ -41,11 +46,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.03.2026 (2. март ст. ст.) — „Преподобни Агатон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The corpus keeps this folder on the Greek 8 Ιανουαρίου and the Prologue keeps him on the Julian 2 March. The two entries are read as one man: both describe an ascetic of the desert with no see, no monastery and no year, whose sayings are those of the Gerontikon, and neither page offers an epithet or a place that would tell two Agathons of that description apart. The Prologue adds what saint.gr has not — Egypt, the fifth century, and Lot as his teacher — and the corpus already keeps that Lot, on the Greek 22 Οκτωβρίου, as a wise ascetic of the desert whose sayings are in the Paradise of the Fathers. Two churches keeping a desert father on two different days is the ordinary case and is not a second feast on one church. The identification is a reading and is in the reader's report."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 March: „Преподобни Агатон, велики мисирски подвижник из V века.“ It gives the century and no year. The folder carried no dates at all before this reading, and saint.gr, the only other source read for him, gives him no year, no country and no monastery."
+    }
+  },
+  "related": [
+    "lot-22-october"
+  ]
 }

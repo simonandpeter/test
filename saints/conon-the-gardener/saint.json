@@ -11,6 +11,11 @@
       "form": "Κόνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Κόνων ο Κηπουρός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Конон Баштован",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 5 March on pravoslavno.rs, „Свети мученик Конон Баштован.“, with the rank word мученик left off and Свети, which is not a rank. Баштован, the gardener, is kept: it is the by-name his trade gives him, it is what this folder's English name already carries from the other two calendars, and it is what the Prologue uses to tell him from the Conon of the entry before."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.03.2026 (5. март ст. ст.) — „Свети мученик Конон Баштован.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and the heading carries the epithet that keeps him apart from the day's first Conon, so the stored Serbian form keeps it too. The Prologue gives the year as 251, which falls inside the interval this folder already holds from doxologia, Decius's reign of 249 to 251, and narrower than it; a sourced interval is not narrowed on a reading, so nothing was changed."
     }
   ],
   "text": {

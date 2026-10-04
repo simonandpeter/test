@@ -11,6 +11,11 @@
       "form": "Γεράσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Όσιος Γεράσιμος ο Ιορδανίτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Герасим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 4 March on pravoslavno.rs, „Преподобни Герасим.“, with the rank word Преподобни left off. The heading carries neither the Jordan nor the Thebaid, both of which are in the body."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.03.2026 (4. март ст. ст.) — „Преподобни Герасим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first and longest entry. It agrees with the year the folder already holds, 475, and adds the typikon of his monastery, the lion, and his part at Chalcedon. The Prologue puts the Council «у време Маркијана и Пулхерије» — in the time of Marcian and Pulcheria, both of whom the corpus keeps as folders of their own; a reign is dating and not a relation, so the names are recorded here and not in the life, where they would imply `related` rows that are not true. The heading gives him no epithet, so the stored Serbian form is the bare forename; `Герасим` is held by no other folder."
     }
   ],
   "hymns": [

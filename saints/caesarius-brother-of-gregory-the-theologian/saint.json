@@ -6,6 +6,11 @@
       "form": "Καισάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Μαρτίου, «Άγιος Καισάριος αδελφός Γρηγορίου Θεολόγου», with the rank word and the kinship clause left off."
+    },
+    {
+      "form": "Кесарије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 9 March on pravoslavno.rs, „Свети Кесарије.“, with Свети left off, which is not a rank. The heading gives no epithet and no kinship; the brother is named in the body's first clause, and the corpus puts such clauses in the English name and not in the stored form. `Кесарије` is held by no other folder."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.03.2026 (9. март ст. ст.) — „Свети Кесарије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry. The heading gives the bare forename alone and the body's first clause is what identifies him — brother of Gregory the Theologian — which is the kinship this folder's English name already carries. That clause also prints the year 369, where the folder holds saint.gr's 368 for his repose; one year apart, and the sourced year was not written over. The entry is otherwise about his theology and not his life."
     }
   ],
   "dates": {

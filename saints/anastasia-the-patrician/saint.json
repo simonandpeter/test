@@ -6,6 +6,11 @@
       "form": "Αναστασία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαρτίου, «Οσία Αναστασία η Πατρικία», with the rank word left off. The page adds that abba Daniel renamed her Αναστάσιος when he dressed her as a man."
+    },
+    {
+      "form": "Анастасија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 10 March on pravoslavno.rs, „Преподобна матер Анастасија.“, with the rank word Преподобна left off and матер, which is a form of address and not part of the name. The heading gives no epithet; the patrician rank, which this folder's English name carries, is in the body's first sentence. `Анастасија` is held by no other folder."
     }
   ],
   "sex": "female",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.03.2026 (10. март ст. ст.) — „Преподобна матер Анастасија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry. It is read as this folder's saint on the day, the court of Justinian, the patrician rank and the Egyptian desert, all of which saint.gr gives her too. The folder held a `floruit` of Justinian's reign and no death; the Prologue's 563 was added as the death and falls inside that reign, so the floruit was left as it was. The twenty-eight years in the cell are in the entry and are a span and not a date. The empress Theodora, whom the entry names as the reason she left Constantinople, and the Abba Daniel who tonsured her are both named in the life; neither is a folder in this corpus that was read as these people, so neither took a `related` row."
     }
   ],
   "dates": {
@@ -53,6 +68,13 @@
       "display": "under Justinian the Great (527–565)",
       "basis": "traditional",
       "note": "saint.gr: «ήταν μια από τις πιο θεοφοβούμενες κόρες του Βυζαντίου, στα χρόνια του Ιουστινιανού του μεγάλου (527 - 565 μ.Χ.)». The page gives no year of her own, so the interval is the reign it prints."
+    },
+    "death": {
+      "earliest": 563,
+      "latest": 563,
+      "display": "563",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 10 March: „И затвори се Анастасија у тесну келију где проведе двадесетосам година, и где се упокоји 563. године.“ The folder carried no death at all before this reading, only the reign saint.gr gives for her life, and 563 falls inside it."
     }
   },
   "related": [

@@ -11,6 +11,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιανουαρίου, «Όσιος Ιάκωβος ο Ασκητής», with the rank word left off."
+    },
+    {
+      "form": "Јаков Посник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 4 March on pravoslavno.rs, „Свети Јаков Посник.“, with Свети left off, which is not a rank. Посник is kept as the by-name that distinguishes him: the corpus keeps the same epithet in English display names (`eustratius-the-faster`, `macarius-the-faster`, `john-the-faster-of-the-cave`), which `scripts/draft-saint.mjs`'s rank check would refuse if it read as a rank, and the bare forename would fold with `james-of-nisibis` and `james-of-samosata`. Nothing was added to `types` from it."
     }
   ],
   "sex": "male",
@@ -54,11 +59,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.03.2026 (4. март ст. ст.) — „Свети Јаков Посник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The corpus keeps this folder on the Romanian and Greek 28 January and the Prologue keeps him on the Julian 4 March. The two are read as one man on the story, which is the same story in the same order and is not a common one: fifteen years of asceticism, the gift of healing, the harlot sent to him by mockers and turned to repentance, the possessed girl brought by her parents and healed, the fall with her, the murder, the body thrown into the river, the years of penance in a tomb, and the rain in a drought as the sign of forgiveness. The Prologue adds the left hand held in the fire, puts him in the sixth century, has him kill the girl only where saint.gr has her younger brother killed with her, and gives the penance as ten years. The folder carried no dates at all; the century was added. Two churches keeping him on two different days is the ordinary case and is not a second feast on one church."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 4 March: „Живео у VI веку.“ It gives the century and no year. The folder carried no dates at all before this reading, and neither doxologia.ro nor saint.gr, the two other sources read for him, gives a year or a century."
+    }
   }
 }

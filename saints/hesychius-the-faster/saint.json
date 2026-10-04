@@ -1,0 +1,67 @@
+{
+  "slug": "hesychius-the-faster",
+  "display_name": "Hesychius the Faster",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Исихије Посник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 5 March on pravoslavno.rs, „Преподобни Исихије Посник.“, with the rank word Преподобни left off. Посник is kept as the by-name that distinguishes him: the corpus keeps the same epithet in English display names (`eustratius-the-faster`, `macarius-the-faster`, `john-the-faster-of-the-cave`), which `scripts/draft-saint.mjs`'s rank check would refuse if it read as a rank, and the bare forename is held by eighteen other folders. Neither Bursa, nor the mountain, nor Amasea is in the heading."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 5 March: „Рођен беше близу Брусе у VIII веку.“ It gives the century of his birth and no year."
+    },
+    "death": {
+      "earliest": 790,
+      "latest": 790,
+      "display": "790",
+      "basis": "traditional",
+      "note": "The same entry closes „Скончао мирно и преселио се у царство Господа свога 790. године.“ — a year and not an approximation, unlike the other two years this day's entries give. The Prologue is the only source read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 5 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 5 martie, which is the page for this menologion number — not 18 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 5 Μαρτίου, which is the page for this menologion number. The corpus already holds the other three entries of that Greek day, `conon-of-isauria`, `conon-the-gardener` and `mark-the-ascetic`, and no page read for them names him."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.03.2026 (5. март ст. ст.) — „Преподобни Исихије Посник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and a new folder rather than an upgrade. The corpus holds eighteen other folders whose name reads as this one's, and the two that are venerable ascetics were read against this entry and are not this man: `hesychius-the-choribite` is a sixth-century monk kept by the Russian calendar on 3 October, who died and was given back his life and shut himself up for twelve years, and `hesychius-the-sinaite` is a seventh-century abbot kept by the Greek on 29 March. Nothing else in the corpus is an eighth-century hermit of Bithynia. Theophylact, bishop of Amasea, who moved his relics, has no folder here; the corpus's three Theophylacts are other men."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

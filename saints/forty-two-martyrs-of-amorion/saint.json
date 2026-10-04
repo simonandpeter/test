@@ -11,6 +11,11 @@
       "form": "Τεσσαράκοντα δύο Μάρτυρες",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαρτίου, «Άγιοι Τεσσαράκοντα δύο Μάρτυρες από το Αμόριο», with the rank word and the city left off. The site gives no single name for the company beyond its number."
+    },
+    {
+      "form": "Четрдесетдва мученика из Амореје",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 6 March on pravoslavno.rs, „Света четрдесетдва мученика из Амореје.“, with Света left off, which is not a rank. The number, the word мученика and the city are the whole of what the heading gives them, as they are in the Romanian and Greek forms this folder already holds; the body names none of the forty-two, so nothing fuller could be reached."
     }
   ],
   "sex": "male",
@@ -23,7 +28,14 @@
       "latest": 842,
       "display": "829–842",
       "basis": "traditional",
-      "note": "doxologia.ro opens: «Teofil, împăratul grecilor (829-842), fiul împăratului Mihail (820-829) care se numea Valvos sau Travlos, fiind cu neamul din Amoreea». The city fell in his reign; the same life says only that «Se împliniseră șapte ani de la pătimirea sfinților» before they were put to death, and gives no year for the martyrdom itself."
+      "note": "doxologia.ro opens: «Teofil, împăratul grecilor (829-842), fiul împăratului Mihail (820-829) care se numea Valvos sau Travlos, fiind cu neamul din Amoreea» — the reign the page gives for the emperor whose commanders these were, and the only interval either of the first two calendars read for them states."
+    },
+    "death": {
+      "earliest": 845,
+      "latest": 845,
+      "display": "845",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 6 March: „После седам година беху посечени, 845. године.“ — after seven years they were beheaded, in the year 845. The folder carried no death at all before this reading. It falls after the end of the reign the floruit holds, which is what the seven years in prison account for, so neither interval was changed to make room for the other."
     }
   },
   "attestations": [
@@ -63,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.03.2026 (6. март ст. ст.) — „Света четрдесетдва мученика из Амореје.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first and longest entry, and most of it is the two arguments the commanders made in prison. The heading enumerates nobody and the body names none of the forty-two, so the company stays one folder. The folder held a `floruit` of Theophilos's reign, 829 to 842, from doxologia and no death at all; the Prologue's 845 was added as the death, which does not narrow or contradict the reign — the seven years in prison run past the end of it."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Μάρκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Όσιος Μάρκος ο ασκητής και Θαυματουργός», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Марко Подвижник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 5 March on pravoslavno.rs, „Преподобни Марко Подвижник.“, with the rank word Преподобни left off. Подвижник, the ascetic, is kept rather than stripped as a second rank: it is the by-name this folder's English name already carries from the other two calendars, which print «Marcu Pustnicul» and «Μάρκος ο ασκητής», and the bare forename would fold with the corpus's other men of the name."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.03.2026 (5. март ст. ст.) — „Преподобни Марко Подвижник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth and last entry. It gives no year and no century — the forty years before the tonsure and the sixty after it are counted from nothing — so the folder's empty `dates` is unchanged and nothing was inferred from the death of the teacher it names. The entry names the patriarch Photius as having praised his homilies, which is the kind of row this corpus already keeps: `troadius` relates to `nicodemus-the-hagiorite` for the same reason, a later father cited about an earlier one."
     }
   ],
   "hymns": [
@@ -82,6 +97,7 @@
   },
   "related": [
     "john-chrysostom",
-    "symeon-the-new-theologian"
+    "symeon-the-new-theologian",
+    "photius-of-constantinople"
   ]
 }

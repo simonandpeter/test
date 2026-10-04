@@ -6,4 +6,8 @@ There, at a place called Pempton, she built a monastery which came to be called 
 
 When she felt her end coming she called for abba Daniel, and having communicated of the immaculate mysteries she gave up her righteous soul. The page keeps for her one distich, «H Πατρικία πάντα λιπούσα τάδε, / Πάντων κατέστη κυρία εν τω πόλω» — the patrician, having left all these things behind, became lady of all in heaven — and it prints no hymn and names no relic.
 
-*After saint.gr's calendar for 10 Μαρτίου — [the day](https://www.saint.gr/03/10/index.aspx) and [the life](https://www.saint.gr/1256/saint.aspx); read 30 September 2026.*
+The Serbian church keeps her on this day, and the Ohrid Prologue of Bishop Nikolai Velimirović gives her five sentences and the reason she left the city. She was a patrician and a lady at the court of the emperor [Justinian](/saints/justinian-the-great); and when she was widowed, and saw that the empress Theodora could not bear her, she disappeared all at once out of Constantinople and was found in the Egyptian desert.
+
+The famous spiritual father Abba Daniel tonsured her and gave her out as the monk Anastasius the eunuch, at her own wish, so that as a woman under a man's appearance she might be saved the more easily and might also be hidden from the emperor's searches for her. She shut herself in a narrow cell, where she passed twenty-eight years and where she reposed in the year 563. Before her death, the entry ends, the elder Daniel saw her face shining like the sun.
+
+*After saint.gr's calendar for 10 Μαρτίου — [the day](https://www.saint.gr/03/10/index.aspx) and [the life](https://www.saint.gr/1256/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 10. март ст. ст. — [the Serbian day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-23&prolog=1), read 4 October 2026.*

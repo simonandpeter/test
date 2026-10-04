@@ -1,0 +1,50 @@
+{
+  "slug": "unknown-maiden-of-alexandria",
+  "display_name": "The Unknown Maiden of Alexandria",
+  "sex": "female",
+  "types": [
+    "virgin"
+  ],
+  "names": [
+    {
+      "form": "Непозната девојка из богате куће у Александрији",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 3 March on pravoslavno.rs, „Непозната девојка из богате куће у Александрији.“ The heading is a description and not a name: it carries no personal name and no rank word, so there was nothing to strip and the form is kept whole, as `holy-woman-and-her-infant` keeps its Greek form whole for the same reason. The body calls her девица."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 3 марта ст. ст., which is the page for this menologion number. She is nameless, so no other calendar could be searched for her by name either."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 martie, which is the page for this menologion number — not 16 martie, which merely shares her civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 3 Μαρτίου, which is the page for this menologion number. The corpus already holds the other two entries of that Greek day, the three martyrs and `piamoun`, and neither page read for them names her."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.03.2026 (3. март ст. ст.) — „Непозната девојка из богате куће у Александрији.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, numbered and headed like the other two. It gives her no name at all, so the folder's English name is a description and not a chosen form of any name; `holy-woman-and-her-infant` is the corpus's existing case of the same kind. The Prologue is the only one of the four calendars read for her, and being nameless she cannot be looked for in the other three by name. That this entry is a commemoration rather than a story told about the day is a reading, and it is in the reader's report."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

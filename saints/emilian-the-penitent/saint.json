@@ -1,0 +1,51 @@
+{
+  "slug": "emilian-the-penitent",
+  "display_name": "Emilian the Penitent",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Емилијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 7 March on pravoslavno.rs, „Преподобни Емилијан.“, with the rank word Преподобни left off. The heading gives no epithet and no place; Rome is in the body's first sentence, and the English epithet this folder carries is a chosen one and not a form of any name the source prints. `Емилијан` is held by no other folder."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 7 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 7 martie, which is the page for this menologion number — not 20 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 7 Μαρτίου, which is the page for this menologion number. That Greek day does carry an Emilian of Rome — «Άγιοι Αιμιλιανός ο Ρωμαίος και οι συν αυτώ Ιάκωβος και Μαριανός», which is the corpus's `emilian-the-roman` — but he is a martyr of 259 with two companions, and this man is a monk who reposed in the Lord after a long life; nothing was read that would make them one, and the two stories cannot both be one man's."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.03.2026 (7. март ст. ст.) — „Преподобни Емилијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, and a new folder rather than an upgrade. The corpus's `emilian-the-roman` is kept by the Greek on this same menologion day and is also born at Rome, but he is a martyr who died in 259 with the companions James and Marianus, where this entry's man takes the monastic habit, is an example to his brethren, and lives long and reposes in the Lord — the heading calls him Преподобни and nothing in the entry is a martyrdom. Death by the sword against a peaceful repose is the kind of incompatibility this corpus reads as two men, as `kalia-12-february` was read against `kale`. The English name is a chosen form, because the only thing in the entry that distinguishes him from the other Emilian of Rome is his repentance; that choice is in the reader's report. No `dates`: the entry gives neither a year nor a century."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

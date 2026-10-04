@@ -7,6 +7,11 @@
       "form": "Θεοδώρητος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαρτίου, «Άγιος Θεοδώρητος ο Ιερομάρτυρας, πρεσβύτερος Αντιοχείας», with the rank words and the see left off."
+    },
+    {
+      "form": "Теодорит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 8 March on pravoslavno.rs, „Свети свештеномученик Теодорит.“, with the rank word свештеномученик left off and Свети, which is not a rank. The heading gives no epithet and does not name Antioch, which this folder's English name carries and which the body of the entry supplies."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.03.2026 (8. март ст. ст.) — „Свети свештеномученик Теодорит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The corpus keeps this folder on the Greek 3 Μαρτίου and the Prologue keeps him on the Julian 8 March. The two are read as one man: a presbyter of the church of Antioch, arrested under Julian the Apostate and killed for refusing to deny Christ, which is the whole of what either page makes him. The Prologue adds the Golden Church that Constantine built, the treasurership, the plundering by the emperor's uncle of the same name, and the deaths of the two who had a hand in it. It dates the beheading 362 where this folder holds saint.gr's 361; one year apart, and the sourced year was not written over. The entry also names a Felix as the judge's helper, who dies of a flow of blood at the mouth; the corpus's `felix-8-march` is a martyr the other calendars keep on this menologion day and is plainly not that man, so no row and no relation was made for him."
     }
   ],
   "dates": {
@@ -57,5 +72,8 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "constantine-the-great"
+  ]
 }

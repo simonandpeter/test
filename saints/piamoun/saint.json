@@ -6,6 +6,11 @@
       "form": "Πιαμούν",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαρτίου, «Οσία Πιαμούν η Παρθένος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Пиамука Мисирка",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 3 March on pravoslavno.rs, „Света Пиамука Мисирка.“, with Света left off, which is not a rank. Мисирка is kept: it is the epithet of her country, the Egyptian woman, and not a rank or a see, and the heading carries no rank word at all."
     }
   ],
   "sex": "female",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.03.2026 (3. март ст. ст.) — „Света Пиамука Мисирка.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, five sentences long. It is read as this folder's saint on the menologion day, the country and the manner of life: a virgin of Egypt kept on 3 March who lived as an ascetic in her mother's house. The two accounts share almost no incident — saint.gr has her orphaned young, giving alms with her mother and lifting a siege by her name, where the Prologue has her refuse marriage, eat every second day and receive the gift of foresight — and the difference is recorded rather than reconciled. The Prologue gives her repose as about 377, which the folder's `floruit` of the fourth century had no death beside; the death was added and the floruit left alone."
     }
   ],
   "dates": {
@@ -52,6 +67,13 @@
       "display": "4th century",
       "basis": "traditional",
       "note": "saint.gr: «Η Οσία Πιαμούν, καταγόταν από την Αίγυπτο όπου έζησε τον 4ο μ.Χ. αιώνα» — she came of Egypt, where she lived in the fourth century. The page gives no year of birth and none of repose."
+    },
+    "death": {
+      "earliest": 377,
+      "latest": 377,
+      "display": "about 377",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 3 March: „Упокојила се мирно обручивши душу своју Господу, око 377. године.“ The page says about the year 377, not 377, and it is the only source read for her that gives a year of any kind; saint.gr gives none, and the floruit beside this is that page's century. The two do not conflict: 377 falls inside the century, and nothing of the century's interval was narrowed."
     }
   },
   "text": {

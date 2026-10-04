@@ -12,6 +12,11 @@
       "form": "Σωφρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Σωφρόνιος Πατριάρχης Ιεροσολύμων», with the rank words left off."
+    },
+    {
+      "form": "Софроније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 March on pravoslavno.rs, „Свети Софроније, патријарх јерусалимски.“, with Свети left off, which is not a rank, and the see патријарх јерусалимски left off as well. What remains is the bare forename, which is all the heading gives him; `Софроније` is held by no other folder."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.03.2026 (11. март ст. ст.) — „Свети Софроније, патријарх јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first and longest entry. The heading carries the see, which is left out of the stored name form. Two things are recorded rather than written over. It dates his repose 644, where the folder holds saint.gr's 638; ten years of governing are in the Prologue and no year of accession, so the two cannot be reconciled from the page, and displacing a sourced year is the author's call. And the entry prints the death of his predecessor Modestus as «(+ 364)», which cannot be right on its own page — Modestus is succeeded by a man the same entry has dying in 644 — and reads as a misprint for 634; nothing was taken from it, and it is noted here rather than silently corrected. The entry also names Zacharias and Modestus as the patriarchs before him and the emperor Heraclius and the caliph Omar; a succession and a reign are context and not relations, so those names are here and not all of them in the life."
     }
   ],
   "hymns": [

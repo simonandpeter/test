@@ -11,6 +11,11 @@
       "form": "Καπίτων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιοι Εφραίμ, Βασιλεύς, Ευγένιος, Αγαθόδωρος, Ελπίδιος, Καπίτων και Αιθέριος», with the rank word left off."
+    },
+    {
+      "form": "Капитон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first entry for the Julian 7 March on pravoslavno.rs, whose heading is „Светих седам свештеномученика Херсонских.“ and whose first sentence names the seven: „Василије, Јефрем, Евгеније, Елпидије, Агатодор, Етерије и Капитон.“ This man's own name is taken out of that list; the rank word свештеномученика and Светих are left off, and Херсонских describes the seven together and is not part of any one name, so the bare forename is all the entry gives him."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.03.2026 (7. март ст. ст.) — „Светих седам свештеномученика Херсонских.“ … „Светих седам свештеномученика Херсонских: Василије, Јефрем, Евгеније, Елпидије, Агатодор, Етерије и Капитон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. Its heading names nobody and its first sentence names all seven, so the citation quotes the heading and the body's own naming clause, and the heading is quoted whole by each of the seven folders. This folder is the Капитон of the seven. The entry tells the furnace at Cherson, the baptism of the city, the speaking of the wonder at the Council of Nicaea — which it does not date — and the drowning in the Dnieper, and the Romanian row's existing note about a death on 21 December is neither confirmed nor contradicted by it. The stored bare form is also held by `capito-the-martyr` as its Russian form, read off another day altogether; neither entry offers a fuller form, and that fold is recorded in the run's findings."
     }
   ],
   "hymns": [
@@ -118,5 +133,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 325,
+      "display": "the beginning of the 4th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 7 March closes the entry for the seven „Сви пострадаше почетком IV века.“ — all of them suffered at the beginning of the fourth century. It gives the century's beginning and no year, which is why the bounds are a quarter-century and not a year, and the folder carried no dates at all before this reading."
+    }
   }
 }
