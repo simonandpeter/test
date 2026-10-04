@@ -12,6 +12,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιανουαρίου, «Άγιοι Αθανάσιος ο Μέγας και Κύριλλος Πατριάρχες Αλεξανδρείας», with the rank words left off."
+    },
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. јун ст. ст., „Свети Кирил, архиепископ александријски“ — Свети is not a rank and „архиепископ александријски“ is the rank with its see, which `office` and the display name already carry; both come off and the bare forename is left. **THE FOLD IS THE WIDEST THIS WAVE HAS WRITTEN**: `foldchk.py` returns four `sr` holders already — `cyril-of-catania`, `cyril-of-heliopolis`, `cyril-of-jerusalem`, `cyril-the-philosopher` — so this is the fifth on the string. Deliberate: the heading offers nothing fuller, and a form may not be built out of a body."
     }
   ],
   "sex": "male",
@@ -40,7 +45,8 @@
     "misael-of-the-three-youths",
     "rufus-of-thessalonica",
     "theodosius-the-younger",
-    "acacius-of-melitene"
+    "acacius-of-melitene",
+    "celestine-of-rome"
   ],
   "dates": {
     "birth": {
@@ -48,14 +54,14 @@
       "latest": 378,
       "display": "378",
       "basis": "traditional",
-      "note": "doxologia.ro's life: «Chiril, marele învățător al Bisericii, s-a născut în 378, la Mahalla, în Egipt»."
+      "note": "doxologia.ro's life: «Chiril, marele învățător al Bisericii, s-a născut în 378, la Mahalla, în Egipt». The Охридски пролог for 9. јун ст. ст. gives no year of birth and nothing was changed here (5 October 2026)."
     },
     "death": {
-      "earliest": 446,
+      "earliest": 444,
       "latest": 446,
-      "display": "446",
+      "display": "444 or 446",
       "basis": "traditional",
-      "note": "The life's note 71 quotes Theophanes the Confessor: «În acest an (446), au murit întru cucernicie Chiril al Alexandriei și Proclu al Constantinopolului.» The same page says the day of his repose is 9 June, on the authority of Christopher of Mitylene's distich, and that 18 January is not the day of his repose."
+      "note": "The life's note 71 quotes Theophanes the Confessor: «În acest an (446), au murit întru cucernicie Chiril al Alexandriei și Proclu al Constantinopolului.» The same page says the day of his repose is 9 June, on the authority of Christopher of Mitylene's distich, and that 18 January is not the day of his repose. The Охридски пролог for 9. јун ст. ст. — the very day that argument names — states a different year flat: „Представио се Господу 444. године“. The interval is widened to hold both years and neither is chosen (5 October 2026)."
     }
   },
   "hymns": [
@@ -163,8 +169,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.06.2026 (9. јун ст. ст.) — „Свети Кирил, архиепископ александријски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE DAY IS THE ONE THE ROMANIAN LIFE SAYS IT SHOULD BE, AND THE TWO OTHER ROWS ARE ON ANOTHER. doxologia and saint.gr both keep him on 18 JANUARY, and **this folder’s own `death` note already records that doxologia says otherwise about the day**: that the day of his repose is 9 June, on the authority of Christopher of Mitylene’s distich, and that 18 January is not the day of his repose. **This book keeps the Julian 9 June**, so the `serbian` row is on the day the Romanian page argued for while the Romanian row sits on the day the Romanian calendar prints. `sr-cand.mjs 01-18` prints this book’s own Julian 18 January, which is Athanasius the Great and Maximus archbishop of Vlach-Zaplanina, **and does not name him**, so there is no second Serbian day and no §4 note is owed. A DEATH WIDENED BY TWO YEARS. The folder held `death` 446, off the life’s note 71 quoting Theophanes the Confessor: «În acest an (446), au murit întru cucernicie Chiril al Alexandriei și Proclu al Constantinopolului». This book states „Представио се Господу 444. године“. Two books, two flat years: `death` 444 to 446, display «444 or 446», neither chosen. `birth` 378 untouched, this book giving no year of birth. ONE NEW `related` PAIR, RECIPROCAL, AND THE FOLDER IT REACHES HAD NONE. The entry says Cyril presided at the Third Ecumenical Council at Ephesus **and at the same time represented Celestine, pope of Rome, at that pope’s own request, he being too old to come to the Council**. `celestine-of-rome` exists, has `related: null`, and is reached by nothing. **A Council is not a folder and this row is not written on the Council**: it is written on a request one man made of another and a representation the body narrates. Added here and on his. A KINSHIP THE BODY NARRATES AND NO FOLDER TO PUT IT ON. „близак сродник Теофила, патријарха александријског, после чије смрти би посвећен за патријарха“ — a close kinsman of Theophilus, patriarch of Alexandria, whom he succeeded. **A kinship is the test that owes a row**, and `ls saints | grep -i '^theophilus'` returns twenty-odd folders of whom not one is the patriarch of Alexandria. Refused by ruling 3 and named. WHAT ELSE IS NEW, AND IT IS A GREAT DEAL. The three fights of his life set out as three: the Novatians, Nestorius, and the Jews of Alexandria. **The Novatian doctrine in detail** — named after the presbyter Novatian at Rome, proud of their own virtue, going about in white clothing, forbidding a second marriage, holding that one must not pray for those who commit a mortal sin nor take back into the church those who once fall away from it, however bitterly they repent — and that Cyril beat them and drove them out of Alexandria **together with their bishop**. **The fight with the Jews of Alexandria, which it calls much harder and bloodier**, and that he at last prevailed with the emperor Theodosius the Younger that they be driven out of the city. **That he presided at Ephesus and represented the pope.** **The end of Nestorius**: condemned, anathematised, exiled by the emperor to the eastern frontier of the empire, where he died a horrible death, worms eating the tongue with which he had blasphemed the Most Holy Theotokos by calling her Христородица, Christotokos. And, in the entry’s last sentence, **that he is said to have composed „Богородице Дјево радујся!“** — Rejoice, O Virgin Theotokos. **THAT LAST IS A HYMN AND IT GOES NOWHERE NEAR `hymns`.** §3 of the Serbian brief is absolute: this source prints no liturgical text, and what it prints here is a claim about authorship and not the text of anything. `hymns` is untouched, nothing was quoted as a troparion, and the attribution is in the prose where a reader can weigh «it is said» for himself. `types` and `office` UNTOUCHED: архиепископ is the «Archbishop of Alexandria» `office` already holds, and `archbishop` is not added because the folder’s grade is `patriarch`, which is higher, and the 2 June refusal of a plain `martyr` beside a `great-martyr` is the same mechanism. NO ROWS for Nestorius, Novatian, the Novatian bishop or the Jews of Alexandria: no folder holds the first two, the third is unnamed, and the emperor Theodosius the Younger is already in this folder’s `related` off another page and takes no row for being an emperor here. No `locations`. THE FOLD IS DELIBERATE AND FIVE WIDE, WHICH IS THE WIDEST THIS WAVE HAS WRITTEN. `foldchk.py` returns `cyril-of-catania`, `cyril-of-heliopolis`, `cyril-of-jerusalem` and `cyril-the-philosopher`, all four `sr`, for «Кирил». The see came off as §6 and five earlier days of this wave require, and the heading has nothing else in it, so there is nothing to break the fold with; the five are told apart by their sees and their days. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

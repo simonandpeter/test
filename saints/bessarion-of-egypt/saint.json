@@ -11,6 +11,11 @@
       "form": "Βησσαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Φεβρουαρίου, «Όσιος Βησσαρίων», with the rank word left off."
+    },
+    {
+      "form": "Висарион",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. јун ст. ст., „Преподобни Висарион“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped, and the heading has nothing else in it, no place and no epithet. `foldchk.py` returns `[('bessarion-of-larissa', 'sr')]`: a fold of two on the bare form, deliberate, the other man a metropolitan of Larissa."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.06.2026 (6. јун ст. ст.) — „Преподобни Висарион“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE DAY WAS CHECKED, FOR THE FOURTH DAY RUNNING, AND IT IS THIS BOOK’S ONLY ONE FOR HIM. doxologia keeps him TWICE, on 20 februarie and again on 6 iunie, and this folder’s `romanian` row carries the 20 February with the second day recorded in its note; saint.gr keeps the 20 February. **This book keeps the 6 June, which is doxologia’s second day and not its row’s day** — each row carries its own day, as the schema intends. `sr-cand.mjs 02-20` prints this book’s own Julian 20 February, which is Leo bishop of Catania and the hieromartyr Sadok, **and does not name him**, so there is no second Serbian day and no note is owed. TWO TEACHERS NEITHER EARLIER BOOK NAMED, AND THEY ARE TWO RECIPROCAL `related` ROWS. This folder’s own life says doxologia «names no monastery and no teacher», and saint.gr names none either. This book names two: „Посетио је светог Герасима на Јордану, и слушао је светог Исидора Пелусиота“. Both are held: `gerasimus-of-the-jordan` (one of eighteen Gerasimuses, told by the river) and `isidore-of-pelusium` (one of eleven Isidores, told by the see). **A visit and a hearing are a relation in the plain sense — the body narrates both, and the page’s own linker matches both display forms, so a row is owed in both directions or the life would carry a link with no row.** Added here and on each of theirs. **„466. године“ REFUSED, ON THE 31 MAY READING, AND IT IS THE AUTHOR’S.** This folder holds `floruit` 351 to 450, display «late 4th – early 5th century», off saint.gr’s «έζησε περί τα τέλη του 4ου και αρχές του 5ου αιώνα», and no `death` at all. This book states one flat, and it falls SIXTEEN YEARS BEYOND the far end of that interval. `dates` is untouched, for three stated reasons: writing `death` 466 beside a `floruit` ending 450 would have the folder assert activity stopping in 450 and a death sixteen years later; replacing the floruit would be overwriting another book’s reading rather than widening it, which is what `philosophos-of-alexandria` was refused on 31 May; and the Greek interval is itself an approximation («περί τα τέλη»), so the two are not commensurable. **Both books agree he lived to deep old age, which is the one thing that could reconcile them, and that is a length of life and no source for a year.** AND THE YEAR IS KEPT AWAY FROM A DEATH VERB IN THE LIFE ON PURPOSE: this folder has no `death`, so `date-audit`’s `stated` reads its prose, and a repose verb beside 466 would have put a refused year into the audit. Measured: `stated` 153, unmoved. `types` untouched — Преподобни is the `venerable` already there, and `hermit` and `wonderworker` are both corroborated by this entry’s mountains and woods and its „велики дар чудотворства“. No `locations`: Egypt is a country. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('bessarion-of-larissa', 'sr')]`, so the bare form makes a fold of two; the heading offers nothing else at all. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
@@ -92,6 +107,8 @@
   },
   "related": [
     "elisha-the-prophet",
-    "elijah-the-tishbite"
+    "elijah-the-tishbite",
+    "gerasimus-of-the-jordan",
+    "isidore-of-pelusium"
   ]
 }

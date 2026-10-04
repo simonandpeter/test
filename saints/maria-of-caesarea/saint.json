@@ -11,6 +11,11 @@
       "form": "Μαρία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουνίου, «Αγια Μαρια η Παρθενα», with the rank word left off. The day's line names the five together, «Αγίες πέντε Παρθένες, Μάρθα, Μαρία, Κυρία, Βαρέρια και Μαρκία», and the life page heads each of them separately."
+    },
+    {
+      "form": "Марија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. јун ст. ст., „Свете мученице Кириакија, Велерија и Марија“, which names her third of three. Свете is not a rank and мученице is the `martyr` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form; the heading carries no place, the city being in the body. THE FOLD IS DELIBERATE AND IS NOW FIVE WIDE: `foldchk.py` returns `mary-called-marinos`, `mary-of-tarsus`, `mary-sister-of-lazarus` and `mary-wife-of-xenophon`, the third of them written three days ago in this same wave. The heading offers nothing fuller and §6 does not let a form be built out of a body, so the five are told apart by their days and their companies."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.06.2026 (7. јун ст. ст.) — „Свете мученице Кириакија, Велерија и Марија“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THREE OF A COMPANY OF FIVE, AND THE IDENTIFICATION IS ON THE STORY AND NOT ON THE NAME. saint.gr keeps five virgins of Caesarea in Palestine on 6 June in one line and on one page — Martha, Maria, Kyria (or Kyra), Vareria (or Valeria) and Markia — and this book keeps THREE of them on the 7 June. The story is the same sentence by sentence: Caesarea of Palestine; the withdrawal to one dwelling („у једну колибу“ against the Greek’s one house); unceasing prayer with fasting „да би се вера Христова распрострла по васцелом свету“ against «that the faith of the Christians might shine out over the whole world»; the betrayal, here a slander; and death under torments, one after another. **THE SOFT SPOT IS THE FIRST NAME AND IT IS NAMED HERE.** This book writes «Кириакија» where the Greek page writes «Κυρία» and glosses it «or Kyra»: a third variant of a name the Greek page already could not settle, and Kyriake is not Kyria letter for letter. **The identification rests on the company and the story — three women of Caesarea in one hut praying for the spread of the faith, betrayed and tortured to death — and not on the spelling**, and it is said so plainly here. MARTHA AND MARCIA GET NOTHING, AND THAT IS THE READING TOO: this book names three of the five and `martha-of-caesarea` and `marcia-of-caesarea` are not among them, so neither folder was touched. A company is what the heading enumerates. A FIRST DATE FOR ALL THREE. All five folders held `dates: null`, and `kyria-of-caesarea`’s life says why: saint.gr «gives no year for it and names no emperor». This book closes „мучене и мукама уморене 304. године“ — stated flat, of the three together, with no „око“. `death` 304 to 304, `basis` `traditional`. **Only on the three the heading names**; Martha and Marcia stay undated, which is the asymmetry the source itself makes. THE DAY WAS CHECKED, FOR THE FIFTH DAY RUNNING: `sr-cand.mjs 06-06` prints Bessarion, Hilarion the New and the three virgin martyrs Archelais, Thekla and Susanna, **and not these three**, so the 7 June is this book’s day for them and the row carries it although both other calendars keep the company on the 6th. `related` UNTOUCHED: all five folders already relate to the other four, written off the Greek page, and this entry names nobody else. No `locations` — Caesarea of Palestine is in both accounts and the folders have stayed unplaced. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "related": [
@@ -53,5 +68,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The folder had no dates: saint.gr gives the company no year and names no emperor, and doxologia's line for the one of the five it prints gives nothing either. The Охридски пролог for 7. јун ст. ст. states it flat, of the three women its heading names: „По некој клевети беху изведене на суд, мучене и мукама уморене 304. године“. No approximation and nothing to derive it from (5 October 2026)."
+    }
   }
 }

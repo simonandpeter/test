@@ -29,11 +29,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 304,
+      "earliest": 303,
       "latest": 304,
-      "display": "304",
+      "display": "303 or 304",
       "basis": "traditional",
-      "note": "saint.gr, as the folder's own life has it: «he was martyred at Ancyra in the year 304, in the years of the emperor Maximian, who reigned from 285 to 305»."
+      "note": "One page disagreeing with itself. days.pravoslavie.ru's line for 7 ноября ст. ст. is «Мч. Феодота корчемника (303).», with «(303)», and the shorter of the two lives behind his name page closes «усекли мечом (+ 303)»; the longer says he «принял смерть за Христа 7 июня 303 или 304 года». Both readings stand. Neither doxologia.ro nor saint.gr had given this folder any year."
     }
   },
   "attestations": [
@@ -95,7 +95,7 @@
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-31&prolog=1",
         "year": 2026
       },
-      "note": "The day’s first entry, on the same menologion 18/5 the Romanian and Greek rows already carry, so nothing moved. **A YEAR READ AND REFUSED BECAUSE IT WOULD NARROW.** „би посечен 303. године“ gives **303**, and this folder’s `death` is already **303–304**, „303 or 304“, read off days.pravoslavie.ru, which disagrees with itself between «(303)» and «7 июня 303 или 304 года». **303 falls inside that interval**, so writing it would narrow a sourced interval, which the coordinator’s ruling forbids without qualification. `dates` is **untouched**, and the Prologue is recorded here as a second book for the earlier of the two years. **THE PROLOGUE SENDS HIM TO A SECOND DAY AND THE NOTE IS WRITTEN NOW SO THAT A LATER READER IS NOT SURPRISED BY IT.** The entry closes „(в. 7. јун)“ — see 7 June — which is the day the Russian life gives for his death, «7 июня 303 или 304 года», while the Russian calendar keeps him on 7 ноября. **This row is the Julian 18 May, the day of the full entry**, and one attestation row per church is the schema; **the reader who reaches the Julian 7 June will find this row already venerated and must leave it**, recording that day as a second-day note here rather than moving anything. **New here, and the Prologue has the whole of it alone**: that he was **married and lived by the apostle’s word, „Одсада и они који имају жене да буду као да их немају“ (1 Cor 7:29)**, as if he had no wife; that **he kept the inn precisely so that he could help Christians without being suspected**, and that **his inn was the refuge of the persecuted faithful**; that he secretly sent help to the Christians scattered in the mountains and secretly gathered and buried the bodies of the killed; that he bore the tortures **as though he were in another’s body**, his whole mind sunk in the Lord; that **his teeth were crushed with stones**; **his words on the scaffold** — „Не плачите, браће, за мном него прославите Господа нашег Исуса Христа, који ми поможе свршити подвиг и душмана победити“ — and that he laid his own head on the block; and that **a priest buried him honourably on a rise outside the city, where a church was later raised in his name**. **TWO DIFFERENCES FROM THE ROMANIAN LIFE, BOTH RECORDED AND NEITHER RESOLVED.** The Prologue has him go to the lake **with one companion, whom it does not name, and that companion betrayed him to the judge**; doxologia’s life, signed by Saint Nilus, has him go with Polychronius and Theocharides and has Polychronius betray the burial afterwards. And the Prologue has him **arrested on the betrayal**, where doxologia has him **give himself up**. The added paragraphs say what this book says and nothing was altered on the other folders. `types` untouched — мученици is the `martyr` he carries, and крчмар, an innkeeper, is a trade and no rank. No `locations`, although Ancyra is named. The Prologue prints no troparion and no kontakion."
+      "note": "A SECOND DAY ON THIS CHURCH, ADDED 5 October 2026, AND THE READER OF THE JULIAN 18 MAY ASKED FOR IT IN WRITING. That reader’s note on this row ends: «the reader who reaches the Julian 7 June will find this row already venerated and must leave it, recording that day as a second-day note here rather than moving anything». **That is exactly what was done.** The row above is the Julian 18 May, copied back byte for byte — same day, same month, same source text, same url, same year — under `replace_venerated: true`, which §4 sanctions for this and for nothing else. Nothing was moved. **§4’S REFUSAL CLASS DOES NOT APPLY, AND THIS IS THE CASE IT WAS WRITTEN FOR.** The rule refuses a second-day note where the other row is `undocumented`, because writing a second day onto an empty row bars a later reader from the principal one. Here the `serbian` row was ALREADY `venerated` on the 18 May, so there is a row to copy and the note has somewhere to live. Four saints have been refused on the other half of this rule; this is the second note the wave has been able to write, after 27 May. THE BOOK CROSS-REFERENCES ITSELF IN BOTH DIRECTIONS, WHICH IS WHY NEITHER DAY SURPRISED ANYBODY. The 18 May entry closes „(в. 7. јун)“ and the 7 June entry closes „(в. 18. мај)“. The 27 May note was written on a forward reference of the same kind, and the 2 June row on `nikephoros-patriarch-of-constantinople` on a third. **Three in sixteen days: this book cross-references its own days often enough that a reader should expect it, and the cheapest way to catch one is to read the entry’s last four characters.** THE 7 JUNE ENTRY IS THREE SENTENCES AND ADDS NOTHING. He was a secret Christian and as such helped the church and honourably buried the bodies of the holy martyrs; so he buried also the bodies of the seven maidens who suffered for Christ; and when the heathen found him out they put him too to torments and killed him. **All three are in the 18 May entry at length and on this folder already**, and the seven maidens are the seven the 18 May heading enumerates. The row’s own note above records what that day gave. `dates`, `types`, `related`, `names` AND `locations` ALL UNTOUCHED: the 7 June entry gives no year, no rank word not already carried, and names nobody at all — not the maidens, not the judge, not the companion. The `sr` form «Теодот» is already stored off the 18 May heading and this heading prints the identical string, so no second form is written and the four-wide fold that reader recorded is unchanged. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -155,14 +155,5 @@
     "christina-martyr-18-may",
     "thecusa-of-ancyra",
     "theodote-of-ancyra"
-  ],
-  "dates": {
-    "death": {
-      "earliest": 303,
-      "latest": 304,
-      "display": "303 or 304",
-      "basis": "traditional",
-      "note": "One page disagreeing with itself. days.pravoslavie.ru's line for 7 ноября ст. ст. is «Мч. Феодота корчемника (303).», with «(303)», and the shorter of the two lives behind his name page closes «усекли мечом (+ 303)»; the longer says he «принял смерть за Христа 7 июня 303 или 304 года». Both readings stand. Neither doxologia.ro nor saint.gr had given this folder any year."
-    }
-  }
+  ]
 }

@@ -7,6 +7,11 @@
       "form": "Игорь Черниговский",
       "lang": "ru",
       "note": "Read out of the Sretensky life’s heading «Святой благоверный князь Игорь Черниговский»."
+    },
+    {
+      "form": "Игор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јун ст. ст., „Блажени Игор, кнез черниговски и кијевски“ — Блажени is a rank word §5 maps onto `types`, and „кнез черниговски и кијевски“ is the rank with its two seats, which `types`, `office` and the display name already carry between them; strip them and the bare forename is left. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`. The folder’s only other form is the Russian «Игорь Черниговский», which carries the see inside it against the contract in `src/lib/honorific.js`; **that one is left as it is and the habit is not copied**, as §6 requires."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 02.10.2026 (19. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.06.2026 (5. јун ст. ст.) — „Блажени Игор, кнез черниговски и кијевски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, five lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **THE MOST DELICATE §4 CALL OF THE WAVE, AND IT IS WRITTEN WITH THE MEASUREMENT BESIDE IT.** This folder’s own life closes: «The Russian calendar keeps him on 19 September old style **and on 5 June for the translation of his relics**». So a `serbian` row on 5/6 is a row on a day that is, in the other church that keeps him, a relics day — which is exactly the class §4 says to refuse, four saints being in it already. THREE THINGS WERE MEASURED BEFORE IT WAS WRITTEN. **One**: the heading is «Блажени Игор, кнез черниговски и кијевски» and not «Пренос моштију»; the four in §4’s class are headed as relics feasts. **Two**: the entry narrates the murder and nothing of a translation — the tonsure, the mob, the killing, the self-lighting candles, the pillar of fire — and dates itself „То је било 1147. године“, the year of the murder, where the relics went to Chernigov in 1150. **Three, and decisive**: `sr-cand.mjs 09-19` prints this book’s own Julian 19 September — Trophimus, Sabbatius and Dorymedon; Zosimas the hermit; Theodore prince of Yaroslavl — **and it does not name Igor**, which is also why the Serbian reader who worked that day inside the covered block left this folder alone. **There is therefore no later reader to bar: this book has no other day for him.** If the author reads it the other way the row comes out again with `sr-backout.py`, and this note is where the argument is. NEW HERE, AND THE FOLDER IS BUILT ON A LONG RUSSIAN LIFE: the troubles that came upon the people of Kyiv for the crime; the pillar of fire seen over the church where he lay; and the candles lighting of themselves „у неколико маха“, several times over, where the Russian life has them light once on the evening of the killing. The motive is put differently too: the Kyivans „незадовољни династијом Олговића, хтедну да је истребе“ — wanting the whole dynasty wiped out, where the Russian life has a veche resolving on revenge. `dates` UNTOUCHED: 1147 is the year both books give and there is nothing to widen; the `basis` stays `attested`. **`monk` REFUSED, AND THE MECHANISM IS THE 28 MAY ONE. „он напусти свет и замонаши се“ and „схимника Игора“ would both carry `monk`** — but `monk` is on `honorific.js`’s `MONASTIC` list, so it fires `venerable`, which stands twelfth in `PRECEDENCE` against `righteous` at fifteenth, and the page would stop printing *Righteous Igor of Chernigov* and start printing *Venerable*. **The rule this day settles for the wave: a rank word in the heading is written, a rank inferred from a verb in the body is not.** The heading’s word is Блажени, which §5 says to read as `fool-for-christ` or `righteous`, and `righteous` is what the folder already holds. Yesterday’s `martyr` on the Tsarevich passes that test and this does not. NO `related`: this entry names no person at all beyond the people of Kyiv and the dynasty. `office` untouched at «Grand Prince», which the heading’s кнез corroborates. No `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

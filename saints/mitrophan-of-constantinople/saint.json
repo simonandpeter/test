@@ -11,6 +11,11 @@
       "form": "Μητροφάνης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουνίου, «Άγιος Μητροφάνης Αρχιεπίσκοπος Κωνσταντινούπολης», with the rank words left off."
+    },
+    {
+      "form": "Митрофан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свети Митрофан, први патријарх цариградски“ — Свети is not a rank, први is an ordinal, and „патријарх цариградски“ is the rank with its see, which `types` and `office` already carry; all of it comes off and the bare forename is what the heading leaves. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.06.2026 (4. јун ст. ст.) — „Свети Митрофан, први патријарх цариградски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first and longest entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A THIRD BOOK THAT ADDS ALMOST NOTHING TO THE STORY AND ONE THING TO THE DATE. Everything the entry narrates is already on this folder off doxologia: the father Dometius, brother of the emperor Probus, fleeing Rome; the bishop of Byzantium who ordained him presbyter; the succession father, elder brother, then Mitrophan; Constantine loving him as a father; the chorbishop sent to Nicaea in his place; the patriarchal title obtained for him from the Council; the Council brought to the sick old man’s bedside; the naming of his successor; the word to Alexander of Alexandria and the archdeacon Athanasius taken by the hand; the ten days; the hundred and seventeen years. **The value of the row is the corroboration and the year, not new narrative**, and that is worth recording as plainly as a new fact would be. A DEATH WIDENED BY TWO YEARS. The folder held `death` 327 off saint.gr’s «(; - 327)», which also dates the episcopate 313–327; doxologia gives the day, 4 June, and no year at all. This book closes „предаде душу Богу 325. године“. Two books, two flat years: `death` 325 to 327, display «325 or 327», and neither is chosen. AN AGE REFUSED FOR THE SIXTH TIME IN THE WAVE. This book puts the hundred and seventeen years AT THE COUNCIL, where doxologia puts them at the death and saint.gr hedges them with «ίσως». Either way it is a length of life and no source for a birth; `birth` stays absent, as it is on all three pages. `types` UNTOUCHED: патријарх is the `patriarch` already there, први is an ordinal and no rank, and цариградски is the see `office` already holds. `office` untouched at «Patriarch of Constantinople», which this heading states in its own words. `related` UNTOUCHED, AND THE ONE CANDIDATE IS NAMED. `alexander-of-alexandria` exists and this entry addresses him by name („рече Александру Александријском“), but **doxologia’s life already names him in this folder’s prose with no row and the floor test does not match the form**, so no row is owed and none was invented: a word spoken at a deathbed is neither a martyrdom nor a kinship. The father, the brother and the ordaining bishop ARE kinships the body narrates, and no calendar read for this corpus keeps any of the three — see the commit message. The emperors Probus and Constantine take no row for being emperors; Constantine is already in the `related` off doxologia. No `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -161,11 +176,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 327,
+      "earliest": 325,
       "latest": 327,
-      "display": "327",
+      "display": "325 or 327",
       "basis": "traditional",
-      "note": "saint.gr's head line reads «Αγιος Μητροφανης Αρχιεπισκοπος Κωνσταντινουπολης (; - 327)» and the life says he died in 327, possibly at the age of a hundred and seventeen. The page gives no year of birth and dates his episcopate 313-327. doxologia.ro's life, which this folder was built from, printed no year."
+      "note": "saint.gr's head line reads «Αγιος Μητροφανης Αρχιεπισκοπος Κωνσταντινουπολεως (; - 327)» and the life says he died in 327, possibly at the age of a hundred and seventeen; it dates his episcopate 313-327. doxologia.ro's life, which this folder was built from, printed no year and gives the day, 4 June. The Охридски пролог for 4. јун ст. ст. states a different year flat, ten days after the Council visited his bed: „након десет дана предаде душу Богу 325. године“. The interval is widened to hold both years and neither is chosen. The hundred and seventeen years are a length of life and no source for a birth, and the three books put them in three places (5 October 2026)."
     }
   }
 }

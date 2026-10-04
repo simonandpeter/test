@@ -11,6 +11,11 @@
       "form": "Μάρθα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Ιουνίου, «Αγίες Μάρθα και Μαρία οι αδελφές του Λαζάρου», with the rank words left off."
+    },
+    {
+      "form": "Марта",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свете Марта и Марија“, which names the two sisters and nothing else. Свете is not a rank, so there is nothing to strip and the bare personal name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.06.2026 (4. јун ст. ст.) — „Свете Марта и Марија“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s sixth and last entry, which names her first of two. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE SHORTEST ENTRY OF THE DAY AND IT CORROBORATES THE ONE THING THAT MATTERS ON THIS FOLDER. Four sentences: sisters of Lazarus; after the Lord’s ascension Lazarus went to preach the Gospel; in this his sisters helped him; „Не зна се где су скончале“ — it is not known where they ended. **That last sentence is why `dates` and `locations` are both absent here, and a third book stating it outright is worth more to this folder than a new scene would be**: doxologia says the same in its three sentences, and saint.gr says only that the sisters were counted worthy to die peacefully and not under persecution. No year, no place, from any of the three. `dates` AND `locations` DELIBERATELY STILL ABSENT, AND THE LIFE CARRIES NO DIGITS so that no sentence of it can put a year beside an end this corpus does not record. `types` STILL EMPTY, AND THAT IS A READING TOO. Свете is not a rank and this heading has no other word in it. doxologia’s day line calls the two «Sfintele Mironosițe» and saint.gr’s kathisma calls them deacons of Christ; **myrrh-bearer is not in the `types` vocabulary at all**, `deaconess` would be written on a hymn and not on a life, and this book gives neither word. So the folder keeps no type, as it has since it was made. `related` UNTOUCHED: the sister and the brother are both already there, and this entry names no one else. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

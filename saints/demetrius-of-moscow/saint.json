@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "prince",
-    "wonderworker"
+    "wonderworker",
+    "martyr"
   ],
   "names": [
     {
       "form": "Δημήτριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Άγιος Δημήτριος ο Μοσχοβίτης, ο Θαυματουργός», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Димитрије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. јун ст. ст., „Свети мученик Димитрије, царевић руски“ — Свети is not a rank, мученик is a rank word, and „царевић руски“ is a rank with a nation after it, set off by the heading’s own comma as an apposition and not as part of the name; all three come off and the bare forename is what is left. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('demetrius-of-rostov', 'sr')]`, so this makes a fold of two, and the two are told apart by their centuries — a boy killed in 1591 and a metropolitan of Rostov. `nikephoros-patriarch-of-constantinople` stored a bare Никифор on the same reading, the see stripped and the fold recorded."
     }
   ],
   "dates": {
@@ -57,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.06.2026 (3. јун ст. ст.) — „Свети мученик Димитрије, царевић руски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, five lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE FIFTH CANDIDATE FOR §4’S RELICS CLASS, CHECKED AND NOT IN IT. This folder’s only other row is the Greek 15 May, and its own life says «the Church keeps the translation of those relics on 3 June» — so a `serbian` row on 3/6 looked exactly like the trap §4 names: a translation-of-relics day written onto an `undocumented` row, barring a later reader from giving the saint his principal day. IT WAS MEASURED RATHER THAN ASSUMED. `sr-cand.mjs 05-15` prints this book’s own Julian 15 May, and it holds „Преподобни Пахомије Велики“, „Свети Ахил, епископ лариски“ and „Преподобни Силуан“ and DOES NOT NAME HIM — which is also why the reader who worked the Julian 15 May in this wave left this folder alone. The Prologue’s 3 June entry is headed with his name and rank, not «Пренос моштију», and narrates the murder first and the uncovering second. SO THE JULIAN 3 JUNE IS THIS BOOK’S PRINCIPAL DAY FOR HIM and the row is written. No second-day note is owed, because there is no second Serbian day to note. THE BOOK ANSWERS OUTRIGHT WHAT THE GREEK PAGE REFUSES TO SETTLE. saint.gr: «Ο θάνατός του, το 1591 μ.Χ., παρέμεινε μυστηριώδης», historians disagreeing whether it was accident or crime and history marking Godunov the moral author only. This book: „Би мучки убијен од властољубивога Бориса Годунова“. Recorded in the life as this book’s word against the other’s silence, and not resolved. `martyr` ADDED, AND IT CHANGES WHAT THE PAGE PRINTS — SAY SO. The heading is Свети мученик and the body says he was murdered, so the word is stated twice over. But `prince` and `wonderworker`, the two types this folder had, are NOT IN `PRECEDENCE` at all, so the page has been printing a bare honorific for him; with `martyr` it will print *Martyr Demetrius of Moscow*. THIS IS THE FIRST TYPE THIS WAVE HAS ADDED THAT MOVES A RENDERED RANK, and it is named for the author: the warrant is one book’s heading and body against another book’s refusal to call the death a crime. царевић adds nothing — `prince` is already there. `dates` UNTOUCHED, AND A DURATION REFUSED FOR THE FIFTH TIME IN THE WAVE. 1591 is the year both books give for the murder and there is nothing to widen. „у осмој години свога живота“ — in the eighth year of his life — would put the birth near 1583 or 1584 against the 1581 this folder holds off saint.gr, which makes him in his tenth. A LENGTH OF LIFE IS NOT A SOURCE FOR A YEAR: nothing was derived, `birth` 1581 stands, and the disagreement is recorded in the life. The fifteen years to the uncovering are the same kind of number and are used for nothing either, though 1591 and fifteen agree with the Greek page’s 1606. NO `related` AND NO `locations`. Boris Godunov is a murderer the body names, which is not a kinship and not a martyrdom of his own, and no calendar read for this corpus keeps him; the monk to whom the saint appeared is unnamed; the false Demetrius is an impostor. Tsar Ivan IV, Tsar Theodore and the mother Maria Theodorovna are in the prose off saint.gr and this entry names none of them. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

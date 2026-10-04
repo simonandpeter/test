@@ -11,6 +11,11 @@
       "form": "Αγαπητός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουνίου, «Όσιος Αγαπητός ο εν τω σπηλαίω ο Ανάργυρος και Ιαματικός ο εκ Ρωσσίας», with the rank word and the three epithets left off."
+    },
+    {
+      "form": "Агапит Печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. јун ст. ст., „Преподобни Агапит Печерски“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped; Печерски is the house and not a rank, so it stays and the form is the fullest the heading gives. MEASURED, AND THE FULLER FORM AVOIDS A LIVE FOLD: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Агапит Печерски» but `[('agapitus-of-rome', 'sr'), ('agapitus-the-deacon', 'ru')]` for the bare «Агапит», so the bare form would have folded onto a pope of Rome on the strength of a forename."
     }
   ],
   "sex": "male",
@@ -29,7 +34,7 @@
       "latest": 1100,
       "display": "11th century",
       "basis": "traditional",
-      "note": "doxologia.ro's life closes: «Pomenirea Sfântului Agapit se săvârșește la 1 iunie (ziua fericitei sale adormiri, veacul al XI-lea) și la 28 septembrie (Soborul Sfinților din Peșterile de Aproape).» No closer year is printed."
+      "note": "doxologia.ro's life closes: «Pomenirea Sfântului Agapit se săvârșește la 1 iunie (ziua fericitei sale adormiri, veacul al XI-lea) și la 28 septembrie (Soborul Sfinților din Peșterile de Aproape).» No closer year is printed. The Охридски пролог for 1. јун ст. ст. does print one, and it is the only one of the three books that does: „Упокоји се свети Агапит око 1095. године“. The interval is left at the century, because 1095 falls inside it — so there is nothing to widen and adopting it would narrow another book's own range — and because „око“ is an approximation and not a source for an endpoint (5 October 2026)."
     }
   },
   "attestations": [
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.06.2026 (1. јун ст. ст.) — „Преподобни Агапит Печерски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE SHORTEST OF THE THREE ACCOUNTS AND IT DIFFERS FROM THE FULLEST IN TWO PLACES. „Безмездни врач. Ученик светог Антонија Печерског“ corroborates `unmercenary`, `physician`, `monk` and the one `related` row this folder has. New: it makes the Armenian THE PRINCE’S OWN PHYSICIAN („кнежев лекар, неки Јерменин“) where doxologia makes him a famous physician of Kyiv; it says plainly that Agapitus healed the prince („Тако излечио и кнеза Владимира Мономаха“) where doxologia has him beg not to be sent to Chernigov and the roots carried there by the messengers; and it says the herbs he gave were the ones he made his own bread from. `кнез` IS NOT A ROW: Vladimir Vsevolodovich Monomakh is the object of a healing and no calendar read for this corpus keeps him — `vladimir-the-great` is another man, dead in 1015 — and a prince healed is not a kinship and not a martyrdom. He is already in this folder’s prose off both earlier books, unlinked, and gains nothing. The Armenian is unnamed in all three books and gets neither row nor folder. „око 1095“ RECORDED IN THE NOTE AND NOT WRITTEN INTO THE INTERVAL, AND THIS IS THE ONE THING ON THIS DAY THE AUTHOR MIGHT WANT DIFFERENTLY. „Упокоји се свети Агапит око 1095. године“ is THE ONLY YEAR ANY OF THE THREE BOOKS HAS PRINTED for him; doxologia gives «veacul al XI-lea» and saint.gr «περί τον 11ο αιώνα». The interval is LEFT at 1001 to 1100 and the display at «11th century», for two stated reasons: 1095 is inside the century the other two give, so there is nothing to widen and taking it would NARROW another book’s range; and „око“ is an approximation, which this wave has four times refused as a source for an endpoint. The Prologue’s sentence is added to the `death` note instead, so the year is in the record and the reader can see which book printed it. `types` untouched, all four corroborated or unaffected. No `office`, no `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

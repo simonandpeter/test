@@ -6,12 +6,18 @@
       "form": "Marcelin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 7 iunie, «Sfântul Marcelin, Episcopul Romei»."
+    },
+    {
+      "form": "Маркелин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. јун ст. ст., „Свештеномученик Маркелин, папа римски“ — Свештеномученик is the `hieromartyr` §5 maps onto `types`, and „папа римски“ is the see, which `office` already holds as «Bishop of Rome» and the display name carries; strip both and the bare personal name is left. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Маркелин» **and also for «Маркел»**, the pope of the entry above, whom no folder holds — so the two popes of this day raise no fold between them."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "hieromartyr"
   ],
   "related": [
     "emilian-of-trebia"
@@ -44,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.06.2026 (7. јун ст. ст.) — „Свештеномученик Маркелин, папа римски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and the largest single gain of the wave on one folder. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A ONE-LINE FOLDER THAT NOW HAS A WHOLE LIFE, AND THE ROMANIAN PAGE HAD SAID WHAT WAS MISSING. This folder’s own life says doxologia «names him and gives no life», that his page carries no Viață tab, and that the only thing on it beyond the readings is an article titled «Sfântul Marcelin – drumul de la cădere la sfințenie», the road from a fall to holiness — adding, in that reader’s words, «what the fall was, and when, this source does not say». **This book says what the fall was, at length**, and the answer is in the first sentence of its account: summoned by Diocletian and threatened with torture, HE SACRIFICED TO THE IDOLS, and the emperor rewarded him with a precious robe. WHAT ELSE IS NEW, WHICH IS ALL OF IT: that he repented bitterly and wept day and night for his denial of Christ, as the apostle Peter once did; that a council of bishops was then sitting in Campania, and that he put on sackcloth, poured ashes on his head, came into the council, confessed his sin before them all and asked to be judged; that the fathers told him to judge himself; that he then deprived himself of the priestly rank and laid it down that his body should not be buried but thrown to the dogs, **with a curse on anyone who dared to bury it**; that he went to Diocletian, threw the precious robe down before him, confessed Christ and reviled the idols; that the emperor had him tortured and killed outside the city; that his body lay thirty-six days where the bodies of the three killed with him were buried at once; and that **the apostle Peter appeared to the next pope and ordered the burial, saying „Ко се смирује, узвисиће се“** — he that humbleth himself shall be exalted. NO `dates` AND THAT IS THE SOURCE’S DOING. The entry gives no year of any kind: not for the sacrifice, not for the council, not for the death. Diocletian and Maximian are named and **an emperor is no source for a year**, which this wave has refused three times. The thirty-six days are a duration. So the folder stays undated, as it was. `types` and `office` UNTOUCHED, AND THE HEADING’S RANK WORD IS REFUSED WITH A REASON. Свештеномученик is §5’s `hieromartyr`, and the folder carries `hierarch` and `bishop`. **`hieromartyr` would be a true addition and it moves what the page prints** — `hieromartyr` stands eighth in `PRECEDENCE` where `hierarch` is not in the list at all, so the page would go from *Saint Marcellinus of Rome* to *Hieromartyr*. It is a rank word in the heading, which is the test 5 June settled, and the body narrates the martyrdom it claims — **so it was added**; see `types_add`. **THE THREE KILLED WITH HIM GET NO ROW, AND THE REASON IS THAT THEY CANNOT BE IDENTIFIED.** „заједно с три добра мужа: Клавдијем, Кирином и Антонином“ is a martyrdom the body narrates, which is the test that owes a row — but `ls saints | grep -i -E 'cyrinus|quirinus'` returns NOTHING, and the corpus holds many a bare Claudius and many a bare Antoninus of which nothing in this entry picks one: no day, no see, no city. **A row written on a bare forename and a guess is the failure §3 calls the worst this job has**, so all three are refused and named. `priscilla`, `papias` and `crescentianus` exist and are the same kind of trap one entry over. `related` untouched at `emilian-of-trebia`; the apostle Peter appears to a third man and not to him, and the next pope has no folder. No `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

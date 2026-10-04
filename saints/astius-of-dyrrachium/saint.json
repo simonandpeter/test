@@ -12,6 +12,11 @@
       "form": "Αστείος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιος Αστείος επίσκοπος Δυρραχίου», with the rank word and the see left off; the life page gives «Αστείος (ή Αστίος)»."
+    },
+    {
+      "form": "Астије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. јун ст. ст., „Свештеномученик Астије, епископ драчки“ — Свештеномученик is the `hieromartyr` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „драчки“ is the see, which the display name already carries; strip them and the bare personal name is what is left, which is the `therapon-of-cyprus` reading of 25 May applied again. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.06.2026 (4. јун ст. ст.) — „Свештеномученик Астије, епископ драчки“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, five lines long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A THIRD CALENDAR ON A THIRD DAY, AND THE GREP FOUND HIM WHERE BOTH INSTRUMENTS COULD NOT. doxologia and saint.gr both keep him on 6 JULY; this book keeps him on the Julian 4 JUNE. **He is not on the day list for the menologion 4/6**, because no calendar in this corpus kept him there, and `sr-namesweep.mjs` scoring this heading could not reach him either. He was found by `grep -ril 'Dyrrachium' saints/`, which returns four paths and two folders, one of them his — the fifth day in this wave on which grepping the corpus for an entry’s own uncommon proper name, a see or a place, has beaten both instruments. AND THE DAY WAS CHECKED AGAINST §4 BEFORE IT WAS WRITTEN. If this book also kept him on its own Julian 6 July, the 4 June would be a second day and the row would have to be a note. `sr-cand.mjs 07-06` prints four entries — Sisoes the Great, the martyrs Marinus and Martha, the finding of the relics of the virgin Juliana, and the martyr Lucia — AND NOT HIM. So the Julian 4 June is this book’s principal day for him, as the Julian 3 June was for the Tsarevich yesterday, and the row carries its own day as the schema intends. EVERY TORMENT IS ALREADY ON THE FOLDER AND TWO DETAILS ARE NOT. The leaden rods, the stripping, the honey, the stinging insects and the cross are in both earlier accounts. New: **the order is reversed** — this book has him crucified naked on a tree FIRST and the naked body smeared with honey after, where doxologia smears and then crucifies; and **the insects are named differently**, „осе и стршљенови“, wasps and hornets, where saint.gr has clouds of bees and doxologia wasps and other insects. Both recorded, neither resolved. New also: „прими два венца, и као мученик и као јерарх“ — two crowns, as martyr and as hierarch — which is this folder’s `hieromartyr` and `bishop` said in the book’s own words. `dates` UNTOUCHED AND A REIGN USED FOR NOTHING. „Пострадао у време Трајаново“ gives the reign and no year, and the folder already holds 98 to 117, which is that reign, with the display keeping doxologia’s stated «98». A third book agreeing on the reign corroborates the interval and moves no endpoint. `types` and `office` untouched, both corroborated. No `locations` — the see is in the display name and the folder has stayed unplaced. NO `related`: the governor Agricola is not named in this entry at all, and the seven who were drowned for praising his courage are doxologia’s and not this book’s. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

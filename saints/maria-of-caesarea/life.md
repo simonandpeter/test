@@ -6,4 +6,8 @@ From then on, the page says, they all sat together in one house and spent their 
 
 The other four of the five are [Martha](/saints/martha-of-caesarea), [Kyria](/saints/kyria-of-caesarea), [Marcia](/saints/marcia-of-caesarea) and [Valeria](/saints/valeria-martyr-6-june).
 
-*After saint.gr's calendar for 6 Ιουνίου — [the day](https://www.saint.gr/06/06/index.aspx) and [the life](https://www.saint.gr/489/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps her on the Julian 7 June, where both the other calendars keep the company on the 6th — and not on its own Julian 6 June, which prints three other entries and does not name her. Its heading names three of the five, her and [Kyria](/saints/kyria-of-caesarea) and [Valeria](/saints/valeria-martyr-6-june), and its account is the same story the Greek page tells in the same order: all three were of Caesarea in Palestine; when the persecution of the Christians came they withdrew out of the city into a hut; and there they prayed to God unceasingly, fasting and weeping, that the faith of Christ might spread over the whole world and that the persecution of the Church might cease.
+
+Then, on somebody’s slander, they were brought to trial, tortured, and died of their torments in 304 — the only year any book read for this folder has given, and the folder now records it. So these glorious virgins were crowned with the martyr’s crown, the entry ends. Two of the five the Greek page names are not in this heading, and nothing here is written about them.
+
+*After saint.gr's calendar for 6 Ιουνίου — [the day](https://www.saint.gr/06/06/index.aspx) and [the life](https://www.saint.gr/489/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 7. јун ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-20&prolog=1), read 5 October 2026.*
