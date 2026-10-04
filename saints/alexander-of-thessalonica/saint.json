@@ -12,6 +12,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Αλέξανδρος Επίσκοπος Θεσσαλονίκης», with the rank word left off."
+    },
+    {
+      "form": "Александр Солунский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for him, «Мученик Александр Солунский», with the rank word left off; one of its two life pages heads him «Александр Солунский (Фессалоникийский)», giving both readings of the city's name. The day's line prints it in the genitive, «Мч. Александра Солунского»."
     }
   ],
   "dates": {
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Мч. Александра Солунского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

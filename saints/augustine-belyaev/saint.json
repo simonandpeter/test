@@ -1,0 +1,79 @@
+{
+  "slug": "augustine-belyaev",
+  "display_name": "Augustine (Belyaev)",
+  "names": [
+    {
+      "form": "Августин (Беляев)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9100, «Святитель Августин (Беляев), архиепископ Калужский, сщмч.», with the rank words and the see left off; the day's line gives the forename alone and in the genitive, «Сщмчч. Августина , архиеп. Калужского». azbyka.ru writes the same form."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "28 February 1886",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 28 февраля 1886 года в городе Камышин Саратовской губернии в семье священника»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «10 (23 н. ст.) ноября 1937 года Владыка был расстрелян вместе с группой духовенства и мирян в городе Калуге». The lives of five of the men shot with him give the same day as the day of the troika's sentence plus four: «19 ноября 1937 года Тройка НКВД приговорила … к расстрелу, они были расстреляны 23 ноября 1937 года и погребены в общей безвестной могиле». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died."
+    }
+  },
+  "related": [
+    "joannicius-dmitriev",
+    "john-speransky",
+    "seraphim-gushchin",
+    "alexis-gorbachev",
+    "apollon-babichev",
+    "michael-arefyev",
+    "olga-maslennikova",
+    "anna-ostroglazova",
+    "boris-semenov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day; azbyka.ru keeps that synaxis on the moveable 7 February and adds four diocesan synaxes — Penza, Ivanovo, Kaluga and Samara. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Августина , архиеп. Калужского, и с ним Иоанна пресвитера, прмч. Иоанникия и Серафима , мчч. Алексия , Аполлона , Михаила (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

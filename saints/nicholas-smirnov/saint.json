@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-smirnov",
+  "display_name": "Nicholas (Smirnov)",
+  "names": [
+    {
+      "form": "Николай (Смирнов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 10008, «Николай (Смирнов), мч.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Мч. Николая». azbyka.ru writes the surname unbracketed, «Николая Смирнова»."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "office": "Psalmist",
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "6 May 1886",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 6 мая 1886 года в селе Старая Кашира Коломенского уезда Московской губернии в семье крестьянина Петра Смирнова». azbyka.ru prints the same sentence."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1939,
+      "display": "1937–1939",
+      "basis": "traditional",
+      "note": "No page gives a date. His life says «19 ноября 1937 года Тройка НКВД приговорила псаломщика Николая Смирнова к десяти годам заключения в исправительно-трудовой лагерь, по прибытии в который он вскоре скончался», which puts him alive on 19 November 1937 and dead soon after reaching the camp; the day's line closes the entry «(1930-е)», the 1930s, which is the only upper bound any page gives. The two do not sit easily together — a ten-year term begun in 1937 would run past the decade — and the interval records both readings rather than choosing one."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day, and azbyka.ru adds the synaxis of the Kaluga saints. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only. No page says he died on this day or near it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мч. Николая и мц. Анны и св. Бориса исп., диакона (1930-е).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

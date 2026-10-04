@@ -253,6 +253,22 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τῇ Ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Преподобнически пожив, яко мудрый иерарх,/ прославил еси Господа/ добродетельным житием, Нектарие преподобне./ Темже, Утешителя прославлен силою,/ Божественными мощми твоими,/ демоны отгониши и болящия исцеляеши,/ верою приходящия ти.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Тропарь святителя Нектария Эгинского, митрополита Пентапольского», printed under his own name",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived as a monk lives, O wise hierarch, you glorified the Lord by a life of virtue, O venerable Nektarios. Therefore, glorified by the power of the Comforter, through your divine relics you drive off demons and heal the sick who come to you in faith.",
+        "rendered": "site"
+      }
     }
   ],
   "historicity": "attested"

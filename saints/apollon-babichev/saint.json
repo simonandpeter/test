@@ -1,0 +1,74 @@
+{
+  "slug": "apollon-babichev",
+  "display_name": "Apollon (Babichev)",
+  "names": [
+    {
+      "form": "Аполлон (Бабичев)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9944, «Аполлон (Бабичев), мч.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Аполлона». azbyka.ru writes the surname unbracketed, «Аполлона Бабичева»."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "office": "Psalmist",
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "30 March 1874",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Аполлон Ксенофонтович Бабичев родился 30 марта 1874 года в городе Калуге». azbyka.ru prints the same sentence."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «19 ноября 1937 года Тройка НКВД приговорила … к расстрелу, они были расстреляны 23 ноября 1937 года и погребены в общей безвестной могиле». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died."
+    }
+  },
+  "related": [
+    "augustine-belyaev",
+    "joannicius-dmitriev",
+    "john-speransky",
+    "alexis-gorbachev",
+    "michael-arefyev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day, and azbyka.ru adds the synaxis of the Kaluga saints. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Августина , архиеп. Калужского, и с ним Иоанна пресвитера, прмч. Иоанникия и Серафима , мчч. Алексия , Аполлона , Михаила (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

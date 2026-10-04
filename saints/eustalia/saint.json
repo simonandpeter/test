@@ -6,6 +6,11 @@
       "form": "Ευσταλία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Αγίες Ευσταλία και Σωπάτρα», with the rank word left off. The distich on the same page spells it Εὐστολία."
+    },
+    {
+      "form": "Евстолия Константинопольская",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for her, «Евстолия Константинопольская, прп.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Прпп. Евстолии (610) и Сосипатры»."
     }
   ],
   "sex": "female",
@@ -17,19 +22,28 @@
     "sopatra"
   ],
   "dates": {
-    "floruit": {
-      "earliest": 584,
-      "latest": 584,
-      "display": "c. 584",
+    "death": {
+      "earliest": 610,
+      "latest": 610,
+      "display": "610",
       "basis": "traditional",
-      "note": "saint.gr: «Οι άγιες Ευσταλία και Σωπάτρα έζησαν την εποχή του αυτοκράτορα Μαυρίκιου (περί το 584 μ.Χ.)»."
+      "note": "days.pravoslavie.ru's joint life for the two: «Святая Евстолия скончалась в 610 году, а святая Сосипатра - в 625 году», and the day's line closes her name «(610)». The first date this folder has carried."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прпп. Евстолии (610) и Сосипатры (ок. 625).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

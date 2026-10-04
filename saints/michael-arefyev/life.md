@@ -1,0 +1,7 @@
+# Michael (Arefyev)
+
+Michael Pavlovich Arefyev was born on 27 June 1865 at Kaluga. Until 1917 he was a shop assistant and the trusted man of one of the Kaluga manufacturers. Being a deeply believing man, he joined the council of a city church in 1928, which is the one office he ever held in the Church and the whole of what he was charged with. The authorities arrested him in October 1937, and at the interrogations he did not admit the charges brought against him.
+
+On 19 November 1937 an NKVD troika sentenced him with the archbishop [Augustine (Belyaev)](/saints/augustine-belyaev), the archimandrite [Joannicius (Dmitriev)](/saints/joannicius-dmitriev), the archpriest [John (Speransky)](/saints/john-speransky) and the psalmists [Alexis (Gorbachev)](/saints/alexis-gorbachev) and [Apollon (Babichev)](/saints/apollon-babichev) to be shot; they were shot on 23 November 1937 and buried in one unmarked grave. 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died. He was the one layman of the six, and his folder carries no office because a seat on a church council is not one. He was glorified in August 2000 by the jubilee council of bishops.
+
+*After the Православный церковный календарь of the Сретенский monastery for 10 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261110.html) and [the life](https://days.pravoslavie.ru/Life/life4849.htm) — with [azbyka.ru's own page](https://azbyka.ru/days/sv-mihail-arefev) read in the browser, which prints the same life and no hymn; read 4 October 2026.*

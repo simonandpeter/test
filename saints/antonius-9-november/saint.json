@@ -6,6 +6,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Άγιος Αντώνιος», with the rank word left off."
+    },
+    {
+      "form": "Антоний Апамейский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for him, «Антоний Апамейский, камнесечец, мч.», with the rank word and the trade left off; the day's line gives the forename alone and in the genitive, «Мч. Антония»."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Мч. Антония (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life for him: «Святой мученик Антоний, сириец, жил в V веке, был каменщиком», and the day's line closes «(V)». The first date this folder has carried."
+    }
   }
 }

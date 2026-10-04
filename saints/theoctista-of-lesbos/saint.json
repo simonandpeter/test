@@ -11,6 +11,11 @@
       "form": "Θεοκτίστη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Οσία Θεοκτίστη η Λέσβια», with the rank word left off."
+    },
+    {
+      "form": "Феоктиста Паросская",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for her, «Феоктиста Паросская, прп.», with the rank word left off — the by-name is the island she spent thirty-five years on and not the island she was born on, where the Greek and Romanian forms this folder already carries name Lesbos. The day's line gives the forename alone and in the genitive, «Прп. Феоктисты»."
     }
   ],
   "sex": "female",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прп. Феоктисты (881).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -68,11 +82,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 889,
+      "earliest": 881,
       "latest": 889,
-      "display": "889",
+      "display": "881 or 889",
       "basis": "traditional",
-      "note": "saint.gr's own head line for her, «Οσια Θεοκτιστη η Λεσβια (; - 889)». The same page's text says instead that she lived «στα χρόνια του βασιλιά του Λέοντα του Σοφού (816 μ.Χ.)», which does not agree with it; the head line's year is taken and the disagreement is the page's own."
+      "note": "Two readings, and neither is chosen. days.pravoslavie.ru's life: she was taken by Arab raiders in 846 at the age of eighteen and «прожила на острове 35 лет (+ 881)» — 846 and thirty-five years, which is self-consistent and which the day's line repeats as «(881)». saint.gr's head line reads «Οσια Θεοκτιστη η Λεσβια (; - 889)», and that page's own text puts her instead in the reign of Leo the Wise and dates it 816, which agrees with neither. The interval holds the two readings that are close to each other and the third is named here."
     }
   },
   "hymns": [

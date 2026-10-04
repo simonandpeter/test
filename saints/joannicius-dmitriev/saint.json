@@ -1,0 +1,109 @@
+{
+  "slug": "joannicius-dmitriev",
+  "display_name": "Joannicius (Dmitriev)",
+  "names": [
+    {
+      "form": "Иоанникий (Дмитриев)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9173, «Иоанникий (Дмитриев), архимандрит, сщмч.», with the grade and the rank word left off; the day's line gives the forename alone and in the genitive, «прмч. Иоанникия». The name page's rank word is сщмч., hieromartyr, where the line, the life page's own title and azbyka.ru all have прмч., venerable martyr; the folder's types follow the three and the disagreement is recorded here."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "office": "Archimandrite",
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился в 1875 году в деревне Редкие Дворы Московской губернии в семье крестьянина». azbyka.ru gives the same year and a different village and province, «в деревне Заводские Хутора Тульской губернии», with a footnote of its own hanging on the province; both are in the life and neither is chosen. No day or month is given by either."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «19 ноября 1937 года Тройка НКВД приговорила … к расстрелу, они были расстреляны 23 ноября 1937 года и погребены в общей безвестной могиле». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died."
+    }
+  },
+  "related": [
+    "augustine-belyaev",
+    "john-speransky",
+    "seraphim-gushchin",
+    "alexis-gorbachev",
+    "apollon-babichev",
+    "michael-arefyev"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Я́ко мона́шествующих утвержде́ние/ и преподобному́чеников похвалу́/ О́птина пу́стынь вас велича́ет,/ Иоанни́кие и Серафи́ме досточу́днии,/ вы бо, ду́ши своя́ за Христа́ положи́вше,/ венце́м страда́ния увенча́стеся./ Те́мже моли́теся Христу́, добропобе́днии,/ страну́ на́шу в Правосла́вии утверди́ти// и душа́м на́шим дарова́ти ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Иоанникий (Дмитриев)», тропарь, напечатанный обоим преподобномученикам Оптинским, Иоанникию и Серафиму",
+        "url": "https://azbyka.ru/days/sv-ioannikij-dmitriev",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the strengthening of monastics and the praise of venerable martyrs, Optina hermitage magnifies you, O Joannicius and Seraphim, worthy of wonder; for, laying down your souls for Christ, you were crowned with the crown of suffering. Therefore pray to Christ, O well-triumphant ones, that our land may be established in Orthodoxy and that great mercy may be granted to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Непоро́чное твое́ житие́ во и́ночестве, Иоанни́кие,/ и любо́вь ко Христу́ неутоли́мая,/ Правосла́вия побо́рника и преподобному́ченика сла́вна тя показа́./ Сего́ ра́ди во дворы́ ра́йския всели́ тя Госпо́дь,/ еди́ный све́дый серде́чная.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Иоанникий (Дмитриев)», кондак, напечатанный под его именем",
+        "url": "https://azbyka.ru/days/sv-ioannikij-dmitriev",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your blameless life in the monastic estate, O Joannicius, and your unquenchable love for Christ showed you a champion of Orthodoxy and a glorious venerable martyr. For this the Lord, who alone knows the things of the heart, has settled you in the courts of paradise.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day; azbyka.ru keeps that synaxis on the moveable 7 February and adds the synaxis of the Kaluga saints and the synaxis of all the saints of Optina. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Августина , архиеп. Калужского, и с ним Иоанна пресвитера, прмч. Иоанникия и Серафима , мчч. Алексия , Аполлона , Михаила (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

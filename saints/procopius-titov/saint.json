@@ -1,0 +1,105 @@
+{
+  "slug": "procopius-titov",
+  "display_name": "Procopius (Titov)",
+  "names": [
+    {
+      "form": "Прокопий (Титов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9122, «Святитель Прокопий (Титов), архиепископ Херсонский, сщмч.», with the rank words and the see left off; the day's line gives the forename alone and in the genitive, «Сщмчч. Прокопия , архиеп. Одесского». azbyka.ru writes the surname unbracketed, «Прокопия (Титова), архиепископа Херсонского»."
+    }
+  ],
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop"
+  ],
+  "office": "Archbishop",
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "25 December 1877",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 25 декабря 1877 года в городе Кузьминск Томской губернии в семье священника»; the longer life azbyka.ru prints gives the same date and a different town, «в семье священника города Кузнецка Томской губернии». The date is the same on both pages and the town is not; both are recorded in the life."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Святитель был расстрелян 10 (23 н. ст.) ноября 1937 года». The longer life azbyka.ru prints closes with the same day: «23 ноября 1937 года архиепископ Одесский и Херсонский Прокопий (Титов) и священник Иоанн Скадовский были расстреляны и погребены в безвестной общей могиле». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died."
+    }
+  },
+  "related": [
+    "john-skadovsky"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Свети́льник всесве́тлый во гра́де Херсо́не яви́лся еси́, па́стырю до́брый, священному́чениче Проко́пие. Любо́вь и милосе́рдие в сердца́х ве́рных насажда́я, тве́рдо стоя́ти во испове́дании ве́ры Правосла́вныя призыва́л еси́. Те́мже со пресви́тером Иоа́нном за Христа́ пострада́л еси́, и ны́не ку́пно с ни́м на небеси́ престо́лу Бо́жию предстоя́, моли́ Ми́лостиваго Бо́га оте́чество на́ше в Правосла́вии и благоче́стии утверди́ти, ми́р Це́ркви дарова́ти и душа́м на́шим ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Прокопий Титов», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-prokopij-titov",
+        "year": 2026
+      },
+      "english": {
+        "text": "An all-radiant lamp didst thou appear in the city of Kherson, O good shepherd, hieromartyr Procopius. Planting love and mercy in the hearts of the faithful, thou didst call them to stand firm in the confession of the Orthodox faith. Therefore thou didst suffer for Christ together with the presbyter John, and now, standing with him before the throne of God in heaven, entreat the merciful God to establish our fatherland in Orthodoxy and piety, to grant peace to the Church and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Во святи́телех благоче́стно пожи́в, и муче́ния пу́ть проше́д, безбо́жия си́лу побежда́я, побо́рник бы́в Херсо́нстей па́стве, богому́дре. Те́мже тя́ почита́юще, та́ко вопие́м ти́: от бе́д изба́ви на́с при́сно твои́ми мольба́ми, о́тче священному́чениче Проко́пие.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Прокопий Титов», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-prokopij-titov",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived piously among the hierarchs and walked the way of martyrdom, overcoming the power of godlessness, thou wast a champion of the flock of Kherson, O wise in God. Therefore honouring thee we cry out to thee thus: deliver us always from troubles by thy prayers, O father and hieromartyr Procopius.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, «8 июня (Петерб.)», the synaxis of the saints of St Petersburg, and this day; azbyka.ru lists four synaxes beside the day, among them the Solovki new martyrs and the fathers of the council of 1917–1918. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Прокопия , архиеп. Одесского, Дионисия , Иоанна и Петра пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
