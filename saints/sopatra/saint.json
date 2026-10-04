@@ -6,6 +6,11 @@
       "form": "Σωπάτρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Αγίες Ευσταλία και Σωπάτρα», with the rank word left off."
+    },
+    {
+      "form": "Сосипатра (Сопатра) Константинопольская",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for her, «Сосипатра (Сопатра) Константинопольская, прп.», with the rank word left off; it carries both spellings of her name and the folder's English form follows the shorter, which is the Greek and Romanian pages'. The day's line prints the longer in the genitive, «и Сосипатры»."
     }
   ],
   "sex": "female",
@@ -17,19 +22,28 @@
     "eustalia"
   ],
   "dates": {
-    "floruit": {
-      "earliest": 584,
-      "latest": 584,
-      "display": "c. 584",
+    "death": {
+      "earliest": 625,
+      "latest": 625,
+      "display": "about 625",
       "basis": "traditional",
-      "note": "saint.gr: «Οι άγιες Ευσταλία και Σωπάτρα έζησαν την εποχή του αυτοκράτορα Μαυρίκιου (περί το 584 μ.Χ.)», and she is the daughter of that emperor on the same page."
+      "note": "days.pravoslavie.ru's joint life for the two: «Святая Евстолия скончалась в 610 году, а святая Сосипатра - в 625 году», where the day's line gives «(ок. 625)», about 625. The same life makes her the daughter of the emperor Maurice and dates his reign 582 to 602. The first date this folder has carried."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прпп. Евстолии (610) и Сосипатры (ок. 625).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

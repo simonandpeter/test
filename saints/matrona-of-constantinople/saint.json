@@ -11,6 +11,11 @@
       "form": "Ματρώνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Οσία Ματρώνα», with the rank word left off. The page gives the name she took in the men's monastery as Βαβύλας."
+    },
+    {
+      "form": "Матрона Константинопольская",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for her, «Матрона Константинопольская, прп.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Прп. Матроны». The day page's hymns call her «Матроны Царьградской»."
     }
   ],
   "sex": "female",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прп. Матроны (ок. 492).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -109,6 +123,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Мужескомудрено утаившися вражиих лукавых путей, Матроно,/ к жизни воистину шествовавши несумненною волею/ и неуклонное течение Богомудро скончавши,/ от Христа прияла еси благодать духовную,/ тем и воду цельбам источаеши/ любовию притекающим в память твою славную,/ мнихом похвала,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Тропарь преподобной Матроны Царьградской», printed under her own name",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With a manly wisdom you hid yourself from the crafty ways of the enemy, O Matrona, and walked truly towards life with an undoubting will; having finished your unswerving course in the wisdom of God, you received spiritual grace from Christ, and therefore you pour forth water for healings upon those who come with love to your glorious memory. O praise of monastics, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "За любовь Господню, преподобная Матроно,/ покоя желание возненавидела еси,/ лощением дух твой просветивши,/ но твоими молитвами и противных шатания разори,/ крепко бо звери победила еси.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Кондак преподобной Матроны Царьградской», printed under her own name",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For the love of the Lord, O venerable Matrona, you came to hate the desire for rest, enlightening your spirit by fasting; by your prayers scatter the ragings of the adversaries, for you mightily overcame the beasts.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -121,6 +167,13 @@
       "display": "450–474",
       "basis": "traditional",
       "note": "saint.gr: «Η Οσία Ματρώνα έζησε στα χρόνια των βασιλέων Μαρκιανού (450 - 457 μ.Χ.) και Λέοντα Θρακός ή Μακέλλη (457 - 474 μ.Χ.)» — the two reigns the page names, and it gives no year of her own; it says she died at a hundred."
+    },
+    "death": {
+      "earliest": 492,
+      "latest": 492,
+      "display": "about 492",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life for her: «В возрасте ста лет преподобная Матрона, благословив сестер, тихо отошла ко Господу (около 492 года)», and the day's line closes «(ок. 492)». The same life opens «родилась в городе Пергии Памфилийской (Малая Азия) в V веке». The year sits later than the two reigns her Greek page places her in, and both readings stand: a hundred years of life reaches from one to the other."
     }
   }
 }

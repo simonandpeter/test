@@ -6,4 +6,6 @@ Sopatra was one of those young women, and she preferred the monastic life to the
 
 Her distich sets her before the throne: «Σωπάτρα Πατρὸς Πνεύματός τε καὶ Λόγου, / Θρόνῳ παρέστη, δοῦσα γῇ τὸ σαρκίον» — Sopatra stood before the throne of the Father and the Spirit and the Word, having given her poor flesh to the earth.
 
-*After saint.gr's calendar for 9 Νοεμβρίου — [the day](https://www.saint.gr/11/09/index.aspx) and [the life](https://www.saint.gr/2952/saint.aspx); read 1 October 2026.*
+The Russian calendar's joint life for the two women gives this folder its first date and names her father: she was the daughter of the emperor Maurice, whose reign it dates 582 to 602. Drawn to the monastic life, she met [Eustalia](/saints/eustalia) in the church of the Mother of God at Blachernae, and after that conversation resolved to leave the world for good and to give her will wholly over to her as her teacher. The palace her pious father had given his daughter became by degrees a monastery known for the strictness of its rule. Eustolia died in 610 and she about 625.
+
+*After saint.gr's calendar for 9 Νοεμβρίου — [the day](https://www.saint.gr/11/09/index.aspx) and [the life](https://www.saint.gr/2952/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery, 9 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261109.html) and [the joint life](https://days.pravoslavie.ru/Life/life2510.htm), read 4 October 2026.*

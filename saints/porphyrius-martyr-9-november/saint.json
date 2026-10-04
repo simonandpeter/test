@@ -11,6 +11,11 @@
       "form": "Πορφύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Άγιοι Ονησιφόρος και Πορφύριος», with the rank word left off."
+    },
+    {
+      "form": "Порфирий",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page for him, «Порфирий, мч.», with the rank word left off; it gives no by-name, no city and no year, so the bare forename is all of it. The day's line prints it in the genitive, «Мчч. Онисифора и Порфирия»."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Мчч. Онисифора и Порфирия (ок. 284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -111,9 +125,50 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Тропарь мучеников Онисифора и Порфирия», which is the common of martyrs printed under their two names",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their sufferings received incorruptible crowns from You, our God; for having Your strength, they cast down the tormentors and crushed also the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мученик двоица, пострадавше крепко,/ вражию гордыню на землю низложисте,/ озарившеся благодатию несозданныя Троицы,/ славнии Онисифоре и Порфирие,// молитеся непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Кондак мучеников Онисифора и Порфирия», printed under their two names and naming them both",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O pair of martyrs, having suffered manfully you cast the enemy's pride down to the earth, illumined by the grace of the uncreated Trinity, O glorious Onesiphorus and Porphyrius; pray unceasingly for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's joint life for the two martyrs: «пострадали во время гонения на христиан при императоре Диоклетиане (284–305)», and the day's line closes «(ок. 284-305)». That is the reign and not a year: the first date this folder has carried."
+    }
   }
 }

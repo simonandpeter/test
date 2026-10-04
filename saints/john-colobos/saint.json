@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιος Ιωάννης ο Βραχύσωμος ή Κολοβός», with the rank word left off."
+    },
+    {
+      "form": "Иоанн Колов",
+      "lang": "ru",
+      "note": "The forename and the by-name of the calendar's name page heading, «Иоанн Колов, Младший, Скитский, отшельник», with the rank word and the page's two further by-names left off; the day's line prints the same two words in the genitive, «Прп. Иоанна Колова»."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прп. Иоанна Колова (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -67,5 +81,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life for him: «подвизался в египетской пустыне в V веке», and the day's line closes «(V)». The first date this folder has carried."
+    }
   }
 }
