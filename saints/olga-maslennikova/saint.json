@@ -1,0 +1,66 @@
+{
+  "slug": "olga-maslennikova",
+  "display_name": "Olga (Maslennikova)",
+  "names": [
+    {
+      "form": "Ольга (Масленникова)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 10098, «Ольга (Масленникова), мц.», with the rank word left off; the day's line gives the forename alone and in the genitive, «Мцц. Ольги (1941)»."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "10 July 1874",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for her: «родилась 10 июля 1874 года в городе Калуге»."
+    },
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for her: «Ольга Александровна скончалась в концлагере в 1941 году» — the year, the camp and no more; the day line closes with the same year, «(1941)». No day or month is recorded anywhere on the page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast, beside this day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мцц. Ольги (1941) и Феоктисты (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
