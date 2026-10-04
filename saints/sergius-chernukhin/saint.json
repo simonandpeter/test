@@ -1,0 +1,68 @@
+{
+  "slug": "sergius-chernukhin",
+  "display_name": "Sergius (Chernukhin)",
+  "office": "Abbot",
+  "sex": "male",
+  "types": [
+    "venerable-martyr"
+  ],
+  "names": [
+    {
+      "form": "Сергий (Чернухин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 27 октября ст. ст., «Сергий (Чернухин), игумен, прмч.», with the rank word and the office left off; azbyka.ru heads him «Преподобномученик Сергий (Чернухин), игумен», which gives the same form. The line on the day page itself gives only the forename, in the genitive, and no surname."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «Преподобномученик Сергий родился 3 февраля 1879 году в селе Семеновка Бузулукского уезда Самарской губернии в семье крестьянина Савелия Чернухина и в крещении был наречен Симеоном». days.pravoslavie.ru gives no birth. Read 4 October 2026."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1942)» after his name on 27 октября ст. ст.; azbyka.ru's life gives the day as well — «скончался 9 ноября 1942 года в Свободненском исправительно-трудовом лагере Амурской области и был погребен в безвестной могиле» — and closes «Память его совершается 27 октября (9 ноября)», which is this menologion day in both styles. Read 4 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page on days.pravoslavie.ru lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; azbyka.ru lists the same synaxis as a moveable 7 февраля and adds the moveable synaxis of the Moscow saints. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 октября ст. ст. — «Прмч. Сергия (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261027.html",
+        "year": 2026
+      },
+      "note": "The line's «Прмч.» is venerable-martyr and the link's «игумен» is the office; both are said in the life and neither is read into the other. The life is azbyka.ru's, compiled by Abbot Damaskin (Orlovsky) and published in Московские Епархиальные Ведомости 11–12 (2008), with its archival references printed. The surname «Чернухин» returns no other folder, and no other Sergius in the corpus is kept on 27 October in any calendar."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

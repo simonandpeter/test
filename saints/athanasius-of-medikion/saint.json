@@ -1,0 +1,63 @@
+{
+  "slug": "athanasius-of-medikion",
+  "display_name": "Athanasius of Medikion",
+  "office": "Steward of the monastery of Medikion",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Афанасий Мидикийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 26 октября ст. ст., «Афанасий Мидикийский, эконом, прп.», with the rank word and the office left off. The line on the day page itself declines the name, as «Прп. Афанасия Мидикийского»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 814,
+      "latest": 814,
+      "display": "about 814",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(ок. 814)» after his name on 26 октября ст. ст., and its life for him closes the sentence «Он был сподвижником преподобного Никиты (память 3 апреля) и скончался около 814 года». The page gives no other year and no day. Read 4 October 2026."
+    }
+  },
+  "related": [
+    "nicetas-of-medikion"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Прп. Афанасия Мидикийского (ок. 814).»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      },
+      "note": "His name page lists this one day and no other. He is not the corpus's `athanasius-the-confessor`, who is the Greek calendar's «Όσιος Αθανάσιος ο Ομολογητής της Μονής Παυλοπετρίου» on 22 February — a different monastery, a different day and a different page; thirty-eight other `athanas*` folders were listed and none is of Medikion, and `grep` for Medikion across the corpus names ten folders of which he is not one."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

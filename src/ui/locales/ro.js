@@ -1184,6 +1184,7 @@ export const ro = {
     'Schemanun': 'Schimonahie',
     'Senator': 'Senator roman',
     'Steward of the monastery of Christ the Saviour of Bathys Ryax': 'Econom al mănăstirii Mântuitorului din Vathys Ryax',
+    'Steward of the monastery of Medikion': 'Econom al mănăstirii Medikion',
     'Stylite': 'Stâlpnic',
     'Subdeacon': 'Ipodiacon',
     'Tsar of Russia': 'Țar al Rusiei',

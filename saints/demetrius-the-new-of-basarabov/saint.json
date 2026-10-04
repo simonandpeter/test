@@ -11,6 +11,11 @@
       "form": "Δημήτριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Οκτωβρίου, «Όσιος Δημήτριος ο Νέος (Μπασαράμπης)», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Димитрий Басарбовский (Бассарабовский), Болгарский",
+      "lang": "ru",
+      "note": "Read whole off the title on the name link behind his line for 26 октября ст. ст., «Димитрий Басарбовский (Бассарабовский), Болгарский, прп.», with the rank word left off; the bracketed second spelling is the calendar's own. The line on the day page declines the name and gives it without the second spelling."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «8 июля (Перенесение мощей)», the translation of his relics to Bucharest. One row per church is the schema, so the second day is recorded here and he does not render on it. The Romanian row keeps him on 27 octombrie, a day later in the menologion than this calendar does; neither page explains the difference and neither is changed."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Прп. Димитрия Басарбовского, Болгарского (1685).»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -66,10 +81,10 @@
   "dates": {
     "death": {
       "earliest": 1201,
-      "latest": 1300,
-      "display": "13th century",
+      "latest": 1685,
+      "display": "13th century or 1685",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε τον 13ο αιώνα μ.Χ. στην περίοδο της βασιλείας των Πέτρου και Ιωάννου Ασάν» — the page gives the century and the reign and no year."
+      "note": "Two calendars disagree by nearly five centuries and neither reading is chosen. days.pravoslavie.ru prints «(1685)» after his name on 26 октября ст. ст. and its life says «Скончался в 1685 г.»; saint.gr, from which this folder was first read, says «Έζησε τον 13ο αιώνα μ.Χ. στην περίοδο της βασιλείας των Πέτρου και Ιωάννου Ασάν» and gives no year. No third source was read to break it. The interval holds both readings, as docs/CORPUS.md §3 requires. Read 4 October 2026."
     }
   }
 }

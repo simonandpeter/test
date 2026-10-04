@@ -1185,6 +1185,7 @@ export const el = {
     'Schemanun': 'Σχημομοναχή',
     'Senator': 'Συγκλητικός',
     'Steward of the monastery of Christ the Saviour of Bathys Ryax': 'Οικονόμος της μονής του Σωτήρος Βαθέος Ρύακος',
+    'Steward of the monastery of Medikion': 'Οικονόμος της μονής Μηδικίου',
     'Stylite': 'Στυλίτης',
     'Subdeacon': 'Υποδιάκονος',
     'Tsar of Russia': 'Τσάρος της Ρωσίας',

@@ -3,21 +3,36 @@
   "display_name": "Theophilus of Novgorod",
   "sex": "male",
   "types": [
-    "archbishop"
+    "archbishop",
+    "venerable"
   ],
   "names": [
     {
       "form": "Θεόφιλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Όσιος Θεόφιλος Αρχιεπίσκοπος Νόβγκοροντ», with the rank words and the see left off."
+    },
+    {
+      "form": "Феофил Печерский, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 26 октября ст. ст., «Святитель Феофил Печерский, Новгородский», with the rank word left off. The line on the day page itself declines the name and abbreviates the see, as «Прп. Феофила Печерского, архиеп. Новгородского»."
     }
   ],
   "office": "Archbishop of Novgorod",
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Прп. Феофила Печерского, архиеп. Новгородского (1482).»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +62,52 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1482,
+      "latest": 1482,
+      "display": "1482",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after his name on 26 октября ст. ст., «Прп. Феофила Печерского, архиеп. Новгородского (1482).» Its longer life gives no year of death and instead the chronicle's phrase, that after being sent to the Chudov monastery in 1480 he «сидел полтретья лето, ту и преставися» — sat two and a half summers and there died. The same life dates his consecration to 15 December 1472 and his letter of resignation to 1479. This folder held no date at all before. Read 4 October 2026."
+    }
+  },
+  "related": [
+    "niphon-of-novgorod",
+    "jonah-of-novgorod"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры, и образ кротости,/ и воздержания известный учитель Христову стаду воистину был еси,/ уча е выну смирению,/ не мудрствовати еже высокая,/ сего ради стяжал, яже желаше,/ отче святителю Феофиле,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Тропарь преподобного Феофила Печерского, архиепископа Новгородского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A rule of faith and an image of meekness and a known teacher of abstinence you truly were to the flock of Christ, teaching it always humility and not to be wise in high things; and for this you gained what you desired, father and hierarch Theophilus. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко воистинну по имени своему ты,/ Боголюбезне святителю Феофиле и преподобне, соблюдши,/ явися тебе Христос Спас,/ обещая ти Живот и Царствие Свое,/ в немже, днесь ликуя, не забуди нас, рабов твоих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Кондак преподобного Феофила Печерского, архиепископа Новгородского,»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having kept yourself truly according to your own name, hierarch Theophilus, God-loving and venerable, Christ the Saviour appeared to you, promising you his Life and his Kingdom; rejoicing in it today, do not forget us, your servants.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
