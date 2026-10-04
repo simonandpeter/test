@@ -12,6 +12,11 @@
       "form": "Феогност Киевский и Московский",
       "lang": "ru",
       "note": "days.pravoslavie.ru's name page 2173 heads him «Святитель Феогност Киевский и Московский, митрополит»; the two sees are kept in the form because the Russian names both where the Greek names only Kyiv."
+    },
+    {
+      "form": "Теогност",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 14 March on pravoslavno.rs, „Свети Теогност, митрополит кијевски.“, with Свети left off, which is not a rank, and with the see митрополит кијевски left off as well. The heading gives no epithet, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Теогност."
     }
   ],
   "sex": "male",
@@ -70,12 +75,23 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.03.2026 (14. март ст. ст.) — „Свети Теогност, митрополит кијевски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry. It is plainly this metropolitan: a Greek by birth, successor of the holy Peter of Kyiv, who suffered much in the Mongol horde from Janibeg, governed the church twenty-five years and reposed in the Lord in 1353 — the same year saint.gr gives, so no date was touched. The predecessor it names is `peter-of-moscow`, whom this corpus keeps as Peter, metropolitan of Moscow, and whom the Russian row already on this folder names in the same synaxis line of the hierarchs of Moscow; a `related` row goes both ways for him, because the see he took over is this saint's own story. Janibeg, the khan who held him, has no folder and takes none. The Russian row's note already records that days.pravoslavie.ru's name page lists 14 марта as his repose while that row sits on the synaxis of 5 октября; the Serbian row is the first in this folder to stand on 14 March itself. The stored Serbian form is the bare forename, because Свети is not a rank and митрополит кијевски is the see this folder keeps in `office`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [
-    "alexis-of-moscow"
+    "alexis-of-moscow",
+    "peter-of-moscow"
   ],
   "text": {
     "life": "life.md"

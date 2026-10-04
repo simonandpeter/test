@@ -11,6 +11,11 @@
       "form": "Βενέδικτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαρτίου, «Όσιος Βενέδικτος ο εκ Νουρσίας», with the rank words left off."
+    },
+    {
+      "form": "Бенедикт",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 14 March on pravoslavno.rs, „Преподобни Бенедикт.“, with the rank word Преподобни left off. The heading gives no epithet and no place — Nursia is in the body's first sentence and not in the name — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.03.2026 (14. март ст. ст.) — „Преподобни Бенедикт.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-27&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first and longest entry. The heading's one word beside the name is a rank this folder's `types` already carry, and it gives no epithet and no place, so the stored form is the bare forename; no other folder in the corpus holds a Serbian Бенедикт. The entry puts his birth in 480, where this folder holds 481 from saint.gr; the sourced year is left standing and the disagreement is recorded here rather than resolved, and its 543 for his repose agrees with what the folder holds. It says his parents were rich and notable, names the monk Romanus who tonsured him and lowered bread to his cave on a rope, names his sister Scholastica, counts twelve monasteries of twelve monks each, and notes that the Benedictine order that later grew from them still exists in the Roman Catholic Church — which is the Prologue's own remark and not this corpus's. The Prologue prints no troparion and no kontakion; the ПЕСМА on this day is a verse about the disciples Placidus and Maurus, and nothing was taken from it."
     }
   ],
   "hymns": [
