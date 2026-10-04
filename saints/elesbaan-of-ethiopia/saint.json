@@ -1,0 +1,98 @@
+{
+  "slug": "elesbaan-of-ethiopia",
+  "display_name": "Elesbaan of Ethiopia",
+  "sex": "male",
+  "types": [
+    "righteous",
+    "king",
+    "ascetic"
+  ],
+  "names": [
+    {
+      "form": "Елезвой Эфиопский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Елезвой Эфиопский, царь, затворник», with the rank and the state of life left off. The line itself declines it and adds a second name in brackets, «Блж. Елезвоя (Калеба), царя Ефиопского»."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Блж. Елезвоя (Калеба), царя Ефиопского (553-555).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "His life page heads «День памяти: 24 октября» and no other day. The line's «Блж.» is read as righteous and not as a fool for Christ, because nothing on either page gives him that labour and the page has him end as a recluse in a monastic cell; the name link's «царь, затворник» supplies the kingship, which is in `types`, and the enclosure, which is said in the life. The second name the line prints in brackets, «(Калеба)», is given as the calendar gives it and is not resolved here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 6 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 553,
+      "latest": 555,
+      "display": "between 553 and 555",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 24 октября ст. ст. «(553-555)» and his life closes «(† ок. 553-555)»; the page gives a span and not a year, and the «ок.» is its own. Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже Божественным рачением подвигся/ на отмщение пролитыя крови праведных,/ яко Давид от Самуила,/ ты же от Зинона предивнаго,/ пророчески яже сбытися тебе предрекша,/ еже обещанием к нему,/ и того благословением победы на враги и одоления показавшу,/ отнюду же со отложением царства/ постных селений горы жизнь соверши, Елезвое царю,/ моли Небеснаго Царя Христа/ спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Тропарь блаженного Елезвоя»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Moved by a divine zeal to avenge the shed blood of the righteous, you were told what would come to pass — as David was by Samuel, so you by the wondrous Zeno — upon the promise you made to him, and by his blessing you were given victory and mastery over your enemies; and from there, laying down your kingdom, you finished your life in the mountain dwellings of fasting. King Elesbaan, pray to Christ the heavenly King to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Высоту земнаго царства, и венца венец светлости,/ и багряницу отложшаго любве ради Царя Христа,/ от Негоже на Небесех славно венчана, Елезвоя царя мудраго,/ иже тленным царством и мимоходящим, Царство Вечное изменшаго,/ в пениих песненных восхвалим,/ молитвенника о мире велика.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Кондак блаженного Елезвоя»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise in songs of hymnody the wise king Elesbaan, who laid aside the height of an earthly kingdom, the brightest of crowns and the purple for the love of Christ the King, and was gloriously crowned by Him in heaven; who exchanged a perishing and passing kingdom for the Kingdom that is everlasting, and is a great intercessor for the world.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "related": [
+    "aretas-of-nagran"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
