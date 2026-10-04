@@ -11,6 +11,11 @@
       "form": "Αιδέσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιοι Αιδέσιος και Αμφιανός οι αυτάδελφοι», with the rank word left off."
+    },
+    {
+      "form": "Едесије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 2 April on pravoslavno.rs, „Св. муч. Амфијан и Едесије“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -58,11 +63,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.04.2026 (2. април ст. ст.) — „Св. муч. Амфијан и Едесије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, one heading naming both brothers, on the same menologion day the Romanian and the Greek already keep in both folders, and the same story for this one: the copper mines of Palestine first, then Egypt, then Alexandria and the governor Hierocles who had gathered Christian nuns, maidens and honourable women in the market and was handing them over to the most shameless men for abuse; the blow struck in holy zeal; the torture, and the drowning in the sea as his brother was drowned. **A date was added where this folder had none**: „око 306. год.“, about 306, said of the two brothers together, and this folder's own life says in its own words that no page read for it gives a year for either of them. saint.gr's «about 305» belongs to the emperor's letters and not to a death, so nothing was reconciled. The Prologue agrees with the Romanian life on Patara against saint.gr's Gaza, which makes it two sources to one. The Prologue prints no troparion and no kontakion, and this folder has none. The stored form Едесије folds with nothing: no other folder in the corpus holds a Serbian form of this spelling."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 306,
+      "display": "about 306",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 April, of the two brothers together: „Као два невина јагњета жртвоваше се за Христа, око 306. год.“ — like two innocent lambs they were offered for Christ about the year 306. The page says about, not 306 flat. It is the only year any source read for these two folders gives them: this folder's life records that neither page read for it gives a year for either brother, and saint.gr's «about 305» belongs to the emperor Maximinus II's letters ordering every inhabitant to sacrifice, not to a death."
+    }
   }
 }
