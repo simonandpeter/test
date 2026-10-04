@@ -12,6 +12,11 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Φεβρουαρίου, «Άγιος Νικήτας ο νέος Ιερομάρτυρας», with the rank words and the epithet left off."
+    },
+    {
+      "form": "Никита",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 4 April on pravoslavno.rs, „Преп. муч. Никита“, with the rank words Преп. муч. left off. The heading gives no epithet and no place — Albania, the Holy Mountain and Serres are all in the body — so the bare forename is what the source gives, and it is the fourth folder in the corpus to hold it."
     }
   ],
   "related": [],
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.04.2026 (4. април ст. ст.) — „Преп. муч. Никита“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, **and this row is a reading the author should check, because the Prologue keeps him on a different day from the Greek and gives a different year.** The entry is four sentences: a Slav from Albania; an Athonite monk who went to Serres, where he disputed about the faith with the mullahs; and when they could not overcome him with arguments the Turks put him to torments, in which the holy Nicetas died and gave his soul to God, 1808. The identification is not on the name — the corpus holds eighteen folders of this name — but on four marks together, every one of them unusual and all of them in saint.gr's life for this folder: **Epirus against Albania**, which are the same stretch of country in the older usage and the entry's own word is only that he was a Slav from it; **the Holy Mountain**, where saint.gr makes him a hieromonk of the skete of St Anne and then of the Russian house of St Panteleimon; **Serres**, where saint.gr has him preach in the surrounding villages and be imprisoned; and **death under Turkish torture within two years of the Prologue's date**. No other `nicetas-*` or `nikitas-*` folder was read as an Athonite martyr at Serres: `nicetas-the-new` is a man saint.gr says nothing at all about, on the Greek 17 December, and `nikitas-of-nea-moni` is an eleventh-century founder on Chios. **The two differences are recorded and neither was resolved.** The Greek row holds 19 February, which is the day saint.gr keeps him, and the Serbian row carries the Prologue's 4 April; one row per church is the schema and nothing was moved. And this folder's `death` is 1806, `basis: attested`, from saint.gr's „στις 19 Φεβρουαρίου 1806 μ.Χ. τον κρέμασαν“, where the Prologue says 1808: **an attested year is not displaced by a reader**, so the date stands untouched and the Prologue's year is recorded here and in the life. New to the folder: that he was a Slav, and that what he did at Serres was dispute with the mullahs and defeat them in argument, which is what brought the tortures on him; saint.gr has him preaching in the villages instead. The Prologue prints no troparion and no kontakion, and this folder has none. The stored form Никита joins the fold `nicetas-the-chartularius`, `nicetas-the-goth` and `nicetas-of-medikion` hold, which this wave recorded two days ago; it is a deliberate fold and is on file."
     }
   ],
   "text": {

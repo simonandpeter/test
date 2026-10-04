@@ -10,9 +10,16 @@
       "form": "Φερφούθη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Αγία Φερφούθη μετά της αδελφής και ανιψιάς της», with the rank word left off. The life page's couplet spells the same name Φερβούθαν."
+    },
+    {
+      "form": "Фервута",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 4 April on pravoslavno.rs, „Св. мученица Фервута и њена сестра удова и њихова робиња“, with the rank words Св. мученица left off. The heading names only this woman and describes the other two by what they were, so hers is the one name on the page; it carries no epithet and no city, and the bare forename is what the source gives."
     }
   ],
-  "related": [],
+  "related": [
+    "simeon-of-persia"
+  ],
   "dates": {
     "death": {
       "earliest": 301,
@@ -50,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.04.2026 (4. април ст. ст.) — „Св. мученица Фервута и њена сестра удова и њихова робиња“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Greek already keeps in this folder, the same three women, the same king of Persia and the same death by the saw. **The third woman is not the same person in the two sources and nothing was changed to make her one.** This folder's display name says «with her sister and her niece», which is saint.gr's reading; the Prologue's heading says „и њена сестра удова и њихова робиња“ — her widowed sister and their slave-girl — and its body repeats робиња. So the Prologue makes the third woman a servant of the household and the Greek page a niece, and both readings are recorded; the display name was left as it is, because it is the Greek page's and changing it on one calendar's word is the author's call. The Prologue's 343 falls inside the fourth century this folder holds from saint.gr and is narrower than it, so **the interval was not narrowed**. New to the folder: that her brother the bishop had been put to death first under the Persian king Shapur; that Pherbutha was taken into the palace at the queen's own wish; that she was of unusual beauty, so that many suitors pressed her, among them the pagan priests and diviners, and that her refusal of all of them was what raised the anger against her; and that when the queen fell ill the priests told the king she had been poisoned by Pherbutha and prescribed as the cure that the three Christian women be sawn in half, three halves laid on one side and three on the other, and the queen carried between them — to which the king agreed. **Her brother is named and linked**, the corpus holding `simeon-of-persia`, a bishop in Persia killed under the same king, whom the Romanian and the Greek both keep on 17 April. The Prologue prints no troparion and no kontakion, and this folder has none. The stored form Фервута folds with nothing."
     }
   ],
   "text": {
