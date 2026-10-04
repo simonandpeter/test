@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-grudakov",
+  "display_name": "Theodore (Grudakov)",
+  "names": [
+    {
+      "form": "Феодор (Грудаков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 13852, «Феодор (Грудаков), иерей, сщмч.», with the grade word and the rank word left off. The day's own line declines the name to «Феодора» and gives it without a surname. azbyka.ru heads its life «Священномученик Феодор Грудаков, пресвитер»; the two hosts agree that he was a priest and not an archpriest."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists two moveable synaxes beside this day, the new martyrs and confessors of the Russian Church and the saints of Moscow; both are synaxis headings and neither is a second proper feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Сщмч. Феодора пресвитера (1940).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "13 February 1889",
+      "basis": "attested",
+      "note": "azbyka.ru's life of him: «Священномученик Феодор родился 13 февраля 1889 года в деревне Песье Подольского уезда Московской губернии в семье крестьянина Василия Грудакова.»"
+    },
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "27 November 1940",
+      "basis": "attested",
+      "note": "azbyka.ru's life of him: «умер от непосильного труда и голода 27 ноября 1940 года и был погребен в безвестной общей могиле» in the Samarlag camp. 27 November 1940 is 14 November old style, the day days.pravoslavie.ru keeps him on, and its line closes him with «(1940)»."
+    }
+  },
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}

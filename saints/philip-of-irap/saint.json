@@ -1,0 +1,97 @@
+{
+  "slug": "philip-of-irap",
+  "display_name": "Philip of Irap",
+  "names": [
+    {
+      "form": "Филипп Ирапский, Череповецкий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 14 ноября ст. ст., name page 2293, «Филипп Ирапский, Череповецкий, прп.», with the rank word left off and both toponymics kept, as `demetrius-of-prilutsk` keeps «Димитрий Прилуцкий, Вологодский». The day's own line declines it, «Прп. Филиппа Ирапского (1527)». The life adds that his name in the world was Феофил, which is not stored as a name form because the calendar gives it only in the genitive of a sentence."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Прп. Филиппа Ирапского (1527).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1527,
+      "latest": 1527,
+      "display": "1527",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's line for 14 ноября ст. ст. closes him with «(1527)». His life there says «Преподобный Филипп провел в пустыни 15 лет и скончался в возрасте 45 лет», which would give a birth year by subtraction; it is not subtracted, and no birth date is recorded."
+    }
+  },
+  "related": [
+    "cornelius-of-komel"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко кедр, в пустыни давидски растущ, и яко финикс, благоуханен цветущ,/ ревнитель учителю твоему был еси, преподобному отцу Корнилию,/ стопам бо его последовал еси/ и, святое иго взем,/ светлым житием просиял еси, яко солнце,/ явлься мирови многими чудесы, отче Филиппе!/ И ныне на Небесех предстоиши Престолу Пресвятыя Троицы/ и, яко великое имея дерзновение,/ преподобнии свой руце воздев,/ моли от враг сохранитися градом нашим/ и спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Тропарь преподобного Филиппа Ирапского, Череповецкого»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Growing in the wilderness like a cedar, as David sings of it, and flowering fragrant like a palm, you were a zealous follower of your teacher, the venerable father Cornelius, for you walked in his steps; and taking up the holy yoke you shone like the sun with a radiant life and were shown to the world by many wonders, father Philip. Now you stand in heaven before the throne of the All-holy Trinity, and having great boldness, lifting up your venerable hands, pray that our cities may be kept from enemies and that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Воспоем ныне предивнаго в чудесех,/ возсиявшаго во области Белаозера, просиявшаго, яко солнце./ О неистощимый источниче чудес, святче Божий Филиппе!/ всегда Святей Троице предстоя/ и молением предваряя за страну нашу и о всем мире,/, не забуди и нас, твоих раб,/ призывающих тя молебным пением,/ честную память твою творящих,/ помолися о нас ко Господу во святых своих молитвах,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Кондак преподобного Филиппа Ирапского»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026,
+        "note": "Copied whole as the page has it, including the doubled divider «/,» before «не забуди», which is the page's own."
+      },
+      "english": {
+        "text": "Let us now sing of him who is marvellous in wonders, who dawned in the country of the White Lake and shone out like the sun. O inexhaustible fountain of miracles, Philip, holy one of God, standing always before the Holy Trinity and going before us in prayer for our land and for all the world: do not forget us either, your servants, who call upon you with supplicating song and keep your honoured memory. Pray for us to the Lord in your holy prayers, that He may save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

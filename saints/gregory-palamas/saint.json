@@ -158,6 +158,55 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия светильниче,/ Церкве утверждение и учителю, монахов доброто,/ богословов поборниче непреоборимый, Григорие чудотворче,/ Фессалонитская похвало, проповедниче благодати,// молися выну спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Тропарь святителя Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lamp of Orthodoxy, support and teacher of the Church, beauty of monks, unconquerable champion of theologians, Gregory the wonderworker, boast of Thessalonica, preacher of grace: pray without ceasing that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче, святителем украшение,/ Богословцем поборниче непобедимый, Григорие чудотворче,/ Солуню великая похвало, проповедниче благодати,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Тропарь Григория Паламы, архиепископа Фессалонитского»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026,
+        "note": "The day page prints two troparia of him in the same tone, this one under his full name and the other under «Тропарь святителя Григория»; both are kept, neither being a proper of another saint."
+      },
+      "english": {
+        "text": "Teacher of Orthodoxy, adornment of hierarchs, unvanquished champion of theologians, Gregory the wonderworker, great boast of Salonica, preacher of grace: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Премудрости священный и Божественный орган,/ богословия светлую согласно трубу, воспеваем тя, Григорие богоглагольниче,/ но яко ум, Уму первому предстояй,/ к Нему ум наш, отче, настави, да зовем:// радуйся, проповедниче благодати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Кондак святителя Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "We sing of you, Gregory who spoke of God, as the sacred and divine instrument of wisdom and the bright, well-tuned trumpet of theology. But since you are a mind that stands before the first Mind, direct our mind to Him, father, that we may cry: rejoice, preacher of grace.",
+        "rendered": "site"
+      }
     }
   ]
 }

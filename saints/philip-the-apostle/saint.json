@@ -11,6 +11,11 @@
       "form": "Φίλιππος",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Φίλιππος», with no rank word attached."
+    },
+    {
+      "form": "Филипп",
+      "lang": "ru",
+      "note": "The bare name out of days.pravoslavie.ru's name page 2291, headed «Филипп, апостол из 12-ти»; the day's own line declines it. Five other folders already store this form."
     }
   ],
   "sex": "male",
@@ -27,13 +32,25 @@
   "related": [
     "peter-the-apostle",
     "andrew-the-first-called",
-    "bartholomew-the-apostle"
+    "bartholomew-the-apostle",
+    "mariamne-sister-of-philip",
+    "narcissus-of-athens"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Апостола Филиппа (ок. 81-96).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026,
+        "note": "The life page's «Дни памяти» line adds 30 июня, which is the Synaxis of the Twelve and not a second proper feast; the day page for 14 ноября is what names him here."
+      }
     },
     {
       "church": "romanian",
@@ -184,9 +201,51 @@
         "rendered": "site"
       },
       "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Благоукрашается вселенная,/ Ефиопия ликовствует,/ яко венцем красуема,/ тобою просветившися,/ светло торжествует память твою,/ богоглаголиве Филиппе,/ вся бо веровати Христу научил еси/ и течение совершил достойно Евангелия./ Тем дерзновенно варит Ефиопская рука к Богу,// Егоже моли даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Тропарь апостола Филиппа»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026,
+        "note": "Printed under his own heading and naming him and no other saint, so it is his. It credits the enlightening of Ethiopia to him, which the calendar's own life of him does not: that life has Galilee, Greece, Parthia, Azotus and the two Hierapoleis."
+      },
+      "english": {
+        "text": "The whole world is adorned and Ethiopia dances for joy, decked as with a crown, for she was enlightened by you; brightly she keeps the feast of your memory, Philip who spoke of God. For you taught all men to believe in Christ and finished your course worthily of the Gospel. Therefore the hand of Ethiopia is stretched out boldly to God, whom entreat to grant us His great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Ученик и друг Твой и подражатель страсти Твоея,/ вселенней Бога Тя проповеда богоглаголивый Филипп;/ того молитвами от врагов пребеззаконных/ Церковь Твою и всяк град Твой// Богородицею соблюди, Многомилостиве.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Кондак апостола Филиппа»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your disciple and friend and imitator of Your passion, Philip who spoke of God, preached You to the world as God. By his prayers keep Your Church and every city of Yours from utterly lawless enemies, through the Theotokos, O most merciful One.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 81,
+      "latest": 96,
+      "display": "about 81–96",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Апостола Филиппа (ок. 81-96).» Neither doxologia.ro nor saint.gr gave a year."
+    }
   }
 }

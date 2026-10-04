@@ -7,6 +7,11 @@
       "form": "Justinian cel Mare",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 2 august, «Binecredinciosul Împărat Justinian cel Mare», with the rank words left off."
+    },
+    {
+      "form": "Иустиниан I Управда",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 1153, «Иустиниан I Управда, император Византийский», with the office left off. The day's own line declines it, «Правоверного царя Иустиниана (565)», and the page's own photograph caption spells the forename «Юстиниан»; the name page's «Иустиниан» is the calendar's nominative and is what is stored. No other folder holds this form."
     }
   ],
   "sex": "male",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Правоверного царя Иустиниана (565) и царицы Феодоры (548).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026,
+        "note": "The Romanian row of this folder keeps him on 2 august; the Russian calendar keeps him on this Julian day, which is a different day and not a thirteen-day conversion of it."
+      }
     },
     {
       "church": "romanian",
@@ -75,6 +90,7 @@
     "eutychius-of-constantinople",
     "menas-of-constantinople",
     "theodore-of-sykeon",
-    "timothy-of-prokonnesos"
+    "timothy-of-prokonnesos",
+    "theodora-wife-of-justinian"
   ]
 }

@@ -1,0 +1,61 @@
+{
+  "slug": "theodora-wife-of-justinian",
+  "display_name": "Theodora, wife of Justinian",
+  "names": [
+    {
+      "form": "Феодора Греческая",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 2707, «Феодора Греческая, царица», with the rank word left off. The day's own line declines it, «и царицы Феодоры (548)». The same calendar's Julian 11 February carries an identical title on a different name page, 2706, for the iconodule empress who died in 867, whom the corpus keeps as theodora-the-empress with this same stored form; the fold is deliberate and the two are told apart by day, by century and by slug."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "empress"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Правоверного царя Иустиниана (565) и царицы Феодоры (548).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 548,
+      "latest": 548,
+      "display": "548",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's line for 14 ноября ст. ст. closes her half with «(548)», and its life for the two of them says «Вместе с императором к лику святых причислена супруга его и единомышленница императрица Феодора, скончавшаяся в 548 году.» The calendar gives no year of birth."
+    }
+  },
+  "related": [
+    "justinian-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
