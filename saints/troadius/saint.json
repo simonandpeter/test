@@ -6,6 +6,11 @@
       "form": "Τρωάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Τρωάδιος και οι συν αυτώ», with the rank word and the company left off."
+    },
+    {
+      "form": "Троадије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 2 March on pravoslavno.rs, „Свети мученик Троадије.“, with the rank word мученик left off and Свети, which is not a rank. The heading gives no epithet."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.03.2026 (2. март ст. ст.) — „Свети мученик Троадије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, three sentences long. It adds the witness saint.gr leaves out and puts the martyrdom in the third century, which is where the interval already recorded here falls, so nothing was changed; the Prologue gives no year."
     }
   ],
   "dates": {
@@ -57,6 +72,7 @@
     "life": "life.md"
   },
   "related": [
-    "nicodemus-the-hagiorite"
+    "nicodemus-the-hagiorite",
+    "gregory-the-wonderworker-of-neocaesarea"
   ]
 }

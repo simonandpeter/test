@@ -12,6 +12,11 @@
       "form": "Θεόδοτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Θεόδοτος επίσκοπος Κυρήνειας Κύπρου Ομολογητής και Ιερομάρτυρας», with the rank words and the see left off."
+    },
+    {
+      "form": "Теодот",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 2 March on pravoslavno.rs, „Свештеномученик Теодот, епископ киринијски, на острву Кипру.“, with the rank word Свештеномученик and the see епископ киринијски both left off; the island is a place clause and not part of the name. What is left is the bare forename, which is all the heading gives him."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.03.2026 (2. март ст. ст.) — „Свештеномученик Теодот, епископ киринијски, на острву Кипру.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. The heading carries the see, which is left out of the stored name form along with the rank word; `theodotus-of-marcianopolis` already stores the same bare Serbian form off a line of its own, so this is a deliberate fold of two folders on one form, told apart by `display_name`, by slug and by see. The Prologue closes the entry with the year 302, which lies outside the interval this folder already holds from the Romanian life, and which the Prologue's own sentences stand against; the interval was not written over and the life says why."
     }
   ],
   "hymns": [

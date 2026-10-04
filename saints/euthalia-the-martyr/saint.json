@@ -10,6 +10,11 @@
       "form": "Ευθαλία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Αγία Ευθαλία η παρθενομάρτυς», with the rank word left off."
+    },
+    {
+      "form": "Евталија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 2 March on pravoslavno.rs, „Света мученица Евталија.“, with the rank word мученица left off and Света, which is not a rank. The heading gives no epithet; Sicily, which the entry's first sentence names, is not in it."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.03.2026 (2. март ст. ст.) — „Света мученица Евталија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fifth and last entry. It tells the same life as the Romanian and Greek pages already quoted here, in the same order and with the same names, and gives no year, so the folder's empty `dates` is unchanged."
     }
   ],
   "text": {

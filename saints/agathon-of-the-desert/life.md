@@ -6,4 +6,8 @@ The first: some men who had heard that he had great discernment wanted to test w
 
 The second the page tells more briefly. One of the fathers of the desert called out one day to Agathon, who was still a young monk, "Abba." Another who heard it asked him: have you made him an abba already? I did not make him one, he answered, but the manner of his life did.
 
-*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/121/saint.aspx); read 30 September 2026.*
+The Serbian church keeps him on the second of March, and the Ohrid Prologue is where everything this folder knows of his life outside the sayings comes from. It calls him a great Egyptian ascetic of the fifth century and a disciple of [Lot](/saints/lot-22-october), and says that he took care to fulfil all the commandments of God. One of the brethren praised a little knife of his, with which he cut the withies for his baskets; hearing the praise, the saint handed that brother the knife as a gift, and did it with joy.
+
+The Prologue gives him one saying of his own and then asks its own question about it. Agathon said that it would be a satisfaction to him if he could take to himself the body of some leper and give the leper his own body in its place; and the entry ends by asking whether that is not perfect love. It names no monastery and no city, and gives no year — only the century, the country and the name of his teacher.
+
+*After saint.gr's calendar for 8 Ιανουαρίου — [the day](https://www.saint.gr/01/08/index.aspx) and [the life](https://www.saint.gr/121/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 2. март ст. ст. — [the Serbian day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-15&prolog=1), read 4 October 2026.*
