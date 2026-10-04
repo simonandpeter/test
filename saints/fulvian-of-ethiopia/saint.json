@@ -1,0 +1,63 @@
+{
+  "slug": "fulvian-of-ethiopia",
+  "display_name": "Fulvian of Ethiopia",
+  "names": [
+    {
+      "form": "Фулвиан Эфиопский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 2340, «Святитель Фулвиан (в крещении Матфей) Эфиопский, князь, епископ», with the rank and the two grade words left off and the baptismal name left in the life rather than folded into the form. The day’s own line declines both names, «Фулвиана , кн. Ефиопского, во св. Крещении Матфея». No other folder holds this form, and none holds the bare «Фулвиан» either."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "prince",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Прав. Фулвиана , кн. Ефиопского, во св. Крещении Матфея (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 16 ноября ст. ст. with «(I)», the first century, and gives him no year of his own. The life he shares with the apostle puts the apostle’s death at 60 and his own baptism, presbyterate and episcopate after it, and nothing narrower is taken from that."
+    }
+  },
+  "related": [
+    "matthew-the-apostle"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
