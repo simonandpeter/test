@@ -12,12 +12,19 @@
       "form": "Νίκων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Μαρτίου, «Όσιος Νίκων καθηγούμενος της Λαύρας των Σπηλαίων του Κιέβου», with the rank word and the office left off."
+    },
+    {
+      "form": "Никон Печерски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 23 March on pravoslavno.rs, „Преподобни Никон Печерски.“, with the rank word Преподобни left off. Печерски is kept: it is not a rank but the by-name the heading gives him, of the Caves, and it is what this folder's English name already carries. A bare Никон would fold with `nikon-of-sicily`, whose entry stands first on the same day."
     }
   ],
   "related": [
     "anthony-of-the-caves",
     "theodosius-of-the-kyiv-caves",
-    "alypius-of-the-caves"
+    "alypius-of-the-caves",
+    "barlaam-of-the-kyiv-caves",
+    "ephraim-of-the-kyiv-caves"
   ],
   "dates": {
     "death": {
@@ -56,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.04.2026 (23. март ст. ст.) — „Преподобни Никон Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, on the same menologion day the Greek already keeps in this folder, and the same abbot of the Caves: the companion of Anthony of the Caves and spiritual father of Theodosius, who was made abbot in old age and against his will, and whose incorrupt relics lie in the Kyiv caves. The Prologue dates his repose 1066, where this folder holds 1088 from saint.gr; the sourced year is left standing and the disagreement is recorded here rather than resolved. It gives two scenes neither other page had: the danger from prince Izyaslav over his tonsuring of the boyar Barlaam and the eunuch Ephraim, turned aside by the princess, who changed the prince's anger into the fear of God; and the Greek iconographers who came to Kyiv from Constantinople unlooked-for, in answer to his prayer, having seen Anthony and Theodosius in a vision telling them to go to him. `related` goes both ways to `barlaam-of-the-kyiv-caves` and `ephraim-of-the-kyiv-caves`, the two men the entry names as his tonsured, and `ephraim-of-the-kyiv-caves` keeps his own commemoration on this same menologion day in another calendar. The stored form keeps Печерски, which is the by-name the heading gives him and the one this folder's English name already carries; a bare Никон would fold with `nikon-of-sicily`, who is the day's first entry. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
