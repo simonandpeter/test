@@ -10,6 +10,11 @@
       "form": "Χάρισσα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Απριλίου, «Άγιος Λεωνίδης και οι Αγίες Χάρισσα, Νίκη, Γαλήνη, Καλλίδα, Νουνεχία, Βασίλισσα και Θεοδώρα», with the rank word left off."
+    },
+    {
+      "form": "Хариеса",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's heading for the Julian 16 April, „Св. муч. Леонид и с њим мученице: Хариеса, Никија, Галина, Калида, Нунехија, Василиса и Теодора.“, with Св. left off — it is not a rank — and without муч. and мученице, which are the `martyr` this folder already carries in `types`. One rank word stands over the whole company and belongs to none of them, so what is left for this saint is the bare forename; the heading gives no epithet, no city and no see, and the companionship clause this corpus keeps in some of these display names is not part of the source's name for anybody. No other folder in the corpus holds this Serbian form."
     }
   ],
   "related": [
@@ -43,11 +48,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.04.2026 (16. април ст. ст.) — „Св. муч. Леонид и с њим мученице: Хариеса, Никија, Галина, Калида, Нунехија, Василиса и Теодора.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated company of eight — Leonides and seven women named one after another — so one row each, on the same menologion day the Greek keeps them on. The entry is four lines and tells only the end, and it tells it as a wonder the Greek page has nothing of: the sea would not receive them, they walked on it as on dry land singing to God, the pagans marvelled and then tied stones about their necks and threw them into the deep a second time. **It also gives a year, and the year is a disagreement**: „Сви чесно пострадаше за Христа Цара и Господа 281. год.“, where saint.gr — the source this folder was written from — puts the company in the years of the king Decius and dates that reign 249 to 251. Neither reading is chosen: the folder's `dates` now carries the whole of the disagreement as one interval and its note names both, which is what docs/CORPUS.md §3 asks for. The Prologue prints no troparion and no kontakion, and the martyrs' song in the entry is the entry's own narrative and not a hymn of the Church."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 249,
+      "latest": 281,
+      "display": "249–281",
+      "basis": "traditional",
+      "note": "Two sources that disagree, recorded as one interval and nothing chosen, on docs/CORPUS.md §3's rule. The Ohrid Prologue for 16. април ст. ст. closes the entry „Сви чесно пострадаше за Христа Цара и Господа 281. год.“ — all suffered honourably for Christ the King and Lord in the year 281. saint.gr, the source this folder was written from and quoted in its own Greek row, instead puts the company in the years of the king Decius and dates that reign 249 to 251, thirty years earlier. The folder held no `dates` before this, so nothing was narrowed and nothing displaced; the lower bound is the Greek reading's earliest year and the upper bound the Serbian reading's only year. No year of birth is recorded anywhere read."
+    }
   }
 }
