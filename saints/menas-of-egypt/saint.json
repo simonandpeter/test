@@ -11,6 +11,11 @@
       "form": "Μηνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Άγιος Μηνάς «ὁ ἐν τῷ Κοτυαείῳ» ο Μεγαλομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Мина Котуанский (Фригийский)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Мина Котуанский (Фригийский), вмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Мины». azbyka.ru prints the same two by-names on its own line, «Вмч. Мины Котуанского (Фригийского) (304)»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Вмч. Мины (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -108,6 +122,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко Безплотным собеседника/ и страстотерпцем единовсельника,/ сошедшеся верою, Мино, восхваляем тя,/ мира мирови испроси// и душам нашим велия милости.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Тропарь великомученика Мины»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the companion of the bodiless powers and the fellow-dweller of the passion-bearers we are gathered in faith, O Menas, and praise you: ask peace for the world and great mercies for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Воинства исхити привременнаго/ и нетленнаго показа тя Небеснаго общника,/ страстотерпче Мино,/ Христос, Бог наш,// Иже мучеников нетленный венец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак великомученика Мины»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Christ our God, who is the martyrs' incorruptible crown, snatched you out of the army of this passing world and showed you an incorruptible sharer in the heavenly one, O passion-bearer Menas.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

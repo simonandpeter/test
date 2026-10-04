@@ -19,11 +19,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1542,
-      "latest": 1552,
-      "display": "c. 1547",
+      "earliest": 1434,
+      "latest": 1434,
+      "display": "11 November 1434",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru: “Обретение мощей блж. Максима, Христа ради юродивого, Московского (ок. 1547)”."
+      "note": "**Corrected, and the year that stood here was another event's.** The folder carried «c. 1547», 1542–1552, out of a Sretensky line for 13 августа ст. ст. that is headed «Обретение мощей» — the finding of his relics, not his death; the folder's own life already said he died on 11 November 1434 and said that the recorded year had come from the relics line. The Sretensky line for 11 ноября ст. ст. is his repose and closes «Блж. Максима , Христа ради юродивого, Московского чудотворца (1434).», azbyka.ru's line for the same civil day closes «(1434)», and saint.gr says «κοιμήθηκε στις 11 Νοεμβρίου του 1434». Three calendars give 1434 for the death and the 1547 is the finding; it is in this note and in neither bound."
     }
   },
   "attestations": [
@@ -70,5 +70,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Наготою телесною и терпением/ обнажил еси вражия коварствия,/ обличая неподобное его деяние,/ зельне стражда солнечный вар/ и нуждныя великия студени,/ мраза и огня не чул еси,/ Божиею помощию покрываемь,/ Максиме премудре,/ о верою творящих память твою честно/ и усердно притекающих к мощем твоим/ моли избавитися от бед/ и падения избежати.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Тропарь блаженного Максима, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the nakedness of your body and by patient endurance you stripped bare the enemy's cunning and rebuked his unseemly work; suffering bitterly the burning of the sun and the great hard frosts, you felt neither cold nor fire, being covered by the help of God, O most wise Maximus. For those who keep your memory in faith and with honour and come with zeal to your relics, pray that they may be delivered from troubles and escape falling.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышния красоты желая,/ нижния сладости и телесная одеяния в ничтоже вменил еси/ и нестяжание паче суетнаго мира возлюбил еси./ Ангельское житие проходя,/ скончался еси, блаженне Максиме:/ с нимиже Христа моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак блаженного Максима, Христа ради юродивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring the beauty on high, you counted as nothing the sweetness below and the clothing of the body, and loved to own nothing rather than the empty world. Passing a life like the angels', you came to your end, O blessed Maximus; pray with them unceasingly to Christ for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

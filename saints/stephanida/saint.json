@@ -11,6 +11,11 @@
       "form": "Στεφανίδα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Αγία Στεφανίδα», with the rank word left off."
+    },
+    {
+      "form": "Стефанида Дамасская",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Стефанида Дамасская, мц.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Стефаниды»."
     }
   ],
   "sex": "female",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Мч. Виктора и мц. Стефаниды (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -94,6 +108,22 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже славе, Господи и всех Содетелю,/ Ты в мире явил еси украшенных добродетельми страстотерпцы и мученики,/ да омут непобедимую победу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак мучеников Виктора, Стефаниды и Викентия»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Lord of glory and Maker of all, you have shown forth in the world passion-bearers and martyrs adorned with virtues, that they may hold the unconquerable victory.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -102,10 +132,10 @@
   "dates": {
     "floruit": {
       "earliest": 160,
-      "latest": 160,
-      "display": "160",
+      "latest": 180,
+      "display": "160–180",
       "basis": "traditional",
-      "note": "saint.gr: «Η Αγία Στεφανίδα ήταν γυναίκα ενός στρατιωτικού στην Ιταλία το 160 μ.Χ., όταν βασιλιάς ήταν ο Αντωνίνος» — the year the page gives for her and her husband; it gives no year for her death as such."
+      "note": "Two readings, widened to hold both and neither chosen. saint.gr gave the flat «160» this folder carried. days.pravoslavie.ru's life for the pair sets them under one emperor and dates his reign: «Святой мученик Виктор был воином во время царствования императора Марка Аврелия Философа (161 - 180)», and its line for 11 ноября ст. ст. closes the pair with «(II)», the second century. Where a calendar prints a reign rather than a year, that is the interval (CORPUS.md §3); 160 is a year earlier than the reign the Russian prints, so the bounds keep both."
     }
   }
 }

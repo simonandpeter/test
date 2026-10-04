@@ -7,6 +7,11 @@
       "form": "Ștefan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 11 noiembrie, «Sfântul Ștefan de la Decani, regele Serbiei»; the bare personal name, without the epithet."
+    },
+    {
+      "form": "Стефан Урош III, Дечанский, Сербский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Стефан Урош III, Дечанский, Сербский, король, вмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone with one by-name, «Стефана Дечанского». It is the first form in any language this folder has held besides the Romanian «Ștefan»."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page lists «30 июня (Перенесение мощей) , 30 августа (Серб.) , 11 ноября». The June day is a translation of relics, which is a feast and not a second day for the man, and the August day is marked «(Серб.)», the Serbian church's own; one row per church is the schema and this is the day the Russian day page listed him on. The line's «(Серб.)» marks him a Serb and not a borrowed day: the Russian calendar prints him, with four hymns of his own."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Мч. Стефана Дечанского (ок. 1336) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,84 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1331,
+      "latest": 1336,
+      "display": "1331 or 1336",
+      "basis": "traditional",
+      "note": "The first date this folder has carried, and the two hosts disagree, so both bounds are theirs and neither is chosen. days.pravoslavie.ru's line for 11 ноября ст. ст. reads «Мч. Стефана Дечанского (ок. 1336) (Серб.).»; azbyka.ru's line for the same civil day reads «мч. Стефана Дечанского, короля Сербского (ок. 1331) (Серб.)». Both say «ок.», about. Neither doxologia.ro nor saint.gr gave a year at all."
+    }
+  },
+  "related": [
+    "nicholas-of-myra",
+    "stephen-milutin"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В терпении добрострадальных подвиг твоих/ многообразныя раны претерпел еси,/ и по кончине своей/ венец от Бога с мученическими лики восприемлеши,/ и в земли кротких достойно водворяешися, блаженне,/ о нас Христа Бога моли/ даровати душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Тропарь мученика Стефана-Уроша III, Дечанского, Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the patience of your good and suffering struggles you bore wounds of many kinds, and after your end you receive from God a crown among the ranks of the martyrs, and you dwell worthily in the land of the meek, O blessed one. Pray to Christ our God for us, to grant our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Царство, еже на земли добре окормляя, страдальче,/ и, багряницу нося, смиренно стяжал еси мудрование,/ нищих посещая и сим хлеб раздробляя,/ тем Пребожественная Троица/ Царствия купно и мученичества венцем увязе тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Ин тропарь мученика Стефана-Уроша III, Дечанского, Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Steering well the kingdom that is on earth, O sufferer, and wearing the purple, you gained a humble mind, visiting the poor and breaking bread for them; and for this the most divine Trinity bound upon you the crown of the kingdom and of martyrdom together.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "В царех благочестно пожив/ и страдания путь прошед, веледушне,/ и страдальцем равночестен венечник явился еси,/ и церковь твоя прославляет тя славно,/ святыми благоуханными мощми твоими освящаема,/ темже почитаем и тайно вопием ти:/ от бед избави нас молитвами твоими, святе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак мученика Стефана-Уроша III, Дечанского, Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived piously among kings and walked the way of suffering, O great-souled one, you were shown a crowned one equal in honour with those who suffered; and your church glorifies you gloriously, hallowed by your holy and sweet-smelling relics. Therefore we honour you and cry to you in secret: deliver us from troubles by your prayers, O holy one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Другаго Константина стяжа тя Церковь благочестием, блаженне,/ и кротостию, правдою и милостынями,/ но и великомученика и страдальца истинна./ Темже и, тобою красящися, вопиет:/ Стефан мне похвала и утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Ин кондак мученика Стефана-Уроша III, Дечанского, Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church has gained you as a second Constantine in piety, O blessed one, and in meekness, in justice and in almsgiving, and as a great-martyr and a true sufferer besides. Therefore, adorned by you, she cries: Stephen is my praise and my strength.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

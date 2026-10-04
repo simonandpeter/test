@@ -11,6 +11,11 @@
       "form": "Μαρτύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Όσιος Μαρτύριος του Ζελένσκ», with the rank word and the place left off."
+    },
+    {
+      "form": "Мартирий Зеленецкий",
+      "lang": "ru",
+      "note": "The heading of the two lives the calendar serves behind its line for 11 ноября ст. ст., «Преподобный Мартирий Зеленецкий», with the rank word left off; the line declines it, «Прп. Мартирия Зеленецкого». azbyka.ru prints the same name. It is the first Russian form this folder has held."
     }
   ],
   "sex": "male",
@@ -22,16 +27,26 @@
     "death": {
       "earliest": 1603,
       "latest": 1603,
-      "display": "1603",
-      "basis": "traditional",
-      "note": "doxologia.ro: «Sfântul Martirie a adormit întru Domnul în anul 1603»; the same page says he was born at Veliki Luki «în secolul al XVI-lea», ordained presbyter «în anul 1570» and made abbot «în anul 1582»."
+      "display": "1 March 1603",
+      "basis": "attested",
+      "note": "The year is unchanged and now has a day. doxologia.ro gave «Sfântul Martirie a adormit întru Domnul în anul 1603» and no day; days.pravoslavie.ru's longer life closes «со словами: \"Мир всем православным\", - в духовном веселии почил о Господе 1 марта 1603 года», and its shorter one says only «Скончался он в глубокой старости в 1603 г.» The calendar keeps him on 11 ноября ст. ст. all the same, which is not that day."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Both of the lives this calendar serves him list «1 марта , 11 ноября», and 1 March is the day his own life gives for his death, «почил о Господе 1 марта 1603 года». The Russian day page that listed him is 11 ноября, and that is the day recorded here; the Romanian row on this folder is the mirror of it, kept on 1 martie with a note that doxologia.ro also keeps him on 11 noiembrie. One row per church is the schema."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Прп. Мартирия Зеленецкого (1603).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -71,5 +86,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "От юности, Богоблаженне, Христа возлюбив,/ отечество оставил еси/ и, всех мирских мятежей уклонився,/ в тихое пристанище пречестныя обители Богоматерни достигл еси:/ отнюдуже уведев непроходную пустыню,/ крестовидною зарею показанную,/ желательне ю обрел еси,/ и, в ней вселився,/ иночествующих собрал еси,/ и сих ученьми своими, яко лествицею восходною на Небо,/ трудолюбно тщался еси возводити к Богу,/ Емуже молися, Богомудре Мартирие,/ даровати душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Тропарь преподобного Мартирия Зеленецкого»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having loved Christ from your youth, O blessed of God, you left your own country, and turning aside from all the world's tumults you reached the quiet haven of the most honourable monastery of the Mother of God. Learning from there of a trackless wilderness shown you by a cross-shaped light, you sought it out with longing and settled in it, and gathered monks, and laboured to lead them up to God by your teachings as by a ladder that climbs to heaven. Pray to him, O God-wise Martyrius, to grant our souls great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Отечества, преподобне, и всего мирскаго мятежа уклонитися возжелел еси,/ и, в пустыню вселився,/ тамо во блаженнем безмолвии жестокое житие показал еси,/ и чада послушания и смирения в нем возрастил еси./ Сего ради, дерзновение стяжав ко Святей Троице,/ еже молитися, Богоблаженне, о нас, чадех своих, ихже собрал еси,/ и о всех правоверных, да зовем ти:/ радуйся, отче Мартирие, безмолвия пустыннаго любитель.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак преподобного Мартирия Зеленецкого»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You longed, O venerable one, to turn aside from your own country and from all the world's tumult, and settling in the wilderness you showed forth there, in blessed stillness, a hard and austere life, and raised up in it children of obedience and humility. Therefore, having won boldness before the Holy Trinity to pray, O blessed of God, for us your children whom you gathered, and for all the faithful, we cry to you: rejoice, father Martyrius, lover of the wilderness's stillness.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
