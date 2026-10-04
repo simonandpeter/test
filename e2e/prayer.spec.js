@@ -812,7 +812,16 @@ test('a name pressed in an aside is reached even when the query is hiding it', a
   await expect(page.locator('.hy-saint')).toHaveAttribute('data-slug', subject.slug);
 
   const target = HIDDEN_MENTION.slug;
-  await expect(page.locator(`[data-go="${target}"]`)).toHaveCount(1);
+  /* Present, not present once: the two asides are different questions — one
+     names who this saint is recorded with, the other who shares their day — and
+     a saint can answer both, which `abramius-of-rostov` began doing the day a
+     batch gave him a companion on his own day. The claim is that the name is
+     reachable, and the press below takes the first of them. */
+  await expect
+    .poll(() => page.locator(`[data-go="${target}"]`).count(), {
+      message: 'the margin never named the saint it is supposed to hide',
+    })
+    .toBeGreaterThanOrEqual(1);
 
   /* A query that narrows to the saint in hand and therefore excludes whoever
      their margin names. The relation is a fact about the saint and not about
