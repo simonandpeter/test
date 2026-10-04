@@ -1,0 +1,68 @@
+{
+  "slug": "sergius-zverev",
+  "display_name": "Sergius (Zverev)",
+  "names": [
+    {
+      "form": "Сергий (Зверев)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Святитель Сергий (Зверев), архиепископ Елецкий, Мелитопольский, сщмч.», with the rank words and the grade word left off; the surname is part of the name and stays. The line itself gives the forename in the genitive, «Сергия», and no surname at all."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast. His own life gives 31 October old style, the civil 13 November, as the day he was shot in the Karaganda camp, which is neither this day nor thirteen days from it; the day recorded here is the day page that listed him and the disagreement is in his life."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Сщмчч. Сергия , архиеп. Елецкого, Николая пресвитера и мч. Георгия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "4 February 1870",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился 4 февраля 1870 года в Петропавловске, в семье священника»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "31 October 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «31 октября (13 ноября н. ст.) 1937 года Владыка был расстрелян в Карагандинском концлагере». The day line closes with the same year, «(1937)», but keeps him on 7 ноября ст. ст., which is the civil 20 November and not this date; the disagreement is in the attestation's note and in the life."
+    }
+  },
+  "office": "Archbishop of Yelets",
+  "text": {
+    "life": "life.md"
+  }
+}

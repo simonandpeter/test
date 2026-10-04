@@ -11,6 +11,11 @@
       "form": "Θεόδοτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Μαΐου, «Αγίες Τεκούσα, Αλεξανδρία, Κλαυδία, Φαεινή, Ευφρασία, Ματρώνα, Ιουλία και Θεοδότη οι Παρθενομάρτυρες από την Άγκυρα της Γαλατίας και Θεόδοτος ο Μάρτυρας», with the rank word and the place left off."
+    },
+    {
+      "form": "Феодот Анкирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Мученик Феодот Анкирский», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Феодота корчемника»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists three days, «18 мая , 7 июня , 7 ноября». The 18 мая is the day doxologia.ro and saint.gr keep him on and the day his long life gives for the death of the seven virgins; 7 июня is the day that life gives for his own death. Neither day page was read here and one row per church is the schema, so both are recorded as a note and this folder's Russian row renders on 7 ноября ст. ст., the day page that listed him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Мч. Феодота корчемника (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -75,6 +90,38 @@
         "text": "Thy martyrs, O Lord, in their contests received the crowns of incorruption from Thee our God; for having Thy strength, they cast down the tyrants and broke the feeble insolence of the demons. At their prayers, O Christ our God, save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь мучеников», a common of martyrs printed on the day page under no saint's name, on a day whose martyr entries are the thirty-three of Melitene, Theodotus the innkeeper of Ancyra, Melasippus, Cassine and their son Antoninus, and Auctus, Taurion and Thessalonike",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Лик мученический ясен, полк светоносен,/ сошед к нам разумно,/ Церковь днесь просветил есть чудными зарями./ Темже, празднующе честную память их,/ просим от Тебе, Спасе наш:/ тех молитвами от бед избави нас,// да поем Ти: аллилуия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Кондак мучеников», a common of martyrs printed on the day page under no saint's name, beside the common troparion above",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The choir of the martyrs is bright, a host bearing light; coming down to us with understanding it has enlightened the Church today with wondrous radiance. Therefore, keeping their honoured memory, we ask of thee, our Saviour: by their prayers deliver us from troubles, that we may sing to thee: Alleluia.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -84,5 +131,14 @@
     "christina-martyr-18-may",
     "thecusa-of-ancyra",
     "theodote-of-ancyra"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 304,
+      "display": "303 or 304",
+      "basis": "traditional",
+      "note": "One page disagreeing with itself. days.pravoslavie.ru's line for 7 ноября ст. ст. is «Мч. Феодота корчемника (303).», with «(303)», and the shorter of the two lives behind his name page closes «усекли мечом (+ 303)»; the longer says he «принял смерть за Христа 7 июня 303 или 304 года». Both readings stand. Neither doxologia.ro nor saint.gr had given this folder any year."
+    }
+  }
 }

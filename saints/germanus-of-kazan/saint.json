@@ -85,5 +85,71 @@
     "maximus-the-greek",
     "job-patriarch-of-moscow",
     "hermogenes-of-moscow"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности иго Христово усердно восприим,/ бденными подвиги поста и молитвы прославился еси./ Отонудуже призывающу тя Богу на служение Церкви/ в новопросвещеннем царстве Казанстем,/ вкупе со святителем Гурием воззван был еси,/ идеже яко первоначальник/ созданной тобою в граде Свияжске обители/ и достойный первосвятителю преемник явился еси./ Духом предстоя Престолу Владычню,/ молися, святителю Германе, со святителем Гурием/ православной пастве во благочестии преспевати/ и тьме иноверия светом веры разгнатися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Тропарь святителя Германа, архиепископа Казанского», printed on the day of his repose, under his name",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taking up the yoke of Christ with zeal from your youth, you were made glorious by the vigilant labours of fasting and prayer. When God called you from there to the service of the Church in the newly enlightened kingdom of Kazan, you were summoned together with the hierarch Gury, and there you were shown to be the first head of the monastery you founded in the city of Sviyazhsk and a worthy successor to the first hierarch of that see. Standing in spirit before the Master's throne, pray, O hierarch Germanus, with the hierarch Gury, that the Orthodox flock may grow in piety and that the darkness of unbelief may be scattered by the light of the faith.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко великим пастырем единонравна и учителем вселенныя единомысленна,/ Церкве Божия служителя усердна, и строителя тайн Христовых благоговейна,/ стекшеся благовернни людие Свияжския обители Богомудраго основателя/ и Казанский новопросвещенныя паствы святителя Германа/ песньми и пении восхвалим, глаголюще:/ не престаи присещати молитвами твоими на всю паству твою, в вере и благочестии блюди невредимо.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Ин тропарь святителя Германа, архиепископа Казанского», printed on the day of his repose, under his name; the page writes «благовернни» and «не престаи» as they stand here",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one of the same manner as the great shepherds and of one mind with the teachers of the whole world, a zealous servant of the Church of God and a reverent steward of the mysteries of Christ — let us, the faithful people, gather and praise with hymns and songs the God-wise founder of the monastery of Sviyazhsk and the hierarch of the newly enlightened flock of Kazan, Germanus, saying: do not cease to visit your whole flock with your prayers, and keep it unharmed in faith and in piety.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Доблестями преподобия и правды/ врученное тебе словесное стадо озаряя/ и на злачных Слова Христова пажитях питая,/ на правый путь заповедей Господних/ силою духа твоего наставлял еси е./ Темже и ныне, осеняемое цельбоносными чудотворении твоими,/ в святую память твою, зовем тебе:/ не престай, святителю, предстательствовати/ пред Пастыреначальником о стаде твоем,/ яко паствы твоей утверждение/ и сущим по тебе святителем удобрение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Кондак святителя Германа, архиепископа Казанского», printed on the day of his repose, under his name",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lighting up the rational flock entrusted to you with the excellences of holiness and righteousness, and feeding it in the green pastures of the word of Christ, you led it by the strength of your spirit onto the straight path of the Lord's commandments. Therefore now also, overshadowed by your healing wonderworking, on your holy memorial we cry to you: do not cease, O hierarch, to intercede before the Chief Shepherd for your flock, for you are the confirmation of your fold and the betterment of the hierarchs who come after you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Бодрствуя в молитвах,/ послушания добрый рачитель быв,/ в терпении стяжал еси душу твою,/ делы смиренномудрия и кротости изрядствуя,/ престол святотельства благоверием и благочестием украсил еси,/ отче священноначальниче Германе,/ моли Христа Бога о всем стаде твоем,/ яко паствы твоей утверждение/ и сущим по тебе святителем светлое украшение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 ноября ст. ст. — «Ин кондак святителя Германа, архиепископа Казанского», printed on the day of his repose, under his name; «престол святотельства» is the page's own spelling of святительства",
+        "url": "https://days.pravoslavie.ru/Days/20261106.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping watch in prayer and being a good lover of obedience, you gained your soul in patience; excelling in the works of humility and meekness, you adorned the throne of the hierarchy with right belief and piety, O father and chief priest Germanus. Pray to Christ God for your whole flock, for you are the confirmation of your fold and the bright adornment of the hierarchs who come after you.",
+        "rendered": "site"
+      }
+    }
   ]
 }
