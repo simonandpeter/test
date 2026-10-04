@@ -10,13 +10,29 @@
       "form": "Μαρτύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Οκτωβρίου, «Όσιοι Μαρτύριος ο Έγκλειστος και Μαρτύριος ο διάκονος», with the rank word and the epithet «διάκονος» left off."
+    },
+    {
+      "form": "Мартирий Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on his own life page, «Преподобный Мартирий Печерский, диакон», with the rank word and the grade left off; the name link behind his place in the day's line is titled «Преподобный Мартирий, диакон Печерский», the same form with the grade inside it. The line itself declines it, as «Прпп. Мартирия диакона ... Печерских»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of his life pages head «Дни памяти: 28 августа (Печер.(Д)) , 25 октября», the August day being the synaxis of the venerable of the Far caves, and one of them adds «Память отмечается также 28 августа и во 2-ю неделю Великого поста» — the second week of Great Lent, which is reckoned from Pascha and which this schema cannot hold. One row per church is the schema, so the August day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Прпп. Мартирия диакона и Мартирия затворника, Печерских (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "note": "**The Russian calendar is the first source this folder has had with anything in it.** saint.gr said outright that it had no details of the lives of the two Russian venerable men of this name — «Δεν έχουμε λεπτομέρειες για τους βίους των Ρώσων Οσίων» — and this page gives the monastery, the caves, the century, the gift and the ode of the canon that remembers him. **His stored Russian form folds with the other Martyrius of these caves**, «Мартирий Печерский», because the calendar separates the two only by «диакон» and «затворник», which are a grade and a state of life and are not stored in a name form; the fold is recorded in the run's deliberate-folds table. He is told from the subdeacon of Constantinople the same day keeps by the city in the form."
     },
     {
       "church": "romanian",
@@ -49,5 +65,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th or 14th century",
+      "basis": "traditional",
+      "note": "The page disagrees with itself by one century and neither reading is chosen. The day's line gives the two of them «(XIII-XIV)» together, and one of his two life pages opens «Преподобный Мартирий, диакон Печерский, в Дальних пещерах (ХIII-ХIV)»; the other says «Подвизался в XIV веке в Киево-Печерской обители», the fourteenth alone. No year of birth or death is given anywhere, so this is a floruit and not a death. Read 4 October 2026."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Служивый в чину диаконства Господеви добре,/ честный иеродиаконе Мартирие,/ и тамо яко слуга Господень обретыйся,/ идеже и Господь твой,/ молися Ему и о нас,/ да подаст нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Тропарь преподобного Мартирия, диакона Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You served the Lord well in the order of the diaconate, honourable hierodeacon Martyrius, and were found there as the Lord's servant where your Lord also is. Pray to Him for us too, that He may grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Диаконе честный, иночествующим похвало/ и преподобным сопричастниче всеблаженне Мартирие,/ молися Господеви непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 октября ст. ст. — «Кондак преподобного Мартирия, диакона Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261025.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honourable deacon, boast of monastics and fellow of the venerable, all-blessed Martyrius, pray to the Lord without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
