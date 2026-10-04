@@ -110,6 +110,11 @@
       "uncertainty_km": 15
     }
   ],
+  "related": [
+    "epolonius-child-martyr",
+    "prilidian-child-martyr",
+    "urban-child-martyr"
+  ],
   "text": {
     "life": "life.md"
   },

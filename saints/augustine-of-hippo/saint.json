@@ -190,7 +190,9 @@
     }
   ],
   "historicity": "attested",
-  "related": [],
+  "related": [
+    "monica-mother-of-augustine"
+  ],
   "text": {
     "life": "life.md"
   },

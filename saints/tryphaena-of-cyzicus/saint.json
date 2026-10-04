@@ -94,6 +94,9 @@
       }
     }
   ],
+  "related": [
+    "matrona-of-cyzicus"
+  ],
   "text": {
     "life": "life.md"
   }

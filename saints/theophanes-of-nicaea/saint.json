@@ -139,6 +139,9 @@
       "model": "Ἐπεφάνης σήμερον."
     }
   ],
+  "related": [
+    "theodore-brother-of-theophanes"
+  ],
   "text": {
     "life": "life.md"
   },

@@ -108,6 +108,9 @@
       "uncertainty_km": 20
     }
   ],
+  "related": [
+    "joasaph-disciple-of-niphon"
+  ],
   "text": {
     "life": "life.md"
   },
