@@ -16,6 +16,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιος Βασίλειος ο Θαυματουργός εκ Σερβίας», with the rank word, the epithet and the country left off."
+    },
+    {
+      "form": "Василије Острошки",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 29. април ст. ст., „Св. Василије Острошки.“, with Св. left off as no rank. Острошки — of Ostrog, where he ended his life and where his relics are — is an epithet and not a rank `honorific.js` composes, so it is kept, and the fuller form is what keeps this folder **out** of the bare «Василије» fold the corpus's five other Basils share. The see of Zahumlje and Skenderija and the rank of metropolitan are the body's and belong to `office` and `types`."
     }
   ],
   "sex": "male",
@@ -78,8 +83,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.05.2026 (29. април ст. ст.) — „Св. Василије Острошки.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The fullest account of this man read for this folder, and by a Serbian bishop writing of a Serbian saint. **No date was taken, and the refusal is arithmetic.** The entry closes „Престави се мирно Господу, у XVI веку“ — he reposed in the **sixteenth** century — where doxologia's life gives his birth as 28 December 1610 and his death as 29 April 1671, which are the two years this folder records. Widening the death to hold a sixteenth-century repose would make the folder say he died before he was born, and narrowing or displacing a sourced year is not a reader's act either, so **nothing was touched**. What this does change is the weight of a disagreement already written into this life: saint.gr puts him on the metropolitan throne in the second half of the sixteenth century while giving the same 1610 for his birth, and the Prologue is now **a second source for that century against the two years**. The choice is the author's. **It also disagrees about the birthplace**: „Родом из Попова Села у Херцеговини“, where doxologia's life names the village Mrkonjić in Herzegovina — recorded and not resolved, and no `locations` were taken for either. New besides: parents simple but devout; the monastic habit taken at the **Trebinje monastery of the Dormition**; labour laid upon labour, each heavier than the last; the see of **Zahumlje and Skenderija** taken against his own will; the first residence at **Tvrdoš** and the flight to Ostrog when the Turks destroyed it; the flock guarded „од свирепства турског и лукавства латинског“; the relics whole and healing to this day; **Christians and Muslims alike** coming to them; and the great assembly of the people at Ostrog every year at Trinity, which is a moveable observance this schema has no field for and is therefore in the life and not in this row. The Prologue prints no hymn."
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Μέμνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Απριλίου, «Όσιος Μέμνων ο Θαυματουργός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Мемнон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 29. април ст. ст., „Преп. Мемнон чудотворац.“ Преп. is the `venerable` and чудотворац the `wonderworker` this folder already carries in `types`, both of which `honorific.js` composes back; the heading gives no house and no country, so the bare forename is the whole of the Serbian form. One other folder holds the same bare spelling in Russian; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.05.2026 (29. април ст. ст.) — „Преп. Мемнон чудотворац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man, in four sentences: given from his youth to fasting and prayer, so cleansed that he became a dwelling of the Holy Spirit, healer of incurable sicknesses, and the one who appeared in storms at sea and saved ships from destruction. **A first date**: „Упокоји се мирно у Господу у II столећу“ → `death` 101–200, `display: \"2nd century\"`, `traditional`, where doxologia gives no year, no country and no monastery by name and saint.gr gives none either. `node .tmp/dd.mjs \"2nd century\"` reads «II в.» and «2ος αι.» The Serbian day is Julian 29 April, with the Romanian and against the Greek 28 April. The Prologue has none of doxologia's spring in the dry place, none of its locusts, and none of saint.gr's monastery savings carried to the farming people; the sea storms are the one wonder all three accounts share. It prints no hymn — saint.gr's one hymn for him is a kathisma, which this corpus does not hold, and was taken by neither reading."
     }
   ],
   "hymns": [
@@ -80,5 +95,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 29. април ст. ст.: „Упокоји се мирно у Господу у II столећу, и пресели се у небеске дворе Господње.“ — the first century any calendar read for this folder has given. doxologia's life says expressly that it gives no year, no country and no monastery by name, and saint.gr's notice gives no year either."
+    }
   }
 }
