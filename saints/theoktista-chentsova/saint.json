@@ -1,0 +1,66 @@
+{
+  "slug": "theoktista-chentsova",
+  "display_name": "Theoktista (Chentsova)",
+  "names": [
+    {
+      "form": "Феоктиста (Ченцова)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 10103, «Феоктиста (Ченцова), мц.», with the rank word left off; the day's line gives the forename alone and in the genitive, «и Феоктисты (1942)»."
+    }
+  ],
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "21 January 1880",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for her: «родилась 21 января 1880 года в городе Калуге в семье калужского купца Семена Ченцова, занимавшегося торговлей скобяным товаром»."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "16 February 1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for her: «Феоктиста Семеновна скончалась в одном из Карагандинских лагерей 16 февраля 1942 года и была погребена в безвестной могиле». The day line closes with the same year, «(1942)», and keeps her on 10 ноября ст. ст., which is neither this date nor thirteen days from it; the disagreement is in the attestation's note and in the life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast, beside this day. Her own life page gives 16 February 1942 as the day she died in a Karaganda camp, which is neither this day nor thirteen days from it; the day recorded here is the day page that listed her and the disagreement is in her life."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мцц. Ольги (1941) и Феоктисты (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

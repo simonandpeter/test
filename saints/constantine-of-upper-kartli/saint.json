@@ -1,0 +1,58 @@
+{
+  "slug": "constantine-of-upper-kartli",
+  "display_name": "Constantine of Upper Kartli",
+  "names": [
+    {
+      "form": "Константин Грузинский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 1272, «Константин Грузинский, князь, мч.», with the rank words left off. The day's line declines it and names the dignity in Russian, «Мч. Константина , кн. Грузинского»; the page's epithet is Georgian, and Upper Kartli, which its life page gives as his country, is in the English name here and not in the recorded form."
+    }
+  ],
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 842,
+      "latest": 853,
+      "display": "842, 852 or 853",
+      "basis": "traditional",
+      "note": "Three years from three pages, and none is preferred. days.pravoslavie.ru's line for 10 ноября ст. ст. closes «(842).» and its life page says «он был усечен мечом в 842 году на 85-м году жизни». The article that same calendar's name page links, pravoslavie.ru/57562, says instead «святого Константина обезглавил один из слуг правителя 10 ноября 853 года», and sets him under the empress Феодора, «правившей с 842 по 856 год», and before a caliph its own footnote dates 847–861 — a reign that had not begun in 842. azbyka.ru, asked once on 4 October 2026, carries word for word the same life as days.pravoslavie.ru with one figure changed, «он был усечен мечом в 852 году на 85-м году жизни», and its own day line prints «(852)». The eighty-fifth year of his life is in those two pages only, and no year of birth is recorded; nothing here is computed from the age."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мч. Константина , кн. Грузинского (842).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

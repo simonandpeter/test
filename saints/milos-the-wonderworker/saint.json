@@ -6,6 +6,11 @@
       "form": "Μίλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Μίλος ο Θαυματουργός Επίσκοπος Ιερομάρτυρας και οι δύο μαθητές του», with the rank words left off. The page gives the variant Μίλης in its own text."
+    },
+    {
+      "form": "Милий Персидский, Сузский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 1531, «Святитель Милий Персидский, Сузский, епископ, сщмч.», with the rank words and the grade left off; the page gives both epithets, of Persia and of Susa. The day's line declines the name and names the see in Russian, «Сщмч. Милия , еп. Персидского»."
     }
   ],
   "sex": "male",
@@ -17,8 +22,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмч. Милия , еп. Персидского, и двух учеников его (341).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -48,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 341,
+      "latest": 341,
+      "display": "341",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 10 ноября ст. ст., «Сщмч. Милия , еп. Персидского, и двух учеников его (341).», and its life page repeats it — «Святитель пострадал в 341 году с двумя своими учениками». saint.gr gave this folder no year."
+    }
   }
 }

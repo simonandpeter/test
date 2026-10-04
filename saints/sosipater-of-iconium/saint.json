@@ -16,6 +16,11 @@
       "form": "Сосипатер",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“ Св. апостоли stands over the first two names and апостол is the `apostle` this folder already carries in `types`; the heading gives him no see and no epithet — Iconium is the body's — so the bare forename is the whole of the Serbian form."
+    },
+    {
+      "form": "Сосипатр",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 2036, «Апостол от 70-ти Сосипатр», with the apposition left off. The day's line declines it, «Сосипатра»."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page lists «4 января (70 ап.) , 28 апреля , 10 ноября». The 4 января entry is the synaxis of the Seventy Apostles, a synaxis and not a feast; 28 апреля is the day the Romanian calendar keeps him on, and that Russian day page was not read. Both are recorded here as notes, and this row's feast is the 10 ноября day page that listed him."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Апп. от 70-ти Ераста , Олимпа , Родиона , Сосипатра , Куарта (Кварта) и Тертия (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -150,9 +165,66 @@
         "text": "Illumined by the teachings of Paul, you became lights of the whole world, O thrice-blessed ones; for you shine upon the world for ever with wonders — Jason, the fount of healings, and Sosipater, the glory of the martyrs of Christ. O God-bearing apostles, protectors of those in straits, entreat God that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Апостоли святии,/ молите милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Тропарь апостолов», the common of the apostles, printed under no one name on the day whose apostolic entry is the line of six of the Seventy that names him",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray to the merciful God, that He may grant the forgiveness of our offences to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественным светом ум озаривше,/ витийская плетения мудре разористе,/ и языки вся уловивше, апостоли славнии,/ Владыце приведосте,// Троицу Божественную славити научающе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Кондак апостолов», the common of the apostles, printed under no one name on the day whose apostolic entry is the line of six of the Seventy that names him",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lit up your minds with the divine light, you wisely undid the woven arguments of the orators; and having caught all the nations, O glorious apostles, you brought them to the Master, teaching them to glorify the divine Trinity.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явися днесь/ апостол честное торжество,/ подающее яве всем/ прегрешений оставление,// совершающим их память.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Кондак апостолов», the common of the apostles, printed under no one name on the day whose apostolic entry is the line of six of the Seventy that names him; the page prints two kontakia under that one label, in глас 2 and глас 4, and this is the second",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the honoured festival of the apostles has appeared, plainly granting the forgiveness of their offences to all who keep their memory.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 10 ноября ст. ст. closes «(I)», the first century, for all six of the apostles it names, and neither of the two life pages behind his name page gives him a year."
+    }
   }
 }

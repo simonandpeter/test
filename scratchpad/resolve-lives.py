@@ -1,23 +1,31 @@
 # -*- coding: utf-8 -*-
-"""The Terentius company's four lives, merged so each keeps one citation line.
+"""A life conflicted by two calendars reading the same saint, merged so it keeps
+one citation line.
 
-Two batches read the same four men from two calendars on their two days, and
-each appended its own paragraphs *and* its own clause to the life's single
-closing citation. Concatenating the halves left that line twice, once in the
-middle of the document, which is why this is not `-X ours` or a hand edit per
-file: the fix is structural. Both sides' paragraphs are kept in the order the
-calendars were read, and the two citation lines are folded into one by taking
-their common prefix and both tails.
+Two waves reading one person from two calendars append their own paragraphs
+*and* their own clause to the life's single closing citation. Concatenating the
+halves leaves that line twice, the first copy stranded mid-document, which is
+why this is not `-X ours` or a hand edit per file. Both sides' paragraphs are
+kept in the order the calendars were read, and the two citation lines are folded
+into one by taking their common prefix and both tails.
+
+    python scratchpad/resolve-lives.py saints/<slug>/life.md ...
+
+Both marker styles are accepted: `git merge` writes `HEAD` and the branch name,
+and `git checkout -m` on the same file afterwards writes `ours` and `theirs`.
 """
-import io, sys
+import io
+import re
+import sys
 
 for path in sys.argv[1:]:
     s = io.open(path, encoding='utf-8', newline='').read()
-    a = s.index('<<<<<<< ours\n')
+    m = re.search(r'^<<<<<<< .*\n', s, re.M)
+    a, after_a = m.start(), m.end()
     b = s.index('=======\n', a)
-    c = s.index('>>>>>>> theirs', b)
+    c = s.index('>>>>>>> ', b)
     end = s.index('\n', c) + 1
-    ours = s[a + len('<<<<<<< ours\n'):b].strip().split('\n\n')
+    ours = s[after_a:b].strip().split('\n\n')
     theirs = s[b + len('=======\n'):c].strip().split('\n\n')
     foot_o, foot_t = ours[-1], theirs[-1]
     i = 0

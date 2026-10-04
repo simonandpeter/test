@@ -1,0 +1,67 @@
+{
+  "slug": "niphon-vyblov",
+  "display_name": "Niphon (Vyblov)",
+  "names": [
+    {
+      "form": "Нифонт (Выблов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9236, «Нифонт (Выблов), иеромонах, сщмч.», with the grade and the rank word left off; the day's line gives the forename alone and in the genitive, «Прмч. Нифонта»."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Иеромонах Нифонт родился в 1882 году в городе Ейске в семье небогатого крестьянина Григория Выблова». No day or month is given."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "30 August 1931",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Иеромонах Нифонт скончался 30 августа 1931 года в половине десятого утра в Сызранской тюрьме». The day line closes with the same year, «(1931)», but keeps him on 10 ноября ст. ст., which is the civil 23 November and neither this date nor thirteen days from it; the disagreement is in the attestation's note and in the life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast, beside this day. His own life page gives 30 August 1931 as the day he died in the Syzran prison, which is neither this day nor thirteen days from it; the day recorded here is the day page that listed him and the disagreement is in his life."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Прмч. Нифонта и мч. Александра (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
