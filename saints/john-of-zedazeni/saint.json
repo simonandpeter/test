@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαΐου, «Όσιος Ιωάννης και οι μαθητές αυτού», with the rank word left off; the page's own head line for him reads «Οσιος Ιωαννης»."
+    },
+    {
+      "form": "Јован Зедазнијски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст., whose body says „Началник свих ових христољубивих мисионара био је свети Јован Зедазнијски.“ Свети is no rank and Преподобни in the heading is the `venerable` this folder already carries in `types`; **Зедазнијски is kept**, because it is a by-name from Mount Zaden and not a rank word `honorific.js` composes — and keeping it is what holds this folder out of the gate's eight-folder `? \"јован\"` fold, which the bare form would have made nine. The name stands in the body's naming sentence and not in the heading, which names nobody at all."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.05.2026 (7. мај ст. ст.) — „Преподобни оци грузијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-20&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading names nobody and the body enumerates the whole company, so the citation above is the heading whole** — „Преподобни оци грузијски.“ — per BRIEF-SERBIAN.md §4's synaxis ruling and the coordinator's first ruling for an enumerated company, and the Serbian name form is read out of the body's naming clause: „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ — twelve bare forenames, no rank word on any of them and no epithet, with Началник свих ових ... био је свети Јован Зедазнијски standing before the list for their leader. **The identification is the set and not the name**: the corpus already keeps these thirteen men together on this very menologion day, out of doxologia's «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia» and saint.gr's «Όσιος Ιωάννης και οι μαθητές αυτού», and the Prologue's twelve names map one-to-one onto the twelve folders, eleven of them unmistakably — Антоније, Давид, Зинон, Тадеј, Јосиф, Михаил, Пир, Стефан, Шијо, Иса for Ise of Tsilkani and Издериос for Isidore of Samtavisi — which forces the twelfth, Авид for Abibus of Nekresi, because it is the only slot and the only name left. **`types` was deliberately not touched on any of the thirteen.** Преподобни in that heading heads a company of thirteen whose own folders carry ranks three other calendars gave them — `hieromartyr` and `bishop` for Abibus, `hierarch` and `bishop` for Jesse, `stylite` for Anthony — and a rank word covering a whole company is not evidence about one man's own grade; adding it could make `honorific.js` compose a different word to every reader, which is the `boris-michael-of-bulgaria` ruling. **No `locations` were taken**: Georgia is a country. The Prologue prints no troparion and no kontakion. **This folder is the company's leader and the heading's „Преподобни“ is the `venerable` it already holds**, so nothing was added to `types` here either. „Началник свих ових христољубивих мисионара био је свети Јован Зедазнијски.“ gives him the by-name Зедазнијски, **which is kept** — it is the mountain of Zaden his own life is named from, not a rank, and `honorific.js` does not compose it. **Keeping it is what holds this folder out of the gate's `? \"јован\"` set of eight and the `? \"ιωαννησ\"` set of ninety-odd**, which was measured and not assumed: the bare «Јован» would have made a ninth. **NO DATE WAS TOUCHED**: this folder already holds a birth of „late 5th century“ from doxologia, and the entry's „У VI веку“ dates the mission rather than the man and would not sharpen it. New to the corpus from this page and on no other account of him: that the mission came **two hundred years after Saint Nina preached the Gospel in Georgia**; that the twelve were **solemnly received by the prince of the land and by its catholicos**, whom this book names Евлалије where saint.gr's angel announces them to a bishop Eulogius and doxologia names neither — **the catholicos is named here and kept out of the life on purpose**, because `eulalius-the-hierarch`'s display name is the bare Eulalius and `related-floor.test.mjs` would ask for a row in both directions for a man who is not this one; that the people **gathered about them in crowds**; and that they **founded many monasteries and left many disciples after them**."
     }
   ],
   "text": {

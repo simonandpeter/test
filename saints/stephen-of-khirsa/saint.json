@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's page for 7 Μαΐου, which heads him «Οσιος Στεφανος Μαθητης Του Οσιου Ιωαννη», with the rank words and the clause about his teacher left off."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's naming clause in the entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст. — „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ The list carries no rank word and no epithet on any of the twelve; Преподобни heads the whole company in the heading and belongs to no one name, and the see or monastery each folder's English name keeps is nowhere on this page. So the bare forename is the whole of the form. **A widening**: the gate's existing `? \"стефан\"` set of ten becomes eleven. Measured before drafting."
     }
   ],
   "sex": "male",
@@ -58,11 +63,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.05.2026 (7. мај ст. ст.) — „Преподобни оци грузијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-20&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading names nobody and the body enumerates the whole company, so the citation above is the heading whole** — „Преподобни оци грузијски.“ — per BRIEF-SERBIAN.md §4's synaxis ruling and the coordinator's first ruling for an enumerated company, and the Serbian name form is read out of the body's naming clause: „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ — twelve bare forenames, no rank word on any of them and no epithet, with Началник свих ових ... био је свети Јован Зедазнијски standing before the list for their leader. **The identification is the set and not the name**: the corpus already keeps these thirteen men together on this very menologion day, out of doxologia's «Sfântul Cuvios Ioan Zedazneli, dimpreună cu 12 ucenici din Georgia» and saint.gr's «Όσιος Ιωάννης και οι μαθητές αυτού», and the Prologue's twelve names map one-to-one onto the twelve folders, eleven of them unmistakably — Антоније, Давид, Зинон, Тадеј, Јосиф, Михаил, Пир, Стефан, Шијо, Иса for Ise of Tsilkani and Издериос for Isidore of Samtavisi — which forces the twelfth, Авид for Abibus of Nekresi, because it is the only slot and the only name left. **`types` was deliberately not touched on any of the thirteen.** Преподобни in that heading heads a company of thirteen whose own folders carry ranks three other calendars gave them — `hieromartyr` and `bishop` for Abibus, `hierarch` and `bishop` for Jesse, `stylite` for Anthony — and a rank word covering a whole company is not evidence about one man's own grade; adding it could make `honorific.js` compose a different word to every reader, which is the `boris-michael-of-bulgaria` ruling. **No `locations` were taken**: Georgia is a country. The Prologue prints no troparion and no kontakion. **A FIRST DATE**: this folder held no `dates` at all, and the entry's „У VI веку“ gives it a `floruit` of 501–600, the same interval `anthony-of-martkopi` already holds from doxologia's identical statement."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 7. мај ст. ст.: „У VI веку, а на двесто година после тога како је света Нина проповедала Јеванђеље у Грузији, јави се Пресвета Богоматер Јовану, подвижнику Антиохијском, и нареди му да избере дванаест својих ученика и оде у Грузију“ — the century the book gives for the mission itself, which is this man's only dating anywhere in this corpus. The same interval stands on `anthony-of-martkopi` from doxologia's identical statement. `node .tmp/dd.mjs \"6th century\"` reads it as «VI в.» and «6ος αι.» The book prints no year of birth and none of death for any of the thirteen."
+    }
   }
 }
