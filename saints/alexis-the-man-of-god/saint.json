@@ -11,6 +11,11 @@
       "form": "Αλέξιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Αλέξιος ο άνθρωπος του Θεού», with the rank word left off."
+    },
+    {
+      "form": "Алексије Човек Божји",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 17 March on pravoslavno.rs, „Свети Алексије Човек Божји.“, with Свети left off, which is not a rank. Човек Божји is kept: it is not a rank word but the by-name the heading gives him, the Man of God, and it is what this folder's English name already carries. A bare Алексије would fold with `alexis-of-moscow`."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.03.2026 (17. март ст. ст.) — „Свети Алексије Човек Божји.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man and the same story: the only son of a rich Roman, married and gone the same night, seventeen years a beggar at Edessa and seventeen more unrecognised in his father's own courtyard, the paper in his dead hand, the voice in the church. Its „17. марта 411. године“ agrees with the year this folder already holds from doxologia, to the day. It adds the reign of Honorius, the names of his parents, the image of the Lord Jesus at Edessa that was sent by the Lord himself to king Abgar, the ship driven past Laodicea to Rome, the thirty-four years his bride lived without him, the fragrant myrrh from his body, the coffin of marble and emerald, and his head in the Holy Lavra in the Peloponnese. Nothing in that was taken as a place: the entry names cities for his journeys and not one for a life lived in a single spot, and `locations` stays absent. The stored form keeps Човек Божји, which is not a rank but the by-name the heading itself gives him and the one this folder's English name already carries. The Prologue prints no troparion and no kontakion; the three hymns here are the Romanian and Greek pages'."
     }
   ],
   "hymns": [

@@ -11,11 +11,17 @@
       "form": "Μαρίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαρτίου, «Άγιος Μαρίνος», with the rank word left off."
+    },
+    {
+      "form": "Марин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 17 March on pravoslavno.rs, „Свети мученик Марин.“, with the rank words Свети мученик left off. The heading gives no epithet and no city, so the bare forename is what the source gives; no other folder in the corpus holds a Serbian Марин."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "attestations": [
     {
@@ -54,11 +60,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.03.2026 (17. март ст. ст.) — „Свети мученик Марин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the only one of the three pages to say anything about him at all: he was a soldier, he not only refused to offer sacrifice to the idols but scattered the sacrifices others had offered and trampled them underfoot, and for that he was tortured and beheaded in the third century. The folder held no date of any kind and now holds that century for his death. `soldier` is added to `types` from the entry's own words „Био војник“, which is BRIEF-SERBIAN.md §5's mapping of Војник. A senator Asterius is named in the body — he was so moved by the courage Christ gives his followers that he carried the martyr's body away on his own back and buried it honourably, and the heathen killed him too as a Christian — and he takes no row and no folder: the heading names only Marinus, the corpus keeps no Asterius who was read as this senator, and a person the body names is recorded here rather than made a folder, as this wave has done since the bishop Peter of the Forty. The stored form is the bare forename, because Свети мученик is the rank and the heading gives nothing else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for the Julian 17 March: „Због тога беше мучен и посечен, у III веку.“ The entry gives no year within the century. Neither doxologia nor saint.gr gave this folder a date at all — both print his name in a bare calendar line — so this is the first it has held."
+    }
   }
 }
