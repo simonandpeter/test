@@ -11,6 +11,11 @@
       "form": "Προκόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Προκόπιος ο Δεκαπολίτης ο Ομολογητής», with the rank word and both epithets left off."
+    },
+    {
+      "form": "Прокопије Декаполит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 27. фебруар ст. ст., „Преподобни Прокопије Декаполит.“, with the rank word Преподобни left off. The by-name is kept because the body explains it: he was from the Decapolis about the sea of Galilee, and was called the Decapolite for it."
     }
   ],
   "sex": "male",
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.03.2026 (27. фебруар ст. ст.) — „Преподобни Прокопије Декаполит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

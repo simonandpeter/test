@@ -12,6 +12,11 @@
       "form": "Τίτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Τίτος ο Πρεσβύτερος της Λαύρας των Σπηλαίων του Κιέβου», with the rank word, the rank and the house left off."
+    },
+    {
+      "form": "Тит Печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 27. фебруар ст. ст., „Преподобни Тит Печерски.“, with the rank word Преподобни left off. Печерски, of the Caves, is kept because the heading carries it as part of the form; the body adds that he was a presbyter, which is a rank and stays out."
     }
   ],
   "related": [],
@@ -51,8 +56,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.03.2026 (27. фебруар ст. ст.) — „Преподобни Тит Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

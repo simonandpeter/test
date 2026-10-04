@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Στέφανος», with the rank word left off."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fourth heading for 27. фебруар ст. ст., „Преподобни Стефан.“, with the rank word Преподобни left off. Like the Greek line, the heading gives him no epithet at all, which is why the folder's English name carries the day instead."
     }
   ],
   "related": [],
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.03.2026 (27. фебруар ст. ст.) — „Преподобни Стефан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man as the folder's Greek row: saint.gr's one sentence for 27 Φεβρουαρίου makes him chamberlain to the emperor Maurice and the founder of an old people's home, and the Prologue's three sentences say the same of him and add the year."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 614,
+      "latest": 614,
+      "display": "614",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 27 February: „Скончао мирно 614. године.“ The folder carried no dates at all before this reading; saint.gr, which it was read from, gives no year and only the reign of Maurice (582–602), which it does not contradict."
+    }
   }
 }

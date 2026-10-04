@@ -6,6 +6,11 @@
       "form": "Ιουλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Αλέξανδρος, Κρονίων, Ιουλιανός, Μακάριος και άλλοι Δεκατρείς Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Јулијан Подагрик",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's fifth heading for 27. фебруар ст. ст., „Свети мученик Јулијан Подагрик.“, with Свети and the rank word мученик left off. Подагрик, the gouty, is kept because the body explains it: he suffered from gout so badly that he could neither stand nor walk and was carried before the court on a litter."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.03.2026 (27. фебруар ст. ст.) — „Свети мученик Јулијан Подагрик.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-12&prolog=1",
+        "year": 2026
+      },
+      "note": "Read onto this folder because the Prologue's two sentences agree with its Greek row on the city, the reign, the year by implication and the companion's name: a Julian and a Cronion put to death under Decius at Alexandria. Two things differ and are not reconciled here — the Prologue burns him alive where saint.gr's company has Julian beheaded and burns some of the unnamed thirteen, and it makes Cronion his disciple where saint.gr pairs Cronion with Alexander. The pairing is what the folder's English name was built from, and it is not changed."
     }
   ],
   "text": {

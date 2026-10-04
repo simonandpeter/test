@@ -11,6 +11,11 @@
       "form": "Θαλλελαίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Φεβρουαρίου, «Όσιος Θαλλελαίος», with the rank word left off."
+    },
+    {
+      "form": "Талалеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 27. фебруар ст. ст., „Преподобни Талалеј, испосник сиријски.“, with the rank word Преподобни and the description испосник сиријски left off; a Syrian ascetic is a rank and a country and not part of the name, and Gabala, which the folder's English name carries, is in neither."
     }
   ],
   "sex": "male",
@@ -56,8 +61,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.03.2026 (27. фебруар ст. ст.) — „Преподобни Талалеј, испосник сиријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-12&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
@@ -65,5 +79,14 @@
   },
   "related": [
     "sophronius-of-jerusalem"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 460,
+      "latest": 460,
+      "display": "about 460",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 27 February: „Скончао око 460. године.“ The page says about the year 460, not 460, and it is the only source read for him that gives a year; the folder carried no dates at all before this reading."
+    }
+  }
 }
