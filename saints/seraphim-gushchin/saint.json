@@ -1,0 +1,105 @@
+{
+  "slug": "seraphim-gushchin",
+  "display_name": "Seraphim (Gushchin)",
+  "names": [
+    {
+      "form": "Серафим (Гущин)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 14433, «Серафим (Гущин), прмч.», with the rank word left off; the day's line gives the forename alone and in the genitive, «прмч. Иоанникия и Серафима». azbyka.ru writes the same form and adds the rank the Sretensky pages do not give, «Серафима (Гущина), иеромонаха»."
+    }
+  ],
+  "types": [
+    "venerable-martyr",
+    "new-martyr"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "22 December 1872",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «родился 22 декабря 1872 года в селе Нагулино Балахнинского уезда Нижегородской губернии в семье мелкого волжского судовладельца Григория Гущина и в крещении был наречен Стефаном». days.pravoslavie.ru gives no date: its name page 14433 carries no life."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "23 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life for him: «Иеромонах Серафим (Гущин) был расстрелян в тот же день, что и управляющий Калужской епархией архиепископ Августин (Беляев) и архимандрит Оптиной Пустыни Иоанникий (Дмитриев), – 23 ноября 1937 года». 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died; its own line gives the year alone, «(1937)»."
+    }
+  },
+  "related": [
+    "augustine-belyaev",
+    "joannicius-dmitriev"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Я́ко мона́шествующих утвержде́ние/ и преподобному́чеников похвалу́/ О́птина пу́стынь вас велича́ет,/ Иоанни́кие и Серафи́ме досточу́днии,/ вы бо, ду́ши своя́ за Христа́ положи́вше,/ венце́м страда́ния увенча́стеся./ Те́мже моли́теся Христу́, добропобе́днии,/ страну́ на́шу в Правосла́вии утверди́ти// и душа́м на́шим дарова́ти ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Серафим (Гущин)», тропарь, напечатанный обоим преподобномученикам Оптинским, Иоанникию и Серафиму",
+        "url": "https://azbyka.ru/days/sv-serafim-gushchin",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the strengthening of monastics and the praise of venerable martyrs, Optina hermitage magnifies you, O Joannicius and Seraphim, worthy of wonder; for, laying down your souls for Christ, you were crowned with the crown of suffering. Therefore pray to Christ, O well-triumphant ones, that our land may be established in Orthodoxy and that great mercy may be granted to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Кро́вию твое́ю зе́млю Ру́сскую удобри́в,/ и страда́нием Це́рковь Христо́ву украси́в,/ преподобному́чениче Серафи́ме,/ злонача́льника ору́жием кре́стным победи́л еси́,/ я́ко сие́ есть ми́ра непобеди́мая побе́да.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Серафим (Гущин)», кондак, напечатанный под его именем",
+        "url": "https://azbyka.ru/days/sv-serafim-gushchin",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having enriched the Russian land with your blood and adorned the Church of Christ with your suffering, O venerable martyr Seraphim, you overcame the author of evil with the weapon of the cross, for this is the unconquerable victory of the world.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, beside this day; azbyka.ru keeps that synaxis on the moveable 7 February and adds the synaxis of the Kaluga saints and the synaxis of all the saints of Optina. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Сщмчч. Августина , архиеп. Калужского, и с ним Иоанна пресвитера, прмч. Иоанникия и Серафима , мчч. Алексия , Аполлона , Михаила (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

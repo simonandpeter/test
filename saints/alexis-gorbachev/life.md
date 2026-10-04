@@ -1,0 +1,7 @@
+# Alexis (Gorbachev)
+
+Alexis Grigorievich Gorbachev was born on 5 February 1892 in the village of Kurovskaya in the Kaluga province, the son of a peasant named Grigory Gorbachev. He finished the village school, and from 1911 served as psalmist in a village church — Мурманцево in the calendar's life page, Муромцево in azbyka's, and the two pages do not agree about the village's name. That, and the autumn of 1937, is the whole of what is recorded of him: the authorities arrested him, and questioned on a charge of counter-revolutionary activity he did not admit his guilt.
+
+On 19 November 1937 an NKVD troika sentenced him with the archbishop [Augustine (Belyaev)](/saints/augustine-belyaev), the archimandrite [Joannicius (Dmitriev)](/saints/joannicius-dmitriev), the archpriest [John (Speransky)](/saints/john-speransky), the psalmist [Apollon (Babichev)](/saints/apollon-babichev) and [Michael (Arefyev)](/saints/michael-arefyev) of a church council, to be shot; they were shot on 23 November 1937 and buried in one unmarked grave. 10 ноября ст. ст. is that civil day, so the calendar keeps him on the day he died. He was glorified in August 2000 by the jubilee council of bishops.
+
+*After the Православный церковный календарь of the Сретенский monastery for 10 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261110.html) and [the life](https://days.pravoslavie.ru/Life/life4738.htm) — with [azbyka.ru's own page](https://azbyka.ru/days/sv-aleksij-gorbachev) read in the browser for its district and its spelling of the village; read 4 October 2026.*
