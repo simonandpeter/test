@@ -10,18 +10,48 @@
       "form": "Λογγίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Όσιος Λογγίνος ο φύλακας της θύρας», with the rank word left off."
+    },
+    {
+      "form": "Лонгин, вратарь Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1366, «Преподобный Лонгин, вратарь Печерский», with the rank word left off; вратарь is the doorkeeper, the same office the Greek line names, and Печерский is the Caves. The day line gives «Лонгина , вратаря Печерского»."
+    },
+    {
+      "form": "Лонгин Трудољубиви",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second entry for 16 October old style as the Православни подсетник prints it, «Преп. Лонгин Трудољубиви», with the rank word left off. The Serbian epithet is Labour-loving where the Russian and Greek name the gate; the body of the Prologue's entry then calls him «вратар у манастиру», the doorkeeper of the monastery, so the two epithets belong to one man."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 1201,
+      "latest": 1400,
+      "display": "13th–14th century",
+      "basis": "traditional",
+      "note": "No calendar gives a year and two of them give different centuries. The Russian day line dates him «(XIII-XIV)», the thirteenth to fourteenth; the Ohrid Prologue calls him «Монах Кијево-Печерски из XIV столећа», a Kyiv Caves monk of the fourteenth century. The interval carries both and is bounded by the wider reading; the Greek page gives nothing at all."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Прп. Лонгина , вратаря Печерского (XIII-XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's one service icon stands before Longinus the Centurion at the head of the paragraph and is that line's alone. The space before the comma is the page's own."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the man the Greek page could say nothing about — it answered «Δεν έχουμε λεπτομέρειες για τον βίο του Ρώσου Οσίου», we have no details of the life of the Russian venerable. **This page supplies the monastery, the gift and the grave.** He kept his obedience in the Kyiv Caves monastery; his zeal in prayer and his humble industry were rewarded by the Lord with the gift of foresight; he encouraged those who came to the Lavra with good intentions and reproved the evil without mercy and brought them to repentance; and he was buried in the Far Caves. It also gives the two other days he is kept on — «Дни памяти: 28 августа (Печер.(Д)) , 16 октября», the Caves synaxis of the Far Caves on 28 August and this one — and the life adds «Память также 28 августа и во 2-ю Неделю Великого поста», the second Sunday of Great Lent, which is a moveable commemoration and is recorded here rather than as a feast. Only the October day was read, and the row records it."
     },
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+      "note": "Not on doxologia.ro's calendar for 16 octombrie, the same menologion day the Greek and the Russian keep him on (read 29 October 2026); no other day checked."
     },
     {
       "church": "greek",
@@ -40,8 +70,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.10.2026 (16. октобар ст. ст.) — „2. Преп. Лонгин Трудољубиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-29&prolog=1",
+        "year": 2026,
+        "note": "The second of the day's two entries; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "**The identity is not a name match**: the Serbian epithet is Трудољубиви, Labour-loving, and the Russian and the Greek both name the gate instead. What the page keeps is the same man — «Монах Кијево-Печерски из XIV столећа. Био је вратар у манастиру», a Kyiv Caves monk of the fourteenth century who was the doorkeeper of the monastery — and it then renders the Russian page's gift of foresight as something sharper and more particular: his heart was so pure and full of grace «да је увек знао, с каквим мислима неко улази у манастир, и с каквим опет други излазе из манастира», that he always knew with what thoughts a man came into the monastery and with what thoughts another went out of it. It ends on the relics, «Чудотворне мошти Лонгинове почивају у Теодосијевим пешчерама», which is the same grave the Russian life gives as the Far Caves. Its century, the fourteenth, is the narrower half of the Russian's «XIII-XIV», and `dates` carries both."
     }
   ],
   "related": [

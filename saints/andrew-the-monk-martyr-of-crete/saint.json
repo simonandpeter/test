@@ -11,17 +11,48 @@
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Οκτωβρίου, «Άγιος Ανδρέας ο Οσιομάρτυρας «Ὁ ἐν τὴ Κρίσει»», with the rank word left off."
+    },
+    {
+      "form": "Андрей Критский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 182, «Преподобномученик Андрей Критский», with the rank word left off; the day line gives «Андрея Критского»."
+    },
+    {
+      "form": "Андреј",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third entry for 17 October old style as the Православни подсетник prints it, «Преп. муч. Андреј», with the rank words left off. The Prologue gives him no epithet of place at all, neither Crete nor the Krisis."
     }
   ],
   "sex": "male",
   "types": [
     "venerable-martyr"
   ],
+  "dates": {
+    "death": {
+      "earliest": 767,
+      "latest": 767,
+      "display": "767",
+      "basis": "attested",
+      "note": "Two calendars give the same year and the other two give none. days.pravoslavie.ru's day line for 17 октября ст. ст.: «Прмч. Андрея Критского (767)». The Ohrid Prologue, as the Православни подсетник prints it for the same Julian day: «Тако предаде Андреј своју свету душу Богу, 767. год.» The Greek and Romanian pages this folder was built from date him only by the reign of Constantine Copronymus, which the Russian life gives as 741–775, and 767 falls inside it."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Прмч. Андрея Критского (767).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. It is the second of the day's two such icons; the first belongs to the prophet Hosea, the entry before his."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Romanian, and the same man. **It gives the year the folder had no `dates` for, 767**, which the Ohrid Prologue gives as well. Its life names the emperor as Constantine Copronymus and dates the reign «(741 - 775)», says he ordered the Christians on pain of death to take the holy icons out of the churches and the houses, and that the faithful who resisted him fearlessly and held firmly to the tradition of the holy fathers were shut in prisons. When Andrew heard that the emperor was imprisoning and torturing not thieves and robbers but virtuous and pious Christians he came to Constantinople and reproached the heretic publicly, **in the church of the holy martyr Mamas** — the same church the Prologue names. The emperor's defence, in the page's own words, was that it is madness to pay honour to wood and paints; Andrew answered that whoever suffers for the holy icons suffers for Christ, and whoever insults an icon on which Christ is depicted insults Christ himself. **It differs from the Prologue about the death**: here the martyr, torn mercilessly at the iconoclast's order, «по пути к месту казни … отошел ко Господу», departed to the Lord on the road to the place of execution, where the Prologue has a heretic kill him with an axe. Two things are added at the end: a hundred years later a canon was written for him by Joseph the Hymnographer, and by his prayers the possessed are healed."
     },
     {
       "church": "romanian",
@@ -54,8 +85,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.10.2026 (17. октобар ст. ст.) — „3. Преп. муч. Андреј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-30&prolog=1",
+        "year": 2026,
+        "note": "The third of the day's four entries; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "The Prologue agrees with the Russian life on the shape of it — the church of the holy martyr Mamas, the emperor Copronymus present in it, the public reproach, the beating and the dragging through the streets — and differs in three places. **It gives him a rank the other calendars do not**: «Хрићанин по роду, и свештеник хришћански», a Christian by birth and a Christian priest, where the Greek and Romanian keep him as a monk-martyr and the Russian as a venerable-martyr. **It keeps his words**: «Боље би ти било, царе, да гледаш војничке послове и да народом управљаш него да гониш Христа и слуге Његове» — it would be better for you, emperor, to look to military affairs and govern the people than to persecute Christ and his servants. **And it kills him differently**: «Неки јеретик удари га секиром и уби», a certain heretic struck him with an axe and killed him, where the Russian life has him die on the road to the place of execution. It dates the death «767. год.», the same year as the Russian day line, and says his relics gave healing to the sick. The rank the Prologue gives is set down here and `types` is left as it was."
     }
   ],
   "hymns": [
@@ -118,5 +160,8 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "joseph-the-hymnographer"
   ]
 }

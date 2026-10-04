@@ -11,18 +11,43 @@
       "form": "Λουκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Λουκιανός ο ιερομάρτυρας Πρεσβύτερος των Σπηλαίων του Κιέβου», with the rank word and the see left off."
+    },
+    {
+      "form": "Лукиан Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1385, «Лукиан Печерский, пресвитер, сщмч.», with the two rank words left off; the day line gives «Лукиана Печерского»."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 1243,
+      "latest": 1243,
+      "display": "1243",
+      "basis": "attested",
+      "note": "The Russian day line, and the only year any of the four calendars gives him: «Сщмч. Лукиана Печерского (1243)». The Greek page that first brought him into the corpus says outright that it has no details of his life, and gives no year."
+    }
+  },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Сщмч. Лукиана Печерского (1243).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's three icons all stand in the paragraph above it, each immediately before its own entry."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man — the hieromartyr presbyter of the Caves. **This calendar adds exactly one fact and withholds everything else.** The fact is the year, 1243, which the Greek page could not give; and the withholding is that the line carries no life link at all, where almost every other entry on the day does, so the Russian has no account of him either. The name index page 1385 prints his name, his rank and the one day, and nothing more. So the folder still stands on its line, now with a year on it."
     },
     {
       "church": "romanian",
       "status": "undocumented",
-      "note": "Not checked: doxologia.ro's calendar for the same civil day (1 October 2026)."
+      "note": "Not on doxologia.ro's calendar for 15 octombrie, the same menologion day the Greek and the Russian keep him on — its entries for the day are Magdalena of Mălainița, Euthymius the New, Lucian the priest of Antioch, Vars bishop of Edessa and Savin bishop of Cyprus (read 28 October 2026). No other day checked."
     },
     {
       "church": "greek",
@@ -42,7 +67,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026). Its two entries that day are the other Lucian — «Преп. муч. Лукијан презв. Антиохијски», the presbyter of Antioch, with a full paragraph — and Euthymius the New; neither is this man. No other day checked."
     }
   ],
   "related": [

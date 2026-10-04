@@ -11,6 +11,16 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Άγιος Ευθύμιος ο Νέος», with the rank word and the see left off."
+    },
+    {
+      "form": "Евфимий Новый, Солунский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 740, «Евфимий Новый, Солунский (Фессалоникийский), иеродиакон», with the rank word and the parenthetical variant of the epithet left off; the day line gives «Евфимия Нового, Солунского»."
+    },
+    {
+      "form": "Јевтимије Нови",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second entry for 15 October old style as the Православни подсетник prints it, «Преп. Јевтимије Нови», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -21,24 +31,36 @@
   "dates": {
     "birth": {
       "earliest": 823,
-      "latest": 823,
-      "display": "823",
+      "latest": 824,
+      "display": "823 or 824",
       "basis": "attested",
-      "note": "doxologia.ro: «S-a născut în zona Ancyrei în anul 823 din părinți credincioși, la botez primind numele de Nichitas.»"
+      "note": "doxologia.ro: «S-a născut în zona Ancyrei în anul 823 din părinți credincioși, la botez primind numele de Nichitas.» The Ohrid Prologue for the Serbian 15 October gives the other year — «Рођен у Анкири 824. год.» — and the two readings are carried together rather than one chosen."
     },
     "death": {
-      "earliest": 898,
+      "earliest": 889,
       "latest": 898,
-      "display": "898",
+      "display": "889–898",
       "basis": "attested",
-      "note": "doxologia.ro: «și acolo și-a dat duhul multnevoitorul cuvios făcător de minuni (898)»; the relics were moved to Thessalonica in 899."
+      "note": "Three of the four calendars print a different year and the fourth prints none, so the interval carries all of them. days.pravoslavie.ru: «Прп. Евфимия Нового, Солунского (889)», and its life «удалился на островок, находящийся у Афона, и там почил в 889 году». doxologia.ro: «și acolo și-a dat duhul multnevoitorul cuvios făcător de minuni (898)»; the relics were moved to Thessalonica in 899. saint.gr heads him «Αγιος Ευθυμιος ο Νεος (; - 894)» and says «απεβίωσε ειρηνικά την 15η Οκτωβρίου 894 μ.Χ.». The Ohrid Prologue gives no year at all, only «Упокојио се на острву Свештеном близу Св. Горе крајем IX века», at the end of the ninth century, which the interval lies inside."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "rank": "simple",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Прп. Евфимия Нового, Солунского (889).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "The rank is the alt text of the icon standing immediately before this line, «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The day's polyeleos icon, «Совершается служба с полиелеем», stands two entries later, before Athanasius of Kovrov, and is that line's alone."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek and the Romanian, and the same man: Nikitas in the world, born at Ancyra in Galatia of Epiphanius and Anna, left fatherless at seven, married at his mother's insistence after his military service, and gone from the house in secret after a daughter was born. The Russian life adds what the other calendars do not. Fifteen years on Mount Olympus; then Athos, where on the road he sent his mother and his wife a cross and the news that he had become a monk; the great schema and three years in a cave in complete silence; a long stand on a pillar near Thessalonica; and, **at the Lord's command in 863, two monasteries founded on Mount Peristera near Thessalonica, which he governed for fourteen years while remaining in the rank of deacon** — his mother and his wife were tonsured in one of them. It ends on the islet off Athos where he died and the translation of his relics to Thessalonica, and it explains the epithet: he is called the New to distinguish him from Euthymius the Great, kept on 20 January. Its year, 889, is nine behind doxologia's and five behind saint.gr's; all three are now in `dates`."
     },
     {
       "church": "romanian",
@@ -71,8 +93,19 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.10.2026 (15. октобар ст. ст.) — „2. Преп. Јевтимије Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-28&prolog=1",
+        "year": 2026,
+        "note": "The Prologue prints two entries for the day and this is the second; the page gives no typikon rank, so none is recorded."
+      },
+      "note": "The Prologue's paragraph is four lines and agrees with the Russian life on the shape of it while differing on two points of fact. It names the parents Epiphanius and Anna, the military service and the marriage, and the one daughter — whom it names, Anastasia, where the Russian life leaves her unnamed — then the Olympus monasteries, the Holy Mountain, a time as a stylite near Thessalonica, and the founding there of one men's and one women's monastery. It gives his birth as 824 against doxologia's 823, and his death only as «крајем IX века», the end of the ninth century, rather than a year; both readings are in `dates`. It closes with the relics: «Мошти му свете и чудотворне почивају у Солуну», his holy and wonderworking relics rest at Thessalonica. No hymn is printed for him."
     }
   ],
   "text": {
@@ -81,6 +114,7 @@
   "related": [
     "basil-of-thessalonica",
     "elijah-the-tishbite",
-    "euthymius-of-madytos"
+    "euthymius-of-madytos",
+    "euthymius-the-great"
   ]
 }

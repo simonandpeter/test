@@ -1,0 +1,62 @@
+{
+  "slug": "alexis-nikonov",
+  "display_name": "Alexis (Nikonov)",
+  "names": [
+    {
+      "form": "Алексий (Никонов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13832, «Алексий (Никонов), иерей, сщмч.», with the two rank words left off; the day line gives «Алексия пресвитера» without the surname, and the surname is the index's."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The Russian day line, and the only thing printed about him besides his name and his rank: «Сщмч. Алексия пресвитера (1938)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Сщмч. Алексия пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day has exactly one, standing before Longinus the Centurion at the head of the paragraph."
+      },
+      "note": "**The calendar prints a line and nothing else.** The day line gives the rank, the name and the year; his name page 13832 adds the surname, «Алексий (Никонов), иерей, сщмч.», and the second day he is kept on, «26 января (Новомуч.)» — and then stops. There is no life link on either page. His index number, 13832, stands immediately beside George (Troitsky)'s 13831, so the two were added to the calendar together; that is the calendar's own numbering and nothing is inferred from it. The January day was not read. azbyka.ru answered **403** to the corpus's own fetcher on 28 October 2026 and was not asked again."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 16 octombrie, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 16 Οκτωβρίου, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 16 October old style as the Православни подсетник prints it (pravoslavno.rs for 29.10.2026, read 29 October 2026); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

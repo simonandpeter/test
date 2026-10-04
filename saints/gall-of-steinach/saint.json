@@ -10,13 +10,29 @@
       "form": "Γάλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Οκτωβρίου, «Άγιος Γάλλος», with the rank word left off. The page prints the Latin form beside it in its first sentence, «Ο Άγιος Γάλλος (Gall)»."
+    },
+    {
+      "form": "Галл",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 15004, «Галл, прп.», with the rank word left off; the day line gives «Галла» and no epithet, no see and no country."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Прп. Галла (ок. 650).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's one service icon stands before Longinus the Centurion at the head of the paragraph and is that line's alone."
+      },
+      "note": "The same menologion day the folder already keeps for the Greek, and the same man — the one Western monk the Russian calendar keeps on this day. **It adds a year and takes nothing away, and it adds nothing else at all.** The line is «Прп. Галла (ок. 650)», about 650, against saint.gr's flat 646, and `dates` now carries the pair as an interval. There is no life link on the day line and his name page 15004 holds nothing but «Галл, прп.» and the one day, «День памяти: 16 октября» — no life, no other day, no hymn. The Russian prints no epithet for him either: not Steinach, not Ireland, not the abbey, so the folder's display name still rests on the Greek page alone."
     },
     {
       "church": "romanian",
@@ -41,16 +57,16 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "note": "Not in the Ohrid Prologue for 16 October old style as the Православни подсетник prints it (pravoslavno.rs for 29.10.2026, read 29 October 2026); its two entries that day are Longinus the martyr and Longinus the Labour-loving of the Kyiv Caves. No other day checked."
     }
   ],
   "dates": {
     "death": {
       "earliest": 646,
-      "latest": 646,
-      "display": "646",
+      "latest": 650,
+      "display": "646–650",
       "basis": "traditional",
-      "note": "saint.gr: «Κοιμήθηκε το 646 μ.Χ.», and its page head gives him as «Αγιος Γαλλος (; - 646)». For his birth the page says only «Γεννήθηκε λίγο μετά το 550 μ.Χ. στην Ιρλανδία», which is not recorded as an interval here."
+      "note": "Two calendars, two years, and the interval carries both. saint.gr: «Κοιμήθηκε το 646 μ.Χ.», and its page head gives him as «Αγιος Γαλλος (; - 646)». days.pravoslavie.ru's day line for 16 октября ст. ст. gives «Прп. Галла (ок. 650)», about 650 — an approximation rather than a year, which is why the interval is bounded at it and not widened past it. For his birth saint.gr says only «Γεννήθηκε λίγο μετά το 550 μ.Χ. στην Ιρλανδία», a little after 550, which is not recorded as an interval here, and the Russian page gives no birth at all."
     }
   },
   "related": [

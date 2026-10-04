@@ -1,0 +1,74 @@
+{
+  "slug": "alexander-shchukin",
+  "display_name": "Alexander (Shchukin)",
+  "office": "Archbishop of Semipalatinsk",
+  "names": [
+    {
+      "form": "Александр (Щукин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9103, «Святитель Александр (Щукин), архиепископ Семипалатинский, сщмч.», with the rank words and the see left off. His name in the world, which the life page gives, is Александр Иванович Щукин. The day line gives «Александра , архиеп. Семипалатинского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "hierarch",
+    "archbishop",
+    "new-martyr"
+  ],
+  "related": [
+    "sergius-of-radonezh"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "13 May 1891",
+      "basis": "attested",
+      "note": "«родился 13 мая 1891 года в городе Риге в многодетной семье священника» — born 13 May 1891 in the city of Riga, in the large family of a priest."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "30 October 1937",
+      "basis": "attested",
+      "note": "«Через два дня 17 (30 н. ст.) октября 1937 года Владыка был расстрелян» — two days after the sentence, on 17 October old style, 30 October new style, 1937, he was shot. The page gives both styles itself, and the new-style date is the civil day the Russian calendar's Julian 17 October falls on in 2026 as well. The sentence had been passed «15 (28) октября». The glorification is a third year the page prints, August 2000, and belongs to the glorification and not to the death."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Сщмч. Александра , архиеп. Семипалатинского (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's two icons stand in the paragraph above this one, before Hosea and before Andrew of Crete. The space before the comma is the page's own."
+      },
+      "note": "**One of two entries on this day with a full written life, and the one that dates itself twice over.** The page keeps him on two days, «26 января (Новомуч.) , 17 октября», the synaxis of the new martyrs and confessors and this one; the January day was not read. Of his life: born at Riga on 13 May 1891 in the large family of a priest; quiet, modest and obedient, dreaming from childhood of the priesthood and trying to imitate the ancient ascetics, and fond of shutting himself in his father's room to pray; finished the Moscow Theological Academy in 1915 as a candidate of theology and was appointed a teacher at the Nizhny Novgorod seminary; tonsured in the Trinity-Sergius Lavra in 1917 and soon ordained hieromonk; served from 1918 to 1923 in the church of the village of Lyskovo in the Nizhny Novgorod diocese together with his own father; consecrated bishop of Lyskovo, vicar of that diocese, in 1923. He lived at the Makaryev Zheltovodsky monastery, organised the teaching of the Law of God to children, and preached often against godlessness and the wreckers of churches. **The two sentences the page keeps in his own voice** are the answer under beating in the Nizhny Novgorod prison in the autumn of 1928 — «Тело моё в вашей власти, и вы можете делать ним, что хотите, но душу свою я вам не отдам», my body is in your power and you may do what you like with it, but my soul I will not give you — and the answer to his sister, who wrote to him at Oryol to retire and come and sit it out at Lyskovo: «Как бы я вас ни любил, но я не для того взял посох, чтобы его оставить», however much I may love you, I did not take up the staff in order to lay it down. Three years in the Solovki camp followed the 1928 arrest, the charge being that «путём произнесения проповеди с антисоветским уклоном прививал свои контрреволюционные убеждения населению»; he worked there first as a watchman and then as a bookkeeper. Freed at the end of 1931, he went to the Volkhov vicariate in the Oryol diocese and from the summer of 1932 was bishop of Oryol; in September 1936 he was appointed to the see of Semipalatinsk and a year later arrested there. He signed none of the accusations and bore himself bravely at the interrogations; he was sentenced on 15 (28) October for «шпионаже и контрреволюционной агитации» and shot two days later. He was numbered among the New Martyrs and Confessors of Russia for church-wide veneration at the Jubilee Council of Bishops in August 2000. **The folder's `office` is the last see the calendar names**, Semipalatinsk; Lyskovo and Oryol are in the life and not in that field."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 17 octombrie, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 17 Οκτωβρίου, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 17 October old style as the Православни подсетник prints it (pravoslavno.rs for 30.10.2026, read 30 October 2026); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

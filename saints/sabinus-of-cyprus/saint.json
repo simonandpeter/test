@@ -11,8 +11,22 @@
       "form": "Σαβίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Οκτωβρίου, «Όσιος Σαβίνος ο επίσκοπος», with the rank word and the see left off."
+    },
+    {
+      "form": "Савин Катанский (Сицилийский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1911, «Святитель Савин Катанский (Сицилийский), епископ», with the rank words left off; the parenthesis is the calendar's own, naming the island beside the city. The day line gives «Савина, еп. Катанского»."
     }
   ],
+  "dates": {
+    "death": {
+      "earliest": 760,
+      "latest": 760,
+      "display": "760",
+      "basis": "attested",
+      "note": "The Russian day line, and the only year any of the four calendars gives him: «Свт. Савина , еп. Катанского (760)». The Greek and Romanian pages the folder already cites give no year at all, and the Russian life page gives none either — the year is on the day line alone."
+    }
+  },
   "sex": "male",
   "types": [
     "hierarch",
@@ -22,8 +36,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Свт. Савина , еп. Катанского (760).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon, and the day's three icons all stand in the paragraph above it, each before its own entry. The space before the comma is the page's own."
+      },
+      "note": "**The identity was the day's one real question, and it is settled as one man rather than two.** The Russian keeps «Свт. Савина, еп. Катанского (760)» — Sabinus bishop of Catania, and its name index heads him «Святитель Савин Катанский (Сицилийский), епископ», of Catania in Sicily — where this folder's Romanian row reads «Sfântul Ierarh Savin, Episcopul Ciprului», of Cyprus. Four things decided it. **One day**: all three calendars keep him on 15 October and each prints exactly one Sabinus there, so the two cannot be a pair the way Sozon and Sozon are a pair on the Greek 7 September. **One life**: the Russian's four-line notice is the same notice — a bishop who, wishing to serve the Lord more zealously, withdrew into the desert, lived there a strict ascetic life, and received from the Lord the gift of wonderworking and of foresight — and the Greek and Romanian accounts are that story at length, the man pressed into a throne he did not want, unable to bear the administration, going back to his cell, and given wonders, healings, the casting out of demons and the foretelling of what was to come. **The see is the one thing that differs, and the Greek calendar itself does not assert it**: its day line is «Όσιος Σαβίνος ο επίσκοπος», the bishop and nothing more, and the page's closing note hangs Cyprus on a single manuscript — «Ο Παρισινός Κώδικας 1578 τον αναφέρει σαν επίσκοπο Κύπρου». So the epithet is unstable in the tradition and is not a discriminator, which is the Paraskeva reading: three calendars, three epithets, one person. **Nothing is chosen**: the display name is left as the corpus already had it, no `office` is proposed, no coordinates are recorded for either see, and both readings stand in the life. The Russian adds the year, 760, which no other calendar gives."
     },
     {
       "church": "romanian",
@@ -57,7 +82,7 @@
     {
       "church": "serbian",
       "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); its two entries that day are Lucian the presbyter of Antioch and Euthymius the New. No other day checked."
     }
   ],
   "text": {

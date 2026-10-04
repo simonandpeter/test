@@ -1,0 +1,63 @@
+{
+  "slug": "sarbelus-of-edessa",
+  "display_name": "Sarbelus of Edessa",
+  "names": [
+    {
+      "form": "Сарвил Едесский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1922, «Сарвил Едесский, мч.», with the rank word left off; the day line gives «Сарвила» alone."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "related": [
+    "bebaia-of-edessa"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 98,
+      "latest": 117,
+      "display": "98–117",
+      "basis": "traditional",
+      "note": "The Russian day line gives «Мчч. Сарвила и Вевеи Едесских (ок. 98-117)» — about 98 to 117 — and its life says only that they suffered «во II веке, при императоре Траяне», in the second century under the emperor Trajan, whose reign those years are. No year of its own is printed, so the interval stands rather than a date."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Мчч. Сарвила и Вевеи Едесских (ок. 98-117).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "No rank is recorded because the line carries no icon. The day prints three service icons, two «Cовершается служба, не отмеченная в Типиконе никаким знаком» and one «Совершается служба с полиелеем», and all three stand in the paragraph above this one, each immediately before its own entry; none of them reaches this line."
+      },
+      "note": "The Russian is the only one of the four calendars that keeps this pair. **The identity is held apart from the corpus's existing `sarbel-the-martyr` on this calendar's own authority, not on a reading of the name.** days.pravoslavie.ru's name index gives this martyr page 1922, «Сарвил Едесский, мч.», and the martyr on its 5 September page 1923, «Сарвил, мч.»; each of the two pages names one day only, and the two lines carry different lives — life1748 for this pair, beheaded, and life1456 for Thathuel and his sister, hung on a tree and sawn through and killed by a spear thrust. Nothing read here joins them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 15 octombrie, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 15 Οκτωβρίου, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); that day's Prologue has two entries and neither is his. No other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

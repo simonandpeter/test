@@ -1,0 +1,74 @@
+{
+  "slug": "anthony-of-leokhnovo",
+  "display_name": "Anthony of Leokhnovo",
+  "names": [
+    {
+      "form": "Антоний Леохновский, Новгородский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 214, «Преподобный Антоний Леохновский, Новгородский», with the rank word left off; Леохново is the hermitage beyond Lake Ilmen and Новгородский is Novgorod, where he died. The day line gives «Антония Леохновского, Новгородского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "related": [
+    "luke-the-evangelist",
+    "peter-the-apostle",
+    "paul-the-apostle"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1525,
+      "latest": 1526,
+      "display": "1525 or 1526",
+      "basis": "inferred",
+      "note": "**Inferred, not read.** The page gives no year of birth; it gives the death and the age at it — «Скончался 14 сентября 1611 года в возрасте 85-ти лет», died 14 September 1611 at the age of 85 — and 1611 less 85 is 1526 if the birthday had passed by 14 September and 1525 if it had not. The interval is that arithmetic and nothing else, which is why the basis is `inferred`."
+    },
+    "death": {
+      "earliest": 1611,
+      "latest": 1611,
+      "display": "14 September 1611",
+      "basis": "attested",
+      "note": "«Скончался 14 сентября 1611 года в возрасте 85-ти лет и был погребен близ церкви во имя святого евангелиста Луки на Софийской стороне.» The same page says the commemoration of his repose is kept on 17 October and that he died on the feast of the Exaltation of the honoured Cross at the ninth hour of the evening, which is the 14 September date in another form; the gap between the day he died and the day it is kept is the calendar's own and is not resolved here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The calendar keeps him on three days — his name page gives «11 июля , 13 июля (Перенесение мощей) , 17 октября» — and the life explains this one: «17 октября - память преставления святого», the commemoration of the saint's repose, although he died on 14 September. Only the October day was read, and the row records it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 октября ст. ст. — «Прп. Антония Леохновского, Новгородского (1611).»",
+        "url": "https://days.pravoslavie.ru/Days/20261017.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's two icons are both «Cовершается служба, не отмеченная в Типиконе никаким знаком» and stand in the paragraph above this one, before Hosea and before Andrew of Crete."
+      },
+      "note": "**The only one of the four calendars that keeps him, and the only account there is.** It gives him a family — the Tver boyars the Veniaminovs — a hermitage at Rublevo on the river Perekhod near Novgorod, a move about 1556 to the hermit Tarasius beyond Lake Ilmen at Leokhnovo near Staraya Russa, and the tonsure from Tarasius's hand; out of that grew the hermitage of the Transfiguration of the Lord, later called the Leokhnovsky or the Ivetsky-Antonievsky monastery. It gives him the gift of foresight in deep old age; the summons to Novgorod by the metropolitan Isidore in 1611 when the Swedes laid the country round Novgorod waste; the death on 14 September 1611 at eighty-five and the burial near the church of the holy evangelist Luke on the Sophia side. **Then the part that is his own**: before his death he said before many that his body would rest in his own hermitage, and his disciple Gregory, who had come back to the burnt-out place and set up a cell with a chapel, was told three times in sleep, «Брат Григорий, иди в Новгород, скажи митрополиту Киприану и старшинам города, чтобы положили меня на месте моей обители». The metropolitan made a procession to the grave, the incorrupt relics were taken to Leokhnovo on 13 July 1620, and at the finding a blind man named Joseph received his sight. The page closes with the particular round of commemorations the churches of his name at Leokhnovo and at the Rublevo hermitage kept, which is where the three days on his index page come from."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 17 octombrie, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 17 Οκτωβρίου, the same menologion day the Russian keeps him on (read 30 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 17 October old style as the Православни подсетник prints it (pravoslavno.rs for 30.10.2026, read 30 October 2026); its four entries that day are Hosea, Cosmas and Damian of Arabia with their brothers, Andrew the monk-martyr and the translation of Lazarus's relics. No other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

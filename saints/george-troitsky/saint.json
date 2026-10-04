@@ -1,0 +1,61 @@
+{
+  "slug": "george-troitsky",
+  "display_name": "George (Troitsky)",
+  "names": [
+    {
+      "form": "Георгий (Троицкий)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13831, «Георгий (Троицкий), иерей, сщмч.», with the two rank words left off; the day line gives «Георгия исп., пресвитера» without the surname, and the surname is the index's."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "The Russian day line, and the only thing printed about him besides his name and his rank: «Св. Георгия исп., пресвитера (1931)»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 октября ст. ст. — «Св. Георгия исп., пресвитера (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20261016.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day has exactly one, standing before Longinus the Centurion at the head of the paragraph."
+      },
+      "note": "**The two pages of this calendar give him two different ranks and the types follow the day line.** The day line calls him «Св. Георгия исп., пресвитера» — saint, confessor, presbyter — and his name page 13831 heads him «Георгий (Троицкий), иерей, сщмч.», priest and hieromartyr. A confessor and a hieromartyr are not the same finding, so `types` records what the day page prints, confessor and presbyter, and the index's сщмч is set down here and not asserted. The name page keeps him on two days, «26 января (Новомуч.) , 16 октября», the synaxis of the new martyrs and confessors and this one; the January day was not read. **There is no life anywhere**: no life link on the day line, nothing on the name page. azbyka.ru, the workable source for the twentieth-century new martyrs, answered **403** to the corpus's own fetcher on 28 October 2026 and was not asked again."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 16 octombrie, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 16 Οκτωβρίου, the same menologion day the Russian keeps him on (read 29 October 2026); no other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 16 October old style as the Православни подсетник prints it (pravoslavno.rs for 29.10.2026, read 29 October 2026); no other day checked."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

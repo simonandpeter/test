@@ -1,0 +1,97 @@
+{
+  "slug": "john-of-suzdal",
+  "display_name": "John of Suzdal",
+  "office": "Bishop of Suzdal and Nizhny Novgorod",
+  "names": [
+    {
+      "form": "Иоанн Суздальский и Нижегородский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1019, «Святитель Иоанн Суздальский и Нижегородский, епископ», with the two rank words left off; the day line gives «Иоанна, еп. Суздальского» and the life page heads him «Святитель Иоанн, епископ Суздальский»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "bishop",
+    "wonderworker"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1373,
+      "latest": 1373,
+      "display": "1373",
+      "basis": "attested",
+      "note": "The Russian day line, and the only year any of the four calendars gives him: «Свт. Иоанна , еп. Суздальского (1373)». His life page gives no year of death at all — only that he took the schema and withdrew to the Bogolyubsky monastery and there died in peace — and the one year it does print is 1350, when he was made the first bishop of Suzdal and Nizhny Novgorod."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 октября ст. ст. — «Свт. Иоанна , еп. Суздальского (1373).»",
+        "url": "https://days.pravoslavie.ru/Days/20261015.html",
+        "year": 2026,
+        "note": "No rank is recorded: the line carries no service icon. The day's three icons all stand in the paragraph above it, each immediately before its own entry. The space before the comma is the page's own."
+      },
+      "note": "**The Russian keeps him on two days and this is the one the row records.** His name page reads «Дни памяти: 20 августа (Переложение мощей) , 15 октября» — 20 August for the translation of his relics, and 15 October, which is the day whose page was read here and the day the hymns stand under. The 20 August day was not read and no row is written for it. The page is also where his epithet comes from: the calendar heads him «Иоанн Суздальский и Нижегородский», of Suzdal *and* Nizhny Novgorod, where the day line and the life page both give Suzdal alone. **Not to be confused with the Suzdal hierarch the Greek keeps on the same menologion day**: saint.gr's 15 Οκτωβρίου has «Άγιος Διονύσιος Αρχιεπίσκοπος Σουζδαλίας», the corpus's `dionysius-of-suzdal`, an archbishop who died in 1385, and the Russian page for this day does not print him at all."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not on doxologia.ro's calendar for 15 octombrie, the same menologion day the Russian keeps him on (read 28 October 2026); no other day checked."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not on saint.gr's εορτολόγιο for 15 Οκτωβρίου, the same menologion day the Russian keeps him on (read 28 October 2026). The Suzdal hierarch that page does keep is Dionysius the archbishop, a different man. No other day checked."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not in the Ohrid Prologue for 15 October old style as the Православни подсетник prints it (pravoslavno.rs for 28.10.2026, read 28 October 2026); its two entries that day are Lucian the presbyter of Antioch and Euthymius the New. No other day checked."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ Суждалю пресветлый светильниче,/ святителем Богодухновенное удобрение, Иоанне премудре,/ учением твоим паству твою просветил еси;/ святителю блаженне, моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 1019 — «Тропарь святителя Иоанна, епископа Суздальского», глас 8, printed under the day 15 октября. It names him, «Иоанне премудре».",
+        "url": "https://days.pravoslavie.ru/name/1019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Teacher of Orthodoxy, instructor in piety and purity, most radiant lamp of Suzdal, God-inspired adornment of hierarchs, most wise John: by thy teaching thou hast enlightened thy flock. O blessed hierarch, entreat Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Богомудрым учением и святым житием,/ яко светильник, сиял еси в Церкви Божией;/ темже Божественнаго заступления сподобился еси,/ внегда ослепнути очесем злоумышленных клеветников твоих,/ ихже прозрети сотворив молитвою твоею,/ вспять возвратился еси во град твой,/ и добре упасл еси стадо словесных овец;/ ихже чадом помогай и нам, молитвами твоими,/ святителю Христов Иоанне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), страница имени 1019 — «Кондак святителя Иоанна, епископа Суздальского», глас 8, printed under the day 15 октября. It names him, «святителю Христов Иоанне».",
+        "url": "https://days.pravoslavie.ru/name/1019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By thy divinely wise teaching and thy holy life thou didst shine like a lamp in the Church of God; and therefore thou wast counted worthy of divine defence, when the eyes of thy malicious slanderers were struck blind; and having made them see again by thy prayer, thou didst return to thy city and shepherd well the flock of rational sheep. Help us also, the children of that flock, by thy prayers, O John, hierarch of Christ.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
