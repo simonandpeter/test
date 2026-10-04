@@ -10,6 +10,11 @@
       "form": "Διόσκορος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος», with the rank word left off; the life page heads him «Αγιος Διοσκορος»."
+    },
+    {
+      "form": "Диоскор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's entry for 21. април ст. ст., „да баци жреца Диоскора“ — **out of the entry's body and not out of its heading**, which names Theodore alone. The entry prints the name in the accusative there and nowhere in the nominative, so the form stored is that accusative read back into the nominative: a reading of the source's own word and not a transliteration, and flagged as a reading in the batch's commit message. The rank or kinship word beside it is left off, and the companionship clause this corpus keeps in the English display name is not part of the source's name."
     }
   ],
   "related": [
@@ -46,8 +51,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.05.2026 (21. април ст. ст.) — „Св. муч. Теодор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's heading for the day names Theodore alone, „Св. муч. Теодор.“, and the entry's own first words are „И други с њим.“ — and others with him. The body then names the rest: the pagan priest Диоскор, who was condemned and burned, the two soldiers Сократ and Дионисије, run through with a spear, and Филипа, Theodore's mother, beheaded with the sword. So this row rests on the entry's enumeration of the company and not on the heading, which does not name him; the quoted line is the heading whole, as BRIEF-SERBIAN.md §4 requires."
     }
   ],
   "text": {

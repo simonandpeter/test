@@ -11,6 +11,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Απριλίου, «Άγιος Θεόδωρος ο Μάρτυρας και οι συν αυτώ Φιλίππα, Διόσκορος, Σωκράτης και Διονύσιος», with the rank word left off; the life page heads him «Αγιος Θεοδωρος ο Μαρτυρας»."
+    },
+    {
+      "form": "Теодор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 21. април ст. ст., „Св. муч. Теодор.“, with Св. and the rank муч. left off. The heading gives him no by-name and no city — Perga is the body's, as it is the Greek page's — so the bare forename is the whole of what this calendar gives, and `theodore-boyar-of-chernigov` and `theodore-prince-of-yaroslavl` already hold it: a deliberate fold, recorded in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.05.2026 (21. април ст. ст.) — „Св. муч. Теодор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading names him alone and the entry's first words are „И други с њим.“; the five rows this day writes off the entry's own enumeration all quote this same heading."
     }
   ],
   "hymns": [

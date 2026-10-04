@@ -12,6 +12,11 @@
       "form": "Ιανουάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Απριλίου, «Άγιος Ιανουάριος ο Επίσκοπος και οι Πρόκουλος, Σώσσος και Φαύστος οι Διάκονοι, Δισιδέριος ο Αναγνώστης, Ακούτιος και Ευτύχιος», with the rank words left off; the life page heads him «Αγιος Ιανουαριος ο Επισκοπος (; - 305)»."
+    },
+    {
+      "form": "Јануарије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 21. април ст. ст., „Свешт. муч. Јануарије.“, with the rank words Свешт. муч. left off. The heading gives no see: the body has him bishop in Campania in Italy, where this folder's English name and doxologia.ro both say Benevento, and no other folder in this corpus holds this form."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.05.2026 (21. април ст. ст.) — „Свешт. муч. Јануарије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The heading names him alone and the entry's first words are „И други с њим.“; the seven rows this day writes off the entry's own enumeration all quote this same heading."
     }
   ],
   "hymns": [
@@ -128,5 +143,14 @@
     "desiderius-companion-of-januarius",
     "acutius-companion-of-januarius",
     "eutychius-companion-of-januarius"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 305,
+      "display": "305",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Чесно пострада св. Јануарије 305. год.“ — the entry's last sentence. This folder carried no dates at all before this reading, where all six of his companions already held 305 off saint.gr's «(; - 305)»; the year agrees with theirs exactly. The Prologue sets the persecution under Maximian where saint.gr sets it «στα χρόνια του Διοκλητιανού (284-304)»: only the emperor's name differs between the two, and the year is not touched by that."
+    }
+  }
 }
