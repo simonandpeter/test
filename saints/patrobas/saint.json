@@ -6,6 +6,11 @@
       "form": "Πατρόβας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Άγιοι Ερμάς, Πατρόβας, Λίνος, Γάιος και Φιλόλογος, Απόστολοι από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Патров",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Патров, епископ Неапольский и Путеольский, апостол от 70-ти», with the rank words and the see left off; the see is recorded as the office. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page also lists «4 января (70 ап.)», the synaxis of the Seventy Apostles, which is a synaxis and not a second feast; this folder renders on 5 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Апп. от 70-ти Патрова , Ерма , Лина , Гаия , Филолога (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -54,5 +69,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of its line for 5 ноября ст. ст., «Апп. от 70-ти Патрова , Ерма , Лина , Гаия , Филолога (I).». Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }

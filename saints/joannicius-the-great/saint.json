@@ -11,6 +11,11 @@
       "form": "Ιωαννίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Ιωαννίκιος ο Μεγάλος «ὁ ἐν Ὀλύμπῳ»», with the rank word left off."
+    },
+    {
+      "form": "Иоанникий Великий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Иоанникий Великий, прп.», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Прп. Иоанникия Великого (846).»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -116,6 +130,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней,/ сияя чудесы, Иоанникие, отче наш:// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Тропарь преподобного Иоанникия Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighs from the depths thou didst make thy labours bear fruit a hundredfold; and thou becamest a light to the world, shining with wonders, Joannicius our father. Pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Звезда явился еси всесветлая, в мире просвещаяй/ и сущия во мраце страстей облиставаяй,/ врач же крепчайший явился еси,/ но яко приял еси благодать исцелений,/ просящим тя подаждь исцеление, да зовем:// радуйся, отче Иоанникие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Кондак преподобного Иоанникия Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst shine forth as an all-radiant star, enlightening the world and lighting upon those in the darkness of the passions; and thou wast shown to be a most mighty physician. Since thou hast received the grace of healings, grant healing to those who ask of thee, that we may cry: Rejoice, father Joannicius.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -124,10 +170,17 @@
   "dates": {
     "birth": {
       "earliest": 740,
-      "latest": 740,
-      "display": "740",
+      "latest": 752,
+      "display": "740 or 752",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Ιωαννίκιος γεννήθηκε στη Βιθυνία το 740 μ.Χ.» The page gives no year for his death, only «πέθανε 94 χρονών στη Μονή Αντιδίου», so no death interval is recorded from it."
+      "note": "Two pages disagree and both readings are kept. saint.gr: «Ο Όσιος Ιωαννίκιος γεννήθηκε στη Βιθυνία το 740 μ.Χ.»; days.pravoslavie.ru's life for 4 ноября ст. ст.: «Преподобный Иоанникий Великий родился в Вифинии в 752 г. в селении Марикати.» The Russian reading agrees with its own closing sentence, which has him die in 846 at ninety-four, and no third source was read, so nothing is chosen."
+    },
+    "death": {
+      "earliest": 846,
+      "latest": 846,
+      "display": "846",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life for 4 ноября ст. ст.: «святой отошел ко Господу 4 ноября 846 года в возрасте 94-х лет», and the calendar's line for that day ends «(846)». saint.gr gave no death year, only that he died at ninety-four, so this is the first year the folder has carried for his death."
     }
   }
 }

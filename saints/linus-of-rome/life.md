@@ -6,4 +6,8 @@ His episcopate, the page says, lasted eleven years and three months. That is the
 
 Those kept with him are [Hermas](/saints/hermas-5-november), [Patrobas](/saints/patrobas), [Gaius](/saints/gaius-of-ephesus) and [Philologus](/saints/philologus-of-sinope).
 
-*After saint.gr's calendar for 5 Νοεμβρίου — [the day](https://www.saint.gr/11/05/index.aspx) and [the life](https://www.saint.gr/2889/saint.aspx); read 1 October 2026.*
+days.pravoslavie.ru's calendar for 5 ноября ст. ст. keeps him as one of five named on a single line: «Апп. от 70-ти Патрова , Ерма , Лина , Гаия , Филолога (I).». The line gives the five forenames in the genitive, the class «Апп. от 70-ти» for all five together, and the century, and the name link behind his place in it supplies the calendar's own nominative with the see, «Святитель Лин, папа Римский, апостол от 70-ти, сщмч.». That page carries the title and two days and **no life link at all**, so the line and the link are the whole of what this calendar has of him, and the «(I)» at the line's end is the first date this folder has carried. The name page also lists «4 января (70 ап.)», the synaxis of the Seventy Apostles, which is a synaxis and not a second feast; this folder renders on 5 ноября ст. ст. only.
+
+The link is the only one of the five that carries a rank word beyond the apostolate: «сщмч.», hieromartyr, which this folder already held, and «папа Римский», which agrees with the Bishop of Rome already in its `office`. The calendar prints no account of his death and no hymn under his name.
+
+*After saint.gr's calendar for 5 Νοεμβρίου — [the day](https://www.saint.gr/11/05/index.aspx) and [the life](https://www.saint.gr/2889/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 5 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261105.html) and [his name page](https://days.pravoslavie.ru/name/1360.html), read 4 October 2026.*

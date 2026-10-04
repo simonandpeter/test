@@ -1,0 +1,61 @@
+{
+  "slug": "alexander-petropavlovsky",
+  "display_name": "Alexander (Petropavlovsky)",
+  "names": [
+    {
+      "form": "Александр (Петропавловский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Александр (Петропавловский), иерей, сщмч.», with the grade word and the rank word left off; the surname is part of the name and stays. The line itself gives the forename in the genitive and no surname at all."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The name page also lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, which is a synaxis and not a second feast; this folder renders on 4 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Сщмч. Александра пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru prints at the end of the line for 4 ноября ст. ст.: «Сщмч. Александра пресвитера (1937).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Μερκούριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Μερκούριος ο νηστευτής», with the rank word left off; «ο νηστευτής», the faster, is the page's own epithet and is kept in the English form."
+    },
+    {
+      "form": "Меркурий Киево-Печерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Преподобный Меркурий Киево-Печерский», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life pages list «Дни памяти: 28 августа (Печер.(Д)) , 4 ноября , 24 ноября», and the second of them says why: 24 ноября is kept for his name-day with the great-martyr of the same name, and 28 августа with the Synaxis of the Far caves. Neither day page was read, so both are recorded here as notes and not as feasts, and this folder renders on 4 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Прп. Меркурия Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,51 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of its line for 4 ноября ст. ст., «(XIV)», repeated in the second of his two life pages: «Преподобный Меркурий Киево-Печерский подвизался в Дальних пещерах в XIV веке». saint.gr gave this folder no year at all, so this is the first date it carries."
+    }
+  },
+  "related": [
+    "paisius-of-the-caves-lavra"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Присносущныя, блаженне, желая сподобитися жизни, / праведне и непорочне / жизнь свою препроводил еси в нынешнем веце, / темже, Меркурие, желаемаго ты достиг, / моли и нам вечныя сподобитися жизни.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Тропарь преподобного Меркурия, постника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Desiring, O blessed one, to be counted worthy of life everlasting, thou didst pass thy life in this present age righteously and without reproach; wherefore, O Mercurius, having attained what thou didst long for, pray that we too may be counted worthy of life eternal.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Преподобному во всех делех Господеви преискренне работая,/ и Онаго всегда в церкви преподобных Своих/ преподобным воспевая гласом,/ наследил еси, преподобне Меркурие, часть преподобных,/ с нимиже молися о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Кондак преподобного Меркурия, постника Печерского»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Serving the all-holy Lord most sincerely in all thy works, and ever hymning Him in the church of His venerable ones with a venerable voice, thou didst inherit, O venerable Mercurius, the portion of the venerable; with them pray for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

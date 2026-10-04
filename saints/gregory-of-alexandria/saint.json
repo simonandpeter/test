@@ -12,6 +12,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Νοεμβρίου, «Όσιος Γρηγόριος ο Ομολογητής Πάπας Αλεξανδρείας», with the rank words left off."
+    },
+    {
+      "form": "Григорий Александрийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Григорий Александрийский, архиепископ, исповедник», with the rank words left off. The line itself gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Свт. Григория , архиеп. Александрийского (ок. 813-820).»",
+        "url": "https://days.pravoslavie.ru/Days/20261105.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -63,5 +77,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 813,
+      "latest": 820,
+      "display": "c. 813–820",
+      "basis": "traditional",
+      "note": "The interval days.pravoslavie.ru prints at the end of its line for 5 ноября ст. ст., «(ок. 813-820)». The page does not say whether the years are his death, his episcopate or the reign he lived under, and it gives him no life page at all, so the interval is recorded as it stands and nothing is read into it. Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
   }
 }

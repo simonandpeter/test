@@ -1,0 +1,59 @@
+{
+  "slug": "nicander-of-gorodnoezero",
+  "display_name": "Nicander of Gorodnoezero",
+  "names": [
+    {
+      "form": "Никандр Городноезерский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Никандр Городноезерский, прп.», with the rank word left off. The line itself gives the name in the genitive."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page also lists «15 марта». The day page for 15 марта ст. ст. was not read, so that day is recorded here as a note and not as a feast, and this folder renders on 4 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 ноября ст. ст. — «Прп. Никандра Городноезерского (XVI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261104.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 1501,
+      "latest": 1650,
+      "display": "16th or early 17th century",
+      "basis": "traditional",
+      "note": "The page disagrees with itself and both readings are kept. The calendar's line for 4 ноября ст. ст. ends «(XVI)», the sixteenth century, while his life page opens «Преподобный Никандр Городноезерский в начале XVII века основал пустынь», at the beginning of the seventeenth. No third source was read, so the interval holds both and nothing is chosen."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
