@@ -11,6 +11,11 @@
       "form": "Παύλη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουνίου, «Άγιος Λουκιλλιανός, Παύλη και τα νήπια Κλαύδιος, Υπάτιος, Παύλος και Διονύσιος», with the rank words left off."
+    },
+    {
+      "form": "Паула",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. јун ст. ст., „Свети мученици Лукилијан и с њим: Клавдије, Ипатије, Павле, Дионисије, и девица Паула“. Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, and the heading carries no see, no house and no epithet, so the form is the bare personal name the heading itself prints. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder. The heading’s девица is the `virgin` this corpus puts in `types` and is stripped from the form."
     }
   ],
   "sex": "female",
@@ -19,7 +24,11 @@
     "virgin"
   ],
   "related": [
-    "lucillian"
+    "lucillian",
+    "claudius-companion-of-lucillian",
+    "hypatius-companion-of-lucillian",
+    "paul-companion-of-lucillian",
+    "dionysius-companion-of-lucillian"
   ],
   "attestations": [
     {
@@ -58,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.06.2026 (3. јун ст. ст.) — „Свети мученици Лукилијан и с њим: Клавдије, Ипатије, Павле, Дионисије, и девица Паула“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. AN ENUMERATED COMPANY OF SIX AND THE CORPUS HOLDS ALL SIX. The heading names five and adds „и девица Паула“, so six names, and all six stood on the day list for the menologion 3/6 — `lucillian`, `claudius-companion-of-lucillian`, `hypatius-companion-of-lucillian`, `paul-companion-of-lucillian`, `dionysius-companion-of-lucillian`, `paula-companion-of-lucillian`. Second day in a row the day list found a whole company unaided; `sr-namesweep.mjs` scores only a heading’s first name and was no use. A DEATH WIDENED BY FIVE YEARS ON ALL SIX, AND THE BOOK PRINTS THE BRACKET ITSELF. The six folders held `death` 270 flat, off saint.gr’s «(; - 270)» and its sentence that Lucillian lived in the years of Aurelian, in 270; doxologia printed no year. This book closes: „Мучеништво њихово догодило се у време цара Аврелијана, између 270-275. године“. Keeping the flat 270 would NARROW the bracket this book prints, so `death` becomes 270 to 275, display «270–275» in the dash form. THE REIGN IS NOT THE SOURCE AND THAT DISTINCTION IS THE WHOLE OF IT: this wave has four times refused a reign used to derive a year, and refuses one here too — but the book does not leave the reign to be converted, it prints the two years itself, which is the same ground `erasmus-10-may` stands on for its «249–251». `basis` stays `traditional` on all six. TWENTY NEW `related` ROWS, TEN PAIRS, ALL RECIPROCAL. `lucillian` already related to all five; THE FIVE RELATED ONLY TO HIM AND NOT TO EACH OTHER, so a reader could not walk from Claudius to Hypatius although the two were in one prison and under one sword. The heading enumerates all six and the body narrates ONE martyrdom for all six, which is the test that owes a row, so each of the five gains the other four. `lucillian` gains nothing, having them already. `types` UNTOUCHED ON ALL SIX. Свети мученици is the `martyr` all six carry and девица the `virgin` Paula carries; nothing in the heading grades anyone higher. No `locations` — Nicomedia and Byzantium are in both earlier accounts and the folders have stayed unplaced. The Prologue prints no troparion and no kontakion; the day carries only the verse. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder. The heading’s девица is the `virgin` this corpus puts in `types` and is stripped from the form."
     }
   ],
   "text": {
@@ -68,10 +87,10 @@
   "dates": {
     "death": {
       "earliest": 270,
-      "latest": 270,
-      "display": "270",
+      "latest": 275,
+      "display": "270–275",
       "basis": "traditional",
-      "note": "saint.gr's head line for each of the six reads «(; - 270)», and the life says Lucillian lived in the years of the emperor Aurelian, in 270. The page gives no year of birth. doxologia.ro's life, which this folder was built from, printed no year."
+      "note": "saint.gr's head line for each of the six reads «(; - 270)» and its life says Lucillian lived in the years of the emperor Aurelian, in 270. doxologia.ro's life, which this folder was built from, printed no year. The Охридски пролог for 3. јун ст. ст. prints the bracket itself: „Мучеништво њихово догодило се у време цара Аврелијана, између 270-275. године“. The interval is widened to that bracket, because holding the flat 270 would narrow a range this book states in its own words; the two years are the book's and were not derived from the reign (5 October 2026)."
     }
   },
   "hymns": [
