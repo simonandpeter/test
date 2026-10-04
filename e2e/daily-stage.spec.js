@@ -835,14 +835,21 @@ test('the page comes back to the line it was left on, without a jump', async ({ 
           return card ? Math.round(card.getBoundingClientRect().top) : null;
         }, pinned.name),
       /*
-       * **Ten seconds, not four, since 1 October.** The grid repaints its
-       * window from the scroll event the landing dispatches, and at 3,724
-       * folders that repaint is long enough on the CI runner to spend four
-       * seconds with this card still unmounted — twice on one run, once as a
-       * failure and once as a retry that passed. The claim is that the card
-       * comes back to the same place, not how many frames it takes.
+       * **Forty seconds, not ten, since 4 October** — four until 1 October, ten
+       * until now. The grid repaints its window from the scroll event the
+       * landing dispatches, and that repaint outran ten seconds on the runner
+       * and twice in six runs here under six workers; run alone it resolves in
+       * a second or two, so what the ceiling is paying for is load and not the
+       * page.
+       *
+       * It is a ceiling and not a budget. **The claim is that the card comes
+       * back to the same place, not how long it takes**, and a test that fails
+       * on the clock reports a defect it has not found — this one has now
+       * reported that twice, each time against a page that was correct.
+       * Anything about the restore's *speed* belongs in a measurement, not
+       * here.
        */
-      { timeout: 10000, message: `${pinned.name} never came back to the grid` },
+      { timeout: 40000, message: `${pinned.name} never came back to the grid` },
     )
     .toBeCloseTo(pinned.top, -1);
 
