@@ -6,6 +6,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Οκτωβρίου, «Όσιος Αθανάσιος Α' Πατριάρχης Κωνσταντινούπολης», with the rank words and the see left off."
+    },
+    {
+      "form": "Афанасий I Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Святитель Афанасий I Константинопольский, патриарх», with the rank words left off. The day's own line declines the name and gives the see in its older Russian form, as «Свт. Афанасия , патриарха Цареградского»."
     }
   ],
   "sex": "male",
@@ -20,21 +25,31 @@
       "latest": 1235,
       "display": "c. 1235",
       "basis": "traditional",
-      "note": "saint.gr: «γεννήθηκε στην Αδριανούπολη της Θράκης (ή κατά άλλες πηγές στην Ανδρούσα της Μεσσηνίας περί το 1235 μ.Χ.)» — the page's own «περί», about, and it attaches the year to the second of the two birthplaces it offers."
+      "note": "saint.gr: «γεννήθηκε στην Αδριανούπολη της Θράκης (ή κατά άλλες πηγές στην Ανδρούσα της Μεσσηνίας περί το 1235 μ.Χ.)» — the page's own «περί», about, and it attaches the year to the second of the two birthplaces it offers. days.pravoslavie.ru, read 4 October 2026, says only «был родом из Адрианополя» and gives no year of birth; it does say he died at the age of a hundred."
     },
     "death": {
-      "earliest": 1323,
+      "earliest": 1311,
       "latest": 1323,
-      "display": "c. 1323",
+      "display": "between 1311 and 1323",
       "basis": "traditional",
-      "note": "saint.gr: «όπου απεβίωσε ειρηνικά σε ηλικία 100 χρονών (περί το 1323 μ.Χ.)» — the page's own «περί», about."
+      "note": "The two calendars give a bound and a year and neither is chosen. saint.gr: «όπου απεβίωσε ειρηνικά σε ηλικία 100 χρονών (περί το 1323 μ.Χ.)», its own «περί». days.pravoslavie.ru closes his line for 24 октября ст. ст. «(после 1311)», after 1311, which is a lower bound and not a year, and its life has him leave the government of the Church in 1311 and live on in his monastery; it dates his two patriarchates «(1289-1293; 1303-1311)» in the first line of the life and gives the same four years in the body. So the interval runs from the Russian bound to the Greek year. Read 4 October 2026."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Свт. Афанасия , патриарха Цареградского (после 1311).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "**The two churches keep him four days apart and the page says so itself.** His life page heads «Дни памяти: 24 октября , 28 октября (в Греческой Церкви)» — this day, and the 28 October which is exactly the day this folder already keeps for the Greek church off saint.gr. So the Russian row is the Russian day and no second-day note is owed: the other day is another church's and is held in that church's own row."
     },
     {
       "church": "romanian",
@@ -67,5 +82,38 @@
   },
   "related": [
     "gregory-palamas"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Чистоты жития светом страстное терние попалил еси/ и течением слез безплодную землю напоил еси,/ многоплодну ниву душевную соделав,/ Афанасие преблаженне,/ светило Царюграду, Патриархом удобрение,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Тропарь святителя Афанасия, патриарха Цареградского» (the page prints no tone for this one)",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the light of a pure life you burned up the thorns of the passions, and with a flowing of tears you watered the barren ground and made of your soul a field bearing much fruit, most blessed Athanasius, lamp of the imperial city and adornment of patriarchs. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В светлую священия одежду одеявся,/ мысленно в Небесныя радостно достигл еси Царства/. Тем восприяша тя селения праведных,/ идеже есть неизглаголанно веселие,/ и слова, и всех святых лицы,/ святителю Афанасие,/ моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Кондак святителя Афанасия, патриарха Цареградского» (copied as the page prints it, the stop inside the second line and all)",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Clothed in the bright garment of the priesthood, you reached the heavenly Kingdom in your mind with joy; and so the dwellings of the righteous received you, where there is gladness beyond speech, and the ranks of the Word and of all the saints. Hierarch Athanasius, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
   ]
 }

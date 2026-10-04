@@ -6,6 +6,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Νοεμβρίου, «Όσιος Γεώργιος Καρσλίδης ο Ομολογητής», with the rank words left off; the page's own form of the surname is «Καρσλίδης», and it gives his baptismal name as «Αθανάσιος»."
+    },
+    {
+      "form": "Георгий (Карслидис)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Георгий (Карслидис), прп.», with the rank word left off. The line itself declines the name and gives it without the surname, as «Прп. Георгия»."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Прп. Георгия (1959).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "**The two days do not convert into one another and nothing on either page explains it.** This row's 24 октября ст. ст. is the civil 6 November; saint.gr, read for this folder's Greek row, keeps him on 4 Νοεμβρίου and dates his repose to that same 4 November 1959, which in the old style is 22 October. The difference is two days and not the thirteen of the style conversion, so neither day is moved and the reading is recorded here, per BRIEF.md §8. The Russian calendar carries no life for him at all: his name page gives this one day, «День памяти: 24 октября», and no `Life/` href follows his name on the day page. The line's «Прп.» agrees with the `venerable` the folder already holds."
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Αρέθας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Οκτωβρίου, «Άγιος Αρέθας ο Μεγαλομάρτυρας και οι «σὺν αὐτῶ»», with the rank words left off."
+    },
+    {
+      "form": "Арефа Негранский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Арефа Негранский, градоправитель, мч.», with the rank word and the office left off."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Мч. Арефы и с ним 4299 мучеников (523).»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "note": "His life page there heads «День памяти: 24 октября» and no other day. The name link behind his place gives him an office the other calendars did not, «Арефа Негранский, градоправитель, мч.» — the governor of the city — and that is said in the life; this folder's `office` is left empty because the upgrade tool does not set it and a bare English rendering of «градоправитель» is a reading better made once for the whole wave. The company of 4299 the line keeps with him enumerates nobody, so it is one entry, as the other two calendars also have it."
     },
     {
       "church": "romanian",
@@ -108,6 +123,38 @@
         "text": "The light-bearing feast of the prize-winners has come to us today as the bringer of gladness; and hymning it we glorify the Lord who is in the highest.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Мужествовавше во Христе противу безбожнаго царя,/ мученицы святии,/ и того неверие иудейское во Христа обличивше,/ прияша мук томление и главам усечение;/ тем восхвалиша тя Ангели,/ и верных роди тя прославляют, Арефо,/ и пострадавших с тобою,/ яко молящихся присно о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Тропарь мученика Арефы и с ним 4299 мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having played the man in Christ against a godless king, holy martyrs, and having convicted his Jewish unbelief in Christ, you accepted the wearing down of torments and the cutting off of your heads; and so the angels praised you, and the generations of the faithful glorify you, Arethas, and those who suffered with you, as those who pray always for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Веселия ходатай нам наста/ светоносный днесь страстотерпец праздник,/ егоже совершающе, славим в Вышних сущаго Господа.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 октября ст. ст. — «Кондак мученика Арефы и с ним 4299 мучеников»",
+        "url": "https://days.pravoslavie.ru/Days/20261024.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "An advocate of gladness has come to us today, the light-bearing feast of the passion-bearers; and keeping it, we glorify the Lord who dwells in the highest.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -115,11 +162,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 518,
-      "latest": 527,
-      "display": "between 518 and 527",
+      "earliest": 523,
+      "latest": 523,
+      "display": "523",
       "basis": "traditional",
-      "note": "saint.gr: «Ήταν ένας από τους προύχοντες της πόλεως Νεγράς στην Αιθιοπία επί εποχής Ιουστίνου (518 - 527 μ.Χ.)» — the page gives the reign and no year."
+      "note": "The Russian calendar gives a year where the Greek one gave only a reign, and the two do not disagree: days.pravoslavie.ru closes his line for 24 октября ст. ст. «(523)», which falls inside the reign saint.gr dates the suffering to — «Ήταν ένας από τους προύχοντες της πόλεως Νεγράς στην Αιθιοπία επί εποχής Ιουστίνου (518 - 527 μ.Χ.)» — so the precise year is taken and the reign is recorded here rather than kept as the bounds. The Russian life itself says only «пострадали за Господа Иисуса Христа в VI веке». Read 4 October 2026."
     }
   },
   "images": [
@@ -131,6 +178,7 @@
   "related": [
     "constantine-the-great",
     "holy-woman-and-her-infant",
-    "elesbaan-of-ethiopia"
+    "elesbaan-of-ethiopia",
+    "syncletica-of-nagran"
   ]
 }
