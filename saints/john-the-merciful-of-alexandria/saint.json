@@ -12,6 +12,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Άγιος Ιωάννης ο Ελεήμονας Αρχιεπίσκοπος Αλεξανδρείας», with the rank words left off."
+    },
+    {
+      "form": "Иоанн Милостивый, Александрийский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Святитель Иоанн Милостивый, Александрийский, патриарх», with the rank and the grade words left off; the see itself is in `office`. The line declines the name, «Иоанна Милостивого, патриарха Александрийского». azbyka.ru's line for the same day gives the same words, «Свт. Иоанна Милостивого, патриарха Александрийского (620)»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Свт. Иоанна Милостивого, патриарха Александрийского (616-620).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -109,6 +123,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В терпении твоем стяжал еси мзду твою, отче преподобне,/ в молитвах непрестанно терпевый,/ нищия возлюбивый и сия удовливый,/ но молися Христу Богу, Иоанне милостиве, блаженне,// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Тропарь святителя Иоанна Милостивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In your patient endurance you gained your reward, venerable father, persevering unceasingly in prayer, loving the poor and supplying their need. Pray therefore to Christ God, O John the merciful and blessed, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Богатство твое расточил еси убогим/ и Небесное богатство ныне восприял еси,/ Иоанне всемудре,/ сего ради вси тя почитаем,/ совершающе память твою,// милостыни о тезоимените!",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Кондак святителя Иоанна Милостивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your wealth you scattered among the destitute, and the wealth of heaven you have now received, O all-wise John; therefore we all honour you and keep your memory, O namesake of mercy!",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -116,11 +162,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 620,
+      "earliest": 616,
       "latest": 620,
-      "display": "620",
+      "display": "616–620",
       "basis": "traditional",
-      "note": "saint.gr: «Τελικά, ειρηνικά παρέδωσε την μακάρια ψυχή του στο Θεό το 620 μ.Χ.», with the page's own head «(; - 620)». The same page places his life «στα χρόνια του Βασιλιά Ηρακλείου (615 μ.Χ.)»."
+      "note": "days.pravoslavie.ru's line for 12 ноября ст. ст. reads «Свт. Иоанна Милостивого, патриарха Александрийского (616-620).», and its life page closes «Прибыв на Кипр, в родной город Амафунт, святитель с миром отошел ко Господу (616 - 620).» saint.gr gave a flat 620 — «Τελικά, ειρηνικά παρέδωσε την μακάρια ψυχή του στο Θεό το 620 μ.Χ.», with the page's own head «(; - 620)» — and azbyka.ru prints «(620)». The bounds hold both readings and neither is chosen; the same Greek page places his life «στα χρόνια του Βασιλιά Ηρακλείου (615 μ.Χ.)»."
     }
   },
   "images": [
@@ -130,6 +176,7 @@
     }
   ],
   "related": [
-    "vitalis-of-alexandria"
+    "vitalis-of-alexandria",
+    "john-the-hairy-of-rostov"
   ]
 }

@@ -6,4 +6,8 @@ But when Solomon turned aside from the divine road, it was again through Ahijah 
 
 Having prophesied these things, Ahijah died in peace, and they buried him near the oak of Shiloh. The page's distich calls him the witness against Jeroboam son of Nebat before his own death.
 
-*After saint.gr's calendar for 12 Νοεμβρίου — [the day](https://www.saint.gr/11/12/index.aspx) and [the life](https://www.saint.gr/3014/saint.aspx); read 1 October 2026.*
+The Russian calendar gives him four sentences where the Greek gave the bare line, and they are the whole of what it prints. He was a contemporary of Solomon and came from the town of Shiloh. He foretold to Jeroboam the royal power over ten of the tribes of Israel which God would give him, tearing it out of Solomon's hands; and later he foretold to the same Jeroboam the destruction of his whole house. Every one of the prophet's predictions came to pass. He died in great old age, nine hundred and sixty years before the Nativity of Christ.
+
+The day page prints no hymn under his name, and the folder therefore has none.
+
+*After saint.gr's calendar for 12 Νοεμβρίου — [the day](https://www.saint.gr/11/12/index.aspx) and [the life](https://www.saint.gr/3014/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery, 12 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261112.html) and [the life](https://days.pravoslavie.ru/Life/life2528.htm), read 5 October 2026.*

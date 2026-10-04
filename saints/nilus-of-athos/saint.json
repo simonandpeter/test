@@ -11,6 +11,11 @@
       "form": "Νείλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Νείλος ο Μυροβλύτης», with the rank word left off."
+    },
+    {
+      "form": "Нил Мироточивый, Афонский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Нил Мироточивый, Афонский, прп.», with the rank abbreviation left off. azbyka.ru's line for the same day gives the same two by-names, «прп. Нила Мироточивого, Афонского (1651)»."
     }
   ],
   "sex": "male",
@@ -25,14 +30,23 @@
       "latest": 1651,
       "display": "1651",
       "basis": "traditional",
-      "note": "saint.gr's own head line for him: «Οσιος Νειλος ο Μυροβλυτης (; - 1651)». The page's text gives no year."
+      "note": "saint.gr's own head line for him: «Οσιος Νειλος ο Μυροβλυτης (; - 1651)». The Greek page's text gives no year. Both Russian calendars print the same year on their line for 12 ноября ст. ст. — days.pravoslavie.ru «Прп. Нила Мироточивого, Афонского (1651).» and azbyka.ru «прп. Нила Мироточивого, Афонского (1651)» — and the Russian life page gives no year in its text either, so the basis stays traditional with three calendars agreeing on the figure and none of them sourcing it."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Прп. Нила Мироточивого, Афонского (1651).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -85,6 +99,38 @@
       },
       "english": {
         "text": "Having lived as a monk in a manner pleasing to God on Athos, thrice-blessed one, you sought God out in prayers and fastings and became a pure vessel of the Spirit, flashing out upon the faithful the brightnesses of the virtues, by which you give light, Nilus, to those who cry to you. Glory to Christ who glorified you, glory to him who sanctified you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Монашествовав богоугодно в Горе Афонстей,/ в молитвах и постех Бога взыскал еси/ и стал еси приятелище чистое Духа,/ облиставая верным добродетелей лучи,/ имиже осияваеши, Ниле, вопиющих тебе:/ слава прославльшему тя Богу,/ слава Венчавшему тя,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Тропарь в честь обретения мощей преподобного Нила Мироточивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived the monastic life in a way pleasing to God on the mountain of Athos, you sought God in prayer and fasting and became a pure vessel of the Spirit, flashing out upon the faithful the rays of the virtues, with which you enlighten those who cry to you, O Nilus: glory to God who has glorified you, glory to him who has crowned you, glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Еже от земли явление/ священных мощей твоих, Ниле,/ совозсия сиянию Креста,/ того бо вожделел еси тепле от младенства,/ кости твоя, сораспявшияся Христови,/ воскресшему яко превечному Богу,/ Того пришла благодать.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Кондак в честь обретения мощей преподобного Нила Мироточивого»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The appearing out of the earth of your holy relics, O Nilus, shone out together with the shining of the Cross, for which you had longed ardently from infancy; and your bones, crucified together with Christ who rose again as the pre-eternal God, received his grace.",
         "rendered": "site"
       }
     }

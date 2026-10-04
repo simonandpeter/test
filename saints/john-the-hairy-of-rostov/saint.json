@@ -20,9 +20,9 @@
     "death": {
       "earliest": 1580,
       "latest": 1580,
-      "display": "1580",
+      "display": "3 September 1580",
       "basis": "attested",
-      "note": "As printed by days.pravoslavie.ru: “Блж. Иоанна Власатого, Ростовского чудотворца (1580)”."
+      "note": "As printed by days.pravoslavie.ru: “Блж. Иоанна Власатого, Ростовского чудотворца (1580)”. Both of the lives behind the calendar's index page close with the day as well as the year — «Скончался в глубокой старости 3 сентября 1580 г.» and «После долгих подвигов он скончался 3 сентября 1580 года» — so the year the folder already carried gains its day, and that day is the one his russian row already stands on. azbyka.ru prints «Блж. Иоанна Власатого, Ростовского (1580)» on 12 ноября ст. ст."
     }
   },
   "attestations": [
@@ -139,5 +139,9 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "related": [
+    "irenarchus-the-recluse",
+    "john-the-merciful-of-alexandria"
   ]
 }

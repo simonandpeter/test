@@ -6,6 +6,11 @@
       "form": "Αχιά",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Προφήτης Αχιά», with the rank word left off."
+    },
+    {
+      "form": "Ахия Силомлянин",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Ахия Силомлянин, пророк», with the rank word left off. The line itself gives the forename alone, «Прор. Ахии»; azbyka.ru prints the by-name on its own line, «прор. Ахии Силомлянина (960 г. до Р. Х.)». Силомлянин is the man of Shiloh, which the life gives as the town he came from."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Прор. Ахии (960 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +60,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -960,
+      "latest": -960,
+      "display": "960 BC",
+      "basis": "traditional",
+      "note": "As printed by days.pravoslavie.ru for 12 ноября ст. ст.: «Прор. Ахии (960 до Р.Х.).» Its life page closes «Пророк Ахия умер в глубокой старости за 960 лет до Рождества Христова», and azbyka.ru's line for the same day prints «прор. Ахии Силомлянина (960 г. до Р. Х.)». saint.gr, which was the folder's only source, gave no year at all."
+    }
   }
 }

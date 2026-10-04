@@ -11,6 +11,11 @@
       "form": "Νείλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Νείλος ο Ασκητής», with the rank word left off."
+    },
+    {
+      "form": "Нил Постник, Синайский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Нил Постник, Синайский, пресвитер, отшельник», with the two grade words left off; both are in `types`. The line itself gives the forename and the epithet alone and in lower case, «Прп. Нила постника»; azbyka.ru capitalises the epithet, «прп. Нила Постника (V)»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Прп. Нила постника (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -109,6 +123,54 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы, Ниле, отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Тропарь преподобного Нила»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with groanings out of the deep you made your labours bear fruit a hundredfold, and you became a lamp to the whole world, shining with wonders, O Nilus our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Хврастная страстей яже от телесе востания/ сечительно, Ниле блаженне,/ во бденной твоей ссекл еси молитве,/ но, яко имея дерзновение ко Господу,/ от всяких мя бед свободи, да зову ти:// радуйся, отче всемирный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Кондак преподобного Нила»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The brushwood of the passions that rise up out of the body you cut clean away, O blessed Nilus, in your vigilant prayer; and since you have boldness before the Lord, set me free from every affliction, that I may cry to you: rejoice, father of all the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Божественною любовию возгоревся, всеблаженне,/ оставил еси иже в житии молвы/ и постных селитву в горе стяжа,/ от неямсе, вшед в мрак незаходный,/ приемлеши, яко древле Богоносец, Богоначертанная писмена,/ имиже к Божественней добродетели наставляеми, весело вопием ти:/ радуйся, отче Ниле, постником добротворение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 ноября ст. ст. — «Ин кондак преподобнаго Нила Постника»",
+        "url": "https://days.pravoslavie.ru/Days/20261112.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with the love of God, O all-blessed one, you left behind the clamour of life and won a dwelling of fasters on the mountain; and entering from it into the unsetting darkness you receive, as the God-bearer did of old, letters traced by God, by which we are guided towards divine virtue and joyfully cry to you: rejoice, father Nilus, the adorning of fasters.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -119,5 +181,18 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 12 ноября ст. ст. reads «Прп. Нила постника (V).», and azbyka.ru's line for the same day prints «(V)» as well. Its own life page sets his lifetime a century earlier — «жил в IV веке и был учеником святого Иоанна Златоуста» — which is not a contradiction but the other end of one life: a disciple of Chrysostom, who died in 407, who then spent forty years in a cave on Sinai reaches the fifth century. The century of the two calendar lines is taken for the death and the life's own sentence is recorded here. The folder carried no date at all before this reading, and neither doxologia.ro nor saint.gr gave one."
+    }
+  },
+  "related": [
+    "theodulus-son-of-nilus",
+    "john-chrysostom"
   ]
 }
