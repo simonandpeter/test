@@ -11,6 +11,11 @@
       "form": "Ζακχαῖος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Απριλίου, «Άγιος Ζακχαίος ο Απόστολος», with the rank words left off; the day's line spells him Ζακχαίος and the page's couplet Ζακχαῖε, and the accented form of the nominative is stored here as the couplet has it."
+    },
+    {
+      "form": "Закхеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Св. апостол Закхеј.“, with „Св.“ and the rank апостол left off; the heading gives no epithet, no see and no year, and no other folder in this corpus holds this form."
     }
   ],
   "sex": "male",
@@ -54,8 +59,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Св. апостол Закхеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

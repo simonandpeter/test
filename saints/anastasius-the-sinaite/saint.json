@@ -11,6 +11,11 @@
       "form": "Αναστάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Απριλίου, «Όσιος Αναστάσιος ο Σιναΐτης», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Анастасије Синајски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. април ст. ст., „Преп. Анастасије Синајски.“, with the rank word Преп. left off. The by-name Синајски is kept: it is not a rank, it is what the heading gives beyond the forename, and `anastasius-the-persian` already holds the bare «Анастасије», which a bare form here would fold onto. The Prologue's next entry calls the patriarch of Antioch Синаит, so the book itself spells the two by-names apart."
     }
   ],
   "sex": "male",
@@ -27,11 +32,11 @@
       "note": "doxologia.ro: «Sfântul Anastasie s-a născut la Alexandria, în Egipt în prima jumătate a secolului al VII-lea»."
     },
     "death": {
-      "earliest": 700,
+      "earliest": 685,
       "latest": null,
-      "display": "after 700",
+      "display": "after 685",
       "basis": "traditional",
-      "note": "doxologia.ro: «A trecut la Domnul cu pace, la adânci bătrânețe, cândva după anul 700»."
+      "note": "Two sources disagree and neither is displaced. doxologia.ro: «A trecut la Domnul cu pace, la adânci bătrânețe, cândva după anul 700». The Ohrid Prologue at pravoslavno.rs for the Julian 20 April: „Скончао у дубокој старости 685. год. и отишао ка Господу, коме је верно послужио.“ Both have him die in deep old age, and the Prologue's year falls below the lower bound doxologia gives, so the interval was widened to hold both readings rather than either of them narrowed away: the earliest is the Prologue's 685 and the upper bound stays open, as doxologia's «după anul 700» leaves it."
     }
   },
   "attestations": [
@@ -71,14 +76,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.05.2026 (20. април ст. ст.) — „Преп. Анастасије Синајски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-03&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
     "life": "life.md"
   },
   "related": [
-    "anastasius-of-antioch"
+    "anastasius-of-antioch",
+    "john-of-the-ladder"
   ]
 }
