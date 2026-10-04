@@ -1,0 +1,9 @@
+# Basil (Pokrovsky)
+
+days.pravoslavie.ru's calendar for 3 ноября ст. ст. carries twelve names on one line and his is the second of them: «Сщмчч. Василия, Василия, Александра, Владимира, Сергия, Николая, Викентия, Иоанна, Петра, Александра, Павла, Космы пресвитеров (1937).» The line gives the forenames in the genitive, the grade-class «пресвитеров» for all twelve together, and one year, 1937, and it gives no surname to any of them. The name link behind his place in it supplies the calendar's own nominative with the surname, «Василий (Покровский), иерей, сщмч.», and that is where the name form in this folder is read from.
+
+That is everything the calendar records of him. He has no life page, no icon, no hymn, no place, no age and no parish anywhere on this calendar, and the name page behind his place on the line carries two days and no text at all. The name page behind his place on the line also lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. That is a synaxis and not a second feast, and he does not render on it. Nothing further is written here, and in particular nothing is reasoned from the surname.
+
+The line names the class and the link names the grade, and both are kept: the line's «Сщмчч.» and «пресвитеров» make him a hieromartyr and a presbyter, and the link's «иерей» is recorded as his office, Priest. He is given no relation to the eleven others on the line. They share a line, a grade-class and a year, and the calendar prints nothing at all that says they died in one place or knew one another; a shared day is not a relation here.
+
+*After the Православный церковный календарь of the Сретенский monastery for 3 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261103.html) and [his name page](https://days.pravoslavie.ru/name/9505.html); read 4 October 2026.*
