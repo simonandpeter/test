@@ -11,6 +11,11 @@
       "form": "Αντωνίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Αντωνίνα», with the rank word left off."
+    },
+    {
+      "form": "Антонина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's third heading for 1. март ст. ст., „Света мученица Антонина.“, with Света and the rank word мученица left off. The heading gives no epithet; Nicaea, which the folder's English name carries, is in the body's first sentence. The other Antonina the corpus keeps on this day has no Serbian form, so the fold this would make does not arise."
     }
   ],
   "sex": "female",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.03.2026 (1. март ст. ст.) — „Света мученица Антонина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-14&prolog=1",
+        "year": 2026
+      },
+      "note": "Read onto this folder and not onto `antonina-venerable-martyr-1-march`, the other Antonina the corpus keeps on this menologion day: the Prologue's entry has her born at Nicaea and drowned in a lake in 302, which is this folder's own story and this folder's reign, while the other is a venerable-martyr of 1924."
     }
   ],
   "text": {

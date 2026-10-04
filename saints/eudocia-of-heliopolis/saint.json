@@ -11,6 +11,11 @@
       "form": "Ευδοκία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Αγία Ευδοκία η από Σαμαρειτών η Οσιομάρτυς», with the rank words left off."
+    },
+    {
+      "form": "Евдокија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 1. март ст. ст., „Преподобномученица Евдокија.“, with the rank word Преподобномученица left off. The heading gives no epithet; Heliopolis, which the folder's English name carries, is in the body's first sentence."
     }
   ],
   "sex": "female",
@@ -23,7 +28,7 @@
       "latest": 117,
       "display": "98–117",
       "basis": "traditional",
-      "note": "doxologia.ro's life opens «Pe vremea lui Traian împăratul (98-117), în cetatea ce se numește Iliopolis». The same life later names an emperor it calls Aurelian — saying expressly that he is not the Caesar of Rome of those years — and the governors Diogen and Vichentie, which do not sit inside that reign; the interval recorded is the one the page states, and the disagreement is the page's own."
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 1 March: „Живела у Илиопољу граду Феничанском за време царовања Трајанова.“ It states the reign of Trajan and no year, so the interval is that reign's own dates, 98 to 117. The folder carried no dates at all before this reading. The entry also has her live fifty-six years in the monastery, which the reign alone cannot hold, so this is a floruit and not a life."
     }
   },
   "attestations": [
@@ -63,8 +68,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.03.2026 (1. март ст. ст.) — „Преподобномученица Евдокија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-14&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "hymns": [

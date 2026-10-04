@@ -11,6 +11,11 @@
       "form": "Αγάπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Όσιος Αγάπιος από τη Σκήτη της Κολιτσούς και οι μετ’ αυτού τέσσερις όσιοι», with the rank word and the skete left off."
+    },
+    {
+      "form": "Агапије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 1. март ст. ст., „Преподобни Агапије.“, with the rank word Преподобни left off. The heading gives no epithet and no house; Vatopedi is in the body and Colciu, which the folder's English name carries, is in neither."
     }
   ],
   "sex": "male",
@@ -67,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.03.2026 (1. март ст. ст.) — „Преподобни Агапије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-14&prolog=1",
+        "year": 2026
+      },
+      "note": "Read onto this folder because the Prologue's entry is this man's story and not another Agapius's: a novice under a spiritual father at Vatopedi — the monastery the skete of Colciu stands beside — taken by sea-robbers, held twelve years, and freed wonderfully by the Mother of God. The corpus keeps several other men of the name and none of them has any of that."
     }
   ],
   "hymns": [
