@@ -11,6 +11,11 @@
       "form": "Αγαθάπους",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Άγιοι Θεόδουλος και Αγαθάπους», with the rank word left off. The life page spells the same name Ἀγαθόπους in its couplet and Άγαθάποδας in its prose."
+    },
+    {
+      "form": "Агатопод",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 5 April on pravoslavno.rs, „Св. муч. Агатопод и Теодул“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city — Thessalonica is in the body — so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.04.2026 (5. април ст. ст.) — „Св. муч. Агатопод и Теодул“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, one heading naming both men, **on the Romanian calendar's day and not the Greek one**: doxologia keeps the pair on 5 April and saint.gr on 4 April, and the Prologue's menologion 5 April is the Romanian's number. The same two men: the deacon and the reader of the church at Thessalonica, the one adorned with the grey hair of age and the other with a young man's chastity, who went to trial hand in hand crying „Ми смо хришћани!“, and were drowned in the sea with their hands tied behind them and a heavy stone hung on each neck. **A death of 303 was added where this folder had none** — „чесно пострадаше у време цара Диоклецијана и солунског кнеза Фаустина, 303. године“ — and it is the only year any source read for this folder gives. New besides that: that the judge's advice to deny Christ and bow to the idols was all in vain; the long imprisonment and starving before the sentence; **Agathopodes's cry as they went to push him into the deep, „Ево другим крштењем перемо се од свих греха наших и одлазимо чисти Христу Исусу!“** — here we are washed of all our sins by a second baptism and go clean to Christ Jesus; that the sea soon threw the drowned bodies up on the shore and Christians buried them honourably; and the prince of Thessalonica, Faustinus, whom the entry names beside Diocletian. **Faustinus is identified with nobody.** `deacon` this folder already carries; the reader's grade of his companion has no slug in this corpus's `types` vocabulary and none was invented. The Prologue prints no troparion and no kontakion. The stored form Агатопод folds with nothing."
     }
   ],
   "hymns": [
@@ -88,5 +103,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 5 April, of the two men together: „Ови дивни Христови војници чесно пострадаше у време цара Диоклецијана и солунског кнеза Фаустина, 303. године“ — in the time of the emperor Diocletian and of Faustinus, prince of Thessalonica, in the year 303. The year is printed flat and not as «about». It is the only year any source read for these two folders gives them: neither doxologia.ro's notice nor saint.gr's prints one, and the persecution of Diocletian they both name is consistent with it. `node .tmp/dd.mjs 303` reads in Russian and Greek."
+    }
   }
 }

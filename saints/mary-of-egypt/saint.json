@@ -14,6 +14,11 @@
       "form": "Maria Egipteanca",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 aprilie, «Sfânta Cuvioasă Maria Egipteanca»."
+    },
+    {
+      "form": "Марија Египћанка",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 1 April on pravoslavno.rs, „Св. Марија Египћанка“, with Св. left off, which is not a rank. Египћанка is kept: it is not a rank but the by-name the heading gives her, the Egyptian, and it is what this folder's English name already carries. A bare Марија would stand against `mary-called-marinos`, `mary-of-tarsus` and `mary-wife-of-xenophon`, which hold that form."
     }
   ],
   "sex": "female",
@@ -79,8 +84,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.04.2026 (1. април ст. ст.) — „Св. Марија Египћанка“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day all three other calendars already keep in this folder, and the same life, named to the same author — Sophronius patriarch of Jerusalem — and told through the same elder Zosimas. **Three numbers in it disagree with what this folder and its other sources hold, and not one of them was acted on.** The entry puts her in Alexandria and gives seventeen full years of profligacy from her twelfth year, where saint.gr says only Egypt and uses seventeen for the first seventeen years of her struggle beyond the Jordan; it gives forty-eight years in the desert where saint.gr gives forty-seven; and it ends „Упокојила се око 530 год.“, about 530, where this folder holds a precise 522 from days.pravoslavie.ru's line. 530 falls outside that year, so **the sourced date stands and the disagreement is recorded here and in the life**. New to the folder besides those: the three loaves she bought, the communion at the monastery of St John before she crossed, the glance at the icon of the Theotokos in the narthex and the promise made before it, that she crossed the Jordan walking on the water after signing it with the cross, that Zosimas saw her raised up in the air at prayer, and that he learned her name only from the words written in the sand above her head, which also say she died on 1 April in the very night of Christ's saving passion after communicating. **The Prologue has no lion**: Zosimas buries her himself where the Romanian and the Greek lives both have the beast dig the grave. The Prologue prints no troparion and no kontakion; this folder's two hymns are the Romanian's and the Greek's. The stored form Марија Египћанка keeps the by-name the heading gives it, Египћанка, the Egyptian, which is not a rank and is what this folder's English name already carries; a bare Марија would fold with the three folders that hold one."
     }
   ],
   "historicity": "traditional",

@@ -1,0 +1,61 @@
+{
+  "slug": "melito-of-sardis",
+  "display_name": "Melito of Sardis",
+  "office": "Bishop of Sardis",
+  "sex": "male",
+  "types": [
+    "bishop",
+    "apologist"
+  ],
+  "names": [
+    {
+      "form": "Мелитон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 1 April on pravoslavno.rs, „Св. Мелитон еп. Сардијски, у Малој Азији“, with Св. left off — it is not a rank — and with the see еп. Сардијски, у Малој Азији left off as well, this corpus keeping the see in `office`. The heading gives no epithet beyond the see, so the bare forename is what the source gives. The corpus holds four other folders of this spelling and not one of them carries a Serbian form, so nothing folds with it."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 177,
+      "latest": 177,
+      "display": "177",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 1. април ст. ст.: „Овај учени, благочестиви и ревносни муж, св. Мелитон, упокоји се мирно у Господу 177. год.“ — this learned, pious and zealous man reposed peacefully in the Lord in the year 177. The same entry calls him a pastor of the Church of the second century and dates his journey to Rome about 170; no other source was read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 1 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 1 aprilie, which is the page for this menologion number — not 14 aprilie, which merely shares his civil date in 2026 (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 1 Απριλίου (4 October 2026). The corpus holds four other folders whose name is this spelling — `meliton-of-beirut` on the Greek 3 January, `meliton-of-caesarea` on the Romanian 3 July, `meliton-martyr-30-june` on the Greek 30 June and `meliton-of-the-forty-martyrs` on the 9 March of three calendars — and **not one of them is a bishop, a writer or a man of the second century**, which is the ground on which this is a new folder and not a row on one of them."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.04.2026 (1. април ст. ст.) — „Св. Мелитон еп. Сардијски, у Малој Азији“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. The Prologue is the only source read for him, and the whole of this folder comes off that one entry: the see of Sardis in Asia Minor, the second century, the learning, the labour of gathering the books of Holy Scripture into one codex, the attempt to bring peace to the church of Laodicea in the dispute over the keeping of Pascha, the defence of Christianity before the pagans, the journey to Rome about 170 with a written apology for the emperor Marcus Aurelius, and the peaceful repose in 177. `types` takes `bishop` from еп. in the heading and `apologist` from the apology the entry says he submitted; the Prologue prints no troparion and no kontakion, and this folder has no hymn. **No `locations`**: the entry names Sardis as his see and Rome as a journey, and neither is a point this folder can claim."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -17,6 +17,11 @@
       "form": "Иона, митрополит Московский и всея Руси",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1042, «Святитель Иона, митрополит Московский и всея Руси», with the rank word left off. The see is kept in the form because the corpus holds several Jonahs."
+    },
+    {
+      "form": "Јона",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 31 March on pravoslavno.rs, „Свети Јона, митрополит московски“, with Свети left off — it is not a rank — and with the see митрополит московски left off as well, this folder keeping the see in `office` and the rank in `types`. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -74,11 +79,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.04.2026 (31. март ст. ст.) — „Свети Јона, митрополит московски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian and the Greek already keep in this folder — and **the first life of him any source read for this folder has printed.** doxologia.ro names him and gives no life; saint.gr says in its own words that he is known to the Russian Church and unknown to the synaxaristae and offers a comparison in place of a narrative; the Russian calendar keeps him with the synaxis of the hierarchs of Moscow in a line of seventeen names that is not expanded. The Prologue gives the whole of a life: Kostroma, the tonsure in his twelfth year, the Simonov monastery at Moscow, the see of Ryazan under the metropolitan Photius, the election and the embassy to Constantinople that Isidore reached first, the return to Ryazan, Isidore's Florence and his expulsion, the metropolitan throne at last, the Agarenes driven from Moscow by his prayer, the wound he asked God for in old age, and the healing of a mute man at his relics. **A death was added where this folder had none**, 1461: the entry says „оде међу небеске грађане 31. марта 1461. године“, the day it heads him on and the year, and saint.gr's heading «(; - 1461)» — already quoted in this folder's life, and left untaken because it stood there beside another man's death year — says the same. Two sources, one year, no disagreement, and the folder was Undated before. The Prologue prints no troparion and no kontakion, and this folder still has none. The stored form Јона folds with `jonah-the-prophet` and `jonah-the-sabaite`, which hold the same bare form; the fold is recorded as deliberate."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1461,
+      "latest": 1461,
+      "display": "1461",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 31. март ст. ст.: „Од те ране светитељ умре и оде међу небеске грађане 31. марта 1461. године“ — of that wound the saint died and went among the citizens of heaven on 31 March 1461, which is the day it heads him on. saint.gr heads him «(; - 1461)» and gives the same year; this folder stood Undated until the Prologue was read, because the Greek year stands in a sentence comparing him with Mark Eugenicus and was left untaken on its own."
+    }
   }
 }

@@ -12,6 +12,11 @@
       "form": "Υπάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαρτίου, «Άγιος Υπάτιος επίσκοπος Γαγγρών», with the rank word and the see left off."
+    },
+    {
+      "form": "Ипатије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 31 March on pravoslavno.rs, „Свештеномученик Ипатије епископ гангрски“, with the rank word Свештеномученик left off and with the see епископ гангрски left off as well, this folder keeping the see in `office`. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.04.2026 (31. март ст. ст.) — „Свештеномученик Ипатије епископ гангрски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man: bishop of Gangra, a father of the First Council, famous for his wonderworking, and killed by Novatians on the road home with a stone thrown by a woman of their party. **It is a second witness to the year this folder does not hold.** The entry ends „пострада и пресели се у вечно царство Христа Бога 326. године“, and saint.gr says 326 too, which this folder's life already records as disagreeing with the «between 337 and 361» it carries from the Romanian life — an interval built on the Romanian notice putting the killing in the reign of Constantius. **Nothing was changed**: a reader does not displace a sourced interval, and the Prologue's own entry has the same tension inside it, naming Constantius as the emperor who had the saint's portrait made while he was still alive and then dating the death 326. That it is now two sources against one interval rather than one is a reading for the author and is on file in the run's findings. New to the folder besides that: that he was born in Cilicia, which neither other calendar gives; that it was Constantius and not Constantine who had the likeness made and kept it in his palace as a weapon against every hostile power; that the woman who threw the stone belonged to the Novatian band rather than holding the heresy of Arius; and that after she was healed at his grave she lived the rest of her life in repentance and prayer. The Prologue prints no troparion and no kontakion. The stored form Ипатије folds with `hypatius-bishop-of-lydia`, which holds the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [

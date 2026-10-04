@@ -1,0 +1,59 @@
+{
+  "slug": "ulpian-of-tyre",
+  "display_name": "Ulpian of Tyre",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Улпијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 3 April on pravoslavno.rs, „Св. муч. Улпијан“, with the rank words Св. муч. left off. The heading gives no epithet and no city — Tyre is in the body — so the bare forename is what the source gives, and no other folder in the corpus holds a Serbian form of this spelling."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 306,
+      "display": "306",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 3. април ст. ст.: „Пострада и прослави се 306. год.“ — he suffered and was glorified in the year 306, printed flat and not as «about». The entry places him under the same governor Urban as the martyr it keeps on the day before, whose death it dates about 306; no other source was read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 3 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 3 aprilie, which is the page for this menologion number — not 16 aprilie, which merely shares his civil date in 2026 (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 3 Απριλίου (4 October 2026). The corpus holds no folder of this name in any spelling — searched as ulpian and as vulpian across `saints/` — and none of the six folders it keeps on this menologion day is a youth of Tyre, which is the ground on which this is a new folder and not a row on one of them."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.04.2026 (3. април ст. ст.) — „Св. муч. Улпијан“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, and the Prologue is the only source read for him. Its whole account is four sentences: a youth of the city of Tyre; tortured for Christ by the governor Urban, whom it names as the tormentor of the martyr it keeps on 2 April; tied at the last into a sack together with a dog and a snake and thrown into the sea; and he suffered and was glorified in 306. **The governor's name is the only thing that places him beside anybody**, and it is not a relation: the entry makes him no companion of the martyr of the day before and does not say they suffered together, so no `related` row was written and that man is not named in this life. **No `locations`**: Tyre is where the entry says he was from and the sea is where he died, and neither is a point this folder can claim. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

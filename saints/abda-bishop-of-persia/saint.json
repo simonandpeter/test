@@ -19,6 +19,11 @@
       "form": "Avdas",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 martie, «Sfântul Ierarh Avdas»."
+    },
+    {
+      "form": "Авда",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 31 March on pravoslavno.rs, „Свештеномученик Авда, епископ града Сузе“, with the rank word Свештеномученик left off and with the see епископ града Сузе left off as well, this folder keeping the see in `office`. The heading gives no epithet beyond the see, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 18.09.2026 (5. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.04.2026 (31. март ст. ст.) — „Свештеномученик Авда, епископ града Сузе“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man: a bishop in Persia beheaded for Christ by the king Izdegerd, with his deacon Benjamin beside him. **The heading gives the see this folder does not have**, епископ града Сузе, bishop of the city of Susa, where `office` reads «Bishop in Persia» from the other calendars; the see was recorded here and in the life and `office` was **not** rewritten, because changing a sourced field on one calendar's word is the author's call and not a reader's. The entry dates the beheading 418, which falls inside the fifth century this folder holds from days.pravoslavie.ru and is narrower than it, so **the interval was not narrowed**; the year is recorded here instead. It is also the whole of what this entry says of him — no birthplace, no trial, no manner of death beyond the sword, and nothing of the nine leading Christians saint.gr puts to death with him, who are `nine-martyrs-with-abda` and whom this page does not mention at all. The Prologue prints no troparion and no kontakion. The stored form Авда folds with nothing: no other folder in the corpus holds a Serbian form of this spelling."
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαρτίου, «Άγιος Ιωάννης συγγραφέας της Κλίμακος», with the rank word left off."
+    },
+    {
+      "form": "Јован Лествичник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 30 March on pravoslavno.rs, „Преподобни Јован Лествичник“, with the rank word Преподобни left off, which is what this folder's `venerable` carries. Лествичник is kept: it is not a rank but the by-name the heading gives him, of the Ladder he wrote, and it is what this folder's English name already carries."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.04.2026 (30. март ст. ст.) — „Преподобни Јован Лествичник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man: the writer of the Ladder, who came to Mount Sinai as a boy of sixteen, was novice, then hermit, then abbot of Sinai, and whose biographer the monk Daniel is quoted here as he is on the Romanian page. **Two disagreements, both recorded here and neither resolved, because resolving either would be a reader's choice between sources.** First, the year: the entry has him abbot „до своје осамдесете године, када је и скончао око 563. године“ — to his eightieth year, when he died about 563 — where this folder holds a birth of probably 523 and a death of about 606 from saint.gr, which heads him «(523 - 606)». 563 falls outside that death and an eightieth year would put his birth near 483, outside that birth; the sourced interval **was not narrowed, widened or touched**, and the Prologue's reading stands beside it here and in the life. Second, the name of the elder who foretold his abbacy: the Prologue says Анастасије Синајски, Anastasius of Sinai, where the Romanian life already in this folder says «the great Athanasius of Sinai». No folder of either name exists in the corpus to decide it and neither reading was altered. New to the folder besides those: the nineteen years he spent in obedience to his spiritual father Martyrius, against saint.gr's four years before the tonsure; the twenty years in a cave after his elder's death, where the Romanian life has some forty years at Tholas; that the falling rock is what Moses was saved from, and that Moses heard John call him in his sleep and leapt up at that moment; and the year of complete silence he kept after some of the brethren reproached him as talkative, until they begged him to speak and go on teaching. The Prologue prints no troparion and no kontakion; this folder's two hymns are the Romanian's and the Greek's. The stored form Јован Лествичник keeps the epithet the heading gives it, Лествичник, the Ladder-writer, which is not a rank word: a bare Јован would fold with the five folders that already hold one."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Αμφιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιοι Αιδέσιος και Αμφιανός οι αυτάδελφοι», with the rank word left off."
+    },
+    {
+      "form": "Амфијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 2 April on pravoslavno.rs, „Св. муч. Амфијан и Едесије“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -58,11 +63,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.04.2026 (2. април ст. ст.) — „Св. муч. Амфијан и Едесије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, one heading naming both brothers, on the same menologion day the Romanian and the Greek already keep in both folders, and the same story: Patara, the schools of Beirut, the enlightenment there, the flight from pagan parents to the presbyter Pamphilus at Caesarea in Palestine, the twenty years in body and the hundred in understanding, the persecution, the hand of the governor Urban seized in the temple with the sacrifice still in it, the feet wrapped and set alight, and the sea that gave the body back to the city. **A date was added where this folder had none**: „жртвоваше се за Христа, око 306. год.“, they offered themselves for Christ about the year 306, and this folder's twin says in its own words that neither page gives a year for either of them. saint.gr's «about 305» is the year of the emperor's letters ordering everyone to sacrifice and not of the death, so it is not a disagreement and nothing was reconciled. It names the persecution's emperor Maximinus, where the Romanian life has Maximian the second of the name taking the East from Maximian Galerius; the two readings were not reconciled either. On Patara the Prologue agrees with the Romanian life and not with saint.gr, which puts their birth at Gaza, and the agreement is worth recording because it makes it two sources to one. Smaller and new: that the wrapping on his feet was cotton, where the Romanian life has oil-soaked cloths; and that some who heard him in the temple and saw his courage repented and received the faith of Christ, where the Romanian life has his boldness strengthen Christians already believing. The Prologue prints no troparion and no kontakion, and this folder has none. The stored form Амфијан folds with nothing: no other folder in the corpus holds a Serbian form of this spelling."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 306,
+      "latest": 306,
+      "display": "about 306",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 April, of the two brothers together: „Као два невина јагњета жртвоваше се за Христа, око 306. год.“ — like two innocent lambs they were offered for Christ about the year 306. The page says about, not 306 flat. It is the only year any source read for these two folders gives them: the Romanian life dates the end to the second day of April on a Thursday and gives no year, and saint.gr's «about 305» belongs to the emperor Maximinus II's letters ordering every inhabitant to sacrifice, not to the death."
+    }
   }
 }

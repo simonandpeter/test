@@ -11,6 +11,11 @@
       "form": "Ζωσιμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Ζωσιμάς», with the rank word left off."
+    },
+    {
+      "form": "Зосим",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 4 April on pravoslavno.rs, „Преп. Зосим“, with the rank word Преп. left off. The form is stored as the page prints it, Зосим and not Зосима; nothing was regularised. The heading leaves no epithet, and no other folder in the corpus holds a Serbian form of this spelling."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.04.2026 (4. април ст. ст.) — „Преп. Зосим“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Romanian and the Greek already keep in this folder, and identified not by the name but by the deed: a monk of the Jordan community who found, communicated and buried Saint Mary of Egypt. **It takes the Romanian side of a disagreement this folder already carries**: it puts him in the time of the emperor Theodosius the Younger, which this folder's life records from the Romanian reading, against saint.gr's reign of Justinian — so the Prologue makes it two sources to one, and nothing was changed, because the dates this folder holds are saint.gr's 460 and 560 and a reign is not a year. Its two other numbers agree with those dates exactly: it has him repose „у својој стотој години“, in his hundredth year, and „у VI столећу“, in the sixth century, and 460 to 560 is a hundred years ending in that century. So nothing in `dates` was touched. The whole entry is four sentences and adds no incident the folder did not have. The Prologue prints no troparion and no kontakion. The stored form **Зосим** is what the heading prints, not Зосима, and it folds with nothing."
     }
   ],
   "text": {

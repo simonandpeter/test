@@ -10,6 +10,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Απριλίου, «Άγιος Παύλος ο Ρώσος ο Απελεύθερος», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Павле Невољник",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 3 April on pravoslavno.rs, „Св. Павле Невољник“, with Св. left off, which is not a rank. Невољник is kept: it is not a rank word but the by-name the heading gives him — the man held against his will, the captive — and it is the only thing in the heading that distinguishes him. It is **not** the by-name this folder's English name carries, which is the Greek line's ο Ρώσος, the Russian; each calendar's own epithet is recorded as that calendar prints it. A bare Павле would fold with three folders that already hold it."
     }
   ],
   "related": [],
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.04.2026 (3. април ст. ст.) — „Св. Павле Невољник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Greek already keeps in this folder, and the same man: a Russian by birth, held by the Turks, beheaded at Constantinople in 1683 for refusing to deny Christ. **The year agrees exactly with the one this folder holds**, and that year's `basis` is `attested` from saint.gr's Great Friday 1683 and the Atmeydan hippodrome, so nothing was touched; a second source printing the same year is worth recording and is not a reason to alter an attested interval. New to the folder: that he was **taken captive by the Turks in his youth**, which saint.gr's account does not say, and that he was tortured before the beheading. The entry does not mention the vizier, the Great Friday or the hippodrome, and nothing was carried across. The Prologue prints no troparion and no kontakion, and this folder has none. **The stored form keeps the by-name the heading gives it**, Невољник, which is not the by-name this folder's English name carries: the Greek line calls him ο Ρώσος, the Russian, and the Prologue calls him the captive. Both are recorded as what their own calendars print. A bare Павле would fold with `paul-of-ptolemais`, `paul-of-jamnia` and `paul-companion-of-quadratus`, which already hold that form from this same wave."
     }
   ],
   "text": {

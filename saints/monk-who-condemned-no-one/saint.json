@@ -1,0 +1,43 @@
+{
+  "slug": "monk-who-condemned-no-one",
+  "display_name": "The Monk Who Condemned No One",
+  "sex": "male",
+  "types": [
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 30 марта ст. ст., which is the page for this menologion number. He is nameless, so no calendar could be searched for him by name either."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 30 martie, which is the page for this menologion number — not 12 aprilie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 30 Μαρτίου, which is the page for this menologion number. The corpus already holds the other entry of that Greek day, `john-of-the-ladder`, and the pages read for him name nobody of this kind."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.04.2026 (30. март ст. ст.) — „Спомен на монаха“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second and last entry, numbered and headed like the first. **That it is a commemoration and not a story told about the day is the Prologue's own word for it**: the heading is Спомен, the word this book uses for a commemoration, which is the same test that refused „Чудесан догађај са Таксиотом“ on the Julian 28 March — a wonderful event in the page's own words, and so no folder — and the same reading that made `unknown-maiden-of-alexandria` a folder on the Julian 3 March. It gives him no name at all, so this folder's English name is a description and not a chosen form of any name, and **no name form is stored in any language**, because the heading „Спомен на монаха“ says what the entry is and not what the man was called; `blind-man-healed-by-panteleimon` is the corpus's existing case of a folder that keeps no name form. Being nameless he cannot be looked for in the other three calendars by name. The entry gives no year, no century, no country and no monastery, so there is no `dates` object and no `locations`. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

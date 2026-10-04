@@ -11,6 +11,11 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Νικήτας ο Ομολογητής Ηγούμενος Μονής Μηδικίου», with the rank word, the epithet and the office left off."
+    },
+    {
+      "form": "Никита",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 3 April on pravoslavno.rs, „Св. Никита Исповедник“, with Св. left off — it is not a rank — and with the rank word Исповедник left off as well, which is what this folder's `confessor` carries. Medikion is in the body and not in the heading, so the heading gives no epithet at all and the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.04.2026 (3. април ст. ст.) — „Св. Никита Исповедник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek already keep in this folder, and the same man beyond doubt: born at Caesarea in Bithynia; his father Philaretus taking the monastic habit after losing his wife, so that the boy was left with his grandmother; the monastery of Medikion, the abbot Nicephorus who tonsured him, the seven years before the patriarch Tarasius ordained him hieromonk, and the abbacy he took against his will after Nicephorus and his friend Athanasius died. **A death of 824 was added where this folder had none** — „Упокоји се овај велики јерарх 824. год.“ — and it is the only year any source read for this folder gives him. New to the folder besides that: the whole line of emperors, the devout Irene and the right-believing Nicephorus and Michael before Leo V the Armenian, under whom the iconoclast heresy flared again; the deposition of the patriarch Nicephorus and his exile, and the heretic Theodotus Cassiteras of unclean life raised in his place; the moving from prison to prison and the torments of hunger and thirst, frost and sweat and mockery; **the man named Nicholas who plagued him with jeering, until his own dead father appeared to him in a dream and told him to leave off the servant of God, after which he not only stopped but turned others from it**; the release of all the Orthodox sufferers when Leo died an evil death and the right-believing Michael Balbus took the empire; the solitary place near Constantinople where he spent his last days; the sick who touched his body at the funeral procession and were healed; and the relics laid beside those of his spiritual father Nicephorus and his friend Athanasius. **Nicholas and the father are not identified with anybody** — the entry gives neither a see, a monastery nor a by-name — and neither are the emperors or Theodotus, who take nothing. The Prologue prints no troparion and no kontakion. The stored form Никита folds with `nicetas-the-chartularius` and `nicetas-the-goth`, which hold the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [
@@ -147,5 +162,14 @@
     "theophilus-of-ephesus",
     "theophylact-of-nicomedia",
     "athanasius-of-medikion"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 824,
+      "latest": 824,
+      "display": "824",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 3 April: „Упокоји се овај велики јерарх 824. год.“ — this great hierarch reposed in the year 824. It is the only year any source read for this folder gives him; neither doxologia.ro's life nor saint.gr's prints one, and the reigns they name — Leo V the Armenian, then Michael Balbus — are consistent with it. `node .tmp/dd.mjs 824` reads in Russian and Greek."
+    }
+  }
 }

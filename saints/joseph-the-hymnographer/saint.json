@@ -11,6 +11,11 @@
       "form": "Ιωσήφ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Ιωσήφ ο Υμνογράφος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Јосиф",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 4 April on pravoslavno.rs, „Преп. Јосиф Песмописац“, with the rank word Преп. left off and with Песмописац left off as well — it is the rank word this source uses for a hymnographer, and this folder already carries `hymnographer` in `types`. The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -85,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.04.2026 (4. април ст. ст.) — „Преп. Јосиф Песмописац“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, **on the Romanian day and not the Greek one**: doxologia.ro keeps him on 4 April and saint.gr on 3 April, and the Prologue's menologion 4 April is the Romanian's number. The man is the same beyond doubt — Sicily, Thessalonica, Gregory the Decapolite, the mission to Rome, the pirates, the prison, the canons and stichera, and the patriarch Photius — and the year agrees exactly with the 883 this folder holds, whose `basis` is `attested` from doxologia's own closing note, so nothing was touched. New to the folder: **his parents' names, Plotinus and Agatha**, and that they were devout and virtuous; that he was a pattern to all in fasting, extreme abstinence, unceasing prayer, psalmody, vigil and labour; that the heretics held him six years in prison on Crete and that he counted the iron chains on him as ornaments of gold; that the wicked emperor Leo was killed at matins in church on the morning of the Nativity in the sixth year, and that in that same hour Saint Nicholas appeared to Joseph in the prison and said „Устани и следуј мени!“, so that he felt himself lifted into the air and was suddenly before Constantinople; and that the Prologue dates his repose to **the eve of Great Thursday**, 883. **Nicholas is left unidentified and unlinked**: the entry gives him no see and no epithet, the corpus holds many men of the name, and an identification on a forename is not one. The Prologue prints no troparion and no kontakion. The stored form Јосиф folds with `joseph-of-alaverdi`, which holds the same bare form; the fold is recorded as deliberate."
     }
   ],
   "hymns": [
