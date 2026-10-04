@@ -359,6 +359,13 @@ test('the carousel drifts on its own, and keeps drifting under the pointer', asy
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  /* Waited out, not raced: the second pack repaints the whole row from idle
+     time and the repaint rebuilds the drift loop, so a press, a wheel or a
+     measurement taken while it is still running is taken against a row that is
+     about to be replaced. It used to land inside one idle callback and was over
+     before a test could reach it; sliced, it spans seconds on a loaded runner,
+     which is where `:899` went red twice while passing six of six here. */
+  await packedRow(page);
 
   const at = () => page.evaluate(() => document.querySelector('[data-carousel-track]').scrollLeft);
 
@@ -619,6 +626,13 @@ test('the wheel carries the carousel back, and no faster than its cap', async ({
   await ready(page);
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  /* Waited out, not raced: the second pack repaints the whole row from idle
+     time and the repaint rebuilds the drift loop, so a press, a wheel or a
+     measurement taken while it is still running is taken against a row that is
+     about to be replaced. It used to land inside one idle callback and was over
+     before a test could reach it; sliced, it spans seconds on a loaded runner,
+     which is where `:899` went red twice while passing six of six here. */
+  await packedRow(page);
 
   const run = await page.evaluate(async () => {
     const track = document.querySelector('[data-carousel-track]');
@@ -910,6 +924,13 @@ test('the row comes back on its own after a press, and takes the wheel while it 
   await page.goto(INDEX, { waitUntil: 'networkidle' });
   const track = page.locator('[data-carousel-track]');
   await expect(page.locator('.cx-card').first()).toBeVisible();
+  /* Waited out, not raced: the second pack repaints the whole row from idle
+     time and the repaint rebuilds the drift loop, so a press, a wheel or a
+     measurement taken while it is still running is taken against a row that is
+     about to be replaced. It used to land inside one idle callback and was over
+     before a test could reach it; sliced, it spans seconds on a loaded runner,
+     which is where `:899` went red twice while passing six of six here. */
+  await packedRow(page);
   const at = () => track.evaluate((el) => el.scrollLeft);
 
   /*

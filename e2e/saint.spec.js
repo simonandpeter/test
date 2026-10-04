@@ -1462,10 +1462,19 @@ test('the column beside the life is the search the reader came from, and narrows
   await page.goto('/saints', { waitUntil: 'networkidle' });
   await page.locator('[data-query]').fill('Nicomedia');
   // The count the Index itself is showing, so this test does not have to know
-  // how many saints match — only that the column agrees with the page.
+  // how many saints match — only that the column agrees with the page. Read
+  // off the Index's own count line and not by counting cards: the grid is
+  // virtualised, so the cards in the DOM are a window on the match and never
+  // the whole of it.
   await expect.poll(() => page.locator('.index-card').count()).toBeGreaterThan(0);
-  const matched = await page.locator('.index-card').count();
-  expect(matched).toBeLessThan(200);
+  const countOf = async () =>
+    Number((await page.locator('[data-count]').textContent())?.replace(/\D+/g, ''));
+  // Polled, because the field is debounced: the cards above arrive before the
+  // count line has been rewritten, and reading it too early reads the corpus.
+  await expect
+    .poll(countOf, { message: 'the query never narrowed the count line' })
+    .toBeLessThan(200);
+  const matched = await countOf();
 
   await page.locator('.index-card .index-name').first().click();
   await expect(page.locator('h1.saint-name')).toBeVisible();
@@ -1474,7 +1483,14 @@ test('the column beside the life is the search the reader came from, and narrows
   await expect(rows.first()).toBeVisible();
   const shown = await rows.count();
   expect(shown, 'the column shows the corpus rather than the search').toBeLessThan(200);
-  await expect(page.locator('[data-side-count]')).toContainText(String(shown));
+  /*
+   * **The count is the whole set and the list is a chunk of it** (`SIDE_CHUNK`,
+   * views/saint.js), so the two agree only while the set fits one chunk — which
+   * stopped being true of this query the day it reached 61 matches. The claim
+   * is the column against the *page*, which is what the test is about.
+   */
+  expect(shown, 'the column drew more rows than the search matched').toBeLessThanOrEqual(matched);
+  await expect(page.locator('[data-side-count]')).toContainText(String(matched));
 
   /*
    * And the saint being read is marked in it. Asserted here rather than on a
