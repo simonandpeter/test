@@ -6,6 +6,11 @@
       "form": "Μαρκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιος Μαρκιανός ο Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Маркиан",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Священномученик Маркиан, епископ Сиракузский», with the rank word and the see left off. The line itself declines the name, «Маркиана»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps him on its own 30 October; this is the Russian calendar's own day and not a second day on one calendar. His life page lists «Дни памяти: 9 февраля , 30 октября», and the 9 февраля of that list is the day on which this calendar keeps the bishop of Sicily it says he is one person with; one row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Сщмч. Маркиана , еп. Сиракузского (II).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the third of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek day and the Greek account — ordained by the Apostle Peter and sent to Sicily, killed by violence, the killing laid to the Jews — and adds the cave near Syracuse he settled in, the success of his preaching, and relics now in the Italian city of Gaeta. **It then says, in a bracket closing the life, that he is one person with a saint the corpus keeps as a folder of its own**: «(Священномученик Маркиан - одно лицо со святым Маркеллом, епископом Сикелийским, память которого 9 февраля.)» That folder is `marcellus-of-sicily`, which already carries a venerated russian row for 9 февраля from this same calendar, written off the line «Сщмчч. Маркелла, еп. Сикелийского, Филагрия, еп. Кипрского, и Панкратия, еп. Тавроменийского (I).», and whose life has the Greek page put him over Syracuse in Sicily as well. So one calendar keeps two commemorations and states that they are one man, where the corpus keeps two folders read from two other calendars. **Nothing here folds them**: deciding that two folders are one person is not a reader's call, and this row is written for the day's own line and says what the bracket says. The two folders also disagree in their `types`: the Greek has the three bishops of 9 февраля fall asleep after a life of daily martyrdom, and has this one killed with a noose."
     },
     {
       "church": "romanian",
@@ -51,5 +68,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 200,
+      "display": "1st–2nd century",
+      "basis": "traditional",
+      "note": "One page disagreeing with itself, and nothing chosen. days.pravoslavie.ru's line for 30 октября ст. ст. closes his name with «(II)», the second century, while its own life for him begins «ученик святого апостола Петра, был послан в Сицилию» — a disciple of the Apostle Peter, sent by him, which is the first. saint.gr says the same of the ordination and gives no year at all, and the folder held no `dates` before this. The interval is the union of the two readings."
+    }
   }
 }

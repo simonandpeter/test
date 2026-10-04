@@ -6,6 +6,11 @@
       "form": "Ευτροπία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Αγία Ευτροπία», with the rank word left off."
+    },
+    {
+      "form": "Евтропия Александрийская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind her line for 30 октября ст. ст., «Евтропия Александрийская, мц.», with the rank word left off. The line itself declines the name, «Евтропии Александрийской»."
     }
   ],
   "sex": "female",
@@ -15,8 +20,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps her on its own 30 October; this is the Russian calendar's own day and not a second day on one calendar. Her life page is headed «День памяти: 30 октября» and lists no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Мц. Евтропии Александрийской (ок. 250).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the fourth of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek day and the city, and gives her the first narrative and the first date this folder has had: she visited the Christians shut up in the prisons often, and called them to bear their sufferings patiently; for that the persecutors of the Christians took her for torture; at the trial she confessed her faith in Christ firmly, and she died of the cruelty of the torments. The city is Alexandria in both calendars."
     },
     {
       "church": "romanian",
@@ -46,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "about 250",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 30 октября ст. ст. prints «(ок. 250)» and its life for her repeats it, «пострадала за Христа в Александрии около 250 года» — about 250, written «ок.» and «около» in both places. The folder held no `dates` before this; saint.gr gave her no year."
+    }
   }
 }

@@ -12,6 +12,11 @@
       "form": "Ζηνόβιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Οκτωβρίου, «Άγιοι Ζηνόβιος και Ζηνοβία τα αδέλφια», with the rank word left off."
+    },
+    {
+      "form": "Зиновий Егейский (Киликийский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Святитель Зиновий Егейский (Киликийский), епископ, сщмч.», with the rank words and the grade left off. The link gives the see twice over, as of Aegae and in brackets as Cilician; the day's line gives «еп. Егейского» alone."
     }
   ],
   "sex": "male",
@@ -23,8 +28,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek and Romanian calendars keep the pair on their own 30 October; this is the Russian calendar's own day for the same pair and not a second day on one calendar. His life page is headed «День памяти: 30 октября» and lists no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Сщмч. Зиновия , еп. Егейского, и сестры его Зиновии (285).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the first of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The Russian agrees with the Greek and Romanian days this folder was written from, prints the pair's two hymns, and adds the whole of a life neither of them had: the parents from whom the two took the faith, the inheritance given away, the gift of healing, the election to the see, Diocletian's persecution, the governor Lysias and his two sentences, the saint's answer, the cross, the red-hot bed, the boiling cauldron, the beheading and the presbyter who buried them. It states the year flatly, «претерпели мученическую смерть в 285 году», where saint.gr prints 285 and offers Diocletian as an alternative account; the Russian life has both at once, dating the reign «(284-305)» and the martyrdom 285, so the folder's existing interval stands unchanged and is now carried by two calendars. Lysias is the same governor of Cilicia before whom the previous day's company of four stood in the same year."
     },
     {
       "church": "romanian",
@@ -121,6 +138,38 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости,/ тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Тропарь священномученика Зиновия и мученицы Зиновии». The text is the common of martyrs and names neither of them; it is printed under their names on the day page and is copied whole, as the brief directs.",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, received from You, our God, crowns that do not fade, for in their sufferings they had Your strength; they threw down their torturers and broke the feeble insolence of the demons. By their prayers, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Истины свидетели и благочестия проповедники,/ двоицу достойно почтим в богодухновенных песнех,/ Зиновия вкупе с мудрою Зиновиею,/ купно жившия и отшедшия// и мучением приимшия венец нетленный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Кондак священномученика Зиновия и мученицы Зиновии»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Witnesses of the truth and preachers of godliness, let us honour the two of them worthily in God-inspired songs: Zenobius together with the wise Zenobia, who lived together and departed together, and by their martyrdom received the crown that does not fade.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Ιησούς",
       "lang": "el",
       "note": "The page's second form for the same man: «Ο Ιούστος (ή Ιησούς) έγινε επίσκοπος Ελευθερούπολης», and its epigram for him is headed «Eις τον Iησούν»."
+    },
+    {
+      "form": "Иуст",
+      "lang": "ru",
+      "note": "Read out of the calendar's own life for the four, «Святой Иуст, называемый Варсавою», which prints the nominative; the day's line declines it, «Иуста», and the name link behind the line is titled with the other of his names, «Святой Варсава, апостол от 70-ти». His own life page is headed «Святой Варсава (Иосиф, Иуст), апостол от 70-ти» and gives all three."
     }
   ],
   "sex": "male",
@@ -21,8 +26,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps the same four apostles on its own 30 October; this is the Russian calendar's own day and not a second day on one calendar. His own life page lists «4 января (70 ап.)», the synaxis of the Seventy, and «30 октября»; one row per church is the schema, so the synaxis is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 октября ст. ст. — «Апп. от 70-ти Тертия , Марка , Иуста и Артемы (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261030.html",
+        "year": 2026,
+        "note": "The line is the second of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "That this is the same man the Greek page gave the corpus is read off the see: saint.gr has «Ο Ιούστος (ή Ιησούς) έγινε επίσκοπος Ελευθερούπολης» and the Russian life has «епископствовал и мученически скончался в Елевферополе». The Russian adds the martyrdom, which the Greek page did not have, and a third name and a parentage: he is «Варсава», Barsabas, the son of Joseph the Betrothed, and one of the two put forward in place of Judas Iscariot at Acts 1.23-26. **The calendar names him three ways and the folder stores one.** The day's line prints «Иуста», the name link behind it is titled «Святой Варсава, апостол от 70-ти», and his own life page is headed «Святой Варсава (Иосиф, Иуст)» — Barsabas, Joseph and Justus for one man. The stored form is the nominative «Иуст», which that life page prints in its text, because it is the name the day's line and this folder's display name both use; the other two are recorded here and are not kept as forms, since the calendar gives no way to tell which of the three it would call the fullest. The Greek page's second name for him was «Ιησούς», Jesus, which is none of these three."
     },
     {
       "church": "romanian",
@@ -52,5 +69,18 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 30 октября ст. ст. closes the four apostles with «(I)», the first century, and neither of its two lives for him gives a year. The folder held no `dates` before this; saint.gr gave him none."
+    }
+  },
+  "related": [
+    "matthias-the-apostle",
+    "joseph-the-betrothed"
+  ]
 }
