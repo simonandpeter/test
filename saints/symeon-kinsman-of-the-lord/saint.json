@@ -11,6 +11,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Απριλίου, «Άγιος Συμεών ο Αδελφόθεος Επίσκοπος Ιεροσολύμων», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Симеон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 27. април ст. ст., „Св. апостол Симеон.“ Св. is not a rank, and апостол is the `apostle` this folder already carries in `types` and `honorific.js` composes back. The heading gives no epithet and no kinship clause — the son of Cleopas and the kinsman of the Lord, which this corpus's English name keeps, are the body's — so the bare forename is the whole of the Serbian form. One other folder holds it; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.05.2026 (27. април ст. ст.) — „Св. апостол Симеон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The same man: one of the Seventy, son of Cleopas and so nephew of Joseph the Betrothed, second bishop of Jerusalem after James, crucified over the age of a hundred under Trajan on the double charge of David's descent and of Christ. **It gives no year**, so the 107 this folder carries from saint.gr stands untouched and no birth was added. Its account of the reckoning is the Romanian life's first reading and not the second — Cleopas the brother of Joseph, Symeon his son — stated flatly and argued nowhere. New from this book: that the Jews killed James **by pushing him from the height of the temple and striking him on the head with a club**, where doxologia has him thrown down from the seat of the Church and struck with wood; that Symeon preached „свуда по Јудеји“, everywhere through Judea; that he governed „са мудрошћу и силом“ into deep old age; and that the persecution under Trajan was raised in Palestine against the house of David and against the Christians as two persecutions at once, „двојако гоњење“. It names no proconsul, where both other calendars name Atticus. The Prologue prints no hymn."
     }
   ],
   "text": {
