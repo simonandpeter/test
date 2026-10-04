@@ -6,11 +6,18 @@
       "form": "Ermie",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 31 mai, «Sfântul Apostol Ermie»."
+    },
+    {
+      "form": "Јерма",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети апостол Јерма“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`; the bare personal name is what is left. **Measured, and the fold that matters here is the one this form AVOIDS**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јерма», and **this book spells the apostle of this entry „Јерма“ and the martyr of its very next entry „Ермије“, where doxologia spells both «Ermie» and this folder and `hermias-of-comana` therefore both carry the identical Romanian form.** It writes „Ермије“ again for a third man, the apostle Hermes of Dalmatia, on its own 8 April — **so that one Serbian string covers two men and this form covers neither of them.** The Serbian book tells the two men apart by spelling where the Romanian one does not, and that is worth having on the folder. The Romanian form «Ermie» here is left alone."
     }
   ],
   "sex": "male",
   "types": [
-    "apostle"
+    "apostle",
+    "martyr",
+    "bishop"
   ],
   "attestations": [
     {
@@ -39,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.06.2026 (31. мај ст. ст.) — „Свети апостол Јерма“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 31/5 the Romanian row already carries; the Greek and Russian rows are `undocumented`. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 31 May is. **THIS FOLDER HAD A RANK AND NOTHING ELSE, AND THIS ENTRY IS ITS WHOLE LIFE.** doxologia’s calendar names him and gives no life — its own page carries no Viață tab — and the existing life says so: „The rank in the line is the whole of what is stated: an apostle, kept on 31 May.“ **The Prologue gives eight things, every one of them new to this folder**: that he was **one of the Seventy**; that he is **the Hermas Paul greets at Romans 16:14**; that he was **a Greek by birth but lived a long time at Rome**; that he was **bishop in Philippopolis**; that **he ended his life as a martyr**; that **he wrote the very instructive book „Пастир“, the Shepherd, according to the revelations of an angel of God**; that **he was a rich man and fell into utter poverty through his own sins and his sons’**; and that **at prayer a man in white clothing with a staff in his hand appeared to him and said he was the angel of repentance, sent to him for the rest of his life** — and then the **twelve commandments** the angel gave him, which the entry sets out numbered and which are in the appended paragraphs. **TWO TYPES ADDED, BOTH STATED IN PLAIN WORDS, AND NEITHER CHANGES WHAT PRINTS.** „завршио је свој живот мученички“ gives `martyr` and „Био је епископ у Филипопољу“ gives `bishop`. **`PRECEDENCE` puts `apostle` sixth and `martyr` eleventh, so the page goes on reading *Apostle Hermas*** off the `apostle` this folder already carried from the Romanian line, and `bishop` is not in `PRECEDENCE` at all; both show in the facts line. `apostle` is corroborated by the heading and by „Један од Седамдесеторице“. **`office` LEFT EMPTY ON PURPOSE, AND IT IS THE ONE THING HERE THE AUTHOR MIGHT WANT.** „епископ у Филипопољу“ would make an `office` of *Bishop of Philippopolis*, and `upgrade.py` has the key — **but `office` strings are translated through the `offices` branch of the locale packs, whose keys are the English phrases the data wrote down, and a phrase no pack holds is a gap `locale-coverage.mjs` reports.** So no new office string was invented; the see is in the prose and the field is left as it was. **`dates` UNTOUCHED AND THE FOLDER STAYS UNDATED**: the entry gives no year of any kind, and doxologia gave none, so two calendars now agree in giving him none. **No `related` row, and the apostle Paul is the case for it.** Paul is named as the writer of the epistle the greeting stands in, which is a citation and not a meeting; `paul-the-apostle` took no row on `carpus-the-apostle` on 26 May for the same reason, where the existing life names him four times unlinked. **The sons are unnamed and the angel is not a saint with a folder.** `related` stays empty. **And the other «Ермије» of this day is NOT this man**: doxologia prints two, a line apart, and the existing life already says the corpus keeps them as two folders — **this book prints them as its own first and second entries, under two different names, „Јерма“ and „Ермије“, which is the clearest confirmation of that reading the corpus has had.** No `locations`, although Rome and Philippopolis are both named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
