@@ -15,6 +15,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word left off."
+    },
+    {
+      "form": "Павле",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 4 March on pravoslavno.rs, „Свети мученици Павле и Јулијана.“, which names two people; this man's own name is taken out of it, with the rank word мученици left off and Свети, which is not a rank. The heading gives no epithet and does not name Ptolemais, which this folder's English name carries and which the body of the entry supplies."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 30.08.2026 (17. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.03.2026 (4. март ст. ст.) — „Свети мученици Павле и Јулијана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. Its heading names the brother and the sister and nobody else, so the three executioners the corpus keeps on this menologion day from the Greek and Russian lines — `stratonicus-the-executioner`, `codratus-the-executioner` and `acacius-the-executioner` — took no row from it: the body says only that many pagans were converted by the wonders and that some of them were beheaded too, and names none of them. The Prologue gives the emperor as Aurelian and the year as 273, which falls inside the interval this folder already holds, 268 to 278, and narrower than it; a sourced interval is not narrowed on a reader's reading, so nothing was changed. The stored Serbian form is the bare forename, which `paul-of-jamnia` already holds off a line of its own; that fold is recorded in the run's findings."
     }
   ],
   "text": {

@@ -15,6 +15,11 @@
       "form": "Ιουλιανή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word left off."
+    },
+    {
+      "form": "Јулијана",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 4 March on pravoslavno.rs, „Свети мученици Павле и Јулијана.“, which names two people; this woman's own name is taken out of it, with the rank word мученици left off and Свети, which is not a rank. The heading gives no epithet and does not name Ptolemais, which the body of the entry supplies."
     }
   ],
   "sex": "female",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 30.08.2026 (17. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.03.2026 (4. март ст. ст.) — „Свети мученици Павле и Јулијана.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, whose heading names the brother and the sister and nobody else, so it is quoted whole by both folders and the three executioners the corpus keeps on this menologion day took no row from it. The Prologue gives the emperor as Aurelian and the year as 273, inside the interval this folder already holds, 268 to 278, and narrower than it; the interval was not narrowed."
     }
   ],
   "text": {
