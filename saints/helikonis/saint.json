@@ -11,6 +11,11 @@
       "form": "Ελικωνίδα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Αγία Ελικωνίδα», with the rank word left off."
+    },
+    {
+      "form": "Еликонида",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Света мученица Еликонида“ — Света is not a rank and мученица is the `martyr` this corpus puts in `types`; the bare personal name is what is left. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Еликонида», so this is the first folder to hold it and the corpus keeps no other woman of the name. **The body spells it once «Елконида**, without the и, in „уздиже Елконида руке своје“ — **that shorter spelling is not stored**: one `sr` form per folder, the fullest, and the heading’s form is the fuller and the one the entry uses everywhere else. It is named here so a later reader who meets «Елконида» knows which folder holds it. The Greek form, «Ελικωνίδα», and the Romanian «Eliconida» are the same name."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.06.2026 (28. мај ст. ст.) — „Света мученица Еликонида“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 28/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 28 May is. **The `[~]` mark fired on this line and was wrong**, as it is a hint and not a decision: „Света мученица“ reads to it like a feast word and she is a person. **A SECOND EMPEROR, AND IT IS REFUSED AS A SOURCE FOR A YEAR.** This folder holds `death` 238 to 244, „mid 3rd century“, off **saint.gr’s own stated interval** for the reign of Gordian III. **The Prologue says „У време Гордијана и Филипа“** — in the time of Gordian **and Philip** — which is a second reign the Greek page does not mention, and Philip reigned after Gordian. **Widening the folder’s `latest` past 244 to take Philip in would mean supplying Philip’s regnal years myself, because no book read for this folder states them**, and this corpus refuses a date derived from a reign and refuses an unbounded one. **So `dates` is untouched and the second emperor is recorded in the prose.** The 238 to 244 stands as saint.gr’s own numbers, not as a reading of a reign. **It is the author’s to widen if he wishes, off a source that states the years.** **THE TWO BOOKS REVERSE WHO DENOUNCED WHOM.** saint.gr has her **denounced as a Christian to the ruler Perinios**. **The Prologue has her denounce the idolaters**: „она пређе у Коринт где велегласно изобличи све оне који приношаху жртве идолима“, she went over to Corinth where she loudly rebuked all those who offered sacrifice to idols. **Neither account was altered and both stand in the life.** **And the torments are a different list in each.** saint.gr has molten lead and pitch under Perinios, then fire and wild beasts under **the proconsul Justin**, then the sword. **The Prologue has no lead, no pitch and no Justin**, and instead: that **she was thrown into fire, and much blood poured out of her body and quenched it, and she stayed alive**; that **she was thrown before lions and the lions did not touch her but fawned about her**; that **let into the temple to sacrifice she smashed the idols**; that **as she lay all wounded in prison the Lord Himself appeared to her with the archangels Michael and Gabriel, healed her wounds and comforted and strengthened her**; and that at the scaffold **she raised her hands and prayed, and a voice was heard from heaven, „Приђи, крећи, готов је за тебе и венац и престо!“** — come, set out, both the crown and the throne are ready for thee. **Only the beheading is in both.** **Асклепius IS NAMED HERE AND NOWHERE ELSE**: „Када је начелник Периније саветоваше да принесе жртву идолу Ескулапу“, and her answer „Чуј ме, ја сам слушкиња Христова, а ко је Ескулап, не знам. Чини што ти воља“ — hear me, I am a handmaid of Christ, and who Asclepius is I do not know; do as you please. saint.gr names no god. **Her Thessalonican birth and the move to Corinth are in both books and agree.** **NO ROW FOR THE ARCHANGELS, AND NOT BECAUSE THE TEST DID NOT FIRE.** The corpus keeps no folder for Michael or Gabriel the archangel — `ls saints | grep -iE 'archangel'` returns nothing, and the twenty-four Gabriels and the Michaels it does keep are men. **An archangel is not a saint with a folder in this corpus**, and the appearance of the Lord Himself is no more a `related` row than a dedication is. They are named in the prose. The ruler Perinios gains nothing by the coordinator’s third ruling, the martyrdom belonging to her and not to the persecutor. `martyr` is corroborated and **no type was added**: the entry calls her „Христова мученица“ and nothing else, and **`virgin` is NOT written although the closing image is „као невино и чисто јагње“** — an innocent and pure lamb is a figure for the sacrifice and not the rank Девица, which this heading does not print. `related` stays empty. No `locations`, although Thessalonica and Corinth are named in both books. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
