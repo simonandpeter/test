@@ -11,6 +11,11 @@
       "form": "Χρύσανθος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαρτίου, «Άγιοι Χρύσανθος και Δαρεία», with the rank word left off."
+    },
+    {
+      "form": "Хрисант",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first entry for the Julian 19 March on pravoslavno.rs, whose heading is „Свети мученици Хрисант и Дарија, и други с њима.“, where the form is the first of the two names the heading prints. The rank words Свети мученици stand at the head of the whole company and are left off, and nothing on the page gives this man an epithet or a city, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -78,8 +83,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.04.2026 (19. март ст. ст.) — „Свети мученици Хрисант и Дарија, и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the other calendars already keep in these folders, and the same company: Rome, the reign of Numerian, the torturer who was converted by what he saw and died with his household, and Chrysanthus and Daria buried alive under stones. The heading names two and then „и други с њима“, and the body names three more — Claudius, Diodorus the priest and Marianus the deacon — and describes, without naming, Claudius's wife and his two sons. All eight folders the corpus already holds on this day take a row, which is how the rows already in them were written: saint.gr's own line for this family names all four of them together, and its line for the clergy names the other two. The Prologue's „283. и 284. године“ is the pair of years these folders already hold, so no date was touched. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
