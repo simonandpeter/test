@@ -11,6 +11,11 @@
       "form": "Ειρήνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαΐου, «Αγία Ειρήνη η Μεγαλομάρτυς», with the rank words left off."
+    },
+    {
+      "form": "Ирина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 5. мај ст. ст., „Света великомученица Ирина.“ Света is no rank; великомученица is the `great-martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping it leaves the bare forename and nothing else. **Magedon, which the English display name keeps, is in the body and not in the heading** — „у некоме граду Магедону“ — so it is not part of the form, and no epithet was invented to hold the folder out of the fold with `irene-of-aquileia`'s equally bare Ирина."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.05.2026 (5. мај ст. ст.) — „Света великомученица Ирина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-18&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 5 May, the same menologion day the Romanian and the Greek keep her on**, and this is the third full account of her read for this folder. No existing row was moved. The identification is the whole story: a father named Licinius who was a king at Magedon, the pagan name Penelope, the teacher Apelian, the priest Timothy of the Apostle Paul who baptised her, the king Sedekiah and his son Savah, the three heated brazen oxen, Mesembria, and the grave found empty on the fourth day with Apelian standing by it. **No year was taken.** This page says only „Живела у времена апостолска“, which has no bounds; the folder holds no `dates` because the Romanian page argues the first century and saint.gr gives the fourth and 315, and this book **siding with the earlier reading does not make it a bound**. New to the corpus from this page: that **some think she was a Slav** — „Неки мисле да је била Словенкиња“, which no other account of her carries; that **Apelian taught her the Christian faith**, where the Romanian page has him only read the birds; that Timothy was the **disciple** of the Apostle Paul and brought her his letters to read; that Sedekiah's ditch held **scorpions as well as snakes** and that she was buried in it **up to the head**; that the saw rebounded from her **as from stone**; that Savah **shod her with nails, loaded a sack of sand on her and bridled her** and had her driven like a beast out of the city, where she said „Заиста сам као скот пред Тобом, Господе!“, and that **the earth opened and swallowed her tormentors**; that the eparch **Ваводин** took her to **град Константину**, a place neither other account names, where the Romanian page has his grating at Callinicum; and that she brought **more than a hundred thousand** pagans to the faith. **One deliberate fold**: the heading's bare Ирина is already held by `irene-of-aquileia`, and the row is in this batch's commit message. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

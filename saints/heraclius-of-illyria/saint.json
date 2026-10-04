@@ -1,0 +1,60 @@
+{
+  "slug": "heraclius-of-illyria",
+  "display_name": "Heraclius of Illyria",
+  "names": [
+    {
+      "form": "Ираклије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 5. мај ст. ст., „Свети Мартин и Ираклије.“ Свети heads both men and is no rank; the heading carries **no rank word at all** and no epithet, no see and no place, so the bare forename is the whole of it. Illyria, which this folder's English name takes, is in the body — „Беху гоњени од јеретика, аријеваца, у Илирији.“ — and not in the heading, and this corpus does not put a place into a name form that the source does not print there. The form meets no other folder in any language, which was measured rather than assumed: `heraclius-companion-of-alexander` holds the fuller Russian «Ираклий Адрианопольский», and `philip-of-heraclea`'s Serbian form carries Ираклијски, which is the see of Heraclea and not this name."
+    }
+  ],
+  "sex": "male",
+  "types": [],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.05.2026 (5. мај ст. ст.) — „Свети Мартин и Ираклије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-18&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading enumerates both men — „Свети Мартин и Ираклије.“ — so the citation above is that heading whole**, per BRIEF-SERBIAN.md §4 and the coordinator's ruling for an enumerated company, and the two names are two folders. **He is new and not an upgrade, and that was measured three ways**: the day list for the menologion 5/5 names eleven folders and neither of these two is among them; `ls saints | grep -iE 'martin|heracl|herakl'` returns twenty-one folders, every one of which is a different man on a different day — seven Martins off Greek and Romanian lines for 10 and 12 November, 7 December and 22 September, and the Heracliuses of Athens, Adrianople, Carthage, Todi, Bessarabia and 14 July — and `grep -ril illyri saints/` returns **no folder at all**, so nothing in this corpus has yet held an Illyrian. The §7 namesweep ranked the seven Martins `!!` on the forename and, as on every enumerated company so far, **read only the first name of the heading**, so Ираклије was swept by hand. The identification is a pair of Slavs persecuted by Arians in Illyria, exiled, and dead in exile in the fourth century. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 5. мај ст. ст.: „Послани у изгнанство ови витези Православља скончаше земни живот у IV веку, и преселише се ка Господу.“ — the book prints the century and no year, and nothing narrower was taken from the Arian persecution it names. `node .tmp/dd.mjs \"4th century\"` reads it as «IV в.» and «4ος αι.»"
+    }
+  },
+  "related": [
+    "martin-of-illyria"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
