@@ -11,6 +11,11 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαΐου, «Άγιος Ακάκιος», with the rank word left off."
+    },
+    {
+      "form": "Акакије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 7. мај ст. ст., „Свети мученик Акакије.“ Свети is no rank and мученик is the `martyr` this folder already carries in `types` and `honorific.js` composes back, so stripping them leaves the bare forename and nothing else: the heading gives no epithet, no rank of office, no city and no company, and the officer's commission, Maximian, Perinthus and Byzantium are all in the body. Two other folders already hold this bare form and the fold was measured before drafting, not discovered by the gate."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.05.2026 (7. мај ст. ст.) — „Свети мученик Акакије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-20&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 7 May, the same menologion day the Romanian and the Greek keep him on, and this is the first account of him this corpus has read** — doxologia gives «Sfântul Mucenic Acachie» and no life, and saint.gr «Άγιος Ακάκιος» and no more. The identification is day, rank and the soldiering: „официр римски“ against this folder's own `soldier` and the English name it was given, the Centurion. **He is not `acacius-the-new-of-neochorion`, nor any of the other thirteen Acacii this corpus keeps** — checked by listing them all; the fourteen stand apart by day and see. **A FIRST DATE**: „Чесно пострада и пресели се у царство вечне радости 303. године.“ → `death` 303, where this folder held no `dates` at all; `node .tmp/dd.mjs \"303\"` reads it in both packs. New besides, and all of it new: that he was **a Roman officer in the time of the emperor Maximian**; that answering at his trial he said he had **inherited the pious faith from his own parents** and had been confirmed in it **by seeing many wonderful healings from the relics of Christian saints**; that the great torments he bore bravely were **in the Thracian city of Perinthus**; and that he was then **taken over into Byzantium**, where he endured fresh torments until he was at last beheaded with the sword. **No `locations` were taken** for Perinthus or Byzantium: he was tortured in one and died in the other, and „he was taken to Byzantium“ is not a birthplace or a see. `types` was not touched: мученик is the `martyr` the folder already holds, and the officer is its `soldier`. **One deliberate fold, a widening**: the heading's bare Акакије joins the gate's existing `? \"акакије\"` pair, and the row is in this batch's commit message. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -85,5 +100,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "Охридски пролог за 7. мај ст. ст.: „Чесно пострада и пресели се у царство вечне радости 303. године.“ — the book prints the year plainly and this folder held no date at all before it; doxologia and saint.gr both give him a bare line with no century. `node .tmp/dd.mjs \"303\"` reads it in both packs. No year of birth is printed anywhere."
+    }
+  }
 }

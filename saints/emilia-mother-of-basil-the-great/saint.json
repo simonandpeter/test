@@ -6,6 +6,11 @@
       "form": "Emilia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 1 ianuarie."
+    },
+    {
+      "form": "Емилија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 8. мај ст. ст., „Света Емилија.“ Света is no rank, and the heading carries nothing else at all — no epithet, no place, no kinship clause; „Мати светог Василија Великог“ is the body's first sentence, and this corpus keeps a kinship clause in the English display name, where this folder already has it. So the bare forename is the whole of the form. It meets no other folder in any language, which was measured rather than assumed — and in particular it does **not** meet `emmelia`, whose only form is the Greek Εμμέλεια, although the two folders are one woman; see this row's note."
     }
   ],
   "sex": "female",
@@ -16,7 +21,8 @@
     }
   ],
   "related": [
-    "basil-the-great"
+    "basil-the-great",
+    "macrina-sister-of-basil-the-great"
   ],
   "attestations": [
     {
@@ -45,11 +51,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs and the Ohrid Prologue for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.05.2026 (8. мај ст. ст.) — „Света Емилија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-21&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 8 May, and it is the day doxologia's own page for her already pointed at**: this folder's life says in so many words that doxologia „keeps her on 1 January and again on 8 May“, and the Romanian row is the 1 ianuarie it was read from. So the Serbian row falls on the second of doxologia's two days and no row was moved. The identification is one line of the body — „Мати светог Василија Великог.“ — and this folder's own display name. **A FIRST DATE AND A FIRST DAY OF DEATH**: „упокојила се у Господу 8. маја 375. године“ → `death` 375, where this folder held no `dates` at all and doxologia names „no year, no place and no death“; `node .tmp/dd.mjs \"375\"` reads it in both packs. **AND A DISAGREEMENT ABOUT HOW MANY CHILDREN SHE HAD, recorded and not settled**: this book says „Родила деветоро деце“, nine, where doxologia's page says five of her **ten** were raised to sanctity. Both stand in the life. New besides: that **in her youth she wished to stay a virgin her whole life and was forced into marriage**; that she so breathed the spirit of Christ into her children that **five of them became saints**, whom this book names — Василије Велики, Григорије епископ ниски, Петар епископ севастијски, Макрина and Теозвија; and that **in old age she built a monastery where she lived with her daughter Macrina and where she reposed**. **Only two of those five are named in the appended paragraph and the reason is a rule.** Macrina is in the narrative — the monastery was where the two of them lived — so she is named, linked, and `related_add` completes a row `macrina-sister-of-basil-the-great` already carried one-sidedly to this folder; Basil was already named and reciprocally related. **Gregory of Nyssa, Peter of Sebaste and Theosebia stand in a list and not in a story**, so naming them in the life would have `related-floor.test.mjs` demanding three new family rows in both directions on folders this day does not commemorate, and `BRIEF.md` §4's „a `related` row for every person named“ is the rule that makes the restraint necessary rather than timid. They are named here instead. **And Теозвија is the one of the five this corpus does not hold as her daughter**: `theosebia-the-deaconess` is related to `gregory-of-nyssa` and `gregory-the-theologian` and to no parent, the tradition is divided over whether she was Gregory of Nyssa's sister or his wife, and `emmelia` — see below — does not relate to her either. **The Prologue's claim is recorded and nothing was written.** `types` was not touched: Света is no rank, and the monastery she built is a narrative and not a rank word, so this folder's missing `types` stays missing. **THE FOLDER'S OWN DUPLICATE IS THE FINDING OF THIS ENTRY AND IS THE AUTHOR'S**: `emmelia` is the same woman — saint.gr's «Αγία Εμμελεία» for 30 Μαΐου, related to `basil-the-great`, `gregory-of-nyssa`, `peter-of-sebaste`, `macrina-sister-of-basil-the-great`, `naucratius-brother-of-basil` and `basil-the-elder`, which is this household entire — so the corpus keeps Basil's mother in **two folders on two calendars and two days**. The Serbian row was put on this one, because the Prologue spells her Емилија and names her „Мати светог Василија Великог“, which is this folder's own name and its own line; `emmelia` was not touched. **Merging two committed folders is not a reader's call** — the standing ruling from `nectarios-of-aegina` — so the duplicate is named and left standing. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 375,
+      "latest": 375,
+      "display": "375",
+      "basis": "traditional",
+      "note": "Охридски пролог за 8. мај ст. ст.: „у старости устројила манастир где је живела са својом ћерком Макрином, и где се упокојила у Господу 8. маја 375. године.“ — the book prints the year and the day, and this folder held no date at all before it; its own life says doxologia „names no year, no place and no death“. `node .tmp/dd.mjs \"375\"` reads it in both packs. No year of birth is printed anywhere, and the number of her children is itself disputed — nine here against doxologia's ten — so nothing was reckoned from it."
+    }
   }
 }

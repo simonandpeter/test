@@ -11,6 +11,11 @@
       "form": "Βάρβαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Βάρβαρος ο Μυροβλύτης», with the rank word left off."
+    },
+    {
+      "form": "Варвар разбојник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 6. мај ст. ст., „Свети Варвар разбојник.“ Свети is no rank, and **разбојник — the robber — is not a rank word in any of the mappings this wave works from**: `honorific.js` does not compose it, it is not what the folder's `types` hold, and it is the one thing on the page that distinguishes him. **So it is kept, and keeping it is what holds this folder out of the fold with the day's other Barbarus**, the soldier-martyr whose own heading gives him the bare Варвар — the same move Папучар, Тарсанка, Боровски and Кијево-Печерски made on earlier days of this wave. The by-name the Greek page gives him, Μυροβλύτης the Myrrh-streamer, is nowhere on this page and was not imported; the myrrh is in the body's last sentence and not in the heading."
     }
   ],
   "dates": {
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.05.2026 (6. мај ст. ст.) — „Свети Варвар разбојник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-19&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day is Julian 6 May and the Greek keeps him on 15 Μαΐου, and that is not a conflict** — the Greek row was not moved, exactly as `silvanus-of-gaza` kept three calendars on 14 October beside a Serbian 4 May; and saint.gr's own page already reports a **third** day for him, 23 Ιουνίου, where the hagiology of Aetolia and Akarnania and of Corfu calls him Barbarus the Pentapolite. **The identification is the robber, the four-footed penance, the killing by mistake and the myrrh**, four things together: „После многих злочинстава покајао се“ against saint.gr's λῄσταρχος; „три године иде четвороношке“ against «πεποίηκε χρόνους τρεῖς κυλιόμενος ὡς τετράπους»; shot „помислише да је звер, а не човек“ against the farmer who killed him taking him for a wild animal; and „из његовог тела потече целебно миро“ against the myrrh-giving tomb that earned him the by-name Μυροβλύτης. **This is the day's second Barbarus and the pairing is what identified both**: the Prologue's „Свети мученик Варвар.“ is the soldier-martyr `barbarus-6-may`, upgraded in this same batch, and this heading's разбојник is the penitent. **NO DATE WAS TOUCHED**: this entry prints no year, no century and no reign, so the folder's `floruit` of 820–829 — saint.gr's bounds for Michael the Stammerer's reign — stands exactly as it was, and nothing was widened into it. New to the corpus from this page: that he **sentenced himself** to the penance in two parts, the second being **twelve years in the forest with no clothing, no roof and no food but grass and leaves**, which the Greek account has not at all; that **an angel brought him word that his sins were forgiven**; that his killers were **merchants shooting from a distance with bows** rather than one farmer; that **he asked them as he died to fetch the priest**, who came and buried him honourably; and that the myrrh flowed **from his body**, where saint.gr has it from the tomb. All four disagreements are recorded in the life and none is chosen. `types` was not touched: the heading carries no rank word — разбојник is not one — and the folder's `venerable` and `wonderworker` came from the Greek Όσιος and the myrrh. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
