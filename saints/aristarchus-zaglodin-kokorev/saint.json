@@ -1,0 +1,60 @@
+{
+  "slug": "aristarchus-zaglodin-kokorev",
+  "display_name": "Aristarchus (Zaglodin-Kokorev)",
+  "names": [
+    {
+      "form": "Аристарх (Заглодин-Кокорев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 14 ноября ст. ст., name page 9198, «Аристарх (Заглодин-Кокорев), иеромонах, сщмч.», with the grade word and the rank word left off. The day's own line declines the name to «Аристарха» and gives it without a surname. The day's line gives him the rank «прмч.», venerable-martyr, while the name page gives «сщмч.»; both words are stated in the life rather than resolved, and the types are read from the line's «прмч.» together with the name page's «иеромонах»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 ноября ст. ст. — «Сщмчч. Димитрия , Александра , Виктора , Алексия , Михаила , Михаила , Феодора , Петра , Алексия , Сергия , Николая , Василия , Александра , Николая , Димитрия , Димитрия , Порфирия , Василия , Георгия , Василия , Сергия , Александра , Сергия пресвитеров, Николая диакона, прмч. Аристарха , мч. Гавриила и мц. Анны (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261114.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 27 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 27 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 27 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the line it names him in on 14 ноября ст. ст. The calendar carries no life page, so the year it prints at the end of that line is the whole of what is recorded here. No day, no place and no manner of death are given, and none is inferred."
+    }
+  },
+  "office": "Hieromonk",
+  "text": {
+    "life": "life.md"
+  }
+}
