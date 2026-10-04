@@ -7,6 +7,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιανουαρίου, «Άγιος Κύριλλος Μητροπολίτης Καζάν», with the rank words left off."
+    },
+    {
+      "form": "Кирилл (Смирнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Святитель Кирилл (Смирнов), митрополит Казанский, сщмч.», with the rank words and the see left off; the surname is part of the name and stays. The line itself gives the forename in the genitive, «Кирилла», with the see and no surname."
     }
   ],
   "sex": "male",
@@ -15,19 +20,36 @@
     "metropolitan"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "26 April 1863",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «родился в семье псаломщика 26 апреля 1863 года в городе Кронштадт Санкт-Петербургской губернии». saint.gr gave this folder no birth at all."
+    },
     "death": {
       "earliest": 1937,
       "latest": 1937,
-      "display": "1937",
+      "display": "7 November 1937",
       "basis": "attested",
-      "note": "saint.gr: «Ο Άγιος Κύριλλος μαρτύρησε το έτος 1937 μ.Χ.»; the page's heading dates him «(; - 1937)»."
+      "note": "days.pravoslavie.ru's life for him: sentenced to be shot by the NKVD troika on 6 November 1937 and «7 (20 н. ст.) ноября Святитель был расстрелян в Лисьем овраге под Чимкентом». The day line closes with the same year, «(1937)», and keeps him on 7 ноября ст. ст., which is that date. saint.gr had «Ο Άγιος Κύριλλος μαρτύρησε το έτος 1937 μ.Χ.» and the year alone."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists three days, «26 января (Новомуч.) , 8 июня (Петерб.) , 7 ноября». The first is the synaxis of the new martyrs and confessors of Russia — which is also the day saint.gr keeps him on — and the second the synaxis of the saints of Saint Petersburg; both are synaxes and not feasts, and neither day page was read here. The 7 ноября is the day page that listed him and, his life says, the day he was shot. This folder's Russian row renders on 7 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Сщмч. Кирилла , митр. Казанского, Михаила , Александра , Александра , Михаила , Александра , Николая , Алексия , Павла , Василия , Павлина пресвитеров, Иоанна и Вениамина диаконов, мч. Николая , мц. Елисаветы (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

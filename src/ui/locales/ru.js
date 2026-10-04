@@ -808,6 +808,7 @@ export const ru = {
     'Archbishop of Uglich': 'Архиепископ Угличский',
     'Archbishop of Tobolsk': 'Архиепископ Тобольский',
     'Archbishop of Voronezh': 'Архиепископ Воронежский',
+    'Archbishop of Yelets': 'Архиепископ Елецкий',
     'Archbishop of York': 'Архиепископ Йоркский',
     'Archbishop and Patriarch of Constantinople': 'Архиепископ и Патриарх Константинопольский',
     'Archdeacon': 'Архидиакон',
