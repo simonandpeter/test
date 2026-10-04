@@ -11,6 +11,11 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουνίου, «Όσιος Ιλαρίων ο νέος, ηγούμενος Μονής Δαλμάτων», with the rank word left off. The epithet and the office in the day's line are left off the stored form."
+    },
+    {
+      "form": "Иларион Нови",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. јун ст. ст., „Преподобни Иларион Нови“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped; Нови is the epithet the man took with the name and is not a rank, so it stays, and the form is the fullest the heading gives. **IT IS NOT UNIQUE AND THAT IS KNOWN**: `foldchk.py` returns `[('hilarion-the-new-of-pelecete', 'sr')]`, the identical string on another Hilarion the New kept by this same book on another day. The house is in neither heading, so neither form can be made fuller, and the two are told apart by their days."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.06.2026 (6. јун ст. ст.) — „Преподобни Иларион Нови“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A THIRD BOOK THAT ADDS NOTHING AND AGREES EXACTLY, WHICH IS WORTH SAYING. Every sentence of this entry is already on the folder off doxologia: abbot of the Dalmatou house in Constantinople; disciple of Gregory the Decapolite; imitator of Hilarion the Great, whose name he took; mighty in prayer and brave in suffering; much suffered for the icons under Leo the Armenian; **Leo cut down with swords by his own soldiers in the very church and the very place where he had first mocked the holy icons and from which he took the first icon down**; Hilarion let out of prison and shortly tortured and imprisoned again until the Orthodox empress Theodora; **the angels of God seen carrying the soul of Theodore the Studite to heaven**. The two most striking sentences in the entry are the two the Romanian life already has almost word for word. `dates` UNTOUCHED AND THE AGREEMENT IS EXACT TO THE AGE. saint.gr gives «(775 - 845)» and «εκοιμήθη ειρηνικά σε ηλικία 70 ετών, το 845»; this book gives „упокојио се у царству небеском 845. године у својој седамдесетој години“ — the same year and the same seventieth year. **Nothing to widen; the seventieth year is not used to derive the 775 either, which saint.gr prints for itself.** `types` and `office` untouched, all four corroborated or unaffected: Преподобни is the `venerable`, Игуман the `abbot` and the `Abbot` in `office`, and the suffering for the icons under an iconoclast emperor is the `confessor`. `related` untouched: Gregory the Decapolite, Hilarion the Great and Theodore the Studite are all three already there, which is every person this entry names but the emperors. An emperor in a life is not a relation. No `locations`. **THE FOLD IS THE FINDING OF THE ENTRY, AND IT IS ON THE FULL FORM AND NOT A BARE ONE.** `foldchk.py` returns `[('hilarion-the-new-of-pelecete', 'sr')]` for «Иларион Нови»: **the identical two-word string, epithet and all, is already stored for a different Hilarion the New**, of the Pelecete monastery, off this same book’s own other day. The form is stored a second time on purpose — it is what this heading prints and there is no third word in it — and the two are told apart by their houses and their days. **They are certainly two men**: this entry says „Игуман Далматске обитељи у Цариграду“ and names Gregory the Decapolite as his teacher. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
