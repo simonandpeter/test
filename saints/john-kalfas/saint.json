@@ -10,6 +10,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Άγιος Ιωάννης ο Κάλφας ο Νεομάρτυρας», with the rank word and the second epithet left off."
+    },
+    {
+      "form": "Јован Калфа",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's second heading for 26. фебруар ст. ст., „Свети мученик Јован Калфа.“, with Свети and the rank word мученик left off. Калфа is kept in the form because the body treats it as his by-name and glosses it: Калфа значи неимар, a builder, which was his trade."
     }
   ],
   "related": [],
@@ -49,8 +54,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.03.2026 (26. фебруар ст. ст.) — „Свети мученик Јован Калфа.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

@@ -12,6 +12,11 @@
       "form": "Πορφύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Φεβρουαρίου, «Όσιος Πορφύριος επίσκοπος Γάζης», with the rank word and the see left off."
+    },
+    {
+      "form": "Порфирије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 26. фебруар ст. ст., „Свети Порфирије, епископ гаски.“, with Свети, the rank word епископ and the see left off; the see is the folder's `office` and not part of the name."
     }
   ],
   "sex": "male",
@@ -55,8 +60,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.03.2026 (26. фебруар ст. ст.) — „Свети Порфирије, епископ гаски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-11&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
