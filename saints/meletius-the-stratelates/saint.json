@@ -11,6 +11,11 @@
       "form": "Μελέτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, which names the whole company, and out of the life page's own head line for him or her; the rank words are left off."
+    },
+    {
+      "form": "Мелетије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Свети мученици Мелетије стратилат и хиљаду двесто осамнаест војника са женама и децом“ — Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, стратилат is the `soldier` it puts there too, and everything after „и“ is the unenumerated company and not part of his name. Strip all of it and the bare personal name is what the calendar gives. **The fold was measured on both instruments, not assumed**: `foldchk.py` compares the stored string exactly and returns `NO FOLDER HOLDS THIS FORM` for «Мелетије», so this is the first folder to hold that form — but `corpus-gate.mjs` folds on a looser reading of the name and its «мелетије» row now reads `meletius-of-antioch, meletius-the-stratelates`, so on the gate’s reading it **is** a joining, of two. The two instruments answer different questions and both answers are recorded here rather than the first one alone. The Greek form on this folder, «Μελέτιος», is the same bare name."
     }
   ],
   "related": [
@@ -38,11 +43,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 218,
+      "earliest": 101,
       "latest": 222,
-      "display": "between 218 and 222",
+      "display": "101–200 or 218–222",
       "basis": "traditional",
-      "note": "saint.gr gives the reign and no year: «Μαρτύρησαν στα χρόνια του αυτοκράτορα Ηλιογάβαλου (218 - 222 μ.Χ.)». The interval is that reign as the page prints it."
+      "note": "Widened, not narrowed, because two books disagree by a century. saint.gr gave „between 218 and 222“, which this folder held alone. Охридски пролог за 06.06.2026 (24. мај ст. ст.): „Оптужен … у време цара Антонина“ and „Сви чесно пострадаше у II веку и преселише се у царство Христа Бога“. The century is stated and not derived from the reign, and no attempt is made to say which Antoninus the Prologue means."
     }
   },
   "attestations": [
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.06.2026 (24. мај ст. ст.) — „Свети мученици Мелетије стратилат и хиљаду двесто осамнаест војника са женама и децом“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 24/5 the Greek row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as all three of this day’s and all three of the 23 May’s do. **A COMPANY THAT ENUMERATES NOBODY, SO IT IS ONE ENTRY.** The heading counts his men — „хиљаду двесто осамнаест војника са женама и децом“, one thousand two hundred and eighteen soldiers with their wives and children — **and names not one of them**, and the body names nobody either. By BRIEF.md §4’s ruling a company that enumerates its members is one folder per member and one that names nobody is one entry, so **this is one row on this folder and nothing else**. The number is new: saint.gr’s heading says only „και οι συν αυτώ Μάρτυρες“. **The twenty-one folders this folder already relates to — the twelve tribunes, the two infants, the three women, Callinicus the magus and the rest — come off saint.gr’s life and not off this heading, and not one of them gains a row from this book**, which does not name them. **THE DEATH IS WIDENED, AND THE TWO BOOKS ARE A CENTURY APART.** This folder holds `death` 218 to 222 off saint.gr, „between 218 and 222“. The Prologue says the suffering was **in the second century** — „Сви чесно пострадаше у II веку“ — and names the emperor as **Антонин**. A century stated outright is not a derivation from a reign, so it is usable; and this corpus **widens where two books disagree and refuses to narrow**, so `death` becomes `earliest` 101, `latest` 222 with the display `101–200 or 218–222`, which holds both readings and asserts neither. **The dash form is deliberate**: `286–305 or about 308` reads in both languages where `between 286 and 305, or about 308` fails `lives.test.mjs` with `cannot read`, so the compound is written with dashes throughout. **121 years, so it is under `date-audit`’s 150-year `wide` threshold and the finding does not move.** **And no attempt was made to say which Antoninus is meant** — that is exactly the identification this corpus does not make from a name, and it is why the interval and not a choice is what got written. **New here**: that he was **accused of destroying a heathen temple**, which saint.gr does not give as the charge; and that **he was nailed to a tree and gave up his holy soul so**, „Прикован за дрво, Мелетије испусти своју свету душу“. The Prologue confirms `martyr` and `soldier`: „стратилат“, and the soldiers who were under his command and would not deny Christ their Lord. **No new types**, the folder holding both already. **The emperor Антонин gains nothing** by the coordinator’s third ruling: no calendar read for this corpus keeps him, and he is not a saint. No `locations`, the entry naming no place at all. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

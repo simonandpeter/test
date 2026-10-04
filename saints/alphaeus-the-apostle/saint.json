@@ -11,6 +11,11 @@
       "form": "Αλφαίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αλφαίος ο Απόστολος», with the rank word left off."
+    },
+    {
+      "form": "Алфеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Свети апостол Алфеј“ — Свети is not a rank and апостол is the `apostle` in `types`; the bare personal name is what is left. **Measured, and it is a fold of two told apart by the Prologue itself**: `foldchk.py` returns `[('alphaeus-martyr-10-may', 'sr')]` for «Алфеј», because **this same book keeps an «Алфеј» on its own Julian 10 May** — the martyr of the three brothers, whose `serbian` row a reader of this wave wrote off the Охридски пролог за 23.05.2026 — **and two commemorations on one calendar means two men**, which is exactly how this fold is told. So the identical string is stored a second time on purpose, and the two folders are kept apart by their days and their ranks, the 10 May man being `martyr` and this one `apostle`. **A third Alphaeus is already distinguished in this folder’s own life**, the brother of Alexander and Zosimas kept on 28 September, so the corpus now reads three men of the name and says so on each. **It is stored on this folder and not on `james-son-of-alphaeus`, although that folder’s Greek form «Ιάκωβος του Αλφαίου» carries the same name**, because the heading is this folder’s heading and a patronymic inside another saint’s name is not a form of this one. The Greek form here, «Αλφαίος», and the Romanian «Alfeu» are the same bare name."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.06.2026 (26. мај ст. ст.) — „Свети апостол Алфеј“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 26/5 the Romanian and Greek rows already carry, and **two sentences long**. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 26 May is. **THE BOOK ANSWERS, IN ONE LINE, THE QUESTION THE OTHER TWO CALENDARS REFUSE — AND NO `related` ROW IS WRITTEN ON THE STRENGTH OF IT.** doxologia prints the line and no life. saint.gr says in so many words that there are no clear biographical particulars and that **it cannot pronounce with certainty which Alphaeus is meant**, then sets out two answers: some, Nikodemos the Hagiorite among them, take him for the father of James of the Twelve and of the Evangelist Matthew; others — **and this, saint.gr says, is the likelier** — take him for the Alphaeus or Cleopas who was husband of the Mary who was a kinswoman of the Mother of God. **The Prologue takes the first answer and states it flatly**: „Отац двојице апостола из Дванаесторице и то: Јакова Алфејева и Матеја Јеванђелиста“ — the father of two apostles of the Twelve, namely James the son of Alphaeus and Matthew the Evangelist. **It gives no argument and does not mention the other answer.** **WHY NO ROW.** `james-son-of-alphaeus` and `matthew-the-apostle` are both in the corpus, and a fatherhood is a kinship the body narrates, which is ordinarily the test that owes a row. **But this folder already carries `abercius-martyr-26-may` and `helen-martyr-26-may` in `related` as his son and his daughter, off saint.gr’s Cleopas reading** — and the two readings cannot both be true of one man’s family. Adding two more sons would leave the folder asserting an incoherent household and would silently prefer this book over the Greek page’s own stated preference. `docs/CORPUS.md` §10 reserves both *that two entries are one person* and *a `related` row*, and `BRIEF.md` §3 says that where a reader is not sure he says so and writes nothing. **So both identifications are in the prose, named and unlinked, neither is chosen, and the four rows this would have produced are the author’s to write or to refuse. This is the open question of the day.** **`dates` UNTOUCHED**: the Prologue gives no year, and „Скончао је свој земаљски живот мирно“ — he ended his earthly life in peace — is the one thing it says of his end. **That is itself new**: doxologia says nothing at all of his death and saint.gr says nothing of it either, so a peaceful end is this book’s alone, and it belongs to whichever Alphaeus this book means. `types` untouched at `apostle`, which the heading corroborates. No `locations`, the entry naming no place. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

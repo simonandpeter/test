@@ -11,6 +11,11 @@
       "form": "Μαρκιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιουνίου, «Άγιοι Νίκανδρος και Μαρκιανός», with the rank words left off."
+    },
+    {
+      "form": "Маркијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s body for 25. мај ст. ст., not out of its heading, which is „Свети мученици Пасикрат, Валентион, Јулије и други“ and does not name him: „С Никандром погине и Маркијан“. The form stands in the nominative there and is given bare, with no rank word attached to it anywhere in the entry. **Measured, and it is a fold**: `foldchk.py` returns `[('marcian-of-constantinople', 'sr')]` for «Маркијан», so storing it here makes a second holder of the identical string and `corpus-gate.mjs` will print the pair as a `?` row. **The fold is entered on purpose and there is nothing fuller to prefer**: the entry gives the name bare in the body, names him in no heading, and the place in the display name is the other calendars’ and not this book’s to attach. The two men are told apart by their days and their sees, as the two Therapons of this same week are. Note the Serbian spelling: «Маркијан» with the ј, where the Russian calendar writes «Маркиан»."
     }
   ],
   "sex": "male",
@@ -19,7 +24,10 @@
     "soldier"
   ],
   "related": [
-    "nicander-of-durostorum"
+    "nicander-of-durostorum",
+    "passicrates-of-durostorum",
+    "valentine-of-durostorum",
+    "julius-the-veteran"
   ],
   "dates": {
     "death": {
@@ -67,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.06.2026 (25. мај ст. ст.) — „Свети мученици Пасикрат, Валентион, Јулије и други“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and like his companion **he is in the body and not in the heading**, so this row exists because the day was read. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. **THE COMPANY, AND HOW IT WAS TOLD FROM THE OTHER DAYS.** The heading enumerates three — „Пасикрат, Валентион, Јулије“ — and „и други“ after them, and the body names two more, **Никандар** and **Маркијан**, so five men of this entry have folders and all five get a row. **The corpus keeps them on three different days of three different calendars**: `passicrates-of-durostorum` and `valentine-of-durostorum` on 24 April, `julius-the-veteran` on the Romanian 27 May and the Greek 26 May, and `nicander-of-durostorum` and `marcian-of-durostorum` on 8 June. **Not one of them was found by `sr-namesweep.mjs` scoring this heading** — it scores only the first name of an enumerated company, which is its fourth known failure mode — **and not one of them is on the day list for the menologion 25/5 either**, the corpus keeping none of them on that day. They were found by `ls saints | grep -iE 'pasicrat|valent|nicander|marcian|julius' and by grepping the corpus for the entry’s own uncommon proper name, Durostorum, which returned twelve folders at once. **The grep beat both instruments again**, and the misspelling is why the first grep missed one: the corpus stores him `passicrates-of-durostorum`, with two s. **«Доростолу Македонском» AGAINST MOESIA, RECORDED AND NOT RESOLVED.** The Prologue puts Durostorum in **Macedonia**; doxologia puts it in the Roman province of Moesia Inferior and saint.gr in Moesia. **No `locations` was written or changed on any of the five.** **«око 302» IS REFUSED ON ALL FIVE, AND FOR THREE DIFFERENT REASONS.** It is the only year this entry gives, it is approximate, and it is stated of the heading’s company and not of any one man. For `julius-the-veteran` it **narrows**: his folder holds 284 to 311 off the Romanian page, and a reader before this one had already refused saint.gr’s flat 302 for the same reason, writing „the year is the Greek’s; this folder’s dating stays the interval the Romanian page allows“ — this book agreeing with saint.gr changes nothing, two books inside a range still not narrowing it. For `nicander-of-durostorum` and `marcian-of-durostorum` it would **widen an `attested` 298 with an approximation**, and a „око“ is not a source for an endpoint. For `passicrates-of-durostorum` and `valentine-of-durostorum` **it is the Prologue’s second answer to a question the Prologue has already answered differently**, and that is the finding of the day, below. **NO DATE ON ANY OF THE FIVE WAS TOUCHED.** **The Prologue’s own Julian 06-08 was read before this row was written and does not keep him either**, so the 25 May is this book’s only day for him and the §4 warning about writing a lesser day onto an `undocumented` row does not bite. **EVERYTHING THIS ENTRY GIVES OF HIM, THE GREEK PAGE ALREADY GAVE, AND THAT IS THE READING.** „С Никандром погине и Маркијан. Жена његова дође на губилиште носећи сина на рукама. Маркијан пољуби сина и помоли се Богу: ‘Господе свемоћни, старај се Ти о њему!’“ — saint.gr has the wife holding out the child and weeping, and Marcian taking the child, raising his eyes to heaven and saying *Lord, you will take care of this child*, then kissing the child and his wife. **Two books, read a month apart off two hosts in two languages, give the same prayer in the same words.** The small differences are recorded and not resolved: **this book has her come to the place of execution carrying the son**, where saint.gr has her watching the tortures and weeping, and **it has him pray before the beheading with no tongue-cutting between**, where saint.gr puts the tongues out first. **His death with Nicander is corroborated outright** — „С Никандром погине и Маркијан“ — and that pair was already `related` in both directions. `martyr` and `soldier` are both corroborated. **His wife and his son gain no folders and no rows**: both are unnamed in all three books, and a wife and a son are kinships the body narrates, so the rows are owed and refused only for want of anyone to write them for. **The prefect Maximus gains nothing**, the martyrdom belonging to him and not to the persecutor. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

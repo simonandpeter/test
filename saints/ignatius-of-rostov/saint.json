@@ -13,6 +13,11 @@
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Ιγνάτιος Επίσκοπος Ροστώβ», with the rank word left off."
+    },
+    {
+      "form": "Игњатије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Свети Игњатије епископ ростовски“ — Свети is not a rank, епископ is the `bishop` this corpus puts in `types` and the `Bishop` in `office`, and „ростовски“ is the see, which `office` and the display name both carry. Strip them and the bare personal name is left. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Игњатије», so this is the first folder to hold it, although the corpus keeps a long column of Ignatii, none of them with an `sr` form. **Note the Serbian spelling**: «Игњатије» with the њ, where the Russian calendar writes «Игнатий» — the same name and not the same string, as with «Маркијан» against «Маркиан» on 25 May. The Greek form on this folder, «Ιγνάτιος», is the same bare name."
     }
   ],
   "dates": {
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.06.2026 (28. мај ст. ст.) — „Свети Игњатије епископ ростовски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 28/5 the Greek row already carries, and the Russian and Romanian rows are `undocumented`. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 28 May is. **`dates` UNTOUCHED AND CORROBORATED TO THE DAY.** „Представио се Господу 28. маја 1288. године“ is exactly the `death` of 1288 this folder holds off saint.gr, and **the day it gives is 28 May, which is the day this row is written on** — so a Russian hierarch’s repose and his feast fall together, unlike the eight-day gap on `nicetas-the-stylite-of-pereslavl` on 24 May. **There is no field for a day of death**, so it is in the prose. **The twenty-six years of his episcopate are a duration and are used for nothing**; they also corroborate saint.gr’s own twenty-six, so two books agree on the length and neither gives a year of birth, and none was derived. **THE WONDER IS MUCH FULLER HERE, AND THAT IS THE WHOLE VALUE OF THE ROW.** saint.gr says only that on the day of his funeral some of the faithful saw his honourable relic raise itself and bless them. **The Prologue says what they saw**: „видеше неки, како он уста из сандука и диже се на ваздуху изнад цркве, и са висине благослови људе и град, потом се поново врати у свој мртвачки сандук“ — that he rose out of the coffin and **lifted into the air above the church**, and **from on high blessed the people and the city**, and then **returned again into his coffin**. **The city blessed as well as the people, the height above the church and the return to the coffin are all new.** It also confirms that **many other wonders happened at his grave**, which is where this folder’s `wonderworker` comes from, and that **he governed the flock of Christ with great love and mercy**. `hierarch`, `bishop` and `wonderworker` are all three corroborated and **no type was added**. `office` untouched at `Bishop of Rostov`, which the heading says in its own words. **Nobody in the entry gains a row**, the entry naming no person at all besides him; `related` stays empty. No `locations`, although Rostov is named in the heading. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

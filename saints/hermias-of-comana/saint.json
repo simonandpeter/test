@@ -11,12 +11,18 @@
       "form": "Ερμείας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Μαΐου, «Άγιος Ερμείας», with the rank word left off. The hymns on the same page inflect it «Ἑρμεία»."
+    },
+    {
+      "form": "Ермије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети мученик Ермије“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; the bare personal name is what is left. **Measured, and it is a fold of two told apart by the book’s own two days**: `foldchk.py` returns `[('hermes-apostle-of-dalmatia', 'sr')]` for «Ермије» — **the Prologue uses the identical string for the apostle Hermes of Romans 16:14 on its own Julian 8 April**, whose `serbian` row a reader of this wave wrote off the Охридски пролог за 21.04.2026, and who is an apostle, a bishop and a martyr of Dalmatia and not this old soldier of Comana. So the identical form is stored a second time on purpose and the two are told apart by their days and their ranks. **And the spelling is still the point**: this book writes „Ермије“ for this martyr and „Јерма“ for the apostle of its own previous entry, where doxologia writes «Ermie» for both and this folder and `hermas-31-may` consequently carry the identical Romanian form. **So the Serbian forms tell the two men apart where the Romanian ones cannot**, and that is why both were written on the same day. The Greek form here, «Ερμείας», is the same bare name."
     }
   ],
   "sex": "male",
   "types": [
     "martyr",
-    "soldier"
+    "soldier",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -55,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.06.2026 (31. мај ст. ст.) — „Свети мученик Ермије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 31/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 31 May is. **THE DEATH IS WIDENED BY SIX YEARS.** This folder holds `death` 160 off saint.gr’s «Τελικά τον αποκεφάλισαν … το 160 μ.Χ.» **The Prologue closes „Пострада свети Ермије 166. године за време цара Антонина“** — he suffered in the year 166, in the time of the emperor Antoninus. **Widened, not narrowed**: `death` becomes `earliest` 160, `latest` 166, display `160 or 166`. **The reign is used for nothing, and this folder’s existing `dates` note is why that matters** — it records that saint.gr names **two** emperors for the one persecution and gives Antoninus Pius’s regnal years under Marcus Aurelius’s name, so no reign was recorded as an interval there either. **This book naming Antoninus agrees with the first of saint.gr’s two and changes nothing**, 166 being stated outright. Six years, and `date-audit`’s `wide` did not move. **ALMOST THE WHOLE ENTRY IS ALREADY ON THE FOLDER.** The old soldier, the judge urging him in vain, the teeth beaten out with stones, the skin flayed off his face with a knife, the fiery furnace he rose from unharmed, the sorcerer’s poison that did him no harm, the sorcerer confessing Christ and being beheaded at once, the eyes gouged out, his answer to the judge, the hanging head-down, the men blinded by it and healed by his own prayer, the judge taking the knife himself, the Christians burying him secretly and the healings at his relics — **all of it is in the life already, in two other languages.** **New, and it is his sentence**: „Узми себи ове очи телесне, које гледају сујету света, ја имам очи срца, којима јасно видим светлост истиниту“ — take these bodily eyes to yourself, which look on the vanity of the world; I have the eyes of the heart, with which I see the true light clearly. **A third book confirming a long chain of torments word for word is worth recording and changes nothing else.** **`wonderworker` ADDED, AND THE DISTINCTION IS THE ONE THIS WAVE HAS BEEN MAKING ALL WEEK.** „Свети Ермије призва их к себи, стави своје руке на њих и молитвом ка Господу поврати им вид“ — he called the blinded men to himself, laid his hands on them and by prayer to the Lord gave them back their sight. **The man is the subject of that wonder**, as on 24 May and 30 May, where the healings at his relics in the very next sentence are the relics’ — the reading that refused `wonderworker` to both Therapons on 25 and 27 May. **So the type is written on the living prayer and not on the relics**, and it is said here which sentence it came from. `wonderworker` is not in `PRECEDENCE`, so the page goes on reading *Martyr Hermias*. `martyr` and `soldier` are both corroborated — „Остарео као војник царски“. **THE SORCERER IS A MARTYRDOM THE BODY NARRATES AND HE GETS NO ROW, FOR WANT OF A NAME.** „Видећи то волх, толико се изненади да јавно исповеди Христа, због чега би одмах мачем посечен“ — a man converted by the failure of his own poison and beheaded for it, **which is exactly the test that owes a row** — but the entry calls him only волх, the sorcerer, no calendar read for this corpus keeps him, and by the coordinator’s third ruling nothing is minted for him. **He is the clearest owed row of the wave refused only for anonymity.** The judge and the emperor Antoninus gain nothing, the martyrdom belonging to him and not to the persecutor — the same Antoninus refused on 24 May. `related` stays empty. No `locations`, although Comana is in the display name and the entry names no place at all. The Prologue prints no troparion and no kontakion; the three hymns on this folder stay."
     }
   ],
   "hymns": [
@@ -117,10 +133,10 @@
   "dates": {
     "death": {
       "earliest": 160,
-      "latest": 160,
-      "display": "160",
+      "latest": 166,
+      "display": "160 or 166",
       "basis": "traditional",
-      "note": "saint.gr: «Τελικά τον αποκεφάλισαν χαρίζοντας του το στέφανο της δόξας το 160 μ.Χ.» The page's heading is «Άγιος Ερμείας (; - 160)» and gives no year of birth, only that he was already of venerable old age when he was taken. **The same page names two emperors for the one persecution** — it puts him «την εποχή του αυτοκράτορα των Ρωμαίων Αντωνίνου Πίου» and the persecution «την περίοδο της βασιλείας του Μάρκου Αυρήλιου (138 - 161 μ.Χ.)», where those dates are Antoninus Pius's reign and not Marcus Aurelius's — so no reign is recorded as an interval, and only the year the page gives for the beheading is entered."
+      "note": "Widened, not narrowed, because two books disagree by six years. saint.gr gave 160, which this folder held alone: «Τελικά τον αποκεφάλισαν χαρίζοντας του το στέφανο της δόξας το 160 μ.Χ.» Охридски пролог за 13.06.2026 (31. мај ст. ст.): „Пострада свети Ермије 166. године за време цара Антонина“. The reign is used for nothing — saint.gr names two emperors for the one persecution and gives Antoninus Pius’s regnal years under Marcus Aurelius’s name — and 166 is stated outright. Neither book gives a year of birth, only that he was already old."
     }
   },
   "images": [

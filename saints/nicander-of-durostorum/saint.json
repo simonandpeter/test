@@ -11,6 +11,11 @@
       "form": "Νίκανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιουνίου, «Άγιοι Νίκανδρος και Μαρκιανός», with the rank words left off."
+    },
+    {
+      "form": "Никандар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s body for 25. мај ст. ст., not out of its heading, which is „Свети мученици Пасикрат, Валентион, Јулије и други“ and does not name him: „По том Никандар би изведен пред префекта Максима“. **The nominative is restored out of that sentence and that is a reading, not a regex** — the form in the text is already nominative there, and it is given bare, with no rank word attached to it anywhere in the entry. **Measured, and the result was not the expected one**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the bare «Никандар», so this is the first folder to hold that exact string — **and `nicander-of-egypt-15-march` holds «Никандар Мисирац», a fuller form of the same name, which `corpus-gate.mjs` does NOT fold onto it**: the gate was run and prints no «никандар» row at all, folding on the whole stored string rather than on a leading word. What it does carry for this name are two settled `·` rows, on the Greek «νικανδροσ» and the Romanian «nicandru», both of which already list this folder. The prediction that a bare form beside a fuller one would raise a `?` row was made before the gate was run and was wrong; this is what was measured. **There is no fuller form to prefer**: this entry gives the name bare in the body and nothing in its heading, and the place would have to be composed from the display name, which is not a reading. The fold is entered on purpose, as the bare «Михаил» was on 23 May. Note the Serbian vowel: this book writes «Никандар» where the Russian calendar writes «Никандр», and the two are not the same string."
     }
   ],
   "sex": "male",
@@ -19,7 +24,10 @@
     "soldier"
   ],
   "related": [
-    "marcian-of-durostorum"
+    "marcian-of-durostorum",
+    "passicrates-of-durostorum",
+    "valentine-of-durostorum",
+    "julius-the-veteran"
   ],
   "dates": {
     "death": {
@@ -67,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.06.2026 (25. мај ст. ст.) — „Свети мученици Пасикрат, Валентион, Јулије и други“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. **His name is not in the heading at all — it is in the body** — so this row exists because the day was read and not because anything scored it: the sweep scores a heading and the day list reads the corpus, and **neither finds a companion the heading does not name**. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. **THE COMPANY, AND HOW IT WAS TOLD FROM THE OTHER DAYS.** The heading enumerates three — „Пасикрат, Валентион, Јулије“ — and „и други“ after them, and the body names two more, **Никандар** and **Маркијан**, so five men of this entry have folders and all five get a row. **The corpus keeps them on three different days of three different calendars**: `passicrates-of-durostorum` and `valentine-of-durostorum` on 24 April, `julius-the-veteran` on the Romanian 27 May and the Greek 26 May, and `nicander-of-durostorum` and `marcian-of-durostorum` on 8 June. **Not one of them was found by `sr-namesweep.mjs` scoring this heading** — it scores only the first name of an enumerated company, which is its fourth known failure mode — **and not one of them is on the day list for the menologion 25/5 either**, the corpus keeping none of them on that day. They were found by `ls saints | grep -iE 'pasicrat|valent|nicander|marcian|julius' and by grepping the corpus for the entry’s own uncommon proper name, Durostorum, which returned twelve folders at once. **The grep beat both instruments again**, and the misspelling is why the first grep missed one: the corpus stores him `passicrates-of-durostorum`, with two s. **«Доростолу Македонском» AGAINST MOESIA, RECORDED AND NOT RESOLVED.** The Prologue puts Durostorum in **Macedonia**; doxologia puts it in the Roman province of Moesia Inferior and saint.gr in Moesia. **No `locations` was written or changed on any of the five.** **«око 302» IS REFUSED ON ALL FIVE, AND FOR THREE DIFFERENT REASONS.** It is the only year this entry gives, it is approximate, and it is stated of the heading’s company and not of any one man. For `julius-the-veteran` it **narrows**: his folder holds 284 to 311 off the Romanian page, and a reader before this one had already refused saint.gr’s flat 302 for the same reason, writing „the year is the Greek’s; this folder’s dating stays the interval the Romanian page allows“ — this book agreeing with saint.gr changes nothing, two books inside a range still not narrowing it. For `nicander-of-durostorum` and `marcian-of-durostorum` it would **widen an `attested` 298 with an approximation**, and a „око“ is not a source for an endpoint. For `passicrates-of-durostorum` and `valentine-of-durostorum` **it is the Prologue’s second answer to a question the Prologue has already answered differently**, and that is the finding of the day, below. **NO DATE ON ANY OF THE FIVE WAS TOUCHED.** **A SECOND DAY ON A CALENDAR THAT KEPT HIM ON NONE**: his `serbian` row was `undocumented`, and the Prologue keeps him on 25 May where doxologia and saint.gr keep him on 8 June. **The Prologue’s own Julian 06-08 was read before this row was written and does not keep him** — it prints Ephraim of Antioch, Zosimus of Phoenicia and Theodore Stratelates — **so the 25 May is this book’s only day for him and no later reader is barred from anything.** That check was made because §4’s warning about writing a lesser day onto an `undocumented` row applies exactly here. **WHAT IS NEW IS ONE EXCHANGE, AND THE REST CORROBORATES.** saint.gr already gave this folder the governor Maximus, the twenty days in prison, the tortures, and **the wife who encouraged her husband to bear them**; the Prologue confirms all of it in two sentences and adds **the dialogue**: that **when Nicander was brought before the prefect Maximus his wife encouraged him to die for Christ, and that Maximus said to her angrily „Глупа бабо, теби се хоће бољи муж!“** — stupid old woman, you want a better husband — **and that she answered „Ако ти тако мислиш о мени, нареди, нека мене сад погубе пре мога мужа!“**, if that is what you think of me, give the order, let them kill me before my husband. **Neither other page has the prefect speak to her or her answer him.** It also makes him one of a company of five, which neither other page does. `martyr` and `soldier` are both corroborated. **Nicander’s wife gains no folder and no row**: she is unnamed in all three books, and a wife is a kinship the body narrates, so the row is owed and refused only for want of anyone to write it for. **The prefect Maximus gains nothing** by the coordinator’s third ruling — the martyrdom belongs to him and not to the persecutor, the reading made on 20 May — and `maximus-of-marcianopolis` and the corpus’s other Maximi are other men. **No `locations`.** The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

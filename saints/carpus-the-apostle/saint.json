@@ -11,6 +11,11 @@
       "form": "Κάρπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Κάρπος ο Απόστολος από τους Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Карп",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Свети апостол Карп“ — Свети is not a rank and апостол is the `apostle` this corpus puts in `types`; strip the two and the bare personal name is the whole of what the heading gives. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Карп», so this is the first folder to hold it, and the corpus keeps no other Carpus. The Greek form on this folder, «Κάρπος», and the Romanian «Carp» are the same bare name."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.06.2026 (26. мај ст. ст.) — „Свети апостол Карп“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 26/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 26 May is. **THIS BOOK BREAKS A TIE BETWEEN THE OTHER TWO, AND THAT IS THE WHOLE VALUE OF THE ROW.** doxologia has him **killed savagely and without mercy by the Jews who had not believed**; saint.gr says flatly **„He died peacefully, giving light by his example to many“**. The two accounts already on this folder contradict each other on whether he was martyred at all, and the folder holds `martyr` in `types` off the Romanian reading. **The Prologue is with doxologia**: „он је најзад пострадао од неверних Јевреја, и убијен био“ — he suffered at last from the unbelieving Jews and was killed. **So it is two books against one, and `martyr` stands where it was.** The contradiction is not resolved by a count and is left on the folder as a contradiction; what changes is that the reading which supports the stored type now has a second witness, and that is said rather than assumed. **`dates` UNTOUCHED, AND THE FOLDER STAYS UNDATED ON PURPOSE.** The existing source line records „the page gives no year, and none is recorded here“, saint.gr dates him only by the reign of Nero, and **the Prologue gives no year at all**. A reign is not a source for a year in this corpus, so the folder is left undated and that is now the answer of three calendars. **New here, and it is little but it is his character rather than his acts**: that Dionysius witnesses of him that he was **a man of unusually pure mind, of meekness and of guilelessness** — „човек необично чистог ума, кротости и незлобивости“ — which neither other page gives; and that **the Lord Jesus appeared to him in a vision with His angels**, where doxologia’s vision is the Lord alone, answering a prayer that two sinners be punished, with the words *Strike me instead*. **The two visions are not told as one and neither was made to swallow the other.** Everything else the entry gives, both other books already gave: one of the Seventy, follower and companion of Paul, set by him bishop of Beroea in Thrace, preaching in Crete, receiving Dionysius the Areopagite into his house, and Dionysius’s testimony that he never began the holy liturgy without a heavenly vision first. **`related` UNTOUCHED at `dionysius-the-areopagite`**, who is the only person in this entry with a folder whom the body puts in his story. **The apostle Paul takes no new row**: `paul-the-apostle` is in the corpus and the existing life already names him four times with no row and no exclusion, `related-floor.test.mjs` not matching the bare form, and **an ordination is not the kinship or the martyrdom that owes a row** — so nothing is added and nothing is quietly relied on. The unbelieving Jews are not persons. No `locations`, although Beroea, Thrace and Crete are all named. The Prologue prints no troparion and no kontakion; the four hymns on this folder stay."
     }
   ],
   "hymns": [

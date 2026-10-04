@@ -8,4 +8,10 @@ Then Theodosia, at the head of a company of nuns and other women, rushed upon th
 
 Theodosia they ill-used, and then led her out to the place called the Ox and cut her throat, running a ram's horn through it, in the year 730. Her honourable relic was gathered up and buried in the monastery of Dexiokrates, and the page says it worked many wonders on the faithful who came to it with faith and reverence. saint.gr prints no hymn for her.
 
-*After saint.gr's calendar for 29 Μαΐου — [the day](https://www.saint.gr/05/29/index.aspx) and [the life](https://www.saint.gr/1654/saint.aspx); read 30 September 2026.*
+The Ohrid Prologue keeps her on the same day and tells her beginning quite differently. She was born, it says, by the prayer of her mother to the holy martyr Anastasia, who appeared to her mother and told her that she would bear a child. Her parents dedicated her to God and gave her early into a women’s monastery, the monastery of Saint Anastasia — where the Greek page has her left fatherless at seven and put into the house near the dark well that was called the Asparos cistern.
+
+After her parents died she had an enormous fortune, and out of it she ordered three icons from a goldsmith: of the Saviour, of the Mother of God and of Saint Anastasia. All the rest she gave away to the poor. So the two books agree that she gave her inheritance away and differ on what she kept back for herself.
+
+She suffered in the days of the wicked emperor Leo the Isaurian, the persecutor of the icons, and received the double crown, the virginal and the martyric, in the year 730 — the same emperor and the same year the Greek page gives. Of her death this book says nothing further: it has neither the image over the Chalke Gate, nor the ladder, nor the place called the Ox.
+
+*After saint.gr's calendar for 29 Μαΐου — [the day](https://www.saint.gr/05/29/index.aspx) and [the life](https://www.saint.gr/1654/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 29. мај ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1), read 5 October 2026.*

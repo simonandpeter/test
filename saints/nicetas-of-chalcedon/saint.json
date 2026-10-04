@@ -12,6 +12,11 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Μαΐου, «Άγιος Νικήτας Αρχιεπίσκοπος Χαλκηδόνας», with the rank word left off."
+    },
+    {
+      "form": "Никита",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 28. мај ст. ст., „Свети Никита исповедник, епископ халкидонски“ — Свети is not a rank, исповедник is the `confessor` this corpus puts in `types`, епископ the `bishop` it puts there and the `Bishop` in `office`, and „халкидонски“ the see, which the display name carries. Strip all four and the bare personal name is what is left. **THIS IS A FIFTH HOLDER, ENTERED ON PURPOSE AND MEASURED**: `foldchk.py` returns `nicetas-of-epirus`, `nicetas-of-medikion`, `nicetas-the-chartularius` and `nicetas-the-goth` for «Никита». **There is no fuller form to prefer**, the heading printing nothing between the name and the rank words — unlike `nicetas-the-stylite-of-pereslavl` four days earlier in this same wave, whose heading gave „Никита Столпник“ and which therefore raised no fold at all. The two cases together are the rule: the form is as full as the heading, never fuller."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 10.06.2026 (28. мај ст. ст.) — „Свети Никита исповедник, епископ халкидонски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-10&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 28/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 28 May is. **`monk` REFUSED, AND IT IS THE 16 MAY REFUSAL REPEATED EXACTLY.** „У младости одрече се света и удаљи се на подвиг монашки“ — in his youth he renounced the world and withdrew to the monastic struggle — so Монах would map to `monk`. **But `src/lib/honorific.js`’s `PRECEDENCE` returns `venerable` for `venerable` OR any of its `MONASTIC` list, and `venerable` stands above `confessor` in that list.** This folder carries `confessor` and prints *Confessor Nicetas*; adding `monk` would make the page print **Venerable Nicetas** instead, **demoting a Confessor whom two calendars name a confessor in their own headings** — doxologia’s „Sfântul Ierarh Nichita Mărturisitorul“ and this book’s „Свети Никита исповедник“. So it is not added and the monastic years are in the prose. This is the third rank refused in the wave for what it would print, after `monk` on `nicholas-the-mystikos` on 16 May — the same refusal, the same mechanism — and `virgin` on `john-vladimir` on 22 May. `confessor` and `bishop` are both corroborated outright. `office` untouched at `Bishop`. **`dates` UNTOUCHED, AND THE FOLDER STAYS UNDATED BY THE AGREEMENT OF THREE CALENDARS.** This folder has no `dates` object. doxologia gives no year, saint.gr gives none, and **the Prologue gives none either** — „Када зли Лав Јерменин устаде против икона“ is a reign and this corpus takes no year off one. **Nothing was written and the undatedness is now a reading rather than a gap.** **New here**: that he was **noticed by the elders of the Church for shining in virtue like the sun** and so raised to the hierarchical throne at Chalcedon; that as hierarch **he was especially merciful to the wretched and took great care of orphans, of widows and of the destitute**; that he **rebuked the emperor to his face and expounded the meaning of the icons**, which is a different act from standing against the persecution; and that he bore **many humiliations, afflictions and imprisonments** before the exile, and **reposed in labours and sufferings** in it. **Nobody in the entry gains a row.** Leo the Armenian is the iconoclast emperor, no calendar read for this corpus keeps him, and the elders of the Church are unnamed. `related` stays empty. No `locations`, although Chalcedon is named. The Prologue prints no troparion and no kontakion; the Romanian one on this folder stays."
     }
   ],
   "hymns": [

@@ -11,13 +11,20 @@
       "form": "Ισαάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Μαΐου, «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων», with the rank words and the monastery left off."
+    },
+    {
+      "form": "Исакије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. мај ст. ст., „Преподобни Исакије исповедник“ — Преподобни is the `venerable` this corpus puts in `types` and исповедник the `confessor` it puts there too; strip the two and the bare personal name is the whole of what the heading gives. **A SECOND HOLDER, ENTERED ON PURPOSE AND MEASURED**: `foldchk.py` returns `[('isaac-the-recluse-of-the-kyiv-caves', 'sr')]` for «Исакије». **There is nothing fuller to prefer** — the heading prints no see and no monastery, and „Dalmatou“ is the Greek page’s and the house’s name rather than his. The two men are told apart by their days and their places, the recluse of the Kyiv Caves having nothing in common with this abbot but the name. The Greek form on this folder, «Ισαάκιος», and the Romanian «Isaachie» are the same bare name."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "confessor",
-    "abbot"
+    "abbot",
+    "hermit",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -57,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.06.2026 (30. мај ст. ст.) — „Преподобни Исакије исповедник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 30/5 the Romanian and Greek rows already carry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 30 May is. **THE DEATH IS WIDENED BY THIRTEEN YEARS.** This folder holds `death` 396 off saint.gr, whose own words the `dates` note quotes: he appointed Dalmatius his successor and „κοιμήθηκε με ειρήνη σε βαθύ γήρας το 396 μ.Χ.“ **The Prologue says „И пресели се богоугодни старац Исакије око 383. године у вечност“** — about the year 383. **This corpus widens where two books disagree and refuses to narrow**, so `death` becomes `earliest` 383, `latest` 396 with the display **`about 383 or 396`**, which holds both and chooses neither. **The dash-and-“about” form is the sanctioned one** — `286–305 or about 308` reads in both languages where a “between … and …” compound fails `lives.test.mjs` with `cannot read` — and the „око“ is carried into the display rather than dropped, because dropping it would turn an approximation into a date. **Thirteen years, well inside `date-audit`’s 150-year `wide` threshold**, which did not move. **ALMOST THE WHOLE ENTRY IS ALREADY ON THIS FOLDER, AND THAT IS THE READING.** The persecution under Valens, the hermit leaving the eastern desert for Constantinople, the march against the Goths, the three days of running out before the emperor, the Arian counsellor who stopped him relenting, the catching of the horse by the bridle, the pit of mud and thorns and the angels who drew him out, the prophecy of a flight and a burning, the army cut down, the emperor hidden in a barn and burnt in it with his counsellor, Theodosius summoning him and bowing to him, the nobleman Saturninus building him a house, and Dalmatus appointed in his place and the monastery named Dalmatou after him — **every one of those is in the life already, from doxologia and saint.gr.** **A third book, in a third language, telling a long story the same way throughout is worth recording and changes nothing.** The differences are three and all small: **this book counts the angels, „ангела три“**, where the existing life has „His holy angels“ without a number; it gives the emperor’s threatened death as **„жив сажежен“, burnt alive**, in the prophecy’s own words; and it has him **wish to return to his desert and be begged to stay**, which neither other page says. **TWO TYPES ADDED, BOTH OUT OF NOUNS SAID OF HIM, AND NEITHER CAN CHANGE WHAT PRINTS.** „Исакије, пустињак негде на Истоку“ — a hermit somewhere in the East — and Пустињак maps to `hermit` in BRIEF-SERBIAN.md §5; „где се старац до смрти подвизаваше, чинећи многа чудеса“ — where the elder struggled until his death, working many wonders — **with him as the subject of the wonders**, which is the test this wave has been applying: `wonderworker` was added on 24 May off a sentence of his gifts and refused twice, on 25 and 27 May, because the word was said of relics and of trees. **Both `hermit` and `wonderworker` leave the printed rank alone**: `hermit` is in `honorific.js`’s `MONASTIC` list, which makes `PRECEDENCE` return `venerable` — and this folder already carries `venerable`, so the page goes on reading *Venerable Isaac*; `wonderworker` is not in `PRECEDENCE` at all. `venerable`, `confessor` and `abbot` are all three corroborated here. **ONE RECIPROCAL `related` ROW, AND IT WAS HALF THERE.** `dalmatus-of-constantinople` **already carries `isaac-of-constantinople` in its `related`** while this folder carried no row back to him — the existing life names „the blessed Dalmatus“ in prose, unlinked, and `related-floor.test.mjs` does not match that form, so nothing caught it. **This entry makes him the named successor and the man the monastery is called after, which is as near a narrated relation as a monastery gets**, so the row is added and the pair now reads both ways. It is the second such half-finished pair found in this wave, after `martha-of-antioch` on 24 May. **THE EMPEROR THEODOSIUS IS NAMED AND TAKES NO ROW, AND THAT IS LEFT FOR THE AUTHOR.** `theodosius-the-great` is in the corpus, holds the `sr` form «Теодосије Велики» off this same book’s 17 January, and **already relates to `dalmatus-of-constantinople` but not to this folder.** In this entry he is more than a date: he hears of the fulfilled prophecy, summons the elder and bows to him. **But the existing life already names him four times, unlinked, with no row and no exclusion, and the standing precedent in `scripts/related-floor-exclusions.json` is `nilus-the-hermit-of-sinai -> theodosius-the-great`, `category: \"reign\"` — an emperor named in a life is not automatically a relation.** So he is named unlinked here as he is named unlinked above, no row is written in either direction, and **whether an audience and a bow make a `related` row is the author’s to decide.** `related` also keeps `constantine-the-great`, which was there before. **Valens, his Arian counsellor, Saturninus and Arius gain nothing** by the coordinator’s third ruling. No `locations`, although Constantinople, the Danube and Thrace are all named. The Prologue prints no troparion and no kontakion; the three hymns on this folder stay."
     }
   ],
   "hymns": [
@@ -118,11 +135,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 396,
+      "earliest": 383,
       "latest": 396,
-      "display": "396",
+      "display": "about 383 or 396",
       "basis": "traditional",
-      "note": "saint.gr: «Προαισθανόμενος το τέλος του, αφού διόρισε διάδοχό του τον Όσιο Δαλμάτιο (τιμάται 3 Αυγούστου), κοιμήθηκε με ειρήνη σε βαθύ γήρας το 396 μ.Χ.» The page's own heading is «Όσιος Ισαάκιος ο Ομολογητής ηγούμενος Μονής Δαλμάτων (; - 396)» and it gives no year of birth, only that he lived «στα χρόνια του βασιλιά Ουάλη (364 μ. Χ.)» and died in deep old age."
+      "note": "Widened, not narrowed, because two books disagree by thirteen years. saint.gr gave 396, which this folder held alone: «Προαισθανόμενος το τέλος του, αφού διόρισε διάδοχό του τον Όσιο Δαλμάτιο (τιμάται 3 Αυγούστου), κοιμήθηκε με ειρήνη σε βαθύ γήρας το 396 μ.Χ.» Охридски пролог за 12.06.2026 (30. мај ст. ст.): „И пресели се богоугодни старац Исакије око 383. године у вечност“. The Serbian book’s „око“ is kept in the display, an approximation not being turned into a date; neither book gives a year of birth, and saint.gr says only that he died in deep old age."
     }
   },
   "images": [
@@ -132,6 +149,7 @@
     }
   ],
   "related": [
-    "constantine-the-great"
+    "constantine-the-great",
+    "dalmatus-of-constantinople"
   ]
 }

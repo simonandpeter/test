@@ -13,15 +13,20 @@
       "form": "Νικήτας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Μαΐου, «Άγιος Νικήτας ο Στυλίτης Πρεσλαβίας ο Θαυματουργός», with the rank words left off."
+    },
+    {
+      "form": "Никита Столпник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. мај ст. ст., „Преподобни Никита Столпник“ — Преподобни is the `venerable` inside the `venerable-martyr` this corpus puts in `types`, and it is the only word stripped. **Столпник is kept although `stylite` is in `types`**, and this entry is where the reading is plainest: „затвори се у један столп, због чега се и прозва Столпником“ — he was *called* the Stylite because of the pillar, so the word is the name he is known by and not a rank laid on him, exactly as „прозват је Дивногорац“ works for the other stylite of this same day. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Никита Столпник», where a bare «Никита» would have folded onto the corpus’s other Nicetases for nothing. The Greek form on this folder, «Νικήτας», is the bare one."
     }
   ],
   "dates": {
     "death": {
-      "earliest": 1196,
+      "earliest": 1186,
       "latest": 1196,
-      "display": "1196",
+      "display": "1186 or 1196",
       "basis": "traditional",
-      "note": "saint.gr's head line reads «Αγιος Νικητας ο Στυλιτης Πρεσλαβιας ο Θαυματουργος (; - 1196)»; the body gives no year and says only that he lived in the twelfth century."
+      "note": "Widened, not narrowed, because two books disagree by ten years. saint.gr gave 1196, which this folder held alone. Охридски пролог за 06.06.2026 (24. мај ст. ст.): „То се догодило 16. маја 1186. године“. The Prologue also gives the day, 16 May, which is eight days off the 24 May both calendars keep him on and is not the thirteen days of a style conversion; there is no field for a day of death and it stands in the prose."
     }
   },
   "attestations": [
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.06.2026 (24. мај ст. ст.) — „Преподобни Никита Столпник“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 24/5 the Greek row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as all three of this day’s and all three of the 23 May’s do. **THE DEATH IS WIDENED BY TEN YEARS.** This folder holds `death` 1196 off saint.gr. The Prologue states **1186** — „То се догодило 16. маја 1186. године“ — so `death` becomes `earliest` 1186, `latest` 1196, display `1186 or 1196`, which holds both and chooses neither. **Nothing was narrowed**, and the ten years are well inside `date-audit`’s `wide` threshold. **A DAY OF DEATH, AND IT IS EIGHT DAYS OFF HIS FEAST.** „16. маја“ against the 24 May both calendars keep him on. **It is not the thirteen days of a style conversion** — that was the reading on 21 May in this wave, and it does not apply to eight — and **there is no field for a day of death**, so it stands in the prose as what the book says and nothing is moved. **AN IDENTITY REFUSED, AND IT IS THE SHARPEST ONE OF THE WAVE SO FAR.** „Тако исцели од узетости черниговског кнеза Михаила“ — so he healed the prince of Chernigov, Michael, of palsy. **The corpus keeps exactly one `michael-of-chernigov`**, the passion-bearer prince, and **this book itself keeps him on the Julian 20 September with a `venerated serbian` row already on his folder**, so the Prologue is speaking about a Michael of Chernigov somewhere in its own pages. **But that folder’s `death` is 1244 to 1246, `attested`, and this healing happened before a murder the same entry dates to 1186** — the man would have been an infant, if he was born at all. **Two commemorations on one calendar means two men, and this is the same test one step further out: a date that cannot hold one man means two men.** So **no `related` row is written in either direction, and the prince is named in the prose without a link**, which is what the floor test permits for a name no folder answers to. **This is a question for the author**: either the Prologue means a different prince Michael of Chernigov, or one of the two years is wrong, and nothing read for this corpus settles it. **New here, and it is the whole of his conversion**: that **as a youth he lived an unbridled and vicious life**; that **going into a church once by chance he heard the words of the prophet Isaiah, „Умијте се, (од греха) бићете чисти“ (Isaiah 1:16)**, which went deep into his heart and made a whole revolution in his life — **the same verse saint.gr quotes at greater length in Greek, so the two books agree on the hinge of his life**; that **he left his house, and his wife, and his property**, which saint.gr does not say and which makes him a married man; that he **laid chains upon himself and shut himself in a pillar, and was called the Stylite for it**; and that **after his death he appeared to a certain elder Symeon and ordered him to lay the chains, once found, in the grave beside his body**. **That last dovetails with saint.gr rather than contradicting it**: that page has the robbers throw the chains into the Volga and the devout old monk Symeon of the monastery of the Apostles Peter and Paul at Yaroslavl see three shafts of light above the river, after which the fathers carried the chains to his tomb — the Prologue supplies the command that sent them there. **Where it does differ**: the Prologue has the murderers take the chains **because, by their shining, they thought them silver**, where saint.gr has robbers who threw them away on finding them iron, and the Prologue makes the theft the motive of the murder itself. **Symeon the elder gains no row**: he is unidentifiable, the existing life already names him without owing one, and the Prologue adds no see, no date and no second name. `venerable-martyr`, `stylite`, `monk` and `wonderworker` are all four corroborated here and **no type was added**. No `locations`, although Pereyaslavl is named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -24,7 +24,10 @@
     "soldier"
   ],
   "related": [
-    "valentine-of-durostorum"
+    "valentine-of-durostorum",
+    "julius-the-veteran",
+    "nicander-of-durostorum",
+    "marcian-of-durostorum"
   ],
   "attestations": [
     {
@@ -73,7 +76,8 @@
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Пасикрат и Валентин.“",
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
         "year": 2026
-      }
+      },
+      "note": "A SECOND DAY ON THIS CHURCH, ADDED 5 October 2026. **THE BOOK CONTRADICTS ITSELF ACROSS ITS OWN TWO DAYS, AND BY SEVENTY-FOUR YEARS.** `BRIEF.md` §4 allows a reader to write a second-day note on a row that is already `venerated`, under `replace_venerated: true`, and **the row is copied back byte for byte** — same day, same month, same source, same year — **with the note added and nothing else changed**. The Prologue keeps this man **twice**: on the Julian 24 April, headed „Св. муч. Пасикрат и Валентин.“, where it says the two were beheaded together „око 228. год.“, and again here on the Julian 25 May, where it says the company suffered „око 302. године“. **It is the same pair and demonstrably so, because the same brother appears in both**: the apostate Папијан, who in the 24 April entry is urged on Pasicrates by the judge and in this one comes to him himself. **So this is not two men but one book with two answers**, which is the reading made for `basiliscus-of-amasea` on 22 May, where the Prologue’s own 3 March and 22 May entries told his death two ways. **No second row was made and no day was moved**: one attestation row per church is the schema, this church’s row stays on the Julian 24 April, and he does not render on the 25 May. **And `dates` is untouched.** The folder holds a `death` of 297 off doxologia and saint.gr; the Prologue’s two guesses, 228 and 302, straddle it, and widening to 228–302 on the strength of two approximations the same book makes against itself would put a seventy-four-year interval on the folder in place of a year two other calendars agree on. **It is recorded here and left for the author.** The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. The 25 May heading is „Свети мученици Пасикрат, Валентион, Јулије и други“ and the 25 May entry is the one that names the company: Roman soldiers who suffered for Christ at Durostorum. **New from it, and not on any other page read for him**: that **when his brother Папијан, who had fallen away from Christ out of fear, came to him and began urging him to deny Christ and stay alive, Pasicrates answered „Иди од мене, ти ми ниси брат!“** — go from me, you are not my brother. The 24 April entry has the same brother but has the **judge** urge him, and this hard sentence is only here; there the mother encourages him and here she is not mentioned. **He gains no new name form**: «Пасикрат» is already stored off the 24 April heading and the 25 May heading prints the identical string, measured with `foldchk.py`, which returns `[('passicrates-of-durostorum', 'sr')]` and nothing else. **Папијан gains no folder and no row**: a brother is a kinship the body narrates, which is the test that owes a row, **but no calendar read for this corpus keeps him** — `ls saints | grep -i papia` returns only the four Papiases, who are other men — and by the coordinator’s third ruling nothing is minted for an apostate the book names to contrast him. He is in the prose, unlinked. **THREE NEW `related` ROWS, ALL RECIPROCAL.** This folder related only to `valentine-of-durostorum`. The 25 May entry narrates one martyrdom for five men, which is the test that owes a row, so `julius-the-veteran`, `nicander-of-durostorum` and `marcian-of-durostorum` are added here and this folder is added on each of theirs. `hesychius-of-durostorum` is NOT added: he is in `julius-the-veteran`’s life off saint.gr, **this entry does not name him**, and a row is owed for what the body narrates. `types` untouched, both corroborated. No `locations`. No hymn."
     }
   ],
   "text": {

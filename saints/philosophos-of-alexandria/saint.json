@@ -10,6 +10,11 @@
       "form": "Φιλόσοφος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Άγιος Φιλόσοφος», with the rank word left off."
+    },
+    {
+      "form": "Философ",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. мај ст. ст., „Свети мученик Философ“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; the bare personal name is what is left, and **it is a personal name and not a trade**, as the Greek «Φιλόσοφος» on both this folder and `philosophos-ornatsky` already shows. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Философ», so this is the first folder to hold it — **but it will fold the moment a reader writes the Russian archpriest of 1918, who is kept on this very menologion day and whose Greek form is the identical «Φιλόσοφος».** That is said here so the fold is a known one when it comes, and so that the two are told apart by their years and not by their names, as the two Therapons of 25 and 27 May are told apart by their sees."
     }
   ],
   "related": [
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.06.2026 (31. мај ст. ст.) — „Свети мученик Философ“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 31 May is. **THIS IS NOT THE «Философ» THE DAY LIST OFFERS, AND THAT IS THE READING OF THE DAY.** The corpus keeps **three** folders on the menologion 31/5 under that name — `philosophos-ornatsky` and his two sons `nicholas-son-of-philosophos` and `boris-son-of-philosophos` — and they are **a Petrograd archpriest and his sons, shot in 1918**, `basis: \"attested\"`. **The Prologue’s man is „родом из околине Александрије“, of the country round Alexandria, martyred under a pagan persecution.** Taking the day list’s first offer would have put an ancient martyr’s life on a twentieth-century new-martyr, which `BRIEF.md` §3 calls the worst failure this job has. **The right folder was found by `ls saints | grep -i philosoph`, which returns twelve, among them `philosophos-of-alexandria` — and that folder is not on the day list at all**, because saint.gr keeps him on **1 May**. The grep beat both instruments for the fourth time in this wave. **A DAY NO OTHER CALENDAR KEEPS HIM ON**: saint.gr on 1 May, this book on 31 May, and the Romanian and Russian rows `undocumented`. The row is written on the 31/5 and the Greek row is left on the 1/5. **THE SAME MARTYRDOM, TOLD THE SAME WAY, AND THE SAME FOLDER BEYOND DOUBT.** The soft bed, the hands and the feet bound, the loose woman sent in, the tongue bitten through and the lust quenched by it, the woman’s horror, and the beheading are all in the existing life from saint.gr. **New here**: that **he felt the lust waking in him at the touch of the woman’s hands**, which is why he did it — saint.gr has him shut his eyes and make nothing of the pain, and says nothing of what he felt; that **he spat the severed tongue into the harlot’s face**, where saint.gr has the blood that ran out soak her face and her clothes; and that **he was in his young years** when he was beheaded, which saint.gr does not say. **AND A FLAT CONTRADICTION ON WHEN, WHICH IS NOT RESOLVED AND NOT WIDENED.** This folder holds `floruit` 301 to 400, „4th century“, and the existing life says what that rests on: **what is known of him „was told by Antony the Great“**, whom the corpus gives a `birth` of about 251 and a `death` of 356. **The Prologue says „Потом би посечен мачем око 252. године“** — beheaded about the year 252, which is the third century and is the year Antony the Great was about one year old. **So the two readings cannot both stand, and neither can be made to.** `dates` is **untouched**, and three reasons are recorded for it: a `death` of 252 beside a `floruit` of 301 to 400 would have the folder assert two incompatible things; replacing the floruit would be overwriting another book’s reading rather than widening it; and „око“ is an approximation. **It is the author’s to settle, and it is the sharpest dating question of the wave.** `martyr` is corroborated and **no type was added**: the entry gives no other rank word, and **`virgin` is not written although the whole entry is about his chastity** — Девица is not in the heading or the body, and `PRECEDENCE` tests `martyr && virgin` for `virgin-martyr`, which this folder’s bare `martyr` would fire, so the page would print **Virgin Martyr Philosophos**: the `john-vladimir` refusal of 22 May exactly, and here the word is not even in the source. `related` stays at `anthony-the-great`, whom this entry does not name and who is on `lives.test.mjs`’s `BEFORE_THE_RULE` list — **nothing was appended to his life and nothing needed to be**. The princes and judges are persecutors and the woman is unnamed. No `locations`, although Alexandria is in the display name. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

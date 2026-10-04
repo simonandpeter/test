@@ -16,6 +16,11 @@
       "form": "Νάννος",
       "lang": "el",
       "note": "The by-name the same page prints and explains: he was called Ιωάννης because he was born on the eve of the Nativity of the Forerunner, and «για να διακρίνεται όμως από τον πατέρα του, τον φώναζαν Νάννο» — to tell him from his father, who was also John, they called him Nannos."
+    },
+    {
+      "form": "Нан Солунски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Свети мученик Нан (Јован) Солунски“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`. **The parenthesis is left out and that is the standing rule, not a choice**: one `sr` form per folder, the fullest, and a name given in parenthesis beside another is not a fuller form of it. Dropping „(Јован)“ leaves „Нан … Солунски“ contiguous in the heading, which is the form stored. **The second name is not lost**: this folder already holds both Greek forms, «Ιωάννης» and «Νάννος», off saint.gr, so the pair is recorded and only the `sr` row is single. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Нан Солунски» and for the bare «Нан» as well, so no fold is entered either way; Солунски is kept because the heading prints it and it distinguishes him."
     }
   ],
   "dates": {
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Свети мученик Нан (Јован) Солунски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s sixth entry, on the same menologion 29/5 the Greek row already carries, and one sentence long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **ONE SENTENCE, AND EVERY WORD OF IT CORROBORATES AN `attested` RECORD.** „Пострадао за веру од Турака 1802. године у Смирни“ — he suffered for the faith at the hands of the Turks in the year 1802 at Smyrna. This folder holds `death` 1802 with `basis: \"attested\"`, and saint.gr gives both the year and Smyrna. **So `dates` is untouched: there is nothing to widen, nothing to narrow, and an `attested` year is not improved by a second book agreeing with it.** **That is the whole value of this row and it is worth having**: a second calendar, in a third language, independently keeping the same man on the same day with the same year and the same city. `new-martyr` and `martyr` are both corroborated. **THE PARENTHESIS IN THE HEADING IS THE SECOND NAME, AND THE FOLDER ALREADY HOLDS BOTH IN GREEK.** „Нан (Јован)“ against saint.gr’s two separate forms «Ιωάννης» and «Νάννος». Nothing was reconciled and no form was composed; see the name note. **Nobody in the entry gains a row**, it naming only the Turks. `related` stays at `nikephoros-of-chios`, who wrote his account and is the Greek page’s. No `locations`, although Smyrna is named in both books. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

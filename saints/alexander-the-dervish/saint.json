@@ -10,6 +10,11 @@
       "form": "Αλέξανδρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Αλέξανδρος από την Θεσσαλονίκη ο Δερβίσης», with the rank word left off and the by-name kept, as the page's own head line prints it."
+    },
+    {
+      "form": "Александар Солунски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. мај ст. ст., „Свети новомученик Александар Солунски“ — Свети is not a rank and новомученик is the `new-martyr` this corpus puts in `types`; strip the two and „Александар Солунски“ is left. **Солунски is kept because it is what tells him from the corpus’s other Alexanders and because the heading prints it as part of the name**, and it was measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Александар Солунски», where a bare «Александар» would have folded onto a long column for nothing. **Дервиш is not in the stored form** although the display name keeps it: this heading does not print it, and a form is copied and not composed. The Greek form on this folder, «Αλέξανδρος», is the bare one."
     }
   ],
   "dates": {
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.06.2026 (26. мај ст. ст.) — „Свети новомученик Александар Солунски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, on the same menologion 26/5 the Greek row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 26 May is. **`dates` UNTOUCHED, AND CORROBORATED TO THE DAY AND THE PLACE.** The folder holds `death` 1794 off saint.gr’s „on 26 May 1794“. The Prologue says „Би посечен у Смирни 1794. године“ — beheaded at Smyrna in 1794 — so the year, the manner and the city are all confirmed by a second book, and there is nothing to widen and nothing to narrow. **„у време велике тираније турске над овим градом“ is a period and not a year**, and no date is taken from it. **THE TWO BOOKS TELL THE APOSTASY DIFFERENTLY, AND THE DIFFERENCE IS THE REASON FOR IT.** saint.gr has him come young to Smyrna **fleeing the lewd designs of a Turk**, and says that there, **„for reasons unknown to us“ — the page’s own words — he renounced his faith**. **The Prologue gives a reason**: „Као младић заваран би од Турака и потурчен“ — as a youth he was deceived by the Turks and made a Turk — **and it puts the apostasy at no city at all**, where saint.gr puts it at Smyrna. **A reason stated against a reason refused is not a contradiction and neither account was altered**: both stand in the life, and the Greek page’s own confession of ignorance is left standing beside this book’s answer. **AND THE REPENTANCE BEGINS IN A DIFFERENT PLACE IN EACH.** This book has him come to **the Kaaba with the other Muhammadan pilgrims**, become a dervish, and then **as a dervish in Thessalonica begin bitterly to repent**; saint.gr has him visit Mecca, enter the order, feign madness and wander the subject countries **eighteen years**, rebuke the Turkish tyranny, keep Great Lent in a Christian church on **Chios** in his dervish’s clothes, and only then come to Smyrna and strip the clothes off before the judge. **The eighteen years, Chios and the trampling are saint.gr’s alone; the Kaaba, Thessalonica and the reasoning are this book’s.** **New here, and the heart of it is one argument and one sentence**: that in his repentance **he came to the thought that he could wash the dreadful sin of apostasy from himself by nothing but his own blood**, and so resolved on martyrdom and declared himself a Christian before the Turks; that under torture he only cried **„Као хришћанин сам рођен, као хришћанин хоћу да умрем“** — as a Christian I was born, as a Christian I will die; and that when they condemned him **he rejoiced greatly, knowing from it that his sins were forgiven and that God accepted his sacrifice**. **He was also born at Thessalonica**, which the display name already says and which saint.gr gives only as where he came from. `new-martyr` is corroborated outright and **no type was added**: Дервиш is not a rank in this corpus’s vocabulary and the epithet is already in the display name. `related` stays empty, the entry naming nobody with a folder. No `locations`, although Thessalonica, the Kaaba and Smyrna are all named. The Prologue prints no troparion and no kontakion; the two Greek hymns on this folder stay."
     }
   ],
   "hymns": [

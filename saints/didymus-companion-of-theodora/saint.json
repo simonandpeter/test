@@ -3,13 +3,19 @@
   "display_name": "Didymus, companion of Theodora",
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "names": [
     {
       "form": "Δίδυμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Απριλίου, «Άγιοι Θεοδώρα και Δίδυμος», with the rank word left off."
+    },
+    {
+      "form": "Дидим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. мај ст. ст., „Свети мученици Теодора и Дидим“ — Свети is not a rank, мученици is the `martyr` in `types`, and Теодора is his companion and not part of his name; the body confirms the bare form in the nominative, „уђе к њој војник по имену Дидим“. **Measured, and it is a fold of two**: `foldchk.py` returns `[('didymus-of-laodicea', 'ru'), ('didymus-of-laodicea', 'sr')]` for «Дидим», so that folder holds the identical string already and this makes a second holder. **There is nothing fuller to prefer**: the heading gives the two companions’ names and nothing else, and Alexandria is the other book’s to attach. The two are told apart by their days — Laodicea on its own — and by this one being half of a pair. The corpus keeps two further Didymi, of Cyprus and the tribune of 24 May met in this same wave, neither holding an `sr` form. The Greek form here, «Δίδυμος», is the same bare name."
     }
   ],
   "related": [
@@ -43,11 +49,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.06.2026 (27. мај ст. ст.) — „Свети мученици Теодора и Дидим“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, whose heading names him second. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 27 May is — note that the 7 May and 24 April headings quoted elsewhere in this wave do carry one, so this is the page and not a transcription habit. **A DAY NEITHER OTHER CALENDAR KEEPS THE PAIR ON.** saint.gr keeps them together on 5 April and the Romanian and Russian rows are `undocumented`, so the row is written on the 27/5 and the Greek row is left on the 5/4. The day list for the menologion 27/5 could not see either of them for that reason, and **`sr-namesweep.mjs` found them because the heading prints both names** — the one shape of enumerated company it does manage, two names with the first one scored. **FIRST DATES FOR BOTH, AND THE EMPEROR DISAGREES.** Neither folder has had a `dates` object: the existing life records „The page gives no year, names no relics and prints no hymn under either of them.“ The Prologue states one — „Чесно пострадаше и задобише венце вечне славе 304. године у Александрији“ — so `dates.death` is 304 to 304, `basis: \"traditional\"`, with the book’s own words in the note. **The reign is used for nothing, and it is the reign the two books differ on**: this entry opens „У време злочестивог цара Максимилијана“, Maximian, where saint.gr puts the martyrdom „in the fiercest persecution the Church knew, under Diocletian“. **No year was derived from either reign and neither emperor was chosen**; both stand in the prose. **AND THE PROLOGUE NAMES NO EPARCH WHERE SAINT.GR NAMES EUSTRATIUS**, calling him only „кнез мучитељ“ and „судија“. Nothing was reconciled: a persecutor gains no folder by the coordinator’s third ruling and the existing life keeps the Greek page’s name for him. **THE EXECUTION IS A DIFFERENT SCENE IN EACH BOOK, AND THIS ONE IS THE DIALOGUE.** saint.gr has Didymus beheaded and burnt, and then Theodora present herself to the eparch, reproach him for the killing and be thrown into the flames. **The Prologue has her run to the place of execution and argue with Didymus himself**: „Иако си ти спасао моју част, ја нисам од тебе искала да ме спасеш од смрти. Уступи мени смрт мученичку!“ — though you saved my honour, I did not ask you to save me from death; yield me the martyr’s death — and his answer, „Возљубљена сестро, не спречавај ме да умрем за Христа и крвљу мојом оперем грехе моје!“ **And the pagans, hearing the quarrel, condemned them both**, and **both were beheaded and both bodies burnt**, where saint.gr has her burnt alive. **Both tellings are written and neither is resolved.** **«сестро» IS NOT A KINSHIP.** He calls her beloved sister at the scaffold and nothing in either book makes them kin; the two folders were already `related` to each other in both directions as companions, and no row was added or changed. No `locations`, although Alexandria is named in both books. The Prologue prints no troparion and no kontakion. **`soldier` ADDED, AND IT IS THIS BOOK’S WORD AND NOT AN INFERENCE FROM THE GREEK PAGE’S.** „уђе к њој војник по имену Дидим“ — a soldier named Didymus came in to her — and Војник maps to `soldier` in BRIEF-SERBIAN.md §5. **saint.gr does not say it**: it makes him „a man of rank at Alexandria“ who „put on his uniform“, from which a reader could have guessed the rank and this corpus did not. **Now it is stated and the type is written.** `soldier` is **not in `src/lib/honorific.js`’s `PRECEDENCE`**, so the page goes on reading *Martyr Didymus* off the `martyr` he already carries and the new word shows only in the facts line. **Of him in particular, new besides**: that **he told her he too was a servant of Christ**; that **he stayed behind in the brothel in her clothes** after letting her out; and his answer at the scaffold, „Возљубљена сестро, не спречавај ме да умрем за Христа и крвљу мојом оперем грехе моје!“ **He also dies the same death in both books** — beheaded, body burnt — which is the one point of the execution the two agree on."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "Охридски пролог за 09.06.2026 (27. мај ст. ст.): „Чесно пострадаше и задобише венце вечне славе 304. године у Александрији“. The first year any calendar read for this folder states; saint.gr gives none. The entry opens „У време злочестивог цара Максимилијана“ where saint.gr puts the martyrdom under Diocletian; both reigns are recorded in the life and no year was derived from either."
+    }
   }
 }

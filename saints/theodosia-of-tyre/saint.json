@@ -6,6 +6,11 @@
       "form": "Teodosia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 29 mai, «Sfânta Muceniță Teodosia, fecioara»."
+    },
+    {
+      "form": "Теодосија Тирска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Света мученица Теодосија Тирска“ — Света is not a rank and мученица is the `martyr` this corpus puts in `types`; strip the two and „Теодосија Тирска“ is left, the name with the city that distinguishes her. **Тирска IS WHAT KEEPS THREE WOMEN APART AND IT WAS MEASURED.** `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Теодосија Тирска» and `[('theodosia-of-caesarea-in-palestine', 'sr')]` for the bare «Теодосија» — a woman beheaded at the same Caesarea in Palestine, kept by this same book on its own 25 March. **A bare form here would have folded this martyr of 308 onto that martyr of 361 on the strength of a shared city**, and the day’s own third entry is a third Theodosia besides. The Greek rows give this folder no form at all and the Romanian gives «Teodosia», the bare name."
     }
   ],
   "sex": "female",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Света мученица Теодосија Тирска“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 29/5 the Romanian row already carries; the Greek and Russian rows are `undocumented`. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **TWO DIFFERENT THEODOSIAS ON ONE DAY OF ONE BOOK, AND A THIRD ALREADY IN THE CORPUS.** The day’s second and third entries are both Theodosias, and the Prologue tells them apart by rank and epithet alone — „Света мученица Теодосија Тирска“ against „Преподобна мученица Теодосија“. **The corpus keeps them as two folders and they stay two**: one dies at Caesarea in Palestine under Maximian in 308 and the other at Constantinople under Leo the Isaurian in 730. **And the fold reaches a third woman**: `theodosia-of-caesarea-in-palestine` already holds the bare `sr` form «Теодосија», written in this same wave off the Prologue’s own Julian 25 March, where she is beheaded with Pelagia in 361. **That folder was opened and read before either row here was written**, because her place of death is the same Caesarea in Palestine as the 29 May martyr’s and the bare name is the same string — **and she is a third woman**: a different day of this same book, a different year, a different companion. **Two commemorations on one calendar means two women, and three mean three.** **A FIRST DATE AND A FIRST EMPEROR.** The existing life closes „The page prints no year“, and doxologia dates her only by Eusebius’s „the persecution had run over them for five years“ and the second day of April. The Prologue states a year — „Чесно пострада и прослави се 308. године“ — so `dates.death` is 308 to 308, `basis: \"traditional\"`. **It also names the emperor, „У време цара Максимијана“, where doxologia names only the governor Urban; the reign is used for nothing and no year was derived from it.** **doxologia’s second of April is a day of death twenty-seven days off the 29 May all the calendars keep her on, and there is no field for a day of death**; it was already in the prose and nothing was moved. **THE SAME SAYING IN THE SAME WORDS, OFF TWO HOSTS IN TWO LANGUAGES.** „Видите ли, колика је слава и благодат Христа мога, које сте ме хтели лишити?“ against doxologia’s *see how great is the glory and the gift of my Christ, of which you wished to deprive me*. **The appearance to her parents the following night, the reproach in it, and the reason for the reproach — that they had held her back from the martyr’s contest — are all in both books.** So are the stone hung at her neck, the drowning in the depth of the sea, the angels bringing her up alive to the shore, her coming again before the judge and the beheading. **New here, and it is little**: that she was **surrounded by many other saved maidens** in the vision, where doxologia has her in the midst of the holy virgins with a golden cross and a crown; and that she **blessed and encouraged the bound Christians for a martyr’s death**, where doxologia has her speak to them of the kingdom of God and ask to be remembered. **What the Prologue has not got**: the governor Urban, the iron claws, the beasts that would not harm her, the dove brighter than gold, and her age. `martyr` and `virgin` are both corroborated — „ова благочестива девица“ — and **no type was added**; the folder already prints *Virgin Martyr Theodosia* from the pair and nothing about it changed. Nobody in the entry gains a row: the parents are unnamed, the judge is a persecutor, and Maximian is an emperor no calendar read here keeps. `related` stays empty. No `locations`, although Caesarea in Palestine and Tyre are both named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -70,5 +85,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "traditional",
+      "note": "Охридски пролог за 11.06.2026 (29. мај ст. ст.): „Чесно пострада и прослави се 308. године“. The first year any calendar read for this folder states; doxologia prints none and dates her only by Eusebius’s five years of persecution and the second of April. The same entry opens „У време цара Максимијана“ and no year was derived from that reign."
+    }
+  }
 }

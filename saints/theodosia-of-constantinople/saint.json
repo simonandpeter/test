@@ -4,13 +4,19 @@
   "sex": "female",
   "types": [
     "venerable-martyr",
-    "monastic"
+    "monastic",
+    "virgin"
   ],
   "names": [
     {
       "form": "Θεοδοσία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Μαΐου, «Αγία Θεοδοσία η Οσιομάρτυς η Κωνσταντινουπολίτισσα», with the rank word and the epithet of the city left off."
+    },
+    {
+      "form": "Теодосија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. мај ст. ст., „Преподобна мученица Теодосија“ — Преподобна and мученица together are the `venerable-martyr` this corpus puts in `types`; strip them and the bare personal name is the whole of what the heading gives. **THIS IS A SECOND HOLDER OF A FORM THAT ALREADY FOLDS, AND IT IS ENTERED ON PURPOSE**: `foldchk.py` returns `[('theodosia-of-caesarea-in-palestine', 'sr')]` for «Теодосија». **There is nothing fuller to prefer** — this heading, unlike the same day’s second one, prints no city, and Constantinople is the Greek page’s and the display name’s, not this heading’s to attach. The three women are told apart by their days, their years and their ranks: 25 March and 361 for the Caesarean martyr, 29 May and 308 for the virgin of Tyre, 29 May and 730 for this `venerable-martyr`."
     }
   ],
   "dates": {
@@ -50,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.06.2026 (29. мај ст. ст.) — „Преподобна мученица Теодосија“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 29/5 the Greek row already carries. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23 to 29 May is. **TWO DIFFERENT THEODOSIAS ON ONE DAY OF ONE BOOK, AND A THIRD ALREADY IN THE CORPUS.** The day’s second and third entries are both Theodosias, and the Prologue tells them apart by rank and epithet alone — „Света мученица Теодосија Тирска“ against „Преподобна мученица Теодосија“. **The corpus keeps them as two folders and they stay two**: one dies at Caesarea in Palestine under Maximian in 308 and the other at Constantinople under Leo the Isaurian in 730. **And the fold reaches a third woman**: `theodosia-of-caesarea-in-palestine` already holds the bare `sr` form «Теодосија», written in this same wave off the Prologue’s own Julian 25 March, where she is beheaded with Pelagia in 361. **That folder was opened and read before either row here was written**, because her place of death is the same Caesarea in Palestine as the 29 May martyr’s and the bare name is the same string — **and she is a third woman**: a different day of this same book, a different year, a different companion. **Two commemorations on one calendar means two women, and three mean three.** **`dates` UNTOUCHED AND CORROBORATED EXACTLY.** „Пострада у време опакога цара Лава Исаврјанина, иконогонитеља … 730. године“ is the `death` of 730 this folder already holds off saint.gr, and the emperor is saint.gr’s emperor too. Nothing to widen and nothing to narrow, and **the reign is used for nothing**. **`virgin` ADDED — AND IT IS THE WORD REFUSED ON `john-vladimir` ON 22 MAY, WRITTEN HERE FOR A REASON THAT IS ENTIRELY MECHANICAL.** „прими двогуби венац: девичански и мученички“ — she received the double crown, the virginal and the martyric — so Девица maps to `virgin` and the source could hardly be plainer. **`src/lib/honorific.js`’s `PRECEDENCE` tests `martyr && virgin` for `virgin-martyr`, and this folder carries `venerable-martyr`, not the bare `martyr`** — so the test does not fire, `venerable-martyr` wins where it already won, and the page goes on reading *Venerable Martyr Theodosia* with `virgin` showing in the facts line. **On 22 May the same word was refused because that folder does carry bare `martyr` and the page would have printed Virgin Martyr over a Serbian king.** The two readings together are the rule, and it is worth stating plainly: **the question is never whether the source says the word, it is what `PRECEDENCE` would make the page print.** `venerable-martyr` and `monastic` are both corroborated and neither was touched. **NEW, AND IT IS A DIFFERENT BEGINNING FROM THE GREEK PAGE’S.** That she was **born by the prayer of her mother to the holy martyr Anastasia, who appeared to her and told her she would bear a child**; that **her parents dedicated her to God and gave her early into a women’s monastery — the monastery of Saint Anastasia**; and that after her parents’ death, **out of an enormous fortune, she ordered three icons from a goldsmith — of the Saviour, of the Mother of God and of Saint Anastasia — and gave all the rest away to the poor.** saint.gr has her fatherless at seven, put in a monastery it names the Άσπαρον στέρνην near the dark well, and selling what she had and sharing it among the poor — **so the two books agree that she gave her inheritance away and disagree on what she kept back, and name the house differently.** Both are recorded. **The Prologue has none of the Chalke Gate and none of the ram’s horn**: no ladder, no guardsman thrown down, no stones against the Patriarchate, no place called the Ox, and it does not mention Germanus. **ANASTASIA GAINS NO ROW, AND THE REASON IS THAT NOBODY CAN SAY WHICH ANASTASIA.** The entry says only „светој мученици Анастасији“. The corpus keeps ten women of the name — `anastasia-the-roman`, `anastasia-pupil-of-chrysogonus`, `anastasia-of-rome-15-april` and seven more — **and several are martyrs, so the name does not pick one out.** `docs/CORPUS.md` §10 reserves *that two entries are one person*, and a row here would assert an identification no book read for this folder makes. **She is named in the prose, unlinked, three times, and no row is written in either direction.** It is the author’s to settle. `related` stays at `germanus-of-constantinople`, from the Greek page. No `locations`, although Constantinople is in the display name. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

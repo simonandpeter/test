@@ -11,6 +11,11 @@
       "form": "Ιούλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Μαΐου, «Άγιος Ιούλιος ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Јулије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. мај ст. ст., „Свети мученици Пасикрат, Валентион, Јулије и други“ — Свети is not a rank, мученици is the `martyr` this corpus puts in `types`, and the other names in the heading are his companions and not his own. **„Ветеран“ is left out of the form although the display name keeps it**: in this book it is not an epithet in the heading at all but the man’s own word about himself in the body, „Ја сам ветеран“, and one `sr` form per folder means the heading’s form and not a composed one. **Measured**: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јулије», so this is the first folder to hold it, and `julius-of-aegina` is the only other Julius in the corpus. The Greek form on this folder, «Ιούλιος», is the same bare name; the Romanian, «Iuliu Veteranul», keeps the epithet because doxologia’s line prints it."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.06.2026 (25. мај ст. ст.) — „Свети мученици Пасикрат, Валентион, Јулије и други“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, whose heading names him third. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. **THE COMPANY, AND HOW IT WAS TOLD FROM THE OTHER DAYS.** The heading enumerates three — „Пасикрат, Валентион, Јулије“ — and „и други“ after them, and the body names two more, **Никандар** and **Маркијан**, so five men of this entry have folders and all five get a row. **The corpus keeps them on three different days of three different calendars**: `passicrates-of-durostorum` and `valentine-of-durostorum` on 24 April, `julius-the-veteran` on the Romanian 27 May and the Greek 26 May, and `nicander-of-durostorum` and `marcian-of-durostorum` on 8 June. **Not one of them was found by `sr-namesweep.mjs` scoring this heading** — it scores only the first name of an enumerated company, which is its fourth known failure mode — **and not one of them is on the day list for the menologion 25/5 either**, the corpus keeping none of them on that day. They were found by `ls saints | grep -iE 'pasicrat|valent|nicander|marcian|julius' and by grepping the corpus for the entry’s own uncommon proper name, Durostorum, which returned twelve folders at once. **The grep beat both instruments again**, and the misspelling is why the first grep missed one: the corpus stores him `passicrates-of-durostorum`, with two s. **«Доростолу Македонском» AGAINST MOESIA, RECORDED AND NOT RESOLVED.** The Prologue puts Durostorum in **Macedonia**; doxologia puts it in the Roman province of Moesia Inferior and saint.gr in Moesia. **No `locations` was written or changed on any of the five.** **«око 302» IS REFUSED ON ALL FIVE, AND FOR THREE DIFFERENT REASONS.** It is the only year this entry gives, it is approximate, and it is stated of the heading’s company and not of any one man. For `julius-the-veteran` it **narrows**: his folder holds 284 to 311 off the Romanian page, and a reader before this one had already refused saint.gr’s flat 302 for the same reason, writing „the year is the Greek’s; this folder’s dating stays the interval the Romanian page allows“ — this book agreeing with saint.gr changes nothing, two books inside a range still not narrowing it. For `nicander-of-durostorum` and `marcian-of-durostorum` it would **widen an `attested` 298 with an approximation**, and a „око“ is not a source for an endpoint. For `passicrates-of-durostorum` and `valentine-of-durostorum` **it is the Prologue’s second answer to a question the Prologue has already answered differently**, and that is the finding of the day, below. **NO DATE ON ANY OF THE FIVE WAS TOUCHED.** **A THIRD DAY, ON A THIRD CALENDAR**: doxologia keeps him on 27 May, saint.gr on 26 May, and this book on 25 May. Three calendars, three consecutive days, and **each row carries its own day**, which is what the schema is for; nothing was moved and no day was reconciled. The day list for the menologion 25/5 could not see him, and the namesweep scoring this heading could not either. **New here, and it is the sentence the Romanian page summarises and this one quotes**: that **Julius said at the trial „Ја сам ветеран, двадесет шест година служио сам верно цару, па кад сам до сада био веран нижем, како сад да не будем веран вишем?“** — I am a veteran, twenty-six years I served the emperor faithfully, and if I have been faithful until now to the lesser, how should I not be faithful to the greater? — **and that the greater is the heavenly Emperor, which the Prologue glosses in its own voice.** The twenty-six years are new: neither other page gives a length of service, and **they are a duration and no year is derived from them.** `martyr` and `soldier` are both corroborated — „Војници римски“ and the veteran’s own word. **FOUR NEW `related` ROWS, ALL RECIPROCAL, AND THIS FOLDER HAD NONE AT ALL.** Its `related` was empty although **its own life already names Pasicrate, Valentin and Hesychius in prose** off doxologia and saint.gr — `related-floor.test.mjs` does not match those forms, so nothing caught it. The 25 May entry narrates one martyrdom for five men, which is the test that owes a row, so `passicrates-of-durostorum`, `valentine-of-durostorum`, `nicander-of-durostorum` and `marcian-of-durostorum` are added and this folder is added on each of theirs. **`hesychius-of-durostorum` is NOT added**: this entry does not name him, and a row is owed for what the body narrates, not for what another book says about the same men. **That is a gap this day deliberately leaves open** — his life and Julius’s are tied together on saint.gr, and the row is the author’s to write off those pages, not this reader’s to write off a book that is silent. No `locations`. The Prologue prints no troparion and no kontakion; the Romanian one on this folder stays."
     }
   ],
   "hymns": [
@@ -88,5 +103,11 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "passicrates-of-durostorum",
+    "valentine-of-durostorum",
+    "nicander-of-durostorum",
+    "marcian-of-durostorum"
+  ]
 }

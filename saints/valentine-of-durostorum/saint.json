@@ -24,7 +24,10 @@
     "soldier"
   ],
   "related": [
-    "passicrates-of-durostorum"
+    "passicrates-of-durostorum",
+    "julius-the-veteran",
+    "nicander-of-durostorum",
+    "marcian-of-durostorum"
   ],
   "attestations": [
     {
@@ -73,7 +76,8 @@
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Пасикрат и Валентин.“",
         "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
         "year": 2026
-      }
+      },
+      "note": "A SECOND DAY ON THIS CHURCH, ADDED 5 October 2026. **THE BOOK CONTRADICTS ITSELF ACROSS ITS OWN TWO DAYS, AND BY SEVENTY-FOUR YEARS.** `BRIEF.md` §4 allows a reader to write a second-day note on a row that is already `venerated`, under `replace_venerated: true`, and **the row is copied back byte for byte** — same day, same month, same source, same year — **with the note added and nothing else changed**. The Prologue keeps this man **twice**: on the Julian 24 April, headed „Св. муч. Пасикрат и Валентин.“, where it says the two were beheaded together „око 228. год.“, and again here on the Julian 25 May, where it says the company suffered „око 302. године“. **It is the same pair and demonstrably so, because the same brother appears in both**: the apostate Папијан, who in the 24 April entry is urged on Pasicrates by the judge and in this one comes to him himself. **So this is not two men but one book with two answers**, which is the reading made for `basiliscus-of-amasea` on 22 May, where the Prologue’s own 3 March and 22 May entries told his death two ways. **No second row was made and no day was moved**: one attestation row per church is the schema, this church’s row stays on the Julian 24 April, and he does not render on the 25 May. **And `dates` is untouched.** The folder holds a `death` of 297 off doxologia and saint.gr; the Prologue’s two guesses, 228 and 302, straddle it, and widening to 228–302 on the strength of two approximations the same book makes against itself would put a seventy-four-year interval on the folder in place of a year two other calendars agree on. **It is recorded here and left for the author.** The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of the 23, 24 and 25 May is. The 25 May heading is „Свети мученици Пасикрат, Валентион, Јулије и други“, which names him second, and the entry says of him exactly what the 24 April one says: **„Пасикрат и Валентион буду заједно посечени“**, the two beheaded together. **So this day adds nothing to his own story and everything to its setting**: the company of five, the place Durostorum, the year about 302, and the dialogue that belongs to the other four. That is itself the reading — **the Prologue is as silent about this man on its second day as on its first**, and the row is written so that a later reader does not take the 25 May entry for a different Valention. **He gains no new name form**: «Валентин» is stored off the 24 April heading, which prints „Валентин“, and **the 25 May heading prints „Валентион“, a different string** — `foldchk.py` returns `[('valentine-of-durostorum', 'sr')]` for the stored form and `NO FOLDER HOLDS THIS FORM` for «Валентион». **The second form is refused and this is a reading, not an oversight**: one `sr` form per folder, the fullest, and „Валентион“ is neither fuller nor a different name but the same name in the same book spelled two ways two days apart. Both spellings are named here so the next reader to meet „Валентион“ knows which folder holds it. **THREE NEW `related` ROWS, ALL RECIPROCAL**, on the same reading as his companion’s: the entry narrates one martyrdom for five men. `types` untouched, both corroborated. No `locations`. No hymn."
     }
   ],
   "text": {
