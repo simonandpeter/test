@@ -1,0 +1,61 @@
+{
+  "slug": "paul-of-aglomazovo-b",
+  "display_name": "Paul of Aglomazovo",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Павел",
+      "lang": "ru",
+      "note": "Read out of the title on his own name link behind the company's line for 29 октября ст. ст., «Павел, мч.», with the rank word left off. The line itself declines the name."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the company's line for 29 октября ст. ст. with «(1918)», and its life has the whole killing follow the February 1918 mobilisation. No page gives a calendar date for the shooting; the folder reads none off the menologion day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Every one of these thirteen name pages lists the same other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 октября ст. ст. — «мчч. Агломазовских: Космы , Виктора , Наума , Филиппа , Иоанна , Павла , Андрея , Павла , Василия , Алексия , Иоанна и мц. Агафии (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20261029.html",
+        "year": 2026,
+        "note": "The line stands in the day's third paragraph, which carries no typikon icon, so no rank is recorded. It enumerates its twelve members by name, so it is twelve folders, by the ruling in docs/CORPUS.md §10.1; and the one life page behind every one of those names is the same page, the company's."
+      },
+      "note": "One of the twelve the line enumerates as «мчч. Агломазовских», the martyrs of Aglomazovo, under the priest the line before names. The by-name in the English display name is that word and is not invented: the calendar prints it of the company. The stored Russian form is bare because the name link is bare, which is why several of these folders share a form with each other and with older folders; that is recorded in the batch's commit message as a deliberate fold."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
