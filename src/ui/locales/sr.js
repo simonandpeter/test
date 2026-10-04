@@ -762,6 +762,7 @@ export const sr = {
     'Archbishop of Kazan': 'Архиепископ казански',
     'Archbishop of Kazan and Sviyazhsk': 'Архиепископ казански и свијажски',
     'Archbishop of Kharkov': 'Архиепископ харковски',
+    'Archbishop of Kursk': 'Архиепископ курски',
     'Archbishop of Larissa': 'Архиепископ лариски',
     'Archbishop of Lacedaemonia': 'Архиепископ лакедемонски',
     'Archbishop of Myra in Lycia': 'Архиепископ мирликијски',

@@ -10,13 +10,27 @@
       "form": "Ζωτικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Άγιοι Γάιος, Δάσιος και Ζωτικός», with the rank word left off."
+    },
+    {
+      "form": "Зотик Никомидийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Зотик Никомидийский, мч.», with the rank word left off. The day's own line gives the name without the epithet."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Мчч. Дасия , Гаия и Зотика (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 21 октября ст. ст. prints «Мчч. Дасия , Гаия и Зотика (303)», and its notice for the three gives the year and the reign: «приняли мученическую кончину в 303 году, при императоре Диоклитиане (284-305)». The folder held no date."
+    }
   }
 }

@@ -780,6 +780,7 @@ export const ru = {
     'Archbishop of Kazan': 'Архиепископ Казанский',
     'Archbishop of Kazan and Sviyazhsk': 'Архиепископ Казанский и Свияжский',
     'Archbishop of Kharkov': 'Архиепископ Харьковский',
+    'Archbishop of Kursk': 'Архиепископ Курский',
     'Archbishop of Larissa': 'Архиепископ Ларисский',
     'Archbishop of Lacedaemonia': 'Архиепископ Лакедемонийский',
     'Archbishop of Myra in Lycia': 'Архиепископ Мир Ликийских',

@@ -11,6 +11,11 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Ιλαρίων ο Μέγας», with the rank word left off."
+    },
+    {
+      "form": "Иларион Великий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Иларион Великий, прп.», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Прп. Илариона Великого (371-372).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -123,6 +137,54 @@
         "text": "Gathered together today we praise you in hymns as an unsetting lamp of the Sun that the mind beholds. You shone upon those in the darkness of ignorance, raising up to the divine height all who cry: Rejoice, O father, foundation of the ascetics.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси/ и, иже из глубины воздыханьми, во сто трудов уплодоносил еси,/ и был еси светильник вселенней,/ сияя чудесы, Иларионе, отче наш:/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Тропарь преподобного Илариона Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with your sighings out of the depths you made your labours bear fruit a hundredfold; and you became a lamp to the whole world, shining with wonders, Hilarion our father. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко иноков утверждение, наставник же граждан пустынных,/ и чудотворец благодатию Великому Антонию подобяся,/ помощник в страстех бедствующим неотступен, Иларионе отче наш,/ моли за чтущия святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Ин тропарь преподобного Илариона Великого», the second of the two troparia the day page prints for him",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the strengthening of monks and the teacher of the citizens of the desert, likened by grace in the working of wonders to Anthony the Great, an unfailing helper to those in distress from the passions, Hilarion our father, pray for those who honour your holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко светильника незаходимаго умнаго тя Солнца,/ сошедшеся днесь, восхваляем в песнех,/ возсиял бо еси сущим во тьме неведения,/ вся возводя к Божественней высоте, Иларионе./ Темже вопием:// радуйся, отче, всех постников основание.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Кондак преподобного Илариона Великого»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Gathered today, we praise you in hymns as the unsetting lamp of the Sun of the mind, for you shone upon those who sat in the darkness of ignorance and led all up to the divine height, O Hilarion. Therefore we cry out: rejoice, father, foundation of all who fast.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -134,14 +196,14 @@
       "latest": 333,
       "display": "333",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Ιλαρίων ο Μέγας γεννήθηκε το 333 μ.Χ., στα χρόνια του Μεγάλου Κωνσταντίνου»."
+      "note": "saint.gr: «Ο Όσιος Ιλαρίων ο Μέγας γεννήθηκε το 333 μ.Χ., στα χρόνια του Μεγάλου Κωνσταντίνου». days.pravoslavie.ru gives no birth year."
     },
     "death": {
-      "earliest": 413,
+      "earliest": 371,
       "latest": 413,
-      "display": "413",
+      "display": "371 or 413",
       "basis": "traditional",
-      "note": "saint.gr heads his page «(333 - 413)» and says «παρέδωσε στο Θεό την ψυχή του, ογδόντα χρονών» — eighty years old."
+      "note": "The two calendars disagree by forty years and neither is chosen. days.pravoslavie.ru's line for 21 октября ст. ст. prints «Прп. Илариона Великого (371-372)», an uncertainty of one year about 371; saint.gr heads his page «(333 - 413)» and says «παρέδωσε στο Θεό την ψυχή του, ογδόντα χρονών», eighty years old, which agrees with its own birth year of 333 and not with 371. The folder held 413 alone."
     }
   }
 }
