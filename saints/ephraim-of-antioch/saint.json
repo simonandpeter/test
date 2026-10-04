@@ -7,20 +7,26 @@
       "form": "Εφραίμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Μαρτίου, «Άγιος Εφραίμ Πατριάρχης Αντιόχειας», with the rank word and the see left off."
+    },
+    {
+      "form": "Јефрем",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. јун ст. ст., „Свети Јефрем, патријарх антиохијски“ — Свети is not a rank and „патријарх антиохијски“ is the rank with its see, which `types`, `office` and the display name already carry; both come off and the bare forename is left. `foldchk.py` returns `[('ephraim-of-tomis', 'sr')]`: a fold of two, deliberate, told apart by the sees."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
-    "patriarch"
+    "patriarch",
+    "wonderworker"
   ],
   "dates": {
     "death": {
-      "earliest": 546,
+      "earliest": 540,
       "latest": 546,
-      "display": "546",
+      "display": "540 or 546",
       "basis": "traditional",
-      "note": "saint.gr's head gives «Αγιος Εφραιμ Πατριαρχης Αντιοχειας (; - 546)», and the page's own arithmetic agrees with it: it has him go up to the patriarchal throne of Antioch «το 526 μΧ» and says «Για 20 χρόνια ποίμανε τον λαό όπως έπρεπε και απεβίωσε ειρηνικά». No year of birth is printed."
+      "note": "saint.gr's head gives «Αγιος Εφραιμ Πατριαρχης Αντιοχειας (; - 546)», and the page's own arithmetic agrees with it: it has him go up to the patriarchal throne of Antioch «το 526 μΧ» and says «Για 20 χρόνια ποίμανε τον λαό όπως έπρεπε και απεβίωσε ειρηνικά». No year of birth is printed. The Охридски пролог for 8. јун ст. ст. states a different year flat: „Сконча свети Јефрем у миру 540. године“, and it puts him under a different emperor, Anastasius rather than Justin. The interval is widened to hold both years and neither is chosen; the twenty years of shepherding are a duration and were used for nothing (5 October 2026)."
     }
   },
   "attestations": [
@@ -51,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.06.2026 (8. јун ст. ст.) — „Свети Јефрем, патријарх антиохијски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first and longest entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. A SECOND CALENDAR ON A FOLDER THAT HAD ONE, ON A DIFFERENT DAY, AND IT TRIPLES THE LIFE. saint.gr keeps him on 7 MARCH and this book on the Julian 8 JUNE; `sr-cand.mjs 03-07` prints the seven hieromartyrs of Cherson and the venerable Emilian **and does not name him**, so the 8 June is this book’s own day for him and the row carries it. **He was not on the day list for the menologion 8/6**, no calendar in this corpus keeping him there, and was found with `ls saints | grep -i -E 'ephraim|ephrem'`, which returns fourteen of whom one carries the see of Antioch in its display name. WHAT IS NEW IS ALMOST THE WHOLE ENTRY, AND SAINT.GR AND THIS BOOK DO NOT TELL THE SAME STORY. saint.gr has him from Amida, comes of Antioch under Justin the Thracian, raised from layman to the patriarchal throne in 526 at the emperor’s own suggestion, clearing the province of Monophysites, writing against them, bringing back a stylite of Hierapolis by a wonder, shepherding twenty years. **This book has a different emperor and a different reason.** Under Anastasius he was војвода of the eastern parts, known to all for his great piety and mercy; the emperor set him to rebuild Antioch after an earthquake and fire; **among the common workmen was a bishop who had left his bishopric for reasons unknown and laboured unrecognised**, and when he slept Ephraim saw A PILLAR OF FIRE rising from him to heaven, called him and adjured him, and the man confessed what he was **and prophesied that Ephraim would shortly be consecrated patriarch of Antioch, the see standing empty because the old patriarch Euphrasius had perished in the earthquake**; which came to pass in those very days. And a wonder saint.gr does not have: **to convince a heretic that Orthodoxy is true he put his own omophorion into the fire and prayed, and it stood three hours in the fire unharmed**, and the heretic was appalled and threw off his heresy. The two accounts are recorded side by side and neither emperor and neither route to the throne is preferred. A DEATH WIDENED BY SIX YEARS. The folder held `death` 546 off saint.gr’s head line «(; - 546)», which the page’s own arithmetic supports — the throne in 526 and twenty years of shepherding. This book states „Сконча свети Јефрем у миру 540. године“. Two books, two flat years: `death` 540 to 546, display «540 or 546», neither chosen. **The twenty years are not used for anything**: they are a duration, and under this book’s emperor they would not even reach 526. `types` and `office` UNTOUCHED, both corroborated by „патријарх антиохијски“. `wonderworker` REFUSED AND THE REFUSAL IS WORTH THE WORD: the entry says outright „даде му се од Бога велики дар чудотворства“ and he is the subject of the omophorion wonder, which is the 31 May test passed twice over — **but `types` is a scalar list and `hierarch` is not in `PRECEDENCE`, so `wonderworker` would not change what prints, and the word IS stated**; it was added. See `types_add`. NO `related`: the bishop among the workmen is unnamed, the patriarch Euphrasius has no folder, and the emperors take no row. No `locations` — Antioch is in the display name and the see is in `office`. THE FOLD IS DELIBERATE: `foldchk.py` returns `[('ephraim-of-tomis', 'sr')]`, so the bare form makes a fold of two; the see came off as §6 requires and the two are told apart by their sees. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

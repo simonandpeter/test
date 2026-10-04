@@ -6,6 +6,11 @@
       "form": "Zosima Fenicianul",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 10 iunie, «Sfântul Cuvios Zosima Fenicianul»."
+    },
+    {
+      "form": "Зосим Финикијски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. јун ст. ст., „Преподобни Зосим Финикијски“ — Преподобни is the `venerable` this corpus puts in `types` and is stripped. Финикијски is kept: it is not a rank and not a see but the by-name the display name itself carries («Zosimas the Phoenician»), and §6 asks for the fullest form. **The bare form was measured and refused for that reason**: `foldchk.py` returns `[('zosimas-of-palestine', 'sr'), ('zosimas-of-solovki', 'sr')]` for «Зосим» and `NO FOLDER HOLDS THIS FORM` for the two-word form, so keeping the by-name avoids a fold three wide and costs nothing."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.06.2026 (8. јун ст. ст.) — „Преподобни Зосим Финикијски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE IDENTIFICATION IS CERTAIN AND IT IS AGAIN A SCENE THAT MAKES IT. doxologia keeps him on 10 JUNE and this book on the Julian 8 JUNE, so **he is not on the day list for the menologion 8/6**; `sr-cand.mjs 06-10` prints Timothy bishop of Prusa, the martyrs Alexander and Antonina, and Bassian bishop of Lodi, **and does not name him**, so the 8 June is this book’s own day. The two scenes settle it: **he foresaw the fall of Antioch**, and **a lion ate his donkey on the road and he ordered it to carry the load in the donkey’s place, and it carried it to the gate of Caesarea, where he loosed it** — which is the folder’s own long quotation out of John Moschus by way of doxologia, down to the gates of Caesarea. THREE DIFFERENCES, ALL RECORDED AND NONE RESOLVED. **The village**: this book names it, „у селу Синди, у околини града Тира“, where doxologia says only Phoenicia not far from Tyre. **The monastery**: this book has him ascetic near Tyre IN HIS OWN MONASTERY, where doxologia has him in the monasteries near Caesarea in Palestine. **The fall of Antioch**: this book makes it an EARTHQUAKE and adds that he lay on the ground weeping and begged God not to destroy the city utterly, where doxologia’s article, out of Palladius and John Moschus, makes it the city’s loss for ever as a Christian city. **„у VI веку“ REFUSED, AND THE TWO BOOKS ARE TWO CENTURIES APART.** The folder holds `floruit` 351 to 400, display «late 4th century», off doxologia’s «un monah care a trăit la sfârșit de secol IV». This book closes „Упокоји се свети Зосим мирно у VI веку“. `dates` IS UNTOUCHED, for three stated reasons: a `death` in the sixth century beside a `floruit` ending in 400 would have the folder assert two incompatible things, which is the 31 May refusal; widening the floruit to 351–600 would make a 250-year interval, over `date-audit`’s WIDE threshold, and assert a life nobody claims; and replacing it would overwrite one book with another rather than widen. **AND THE BOOK’S OWN DAY ARGUES FOR ITS OWN CENTURY, WHICH IS WHY THIS IS WORTH THE AUTHOR’S TIME.** The earthquake that threw down Antioch is the subject of THIS DAY’S FIRST ENTRY, where Ephraim rebuilds the city under the emperor Anastasius, who died in 518. So the Prologue’s two entries for the Julian 8 June place Zosimas in the sixth century by their own internal reference, against doxologia’s fourth. **That is an argument from the source and not from memory, and it is the sharpest dating question since 31 May.** Nothing was written on it. AND THE YEAR IS KEPT AWAY FROM A DEATH VERB ON PURPOSE: this folder has a `floruit` and no `death`, so `date-audit`’s `stated` reads its prose; «sixth century» is written in words and the appended paragraphs carry no four-digit year at all. Measured: `stated` 153, unmoved. `types` untouched — Преподобни is the `venerable` already there, and `monk` and `ascetic` are both corroborated. `wonderworker` REFUSED: the clairvoyance and the lion are both things he does, but the entry uses no such word and §5’s table is read and not guessed at; the folder has never carried it. No `related` — the entry names no person. No `locations`. THE FOLD IS DELIBERATE AND THREE WIDE: `foldchk.py` returns `[('zosimas-of-palestine', 'sr'), ('zosimas-of-solovki', 'sr')]`. **That fold is why the fuller form was kept**: the heading gives «Зосим Финикијски», the by-name is the one the display name itself carries, and the two-word form returns `NO FOLDER HOLDS THIS FORM`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
