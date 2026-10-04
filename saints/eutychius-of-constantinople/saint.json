@@ -12,6 +12,11 @@
       "form": "Ευτύχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Απριλίου, «Άγιος Ευτύχιος πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Евтихије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 6 April on pravoslavno.rs, „Свети Евтихије, патријарх цариградски.“, with Свети left off — it is not a rank — and with патријарх цариградски left off as well, which is the see this corpus keeps in `office` and this folder already carries there. The heading leaves no epithet, so the bare forename is what the source gives."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.04.2026 (6. април ст. ст.) — „Свети Евтихије, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of two entries, and the Prologue keeps him on the same menologion day as the Romanian and the Greek, 6 April, so nothing moves. The man is the same beyond doubt: Phrygia, the father an officer, the boys' game of writing names and ranks and this child writing «Евтихије патријарх», Amasea, the fifth ecumenical council, the patriarch Menas, the aphthartodocete heresy, the exile of twelve years and eight months, the healings by prayer and oil, the return under Justin, and the seventieth year. Its 582 agrees exactly with the 582 this folder already holds from saint.gr's heading, and its «у својој седамдесетој години» agrees with the folder's own «all the years from his birth were seventy», so **no date was touched and none was added**. New to the folder: that he became abbot of a monastery of Amasea **in his thirtieth year** and was sent to the council in his fortieth, where the folder's Romanian life puts the fortieth year at his raising to the throne instead — the Prologue's own reading, recorded and not reconciled; that the boys wrote on a **rock** where the Romanian life has them write on the walls; that a dispute arose at the council **whether heretics may be anathematised after their death**, and that he held they may, citing the Book of Kingdoms 13, 1-8 and the fourth book of Kingdoms 23, 16; that Menas was **at that time very rich** and named Eutychius his successor and petitioned the emperor to effect it, where the folder's Romanian life has Menas prophesy it to his clergy and die before the council gathered; and that **Justinian repented before he died**. The aphthartodocete error is spelled out here as a body divine and incorruptible even before the resurrection, without the feeling of hunger, thirst or pain. The Prologue prints no troparion and no kontakion; the four hymns on this folder are the Romanian and Greek calendars'. The stored form Евтихије folds with nothing, measured: `corpus-gate.mjs` lists no fold naming this folder. `eutyches-the-hieromartyr` holds the same forename in Serbian but stores it as «Свети свештеномученик Евтихије», rank words and all, from before the naming contract was followed, and the gate keys that whole string — so the two do not meet, and the gate's `? \"евтихии\"` pair is its two Russian «Евтихий» forms and not this. Were that older form ever brought to the contract, the fold would appear and would be deliberate."
     }
   ],
   "hymns": [
@@ -156,6 +171,7 @@
     }
   ],
   "related": [
-    "justinian-the-great"
+    "justinian-the-great",
+    "menas-of-constantinople"
   ]
 }
