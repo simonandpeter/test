@@ -1,0 +1,70 @@
+{
+  "slug": "boris-semenov",
+  "display_name": "Boris (Semenov)",
+  "names": [
+    {
+      "form": "Борис (Семенов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 9843, «Борис (Семенов), диакон, исповедник», with the rank and the grade left off; the day's line gives the forename alone and in the genitive, «и св. Бориса исп., диакона». azbyka.ru writes the surname unbracketed, «Бориса Семенова, диакона». Three other folders carry a «Борис (Surname)» form and none of them this surname."
+    }
+  ],
+  "types": [
+    "deacon",
+    "confessor"
+  ],
+  "office": "Deacon",
+  "dates": {
+    "birth": {
+      "earliest": 1900,
+      "latest": 1900,
+      "display": "1900",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's life for him: «Родился в 1900 году в Санкт-Петербурге в семье наборщика типографии журнала «Нива» Александра Семенова». No day or month is given, and azbyka.ru prints the same sentence."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1939,
+      "display": "1931–1939",
+      "basis": "traditional",
+      "note": "No page gives a date. His life says «28 октября 1931 года Особое Совещание при Коллегии ОГПУ приговорило епископа Августина и диакона Бориса к трем годам заключения в концлагерь» and closes «Послушник епископа диакон Борис был отправлен в другой концлагерь, также недалеко от станции Лодейное Поле, и в заключении скончался», which puts him alive at the sentence of 28 October 1931 and dead in the camp without a year; the day's line closes the entry «(1930-е)», the 1930s, which is the only upper bound any page gives."
+    }
+  },
+  "related": [
+    "augustine-belyaev"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The life page lists «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia, and «7 июня (Иван.)», the synaxis of the Ivanovo saints, beside this day; azbyka.ru keeps the first on the moveable 7 February and does not list the second. A synaxis is not a second feast, and this folder renders on 10 ноября ст. ст. only. No page says he died on this day or near it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мч. Николая и мц. Анны и св. Бориса исп., диакона (1930-е).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 10 Νοεμβρίου (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 10 November (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
