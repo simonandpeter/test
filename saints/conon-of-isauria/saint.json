@@ -11,6 +11,11 @@
       "form": "Κόνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Κόνων ο Ίσαυρος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Конон Исавријски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 5 March on pravoslavno.rs, „Свети мученик Конон Исавријски.“, with the rank word мученик left off and Свети, which is not a rank. Исавријски is kept: it is the epithet of his country and it is what the Prologue uses to tell him from the Conon of the next entry."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.03.2026 (5. март ст. ст.) — „Свети мученик Конон Исавријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, and the heading carries the epithet that keeps him apart from the day's second Conon, so the stored Serbian form keeps it too. The folder held a birth and no death; the Prologue states the century of his life and his suffering and the death was added from it. The two statements of century are not quite the same: saint.gr puts his birth about the end of the first century and has him live «στους Αποστολικούς χρόνους», in the apostolic times, where the Prologue puts both his life and his suffering in the second. The birth interval was left exactly as it was and the tension is recorded in the death's note."
     }
   ],
   "hymns": [
@@ -120,6 +135,13 @@
       "display": "about the end of the 1st century",
       "basis": "traditional",
       "note": "saint.gr: «Ο Άγιος Κόνων γεννήθηκε περί τα τέλη του 1ου αιώνα μ.Χ. στη Βαδινή, χωριό της Ισαυρίας της Μικράς Ασίας και έζησε στους Αποστολικούς χρόνους» — the page's «περί τα τέλη», about the end, is why the bounds are a quarter-century and not a year. doxologia.ro, from which this folder was first written, gives him no year at all, and saint.gr gives none for his repose."
+    },
+    "death": {
+      "earliest": 101,
+      "latest": 200,
+      "display": "2nd century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 5 March: „Овај дивни светитељ поживе и пострада у II веку.“ It gives the century and no year, and the folder carried no death at all before this reading. The saint.gr sentence quoted on the birth above sets him in the apostolic times, which reads as the first century rather than the second; the interval here is the Prologue's own and the disagreement is not resolved."
     }
   },
   "related": [
