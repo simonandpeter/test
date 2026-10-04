@@ -10,6 +10,11 @@
       "form": "Σατορνίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Επτά Μάρτυρες Σατορνίνος, Ιακισχόλος, Φαυστιανός, Ιανουάριος, Μαρσάλιος, Ευφράσιος και Μάμμινος»; its own page heads him «Άγιος Σατορνίνος ο Μάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Саторније",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's entry for 28. април ст. ст., the first of the seven in „Саторније, Јакисхол, Фаустијан, Јануарије, Марсалије, Ефрасије и Мамије“ — a bare list with no rank word on any of them and no epithet; разбојника, robbers, is what they were before and no part of a name. Corfu, which this corpus's English name keeps, is the entry's setting and not in the list."
     }
   ],
   "related": [
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. апостоли Јасон и Сосипатер, и Керкира девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "**The heading names the two apostles and the king's daughter, and the body is where this book names the seven**, so the citation above is that heading whole, per BRIEF-SERBIAN.md §4 and the coordinator's ruling for a heading that names some while the body enumerates the rest. The body's own words are „где беху затворени 7 разбојника: Саторније, Јакисхол, Фаустијан, Јануарије, Марсалије, Ефрасије и Мамије“, and the clause that makes them martyrs is „нареди да се та седморица уморе смрћу у врелој смоли“. **The seven are the same seven and the identification is by order as much as by name**: the Prologue's list is the same count in the same sequence as saint.gr's — Saturninus, Iakischolos, Faustianus, Januarius, Marsalios, Euphrasius, Mamminos — with the same prison, the same converting apostles and the same boiling pitch. New from this book: that the apostles „од вукова направише јагањце“, made lambs out of wolves, of them, and that it was **the king's own order** that they be killed in the pitch. **It gives no year**, so this folder's empty `dates` stay empty. It does not name saint.gr's gaoler Antonius. The Prologue prints no hymn."
     }
   ],
   "text": {

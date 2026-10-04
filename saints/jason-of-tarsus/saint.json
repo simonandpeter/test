@@ -11,6 +11,11 @@
       "form": "Ιάσων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι», whose page heads him «Άγιος Ιάσονας ο Απόστολος», with the rank word left off."
+    },
+    {
+      "form": "Јасон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“ Св. апостоли is not his alone — it stands over the first two names — and апостол is the `apostle` this folder already carries in `types`; the heading gives him no see and no epithet, Tarsus being the body's, so the bare forename is the whole of the Serbian form."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. апостоли Јасон и Сосипатер, и Керкира девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "An **enumerated heading** of three, so three rows off it and no note of the company needed; the seven robbers of the body take seven more. The same man: one of the Seventy whom Paul calls his kinsman at Romans 16:21, of Tarsus as Paul was, made bishop of Tarsus, who preached on Corfu with Sosipater and died there in deep old age. **It gives no year**, so this folder's empty `dates` stay empty. The Serbian day is Julian 28 April, where the Greek keeps the whole company on 29 April and the Romanian keeps the two apostles on 28 April. New from this book: the citation of Romans 16:21 and the kinship; Sosipater's Achaia against his own Tarsus; **the church they built on Corfu „у име св. Стефана првомученика“**; that they made „од вукова... јагањце“, lambs out of wolves, of the seven; **that the seven were put to death in boiling pitch by the king's order**; and the end of the king, whose ship went down „као негда фараон“. **One disagreement is recorded and not resolved**: this book drowns the persecuting king and has a *new* king take the faith and the name Severin — Севастијан — while saint.gr has the king himself, Kerkyllinos, repent, be baptized and be renamed Sebastianos. Nothing here chooses, and no folder was made for either reading. It does not have saint.gr's eparch Capreanus or its gaoler Antonius. The Prologue prints no hymn."
     }
   ],
   "hymns": [

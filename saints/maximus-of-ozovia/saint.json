@@ -11,6 +11,11 @@
       "form": "Μάξιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Απριλίου, «Άγιοι Κυντιλλιανός, Μάξιμος και Δάδας», with the rank word left off."
+    },
+    {
+      "form": "Максим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. муч. Максим, Дада и Квинтилијан.“ Св. муч. stands over all three names and муч. is the `martyr` this folder already carries in `types`; the heading gives no epithet and no village — Ozovia is the Romanian life's — so the bare forename is the whole of the Serbian form. Several folders already hold it; the fold was measured and the row is in the batch's commit message."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. муч. Максим, Дада и Квинтилијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "An **enumerated heading** of three, so three rows and no company note needed. The whole entry is three short sentences and it adds almost nothing to what this folder already holds: they suffered in the time of Diocletian, were judged and tortured by **the voivode Tarquinius**, and after prison and torments were beheaded with the sword. The two things worth recording are that **this book keeps the three on 28 April with the Romanian calendar and against the Greek 13 April**, and that **„у време Диоклецијана“ is a reign with no printed bounds** and was therefore not turned into a date: this folder stays undated, as doxologia's long life and saint.gr's notice both left it. The Prologue prints no hymn."
     }
   ],
   "hymns": [

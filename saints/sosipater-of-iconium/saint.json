@@ -11,6 +11,11 @@
       "form": "Σωσίπατρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Απριλίου, «Άγιοι Ιάσονας και Σωσίπατρος οι Απόστολοι», whose page heads him «Άγιος Σωσίπατρος ο Απόστολος», with the rank word left off."
+    },
+    {
+      "form": "Сосипатер",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 28. април ст. ст., „Св. апостоли Јасон и Сосипатер, и Керкира девица.“ Св. апостоли stands over the first two names and апостол is the `apostle` this folder already carries in `types`; the heading gives him no see and no epithet — Iconium is the body's — so the bare forename is the whole of the Serbian form."
     }
   ],
   "sex": "male",
@@ -81,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.05.2026 (28. април ст. ст.) — „Св. апостоли Јасон и Сосипатер, и Керкира девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The second name of an enumerated heading of three. The same man: one of the Seventy, Paul's kinsman at Romans 16:21, **of Achaia** by birth where Jason was of Tarsus, made bishop of Iconium, dead on Corfu in deep old age. **It gives no year**, so this folder's empty `dates` stay empty. The Serbian day is Julian 28 April against the Greek 29 April. The entry's whole account of the mission, the seven robbers in boiling pitch, the king's daughter and the king's drowning is set out in this folder's life and in Jason's; the disagreement with saint.gr over whether the persecuting king died in the sea or repented and was renamed Sebastianos is recorded there and resolved nowhere. The Prologue prints no hymn."
     }
   ],
   "hymns": [
