@@ -1,0 +1,50 @@
+{
+  "slug": "quadratus-of-nicomedia",
+  "display_name": "Quadratus of Nicomedia",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Кодрат Никомидијски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 March on pravoslavno.rs, „Свети мученик Кодрат Никомидијски.“, with the rank word мученик left off and Свети, which is not a rank. Никомидијски is kept: it is the epithet of his city and it is what the Prologue uses to tell him from the Quadratus of the entry before."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 10 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 10 martie, which is the page for this menologion number — not 23 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 10 Μαρτίου, which is the page for this menologion number; that day's Greek line is «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης», the six of Corinth, and this is not that Quadratus. The corpus's other two men of the name are not him either: `quadratus-the-apostle`, and `quadratus-of-the-east`, whom the Greek keeps on 26 Μαρτίου in a company with Theodosius and Manuel."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.03.2026 (10. март ст. ст.) — „Свети мученик Кодрат Никомидијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, and a new folder rather than an upgrade: the Prologue prints two men of this name on this one day and marks them apart by their cities, and the corpus held only the Corinthian of the first entry. A nobleman and a rich man who bribed the jailers to get in to the prisoners, where the Corinthian was a physician brought up in the forest; nothing joins the two but the name and the day, which the Prologue itself separates. No `dates`: the entry names the persecution of Valerian and gives no year and no century, and the reign's own years are not on the page."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

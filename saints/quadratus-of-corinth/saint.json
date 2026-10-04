@@ -11,6 +11,11 @@
       "form": "Κοδράτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαρτίου, «Άγιοι Κοδράτος, Ανεκτός, Παύλος, Διονύσιος, Κυπριανός και Κρήσκης», with the rank word left off."
+    },
+    {
+      "form": "Кодрат Коринтски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 10 March on pravoslavno.rs, „Свети мученик Кодрат Коринтски и други с њим.“, with the rank word мученик left off and Свети, which is not a rank. Коринтски is kept: it is the epithet of his city and it is what the Prologue uses to tell him from the Quadratus of the next entry."
     }
   ],
   "sex": "male",
@@ -27,7 +32,10 @@
   ],
   "related": [
     "cyprian-companion-of-quadratus",
-    "dionysius-companion-of-quadratus"
+    "dionysius-companion-of-quadratus",
+    "anectus-companion-of-quadratus",
+    "paul-companion-of-quadratus",
+    "crescens-companion-of-quadratus"
   ],
   "dates": {
     "floruit": {
@@ -36,6 +44,13 @@
       "display": "249–259",
       "basis": "traditional",
       "note": "doxologia.ro opens the life «Pe vremea lui Deciu (249-251) și a lui Valerian (253-259) s-a născut Sfântul Mucenic Codrat». The bounds are the two reigns the page prints; it gives no year for the martyrdom, only that it fell on 10 March."
+    },
+    "death": {
+      "earliest": 250,
+      "latest": 250,
+      "display": "250",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 10 March: „Чесно пострадаше за истину 250. године у Коринту у време цара Декија и његовог намесника Јасона.“ The folder held a `floruit` of 249 to 259 from doxologia, the two reigns the Romanian life names, and no death at all; this is the death added beside it, and the floruit was left exactly as it was. 250 falls inside it."
     }
   },
   "attestations": [
@@ -75,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.03.2026 (10. март ст. ст.) — „Свети мученик Кодрат Коринтски и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. Its heading names him and says „и други с њим“, and the body enumerates the five, so the heading is quoted whole by all six folders and each of the five also carries the body's naming clause. The heading gives him the epithet of his city, so the stored Serbian form keeps it. The folder held a `floruit` and no death; 250 was added as the death. The entry also names the governor Jason, whom no calendar read for these six has named before."
     }
   ],
   "hymns": [
