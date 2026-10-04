@@ -6,6 +6,11 @@
       "form": "Αττικός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Άγιοι Εύδοξιος, Αγάπιος και άλλοι οκτώ μάρτυρες, Αττικός, Μαρίνος, Ωκεανός, Ευστράτιος, Καρτέριος, Νικοπολιτιανός, Στύραξ και Τωβίας», with the rank words left off."
+    },
+    {
+      "form": "Аттик Севастийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the first name on days.pravoslavie.ru's line for 3 ноября ст. ст., «Аттик Севастийский, мч.», with the rank word left off. The line itself gives «Аттика», the genitive."
     }
   ],
   "sex": "male",
@@ -23,22 +28,33 @@
     "nicopolitianus-of-sebasteia",
     "oceanus-of-sebasteia",
     "styrax-of-sebasteia",
-    "tobias-of-sebasteia"
+    "tobias-of-sebasteia",
+    "istucarius-of-sebasteia",
+    "pactobius-of-sebasteia"
   ],
   "dates": {
     "death": {
       "earliest": 315,
-      "latest": 315,
-      "display": "315",
+      "latest": 320,
+      "display": "315 or 320",
       "basis": "traditional",
-      "note": "saint.gr's line for each of the ten in «Άγιοι που εορτάζουν», «Αγιος Αττικος (; - 315)», and in the notice «Όταν, το 315 μ.Χ., εξετάστηκαν από τον άρχοντα της Σεβάστειας Αυξάνιο…». No year of birth is given."
+      "note": "Two calendars a few years apart on one company, and neither preferred. saint.gr's line for each of the ten is «(; - 315)» and its notice dates the examination «Όταν, το 315 μ.Χ., εξετάστηκαν από τον άρχοντα της Σεβάστειας Αυξάνιο…»; days.pravoslavie.ru's line for 3 ноября ст. ст. closes «(ок. 320)», about 320. The interval holds both readings. No year of birth is given by either."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Мчч. Аттика, Агапия, Евдоксия, Катерия, Истукария, Пактовия, Никтополиона и дружины их (ок. 320).»",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

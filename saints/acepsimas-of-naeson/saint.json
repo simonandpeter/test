@@ -12,6 +12,11 @@
       "form": "Ακεψιμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Άγιοι Ακεψιμάς, Ιωσήφ και Αειθαλάς», with the rank word left off."
+    },
+    {
+      "form": "Акепсим Наессонский (Анисский), Арбельский, Персидский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 ноября ст. ст., «Святитель Акепсим Наессонский (Анисский), Арбельский, Персидский, епископ, сщмч.», with the rank words at both ends left off. The line itself gives «Акепсима», the genitive, with «еп.» for the grade and no by-name at all."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Мчч. Акепсима еп., Иосифа пресвитера и Аифала диакона (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -120,6 +135,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости:/ тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Тропарь мучеников». The text names none of the three and is the common of martyrs, printed under their line and copied whole, as the brief directs; it is the Slavonic of the troparion this folder already holds in Romanian, and not the Greek one, which calls the three of them pillars of the Church.",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your martyrs, O Lord, in their sufferings received incorruptible crowns from you, our God; for having your strength they cast down the tormentors and shattered the feeble insolence of the demons. By their prayers save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественная, мудре, непорочно тайноводил еси,/ жертва приятна был еси, богоблаженне,/ Христову бо пил еси чашу славно, святе Акепсимо,/ со страдальцы твоими,// моляся непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Кондак мучеников». It names him and his fellow-sufferers and no other saint, and it is the Slavonic of the kontakion this folder already holds in Greek. It is taken for this folder only, as the Greek one was, because it is the one of the three the text names.",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Wisely and blamelessly you were led into the divine mysteries, and became an acceptable sacrifice, O God-blessed one; for gloriously you drank the cup of Christ, holy Acepsimas, together with your fellow-sufferers, praying without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

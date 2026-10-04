@@ -6,6 +6,11 @@
       "form": "Ακεψιμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Όσιος Ακεψιμάς», with the rank word left off."
+    },
+    {
+      "form": "Акепсим Антиохийский, Сирийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 ноября ст. ст., «Акепсим Антиохийский, Сирийский, пресвитер, отшельник», with the two grade words at the end left off. The line itself gives «Акепсима», the genitive, with the rank word «Прп.» and no by-name."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Прп. Акепсима (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

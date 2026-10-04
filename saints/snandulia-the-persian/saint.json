@@ -1,0 +1,62 @@
+{
+  "slug": "snandulia-the-persian",
+  "display_name": "Snandulia the Persian",
+  "names": [
+    {
+      "form": "Снандулия (Яздундокта) Персидская",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 ноября ст. ст., whose page is titled «Снандулия (Яздундокта) Персидская» — the calendar's own nominative, with a second name in brackets and a by-name, and with no rank word to strip. The line itself gives «Снандулии», the genitive, and no second name."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Прав. Снандулии (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 16 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 16 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The century days.pravoslavie.ru prints at the end of her line for 3 ноября ст. ст.: «Прав. Снандулии (IV).» It is recorded as the span she lived in and not as a year of death, because the line calls her righteous and not a martyr and gives no death at all."
+    }
+  },
+  "related": [
+    "joseph-presbyter-of-persia",
+    "aithalas-the-deacon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

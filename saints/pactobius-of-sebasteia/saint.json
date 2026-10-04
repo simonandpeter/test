@@ -1,0 +1,65 @@
+{
+  "slug": "pactobius-of-sebasteia",
+  "display_name": "Pactobius of Sebasteia",
+  "names": [
+    {
+      "form": "Пактовий Севастийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the sixth name on days.pravoslavie.ru's line for 3 ноября ст. ст., «Пактовий Севастийский, мч.», with the rank word left off. The line itself gives «Пактовия», the genitive. The calendar gives no second name."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 ноября ст. ст. — «Мчч. Аттика, Агапия, Евдоксия, Катерия, Истукария, Пактовия, Никтополиона и дружины их (ок. 320).»",
+        "url": "https://days.pravoslavie.ru/Days/20261103.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 16 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 16 Νοεμβρίου, the corresponding civil day (4 October 2026). saint.gr's own 2 Νοεμβρίου keeps the company this line names, in a line of ten, and does not print this name."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 320,
+      "latest": 320,
+      "display": "about 320",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the company's line for 3 ноября ст. ст., «(ок. 320)», about 320. It is the only year any page read for this folder gives; the Greek calendar's 315 stands on the four folders of the company that were written from that page, and is not borrowed onto this one."
+    }
+  },
+  "related": [
+    "istucarius-of-sebasteia",
+    "atticus-of-sebasteia",
+    "agapius-2-november",
+    "eudoxius-of-sebasteia",
+    "carterius-of-sebasteia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
