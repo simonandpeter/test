@@ -11,6 +11,11 @@
       "form": "Συμεών",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Συμεών επίσκοπος Περσίας…», with the rank word and the see left off."
+    },
+    {
+      "form": "Симеон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 17 April, „Свешт. муч. Симеон епископ Персијски.“, with Св. left off — it is not a rank — with Свешт. муч. left off, which is the `hieromartyr` this folder already carries in `types`, and with епископ Персијски left off, a rank and a see this corpus keeps in `types` and in the display name. The heading gives no epithet beyond the see, so the bare forename is what the source leaves."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.04.2026 (17. април ст. ст.) — „Свешт. муч. Симеон епископ Персијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian and the Greek both keep him on. **The heading names him and nobody else**, so this entry is one row and not a company's worth, on the ruling made for `asyncritus-the-apostle` on the Julian 8 April: the row rests on the heading. The body does name six others who died in the same persecution — the presbyters Авделај and Ананија, the king's eunuch Устазан, the officer Фусик, his daughter the virgin Аскитреја, and the eunuch Азат a year later on Great Friday — and the corpus keeps folders for four of them, but not one of those names is in the heading, so **no row and no name form was written for any of them** and the entry's account of them stands in this folder's life, where the Romanian life already told it. **The year is new to this folder**: „Сви чесно пострадаше за Христа Цара и Господа 341. или 344. год.“ — 341 or 344, the page disagreeing with itself, recorded as the interval it is. The Romanian life this folder was written from says in so many words that no year is given anywhere on its page, and saint.gr gives none either, so nothing was displaced. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -142,5 +157,14 @@
     "gothazat-companion-of-simeon",
     "phousik-companion-of-simeon",
     "sadoth-of-persia"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 341,
+      "latest": 344,
+      "display": "341 or 344",
+      "basis": "traditional",
+      "note": "One page disagreeing with itself, recorded as an interval with nothing chosen, on docs/CORPUS.md §3's rule. The Ohrid Prologue for 17. април ст. ст. closes the entry „Сви чесно пострадаше за Христа Цара и Господа 341. или 344. год.“ — all suffered honourably for Christ the King and Lord in 341 or 344. The folder held no `dates` before: doxologia's long life, which this folder was written from, says in so many words that no year is given anywhere on its page, and saint.gr prints none. The entry puts the eunuch Азат's death a year after Simeon's, on Great Friday, so the interval is the bishop's own year as the page gives it and not the company's span. No year of birth is recorded anywhere read."
+    }
+  }
 }
