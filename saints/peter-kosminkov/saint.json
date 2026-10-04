@@ -46,16 +46,46 @@
     }
   ],
   "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "4 January 1887",
+      "basis": "attested",
+      "note": "azbyka.ru's life for the three new martyrs of Быково: «Священномученик Петр родился 4 января 1887 года в селе Пахрино Подольского уезда Московской губернии в семье Василия Петровича Косминкова, служившего псаломщиком в Троицкой церкви в этом селе.»"
+    },
     "death": {
       "earliest": 1937,
       "latest": 1937,
-      "display": "1937",
+      "display": "16 November 1937",
       "basis": "attested",
-      "note": "The year days.pravoslavie.ru prints at the end of the line for 3 ноября ст. ст.: «Сщмчч. Василия, Василия, Александра, Владимира, Сергия, Николая, Викентия, Иоанна, Петра, Александра, Павла, Космы пресвитеров (1937).»"
+      "note": "azbyka.ru's life for the three new martyrs of Быково: «Священники Иоанн Кесарийский, Петр Косминков и диакон Симеон Кречков были расстреляны 16 ноября 1937 года и погребены в безвестной общей могиле на полигоне Бутово под Москвой», the NKVD troika having sentenced them on 15 November. 16 November 1937 is 3 ноября ст. ст., the day days.pravoslavie.ru keeps him on, whose line closes with the year 1937: «Сщмчч. Василия, Василия, Александра, Владимира, Сергия, Николая, Викентия, Иоанна, Петра, Александра, Павла, Космы пресвитеров (1937).»"
     }
   },
   "office": "Priest",
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-kesariysky",
+    "simeon-krechkov",
+    "eudocia-safronova"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "В годи́ну о́гненных искуше́ний Це́ркве Ру́сския,/ кро́тость и смире́ние стяжа́вше,/ любо́вь Христо́ву к па́стве свое́й яви́сте/ и, я́ко па́стыри до́брии,/ ду́ши своя́ за ню положи́сте./ Моли́теся о нас священному́ченицы Иоа́нне, Пе́тре и Симео́не,/ ку́пно с му́ченицею Евдоки́ею,// спасти́ и просвети́ти ду́ши на́ша.",
+      "source": {
+        "text": "«Служба новомученикам Быковским», текст утверждён Священным Синодом Русской Православной Церкви 14 мая 2018 года (журнал № 37), печатаемая azbyka.ru под житием священномучеников Иоанна Кесарийского, Петра Косминкова и Симеона Кречкова — «Ме́сяца ноября́ в 3-й день. Новому́чеников Бы́ковских ... На благослове́нии хле́бов тропа́рь, глас 6»",
+        "url": "https://azbyka.ru/days/sv-simeon-krechkov",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the hour of the Russian Church's fiery trial you gained meekness and humility and showed Christ's love to your flock, and like good shepherds you laid down your lives for her. Pray for us, hieromartyrs John, Peter and Simeon, together with the martyr Eudocia, that our souls may be saved and enlightened.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

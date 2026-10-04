@@ -11,22 +11,36 @@
       "form": "Μαναθώ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Αγία Μαναθώ η παρθένος», with the rank word left off."
+    },
+    {
+      "form": "Манефа Кесарийская (Палестинская)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind the line for 13 ноября ст. ст., page 2583, «Манефа Кесарийская (Палестинская), дева, мц.», with the grade and the rank words left off; the bracketed word is the calendar's own, the province behind the city. The line itself gives the forename in the genitive and nothing else, «Мц. Манефы»."
     }
   ],
   "dates": {
     "death": {
       "earliest": 286,
-      "latest": 305,
-      "display": "between 286 and 305",
+      "latest": 308,
+      "display": "286–305 or about 308",
       "basis": "traditional",
-      "note": "saint.gr: «Η Αγία Μαναθώ μαρτύρησε στα χρόνια του Μαξιμιανού (286 - 305 μ.Χ.)» — the page gives the reign and no year."
+      "note": "Two calendars, two readings, and the interval holds both. saint.gr: «Η Αγία Μαναθώ μαρτύρησε στα χρόνια του Μαξιμιανού (286 - 305 μ.Χ.)» — the reign and no year. days.pravoslavie.ru's line for 13 ноября ст. ст. closes «(ок. 308)», which is outside that reign; neither is preferred here."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 ноября ст. ст. — «Мц. Манефы (ок. 308).»",
+        "url": "https://days.pravoslavie.ru/Days/20261113.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

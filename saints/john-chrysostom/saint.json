@@ -297,6 +297,22 @@
         "text": "The sacred and God-proclaiming preachers, the chief of teachers, thou hast received, O Lord, into the enjoyment of thy good things and into rest; for thou hast accepted their labours and their death above every whole burnt offering, O thou who alone glorifiest thy saints.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "От Небес приял еси Божественную благодать/ и твоими устнами вся учиши/ покланятися в Троице Единому Богу,/ Иоанне Златоусте, всеблаженне преподобне,/ достойно хвалим тя:/ еси бо наставник,// яко Божественная являя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 ноября ст. ст. — «Кондак святителя Иоанна Златоустого»",
+        "url": "https://days.pravoslavie.ru/Days/20261113.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From heaven you received divine grace, and by your lips you teach all men to worship the one God in Trinity, John Chrysostom, all-blessed and venerable; worthily do we praise you, for you are our teacher, making the things of God plain.",
+        "rendered": "site"
+      }
     }
   ]
 }

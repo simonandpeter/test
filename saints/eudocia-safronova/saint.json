@@ -48,12 +48,35 @@
     "death": {
       "earliest": 1938,
       "latest": 1938,
-      "display": "1938",
+      "display": "25 August 1938",
       "basis": "attested",
-      "note": "The year days.pravoslavie.ru prints at the end of the line for 3 ноября ст. ст.: «Мц. Евдокии (1938).»"
+      "note": "azbyka.ru's life for the three new martyrs of Быково, which names her among those arrested with them and sentenced by the same troika: «Евдокия Сафронова умерла в заключении 25 августа 1938 года и была погребена в безвестной могиле.» days.pravoslavie.ru's line for 3 ноября ст. ст. gives the year alone, «Мц. Евдокии (1938).»"
     }
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-kesariysky",
+    "peter-kosminkov",
+    "simeon-krechkov"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "В годи́ну о́гненных искуше́ний Це́ркве Ру́сския,/ кро́тость и смире́ние стяжа́вше,/ любо́вь Христо́ву к па́стве свое́й яви́сте/ и, я́ко па́стыри до́брии,/ ду́ши своя́ за ню положи́сте./ Моли́теся о нас священному́ченицы Иоа́нне, Пе́тре и Симео́не,/ ку́пно с му́ченицею Евдоки́ею,// спасти́ и просвети́ти ду́ши на́ша.",
+      "source": {
+        "text": "«Служба новомученикам Быковским», текст утверждён Священным Синодом Русской Православной Церкви 14 мая 2018 года (журнал № 37), печатаемая azbyka.ru под житием священномучеников Иоанна Кесарийского, Петра Косминкова и Симеона Кречкова — «Ме́сяца ноября́ в 3-й день. Новому́чеников Бы́ковских ... На благослове́нии хле́бов тропа́рь, глас 6»",
+        "url": "https://azbyka.ru/days/sv-simeon-krechkov",
+        "year": 2026
+      },
+      "english": {
+        "text": "In the hour of the Russian Church's fiery trial you gained meekness and humility and showed Christ's love to your flock, and like good shepherds you laid down your lives for her. Pray for us, hieromartyrs John, Peter and Simeon, together with the martyr Eudocia, that our souls may be saved and enlightened.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
