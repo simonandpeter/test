@@ -6,4 +6,6 @@ After the communion the patriarch asked his steward Menas when this abba of Sina
 
 It is said, the page adds, that the venerable George and the patriarch Peter I fell asleep peacefully together six months afterwards, which George had foretold. The two lines the page keeps for him ask how he could have crossed so many acres of ground so quickly if he had not been, as it were, without flesh in his manner of life. It gives no year of his own and no hymn.
 
-*After saint.gr's calendar for 11 Μαρτίου — [the day](https://www.saint.gr/03/11/index.aspx) and [the life](https://www.saint.gr/3813/saint.aspx); read 30 September 2026.*
+The Serbian church keeps him on this day, and the Ohrid Prologue of Bishop Nikolai Velimirović gives him four sentences. It makes him abbot of the mountain of Sinai, and a great ascetic and a righteous man. On the night of Pascha an angel of God carried him to Jerusalem for the service of God, and brought him back to Sinai the same day. He reposed in peace, the entry ends, in the sixth century — which is the century the interval already recorded here falls inside, so nothing was changed on it.
+
+*After saint.gr's calendar for 11 Μαρτίου — [the day](https://www.saint.gr/03/11/index.aspx) and [the life](https://www.saint.gr/3813/saint.aspx); read 30 September 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 11. март ст. ст. — [the Serbian day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-24&prolog=1), read 4 October 2026.*

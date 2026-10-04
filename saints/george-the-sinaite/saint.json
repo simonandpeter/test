@@ -6,13 +6,19 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Όσιος Γεώργιος ο Σιναΐτης», with the rank words left off."
+    },
+    {
+      "form": "Георгије Синаит",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 11 March on pravoslavno.rs, „Преподобни Георгије Синаит.“, with the rank word Преподобни left off. Синаит is kept: it is the epithet of his mountain, it is what this folder's English name already carries from the Greek calendar, and a bare Георгије would fold with a great many folders."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
     "monk",
-    "ascetic"
+    "ascetic",
+    "abbot"
   ],
   "attestations": [
     {
@@ -42,8 +48,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.03.2026 (11. март ст. ст.) — „Преподобни Георгије Синаит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third and last entry, four sentences long. It calls him игуман of the mountain of Sinai, which is a rank the folder did not hold, so `abbot` was added to its `types`; the folder's `floruit` under Justinian is narrower than the Prologue's bare sixth century and was left exactly as it was, since a reading does not widen a sourced interval any more than it narrows one."
     }
   ],
   "dates": {

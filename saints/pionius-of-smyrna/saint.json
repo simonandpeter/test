@@ -11,6 +11,11 @@
       "form": "Πιόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιοι Πιόνιος ο Πρεσβύτερος και Σαβίνα», with the rank words left off."
+    },
+    {
+      "form": "Пионије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 March on pravoslavno.rs, „Свети мученици Пионије и други с њим.“, with the rank word мученици left off and Свети, which is not a rank. The heading gives no epithet and does not name Smyrna, which this folder's English name carries and which the body's first words supply."
     }
   ],
   "sex": "male",
@@ -64,11 +69,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.03.2026 (11. март ст. ст.) — „Свети мученици Пионије и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry. The heading says „и други с њим“ — and the others with him — and neither the heading nor the body names one of them, so the others took no row and no folder; the Greek line this folder already quotes names a Sabina with him, and the Prologue does not. The Prologue gives the year 250, which falls inside the interval this folder already holds, 245 to 251, and narrower than it, so nothing was changed. The entry names him as the writer of the life of Polycarp of Smyrna, which took a `related` row in both directions on the footing `troadius` already relates to `nicodemus-the-hagiorite`."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "polycarp-of-smyrna"
+  ]
 }
