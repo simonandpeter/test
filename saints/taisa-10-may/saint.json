@@ -1,0 +1,53 @@
+{
+  "slug": "taisa-10-may",
+  "display_name": "Taisa (10 May)",
+  "sex": "female",
+  "types": [
+    "righteous"
+  ],
+  "names": [
+    {
+      "form": "Тајса",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 10 May, „Блажена Тајса.“ — Блажена left off, which BRIEF-SERBIAN.md §5 reads as either fool-for-christ or righteous and which this folder carries as `righteous`. The heading gives no epithet, no city and no year; Egypt, the giving away of her goods, the fall, the elder and the angels are all in the body. The day in the display name is the corpus's own way of telling her from `thais-of-egypt`, whom the same book keeps on the Julian 8 October, and is no part of the source's name for her."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (5 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 10 Μαΐου (5 October 2026). That day's Greek page was read for this corpus on 30 September 2026 and the saints it gave were the apostle Simon, the three brothers Alphaeus, Cyprinus and Philadelphus, Erasmus, Onesimus, Isidore the fool of Alexandria, Hesychius, Laurence, Comgall of Bangor and the household of Passarion; no Taisa was among them, but the page was not re-opened for her and an absence is not claimed here."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Блажена Тајса.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth and last entry, a single paragraph. **She is not `thais-of-egypt`, and the proof is in the same book.** The Ohrid Prologue keeps a second penitent of this name on the Julian 8 October, „Преп. Таиса.“, and that one is `thais-of-egypt` entire: Egyptian by birth, set on the evil path by her own shameless mother, converted by Пафнутије Сидонит a disciple of Antony the Great, three years enclosed in a maidens' monastery on bread and water, brought out by Paphnutius before her death, seen in paradise by Павле Препрости, and „Упокоји се ова света душа 340. год.“ — the mother, the elder, Paul the Simple and the 340 all being what that folder already holds. **Two commemorations on one calendar, so two women by this corpus's settled rule**, and four differences besides the day: this one is a rich Christian girl who resolved never to marry and gave her goods to the desert monks before she fell, where that one was put to the trade by her mother; this one is converted by Јован Колов and that one by Paphnutius; this one's soul is taken by angels in the desert the very night of her repentance, where that one lived three years enclosed and died of an illness; and this one's entry says nothing of any year. **The Julian 8 October page was fetched and read for this identification alone** — it is outside this reader's range, nothing was drafted from it, and `thais-of-egypt`'s own `serbian` row is left `undocumented` for the reader whose range holds that day. **The identification is a reading and is named for the author.** No `dates`: the entry prints no year of any kind. No `locations`: Egypt and Alexandria are the only places and neither is a point this entry will carry. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "related": [
+    "john-colobos"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

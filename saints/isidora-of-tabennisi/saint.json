@@ -11,6 +11,11 @@
       "form": "Ισιδώρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαΐου, «Οσία Ισιδώρα η δια Χριστόν Σαλή», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Исидора",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 10 May, „Преподобна Исидора Јуродива.“ — Преподобна left off, which is the `venerable` this folder already carries in `types`, and Јуродива left off too, which is the `fool-for-christ` it also carries and which BRIEF-SERBIAN.md §5's table reads as a rank and not an epithet. Nothing else is in the heading: Tabennisi, the feigned madness, Pitirim and the year are all in the body. A direct walk of every `names` entry in `saints/` finds no folder holding Исидора — not `isidora-17-october`, which has no Serbian form — so this one folds with nothing, and it does not meet the ten `isidore-*` folders either, whose names are masculine."
     }
   ],
   "sex": "female",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Преподобна Исидора Јуродива.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry. **THE SERBIAN ROW IS THE JULIAN 10 MAY WHERE THE ROMANIAN AND THE GREEK ROWS ARE 1 MAY, AND THAT IS NOT A MISTAKE: A SECOND SLAVIC BOOK NOW CORROBORATES THE SLAVIC DAY.** This folder's `russian` row carries the note that „The Romanian life adds that the Russian Church keeps her on 10 May, which is not verified here“ — and the Ohrid Prologue, a Slavonic book reckoning in the Julian calendar, prints her on exactly that 10 May. One attestation row per church is the schema, so each church keeps the day it was read on and nothing moved; her `russian` row stays `undocumented`, because days.pravoslavie.ru has still not been opened for her and a claim is not made from a second-hand sentence. **It is plainly the same woman**: „била монахиња у женском манастиру у Тавенисиоту“, the convent of Tabennisi this folder is named for, feigning madness to hide her virtue and her struggle. **THE ENTRY RESOLVES, FROM ONE PAGE, WHAT THE FOLDER HELD AS A DISAGREEMENT BETWEEN TWO.** Its `death` note says doxologia has her leave the monastery with nobody knowing where she went or how she died, while saint.gr has her fall asleep in peace in a monastery of Egypt in 365 — and the Prologue gives **both halves together**: „А она да би избегла почаст од људи, одбеже из манастира, и умре незнано где, око 365. године.“ She fled the monastery to escape honour from men, and died nobody knows where, about 365. **The year agrees exactly and nothing in `dates` was touched**, and the fourth century „Живела у IV веку“ agrees with the `floruit` too; what changed is that the two readings are no longer only two books apart. **New here**: that she did the filthiest work, fed on the slops from the dishes, served everyone and was despised by everyone; that an angel of God disclosed the secret about her to the great ascetic Питирим; that he came to the convent, and seeing her bowed to the ground before her, and she to him; that when the sisters told him she was mad he answered „Ви сте луде ... а ова је већа пред Господом и од мене и од вас; ја само молим Бога, да мени да оно што је њој намењено на Суду Страшном!“; and that the sisters were ashamed and begged forgiveness of them both, and all began from then to show her honour — which is what she fled. **Питирим takes nothing and has no folder.** saint.gr names the same visitor Pityrion and gives him 29 Νοεμβρίου, and this folder's Greek note already says the corpus holds no folder for him; `pitirim-of-perm` is a Russian bishop and not him. No folder anywhere, so by the coordinator's third ruling no row is owed and no folder is minted, and he is named instead. **`types` untouched**: Преподобна is the `venerable` and Јуродива the `fool-for-christ` the folder already carries, and `monastic` is corroborated by „монахиња“. **No `locations`**: Tabennisi is named by three books now and this folder has never claimed a point for it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

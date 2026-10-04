@@ -11,6 +11,11 @@
       "form": "Κυπρίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Κυπρινος ο Μαρτυρας». The same page offers three other forms of the one name — «Κυπρίνος (ή Kύριλλος ή Κυρίνος ή Κυπριανός)» — which are left in the note on the attestation rather than stored as separate forms."
+    },
+    {
+      "form": "Кирин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. **This is a fifth spelling of the one name** — the folder's Romanian form is Ciprian and its Greek Κυπρίνος, and saint.gr's own parenthesis offers Κύριλλος, Κυρίνος and Κυπριανός beside it; Кирин is that Κυρίνος, and it is stored as the page prints it and not reconciled with the others, because choosing among a source's own variants is not this reader's to do. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year. A direct walk of every `names` entry in `saints/` finds no folder holding Кирин, so the form folds with nothing."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Свети мученици Алфеј, Филаделф и Кирин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated company of three, so one row each, on the same menologion day the Romanian and the Greek both keep them on. **THE PROLOGUE SUPPLIES A FIFTH FORM OF THIS MAN'S ONE NAME, AND IT IS THE SECOND OF saint.gr's OWN VARIANTS.** The Greek page writes him „Κυπρίνος (ή Kύριλλος ή Κυρίνος ή Κυπριανός)“ — Cyprinus, or Cyril, or Cyrinus, or Cyprian — and that parenthesis is what this folder's Greek note already called the thing that makes him one man and not a fifth. The Prologue prints **Кирин**, which is that parenthesis's Κυρίνος; the same day, the same two brothers, the same father and the same Sicily settle it besides, so the entry is an upgrade and nothing was minted. **THE REIGN IS A DIFFERENT EMPEROR AND THE DATE WAS NOT TOUCHED**: „у време цара Ликинија“ against saint.gr's „επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)“, and the Prologue gives Licinius with no bounds, which the coordinator's standing refusal of a boundless reign will not let a reader turn into an interval or use to widen one. `dates` unchanged, the disagreement recorded here and in the life. **His own death**: „а Кирин у огњу“, in the fire, where saint.gr has them fry him in an enormous pan — the same element put two ways, and both stand. **New here**: the brothers born of one womb, the father a certain prince Vitalis in southern Italy, the leading from judge to judge, the crossing into Sicily; **the finding of their incorrupt relics in 1517**, which is in the life and not in `dates`; and **the appearance of the three brothers to Saint Euthalia**, „(в. 2. март)“, which `related_add` answers with a row in each direction. **The father Vitalis takes nothing**: none of the corpus's four Vitalis folders is him, so by the coordinator's third ruling no folder is minted and he is named instead. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -76,6 +91,7 @@
     "cyprian-of-carthage",
     "erasmus-10-may",
     "onesimus-10-may",
-    "philadelphus-martyr-10-may"
+    "philadelphus-martyr-10-may",
+    "euthalia-the-martyr"
   ]
 }

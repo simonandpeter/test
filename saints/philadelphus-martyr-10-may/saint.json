@@ -11,6 +11,11 @@
       "form": "Φιλάδελφος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Μαΐου, «Άγιοι Αλφειός, Κυπρίνος και Φιλάδελφος οι Αυτάδελφοι Μάρτυρες», with the rank word left off; the page's own head line for him is «Αγιος Φιλαδελφος ο Μαρτυρας»."
+    },
+    {
+      "form": "Филаделф",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 10 May, „Свети мученици Алфеј, Филаделф и Кирин.“ — Свети left off, which is not a rank, and мученици left off, which is the `martyr` this folder already carries in `types`. One rank word stands over all three names and belongs to none of them; the heading gives no epithet, no city and no year. A direct walk of every `names` entry in `saints/` finds no folder holding Филаделф, so the form folds with nothing, although the corpus keeps two other Philadelphi — the martyr and the venerable of 8 February — neither of whom has a Serbian form."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.05.2026 (10. мај ст. ст.) — „Свети мученици Алфеј, Филаделф и Кирин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, an enumerated company of three, so one row each, on the same menologion day the Romanian and the Greek both keep them on. **THE REIGN IS A DIFFERENT EMPEROR AND THE DATE WAS NOT TOUCHED**: „у време цара Ликинија“ against saint.gr's „επί αυτοκράτορα Δεκίου (249-251 μ.Χ.)“, and the Prologue gives Licinius with no bounds, which the coordinator's standing refusal of a boundless reign will not let a reader turn into an interval or use to widen one. `dates` unchanged, the disagreement recorded here and in the life. **His own death agrees exactly**: „Филаделф сажежен на гвозденој леси“ — burned on an iron grid — is saint.gr's red-hot gridiron, so that much is corroboration and not news. **New here**: the brothers born of one womb, the father a certain prince Vitalis in southern Italy, the nobility and the strength in the faith, the leading from judge to judge and torturer to torturer, the crossing into Sicily; **the finding of their incorrupt relics in 1517**, a date for the relics and not for the man, so it is in the life and not in `dates`; and **the appearance of the three brothers to Saint Euthalia**, „(в. 2. март)“, which `related_add` answers with a row in each direction. **The father Vitalis takes nothing**: the corpus's four Vitalis folders were read and he is none of them, so by the coordinator's third ruling no folder is minted and he is named instead. **No `locations`**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -74,6 +89,7 @@
     "alphaeus-martyr-10-may",
     "cyprian-martyr-10-may",
     "erasmus-10-may",
-    "onesimus-10-may"
+    "onesimus-10-may",
+    "euthalia-the-martyr"
   ]
 }
