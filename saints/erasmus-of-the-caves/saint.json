@@ -1,0 +1,64 @@
+{
+  "slug": "erasmus-of-the-caves",
+  "display_name": "Erasmus of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "names": [
+    {
+      "form": "Еразмо",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 24 February on pravoslavno.rs, „Преподобни Еразмо, инок печерски.“, with the rank word Преподобни and the description инок печерски left off; a monk of the Caves is what the folder's English name and `types` say and is not part of the name the heading gives."
+    }
+  ],
+  "related": [
+    "anthony-of-the-caves",
+    "theodosius-of-the-kyiv-caves"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1160,
+      "latest": 1160,
+      "display": "1160",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 24 February: „Свети Еразмо се упокојио 1160. године.“ It is the only source read for him and gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 24 февраля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 24 februarie, which is the page for this menologion number — not 9 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 24 Φεβρουαρίου, which is the page for this menologion number — not 03/09, which merely shares his civil date in 2026. The corpus holds `erasmus-the-venerable` on the Romanian and Greek 18 June, a bare line with no life, no country and no century behind it; nothing was found to say whether that is this man or another, and the two are kept apart rather than merged on a shared forename."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 2,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.03.2026 (24. фебруар ст. ст.) — „Преподобни Еразмо, инок печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, after the Finding of the Head of the Forerunner, which is a feast and not a folder. The Prologue is the only one of the four calendars read for him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
