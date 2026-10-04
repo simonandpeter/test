@@ -11,6 +11,11 @@
       "form": "Δημήτριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Οκτωβρίου, «Άγιος Δημήτριος ο Μυροβλύτης», with the rank word left off."
+    },
+    {
+      "form": "Димитрий Солунский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 26 октября ст. ст., «Великомученик Димитрий Солунский», with the rank word left off. The line on the day page itself declines the name."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Вмч. Димитрия Солунского (ок. 306).»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -125,6 +139,38 @@
       },
       "english": {
         "text": "With the streams of your blood, Demetrius, God has made the Church purple, he who gave you unconquered strength and guards your city unwounded; for you are its support.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Велика обрете в бедах тя поборника вселенная, страстотерпче,/ языки побеждающа./ Якоже убо Лиеву низложил еси гордыню,/ и на подвиг дерзновенна сотворив Нестора,/ тако, святе Димитрие,/ Христу Богу молися// даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Тропарь великомученика Димитрия Солунского»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The whole world has found in you a great champion in its troubles, passion-bearer, for you overcome the heathen. As you threw down the pride of Lyaeus and made Nestor bold for the contest, so, holy Demetrius, pray to Christ God to grant us his great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Кровей твоих струями, Димитрие,/ Церковь Бог обагри,/ давый тебе крепость непобедимую/ и соблюдая град твой невредим,// того бо еси утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 октября ст. ст. — «Кондак великомученика Димитрия Солунского»",
+        "url": "https://days.pravoslavie.ru/Days/20261026.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your blood, Demetrius, God has dyed his Church red, who gave you unconquerable strength and keeps your city unharmed; for you are its firm support.",
         "rendered": "site"
       }
     }
