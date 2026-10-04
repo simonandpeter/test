@@ -11,6 +11,11 @@
       "form": "Ονούφριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουνίου, «Όσιος Ονούφριος ο Αιγύπτιος», with the rank word and the place-phrase left off."
+    },
+    {
+      "form": "Онуфрије Велики",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јун ст. ст., „Преподобни Онуфрије Велики“ — Преподобни is the rank and comes off; Велики stays, because §5 of this wave’s brief is explicit that it is not a rank but the epithet «the Great», and it is what distinguishes him. `foldchk.py` holds no folder on either «Онуфрије Велики» or «Онуфрије», so the epithet is kept for fullness and not to break a fold."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.06.2026 (12. јун ст. ст.) — „Преподобни Онуфрије Велики“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 12 June is the same menologion number the folder’s `romanian` and `greek` rows already carry, so there is no second day and no §4 note is owed. A FIRST DATE ON A FOLDER THAT HELD NONE. The folder carried no `dates` object at all: doxologia gave no year and the `greek` note records in its own words that saint.gr «gives no years». This book states one flat and last: „Онуфрије сконча 400. године“. `death` 400 to 400, display «400», basis traditional, the Prologue’s own sentence in the note. No `birth`: the entry gives sixty years in the desert and a lifespan is refused, and no year may be reached by taking sixty from four hundred. THE VISITOR IS NAMED AND HE IS KEPT OUT OF THE PROSE. The entry turns on „монах Пафнутије“ — the monk Paphnutius, who finds him, is greeted by name, hears the life from his own mouth, sees the heavenly light and buries him. `ls saints | grep -i paphnut` returns nine folders and **not one of them is this man**: `paphnutius-of-the-thebaid`, the nearest by name and the one this folder’s own `greek` note calls «abba Paphnoutios», is Paphnutius the Confessor, bishop in the Thebaid, who sat at the First Ecumenical Council against Arius and whose lost eye the emperor Constantine kissed — a bishop and a confessor, not a desert monk on a journey. Refused by ruling 3, and because `related-floor` reads a prose name as well as a linked one the name is kept out of the paragraph altogether; the paragraph says «a monk who came to him» and the refusal is here. WHAT ELSE IS NEW. The sixty full years; the hair and beard reaching the ground and the body overgrown for want of clothing, every hair white as snow; that for a long time he ate nothing but earth, which is seldom found in the desert, until he had borne the struggle with the demons and an angel began to bring him bread; the palm that grew by his cell and bore good dates and the spring of living water that opened there; his own answer, „а највише храним се и појим слатко речима Божјим“; and that an angel of God brought him the communion every Saturday. The `greek` note already had the palm and the spring from saint.gr and names a hermit Hermias as the one who met him; **this book names no Hermias**, and the difference of visitor is recorded and not resolved. `types` UNTOUCHED: `venerable` and `hermit` are both there already, and Велики is not a rank but the epithet, which the display name carries. No `office`, no `locations`, no `related`. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -123,5 +138,14 @@
   "related": [
     "meletius-of-stanisoara",
     "peter-the-athonite"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 400,
+      "latest": 400,
+      "display": "400",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 12. јун ст. ст. ends the entry „Онуфрије сконча 400. године“. The folder held no date of any kind before this: doxologia.ro gives no year and saint.gr's page gives none either, as this folder's greek note already records. The sixty years the same entry gives for his time in the desert are a span and no year of birth is taken from them (5 October 2026)."
+    }
+  }
 }
