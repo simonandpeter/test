@@ -11,6 +11,11 @@
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Όσιος Παΐσιος Βελιτσκόφσκυ», with the rank words left off. The surname the page prints in Greek letters, «Βελιτσκόφσκυ», is left out of the bare personal form."
+    },
+    {
+      "form": "Паисий Величковский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 15 ноября ст. ст., «Паисий Величковский, прп.», with the rank word left off. The surname is part of the name and stays; the line itself gives both in the genitive."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026). His own life says the Holy Synod of the Russian Church canonised him in 1988."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Прп. Паисия Величковского (1794).»",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -101,9 +115,42 @@
         "text": "Defender of the right faith and praise of monks, venerable father Paisius, loving Christ from thy infancy thou didst leave thy homeland like another Abraham, labouring on the Mountain of Athos; and gathering a company of disciples thou didst settle in the blessed land of Moldavia and didst make the monastery of Neamț an earthly paradise. Therefore, together with the angels, cease not to pray to God for our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Странен быв на земли,/ Небеснаго Отечества достигл еси/ преподобне отче Паисие,/ добротолюбия подвижниче,/ верных научил ум к Богу возводити/ и сердцем к Нему взывати:/ Господи Иисусе Христе, Сыне Божий,/ помилуй мя, грешнаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Тропарь преподобного Паисия Величковского», глас 2. His own, and it names him.",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A stranger on the earth, you reached the heavenly Fatherland, venerable father Paisius, ascetic of the love of the good; you taught the faithful to lead the mind up to God and to call on Him from the heart: Lord Jesus Christ, Son of God, have mercy on me, a sinner.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Избранный иноческаго жития ревнителю, яко пчела многотрудная писаньми отеческими души наша снабдил еси, коегождо наставляя на путь спасения, сего ради зовем ти: радуйся, Паисие премудре, старчества духовнаго в стране нашей возродителю.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Кондак преподобного Паисия Величковского», глас 8. His own, and it names him.",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen zealot of the monastic life, like a bee of much labour you furnished our souls with the writings of the fathers, guiding each one onto the path of salvation; and for this we cry to you: rejoice, most wise Paisius, who raised up spiritual eldership again in our land.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Archimandrite"
 }
