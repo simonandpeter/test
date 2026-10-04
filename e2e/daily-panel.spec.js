@@ -265,9 +265,14 @@ test('opening from the calendar goes through the prefetched payload', async ({ p
   const link = page.locator('.hero-name a');
   const opens = await link.getAttribute('href');
   await link.hover();
-  await page.waitForTimeout(300);
+  /* Polled, not slept: 300 ms was enough on this desk and not on a loaded
+     runner, where the fetch had not left yet and the count read 0. The claim is
+     unchanged — exactly one payload, the hero's — and a second one arriving
+     late still fails it, here or at the foot of the test. */
+  await expect
+    .poll(() => fetched.length, { timeout: 5000, message: 'the hover never fetched the hero' })
+    .toBe(1);
   const afterHover = fetched.length;
-  expect(afterHover).toBe(1);
 
   await link.click();
   // The saint the hero happens to be, not a named one: who leads 30 January
@@ -336,8 +341,14 @@ test('without a pointer to hover with, prefetch follows the viewport', async ({ 
 
   await page.goto(POPULATED, { waitUntil: 'networkidle' });
   await expect(page.locator('.hero-name a')).toBeVisible();
-  await page.waitForTimeout(400);
-  expect(fetched.some((url) => url.includes('anthony-the-great'))).toBe(true);
+  /* Polled for the same reason as the hover above: the wait was a sleep, and a
+     sleep that is long enough here is not long enough under load. */
+  await expect
+    .poll(() => fetched.some((url) => url.includes('anthony-the-great')), {
+      timeout: 5000,
+      message: 'the viewport never prefetched the hero',
+    })
+    .toBe(true);
   await ctx.close();
 });
 
