@@ -1,0 +1,63 @@
+{
+  "slug": "theophilus-of-omuch",
+  "display_name": "Theophilus of Omuch",
+  "names": [
+    {
+      "form": "Феофил Омучский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Преподобный Феофил Омучский», with the rank word left off. The day's own line names the pair together, as «Феофила и Иакова Омучских»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His own life page heads itself «Дни памяти: 21 октября , 29 декабря» and gives 29 December as the day he died, so the December day is the day of his death and this is the day the pair is kept on. One row per church is the schema, so this is the day he renders on and the December day is recorded here. days.pravoslavie.ru's 29 декабря was not read (4 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Прпп. Феофила и Иакова Омучских (ок. 1412).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1412,
+      "latest": 1412,
+      "display": "c. 1412",
+      "basis": "traditional",
+      "note": "The two years the calendar gives: «В 1396 году на реке Омуче в Псковской епархии, недалеко от города Порхова, святые Феофил и Иаков основали пустынь в честь Успения Пресвятой Богородицы», and the day line's «(ок. 1412)», which his own page puts at «29 декабря около 1412 г.» No birth year is given anywhere. The 1396 foundation is kept in the life rather than as an interval, since the calendar gives no birth year and the death is the only year it dates for him."
+    }
+  },
+  "related": [
+    "james-of-omuch",
+    "arsenius-of-konevits"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

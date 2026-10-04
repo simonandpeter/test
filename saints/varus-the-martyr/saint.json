@@ -11,6 +11,11 @@
       "form": "Ούαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Άγιος Ούαρος», with the rank words left off."
+    },
+    {
+      "form": "Уар Египетский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Уар Египетский, мч.», with the rank word left off. The day's own line gives the name without the epithet."
     }
   ],
   "sex": "male",
@@ -20,13 +25,23 @@
   ],
   "related": [
     "cleopatra",
-    "six-hermit-martyrs"
+    "six-hermit-martyrs",
+    "john-son-of-cleopatra"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Мч. Уара и с ним семи мчч., учителей христианских (ок. 307).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -96,6 +111,38 @@
       },
       "tone": "Ἦχος πλ. α’.",
       "model": "Τὸν συνάναρχον Λόγον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Воинством святых страстотерпец страждущих законне,/ зря онех, показал еси мужески крепость свою./ И устремився на страсть волею,/ и умрети вожделе за Христа,/ Иже приял еси почесть победы твоего страдания, Уаре,/ моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Тропарь мученика Уара»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Beholding the host of holy passion-bearers contending lawfully, you showed your own strength manfully; and setting out willingly upon suffering you longed to die for Christ, from whom you received the honour of victory for your suffering, O Varus. Pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Христу последуя, мучениче Уаре,/ Того испив чашу,/ и мучения венцем увязеся,/ и со Ангелы ликовствуеши:// моли непрестанно за души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Кондак мученика Уара»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Following Christ, O martyr Varus, you drank his cup, were wreathed with the crown of martyrdom, and now keep festival with the angels: pray unceasingly for our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

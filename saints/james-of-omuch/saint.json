@@ -1,0 +1,62 @@
+{
+  "slug": "james-of-omuch",
+  "display_name": "James of Omuch",
+  "names": [
+    {
+      "form": "Иаков Омучский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Иаков Омучский, прп.», with the rank word left off. The day's own line names the pair together, as «Феофила и Иакова Омучских»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Прпп. Феофила и Иакова Омучских (ок. 1412).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1412,
+      "latest": 1412,
+      "display": "c. 1412",
+      "basis": "traditional",
+      "note": "The two years the calendar gives for the pair: the foundation on the Omucha in 1396, and «Кончина их последовала около 1412 года» — their death followed about 1412. No birth year and no separate day of death is given for him. The 1396 foundation is kept in the life rather than as an interval, since the calendar gives no birth year and the death is the only year it dates for him."
+    }
+  },
+  "related": [
+    "theophilus-of-omuch",
+    "arsenius-of-konevits"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

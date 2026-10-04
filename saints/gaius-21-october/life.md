@@ -6,4 +6,6 @@ They were hung upon wooden frames and their flesh was rubbed with cloths woven o
 
 That is all the page prints of them. It gives no year, no emperor, no trades and no families, and it prints no hymn for them.
 
-*After saint.gr's calendar for 21 Οκτωβρίου — [the day](https://www.saint.gr/10/21/index.aspx) and [the life](https://www.saint.gr/2562/saint.aspx); read 1 October 2026.*
+The Russian calendar keeps the three on the same day and adds what the Greek line did not carry: the year, the reign, the charge and the manner of death. Its notice says they met their martyr's end in 303, under the emperor Diocletian, whose reign it dates 284 to 305, for destroying an idol shrine; and that after they had been tortured the martyrs were drowned in the sea. The title on the name link behind each of the three names gives him the epithet Никомидийский, of Nicomedia, which neither the line nor the notice repeats.
+
+*After saint.gr's calendar for 21 Οκτωβρίου — [the day](https://www.saint.gr/10/21/index.aspx) and [the life](https://www.saint.gr/2562/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery for 21 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261021.html) and [the notice for the three](https://days.pravoslavie.ru/Life/life4567.htm), read 4 October 2026.*

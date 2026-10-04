@@ -1,0 +1,66 @@
+{
+  "slug": "arcadius-ershov",
+  "display_name": "Arcadius (Ershov)",
+  "names": [
+    {
+      "form": "Аркадий (Ершов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 21 октября ст. ст., «Святитель Аркадий (Ершов), епископ Екатеринбургский, сщмч.», with the rank words and the see left off. The day's own line gives the name without the surname, as «Аркадия , еп. Екатеринбургского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop of Yekaterinburg",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Сщмчч. Павлина , архиеп. Могилевского, Аркадия , еп. Екатеринбургского, и с ними Анатолия и Никандра пресвитеров и мч. Киприана (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the company line it names him in on 21 октября ст. ст."
+    }
+  },
+  "related": [
+    "paulinus-kroshechkin",
+    "anatolius-levitsky",
+    "nicander-chernelevsky",
+    "cyprian-annikov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

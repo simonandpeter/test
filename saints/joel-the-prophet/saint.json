@@ -11,6 +11,11 @@
       "form": "Ιωήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Οκτωβρίου, «Προφήτης Ιωήλ», with the rank words left off."
+    },
+    {
+      "form": "Иоиль",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 19 октября ст. ст., «Пророк Иоиль», with the rank word left off. The calendar gives the name alone, with no epithet."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Прор. Иоиля (800 до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -100,6 +114,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Предведый Божие пришествие во плоти/ и наитие Духа Святаго и грядущий Суд предсказавый,/ пророче Иоиле,/ спасай молитвами твоими// чтущия тя от всех скорбей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Тропарь пророка Иоиля»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Foreknowing God's coming in the flesh, and foretelling the descent of the Holy Spirit and the Judgement to come, O prophet Joel: save by your prayers from every sorrow those who honour you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Просветившееся Духом чистое твое сердце/ пророчества бысть светлейшаго приятилище:/ зриши бо, яко настоящая, далече сущая,/ сего ради тя почитаем, пророче, блаженне Иоиле, славне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Кондак пророка Иоиля»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your pure heart, enlightened by the Spirit, became the dwelling of the brightest prophecy, for you behold things far off as though they stood before you. Therefore do we honour you, O prophet, blessed and glorious Joel.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

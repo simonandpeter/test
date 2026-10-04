@@ -1,0 +1,80 @@
+{
+  "slug": "hilarion-of-gdov",
+  "display_name": "Hilarion of Gdov",
+  "names": [
+    {
+      "form": "Иларион Псковоезерский, Гдовский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Преподобный Иларион Псковоезерский, Гдовский», with the rank word left off. The calendar's two epithets are the lake and the town; the second of its two life pages reverses their order."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of his life pages head themselves «Дни памяти: 28 марта , 21 октября» and both give 28 March 1476 as the day he died, so the March day is the day of his death and this is the second. One row per church is the schema, so this is the day he renders on and the March day is recorded here. days.pravoslavie.ru's 28 марта was not read (4 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Прп. Илариона Псковоезерского, Гдовского (1476).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1476,
+      "latest": 1476,
+      "display": "1476",
+      "basis": "traditional",
+      "note": "Both life pages give the day and the year: «Скончался 28 марта 1476 г.» and «Преставился преподобный Иларион 28 марта 1476 года», and the day line prints «(1476)». Neither page gives a birth year."
+    }
+  },
+  "related": [
+    "euphrosynus-of-pskov"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "В молитвах бодрствуя,/ пресветлый храм Духа Святаго был еси,/ темже и чудотворец предивный явился еси,/ преподобне отче наш Иларионе./ О нас моли Христа Бога/ светом Божественнаго познания просветити ны/ и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Тропарь преподобного Илариона Псковоезерского, Гдовского»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping watch in prayer, you became a most radiant temple of the Holy Spirit, and so you were shown to be a most wonderful worker of miracles, our venerable father Hilarion. Pray to Christ God for us, that he may enlighten us with the light of the knowledge of God and save our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,13 +11,28 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Οκτωβρίου, «Όσιος Ιλαρίων της Λαύρας των Σπηλαίων», with the rank word left off."
+    },
+    {
+      "form": "Иларион Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 21 октября ст. ст., «Преподобный Иларион Печерский, схимник», with the rank word and the grade left off. The day's own line gives the name alone and the grade after it, as «Илариона , схимника Печерского»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of his life pages head themselves «Дни памяти: 28 августа (Печер.(Д)) , 21 октября», the first of those being the synaxis of the fathers of the Far Caves, and the second page adds the second Sunday of Great Lent. One row per church is the schema, so this is the day he renders on and the others are recorded here."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Прп. Илариона , схимника Печерского (XI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1066,
+      "latest": 1066,
+      "display": "1066",
+      "basis": "traditional",
+      "note": "The first of the two lives days.pravoslavie.ru carries for him: «Мирно почил в 1066 г. и был погребен в Дальних пещерах.» The day line gives only the century, «(XI)», and the second life only «подвизался в ХI веке»; 1066 lies inside it, so nothing is in conflict. The folder held no date."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Воистину достойне наречен был еси Иларион,/ тихостен бо и кроток нрав по имени твоему имел еси, блаженне,/ имже кроткому Господу Иисусу благоугодив,/ молися Ему о нас рабех твоих.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Тропарь преподобного Илариона, схимника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly you were worthily named Hilarion, for your temper was quiet and meek as your name is, O blessed one; and having pleased the meek Lord Jesus by it, pray to him for us your servants.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Великий Ангельский образ иноческаго чина святую схиму яко прием,/ и второе отрицание суетнаго мира сего яко сотворь,/ тщался еси всеми образы, преподобне Иларионе,/ обещание делом исполнити/ и образу святому приличие пожити,/ тем тя чтим и ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 21 октября ст. ст. — «Кондак преподобного Илариона, схимника Печерского, в Дальних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261021.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the great angelic habit of the monastic order, the holy schema, and having made thereby a second renunciation of this vain world, you strove by every means, venerable Hilarion, to fulfil your promise in deed and to live worthily of the holy habit; and therefore we honour and bless you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -11,6 +11,11 @@
       "form": "Γαβριήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Νοεμβρίου, «Όσιος Γαβριήλ ο Ομολογητής - Σαλός», with the rank words left off. The page's own transliteration of the surname is «Ουργκεμπάτζε»."
+    },
+    {
+      "form": "Гавриил (Ургебадзе) Самтаврийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 20 октября ст. ст., «Гавриил (Ургебадзе) Самтаврийский». The day's own line gives the name without the surname, as «Гавриила Самтаврийского»."
     }
   ],
   "sex": "male",
@@ -39,8 +44,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Прп. Гавриила Самтаврийского (1995). (Груз.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,62 @@
+{
+  "slug": "john-son-of-cleopatra",
+  "display_name": "John, son of Cleopatra",
+  "names": [
+    {
+      "form": "Иоанн Палестинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind the second half of days.pravoslavie.ru's line for 19 октября ст. ст., «Иоанн Палестинский, воин», with the word for his rank as a soldier left off. The day's own line gives the name without the epithet, as «сына ее Иоанна»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 октября ст. ст. — «Блж. Клеопатры (327) и сына ее Иоанна (320).»",
+        "url": "https://days.pravoslavie.ru/Days/20261019.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 1 noiembrie, the corresponding civil day (4 October 2026). The Romanian calendar's 19 octombrie keeps his mother and the martyr Varus but was not read for him."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 1 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 1 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 320,
+      "latest": 320,
+      "display": "320",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints after his half of the line for 19 октября ст. ст.: «Блж. Клеопатры (327) и сына ее Иоанна (320).»"
+    }
+  },
+  "related": [
+    "cleopatra",
+    "varus-the-martyr"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
