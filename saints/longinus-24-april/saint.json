@@ -10,6 +10,11 @@
       "form": "Λογγίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιοι Δάναβος, Δημήτριος, Ευσέβιος, Λεόντιος, Λογγίνος, Νεστάβος, Νέων και Χριστόφορος», with the rank word left off; the life page heads him «Αγιος Λογγίνος (; - 303)»."
+    },
+    {
+      "form": "Лонгин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Евсевије, Неон, Леонтије и Лонгин.“, with „Св.“ and the one rank word муч., which stands over all four and belongs to none of them, left off. The heading gives him no epithet, no city and no year, and the day this corpus keeps in his English display name is the corpus's own device and no source's name."
     }
   ],
   "related": [
@@ -59,8 +64,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Евсевије, Неон, Леонтије и Лонгин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {

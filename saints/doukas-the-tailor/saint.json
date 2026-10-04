@@ -10,6 +10,11 @@
       "form": "Δούκας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Δούκας ο ράπτης από τη Μυτιλήνη», with the rank word, the trade and the island left off."
+    },
+    {
+      "form": "Лука",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. новомуч. Лука и Никола.“, with „Св.“ and the rank новомуч., which stands over both names, left off. **The form is the name this book gives him and not a Serbian spelling of the folder's English one**: see the attestation's note. `luke-of-bathys-ryax` holds a bare Russian «Лука» of the same spelling, which is a deliberate fold recorded in the batch's commit message."
     }
   ],
   "related": [],
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. новомуч. Лука и Никола.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      },
+      "note": "**An identification, and it is a reading.** The Prologue calls this new martyr Лука, Luke, where saint.gr and this folder call him Δούκας, Doukas. Everything else in the two lines is the same man: a tailor by trade („кројач по занату“ against «ο ράπτης»), a youth, a new martyr, dead in **1564**, commemorated on **this same menologion day**. The corpus holds no other new martyr of either name on 24 April. So the row is written here rather than as a second folder, and the name difference is recorded rather than resolved: this reader did not change the folder's English name, and whether Лука is a rendering of Δούκας or a second tradition about his name is the author's."
     }
   ],
   "text": {

@@ -10,6 +10,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιος Νικόλαος που μαρτύρησε στη Μαγνησία», with the rank word left off; the place of his martyrdom is kept in the English form because it is the day's own way of telling him apart."
+    },
+    {
+      "form": "Никола",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. новомуч. Лука и Никола.“, with „Св.“ and the rank новомуч., which stands over both names, left off. The heading gives him no city — Magnesia, which this corpus's English name keeps, is saint.gr's — so the bare forename is all of it, and it is the **Serbian** vernacular Никола where most of this corpus's Nicholases are the Russian Николай. What that folds onto was measured and is in the batch's commit message."
     }
   ],
   "related": [],
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. новомуч. Лука и Никола.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      },
+      "note": "The entry gives this martyr **a name, a rank and a year and nothing else** — „а Никола 1776. год.“ — so the identification rests on those three and on the day: a new martyr called Nicholas, dead 1776, commemorated on this menologion day, which is the folder saint.gr keeps on 24 April and heads «(1754 - 1776)». The corpus holds no other Nicholas new martyr on this day. It is a thin call and is written as one."
     }
   ],
   "text": {

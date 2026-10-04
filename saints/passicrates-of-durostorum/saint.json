@@ -11,6 +11,11 @@
       "form": "Πασικράτης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Απριλίου, «Άγιοι Πασικράτης και Βαλεντίων», with the rank word left off."
+    },
+    {
+      "form": "Пасикрат",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 24. април ст. ст., „Св. муч. Пасикрат и Валентин.“, with „Св.“ and the one rank word муч., which stands over both names, left off. The heading gives no city: Durostorum, which this corpus's English name keeps, is the Greek calendar's and is nowhere in this entry. No other folder in this corpus holds this form in any language."
     }
   ],
   "sex": "male",
@@ -58,8 +63,17 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.05.2026 (24. април ст. ст.) — „Св. муч. Пасикрат и Валентин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-07&prolog=1",
+        "year": 2026
+      }
     }
   ],
   "text": {
