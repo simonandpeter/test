@@ -1,0 +1,57 @@
+{
+  "slug": "isaac-of-spoleto",
+  "display_name": "Isaac of Spoleto",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk",
+    "abbot",
+    "wonderworker"
+  ],
+  "names": [
+    {
+      "form": "Исаак Сирин II",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 12 April on pravoslavno.rs, „Преп. Исаак Сирин II. (Исаак Сирин I празнује се 28. Јан.).“, with the rank word Преп. left off and the parenthesis left off as well — it is the book's own cross-reference to its 28 January entry and not part of a name. The numeral **is** kept: it is the only thing the heading gives beyond the forename and the by-name, and it is exactly what the source uses to distinguish him from the Isaac the Syrian the corpus already holds, who carries the bare Исаак Сирин off that same 28 January heading. Spoleto, which the English name takes, is in the body and not in the heading."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for the corresponding day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.04.2026 (12. април ст. ст.) — „Преп. Исаак Сирин II. (Исаак Сирин I празнује се 28. Јан.).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first of four entries. **This is a new folder and not an upgrade of `isaac-the-syrian`, and the source itself says so** — the heading is „Исаак Сирин II“ with the parenthesis «(Исаак Сирин I празнује се 28. Јан.)», the Prologue's own statement that it keeps two men of the name on two days; and the corpus's `isaac-the-syrian` already carries a venerated serbian row for the Julian 28 January read off that very entry, „Преподобни Исаак Сирин.“ So the two are two by the printed word of the one calendar, which is the strongest warrant this wave has had for a second folder. The other twelve `isaac-*` and `isaacius-*` folders were listed and none is this man: none is in Italy, none is at Spoleto, and none is a wonderworker of the Gothic time. **The account is Gregory the Dialogist's**, as the entry's first sentence says. **No `dates`**: the entry puts him in Italy «у време Готско», in the Gothic time, and prints no year at all; nothing was inferred from that phrase. **No `locations`**: Spoleto is named, but a located folder with no `dates` has to go on `tests/map-span.test.mjs`'s UNDATED list and the gain would be nothing. The rank words earned by the body rather than the heading are `abbot` — the entry calls him игуман when the clothes are handed to the beggars, which `BRIEF-SERBIAN.md` §5 maps to abbot — and `wonderworker`, the entry saying he was знаменит због свог чудотворства. The clairvoyance it dwells on has no slug in this corpus's vocabulary and none was invented. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "related": [
+    "gregory-the-dialogist",
+    "isaac-the-syrian"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

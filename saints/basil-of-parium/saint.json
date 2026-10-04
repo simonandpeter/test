@@ -7,6 +7,11 @@
       "form": "Vasile",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 aprilie, «Sfântul Ierarh Vasile Mărturisitorul, Episcopul Pariei»; the bare personal name, without the rank the line carries."
+    },
+    {
+      "form": "Василије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 12 April on pravoslavno.rs, „Св. Василије исповедник.“, with Св. left off — it is not a rank — and with исповедник left off as well, the rank word this source uses for a confessor, which this folder already carries in `types`. The heading leaves no epithet and names neither the see nor the province; both are in the body, and this corpus keeps a see in `office`. The bare form is shared with three other folders and that fold is deliberate and recorded."
     }
   ],
   "sex": "male",
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.04.2026 (12. април ст. ст.) — „Св. Василије исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, on the same menologion day the Romanian keeps him on; the Russian and the Greek rows stay `undocumented`, since neither source was read for him. The man is the same beyond doubt: the bishop of Parium in Asia Minor who refused to sign the imperial paper against the veneration of the icons. **A death of «the first half of the eighth century» was added where this folder had none** — „Сконча у првој половини VIII века“ — recorded as the interval 701–750, which is what the phrase says and no narrower; doxologia.ro's line, the folder's only other source, prints no year at all. `node .tmp/dd.mjs \"first half of the 8th century\"` reads in Russian and Greek, so no era label had to be placed in the locale packs. New besides the date: that he was **much persecuted and tortured** for the refusal, and that **he stayed firm in Orthodoxy like a diamond** — the entry's own figure. **The fold is deliberate and it widens one already on file**: the stored Василије is the same bare form `basileus-of-cherson`, `basil-the-confessor` and `basil-of-ancyra` hold, a set the run's findings recorded on the Serbian 7. and 22. март ст. ст., and this is a fourth folder joining it; the heading gives a rank word this folder already carries in `types` and nothing else, and the see is in the body and kept in `office`. Recorded in the findings before this was committed. The Prologue prints no troparion and no kontakion, and this folder has no hymn from any source."
     }
   ],
   "hymns": [
@@ -72,5 +87,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 750,
+      "display": "first half of the 8th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 12 April: „Сконча у првој половини VIII века, и пресели се ка Господу.“ — he ended in the first half of the eighth century. The interval is the phrase and nothing narrower: no year is printed and none was chosen inside it. It is the only dating any source read for this folder gives — doxologia.ro's line «Sfântul Vasile Mărturisitorul, Episcopul Pariei» prints no year — and the iconoclasm the entry sets him in is consistent with it. `node .tmp/dd.mjs \"first half of the 8th century\"` reads in Russian and Greek."
+    }
+  }
 }

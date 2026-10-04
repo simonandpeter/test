@@ -6,6 +6,11 @@
       "form": "Atanasia de la Eghina",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 aprilie, «Sfânta Cuvioasă Atanasia de la Eghina»."
+    },
+    {
+      "form": "Атанасија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 12 April on pravoslavno.rs, „Преп. Атанасија.“, with the rank word Преп. left off. The heading leaves no epithet and does not name the island, which is in the body; Aegina, which the English name takes, is therefore not part of the form the source prints. This is also the folder's second name form of any kind: it held only the Romanian Atanasia de la Eghina."
     }
   ],
   "sex": "female",
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.04.2026 (12. април ст. ст.) — „Преп. Атанасија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's fourth entry, on the same menologion day the Romanian keeps her on; the Russian and the Greek rows stay `undocumented`. The woman is the same beyond doubt: born on the island of Aegina of rich and well-born parents, her property given away, the monastery, the abbacy, the gift of wonderworking in life and after death, and 860. The **860 agrees exactly** with the `attested` 860 this folder holds off doxologia's own «trecerea ei la cele veșnice s-a petrecut la 14 august 860», and **an attested year is not displaced by a reader**, so nothing was touched — note that the day inside that year is doxologia's 14 August while the calendars keep her on 12 April, which this folder already records. New to the folder, and it is the ascetic detail: that she **laid on herself an ever heavier and heavier struggle**; that she took food **once a day only, and that bread and water**, during the Great Fast **once in two days**, and **tasted oil and fish only at the Nativity and at Pascha**; and that, **abbess though she was, she was a servant to all the other sisters and was ashamed to be waited on**. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

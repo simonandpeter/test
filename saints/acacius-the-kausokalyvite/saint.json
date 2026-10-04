@@ -13,6 +13,11 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Απριλίου, «Όσιος Ακάκιος ο Νέος, ο Καυσοκαλυβίτης», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Акакије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's third heading for the Julian 12 April on pravoslavno.rs, „Преп. Акакије.“, with the rank word Преп. left off. The heading leaves no epithet, no village and no mountain, so the bare forename is what the source gives; it folds with nothing, no other folder holding a Serbian Акакије. This is also the folder's second name form of any kind: it held only the Greek Ακάκιος."
     }
   ],
   "related": [
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.04.2026 (12. април ст. ст.) — „Преп. Акакије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-04-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion day the Greek keeps him on. The man is the same beyond doubt, and on the village above all: the Prologue says he was **из села Голице**, from the village of Golica, which is saint.gr's «στο χωριό Γόλιτσα των Αγράφων», and adds the great Athonite ascetic, the spiritual father, the second sight, the heavenly visions, the monks he blessed for martyrdom, and the year. The **1730 agrees exactly** with the 1730 this folder holds, so **no date was touched**; the Prologue's «у 98. години» sits inside the birth interval this folder already carries, «soon after 1630», where saint.gr says only «σε ηλικία εκατό περίπου ετών», about a hundred years old, so **the 98th year is a sharpening and not a contradiction and was recorded here rather than written into `dates`** — turning an age into a birth year would be arithmetic off a year the other page calls approximate. New besides: that the Prologue places the village **in Epirus**, where saint.gr places Golitsa in the Agrafa, two namings of the district recorded and not reconciled; and that he **blessed several monks for the struggle of martyrdom**, which the folder had in no source. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
