@@ -12,6 +12,11 @@
       "form": "Παχώμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαΐου, «Όσιος Παχώμιος ο Νέος ο Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Пахомије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Преподобни мученик Пахомије.“ — Преподобни мученик is the `venerable-martyr` this corpus puts in `types`; strip it and the bare forename is left, and the body repeats it bare once. **Uşaki, the Holy Mountain and Patmos are all in the body and none of them is part of the name**, and «Пахомије Усачки» is nowhere on the page. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — **which is worth saying, because on 15 May this wave gave `pachomius-the-great` the form «Пахомије Велики» and not a bare «Пахомије» precisely because the Prologue printed Велики in that heading. The two readings together keep the corpus’s eleven other Pachomii out of a fold they would otherwise have joined.**"
     }
   ],
   "dates": {
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.06.2026 (21. мај ст. ст.) — „Преподобни мученик Пахомије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 21/5 the Greek row already carries, and the same man: beheaded at Uşak in 1730 on the Ascension, his relics at Patmos. **A DAY OF DEATH THAT DIFFERS FROM HIS FEAST BY EXACTLY THIRTEEN DAYS, AND THERE IS NO FIELD FOR IT.** „најзад посеку 8. маја 1730. године, на сам дан Вазнесења“ — **8 May**, where every calendar that keeps him, this book included, keeps him on **21 May**. **21 less 8 is thirteen**, which BRIEF.md §8 names as the signature of the style conversion — but that rule is about two **feast** dates, and this is a date of death against a feast, so **it is recorded and not resolved**: the row is the 21 May this book prints as its day, no day is moved, and the 8 May stands in the prose and in this note. **saint.gr agrees on the Ascension and gives no day-number at all**, «μαρτύρησε δι' αποκεφαλισμού το 1730 μ.Χ., την Πέμπτη της Αναλήψεως», so the two books agree on the year and on the feast and only this one gives the day. **It is the fifth day of death this wave has had to put in prose**, after Cyril’s 14 February, Methodius’s 6 April, Isidore of Rostov’s 14 May and Stephen of Piperi’s 20 May. **`dates` untouched**: `death` 1730 is already there off saint.gr and this book gives the same year. **New here, and it is almost the whole of a life saint.gr gives in one sentence**: that he was **„Родом из Мале Русије“**, of Little Russia, and a „сељак малоруски“, a Little-Russian peasant; that **the Tatars caught him in his youth and sold him to a Turkish tanner as a slave**; that he **spent twenty-seven years in slavery at Uşaki in Asia Minor** and was **made a Turk by force**; that he went to the Holy Mountain, was tonsured and **spent twelve years at the monastery of Saint Paul**; that **his elder and spiritual father Јосиф went with him back to Uşaki**, where **he showed himself to his former master as a Christian in monastic dress**; that he was tortured, thrown into prison and beheaded; and that **many wonders came of his blood and his relics**. **The two durations are not dates**: twenty-seven years of slavery and twelve on Athos, with a death in 1730, invite a birth and none is reckoned — the seventh such refusal in seven days. **His elder Joseph gains no folder and no row**: the entry gives him nothing but a name and an office, no calendar read for this corpus can be shown to keep him, and by the coordinator’s third ruling nothing is minted for him. `types` untouched — Преподобни мученик is exactly the `venerable-martyr` this folder carries, and the `new-martyr` and `monk` stand uncontradicted. **`related` untouched**: `john-the-theologian` is already its one row and is there because of the church on Patmos, which this entry confirms. No `locations`, although Little Russia, Uşaki, the Holy Mountain and Patmos are all named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
