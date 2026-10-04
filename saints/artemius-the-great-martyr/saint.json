@@ -11,6 +11,11 @@
       "form": "Αρτέμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Οκτωβρίου, «Άγιος Αρτέμιος ο Μεγαλομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Артемий Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 20 октября ст. ст., «Артемий Антиохийский, военачальник, вмч.», with the rank word and the office left off. The day's own line gives the name alone, as «Артемия»."
     }
   ],
   "sex": "male",
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Вмч. Артемия (362).»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -119,6 +133,38 @@
         "text": "As the Saviour's champion, marvellous in many things, and as a rich-handed dispenser of healings, we hymn you gladly, great martyr. And since you are the best of physicians for rupture, keep me unharmed from that affliction, that I may cry out to you: Rejoice, Martyr Artemius.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Истинною бо Христовою верою/ утверждься, страстотерпче,/ мучителя злочестива царя/ победил еси со идольским того возношением./ Тем от Царя Великаго, вечно царствующаго,/ пресветлым венцем победным одарен бысть,/ вся исцеляяй болящия и призывающий тя, Артемие великий,/ моли Христа Бога/ спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Тропарь великомученика Артемия»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Established in the true faith of Christ, O passion-bearer, you overcame the impious tyrant emperor together with his lifting up of idols. Therefore you were given a most radiant crown of victory by the Great King who reigns for ever, O Artemius the great, who heal all that are sick and call upon you: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Благочестиваго и венценоснаго мученика,/ на враги победы вземшаго одоление,/ сошедшеся, достойно песньми восхвалим Артемия,/ превеликаго в мученицех,/ чудес же дателя пребогатаго,// молится бо Господу о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Кондак великомученика Артемия»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Come, let us gather and worthily praise in hymns the devout and crown-bearing martyr Artemius, who carried off the victory over his enemies, greatest among martyrs and a most generous giver of wonders; for he prays to the Lord for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -126,11 +172,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 363,
+      "earliest": 362,
       "latest": 363,
-      "display": "363",
+      "display": "362 or 363",
       "basis": "traditional",
-      "note": "saint.gr: «Όταν, το 363 μ.Χ., ο Αρτέμιος άκουσε ότι ο Ιουλιανός ο Παραβάτης βασάνιζε τους χριστιανούς στην Αντιόχεια… τελικά τον αποκεφάλισε»; the page's heading prints «(; - 363)»."
+      "note": "The two calendars disagree by a year and neither is chosen. saint.gr: «Όταν, το 363 μ.Χ., ο Αρτέμιος άκουσε ότι ο Ιουλιανός ο Παραβάτης βασάνιζε τους χριστιανούς στην Αντιόχεια… τελικά τον αποκεφάλισε», and its heading prints «(; - 363)»; days.pravoslavie.ru's line for 20 октября ст. ст. prints «Вмч. Артемия (362).» The folder held 363 alone."
     }
   }
 }

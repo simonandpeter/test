@@ -1,0 +1,70 @@
+{
+  "slug": "paul-bocharov",
+  "display_name": "Paul (Bocharov)",
+  "names": [
+    {
+      "form": "Павел (Бочаров)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in days.pravoslavie.ru's line for 20 октября ст. ст., «Павел (Бочаров), мч.», with the grade and the rank word left off. The day's own line gives the name without the surname, as «Павла»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Сщмчч. Зосимы, Иоанна, Иоанна, Иоанна, Николая, Леонида, Иоанна и Александра пресвитеров, Михаила и Петра диаконов и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru prints at the end of the company line it names him in on 20 октября ст. ст.: «Сщмчч. Зосимы, Иоанна, Иоанна, Иоанна, Николая, Леонида, Иоанна и Александра пресвитеров, Михаила и Петра диаконов и мч. Павла (1937).»"
+    }
+  },
+  "related": [
+    "alexander-orlov-20-october",
+    "john-ganchev",
+    "john-rechkin",
+    "john-rodionov",
+    "john-talyzin",
+    "leonid-nikolsky",
+    "michael-isaev",
+    "nicholas-figurov",
+    "peter-kravets",
+    "zosima-pepenin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

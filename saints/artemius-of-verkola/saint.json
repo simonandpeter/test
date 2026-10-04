@@ -1,0 +1,100 @@
+{
+  "slug": "artemius-of-verkola",
+  "display_name": "Artemius of Verkola",
+  "names": [
+    {
+      "form": "Артемий Веркольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 20 октября ст. ст., «Святой праведный Артемий Веркольский», with the rank words left off. The day's own line gives «Артемия Веркольского» and calls him «отрока», a boy."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian",
+        "note": "Both of the life pages the calendar carries for him head themselves «Дни памяти: 23 июня , 20 октября», and the second of them gives 23 June 1545 as the day he died; so the June day is the day of his death and this one is the day of his relics. One row per church is the schema, so the October day the day page listed him on is the one he renders on and the June day is recorded here. days.pravoslavie.ru's 23 июня was not read (4 October 2026)."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Прав. отрока Артемия Веркольского (1545).»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 November 2026 (4 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1532,
+      "latest": 1532,
+      "display": "1532",
+      "basis": "traditional",
+      "note": "Both of the lives days.pravoslavie.ru carries for him give the year: «Родился в 1532 г. в селе Верколе Двинского края» on the one, «родился в селении Верколе Двинского округа в 1532 году» on the other."
+    },
+    "death": {
+      "earliest": 1545,
+      "latest": 1545,
+      "display": "1545",
+      "basis": "traditional",
+      "note": "The year the day line prints, «Прав. отрока Артемия Веркольского (1545)», and the date the longer life gives, «23 июня 1545 года». The two lives disagree about his age: the first has him killed «в возрасте 12 лет», the second calls him «тринадцатилетний», which 1532 to 1545 allows either way depending on the month of his birth, and neither is chosen."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышняго повелением,/ тученосным облаком, небо помрачившим/ и молниям блистающим,/ грому же возшумевшу с прещением,/ испустил еси душу твою в руце Господеви,/ премудре Артемие,/ и ныне предстоиши Престолу Владыки всех,/ иже верою и любовию приходящим к тебе,/ подай исцеление всем неотложно/ и моляся Христу Богу,/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Тропарь праведного отрока Артемия Веркольского»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "At the bidding of the Most High, when the rain-bearing cloud had darkened the sky and the lightnings flashed and the thunder broke out in threatening, you gave up your soul into the hands of the Lord, O most wise Artemius; and now you stand before the throne of the Master of all. Grant healing without delay to all who come to you in faith and love, and pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Возсия днесь пресветлая память премудраго Артемия;/ Богоданная благодать, яко реки, изливает от целебных мощей его дивная исцеления,/ имиже от многоразличных недуг избавляемся,/ с верою приемлюще я и взывающе:/ радуйся, Артемие Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 октября ст. ст. — «Кондак праведного отрока Артемия Веркольского»",
+        "url": "https://days.pravoslavie.ru/Days/20261020.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Today the most radiant memory of the most wise Artemius has dawned; grace given of God pours out wonderful healings like rivers from his curative relics, and by them we are delivered from many kinds of sickness, receiving them in faith and crying out: rejoice, Artemius, wise in God.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
