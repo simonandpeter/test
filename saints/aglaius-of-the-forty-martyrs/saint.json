@@ -64,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.03.2026 (9. март ст. ст.) — „Светих Четрдесет Мученика у Севастији.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry. Its heading names the company and nobody in it, and the body names only Candidus, who answers for them all, and Peter the bishop who gathered the relics. The heading is therefore quoted whole by each of the forty folders, exactly as doxologia's «✝ Sfinții 40 de Mucenici din Sevastia» and saint.gr's «Άγιοι Σαράντα Μάρτυρες που μαρτύρησαν στη Σεβάστεια» already are on them: all three calendar lines name the company collectively, and it is each folder's own existing rows that make it one of this company. No Serbian name form is stored, because the Prologue prints none for this man. The Prologue dates the suffering 320, which falls inside the reign this folder's interval already holds and is narrower than it, so the interval was not narrowed."
     }
   ],
   "hymns": [

@@ -1,0 +1,60 @@
+{
+  "slug": "philoromus-of-galatia",
+  "display_name": "Philoromus of Galatia",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "names": [
+    {
+      "form": "Филором",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's second heading for the Julian 9 March on pravoslavno.rs, „Преподобни Филором исповедник.“, with both rank words left off — Преподобни and исповедник, which are the two the folder's `types` carry. The heading gives no epithet and no place; Galatia, which this folder's English name carries, is in the body's first sentence. `Филором` is held by no other folder."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 9 March: „Живео и подвизавао се у Галатији у IV веку.“ It gives the century and no year. The entry also says he reposed in his eightieth year, which is an age and not a date, and it is the only source read for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 9 марта ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 9 martie, which is the page for this menologion number — not 22 martie, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's εορτολόγιο for 9 Μαρτίου, which is the page for this menologion number. The corpus already holds the other two entries of that Greek day, the Forty of Sebaste and `caesarius-brother-of-gregory-the-theologian`, and no page read for them names him."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.03.2026 (9. март ст. ст.) — „Преподобни Филором исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's second entry, five sentences long, and a new folder rather than an upgrade: the name sweep returned only kin matches on Flor- and Philaret-, and a grep of `saints/` for the Latin and Greek stems — philorom, Φιλόρωμ — found nothing at all. The Prologue is the only one of the four calendars read for him."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Κάνδιδος",
       "lang": "el",
       "note": "Read out of the list of the forty names on saint.gr's page for the company, «Κατά τους Παρισινούς Κώδικες 1575 και 1476 τα ονόματα τους ήταν: … Κάνδιδος (ή Κλαύδιος) …», with the rank word left off. The page prints the bracketed alternative beside it; the head form is the one taken."
+    },
+    {
+      "form": "Кандид",
+      "lang": "sr",
+      "note": "Read out of the body of the Ohrid Prologue's first entry for the Julian 9 March on pravoslavno.rs, „одговори један од њих, свети Кандид“, with Свети left off, which is not a rank. The heading names nobody, so this is the only Serbian form the entry gives any of the forty, and it carries no epithet."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.03.2026 (9. март ст. ст.) — „Светих Четрдесет Мученика у Севастији.“ … „одговори један од њих, свети Кандид: „Не само част војничку, но и тела наша узми од нас; ништа нам није драже и чесније од Христа Бога нашега“.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-03-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, whose heading names the company and nobody in it. This man is the one exception: the body names Candidus and quotes his answer to the commander, so the citation here carries the heading whole and his own clause after it, as the twelve of the Julian 16 February did. The other thirty-nine of the forty carry the heading alone. The bishop Peter whom the body names as the gatherer of the relics took no row: the corpus's `peter-of-sebaste` is kept on another day and nothing was read that would make the two one man. The Prologue dates the suffering 320, inside and narrower than the reign this folder holds, so the interval was not narrowed."
     }
   ],
   "hymns": [
