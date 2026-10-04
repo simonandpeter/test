@@ -138,13 +138,24 @@ answer — it counts the eight `data/feasts-fixed.js` records as covering their
 own day, which a count over `saints/` alone does not, and that undercount is
 how the first figures were wrong by eight in every church. As of the evening of
 5 October: **romanian closed** at 366 of 366, **greek one day** (29 February,
-which no civil year in Daily's runway prints), **russian 135 of 366**,
-**serbian 126 of 366**. The script prints each church's remaining days in that
-church's own reckoning — Julian for the Russian and the Serbian. The Russian
-run is contiguous to Julian 18 October and resumes at **19 October**; the
-Serbian is contiguous to Julian 03-01 and resumes at **03-02**, with Julian
-01-06 owing nothing, 02-29 having no source, and **02-03 still owed as the
-parser finding below**.
+which no civil year in Daily's runway prints), **russian 144 of 366**,
+**serbian 153 of 366**, over 5,616 folders. The script prints each church's
+remaining days in that church's own reckoning — Julian for the Russian and the
+Serbian — and it counts a day as carried when anything renders there, including
+a fixed feast the code holds, so it reads higher than a direct walk of
+`saints/`: say which you measured. The Russian run is contiguous to Julian
+27 October and resumes at **10-28**; the Serbian to Julian 03-28 and resumes at
+**03-29**, with Julian 01-06 owing nothing, 02-29 having no source, and
+**02-03 still owed as the parser finding below**.
+
+**Both waves run as worktree agents, and a worktree starts at whatever `main`
+was when it was made.** Three readers in a row started several batches behind;
+two caught it and one nearly wrote a day twice. **Merge local `main` first,
+before reading anything** — every duplicate check depends on it. And `.tmp/` is
+gitignored, so each worktree must copy the main checkout's `.tmp/` or it has no
+tools. **A report file cannot be written from a worktree** — the guards refuse
+both the path and the file — so a reader's report is its commit messages, and
+`git log` is where the next reader finds it.
 
 **azbyka.ru answered 403 on 4 October**, to the repo fetcher's user-agent and
 to a full Chrome one. `docs/CORPUS.md` §2 records it answering 200 on
@@ -153,16 +164,23 @@ new martyrs, who are most of a Russian day in these months — 13 of one night's
 21 new folders. The in-app browser reads it (measured 4 October, 200), which is
 what settled CORPUS.md §2's amendment to a browser source.
 
-**And the block is on the user-agent string, not on the address or the IP**
-(measured 4 October, minutes apart): `/days/2026-10-28` answered 403 to
-`Mozilla/5.0 (agios-corpus; one page at a time)` and **200 to a bare
-`Mozilla/5.0`**. Nobody has acted on that and nobody should without the
-author: the protocol asks for honest identification, and sending a browser's
-string to get past a host's own refusal is the author's call. **It is the
-difference between thin folders and full lives for every twentieth-century new
-martyr left in the Russian calendar, and there are many** — seven folders of
-the Julian 15–17 October batches carry one calendar line each because of it,
-and each life names the refusal and the date.
+**It is a quota, not a block** (measured 4 October, later the same day, and
+this corrects the reading above it): `node .tmp/fetch.mjs` got **three 200s**
+to this corpus's own user-agent — a day page and two lives — and then **five
+403s in a row** across two calls. An earlier measurement had a bare
+`Mozilla/5.0` answered 200 where ours was refused minutes before, so the string
+may weigh too; what is certain is that the refusal is not permanent.
+
+So the route is **pacing, not spoofing**: one page, a real pause, one page, and
+spend the quota on the folders that would otherwise be four words. One of
+Julian 10-27's new folders went from four words to a five-paragraph life with
+its archival references on three requests. Sending a browser's string to get
+past a host's refusal remains the author's call and nobody has done it.
+
+**Open for the author: whether the wave's earlier thin folders should be
+backfilled.** Several dozen folders across Julian 15–27 October carry one
+calendar line each because azbyka refused that minute, and each life names the
+refusal with its date, so they can be found.
 
 **The Advanced-search press is 300 ms of curtain, not of work** (measured
 5 October, and two earlier diagnoses of it were wrong). `switchMode` waits out
@@ -181,6 +199,33 @@ a folder's hymn under the same URL, over 25 day-and-church rows, Russian and
 Romanian — `scratchpad/hymn-dup.mjs` prints them. Do not fix this in the data:
 the day record's hymns drive the calendar's own rank cross, and the folder is
 what a saint's page and the hymnal draw from.
+
+**The sliced pack invalidated five test premises, and every one of them was
+the test rather than the page** (4 and 5 October, commits `013ea7d6`,
+`cbf84133`, and the prefetch pair after them). Worth reading before writing a
+test that touches the row, because the shape repeats: the first paint deals
+`CX_PREFIX` = 180 and the rest is packed from idle time, so **anything that
+reads the row's membership, length or order straight after `networkidle` is
+reading the prefix** — about 317 cards of a corpus of 5,500 — and before the
+slicing it was reading the settled run, because the repack landed inside one
+idle callback. `helpers.js`'s `packedRow` is the wait.
+
+- `the carousel is a real loop` counted fewer than 700 saints in the run.
+- `the reader's own work is still there on the way back` read 317 as the whole
+  corpus and then waited for `martyr`'s 2,872 to be *smaller* than it. Its
+  other claim, that the row returns holding the same number of cards, was
+  simply false: the narrowed row packs 54 cells and then 478, four seconds
+  apart at 6x (`scratchpad/rowgrow.mjs`), and it goes on packing while parked
+  under the day. It asserts the saints at the row's head now.
+- `the second pack continues the row` measures a card's place across three or
+  four frames of a row that never stops drifting, and **the drift and the
+  defect are the same shape** — both move the whole row at once. Only the rate
+  separates them, so the budget pays for the drift at `loop-scroll.js`'s own
+  26 px/s on top of its 40 px. Measuring in the row's own coordinates instead
+  was tried and is wrong: `carry` holds a saint at the same place *on screen*,
+  so a longer run puts her elsewhere in the row by design.
+- Two prefetch tests were **sleeps** — 300 ms and 400 ms — and a sleep long
+  enough at this desk is not long enough on a loaded runner.
 
 **The two shelf-swipe tests are the whole of CI's flake list, three runs
 running.** `chrome.spec.js:273` (`on a touch device the shelf row carries no x`)
