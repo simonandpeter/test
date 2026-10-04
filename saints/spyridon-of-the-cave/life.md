@@ -2,4 +2,8 @@
 
 The Greek synaxarion keeps the venerable Spyridon and [Nicodemus](/saints/nicodemus-of-the-cave) «in the cave» together on 28 September, and says that it has no details of the lives of these Russian venerable fathers; their memory is repeated, it says, on 31 October and on the Sunday of Meatfare. That is all it prints, and it gives no date.
 
-*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/1035/saint.aspx); read 17 September 2026.*
+The Russian church calendar of the Сретенский monastery keeps the two of them on 31 октября ст. ст., and it has what the Greek page said it did not: their life. For thirty years the two fulfilled one obedience, the baking of the prosphora. This one came to the monastery under the abbot Pimen, whose years the page gives as 1132 to 1141, and he came already not a young man. He accompanied his work with unceasing prayer and with the singing of psalms.
+
+God glorified him with wonders while he was still alive, and the page tells one of them: when the bakery caught fire he put it out with his mantle, and the fire went out and the mantle stayed whole. [Nicodemus](/saints/nicodemus-of-the-cave) laboured with him and led as strict a life. Their relics lie in the cave of Antony, and of this one the page notes that the fingers of his right hand are folded in the three-fingered sign. The day's line dates the pair to the twelfth century, and the calendar keeps them again on 28 сентября with the saints of the Near Caves and on the second Sunday of Great Lent.
+
+*After the Ορθόδοξος Συναξαριστής (saint.gr), 28 Σεπτεμβρίου — [the entry](https://www.saint.gr/1035/saint.aspx); read 17 September 2026; and the Православный церковный календарь of the Сретенский monastery for 31 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261031.html) and [the life of the two](https://days.pravoslavie.ru/Life/life4621.htm), read 4 October 2026.*

@@ -1,0 +1,61 @@
+{
+  "slug": "maura-of-constantinople",
+  "display_name": "Maura of Constantinople",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "deaconess"
+  ],
+  "names": [
+    {
+      "form": "Мавра Константинопольская",
+      "lang": "ru",
+      "note": "Read out of the title on her name link behind her line for 31 октября ст. ст., «Мавра Константинопольская, диакониса», with the grade left off. The line itself declines the name, «Мавры Константинопольской», and the calendar's life for her is headed with the bare «Преподобная Мавра»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes her name with «(V)» and its one-sentence life for her puts her death «в V веке» — in the fifth century. No year, no reign and no other bound is given on either page."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Прп. Мавры Константинопольской (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the third of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded. Her life page is headed «День памяти: 31 октября» and lists no second day."
+      },
+      "note": "The line's «Прп.» is venerable and the name link's «диакониса» is the one further thing recorded about her, so both are in `types`. The corpus's three other Mauras are other women on other days: `maura-wife-of-timothy`, the martyr of the Greek and Romanian 3 May; `maura-9-november`, a bare Greek line; and `maura-of-ceahlau`, a Romanian hermitess. None of the three is a deaconess of Constantinople and none is kept on this day by any calendar. The calendar prints no hymn under her name on a day whose other four entries all have one."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

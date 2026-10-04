@@ -10,6 +10,11 @@
       "form": "Νικόδημος",
       "lang": "el",
       "note": "Read out of «Όσιοι Σπυρίδων και Νικόδημος «οι εν τω σπηλαίω»» in this folder’s Greek citation."
+    },
+    {
+      "form": "Никодим Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the pair's line for 31 октября ст. ст., «Преподобный Никодим Печерский», with the rank word left off. The line declines the name and gives the by-name in the plural for the two of them, «Спиридона и Никодима , просфорников Печерских»; his link, unlike his companion's, does not carry the grade «просфорник»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,20 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru’s page for 28 сентября ст. ст. (civil 11 October) was not read (2026-09-17)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "The Greek calendar keeps the pair on 28 September and says there that their memory is repeated on 31 October; this is the Russian calendar's own principal day for them and not a second day on one calendar. Their shared life page lists «28 сентября (Печер.(Б))», the synaxis of the saints of the Near Caves, and closes by naming the second Sunday of Great Lent, which is a moveable day and cannot be held as a feast; one row per church is the schema, so both are recorded here and he renders on this day only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Прпп. Спиридона и Никодима , просфорников Печерских (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the fourth of the day. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "**The Greek page said in so many words that it had no details of these two Russian fathers' lives, and this folder's whole life was that admission; this is the page that has them.** Of this one the life says less than of his companion: he laboured together with Spyridon and led the same strict life, and the thirty years at the baking of the prosphora and the relics in the cave of Antony are said of the two of them. The wonder with the mantle and the three folded fingers are the other's. Both of the day's hymns name him beside the other, which is how the calendar keeps them: one line, one life page, one pair of hymns. The century is the day line's «(XII)»; the life's title mis-sets it in Cyrillic letters as «(ХП)», and the line is what the row cites."
     },
     {
       "church": "romanian",
@@ -52,5 +69,48 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's line for 31 октября ст. ст. closes the pair with «(XII)», the twelfth century, and its life for them sets his companion's arrival at the monastery under the abbot Pimen, «при игумене Пимене (1132-1141)», which falls inside it. No year of birth or of death is given for either man, and the folder held no `dates` before this: saint.gr said in so many words that it had no details of their lives."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Хлебы приносныя руками своими творя,/ псалмопение непрестанное усты своими/ яко жертву хвалы приношаше Господеви,/ со честным Никодимом, блаженне Спиридоне,/ с нимже молися Христу Богу о душах наших",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Тропарь преподобных Спиридона и Никодима, просфорников Печерских, в Ближних пещерах». The text names both men and is theirs, though it addresses the other by name; the page prints it without a closing stop.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Making the bread of the offering with your own hands, you offered unceasing psalmody with your lips to the Lord as a sacrifice of praise, together with the honoured Nicodemus, blessed Spyridon; pray with him to Christ God for our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Да явиши разжженную твою ко Господу любовь,/ чудне Спиридоне,/ разжегшуюся зело пещь/ мантиею своею заграждавши/ и да покажеши источник вод дарований духа в тебе живущ,/ одеждею своею, нося воду,/ угашаеши пламень огненный,/ тем, яко имея дерзновение ко Господу,/ со блаженным Никодимом/ молися присно о нас, поющих тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Кондак преподобных Спиридона и Никодима, просфорников Печерских». The text is addressed to his companion and names this one at its close.",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To show your burning love for the Lord, wonderful Spyridon, you shut in the fiercely blazing oven with your mantle; and to show the spring of the waters of the Spirit's gifts that lived in you, carrying water in your own garment you quenched the flame of fire. Therefore, having boldness before the Lord, pray with blessed Nicodemus always for us who sing of you.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
