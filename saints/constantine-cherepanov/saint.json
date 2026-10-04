@@ -1,0 +1,74 @@
+{
+  "slug": "constantine-cherepanov",
+  "display_name": "Constantine (Cherepanov)",
+  "names": [
+    {
+      "form": "Константин (Черепанов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page, «Константин (Черепанов), иерей, сщмч.», with the grade and the rank word left off; the surname is part of the name and stays. The day's line gives the forename alone and in the genitive, with no surname at all. azbyka.ru writes the surname without the brackets, «Константина Черепанова», and puts him second on its own line rather than sixth."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «Константин Васильевич Черепанов родился в Екатеринбургском уезде Пермской губернии в 1878 году». No day or month is given."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "22 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «Вместе с этими священномучениками отец Константин был приговорен к высшей мере наказания и расстрелян в 2 часа ночи 22 ноября», without the year on that sentence; the year is the one days.pravoslavie.ru prints at the end of the line for 9 ноября ст. ст. and the one azbyka's life for Феодор Чичканов gives for the same execution, «22 ноября 1937 года в городе Семипалатинске»."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists «7 февраля (переходящая) - Собор новомучеников и исповедников Церкви Русской» beside this day, and days.pravoslavie.ru's name page 9662 lists «26 января (Новомуч.)». A synaxis is not a second feast, and this folder renders on 9 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Сщмчч. Парфения , еп. Ананьевского, Константина , Димитрия , Нестора , Феодора , Константина , Виктора , Илии , Павла пресвитеров, Иосифа диакона и прмч. Алексия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 22 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 9 November (5 October 2026)."
+    }
+  ],
+  "related": [
+    "nestor-panin",
+    "theodore-chichkanov",
+    "victor-klimov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

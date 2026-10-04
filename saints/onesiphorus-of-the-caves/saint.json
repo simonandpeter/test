@@ -1,0 +1,65 @@
+{
+  "slug": "onesiphorus-of-the-caves",
+  "display_name": "Onesiphorus of the Caves",
+  "names": [
+    {
+      "form": "Онисифор Печерский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 1670, «Онисифор Печерский, иеромонах, исповедник», with the two grade words left off. The day's line declines it, «Прп. Онисифора Печерского», and azbyka.ru writes the same name with the cave added, «Онисифора Печерского, в Ближних пещерах»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "death": {
+      "earliest": 1148,
+      "latest": 1148,
+      "display": "1148",
+      "basis": "attested",
+      "note": "Both hosts give the year and no day: days.pravoslavie.ru's line for 9 ноября ст. ст. closes «(1148)» and its life says «Скончался в 1148 году»; azbyka.ru says «Святой подвижник скончался в 1148 году». The one other date either host gives him is the abbacy inside which the letter sets him, «Во время игуменства Пимена (1132–1141)», which is not a date of his own and is left in the life."
+    }
+  },
+  "related": [
+    "spyridon-of-the-cave",
+    "onesiphorus-martyr-9-november"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "days.pravoslavie.ru's name page 1670 lists «28 сентября (Печер.(Б))» beside this day, the synaxis of the venerable of the Near Caves; azbyka.ru lists the same feast as «11 октября - Собор Киево-Печерских преподобных, в Ближних пещерах», which is that Julian day in new style, and adds «28 марта (переходящая) - Собор всех Киево-Печерских преподобных отцов», a moveable day that cannot be held as a feast at all. A synaxis is not a second feast, and this folder renders on 9 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Прп. Онисифора Печерского (1148).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 22 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 9 November (5 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

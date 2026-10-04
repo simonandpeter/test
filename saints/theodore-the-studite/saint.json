@@ -44,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The three lives this calendar serves him list «26 января , 11 ноября», and the second of them says what the January day is: «26 января празднуется память перенесения мощей преподобного Феодора Студита из Херсонеса в Константинополь в 845 году». A translation of relics is a feast and not a second day for the man; one row per church is the schema, and this folder renders on 11 ноября ст. ст."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Прп. Феодора Студита, исп (826).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -115,6 +125,38 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Православия наставниче,/ благочестия учителю и чистоты,/ вселенныя светильниче,/ монашествующих богодухновенное удобрение,/ Феодоре премудре,/ ученьми твоими вся просветил еси,/ цевнице духовная,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Тропарь преподобнаго Феодора Студита»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Guide of Orthodoxy, teacher of piety and of purity, lamp of the whole world, God-inspired adornment of monastics, O most wise Theodore: by your teachings you have enlightened all, O spiritual harp. Pray to Christ our God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Постническое и равноангельное житие твое/ страдальческими уяснил еси подвиги/ и Ангелом совсельник, богоблаженне, явился еси, Феодоре./ С ними Христу Богу моляся// не престай о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак преподобнаго Феодора Студита»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your fasting life, the equal of the angels', you made plain by the struggles of one who suffers, and you were shown a fellow-dweller with the angels, O Theodore blessed of God. Praying with them to Christ our God, do not cease to pray for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -122,18 +164,18 @@
   },
   "dates": {
     "birth": {
-      "earliest": 759,
+      "earliest": 758,
       "latest": 759,
-      "display": "759",
+      "display": "758 or 759",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Θεόδωρος γεννήθηκε στην Κωνσταντινούπολη το 759 μ.Χ.», with the page's own head «(759 - 826)»."
+      "note": "Two readings, both kept. saint.gr: «Ο Όσιος Θεόδωρος γεννήθηκε στην Κωνσταντινούπολη το 759», which is the year this folder carried; both of days.pravoslavie.ru's longer lives say instead «Родился в 758 г. в Константинополе» and «родился в 758 году в Константинополе в семье сборщика царских податей Фотина и его супруги Феоктисты». Neither is chosen."
     },
     "death": {
       "earliest": 826,
       "latest": 826,
       "display": "826",
       "basis": "traditional",
-      "note": "saint.gr: «Πέθανε στην εξορία το 826 μ.Χ. σε ηλικία 67 ετών, στη χερσόνησο του Ακρίτα του Αγίου Τρύφωνα»."
+      "note": "Unchanged, and now cited twice over: days.pravoslavie.ru's line for 11 ноября ст. ст. closes «Прп. Феодора Студита, исп (826).» and both its longer lives end «скончался в 826 г.»"
     }
   }
 }

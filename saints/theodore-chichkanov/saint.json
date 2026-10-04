@@ -1,0 +1,75 @@
+{
+  "slug": "theodore-chichkanov",
+  "display_name": "Theodore (Chichkanov)",
+  "names": [
+    {
+      "form": "Феодор (Чичканов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page, «Феодор (Чичканов), протоиерей, сщмч.», with the grade and the rank word left off; the surname is part of the name and stays. The day's line gives the forename alone and in the genitive, with no surname at all. azbyka.ru writes the surname without the brackets, «Феодора Чичканова»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "dates": {
+    "birth": {
+      "earliest": 1884,
+      "latest": 1884,
+      "display": "10 February 1884",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «родился 10 февраля 1884 года в небольшом селе Барнаульского уезда в благочестивой семье Павла Васильевича и Надежды Ефимовны Чичкановых»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "22 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life prints the troika's decision of «19 ноября 1937 года» naming six men and says «Приговор был приведен в исполнение 22 ноября 1937 года в городе Семипалатинске». **The same page records a second and false date**: a death certificate reached the family in 1956 giving death from hypertension on «22 ноября 1945 года», and the page says the execution of 1937 was established only when the archives were opened at the end of the 1990s. The certificate's year is recorded here and is in neither bound, because the page that prints it also says what it was."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists «7 февраля (переходящая) - Собор новомучеников и исповедников Церкви Русской» beside this day, and days.pravoslavie.ru's name page 9408 lists «26 января (Новомуч.)». A synaxis is not a second feast, and this folder renders on 9 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Сщмчч. Парфения , еп. Ананьевского, Константина , Димитрия , Нестора , Феодора , Константина , Виктора , Илии , Павла пресвитеров, Иосифа диакона и прмч. Алексия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 22 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 9 November (5 October 2026)."
+    }
+  ],
+  "related": [
+    "nestor-panin",
+    "victor-klimov",
+    "constantine-cherepanov",
+    "alexander-shchukin"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

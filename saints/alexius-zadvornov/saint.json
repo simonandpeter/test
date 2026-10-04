@@ -1,0 +1,69 @@
+{
+  "slug": "alexius-zadvornov",
+  "display_name": "Alexius (Zadvornov)",
+  "names": [
+    {
+      "form": "Алексий (Задворнов)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page, «Алексий (Задворнов), иеромонах, прмч.», with the grade and the rank word left off; the surname is part of the name and stays. The day's line gives the forename alone and in the genitive, with no surname at all. azbyka.ru writes the same name «Алексия (Задворнова)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "office": "Hieromonk",
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «Алексей Семенович Задворнов родился в 1882 в деревне Корепово Борисоглебского уезда Ярославской губернии в крестьянской семье». No day or month is given."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "21 November 1937",
+      "basis": "attested",
+      "note": "azbyka.ru's life: «21 ноября он был расстрелян», the year being the «1 нояб. 1937 г.» of the arrest in the camp in the sentence before it and the year days.pravoslavie.ru prints at the end of the line for 9 ноября ст. ст."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian",
+        "note": "azbyka.ru lists three synaxes beside this day — «29 мая (переходящая) - Собор новомучеников, в Бутове пострадавших», «5 июня - Собор Ростово-Ярославских святых» and «5 сентября (переходящая) - Собор Московских святых» — and days.pravoslavie.ru's name page 9193 lists «26 января (Новомуч.)». A synaxis is not a second feast, and this folder renders on 9 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 ноября ст. ст. — «Сщмчч. Парфения , еп. Ананьевского, Константина , Димитрия , Нестора , Феодора , Константина , Виктора , Илии , Павла пресвитеров, Иосифа диакона и прмч. Алексия (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261109.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's calendar for 22 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's calendar for 22 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the Julian 9 November (5 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

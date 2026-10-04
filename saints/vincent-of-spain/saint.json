@@ -12,6 +12,11 @@
       "form": "Βικέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Νοεμβρίου, «Άγιος Βικέντιος ο Διάκονος Ιερομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Викентий Августопольский (Сарагосский), Валенсийский",
+      "lang": "ru",
+      "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Викентий Августопольский (Сарагосский), Валенсийский, диакон, сщмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone, «Викентия». azbyka.ru keeps only the last of the three places, «Викентия, диакона, Валенсийского»."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Мч. Викентия (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -94,6 +108,22 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже славе, Господи и всех Содетелю,/ Ты в мире явил еси украшенных добродетельми страстотерпцы и мученики,/ да омут непобедимую победу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 ноября ст. ст. — «Кондак мучеников Виктора, Стефаниды и Викентия»",
+        "url": "https://days.pravoslavie.ru/Days/20261111.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O Lord of glory and Maker of all, you have shown forth in the world passion-bearers and martyrs adorned with virtues, that they may hold the unconquerable victory.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -107,5 +137,14 @@
   ],
   "related": [
     "vincentius-martyr-11-december"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "attested",
+      "note": "The first year this folder has carried. days.pravoslavie.ru's line for 11 ноября ст. ст. closes «Мч. Викентия (304).» and its life ends «Наутро святого мученика предали сожжению. Это произошло в 304 году»; azbyka.ru prints the same figure, «мч. Викентия, диакона, Валенсийского (304)». Neither saint.gr nor doxologia.ro gave a year."
+    }
+  }
 }
