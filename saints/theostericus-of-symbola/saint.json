@@ -6,6 +6,11 @@
       "form": "Θεοστήρικτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Όσιος Θεοστήρικτος «ὁ ἐν Συμβόλοις»», with the rank word left off."
+    },
+    {
+      "form": "Феостирикт (Стирикт) Олимпийский (в Символах)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 2248, «Феостирикт (Стирикт) Олимпийский (в Символах), прп.», with the rank word left off; both parentheses are the page's own. The day's line declines the name and keeps only the second epithet, «Прп. Феостирикта , иже в Символех»."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Прп. Феостирикта , иже в Символех.»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

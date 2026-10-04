@@ -11,6 +11,11 @@
       "form": "Ορέστης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Νοεμβρίου, «Άγιος Ορέστης», with the rank word left off."
+    },
+    {
+      "form": "Орест Тианский (Каппадокийский)",
+      "lang": "ru",
+      "note": "The heading of the calendar's name page 1678, «Орест Тианский (Каппадокийский), мч.», with the rank word left off; the second epithet is parenthesised on the page itself. The day's line declines the name and gives his trade instead of an epithet, «Мч. Ореста врача»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Мч. Ореста врача (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -92,9 +106,34 @@
       },
       "tone": "Ἦχος α’.",
       "model": "Τοῦ λίθου σφραγισθέντος."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Удом усекновение терпел еси/ и огненную лютую муку, мучениче,/ подвигся, всеславне,/ венцем яве увязеся нетленным, преблаженне,/ Престолу же предстоиши Святыя Троицы,/ Юже помоли, да спасет ны,/ мучениче Оресте,/ верою поющим тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 ноября ст. ст. — «Тропарь мученика Ореста врача», printed under his own name and his own trade",
+        "url": "https://days.pravoslavie.ru/Days/20261110.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You endured the cutting of your limbs and the cruel torment of fire, O martyr; having striven, all-glorious one, you were plainly bound with an incorruptible crown, most blessed one, and you stand before the throne of the Holy Trinity. Entreat her, that she may save us who sing of you in faith, O martyr Orestes.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 10 ноября ст. ст., «Мч. Ореста врача (304).», and its life page says the same in words — «Влачимый по камням, святой мученик отошел ко Господу в 304 году». Neither doxologia.ro nor saint.gr gave this folder a year."
+    }
   }
 }
