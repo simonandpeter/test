@@ -11,6 +11,11 @@
       "form": "Παχώμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Παχώμιος ο Μέγας», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Пахомије Велики",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. мај ст. ст., „Преподобни Пахомије Велики.“ Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the bare name is left. **Велики is kept**, because BRIEF-SERBIAN.md §5 reads it as the epithet „the Great“ and not as a rank, and this folder's own display name keeps it — so the fullest form the calendar gives is Пахомије Велики and not a bare Пахомије. Measured before drafting: neither form meets any other folder in any language, and the corpus holds eleven other `pachomius-*` and `pahomie-*` folders."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.05.2026 (15. мај ст. ст.) — „Преподобни Пахомије Велики.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's first entry of the day, and the same menologion 15/5 the Romanian and Greek rows already carry, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „Упокојио се мирно 348. године“ → `death` 348, which is the year saint.gr's head line «(292 - 348)» also gives, so there is nothing to widen. **The lifespan beside it was read and refused**: „у седамдесет четвртој години свога земнога живота“ gives seventy-four years, and 348 less 74 is a birth of 274 against the 292 the Greek page prints — a lifespan is not a date and nothing was derived from it, the Greek's own 292 being left unwritten as the earlier reader left it. **New here**: that the angel came in the habit of a schemamonk at the place called Тавенисиот and gave him **a small board with the rule of a coenobitic monastery written on it**, which the folder's life had as a voice and a habit but not as a written tablet; that he raised cells where nobody was but himself and his brother, and answered his brother's reproach about needless buildings that he followed the commandment of God without regard to when or who would come; that **he founded six more monasteries** as the numbers grew, seven in all; and that **the number of his disciples ran to seven thousand**. **Ten disciples are named and none gains a folder**: „Теодор, Јов, Пафнутије, Пекузије, Атинодор, Епоних, Сур, Псој, Дионисије, Псентаисије и други“. Теодор is `theodore-the-sanctified`, already a `related` row both ways and already named in this life; Пекузије, Сур, Псој and Псентаисије are the Pecusie, Suros, Psoe and Psentais the life already names unlinked; **Јов, Пафнутије, Атинодор, Епоних and Дионисије are not identified** — Paphnutius and Dionysius have many folders apiece and the entry gives nothing to tell which, so by the coordinator's third ruling no folder is minted and none of the five is named in the prose. **His brother Јован is a kinship the entry narrates and he has no folder anywhere**, so no row has anything to attach to; this life already names him, unlinked, and that is unchanged. **Свети Антоније is named in the entry** as the man reckoned the founder of the eremitic life against Pachomius the founder of the coenobitic, and he is **deliberately not named in the added paragraph**: that is a comparison the hagiographer draws and not a relation, which is BRIEF-SERBIAN.md §6's own rule. **`silvanus-of-tabennisi` is added to `related`**, the third entry of this same day narrating him as this man's disciple and his folder already relating this one. `types` untouched: Преподобни is the `venerable` the folder carries, „великo светило Цркве“ is no rank, and „Безбројна чудеса сотвори“ is a wonder worked and not the `wonderworker` title, which this folder has never carried. No `locations`: Тиваидска пустиња and Тавенисиот are named, as the Greek and Romanian pages name them, and the folder's standing refusal of coordinates is not reopened. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -135,6 +150,16 @@
     "constantine-the-great",
     "palamon-the-hermit",
     "theodore-the-sanctified",
-    "tithoes-of-tabennisi"
-  ]
+    "tithoes-of-tabennisi",
+    "silvanus-of-tabennisi"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 348,
+      "latest": 348,
+      "display": "348",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 15. мај ст. ст.: „Упокојио се мирно 348. године, у седамдесет четвртој години свога земнога живота.“ The same year stands in saint.gr's head line, «Οσιος Παχωμιος ο Μεγας (292 - 348)», which an earlier reader recorded in the Greek row and did not write; this folder held no `dates` object at all until now. The seventy-four years are a lifespan and no birth is derived from them."
+    }
+  }
 }

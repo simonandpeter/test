@@ -11,6 +11,11 @@
       "form": "Ιουνία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι», with the rank word left off."
+    },
+    {
+      "form": "Јунија",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's first entry for 17. мај ст. ст., „свету Јунију, помоћницу Андроникову“, with the accusative resolved to the nominative the same body gives three words later, „Са светом Јунијом“ → Јунија; света is not a rank and „помоћницу Андроникову“ is a relation and not a name. **This is the one form in these three days that is not read off a heading**, the Prologue giving her none, and it is a copied script form all the same — not a transliteration. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
     }
   ],
   "sex": "female",
@@ -19,7 +24,8 @@
     "martyr"
   ],
   "related": [
-    "andronicus-the-apostle"
+    "andronicus-the-apostle",
+    "paul-the-apostle"
   ],
   "attestations": [
     {
@@ -58,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети апостол Андроник.“ — „спомињући и свету Јунију, помоћницу Андроникову … Пострадаше обоје за Христа, и тако примише двострук венац: и апостолства и мучеништва.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "**A ROW OWED OUT OF ANOTHER SAINT'S HEADING, as `laodicius-the-jailer`'s was on the Julian 13 May.** The Prologue gives her no heading of her own: the day's first entry is headed „Свети апостол Андроник.“ and she is in its body, named four times — „свету Јунију, помоћницу Андроникову“, „Са светом Јунијом он успе да многе приведе Христу“, „Имађаху обоје благодатну силу чудотворства“, „Пострадаше обоје за Христа, и тако примише двострук венац“. **The body narrates her apostolate, her wonderworking and her martyrdom**, which is the test that owes a row and not the merely-mentioned that does not; so the `text` quotes the heading whole, as the contract requires, and then the clauses that are hers. She is on the same menologion 17/5 the Romanian and Greek rows already carry. **The Prologue takes the helper reading, not the wife reading.** „помоћницу Андроникову“ — his helper — is doxologia's own „ajutătoarea sa“ and not its day line's „soția sa“, his wife, and this folder's life already holds both readings as the source prints them; **the Prologue is a second book for the helper and nothing is decided on it.** **New here**: that she shared the gracious power of wonderworking, demons driven out and every sickness healed, and that the crown was double for her too. **`paul-the-apostle` IS ADDED to `related`**: Romans 16:7, which the Prologue cites, names her with Andronicus as Paul's kinsfolk, and this folder's life already quoted the verse without the row. `types` untouched. No `locations` — the Prologue names Pannonia for Andronicus and nothing for her. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

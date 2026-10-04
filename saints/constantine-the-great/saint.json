@@ -11,6 +11,11 @@
       "form": "Κωνσταντίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι», with the rank word left off."
+    },
+    {
+      "form": "Константин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Свети цар Константин и царица Јелена.“ — Свети is not a rank and цар is the `king` this corpus puts in `types`; strip them and the bare forename is left. **«Константин Велики» is nowhere on this page** — the Prologue gives him no epithet at all, where it gave Pachomius Велики in its heading on 15 May — so the fuller form that would have broken the fold does not exist to be copied, and a form a reader builds is what BRIEF-SERBIAN.md §6 forbids. Measured before drafting with `foldchk.py`: `[('constantine-brancoveanu', 'ru'), ('constantine-of-georgia', 'sr'), ('constantine-presbyter-martyr-1918', 'ru')]`, so the fold is four wide and is read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -163,8 +168,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.06.2026 (21. мај ст. ст.) — „Свети цар Константин и царица Јелена.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, which heads the two of them together, on the same menologion 21/5 the Romanian and Greek rows already carry, so nothing moved. **THE REFUSAL OF THE DAY, AND IT LEAVES CONSTANTINE THE GREAT UNDATED ON PURPOSE.** This folder has **no `dates` object at all** and never has had one. This entry gives everything needed to date him and **states no year for his death**: „А цар Константин надживи своју мајку за десет година и упокоји се у својој шездесет петој години, у граду Никомидији“ — he outlived his mother by ten years and reposed in his sixty-fifth year, at Nicomedia — and the same entry dates **her** death to **327**. 327 plus ten is 337, and 337 less 65 is a birth of 272. **Both are arithmetic on the page and neither is on it**, and BRIEF.md §4 refuses an inferred year without qualification, as this wave has refused six reigns and five durations in seven days. **So `dates` is untouched and this folder stays `undated`**, which is a startling row to leave standing and is left standing deliberately. **It is the clearest case in the wave for the author’s hand**: the year is not in doubt anywhere, no calendar read for this corpus has yet printed it, and one commit closes it. **The Edict of Milan of 313 and the First Council of 325 are both given as years** — „Едикт у Милану 313. године“ and „сазва I васељенски сабор у Никеји 325. године“ — **and this schema has no field for either**: they are events in a reign and neither a birth, a death nor a floruit, the fourth such year in six days after `theodore-of-vrsac`’s rising and the two accession years of `stephen-patriarch-of-constantinople`. Both stand in the prose. **New here**: that his father was **цар Констанције Флор** and that **Flor had other children by another wife, while of Helen he had only this one son**; that there were **three great wars at his accession, against Maxentius the tyrant at Rome, against the Scythians on the Danube, and against the Byzantines**; that the cross appeared **by day, all hung about with stars**, and that he had **a great cross forged to its likeness and carried before the army**; that **Maxentius drowned in the Tiber**; that he **fell into a heavy leprosy**, that **the pagan priests and the physicians advised him to bathe in the blood of slaughtered children and he refused it**, and that **the apostles Peter and Paul appeared to him and sent him to bishop [Sylvester](/saints/sylvester-of-rome), who taught him the faith and baptised him, and the leprosy went from the emperor’s body**; and that **he was buried in the church of the Holy Apostles at Constantinople**. `types` untouched — цар is the `king` this folder carries, which BRIEF-SERBIAN.md §5 says is read and not assumed, and the `equal-to-the-apostles` is the title all three calendars give him. **No new `related` row is owed**: `sylvester-of-rome` and `helen-the-empress` are both rows already, and the apostles Peter and Paul are named without links as the page names them. No `locations`, although Rome, the Danube, the Tiber, Byzantium, Nicomedia and Constantinople are all named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

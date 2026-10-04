@@ -3,13 +3,19 @@
   "display_name": "Acacius, companion of Patrick of Prusa",
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "presbyter"
   ],
   "names": [
     {
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος», with the rank word left off."
+    },
+    {
+      "form": "Акакије",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s first entry for 19. мај ст. ст., „Свети мученик Патрикије епископ бруски, са три презвитера: Акакијем, Менандром и Полиеном.“ — Свети is not a rank and презвитер is the `presbyter` this batch adds to `types`. Measured before drafting with `foldchk.py`: `[('acacius-of-melitene', 'sr'), ('acacius-the-centurion', 'sr'), ('acacius-the-kausokalyvite', 'sr')]`, so the fold is four wide and is read in this batch’s commit message. **THE HEADING PRINTS THE NAME IN THE INSTRUMENTAL AND THE NOMINATIVE IS RESTORED, WHICH IS A READING AND IS SAID HERE.** „са три презвитера: Акакијем, Менандром и Полиеном“ governs the instrumental, and the body names none of the three at all, so no nominative is printed anywhere on the page. **The restoration is grammar and not transliteration**, and for each of the three it is unique: Акакијем → Акакије, the form three other folders already hold off this same book; Полиеном → Полиен, the form `polyaenus-of-rome` already holds in Russian; and Менандром → Менандар and not Менандер, because an -ар stem drops its a before the instrumental ending while an -ер stem does not, which would have given Менандером. **This is the one place in five days where a stored form is not a string copied off the page**, and it is flagged rather than passed over."
     }
   ],
   "attestations": [
@@ -40,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.06.2026 (19. мај ст. ст.) — „Свети мученик Патрикије епископ бруски, са три презвитера: Акакијем, Менандром и Полиеном.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-01&prolog=1",
+        "year": 2026
+      },
+      "note": "One of the three presbyters of the day’s first entry, **named in its heading and nowhere else in it** — the body speaks of them only as „осталој тројици његових презвитера“ and „незлобиви ови следбеници Христови“. **This is the first Serbian row this folder has had, and the second calendar of any kind to keep him**: the Romanian and Russian rows are `undocumented` and only the Greek was venerated, on the same menologion 19/5. **`presbyter` IS ADDED to `types`.** „са три презвитера“ is the Prologue’s own word for the three, and BRIEF-SERBIAN.md §5 maps Презвитер → presbyter; doxologia’s life calls them „three of his priests“ and saint.gr only „fellow-workers“, so this book is where the order is stated plainly. **It changes nothing in print**: `presbyter` is absent from `PRECEDENCE` in `src/lib/honorific.js`, so `martyr` still composes the rank and the word reaches the reader only in the saint page’s facts line — the same ground on which `wonderworker` was added to `achillius-of-larissa` on 15 May and `monk` refused to `nicholas-the-mystikos` on 16 May. **THREE BOOKS, THREE NAMES FOR THE GOVERNOR, AND A FOURTH NAME THAT MAY BE THE SAME MAN PROMOTED TO EMPEROR.** doxologia calls him **Julius**, governor of Bithynia; saint.gr calls him **Julian the Consular**; this book calls him **Јуније**, Junius, „намесник царски“, the imperial deputy. **And this book alone names an emperor** — Julian the Apostate — which neither of the others does. **Whether the Prologue has read saint.gr’s governor Julian as the emperor Julian, or dates the martyrdom to that reign on its own authority, cannot be told from the page**, and nothing is decided on it here: no year is taken from the reign, no name is corrected, and all three readings are in the prose. **That is the reading of this entry and it is the author’s if it is to be resolved.** **NO YEAR, AND THE REFUSAL IS THIS WAVE’S STANDING ONE.** „Пострадали за веру Христову у време Јулијана Одступника“ names a reign and **gives it no bounds**, so nothing is built on it — as „У време царовања Декијева“ was refused for `isidore-of-chios` on 14 May and „У време Декијево“ for the three Athenians on 18 May. **All four folders of this company still carry no `dates` object**, and no calendar read for any of them has given one. **THREE `related` ROWS ADDED.** This folder and its three companions all carried **`related: None`**; the entry narrates the four as one company beheaded together, so each now relates the other three. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -82,5 +98,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "menander-companion-of-patrick",
+    "polyaenus-companion-of-patrick",
+    "patrick-of-prusa"
+  ]
 }

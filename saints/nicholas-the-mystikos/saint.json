@@ -13,6 +13,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Μαΐου, «Άγιος Νικόλαος ο Α' ο Μυστικός Πατριάρχης Κωνσταντινούπολης», with the rank word, the regnal number and the see left off."
+    },
+    {
+      "form": "Никола Мистик",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 16. мај ст. ст., „Свети Никола Мистик, патријарх цариградски.“ Свети is not a rank; „патријарх цариградски“ is the second rank and the see, which this corpus puts in `types` as `patriarch` and in `office` as Patriarch of Constantinople, and **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note**. **Мистик is kept**: it is not in §5's rank table and the entry itself glosses it as a by-name taken from an office he had left — „Мистик означава најстаријег члана царског савета“ — so it is the epithet this folder's display name already carries, and keeping it is the fullest form this book gives. It also keeps this folder clear of the bare «Никола» that `nicholas-of-magnesia` and `nicholas-the-grocer-of-karpenisi` already share. Measured before drafting with `foldchk.py`: no folder holds this form in any language."
     }
   ],
   "related": [
@@ -24,14 +29,14 @@
       "latest": 852,
       "display": "852",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Νικόλαος γεννήθηκε το 852 και η καταγογή του ήταν από την Κάτω Ιταλία.»"
+      "note": "saint.gr: «Ο Άγιος Νικόλαος γεννήθηκε το 852 και η καταγογή του ήταν από την Κάτω Ιταλία.» The Охридски пролог gives no year of birth, so this is copied back unchanged."
     },
     "death": {
       "earliest": 925,
-      "latest": 925,
-      "display": "May 925",
+      "latest": 930,
+      "display": "925 or 930",
       "basis": "traditional",
-      "note": "saint.gr: «Πέθανε τον Μάιο του 925 και ενταφιάσθηκε στη μονή των Γαλακρηνών», and its head line reads «Αγιος Νικολαος ο Α' ο Μυστικος Πατριαρχης Κωνσταντινουπολης (852 - 925)»."
+      "note": "Two books, five years apart, and neither is chosen. saint.gr: «Πέθανε τον Μάιο του 925 και ενταφιάσθηκε στη μονή των Γαλακρηνών», with the head line «Αγιος Νικολαος ο Α' ο Μυστικος Πατριαρχης Κωνσταντινουπολης (852 - 925)» — the month of May is this book's alone. The Охридски пролог for 16. мај ст. ст. says 930 twice, „Упокојио се 930. године“ and „Скончао мирно 930. године“, and dates the council that forbade a fourth marriage to 925, where the Greek page puts the Tome of Union under his second patriarchate and his death in May of 925. The interval is the widening of the disagreement, not a reckoning."
     }
   },
   "attestations": [
@@ -62,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.05.2026 (16. мај ст. ст.) — „Свети Никола Мистик, патријарх цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's third entry, on the same menologion 16/5 the Greek row already carries, and the same man beyond doubt: the patriarch of Constantinople surnamed the Mystikos who forbade the emperor Leo's fourth marriage. **A DEATH WIDENED AND NEITHER YEAR CHOSEN.** The Prologue says it twice — „Упокојио се 930. године“ and, closing, „Скончао мирно 930. године“ — against saint.gr's «Πέθανε τον Μάιο του 925» and its head line «(852 - 925)». **`death` is now 925–930 and reads „925 or 930“**; the display's „May“ moves into the note, the month being the Greek book's alone. Five years apart, the allowed widening, after `arsenius-the-great`'s 445 or 448, `methodius-of-moravia`'s 884 or 885 and `isidore-of-rostov`'s 1474 or 1484. **The Prologue's whole chronology sits about five years later than the Greek's** — it dates the council that forbade the fourth marriage to 925, where saint.gr has the Tome of Union under his second patriarchate and his death in May 925 — and that is the shape of the disagreement, not a reason to prefer either. **`birth` 852 is untouched**; this book gives no year of birth. **`monk` IS REFUSED, and this is the 12 May refusal again.** „по том је оставио сујету света и замонашио се“ is a tonsure plainly narrated and Монах maps to `monk` in BRIEF-SERBIAN.md §5 — but `monk` is on the `MONASTIC` list in `src/lib/honorific.js`, which implies `venerable`, and `venerable` stands **above** `confessor` in that file's `PRECEDENCE`. Adding it would change what the site prints over this folder from **Confessor Nicholas the Mystikos** to **Venerable**, demoting the title the Greek calendar gives him. The tonsure is in the prose instead. **New here**: that **Мистик denotes the most senior member of the imperial council**, so that he was a courtier of high rank before he left the vanity of the world — the Prologue is the only book read for this folder that glosses the by-name; that he became renowned for „необичном строгошћу живота“; that **the emperor forbade him the church and the priest who crowned the marriage was deposed, and that for it the emperor threw him down and drove him away to a monastery**; and that **the delegates of the Roman pope Sergius III approved the emperor's fourth marriage**. **Pope Sergius III and the emperor Leo gain no folders**: no calendar read for this corpus keeps either, and by the coordinator's third ruling neither takes a row; both are named in the prose and link to nothing. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

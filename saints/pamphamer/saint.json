@@ -11,6 +11,11 @@
       "form": "Παμφαμήρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Σολόχων, Παμφαμήρ και Παμφυλών», with the rank word left off; the life page carries «Αγιος Παμφαμηρ» as its own head name."
+    },
+    {
+      "form": "Памфамир",
+      "lang": "sr",
+      "note": "Read out of the body of the Охридски пролог's second entry for 17. мај ст. ст., „То исто учинише и два његова друга: Памфамир и Памфалон“, where the name stands in the nominative; свети, which the next sentence puts before it, is not a rank. **The spelling is this book's own**, Памфамир against the Greek «Παμφαμήρ» this folder also carries, and a copied script form is stored as printed and never corrected towards another language's. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
     }
   ],
   "related": [
@@ -45,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети мученик Солохон.“ — „То исто учинише и два његова друга: Памфамир и Памфалон … под којима издахнуше свети Памфамир и Памфалон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "**A ROW OWED OUT OF A COMPANION'S HEADING.** The Prologue heads the entry „Свети мученик Солохон.“ and names him in the body twice: as one of the two comrades who declared themselves Christians when Solochon did, and as one of the two who **expired under the tortures**. **A martyrdom narrated is the test that owes a row**, as `laodicius-the-jailer`'s was on 13 May and as Junia's is on this same day; so the `text` quotes the heading whole and then his own two clauses. He is on the same menologion 17/5 the Greek row already carries. **A YEAR READ AND DELIBERATELY NOT WRITTEN.** „предста Господу … 298. године“ is given for **Solochon**, in the sentence that follows his revival in the widow's house; Pamphamer and Pamphylon died earlier in the same torture and **the Prologue gives them no year of their own**. Taking Solochon's 298 for them would be inferring a year the page does not state of them, which BRIEF.md §4 forbids, so **`dates` is untouched and this folder stays `undated`** while his companion's now carries 298. **That asymmetry is deliberate and it is the author's to close in one commit if the reading is wanted** — the three died in one episode and no calendar read for the corpus dates the two. **New here**: that **they declared themselves Christians when the imperial order came that all soldiers sacrifice**, which is the Prologue's own framing of the refusal, and that the officer was „војвода“, a commander, rather than the tribune of the Greek page. `types` untouched — мученик is the `martyr` and the soldiering is in the entry's first sentence about Solochon. No `locations`; the Prologue names no place, where saint.gr has Chalcedon. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

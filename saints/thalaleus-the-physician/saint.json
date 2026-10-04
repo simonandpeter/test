@@ -11,6 +11,11 @@
       "form": "Θαλλέλαιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Άγιος Θαλλέλαιος ο Ανάργυρος», with the rank word left off."
+    },
+    {
+      "form": "Талалеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. мај ст. ст., „Свети мученик Талалеј.“ — Свети is not a rank and мученик is the `martyr` this corpus puts in `types`; strip them and the bare forename is left, which is all the heading gives. The body repeats it bare three times. Measured before drafting with `foldchk.py`: `[('thalelaeus-of-gabala', 'sr')]`, so the fold is two wide and is read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.06.2026 (20. мај ст. ст.) — „Свети мученик Талалеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 20/5 the Romanian and Greek rows already carry, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „пресели се у живот вечни 284. године“ → `death` 284. **No other book read for this folder gives a year**, and 284 agrees with the reign the entry names, „у време царовања Нумеријанова“ — **and that reign was itself given no bounds and nothing was built on it**, as this wave has refused four such reigns in five days. **New here, and almost the whole of it**: that he was **of Lebanon**; that his father was **Верукије** and his mother **Ромилија**; that he was **eighteen years old**, comely in face and in body, and **„косе црвеножуте“**, red-yellow haired; that he was **„Лекар по занимању“**, a physician by trade, which is the `physician` this folder carries read from the other side; the **drill through the knees**, the rope through the drilled bones and the hanging from a tree; **that the two executioners were struck as if blind and bored a plank instead of him**; **that the torturer took the drill himself and his hands seized up, so that he had to beg Thalaleus to save him, and that the guileless martyr did it by prayer**; that he was thrown into water and **came alive before the torturer again, because he had asked God not to die at once but that his tortures be lengthened**; that **the beasts licked his feet and fawned on him**; and that he was beheaded at the last. **His parents’ names and his age take no folder and no row** — no calendar read for this corpus keeps either parent, and by the coordinator’s third ruling nothing is minted for them. **The age is not a date**: eighteen years at a death in 284 is a birth of 266, and nothing is derived from it, as nothing was derived from Pachomius’s seventy-four years or Christina’s sixteen. **`related` ROWS ADDED, FILLING A COMPANY THAT RELATED NOBODY.** `thalaleus-the-physician`, `alexander-companion-of-thalaleus` and `asterius-companion-of-thalaleus` all carried **`related: None`** — three folders of one martyrdom, two of them named after Thalaleus in their own display names, relating nobody at all, exactly as Patrick of Prusa’s four did on the Julian 19 May. This entry narrates the three in one scene, so **each now relates the other two**. `types` untouched — мученик is the `martyr` and Лекар the `physician`, both held. No `locations`, although Lebanon is named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -151,5 +166,18 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 284,
+      "display": "284",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 20. мај ст. ст.: „Најзад би посечен мачем и пресели се у живот вечни 284. године.“ This folder held no `dates` object at all until now, and neither doxologia nor saint.gr gave it a year. The reign the entry names, „у време царовања Нумеријанова“, is given no bounds on the page and nothing is built on it; the eighteen years the entry gives his age are a duration and no year of birth is reckoned from them. The year is given of Thalaleus, in the sentence about his own beheading, and is deliberately not carried to the two executioners who died earlier in the same scene."
+    }
+  },
+  "related": [
+    "alexander-companion-of-thalaleus",
+    "asterius-companion-of-thalaleus"
   ]
 }

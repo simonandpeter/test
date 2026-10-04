@@ -11,6 +11,11 @@
       "form": "Σιλβανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Σιλβανός ο Ταβεννησιώτης», with the rank word left off."
+    },
+    {
+      "form": "Силуан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. мај ст. ст., „Преподобни Силуан.“ Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the heading leaves a bare forename and nothing else — no see, no epithet, no place. **This is a deliberate exact-form fold and it was measured before drafting, not discovered after.** `silvanus-of-gaza` already carries „Силуан“ as its `sr` form, off this same book's Julian 4 May, and the two are two men: a hieromartyr bishop of Gaza beheaded with forty soldiers on one day against an Egyptian ascetic and disciple of Pachomius on another. The Prologue offers nothing to tell the forms apart, and BRIEF-SERBIAN.md §6 forbids inventing a fuller one; the fold is the book's and is read in this batch's commit message. The spelling is this book's own, Силуан and not Силван, and is stored exactly as printed."
     }
   ],
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.05.2026 (15. мај ст. ст.) — „Преподобни Силуан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's third entry of the day, three sentences long, and the same menologion 15/5 saint.gr keeps him on — **and it is the identification, not the date, that settles him.** The entry makes him a disciple of Saint Pachomius, and the Prologue prints Pachomius the Great as its first entry of this very day; saint.gr puts «Όσιος Σιλβανός ο Ταβεννησιώτης» beside Pachomius at Tabennisi in the Upper Thebaid on the same day. Same day, same master, same place: one man, and this folder's only other candidate among the fifteen Silvanus-and-Silouan folders is `silvanus-of-gaza`, whom this same book keeps on the Julian 4 May as a hieromartyr bishop — two days, two accounts, two men. **New here, and all of it**: that he had been **a comedian, playing the fool over everything and everybody**, before the love of Christ warmed him; and his one recorded saying, „Готов сам живот свој дати, само да бих добио опроштај грехова“. **No year**: the Prologue gives none, so the `floruit` of the fourth century read off saint.gr stands untouched, and the gift of tears and the gift of prophecy the Greek page knows are not in this entry at all. `types` untouched — Преподобни is the `venerable` the folder carries and комедијант is a trade and no rank. No `locations`; the entry names no place. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

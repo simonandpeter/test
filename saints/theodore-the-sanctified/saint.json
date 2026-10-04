@@ -6,6 +6,11 @@
       "form": "Teodor cel Sfințit",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 mai, «Sfântul Cuvios Teodor cel Sfințit»."
+    },
+    {
+      "form": "Теодор Освештани",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 16. мај ст. ст., „Преподобни Теодор Освештани.“ Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the fuller form is left. **Освештани is kept**: it is the epithet „the Sanctified“ that this folder's own display name carries and not a rank — doxologia's life devotes a whole appended note to arguing why he is called it — and keeping it is also what saves this folder from the bare «Теодор» that four other folders now share. Measured before drafting with `foldchk.py`: no folder in the corpus holds this form in any language."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.05.2026 (16. мај ст. ст.) — „Преподобни Теодор Освештани.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion 16/5 the Romanian row already carries, so nothing moved. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „Упокојио се мирно и преселио у царство вечне светлости 368. године“ → `death` 368. **No other book read for this folder gives a year at all** — doxologia's life ends „he went to the Lord in deep old age“ and the folder has never had a `dates` object — so there is nothing to widen and nothing to reconcile. **THE TWO BOOKS CONTRADICT EACH OTHER ON HIS BIRTH AND NEITHER IS CHOSEN.** The Prologue opens „Рођен и одрастао као незнабожац, но као младић дошао до познања праве вере, крстио се“ — born and raised a heathen, come to the faith as a young man and then baptised — where doxologia has him „born of rich and honoured Christian parents“ with his first zeal kindled at fourteen at a feast kept in their house on 6 January. **This is a real disagreement and not a gap**, it concerns no year, and the added paragraph says both and chooses neither; nothing in `dates` or `types` turns on it. **New here**: that he **fled to Pachomius secretly from his parents**; that Pachomius tonsured him and loved him for his uncommon zeal and obedience; that **when his mother came to call him home he would not even show himself to her** but prayed that God would enlighten her — and that **she neither took her son home nor went home herself, but entered the women's monastery nearby that Pachomius's own sister governed, and was tonsured**; that **his own brother came after a time and was tonsured too**; that **the bishop of Панопољ asked Pachomius for a monastery** and Pachomius took Theodore along and gave him the chief charge of building it; and that **after Pachomius's death he became abbot of all Pachomius's monasteries**. **Two people named and neither gains a folder, by the coordinator's third ruling.** His brother is named „Пафнутије“ — **the same Пафнутије the 15 May entry lists among Pachomius's ten disciples**, and still with nothing to tell him from the corpus's several Paphnutius folders, so he is in the prose as „his own brother“ and not by name. Pachomius's sister is **not named in the entry at all**, which is also why the day's verse on 15 May, which is about her, named her only as „Сестра Авве“. **Petronius, whom doxologia puts between Pachomius and Theodore, is absent from this entry**; nothing is claimed against doxologia on it. `types` untouched: Преподобни is the `venerable` the folder carries and „поста игуманом“ is the `abbot` it carries. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -75,5 +90,14 @@
   "related": [
     "pachomius-the-great",
     "theodore-of-sykeon"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 368,
+      "latest": 368,
+      "display": "368",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 16. мај ст. ст.: „Упокојио се мирно и преселио у царство вечне светлости 368. године.“ This folder held no `dates` object at all until now, and no other calendar read for it gives a year: doxologia's life closes with „deep old age“ and no number, and the Greek and Russian rows are undocumented. No year of birth is given by either book."
+    }
+  }
 }

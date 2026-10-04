@@ -12,6 +12,11 @@
       "form": "Ιωάννης ο Βλαδίμηρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Μαΐου, «Άγιος Ιωάννης ο Βλαδίμηρος ο βασιλεύς και θαυματουργός», with «Άγιος» and the two rank words left off; the second name is kept because the page's own body carries it — «Ο Άγιος Μάρτυς Ιωάννης του Βλαδιμήρου»."
+    },
+    {
+      "form": "Јован Владимир",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. мај ст. ст., „Свети мученик Јован Владимир, краљ српски.“ — Свети is not a rank, мученик is the `martyr` this corpus puts in `types` and „краљ српски“ is the `king` it puts there too; strip them and the fullest form the calendar gives is left. **Владимир is kept because it is a second personal name and not a rank or a see**, and because the body uses the two names separately — „дозва на превару Владимира“ — so the heading’s pair is the fuller form. Keeping it also keeps this folder out of the nine-wide bare «Јован» fold that `john-of-gothia` had to join on 19 May, which was measured and not assumed: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јован Владимир» and nine holders of a bare «Јован». The Greek form on this folder, «Ιωάννης ο Βλαδίμηρος», is the same pair of names."
     }
   ],
   "dates": {
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.06.2026 (22. мај ст. ст.) — „Свети мученик Јован Владимир, краљ српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, on the same menologion 22/5 the Greek row already carries, and **a king of the Serbs read in the Serbian book, so this entry is the nearest thing to a primary source this folder will get.** saint.gr’s account is one paragraph and this one is a reign. **`dates` untouched**: the Prologue’s „посече 1015. године“ is exactly the `death` of 1015 the folder already holds off saint.gr’s head line, so there is nothing to widen; and **this book gives no year of birth, so the `birth` of „10th century“ stands with the contradiction its own note records** — saint.gr dating a tenth-century birth into a reign it puts at 867 to 886 — which this reading can neither close nor worsen. **`virgin` IS REFUSED, AND IT IS THE 16 MAY REFUSAL IN A SHARPER FORM.** „Као владар мудар, милостив, кротак, **девствен** и храбар“ — virgin is plainly said of him, and Девица maps to `virgin` in BRIEF-SERBIAN.md §5. **But `src/lib/honorific.js`’s `PRECEDENCE` tests `martyr && virgin` for `virgin-martyr`, second in the whole list**, so adding it to a folder that already carries `martyr` would print **Virgin Martyr John Vladimir** over a Serbian king — a title the Church does not give him and which no calendar read for this corpus prints. **So it is not added, and the virginity is in the prose.** This is the second rank refused in the wave for what it would print, after `monk` on `nicholas-the-mystikos` on 16 May, and the first where the refused word is plainly in the source. `king`, `martyr` and `wonderworker` are all held and all three are corroborated here: „краљ српски“, „посече“, and the numberless wonders at the relics. **New here, and nearly the whole of it**: that he was **of a princely family, out of Захумље**; that **his grandfather was Хвалимир and his father Петрислав**; that as a ruler he was **wise, merciful, meek, virgin and brave**, prayed earnestly and **built and helped churches of his own will**; that he had **hard struggles within against heretics and Bogomils and without against the emperors Samuel and Basil**; that **Samuel took him by a trick and threw him in prison**, and that **an angel of God appeared to him there and foretold that he would soon be freed but would end a martyr all the same**; that **Samuel came to know him better, came to love him, and gave him his daughter Косара to wife**; that **when Samuel died his son Радомир reigned, and Radomir’s cousin Владислав killed Radomir and then called Vladimir to him by a trick and cut him down too**; that **his relics rest incorrupt in his monastery near Elbasan** and have worked numberless wonders through the centuries; and that **a church was raised to him in 1925 at the monastery of Saint Naum, as its ktitor**. **SEVEN PEOPLE NAMED AND NOT ONE GAINS A FOLDER OR A ROW, BY RULING 3.** Хвалимир, Петрислав, Косара, Радомир and Владислав are a grandfather, a father, a wife, a brother-in-law and a murderer, and **the first four are kinships the body narrates, which is the test that owes a row** — but no calendar read for this corpus keeps any of them, `ls saints | grep -iE 'kosara'` returns nothing, and the coordinator’s third ruling forbids minting a folder. **Цар Самуило is the same emperor of the Macedonians who carried Achillius’s relics to Prespa in this wave’s 15 May entry**, and he has no folder there either; цар Василије is Basil II and has none. All seven are in the prose, unlinked, with no rows. **And Saint Naum takes no row**: `naum-of-ohrid` is in the corpus, but a church raised to this king at that monastery in 1925 is **a dedication, and a dedication is not a relation** — BRIEF.md §4’s ruling, applied as it was to Saint Sava’s image on the banners of `theodore-of-vrsac` on 16 May. He is not named in the prose at all, so the linker does not reach him. **A YEAR WITH NO FIELD TO HOLD IT**: the 1925 of that church is neither a birth, a death nor a floruit, the fifth such year in seven days; it stands in the prose. No `locations`, although Zahumlje and Elbasan are named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

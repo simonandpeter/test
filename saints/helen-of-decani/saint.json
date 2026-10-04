@@ -11,10 +11,16 @@
       "form": "Ελένη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαΐου, «Αγία Ελένη η πριγκίπισσα», with the rank word left off."
+    },
+    {
+      "form": "Јелена Дечанска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Преподобна Јелена Дечанска (3. јун).“ — Преподобна is the venerable rank, which this corpus puts in `types`, and „(3. јун)“ is the new-style date of the day and not part of the name; strip both and the fullest form the calendar gives is left. **Дечанска is kept because it is an epithet and not a see**, and because the body says outright where it comes from — she is buried at Dečani and her relics are there. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM`, and a bare «Јелена» is held by none either — **so the two Helens of this one day are told apart by the book itself**, which is the first time in the wave that has happened: the empress is Јелена in the first entry’s heading and this one is Јелена Дечанска in the third’s, so no fold is made and none had to be read."
     }
   ],
   "related": [
-    "joasaph-of-meteora"
+    "joasaph-of-meteora",
+    "stephen-of-decani"
   ],
   "attestations": [
     {
@@ -44,11 +50,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.06.2026 (21. мај ст. ст.) — „Преподобна Јелена Дечанска (3. јун).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, four sentences long, on the same menologion 21/5 the Greek row already carries — and **the parenthesis in its heading was checked before this row was written, because it looked like a second day and is not one.** „Преподобна Јелена Дечанска (3. јун)“: **21 May plus thirteen is 3 June**, and the Prologue marks a real cross-reference with „в.“ or „види“, as it did on 16, 17 and 19 May — so this is the new-style date of this same day and not a pointer. **And it was verified rather than reasoned**: `sr-cand.mjs 06-03` was run, and the Prologue’s Julian 3 June prints Lucillian and his companions, the hieromartyr Lucian and the tsarevich Demetrius, and **no Helen at all**. The 21 May row stands and no second-day note is owed. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT, AND THE QUALIFIER IS NOT INVENTED INTO BOUNDS**: „Упокојила се средином XIV века“ → `death` 1301–1400, „14th century“. **Средином, „in the middle of“, is recorded in the note and is NOT turned into a narrower interval**: bounds of 1325–1375 would be this reader’s and not the book’s, and the century is what the page states. saint.gr gave this folder no year at all. **A KINSHIP NARRATED, AND IT TAKES A ROW IN BOTH DIRECTIONS.** „Јелена је сестра Стефана Дечанског“ — she is the sister of Stefan Dečanski, which is the test that owes a row, and `stephen-of-decani` is in the corpus with a `death` of „1331 or 1336“. **Neither folder related the other**: hers related only `joasaph-of-meteora` and his only `nicholas-of-myra` and `stephen-milutin`. **Both rows are written in this batch**, his in an entry of its own that carries no attestation row, because the Prologue does not keep him on this day and nothing of his is claimed from it. **New besides**: that she is **buried in the monastery of Dečani, where her relics are to this day**, which is where her own by-name comes from; and that **her portrait survives in the church at Gornji Matejevac near Niš**, which no other book read for her mentions. `types` untouched — Преподобна is the `venerable` she carries, and the `princess` is not contradicted here: the entry calls her a king’s sister and gives her no rank of her own. No `locations`, although Dečani, Gornji Matejevac and Niš are all named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 21. мај ст. ст.: „Упокојила се средином XIV века“ — she reposed **in the middle of** the fourteenth century. **The qualifier is recorded and deliberately not turned into bounds**: 1325–1375 would be this reader’s interval and not the book’s, and the century is what the page states. This folder held no `dates` object at all until now and saint.gr gave it no year. Her brother `stephen-of-decani` carries a `death` of „1331 or 1336“, which falls in that middle and is not borrowed onto her."
+    }
   }
 }

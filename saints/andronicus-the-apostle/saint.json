@@ -11,6 +11,11 @@
       "form": "Ανδρόνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιοι Ανδρόνικος και Ιουνία οι Απόστολοι», with the rank word left off."
+    },
+    {
+      "form": "Андроник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. мај ст. ст., „Свети апостол Андроник.“ Свети is not a rank; апостол is the `apostle` this folder carries in `types`; strip them and the bare forename is left, and the heading offers nothing else — the Pannonia, the kinship and the martyrdom are all in the body. **A deliberate exact-form fold, measured with `foldchk.py` before drafting**: `andronicus-of-antioch` already carries „Андроник“ as its **`ru`** form, so the collision is across two languages that spell the name identically. Two men: a companion of Junia among the Seventy, bishop in Pannonia, against a martyr of Antioch. The fold is read in this batch's commit message."
     }
   ],
   "sex": "male",
@@ -26,7 +31,8 @@
     }
   ],
   "related": [
-    "junia-the-apostle"
+    "junia-the-apostle",
+    "paul-the-apostle"
   ],
   "attestations": [
     {
@@ -66,8 +72,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.05.2026 (17. мај ст. ст.) — „Свети апостол Андроник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-30&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion 17/5 the Romanian and Greek rows already carry, so nothing moved. **THE SEE IS SETTLED, AND IT IS THE FIND OF THIS ENTRY.** This folder's own life records that „Andronicus was bishop in Panania, **as doxologia's life spells the place**“ — a spelling the earlier reader would not correct and could not place. The Prologue reads „Андроник би постављен за епископа Паноније“ and then „проповедаше Јеванђеље по целој Панонији“, twice and in two cases: **Pannonia**. Doxologia's Panania is a corruption of it. **The `office` field is still empty and this reader did not fill it**, because `upgrade.py` has no key for `office` and a hand-edit is not sanctioned — **so the one thing this reading licenses is the author's, in one commit: `office: \"Bishop of Pannonia\"` on a folder that already carries `bishop` in `types`.** **And the same sentence narrows doxologia's claim.** That page makes him „a preacher and teacher … not of one city or one country only but of the whole world“; the Prologue says he did not live in one place but preached the Gospel **through the whole of Pannonia**. The added paragraph says both and chooses neither. **New besides**: that **both of them had the gracious power of wonderworking**, by which they drove demons out of men and healed every infirmity and every sickness — the corpus's life had the healings off doxologia but not the gift named; and that **both suffered for Christ and so received a double crown, of apostleship and of martyrdom**, which is the same reading doxologia's „common debt of nature“ sentence carries. The finding of the relics „у пределима Евгенијским (в. 22. фебруар)“ is the same relic-finding the folder already records from doxologia, and **it is a feast and not a row** — the cross-reference to 22 February is the Prologue's own and no second commemoration is written. **`paul-the-apostle` IS ADDED to `related`.** „Сродник апостола Павла, као што сам Павле пише (Рм 16, 7)“ is **a kinship the body narrates**, which is the test that owes a row, and Paul has a folder; the corpus's life already quoted the verse without the row. `types` untouched — апостол is the `apostle` and „би постављен за епископа“ the `bishop`, both held, and Пострадаше the `martyr`. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαΐου, «Άγιος Νικόλαος εκ Μετσόβου», with the rank word and the town left off."
+    },
+    {
+      "form": "Николај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 16. мај ст. ст., „Свети новомученик Николај.“ Свети is not a rank; новомученик is the `new-martyr` this folder carries in `types`; strip them and the heading leaves a bare forename and nothing else — the Epirus, the Trikala and the 1617 are all in the body and none of them is part of the name. **A deliberate exact-form fold, measured with `foldchk.py` before drafting**: `nicholas-of-pskov` already carries „Николај“ as its `sr` form, off this same book's Julian 28 February, where he is „Свети блажени Николај, јуродиви псковски“ — a fool for Christ of Pskov dead in 1576, against a new martyr of Epirus beheaded at Trikala in 1617. Two days, two accounts, two men; the fold is read in this batch's commit message. The spelling is this book's own, Николај and not Никола, and is stored as printed."
     }
   ],
   "sex": "male",
@@ -55,11 +60,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.05.2026 (16. мај ст. ст.) — „Свети новомученик Николај.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-29&prolog=1",
+        "year": 2026
+      },
+      "note": "**`sr-cand.mjs`'s day list could not see this folder, and the reason is on the folder already.** The Romanian and Greek rows keep him on the menologion **17/5** and the Prologue keeps him on the **16/5**, so the day list, which matches on the menologion number, offered eighteen folders and not this one. **What settles it is a sentence this corpus already holds**: this folder's own life records that saint.gr's page says „some synaxaria, Nikodemos the Hagiorite's among them, keep his memory on 16 May“, and that the seventeenth is the day of his formal entry in the calendar by the Ecumenical Patriarchate in 1988. **The Prologue is one of those synaxaria.** The identification is then exact on every particular the entry gives: „Родом из Епира“ against a folder named for Metsovo in Epirus; „мучен од Турака“ against a `new-martyr` under Ottoman rule; „посечен у Трикали“ against a life whose whole scene is Trikala in Thessaly; and „1617. године“ against saint.gr's head line of 1617. **Two days and four churches, and it is not a conflict**: the Romanian and Greek rows stay on 17 May and neither was moved. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: `death` 1617, the year both books give, so nothing to widen. **New here, and the Prologue is the only book that tells the end**: that he was **beheaded**, where saint.gr's life breaks off at his resolve and names no manner of death at all; that **his head is kept to this day in one of the monasteries of Meteora in Thessaly**; and that he **works many wonders, heals the gravest sicknesses and is known above all for driving the locusts off the fields**. `types` untouched — новомученик is the `new-martyr` the folder carries, and „Чини многа чудеса“ is wonders worked and not the Чудотворац title. No `locations`, although Epirus, Trikala, Meteora and Thessaly are all named, as the Greek page already names Metsovo and Trikala; this folder has never carried coordinates. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1617,
+      "latest": 1617,
+      "display": "1617",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 16. мај ст. ст.: „За веру Христову мучен од Турака и посечен у Трикали 1617. године.“ The same year stands in saint.gr's head line for him, which this folder's life records as „dead, by saint.gr's head line, in 1617“; the folder held no `dates` object at all until now, and doxologia names no year."
+    }
   }
 }

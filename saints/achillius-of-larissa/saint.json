@@ -11,13 +11,19 @@
       "form": "Αχίλλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαΐου, «Όσιος Αχίλλιος Επίσκοπος Λαρίσης», with the rank word and the see left off."
+    },
+    {
+      "form": "Ахил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 15. мај ст. ст., „Свети Ахил, епископ лариски.“ Свети is not a rank; „епископ“ is the `bishop` this folder carries in `types` and „лариски“ the see it carries in `office`, and **stripping a rank and a see to reach the bare form is the reading BRIEF-SERBIAN.md §6 asks be said in the note** — the heading leaves nothing else, so the bare forename is the fullest form this book gives. The body repeats it bare twice, „свети Ахил“ and „светог Ахила“, and prints Ахил and Аил as the names of the island in Prespa. Measured before drafting: no folder in the corpus holds this form in any language, the four other Achillius-like folders being `achillas`, `achillas-of-alexandria`, `achilles-the-deacon-of-the-caves` and this one."
     }
   ],
   "sex": "male",
   "office": "Bishop",
   "types": [
     "hierarch",
-    "bishop"
+    "bishop",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -56,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.05.2026 (15. мај ст. ст.) — „Свети Ахил, епископ лариски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The Prologue's second entry of the day, the same menologion 15/5 the Romanian and Greek rows already carry, and plainly the same man: born in Cappadocia, at the First Ecumenical Council against the Arians, reposed at Larissa. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „Свети Ахил упокојио се мирно у Лариси 330. године“ → `death` 330, which is exactly the year saint.gr's head line «Οσιος Αχιλλιος Επισκοπος Λαρισης (; - 330)» prints and an earlier reader recorded in the Greek row without writing. **Two books, one year, so no widening.** **`wonderworker` IS ADDED to `types`**, off „Овај велики јерарх и чудотворац“ — the Prologue's own title for him, which BRIEF-SERBIAN.md §5 maps as Чудотворац → wonderworker, and which the oil from the stone and doxologia's own „drove demons out of men and worked many other wonders“ both bear out. **It changes nothing in print**: `wonderworker` is absent from `PRECEDENCE` in `src/lib/honorific.js`, so `hierarch` still composes the rank and the word reaches the reader only in the saint page's facts line. **New here, and the centre of the entry**: the stone he took up at the Council and the oil that flowed from it at his second word, which neither doxologia nor saint.gr prints. **A translation of relics, and it is not a row**: „Самуил, цар македонски, када освоји Тесалију, пренесе мошти Ахилове у Преспу, на острво у језеру, које се прозва, а и данас зове Ахил, или Аил.“ BRIEF-SERBIAN.md §5 makes a пренос моштију a feast and not a folder, and it is no second commemoration either — the Prologue gives it no day — so it stands in the prose only. The emperor Samuel is a ruler of the Bulgarians and the Macedonians and no folder is minted for him; the bare forename in the prose links to nothing, as it does not in eight older lives. No `locations`: Cappadocia, Larissa and Prespa are all named and the folder has never carried coordinates. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -103,5 +119,14 @@
     "barnabas-of-soumela",
     "constantine-the-great",
     "sophronius-of-soumela"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 330,
+      "latest": 330,
+      "display": "330",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 15. мај ст. ст.: „Свети Ахил упокојио се мирно у Лариси 330. године.“ The same year stands in saint.gr's head line, «Οσιος Αχιλλιος Επισκοπος Λαρισης (; - 330)», which an earlier reader recorded in the Greek row and did not write; this folder held no `dates` object at all until now. Neither book gives a year of birth."
+    }
+  }
 }

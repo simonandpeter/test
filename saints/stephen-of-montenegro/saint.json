@@ -5,13 +5,19 @@
   "types": [
     "venerable",
     "monk",
-    "hermit"
+    "hermit",
+    "abbot"
   ],
   "names": [
     {
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Μαΐου, «Όσιος Στέφανος», with the rank word left off."
+    },
+    {
+      "form": "Стефан Пиперски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. мај ст. ст., „Преподобни Стефан Пиперски.“ — Преподобни is the venerable rank, which this corpus puts in `types`; strip it and the fullest form the calendar gives is left. **Пиперски is kept because it is an epithet and not a see**: Piperi is the place of his cell and of his relics, the Prologue prints it in the heading as part of the name, and this is the one Serbian saint of these six days whose by-name the book gives outright. **Keeping it also keeps this folder out of the twelve-wide bare «Стефан» fold** that `stephen-patriarch-of-constantinople` had to join on 17 May for want of any by-name at all — measured, not assumed: `foldchk.py` returns twelve holders of «Стефан», this wave having added the twelfth on 17 May, and `NO FOLDER HOLDS THIS FORM` for «Стефан Пиперски»."
     }
   ],
   "attestations": [
@@ -42,11 +48,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.06.2026 (20. мај ст. ст.) — „Преподобни Стефан Пиперски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 20/5 the Greek row already carries — and **this is a saint of the Serbian church read in the Serbian book, so the entry is the nearest thing to a primary source this folder will ever get.** saint.gr’s account is one paragraph and places him in Montenegro in the seventeenth century, a monk of **Morača** driven out by the Turks, seven years hidden among shepherds, from 1660 thirty years of unceasing prayer in a cave, and his relic found four years after his repose by the light in the cave. **The two accounts agree on the monastery, the Turks and the cave, and this one adds the family, the three places, the office and the day.** **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „Упокојио се мирно у Господу 20. маја 1697. године“ → `death` 1697. **saint.gr gave no year of birth and no year of death at all**, only the century and the 1660 of the cave, so there is nothing to widen; 1697 falls inside the seventeenth century it names. **And the arithmetic the two pages invite is deliberately not done**: 1660 plus the thirty years of prayer is 1690, not 1697, and **a duration is not a date** — the fourth such refusal in six days. **THERE IS NO FIELD FOR A DAY OF DEATH**, and this entry gives one: **20 May**, which is the day all three calendars keep him on, so it stands in the prose and in this note — the fourth day of death this wave has had to put in prose, after Cyril’s 14 February, Methodius’s 6 April and Isidore of Rostov’s 14 May. **`abbot` IS ADDED to `types`.** „подвизавао се најпре у манастиру Морачи, где је и игуманом био“ — Игуман maps to `abbot` in BRIEF-SERBIAN.md §5, and **saint.gr says only that he became a monk there**, so this book is where the office is stated. **It changes nothing in print**: `abbot` is on the `MONASTIC` list in `src/lib/honorific.js`, which implies the `venerable` this folder already carries, so `venerable` still composes the rank — unlike `monk` on `nicholas-the-mystikos` on 16 May, where the same implication would have demoted a Confessor. **The Prologue marks it „По предању“, by tradition**, and that hedge is carried into the prose rather than dropped. **New besides**: that he was born **in the Nikšić tribe, in the village of Župa**, of poor but devout parents **Радоје** and **Јаћима**; that after Morača he settled at **Турман Ровачки, at the place now called Ќелиште**; that he then moved to **Пипери**, to a single cell, where he stayed until death; and that **his relics rest there still and glorify Christ with many wonders**. **The parents take no folders and no rows** — no calendar read for this corpus keeps either — and the wonders at the relics are **not** read as the Чудотворац title, the same distinction that refused `wonderworker` to Pachomius on 15 May and granted it to the prince of Vologda on 19 May. **THE DISPLAY NAME IS THE AUTHOR’S.** The folder is „Stephen of Montenegro“, a name built from saint.gr’s „in Montenegro, in Serbia“; **the Serbian church’s own book calls him Пиперски, of Piperi**, which is the place his cell and his relics are in. `upgrade.py` has no `display_name` key and §10 reserves the English display name, so nothing was renamed: „Stephen of Piperi“ is a one-line commit on this reading. **No `locations`**, although four places are now named, and this folder has never carried coordinates. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1697,
+      "latest": 1697,
+      "display": "1697",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 20. мај ст. ст.: „Упокојио се мирно у Господу 20. маја 1697. године.“ This folder held no `dates` object at all until now: saint.gr gave only the seventeenth century, the 1660 in which he entered the cave and thirty years of prayer in it, and no year of birth or death. 1697 falls inside that century. **Nothing is reckoned from the thirty years**, which would have given 1690. **The day, 20 May, is the day all three calendars keep him on and there is no field for a day of death**, so it is in the life and in the attestation note."
+    }
   }
 }

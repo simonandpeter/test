@@ -11,6 +11,11 @@
       "form": "Ελένη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Μαΐου, «Άγιοι Κωνσταντίνος και Ελένη οι Ισαπόστολοι», with the rank word left off."
+    },
+    {
+      "form": "Јелена",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. мај ст. ст., „Свети цар Константин и царица Јелена.“ — царица is the `empress` this corpus puts in `types`; strip it and the bare forename is left, and the body repeats it bare twice, „царица Јелена“ and „Света Јелена“. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — **and the day’s third entry gives the other Helen Дечанска in its own heading, so the two Helens of this one day do not fold**, which is the first time in the wave that the book has told two namesakes of one day apart by itself."
     }
   ],
   "sex": "female",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.06.2026 (21. мај ст. ст.) — „Свети цар Константин и царица Јелена.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry names her in its heading beside her son and gives her a passage of her own, on the same menologion 21/5 the Romanian and Greek rows already carry. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „У својој осамдесетој години представи се ова света жена Господу 327. године“ → `death` 327. **Neither doxologia nor saint.gr gave this folder a year**, so there is nothing to widen. **The eightieth year is a lifespan and no birth is reckoned from it**: 327 less 80 is 247, and nothing is derived — the sixth such refusal in seven days. **And the contrast with her son’s row on this same entry is the whole lesson of the day**: the book states her year and not his, so she is dated and he is not, from one paragraph. **New here**: that she **„ревноваше много за веру Христову“**, was full of zeal for the faith of Christ; that **she visited Jerusalem and found the Honourable Cross of the Lord**; and that **she built the church of the Resurrection on Golgotha and many other churches besides through the Holy Land**. `types` untouched — царица is the `empress` this folder carries, which BRIEF-SERBIAN.md §5 asks be read rather than assumed between empress and queen, and the `equal-to-the-apostles` is the title all three calendars give her. **No `related` row is owed**: `constantine-the-great` and `sylvester-of-rome` are both rows already, and the finding of the Cross is an event and not a person. No `locations`, although Jerusalem and Golgotha are named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -148,5 +163,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 327,
+      "latest": 327,
+      "display": "327",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 21. мај ст. ст.: „У својој осамдесетој години представи се ова света жена Господу 327. године.“ This folder held no `dates` object at all until now, and neither doxologia.ro nor saint.gr gave it a year. **The eightieth year is a lifespan and no `birth` is reckoned from it**, which would have given 247."
+    }
   }
 }

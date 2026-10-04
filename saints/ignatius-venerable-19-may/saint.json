@@ -4,13 +4,20 @@
   "sex": "male",
   "types": [
     "venerable",
-    "monk"
+    "monk",
+    "prince",
+    "wonderworker"
   ],
   "names": [
     {
       "form": "Ιγνάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Όσιος Ιγνάτιος», with the rank word left off; the life page adds that his name in the world was Ιωάννης."
+    },
+    {
+      "form": "Јован Вологодски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. мај ст. ст., „Свети кнез Јован Вологодски.“ — Свети is not a rank and кнез is the `prince` this batch adds to `types`; strip them and the fullest form the calendar gives is left. **This folder is displayed as Ignatius and the form stored for it is John of Vologda, and that is deliberate.** BRIEF-SERBIAN.md §6 allows **one `sr` form per folder, the fullest the calendar gives**, and the calendar gives the princely name in its heading while the monastic name stands in the body’s last clause, „доби име Игњатије“. **«Јован Вологодски» is the fuller of the two and is the one stored; «Игњатије» is recorded in this note and not as a second form.** This is the inverse of the «Кирил (Константин)» case the brief settles — there the name in the world stood in a parenthesis beside the stored one, here the name in the world is the heading and the monastic name is in the body — and **swapping the two is one commit if the author prefers the folder’s own name.** Measured before drafting with `foldchk.py`: «Јован Вологодски» and «Игњатије» are both held by no folder in any language, while a bare «Јован» is held by eight — so keeping Вологодски also keeps this folder out of that fold."
     }
   ],
   "dates": {
@@ -57,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.06.2026 (19. мај ст. ст.) — „Свети кнез Јован Вологодски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, on the same menologion 19/5 the Greek row already carries, and **the same man beyond doubt**: saint.gr’s two sentences say he was called **John in the world**, was born in Russia in **1477** the son of the prince Andrew Vasilyevich and of Helen, and was tonsured a monk with the name **Ignatius**, its head line closing him in **1522**. This entry heads him „Свети кнез Јован Вологодски.“ and closes „Пред смрт се замонаши Јован и доби име Игњатије.“ — the same John, the same Ignatius, the same tonsure. **THE PLACE AND THE IDENTITY ARE THIS BOOK’S GIFT, AND THE DISPLAY NAME IS THE AUTHOR’S.** The folder is called **„Ignatius (19 May)“**, a name chosen because saint.gr gave nothing to distinguish him by; this entry gives **Вологодски**, of Vologda, and **кнез**, prince, in his own right rather than as a prince’s son. **`upgrade.py` has no `display_name` key** and the English display name is one of the nine things `docs/CORPUS.md` §10 reserves, so nothing was renamed: **„Ignatius of Vologda“ is a one-line commit the author can make on this reading.** **THE SAME NUMBER, THIRTY-TWO, READ TWO DIFFERENT WAYS BY TWO BOOKS — AND NEITHER IS WRITTEN.** saint.gr: „At the age of thirty-two he left the world and was tonsured a monk with the name Ignatius.“ The Prologue: „одмалена он би … вргнут у тамницу … где проведоше пуне тридесет две године“ and the tonsure „пред смрт“, before his death. **One book makes thirty-two his age at the tonsure, the other the length of the imprisonment with the tonsure at the end of his life**, and 1477 + 32 = 1509 against a death in 1522. **Nothing is derived from either**: `dates` is untouched, `birth` 1477 and `death` 1522 both stand as saint.gr gave them, and a duration is not a date — the same refusal made of Pachomius’s seventy-four years on 15 May and of Christina’s sixteen on 18 May. **Which reading of the thirty-two is right is the author’s**, and the Prologue’s is the one that fits a death in 1522. **TWO `types` WORDS ADDED, NEITHER OF THEM CHANGING WHAT IS PRINTED.** „Свети кнез“ gives `prince` by BRIEF-SERBIAN.md §5 — Кнез → prince — and the entry’s whole second line, „Чудотворац.“, is the Чудотворац that §5 maps to `wonderworker`, standing alone as a title and not as a wonder narrated. **Both are absent from `PRECEDENCE` in `src/lib/honorific.js`**, so `venerable` still composes the rank over him and the two words reach the reader only in the saint page’s facts line. **New besides**: that he was **God-fearing and devout**; that **his own uncle, the prince John Vasilyevich, threw him into prison from his early years**; and that **his brother Dimitry was shut up with him for the whole thirty-two years**. **Neither the uncle nor the brother gains a folder or a row**: no calendar read for this corpus keeps either, and by the coordinator’s third ruling nothing is minted for them — they are in the prose, unlinked. No `locations`, although Vologda is now named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
