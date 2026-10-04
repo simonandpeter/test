@@ -6,6 +6,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Μελάσιππος, Κασσίνη και Αντώνιος και Σαράντα Παίδες», with the rank word left off."
+    },
+    {
+      "form": "Антонин Анкирский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Антонин Анкирский, мч.», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «сына их Антонина»."
     }
   ],
   "sex": "male",
@@ -20,17 +25,26 @@
   "dates": {
     "death": {
       "earliest": 361,
-      "latest": 361,
-      "display": "361",
+      "latest": 363,
+      "display": "361 or 363",
       "basis": "traditional",
-      "note": "saint.gr's head line for him, «Αγιος Αντωνιος (; - 361)», and its text: «έζησαν κατά τους χρόνους του αυτοκράτορα Ιουλιανού του Παραβάτη (361 μ.Χ.)»."
+      "note": "Two calendars and neither is chosen. saint.gr's head line reads «Αγιος Μελασιππος (; - 361)» and its text puts the three «κατά τους χρόνους του αυτοκράτορα Ιουλιανού του Παραβάτη (361 μ.Χ.)», which this folder held alone; days.pravoslavie.ru prints «(363)» on its line for 7 ноября ст. ст., «Мчч. Меласиппа и Касинии и сына их Антонина (363).», and its life says they suffered «в царствование императора Юлиана Отступника в городе Анкире во Фригии в 363 году». Julian reigned from 361 to 363 and both years fall inside the reign, so the interval is the two readings and nothing is chosen."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Мчч. Меласиппа и Касинии и сына их Антонина (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +74,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь мучеников», a common of martyrs printed on the day page under no saint's name, on a day whose martyr entries are the thirty-three of Melitene, Theodotus the innkeeper of Ancyra, Melasippus, Cassine and their son Antoninus, and Auctus, Taurion and Thessalonike",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Лик мученический ясен, полк светоносен,/ сошед к нам разумно,/ Церковь днесь просветил есть чудными зарями./ Темже, празднующе честную память их,/ просим от Тебе, Спасе наш:/ тех молитвами от бед избави нас,// да поем Ти: аллилуия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Кондак мучеников», a common of martyrs printed on the day page under no saint's name, beside the common troparion above",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The choir of the martyrs is bright, a host bearing light; coming down to us with understanding it has enlightened the Church today with wondrous radiance. Therefore, keeping their honoured memory, we ask of thee, our Saviour: by their prayers deliver us from troubles, that we may sing to thee: Alleluia.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

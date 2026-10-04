@@ -15,13 +15,23 @@
   ],
   "sex": "unknown",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Мучеников в Мелитине: Иерона , Исихия , Никандра , Афанасия , Маманта , Варахия , Каллиника , Феагена , Никона , Лонгина , Феодора , Валерия , Ксанфа , Феодула , Каллимаха , Евгения , Феодоха , Острихия , Епифания , Максимиана , Дукития , Клавдиана , Феофила , Гигантия , Дорофея , Феодота , Кастрикия , Аникиты , Фемелия , Евтихия , Илариона , Диодота и Амонита (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -108,6 +118,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ὁ ὑψωθεὶς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь мучеников», a common of martyrs printed on the day page under no saint's name, on a day whose martyr entries are the thirty-three of Melitene, Theodotus the innkeeper of Ancyra, Melasippus, Cassine and their son Antoninus, and Auctus, Taurion and Thessalonike",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Лик мученический ясен, полк светоносен,/ сошед к нам разумно,/ Церковь днесь просветил есть чудными зарями./ Темже, празднующе честную память их,/ просим от Тебе, Спасе наш:/ тех молитвами от бед избави нас,// да поем Ти: аллилуия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Кондак мучеников», a common of martyrs printed on the day page under no saint's name, beside the common troparion above",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The choir of the martyrs is bright, a host bearing light; coming down to us with understanding it has enlightened the Church today with wondrous radiance. Therefore, keeping their honoured memory, we ask of thee, our Saviour: by their prayers deliver us from troubles, that we may sing to thee: Alleluia.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -116,5 +158,14 @@
   "related": [
     "matronianus-brother-of-hieron",
     "antonius-brother-of-hieron"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 284,
+      "latest": 305,
+      "display": "under Diocletian and Maximian (284–305)",
+      "basis": "traditional",
+      "note": "Two readings on one page, and the reign is the interval. days.pravoslavie.ru's line for 7 ноября ст. ст., «Мучеников в Мелитине: Иерона , Исихия , Никандра , Афанасия , Маманта , Варахия , Каллиника , Феагена , Никона , Лонгина , Феодора , Валерия , Ксанфа , Феодула , Каллимаха , Евгения , Феодоха , Острихия , Епифания , Максимиана , Дукития , Клавдиана , Феофила , Гигантия , Дорофея , Феодота , Кастрикия , Аникиты , Фемелия , Евтихия , Илариона , Диодота и Амонита (III).», closes with «(III)», while the life behind the thirty-three name links sets the whole account in the reign of the co-emperors «Диоклетиан и Максимиан (284–305)», whose years that page prints itself. Neither doxologia.ro nor saint.gr gave this folder any year, so this is the first date it carries."
+    }
+  }
 }

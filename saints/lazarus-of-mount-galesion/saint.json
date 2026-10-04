@@ -11,6 +11,11 @@
       "form": "Λάζαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Όσιος Λάζαρος ο Θαυματουργός, ο Γαλλησιώτης», with the rank word left off."
+    },
+    {
+      "form": "Лазарь Галисийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Лазарь Галисийский, иеромонах», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Лазаря Галисийского»."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page lists two days, «17 июля (Перенесение мощей) , 7 ноября». The July day is the translation of his relics; that day page was not read here and one row per church is the schema, so it is recorded as a note and this folder renders on 7 ноября ст. ст. only."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Прп. Лазаря Галисийского (1053).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -111,6 +126,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Τῇ ὑπερμάχῳ."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Бденными молитвами,/ теченьми слезными столп омочил еси,/ и из глубины воздыханьми/ во сто трудов уплодоносил еси,/ и был еси пастырь, всем подая прощение,/ преподобне отче наш Лазаре:/ молися Христу Богу// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь преподобного Лазаря Галисийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With vigilant prayers and with streams of tears you wetted your pillar, and with sighs out of the depths you brought the fruit of your labours a hundredfold; and you became a shepherd, granting forgiveness to all, our venerable father Lazarus. Pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко светильника превеликаго/ Церковь Христова славит тя/ с веселием псаломски,/ темже не престай моляся Христу// дати всем прегрешений прощение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Кондак преподобного Лазаря Галисийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a very great lamp the Church of Christ glorifies you with gladness in psalms; therefore do not cease praying to Christ that forgiveness of offences be granted to all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -118,11 +165,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 1054,
+      "earliest": 1053,
       "latest": 1054,
-      "display": "1054",
+      "display": "1053 or 1054",
       "basis": "traditional",
-      "note": "saint.gr's head line for him, «Οσιος Λαζαρος ο Θαυματουργος, ο Γαλλησιωτης (; - 1054)», and its text: «πέθανε με αγιότητα σε βαθιά γεράματα το 1054 μ.Χ.»; the same page puts his birth in the eleventh century."
+      "note": "Two sources and neither is chosen. days.pravoslavie.ru prints «(1053)» on its line for 7 ноября ст. ст. and «Преподобный Лазарь скончался 72-х лет, в 1053 году» in his life, while saint.gr's head line reads «Οσιος Λαζαρος ο Θαυματουργος, ο Γαλλησιωτης (; - 1054)» and its text «πέθανε με αγιότητα σε βαθιά γεράματα το 1054 μ.Χ.», which this folder held alone until now. The Russian life gives his age at death as seventy-two; no page read gives the year of his birth, and none is inferred here."
     }
   }
 }

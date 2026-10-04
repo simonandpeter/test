@@ -6,6 +6,11 @@
       "form": "Αύκτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Αύκτος, Ταυρίων και Θεσσαλονίκη», with the rank word left off."
+    },
+    {
+      "form": "Авкт Амфипольский (Македонский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Авкт Амфипольский (Македонский), мч.», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Авкта»."
     }
   ],
   "sex": "male",
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Мчч. Авкта , Тавриона и Фессалоникии (739).»",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,64 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 739,
+      "latest": 739,
+      "display": "739",
+      "basis": "traditional",
+      "note": "The only year any source read gives these three, and nothing on the page corroborates it. days.pravoslavie.ru's line for 7 ноября ст. ст. is «Мчч. Авкта , Тавриона и Фессалоникии (739).», closing «(739)»; the life behind it gives no year, names no emperor and no persecutor but Thessalonike's own father, a pagan priest, and saint.gr's line «Άγιοι Αύκτος, Ταυρίων και Θεσσαλονίκη» gave the three of them no year at all. The figure is recorded because the calendar prints it and this note says that it stands alone."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь мучеников», a common of martyrs printed on the day page under no saint's name, on a day whose martyr entries are the thirty-three of Melitene, Theodotus the innkeeper of Ancyra, Melasippus, Cassine and their son Antoninus, and Auctus, Taurion and Thessalonike",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contest received from Thee, our God, the crowns of incorruption; for having Thy strength they overthrew the tormentors, and broke the powerless presumption of the demons. By their prayers, O Christ God, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Лик мученический ясен, полк светоносен,/ сошед к нам разумно,/ Церковь днесь просветил есть чудными зарями./ Темже, празднующе честную память их,/ просим от Тебе, Спасе наш:/ тех молитвами от бед избави нас,// да поем Ти: аллилуия.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Кондак мучеников», a common of martyrs printed on the day page under no saint's name, beside the common troparion above",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The choir of the martyrs is bright, a host bearing light; coming down to us with understanding it has enlightened the Church today with wondrous radiance. Therefore, keeping their honoured memory, we ask of thee, our Saviour: by their prayers deliver us from troubles, that we may sing to thee: Alleluia.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Таврион славный и Авкт дивный, огневи противистася и всем инем казнем,/ молитвами возмогающа;/ та убо молением сердца похваляюще,/ верою пресвятую и честную память ею совершим,/ душам просвещение почерпающа.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 ноября ст. ст. — «Тропарь мучеников Авкта и Тавриона», which names these two of the day's three and not Thessalonike",
+        "url": "https://days.pravoslavie.ru/Days/20261107.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Glorious Taurion and wondrous Auctus withstood the fire and every other punishment, prevailing by their prayers. Praising them therefore with the entreaty of the heart, let us in faith keep their most holy and honoured memory, drawing from it enlightenment for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
