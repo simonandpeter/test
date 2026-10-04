@@ -11,6 +11,11 @@
       "form": "Πατρίκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Μαΐου, «Άγιοι Πατρίκιος επίσκοπος Προύσας, Ακάκιος, Μένανδρος και Πολύαινος», with the rank word and the see left off."
+    },
+    {
+      "form": "Патрикије",
+      "lang": "sr",
+      "note": "Read out of the heading of the Охридски пролог’s first entry for 19. мај ст. ст., „Свети мученик Патрикије епископ бруски, са три презвитера: Акакијем, Менандром и Полиеном.“ — Свети is not a rank, мученик is the martyrdom this corpus puts in `types` as `hieromartyr`, and „епископ бруски“ is the second rank and the see, which go to `types` and `office`; **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note.** The body repeats it bare four times. Measured before drafting with `foldchk.py`: `NO FOLDER HOLDS THIS FORM` — the corpus’s other Patrick is `patrick-of-ireland`."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.06.2026 (19. мај ст. ст.) — „Свети мученик Патрикије епископ бруски, са три презвитера: Акакијем, Менандром и Полиеном.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, on the same menologion 19/5 the Romanian and Greek rows already carry, so nothing moved. **THREE BOOKS, THREE NAMES FOR THE GOVERNOR, AND A FOURTH NAME THAT MAY BE THE SAME MAN PROMOTED TO EMPEROR.** doxologia calls him **Julius**, governor of Bithynia; saint.gr calls him **Julian the Consular**; this book calls him **Јуније**, Junius, „намесник царски“, the imperial deputy. **And this book alone names an emperor** — Julian the Apostate — which neither of the others does. **Whether the Prologue has read saint.gr’s governor Julian as the emperor Julian, or dates the martyrdom to that reign on its own authority, cannot be told from the page**, and nothing is decided on it here: no year is taken from the reign, no name is corrected, and all three readings are in the prose. **That is the reading of this entry and it is the author’s if it is to be resolved.** **NO YEAR, AND THE REFUSAL IS THIS WAVE’S STANDING ONE.** „Пострадали за веру Христову у време Јулијана Одступника“ names a reign and **gives it no bounds**, so nothing is built on it — as „У време царовања Декијева“ was refused for `isidore-of-chios` on 14 May and „У време Декијево“ for the three Athenians on 18 May. **All four folders of this company still carry no `dates` object**, and no calendar read for any of them has given one. **New here**: that the place was „Бруси азијској“, Brusa in Asia, which is the Prusa this folder is named for under its Turkish name; that the governor’s challenge was put as a question about **who made the healing waters, „зар не наши богови Ескулап и други“**; and that — the one line of this entry that is wholly its own — the saint added to his answer **„без које ни влас не отпада са главе човекове“**, without whose will not a hair falls from a man’s head, and that he stood in the boiling spring **„као да стајаше у хладној води“** with unceasing prayer on his tongue. The axe, the scalded bystanders and the four beheadings are all in doxologia’s fuller life already. **It does not say he was thrown in naked**, which doxologia does, and nothing is read out of that silence. **THREE `related` ROWS ADDED, AND THEY FILL A GAP THAT WAS COMPLETE.** This folder and all three of its companions carried **`related: None`** — four folders of one company, named in each other’s display names, relating nobody. This entry narrates the four as one company beheaded together, which is the test that owes a row, so each of the four now relates the other three. `types` untouched — мученик and „епископ бруски“ are the `hieromartyr` and `bishop` the folder holds, and the `presbyter` this entry adds belongs to the three and not to him. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -131,5 +146,10 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "acacius-companion-of-patrick",
+    "menander-companion-of-patrick",
+    "polyaenus-companion-of-patrick"
+  ]
 }

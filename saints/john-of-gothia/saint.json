@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιουνίου, «Όσιος Ιωάννης επίσκοπος Γοτθίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Јован",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. мај ст. ст., „Свети Јован епископ готски.“ — Свети is not a rank and „епископ готски“ is the rank and the see, which this corpus puts in `types` as `bishop` and in `office` as Bishop; **stripping a rank and a see to reach the stored form is the reading BRIEF-SERBIAN.md §6 asks be said in the note**, and here it leaves a bare forename with nothing beside it — Georgia, Bessarabia, the kagan and the century are all in the body. **«Јован Готски» is nowhere on the page** and a form a reader builds is what §6 forbids. **So this is a deliberate ninth joining of the bare «Јован»**: `foldchk.py` returned eight holders before a line was drafted, every one of them an `sr` form from this same book on another Julian day, and the fold is read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -57,11 +62,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 5,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.06.2026 (19. мај ст. ст.) — „Свети Јован епископ готски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-01&prolog=1",
+        "year": 2026
+      },
+      "note": "**The day list could not see this folder**, because the Romanian and Greek rows keep him on the menologion **26/6** and the Prologue keeps him on the **19/5**; the list matches on the menologion number and offered fifty-seven folders without this one. He was found by `ls saints | grep -iE 'goth'`, which is the fourth day in five that a hand grep has caught what the list could not. **The identification is not in doubt** — a bishop of Gothia, a Tatar persecution, four years away among the Goths, the eighth century — but **this book disagrees with the other two at three points and agrees with them at one, and none of the three disagreements is resolved here.** (1) „Би епископ у Грузији“ makes him **bishop in Georgia**, where doxologia has him only **sent to the bishop of Iberia, that is of Georgia, to be consecrated**, his own see being Gothia. (2) The four years away are spent **„међу Готе у Бесарабију“**, among the Goths in Bessarabia, where saint.gr has him take refuge **at Amastris on the Black Sea** — and **the four years themselves match exactly**, which is the agreement and is the strongest reason to think it one event told twice. (3) This book has him **hear of the kagan’s death, return to his service and guide his flock zealously, and fall asleep in peace**, where doxologia has him **pass to the Lord at Amastris in Pontus** and saint.gr has him **die there in 780**. **A FIRST DATE FOR A FOLDER THAT HELD NO `dates` OBJECT**: „Упокоји се мирно у VIII веку“ → `death` 701–800, „8th century“. **saint.gr’s 780 falls inside it and is the narrower reading, and it is not written**: it stands in this folder’s life already, an earlier reader recorded it and did not write it, and this reader writes only what his own source states. **Narrowing the century to 780 is the author’s, in one commit**, and `date-citation-audit.mjs` is the instrument that will keep asking for it. **New here**: the parenthesis **„(Готска епархија образована за време Константина Великог)“**, that the Gothic diocese was formed in the time of Constantine the Great, which no other book read for him says; that the persecutor was **„каган татарски“**, a Tatar kagan, where doxologia has only „some bloody rising“ and the nobles of the Lazi; and **the prophecy of his own death** — „Кроз четрдесет дана одлазим да се судим са каганом“, in forty days I go to be judged with the kagan, which the Prologue glosses itself as going through death before the throne of God — **and that on the fortieth day he departed**. `types` untouched: Свети is no rank and „епископ готски“ is the `bishop` and the `office` the folder already holds, and the `confessor` it carries is the iconoclast years, which this entry does not mention. **Constantine the Great takes no row**: a diocese founded in his reign is not a relation, by the same rule that makes a dedication none. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 19. мај ст. ст.: „Упокоји се мирно у VIII веку.“ This folder held no `dates` object at all until now. **saint.gr gives the narrower 780**, which this folder’s own life records — «πέθανε το 780», read as „there he stayed four years and died in 780“ — and an earlier reader recorded it without writing it. 780 falls inside this century, so there is no disagreement; the century is what this reader’s own source states, and narrowing it to the year is the author’s. Neither book gives a year of birth, saint.gr saying only that he was born at the beginning of the eighth century."
+    }
   }
 }
