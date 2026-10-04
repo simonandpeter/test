@@ -6,12 +6,18 @@
       "form": "Ioan",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 18 aprilie, «Sfântul Cuvios Ioan, ucenicul Sfântului Grigorie Decapolitul»."
+    },
+    {
+      "form": "Јован",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue's first heading for the Julian 18 April, „Преп. Јован.“, with Преп. left off, which is the venerable this folder already carries in `types`. **The heading is a rank word and a bare forename and nothing else** — the discipleship this corpus keeps in his display name is the body's first sentence, not the heading's — so there is no fuller form to store. Six folders already hold this bare Serbian form; this is a seventh, and the fold is recorded as deliberate in the run's findings."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "monk"
+    "monk",
+    "abbot"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.05.2026 (18. април ст. ст.) — „Преп. Јован.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-05-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day's first entry, on the same menologion day the Romanian keeps him on; the Greek row stays `undocumented`. The identification is not on the name, which is bare: the entry's first words are that he was the disciple of St Gregory the Decapolite, and it then names the iconoclast emperor Leo the Armenian and Joseph the Hymnographer, who buried him near Gregory's grave — the same three men, in the same relation, as the Romanian life this folder was written from. **The year is new to this folder**: „Скончао мирно око 820. год.“, about 820, where the Romanian notice says in so many words that no year is given anywhere in it. Two things are new besides, and both are differences rather than additions: that the emperor **put John to the torture together with his teacher Gregory and with Joseph the Hymnographer**, where the Romanian life has the three of them walking about the city strengthening the Orthodox and does not say they were tortured; and that **after Gregory's death John became abbot of the Decapolite's monastery in Constantinople** and redoubled his labour as abbot, which is why `abbot` was added to `types`. Both readings stand and neither was chosen. **No `office`** was added: that would be a key in all four locale packs and the monastery's name is not this folder's to mint. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -67,6 +83,16 @@
   },
   "related": [
     "gregory-the-decapolite",
-    "john-chrysostom"
-  ]
+    "john-chrysostom",
+    "joseph-the-hymnographer"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 820,
+      "latest": 820,
+      "display": "about 820",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue for 18. април ст. ст.: „Скончао мирно око 820. год.“ — he reposed peacefully about 820; the page's «око», about, is why the display says about 820. The folder held no `dates` before, and the Romanian life it was written from closes «No year is given anywhere in the notice», so nothing was displaced. The same entry puts his sufferings under Leo the Armenian, whose iconoclasm the Romanian life also names. No year of birth is recorded anywhere read."
+    }
+  }
 }
