@@ -1,0 +1,9 @@
+# Vsevolod (Smirnov)
+
+The Russian church calendar of the Сретенский monastery names him first of ten people on one line and gives him no life. The line for 31 октября ст. ст. is a rank word, seven forenames in the genitive, two more rank words, three more forenames and one year for all of them — «Сщмчч. Всеволода, Александра, Сергия и Алексия и Василия, Петра, Василия пресвитеров, прмч. Анатолия, Евфросина и мч. Иакова (1937)» — and the name link behind his forename adds the surname the line leaves out and the grade it gives only in the plural: «Всеволод (Смирнов), протоиерей, сщмч.», an archpriest of that name, one of the new martyrs of the Russian church.
+
+So the year is the whole of what is recorded of him, and the year is 1937. There is no life page behind his name, and his name page carries no text and no hymn — an icon, his name, and his days, of which the second is 26 января, the synaxis of the new martyrs and confessors of Russia. Two of the ten on this line do have lives, and both of those men were shot on 13 November 1937 in the Tver region; nothing on the page says that of him, and nothing here says it for him.
+
+He is not the Vsevolod this corpus already keeps for the same year. That one is Vsevolod Potyominsky, a presbyter born in 1870 whom this same calendar commemorates on the Julian 6 сентября; two commemorations on one calendar are two men, and the surnames are not the same. The second Russian calendar, azbyka.ru, which has given this corpus full lives and archival references for others of these men, refused the request with a 403 on the day he was read.
+
+*After the Православный церковный календарь of the Сретенский monastery for 31 октября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261031.html) and [his name page](https://days.pravoslavie.ru/name/9303.html); read 4 October 2026.*

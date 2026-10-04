@@ -1,0 +1,73 @@
+{
+  "slug": "alexis-sibirsky",
+  "display_name": "Alexis (Sibirsky)",
+  "office": "Archpriest",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "names": [
+    {
+      "form": "Алексий (Сибирский)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link behind the company's line for 31 октября ст. ст., «Алексий (Сибирский), иерей, сщмч.», with the grade and the rank word left off. The line itself gives the forename in the genitive among six others and no surname. His own life page calls him throughout by the civil form of the forename, «Алексей Сибирский», and gives his patronymic in the interrogation record, «Сибирский Алексей Васильевич»; the stored form is the church form the name link prints."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day: «родился 17 марта 1870 года в селе Козлове Тверской губернии в семье священника Василия Сибирского»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru gives the day and the two days of the sentence: «11 ноября 1937 года Тройка НКВД приговорила ... к расстрелу. Он был расстрелян через день после постановления Тройки, 13 ноября 1937 года.» The day line prints «(1937)» after the company he is named in. 13 November is the civil date of this menologion day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian",
+        "note": "His life page and his name link both list one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 31 октября ст. ст. — «Сщмчч. Всеволода , Александра , Сергия и Алексия и Василия , Петра , Василия пресвитеров, прмч. Анатолия , Евфросина и мч. Иакова (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261031.html",
+        "year": 2026,
+        "note": "The line is the seventh of the day and names ten people with one year for all of them. The day carries one typikon sign only, «Cовершается служба, не отмеченная в Типиконе никаким знаком», so no rank is recorded."
+      },
+      "note": "The line's «Сщмчч.» and «пресвитеров» are hieromartyr and presbyter and go in `types`; his name link's «иерей» is a priest, and his own life calls him dean of the churches of the Kozlovo deanery, «благочинного храмов Козловского благочиния», so `office` records the Archpriest the deanery implies and the grade on the link is said in the life. **The ten on this line are not recorded as a company.** They were all shot in 1937 and two of the three with lives were shot on the same 13 November by troika decisions of the same 11 November, but no page read says they were tried together or knew one another, and sharing a day of death is not a relation; so no `related` row joins them. The one `related` row this folder takes is the archbishop his life names as having appointed him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 noiembrie, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Νοεμβρίου, the corresponding civil day (4 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 November 2026 (4 October 2026)."
+    }
+  ],
+  "related": [
+    "thaddeus-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
