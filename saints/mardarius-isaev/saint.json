@@ -1,0 +1,68 @@
+{
+  "slug": "mardarius-isaev",
+  "display_name": "Mardarius (Isaev)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Мардарий (Исаев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 9227, «Мардарий (Исаев), иеромонах, сщмч.», with the grade and rank words left off; the day’s own line gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the form and over the surname, and the gate’s own `nameKeys` over the proposed folder: the sweep over Исаев returned one folder and it carries a different forename and a different day; no folder holds this form, and the proposed folder folds with nobody in either script."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Сщмч. Иоанна пресвитера и прмчч. Мардария и Феофана (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "**The line puts three men together and they are not a company.** It names a presbyter and then, under a second grade word, two monastics, and closes with one year for all three; the three lives read on azbyka.ru give three deaths on one day in three places — a camp in the Komi country, a shooting near Углич and a camp at Каргополь — and not one of the three names either of the others. Sharing a day is not a relation, so no `related` row is written for any of them.\n\n**The grade words of the two hosts disagree about him.** The day’s line puts him under «прмчч.», and azbyka.ru heads his page «Преподобномученик Мардарий (Исаев), иеромонах»; the name page behind the line, 9227, titles him «сщмч.». `types` follows the line and azbyka, which agree, and the index’s word is recorded here and not acted on. azbyka also gives him the synaxis of the New Martyrs and the synaxis of the Rostov and Yaroslavl saints, both of which were seen and neither read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "azbyka.ru, out of игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Март»: «Преподобномученик Мардарий родился 4 января 1886 года в деревне Савостино Микулинской волости Старицкого уезда Тверской губернии в крестьянской семье и в крещении был наречен Михаилом». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 5 марта ст. ст. with «(1938)». azbyka.ru: «Иеромонах Мардарий (Исаев) был расстрелян на следующий день, 18 марта 1938 года, и погребен в общей безвестной могиле», the sentence of the troika having been passed on 17 March. The civil 18 March 1938 is this Julian 5 March. He is the only one of the three on this line who was shot."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
