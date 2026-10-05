@@ -11,6 +11,11 @@
       "form": "Ζηνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιουνίου, «Άγιοι Ζήνων και Ζηνάς ο υπηρέτης του», with the rank word and «ο υπηρέτης του» left off."
+    },
+    {
+      "form": "Зина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. јун ст. ст., „Свети мученик Зинон и Зина“ — the second of the two bare forenames, with Свети and мученик off. „слуга“ is in the body and not in the heading, so it was never a candidate; the «(22 June)» of the display name is the corpus’s own. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Зина», so there is no fold — **and the contrast with his master on the same heading is the measurement worth keeping**: «Зинон» has six holders and «Зина» has none, two names four letters apart out of one line, so a fold is a fact about the corpus and never about how common a name looks. The folder’s Romanian form is «Zina», the same name in Latin letters, off doxologia’s «Sfântul Mucenic Zina»."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.07.2026 (22. јун ст. ст.) — „Свети мученик Зинон и Зина“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the servant of its two men. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 22 June is the same menologion number this folder’s other venerated rows carry, so there is no second day and no §4 note is owed. The heading is quoted **whole**, as §4 requires, and its singular rank word over two names is noted on his master’s row. **`dates` STAYS NULL.** This book gives no year, dating the persecution only by the emperor Maximian, and an emperor is no source for a year. saint.gr’s 303 is cited in his master’s prose and in no field on either folder, and is not written from here, the Prologue being this day’s source; it is named as the author’s on that row. **WHAT THIS BOOK MAKES OF HIM, AND IT IS MORE THAN THE GREEK PAGE DID.** Both books have him a servant — „А Зина му беше слуга“ against «Ζηνάς ο υπηρέτης του» — but they part over why he was taken. saint.gr has him hear of the arrest and **run to the eparch to beg his master’s release**, and be imprisoned for it. This book has him simply visit his master in the prison: „а када верни Зина посети свога господара у тамници, то и он би ухваћен и ухапшен“ — and it calls him **верни**, the faithful one, which is the one word of praise either book gives him. A plea and a visit are two accounts of the same arrest; both are written and neither is chosen. And his death moves with his master’s: the fire with oil poured into it here, the beheading there. `types` UNTOUCHED: Свети is not a rank, мученик is the rank and gives the `martyr` this folder carries, and the heading has nothing else. „слуга“ is in the body, is not a rank in this corpus’s vocabulary at all, and is the thing the Greek display name already carried as «ο υπηρέτης του» and that folder’s own note says it left off the stored form. No `office` — a servant’s place is not a see. No `locations`. **NO NEW ROWS.** `zeno-the-martyr-22-june` is `related` here and the reciprocal is on that folder, both untouched and both confirmed by this book. No row for any of the forty-nine George folders over the church they were buried in, a dedication not being a relation; none for the duke Maximus, who is no folder; none for Maximian. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE VERSE IS NOT USED. The ПЕСМА for 22 June is about the first entry and names its three men as three stars — „Јевсевије, и с њим Мелетије, Ко две звезде – трећа: Пелагије“ — and it opens „Црква никад није без пастира“, the Church is never without a shepherd. It is Bishop Nikolai’s own verse and not the entry’s account, so §3 of this wave’s brief puts it in no field and in no life, and it is recorded here instead. **NOTHING IS REFUSED FOR WANT OF A FOLDER ON THIS DAY, WHICH HAS NOT HAPPENED BEFORE IN THIS WAVE.** The Prologue prints two entries for the Julian 22 June and the corpus holds every person in both headings: `eusebius-of-samosata` off two calendars, `zeno-the-martyr-22-june` and `zenas-the-martyr-22-june` off two more. Nineteen days before this one produced sixty-seven upgrades and no new folder, and four days in five refused somebody; this is the fifth day. It is worth recording as the shape of a day rather than as an absence: the corpus holds nine folders on the menologion 22/6 and this book names three of them and nobody else."
     }
   ],
   "text": {
