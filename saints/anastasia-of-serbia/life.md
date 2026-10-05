@@ -4,4 +4,8 @@ saint.gr's calendar for 21 Ιουνίου names her and gives almost no life. Th
 
 So the source gives her no year of birth or death, no century, no place beyond Serbia in her title, no account of how she lived or how she died, and no hymn under her line. It calls her Ὁσία, venerable, which in this calendar is the word for one who lived the monastic life rather than one who was martyred, and it leaves everything else to her son's page.
 
-*After saint.gr's calendar for 21 Ιουνίου — [the day](https://www.saint.gr/06/21/index.aspx) and [the life](https://www.saint.gr/4323/saint.aspx); read 1 October 2026.*
+The Ohrid Prologue keeps her on the Julian 21 June, the same menologion day the Greek calendar keeps her on, and where that calendar had one sentence and a disclaimer this one has a life. She was the wife of Stefan Nemanja and the mother of three sons, the youngest of whom was [Sava](/saints/sava-of-serbia); her baptismal name was Ana, and she was clothed as a nun in 1196 and received then the monastic name Anastasia. She reposed on 21 June 1200 — the first year of any kind the corpus has had for her, and the day of it is the day she is kept on.
+
+She was buried in the narthex of the monastery of Studenica, the book says, and her relics rest in that monastery still. And it ends in the present: some years ago the deacon Vojislav Bilbija made the fine sarcophagus in which those relics now lie. He is named here because the book names him, and for no other reason — a craftsman who made a reliquary is not a companion, and no year is given for the work.
+
+*After saint.gr's calendar for 21 Ιουνίου — [the day](https://www.saint.gr/06/21/index.aspx) and [the life](https://www.saint.gr/4323/saint.aspx); read 1 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 21. јун ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-04&prolog=1), read 5 October 2026.*
