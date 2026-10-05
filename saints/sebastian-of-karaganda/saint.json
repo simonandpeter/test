@@ -17,6 +17,11 @@
       "form": "Севастиан",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 9163, headed «Севастиан (Фомин) Карагандинский, схиархимандрит, исп.», with the surname, the office, the rank word and the epithet left off. The life gives his name in the world: Степан Васильевич Фомин."
+    },
+    {
+      "form": "Севастиан (Фомин) Карагандинский",
+      "lang": "ru",
+      "note": "The fullest form this calendar prints for him, read out of the title on the name link behind his line for 6 апреля ст. ст., name page 9163, «Севастиан (Фомин) Карагандинский, схиархимандрит, исп.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The folder’s other `ru` form, the bare «Севастиан», was read off the same calendar’s 9 октября ст. ст., whose line gives the forename and the toponymic only; both are kept because both are printed. No folder holds either this form or the surname «Фомин»; `.tmp/foldchk.py` and `.tmp/rusurn.py` were both run before this upgrade."
     }
   ],
   "related": [

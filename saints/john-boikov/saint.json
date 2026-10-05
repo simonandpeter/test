@@ -1,0 +1,70 @@
+{
+  "slug": "john-boikov",
+  "display_name": "John (Boikov)",
+  "names": [
+    {
+      "form": "Иоанн (Бойков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 6 апреля ст. ст., name page 9598, «Иоанн (Бойков), иерей, сщмч.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Иоанна», and the same day carries his brother, so the surname alone would not separate them either: the slug and the display name carry the forename and the line carries the year. The life calls him Иван Яковлевич in the body, the civil form of the same name, and he signs a letter «Бойков». No folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Сщмч. Иоанна пресвитера (1934).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "The life opens «Священномученик Иоанн (Бойков) родился в 1891 году в городе Бежецке и был старшим братом священномученика Иакова (Бойкова)» — born in 1891 at Bezhetsk and the elder brother of the other priest this day keeps."
+    },
+    "death": {
+      "earliest": 1934,
+      "latest": 1934,
+      "display": "1934",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 6 апреля ст. ст. with «(1934)». The life gives no day of the month: it prints his last letter, dated 28 July 1934, in which he writes that he is being sent on from Вишера and does not know where, and then says «Вскоре после этого последнего письма о. Иоанн скончался» — soon after that last letter he died, his health broken and the tuberculosis telling on him. **So the day this calendar keeps him on is not the day he died**, which is what makes him the one man of this day whose feast the line does not date; the year is written flat and nothing is constructed from it."
+    }
+  },
+  "related": [
+    "james-boikov"
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
