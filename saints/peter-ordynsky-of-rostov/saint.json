@@ -6,10 +6,16 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Ιουνίου, «Άγιος Πέτρος ο πρίγκιπας του Ορντύνσκϊυ, Ροστώβ», with the rank word left off."
+    },
+    {
+      "form": "Петар царевић",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 30 June, „Блажени Петар царевић.“ — Блажени left off, which §5 reads as either `fool-for-christ` or `righteous` and which this folder now carries as `righteous`. **царевић is kept**: it is not in §5’s table of ranks, which has Кнез for a prince and Цар for a king and no word for a king’s son; it distinguishes him, which is what §6 keeps a by-name for; and without it the form would be the bare Петар, which would widen a fold this same reader keyed the day before on the Julian 29 June. This is the same call the Julian 28 June made on Заставоносац. **AUTHOR: царевић can be read as the rank `prince`, which this folder already carries in `types` off the Greek line, and on that reading §6 would strip it and leave the bare forename.** Ростов and the Horde are in the body and not in the heading."
     }
   ],
   "types": [
-    "prince"
+    "prince",
+    "righteous"
   ],
   "dates": {
     "death": {
@@ -47,11 +53,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.07.2026 (30. јун ст. ст.) — „Блажени Петар царевић.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-13&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of three entries, and **the folder’s own life said outright that this story had not been read**: saint.gr gave it a heading, a year and two place-words, its body was the one sentence that there are no details of the saint’s life, and the life written from it closes «His Russian calendar is the source that will have his life, and it has not been read.» This book has it, and it is a Serbian book rather than a Russian one. „Пореклом Татарин, и синовац татарског цара Беркаја.“ — a Tatar by origin and a nephew of the Tatar khan Berkai; „Чу речи о спасењу од епископа Ростовског Кирила, и те речи му се прилепише за срце.“; „А када још виде чудесно исцељење сина Беркајевог помоћу молитве епископа Кирила, он остави потајно Златну Орду и добеже у Ростов, где се крсти, и где свом душом и срцем предаде себе подвигу и изучавању вере благочестиве.“; „Једном заноћи на обали језера, и у сну му се јавише апостоли Петар и Павле и наредише му, да сагради цркву у њихово име на самом том месту; још уз то добије од њих и потребан новац за ту сврху.“; „Петар, заиста, сагради ту прекрасан храм, у коме се и сам под старост, после смрти своје супруге, замонаши.“; „Мирно сконча у дубокој старости 29. јуна 1290. године а црква његова постане и остане манастиром, такозваним Петровским.“. **`dates` UNTOUCHED, AND THE YEAR AGREES EXACTLY WHILE ADDING A DAY THE CORPUS HAS NO FIELD FOR.** The folder held a flat 1290 off the Greek heading’s «(; - 1290)», and this book gives 1290 as well — and gives the day with it, **29 June, which is not the day this row stands on**. The feast is 30 June in both books and the repose is 29 June in this one: a day of death is not a field in this corpus, so it is in the life and in no field, and nothing in `dates` moved. **ONE RANK WORD WRITTEN AND ONE REFUSED.** Блажени is the heading’s rank and §5 makes it `fool-for-christ` **or** `righteous`, to be read — and this entry has no folly in it at all: a prince who heard a bishop preach, fled the Horde, was baptised, built a church and was tonsured in old age after his wife died. `righteous` is added and `prince`, which the folder held off the Greek «πρίγκιπας», is kept. замонаши, he was tonsured, would give `monk` and is refused, being in the body and not in the heading, which is the Julian 27 June ruling. **THE ROW WRITTEN, AND THE TWO REFUSED THE DAY AFTER THEY WERE WRITTEN ELSEWHERE.** `cyril-ii-of-rostov` is a bishop of Rostov who died in 1262 in this corpus already, so the bishop of the two sentences above is identified and not guessed, and what the entry narrates is a conversion: his words stuck to this man’s heart and the healing of Berkai’s son by his prayer is what made the prince run. The row is written both ways and it is **that folder’s first `related` row of any kind**. **And the apostles Peter and Paul take none.** They appeared to him in a dream, ordered the church built in their name and gave him the money for it — and an appearance is not a relation (the Three Hierarchs ruling) and a dedication is not a relation either, so the entry is refused twice over on the very day after this reader wrote both of their own rows on the Julian 29 June. Berkai and his son take no rows and hold no folders. No `locations`: the Golden Horde, Rostov, the lake shore and the Petrovsky monastery are named in clauses and none is a point. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. **THE DAY’S FIRST ENTRY PRODUCES NOTHING, AND IT IS THE SHARPEST §5 CASE OF THE WAVE.** „Сабор светих славних и свехвалних апостола.“ is the Synaxis of the holy, glorious and all-praised Apostles: „Мада сваки од дванаест великих апостола има свој нарочити дан празновања у години, ипак је црква одредила овај дан као саборни празник свих укупно, и уз њих Павла.“ — though each of the twelve great apostles has his own particular day of celebration in the year, the Church appointed this day as the common feast of all of them together, and Paul with them. **The heading enumerates nobody**, so by §5 it is one entry and no row, and a person narrated in a body but not named in a heading gets none either. **The body enumerates all thirteen completely**, with each man’s own days: „Ово су имена и ово су дани посебног празновања свете Дванаесторице: Петар – 29. јуна и 16. јануара; Андреј – 30. новембра; Јаков Зеведејев – 30. априла; Јован Богослов – 26. септембра и 8. маја; Филип -14. новембра; Вартоломеј – 11. јуна и 25. августа; Тома – 6. октобра; Матеј Јеванђелист – 16. новембра; Јаков Алфејев – 9. октобра; Тадеј (или Јуда Јаковљев) – 19. јуна; Симон Зилот – 10. маја; Матија – 9. августа; Павле – 29. јуна;“ And then it enumerates their deaths: „Да поменемо још овде, како је који од ових најсветијих и најкориснијих људи у историји света скончао свој земни живот: Петар – распет наопако; Андреј – распет; Јаков Зеведејев – посечен; Јован Богослов – упокојио се чудесно; Филип – распет; Вартоломеј – распет, па одеран и посечен; Тома – избоден са пет копља; Матеј – огњем сажежен; Јаков Алфејев – распет; Тадеј – распет; Симон Зилот – распет; Матеј – каменован, па мртав посечен секиром; Павле – посечен.“ Every one of the thirteen is a folder this corpus already keeps, and **not one row, name form, date or type is written from this entry**. The ПЕСМА is twenty-four lines on the apostles of the first entry and nothing on the prince or the Georgian, and it is in no field and in no life (§3), read before this was written: „Апостоли дивни, водени облаци. Простаци- мудраци, рибари-јунаци!“ and „Од Ганга до Темзе пронеше буктињу. Од Нила до Понта јавише светињу.“ — from the Ganges to the Thames, from the Nile to the Pontus. It names no apostle and adds no fact."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "cyril-ii-of-rostov"
+  ]
 }
