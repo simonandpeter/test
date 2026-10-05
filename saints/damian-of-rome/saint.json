@@ -11,6 +11,11 @@
       "form": "Δαμιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουλίου, «Άγιοι Κοσμάς και Δαμιανός οι Ανάργυροι», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Дамјан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. јул ст. ст., „Св. муч. Козма и Дамјан“ — Св. is not a rank, муч. is the rank, which `types` already carries, and „Козма и“ is the other man; all three come off and the bare forename is left, which is all the heading gives. «of Rome» is the corpus’s own disambiguation off two other books and is not in this heading. **The fold is deliberate and forced, and it is the wider of the two**: `foldchk.py` returns `damian-of-arabia`, `damian-of-esphigmenou` and `damian-the-healer`, all `sr`, for «Дамјан», so this is the fourth folder on the string, and the heading offers nothing to break it with."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.07.2026 (1. јул ст. ст.) — „Св. муч. Козма и Дамјан“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, the second of its two names. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **A WIDENED DATE.** The folder held `death` 287 to 287, display «287», off saint.gr’s heading; this book says 284, and the field is widened to «284 or 287» rather than chosen between. The same widening is made on the brother in the same batch, off the same sentence, which speaks of both in the plural — „пострадаше“ — so neither folder’s date is widened on another folder’s prose. A JOINT HEADING, AN ENUMERATED COMPANY OF TWO, AND BOTH NAMES ALREADY HELD. „Козма и Дамјан“ enumerates two names, so by §5 this entry is two folders — and the corpus holds both, so it is **two upgrades and no arrival**, the second time this wave an enumerated company has come out that way. The two rows quote the one heading whole, as §4 requires, and the body is one body for both men. THIS IS THE ROME PAIR AND THE IDENTIFICATION IS MADE ON THE SCENE, NOT THE NAME. The corpus holds four pairs of this name — Rome, Arabia, Asia, and the «31 October» pair — and the body settles it: „родом из Рима“, brothers of one birth, who inherited a great estate and gave it away, were brought before „цар Карин“ reigning at Rome, healed him, and were then stoned on a mountain by their own former teacher in medicine who had taken them out under pretext of gathering healing herbs. That is the Rome pair’s story in both the other books, down to the teacher and the stones, and the Julian 1 July is the number the Romanian and Greek rows already carry; the Arabia pair stand on 17 October and the Asia pair on 1 November. The Julian 1 July is the same menologion number this folder’s other venerated row or rows carry, so there is no second day and no §4 note is owed. WHAT IS NEW. **A speech to the emperor that neither other book has**: „Наш Бог није створен, но Он је Створитељ свега, а твоји су богови измишљотине људске и дело руку уметника. И кад не би било уметника да вам направе богове, ви се не би имали коме клањати.“ — our God is not made, but is himself the Maker of all, and your gods are men’s inventions and the work of craftsmen’s hands; and if there were no craftsmen to make you gods, you would have nobody to bow down to. With it, that they did not merely refuse the emperor’s order but **counselled him** to turn from dead idols and own the one true God. A DISAGREEMENT THAT GOES INTO THE LIFE AND INTO NO FIELD. Both other books have the brothers come before Carinus **of their own will**, refusing to hide, so that nobody should be taken in their place. This book has them brought by the persecutors of Christianity „оковану у ланце“, fettered in chains. Both are written and neither is chosen, which is the shape used for the baptism of Zosimus on 19 June. This book also leaves the emperor’s illness unnamed, „тешког недуга“, where saint.gr has the face twisted round towards his own back — less, not other, and nothing is narrowed on it. `types` UNTOUCHED, AND **`wonderworker` IS REFUSED**. `unmercenary`, `physician` and `martyr` are all there, and „Св. муч.“ is the `martyr`; Свети is not a rank. „Безмездни лекари и чудотворци“ — unmercenary physicians **and wonderworkers** — stands in the **body**, as the entry’s opening line and not in the heading, and a rank read off a body is not written: the same refusal as Niphon on 14 June and Paisius on 19 June. No `office` — a physician’s craft is not a see. No `locations`: Rome and a mountain and a watercourse in a narrative are not a coordinate, and the folder has none to widen. **No rows**: Carinus is an emperor in a life, which is not automatically a relation, and `ls saints | grep -i carinus` holds nobody; the envious teacher is unnamed; the slandering servants are unnamed. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S THIRD ENTRY IS REFUSED FOR WANT OF A FOLDER. „Св. муч. Потит“ — a boy of thirteen, by birth from Sardinia, who suffered many torments for Christ both from his own father and from the state’s persecutors of Christians, and was cut down with the sword in the time of the emperor Antoninus (138–161), having before that healed and baptised the emperor’s daughter Agnia. **No folder holds him.** `ls saints | grep -iE 'potit|pottit'` returns nothing; `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Потит»; `sr-namesweep.mjs` scores him against four Hypatii, a John Pettai and two weaker rows and names nobody of his name; and the standing instrument — grepping the corpus for an entry’s own uncommon proper name — was run twice and answers twice. `grep -ril potit saints/` hits exactly one file, `saints/patrick-of-ireland/life.md`, and the Potitus there is **Patrick’s grandfather, a priest of Britain**, named by both doxologia and saint.gr in that folder’s own prose — a different man, no martyr, and not thirteen years old. `grep -rl 'Πότιτ|Потит' saints/` hits nothing at all, so no Greek or Russian form of the name is anywhere in the corpus either. `grep -ril sardinia saints/` returns `crescens-of-sardinia` and `crescentianus`, neither of whom is a boy martyred by his own father. Ruling 3: named here, left out of every life on this day, and no folder from me — and **the thirteen years, the regnal years 138–161 and the sword are written nowhere**, because there is nothing to write them on. TWO MORE REFUSALS INSIDE THAT ENTRY, BOTH OF WHICH WOULD HAVE BEEN FOLDERS OR ROWS. **Agnia the emperor’s daughter takes no row and no folder**: `agnes-of-rome` is of Rome under Diocletian and `agnes-20-january` is kept on 20 January, neither is the daughter of Antoninus, and the object of a wonder is not its subject in any case. **The father takes no row and no folder**: the body gives him no name at all, saying only „од свога оца“, and the name „Гилас“ stands in the day’s ПЕСМА, which §4 of this wave’s brief says is Bishop Nikolai’s own verse and not a life — so a name that exists only there is not read as the Prologue’s testimony about a person. A narrated martyrdom and a narrated baptism with no folder behind them get no row."
     }
   ],
   "hymns": [
@@ -140,11 +155,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 287,
+      "earliest": 284,
       "latest": 287,
-      "display": "287",
+      "display": "284 or 287",
       "basis": "traditional",
-      "note": "saint.gr prints the year of death in its heading for each brother, «Αγιος Κοσμας ο Αναργυρος (; - 287)» and «Αγιος Δαμιανος ο Αναργυρος (; - 287)», the year of birth left as a question mark; its life sets them in the reign of the Roman emperor Carinus."
+      "note": "Two books, two years, and the field is widened rather than chosen. saint.gr prints the year of death in its heading for each brother, «Αγιος Κοσμας ο Αναργυρος (; - 287)» and «Αγιος Δαμιανος ο Αναργυρος (; - 287)», the year of birth left as a question mark; its life sets them in the reign of the Roman emperor Carinus, as doxologia does, and doxologia gives no year. The Охридски пролог for 1. јул ст. ст. ends the joint entry „Чесно пострадаше за веру Христову 284 год.“ — they suffered honourably for the faith of Christ in the year 284. Three years apart, both inside Carinus, whom both books name and who is **no source for either year**. Nothing is averaged and neither book is preferred; the display takes the «X or Y» form the rule names for two readings and not the dash form, which is for a range a source states (5 October 2026)."
     }
   }
 }
