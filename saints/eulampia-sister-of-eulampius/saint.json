@@ -16,6 +16,11 @@
       "form": "Евлампия",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2471, headed «Евлампия Никомидийская, мц.», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Евлампија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. октобар ст. ст., „Св. муч. Евлампије и Евлампија.“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name, the second of the heading’s two, is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, and the one letter that distinguishes it from her brother’s form is enough to keep the two out of one fold — measured, not assumed."
     }
   ],
   "sex": "female",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.10.2026 (10. октобар ст. ст.) — „Св. муч. Евлампије и Евлампија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, the second of its two names. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. THE HEADING IS AN ENUMERATED COMPANY OF TWO, Евлампије and Евлампија, so section 5 counts two names, two folders are owed a row and the corpus holds both. The quoted line is the one heading, whole, on both rows. The entry opens by calling them «Брат и сестра, из Никомидије», which is the kinship the two folders already relate each other on. `dates` UNTOUCHED ON BOTH: the folders hold `death` 284–311 and **this entry prints no year at all**, dating the persecution only by «цара Максимијана» — an emperor is not a source for a year. `types` untouched at `martyr`, corroborated by муч. No `locations`, no `office`. WHAT THE FOURTH BOOK ADDS. **He tore the decree down.** The Romanian and the Greek have him read the edict and laugh at it; this book has him laugh, смаче је и поцепа — take it off the wall and tear it up — which makes the arrest an act and not a recognition, and it places the edict **on a wall** where the Romanian puts it over the city gates. **The exchange with the judge is reversed**: when the judge counsels him to deny Christ, Eulampius counsels the judge to renounce the false idols and confess Christ as the one living God. And the fire is two fires and a named instrument of deliverance: **boiling pitch first and then a red-hot oven**, where the other books have a cauldron of water or a heated furnace, and the two of them made the fire harmless «силом крсног знамења и имена Христова», by the power of the sign of the cross and the name of Christ. WHAT IT DOES NOT HAVE, since silence is not a correction: no iron bed heated red, no visit to the temple and no idol of Ares or Mars thrown down by his prayer. WHAT IS HERS. The entry calls her девица, a virgin, which no other book read for this folder says and which **is not written into `types`**: it stands in the body and the heading’s only rank word is муч. — a rank word in the heading is written and a rank out of a body is not, and `virgin` would be the second kind. She **ran to the place to take the tortures together with her brother**, and she was beaten until the blood came from her nose and her mouth, which the Romanian has too. And she «издахну пре посечења» — breathed her last before the beheading — which is the Romanian’s reading, where the Russian has her die of what had been done to her. `related` UNTOUCHED — `eulampius-of-nicomedia` and `two-hundred-martyrs-of-nicomedia` are both already there. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Евлампија», and it folds to `евлампија`, which is not her brother’s `евлампије`. The Prologue prints no troparion and no kontakion; the day carries only the verse. TWO REFUSALS ON THIS DAY, BOTH ON SECTION 4’S GROUND, AND BOTH ARE WORTH THE NEXT READER’S TIME. **(1) The day’s second entry is refused whole.** Its heading is «Св. мученици Зографски.» and **it enumerates nobody**. The body tells the burning of the tower of Zographou by the Latin troops Michael VIII Palaiologos brought to Athos after the Union of Lyon, counts the dead as twenty-six — twenty-two monks with their abbot and four laymen who worked for the house — names the abbot Тома, and dates it 10 October 1283. **The corpus already keeps about twenty-six Zographou folders on this menologion day**, `thomas-of-zographou` among them. A synaxis heading that names nobody is one entry and the reader says so; counting by section 5 means counting what the heading enumerates and not what the body narrates, which is the ground two named martyrs were refused rows on earlier in this wave. So **no row went to any Zographou folder**. Two things in it are the author’s: whether that heading warrants twenty-six rows, and that the entry gives the burning as **1283** where `thomas-of-zographou` holds `death` 1275–1282 — a year outside the folder’s interval, offered by an entry that takes no row, so nothing was widened on it. **(2) `two-hundred-martyrs-of-nicomedia` is refused a row.** The first entry ends «Још бише погублени 200 хришћана» — two hundred more Christians were put to death, who believed on seeing the power and the wonders of the two — and the Greek calendar keeps those two hundred as an entry of their own on this same day, which is why the folder exists and why both of this entry’s folders already relate it. **But the Prologue narrates them inside a body whose heading names only Евлампије and Евлампија**, and a row’s quoted line is the heading, whole. No row, and the reason is named rather than left to look like an oversight."
     }
   ],
   "hymns": [

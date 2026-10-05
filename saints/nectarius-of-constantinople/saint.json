@@ -6,6 +6,11 @@
       "form": "Νεκτάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Οκτωβρίου, «Άγιοι Νεκτάριος, Αρσάκιος και Σισίνιος Πατριάρχες Κωνσταντινούπολης», with the rank words left off."
+    },
+    {
+      "form": "Нектарије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. октобар ст. ст., „Св. Нектарије патријарх Цариградски.“ — Св. is «saint» and not a rank, and патријарх Цариградски is the `patriarch` this corpus puts in `types` with the see in `office`, so all of it comes off and the bare personal name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, and this folder held one name form of any language before today."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.10.2026 (11. октобар ст. ст.) — „Св. Нектарије патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and **this is the folder’s second calendar**: the Greek row was its only venerated one until now, and it is the only folder of this day that had fewer than three. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. FOUR SENTENCES, AND THEY AGREE WITH THE FOLDER ON BOTH OF ITS NUMBERS. A layman and a high imperial official, elected patriarch **unanimously** after Gregory the Theologian in 381, marked by deep understanding, tact and zeal for the church, and dead in peace in 397. `dates` UNTOUCHED AND CORROBORATED: the folder holds `death` 397 and this entry gives the same year flat. **The 381 is the year of his election and is not a date for this folder** — there is no field for an accession, the folder has no `birth`, and an event year is not a birth; it is in the prose as what the book says. `types` UNTOUCHED at `patriarch`: патријарх Цариградски in the heading is exactly it, and Св. is «saint» and not a rank. `office` left at «Patriarch of Constantinople», which the heading repeats and does not improve. `related` UNTOUCHED: `gregory-the-theologian`, whom the entry names as his predecessor, is already there, and so are `arsacius-of-constantinople` and `sisinnius-of-constantinople`. **The layman’s office under the emperor takes no row and no `office` string** — a civil post is not an ecclesiastical one and «X or Y» is not a thing a scalar field holds. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Нектарије», **and this folder had only one name form of any language before today**, the Greek «Νεκτάριος». The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S SECOND ENTRY IS REFUSED AND IT IS NOT A CLOSE CALL. «Спомен Седмог Васељенског Сабора.» — **a Council is not a folder**, and the entry is about the Council and not about a person: Nicaea in 787 under the empress Irene and her son Constantine and the patriarch Tarasius, 367 Fathers, the definition of the veneration of icons out of Scripture, the Fathers and attested wonders, and the ruling that relics of martyrs must be put into the antimension. It names the bishop Constantine of Cyprus, who told the Council the story of the shepherd of Constantia who struck the Mother of God’s icon with his iron staff, spoiled the right eye of the image, stumbled on leaving and put out his own right eye with the same staff. **None of those takes a row and none is in any prose of this day**: the Fathers of a Council are not a folder, an emperor in an entry is not a relation, and the subject of an anecdote told at a Council is further still from one. `tarasius-of-constantinople` has a folder and gets nothing from this day."
     }
   ],
   "text": {

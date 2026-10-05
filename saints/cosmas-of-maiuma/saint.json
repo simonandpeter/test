@@ -11,13 +11,19 @@
       "form": "Κοσμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Οκτωβρίου, «Άγιος Κοσμάς ο Μελωδός επίσκοπος Μαϊουμά», with the rank word left off."
+    },
+    {
+      "form": "Козма",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. октобар ст. ст., „Преп. Козма Мајумски.“ — Преп. is the venerable grade this corpus puts in `types` and comes off, and Мајумски is the see the corpus keeps in `office`, so both come off and the bare personal name is the whole of the form. `foldchk.py` measured the string as held by `cosmas-of-arabia` alone before this day, and the two-folder fold is read in the `serbian` row’s note and in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
   "types": [
     "hierarch",
     "bishop",
-    "hymnographer"
+    "hymnographer",
+    "venerable"
   ],
   "office": "Bishop of Maiouma",
   "attestations": [
@@ -69,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.10.2026 (12. октобар ст. ст.) — „Преп. Козма Мајумски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. `types_add: [\"venerable\"]`, AND IT IS A RANK WORD IN THE HEADING. The folder held `hierarch`, `bishop`, `hymnographer`; this heading opens **Преп.**, which section 5 maps to `venerable`, and a rank word in the heading is written. It is not inferred from the body's «Као монах», which would be the other kind. **THE GREEK KEEPS HIM ON 14 OCTOBER AND THIS BOOK ON THE 12TH, WITH THE ROMANIAN AND THE RUSSIAN**, so this row is the Julian 12 October. WHAT THE BOOK ADDS, AND IT IS MOSTLY THE SHAPE OF THE FRIENDSHIP AND THE WORK. He was from Jerusalem by birth. He was the companion of John of Damascus, **whose parents took him as an orphan and brought him up** — the entry is explicit that the Damascene's family adopted him. As a monk he **helped the Damascene put the Octoechos together**, and he composed many canons to the saints himself; the entry singles out for particular beauty and depth his canons for **Lazarus Saturday, Palm Sunday and Passion Week**. He was bishop at Maiouma near Gaza in Palestine. And **he outlived the Damascene and ended in deep old age.** `dates` UNTOUCHED AND UNTOUCHABLE: the folder holds `death` 787 and **this entry prints no year at all**. «Скончао у дубокој старости» is an age and not a date, and «Надживео св. Дамаскина» is a relative ordering — **outliving another man is not a year and nothing may be derived from it by arithmetic.** `office` left at «Bishop of Maiouma», which the heading's Мајумски and the body both say and neither improves. `related` UNTOUCHED: `john-of-damascus` is already there and is the one person of the entry who has a folder, and the adoption and the Octoechos are exactly the story that row holds. No `locations`. THE FOLD THIS ENTRY MADE: `foldchk.py` measured «Козма» before the day as held by `cosmas-of-arabia` alone — one of the unmercenary physicians, dead in 287 or 303 and kept on 17 October — so the fold goes from one folder to two and the key is in `scripts/corpus-gate.mjs` in the same commit. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

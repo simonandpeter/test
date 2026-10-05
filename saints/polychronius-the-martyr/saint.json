@@ -16,6 +16,11 @@
       "form": "Полихроний",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 1815, headed «Полихроний, пресвитер, сщмч.», with the office and the rank word left off."
+    },
+    {
+      "form": "Полихроније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. октобар ст. ст., „Св. муч. Полихроније.“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, and the form does not fold onto the «Полихроний» this folder already stores."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.10.2026 (7. октобар ст. ст.) — „Св. муч. Полихроније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted whole, **with the closing full stop the Prologue itself prints**, which is what BRIEF-SERBIAN §4 asks for. It had to be measured off the raw cached page, because `srbody.mjs` and `sr-cand.mjs` both strip it from their printed output: every heading of this day ends `. </strong>` in the source. **An earlier wave of this reading quoted off the stripped output and wrote into its notes that the headings carry no closing stop, which the raw page contradicts for its own days as well as for these** — the rows of that wave are outside this reader’s range and are a finding for the author, not something fixed here. THE IDENTIFICATION IS ON THE PROVINCE AND NOT ON THE NAME, which matters here more than on most days: the corpus keeps eleven `*-companion-of-polychronius` folders on this same menologion day, all of them related to this folder, so a Polychronius on 7 October is not self-evidently this Polychronius. The Prologue opens «Родом из епархије Агатанидске», and this folder’s own `dates` note quotes saint.gr’s «ἐκ τῆς ἐπαρχίας Γαμφανήτιδος» while the Romanian life calls it Gamfanita. **The same obscure province, the same peasant father, the same vineyard, the same church built with the wages, the same Council, the same death at the hands of Arians inside a church.** One man, and the row goes on the folder that exists. WHAT IS NEW, AND ONE PIECE OF IT IS A DIFFERENT ACCOUNT RATHER THAN AN ADDITION. The vineyard belongs to **a certain man of Constantinople** («некога Цариграђанина»), where the Russian puts the vineyard itself in the city; the owner gave him **far more money than he had earned**, which is sharper than the Romanian’s sum of gold and the Russian’s great deal of money. And the ordination: **at the time of the Council of Nicaea he was a reader**, чтец, **and it was the zeal he showed there in pleading Orthodoxy against the Arians that got him ordained priest.** The Romanian makes him deacon and then priest after the Council, the Greek has him go up to Constantinople and be made deacon and then presbyter there, and **the Prologue has no diaconate at all and makes Nicaea the cause.** His end is «исекоше га на комаде», they cut him to pieces, against the Greek’s throat cut upon the holy table and the Romanian’s swords at the altar. `dates` UNTOUCHED AND NOTHING HERE COULD HAVE TOUCHED THEM: the folder holds `death` 301–400, 4th century, and **this entry prints no year at all** — Nicaea is its only fixed point and a council is not a date for a death. The appended paragraph carries no four-digit year, deliberately. `types` UNTOUCHED at `martyr`, `presbyter`: муч. in the heading is the `martyr` already there, and **the priesthood is a verb in the body** («посветише га за свештеника»), not a rank word in the heading, so it is no warrant for `presbyter` — which the Russian name page «Полихроний, пресвитер» already was. No `office`: the entry names no see and no house. NO NEW `related` AND NO NEW NAME IN THE PROSE. The entry names the vineyard’s owner not at all, the Council is not a folder, and Аријанци are the adversaries; the eleven companions are already related and this entry does not name one of them. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Полихроније», which folds to `полихроније` and not to the `полихронии` of the stored Russian form on this same folder — measured. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

@@ -16,6 +16,11 @@
       "form": "Андроник",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 193, headed «Андроник Антиохийский, Египетский, прп.», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Андроник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. октобар ст. ст., „Преп. Андроник и супруга му Атанасија.“ — Преп. is the venerable grade this corpus puts in `types` and comes off, so the bare personal name, the first of the heading’s two, is the whole of the form; the heading gives him no epithet. It is the same string this folder already stores as its `ru` form, the two calendars spelling the name identically, and `andronicus-the-apostle` holds it too — a fold read in the `serbian` row’s note and in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.10.2026 (9. октобар ст. ст.) — „Преп. Андроник и супруга му Атанасија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the first of its two names. The heading is quoted whole, **with the closing full stop the Prologue itself prints**, which is what BRIEF-SERBIAN §4 asks for. It had to be measured off the raw cached page, because `srbody.mjs` and `sr-cand.mjs` both strip it from their printed output: every heading of this day ends `. </strong>` in the source. **An earlier wave of this reading quoted off the stripped output and wrote into its notes that the headings carry no closing stop, which the raw page contradicts for its own days as well as for these** — the rows of that wave are outside this reader’s range and are a finding for the author, not something fixed here. THE HEADING IS AN ENUMERATED COMPANY OF TWO — Андроник and the wife it names, Атанасија — so §5 counts two names, two folders are owed a row, and the corpus holds both. The quoted line is the one heading, whole, on both rows. `dates` UNTOUCHED ON BOTH, AND THE BOOKS ARE IRRECONCILABLE. The two folders hold `floruit` 540 off saint.gr’s «έζησαν κατά το ἔτος 540 μ.Χ.», while the Russian calendar puts the pair in the fifth century and the folders already record that neither is settled. **This entry opens by dating them to the reign of the emperor Theodosius the Great, which is earlier than both** — and it is the Romanian life’s dating, which this folder’s own first sentence already carries. **An emperor is not a source for a year, a reign is not a date, and three books now disagree three ways**, so the field is not touched at all and the disagreement is recorded here. That is the standing instruction where the books cannot be reconciled. `types` UNTOUCHED at `venerable` on both, corroborated by Преп. No `locations`, no `office`. THE ELDER DANIEL AND THE MARTYR JULIAN TAKE NO ROWS, AND BOTH REFUSALS HAVE A NAMED GROUND. The entry sends Andronicus «код старца Данила у Скиту»; the corpus keeps thirteen folders displayed as a Daniel and **not one of them is of Scetis** — the nearest by name, `daniel-the-egyptian`, is a martyr of one of the Palestinian companies under Diocletian and is a different man — so an identification off a bare forename is refused, as the existing lives already refuse it. And the martyr Јулијан **appears** to Athanasia at the graveyard: an appearance is not a relation. The children, the parents and the emperor’s subjects take no rows. WHAT THE BOOK ADDS, AND ONE ITEM IS A NUMBER NO OTHER BOOK GIVES. **Athanasia died first and Andronicus eight days after her** — «најпре св. Атанасија, а после 8 дана и св. Андроник» — where the Romanian life says he died soon afterwards and the Russian soon after her. The martyr Julian’s consolation is also given its **content** for the first time: that their children are in the kingdom of God and are better off there than they would be with their parents on earth, where the Romanian has him merely reprove her sorrow. And the entry says the two children died «у један дан», in one day. WHAT THE BOOK DOES NOT HAVE, SAID BECAUSE SILENCE IS NOT A CORRECTION: this account knows nothing of the second pilgrimage, of the monk who called himself Athanasius, of the twelve years in one cell, or of the letter under the pillow — the whole recognition story of the Romanian and Russian lives is absent, and it stops at long years of ascetic labour. The thirds of the earnings are here as they are elsewhere, though the order differs: a third to the poor, a third to the church, a third to live on. THE FOLD, AND THE SLUG SET DID NOT MOVE. `foldchk.py` measured «Андроник» before this day as `[('andronicus-of-antioch', 'ru'), ('andronicus-the-apostle', 'sr')]` — this folder already held the identical string as its `ru` form, so the new `sr` form adds no folder to the fold and the gate’s key is unchanged. **The gate has been printing that two-folder row as unread all the same**, so the key is written now: `andronicus-the-apostle` is Andronicus of the Seventy, companion of Junia, an apostle, bishop and martyr kept on 17 May, and this folder is the Antiochene goldsmith of 9 October who ended his life a monk in Egypt. Two days, two men, one bare forename. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

@@ -16,6 +16,11 @@
       "form": "Филипп",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2292, headed «Святой Филипп, апостол от 70-ти», with the rank word and the office left off."
+    },
+    {
+      "form": "Филип",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. октобар ст. ст., „Св. апостол Филип.“ — Св. is «saint» and not a rank and апостол is the `apostle` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. The heading gives him no epithet and nothing that would tell him from the Philip of the Twelve; the body is what identifies him. `foldchk.py` measured the string as held by `philip-of-moscow` alone before this day, and the two-folder fold is read in the `serbian` row’s note and in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.10.2026 (11. октобар ст. ст.) — „Св. апостол Филип.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. **THE HEADING SAYS апостол AND THE MAN IS THE DEACON, AND THE BODY IS WHAT SETTLES IT.** The corpus holds a Philip of the Twelve as well, so the heading alone would be ambiguous; the entry identifies him outright — born at Caesarea in Palestine, married with four daughters, chosen a deacon when the apostles chose the deacons **beside Stephen and the rest**, server of the poor and the widows, preacher in Samaria, baptiser of Simon Magus and of the eunuch of queen Candace, carried off by an angel to Azotus, and made bishop in Tralles. That is this folder’s man line for line, and the `apostle` the heading gives him is already in its `types` beside `deacon` and `bishop`. WHAT THE BOOK ADDS. **All four daughters are said to have been given the gift of prophecy and all four to have vowed virginity for Christ’s sake**, where the other books count them. **The angel carried him to Azotus тренутно и невидљиво**, in an instant and invisibly. And the see is Тралија, Tralles, which the folder already holds from another book and which **is not written into `office`** here: a scalar field is not improved by a second book repeating it, and nothing in the entry grades the see. `dates` UNTOUCHED AND UNTOUCHABLE: the folder holds `dates: null` and this entry gives no year, only «Сконча мирно у дубокој старости», in deep old age — **and an age is not a date and a lifespan is refused**. The appended paragraph carries no four-digit year at all; with neither birth nor death on the folder, `date-audit`’s `stated` reads its prose for both. Measured after the write: unmoved. `related` UNTOUCHED, AND EVERY PERSON THE ENTRY NAMES WHO HAS A FOLDER IS ALREADY THERE: `stephen-the-first-martyr`, `the-eunuch-of-queen-candace`, `paul-the-apostle` and `john-the-theologian`. **Simon Magus takes no row and is not a corpus saint**; queen Candace is the eunuch’s mistress and not a relation. No `locations`. THE FOLD THIS ENTRY MADE: `foldchk.py` measured «Филип» before the day as `[('philip-of-moscow', 'sr')]`, so it goes from one folder to two and the key is written into `scripts/corpus-gate.mjs` in the same commit. The other is the metropolitan of Moscow and All Russia, 1507 to 1569, kept on 9 January. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S SECOND ENTRY IS REFUSED AND IT IS NOT A CLOSE CALL. «Спомен Седмог Васељенског Сабора.» — **a Council is not a folder**, and the entry is about the Council and not about a person: Nicaea in 787 under the empress Irene and her son Constantine and the patriarch Tarasius, 367 Fathers, the definition of the veneration of icons out of Scripture, the Fathers and attested wonders, and the ruling that relics of martyrs must be put into the antimension. It names the bishop Constantine of Cyprus, who told the Council the story of the shepherd of Constantia who struck the Mother of God’s icon with his iron staff, spoiled the right eye of the image, stumbled on leaving and put out his own right eye with the same staff. **None of those takes a row and none is in any prose of this day**: the Fathers of a Council are not a folder, an emperor in an entry is not a relation, and the subject of an anecdote told at a Council is further still from one. `tarasius-of-constantinople` has a folder and gets nothing from this day."
     }
   ],
   "hymns": [

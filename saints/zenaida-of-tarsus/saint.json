@@ -16,6 +16,11 @@
       "form": "Зинаида",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2508, headed «Зинаида Тарсийская, мц.», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Зинаида",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. октобар ст. ст., „Св. муч. Зинаида и Филонида.“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name, the first of the heading’s two, is the whole of the form. It is the same string this folder already stores as its `ru` form, the two calendars spelling the name identically."
     }
   ],
   "sex": "female",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.10.2026 (11. октобар ст. ст.) — „Св. муч. Зинаида и Филонида.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry, the first of its two names. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. THE HEADING IS AN ENUMERATED COMPANY OF TWO, Зинаида and Филонида, so section 5 counts two names, two folders are owed a row and the corpus holds both. The quoted line is the one heading, whole, on both rows. The entry opens «Сестре рођене, родом од Тарса», own sisters of Tarsus, which is the kinship the two folders already relate each other on, and the city both display names carry. **THE KINSHIP WITH PAUL IS GIVEN AS A REPORT AND IS TREATED AS ONE.** «Називају их сродницима св. апостола Павла» — **they are called** kinswomen of the apostle Paul; the book does not assert it in its own voice. `paul-the-apostle` is already related on both folders, so nothing is added and nothing is claimed that the sentence does not claim. `dates` UNTOUCHED AND UNTOUCHABLE: both folders hold `dates: null` and **this entry gives no year, no reign and no emperor** — there is nothing here to infer from, and the appended paragraphs carry no four-digit year at all. With neither birth nor death on either folder, `date-audit`’s `stated` reads both lives’ prose. Measured after the write: unmoved. `types` UNTOUCHED at `martyr`, `physician` on both: муч. in the heading is the `martyr`, and «Знађаху лекарску вештину» corroborates the `physician`. **`virgin` is NOT added although the entry calls them девојке who renounced the world** — that is a word in a body and not a rank in a heading, which is the same refusal this range made for Eulampia on the Julian 10 October. No `office`, no `locations` — the cave the entry puts them in is «нека пештера», some cave, and no coordinate follows from that. WHAT THE BOOK ADDS: **they were stoned, and by night.** «Но неки неверни нападну их ноћу и побију камењем» — some unbelievers attacked them in the night and killed them with stones. **THE FORM IS THE SAME STRING THIS FOLDER ALREADY HOLDS AS ITS RUSSIAN ONE** — `foldchk.py` returns `[('zenaida-of-tarsus', 'ru')]` for «Зинаида», the two calendars spelling the name identically, so the `sr` form is written because this calendar prints it and nothing is folded across folders by it. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S SECOND ENTRY IS REFUSED AND IT IS NOT A CLOSE CALL. «Спомен Седмог Васељенског Сабора.» — **a Council is not a folder**, and the entry is about the Council and not about a person: Nicaea in 787 under the empress Irene and her son Constantine and the patriarch Tarasius, 367 Fathers, the definition of the veneration of icons out of Scripture, the Fathers and attested wonders, and the ruling that relics of martyrs must be put into the antimension. It names the bishop Constantine of Cyprus, who told the Council the story of the shepherd of Constantia who struck the Mother of God’s icon with his iron staff, spoiled the right eye of the image, stumbled on leaving and put out his own right eye with the same staff. **None of those takes a row and none is in any prose of this day**: the Fathers of a Council are not a folder, an emperor in an entry is not a relation, and the subject of an anecdote told at a Council is further still from one. `tarasius-of-constantinople` has a folder and gets nothing from this day."
     }
   ],
   "text": {

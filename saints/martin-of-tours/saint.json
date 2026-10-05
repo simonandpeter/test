@@ -6,6 +6,11 @@
       "form": "Μαρτίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Νοεμβρίου, «Όσιος Μαρτίνος ο θαυματουργός επίσκοπος Φραγκιάς», with the rank words left off."
+    },
+    {
+      "form": "Мартин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. октобар ст. ст., „Св. Мартин еп. Турски.“ — Св. is «saint» and not a rank and еп. Турски is the `bishop` this corpus puts in `types` with the see in `office`, so all of it comes off and the bare personal name is the whole of the form. `foldchk.py` measured the string as held by `martin-of-illyria` and `martin-pope-of-rome` before this day, both `sr`, so this form makes a three-folder fold, read in the `serbian` row’s note and in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.10.2026 (12. октобар ст. ст.) — „Св. Мартин еп. Турски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. **THIS FOLDER HAD NO ROMANIAN AND NO SERBIAN ROW AND TWO NAME FORMS BETWEEN THREE BOOKS**, and the Greek keeps him on 11 October where the Russian and this book keep him on the 12th; this row is the Julian 12 October, the day this page prints him on. WHAT THE BOOK ADDS, AND THE FIRST ITEM IS A PLACE NO OTHER BOOK READ FOR THIS FOLDER GIVES. He was born **in Pannonia, in a town of Styria**, in 316, of heathen parents, and his father was a Roman officer, which is how the boy came to be put into the army against his will. He was already a catechumen — «оглашен» — in the Church, which he had loved with his whole heart from early childhood. The cloak at the gate of Amiens is told in full: a beggar all but naked shivering in the frost, Martin falling behind his companions, the soldier's cloak cut in two with his sword, half given and half worn away. And the dream that night is given its words: Christ appeared wrapped in that half of the cloak and said to his angels, «Мартин је тек оглашен, и ево обуче ме својом одећом!» — Martin is only a catechumen, and see, he has clothed me with his own garment. THE REST: he left the army, was baptised at once, **and baptised his mother**; he became a monk in the diocese of Saint Hilary, at Poitiers; he was extraordinarily humble, and for that humility God gave him an abundant gift of wonderworking, so that he even raised the dead and drove out evil spirits; he was made bishop at Tours **against his will**; and after much labour and a hard struggle with heathen and with Arian heretics he gave up his soul in 397. `dates` UNTOUCHED AND BOTH ENDS CORROBORATED. The folder holds `birth` 316 and `death` «397 or about 400»; this entry gives 316 and 397 flat, which is the birth exactly and the earlier end of the death interval. **Narrowing a range to one end of itself on a second book's flat figure is refused**, so the death field is untouched and the agreement is recorded here. `types` UNTOUCHED at `bishop`, `wonderworker`: еп. in the heading is the `bishop`, «обилати дар чудотворства» corroborates the `wonderworker`, and **«замонаши» is a verb in the body and no warrant for a rank** — the heading has no Преп. `office` left at «Bishop of Tours»; the heading's «еп. Турски» and the body's «епископа у граду Гуру» both say it and neither improves it. `related` UNTOUCHED, AND THE ONE NAME IN THE ENTRY IS KEPT OUT OF THE PROSE ON SECTION 6'S GROUND. The entry says he was tonsured «у епархији св. Иларија Поатијског», in the diocese of Saint Hilary of Poitiers, and `hilary-of-poitiers` is that display name exactly — so writing the phrase whole would make `related-floor.test.mjs` demand a row in both directions, and **a diocese is a jurisdiction and not a companion**, the same reading that kept Sabbas the Sanctified's monastery out of Theophanes's prose on the Julian 11 October. The prose names only Saint Hilary, at Poitiers, which matches no display name; the book's own words are here. The beggar, the mother and the father take no rows. No `locations` — «у једноме граду Штајерске», in some town of Styria, is not a coordinate. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {

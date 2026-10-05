@@ -16,6 +16,11 @@
       "form": "Сергий",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 1975, headed «Сергий Римлянин, Росафский, мч.», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Сергије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. октобар ст. ст., „Св. муч. Сергије и Вакх.“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name, the first of the heading’s two, is the whole of the form. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this is the first holder; the Serbian vernacular ending keeps it off the six-folder «Сергий» fold."
     }
   ],
   "sex": "male",
@@ -80,8 +85,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.10.2026 (7. октобар ст. ст.) — „Св. муч. Сергије и Вакх.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, the first of its two names. The heading is quoted whole, **with the closing full stop the Prologue itself prints**, which is what BRIEF-SERBIAN §4 asks for. It had to be measured off the raw cached page, because `srbody.mjs` and `sr-cand.mjs` both strip it from their printed output: every heading of this day ends `. </strong>` in the source. **An earlier wave of this reading quoted off the stripped output and wrote into its notes that the headings carry no closing stop, which the raw page contradicts for its own days as well as for these** — the rows of that wave are outside this reader’s range and are a finding for the author, not something fixed here. THE HEADING IS AN ENUMERATED COMPANY OF TWO and §5 counts the names it prints: Сергије and Вакх, two names, therefore up to two folders, and the corpus already holds both — so the entry is two upgrades and no arrival. The quoted line is the one heading, whole, on both rows. THE RANK WORD IS муч., martyr by §5, and `types` IS LEFT AT `great-martyr`, WHICH IS NOT A CORRECTION OF IT: the folder took `great-martyr` from doxologia’s «Sfantul Mare Mucenic» and the Greek page, three books against one abbreviation, and a scalar field has no «X or Y» — the Prologue’s grade is recorded here instead. `dates` UNTOUCHED, AND THE PROLOGUE IS THE REASON IT COULD NOT MOVE. The folder holds `death` 290–303 off the Russian day line «Мчч. Сергия и Вакха (290-303)»; this entry closes «Пострадаше ови красни витези вере Христове око 303. г.», about 303, which lies inside the span the folder already carries. **Taking it would narrow a source’s range to one end of itself**, which is refused, and widening is for two books that disagree — these two agree. NO NEW `related`: Maximian is an emperor in a life and the governor Antiochus is the adversary of the story, and neither is a relation; the pair already relate each other. No `locations` — the entry names Rome, Barbalissos and Rosaf and the folder has never been placed, and a located saint with a thirteen-year death span is a `map-span` question nobody asked. The Prologue prints no troparion and no kontakion; the day carries only the verse. WHAT THIS FOURTH BOOK ADDS TO A 5 kB LIFE, which already carries the Romanian, the Greek and the Russian. Most of the entry is here already: the two as the first nobles at Maximian’s court, the emperor’s love turning to anger when he heard they were Christians, the great sacrifice they openly refused, the stripping of the soldier’s dress, the rings and the decorations, the women’s clothes, the iron hoops about the neck, the parade for the mockery of all, the sending into Asia to the governor Antiochus who owed his own rise to their recommendation, Bacchus beaten to death while Sergius lay in prison, the iron shoes stuck full of nails, and the beheading at Rosaf. THREE THINGS ARE NEW. The parade is **through the streets of the city of Rome**, which no page read for this folder names. Rosaf is **in Syria**, where the Romanian gives the city with no province. And the two answer Antiochus in one sentence, spoken for both of them: „и чест и бешчешће, и живот и смрт – све је једно ономе ко иште царства небескога.“ — both honour and dishonour, both life and death, are all one to him who seeks the kingdom of heaven. It is a different saying from the one the Greek page gives Sergius at the end, the Apostle’s «Ἐμοὶ τὸ ζῆν Χριστός», and is said here by the two together before the tortures rather than by Sergius on the block. WHAT THE PROLOGUE DOES NOT HAVE, said because its silence is not a correction: no angel heals his feet, no pillar of fire stands over the grave, no fifteen bishops translate the relics, and Justinian’s church is not mentioned. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Сергије», and it folds to `сергије`, which is **not** the `сергии` the six-folder Russian fold stands on — measured, not assumed, and the Serbian vernacular ије ending is the whole reason. No fold is widened by this day."
     }
   ],
   "hymns": [
