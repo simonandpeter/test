@@ -11,6 +11,11 @@
       "form": "Λεόντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουνίου, «Άγιος Λεόντιος και οι συν αυτώ Υπάτιος και Θεόδουλος», with the rank word left off."
+    },
+    {
+      "form": "Леонтије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. јун ст. ст., „Свети мученик Леонтије“ — Свети is not a rank and мученик is the rank, which `types` already carries; both come off and the bare forename is left, which is all this heading gives. **The fold is deliberate and forced**: `foldchk.py` returns `leontius-24-april` and `leontius-of-arabia`, both `sr`, for «Леонтије», so this is the third folder on the string — and the same day’s second entry would have made it the fourth, except that its own heading gives a by-name and keeps it. There is nothing in this heading to break the fold with: «of Tripoli» is the corpus’s disambiguation and not a word this book prints."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.07.2026 (18. јун ст. ст.) — „Свети мученик Леонтије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 18 June is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. TWO ENTRIES, TWO LEONTIUSES, AND THE BY-NAME RULE DOING THE WORK. This day prints a `Свети мученик Леонтије` and a `Преподобни Леонтије прозорљиви`, two different men, and both have folders. Stripped to the bare forename both would store the same `sr` string and the day would have folded two of its own folders together. **The second heading gives a by-name and it is kept**, so the forms written are «Леонтије» and «Леонтије прозорљиви», and only the first takes a fold. A FIRST DATE ON A FOLDER THAT HELD NONE, AND IT IS A FLAT YEAR. The folder carried no `dates` object at all: doxologia set the passion «in the days of Vespasian» and saint.gr «in the years of the emperor Vespasian», and **an emperor is not a source for a year**, so neither gave one. This book ends the entry with one, flat and alone: „Чесно пострада свети Леонтије 73. године“. `death` 73 to 73, display «73», basis traditional, the sentence in the note. The year sits inside Vespasian’s reign, which is what the other two books gave, so nothing is widened and nothing contradicted — but **the year is written off the sentence and not off the reign**, and would have been refused if this book had only named the emperor. No `birth`: the entry gives his origin and his build and nothing of his beginning. WHAT ELSE IS NEW, AND IT IS THREE THINGS IN A STORY THE CORPUS ALREADY HELD TWICE. The folder is long: doxologia’s whole passion and saint.gr’s account are both in it, with Hadrian, Vespasian, the vision on the road, the thrice-repeated „Боже Леонтијев, помози ми!“, the shining cloud and the rain that baptised, the name of the Trinity called over them, the white clothes and the candles, and Notarius’s tablets of lead laid in the grave. So this paragraph says what this third book adds and no more. **An angel of the Lord appeared to Leontius in the middle of the worst of the torments, encouraged him and comforted him** — neither other book has it, and it is the second day of this wave on which this book puts an angel into a torture the other books tell without one. **The axe**: Hadrian ordered Hypatius and Theodulus beaten without mercy and then „главе секиром одсеку“, their heads cut off with an axe, where the other books say only beheading. **The end**: „најзад повалише мученика по земљи, и бише га дотле докле не предаде дух свој Богу“ — they threw him down on the ground and beat him until he gave up his spirit to God. The book also quotes its own description of him, „великотелесан узрастом, снажан, крепак и храбар у биткама“, and makes him „родом из Јеладе“, of Hellas, where saint.gr named the island of Aegina and doxologia named nothing; **the wider reading is written and the narrower is left standing**, because a book that says Hellas does not contradict a book that says a place in it. NO ROWS FOR THE TWO MEN THIS ENTRY MARTYRS, AND THAT IS THE RULING OF THE DAY. `hypatius-the-tribune` and `theodulus-of-tripoli` both exist, both are kept on this same menologion number 18/6 by another calendar, both are already in this folder’s `related` and this folder in both of theirs, and both are already named and linked in its prose. **Neither takes a serbian row from this day.** The Prologue names them in the **body** of an entry whose heading is one man’s name, and §4 is explicit that the quoted line of a row is «the Prologue’s own heading, whole, and nothing else» — so a row on Hypatius quoting „Свети мученик Леонтије“ would cite a heading that does not name him. That is a different thing from §5’s enumerated company, where the heading itself prints every name and each row quotes the one heading truly. Counted by §5 this heading enumerates **one** name. The two are named in the commit instead. `types` UNTOUCHED: `martyr` and `soldier` are both there, „Свети мученик“ is the `martyr` and „био војвода римски“ the `soldier`. No `office` — војвода is a military rank, not a see, and no `office` string is invented. No `locations`: Tripoli in Phoenicia and Hellas are two clauses and the folder already has both unbounded. **No rows** for the governor Hadrian, whom `ls saints | grep -i adrian` shows the corpus holds twenty-six other men of, and who is an official and not a relation — he is already named throughout the older prose and that prose is left as it stands; for Vespasian, an emperor; or for „неки кир Нотарије“, whom the older prose already calls «a servant of Christ named Notarius» and whom `ls saints | grep -i notar` shows no folder holds. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -123,5 +138,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 73,
+      "latest": 73,
+      "display": "73",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 18. јун ст. ст. ends the entry „Чесно пострада свети Леонтије 73. године“ — he suffered honourably in the year 73. The folder held no date of any kind before this: doxologia.ro set the passion «in the days of Vespasian» and saint.gr «in the years of the emperor Vespasian», and an emperor is not a source for a year. This year is written off the sentence that states it and not off the reign that contains it. No `birth` is taken: the entry gives his origin and his build and nothing of his beginning (5 October 2026)."
+    }
   }
 }

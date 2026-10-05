@@ -11,6 +11,11 @@
       "form": "Λεόντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουνίου, «Όσιος Λεόντιος ο Αθωνίτης ο Μυροβλήτης», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Леонтије прозорљиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. јун ст. ст., „Преподобни Леонтије прозорљиви“ — Преподобни is the rank and comes off, and what is left is the forename **with its by-name kept**: прозорљиви, clear-sighted, which is not a rank in this corpus’s vocabulary and is therefore part of the name the heading gives. Keeping it is what makes this form clear: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Леонтије прозорљиви», where for the bare «Леонтије» it returns `leontius-24-april` and `leontius-of-arabia` — and the same day’s first entry writes that bare form, so stripping the by-name here would have folded two folders of one day together. The Myrrh-gusher and the Athonite of the other books’ forms are not in this heading and are not built onto it."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.07.2026 (18. јун ст. ст.) — „Преподобни Леонтије прозорљиви“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 18 June is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. TWO ENTRIES, TWO LEONTIUSES, AND THE BY-NAME RULE DOING THE WORK. This day prints a `Свети мученик Леонтије` and a `Преподобни Леонтије прозорљиви`, two different men, and both have folders. Stripped to the bare forename both would store the same `sr` string and the day would have folded two of its own folders together. **The second heading gives a by-name and it is kept**, so the forms written are «Леонтије» and «Леонтије прозорљиви», and only the first takes a fold. `dates` LEFT AS THEY STOOD, AND A THIRD BOOK BREAKING A TIE. The folder holds `death` 1605 `attested` off doxologia’s «a adormit cu pace … în ziua de 16 martie 1605» and `birth` 1520 `traditional` off saint.gr. This book states the death year flat — „преставио се 1605. године“ — so there is nothing to widen and nothing to choose, and `dates` is not touched. **But it does settle something the folder recorded as a disagreement**: doxologia had him enter Dionysiou in 1537 and struggle there sixty-eight years, saint.gr had him sixty years in the monastery, and the folder’s own `death` note says so. This book says „подвизавао се у манастиру Дионисијату шездесет година“ — sixty years — **and says it twice**, the second time in the sentence about going in and coming out, „за пуних шездесет година“. So two of three books now read sixty. That is written into the life and **not into `dates`**, because a duration is not a year and the field the arithmetic would reach is a `birth` this folder already holds off another book. **NO `birth` IS TOUCHED AND THE EIGHTY-FIVE YEARS ARE REFUSED**: „будући осамдесет пет година од рођења“ is a lifespan, and sixteen hundred and five less eighty-five is a year reached by arithmetic — both refused on their own, and refused twice over because saint.gr’s own 1520 is that same subtraction made by somebody else and is the folder’s, not mine to endorse or to move. THE ONE THING THIS BOOK HAS THAT NEITHER OTHER BOOK HAS. „Само једном ушао у манастир и само једном изишао из манастира за пуних шездесет година“ — in sixty full years he went into the monastery once and came out of it once: in when he first entered Dionysiou, out when they carried him out dead to bury him. Nothing of that is in either of the other two lives, and it is the whole reason this row is worth the paragraph. WHAT IT AGREES ON. „Пореклом Грк из Пелопонеза“ — a Greek of the Peloponnese by origin, where saint.gr named Argos in the Peloponnese; **the wider reading is written and the narrower left standing**. „Имао је чудесан дар прозорљивости и прорицања“ — the wonderful gift of clear sight and of foretelling; and „по смрти из његових моштију потекло је миро“, that myrrh flowed from his relics after his death, which is the Myrrh-gusher of the display name and is already in the folder. `types` UNTOUCHED, AND **`прозорљиви` GIVES NO TYPE**. `venerable`, `hermit` and `wonderworker` are all there; Преподобни is the `venerable` and the heading’s one other word, прозорљиви, means clear-sighted, for which **there is no word in the vocabulary at all** — so it goes into the name form, where it breaks a fold, and into the life, and nowhere else. No `office`, no `locations`: the Peloponnese and the monastery are the folder’s already and unbounded. NO ROWS: the entry names no person but him. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
