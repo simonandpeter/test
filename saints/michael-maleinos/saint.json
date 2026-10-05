@@ -11,6 +11,11 @@
       "form": "Μιχαήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουλίου, «Όσιος Μιχαήλ ο Μαλείνος πνευματικός πατέρας του Αγίου Αθανασίου του Αθωνίτη», with the rank word, the surname and the description left off. The page gives his name in the world as Μανουήλ."
+    },
+    {
+      "form": "Михаил Малеин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Преп. Михаил Малеин.“ — „Преп.“ is the rank, which `types` already carries, and „Малеин“ is a **by-name and not a see**: it is the mountain he withdrew to turned into a surname, and §6 keeps a by-name, so the form is the two words the heading leaves. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder — and **the by-name is what keeps it so**, a bare «Михаил» folding with every Michael this corpus has, which is the second time in three days that §6 has kept a form out of a very deep fold."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.07.2026 (12. јул ст. ст.) — „Преп. Михаил Малеин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is the by-name and the mountain and the disciple: „Михаил Малеин“ is this folder’s own name, „повуче се на гору Малеа, код Св. Горе“ is the Mount Maleon the by-name comes from, „од којих је најзнаменитији св. Атанасије Атонски“ names the disciple this folder already relates in both directions, and the Romanian and Greek rows stand on this very 12 July. **`dates` WRITTEN WHERE THE FOLDER HAD NONE, AND THE BOOK’S OWN HEDGE IS KEPT IN THE DISPLAY.** The folder held `dates: null`. This book ends „Скончао мирно око 940 год.“ — he ended peacefully about 940 — so `death` is 940 to 940, basis traditional, display **«about 940»**, the qualifier being the book’s own word and the same treatment «end of the 4th century» had on 9 July: **the hedge is kept in the display and is not turned into numbers**, because any boundary invented for «about» would be invented. This is not the „вероватно“ of 5 July, which was a probability and was refused outright; «око» is a precision and not a doubt. It is also not a narrowing — there was no interval to narrow. `types` UNTOUCHED at `venerable` and `abbot`: „Преп.“ is the `venerable`, and the `abbot` the folder already holds is not in this heading and is not taken away by its silence. **`wonderworker` is not on offer** and nothing in the body offers it. No `office`. No `locations`: Mount Maleon and the Holy Mountain are a narrative. No new `related` rows. **WHAT IS NEW IS THE RENUNCIATION AND THE MEANS.** He was of noble and rich birth, and „Презревши земна блага у младости“ — having despised earthly goods in his youth — withdrew to Mount Maleon, where he struggled „чистећи своје срце постом и молитвом“, cleansing his heart with fasting and prayer; and he had many disciples afterwards, of whom the most notable was Athanasius. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -88,5 +103,14 @@
   ],
   "related": [
     "athanasius-the-athonite"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 940,
+      "latest": 940,
+      "display": "about 940",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; neither doxologia nor saint.gr gave a year. The Охридски пролог for 12. јул ст. ст. ends „Скончао мирно око 940 год.“ The qualifier «око», about, is the book’s own and is kept in the display rather than turned into a wider interval, any boundary for it being invented."
+    }
+  }
 }

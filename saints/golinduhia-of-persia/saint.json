@@ -21,6 +21,11 @@
       "form": "Μαρία",
       "lang": "el",
       "note": "The baptismal name, read out of the same line for 13 Ιουλίου: «η Περσίδα που μετονομάστηκε Μαρία», and out of the life page's «όταν βαπτίστηκε πήρε το όνομα Μαρία»."
+    },
+    {
+      "form": "Голиндуха",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. мученица Голиндуха.“ — „Св.“ is not a rank and „мученица“ is the rank `types` already carries, so the bare forename is the whole form. **Her baptismal name Марија is not stored**: the body gives it, the heading does not, and §4 and §6 together make a stored form the heading’s and not the body’s. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder — had Марија been taken off the body it would have folded with a great many women, which is the second reason not to take it."
     }
   ],
   "sex": "female",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.07.2026 (12. јул ст. ст.) — „Св. мученица Голиндуха.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and **it lands a day before the two calendars that already keep her**: the Romanian and Greek rows stand on the 13 July and this book prints her on the 12th. The `serbian` row was `undocumented`, so it is written plainly on this book’s day and nothing of the other two is touched — §4 forbids moving a principal day — and the two days stand side by side in the life. The identification is not in doubt and the Greek calendar’s own heading makes it: saint.gr has «Αγία Γολινδούχ η Περσίδα που μετονομάστηκε Μαρία», the Persian woman renamed Maria, and this book says „На крштењу доби име Марија“, at her baptism she received the name Maria. One Persian woman, one second name, two consecutive days. **`dates` WRITTEN WHERE THE FOLDER HAD NONE.** `dates: null` before; this book ends „Најзад проповедајући веру праву мирно скончала близу града Нисивије, 587. год.“, so `death` is 587 to 587, display «587», basis traditional. A flat year into an empty field, which is exactly what the narrowing rule permits and does not touch. **The eighteen years in prison and the three years of her marriage are durations**, and nothing is reckoned back from 587 by either of them. `types` UNTOUCHED at `martyr`, which „мученица“ is — **and the body says she died in peace**, „мирно скончала“, after all her sufferings, so this folder is a martyr by the rank its calendars give it and not by its death, which is a thing worth recording and not a thing to correct: §10 reserves the reading and §5 gives the rank. No `locations`: Persia, Jerusalem and Nisibis are a narrative. No new `related` rows — the Persian magus she married, the angel who showed her the other world, and Severus whose heresy she refuted at Jerusalem are a husband, an angel and a heresiarch, and `syra-of-persia`, whom the folder already relates, is not named in this book at all. **WHAT IS NEW IS THE WHOLE MIDDLE OF THE LIFE.** The vision of an angel who showed her the other world, the torments of sinners and unbelievers and the joy of the righteous, after three years of marriage to a Persian magus; the life sentence to prison, and **eighteen years in it without wavering**; being thrown into a pit and saved by God, and set before a dreadful serpent that did not harm her; wicked youths sent to defile her, and **God making her invisible to their eyes**; many Persians coming to the faith of Christ in amazement at her suffering; and the visit to Jerusalem, where she refuted the heresy of Severus — which taught that the divinity in Christ suffered, on account of which they sang the Trisagion with the words «who wast crucified for us» added. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -97,5 +112,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 587,
+      "latest": 587,
+      "display": "587",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; neither doxologia nor saint.gr gave a year. The Охридски пролог for 12. јул ст. ст. ends „Најзад проповедајући веру праву мирно скончала близу града Нисивије, 587. год.“ The eighteen years in prison and the three years of her marriage are durations and nothing is reckoned from them."
+    }
   }
 }

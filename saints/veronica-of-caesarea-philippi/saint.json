@@ -11,6 +11,11 @@
       "form": "Βερονίκη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουλίου, «Αγία Βερονίκη η αιμορροούσα», with the rank word and the description left off."
+    },
+    {
+      "form": "Вероника",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. Вероника.“ — „Св.“ is not a rank and there is nothing else in the heading, so the bare forename is the whole of what this calendar gives her; «of Caesarea Philippi» in the display name is the corpus’s own and is not in this book at all. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.07.2026 (12. јул ст. ст.) — „Св. Вероника.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is a verse of the Gospel and this book gives it: „То је она крвоточна жена, коју је Господ исцелио (Мат. 9, 20)“ — this is that woman with the issue of blood whom the Lord healed — and the Romanian and Greek rows stand on this very 12 July. **`dates` STAY NULL AND THERE IS NOTHING TO REFUSE.** The folder holds no dates; this book gives no year, no century and no reign for her, only „упокојила се мирно“, she reposed peacefully. The one date in the entry belongs to somebody else — the statue was preserved „до времена цара Јулијана Одступника“, until the time of Julian the Apostate — and a reign is no source for a year in any case, least of all for a woman who died two centuries before it. `types` UNTOUCHED at `righteous`: the heading’s only word before the name is „Св.“, which §5 says is not a rank, so **this heading yields no type at all** and the one the folder holds came off another calendar. No `office`, no `locations`. No new `related` rows: the Lord who healed her is not a folder of this corpus, and `nicodemus-the-hagiorite`, whom the folder already relates, is not named here. **WHAT IS NEW IS A STATUE AND A REMARK ABOUT STATUES.** Out of gratitude to her Lord and healer, the Prologue says, Veronica had a statue of the Lord Jesus made, and prayed before it; by tradition that statue was preserved until the time of Julian the Apostate, **who turned it into a statue of the idol Zeus**. And the Prologue adds a remark of its own that is not about her at all: this is one of the rarest cases of statues of saints being used in the Eastern church, whereas, as is known, it later became the general custom of the Western churches. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
