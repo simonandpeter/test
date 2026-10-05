@@ -17,6 +17,11 @@
       "form": "Аверкий Иерапольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 22 октября ст. ст., «Святитель Аверкий Иерапольский, епископ, равноапостольный», with the rank words and the see left off."
+    },
+    {
+      "form": "Аверкије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. октобар ст. ст., „Св. Аверкије равноапостолни.“ — «Св.» is \"saint\" and not a rank and «равноапостолни» is the `equal-to-the-apostles` grade this corpus keeps in `types`, so both come off and the bare forename is the whole of the form; the see is in the body and this folder keeps it in `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.11.2025 (22. октобар ст. ст.) — „Св. Аверкије равноапостолни.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-04&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (BRIEF-SERBIAN section 4). The URL year is 2025, which is what `sr-civil.mjs` gives for the Julian 10-20 to 12-18. «равноапостолни» is the `equal-to-the-apostles` this folder already holds, «епископ» the `bishop` and the `office`, and the healings the `wonderworker`; `types` untouched. THE ONE DATE CHANGE OF THIS DAY, AND IT IS A WIDENING. The folder held `death` 167 flat, «c. 167», traditional. This entry puts his repose «крајем II столећа», AT THE END OF THE SECOND CENTURY, which is OUTSIDE the figure on file and not a vaguer version of it — 167 is the middle of that century, not its end. Two books cannot both be right and a reader does not pick the winner, so the interval becomes 167 to 200 and holds both. Width 33 years: neither `wide` nor `loose-basis`, so `date-audit.mjs` does not move on it. AND THE ENTRY CONTRADICTS ITSELF, WHICH IS WHY NEITHER END WAS PREFERRED. It opens «У време цара Антонина», in the time of the emperor Antoninus, and closes with the end of the second century; those two cannot both be the same span, and the emperor is nearer the 167 the folder already held than the century’s end is. An emperor is not a source for a year in any case, so nothing was derived from him — but his presence in the same paragraph is the reason this is recorded as a disagreement rather than as a correction. WHAT THE BOOK ADDS. He was bishop at HIERAPOLIS IN PHRYGIA, where the overwhelming majority were pagans, and he governed his small flock grieving in his heart over them and praying that God would turn them to the light of truth. At a NOISY IDOL FESTIVAL he was fired with zeal, WENT INTO THE IDOL TEMPLE AND SMASHED EVERY IDOL IN IT. When the enraged pagans were about to kill him, AT THAT VERY MOMENT THREE POSSESSED YOUTHS FELL UPON HIM, foaming and howling; he drove the demons out of them, the youths became whole and quiet, AND THE PAGANS TURNED THEIR ANGER INTO WONDER AND FIVE HUNDRED OF THEM WERE BAPTISED ON THE SPOT — and little by little the whole city believed. He RESTORED THE SIGHT OF THE BLIND MOTHER OF ПУБЛИЈЕ, the proconsul of the region, so that Publius and his mother and a multitude of others believed. In old age HE WAS CALLED TO ROME, WHERE HE HEALED THE EMPEROR’S MAD DAUGHTER. THE LORD CHRIST APPEARED TO HIM SEVERAL TIMES. Men came from near and far for his help in incurable torments; THE DEMONS NOT ONLY FEARED HIM BUT SERVED HIM AT HIS COMMAND; and BY THE LORD’S OWN DIRECTION he preached the Gospel through SYRIA AND MESOPOTAMIA as well. ONE PERSON NAMED AND NO FOLDER HOLDS HIM, WHICH IS RULING 3: Публије the proconsul, who believed with his mother. The mother and the emperor’s daughter are unnamed. No `related`, no `locations`: Hierapolis, Rome, Syria and Mesopotamia are named and none is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Аверкије». THE DAY’S THIRD ENTRY IS REFUSED WHOLE AND NO FOLDER GETS ANYTHING FROM IT. It is „Спомен чудотворног избављења Москве од Литванаца помоћу Пресвете Богородице.“ — the commemoration of the wonderful deliverance of Moscow from the Lithuanians by the help of the most holy Theotokos. A «Спомен» of an event is a feast and not a person, and section 5 puts it with «Пренос моштију» and «Обретење моштију»: the heading enumerates nobody, so it gets no row. Its body does name three people — св. Сергије Радоњежски, who appeared to a captive bishop Арсеније and promised that Moscow would be cleansed the next day, and кнез Василије Јованович, in whose time it happened — and section 4 and section 5 refuse all three: named in a body, absent from the heading. Nothing was written on `sergius-of-radonezh`. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own."
     }
   ],
   "hymns": [
@@ -172,10 +187,10 @@
   "dates": {
     "death": {
       "earliest": 167,
-      "latest": 167,
-      "display": "c. 167",
+      "latest": 200,
+      "display": "c. 167, or the end of the 2nd century",
       "basis": "traditional",
-      "note": "days.pravoslavie.ru closes his line for 22 октября ст. ст. «(ок. 167)», and its life places him in the second century in Phrygia; the «ок.» is the source's own approximation and the bounds are its one year. saint.gr, read for this folder's Greek row, says he died in peace at seventy-two and gives no year. Read 4 October 2026."
+      "note": "The folder held «c. 167» flat before this reading. The Охридски пролог closes its entry «У дубокој старости представио се Господу своме љубљеноме, у граду Јерапољу, крајем II столећа» — at the end of the second century, which is outside 167 and not a vaguer form of it. The interval now holds both readings rather than preferring one. The same entry opens «У време цара Антонина», which is nearer the 167 than the century’s end is, so this book disagrees with itself as well as with the folder; an emperor is not a source for a year and nothing was derived from him."
     }
   }
 }
