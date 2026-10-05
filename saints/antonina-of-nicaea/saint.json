@@ -16,6 +16,11 @@
       "form": "Антонина",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's third heading for 1. март ст. ст., „Света мученица Антонина.“, with Света and the rank word мученица left off. The heading gives no epithet; Nicaea, which the folder's English name carries, is in the body's first sentence. The other Antonina the corpus keeps on this day has no Serbian form, so the fold this would make does not arise."
+    },
+    {
+      "form": "Антонина Никейская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 2401, «Мученица Антонина Никейская», with the rank word left off. The line itself declines the name. The toponymic is part of the name the calendar’s index carries and stays; the day’s line gives the forename alone and in the genitive. `.tmp/foldchk.py` reports no folder holding this form, while the bare «Антонина» is held by `antonina-of-crodamna` and by this folder itself as Serbian forms, and that fold is read in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "female",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Мц. Антонины (III-IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "Her life pages on this calendar head themselves «Дни памяти: 1 марта , 13 июня», two days. The day recorded here is the one whose page lists her and which this row cites, 1 марта ст. ст.; the June day is the calendar’s own second commemoration of her and is not a conversion of this one, and it is recorded here as a note because the schema keeps one feast to a church. Nothing was read on days.pravoslavie.ru’s 13 июня."
     },
     {
       "church": "romanian",

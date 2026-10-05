@@ -16,6 +16,11 @@
       "form": "Евдокија",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's heading for 1. март ст. ст., „Преподобномученица Евдокија.“, with the rank word Преподобномученица left off. The heading gives no epithet; Heliopolis, which the folder's English name carries, is in the body's first sentence."
+    },
+    {
+      "form": "Евдокия",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 2466, «Преподобномученица Евдокия», with the rank word left off. The line itself declines the name. The calendar gives her no toponymic and no surname on either the line or the link, so the stored form is the bare forename; the two life pages head themselves «Преподобномученица Евдокия Илиопольская», which is a heading and not the name the calendar’s own index carries. `.tmp/foldchk.py` reports the form held by one other folder, `eudocia-nun-martyr-1937`, a nun shot in 1937, and the fold is read in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "female",
@@ -28,14 +33,30 @@
       "latest": 117,
       "display": "98–117",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 1 March: „Живела у Илиопољу граду Феничанском за време царовања Трајанова.“ It states the reign of Trajan and no year, so the interval is that reign's own dates, 98 to 117. The folder carried no dates at all before this reading. The entry also has her live fifty-six years in the monastery, which the reign alone cannot hold, so this is a floruit and not a life."
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 1 March: „Живела у Илиополју граду Феничанском за време царовања Трајанова.“ It states the reign of Trajan and no year, so the interval is that reign’s own dates, 98 to 117. The folder carried no dates at all before this reading. The entry also has her live fifty-six years in the monastery, which the reign alone cannot hold, so this is a floruit and not a life. days.pravoslavie.ru’s shorter life for 1 марта ст. ст. names the same reign and writes it «во времена Римского императора Траяна (89–117 гг.)», which is the reign and not her, and no bound is moved for it."
+    },
+    "death": {
+      "earliest": 152,
+      "latest": 170,
+      "display": "152 or about 160–170",
+      "basis": "traditional",
+      "note": "The two lives days.pravoslavie.ru serves for 1 марта ст. ст. disagree and neither is chosen. The shorter closes «В 152 году, при императоре Антонине, она мученически закончила свою праведную жизнь»; the longer closes «1 марта (ок. 160 - 170) святая преподобномученица была обезглавлена», and the day’s own line for her reads «Прмц. Евдокии (160-170).» The interval holds both readings and the display says both. The Охридски пролог and doxologia.ro give her no year of death at all."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Прмц. Евдокии (160-170).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -129,6 +150,38 @@
       },
       "english": {
         "text": "He who was well pleased to lead thee up, O glorious one, out of the depth of ruin to the utmost bound of godliness, as a chosen stone, hath made thy life shine by thy contest and granteth thee the grace of healings, O Eudocia. Beseech him that we be saved, O venerable martyr, rival of the angels.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Правостию умною душу твою привязавши в любовь Христову,/ тленных, и красных, и временных забытием претекла еси,/ яко Слова ученица:/ пощением страсти первее умертвивши,/ страдальчески второе врага посрамила еси./ Тем Христос сугубых венца сподоби тя,/ славная Евдокие, преподобная страстотерпице,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Тропарь преподобномученицы Евдокии»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having bound your soul to the love of Christ by the uprightness of your mind, you ran past things corruptible and fair and passing away, forgetting them, as a disciple of the Word. By fasting you first put the passions to death, and then in your contest you put the enemy to shame a second time. For this Christ counted you worthy of a double crown, O glorious Eudocia, venerable sufferer: pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Во страдании твоем добре подвизавшися,/ и по смерти нас освящаеши чудес излиянии, всехвальная,/ верою прибегающия в Божественную церковь твою,/ и, торжествующе, молим тя, преподобная мученице Евдокие:// да избавимся недуг душевных и чудес благодать почерпем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Кондак преподобномученицы Евдокии»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having striven well in your suffering, after your death also you sanctify us by the pouring out of wonders, O all-praised one, who come with faith into your divine church; and keeping festival we entreat you, venerable martyr Eudocia: that we may be delivered from the sicknesses of the soul and draw up the grace of wonders.",
         "rendered": "site"
       }
     }

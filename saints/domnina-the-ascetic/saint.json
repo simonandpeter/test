@@ -11,6 +11,11 @@
       "form": "Δομνίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Οσία Δομνίνα η Νέα», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Домнина Сирийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 2457, «Домнина Сирийская, дева, прп.», with the rank word left off. The line itself declines the name. The toponymic is part of the name the calendar’s index carries and stays, and so does the calendar’s own rank of virgin, which is left out of the form itself. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Домнина»."
     }
   ],
   "sex": "female",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Прп. Домнины Сирийской (ок. 450-460).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -69,6 +83,16 @@
       "display": "first half of the 5th century",
       "basis": "traditional",
       "note": "saint.gr: «H Οσία Δομνίνα καταγόταν από την πόλη Κύρο της Συρίας και έζησε κατά το πρώτο μισό του 5ου αιώνα μ.Χ.» — she came of the city of Cyrrhus in Syria and lived in the first half of the fifth century. doxologia.ro, from which this folder was first written, gives her no year at all."
+    },
+    "death": {
+      "earliest": 450,
+      "latest": 460,
+      "display": "about 450–460",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its summary for 1 марта ст. ст. «Святая подвижница мирно отошла ко Господу около 450–460 годов», and the day’s own line reads «Прп. Домнины Сирийской (ок. 450-460).» The «ок.» is the source’s and the interval is kept as approximate. It is later than the first half of the century saint.gr gives for her floruit; neither reading is narrowed to fit the other and both are recorded."
     }
-  }
+  },
+  "related": [
+    "maron-the-hermit"
+  ]
 }
