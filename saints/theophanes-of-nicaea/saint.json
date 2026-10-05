@@ -16,6 +16,11 @@
       "form": "Феофан",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2256, headed «Исповедник Феофан Никейский, Константинопольский», with the rank word and the two epithets left off."
+    },
+    {
+      "form": "Теофан Начертани",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. октобар ст. ст., „Преп. Теофан Начертани.“ — Преп. is the venerable grade this corpus puts in `types` and comes off. **Начертани is kept**, because it is not a rank: it is the Graptos of the two brothers whose faces were written on, which is what tells this Theophanes from the others, and §6 says to keep a by-name the heading itself gives. `foldchk.py` measured the bare string as held by `theophanes-the-confessor-9-september` alone before this day; the fuller form stored here folds to `теофан начертани` and `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for it, so no fold is created — measured both ways."
     }
   ],
   "sex": "male",
@@ -26,12 +31,12 @@
     "hymnographer"
   ],
   "dates": {
-    "floruit": {
-      "earliest": 838,
-      "latest": 838,
-      "display": "838",
-      "basis": "attested",
-      "note": "The one year the page fixes him by, and it is not his own death: «In 838, it says, he buried his brother Theodore with great grief when he died in exile», after which Theophanes was himself exiled to Thessalonica. No year of his repose is printed."
+    "death": {
+      "earliest": 847,
+      "latest": 850,
+      "display": "847 or about 850",
+      "basis": "traditional",
+      "note": "Two books give two years and neither is preferred. The Russian calendar’s day line prints «(ок. 850)» and the first of its two lives for him closes «Скончался преподобный в мире около 850 года». The Ohrid Prologue for the Julian 11 October says «Мирно скончао 847. год.», 847 flat. The interval spans both. Neither saint.gr nor doxologia.ro was read for a year, and the Prologue’s other two numbers — twenty-five years of suffering for the icons and a hundred and forty-five canons — are a duration and a count of works, and neither is a date."
     }
   },
   "attestations": [
@@ -83,8 +88,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.10.2026 (11. октобар ст. ст.) — „Преп. Теофан Начертани.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. THE IDENTIFICATION IS THE EPITHET AND THE BROTHER TOGETHER. Начертани is the Graptos of the two brothers whose faces were written on, and the entry names the brother — Теодором (27. дец.) — whom this folder already relates as `theodore-brother-of-theophanes`. Confessor, canon-writer, the monastery of Sabbas the Sanctified, the mission to the emperor, the prison, the branding and the bishopric after iconoclasm ended: one man, and the folder is his. `dates` WIDENED, AND IT IS THE DAY’S ONLY FIELD CHANGE. The folder held `death` 850 flat, displayed «c. 850», off the Russian day line’s «(ок. 850)» and its life’s «около 850 года». **This entry says «Мирно скончао 847. год.»**, 847 flat. Two books, two years, neither preferred, so the interval is widened to carry both and chooses neither — 847 or about 850, which is the «X or Y» shape the corpus already writes as «285 or about 288». **THE OTHER TWO NUMBERS IN THE ENTRY ARE REFUSED AND BOTH REFUSALS HAVE NAMES.** «Страдао за иконе 25 година» is a **duration**, and a duration is refused and may not be subtracted from anything; «Написао 145 канона» is a count of works and no field holds it. Both are in the prose as what the book says. `types` UNTOUCHED at `hierarch`, `bishop`, `confessor`, `hymnographer`: Преп. and Исповедник corroborate, «писац канона» corroborates the `hymnographer`, and **the entry’s own ordination is a verb in the body** — «ускоро посвећен за епископа», consecrated bishop — which is no warrant for a rank and in any case says no see. `office` left at «Bishop of Nicaea»: **this entry does not name Nicaea at all**, and a scalar field is not touched on a book’s silence. `related` UNTOUCHED: `theodore-brother-of-theophanes` is already there. **The patriarch Thomas of Jerusalem takes no row** — nothing read here identifies him with any folder and he is the man who sent them, not a companion; the emperors Leo the Armenian and Theophilus are emperors in a life. No `locations`. NO FOLD, AND THE BY-NAME IS THE WHOLE REASON. `foldchk.py` measured the bare «Теофан» before the day as `foldchk.py` returning `theophanes-the-confessor-9-september` and nothing else — a venerable confessor born in 283 and dead about 300, kept on 9 September, five and a half centuries off. **Section 6 says to keep a by-name the heading itself gives**, and this heading gives Начертани, which is no rank but the Graptos that tells this Theophanes from every other. So the form stored is «Теофан Начертани», it folds to `теофан начертани` (`nameKeys` sorts the words), `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for it, and **no fold is created and no READ_FOLDS key is owed** — measured both ways before drafting, which is what section 6 was written for. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S SECOND ENTRY IS REFUSED AND IT IS NOT A CLOSE CALL. «Спомен Седмог Васељенског Сабора.» — **a Council is not a folder**, and the entry is about the Council and not about a person: Nicaea in 787 under the empress Irene and her son Constantine and the patriarch Tarasius, 367 Fathers, the definition of the veneration of icons out of Scripture, the Fathers and attested wonders, and the ruling that relics of martyrs must be put into the antimension. It names the bishop Constantine of Cyprus, who told the Council the story of the shepherd of Constantia who struck the Mother of God’s icon with his iron staff, spoiled the right eye of the image, stumbled on leaving and put out his own right eye with the same staff. **None of those takes a row and none is in any prose of this day**: the Fathers of a Council are not a folder, an emperor in an entry is not a relation, and the subject of an anecdote told at a Council is further still from one. `tarasius-of-constantinople` has a folder and gets nothing from this day. §6’S TRAP, MET AND FIXED §6’S WAY. The appended paragraph first read «the monastery of Saint Sabbas the Sanctified», which is a folder’s display name exactly, and `related-floor.test.mjs` failed 483/2 on it in both directions. **A monastery is a house and not a companion** — the two brothers were tonsured there three centuries after its founder died — so the `related` rows the test asked for would both have been false, and nothing was added to `scripts/related-floor-exclusions.json`. The prose now reads «the monastery of Saint Sabbas in Palestine», which matches no display name in the corpus, and the house keeps the book’s own words here: the Prologue says the brothers were tonsured «у манастиру Св. Саве Освештаног», in the monastery of Saint Sabbas the Sanctified."
     }
   ],
   "hymns": [
@@ -145,14 +160,5 @@
   "text": {
     "life": "life.md"
   },
-  "office": "Bishop of Nicaea",
-  "dates": {
-    "death": {
-      "earliest": 850,
-      "latest": 850,
-      "display": "c. 850",
-      "basis": "traditional",
-      "note": "The calendar's day line prints «(ок. 850)», about 850, and the first of its two lives for him closes «Скончался преподобный в мире около 850 года». Neither saint.gr nor doxologia.ro was read for a year."
-    }
-  }
+  "office": "Bishop of Nicaea"
 }
