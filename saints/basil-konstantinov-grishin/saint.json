@@ -1,0 +1,68 @@
+{
+  "slug": "basil-konstantinov-grishin",
+  "display_name": "Basil (Konstantinov-Grishin)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Василий (Константинов-Гришин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 1 марта ст. ст., name page 14506, «Василий (Константинов-Гришин), иерей, сщмч.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` finds neither the double surname nor «Гришин» on any folder; the bare «Василий» is held by eight. The double surname is the calendar’s own and is kept whole — azbyka.ru explains in the life how he came by both halves of it, and which of the two his case files use."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Сщмч. Василия пресвитера (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "His line is the day’s last and names him alone. azbyka.ru’s page for him lists two further days, both moveable synaxes — of the new martyrs and confessors of the Russian Church and of the saints of the metropolitanate of Chuvashia — and neither is a fixed day nor an offset from Pascha this corpus can hold; they are named in the life and recorded nowhere else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 martie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Μαρτίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 March 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Василий родился 23 декабря 1874 года в селе Выползово Курмышского уезда Симбирской губернии (ныне Порецкого района Чувашии) в семье крестьянина Матвея Гришина»"
+    },
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "1943",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 1 марта ст. ст. with «(1943)», and azbyka.ru has him die in confinement in the Temnikov camp in Mordovia on 14 March 1943, which is that Julian 1 March by the civil reckoning. He was sentenced on 30 December 1937 to ten years and not to death, so the year is the year he died in the camp and not a year of execution; no day is recorded here because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

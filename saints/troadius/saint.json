@@ -11,6 +11,11 @@
       "form": "Троадије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 2 March on pravoslavno.rs, „Свети мученик Троадије.“, with the rank word мученик left off and Свети, which is not a rank. The heading gives no epithet."
+    },
+    {
+      "form": "Троадий Неокесарийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 2128, «Троадий Неокесарийский, мч.», with the rank and office words left off. The toponymic is part of the name the calendar’s index carries and stays; the day’s own line gives the forename alone and in the genitive. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Троадий»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Мч. Троадия (ок. 249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -11,6 +11,11 @@
       "form": "Μάρκελλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Μαρτίου, «Άγιοι Μάρκελλος και Αντώνιος», with the rank word left off."
+    },
+    {
+      "form": "Маркелл",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 1472, «Маркелл, мч.», with the rank word left off. The line itself declines the name. The calendar gives him no surname, no toponymic and no epithet on either the line or the link, so the stored form is the bare forename. `.tmp/foldchk.py` reports the form held by one other folder, `marcellus-15-november`, and the fold is read in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Мчч. Маркелла и Антония .»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

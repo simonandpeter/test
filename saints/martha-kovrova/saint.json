@@ -1,0 +1,68 @@
+{
+  "slug": "martha-kovrova",
+  "display_name": "Martha (Kovrova)",
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "office": "Novice",
+  "names": [
+    {
+      "form": "Марфа (Коврова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 3 марта ст. ст., name page 14414, «Марфа (Коврова), послушница, прмц.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/rusurn.py` finds the surname on no folder at all, and the bare «Марфа» is held only by `martha-mother-of-symeon`."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 марта ст. ст. — «Прмц. Марфы и мч. Михаила (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260303.html",
+        "year": 2026
+      },
+      "note": "The line names two people of 1938 and this folder is one of them; nothing on either host makes them a company, and no relation between them is recorded. azbyka.ru keeps her, besides 16 марта, on the moveable synaxis of the new martyrs who suffered at Butovo and the moveable synaxis of the saints of Moscow; neither is a fixed day nor an offset from Pascha this corpus can hold, and both are named in the life instead."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 16 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 16 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "azbyka.ru: «Марфа Степановна Коврова родилась в 1887 году в селе Галыгино Коробовского района Московской области и происходила из крестьянской семьи»"
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the two for 3 марта ст. ст. with «(1938)», and azbyka.ru has her shot on 16 March 1938 at Butovo, which is that Julian 3 March by the civil reckoning: the day of death and the feast are the same day. No day is recorded here because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

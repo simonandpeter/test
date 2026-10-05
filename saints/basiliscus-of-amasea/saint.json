@@ -16,6 +16,11 @@
       "form": "Василиск",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 3 March on pravoslavno.rs, „Свети мученици Евтропије, Клеоник и Василиск.“, which names three men; this man's own name is taken out of it, with the rank word мученици left off and Свети, which is not a rank. The heading gives no epithet and does not name Amasea, which this folder's English name carries from the other calendars."
+    },
+    {
+      "form": "Василиск Команский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 3 марта ст. ст., name page 391, «Мученик Василиск Команский», with the rank words left off. The day’s own line declines the name. The calendar’s index gives him the toponymic not of Amasea, where he was tried, but of Comana, where its own life has him beheaded on 22 May; the form is kept as the index prints it and the difference from this folder’s English name is named in the life. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -30,17 +35,26 @@
   "dates": {
     "death": {
       "earliest": 286,
-      "latest": 305,
-      "display": "between 286 and 305",
+      "latest": 308,
+      "display": "286–305 or about 308",
       "basis": "traditional",
-      "note": "doxologia.ro gives the reign and no year: «Căci îi era dată lui stăpânire asupra creștinilor de la împăratul Maximian (286-305)». The same life places his own end later than his companions', after the governor Asclepiodotus had perished and Agrippa had taken his place."
+      "note": "The two readings are kept and neither is chosen. doxologia.ro gave the reign of Diocletian and Maximian, 286 to 305, which is the interval this folder carried; days.pravoslavie.ru closes the line for 3 марта ст. ст. with «(ок. 308)» and opens its life «Святые мученики Евтропий, Клеоник и Василиск пострадали в городе Амасии Понтийской (Малая Азия) около 308 года». The «ок.» is that source’s own. The same life has Eutropius and Cleonicus crucified on the morning of 3 March and Basiliscus kept in prison and beheaded at Comana on 22 May, so the day of each death differs while the year does not; this corpus records years."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 марта ст. ст. — «Мчч. Евтропия , Клеоника и Василиска (ок. 308).»",
+        "url": "https://days.pravoslavie.ru/Days/20260303.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

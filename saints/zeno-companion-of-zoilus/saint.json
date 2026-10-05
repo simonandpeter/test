@@ -6,6 +6,11 @@
       "form": "Ζήνων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Μαρτίου, «Όσιοι Ζήνων και Ζωίλος», with the rank word left off."
+    },
+    {
+      "form": "Зинон",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 3 марта ст. ст., name page 832, «Зинон», with the rank words left off. The day’s own line declines the name. The calendar gives him no toponymic, no surname and no epithet on either the line or the link, so the stored form is the bare forename. `.tmp/foldchk.py` reports it held by three other folders as a Russian form — `zeno-companion-of-eudoxius`, `zeno-companion-of-peleus` and `zeno-of-nicomedia` — and by three more as a Serbian one, and the fold is read in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -16,8 +21,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 марта ст. ст. — «Св. Зинона и Зоила .»",
+        "url": "https://days.pravoslavie.ru/Days/20260303.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

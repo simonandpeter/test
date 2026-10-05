@@ -11,6 +11,11 @@
       "form": "Пиамука Мисирка",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 3 March on pravoslavno.rs, „Света Пиамука Мисирка.“, with Света left off, which is not a rank. Мисирка is kept: it is the epithet of her country, the Egyptian woman, and not a rank or a see, and the heading carries no rank word at all."
+    },
+    {
+      "form": "Пиама Александрийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 3 марта ст. ст., name page 2645, «Пиама Александрийская, дева, прп.», with the rank words left off. The day’s own line declines the name. The toponymic is part of the name the calendar’s index carries and stays, and so is the calendar’s own rank of virgin, which is left out of the form itself. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "female",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 марта ст. ст. — «Прп. Пиамы девы (337).»",
+        "url": "https://days.pravoslavie.ru/Days/20260303.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -66,14 +80,14 @@
       "latest": 400,
       "display": "4th century",
       "basis": "traditional",
-      "note": "saint.gr: «Η Οσία Πιαμούν, καταγόταν από την Αίγυπτο όπου έζησε τον 4ο μ.Χ. αιώνα» — she came of Egypt, where she lived in the fourth century. The page gives no year of birth and none of repose."
+      "note": "saint.gr gives her the fourth century; days.pravoslavie.ru gives no century of its own but a year, 337, which falls inside it, and the Охридски пролог gives neither."
     },
     "death": {
-      "earliest": 377,
+      "earliest": 337,
       "latest": 377,
-      "display": "about 377",
+      "display": "337 or about 377",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 3 March: „Упокојила се мирно обручивши душу своју Господу, око 377. године.“ The page says about the year 377, not 377, and it is the only source read for her that gives a year of any kind; saint.gr gives none, and the floruit beside this is that page's century. The two do not conflict: 377 falls inside the century, and nothing of the century's interval was narrowed."
+      "note": "The two readings are kept and neither is chosen. saint.gr, from which this folder was written, has her die about 377; days.pravoslavie.ru closes its line for 3 марта ст. ст. «Прп. Пиамы девы (337).» and its life «Святая мирно отошла ко Господу в 337 году». No third source has been read for her, and the two years being each other’s digits reversed is not a reason to prefer either."
     }
   },
   "text": {

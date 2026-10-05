@@ -11,6 +11,11 @@
       "form": "Νέστωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιοι Νέστωρ και Τριβιμίος», with the rank word left off."
+    },
+    {
+      "form": "Нестор Пергийский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 6653, «Нестор Пергийский (Памфилийский), мч.», with the rank word left off. The line itself declines the name. Both epithets are part of the name the calendar’s index carries and both stay; the life page gives the region in prose and the day’s line gives neither. `.tmp/foldchk.py` reports no folder holding this form, and the bare «Нестор» is held by `nestor-of-maghid` as a Serbian form only."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Мчч. Нестора и Тривимия (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "The Russian calendar keeps the pair one menologion day earlier than the Greek and the Romanian do: its line is on 1 марта ст. ст., where saint.gr and doxologia.ro both print them on the 2nd. The difference is one day and not the thirteen of the style conversion, so it is a difference between the calendars and not a conversion; the Sretensky life page for the two repeats its own day, «День памяти: 1 марта», and nothing read moves either reading onto the other’s day."
     },
     {
       "church": "romanian",

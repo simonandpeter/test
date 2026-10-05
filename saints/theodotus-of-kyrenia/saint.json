@@ -17,6 +17,11 @@
       "form": "Теодот",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 2 March on pravoslavno.rs, „Свештеномученик Теодот, епископ киринијски, на острву Кипру.“, with the rank word Свештеномученик and the see епископ киринијски both left off; the island is a place clause and not part of the name. What is left is the bare forename, which is all the heading gives him."
+    },
+    {
+      "form": "Феодот Киринейский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 2219, «Святитель Феодот Киринейский, епископ, исповедник», with the rank and office words left off. The toponymic is part of the name the calendar’s index carries and stays; the day’s own line declines the forename and puts the see after it as an office. `.tmp/foldchk.py` reports no folder holding this form, while the bare «Феодот» is held by `theodotus-father-of-mamas` and `theodotus-presbyter-martyr-1937`, neither of them this man."
     }
   ],
   "sex": "male",
@@ -30,14 +35,30 @@
       "latest": 324,
       "display": "under Licinius (308–324)",
       "basis": "traditional",
-      "note": "doxologia.ro: «Atunci era prigonire mare înpotriva creștinilor, împărățind păgânul Liciniu (308-324), iar în Cipru era ighemon Savin». The same life dates his release from Constantine's victory over Maxentius (312) and the liberty given to Christians (313), and says he lived «după pătimire doi ani pe scaunul său» before he died; it prints no year for his birth or his death."
+      "note": "doxologia.ro: «Atunci era prigonire mare înpotriva creștinilor, împărățind păgânul Liciniu (308-324), iar în Cipru era ighemon Savin». The same life dates his release from Constantine’s victory over Maxentius (312) and the liberty given to Christians (313), and says he lived «după pătimire doi ani pe scaunul său» before he died; it prints no year for his birth or his death. days.pravoslavie.ru names the same reign and writes it «нечестивого Ликиния (307 - 324)»; that is the reign and not him, and no bound is moved for it."
+    },
+    "death": {
+      "earliest": 320,
+      "latest": 326,
+      "display": "about 320–326",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 2 марта ст. ст. «Сщмч. Феодота , еп. Киринейского (ок 320-326).», and its life closes «после двух лет епископского служения мирно отошел ко Господу около 326 года». The folder carried no year of death before this reading, and doxologia.ro and saint.gr give none. The «ок» is the source’s and the interval is kept as approximate; it is a peaceful death and not a martyrdom, which is the same page’s own reading."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Сщмч. Феодота , еп. Киринейского (ок 320-326).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -98,6 +119,22 @@
       },
       "english": {
         "text": "Sharing in the ways of the Apostles and succeeding to their thrones, thou didst find, O God-inspired one, a work that lifts the gaze to the things on high. Therefore, teaching the word of truth aright and enduring in the faith even unto blood, O Hieromartyr Theodotus, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Моря зловерие обличил еси,/ и идольскаго безбожия лесть верою правоверия уязвил еси/ и, всесожжение Божественное быв,/ чудодействием орошаеши концы,/ отче святителю Феодоте, Христа Бога моли// даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Кондак священномученика Феодота»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You rebuked the sea of false belief, and with the faith of right belief you wounded the deceit of the godlessness of idols; and having become a divine whole-burnt offering, you water the ends of the earth with the working of wonders. O father and hierarch Theodotus, pray to Christ God to grant us great mercy.",
         "rendered": "site"
       }
     }

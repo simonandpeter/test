@@ -1,0 +1,67 @@
+{
+  "slug": "antony-korzh",
+  "display_name": "Antony (Korzh)",
+  "names": [
+    {
+      "form": "Антоний (Корж)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 9827, «Антоний (Корж), иеродиакон, сщмч.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` finds no folder holding the surname at all; the bare «Антоний» is held by no folder as a Russian form either."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Cщмчч. Василия , Петра , Иоанна , Вениамина , Михаила пресвитеров, прмч. Антония , прмцц. Анны , Дарии , Евдокии , Ольги , Александры , Матроны , мч. Василия , мц. Надежды (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "The line is one line for fourteen people and this folder is one of them. azbyka.ru’s own page for this saint lists further days besides 14 марта, all of them synaxes; the moveable ones among them are no fixed day and no offset from Pascha this corpus can hold, and the fixed ones are another host’s commemorations and not this calendar’s. They are named in the life and recorded nowhere else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 martie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Μαρτίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 March 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Антоний родился в 1888 году в селе Рубановке Мелитопольского уезда Таврической губернии в семье крестьянина Агафона Коржа»"
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the fourteen for 1 марта ст. ст. with «(1938)», and azbyka.ru has him shot on 14 March 1938, which is that Julian 1 March by the civil reckoning: the day of death and the feast are the same day. No day is recorded here because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

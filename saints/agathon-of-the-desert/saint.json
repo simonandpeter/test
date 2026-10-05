@@ -11,6 +11,11 @@
       "form": "Агатон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 2 March on pravoslavno.rs, „Преподобни Агатон.“, with the rank word Преподобни left off. The heading gives no epithet; Egypt and the century are in the body."
+    },
+    {
+      "form": "Агафон Скитский (египетский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 62, «Агафон Скитский (египетский), пустынник», with the rank and office words left off. Both epithets are part of the name the calendar’s index carries and both stay, the second in the brackets and the lower case the source itself gives it; the day’s own line has instead «Агафона Египетского», the forename declined with one epithet. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Агафон»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Прп. Агафона Египетского (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "note": "The Greek calendar keeps him on 8 January and this one, with the Serbian Охридски пролог, on the Julian 2 March; the two menologion numbers are two calendars’ own and neither is a conversion of the other, and each row records its own day."
     },
     {
       "church": "romanian",
@@ -69,7 +84,14 @@
       "latest": 500,
       "display": "5th century",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 March: „Преподобни Агатон, велики мисирски подвижник из V века.“ It gives the century and no year. The folder carried no dates at all before this reading, and saint.gr, the only other source read for him, gives him no year, no country and no monastery."
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 2 March: „Преподобни Агатон, велики мисирски подвижник из V века.“ It gives the century and no year. The folder carried no dates at all before this reading, and saint.gr, the only other source read for him, gives him no year, no country and no monastery. days.pravoslavie.ru closes its own line with «(V)», the same century."
+    },
+    "death": {
+      "earliest": 435,
+      "latest": 435,
+      "display": "about 435",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru: «Преподобный Агафон преставился около 435 года». It is the only year of the three sources read for him, it falls inside the fifth century the Охридски пролог gives, and the «около» is the source’s own, so the bound is kept approximate and the floruit is left as it stood."
     }
   },
   "related": [
