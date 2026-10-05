@@ -16,6 +16,11 @@
       "form": "Никита",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 3 April on pravoslavno.rs, „Св. Никита Исповедник“, with Св. left off — it is not a rank — and with the rank word Исповедник left off as well, which is what this folder's `confessor` carries. Medikion is in the body and not in the heading, so the heading gives no epithet at all and the bare forename is what the source gives."
+    },
+    {
+      "form": "Никита Мидикийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 3 апреля ст. ст., name page 1616, «Никита Мидикийский, Исповедник, игумен», with the two grade words left off. The toponymic is kept because the bare «Никита» is already held by five folders as their sr form, this one among them."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Прп. Никиты исп., игумена обители Мидикийской (824).»",
+        "url": "https://days.pravoslavie.ru/Days/20260403.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -141,6 +155,22 @@
       },
       "english": {
         "text": "As a most practised interpreter of stillness, thou wast seen to be a sleepless eye of the shepherd's charge, having led the monastery of Medikion. But as a guardian of the God-filled traditions, set in order by the divine Spirit, O Nicetas, those who cry to thee: Rejoice, thrice-blessed Father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Небесный ум и житие стяжав,/ сияеши ясно, якоже солнце, светлостию дел,/ просвещаеши сущия во тьме житейстей, отче Никито,/ и, приводя всех к Богу,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Кондак преподобного Никиты», глас 2. His own, and it names him. The day page prints the same kontakion a second time under the heading «Кондак преподобного Никиты исповедника», with «сиявши» and «просвещавши» for «сияеши» and «просвещаеши»; the first heading and the better-formed text are the ones copied here.",
+        "url": "https://days.pravoslavie.ru/Days/20260403.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained a heavenly mind and a heavenly life, you shine out clear as the sun by the brightness of your deeds, and you give light to those in the darkness of this life, father Nicetas; and bringing all men to God, pray without ceasing for us all.",
         "rendered": "site"
       }
     }

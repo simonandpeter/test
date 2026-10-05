@@ -1,0 +1,63 @@
+{
+  "slug": "galicus-companion-of-elpidephorus",
+  "display_name": "Galicus, companion of Elpidephorus",
+  "names": [
+    {
+      "form": "Галик",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the company’s line for 3 апреля ст. ст., name page 463, «Галик, мч.», with the rank abbreviation left off. The calendar gives him no surname and no toponymic, so the bare forename is the fullest form it has, and no folder holds it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Мчч. Елпидифора , Дия , Вифония и Галика (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260403.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 16 aprilie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 16 Απριλίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 16 April 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line that names the four of them for 3 апреля ст. ст. with «(III)», the third century, and the life behind it gives no year, no reign and no persecution to date them by. Nothing here is narrowed and nothing is inferred."
+    }
+  },
+  "related": [
+    "elpidephorus-the-martyr",
+    "dius-companion-of-elpidephorus",
+    "bithonius-companion-of-elpidephorus"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
