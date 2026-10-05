@@ -6,6 +6,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Ιουλίου, «Όσιος Πέτρος του Πατρικίου εν τοις Ευάνδρου», with the rank word and the title left off."
+    },
+    {
+      "form": "Петар патриције",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. јул ст. ст., „Преп. Петар патриције“ — Преп. is the rank and comes off, and „патриције“ is **kept**, because it is not a rank in §5’s table at all but the Byzantine patrician dignity, which distinguishes him rather than grading him and which this corpus already carries in his display name. §6 wants the fullest form the calendar gives and warns that a bare forename beside a fuller one is a fold: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Петар патриције» and `peter-of-bulgaria` and `peter-of-lampsacus`, both `sr`, for the bare «Петар», so keeping the dignity is what avoids a third folder on that string — measured, not supposed."
     }
   ],
   "types": [
@@ -15,10 +20,10 @@
   "dates": {
     "death": {
       "earliest": 854,
-      "latest": 854,
-      "display": "854",
+      "latest": 865,
+      "display": "854 or 865",
       "basis": "traditional",
-      "note": "saint.gr closes his life with the year: «Ο Όσιος Πέτρος πέθανε ειρηνικά το έτος 854 μ.Χ.», and its heading repeats it as «(; - 854)»."
+      "note": "Two books, two years, and the field is widened rather than chosen. saint.gr closes his life with the year: «Ο Όσιος Πέτρος πέθανε ειρηνικά το έτος 854 μ.Χ.», and its heading repeats it as «(; - 854)». The Охридски пролог for 1. јул ст. ст.: „упокоји се у Господу 865 год. у 77 год. свога живота“ — he reposed in the Lord in the year 865, in the 77th year of his life. Eleven years apart, nothing averaged and neither book preferred. **The 77 years are a lifespan and are written nowhere as a number**, and no `birth` is derived from them: the folder had none before and has none now. The 34 years on Olympus and the 8 in Constantinople, which both books give, are durations and not dates, and saint.gr’s 847 for the return to the City is its own arithmetic (5 October 2026)."
     }
   },
   "related": [
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Serbian church's calendar for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.07.2026 (1. јул ст. ст.) — „Преп. Петар патриције“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 1 July is the same menologion number this folder’s Greek row carries, its only other venerated row, so there is no second day and no §4 note is owed. **A WIDENED DATE, AND AN AGE REFUSED BESIDE IT.** The folder held `death` 854 to 854, display «854», off saint.gr’s «Ο Όσιος Πέτρος πέθανε ειρηνικά το έτος 854 μ.Χ.» and its heading «(; - 854)». This book ends „упокоји се у Господу 865 год. у 77 год. свога живота“ — he reposed in the Lord in the year 865, in the 77th year of his life. Eleven years apart, and the standing rule is to widen and not to choose: `death` earliest 854, latest 865, display «854 or 865», basis traditional, both sentences in the note. **The 77 years are refused**: a lifespan is not a date, and nothing is subtracted from either year to reach a birth — the folder has no `birth` before this day and has none after it. Both books agree on the two spans that make the age up, 34 years on Olympus and 8 in the City, and **those are durations and not dates either**; saint.gr’s own 847 for the return to Constantinople is its arithmetic and not this book’s, and this book gives no year but the one. WHAT ELSE IS NEW. **A wife and a son, and their deaths.** saint.gr has him marry and says no more; this book has him leave wife and son („остави жену и сина“) when he withdrew to Olympus, and settle in Constantinople only „по смрти жене и сина“, after their death — which is why he came back at all, where the Greek page gives only a year. Neither is named and no folder holds either. **The emperor killed in the war.** Both books put the lost campaign against the Bulgars under Nikephoros; this book adds that „цар Никифор би убијен“ in it, the emperor himself killed. That is a year for the emperor and **not a year for Peter**, nothing is derived from it, and `ls saints | grep -iE 'nikephoros|nicephorus-i'` holds three men of the name, none of them this emperor. The 50 nobles and princes agree with saint.gr’s fifty. `types` UNTOUCHED, AND **`soldier` IS REFUSED**. `venerable` and `monk` are both there; Преп. is the `venerable` and „као монах“ the `monk`. „војвода“ — a commander — stands in the **body**, where the heading gives only Преп., and a rank read off a body is not written. NO `office`, AND THE TITLE IN THE HEADING IS WHY THAT IS A READING. „патриције“ is the patrician dignity and is the one thing the heading adds to the forename, but **`office` strings are not invented**: they go through the packs’ `offices` branch, whose keys are English phrases the data already wrote down, and the folder has carried `office: null` and «the Patrician» in its display name since it was made. The dignity is kept where it already is, in the name form and the display name, and `office` is left alone. No `locations`: Olympus and Constantinople in a narrative are not a coordinate. **NO NEW ROWS, AND BOTH THE MEN THIS ENTRY NAMES ALREADY HAVE ONE.** The folder already relates `john-the-theologian`, who freed him from the prison — this book agrees, „из тамнице чудесно ослобођен св. Јованом Богословом“, and an appearance is not a relation, but the row is there from another book and is not mine to take away — and `joannicius-the-great`, whose disciple on Olympus he was for 34 years, which this book states as plainly as saint.gr does. **Neither folder holds the reverse row**, and the two lives pass `related-floor` only because they write «John the Evangelist» and «Joannicius» rather than those folders’ display names exactly; §6’s trap measured. The new paragraph therefore names them the same way the older prose does and adds no reverse row, which is another folder’s field and not this day’s work. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S THIRD ENTRY IS REFUSED FOR WANT OF A FOLDER. „Св. муч. Потит“ — a boy of thirteen, by birth from Sardinia, who suffered many torments for Christ both from his own father and from the state’s persecutors of Christians, and was cut down with the sword in the time of the emperor Antoninus (138–161), having before that healed and baptised the emperor’s daughter Agnia. **No folder holds him.** `ls saints | grep -iE 'potit|pottit'` returns nothing; `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Потит»; `sr-namesweep.mjs` scores him against four Hypatii, a John Pettai and two weaker rows and names nobody of his name; and the standing instrument — grepping the corpus for an entry’s own uncommon proper name — was run twice and answers twice. `grep -ril potit saints/` hits exactly one file, `saints/patrick-of-ireland/life.md`, and the Potitus there is **Patrick’s grandfather, a priest of Britain**, named by both doxologia and saint.gr in that folder’s own prose — a different man, no martyr, and not thirteen years old. `grep -rl 'Πότιτ|Потит' saints/` hits nothing at all, so no Greek or Russian form of the name is anywhere in the corpus either. `grep -ril sardinia saints/` returns `crescens-of-sardinia` and `crescentianus`, neither of whom is a boy martyred by his own father. Ruling 3: named here, left out of every life on this day, and no folder from me — and **the thirteen years, the regnal years 138–161 and the sword are written nowhere**, because there is nothing to write them on. TWO MORE REFUSALS INSIDE THAT ENTRY, BOTH OF WHICH WOULD HAVE BEEN FOLDERS OR ROWS. **Agnia the emperor’s daughter takes no row and no folder**: `agnes-of-rome` is of Rome under Diocletian and `agnes-20-january` is kept on 20 January, neither is the daughter of Antoninus, and the object of a wonder is not its subject in any case. **The father takes no row and no folder**: the body gives him no name at all, saying only „од свога оца“, and the name „Гилас“ stands in the day’s ПЕСМА, which §4 of this wave’s brief says is Bishop Nikolai’s own verse and not a life — so a name that exists only there is not read as the Prologue’s testimony about a person. A narrated martyrdom and a narrated baptism with no folder behind them get no row."
     }
   ],
   "text": {

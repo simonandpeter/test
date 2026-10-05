@@ -16,6 +16,11 @@
       "form": "Κύριλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Ιουνίου, «Άγιος Κύριλλος Ιερομάρτυρας επίσκοπος Γορτύνης Κρήτης», with the rank words and the see left off."
+    },
+    {
+      "form": "Кирил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. јул ст. ст., „Свешт. муч. Кирил еп. Гортински на Криту“ — „Свешт. муч.“ is one rank and „еп.“ the other, both already in `types`, and „Гортински на Криту“ is the see and the island it stands in, which come off with the rank that governs them. The bare forename is left, and it is also this folder’s whole display name, «Cyril». **The fold is forced and it is five deep before this day**: `foldchk.py` returns `cyril-of-alexandria`, `cyril-of-catania`, `cyril-of-heliopolis`, `cyril-of-jerusalem` and `cyril-the-philosopher`, all `sr`, so this is the **sixth** folder on the string — the deepest of this range, one deeper than «Александар» on 3 July. There is nothing in the heading to break it with."
     }
   ],
   "sex": "male",
@@ -79,8 +84,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 19.09.2026 (6. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.07.2026 (9. јул ст. ст.) — „Свешт. муч. Кирил еп. Гортински на Криту“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **THIS FOLDER NOW CARRIES FOUR CALENDARS AND THREE DIFFERENT DAYS, AND THE NEW ROW IS ON THE ROMANIAN ONE.** The russian row stands on the Julian 6 September, the greek on 14 June and the romanian on 9 July; this book keeps him on the **9 July**, the same number the Romanian row carries. No §4 note is owed — the row replaced was `undocumented` and nothing of the other three is touched — but the spread is worth recording, three calendars having already put one bishop on three days before this reading added a fourth row on one of them. **`dates` UNTOUCHED, AND THIS IS THE DAY’S HARDEST READING: THE TWO BOOKS ARE FIFTY YEARS APART AND IRRECONCILABLE.** The folder holds `death` 301 to 310, display «early 4th century», off days.pravoslavie.ru — “Сщмч. Кирилла, еп. Гортинского (III-IV)”, with its life saying he was beheaded at the beginning of the fourth century, **aged ninety-five**. This book says he was martyred „као старац од 84 год.“, as an old man of **eighty-four**, „у време Декијева царовања“, in the time of the reign of **Decius** — which is 249 to 251 and lies **wholly outside** 301 to 310. So there is nothing to widen that would mean anything, nothing to narrow, and no reconciling: **the standing rule for irreconcilable books is to touch `dates` only with stated reasons or not at all**, which is how three books left Peter the Athonite three centuries and an empty field. Nothing is written. **A reign is no source for a year** in any case, and the two ages, 84 and 95, are **ages and not dates** and are written nowhere as numbers of years in a field. Both readings go into the life, and the fifty-year gap is stated there as a gap. WHAT IS NEW. The sentence of the judge, quoted whole: „Кирила, изведеног из огња, праведни суд не може трпети међу живима, зато наређујем, да се убије мачем“ — Cyril, brought out of the fire, the just court cannot suffer among the living, and therefore I order that he be killed with the sword. And before it, that he was cast into fire and **saved by the providence of God**, which is why there was a second sentence at all; and that he laid his head under the sword with joy. `types` UNTOUCHED: `hieromartyr` and `bishop` are both there, „Свешт. муч.“ is the `hieromartyr` and „еп.“ the `bishop`. `office` UNTOUCHED at «Bishop of Gortyna»; „на Криту“, on Crete, is the island the see is in and **no `office` string is invented** to carry it. No `locations`: an island named in a heading is not a coordinate, and this folder’s dates read as a nine-year interval the two books cannot agree on. **NO ROWS.** Decius is an emperor in a life; the judge is unnamed; the folder relates nobody and this book gives it nobody. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "locations": [

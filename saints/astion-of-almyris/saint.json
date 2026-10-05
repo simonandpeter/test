@@ -6,6 +6,11 @@
       "form": "Astion",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iulie, «Sfinții Mucenici Epictet și Astion»."
+    },
+    {
+      "form": "Астион",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Преп. муч. Епиктет и Астион“ — „Преп. муч.“ is the rank and comes off, „Епиктет и“ is the other name the heading enumerates, and the bare forename is left. «disciple of Epictetus» in the display name is the corpus’s own and is this entry’s own first sentence besides. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Астион», so there is no fold, and `ls saints | grep -i astion` returns this folder alone."
     }
   ],
   "sex": "male",
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.07.2026 (7. јул ст. ст.) — „Преп. муч. Епиктет и Астион“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, the second of the two names its heading enumerates. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **TWO CALENDARS, TWO DAYS.** As on his teacher: this folder’s only other venerated row is the Romanian one on the **Julian 8 July** and this book keeps him on the **7th**; the `serbian` row was `undocumented`, so it is written plainly on this book’s day, **nothing of the Romanian row is touched**, and the Prologue’s own 8 July was checked and names neither of them — its three entries are the great-martyr Procopius, Procopius the Fool and Theophilus the Myrrh-gusher. **THE SAME STATED YEAR, REFUSED ON THE SAME GROUND.** The folder holds `death` 284 to 305, display «under Diocletian», off doxologia. This book’s „око 290 год.“ lies inside it and is hedged besides, so nothing is widened and nothing is narrowed: `dates` is passed back verbatim, note and all — including doxologia’s remark that he was thirty-five at the trial, **an age and not a date**, written nowhere as a number. The sentence is plural, „Мучени и посечени“, so the refusal and the note are this folder’s own and not his teacher’s. `types` UNTOUCHED, AND THAT IS THE DIFFERENCE FROM HIS TEACHER’S ROW. „Преп. муч.“ is the venerable-martyr, and **this folder already holds `venerable-martyr`** along with `monk`, so the rank word in the heading is read and nothing is added — where on `epictetus-of-almyris`, which held `hieromartyr` and `venerable` instead, the same word had to be written. The heading is one heading and the two folders answer it differently, which is worth recording. WHAT IS NEW is the same as on his teacher, the entry being one entry: that he was his parents’ only son; the move „однекуд из источних крајева“ into Scythia; the town of Almyris and its present name Ramzina, at the Danube’s outfall into the Black Sea; and that the two of them appeared after their death **in a great light** to his own parents, who were converted and baptised by the bishop Evangelus, himself beheaded afterwards, of whom it was sung „Евангела, другога ангела“. **THE BISHOP GETS NO ROW**, on the same ground as on his teacher’s row: `evangelus-of-tomis` is kept venerated by the Romanian and Greek calendars on the Julian 7 July, the very number this row is written on, and he stands in the body where the heading names the two monks. No `office`, no `locations`. **NO NEW ROWS.** The folder already relates `epictetus-of-almyris` in both directions. **His parents take no row and his father’s name is kept out of the prose**: „Александру и Маркелини“ — `ls saints | grep -i marcellina` holds nobody, and «Alexander» is the bare display name of `alexander-of-comana`, `alexander-patriarch-of-constantinople` and `alexander-the-confessor-1961`, none of them this man, so `related-floor` would have read the word as a claim. §6’s method applied before the test and not after it. The Prologue prints no troparion and no kontakion; the day carries only the verse. **AND THE REFUSAL THIS DAY MAKES TWICE IS OF A YEAR, NOT OF A PERSON.** Three of the four folders of this day hold a `death` whose display is an **interval** — «under Diocletian» — and in each case this book offers a point **inside** it. Writing the point would **narrow a range the other book states**, which is refused outright; and there is nothing to widen, the point falling inside the interval, so there is no disagreement either. In every case `dates` is passed back **verbatim**, note and all, the year is written into the life where the prose can hold it with its own hedge, and **the alternative edit is named here for the author**. This is the same handling as Lampadius’s hedged century on 5 July, reached by a different road: there the book would not assert, here the book asserts something smaller than what is already recorded. **THE DAY REFUSES NO PERSON.** All three entries are persons, all four names the headings enumerate are held, and all four are upgrades — the third such day of this range, after 4 and 5 July."
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Σισώης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουλίου, «Όσιος Σισώης ο μεγάλος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Сисоје Велики",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Преп. Сисоје Велики“ — „Преп.“ is the rank and comes off, and „Велики“ is **kept**, because §5 is explicit that it is not a rank but the epithet «the Great», as it was kept on Paisius on 19 June. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for both «Сисоје Велики» and the bare «Сисоје», so **the choice was made on the rule and not on the fold**, the corpus’s own `sisoes-the-russian` holding no Serbian form of the name at all. Measured either way."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.07.2026 (6. јул ст. ст.) — „Преп. Сисоје Велики“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, as every heading of this wave is — and this day one of them ends in a comma, which is kept. The Julian 6 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **THE FIRST DATE OF ANY KIND THIS FOLDER HAS HELD.** `dates` was **null**: doxologia gives him no year and saint.gr none either. This book says „Упокојио се у дубокој старости, 429 год.“ — he reposed in deep old age, in the year 429. One book, one year, stated flat: `death` 429 to 429, display «429», basis traditional, and **nothing is widened** for want of a second year. **Deep old age is not a birth** and none is written; and „Шесдесет година подвизаваше се Сисоје у пустињи“ is the same sixty years doxologia gave, a duration both times and not a date, with **nothing subtracted from 429 to reach a first year**. WHAT IS NEW. **That he was a disciple of Antony outright**, „Мисирац родом и ученик св. Антонија“, an Egyptian by birth and a disciple of Saint Antony, and that he settled on the desert mountain called Antony’s „По смрти великог учитеља свога“, after the death of his great teacher. The folder had him on that mountain and following that manner of life off doxologia; **the discipleship and the teacher’s death are this book’s**, and they are the strongest statement of the tie any of the three books makes. **The lamb.** By hard labours upon himself he so tamed himself „да беше кротак и незлобив као јагње“, that he was meek and guileless as a lamb — and the grace that followed is given as three gifts, to heal the sick, to drive out unclean spirits and to raise the dead, where doxologia gave only the raising. **And three teachings and a fourth exchange, quoted.** On temptation: whatever happens to a man, he should give himself to God’s will and own that it happened for his sins, and if something good happens, say it happened by God’s providence. On pleasing God: „иступи из света, одели се од земље, остави твар, приступи ка Творцу, сједини се с Богом молитвом и плачем“. On humility: when a man has trained himself to own every other man better than himself, by that he gains humility. And the exchange with Amon, who complained that he could not remember the wise sayings he read so as to repeat them in talk with people, and was told „То није нужно“ — that is not necessary; what is necessary is to gain purity of mind and to speak out of that purity, having laid one’s hope on God. `types` UNTOUCHED, AND **`wonderworker` IS REFUSED FOR THE FIFTH TIME IN THIS RANGE.** `venerable` and `hermit` are both there; „Преп.“ is the `venerable` and the sixty years in the desert the `hermit`. The healing, the casting out and the raising of the dead all stand in the **body**, where the heading gives only „Преп.“, and a rank read off a body is not written. **And „Велики“ is not a rank** but the epithet «the Great», which §5 puts in the display name, where it already is. No `office`, no `locations`: Egypt and a mountain in a narrative are not coordinates. **NO NEW ROWS.** The folder already relates `anthony-the-great`, which is the one relation this entry supports and which it supports more strongly than either other book — **and the new prose still writes «Anthony» and not that folder’s display name**, because `related-floor` reads a prose name and `anthony-the-great` does not hold the row back; the older prose’s linked «Anthony the Great» is left exactly as it stands. **Amon takes no row**: `ls saints | grep -i ammon` returns eight of that name, and an identification off a name in another man’s life is not an identification. The monks round his bed are unnamed. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE DAY’S THIRD ENTRY IS A FEAST AND IS REFUSED TWICE OVER.** „Обретеније моштију св. Јулијаније девице“ — the finding of the relics of the holy virgin Juliana. §5 is explicit that an «Обретење моштију» is a feast and not a folder, which is the first refusal; **and no folder holds her**, which is the second. The entry says she was the daughter of the prince of Olshansk, died about 1540 a virgin of sixteen, and that two hundred years after her death the diggers of a new grave beside the great church of the Kyiv lavra came on her relics whole and incorrupt, as though she had only just fallen asleep; many wonders came of them, and she herself appeared more than once to individual persons. `ls saints | grep -i juliana` returns seven and **not one of them is she**: `juliana-4-december`, `juliana-mother-of-saturninus`, `juliana-of-amisos`, `juliana-of-lazarevo`, `juliana-of-nicomedia`, `juliana-of-ptolemais` and `juliana-of-rhosus`. `ls saints | grep -i olshan` holds nobody. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јулијанија». Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the year 1540, the sixteen years, and the two hundred years are written nowhere**, the first being hedged „около“ in any case and the other two being durations. **AND THE ONE MAN IN THAT ENTRY WHO DOES HAVE A FOLDER TAKES NO ROW.** „знаменити Петар Могила“ — the famous Peter Mohyla — had one of those visions of her, and `peter-mohyla` is a folder kept venerated by the Romanian calendar on 22 December. An appearance is not a relation, which is the Three Hierarchs ruling; the entry is a feast, so no row of any kind hangs on it; and the folder it would hang on is Juliana’s, which does not exist."
     }
   ],
   "hymns": [
@@ -82,5 +97,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 429,
+      "latest": 429,
+      "display": "429",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading, doxologia and saint.gr giving him no year. The Охридски пролог for 6. јул ст. ст.: „Упокојио се у дубокој старости, 429 год.“ — he reposed in deep old age, in the year 429. One book, one year, stated flat, and nothing is widened for want of a second year. Deep old age is not a birth and none is written; the sixty years in the desert, which doxologia gives too, are a duration and not a date, and nothing is subtracted from 429 to reach a first year (5 October 2026)."
+    }
   }
 }

@@ -13,6 +13,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Θεόδωρος ο Σαββαΐτης επίσκοπος Εδέσσης», with the rank words and the bynames left off. The page gives his father's name as Συμεών and his mother's as Μαρία."
+    },
+    {
+      "form": "Теодор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. јул ст. ст., „Св. Теодор еп. Едески, и други с њим“ — Св. is not a rank, „еп.“ is the rank, which `types` already carries, and „Едески“ is the see that rank governs and comes off with it; „и други с њим“ names nobody and is no part of his name. The bare forename is left. «of Edessa» in the display name is the corpus’s own. **The fold is forced and four deep before this day**: `foldchk.py` returns `theodore-boyar-of-chernigov`, `theodore-of-perga`, `theodore-of-vrsac` and `theodore-prince-of-yaroslavl`, all `sr`, for «Теодор», so this is the fifth folder on the string, and the heading offers no by-name to break it with — the see in it being a see."
     }
   ],
   "attestations": [
@@ -43,8 +48,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.07.2026 (9. јул ст. ст.) — „Св. Теодор еп. Едески, и други с њим“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **TWO CALENDARS, TWO DAYS, TEN DAYS APART.** This folder’s only other venerated row is the Greek one, on **19 July**, and this book keeps him on the **9th** — ten days apart, which is neither a thirteen-day conversion nor the same number. The `serbian` row was `undocumented`, so it is written plainly on this book’s day and **nothing of the Greek row is touched**. **THE FIRST DATE OF ANY KIND THIS FOLDER HAS HELD.** `dates` was **null**. This book says „Скончао 848. год.“ — he ended in the year 848. One book, one year, stated flat: `death` 848 to 848, display «848», basis traditional, and **nothing is widened** for want of a second year. **The two spans are refused**: „У 20 год. замонаши се и као монах провео 36 год.“ — tonsured in his twentieth year and thirty-six years a monk — is an age and a duration, and **nothing is subtracted from 848 to reach either a birth or a year of tonsure**, though the two numbers together would plainly offer one. A year derived by arithmetic is refused however well it would fit. WHAT IS NEW, WHICH IS THE WHOLE OF THE ENTRY. The tonsure at twenty and the thirty-six years as a monk; the election as bishop of Edessa „у време цара Михаила и Теодоре“, in the time of the emperor Michael and Theodora; and the year 848. `types` UNTOUCHED: `venerable`, `bishop` and `ascetic` are all three there; Свети is not a rank and „еп.“ is the `bishop`. `office` UNTOUCHED at «Bishop of Edessa», which is what the heading says. No `locations`: Edessa in a heading is not a coordinate. **NO NEW ROWS.** The folder already relates `michael-nephew-of-theodore-of-edessa`, whose display name carries this folder’s own name and whom this book does not mention. The emperor Michael and Theodora are an emperor and an empress in a life, which is not automatically a relation. **„и други с њим“ NAMES NOBODY, SO IT IS ONE ENTRY AND ONE ROW.** §4’s ruling on a synaxis heading decides it: one that enumerates its members is one folder per member, one that names nobody is one entry and the reader says so. Three men are named in the **body** and none of them takes a row: his teacher „св. Теодосије Столпник Сирски“ — `ls saints | grep -i theodosius-the-stylite` holds **nobody**, and an identification off a name in another man’s life is not an identification in any case; his brother „св. Јован“, a bare forename this corpus holds scores of times; and „св. Адер, племић и богаташ, који одбеже од жене и замонаши се“ — Ader, a nobleman and a rich man who fled from his wife and became a monk, for whom `ls saints | grep -i ader` returns three readers and no such man. A brother in a body is a kinship this reading cannot place on a folder it cannot find. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "related": [
@@ -52,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 848,
+      "latest": 848,
+      "display": "848",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 9. јул ст. ст.: „Скончао 848. год.“ — he ended in the year 848. One book, one year, stated flat, and nothing is widened for want of a second year to widen against. The same entry says he was tonsured in his twentieth year and spent thirty-six years as a monk: those are an age and a duration, not dates, and **nothing is subtracted from 848 to reach either a birth or a year of tonsure**, though the two numbers together would plainly offer one. The reign of the emperor Michael and Theodora, in which the entry puts his election, is no source for a year (6 October 2026)."
+    }
   }
 }

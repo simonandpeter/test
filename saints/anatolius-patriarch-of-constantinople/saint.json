@@ -12,6 +12,11 @@
       "form": "Ανατόλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Ανατόλιος Πατριάρχης Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Анатолије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. јул ст. ст., „Св. Анатолије патријарх Цариградски“ — Св. is not a rank, „патријарх“ is the rank, which `types` already carries, and „Цариградски“ is the see that rank governs and comes off with it, as the folder’s Romanian and Greek forms were taken «with the rank word and the see left off» and as „Московски“ came off Photius on 2 July. The bare forename is what the heading leaves, and it is also this folder’s whole display name. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Анатолије», so there is no fold — worth having measured, the corpus keeping an `anatolius-in-the-cave` on this very menologion number."
     }
   ],
   "sex": "male",
@@ -25,11 +30,18 @@
   ],
   "dates": {
     "floruit": {
-      "earliest": 451,
-      "latest": 451,
-      "display": "451",
-      "basis": "attested",
-      "note": "doxologia.ro dates one event of his patriarchate and nothing else: «l-a caterisit la Sinodul al IV-lea a toată lumea de la Calcedon din anul 451». It adds that he shepherded the Church eight years, and gives no year for his enthronement or for his death, so no wider interval is recorded here."
+      "earliest": 449,
+      "latest": 458,
+      "display": "449–458",
+      "basis": "traditional",
+      "note": "Both ends stated, neither derived, and the interval widened from the single year it held. The Охридски пролог for 3. јул ст. ст.: „после смрти патријарха Флавијана, би узведен на престо Цариградског патријарха 449 год.“ and „док најзад не би од њих и убијен 458 год.“ — raised to the throne in 449, killed in 458. Each end has a second book behind it: saint.gr has the patriarch Flavian murdered on 11 August 449 and Anatolius patriarch two months after, and «Ο Πατριάρχης Ανατόλιος πέθανε τον Ιούλιο του 458 μ.Χ». The year this field held before was doxologia’s one attested event inside it: «l-a caterisit la Sinodul al IV-lea a toată lumea de la Calcedon din anul 451». The basis is `traditional` rather than `attested` because the ends come from a traditional book and a hagiographical page while only the middle comes from a Council. The nine years this book gives for the tenure, and doxologia’s eight, are durations and not dates, and nothing is reckoned from either end to the other (5 October 2026)."
+    },
+    "death": {
+      "earliest": 458,
+      "latest": 458,
+      "display": "458",
+      "basis": "traditional",
+      "note": "The folder’s first `death`, and two books agree on the year. saint.gr: «Ο Πατριάρχης Ανατόλιος πέθανε τον Ιούλιο του 458 μ.Χ» — he died in July 458. The Охридски пролог for 3. јул ст. ст.: „док најзад не би од њих и убијен 458 год.“ — until at last he was killed by them, in the year 458. The two books disagree about the manner and not the year: doxologia has him depart to the Lord, saint.gr has him die, and only this book has him murdered by heretics. Both readings are written in the life and neither is chosen, and no martyr type is written off a verb in a body (5 October 2026)."
     }
   },
   "attestations": [
@@ -68,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.07.2026 (3. јул ст. ст.) — „Св. Анатолије патријарх Цариградски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 3 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **BOTH ENDS OF THE PATRIARCHATE, AND A `floruit` THAT WIDENS FROM ONE YEAR TO NINE.** The folder held `floruit` 451 to 451 `attested`, which is the year of Chalcedon and nothing else, doxologia having given no year for the enthronement or for the death and the folder’s own note saying so. This book gives both ends and states each: „после смрти патријарха Флавијана, би узведен на престо Цариградског патријарха 449 год.“, raised to the throne in 449; and „док најзад не би од њих и убијен 458 год.“, killed in 458. **Both ends are stated and neither is derived**, so `floruit` reads earliest 449, latest 458, display «449–458» in the dash form that a stated range takes, with doxologia’s 451 kept in the note as the one attested event inside it. The two years are each confirmed by a second book: saint.gr has the patriarch Flavian murdered on 11 August 449 and Anatolius patriarch two months after, and «Ο Πατριάρχης Ανατόλιος πέθανε τον Ιούλιο του 458 μ.Χ». A `death` of 458 to 458 is written beside it on those two books’ agreement. **THE BASIS MOVED FROM `attested` TO `traditional` AND THAT IS THE DAY’S ONE FIELD-LEVEL READING FOR THE AUTHOR TO OVERRULE**: the interval’s ends come from a traditional book and a hagiographical page, while the single year it replaces came from a Council, so keeping `attested` over a wider interval would have claimed for the new ends an authority only the middle has. **The nine years are refused.** This book says „Управљао црквом близу 9 година“, nearly nine years, where doxologia says eight; durations both, written in the life and in no field, and **nothing is subtracted from 458 to reach 449 or added to 449 to reach 458** — the two ends are read, not reckoned, and that they happen to span the difference is not what put them in. **A MURDER NEITHER OTHER BOOK REPORTS, AND THE TYPE IT IS REFUSED.** doxologia has him depart to the Lord after eight years; saint.gr says πέθανε, he died, in July 458. This book says he suffered much from the heretics „док најзад не би од њих и убијен“ — until at last he was killed by them. **Both readings are written in the life and neither is chosen.** And **`hieromartyr` is refused**, with `martyr` and `new-martyr` and every other rank the killing might suggest: the heading is „Св. Анатолије патријарх Цариградски“ and it carries no martyr word at all, Свети not being a rank, and **a rank inferred from a verb in the body is not written** — the same refusal as `wonderworker` on Niphon on 14 June and on both brothers on 1 July, made here on a verb rather than on an epithet. `types` stays `hierarch` and `patriarch`; „патријарх“ is the `patriarch`. `office` UNTOUCHED at «Patriarch of Constantinople», which is what „патријарх Цариградски“ says and which the folder already holds. WHAT ELSE IS NEW. **That Constantinople was recognised equal to Rome, and where.** „У његово време Цариградски престо би признат равним Римскоме престолу и то на Васељенском Сабору у Халкидону 451 год.“ — in his time the throne of Constantinople was recognised as equal to the throne of Rome, and that at the Ecumenical Council in Chalcedon in the year 451. Neither other book says it, and the folder’s whole account of Chalcedon was the deposition of Dioscorus and the restoration of Flavian’s name to the diptychs. **That he was first a presbyter of the Church of Alexandria** agrees with both other books, saint.gr adding that he was Alexandrian born and had been ordained deacon by Cyril. **THE EMPEROR, AND THE ONE NAME IN THIS ENTRY THAT A FOLDER WOULD MATCH AND MUST NOT.** This book sets the killing „у време Лава Великог“, in the time of Leo the Great — and by that it means **the emperor**, as its own entry for the Julian 2 July proves, which writes „цара Лава Великог (458- 471.)“ of the emperor Leo I in those words. The corpus’s `leo-the-great` is **«Leo the Great», `office` «Bishop of Rome»** — the pope, a different man, who also reigned over those years. So the prose says «the emperor Leo» and not the display name, **no row is written**, and the near-collision is recorded here because it is exactly the kind an identification off a name in another man’s life would have made. No `locations`: Alexandria, Constantinople and Chalcedon in a narrative are not a coordinate. **NO NEW ROWS.** The folder already relates `gennadius-patriarch-of-constantinople`, who followed him, and `theodosius-the-younger`, in whose time he was ordained; this book names neither. Flavian, whose death makes room for him here, is `flavian-of-constantinople` and **takes no row**: a predecessor on a throne is not a kinship, and the folder’s older prose already names him without one. The heretics who killed him are unnamed in this entry, and a Council is not a folder. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FOURTH ENTRY IS REFUSED FOR WANT OF A FOLDER, AND THE NEAREST NAME IS REFUSED ON THE DOUBLE-COMMEMORATION RULE. „Преп. Исаија Отшелник“ — Isaiah the hermit, who struggled in the Egyptian Scetis in the fifth and sixth centuries, is mentioned in the book of Barsanuphius and John (answer 249 and others) as a man of particular holiness, wrote many instructions for monks and hermits, of which little survived and much was destroyed by the Muslims, and whose sayings on the mind before it wakes from the sleep of sloth, on the sign that a sin is forgiven, and on the crown of the virtues being love fill most of the entry. **No folder holds him, and eight folders begin with his name.** `ls saints | grep -i '^isaiah'` returns eight: `isaiah-the-prophet`, who is the Old Testament prophet; `isaiah-of-rostov`, `isaiah-of-the-kyiv-caves`, `isaiah-of-valaam`, `isaiah-of-peking` and `isaiah-of-kykkos`, none of them an Egyptian; `isaiah-companion-of-terentius`, one of a company; and `isaiah-the-egyptian`, whose epithet is the trap. **`isaiah-the-egyptian` is not this man and may not take this row.** His `types` is `martyr`, his `death` is 284 to 305 off saint.gr’s reign of Diocletian, and he is one of the twelve martyrs of Caesarea in Palestine listed with Pamphilus — three centuries before a hermit of the fifth and sixth, and a martyr rather than a writer of instructions. **And he already carries a venerated `serbian` row, on the Julian 16 February**, read off this same book’s entry for the twelve. Two commemorations on one calendar means two men, which is how the Prologue’s Egyptian monk Дула was kept off `doulas-of-cilicia` on 15 June, and it settles this one the same way. `grep -ril scetis saints/` returns fifteen folders and **not one of them is an Isaiah**. Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the fifth and sixth centuries are written nowhere**, because there is nothing to write them on. `barsanuphius-the-great` exists and **takes no row**: the book that mentions Isaiah is a citation and not a kinship, and the entry it would hang on is refused in any case."
     }
   ],
   "text": {

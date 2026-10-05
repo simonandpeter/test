@@ -16,6 +16,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουλίου, «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», with the rank word left off."
+    },
+    {
+      "form": "Атанасије Атонски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јул ст. ст., „Преп. Атанасије Атонски“ — „Преп.“ is the rank and comes off, and „Атонски“ is **kept**, because it is a by-name standing directly on the name and not a see governed by a rank: there is no «archbishop of» for it to hang from, which is what made „Критски“, „Московски“, „Јерусалимски“ and „Цариградски“ come off earlier in this range. That is §6’s own «Аврамије Смоленски» case, and **it pays here where it cost on Andrew the day before**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Атанасије Атонски» and `athanasius-of-attaleia` and `athanasius-once-a-magician`, both `sr`, for the bare «Атанасије», so keeping the by-name is what avoids a third folder on that string. Measured, not supposed. The baptismal „Аврамије“ this entry gives in a parenthesis is **not** written as a second `sr` form: §6 wants one form per folder, the fullest the calendar gives, and the folder already carries that name as a Romanian form off doxologia’s life."
     }
   ],
   "sex": "male",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.07.2026 (5. јул ст. ст.) — „Преп. Атанасије Атонски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 5 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **THE FIRST DATE OF ANY KIND THIS FOLDER HAS HELD.** `dates` was **null**: neither doxologia nor saint.gr gave a year. This book ends „Тако сконча овај велики светилник монаштва 980 год.“ — so ended this great lamp of monasticism, in the year 980. One book, one year, stated flat: `death` 980 to 980, display «980», basis traditional, and **nothing is widened** for want of a second year to widen against. WHAT IS NEW. **The orphanhood and the voivode.** Born at Trebizond of God-fearing parents and early left an orphan, until by God’s Providence a voivode took him, brought him to Constantinople and put him to his studies. **The children’s game, which the book itself reads as a sign.** At their games the children chose one for emperor and one for voivode, and Athanasius for — abbot: „Као неко предсказање!“, as a kind of foretelling. **The baptismal name**, which this book gives in a parenthesis, „до пострижења Аврамије“, Abramius until the tonsure — the same name doxologia gave and this folder already carries as a Romanian form, so **two books now agree on it** and nothing is added. **The desert of Maleinon** near the Holy Mountain, where he struggled as the disciple of [Michael Maleinos](/saints/michael-maleinos), then famous; then the move to the Holy Mountain for silence, and the gathering of many who wanted the ascetic life, so that he was **forced** to build his glorious Lavra. **The Theotokos and the water from the rock**: full of God’s grace he was counted worthy to see the most holy Theotokos, who wonderfully brought water out of the rock and promised to be for ever the „Икономиса (Игуманија)“ of the monastery, its Stewardess and Abbess. **And the appearances after his death**, more than once, to his brethren, whether to comfort or to rebuke. **THE TWO EMPERORS, AND THE ONE ROW THAT IS NOT ADDED THOUGH THE OTHER HALF OF IT ALREADY EXISTS.** This book says the Byzantine emperors helped him abundantly, first „Никифор Фока“, who himself meant to withdraw and become a monk, and afterwards „Јован Цимисхије“. The corpus holds the first as `nicephorus-phocas`, display name «Nicephorus Phocas», `office` «Emperor of the Romans», `types` `king`, kept venerated by the Greek calendar on 11 December — **and that folder already relates this one, while this one does not relate it back.** No row is added: an emperor in a life is not automatically a relation, and a `related` row is a reading and not a repair. **The asymmetry is named here for the author to settle**, and the prose says «the emperor Nikephoros Phokas», which is not that folder’s display name, so nothing is claimed by the wording either. `ls saints | grep -i tzimisk` holds nobody, so John Tzimiskes has no folder at all. `types` UNTOUCHED: `venerable` and `abbot` are both there, „Преп.“ is the `venerable`, and the Lavra he was forced to build is the `abbot` the folder already carries. **`wonderworker` is refused**: the water from the rock is the Theotokos’s wonder and not his, the object of a wonder not being its subject, and the appearances after death stand in the body where the heading gives only Преп.. No `office`: an abbacy is not a see. No `locations`: Trebizond, Constantinople, Maleinon and the Holy Mountain in a narrative are not coordinates. **NO NEW ROWS.** The folder already relates `michael-maleinos`, whose disciple this book makes him in those words and who relates him back, so that name is written in the new prose; and `six-disciples-of-athanasius-the-athonite`, `barnabas-of-soumela`, `david-of-euboea`, `joseph-the-hesychast`, `sophronius-of-soumela` and `xenophon-the-founder`, none of whom this book names. The voivode who raised him is unnamed, and the Theotokos is not a folder of this corpus. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE SIX MONKS GET NO ROW, AND THEIR FOLDER EXISTS AND IS KEPT ON THIS VERY NUMBER.** The body ends Athanasius’s life with them: he went up with six monks over a newly built narthex of the church to look at a wall then being raised, „но зид се провали и њих све затрпа“ — the wall gave way and buried them all. `six-disciples-of-athanasius-the-athonite` is a folder, `venerable` and `monk`, kept **venerated by the Romanian and Greek calendars on 5 July**, the same menologion number this day writes; saint.gr’s own line for the day is «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», Athanasius and the six disciples with him, in one line. **This book’s heading is „Преп. Атанасије Атонски“ and nothing else.** §4 is explicit that a row’s quoted line is the Prologue’s own heading, whole, and §5 that the count is what the heading enumerates and not what the body narrates — the ruling two men martyred by name inside a body were refused rows on, on 18 June, though both existed and both were kept that day by another calendar. **This is the same refusal and a harder one**, the company’s folder standing on the same number as the row this day writes, and it is made on the same ground: and these six are not even named, which is a narrated death with no name and gets no row twice over. The folder already relates them, so the relation is not what is missing; what is refused is a `serbian` attestation row on a heading that does not carry them."
     }
   ],
   "hymns": [
@@ -133,5 +148,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 980,
+      "latest": 980,
+      "display": "980",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading, neither doxologia nor saint.gr giving a year. The Охридски пролог for 5. јул ст. ст.: „Тако сконча овај велики светилник монаштва 980 год.“ — so ended this great lamp of monasticism, in the year 980, the wall of a new narthex having given way and buried him with six monks. One book, one year, stated flat, and nothing is widened for want of a second year to widen against (5 October 2026)."
+    }
   }
 }

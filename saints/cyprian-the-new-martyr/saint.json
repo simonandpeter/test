@@ -11,12 +11,18 @@
       "form": "Κυπριανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουλίου, «Άγιος Κυπριανός ο νέος οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Кипријан Нови",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јул ст. ст., „Преп. муч. Кипријан Нови“ — „Преп. муч.“ is the rank and comes off, and „Нови“ is **kept**, because §5 is explicit that an epithet of this kind is not a rank: it distinguishes him and does not grade him. **And it is what avoids a fold**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Кипријан Нови» and `cyprian-companion-of-quadratus`, `cyprian-of-antioch` and `cyprian-of-kyiv`, all `sr`, for the bare «Кипријан», so keeping the epithet keeps this folder off a string three others already share. «of Kletzos» in the display name is the corpus’s own disambiguation off doxologia and is not in this heading, which gives the village only in the body and puts it in a different region."
     }
   ],
   "sex": "male",
   "types": [
     "hieromonk",
-    "new-martyr"
+    "new-martyr",
+    "venerable-martyr"
   ],
   "dates": {
     "death": {
@@ -64,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.07.2026 (5. јул ст. ст.) — „Преп. муч. Кипријан Нови“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 5 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **`dates` UNTOUCHED, AND THE AGREEMENT IS UNUSUALLY COMPLETE.** The folder holds `death` 1679 to 1679 `attested` off doxologia: «ieromonahul Ciprian din Kletzos, Agrafa, și-a dăruit viața din dragoste pentru Iisus Hristos în cetatea Constantinopolului în ziua de duminică, 5 iulie, a anului 1679». This book ends „И тако пострада за Христа овај Божји човек 5 јула 1679 год.“ — **the same day and the same year**, and the same city, since the martyrdom is at Constantinople in both. Two books, one date, nothing to widen and nothing to add: the field is passed back verbatim, note and all, and it is the only folder of this range whose `dates` the Prologue confirms to the day. **A `types` WORD READ OFF A HEADING, WHICH IS THE FIRST OF THIS RANGE.** The heading is „Преп. муч. Кипријан Нови“, and „Преп. муч.“ is Преподобномученик, the **venerable-martyr** — a rank word **in the heading**, which the rule says is written, where every rank this range has refused stood in a body. The folder held `hieromonk` and `new-martyr` and did not hold `venerable-martyr`; `venerable-martyr` is added and **both the others are kept**. Nothing is removed and nothing is claimed to be wrong: saint.gr’s line is «ο νέος οσιομάρτυρας», the new venerable-martyr, which is the same rank reached by another route and which this corpus read as `new-martyr`, and doxologia’s «Sfântul Cuvios Mucenic» is the same word again. So the two types now sit side by side with the `hieromonk` doxologia’s own prose gives. „Нови“ is **not** a rank: it is the epithet «the New», which §5 puts in the name and not in `types`, exactly as it does „Велики“. **A DISAGREEMENT ABOUT WHERE HE WAS BORN, WRITTEN AND NOT CHOSEN.** This book says „Рођен у селу Клицосу у Епиру“ — born in the village of Klitsos in **Epirus** — where doxologia says Kletzos in **Agrafa**, which is this folder’s display name. The village is the same village and the region is not the same region; both are written in the life and neither is chosen, and **no `locations` is written**, a village named in two regions being the worst possible coordinate. WHAT ELSE IS NEW, AND IT IS the whole road to the martyrdom. That after his good parents’ death he went to the Holy Mountain, was tonsured there and gave himself to ascesis **in a cell near the monastery of Koutloumousiou**, laying labour on labour and ascesis on ascesis until he was famous and honoured throughout the Holy Mountain. That he was **not satisfied with himself**, and was tormented by the thought that he could not be saved otherwise than through martyrdom for Christ. That he left the Mountain, came to Thessalonica, went before the pasha and called on him to throw off the false faith of Mohammed and receive the true faith of Christ — and was beaten and driven out. That, **unsatisfied with so small a suffering for Christ**, he went to Constantinople and wrote a paper to the grand vizier setting out the falsity of Mohammed and the truth of Christ the Lord; that the angered vizier sent him to the sheikh-ul-islam, who, having heard all Cyprian had to say, ordered his head struck off; and that he was glad beyond measure and „иђаше на губилиште као на свадбу“, went to the place of execution as to a wedding. No `office`: a hieromonk’s order is not a see. **NO ROWS.** The pasha of Thessalonica, the grand vizier and the sheikh-ul-islam are all unnamed; the monastery of Koutloumousiou is not a person, and a monastery a man lived beside is not a relation; his parents are unnamed. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE SIX MONKS GET NO ROW, AND THEIR FOLDER EXISTS AND IS KEPT ON THIS VERY NUMBER.** The body ends Athanasius’s life with them: he went up with six monks over a newly built narthex of the church to look at a wall then being raised, „но зид се провали и њих све затрпа“ — the wall gave way and buried them all. `six-disciples-of-athanasius-the-athonite` is a folder, `venerable` and `monk`, kept **venerated by the Romanian and Greek calendars on 5 July**, the same menologion number this day writes; saint.gr’s own line for the day is «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», Athanasius and the six disciples with him, in one line. **This book’s heading is „Преп. Атанасије Атонски“ and nothing else.** §4 is explicit that a row’s quoted line is the Prologue’s own heading, whole, and §5 that the count is what the heading enumerates and not what the body narrates — the ruling two men martyred by name inside a body were refused rows on, on 18 June, though both existed and both were kept that day by another calendar. **This is the same refusal and a harder one**, the company’s folder standing on the same number as the row this day writes, and it is made on the same ground: and these six are not even named, which is a narrated death with no name and gets no row twice over. The folder already relates them, so the relation is not what is missing; what is refused is a `serbian` attestation row on a heading that does not carry them."
     }
   ],
   "text": {

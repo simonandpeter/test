@@ -11,6 +11,11 @@
       "form": "Λαμπαδός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Ιουλίου, «Όσιος Λαμπαδός», with the rank word left off."
+    },
+    {
+      "form": "Лампад",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. јул ст. ст., „Преп. Лампад“ — „Преп.“ is the rank and comes off, and the heading gives nothing else; «of Irenopolis» in the display name is the corpus’s own and the place is in the body. The form is this book’s own short shape of the name, two syllables against saint.gr’s Λαμπαδός and doxologia’s «Lampadie», and it is **copied as printed and not transliterated or lengthened to match either**. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Лампад», so there is no fold."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.07.2026 (5. јул ст. ст.) — „Преп. Лампад“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, five sentences long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 5 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **A DATE REFUSED BECAUSE THE ONLY BOOK THAT OFFERS ONE DOES NOT ASSERT IT.** `dates` is **null** and stays null. doxologia and saint.gr both give this man a line and no year. This book ends „Подвизавао се вероватно у Х столећу“ — he struggled **probably** in the tenth century. The shape would have been allowed: a century a book states for a life goes in as an interval with a display like «10th century». **But this book does not state it; it guesses, in its own word „вероватно“** — and `basis` has no value for a source’s own hedge, so writing 901 to 1000 `traditional` would present as a tradition what the book declines to assert. Nothing is written, the sentence is carried into the life **with its hedge**, and the paragraph is written with no four-digit year in it at all so that `date-audit` has no prose year to read on a folder that holds no date. **This is the day’s one reading for the author to overrule**, and the alternative is one edit: `floruit` 901 to 1000, display «10th century», basis traditional, with „вероватно“ in the note. WHAT IS NEW, WHICH IS LITTLE, THE ENTRY BEING SHORT. That he loved Christ **from childhood** with a burning love and withdrew for it; that the desert he went to was „близу Иринопоља“, near Irenopolis, which is the see in his display name and which **two books now agree on**; that having overcome all the passions and desires of the body „душа његова би обасјана небеском светлошћу и неисказаним миром не од овога света“, his soul was lit with a heavenly light and an unspeakable peace not of this world; and that he was „Чудотворац био иза живота и по смрти“, a wonderworker both in life and after death. `types` UNTOUCHED, AND THE `wonderworker` ALREADY THERE IS WHY. `venerable`, `hermit` and `wonderworker` are all three on the folder off the other two books; „Преп.“ is the `venerable` and the desert is the `hermit`. **The wonderworking sentence of this entry stands in the body**, so it would not have been written off this book — and nothing needs writing, the type being there already. It is recorded as an agreement and not used as a source, which is the same handling as 108 inside Trajan’s reign on 3 July. No `office`, no `locations`: a desert near a city is not a coordinate, and a folder with no dates and a `locations` would have to go on `map-span`’s UNDATED list. **NO ROWS.** The entry names no person at all besides its subject. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE SIX MONKS GET NO ROW, AND THEIR FOLDER EXISTS AND IS KEPT ON THIS VERY NUMBER.** The body ends Athanasius’s life with them: he went up with six monks over a newly built narthex of the church to look at a wall then being raised, „но зид се провали и њих све затрпа“ — the wall gave way and buried them all. `six-disciples-of-athanasius-the-athonite` is a folder, `venerable` and `monk`, kept **venerated by the Romanian and Greek calendars on 5 July**, the same menologion number this day writes; saint.gr’s own line for the day is «Όσιος Αθανάσιος ο εν Άθω και οι συν αυτώ έξι μαθητές του», Athanasius and the six disciples with him, in one line. **This book’s heading is „Преп. Атанасије Атонски“ and nothing else.** §4 is explicit that a row’s quoted line is the Prologue’s own heading, whole, and §5 that the count is what the heading enumerates and not what the body narrates — the ruling two men martyred by name inside a body were refused rows on, on 18 June, though both existed and both were kept that day by another calendar. **This is the same refusal and a harder one**, the company’s folder standing on the same number as the row this day writes, and it is made on the same ground: and these six are not even named, which is a narrated death with no name and gets no row twice over. The folder already relates them, so the relation is not what is missing; what is refused is a `serbian` attestation row on a heading that does not carry them."
     }
   ],
   "hymns": [

@@ -11,6 +11,11 @@
       "form": "Λουκία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Ιουλίου, «Άγιοι Λουκία η παρθενομάρτυς, Ρήξος βικάριος και πολλοί άλλοι που μαρτύρησαν στην Κομπανία», with the rank word left off; the page's own text writes it «Λούκια»."
+    },
+    {
+      "form": "Лукија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Св. муч. Лукија“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. «of Rome, companion of Rix» in the display name is the corpus’s own disambiguation off two other books, and **this book calls that companion by another name entirely**, which is why none of it is built onto the form. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Лукија», so there is no fold."
     }
   ],
   "sex": "female",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.07.2026 (6. јул ст. ст.) — „Св. муч. Лукија“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, five sentences long. The heading is quoted as the Prologue prints it, as every heading of this wave is — and this day one of them ends in a comma, which is kept. The Julian 6 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **THE FIRST DATE OF ANY KIND THIS FOLDER HAS HELD.** `dates` was **null**: neither doxologia nor saint.gr gave her a year, though saint.gr gives her companion one. This book ends „Најзад заједно с царем пострада за Христа у Риму око 300 године“ — at last, together with the emperor, she suffered for Christ at Rome about the year 300. `death` 300 to 300, display «about 300», basis traditional, with „око“ quoted in the note, which is the shape this corpus already uses for an approximated year — `marius-of-persia` carries «c. 270» the same way. **AND THE YEAR ON THE OTHER FOLDER IS NOT USED.** `rix-the-vicar` holds `death` 301 off saint.gr, «Αγιος Ρηξος Βικαριος Που Μαρτυρησε Στην Κομπανια (; - 301)», and the page of the Twenty-four Martyrs beheaded with him says they suffered in 301. **That year is another folder’s and this folder’s date is not widened on it**, which is the standing prohibition; it is recorded here and left there. **THE COMPANION HAS A DIFFERENT NAME AND A DIFFERENT RANK IN THIS BOOK, AND NO IDENTIFICATION IS MADE.** This folder’s display name is «Lucia of Rome, companion of Rix», and `rix-the-vicar` is a **vicar** in Campania. This book says „У Кампанији зароби је варварски цар Авције“ — in Campania a **barbarian emperor Auceius** took her captive — and then that she converted him, and that she suffered together with him at Rome. Same province, same companion in the martyrdom, **and neither the name nor the rank matches**: Авције against Rix, a barbarian king against a vicar. **No identification is made and no row is added**; the `rix-the-vicar` row the folder already carries comes off another book and is not mine to remove, and the new prose names the man as this book names him, so that the reader sees two books and not one. `ls saints | grep -i auce` and `grep -ril Авције saints/` hold nobody. WHAT ELSE IS NEW, WHICH IS THE WHOLE OF HER STORY, THE FOLDER HAVING HELD NONE OF IT. That he wished to live with her and she resisted; that he then left her in peace to pursue her ascesis; **that she converted the emperor to the faith after he gained a victory in war through her prayer**; and that at the last they suffered together at Rome. `types` UNTOUCHED: `martyr` is there and „Св. муч.“ is the `martyr`. **`virgin` is refused**: her resisting him stands in the body, the heading carries no such word, and the entry says nothing about a vow. No `office`, no `locations`: Campania and Rome in a narrative are not coordinates, and a folder with a `locations` whose dates read as one year would still have to answer `map-span`. **NO NEW ROWS.** The folder relates `rix-the-vicar` already and this book gives that companion another name; the war and the victory are not folders. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE DAY’S THIRD ENTRY IS A FEAST AND IS REFUSED TWICE OVER.** „Обретеније моштију св. Јулијаније девице“ — the finding of the relics of the holy virgin Juliana. §5 is explicit that an «Обретење моштију» is a feast and not a folder, which is the first refusal; **and no folder holds her**, which is the second. The entry says she was the daughter of the prince of Olshansk, died about 1540 a virgin of sixteen, and that two hundred years after her death the diggers of a new grave beside the great church of the Kyiv lavra came on her relics whole and incorrupt, as though she had only just fallen asleep; many wonders came of them, and she herself appeared more than once to individual persons. `ls saints | grep -i juliana` returns seven and **not one of them is she**: `juliana-4-december`, `juliana-mother-of-saturninus`, `juliana-of-amisos`, `juliana-of-lazarevo`, `juliana-of-nicomedia`, `juliana-of-ptolemais` and `juliana-of-rhosus`. `ls saints | grep -i olshan` holds nobody. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јулијанија». Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the year 1540, the sixteen years, and the two hundred years are written nowhere**, the first being hedged „около“ in any case and the other two being durations. **AND THE ONE MAN IN THAT ENTRY WHO DOES HAVE A FOLDER TAKES NO ROW.** „знаменити Петар Могила“ — the famous Peter Mohyla — had one of those visions of her, and `peter-mohyla` is a folder kept venerated by the Romanian calendar on 22 December. An appearance is not a relation, which is the Three Hierarchs ruling; the entry is a feast, so no row of any kind hangs on it; and the folder it would hang on is Juliana’s, which does not exist."
     }
   ],
   "text": {
@@ -63,5 +78,14 @@
   },
   "related": [
     "rix-the-vicar"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 300,
+      "latest": 300,
+      "display": "about 300",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading, neither doxologia nor saint.gr giving her a year. The Охридски пролог for 6. јул ст. ст.: „Најзад заједно с царем пострада за Христа у Риму око 300 године“ — at last, together with the emperor, she suffered for Christ at Rome about the year 300. The book’s own „око“, about, is kept in the display. `rix-the-vicar`, whom this corpus names her companion, holds `death` 301 off saint.gr’s head line and off the page of the Twenty-four Martyrs beheaded with him; **that year is another folder’s and this field is not widened on it**. This book calls her companion a barbarian emperor Auceius rather than a vicar Rix, and no identification is made (5 October 2026)."
+    }
+  }
 }
