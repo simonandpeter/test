@@ -1,0 +1,67 @@
+{
+  "slug": "joannicia-kozhevnikova",
+  "display_name": "Joannicia (Kozhevnikova)",
+  "names": [
+    {
+      "form": "Иоанникия (Кожевникова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 20 ноября ст. ст., name page 13861, «Иоанникия (Кожевникова), игумения, прмц.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. **The corpus has no feminine English form of this name yet.** Seven folders carry a masculine Joannicius and none a Joannicia, so \"Joannicia\" in the display name is this folder’s own and is for the author to keep or change; the stored form is the Cyrillic the page prints. The sweep over Кожевникова returned nothing at all."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "abbess"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Алексия, Александра, Владимира, Иоанна, Алексия, Василия, Николая, Иоанна, Емилиана, Николая пресвитеров, и прмчч. Арсения, Евтихия и Илариона, прмц. Иоанникии игумении (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. **She is the only woman in the company of fourteen and the article says so.** It counts the accused as seven priests, «игумения Тихвинского Введенского монастыря» and six laymen, which is the one house the article names for anybody but the dean. azbyka.ru also gives her «11 июля (переходящая) – Собор святых Санкт-Петербургской митрополии», which was seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 20 ноября ст. ст. with «(1937)», which it gives to the whole company of fourteen; the article azbyka.ru prints out of pstgu.ru closes «были расстреляны в Тихвине 3 декабря 1937 года», and 3 декабря 1937 is the civil day of this Julian 20 November. No day is recorded here because this corpus’s `dates` are years, and no year of birth is given for this person anywhere read."
+    }
+  },
+  "related": [
+    "john-sarv",
+    "basil-kandelyabrov",
+    "nicholas-pokrovsky",
+    "emilian-panasevich",
+    "arsenius-dmitriev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
