@@ -1,0 +1,68 @@
+{
+  "slug": "gerasimus-sukhov",
+  "display_name": "Gerasimus (Sukhov)",
+  "names": [
+    {
+      "form": "Герасим (Сухов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link in the line for 19 ноября ст. ст., name page 9208, «Герасим (Сухов), иеромонах, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined (Герасима) and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` was run over the surname with the other twenty-three of the line across 5,835 folders."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Сщмчч. Порфирия, еп. Симферопольского, Иоасафа, еп. Чистопольского, Сергия, Михаила, Александра, Иоанна, Константина, Александра, Игнатия, Симеона, Иоанна, Иоанна, Димитрия, Иакова, Иакова пресвитеров, прмчч. Иоасафа, Геннадия, Петра, Герасима, Митрофана, мчч. Валентина, Петра, Леонида, Тимофея (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with two days and no more: 26 января, marked «(Новомуч.)», which is the moveable synaxis of the new martyrs and confessors of the Russian Church — azbyka.ru prints the same synaxis as 7 февраля and marks it «переходящая» — and 19 ноября, which is the day of this row. A moveable feast cannot be held by this corpus, and one row per church is the schema, so the synaxis is recorded here and the day of the row is the day the Sretensky day page listed him on."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1866,
+      "latest": 1866,
+      "display": "1866",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Герасим (в миру Герасим Федотович Сухов) родился в 1866 году в Чембарском уезде Пензенской губернии в крестьянской семье». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 19 ноября ст. ст. with «(1937)», which it gives to the whole company of twenty-four; azbyka.ru: «2 декабря преподобномученик был расстрелян в Семипалатинске», which is the civil day of this Julian 19 November. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "office": "Hieromonk",
+  "text": {
+    "life": "life.md"
+  }
+}

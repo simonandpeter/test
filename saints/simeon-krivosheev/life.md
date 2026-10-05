@@ -1,0 +1,7 @@
+# Simeon (Krivosheev)
+
+The Сретенский monastery’s calendar names him tenth of twenty-four and gives no life; the life here is the one azbyka.ru prints for the civil 2 декабря, out of pstgu.ru, and it is short. Semyon Ilarionovich Krivosheev was born in 1878 at Poltava. Having finished the Poltava seminary he was ordained priest in 1903 and took the pastoral care of the village of Kharkovtsy, where he served until the day of his arrest in 1937.
+
+On 27 March 1937, charged with counter-revolutionary agitation, he was sentenced to five years of exile in Kazakhstan, and served it at the settlement of Mayskoye in the Pavlodar region among the other arrested priests. When the arrests began in the group case of the archimandrite Gregory (Rebeza) he was taken too, and at his questioning he gave the most guarded answer he could, denying his own guilt and anybody else’s: «Верно по личности мне известны около 10 служителей религиозного культа, но контрреволюционную работу никакую не проводил». On 1 December 1937 the troika of the East Kazakhstan region sentenced him to be shot, and the sentence was carried out at two in the morning on 2 December 1937.
+
+*After the Православный церковный календарь of the Сретенский monastery for 19 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261119.html) and [his name page](https://days.pravoslavie.ru/name/9797.html), which carries no life; and the life printed by the Russian church calendar at azbyka.ru for 2 декабря — [the entry](https://azbyka.ru/days/sv-simeon-krivosheev); read 5 October 2026.*

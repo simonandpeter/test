@@ -1,0 +1,7 @@
+# John (Florovsky)
+
+The Сретенский monastery’s calendar names him twelfth of twenty-four and gives no life; the life here is the one azbyka.ru prints for the civil 2 декабря, out of pstgu.ru, and it is the shortest of the twelve. Ivan Ivanovich Florovsky was born in 1877 in the village of Istomino in the Tarusa district of the province of Kaluga. Having had his education in the seminary he took holy orders in 1897 and went to serve in the town of Bobrov in the Voronezh region, where he served until his arrest in 1937.
+
+On 17 March 1937 he was sentenced to five years of exile in Kazakhstan and had to find a new place to live at the settlement of Mayskoye in the Pavlodar region. There he was arrested again, the charge being that he belonged to the group of the archimandrite Gregory (Rebeza) which was carrying on counter-revolutionary work in the settlement. Although he flatly refused to admit any guilt, the troika of the East Kazakhstan region sentenced him to the highest measure of punishment, and at two in the morning on 2 December 1937 he was shot. Where he is buried is not known.
+
+*After the Православный церковный календарь of the Сретенский monastery for 19 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261119.html) and [his name page](https://days.pravoslavie.ru/name/9650.html), which carries no life; and the life printed by the Russian church calendar at azbyka.ru for 2 декабря — [the entry](https://azbyka.ru/days/sv-ioann-florovskij); read 5 October 2026.*

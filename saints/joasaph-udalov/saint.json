@@ -1,0 +1,68 @@
+{
+  "slug": "joasaph-udalov",
+  "display_name": "Joasaph (Udalov)",
+  "names": [
+    {
+      "form": "Иоасаф (Удалов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link in the line for 19 ноября ст. ст., name page 14523, «Святитель Иоасаф (Удалов), епископ Чистопольский, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined (Иоасафа) and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` none holding the surname in any `ru` form over 5,823 folders."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "office": "Bishop",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Сщмчч. Порфирия, еп. Симферопольского, Иоасафа, еп. Чистопольского, Сергия, Михаила, Александра, Иоанна, Константина, Александра, Игнатия, Симеона, Иоанна, Иоанна, Димитрия, Иакова, Иакова пресвитеров, прмчч. Иоасафа, Геннадия, Петра, Герасима, Митрофана, мчч. Валентина, Петра, Леонида, Тимофея (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with two days and no more: 26 января, marked «(Новомуч.)», which is the moveable synaxis of the new martyrs and confessors of the Russian Church — azbyka.ru prints the same synaxis as 7 февраля and marks it «переходящая» — and 19 ноября, which is the day of this row. A moveable feast cannot be held by this corpus, and one row per church is the schema, so the synaxis is recorded here and the day of the row is the day the Sretensky day page listed him on."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 decembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Δεκεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "azbyka.ru opens with the dates in brackets: «Иоасаф (в миру Иван Иванович Удалов) (5 апреля 1886, Уфа – 2 декабря 1937, Казань)». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 19 ноября ст. ст. with «(1937)», which it gives to the whole company of twenty-four; azbyka.ru: «29 ноября 1937 приговорён к высшей мере наказания. 2 декабря был расстрелян», which is the civil day of this Julian 19 November. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
