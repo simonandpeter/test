@@ -16,6 +16,11 @@
       "form": "Конон Исавријски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 5 March on pravoslavno.rs, „Свети мученик Конон Исавријски.“, with the rank word мученик left off and Свети, which is not a rank. Исавријски is kept: it is the epithet of his country and it is what the Prologue uses to tell him from the Conon of the next entry."
+    },
+    {
+      "form": "Конон Исаврийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 1266, «Конон Исаврийский, исповедник», with the rank and grade words left off. The day's own line declines the name. The rank word left off here is исповедник, confessor, which is not the grade the line itself gives him; that difference is on the attestation row and in the life. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Мч. Конона Исаврийского (I)»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "**The line and its own name link grade him differently.** The line says Мч., martyr, and the link behind it heads him «Конон Исаврийский, исповедник», confessor — and the life behind the line has him rescued from the torturers by his own townsmen and dying in peace two years afterwards. Nothing is added to `types` on that account and nothing taken away: the grade is the author's to settle, and the reading is set out in the life. The line's century, (I), is also not the century this folder records for his death."
     },
     {
       "church": "romanian",
@@ -121,6 +136,38 @@
       },
       "english": {
         "text": "Counted worthy of an angelic vision, thou wast initiated into the faith in Christ and didst receive the power of wonders, O wise one; whence thou didst bring low the arrogance of the demons and, contending, didst quench the flame of error. O Conon, venerable martyr and contender, make the Lover of mankind merciful towards us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко девственника предивна/ и мученика непоколебима,/ блаженнаго страдальца,/ на бесы власть приемшаго,/ Конона песньми восхвалим и к нему возопиим:/ моли Христа Бога,/ да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Тропарь мученика Конона Исаврийского»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a virgin most wondrous and a martyr unshaken, the blessed sufferer who received power over the demons, let us praise Conon with hymns and cry out unto him: pray thou to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Чистотою яко Ангел на земли пожив,/ отонудуже собеседник Ангелом быти сподобился еси,/ и родители ко Христову познанию привел еси,/ и, единаго Бога в Троице исповедав,/ пострадал еси до крове,/ мучениче Кононе,/ моли Его непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Кондак мученика Конона Исаврийского»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived on earth in purity like an angel, thou wast therefore accounted worthy to be a companion of angels; and thou didst bring thy parents to the knowledge of Christ, and, having confessed one God in Trinity, thou didst suffer even unto blood. O martyr Conon, pray unto him unceasingly for us all.",
         "rendered": "site"
       }
     }

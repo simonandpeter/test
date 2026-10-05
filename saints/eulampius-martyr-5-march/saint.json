@@ -6,6 +6,11 @@
       "form": "Ευλάμπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Άγιος Ευλάμπιος», with the rank word left off."
+    },
+    {
+      "form": "Евлампий Палестинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 682, «Евлампий Палестинский, мч.», with the rank and grade words left off. The day's own line declines the name. **The index gives him a toponymic the day's line does not and the corpus did not hold**: the line is the bare «Мч. Евлампия .» and this folder's display name disambiguates by the day, having nothing else; the index says Палестинский, which the life repeats. The toponymic is what keeps this form out of the fold: `.tmp/foldchk.py` reports the bare «Евлампий» held by `eulampius-of-nicomedia`, and no folder at all holding «Евлампий Палестинский»."
     }
   ],
   "sex": "male",
@@ -15,8 +20,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Мч. Евлампия»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
