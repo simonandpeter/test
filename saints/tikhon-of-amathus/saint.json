@@ -12,6 +12,11 @@
       "form": "Τύχων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιουνίου, «Άγιος Τύχων ο Θαυματουργός επίσκοπος», with the rank and epithet left off."
+    },
+    {
+      "form": "Тихон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 16. јун ст. ст., „Свети Тихон, епископ аматунтски“ — Свети is not a rank and „епископ аматунтски“ is a rank with its see, which `types`, `office` and the display name already carry between them; both come off and the bare forename is left. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тихон», so there is no fold — although the corpus keeps several Tikhons under other scripts, which is why the exact string was measured and not reasoned about. The Serbian form is Тихон where the Greek the folder stores is «Τύχων» and the Romanian «Tihon», three spellings of the one man and none of them transliterated by me."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.06.2026 (16. јун ст. ст.) — „Свети Тихон, епископ аматунтски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 16 June is the same menologion number the folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. A FIRST DATE ON A FOLDER THAT HELD NONE, AND IT IS THE WHOLE OF WHAT IS NEW. The folder is one of the fullest in this wave — two books, both wonders, the granary and the vine, the sixteenth of June named inside doxologia’s own life as the day ripe grapes were brought to his church — and it carried no `dates` object at all. doxologia gave no year; saint.gr gave only the reigns of Arcadius and Honorius, which is an emperor as a source for a year and refused on sight. This book gives one: „пресели се у блажену вечност, око 425. године“. `death` 425 to 425, display «about 425», basis traditional, the sentence in the note. **No `birth`**: the entry has his father a baker and nothing else of his beginning, so there is none, and the new paragraph carries no four-digit year beside a birth verb for the same reason. The one year it does carry is the one the field now states. WHAT ELSE THIS BOOK ADDS, AND IT IS WORDING AND NOT FACT. That the election was „једногласно“ — unanimous; that „чистота живота његова и ревност к Православљу“, the purity of his life and his zeal for Orthodoxy, were what recommended him for the rank; and that he took up the turning of the unbelieving „с апостолском ревношћу“, with apostolic zeal. Both wonders are here in two sentences each and the folder already holds both at length from doxologia, so the life says so rather than telling them twice. THE ONE `related` ROW IS ALREADY THERE, IN BOTH DIRECTIONS. „По смрти блаженог Мемнонија“ — after the death of the blessed Memnon. `mnemonius-of-amathus` is in this folder’s `related` and this folder is in his, and he is already named and linked in the prose. **NO ROW AND NO NEW NAME FOR EPIPHANIUS.** The entry says he was consecrated „посвећен славним Епифанијем“, by the glorious Epiphanius. `epiphanius-of-cyprus` exists and is very probably he — but that is **an identification off a name in another man’s life, which is not an identification**, and a consecrator takes no row for consecrating. The folder’s older prose from doxologia already names him as «the great Epiphanius, archbishop of Cyprus» and that is left exactly as it stands; nothing is added. `types` UNTOUCHED: `hierarch`, `bishop` and `wonderworker` are all there, епископ is `bishop`, and **the body’s opening word „Чудотворац.“ is not what put `wonderworker` on this folder** — saint.gr’s heading did, and a rank read off a body is not written; the two happen to agree. `office` UNTOUCHED at «Bishop»: this book says „епископ аматунтски“, bishop of Amathus, but `office` strings go through the packs’ `offices` branch, whose keys are English phrases the data already wrote down, and **no `office` string is invented here**. No `locations`: Amathus and Cyprus are already unbounded in the folder. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -124,5 +139,14 @@
   ],
   "related": [
     "mnemonius-of-amathus"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 425,
+      "latest": 425,
+      "display": "about 425",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 16. јун ст. ст. closes the life „После дугог труда у винограду Господњем пресели се у блажену вечност, око 425. године“ — after long labour in the Lord’s vineyard he passed over into blessed eternity, about the year 425. The folder held no date of any kind before this: doxologia.ro gave no year, and saint.gr gave only the reigns of Arcadius and Honorius, which is an emperor as a source for a year. The Serbian „око“ is what makes this «about» and not a point. No `birth` is taken: the entry gives his father’s trade and nothing of his beginning (5 October 2026)."
+    }
+  }
 }

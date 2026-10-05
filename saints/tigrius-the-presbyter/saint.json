@@ -3,13 +3,19 @@
   "display_name": "Tigrius",
   "sex": "male",
   "types": [
-    "presbyter"
+    "presbyter",
+    "martyr"
   ],
   "names": [
     {
       "form": "Τίγριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιανουαρίου, «Άγιοι Τίγριος ο Πρεσβύτερος και Ευτρόπιος», with the rank words left off."
+    },
+    {
+      "form": "Тигрије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 16. јун ст. ст., „Свети мученици Тигрије и Евтропије“, where it is the first of the two names — „Свети мученици“ stands at the head of the pair and comes off, and the heading gives him no epithet and no city, so the bare forename is what the source gives. The body adds „презвитер“, which is the `presbyter` the folder already holds and is not built onto the form. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тигрије», so there is no fold."
     }
   ],
   "dates": {
@@ -22,7 +28,8 @@
     }
   },
   "related": [
-    "eutropius-companion-of-tigrius"
+    "eutropius-companion-of-tigrius",
+    "john-chrysostom"
   ],
   "attestations": [
     {
@@ -51,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.06.2026 (16. јун ст. ст.) — „Свети мученици Тигрије и Евтропије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, first of the two names it enumerates. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE COMPANY, COUNTED BY §5. „Свети мученици Тигрије и Евтропије“ enumerates **two** names, therefore up to two folders — and for the first time in this wave both of them exist, so the day costs no new folder and takes two rows. `ls saints | grep -iE 'tigri|eutropi'` returns `tigrius-the-presbyter` and `eutropius-companion-of-tigrius`, each already `related` to the other, both kept by the Greek calendar on **12 January** and not on this menologion number at all. **That is a different church keeping a different day and not a second day on one church**, so no §4 note is owed and nothing of the Greek row is touched; what the Serbian row says is the Serbian day. A FOLDER THAT HELD A NAME, A RANK, A REIGN AND A COMPANION, AND NOW HOLDS A LIFE. saint.gr had one sentence for the two of them together — «Δεν έχουμε λεπτομέρειες για τον βίο των Αγίων», we have no details of the lives of these saints — so this folder printed a name, `presbyter`, the reign of Arcadius and a link to his companion, and said so. Everything in the new paragraph is new to the corpus: that the two were of the clergy of John Chrysostom; that when malicious men drove Chrysostom out of Constantinople the cathedral church caught fire and the flame rose from it and fell on the houses of his persecutors; that the people saw the finger of God in it while his enemies laid the fire at the door of his adherents, and that many of those men suffered for it, these two among them; that Tigrius in his youth was the slave of a rich man who had him castrated („који га ушкопи“), and that when he was freed from that slavery he gave himself wholly to the service of the Church and shone in it like a bright lamp; that the book calls him „кротког, смиреног, милостивог и гостољубивог“, meek, humble, merciful and hospitable, in its own quotation marks; and that Optatus put him to great torture and then sent him into exile in Mesopotamia, where he died in prison. `dates` LEFT AS THEY STOOD. The folder holds `floruit` 395 to 408 off saint.gr’s reign of Arcadius. **This book gives no year at all** — not for the fire, not for the exile, not for the death — so there is nothing to widen and nothing to choose, and `dates` is not touched. No year is derived from the banishment of Chrysostom either, which would be a year reached off another folder’s prose. `types_add` `martyr`, AND NOTHING ELSE. The heading is „Свети мученици“, martyrs, written of both of them, so `martyr` is a rank in the heading and is written; `presbyter` was already there and this book agrees, calling him „Тигрије презвитер“. **Nothing is taken from the body**: that he was made a eunuch in slavery is a thing done to him and not a rank, and the four adjectives the book quotes are a character and not a type. No `office`, no `locations` — Mesopotamia is a place of exile in one clause. THE ONE RELATION, AND IT IS WRITTEN IN BOTH DIRECTIONS IN THIS BATCH. „Ова двојица беху из клира светог Јована Златоуста“ — these two were of the clergy of Saint John Chrysostom, and the whole entry is their suffering for his sake, which is their story and not furniture. `related_add` `john-chrysostom` here, and the same batch carries a fourth spec entry that adds both of these slugs to his `related` — **a row in both directions, which `related-floor` demands of a name in prose whether it is linked or not**. His own folder takes no row, no name form and no paragraph: it is on `BEFORE_THE_RULE` too, and that entry has no `row` and no life keys, so `upgrade.py` does not touch his life. THE CITY PREFECT IS IN THE PROSE AND HAS NO FOLDER. „Градски началник, неки некрштени Грк Оптат“ — the city governor, an unbaptised Greek named Optatus, who raised the hunt against the Chrysostomites with particular malice. `ls saints | grep -i optat` returns nothing, so ruling 3 costs nothing here: he is named in the life because no folder of this corpus can be confused with him. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
