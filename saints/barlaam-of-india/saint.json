@@ -1,0 +1,81 @@
+{
+  "slug": "barlaam-of-india",
+  "display_name": "Barlaam of India",
+  "names": [
+    {
+      "form": "Варлаам Индийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., name page 353, «Варлаам Индийский, иерей, пустынник», with the two grade words left off; the line itself declines the bare forename. The same day carries a second Barlaam on name page 352 and a third on 355, and all three strings differ. `.tmp/foldchk.py` reports no folder holding this form. He is not the `barlaam-the-anchorite` the Greek calendar keeps near Antioch on 18 July: a different place, a different day, and nothing read joins them."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прпп. Варлаама и Иоасафа, царевича Индийского, и отца его Авенира царя (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 decembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Δεκεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 19 ноября ст. ст. with «(IV)» for all three of the people it names, and gives no year anywhere. The century is kept as the interval; nothing on the page narrows it, and the ages and spans of years its life page gives are left in the life rather than turned into dates."
+    }
+  },
+  "related": [
+    "joasaph-of-india"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих источники пустыни безплодное возделал еси,/ и иже из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенныя, сияя чудесы, Варлааме отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Ин тропарь преподобного Варлаама Индийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of thy tears thou didst till the barren desert, and with sighings from the depths thou didst bear fruit a hundredfold in labours, and wast a lamp to the whole world, shining with wonders, O Barlaam our father: pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

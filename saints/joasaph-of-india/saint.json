@@ -6,6 +6,11 @@
     {
       "form": "Όσιος Ιωάσαφ γιος του βασιλιά της Ινδίας Αβενίρ",
       "lang": "el"
+    },
+    {
+      "form": "Иоасаф Индийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., name page 1032, «Иоасаф Индийский, царевич, прп.», with the grade and rank words left off; the line itself declines the forename and keeps the epithet in a separate clause. `.tmp/foldchk.py` reports no folder holding this form. The Greek calendar keeps him on 26 August and this one on 19 November; the Greek row is untouched, since the schema holds one feast per church."
     }
   ],
   "sex": "male",
@@ -24,8 +29,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прпп. Варлаама и Иоасафа, царевича Индийского, и отца его Авенира царя (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,6 +71,58 @@
   },
   "related": [
     "constantine-the-great",
-    "john-of-damascus"
+    "john-of-damascus",
+    "barlaam-of-india",
+    "abenner-king-of-india"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От духовнаго наставника научився,/ царю Иоасафе, Бога познати,/ Крещением же просветився,/ люди к вере обратил еси,/ и отцу твоему от купели приемник быв,/ царство оставив, пустыню достигл еси/ и в ней трудолюбие подвизался еси./ Моли Христа Бога со учителем твоим Варлаамом/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Тропарь преподобного Иоасафа, царевича Индийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Taught by a spiritual guide to know God, O king Joasaph, and enlightened by baptism, thou didst turn thy people to the faith; and having received thy own father from the font, thou didst leave the kingdom, reach the desert and strive there in love of labour. Pray to Christ God, together with Barlaam thy teacher, that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Из чрева матерня/ прекрасное вселение бысть Святаго Духа,/ преславне Иоасафе,/ и от блаженнаго Варлаама безценный бисер, Христа,/ в сердце своем приял еси,/ и Божественным Крещением Индию просветил еси,/ отеческое же нечестие исправль,/ приведе его от тьмы ко свету Богоразумия/ и, оставив тленное на земли царство,/ пустыню достиг и своего учителя,/ темже на Небесех от Живоначальныя Троицы/ венцем царским венчася,/ моли о нас, чтущих честную твою память.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Ин тропарь преподобного Иоасафа, царевича Индийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy mother’s womb thou wast a fair dwelling of the Holy Spirit, O most glorious Joasaph, and from the blessed Barlaam thou didst receive into thy heart the pearl beyond price, Christ; and thou didst enlighten India with divine baptism, and amending thy father’s impiety thou didst bring him from darkness to the light of the knowledge of God; and leaving a corruptible kingdom upon earth thou didst reach the desert and thine own teacher. Therefore in the heavens thou wast crowned with a royal crown by the Life-giving Trinity: pray for us who honour thy precious memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Ведый твое из младенства благое изволение, Иоасафе, един сердцеведец Бог,/ и от царствия земнаго в монашеское пребывание приведый тя,/ великому Варлааму последовати сподоби./ С нимже и ныне горний Иерусалим всесветлый отечество имея,/ желаемыя доброты красно наслаждался Святыя Троицы,/ молим тя, царская красото,/ поминай нас, верою чтущия тя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Кондак преподобного Иоасафа, царевича Индийского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "God alone, who knows the heart, knowing thy good will from thine infancy, O Joasaph, and bringing thee from an earthly kingdom into the monastic life, made thee worthy to follow the great Barlaam. Having now with him the all-radiant Jerusalem on high for a homeland, and delighting fairly in the desired goodness of the Holy Trinity, we pray thee, O royal comeliness: remember us who honour thee in faith.",
+        "rendered": "site"
+      }
+    }
   ]
 }

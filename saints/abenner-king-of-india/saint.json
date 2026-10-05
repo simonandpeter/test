@@ -1,0 +1,62 @@
+{
+  "slug": "abenner-king-of-india",
+  "display_name": "Abenner, father of Joasaph",
+  "names": [
+    {
+      "form": "Авенир Индийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., name page 14, «Авенир Индийский, царь», with the grade word left off; the line itself declines the name. `.tmp/foldchk.py` reports no folder holding this form, and none holding the name in any language before this batch — the Greek calendar names him only inside the stored `el` form of his son’s folder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "king"
+  ],
+  "office": "King of India",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прпп. Варлаама и Иоасафа, царевича Индийского, и отца его Авенира царя (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 decembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Δεκεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 19 ноября ст. ст. with «(IV)» for all three of the people it names, and gives no year anywhere. The century is kept as the interval; nothing on the page narrows it, and the ages and spans of years its life page gives are left in the life rather than turned into dates."
+    }
+  },
+  "related": [
+    "joasaph-of-india"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
