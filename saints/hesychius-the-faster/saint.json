@@ -11,6 +11,11 @@
       "form": "Исихије Посник",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 5 March on pravoslavno.rs, „Преподобни Исихије Посник.“, with the rank word Преподобни left off. Посник is kept as the by-name that distinguishes him: the corpus keeps the same epithet in English display names (`eustratius-the-faster`, `macarius-the-faster`, `john-the-faster-of-the-cave`), which `scripts/draft-saint.mjs`'s rank check would refuse if it read as a rank, and the bare forename is held by eighteen other folders. Neither Bursa, nor the mountain, nor Amasea is in the heading."
+    },
+    {
+      "form": "Исихий Вифинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 1122, «Исихий Вифинский, постник, прп.», with the rank and grade words left off; the line itself gives only Постника, the faster, which is this folder's display name and the Serbian Посник. **The toponymic is a gain**: the corpus held nothing to place him by, and the index and the life agree that he was of Bithynia. `.tmp/foldchk.py` reports no folder holding this form; the gate's ησυχιοσ row of nine folders does not touch this one, which has no Greek form at all."
     }
   ],
   "dates": {
@@ -32,8 +37,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 5 марта ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Прп. Исихия Постника (ок. 790)»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
