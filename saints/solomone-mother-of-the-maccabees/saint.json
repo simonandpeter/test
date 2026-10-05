@@ -11,6 +11,11 @@
       "form": "Σολομονή",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», with the rank word and the kinship clause left off. The page's sub-heading for her is «Αγια Σολομονη Μητερα Των Επτα Μακκαβαιων»."
+    },
+    {
+      "form": "Соломонија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 1 August, „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ — матер њихова left off, a descriptor and not a rank, and already carried by the display name. **This book spells her Соломонија**, with the extra syllable, where the Greek is Σολομονή; the form is copied as printed."
     }
   ],
   "sex": "female",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.08.2026 (1. август ст. ст.) — „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the heading names her: „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“. **The spelling is this book’s own**: it writes Соломонија where the Greek line gives Σολομονή and the Romanian Solomoni and the display name Solomone; copied as printed and not reconciled. матер њихова, their mother, is the descriptor the display name already carries and is no rank, so the stored form is the name alone. `death` about 180 BC, off „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“, whose subject is all of them; the folder held no date. Her own end is „Најзад и мајка, када виде и свог последњег трогодишњег сина у огњу, и сама скочи у огањ и изгори, предавши душу Богу.“ — she saw her youngest son, three years old, in the fire and leapt in herself. `types` untouched at `martyr`: матер is not a rank. No row for Antiochus and none for the high priests; the three folders of this entry were already related to one another in both directions before this reading and nothing was added. No `locations`. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [
@@ -99,5 +114,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -180,
+      "latest": -180,
+      "display": "about 180 BC",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind, neither doxologia nor saint.gr giving a year in its prose. The Охридски пролог for 1. август ст. ст. closes its first entry „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“ — all of them suffered honourably for the faith in the one living God about the year 180 before Christ. The subject is Сви, all of them, so the one sentence dates every holder of this entry; «about» is kept in the display and the interval is left flat, which is the shape `elisha-the-prophet` and `abraham-of-pechenga` carry (6 October 2026)."
+    }
   }
 }

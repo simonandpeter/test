@@ -11,6 +11,11 @@
       "form": "Επτά Μακκαβαίοι",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», with the rank word and the clauses about the mother and the teacher left off. The page's own enumeration of the seven, which this folder does not split into seven, is «Αβείμ (ή Άβιβος), Αντώνιος (ή Αντωνίνος), Γουρίας, Ελεαζάρος, Ευσέβωνας, Αχείμ, Μάρκελλος (ή Σάμωνας, ή Εύλαλος ή Μάρκος)»."
+    },
+    {
+      "form": "Седам Макавеја",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 1 August, „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ — the company’s own three words, with no rank word in them at all. The body calls them Макавеји and Седам браће Макавеја; the heading’s form is the one stored, which is the fullest this calendar gives the company."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.08.2026 (1. август ст. ст.) — „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of three entries, and **the heading names three holders and leaves four names to the body**: „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ gives the company as a number, the mother by name and the priest by name with his rank, and the seven brothers’ own names appear only in „Седам браће Макавеја зваху се: Авим, Антонин, Елеазар, Гурије, Евсевон, Алим и Маркел.“. By §5 the names the heading prints are what is counted, so this entry is three rows and not ten; the corpus holds no folder for any individual brother in any case, keeping the seven as one. **A DEATH YEAR BEFORE CHRIST, AND THE FOLDER HELD NO DATE AT ALL.** „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“ — all of them suffered honourably for the faith in the one living God about the year 180 before Christ. `death` is written −180 flat, display «about 180 BC», basis traditional, which is the shape `elisha-the-prophet` and the other Old Testament folders carry. The subject is Сви, all of them, so the one year covers all three folders of this entry. **WHAT THE ENTRY GIVES AND WHAT IS REFUSED FROM IT.** „Пострадаше сви за чистоту вере Израиљске од цара Антиоха званог од једних Епифанос (просветљени), а од других Епиманис (безумни).“ names the persecutor with both of his by-names, Epiphanes the enlightened and Epimanes the mad; „Због великих греха у Јерусалиму, а нарочито због отимања око власти архијерејске, и злочина, учињених приликом тог отимања, попусти Бог велику беду на свети град.“ lays the calamity on the great sins in Jerusalem and above all on the struggle over the high-priestly power; „Једном дође сам цар у Јерусалим и нареди, да сви Јевреји једу свињско месо, противно закону Мојсијеву.“ and „Јер једење свињског меса беше очигледан знак, да се неко одрекао вере Израиљске.“ make the eating of swine’s flesh the open sign of a man who had renounced the faith of Israel. Antiochus holds no folder and takes no row, nor do the faithless high priests and elders who helped him. `types` untouched on all three. No `locations`: Jerusalem and Antioch are named in clauses. **A TRAP INSIDE THE ENTRY, NAMED SO THE NEXT READER DOES NOT FALL IN IT**: one of the seven brothers is himself called Елеазар in the body list, and he is **not** the priest of the heading, who is an old man and one of the seventy translators and who dies before the king ever leaves Jerusalem. Two Eleazars in one entry. **ENTRY 2, „Изношење Часнога Крста.“, IS A FEAST AND NO FOLDER**, which is §5 on a Празник. „Овај празник установљен би договорно од Грка и Руса, у време цара грчког Мануила и књаза руског Андреја за спомен истовремене победе и то: Руса над Бугарима и Грка над Сараценима.“ has it established by agreement between Greeks and Russians in the time of the Greek emperor Manuel and the Russian prince Andrew, for the memory of two victories won at once, the Russians over the Bulgars and the Greeks over the Saracens; „Зато се установи, да се 1 августа износи крст из цркве Свете Софије, најпре у средину цркве а по том и на улице, ради поклоњења народа и ради спомена чудотворне помоћи крста у бившим ратовима.“ gives the procession out of Hagia Sophia; „Но ово није био обичан крст но прави Часни Крст, који се чувао у храму царског двора.“ insists it was not an ordinary cross but the true Precious Cross kept in the church of the imperial palace; and „31. јула преношен је Часни Крст из царског двора у Св. Софију, а одатле после ношен по улицама ради освештања земље и ваздуха. Најзад 14. августа поново је враћен у храм царске палате.“ gives its three dates, 31 July out of the palace into Hagia Sophia, then through the streets, and 14 August back again. **Neither man in it is a saint of the entry**, which is the Vladimir-icon reading of the Julian 23 June: no row for the emperor and none for the prince, whom `ls saints | grep -i bogolyub` shows the corpus does not hold at all. **ENTRY 3, „Св. девет мученика.“, IS REFUSED AND IT IS THE COSTLIEST REFUSAL OF THIS BLOCK.** The heading enumerates nobody — the holy nine martyrs — and §5 says to count the names the heading prints. Its body prints all nine: „Њихова су имена: Леонтије, Атије, Александар, Киндеј, Минситеј, Кириак, Минеон, Катун и Евклеј.“ „Први беше дрводеља, а остали земљорадници.“ „Због дрзновеног исповедања вере Христове и због разрушења храма Артемидина, бише љуто истјазавани и обезглављени у време Диоклецијаново у Пергији Памфилијској, и посташе наследници царства Христова.“ **And this corpus already keeps every one of the nine, on this very menologion day, under these very names**: `leontius-of-perge`, `attus-of-perge`, `alexander-of-perge`, `cindeus-of-perge`, `mnesitheus-of-perge`, `cyriacus-of-perge`, `menaeus-of-perge`, `catunus-of-perge` and `eucles-of-perge`, nine for nine and in the same order. **AUTHOR: on the other reading of §5 this entry is nine upgrades, and the match is exact.** Nothing was written, and what the refusal costs is nine rows, the carpenter-and-eight-farmers detail, the temple of Artemis, and the reign of Diocletian at Perge in Pamphylia. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is sixteen lines on the cross of the second entry and nothing on the Maccabees or the nine: „Кнез Андреја силом крста Спасе земље поробљене, Силом крста цар Мануил Славно разби Сарацене.“. In no field and in no life (§3), read before this was written."
     }
   ],
   "hymns": [
@@ -123,5 +138,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -180,
+      "latest": -180,
+      "display": "about 180 BC",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind, neither doxologia nor saint.gr giving a year in its prose. The Охридски пролог for 1. август ст. ст. closes its first entry „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“ — all of them suffered honourably for the faith in the one living God about the year 180 before Christ. The subject is Сви, all of them, so the one sentence dates every holder of this entry; «about» is kept in the display and the interval is left flat, which is the shape `elisha-the-prophet` and `abraham-of-pechenga` carry (6 October 2026)."
+    }
   }
 }
