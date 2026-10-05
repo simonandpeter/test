@@ -16,6 +16,11 @@
       "form": "Тит",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 2 April on pravoslavno.rs, „Преп. Тит Чудотворац“, with the rank word Преп. left off and with Чудотворац left off as well — it is a rank word in this source's usage and this folder already carries `wonderworker` in `types`. The heading gives no epithet beyond those, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Тит Чудотворец",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 2 апреля ст. ст., name page 2111, «Тит Чудотворец, иеромонах», with the grade word «иеромонах» left off. The day’s own line declines both words, «Тита чудотворца». The epithet is kept because the forename alone would not tell him apart: `titus-the-apostle` already holds the bare «Тит» as its ru form, and this folder holds it as its sr form."
     }
   ],
   "sex": "male",
@@ -23,13 +28,23 @@
     "venerable",
     "monk",
     "wonderworker",
-    "confessor"
+    "confessor",
+    "hieromonk"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 апреля ст. ст. — «Прп. Тита чудотворца (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260402.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -140,6 +155,22 @@
       },
       "english": {
         "text": "Having cleansed thyself with the coals of abstinence, thou didst flash out the light-shaped rays of the virtues, gladdening those who sing: Rejoice, O Titus, adornment of the Fathers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Жития молву оставил еси/ и тихо, все житие твое пожив, мудре, к Богу прешел еси,/ чудоносне отче наш, Тите преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 апреля ст. ст. — «Кондак преподобного Тита чудотворца», глас 4. His own, and it names him.",
+        "url": "https://days.pravoslavie.ru/Days/20260402.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You left the noise of this life behind, and having lived the whole of your life in quietness, O wise one, you passed over to God, our wonder-bearing father Titus the venerable.",
         "rendered": "site"
       }
     }

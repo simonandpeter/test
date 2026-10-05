@@ -15,6 +15,11 @@
       "form": "Фервута",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 4 April on pravoslavno.rs, „Св. мученица Фервута и њена сестра удова и њихова робиња“, with the rank words Св. мученица left off. The heading names only this woman and describes the other two by what they were, so hers is the one name on the page; it carries no epithet and no city, and the bare forename is what the source gives."
+    },
+    {
+      "form": "Фервуфа",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the three women’s line for 4 апреля ст. ст., name page 2730, «Фервуфа, дева, мц.», with the grade word and the rank abbreviation left off. The calendar gives her no toponymic and no surname, so the bare forename is the fullest form it has, and no folder holds it. Her sister and the third woman have no name link of their own and no name at all in this book, so no form is read for them."
     }
   ],
   "related": [
@@ -22,18 +27,27 @@
   ],
   "dates": {
     "death": {
-      "earliest": 301,
-      "latest": 400,
-      "display": "4th century",
+      "earliest": 341,
+      "latest": 343,
+      "display": "341–343",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησαν τον 4ο αιώνα, στα χρόνια του βασιλιά Κωνσταντίνου, και όταν βασιλιάς στην Περσία ήταν ο Σαπώρ ο Β'» — in the fourth century, in the days of the emperor Constantine, when Shapur II was king in Persia. The page gives no year."
+      "note": "The range is the source’s own and is not narrowed. days.pravoslavie.ru closes her line for 4 апреля ст. ст. with «(341-343)» and its life opens «приняли мученическую смерть за Христа между 341 и 343 годами». The folder held «4th century» off saint.gr and the Ohrid Prologue, which this range falls inside; the same page dates her brother’s own martyrdom «около 341 - 344 годов», and that wider span is his and is not written here."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Мцц. Фервуфы девы, сестры и рабыни ее (341-343).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,105 @@
+{
+  "slug": "benjamin-kononov",
+  "display_name": "Benjamin (Kononov)",
+  "names": [
+    {
+      "form": "Вениамин (Кононов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 4 апреля ст. ст., name page 9166, «Вениамин (Кононов), архимандрит настоятель Соловецкого м-ря, сщмч.», with the two grade words and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Вениамина». Seven folders hold an English Benjamin and none holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "abbot",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Прмчч. Вениамина и Никифора (1928).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 aprilie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Απριλίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 April 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "azbyka.ru’s life gives «родился 4 января 1868 года в деревне Евсевиевской Шенкурского уезда Архангельской губернии». The day of the month is in the prose and not in this field. azbyka.ru’s calendar for the civil 17 April, which is the Julian 4 April, carries the life; it was read in the in-app Browser pane on 5 October 2026, the site answering nothing else. The life there is signed игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Апрель», Тверь 2006."
+    },
+    "death": {
+      "earliest": 1928,
+      "latest": 1928,
+      "display": "1928",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 4 апреля ст. ст. with «(1928)», and azbyka.ru’s life dates the murder to the evening of 17 April 1928, the Tuesday of Bright Week, with the bodies found on 9 June. 17 April 1928 is the civil date of the Julian 4 April, so the calendar keeps him on the day he died; no arithmetic is done here, both readings being printed."
+    }
+  },
+  "related": [
+    "nicephorus-kuchin"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Преподóбнии новомýченицы Вениами́не и Ники́форе,/ дóбрым пóдвигом во оби́тели Соловéцтей просия́вше,/ настáвницы брáтии в завéтех и́ноческих яви́лися естé/ и, от безбóжник беды́ и изгнáние претерпе́вше,/ в плáмени огня́ дýши своя́ Влады́це Христý предáли естé,/ Емýже ны́не предстоя́ще,// моли́те спасти́ся душáм нáшим.",
+      "source": {
+        "text": "azbyka.ru, Православный церковный календарь for the civil 17 April (the Julian 4 April), «Преподобномученикам Вениамину (Кононову) и Никифору (Кучину), Соловецким. Тропарь, глас 5». Their own and a joint one: it names them both and it names the flame. days.pravoslavie.ru prints no hymn for them.",
+        "url": "https://azbyka.ru/days/2026-04-17",
+        "year": 2026
+      },
+      "english": {
+        "text": "Venerable new martyrs Benjamin and Nicephorus, you shone in the monastery of Solovki by a good striving and were shown teachers of the brotherhood in the monastic covenants; and having endured troubles and banishment from the godless, you gave up your souls to Christ the Master in the flame of fire. Standing now before Him, pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Божéственными страдáнии,/ я́же за Христá претерпе́вше,/ отцы́ всеблажéннии,/ я́ко злáто в горни́ле дýши своя́ во огни́ очи́стили естé/ и во оби́тели Гóрния ко Влады́це своемý ны́не пресели́лися есте./ Сегó рáди прилéжно чтим и ублажáем вас,// преподобномýченицы Вениами́не и Ники́форе.",
+      "source": {
+        "text": "azbyka.ru, Православный церковный календарь for the civil 17 April, «Кондак, глас 7» under the same heading. Their own and a joint one; it names them both.",
+        "url": "https://azbyka.ru/days/2026-04-17",
+        "year": 2026
+      },
+      "english": {
+        "text": "All-blessed fathers, having endured divine sufferings for Christ, you cleansed your souls in the fire as gold in the furnace, and have now passed over to your Master in the dwellings on high. Therefore we honour and bless you diligently, venerable new martyrs Benjamin and Nicephorus.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

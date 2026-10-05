@@ -11,6 +11,11 @@
       "form": "Ζωσιμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Ζωσιμάς εκ Ρωσίας», with the rank word and the country left off. The life page calls him «Ζωσιμάς του Βορμποζόμ»."
+    },
+    {
+      "form": "Зосима Ворбозомский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 4 апреля ст. ст., name page 848, «Преподобный Зосима Ворбозомский», with the rank word stripped off the front. No folder holds this form or the bare «Зосима»."
     }
   ],
   "related": [],
@@ -33,8 +38,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Прп. Зосимы Ворбозомского (ок. 1550).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

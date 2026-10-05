@@ -1,0 +1,93 @@
+{
+  "slug": "joseph-the-much-ailing",
+  "display_name": "Joseph the Much-Ailing",
+  "names": [
+    {
+      "form": "Иосиф Многоболезненный",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 4 апреля ст. ст., name page 1060, «Преподобный Иосиф Многоболезненный», with the rank word stripped off the front. The day’s own line declines both words and adds the house, «Иосифа многоболезненного, Печерского». The epithet is kept because the bare «Иосиф» is held by two folders already, `joseph-monk-martyr-1918` and `joseph-of-theodosiopolis`, and because it is the name the Church gives him; no folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Прп. Иосифа многоболезненного, Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 aprilie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Απριλίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 April 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1301,
+      "latest": 1400,
+      "display": "14th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 4 апреля ст. ст. with «(XIV)», and both of the two lives behind it open «жил в XIV веке». Neither gives a year of birth, a year of death or a reign, and nothing here is narrowed."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Слез твоих теченьми пустыни безплодное возделал еси,/ и инее из глубины воздыханьми во сто трудов уплодоносил еси,/ и был еси светильник вселенней, сияя чудесы,/ Иосифе, отче наш,/ моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Тропарь преподобного Иосифа многоболезненного», глас 8. It is the common of a venerable father, printed under his name with his name in it, and it is sung to him: copied whole as the source has it, and named here as a common rather than a proper.",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the streams of your tears you tilled the barren desert, and with sighs from the deep you made it bear fruit a hundredfold in labours, and you became a lamp to the whole world, shining with wonders: Joseph our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Многолетне страдая в болезнех,/ молитвою и обещанием восприятия иночества/ приял еси здравие от Бога,/ и, неленостно подвизався в Печерстей обители,/ наследил еси неболезненную и вечную жизнь,/ и исцелявши недуги чтущих тя,/ преподобне Иосифе, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Кондак преподобного Иосифа многоболезненного», глас 8. His own and not a common: it is about the years of sickness, the vow and the Caves, which is the whole of what his life tells.",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Suffering many years in sickness, by prayer and by the promise to take the monastic habit you received health from God; and labouring without slackness in the monastery of the Caves you inherited the life that is eternal and without pain, and you heal the ailments of those who honour you, Joseph our venerable father.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

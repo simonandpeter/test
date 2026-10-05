@@ -11,6 +11,11 @@
       "form": "Ελπιδηφόρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Απριλίου, «Άγιος Ελπιδηφόρος», with the rank word left off. The life page gives «Ελπιδοφόρος» as a second spelling of the same name."
+    },
+    {
+      "form": "Елпидифор",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the company’s line for 3 апреля ст. ст., name page 773, «Елпидифор, мч.», with the rank abbreviation left off. The calendar gives him no toponymic, and no folder holds the bare form; `elpidephorus-the-persian` is a different man on a different day."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Мчч. Елпидифора , Дия , Вифония и Галика (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260403.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +74,19 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line that names the four of them for 3 апреля ст. ст. with «(III)», the third century, and the life behind it gives no year, no reign and no persecution to date them by. Nothing here is narrowed and nothing is inferred."
+    }
+  },
+  "related": [
+    "dius-companion-of-elpidephorus",
+    "bithonius-companion-of-elpidephorus",
+    "galicus-companion-of-elpidephorus"
+  ]
 }

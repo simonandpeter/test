@@ -11,6 +11,11 @@
       "form": "Ιλλυριός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Απριλίου, «Όσιος Ιλλυριός», with the rank word left off."
+    },
+    {
+      "form": "Иллирик Марсионский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 3 апреля ст. ст., name page 947, «Иллирик Марсионский (Пелопонесский), прп.», with the rank abbreviation left off and the parenthesised second toponymic left in the life. The day’s own line declines the forename alone, «Иллирика». No folder holds this form or the bare «Иллирик»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 апреля ст. ст. — «Прп. Иллирика .»",
+        "url": "https://days.pravoslavie.ru/Days/20260403.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
