@@ -1,0 +1,68 @@
+{
+  "slug": "john-vecherko",
+  "display_name": "John (Vecherko)",
+  "names": [
+    {
+      "form": "Иоанн (Вечерко)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 4 апреля ст. ст., name page 9602, «Иоанн (Вечерко), иерей, сщмч.», with the grade word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename and the grade, «Иоанна пресвитера». azbyka.ru spells the surname «Вечорко» throughout, and the calendar’s own spelling is the one stored; the difference is set down in the life. No folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Сщмч. Иоанна пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 aprilie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Απριλίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 April 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1890,
+      "latest": 1890,
+      "display": "1890",
+      "basis": "attested",
+      "note": "Both books give 1890: «родился в 1890 году в деревне Косаричи Бобруйского уезда Минской губернии» on days.pravoslavie.ru’s collective page for the twenty-three hieromartyrs of Minsk, and «в селе Косаричи … в семье псаломщика Мартина Вечорко» on azbyka.ru. azbyka.ru’s calendar for the civil 17 April, which is the Julian 4 April, carries the life; it was read in the in-app Browser pane on 5 October 2026, the site answering nothing else. The life there is signed игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Апрель», Тверь 2006."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 4 апреля ст. ст. with «(1933)» and its collective page says «По приговору от 17 апреля 1933 года отец Иоанн был расстрелян»; azbyka.ru says the troika sentenced him to be shot on 17 April 1933 and that he was shot and buried in an unmarked grave. 17 April 1933 is the civil date of the Julian 4 April."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

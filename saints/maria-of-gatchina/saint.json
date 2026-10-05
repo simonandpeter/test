@@ -6,27 +6,49 @@
       "form": "Maria",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 26 ianuarie, «Sfânta Cuvioasă Muceniţă Maria din Gatcina»."
+    },
+    {
+      "form": "Мария (Лелянова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her part of the line for 4 апреля ст. ст., name page 14417, «Мария (Лелянова), инокиня, прмц.», with the grade word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Марии». azbyka.ru’s line for the same civil day prints «прмц. Марии Гатчинской, монахини (1932)» and its page is titled «Преподобномученица Мария (Лелянова), Гатчинская, монахиня», which is what joins the calendar’s surname to this folder’s own name. No folder holds this form."
     }
   ],
   "sex": "female",
   "types": [
     "venerable-martyr",
-    "new-martyr"
+    "new-martyr",
+    "monastic"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru’s life gives «родилась в 1874 году в Санкт-Петербурге в семье владельца сургучной фабрики, купца Александра Ивановича Лелянова и в крещении была наречена Лидией». The folder held no year of birth before. azbyka.ru’s calendar for the civil 17 April, which is the Julian 4 April, carries the life; it was read in the in-app Browser pane on 5 October 2026, the site answering nothing else. The life there is signed игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Апрель», Тверь 2006."
+    },
     "death": {
       "earliest": 1930,
-      "latest": 1930,
-      "display": "1930",
+      "latest": 1932,
+      "display": "1930 or 1932",
       "basis": "traditional",
-      "note": "doxologia.ro prints the year with a query mark: «Sfânta Noua Muceniţă Maria din Gatcina (? 1930) este sărbătorită la 26 ianuarie»; the life it carries says «Prin 1930, maica Maria a fost arestată» and that the prison stopped accepting parcels a month later with the words that she had died in hospital."
+      "note": "Two books disagree and the range is widened to hold both rather than choose. The folder held a flat 1930 off doxologia.ro, which printed that year with a query mark against it. days.pravoslavie.ru closes her line for 4 апреля ст. ст. with «(1932)», azbyka.ru’s line for the same civil day says «(1932)», and azbyka’s life says «скончалась 17 апреля 1932 года в тюремной больнице в Петрограде и была погребена на Смоленском кладбище», with the arrest on 19 February and the sentence on 22 March of that year. Nothing is averaged and neither book is preferred."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Сщмч. Николая , еп. Вельского, прмц. Марии (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +77,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "А́гница Твоя́ Иису́се Мари́я./ утеше́ние рабо́м Твои́м в годи́ну лю́тую яви́ся,/ кре́пость ве́ры и благоче́стия показа́вши,/ муче́ния претерпе́ от богобо́рцев./ Тоя́ моли́твами я́ко ми́лостив спаси́ ду́ши на́ша.",
+      "source": {
+        "text": "azbyka.ru, Православный церковный календарь, her own page under the civil 17 April, «Тропарь, глас 4». Hers, and it names her. days.pravoslavie.ru prints no hymn for her, and doxologia printed none.",
+        "url": "https://azbyka.ru/days/sv-marija-leljanova",
+        "year": 2026
+      },
+      "english": {
+        "text": "Your lamb, O Jesus, Mary, was shown a consolation to Your servants in a cruel time: she displayed the strength of faith and of piety, and endured torments from the fighters against God. By her prayers, in Your mercy, save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Страда́лице и благове́стнице пречу́дная,/ моли́твеннице за все́х скорбя́щих и стра́ждущих,/ преподобному́ченице ма́ти Мари́е,/ моли́ся Го́споду Бо́гу со все́ми новому́ченики Росси́йскими// спасе́ние на́м дарова́ти и поми́ловати ду́ши на́ша.",
+      "source": {
+        "text": "azbyka.ru, the same page, «Кондак, глас 4». Hers, and it names her.",
+        "url": "https://azbyka.ru/days/sv-marija-leljanova",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sufferer and most wonderful bringer of good news, intercessor for all who sorrow and are afflicted, venerable martyr mother Mary: pray to the Lord God with all the new martyrs of Russia that salvation may be granted us and our souls have mercy.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

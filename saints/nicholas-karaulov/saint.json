@@ -1,0 +1,68 @@
+{
+  "slug": "nicholas-karaulov",
+  "display_name": "Nicholas (Karaulov)",
+  "names": [
+    {
+      "form": "Николай (Караулов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his part of the line for 4 апреля ст. ст., name page 9152, «Святитель Николай (Караулов), епископ Вельский, сщмч.», with the rank word stripped off the front and the see and the rank abbreviation left off the back; the see is written into the life. The day’s own line gives the forename and the see, «Николая , еп. Вельского». No folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 апреля ст. ст. — «Сщмч. Николая , еп. Вельского, прмц. Марии (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20260404.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 aprilie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Απριλίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 April 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru’s life gives «родился 28 мая 1871 года в селе Томаш Кадниковского уезда Вологодской губернии в семье священника Аполлония Караулова». azbyka.ru’s calendar for the civil 17 April, which is the Julian 4 April, carries the life; it was read in the in-app Browser pane on 5 October 2026, the site answering nothing else. The life there is signed игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Апрель», Тверь 2006."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 4 апреля ст. ст. with «(1932)» and azbyka.ru’s life ends «скончался в тюрьме – 17 апреля 1932 года и был погребен в безвестной могиле», citing the Journal of the Moscow Patriarchate for 1931–1935. 17 April 1932 is the civil date of the Julian 4 April."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
