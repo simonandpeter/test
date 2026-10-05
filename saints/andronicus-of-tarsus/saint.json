@@ -11,6 +11,11 @@
       "form": "Ανδρόνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Οκτωβρίου, «Άγιοι Πρόβος, Τάραχος και Ανδρόνικος», with the rank word left off; the page's own heading for him is «Αγιος Ανδρονικος»."
+    },
+    {
+      "form": "Андроник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. октобар ст. ст., „Св. муч. Тарах, Пров и Андроник.“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name, the third of the heading’s three, is the whole of the form. `foldchk.py` measured the string as held by `andronicus-of-antioch` and `andronicus-the-apostle` before this day, so this form takes that fold to three folders; the key written for the Julian 9 October is replaced by a three-folder one in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.10.2026 (12. октобар ст. ст.) — „Св. муч. Тарах, Пров и Андроник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, the third of its three names. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. THE HEADING IS AN ENUMERATED COMPANY OF THREE — Тарах, Пров and Андроник — so section 5 counts three names, three folders are owed a row and the corpus holds all three. The quoted line is the one heading, whole, on all three rows, and the three folders already relate one another. The entry gives each man his own city: Tarachus of Claudiopolis in Syria, Probus of Side in Pamphylia, Andronicus the son of a notable citizen of Ephesus — and the display names all three carry read «of Tarsus», which is where they were tried and is not what this book says they came from. **Nothing is changed on that**: a display name is reserved by section 10, and a reader names a sourced correction rather than making one. `dates` UNTOUCHED ON ALL THREE AND TWO NUMBERS ARE REFUSED. The folders hold `death` 304; this entry dates the trial only «у време цара Диоклецијана», and **an emperor is not a source for a year**. It also says «Тараху беше 65 година у време мучења» — **an age, which is refused and may not be subtracted from a death year to make a birth.** `types` untouched: муч. in the heading is the `martyr` all three hold, and the `soldier` on Tarachus is from another book — this entry does not call him one. No `office`, no `locations`. WHAT THE BOOK ADDS, AND MOST OF IT IS SPEECH AND BEASTS. The proconsul is named **Нумерије Максим**. Tarachus was asked his name three times and three times answered «хришћанин», a Christian. Probus answered the offer of the emperor's honours and the proconsul's friendship with «нити цареве почасти хоћу, нити твоје пријатељство желим» — I want neither the emperor's honours nor your friendship. Andronicus answered the threat of greater torments with «тело моје пред тобом је, чини што хоћеш» — my body is before you, do what you will. In the theatre the beasts would not touch them: **a bear and a fierce lioness fawned on them**, where other condemned men had been torn apart in the same place just before, and many of the crowd believed and shouted against the proconsul, who sent soldiers in to cut the three to pieces with swords. THREE CHRISTIANS WHO BURIED THEM ARE NAMED AND GET NOTHING, WHICH IS RULING 3. The entry calls them Макарије, Феликс and Верије; they came that night, could not tell the martyrs' bodies from the other dead in the dark, prayed, and three candles appeared over the holy bodies. **No folder in this corpus holds any of those three men** — the corpus has six Felixes and many Macarii and not one of them is this one, and nothing read identifies them — so a person the Prologue names but no folder holds gets no folder from a reader. They are here, and not in the prose, and the candles are in the prose without them. THE FOLD THIS ENTRY WIDENED, AND IT REPLACES A KEY THIS RANGE WROTE THREE DAYS AGO. `foldchk.py` measured «Андроник» as held by `andronicus-of-antioch` in both ru and sr and by `andronicus-the-apostle` in sr — two folders — and this form makes it three. The two-folder key written for the Julian 9 October is therefore **replaced** rather than extended, because a reading that no longer names everyone it folds is worse than none; the three-folder key is in `scripts/corpus-gate.mjs` in the same commit. Three men on three days: the apostle of the Seventy and companion of Junia on 17 May, the goldsmith of Antioch who ended a monk in Egypt on 9 October, and this martyr of the Tarsus trial on 12 October. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
