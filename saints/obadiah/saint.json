@@ -11,6 +11,11 @@
       "form": "Αβδιού",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Προφήτης Αβδιού», with the rank word left off. The same page also prints the variant «Οβδιού», which is not recorded as a separate form."
+    },
+    {
+      "form": "Авдий",
+      "lang": "ru",
+      "note": "Read off his own name page, 9, which heads him «Авдий, пророк, из 12 малых пророков» — everything beside the forename is the rank `prophet` this folder already carries and the enumeration of the Twelve, so the bare form is the whole of what the calendar gives. The day line for him is broken markup and carries no readable name. `.tmp/foldchk.py` reports **one folder already holding this exact form**, `abda-bishop-of-persia`, which stores both «Авдий» and «Авид» for a bishop in Persia of the fifth century kept on 5 сентября ст. ст. A prophet of the ninth century before Christ and a Persian bishop of the fifth after it; two men, one string, and no fuller form on either page to tell them apart by."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прор. Авдия (из 12-ти) (IX до Р.Х.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -104,5 +118,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -900,
+      "latest": -801,
+      "display": "9th century BC",
+      "basis": "traditional",
+      "note": "This folder held no date at all. days.pravoslavie.ru closes the line for 19 ноября ст. ст. with «(IX до Р.Х.)» and its life page opens «Святой пророк Авдий (из 12-ти, IX век до Рождества Христова)». The century is kept as the interval; the reigns of Ahab and Ahaziah the page names are not turned into years of their own."
+    }
   }
 }
