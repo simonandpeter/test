@@ -11,6 +11,11 @@
       "form": "Ρουφίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιος Ρουφίνος ο Διάκονος», with the rank word and the order left off."
+    },
+    {
+      "form": "Руфин",
+      "lang": "ru",
+      "note": "Read out of the title on the first name link behind the three-part line for 7 апреля ст. ст., name page 1890, «Руфин, диакон, сщмч.», with the office word and the rank abbreviation left off. The calendar gives him no toponymic and no by-name, so the bare forename is the whole of the form it prints; no folder holds it. The name link calls him сщмч., a hieromartyr, where the day’s own line heads the three «Мчч.» and this folder carries `deacon` and `martyr`; `types` is untouched and both readings are in the life."
     }
   ],
   "related": [
@@ -30,8 +35,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Мчч. Руфина диакона, Акилины и с ними 200 воинов (ок. 310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
