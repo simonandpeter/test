@@ -1,0 +1,60 @@
+{
+  "slug": "hilarion-of-meglen",
+  "display_name": "Hilarion of Meglen",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Иларион Мегленски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 21. октобар ст. ст., „Св. Иларион еп. Мегленски.“ — «Св.» is \"saint\" and not a rank and «еп.» is the `bishop` grade this corpus keeps in `types`, so both come off and what is left is the bare name with the epithet that distinguishes him. The epithet is kept and had to be: the bare «Иларион» is already held by four folders — `hilarion-companion-of-emilian`, `hilarion-monk-martyr-1937` and `hilarion-pravdin-of-kazan` in ru and `hilarion-the-new-monk-martyr-of-crete` in sr — with twenty-one Hilarion folders in the corpus behind them. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Иларион Мегленски»."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1164,
+      "latest": 1164,
+      "display": "1164",
+      "basis": "attested",
+      "note": "Охридски пролог: «Упокојио се мирно и преселио у царство Господа свога 1164. год.» The 1134 the entry also gives is the year of his consecration as bishop, not of his death, and the entry gives no birth year at all."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 21 Οκτωβρίου (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 21,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.11.2025 (21. октобар ст. ст.) — „Св. Иларион еп. Мегленски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (BRIEF-SERBIAN section 4). The URL year is 2025, which is what `sr-civil.mjs` gives for the Julian 10-20 to 12-18; the Prologue is a fixed annual cycle and that is the page the host actually serves. WHY THIS IS A FOLDER AND NOT A LINE IN A REPORT. No folder in this corpus held him, and that was measured: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Иларион Мегленски», no slug under `saints/` matches Meglen, and the twenty-one Hilarion folders the corpus keeps were listed and read past — `hilarion-of-gdov`, `hilarion-of-peristerona` and `hilarion-of-the-kyiv-caves` stand on this same menologion day in other calendars and none of them is a bishop of Meglen. Ruling 3 creates a folder where the entry is substantial enough, and this one has TWO DATED YEARS, a see, the name of the man who consecrated him, the rule his monastery followed, and the heresy he spent his life against. `types` IS `bishop`, OFF THE HEADING’S «еп.», which section 5 maps to `bishop`. `office` IS THE BARE `Bishop` AND NOT THE SEE, for the reason the Julian 18 October established: `tests/i18n.test.mjs` requires every distinct office string to be translated in all four locale packs, the packs hold no Meglen, and composing three of those four translations would be invention. Fifty-nine folders carry the bare `Bishop` already. The see is in the quoted heading, in this note and in the prose. `dates`: `death` 1164, attested, off «Упокојио се мирно и преселио у царство Господа свога 1164. год.» NO BIRTH — the entry gives his mother’s barrenness, the apparition, his third year and his eighteenth, and NOT ONE OF THOSE IS A BIRTH YEAR; an age is refused and 1134 is the year of his consecration, not of anything else. WHAT THE BOOK SAYS, since this folder begins with it. He was born OF NOTABLE AND DEVOUT PARENTS. HIS MOTHER WAS BARREN and prayed long for a child, and after her prayer THE MOST HOLY THEOTOKOS APPEARED TO HER and comforted her: «Не тугуј, родићеш сина, и он ће обратити многе к светлости истине» — do not grieve, you will bear a son, and he will turn many to the light of truth. WHEN HE WAS THREE YEARS OLD the song «Свјат, свјат, свјат Господ Саваот!» was heard ceaselessly out of his mouth. Well schooled, he WAS TONSURED IN HIS EIGHTEENTH YEAR and FOUNDED A MONASTERY WITH THE TYPIKON OF SAINT PACHOMIUS. IN 1134 ЈЕВСТАТИЈЕ ARCHBISHOP OF TRNOVO CONSECRATED HIM BISHOP OF MEGLEN. He waged a great struggle almost all his life AGAINST THE BOGOMILS AND THE ARMENIAN HERETICS, and by his spiritual learning and his incomparable holiness he put them all to shame and BROUGHT MANY OF THEM TO ORTHODOXY. TWO NAMES AND NEITHER GETS A ROW, WHICH IS RULING 3 AND ONE READING BESIDE IT. Јевстатије archbishop of Trnovo, who consecrated him: the corpus holds fifteen Eustathius folders and five of Trnovo — `euthymius-of-tarnovo`, `joachim-of-tarnovo`, `joannicius-of-tarnovo`, `romanus-of-tarnovo`, `theodosius-of-tarnovo` — and NOT ONE of them is an Eustathius of Trnovo, so no folder holds him and he is named here. Св. Пахомије, whose typikon the monastery took: `pachomius-the-great` is in this corpus, and A RULE ADOPTED IS NOT A DEDICATION AND NOT A COMPANION — the prose names him as «Saint Pachomius», which the linker’s index does not match, and no `related` row is written. No `locations`: Meglen and Trnovo are named and neither is a coordinate. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
