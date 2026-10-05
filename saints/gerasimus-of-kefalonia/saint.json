@@ -11,6 +11,11 @@
       "form": "Γεράσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Αυγούστου, «Όσιος Γεράσιμος ο νέος ασκητής, που ασκήτευσε στη νήσο Κεφαλληνία», with the rank word, the epithet and the clause naming the island left off. The page glosses the name from γέρας, the prize, as the triumphant one."
+    },
+    {
+      "form": "Герасим Нови",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. октобар ст. ст., „Преп. Герасим Нови.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, leaving the bare name with the epithet the heading prints, «Нови», the New. The epithet is kept because section 6 asks for the fullest form the calendar gives and because the bare «Герасим» is already held in sr by `gerasimus-of-the-jordan`, with seventeen Gerasimus folders in the corpus behind it. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Герасим Нови»."
     }
   ],
   "sex": "male",
@@ -21,12 +26,19 @@
     "wonderworker"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1509,
+      "latest": 1509,
+      "display": "1509",
+      "basis": "attested",
+      "note": "Охридски пролог: «Рођен 1509. год.» The folder held no birth before this reading."
+    },
     "death": {
       "earliest": 1579,
       "latest": 1579,
       "display": "1579",
       "basis": "attested",
-      "note": "doxologia.ro: «a adormit cu pace întru Domnul în 15 august 1579», at the age of 71."
+      "note": "Kept unchanged. The Охридски пролог confirms it and adds the day: «Упокојио се у Господу 15. августа 1579. год.» — which is also why the Romanian and Greek calendars keep him on 16 August while this book keeps him on the Julian 20 October."
     }
   },
   "attestations": [
@@ -67,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.11.2025 (20. октобар ст. ст.) — „Преп. Герасим Нови.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (section 4). «Преп.» is the `venerable` this folder holds, and «Чудотворац» at the end of the entry the `wonderworker`; `hieromonk` and `hermit` come from its other books and this entry does not contradict them, so `types` is untouched. The URL year is 2025 and not 2026, because `sr-civil.mjs` knows that pravoslavno.rs serves the Julian 10-20 to 12-18 only on the previous civil year — the Prologue is a fixed annual cycle and a day in the past serves as well as one ahead. This is the first day of this range to need it. THE PROLOGUE KEEPS HIM ON A DIFFERENT DAY FROM THE OTHER TWO BOOKS, AND SAYS WHY WITHOUT MEANING TO. doxologia and saint.gr both keep him on 16 August; this book keeps him on the Julian 20 October AND GIVES HIS DEATH AS 15 AUGUST. So the August day of the other two calendars is the day of his death and the October day is this calendar’s own; each row stands on its own church and nothing was moved. ONE DATE ADDED. The folder held `death` 1579 and NO BIRTH. This entry says «Рођен 1509. год.», so `birth` is now 1509, attested, and the death is confirmed to the day: «Упокојио се у Господу 15. августа 1579. год.» matches the 1579 already on file. WHAT THE BOOK ADDS. He was FROM TRIKALA IN THE PELOPONNESE, OF THE FAMOUS NOTARAS FAMILY; he struggled ON ATHOS, then IN PALESTINE, WHERE HE FASTED FORTY DAYS; then settled on the island of Kefalonia, WHERE HE FOUNDED A WOMEN’S MONASTERY. And three gifts: HE BROUGHT DOWN RAIN BY PRAYER, healed the sick, and SAW INTO THE FUTURE. A wonderworker in his life and after his death. NO `related`, AND ONE NAME DELIBERATELY NOT LINKED: the corpus holds `macarius-notaras`, and a family name is not a relation — nothing read here says the two men are kin, and the Notaras of Trikala in the Peloponnese is a house and not a person. No `office`, no `locations`: Trikala, Athos, Palestine and Kefalonia are named and none is a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

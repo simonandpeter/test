@@ -6,6 +6,11 @@
       "form": "Артемий Веркольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 20 октября ст. ст., «Святой праведный Артемий Веркольский», with the rank words left off. The day's own line gives «Артемия Веркольского» and calls him «отрока», a boy."
+    },
+    {
+      "form": "Артемије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. октобар ст. ст., „Св. праведни Артемије.“ — «Св.» is \"saint\" and not a rank and «праведни» is the `righteous` grade this corpus keeps in `types`, so both come off and the bare forename is the whole of the form. The day’s FIRST heading gives the identical bare form to `artemius-the-great-martyr`, so this string has two holders from this one commit; the fold is deliberate and is recorded in `scripts/corpus-gate.mjs`. The epithet that tells the two apart is in the display name and in the rank, not in the Serbian form, because the heading gives neither man one."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 November 2026 (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.11.2025 (20. октобар ст. ст.) — „Св. праведни Артемије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (section 4). «праведни» is the `righteous` this folder already holds and is its only type. TWO DIFFERENT MEN OF THE SAME BARE NAME ON THE SAME DAY, AND THE PROLOGUE PRINTS THEM AS TWO ENTRIES. The first heading is «Св. вел. муч. Артемије.» and the second «Св. праведни Артемије.» — a great-martyr and a righteous one, 362 and 1545, Egypt and the Dvina. Both headings give the bare forename and nothing else, so BRIEF-SERBIAN section 6 puts the same form on both folders and the fold is DELIBERATE: «Артемије» went from no holder at all to two in one commit, and the two-folder key is in `scripts/corpus-gate.mjs` here. No narrower key existed, because the string had no holder before today. The URL year is 2025 and not 2026, because `sr-civil.mjs` knows that pravoslavno.rs serves the Julian 10-20 to 12-18 only on the previous civil year — the Prologue is a fixed annual cycle and a day in the past serves as well as one ahead. This is the first day of this range to need it. `dates` UNTOUCHED AND AN AGE REFUSED. The folder holds birth 1532 and death 1545. The entry gives «Рођен 1532. године» — the birth year exactly — and for the death only AN AGE, «Када му беше 13 год.», which may not be added to a birth year to make a death year even when the sum happens to be the figure already on file. So the birth is confirmed and the death is untouched. THIS BOOK IS THE SECOND CALENDAR TO KEEP HIM AT ALL: the folder’s romanian and greek rows are `undocumented` and only the Russian kept him before today. WHAT THE BOOK ADDS. He was THE SON OF RUSSIAN PEASANT PARENTS, Козма and Аполинарија, FROM THE VILLAGE OF VERKOLA IN THE DVINA DISTRICT — which is the whole of this folder’s display name, confirmed from a second book. FROM HIS FIFTH YEAR he was marked off from other children by an unusual piety and meekness. At thirteen he was walking with his father through a great forest when HE DIED IN THE FOREST OF A VIOLENT STORM, and his grieving father, unable to dig a grave, COVERED THE BODY WITH BRANCHES AND WENT AWAY. TWENTY-EIGHT YEARS LATER a man saw an unusual light in that forest, went to it, and found the body undecayed and incorrupt; and many sick people were healed the moment they touched it. His relics rest in a monastery NEAR PINEGA IN THE PROVINCE OF ARCHANGEL. TWO PEOPLE NAMED AND NEITHER GETS A FOLDER, WHICH IS RULING 3: his parents Козма and Аполинарија. No folder read here is either, and they are named here and in the prose without a link. No `office`, no `locations`, no `related`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {

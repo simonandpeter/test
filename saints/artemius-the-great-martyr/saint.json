@@ -16,6 +16,11 @@
       "form": "Артемий Антиохийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind days.pravoslavie.ru's line for 20 октября ст. ст., «Артемий Антиохийский, военачальник, вмч.», with the rank word and the office left off. The day's own line gives the name alone, as «Артемия»."
+    },
+    {
+      "form": "Артемије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. октобар ст. ст., „Св. вел. муч. Артемије.“ — «Св.» is \"saint\" and not a rank and «вел. муч.» is the great-martyr grade this corpus keeps in `types`, so both come off and the bare forename is the whole of the form; the heading gives him no epithet. `foldchk.py` returned `NO FOLDER HOLDS THIS FORM` before today, and the SAME bare form goes on `artemius-of-verkola` off the day’s second heading, so the string has two holders from this one commit and the fold is recorded in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -31,7 +36,9 @@
   ],
   "related": [
     "babylas-of-antioch",
-    "constantine-the-great"
+    "constantine-the-great",
+    "andrew-the-first-called",
+    "luke-the-evangelist"
   ],
   "attestations": [
     {
@@ -79,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.11.2025 (20. октобар ст. ст.) — „Св. вел. муч. Артемије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-02&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (section 4). «вел. муч.» is the `great-martyr` this folder holds and «први војвода» the `soldier`, so `types` is untouched. TWO DIFFERENT MEN OF THE SAME BARE NAME ON THE SAME DAY, AND THE PROLOGUE PRINTS THEM AS TWO ENTRIES. The first heading is «Св. вел. муч. Артемије.» and the second «Св. праведни Артемије.» — a great-martyr and a righteous one, 362 and 1545, Egypt and the Dvina. Both headings give the bare forename and nothing else, so BRIEF-SERBIAN section 6 puts the same form on both folders and the fold is DELIBERATE: «Артемије» went from no holder at all to two in one commit, and the two-folder key is in `scripts/corpus-gate.mjs` here. No narrower key existed, because the string had no holder before today. The URL year is 2025 and not 2026, because `sr-civil.mjs` knows that pravoslavno.rs serves the Julian 10-20 to 12-18 only on the previous civil year — the Prologue is a fixed annual cycle and a day in the past serves as well as one ahead. This is the first day of this range to need it. `dates` UNTOUCHED: the folder holds `death` «362 or 363» and the entry says «Најзад му главу одсекоше, 362. год.», which is one end of the interval already recorded — narrowing a range to one end of itself on a second book’s flat figure is refused, as it was for Martin of Tours on the Julian 12 October. WHAT THE BOOK ADDS, AND ONE OF IT IS A CROSS-LINK TO TWO DAYS AGO. He was AN EGYPTIAN BY BIRTH and THE FIRST DUX OF CONSTANTINE THE GREAT; he SAW THE VICTORIOUS CROSS RINGED WITH STARS when it appeared to Constantine, believed in Christ and was baptised — which is where this folder’s existing `related` row to Constantine comes from on this calendar too. THEN, UNDER CONSTANTIUS, HE WAS SENT TO GREECE TO CARRY THE RELICS OF SAINT ANDREW FROM PATRAS AND OF SAINT LUKE FROM THEBES TO CONSTANTINOPLE, and did it with joy. That is the same translation the Prologue’s entry for the Julian 18 October reports from the other end — Luke’s relics «пренесене у Цариград у време цара Констанција» — so two days of this one book name the two halves of one event, and `andrew-the-first-called` and `luke-the-evangelist` are two new `related` rows here, reciprocated in this same commit. He was afterwards made AUGUSTALIS AND IMPERIAL VICEROY IN EGYPT, under Constantius and for a time under Julian the Apostate. Summoned with his army to Antioch while Julian was on his way to the Persian war, he found the emperor torturing two Christian priests, Евгеније and Макарије, and WENT OUT BEFORE THE EMPEROR AND CHALLENGED HIM — «Зашто, царе, тако нечовечно мучиш невине и Богу посвећене мужеве?» — AND PROPHESIED HIS DEATH: «Твоја је погибао близу». The two priests were exiled to Arabia and died there; Artemius was STRIPPED OF HIS MILITARY RANK, scourged and torn, and thrown into prison, WHERE THE LORD CHRIST HIMSELF APPEARED TO HIM, healed him and comforted him. Then he was LAID OUT ON ONE STONE AND PRESSED WITH ANOTHER until his body was crushed FLAT AS A PLANK, and beheaded at the last. AND JULIAN WENT TO THE PERSIANS AND PERISHED SHAMEFULLY, AS ARTEMIUS HAD FORETOLD. TWO PRIESTS NAMED AND NEITHER GETS A FOLDER, WHICH IS RULING 3: Евгеније and Макарије, exiled to Arabia and dead there. The corpus holds thirteen Eugenes and more than twenty Macarii and nothing read identifies either with these two, so they are named here and left out of the prose. Julian the Apostate, Constantius and the rank of augustalis are likewise named and are not saints. No `office`: «први војвода» and «августалије и намесник царски» are both in this note and neither is a see. No `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
