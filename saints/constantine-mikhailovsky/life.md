@@ -1,0 +1,7 @@
+# Constantine (Mikhailovsky)
+
+The Сретенский monastery’s calendar names him seventh of twenty-four and gives no life; the life here is the one azbyka.ru prints for the civil 2 декабря, out of pstgu.ru, and it is short. Constantine Mikhailovich Mikhailovsky was born in Mordovia in 1874. Having decided on the spiritual road he finished the seminary and was ordained priest, and was later raised archpriest. On 19 July 1937 he was convicted and sentenced to five years of exile in Kazakhstan, and was taken under escort to the settlement of Mayskoye in the Beskaragay district of the Pavlodar region.
+
+Like the hieromartyr John Malinovsky he worked at the Maysky mine. On 25 November 1937 the exile was cut short by arrest and his case joined to the group case of the archimandrite Gregory (Rebeza) and others at Pavlodar. To every charge of counter-revolutionary work at Mayskoye he answered: «Контрреволюционной работы при нахождении в ссылке я не проводил». On 1 December 1937 the troika of the East Kazakhstan region sentenced him to the highest measure of punishment, and at two in the morning on 2 December he was shot. Where he is buried is not known.
+
+*After the Православный церковный календарь of the Сретенский monastery for 19 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261119.html) and [his name page](https://days.pravoslavie.ru/name/9344.html), which carries no life; and the life printed by the Russian church calendar at azbyka.ru for 2 декабря — [the entry](https://azbyka.ru/days/sv-konstantin-mihajlovskij); read 5 October 2026.*
