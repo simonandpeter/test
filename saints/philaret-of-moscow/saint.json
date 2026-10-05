@@ -101,5 +101,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Духа Святаго благодать стяжав,/ богомудре святителю Филарете,/ истину и правду разумом просвещенным/ людем проповедал еси,/ мир и милость сердцем умиленным/ страждущим явил еси,/ яко учитель веры и страж неусыпный/ паству российскую жезлом правости сохранил еси./ Сего ради дерзновение ко Христу Богу имея,/ моли даровати Церкви утверждение// и душам нашим спасение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Тропарь святителя Филарета»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gained the grace of the Holy Spirit, O divinely wise hierarch Philaret, thou didst preach truth and righteousness to the people with an enlightened mind, and didst show peace and mercy to the suffering with a compassionate heart; as a teacher of the faith and a sleepless watchman thou didst keep the Russian flock with the rod of uprightness. Therefore, having boldness before Christ God, pray that confirmation be given to the Church and salvation to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Яко истинный подражатель преподобнаго Сергия,/ добродетель измлада возлюбил еси, богоблаженне Филарете,/ яко пастырь праведный и исповедник непорочный,/ по святем преставлении/ от безбожных поругание и поношения приял еси,/ Бог же знаменьми и чудесы тя прослави// и заступника Церкве нашея яви.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Кондак святителя Филарета»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a true imitator of the venerable Sergius, thou didst love virtue from thy youth, O divinely blessed Philaret; and as a righteous shepherd and an undefiled confessor thou didst receive, after thy holy repose, outrage and reviling from the godless; but God glorified thee with signs and wonders and showed thee a defender of our Church.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

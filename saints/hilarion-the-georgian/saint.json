@@ -11,6 +11,11 @@
       "form": "Ιλαρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Όσιος Ιλαρίων ο Ίβηρ, ο εν Θεσσαλονίκη», with the rank word left off; the page's epithets «ο Ίβηρ» — the Georgian — and «ο εν Θεσσαλονίκη» are left out of the stored form and said in the life."
+    },
+    {
+      "form": "Иларион Грузинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., «Иларион Грузинский, иеромонах», with the grade word left off; the line itself declines the forename and prints чудотворца as a separate clause, which is the `wonderworker` this folder already carries in `types`. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -20,19 +25,35 @@
     "wonderworker"
   ],
   "dates": {
+    "birth": {
+      "earliest": 816,
+      "latest": 816,
+      "display": "816",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «Преподобный Иларион чудотворец родился в 816 г. в Кахетии». This folder held no year of birth; neither doxologia.ro nor saint.gr gave one."
+    },
     "death": {
       "earliest": 875,
       "latest": 875,
       "display": "875",
       "basis": "attested",
-      "note": "doxologia.ro: «Sfântul Ilarion a adormit la data de 19 noiembrie 875», and the emperor who translated his relics is given as Basil the Macedonian (867-886). The page gives no year of birth."
+      "note": "Unchanged, and now confirmed by a second source: days.pravoslavie.ru closes his line for 19 ноября ст. ст. with «(875)» and its life page says «Он мирно отошел ко Господу 19 ноября 875 г.», which is the feast day itself. The translation of the relics to Constantinople in 882 is a translation and not a death, and is in the life only."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прп. Илариона чудотворца, Грузинского (875) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

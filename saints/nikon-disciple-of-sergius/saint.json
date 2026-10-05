@@ -11,13 +11,28 @@
       "form": "Νίκων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Νίκων ο θαυματουργός μαθητής του Αγίου Σεργίου», with the rank words left off. The relation and the epithet are left to the display name."
+    },
+    {
+      "form": "Никон Радонежский",
+      "lang": "ru",
+      "note": "The name link behind his line for 17 ноября ст. ст., name page 1644, gives «Преподобный Никон, игумен Радонежский», and the first of the two life pages behind it is titled «Преподобный Никон Радонежский, игумен». The form kept here is that title with the leading rank word and the trailing grade left off, which is the calendar’s own nominative and not a reconstruction. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Прп. Никона , игумена Радонежского, ученика прп. Сергия (1426).»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads both of his life pages «Дни памяти: 7 июля , 17 ноября». The 7 июля is a second Russian day for him — neither a repetition of this one nor thirteen days from it — and this schema keeps one feast per church, so it is recorded here as a note and he does not render on it."
     },
     {
       "church": "romanian",
@@ -47,11 +62,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1427,
+      "earliest": 1426,
       "latest": 1427,
-      "display": "1427",
+      "display": "1426 or 1427",
       "basis": "traditional",
-      "note": "saint.gr: «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Ρώσου Οσίου παρά μόνο ότι κοιμήθηκε το 1427 μ.Χ.», and the head line «(; - 1427)»."
+      "note": "Two sources one year apart and the interval is widened to hold both. saint.gr: «Δεν έχουμε άλλες λεπτομέρειες για τον βίο του Ρώσου Οσίου παρά μόνο ότι κοιμήθηκε το 1427 μ.Χ.», with the head line «(; - 1427)». days.pravoslavie.ru closes his line for 17 ноября ст. ст. with «(1426)» and both its life pages say «скончался 17 ноября 1426 года»."
     }
   },
   "related": [
@@ -59,5 +74,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Послушания добрый рачитель быв,/ преподобне Никоне приснопамятне,/ Церковь бо прекрасну Святыя Троицы в похвалу отцу твоему воздвигл еси./ Темже и мы, чада твоя, любовию вопием ти:/ слава Давшему ти крепость,/ слава Венчавшему тя,// слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Тропарь преподобного Никона»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a good lover of obedience, O ever-memorable venerable Nikon, for thou didst raise up a most beautiful church of the Holy Trinity in praise of thy father. Wherefore we also, thy children, cry out to thee with love: glory to him who gave thee strength, glory to him who crowned thee, glory to him who through thee worketh healings for all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко трисветлаго солнца светозарный звезды,/ Троическим светом озаряете сердца верных,/ сосуда Света Пресвятыя Троицы явльшеся,/ и предивным вашим житием иноком бысте твердии законоположителие/ и церквам благолепие, и благоверным, и святителем, и всем людем,/ вся бо демонския скверны отгнавше отсюду/ вашими чистыми учении и делы,/ добре упасосте стадо, собранное вами,/ но и ныне молим вас:/ посещайте чад своих, яко имущий дерзновение ко Святей Троице,/ Богомудре Сергие с чудным учеником своим Никоном,/ и молите Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Тропарь общий преподобным Сергию и Никону»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the shining stars of the thrice-radiant sun, ye light the hearts of the faithful with the light of the Trinity; and having been shown to be vessels of the Light of the Most Holy Trinity, by your most wondrous life ye became firm lawgivers to monks, and a comeliness to the churches, and to the faithful and the hierarchs and all people; for ye drove away from hence all the defilements of the demons by your pure teachings and deeds, and shepherded well the flock gathered by you. And now also we pray you: visit your children, since ye have boldness before the Holy Trinity, O divinely wise Sergius with thy wondrous disciple Nikon, and entreat Christ God to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Духовному твоему настоятелю, отче Никоне, всячески прилепився/ и от него наставляем,/ во всем Христови поработився,/ монахов был еси чиноначальник и преподобных сожитель,// с нимиже Христа Бога моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Кондак преподобного Никона»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Cleaving in all things to thy spiritual superior, O father Nikon, and guided by him, thou didst serve Christ in everything, and wast a leader in the order of monks and a fellow-dweller with the venerable; with whom pray thou unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В постницех приобщившеся Великому Антонию/ и Евфимию Иерусалимскому поревновавше в подвизех,/ яко ангели, на земли явистеся,/ просвещающе, преподобнии, верных сердца/ Божественными знамении и чудесы повсегда,/ сего ради радостно вас почитаем и любовию вопием вам:/ радуйтеся, преподобнии отцы Сергие и Никоне,/ постником удобрение и всея Российския земли великое утверждение.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Кондак преподобнаго Никона»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Sharing among the fasters in the portion of Anthony the Great, and emulating Euthymius of Jerusalem in your struggles, ye appeared upon earth as angels, enlightening always, O venerable ones, the hearts of the faithful with divine signs and wonders. Therefore we honour you with gladness and cry out to you with love: rejoice, O venerable fathers Sergius and Nikon, adornment of the fasters and the great confirmation of all the Russian land.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

@@ -10,22 +10,36 @@
       "form": "Ηλιόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Ηλιόδωρος από τη Μαγιδώ της Παμφιλίας», with the rank word and the place left off."
+    },
+    {
+      "form": "Илиодор Магидский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., «Илиодор Магидский (Памфилийский), мч.», with the rank word left off; the line itself gives the bare declined forename. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "dates": {
     "death": {
       "earliest": 272,
-      "latest": 272,
-      "display": "272",
+      "latest": 273,
+      "display": "272 or 273",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ηλιόδωρος μαρτύρησε στα χρόνια του αυτοκράτορα Αυρηλιανού (272 μ.Χ.) στη Μαγιδώ της Παμφυλίας», and the page heads him «Αγιος Ηλιοδωρος Απο Τη Μαγιδω Της Παμφιλιας (; - 272)». The page gives no year of birth."
+      "note": "Two sources one year apart and the interval is widened to hold both. saint.gr gave the 272 this folder held flat; days.pravoslavie.ru closes his line for 19 ноября ст. ст. with «(ок. 273)» and its life page «(+ ок. 273)». The same page puts him in the reign of Aurelian, «(270 - 275)», which holds both. Neither page gives a year of birth."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Мч. Илиодора (ок. 273).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

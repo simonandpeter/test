@@ -11,6 +11,11 @@
       "form": "Πορφύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Πορφύριος ο Καυσοκαλυβίτης ο διορατικός και θαυματουργός», with the rank word left off."
+    },
+    {
+      "form": "Порфирий (Баирактарис) Кавсокаливит",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., name page 14737, «Порфирий (Баирактарис) Кавсокаливит, прп.», with the rank word left off; the line itself declines the forename and the epithet and drops the surname. azbyka.ru titles him the same way with the two parts reversed, «Порфирий Кавсокаливит (Баирактарис)»; the calendar’s own order is kept. Evangelos, the name he bore in the world, is left in the life. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прп. Порфирия Кавсокаливита (1991).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "This Julian 19 November falls on the civil 2 December, which is the day of his death and the day the Romanian and Greek rows on this folder already keep; the three are one day in two reckonings and not three feasts. azbyka.ru heads him «День памяти: 2 декабря» and gives no other day."
     },
     {
       "church": "romanian",
@@ -77,7 +92,8 @@
     }
   ],
   "related": [
-    "john-the-hut-dweller"
+    "john-the-hut-dweller",
+    "paisios-the-athonite"
   ],
   "hymns": [
     {

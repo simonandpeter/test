@@ -6,6 +6,11 @@
       "form": "Αδριανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Μαρτίου, «Όσιοι Αδριανός και Λεωνίδας οι Μάρτυρες εκ Ρωσίας», with the rank word left off. The epithet in the display name is the page's own: «Ο Όσιος Αδριανός του Ποσεσόνε»."
+    },
+    {
+      "form": "Адриан Пошехонский, Ярославский",
+      "lang": "ru",
+      "note": "The name link behind his line for 19 ноября ст. ст., name page 76, gives «Священномученик Адриан Пошехонский» and two of the three life pages behind it are titled «Адриан Пошехонский, Ярославский», which the day line repeats in the genitive. The fuller of the two forms is kept, with the leading rank word left off. `.tmp/foldchk.py` reports no folder holding it."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Обретение мощей прмч. Адриана Пошехонского, Ярославского (1625).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "The day the calendar gives him is the finding of his relics, and the «(1625)» in the line is the year of that finding and not of his death. His three life pages head him «Дни памяти: 5 марта , 23 мая (Ростов.) , 19 ноября» — the 5 марта of his death, which is the day the Greek calendar keeps him on, and the Rostov synaxis of 23 мая. One row per church is the schema, so the other two days are recorded here and he does not render on them; the day of this row is the day the day page listed him."
     },
     {
       "church": "romanian",
@@ -55,9 +70,44 @@
     }
   },
   "related": [
-    "leonidas-disciple-of-adrian"
+    "leonidas-disciple-of-adrian",
+    "cornelius-of-komel"
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Христову мученику Адриану тезоименит был еси, преподобне,/ многия труды подъял еси в жизни временней,/ обитель иноческую созидая в пустыни,/ идеже пострадал еси даже до крове от злых разбойник/ и мученическую смерть от них приял еси,/ Адриане славне,/ чудес благодатию обогатився,/ предстоиши всех Царю, Христу Богу,/ Егоже моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Тропарь преподобномученика Адриана Пошехонского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast named for Christ’s martyr Adrian, O venerable one, and tookest many labours upon thee in this passing life, building a monastic house in the wilderness, where thou didst suffer even unto blood from wicked robbers and received a martyr’s death at their hands, O glorious Adrian. Enriched with the grace of wonders, thou standest before the King of all, Christ God: pray him that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Христа ради доблественне претерпел еси/ и венец нетления от Него восприял еси страдания своего,/ приходящим же с верою к тебе подавши цельбы,/ о преподобномучениче Адриане, приснопамятне,/ молитвенниче о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Кондак преподобномученика Адриана Пошехонского»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "For Christ’s sake thou didst endure valiantly, and from him thou didst receive the crown of incorruption for thy suffering; and thou givest healings to those who come to thee in faith, O ever-memorable venerable-martyr Adrian, intercessor for our souls.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

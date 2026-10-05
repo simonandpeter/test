@@ -11,6 +11,11 @@
       "form": "Άζης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Άζης ο Θαυματουργός», with the rank word left off; the epithet «ο Θαυματουργός» is left out of the stored form because the folder's `types` carry it."
+    },
+    {
+      "form": "Аза Исаврийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 19 ноября ст. ст., «Аза Исаврийский, мч.», with the rank word left off; the line itself declines the forename and gives no epithet. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -20,18 +25,27 @@
   ],
   "dates": {
     "floruit": {
-      "earliest": 289,
-      "latest": 289,
-      "display": "about 289",
+      "earliest": 284,
+      "latest": 305,
+      "display": "284–305",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Άζης έζησε στα χρόνια του βασιλιά Διοκλητιανού (περί το 289 μ.Χ.)» — the page's own year, written «περί», about, for the reign it sets him in. It gives no year for the beheading, so the interval is recorded as a floruit and not as a death."
+      "note": "The interval is widened to the reign the source names, and neither reading is narrowed. saint.gr gave this folder a floruit of «about 289»; days.pravoslavie.ru closes his line for 19 ноября ст. ст. with «(284-305)» and its life page puts the martyrdom «при императоре Диоклитиане (284 - 305)». Neither page gives a year of birth or of death."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Мч. Азы и с ним 150-ти воинов (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

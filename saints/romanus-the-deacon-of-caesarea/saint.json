@@ -11,6 +11,11 @@
       "form": "Ρωμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιος Ρωμανός», with the rank words left off."
+    },
+    {
+      "form": "Роман Кесарийский, Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 18 ноября ст. ст., «Роман Кесарийский, Антиохийский, диакон, сщмч.», with the grade and rank words left off. Both sees are kept because the calendar prints both and its life page explains them: a deacon of Caesarea in Palestine who moved to Antioch. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 ноября ст. ст. — «Мчч. Романа диакона и отрока Варула (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261118.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -113,6 +127,22 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прияша нетленныя от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощныя дерзости./ Тех молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 ноября ст. ст. — «Тропарь мучеников Платона и Романа»",
+        "url": "https://days.pravoslavie.ru/Days/20261118.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their sufferings received incorruptible crowns from thee our God; for having thy strength they cast down the tormentors and shattered the feeble insolence of the demons also. By their prayers save our souls.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -120,11 +150,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 304,
+      "earliest": 303,
       "latest": 304,
-      "display": "304",
+      "display": "303 or 304",
       "basis": "traditional",
-      "note": "saint.gr: «έπνιξαν τον γενναίο μάρτυρα (το 304 μ.Χ.)», and the head line «Αγιος Ρωμανος (; - 304)». The page puts his life «στις αρχές του 4ου αιώνα μ.Χ.» and gives no year of birth. The site's other, asterisked entry for a Romanos of Palestine on this same day gives 298, and says the two martyrdoms are confused and very probably one person."
+      "note": "Two sources one year apart and the interval is widened to hold both. saint.gr gave the 304 this folder held flat; days.pravoslavie.ru closes the line for 18 ноября ст. ст. with «(303)» and its life page closes his own death «(+ 303)». Neither page gives a year of birth."
     }
   }
 }

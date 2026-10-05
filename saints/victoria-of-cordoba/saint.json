@@ -1,0 +1,61 @@
+{
+  "slug": "victoria-of-cordoba",
+  "display_name": "Victoria of Cordoba",
+  "names": [
+    {
+      "form": "Виктория Кордубская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her place in the line for 17 ноября ст. ст., name page 14540, «Виктория Кордубская, мц.», with the rank word left off; the line itself declines the name. `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Мчч. Ацискла и Виктории , Кордубских (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 30 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 17 ноября ст. ст. with «(IV)» and gives no year. The century is kept as the interval; nothing on the page narrows it."
+    }
+  },
+  "related": [
+    "acisclus-of-cordoba"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
