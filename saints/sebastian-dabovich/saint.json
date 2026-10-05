@@ -1,0 +1,71 @@
+{
+  "slug": "sebastian-dabovich",
+  "display_name": "Sebastian (Dabovic)",
+  "names": [
+    {
+      "form": "Севастиан (Дабович) Джексонский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 17 ноября ст. ст., name page 14811, «Севастиан (Дабович) Джексонский, архимандрит, прп.», with the grade and rank words left off; the line itself declines the forename and gives no surname. `.tmp/foldchk.py` reports no folder holding this form and `.tmp/rusurn.py` none holding the surname Дабович in any `ru` form over 5,815 folders. Jovan, the name he was baptised with, is left in the life rather than folded into the form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hieromonk"
+  ],
+  "office": "Archimandrite",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Прп. Севастиана Джексонского (1940) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 30 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "1863",
+      "basis": "attested",
+      "note": "azbyka.ru, the short life: «Преподобный Севастиан (Дабович) Джексонский родился 9 июня 1863 года в Сан-Франциско»; the full life on the same page says 9 июля 1863. The two agree on the year and differ on the day, and this corpus’s `dates` are years. days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1940,
+      "latest": 1940,
+      "display": "1940",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 17 ноября ст. ст. with «(1940)»; azbyka.ru: «Последние годы жизни провел на покое в Жичском монастыре, где преставился 30 ноября 1940 года», which is the civil day of that Julian 17 November, so the day of death and the feast are the same day."
+    }
+  },
+  "related": [
+    "tikhon-of-moscow",
+    "nicholas-velimirovich"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

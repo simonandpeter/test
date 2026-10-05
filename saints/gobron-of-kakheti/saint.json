@@ -1,0 +1,59 @@
+{
+  "slug": "gobron-of-kakheti",
+  "display_name": "Gobron of Kakheti",
+  "names": [
+    {
+      "form": "Гоброн (в крещении Михаил) Кахетинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 17 ноября ст. ст., name page 520, «Гоброн (в крещении Михаил) Кахетинский, князь, мч.», with the grade and rank words left off; the baptismal name stands inside the form because the calendar prints it there. `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "prince"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 ноября ст. ст. — «Мч. Гоброна , во св. Крещении Михаила, и с ним 133-х воинов (914) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261117.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 30 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 30 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 30 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 914,
+      "latest": 914,
+      "display": "914",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 17 ноября ст. ст. with «(914)», and its life page: «принял смерть через усекновение главы 17 ноября 914 года». The page gives no year of birth. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
