@@ -1,0 +1,67 @@
+{
+  "slug": "john-tsvetkov",
+  "display_name": "John (Tsvetkov)",
+  "names": [
+    {
+      "form": "Иоанн (Цветков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 16 ноября ст. ст., name page 9651, «Иоанн (Цветков), иерей, сщмч.», with the grade and rank words left off; the line itself declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s own link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and the surname is held by `basil-tsvetkov` and `nicholas-tsvetkov`, two other men of these years, in the forms «Василий (Цветков)» and «Николай (Цветков)»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Сщмчч. Иоанна , Николая , Виктора , Василия , Макария и Михаила пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1878,
+      "latest": 1878,
+      "display": "1878",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4830: «Он родился 17 марта 1878 года в городе Торжке Тверской губернии в семье огородника Степана Цветкова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 16 ноября ст. ст. with «(1937)», and the day of the shooting, 29 November 1937, is the civil day on which that Julian 16 November falls, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "slug": "nicholas-troitsky-16-november",
+  "display_name": "Nicholas (Troitsky) (16 November)",
+  "names": [
+    {
+      "form": "Николай (Троицкий)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 16 ноября ст. ст., name page 9735, «Николай (Троицкий), иерей, сщмч.», with the grade and rank words left off. `nicholas-troitsky` holds the same form from the same calendar’s 7 ноября ст. ст., where the name link is name page 9734: two name pages, two days, two dossiers and two men, and the fold is declared here rather than resolved by inventing a fuller form the calendar does not print. Seven other folders hold the surname with a different forename."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Сщмчч. Иоанна , Николая , Виктора , Василия , Макария и Михаила пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4871: «Священномученик Николай родился 23 июля 1887 года в Тверской губернии в селе Покров, где служил в храме его отец, протоиерей Иоанн Троицкий»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 16 ноября ст. ст. with «(1937)», and the day of the shooting, 29 November 1937, is the civil day on which that Julian 16 November falls, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
