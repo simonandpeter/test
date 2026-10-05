@@ -11,6 +11,11 @@
       "form": "Феофил",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2272, headed «Феофил Тивериопольский, Константинопольский, исповедник, прп.», with the two epithets and the two rank words left off."
+    },
+    {
+      "form": "Теофил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. октобар ст. ст., „Преп. Теофил исповедник.“ — Преп. is the venerable grade and исповедник the `confessor` grade, both of which this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. The heading gives him no epithet and no place, although the body gives one; `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.10.2026 (10. октобар ст. ст.) — „Преп. Теофил исповедник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. **THE LARGEST THING THIS BOOK ADDS TO THE WHOLE DAY IS HIS NATION.** The folder holds the Greek’s «a village near Tiberioupolis» and the Russian’s «the country round Tiberias» with the index epithets of Tiberiopolis and of Constantinople; this entry opens «Пореклом македонски Словен негде од Струмице» — **a Macedonian Slav from somewhere about Strumica.** That is a reading of where Tiberiopolis was, not a new birthplace: it puts the town in Macedonia rather than in Palestine, and it makes him a Slav. **Neither the nation nor the town goes into any field** — `display_name` is reserved by section 10 and a reader names a sourced correction rather than making it, and `locations` wants a coordinate this reader has not read anywhere. It is here, in the prose, and it is the author’s. THE IDENTIFICATION IS ON THE SCENE AND IT IS FIRM: a young monk who founded his own monastery, suffered much for the icons under Leo the Isaurian, would have died then had he not persuaded his own judge, was let go, returned to his monastery and ended there in peace. The judge is named Ипатик, which is the Hypatius of this folder’s Russian life, and **this book calls him a кнез, a prince, where the Russian calls him an official**. The folder also already distinguishes this Theophilus from the Theophilus the Confessor of 2 October, and nothing in this entry touches that. `dates` UNTOUCHED, AND THE PROLOGUE TAKES A SIDE WITHOUT SETTLING IT. The folder holds `death` 716–741, an interval built because the Russian page contradicts itself — it has him resist an emperor whose reign it dates 717 to 741 and then dies in 716. **This entry says 716 flat**, which agrees with the earlier end and knows nothing of the later one. Narrowing a range to one end of itself on a second book’s flat figure is refused; the corroboration is recorded here instead. `types` untouched at `venerable`, `confessor`, corroborated exactly by Преп. and исповедник. No `office` — the entry names no house and no see, and «founded his own monastery» is a verb in a body. `related` UNTOUCHED: `longinus-the-stylite`, whom the Greek page pairs him with, and `theophilus-the-confessor` are both already there, and this entry names neither; the prince Hypatikos and the emperor take no rows. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Теофил». The Prologue prints no troparion and no kontakion; the day carries only the verse. TWO REFUSALS ON THIS DAY, BOTH ON SECTION 4’S GROUND, AND BOTH ARE WORTH THE NEXT READER’S TIME. **(1) The day’s second entry is refused whole.** Its heading is «Св. мученици Зографски.» and **it enumerates nobody**. The body tells the burning of the tower of Zographou by the Latin troops Michael VIII Palaiologos brought to Athos after the Union of Lyon, counts the dead as twenty-six — twenty-two monks with their abbot and four laymen who worked for the house — names the abbot Тома, and dates it 10 October 1283. **The corpus already keeps about twenty-six Zographou folders on this menologion day**, `thomas-of-zographou` among them. A synaxis heading that names nobody is one entry and the reader says so; counting by section 5 means counting what the heading enumerates and not what the body narrates, which is the ground two named martyrs were refused rows on earlier in this wave. So **no row went to any Zographou folder**. Two things in it are the author’s: whether that heading warrants twenty-six rows, and that the entry gives the burning as **1283** where `thomas-of-zographou` holds `death` 1275–1282 — a year outside the folder’s interval, offered by an entry that takes no row, so nothing was widened on it. **(2) `two-hundred-martyrs-of-nicomedia` is refused a row.** The first entry ends «Још бише погублени 200 хришћана» — two hundred more Christians were put to death, who believed on seeing the power and the wonders of the two — and the Greek calendar keeps those two hundred as an entry of their own on this same day, which is why the folder exists and why both of this entry’s folders already relate it. **But the Prologue narrates them inside a body whose heading names only Евлампије and Евлампија**, and a row’s quoted line is the heading, whole. No row, and the reason is named rather than left to look like an oversight."
     }
   ],
   "text": {

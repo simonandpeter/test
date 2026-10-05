@@ -16,6 +16,11 @@
       "form": "Вассиан",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 395, headed «Вассиан (Василий) Константинопольский, чудотворец, игумен, прп.», with the alternative form, the two epithets, the office and the rank word left off."
+    },
+    {
+      "form": "Васијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. октобар ст. ст., „Преп. Васијан.“ — Преп. is the venerable grade this corpus puts in `types` and comes off, so the bare personal name is the whole of the form; the heading gives him no epithet. It is neither of the two strings the Russian index gives this folder, «Вассиан (Василий)», and `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for it."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.10.2026 (10. октобар ст. ст.) — „Преп. Васијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth entry. The heading is quoted whole, with the closing full stop the Prologue itself prints, which is what BRIEF-SERBIAN section 4 asks for. It had to be measured off the raw cached page, because srbody.mjs and sr-cand.mjs both strip it from their printed output: every heading of this day ends \". </strong>\" in the source. **THE ONE DISAGREEMENT IS WHERE HE CAME FROM, AND IT IS NOT A DATE.** The folder holds the Greek’s «he came from Syria» and the Russian’s «born in eastern Syria»; this entry says he came «из Анадолије», out of Anatolia. Two books against one, no reconciliation offered by either, and **nothing in the folder changes on it**: there is no field for a place of origin here — `locations` wants a coordinate and the folder has none — and `display_name` is reserved. The disagreement is named here and in the prose and is the author’s. EVERYTHING ELSE AGREES, AND THAT IS THE IDENTIFICATION: he came to Constantinople in the reign of the pious emperor Marcian; his ascetic labour was great and so was the wonderworking power God gave him; he had about three hundred disciples, and among them Saint Matrona; and Marcian built a church in his name which still stands. Four books, one man. `dates` UNTOUCHED. The folder holds `floruit` «c. 450» off saint.gr’s «περίπου το 450» and the Russian’s reign of 450 to 457. **This entry gives 450 as the year he came to Constantinople**, which is an event inside that floruit and not a span for his life; dropping the «c.» on it would narrow a hedge another book put there, and a lifespan is refused in any case. `types` untouched at `venerable`, `abbot`, `wonderworker`: Преп. corroborates the first and «велика и чудотворна сила» the third. `office` left at «Abbot» — the entry gives no house a name and no second grade, and a scalar field has no «X or Y». `related` UNTOUCHED: `matrona-of-constantinople` is already there and is the one person of the entry who has a folder and belongs to his story; the emperor takes no row and the church he built is a dedication. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Васијан» — worth saying because the Russian index gives this folder a second name outright, «Вассиан (Василий)», and neither of those strings is this one. The Prologue prints no troparion and no kontakion; the day carries only the verse. TWO REFUSALS ON THIS DAY, BOTH ON SECTION 4’S GROUND, AND BOTH ARE WORTH THE NEXT READER’S TIME. **(1) The day’s second entry is refused whole.** Its heading is «Св. мученици Зографски.» and **it enumerates nobody**. The body tells the burning of the tower of Zographou by the Latin troops Michael VIII Palaiologos brought to Athos after the Union of Lyon, counts the dead as twenty-six — twenty-two monks with their abbot and four laymen who worked for the house — names the abbot Тома, and dates it 10 October 1283. **The corpus already keeps about twenty-six Zographou folders on this menologion day**, `thomas-of-zographou` among them. A synaxis heading that names nobody is one entry and the reader says so; counting by section 5 means counting what the heading enumerates and not what the body narrates, which is the ground two named martyrs were refused rows on earlier in this wave. So **no row went to any Zographou folder**. Two things in it are the author’s: whether that heading warrants twenty-six rows, and that the entry gives the burning as **1283** where `thomas-of-zographou` holds `death` 1275–1282 — a year outside the folder’s interval, offered by an entry that takes no row, so nothing was widened on it. **(2) `two-hundred-martyrs-of-nicomedia` is refused a row.** The first entry ends «Још бише погублени 200 хришћана» — two hundred more Christians were put to death, who believed on seeing the power and the wonders of the two — and the Greek calendar keeps those two hundred as an entry of their own on this same day, which is why the folder exists and why both of this entry’s folders already relate it. **But the Prologue narrates them inside a body whose heading names only Евлампије and Евлампија**, and a row’s quoted line is the heading, whole. No row, and the reason is named rather than left to look like an oversight."
     }
   ],
   "text": {
