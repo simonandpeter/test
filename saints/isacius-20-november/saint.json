@@ -10,6 +10,11 @@
       "form": "Ισάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος», with the rank words left off."
+    },
+    {
+      "form": "Исаакий (Исакий) Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the clause for 20 ноября ст. ст., name page 1104, «Святитель Исаакий (Исакий) Персидский, епископ, сщмч.», with the grade words left off. The parenthesis is the source’s own and is kept: the page offers two spellings for one man and this corpus has a folder for each, so dropping either half of the string would hide the thing that has to be decided. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -17,7 +22,8 @@
     "saborius",
     "onam",
     "papias-20-november",
-    "isaacius-20-november"
+    "isaacius-20-november",
+    "hypatius-of-persia"
   ],
   "dates": {
     "death": {
@@ -31,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Нирсы еп. и Иосифа, ученика его, Иоанна, Саверия, Исакия и Ипатия, епископов Персидских; мч. Азата скопца, Сасония, Феклы, Анны и иных многих мужей и жен, в Персиде пострадавших (343).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "**The Russian calendar names one Isacius where this corpus keeps two folders.** The clause has a single «Исакия» and name page 1104 a single man, titled «Святитель Исаакий (Исакий) Персидский, епископ, сщмч.» with both spellings in it; saint.gr’s line for the same day names both Ισάκιος and Ισαάκιος and this corpus made a folder for each. The row is written here rather than on `isaacius-20-november` because the day clause and the body of the life both spell him «Исакий» — the shorter form, which is Ισάκιος letter for letter — and only the page titles use «Исаакий». That is a reading off two strings, not a proof, and `isaacius-20-november` keeps its `russian` row undocumented so the author can move this one."
     },
     {
       "church": "romanian",

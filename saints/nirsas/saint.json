@@ -11,6 +11,11 @@
       "form": "Νιρσάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Νιρσάς ο Επίσκοπος και Ιωσήφ ο μαθητής του και Επίσκοπος», with the rank words left off."
+    },
+    {
+      "form": "Нирса Сциагарцадатский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the clause for 20 ноября ст. ст., «Святитель Нирса Сциагарцадатский (Персидский), епископ, сщмч.», with the grade words left off; the clause itself declines the bare forename. The first half of the double epithet is a see, and no English form of it is written here because none was read: the Cyrillic stands in this note and the `office` field is left empty rather than filled with a guess. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Нирсы еп. и Иосифа, ученика его, Иоанна, Саверия, Исакия и Ипатия, епископов Персидских; мч. Азата скопца, Сасония, Феклы, Анны и иных многих мужей и жен, в Персиде пострадавших (343).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 343,
+      "latest": 343,
+      "display": "343",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the clause for 20 ноября ст. ст. with «(343)» and closes its life page with «(+ 343)», and the page gives no year of birth and no other date. The year is the whole company’s, not this one figure’s: the page gives it once, at the end of a sentence that gathers «Сасоний, Фекла, Анна и многие другие мужчины и женщины»."
+    }
   }
 }
