@@ -20,12 +20,18 @@
       "form": "Ιωάννης ο Πολύτλας",
       "lang": "el",
       "note": "The nominative of «Όσιος Ιωάννης του Πολύτλα και εγκλείστου του εν Κιέβω σπηλαίου» in this folder's Greek citation."
+    },
+    {
+      "form": "Јован многострадални",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. јул ст. ст., „Преп. Јован многострадални.“ — „Преп.“ is the rank, which `types` now carries, and „многострадални“ is a **by-name and not a see or a rank**: it is the epithet the folder’s own display name renders «the Long-Suffering», and §6 keeps a by-name. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder — **and the by-name is the whole of what keeps it so**, a bare «Јован» being the commonest forename in this corpus and certain to fold deeper than the nine Vladimirs of 15 July. §6 earning its keep for the fourth time in this range."
     }
   ],
   "sex": "male",
   "types": [
     "monk",
-    "ascetic"
+    "ascetic",
+    "venerable"
   ],
   "dates": {
     "birth": {
@@ -85,8 +91,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.07.2026 (18. јул ст. ст.) — „Преп. Јован многострадални.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS THE BY-NAME, THE CAVE AND THE RELICS HE WAS HEALED BY.** „многострадални“ is this folder’s own «the Long-Suffering», „Затворник у пештери св. Антонија Кијевског“ is the cave of Anthony of Kyiv, and the relics that ended his struggle are those of „св. Мојсеја Угрина (в. 26. јули)“ — **both of those men are folders this one already relates**, and the Russian and Greek rows stand on this very 18 July. **`types` GAINS `venerable` OFF THE HEADING.** „Преп.“ is Преподобни and §5 reads it `venerable`; the folder held `monk` and `ascetic` and not that word, and both of those are earned by the body — a recluse in a cave, and thirty years of struggle. This is the fourth `types` word of this range written off a heading. **`dates` UNTOUCHED, AND THIS BOOK OFFERS NOTHING TO TOUCH THEM WITH.** The folder holds `death` 1155 to 1165, display «c. 1160», `traditional`, and a `birth` whose every field is null with basis `unknown`. This entry gives **no year, no century and no reign** — and the one number in it, the thirty years he was tormented, is a duration, so **there is nothing here that could narrow the recorded interval and nothing is refused**: this is the first folder of the range whose `dates` are untouched because the book is silent rather than because it is refused. `office` stays null. No `locations`: the caves of Kyiv are a narrative. **ONE MISSING RECIPROCAL IS SUPPLIED.** The folder relates `anthony-of-the-caves`; **`anthony-of-the-caves` did not relate it back**, so naming him in this life would have failed the two-way floor. The reciprocal is added to his folder in this same batch, with no row and no other change — **and his folder was upgraded by this same reader eight days earlier, on the Julian 10 July**, so the two writes stand in one range. `moses-the-hungarian` was already two-way and is named and linked as well. **WHAT IS NEW IS THE SHAPE OF THE THIRTY YEARS AND WHAT ENDED THEM.** For thirty years he was tormented by the passion of lust, against which he fought without giving way, until he overcame it by the help of God **and by touching the relics of Moses the Hungarian** — and the book sends the reader to its own 26 July for him, which is in this same range. Having conquered the foul passion, John was **lit from within by heavenly light, by which he could see at night as by day**. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "locations": [

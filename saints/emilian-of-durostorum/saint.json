@@ -11,6 +11,11 @@
       "form": "Αιμιλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουλίου, «Άγιος Αιμιλιανός», with the rank word left off. The page's hymn has the vocative «Αἰμιλιανὲ»."
+    },
+    {
+      "form": "Емилијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. јул ст. ст., „Св. муч. Емилијан.“ — „Св.“ is not a rank, „муч.“ is the rank `types` already carries, and nothing else is in the heading: no by-name, no see, no place, the city standing in the body only. «of Durostorum» in the display name is the corpus’s own. `foldchk.py` returns `emilian-the-penitent`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.07.2026 (18. јул ст. ст.) — „Св. муч. Емилијан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS THE CITY AND THE DAY AND THE YEAR AT ONCE.** „у Тракијском граду Доростолу“ is this folder’s own Durostorum, the Romanian and Greek rows stand on this very 18 July, and the body ends „пресели се у небесни 18. јула 362. год.“ — **the day and the year together**, and the day is the feast. **`dates` WRITTEN WHERE THE FOLDER HAD NONE.** `dates: null` before; neither doxologia nor saint.gr gave a year. `death` is now 362 to 362, display «362», basis traditional — a flat year into an empty field, which the narrowing rule permits. **The reign in the first clause is refused as usual and is not needed**: „У време Јулијана Одступника“ is a reign, the sixth kind this wave has refused a year off, and the book states the year outright two sentences later, so for once the refusal costs nothing at all. `types` UNTOUCHED at `martyr`, which „муч.“ is. **`soldier` is refused** — he was „слуга у градоначалника“, a servant in the city governor’s house, which is neither `soldier` nor any word this vocabulary has; and **`confessor` is refused**, his coming forward being the act of the entry and not a rank in the heading. No `office`, no `locations` — Thrace and Durostorum are a narrative. **NO NEW `related` ROWS.** The emperor’s envoy, the peasant seized in his place, the city governor he served and Julian the Apostate are an official, an innocent man, a master and an emperor; the folder already relates `emilian-the-roman` in both directions and this book does not name him. **WHAT IS NEW IS THE WHOLE ACT AND THE ARGUMENT BEHIND IT.** When the apostate emperor began to destroy Christianity with fire and sword throughout the Roman empire, an imperial envoy came to Durostorum too, to kill the Christians — **and did not find a single one.** Delighted at it, he gave a great banquet to the citizens and ordered a great sacrifice to the idols and rejoicing throughout the city, day and night. **That night Emilian went round the idol temples, the market-places and the streets of the city and smashed all the idols with a mallet.** In the morning there was horror in the city and everybody was looking for the destroyer of their gods; a peasant was seized who had been seen that morning passing by a temple — and Emilian, seeing that an innocent man would suffer, said within himself „Ако ја скријем своје дело, онда каква ми је корист од тога што учиних? Нећу ли се наћи пред Богом као убица невина човека?“ — If I hide my deed, what good to me is what I did? Shall I not be found before God as the murderer of an innocent man? So he presented himself to the envoy and confessed it all. Asked in a rage who had persuaded him to do it, the martyr of Christ answered „Бог и душа моја заповеди ми, да сокрушим оне мртве стубове, које ви називате боговима“ — God and my own soul commanded me to break those dead pillars which you call gods. He was scourged and then burned in fire. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -105,5 +120,14 @@
   ],
   "related": [
     "emilian-the-roman"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 362,
+      "latest": 362,
+      "display": "362",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; neither doxologia nor saint.gr gave a year. The Охридски пролог for 18. јул ст. ст. ends „Тако сконча свој земни живот св. Емилијан и пресели се у небесни 18. јула 362. год.“ The month and day in it are the feast, which the schema keeps in the attestation and not in `dates`."
+    }
+  }
 }
