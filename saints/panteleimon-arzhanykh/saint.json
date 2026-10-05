@@ -1,0 +1,70 @@
+{
+  "slug": "panteleimon-arzhanykh",
+  "display_name": "Panteleimon (Arzhanykh)",
+  "names": [
+    {
+      "form": "Пантелеимон (Аржаных)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 14351, «Пантелеимон (Аржаных), игумен, прмч.», with the office and grade words left off; the line itself declines the forename and gives no surname. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` none holding the surname Аржаных in any `ru` form over 5,813 folders and nothing for the stem `arzhanykh`. Paul, the name he was baptised with, is left in the life rather than folded into the form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Прмч. Пантелеимона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Пантелеймон родился 29 июня 1872 года в деревне Залипаевка Федоровской волости Мало-Архангельского уезда Орловской губернии в семье крестьянина Тимофея Аржаных и в крещении был наречен Павлом». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 16 ноября ст. ст. with «(1937)»; azbyka.ru: «Игумен Пантелеимон (Аржаных) был расстрелян 29 ноября 1937 года и погребен в общей безвестной могиле», which is the civil day of that Julian 16 November, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "related": [
+    "peter-polyansky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
