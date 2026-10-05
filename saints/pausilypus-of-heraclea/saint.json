@@ -15,14 +15,28 @@
       "form": "Παυσολύπιος",
       "lang": "el",
       "note": "The alternative form saint.gr prints in the body of his page for 8 Απριλίου: «Ο Άγιος Μάρτυς Παυσίλυπος (ή Παυσολύπιος)»."
+    },
+    {
+      "form": "Павсилип",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 8 апреля ст. ст., name page 1706, «Павсилип, мч.», with the rank abbreviation left off. The day’s own line gives the same form declined, «Павсилипа». The calendar gives him no see, no toponymic and no by-name — where the Greek line calls him «ο εν Ηρακλεία της Θράκης αθλήσας» — so the bare forename is the whole of the form it prints, and the «of Heraclea» in the display name is the corpus’s own off the Greek. No folder holds this form and none holds a form that folds with it; `.tmp/foldchk.py` and `.tmp/sr-foldpred.mjs` were both run before this draft."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Мч. Павсилипа (ок. 117-138).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -52,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 117,
+      "latest": 138,
+      "display": "between 117 and 138",
+      "basis": "traditional",
+      "note": "**The folder carried no date at all before this.** days.pravoslavie.ru brackets «ок. 117-138» after his line for 8 апреля ст. ст., which is the reign of the emperor saint.gr names and dates 117 to 138 without turning it into a date of its own. A reign is a bound and not a date, so the interval is kept twenty-one years wide and the display says so; nothing in either page narrows it, neither gives a year of birth, and no new-style pair is constructed from anything here."
+    }
   }
 }

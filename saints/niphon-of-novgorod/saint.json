@@ -19,6 +19,11 @@
       "form": "Нифонт",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 8 April on pravoslavno.rs, „Св. Нифонт еп. Новгородски.“, with Св. left off — it is not a rank — and with еп. Новгородски left off as well, the rank word for a bishop and the see, both of which this folder already carries in `types` and in `office`. The heading leaves no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Нифонт Печерский, Новгородский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 8 апреля ст. ст., name page 1658, «Святитель Нифонт Печерский, Новгородский, епископ», with the rank word and the office word left off and both toponymics kept in the order and with the comma the page prints — **it is the only book read for this folder that names the Caves as well as the city**, and azbyka.ru’s heading agrees, «Свт. Нифонта Печерского, епископа Новгородского». The day’s own line gives only «Нифонта, еп. Новгородского». The bare «Нифонт» is held as an `sr` form by this folder and by `niphon-the-athonite`, so the double toponymic is both what the calendar prints and what keeps the stored string single; `.tmp/sr-foldpred.mjs` answers that it adds a key no other folder holds."
     }
   ],
   "related": [
@@ -31,16 +36,25 @@
     "death": {
       "earliest": 1156,
       "latest": 1156,
-      "display": "1156",
+      "display": "8 April 1156",
       "basis": "traditional",
-      "note": "saint.gr: «Δεκατρείς ημέρες μετά, το Σάββατο της Διακαινησίμου του έτους 1156 μ.Χ., κοιμήθηκε με ειρήνη και ενταφιάσθηκε στη μονή των Σπηλαίων», and the page's heading has «Οσιος Νηφων ο Ρωσος ο Θαυματουργος (; - 1156)». The page gives no birth year."
+      "note": "The year 1156 is what days.pravoslavie.ru brackets after his line for 8 апреля ст. ст., what the Ohrid Prologue gives and what saint.gr gives. **The day is narrowed here off the life azbyka.ru serves for this day**, out of the Caves Paterikon, which closes «поболев тринадцать дней, уснул он с миром в Господе, месяца апреля в 8-й день, в субботу Светлой недели» — the eighth day of April, on the Saturday of Bright Week. saint.gr’s Bright Saturday of 1156 agrees with it without naming the number, so the two books do not conflict and **this calendar keeps him on the day he died**. The basis stays `traditional`, the source being a menologion life and not a record; the date is printed as one number and no new-style pair is constructed from it."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Свт. Нифонта, еп. Новгородского (1156).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -80,5 +94,71 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко сый нравом православных/ Восточныя Церкве преданий истинный защитник,/ сподобился еси великаго во отцех Феодосия/ видети по смерти яко жива,/ возвещающа тебе Царствия Небеснаго наследие,/ егоже неизреченных доброт/ ныне с ним неразлучно наслаждаяся,/ моли и о нас, чадех своих, Нифонте прехвальне.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Тропарь святителя Нифонта, епископа Новгородского», глас 3. His own and a proper: it names him, «Нифонте прехвальне», and it names the vision the three prose accounts turn on, the seeing of the great one among the fathers after his death as though alive. The folder held no hymn in any language before this batch.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who was by his character the true defender of the traditions of the Eastern Church of the Orthodox, you were counted worthy to see the great one among the fathers, Theodosius, after his death as though alive, announcing to you the inheritance of the Kingdom of Heaven; and now, enjoying its unutterable goods with him inseparably, pray for us also, your children, O Niphon most praised.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От мирскаго мятежа из младых ногтей/ исшед в тихое пристанище,/ честный обители Печерския достигл еси/ и, тамо ярем Христов восприим на ся,/ равно Ангелом житие поживе,/ отнюду же пришед, святителю Христов Нифонте, в великий Новград,/ и архиерейский престол восприял еси/ и многи люди учением своим ко Христу привел еси,/ Егоже моли, святителю преподобне, спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Ин тропарь святителя Нифонта, епископа Нивгородского», глас 4 — a second troparion, and **the heading as printed misspells the city, «Нивгородского» for «Новгородского»**; the heading is quoted here as the page prints it and the error is not carried into the hymn, whose own text spells «в великий Новград». His own and a proper: it names him and it names both houses, the Печерская obedience and the great city after it.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having gone out from the tumult of the world from your tender nails into a quiet haven, you reached the honourable monastery of the Caves; and there, having taken the yoke of Christ upon you, you lived a life equal to the angels. Coming thence, O hierarch of Christ Niphon, to great Novgorod, you took up the throne of the archpastor and brought many people to Christ by your teaching: pray to him, O venerable hierarch, that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Ревности древних отец/ в твердом истинных догмат хранении подобней,/ крепкоумне Нифонте,/ не восхотел еси восхитившему самовольне престол Митрополии Климу сослужитель быти,/ избранному же на се от всех, покорен,/ священнолепне с ним служил еси/ и, жизнь свою скончав,/ обрел еси безконечное Царство Христово.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Кондак святителя Нифонта, епископа Новгородского», глас 5. His own and the most particular hymn of the four: it names him, it names the man he would not serve with, and it says that he did serve with the one whom all had elected — a liturgical fact none of the three prose accounts states outright.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Being like the zeal of the ancient fathers in the firm keeping of the true dogmas, O strong-minded Niphon, you would not be concelebrant with Clim, who had seized the throne of the Metropolia of his own will; but being obedient to the one elected to it by all, you served with him in a priestly manner, and having finished your life you found the endless Kingdom of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Возложив себе от юности Богу, преподобне,/ мир тленных нивочтоже вменив/ и паче всех Христа возлюбив,/ Тому от всея души любовию последовал еси/ и, яко светозарное солнце,/ от Киева просил во вся концы Русский земли добродетелию,/ и бысть пастырь великому Новуграду,/ и, добре упас стадо Христово словесных овец на пажитех духовных,/ к Богу отшел еси,/ и ныне со Ангелы Владычню Престолу предстоя,/ нас поминай, раб своих, да зовем ти:/ радуйся, отче Нифонте,/ святителем изрядная похвало.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Ин кондак святителя Нифонта, епископа Новгородского», глас 8 — a second kontakion. His own and a proper: it names him twice and it names both cities, Kyiv and great Novgorod. The word «просил» stands where the sense asks for a verb of shining, and it is copied as the page prints it.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having laid yourself upon God from your youth, O venerable one, and reckoning the world of corruptible things as nothing, and loving Christ above all, you followed after him with all your soul in love; and like the bright-shining sun you went out from Kyiv into all the ends of the Russian land by your virtue, and became shepherd to great Novgorod. Having well pastured the flock of Christ, his reason-endowed sheep, in spiritual pastures, you departed to God; and now, standing with the angels before the Master’s throne, remember us your servants, that we may cry to you: rejoice, O father Niphon, excellent boast of hierarchs.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
