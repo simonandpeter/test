@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-likharev",
+  "display_name": "Alexander (Likharev)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Александр (Лихарев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 13693, «Александр (Лихарев), иерей, сщмч.», with the rank and grade words left off; the day's own line declines the forename and gives no surname at all, where azbyka.ru's line for the same day gives it, «Сщмч. Александра Лихарева, пресвитера (1938)». The surname in brackets is part of the name the calendar's link gives and is kept. The gate's own `nameKeys` reports no folder holding the fold of this form or of the English display name, and the bare «Александр» is held by twelve folders, which is why the surname stays in the form. `.tmp/rusurn.py` finds the surname Лихарев on exactly one folder, `basil-likharev`, a different forename and a different man, and no kinship is claimed."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Сщмч. Александра пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "note": "The one twentieth-century line of a day of ten entries, and the only one of the nine people on it whom the corpus did not already hold. days.pravoslavie.ru prints no life under his name; the life is azbyka.ru's. azbyka keeps him besides 17 марта on three moveable synaxes — of the new martyrs and confessors of the Russian Church, of the saints of Kuzbass and of the saints of Moscow — and not one of them is a fixed day or an offset from Pascha this corpus can hold, so none is recorded as a feast and all three are named in the life."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 17 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 17 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 17 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1876,
+      "latest": 1876,
+      "display": "1876",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Александр родился 22 января 1876 года в селе Синьково Софьинской волости Бронницкого уезда Московской губернии в семье священника Петра Лихарева»"
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 4 марта ст. ст. with (1938), and azbyka.ru has him die in the camp hospital on 17 March 1938, which is that Julian 4 March by the civil reckoning: the day of death and the feast are the same day. **He was not shot.** The sentence of 5 December 1937 was ten years in a corrective labour camp, and he died of dysentery in confinement; the death note says so, so the year is not read as an execution. No day is recorded here because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
