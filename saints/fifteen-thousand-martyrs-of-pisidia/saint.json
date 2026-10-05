@@ -10,6 +10,11 @@
       "form": "Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Ιουλίου, «Άγιοι Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία», with the rank word left off. The page heading repeats it as «Αγιοι Δεκαπεντε Χιλιαδες Μαρτυρες Οι Εν Πισιδια»."
+    },
+    {
+      "form": "15000 мученика",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 16. јул ст. ст., „Св. 15000 мученика.“ — „Св.“ is not a rank and yields nothing, and what is left is the company’s whole name, the number and the rank word that belongs to it, exactly as `four-hundred-forty-martyrs-of-italy` stores „Четири стотине и четрдесет мученика“ and as this range’s own `forty-five-martyrs-of-nicopolis` stores „45 мученика“. **The country is not in the heading at all**, which is the one mercy of an entry whose two books disagree about it. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder."
     }
   ],
   "attestations": [
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.07.2026 (16. јул ст. ст.) — „Св. 15000 мученика.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, and it is one sentence long: „Бише посечени мачем за веру Христову у Персији.“ — they were beheaded with the sword for the faith of Christ **in Persia**. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **TWO BOOKS, ONE COMPANY, TWO COUNTRIES.** The folder’s only other venerated row is the Greek one, off saint.gr’s 16 Ιουλίου line «Άγιοι Δεκαπέντε Χιλιάδες Μάρτυρες οι εν Πισιδία», the fifteen thousand martyrs **in Pisidia**, whose page gives them one sentence — they were martyred by the sword — and a couplet that says about fifteen thousand of the divine contenders were cut down **in one land**. So the two books agree on the number, on the day, and on the sword, and **disagree on the country**. The number and the day and the manner are three agreements out of four and the identification rests on them; nothing else in the corpus keeps fifteen thousand martyrs on any day. **`display_name` IS NOT TOUCHED.** «The Fifteen Thousand Martyrs of Pisidia» is contradicted by this book in its one word of substance, and §10 reserves a display name to the author: it is left exactly as it stands and reported. The disagreement goes into the life and the note and into no field. **`dates` STAY NULL.** Neither book gives a year, a century, an emperor or a governor, and this entry is a single clause. `types` UNTOUCHED at `martyr`, which „мученика“ is and all the heading gives. **`great-martyr` is not on offer.** No `office`, a company having none; **no `locations`**, which on this folder is not a formality — one book’s Persia and the other’s Pisidia are a thousand miles apart and a coordinate would have had to pick one. **NO ROW FOR ANY MEMBER AND NO MEMBER TO GIVE ONE TO.** Neither book names one of the fifteen thousand; the heading enumerates nobody, so §4’s synaxis ruling makes it one entry and one row, which is what it gets. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
