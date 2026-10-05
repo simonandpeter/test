@@ -11,6 +11,11 @@
       "form": "Θωμάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Ιουλίου, «Όσιος Θωμάς ο εν Μαλεώ», with the rank word and the place left off."
+    },
+    {
+      "form": "Тома Малеин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Преп. Тома Малеин“ — „Преп.“ is the rank and comes off, and „Малеин“ is **kept**, because it is a by-name standing directly on the name and not a see governed by a rank, which is §6’s «Аврамије Смоленски» case and the same reading that kept „Атонски“ on Athanasius on 5 July. **And it is what avoids a fold**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Тома Малеин» and `thomas-of-constantinople` and `thomas-the-fool-for-christ`, both `sr`, for the bare «Тома», so keeping the by-name keeps this folder off a string two others already share. Measured, not supposed."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.07.2026 (7. јул ст. ст.) — „Преп. Тома Малеин“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 7 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed. **A CENTURY WRITTEN, AND IT IS THE SAME BOOK’S OTHER HABIT.** `dates` was **null**: neither doxologia nor saint.gr gave him a year. This book says „А када се представи Богу (у Х веку)“ — and when he presented himself to God (in the tenth century). **It is a parenthesis and not a hedge**: there is no „вероватно“ in it, which is precisely what there was two days ago on Lampadius, where the same book said he struggled «probably in the tenth century» and the field was therefore left empty. Here the century is stated, so the allowed shape is written: `floruit`... **no — `death`**, the sentence being about his repose and not about his life. `death` earliest 901, latest 1000, display «10th century», basis traditional. The two days together are the whole of the rule: a century a book **states** goes in, and a century a book **guesses** does not, and the difference is one word in the source. WHAT IS NEW, WHICH IS EVERYTHING BEFORE THE DESERT. That he was first a **commander**, famous for bravery and for wealth; that he was „телом врло крупан“, very large of body, and put fear into his enemies. That when he came to love Christ more than the world and everything in it he left it all and withdrew to the desert, was tonsured and gave himself to ascesis. **That the prophet Elijah appeared to him and led him to the mountain called Malea, near the Holy Mountain** — which is the mountain in this folder’s own display name, so **two books now agree on the place by two routes**. That he lived there alone with God in prayer day and night; that though he hid from the world he could not be hidden, and people came and brought their sick, and he healed them of every sickness and every trouble; and that after his repose his relics went on helping all who came to them with faith. `types` UNTOUCHED, AND THE `wonderworker` ALREADY THERE IS WHY. `venerable`, `hermit` and `wonderworker` are all three on the folder off the other two books; „Преп.“ is the `venerable` and the solitary mountain the `hermit`. The healing stands in the **body** and would not have been written off this book, and nothing needs writing. **`soldier` is refused**: „беше најпре војвода“ is a body sentence and the heading gives only Преп. — the sixth rank refused off a body in this range. No `office`: a command is not a see. No `locations`: a mountain near the Holy Mountain is not a coordinate, and a folder dated to a whole century with a `locations` would have to answer `map-span`. **NO ROWS.** `elijah-the-tishbite` is the prophet of this entry and **takes no row**: an appearance is not a relation, which is the Three Hierarchs ruling and which refused Jeremiah on Paisius on 19 June. The prose says «the prophet Elijah», which is not that folder’s display name. The sick who were brought are unnamed. The Prologue prints no troparion and no kontakion; the day carries only the verse. **AND THE REFUSAL THIS DAY MAKES TWICE IS OF A YEAR, NOT OF A PERSON.** Three of the four folders of this day hold a `death` whose display is an **interval** — «under Diocletian» — and in each case this book offers a point **inside** it. Writing the point would **narrow a range the other book states**, which is refused outright; and there is nothing to widen, the point falling inside the interval, so there is no disagreement either. In every case `dates` is passed back **verbatim**, note and all, the year is written into the life where the prose can hold it with its own hedge, and **the alternative edit is named here for the author**. This is the same handling as Lampadius’s hedged century on 5 July, reached by a different road: there the book would not assert, here the book asserts something smaller than what is already recorded. **THE DAY REFUSES NO PERSON.** All three entries are persons, all four names the headings enumerate are held, and all four are upgrades — the third such day of this range, after 4 and 5 July."
     }
   ],
   "hymns": [
@@ -86,5 +101,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 901,
+      "latest": 1000,
+      "display": "10th century",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading, neither doxologia nor saint.gr giving him a year. The Охридски пролог for 7. јул ст. ст.: „А када се представи Богу (у Х веку) његове мошти продужише помагати свима који с вером њима припадаху“ — and when he presented himself to God, in the tenth century, his relics went on helping all who came to them with faith. The century is **stated** in a parenthesis and not hedged; the same book’s entry for Lampadius on 5. јул ст. ст. says „вероватно“, probably, of the same century, and that folder was therefore left with no date at all. One word in the source is the whole of the difference (6 October 2026)."
+    }
+  }
 }

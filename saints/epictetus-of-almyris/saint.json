@@ -6,12 +6,18 @@
       "form": "Epictet",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 8 iulie, «Sfinții Mucenici Epictet și Astion»."
+    },
+    {
+      "form": "Епиктет",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. јул ст. ст., „Преп. муч. Епиктет и Астион“ — „Преп. муч.“ is the rank and comes off, „и Астион“ is the other name the heading enumerates, and the bare forename is left. «teacher of Astion» in the display name is the corpus’s own and is this entry’s own first sentence besides. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Епиктет», so there is no fold — worth having measured, the corpus keeping an `epictetus-the-wonderworker` as well."
     }
   ],
   "sex": "male",
   "types": [
     "hieromartyr",
-    "venerable"
+    "venerable",
+    "venerable-martyr"
   ],
   "related": [
     "astion-of-almyris"
@@ -53,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.07.2026 (7. јул ст. ст.) — „Преп. муч. Епиктет и Астион“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, the first of the two names its heading enumerates. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **TWO CALENDARS, TWO DAYS, AND NO §4 NOTE IS OWED BY THIS ROW.** This folder’s only other venerated row is the Romanian one, on the **Julian 8 July**, and this book keeps him on the **7th** — one day apart, which is a different menologion number and not a thirteen-day conversion of anything. §4’s second-day note belongs on a row of the **same** church that is already `venerated`, and this folder’s `serbian` row was `undocumented`, so the row is written plainly on the day this book gives and **nothing of the Romanian row is touched**; the two days stand side by side here, as they do on `alexander-the-sleepless` from 3 July. **The Prologue’s own 8 July was checked and does not name him**: its three entries for 8. јул ст. ст. are the great-martyr Procopius, Procopius the Fool and Theophilus the Myrrh-gusher, so this is the one day this book keeps him and there is no second Serbian day in play. **THE IDENTIFICATION, MADE ON THE CITY.** „настане у скитском граду Алмириду (сада Рамзину) на утоку Дунава у Црно Море“ — they settled in the Scythian town of Almyris, now Ramzina, at the Danube’s outfall into the Black Sea. `epictetus-of-almyris` and `astion-of-almyris` are named for that town, and the pair’s own display names are «Epictetus, teacher of Astion» and «Astion, disciple of Epictetus», which is this entry’s first sentence exactly: „Астиона, јединца у родитеља, приволи свештеник Епиктет вери Христовој, крсти га и замонаши“ — the presbyter Epictetus won Astion, his parents’ only son, to the faith of Christ, baptised him and made him a monk. Grepping the corpus for the entry’s own uncommon proper name is what settled it; the two folders are the only hits. **A STATED YEAR REFUSED BECAUSE IT WOULD NARROW, AND IT IS HEDGED BESIDES.** The folder holds `death` 284 to 305, display «under Diocletian», off doxologia, which gives no year. This book says „Мучени и посечени за веру Христову око 290 год.“ — tortured and beheaded for the faith of Christ **about** 290. 290 lies inside 284 to 305, so there is nothing to widen, and writing it would replace a recorded interval with a point: refused. `dates` is passed back verbatim, note and all — including doxologia’s remark that he was sixty at the trial, **which is an age and is written nowhere as a number of years in a field**. The alternative, if the author wants it, is `death` 290 to 290, display «about 290». **A `types` WORD READ OFF THE HEADING, THE SECOND OF THIS RANGE.** „Преп. муч.“ is Преподобномученик, the venerable-martyr. The folder held `hieromartyr` and `venerable` and not `venerable-martyr`; `venerable-martyr` is added and **both the others are kept**, exactly as on Cyprian on 5 July. Nothing is removed: `hieromartyr` is doxologia’s presbyter plus the martyrdom, and this book calls him „свештеник“ too. WHAT IS NEW. The whole of the geography and the sequel. That they moved „однекуд из источних крајева“, from somewhere in the eastern parts, into the Scythian country; the town, and **its present name, Ramzina**; the Danube’s mouth; and that after their death the two of them appeared **in a great light** to Astion’s parents, who were converted to Christ and baptised by the bishop Evangelus — who was himself beheaded for Christ afterwards, and of whom it was sung „Евангела, другога ангела“, Evangelus, a second angel. **THE BISHOP GETS NO ROW, AND HIS FOLDER IS KEPT ON THIS VERY NUMBER.** `evangelus-of-tomis` exists, is `martyr` and `bishop` with `office` «Bishop of Tomis», and is kept **venerated by the Romanian and Greek calendars on the Julian 7 July — the same number this row is written on**. He stands in the **body** and this heading is „Преп. муч. Епиктет и Астион“: §4 is explicit that a row’s quoted line is the heading, whole, and §5 that the count is what the heading enumerates. **This is the same refusal as Audifax and Abachum on 6 July and the six monks on 5 July**, and the third time in three days that a folder standing on the day’s own number has been refused a row for want of a place in the heading. No `office`, no `locations`: a town at a river mouth in a narrative is not a coordinate, and this folder’s dates read as a twenty-one-year interval. **NO NEW ROWS.** The folder already relates `astion-of-almyris`, in both directions, which is the one relation this entry supports. „Александру и Маркелини“, Astion’s parents, have no folders — `ls saints | grep -i marcellina` holds nobody, and «Alexander» is the bare display name of three folders of that name, none of them this man, so **the father’s name is set down here and kept out of the prose** on §6’s ground. Diocletian is not named in this entry at all. The Prologue prints no troparion and no kontakion; the day carries only the verse. **AND THE REFUSAL THIS DAY MAKES TWICE IS OF A YEAR, NOT OF A PERSON.** Three of the four folders of this day hold a `death` whose display is an **interval** — «under Diocletian» — and in each case this book offers a point **inside** it. Writing the point would **narrow a range the other book states**, which is refused outright; and there is nothing to widen, the point falling inside the interval, so there is no disagreement either. In every case `dates` is passed back **verbatim**, note and all, the year is written into the life where the prose can hold it with its own hedge, and **the alternative edit is named here for the author**. This is the same handling as Lampadius’s hedged century on 5 July, reached by a different road: there the book would not assert, here the book asserts something smaller than what is already recorded. **THE DAY REFUSES NO PERSON.** All three entries are persons, all four names the headings enumerate are held, and all four are upgrades — the third such day of this range, after 4 and 5 July."
     }
   ],
   "text": {
