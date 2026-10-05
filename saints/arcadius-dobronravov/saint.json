@@ -1,0 +1,68 @@
+{
+  "slug": "arcadius-dobronravov",
+  "display_name": "Arcadius (Dobronravov)",
+  "names": [
+    {
+      "form": "Аркадий (Добронравов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 7 апреля ст. ст., name page 14452, «Аркадий (Добронравов), протоиерей, сщмч.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Аркадия», with the rank word beside it. azbyka.ru calls him Аркадий Добронравов without the brackets and gives his father’s name as Павел Добронравов. No folder holds this form, no folder holds the bare «Аркадий» either, and no folder holds the surname; `.tmp/foldchk.py` and `.tmp/rusurn.py` were both run before this draft."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Сщмч. Аркадия пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "azbyka.ru’s life opens «Протоиерей Аркадий Добронравов родился в 1868 году в селе Устье Ядринского уезда Казанской губернии (ныне Аликовского района Чувашии) в семье диакона Павла Добронравова». The prison doctor’s certificate of 8 May 1931 calls him sixty-four, which squares with it. days.pravoslavie.ru gives no year of birth. azbyka.ru’s calendar for the civil 20 April, which is the Julian 7 April, carries the life; it was read in the in-app Browser pane on 6 October 2026, the site answering nothing else."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "20 April 1933",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 7 апреля ст. ст. with «(1933)» and azbyka.ru’s life says «Не выдержав тяжелых условий заключения отец Аркадий скончался 20 апреля 1933 года», the camp doctor giving the cause as decompensated myocarditis and psychosis. **20 April 1933 is the civil date of the Julian 7 April**, so this calendar keeps him on the day he died. The source prints the date as one number and no new-style pair is constructed from it. azbyka.ru’s calendar for the civil 20 April, which is the Julian 7 April, carries the life; it was read in the in-app Browser pane on 6 October 2026, the site answering nothing else."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
