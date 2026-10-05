@@ -10,6 +10,11 @@
       "form": "Четири стотине и четрдесет мученика",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 2 March on pravoslavno.rs, „Четири стотине и четрдесет мученика.“ The heading is the whole of what the Prologue gives them: a number and the word мученика, and no personal name at all, so nothing could be stripped as a rank without leaving the form empty. The body names none of them either."
+    },
+    {
+      "form": "440 Италийских мучеников",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 7970, «440 Италийских мучеников», with the rank and office words left off. The company has no personal name and the form is the whole of what the calendar’s index carries for it, the number with the toponymic and the grade — the grade is the name here, as it is on the corpus’s other company folders. The day’s own line writes it «Мчч. 440 Италийских», with the grade abbreviated and the noun left out. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "dates": {
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 2 марта ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Мчч. 440 Италийских (ок. 579).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

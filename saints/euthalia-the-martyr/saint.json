@@ -15,6 +15,11 @@
       "form": "Евталија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fifth heading for the Julian 2 March on pravoslavno.rs, „Света мученица Евталија.“, with the rank word мученица left off and Света, which is not a rank. The heading gives no epithet; Sicily, which the entry's first sentence names, is not in it."
+    },
+    {
+      "form": "Евфалия Леентинская (Сицилийская)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 2477, «Евфалия Леентинская (Сицилийская), мц.», with the rank and office words left off. Both toponymics are part of the name the calendar’s index carries and both stay, the second in the brackets the source itself puts it in; the day’s own line gives the forename alone and in the genitive. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Евфалия»."
     }
   ],
   "sex": "female",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Мц. Евфалии (257).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "note": "The Romanian calendar keeps her on 27 August and this one on the Julian 2 March, which is also the day the Greek and the Serbian give her; the difference between the two menologion numbers is neither a conversion nor a disagreement about her but two calendars keeping her on two days, and each row records its own."
     },
     {
       "church": "romanian",
@@ -80,5 +95,14 @@
     "alphaeus-martyr-10-may",
     "philadelphus-martyr-10-may",
     "cyprian-martyr-10-may"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 257,
+      "latest": 257,
+      "display": "257",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes her line for 2 марта ст. ст. with «(257)»: «Мц. Евфалии (257).» It is the only year any of the four sources read for her gives, and the folder carried no dates at all before this reading — doxologia.ro, saint.gr and the Охридски пролог print none. The life behind the line gives no year itself and names no emperor, so the year is the calendar’s bare statement and is marked traditional."
+    }
+  }
 }

@@ -7,6 +7,11 @@
       "form": "Αρσένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Μαρτίου, «Άγιος Αρσένιος Επίσκοπος Τβερ της Ρωσίας», with the rank word, the see and the country left off."
+    },
+    {
+      "form": "Арсений Тверской",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 2 марта ст. ст., name page 270, «Святитель Арсений, епископ Тверской», with the rank and office words left off. The stored form is the one both life pages print as their own inner heading, «Святитель Арсений Тверской», with the rank word left off; the name link’s title sets the see after a comma as an office, which this corpus keeps in `office` and not in the name. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Арсений»."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr calls him «της Ρωσίας», so that calendar is the one most likely to hold him, and it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Свт. Арсения , еп. Тверского (1409).»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "note": "His life pages on this calendar head themselves «Дни памяти: 2 марта , 6 июля», two days. The day recorded here is the one whose page lists him and which this row cites, 2 марта ст. ст.; the July day is the finding of his relics in 1483, four months and four days off this one and so no conversion of it, and it is recorded here as a note because the schema keeps one feast to a church. A relic-finding is not a repose and is not entered as one. Nothing was read on days.pravoslavie.ru’s 6 июля."
     },
     {
       "church": "romanian",
@@ -61,5 +76,39 @@
   "related": [
     "alexander-nevsky",
     "arethas-the-recluse"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Благочестно пожив во святительстве,/ люди просветил еси учением твоим,/ и о храме Пречистыя вельми подвизався,/ и любитель монахов быв,/ сего ради от Христа паствы твоей венец приял еси./ Темже, яко апостольского престола наместника,/ и святителя великаго чтуще тя, молим чада твоя, блаженне:/ от всех бед избави нас яже ко Христу молитвами твоими,/ святителю Христов Арсение отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Тропарь. Преставление святителя Арсения, епископа Тверского»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having lived devoutly in the hierarch’s office, you enlightened the people with your teaching, and laboured much for the church of the All-pure one, and were a lover of monks; and therefore you received from Christ the crown of your flock. Honouring you as a vicar of the apostolic throne and a great hierarch, we your children entreat you, O blessed one: deliver us from all troubles by your prayers to Christ, O Arsenius, hierarch of Christ, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Восприемши радостно честныя твоя мощи пречистая церковь,/ в тоже честно вносимы множеством священномонахов и князи благоверными,/ и яже приемши, яко сокровище многоценное./ Темже и мы ныне, твоей ограды словесныя овцы,/ окрест раки твоея предстояще,/ любезно вопием ти:/ не забуди чад твоих, отче,/ ихже мудре собрал и возлюбил еси,/ яко да зовем ти:/ радуйся, святителю Арсение, пастырю и учителю наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 марта ст. ст. — «Кондак святителя Арсения, епископа Тверского»",
+        "url": "https://days.pravoslavie.ru/Days/20260302.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The most pure church received your honoured relics with joy, borne into it with honour by a multitude of priest-monks and by right-believing princes, and took them as a treasure of great price. Therefore we also now, the reasonable sheep of your fold, standing about your shrine, cry to you with love: do not forget your children, O father, whom you wisely gathered and loved, that we may call to you: rejoice, O hierarch Arsenius, our shepherd and teacher.",
+        "rendered": "site"
+      }
+    }
   ]
 }
