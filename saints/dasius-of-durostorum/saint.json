@@ -11,22 +11,37 @@
       "form": "Δάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Δάσιος που μαρτύρησε στο Δορύστολο», with the rank words left off."
+    },
+    {
+      "form": "Дасий Доростольский",
+      "lang": "ru",
+      "note": "Read out of the title on the life page behind his line for 20 ноября ст. ст., «Мученик Дасий Доростольский», with the rank word left off; the name link, name page 588, gives «Дасий (Узий) Доростольский, мч.», with a second forename in parentheses that the life page, the day line and saint.gr all lack, and that second form is not taken. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "dates": {
     "death": {
       "earliest": 270,
-      "latest": 300,
-      "display": "late 3rd century",
+      "latest": 305,
+      "display": "late 3rd or early 4th century",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Δάσιος έζησε γύρω στα τέλη του 3ου μ.Χ. αιώνα επί Mαξιμιανού». The page gives no year; the interval is the end of that century as it prints it, and the reign of Maximian it names falls inside it."
+      "note": "The interval is widened to hold both readings and neither is narrowed. saint.gr gave «Ο Άγιος Δάσιος έζησε γύρω στα τέλη του 3ου μ.Χ. αιώνα επί Mαξιμιανού», on which this folder held 270–300. days.pravoslavie.ru says he «жил в III веке» and has him beheaded by order of «императоров Диоклитиана (284 - 305) и Максимиана (284 - 305)», and the day line prints that span after his name as «(284-305)». The two sources agree on the persecution and disagree only about how far into it he lived, so the latest moves to the end of the reign and the display stops naming a single century. Neither page gives a year of birth."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Мч. Дасия (284-305).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "**The line’s «(284-305)» is a reign, not a death year.** The life page puts the same span twice, once after each of the two emperors who ordered the beheading, and says separately that he lived «в III веке». The date on this folder is widened to hold the Russian bracket as well as the Greek reading rather than being replaced by it."
     },
     {
       "church": "romanian",

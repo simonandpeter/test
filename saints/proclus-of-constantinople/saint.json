@@ -12,6 +12,11 @@
       "form": "Πρόκλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιος Πρόκλος αρχιεπίσκοπος Κωνσταντινούπολης», with the rank word and the see left off."
+    },
+    {
+      "form": "Прокл Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 20 ноября ст. ст., name page 1839, «Святитель Прокл Константинопольский, патриарх», with the rank words left off; the line itself gives «архиеп.» where the name page gives «патриарх» and the life page uses both. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Свт. Прокла, архиеп. Константинопольского (446-447).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -70,7 +84,8 @@
     "john-chrysostom",
     "paul-the-apostle",
     "pulcheria-the-empress",
-    "atticus-of-constantinople"
+    "atticus-of-constantinople",
+    "sisinnius-of-constantinople"
   ],
   "hymns": [
     {
@@ -105,6 +120,70 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Тропарь преподобного Григория и святителя Прокла»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us ever according to Thy gentleness, take not away Thy mercy from us, but by their prayers govern our life in peace.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Иже Божественным началом премудрости,/ страхом Господним утверждся,/ оттуду священными восхождении возшел еси/ во ученичество Златоуста,/ и архиерейскаго того престола достоин быв чистоты добротами,/ апостольским правилом себе вообразив,/ не себе живый, но Христу и стаду твоему./ Тем в нетленный живот апостольски вселился еси,/ иерарше Прокле,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Тропарь святителя Прокла, архиепископа Константинопольского»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Established by the fear of the Lord, which is the divine beginning of wisdom, thou didst mount thence by sacred ascents into the discipleship of Chrysostom; and being made worthy of his hierarchical throne by the excellences of purity, and having formed thyself after the apostolic rule, thou didst live not for thyself but for Christ and for thy flock. Therefore thou hast entered apostolically into incorruptible life, O hierarch Proclus: entreat Christ God that our souls be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Достойно днесь торжествует/ всех градов честнейший воистинну в честном преставлении твоем,// отче отцев, Прокле мудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Кондак святителя Прокла»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Worthily doth the most honourable of all cities keep festival today in very truth at thy precious falling asleep, O father of fathers, wise Proclus.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Всечестнаго святителя, Царскаго града престол украсившаго/ и сокровищем безценным того обогащшаго, пречестными мощмй Златоустовыми,/ имже слово животно стяжа, просвещая верно чтущия его,/ песньми похваления того радостно ублажим, зовуще:/ радуйся, архиерею, отче священный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Ин кондак святителя Прокла»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The all-honoured hierarch, who adorned the throne of the imperial city and enriched it with a priceless treasure, the most precious relics of Chrysostom, by which he gained a living word, enlightening those who honour him in faith — him let us joyfully bless with songs of praise, crying: rejoice, O bishop, O sacred father.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
     }
   ],
   "text": {
@@ -112,11 +191,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 447,
+      "earliest": 446,
       "latest": 447,
-      "display": "447",
+      "display": "446 or 447",
       "basis": "traditional",
-      "note": "saint.gr heads the page «Αγιος Προκλος Αρχιεπισκοπος Κωνσταντινουπολης (; - 447)» and the narrative closes with it: «Πατριάρχευσε δώδεκα χρόνια και τρεις μήνες και κοιμήθηκε το 447 μ.Χ.» The page gives no year of birth."
+      "note": "The interval is widened to hold both readings and neither is narrowed. days.pravoslavie.ru prints its own disjunction twice, in the line for 20 ноября ст. ст. — «(446-447)» — and at the close of its life page, «(+ 446 - 447)». saint.gr gave the 447 this folder held flat, off «Αγιος Προκλος Αρχιεπισκοπος Κωνσταντινουπολης (; - 447)». Neither page gives a year of birth."
     }
   }
 }

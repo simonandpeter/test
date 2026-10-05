@@ -1,0 +1,94 @@
+{
+  "slug": "damian-of-yuryegorsk",
+  "display_name": "Damian of Yuryegorsk",
+  "names": [
+    {
+      "form": "Дамиан (в схиме Диодор) Юрьегорский, Каргопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 20 ноября ст. ст., name page 575, «Дамиан (в схиме Диодор) Юрьегорский, Каргопольский, прп.», with the rank word left off. The parenthesis is the source’s own and is kept, because the life page puts the two names the other way round in its own title and the calendar offers no third reading to settle which is the lemma. `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Прп. Дамиана (в схиме Диодора) Юрьегорского (1633).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "**The day of the row is not the day of the death.** Name page 575 prints «Дни памяти: 20 ноября , 27 ноября» and the life page says the repose was on the 27th and the memory is kept on the 20th because the 27th is taken by the feast of the icon of the Sign. The row carries the day of the page that listed him, which is the 20th; the 27th was seen and was not read, and he does not render on it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1633,
+      "latest": 1633,
+      "display": "1633",
+      "basis": "attested",
+      "note": "The life page gives the day as well as the year, «(+ 27 ноября 1633 года)», and the day line gives «(1633)». The year is flat and the day of the death is 27 ноября ст. ст., which is not the day this folder stands on. No year of birth is given; the page gives his age at two moments of his life, fifteen at the pilgrimage and nineteen at the tonsure, and this corpus derives no birth year by arithmetic from an age."
+    }
+  },
+  "related": [],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Желанием духа распалився,/ мятеж мирский отринув,/ ко Единому Богу любовию прилепися/ и Того вседушне взыскуя,/ во внутреннюю пустыню отыде,/ при водах вселися,/ идеже в слезах и трудех пребывая многолетное время,/ в терпении мнозе житие Ангельское проходил еси/ в наставлении Божественнаго разума,/ стадо инок собра мудре,/ ихже посещая, не остави, Диодоре преподобне, отче наш,/ Пресвятей Троице моляся/ от зол всяческих избавити и спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Тропарь преподобного Диодора Юрьегорского»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with the desire of the spirit, and casting off the tumult of the world, thou didst cleave in love to the one God and, seeking Him with all thy soul, didst go away into the inner wilderness and settle beside the waters; and dwelling there many years in tears and labours, in much patience thou didst live the angelic life under the instruction of divine understanding, and didst wisely gather a flock of monks. Visiting them, forsake them not, O venerable Diodore our father, but pray to the Most Holy Trinity to deliver us from all evils and to save our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "От юности, преподобне,/ плотскую волю в постех и молитвах источил еси,/ крест свой взем, Христови последовал еси,/ темже и к Вышним течением радостно устремив себе,/ идеже со всеми святыми Святей Троице предстоиши,/ но и ныне стадо свое посещая,/ поминай чтущих пресвятую память твою,/ да вси благодарно вопием ти:/ радуйся, Богомудре Диодоре, наставниче наш пустынный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Кондак преподобного Диодора Юрьегорского»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O venerable one, thou didst drain away the will of the flesh in fastings and prayers; taking up thy cross thou didst follow Christ, and therefore didst speed thyself joyfully in thy course to the heights, where thou standest before the Most Holy Trinity with all the saints. But visiting thy flock even now, remember those who honour thy most holy memory, that we may all cry thankfully to thee: rejoice, O God-wise Diodore, our teacher of the wilderness.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

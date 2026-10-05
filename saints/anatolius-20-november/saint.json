@@ -10,6 +10,11 @@
       "form": "Ανατόλιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος», with the rank words left off."
+    },
+    {
+      "form": "Анатолий Никейский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 20 ноября ст. ст., name page 170, «Анатолий Никейский, мч.», with the rank word left off; the line itself declines the bare forename. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -21,17 +26,27 @@
   "dates": {
     "death": {
       "earliest": 300,
-      "latest": 300,
-      "display": "300",
+      "latest": 312,
+      "display": "300 or 312",
       "basis": "traditional",
-      "note": "saint.gr: «Οι Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος έζησαν στα χρόνια του βασιλιά Μαξιμιανού το έτος 300 μ.Χ.», and the page's heading carries «(; - 300)» against each of the three names. It gives no year of birth."
+      "note": "The interval is widened to hold both readings and neither is narrowed. saint.gr gave «Οι Άγιοι Ευστάθιος, Θεσπέσιος και Ανατόλιος έζησαν στα χρόνια του βασιλιά Μαξιμιανού το έτος 300», on which this folder held 300 flat. days.pravoslavie.ru gives 312 twice, in the line for 20 ноября ст. ст. and at the close of its life page, «(+ 312)». Neither page gives a year of birth, and no page read gives a reason to prefer either year."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Мчч. Евстафия, Феспесия и Анатолия (312).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "The year the Russian gives, «(312)», is twelve years later than the 300 this folder held off saint.gr. Both are in `dates`, neither is narrowed, and the `display` no longer names one year."
     },
     {
       "church": "romanian",
