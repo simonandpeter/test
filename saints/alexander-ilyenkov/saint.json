@@ -1,0 +1,68 @@
+{
+  "slug": "alexander-ilyenkov",
+  "display_name": "Alexander (Ilyenkov)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Александр (Ильенков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 1 марта ст. ст., name page 9426, «Александр (Ильенков), иерей, сщмч.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` finds the surname on no folder at all; the bare «Александр» is held by several, and the stored form carries the surname."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Cщмч. Александра пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "His line is the day’s second to last and names him alone. azbyka.ru’s page for him lists four days besides 14 марта: two moveable synaxes, of the new martyrs and confessors of the Russian Church and of the saints of the metropolitanate of Perm, and two fixed ones, of the new martyrs and confessors of the metropolitanate of Crimea on 2 декабря and of the saints of Crimea on 28 декабря. The moveable pair is no day this corpus can hold, and the fixed pair is that host’s commemoration and not this calendar’s, which prints him on this line only; they are named in the life and recorded nowhere else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 martie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Μαρτίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 March 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1896,
+      "latest": 1896,
+      "display": "1896",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Александр родился 9 апреля 1896 года в поселке Судак Таврической губернии в семье священника Александра Иоакимовича Ильенкова»"
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 1 марта ст. ст. with «(1942)», and azbyka.ru has him die in confinement on 14 March 1942, which is that Julian 1 March by the civil reckoning. He was sentenced on 29 October 1939 to five years in a camp and not to death, so the year is the year he died at Usollag and not a year of execution; no day is recorded here because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
