@@ -12,6 +12,11 @@
       "form": "Φώτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Ιουλίου, «Άγιος Φώτιος Μητροπολίτης Μόσχας», with the rank word and the see left off."
+    },
+    {
+      "form": "Фотије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. јул ст. ст., „Св. Фотије митрополит Московски“ — Св. is not a rank, „митрополит“ is the rank, which `types` already carries, and „Московски“ is the see that rank governs and comes off with it, as the folder’s own Russian and Greek forms were taken with the rank word and the see left off. **The fold that leaves is deliberate and measured**: `foldchk.py` returns `photius-of-nicomedia`, `sr`, for «Фотије» and NO FOLDER HOLDS THIS FORM for «Фотије Московски», so keeping the see would have avoided a fold and was still refused — because «Московски» modifies the rank and not the name, where «Смоленски» in §6’s own example modifies the name, and a see is not a by-name the heading gives. This is the second folder on the string."
     }
   ],
   "sex": "male",
@@ -21,11 +26,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1431,
+      "earliest": 1430,
       "latest": 1431,
-      "display": "1431",
-      "basis": "attested",
-      "note": "days.pravoslavie.ru’s life: died on the feast of the Placing of the Robe of the Theotokos, «2 июля 1431 года»."
+      "display": "1430 or 1431",
+      "basis": "traditional",
+      "note": "Two books, two years one apart, and the field is widened rather than chosen. days.pravoslavie.ru’s life: died on the feast of the Placing of the Robe of the Theotokos, «2 июля 1431 года» — a full date, and the reading this folder carried alone as `attested`. The Охридски пролог for 2. јул ст. ст.: „Упокојио се 1430. год.“ — a bare year. The Russian life also puts an angel’s warning of his death on 20 April 1430, so this book’s year is the year of that warning as much as of the death; reading the one book’s year as the other’s event would be choosing between them, and the field is widened instead. The week this book puts between the warning and the death, against the Russian life’s two and a half months, and the twenty years it gives for the tenure against the Russian life’s twenty-two, are durations and not dates, and nothing is subtracted from any year (5 October 2026)."
     }
   },
   "attestations": [
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not in the Ohrid Prologue on pravoslavno.rs for 29.09.2026 (16. септембар ст. ст.) (checked 2026-09-17); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.07.2026 (2. јул ст. ст.) — „Св. Фотије митрополит Московски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, four sentences long. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **THE DAY, AND WHICH OF THIS FOLDER’S TWO IT IS.** The Julian 2 July is the same menologion number the **Greek** row carries; the Russian row keeps him on the Julian 16 September and records a Moscow-hierarchs synaxis on 5 October in its own note. So this row is the same day as one venerated row and not as the other, **no §4 second-day note is owed by this one**, and nothing of the Russian row is touched — §4 forbids moving a principal day and this book is not the Russian calendar. **A WIDENED DATE, AND THE NARROWER READING IS THE ONE WITH THE FULL DATE.** The folder held `death` 1431 to 1431 `attested`, off days.pravoslavie.ru’s life: died on the feast of the Placing of the Robe of the Theotokos, «2 июля 1431 года». This book says „Упокојио се 1430. год.“ — reposed in the year 1430. One year apart, and the rule widens and does not choose: `death` earliest 1430, latest 1431, display «1430 or 1431», basis traditional, both sentences in the note. **It is recorded in the note, and nowhere decided, that the Russian reading is a full date and this one a bare year**, and that the Russian life puts an angel’s warning on 20 April 1430 — so this book’s year is the year of that warning as well as its own year of death. Reading one book’s year as the other’s event would be choosing, and the field is widened instead. **AND THE INTERVAL THE TWO BOOKS GIVE FOR THAT WARNING DISAGREES.** This book: „На недељу дана пред смрт јавио му се ангел Божји и објавио му тачно време одласка из овог света“ — a week before his death an angel of God appeared to him and announced the exact time of his going out of this world. The Russian life has the angel on 20 April and the death on 2 July, two and a half months apart. Both are written in the life and **neither is chosen**; a week is a duration and goes into no field. **TWENTY YEARS AGAINST TWENTY-TWO.** „Управљао мудро Руском црквом 20 година“ — he governed the Russian Church wisely twenty years, where the Russian life says «For twenty-two years he led the Russian Church». Durations both, written in the life and in no field, and **nothing is derived from either**: a tenure subtracted from a year of death is arithmetic and is refused. WHAT AGREES. „Пореклом Грк“ — a Greek by origin, which both the Russian life and saint.gr already say, saint.gr claiming him as one of its own from Monemvasia. Nothing new is added by the agreement and nothing is written on it except that a third book now says it. `types` UNTOUCHED: `hierarch` and `metropolitan` are both there and „митрополит“ is the `metropolitan`; Свети is not a rank. **`office` UNTOUCHED, AND THAT IS THE READING THIS ENTRY FORCES.** The folder holds «Metropolitan of Kyiv», off a Russian life whose heading is «митрополит Киевский и всея Руси». This book’s heading says „митрополит Московски“, of **Moscow**, which is what saint.gr says too and which the folder’s Greek row already records as a disagreement. **A scalar field has no «X or Y»**: where two books give different sees, no `office` is written and both are stated in the life, which this folder’s life already does. The third book is recorded here as agreeing with the Greek one, and the field is left exactly as it stands. No `locations`. **NO ROWS.** The angel is not a folder; the entry names no person but its own subject. The folder’s existing `cyprian-of-kyiv` row comes off the Russian life and this book does not mention him. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FIRST ENTRY IS A FEAST AND TAKES NO FOLDER AND NO ROW. „Положење ризе пресвете Богородице у цркву Влахернску у Цариграду“ — the Deposition of the Robe of the most holy Theotokos in the church of Blachernae at Constantinople. §5 is explicit that a „Празник“ is not a folder, and this heading names no person at all. **The two men its body names get no row on that ground alone**: „Галвије и Кандид“, two patricians of Constantinople who lodged at Nazareth in the house of a Jewish maiden keeping the Robe in a secret chamber, took the relic and brought it to the City. A row’s quoted line is the Prologue’s own heading, whole — the ruling two men martyred by name inside a body were refused rows on, on 18 June — and this heading is a feast. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Галвије» and `candidus-of-the-forty-martyrs` for «Кандид», who is one of the Forty of Sebaste and not a patrician of the fifth century; `ls saints | grep -i galbius` holds nobody. So **no folder for either, and the maiden of Nazareth is unnamed in the book itself.** The rest of the entry’s people are refused with it: the emperor Leo and the empress Verina, the patriarch Gennadius, and the emperor Marcian and Pulcheria who built the church — emperors and a patriarch in a feast’s narrative, and `verina` holds nobody; and **the regnal years „(458- 471.)“ this book gives for Leo are written nowhere**, an unbounded reign being refused and an emperor being no source for a year in any case. The Scythian commander Vlahern, after whom the bay and the church are named and who was killed there, is an etymology and not a person this corpus keeps."
     }
   ],
   "related": [
