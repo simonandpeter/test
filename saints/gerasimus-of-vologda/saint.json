@@ -6,18 +6,33 @@
       "form": "Γεράσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Όσιος Γεράσιμος της Βολογκντά», with the rank word and the place left off."
+    },
+    {
+      "form": "Герасим Вологодский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 503, «Преподобный Герасим Вологодский», with the rank words left off. The day's own line declines the name. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "ascetic"
+    "ascetic",
+    "hieromonk"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him in Russia, so that calendar is the one most likely to hold him, and it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Прп. Герасима Вологодского (1178)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -59,5 +74,39 @@
   },
   "related": [
     "gerasimus-of-the-jordan"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко Безплотным единонравен/ и преподобным сообщник, преподобне Герасиме,/ един на Вологду пришел еси,/ прорицая ту быти граду великому/ и в нем святей церкви воздвигнутися/ и святителем водворитися./ Темже и сподобился еси/ близ того погребен быти/ и по преставлении своем многими чудесы исцелений просил еси./ Молися всегда о нас,/ яко да обрящем от Бога милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Тропарь преподобного Герасима Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one of like manner with the bodiless hosts and a companion of the venerable, O venerable Gerasimus, thou camest alone to Vologda, foretelling that a great city should be there, and that a holy church should be raised up in it, and that hierarchs should take up their dwelling there. Wherefore thou wast accounted worthy to be buried near it, and after thy departure thou didst shine forth with many wonders of healing. Pray thou always for us, that we may find mercy from God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "От юности, премудре, мирский мятеж оставил еси,/ и многоценныя ризы тленныя возненавидел еси,/ и святую одежду ангельскую любезно восприял еси,/ и ту соблюл еси в чистой совести/ и во благих делех, и до преставления своего/ бысть Божественнаго ради жития Троицы селение/ и просветил еси верою приходящий к тебе;/ темже вси зовем ти:/ радуйся, отче Герасиме всечестный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Кондак преподобного Герасима Вологодского»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From thy youth, O most wise one, thou didst forsake the tumult of the world, and didst hate the costly garments of corruption, and didst lovingly take upon thee the holy angelic habit, and didst keep it in a pure conscience and in good works until thy departure; and for the sake of thy divine life thou becamest a dwelling place of the Trinity, and didst enlighten with faith those who came unto thee. Wherefore we all cry unto thee: Rejoice, O all honoured father Gerasimus.",
+        "rendered": "site"
+      }
+    }
   ]
 }
