@@ -11,6 +11,11 @@
       "form": "Ιουλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Όσιος Ιουλιανός «ὁ ἐν τῷ Εὐφράτῃ ποταμῷ»», with the rank words left off."
+    },
+    {
+      "form": "Јулијан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. октобар ст. ст., „Св. Јулијан и Дидим Слепац.“ — «Св.» is \"saint\" and not a rank, so it comes off and the bare personal name, the first of the heading’s two, is the whole of the form; the heading gives him no epithet, and «Пустињак», the Hermit, is in the body and is the `hermit` in `types`. `foldchk.py` measured the string as held in sr by five folders already, so this form takes that fold to six and the five-folder key written for it is replaced in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -20,7 +25,8 @@
     "wonderworker"
   ],
   "related": [
-    "meletius-of-antioch"
+    "meletius-of-antioch",
+    "didymus-the-blind"
   ],
   "attestations": [
     {
@@ -59,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.10.2026 (18. октобар ст. ст.) — „Св. Јулијан и Дидим Слепац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, the first of its two names, and the heading is an ENUMERATED COMPANY OF TWO — Јулијан and Дидим Слепац — so BRIEF-SERBIAN section 5 counts two names. The corpus held this folder and nothing for the other man, so the second half of the heading is a new folder, `didymus-the-blind`, in the same commit; the heading is quoted whole on both rows, with the closing full stop, which is section 4. WHAT THE BOOK ADDS. He is called Пустињак, THE HERMIT, which is the `hermit` this folder already holds; he was A PERSIAN and A PEASANT WITHOUT SCHOOLING, but for the purity of his heart a vessel of the grace of the Holy Spirit — none of which the other books read for this folder say. He struggled BY THE EUPHRATES IN MESOPOTAMIA, which is the whole of this folder’s display name, and HE HAD THE GIFT OF FORESIGHT: at the very hour in which Julian the Apostate perished he perceived it in the spirit and announced it to his disciples. ONE DATE ADDED AND THE FLORUIT KEPT, AND AN AUDIT MOVE IS WHAT ASKED FOR IT. The folder held `floruit` 4th century and NO `death` AT ALL. This entry says «упокојили су се после 362. год.», a floor and no ceiling, so `death` is now earliest 362 and latest null, display «after 362» — the corpus’s own shape for exactly this, carried by twenty-four folders before today. The floruit STAYS: it is another book’s reading of the span of his life and this is this book’s floor under the end of it, and the two agree. WHY IT WAS ADDED RATHER THAN LEFT IN THE PROSE: with the paragraph in and no `death` on the folder, `date-audit.mjs` put him in `stated` — a life that states a year the data does not record — and `stated` went 154 to 155. The audit was right, and the answer to it is to record the year, not to reword the sentence. `types` untouched: «Пустињак» is `hermit`, already held, and the heading gives no other rank. No `office`, no `locations`. ONE NEW `related` ROW: `didymus-the-blind`, who shares the heading and the foresight of the same death, reciprocated on the new folder. `foldchk.py` measured «Јулијан» as held in sr by `julian-companion-of-pamphilus`, `julian-of-antinoopolis`, `julian-of-samosata`, `julian-presbyter-of-ancyra` and `julian-the-deacon-of-aegina` — FIVE FOLDERS, AND A FIVE-FOLDER READ_FOLDS KEY ALREADY EXISTED for exactly that set. This form makes six, so that key no longer names everyone it folds: it is DELETED and replaced by a six-folder one in `scripts/corpus-gate.mjs` in this same commit. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -72,7 +88,14 @@
       "latest": 400,
       "display": "4th century",
       "basis": "traditional",
-      "note": "saint.gr: «Παιδί φτωχής οικογένειας ο Όσιος Ιουλιανός, έζησε τον 4ο αιώνα μ.Χ.» The page gives no year of birth or of death."
+      "note": "Kept unchanged from the reading this folder already carried; the Ohrid Prologue’s floor of 362 lies inside it and does not narrow it."
+    },
+    "death": {
+      "earliest": 362,
+      "latest": null,
+      "display": "after 362",
+      "basis": "traditional",
+      "note": "Охридски пролог: «И св. Јулијан и св. Дидим, дивне слуге Божје, упокојили су се после 362. год.» A floor and no ceiling, 362 being the year of Julian the Apostate’s death, which the entry says both men outlived. The interval is left open rather than closed at the end of the century: the `floruit` already on this folder is another book’s reading and borrowing its ceiling for this death would be an inference."
     }
   }
 }

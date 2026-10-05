@@ -1,0 +1,67 @@
+{
+  "slug": "peter-of-cetinje",
+  "display_name": "Peter of Cetinje",
+  "sex": "male",
+  "types": [
+    "metropolitan"
+  ],
+  "office": "Metropolitan",
+  "names": [
+    {
+      "form": "Петар Цетињски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. октобар ст. ст., „Св. Петар Цетињски митрополит Црногорски.“ — «Св.» is \"saint\" and not a rank, and «митрополит Црногорски» is the rank and the see, which this corpus keeps in `types` and `office`, so both come off. What is left is the bare name with the epithet that distinguishes him, which is what section 6 asks for: «Петар» alone is held in sr by `peter-of-bulgaria` and `peter-of-lampsacus` already, and eleven folders share that bare forename across the corpus, so a bare form here would have been a fold on nothing but a forename. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Петар Цетињски»."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1749,
+      "latest": 1749,
+      "display": "1749",
+      "basis": "attested",
+      "note": "Охридски пролог: «Рођен 1. априла 1749. год. у селу Његушу». The book gives the day as well as the year; `dates` holds years."
+    },
+    "death": {
+      "earliest": 1830,
+      "latest": 1830,
+      "display": "1830",
+      "basis": "attested",
+      "note": "Охридски пролог: «Упокојио се 18. октобра 1830. год.» The day of that date is the Julian day this folder is kept on."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 18 Οκτωβρίου (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.10.2026 (18. октобар ст. ст.) — „Св. Петар Цетињски митрополит Црногорски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and the heading names one man and nothing else. It is quoted whole, with the closing full stop the Prologue prints, which is BRIEF-SERBIAN section 4. WHY THIS IS A FOLDER AND NOT A LINE IN A REPORT. Ruling 3 reports a person no folder holds rather than creating one, UNLESS the entry is substantial enough to warrant a folder, and this entry is the fullest single life in the four days of this range read so far: it gives A BIRTH DAY AND YEAR, «Рођен 1. априла 1749. год. у селу Његушу», a village, the age at which he became a monk, the year and the circumstance of his accession, what he did at home and abroad, a named battle, a judgement on his character, how he lived, A DEATH DAY AND YEAR, «Упокојио се 18. октобра 1830. год.», and where his relics are. No folder in this corpus holds him — `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Петар Цетињски», no slug under `saints/` matches Cetinje, Njeguši, Njegoš, Petrović or Montenegro except `stephen-of-montenegro`, who is another man, and the only two lives in the corpus that mention Cetinje at all are `nicholas-velimirovich`’s and `mardarije-of-libertyville`’s, neither of which is his. `types` IS `metropolitan` AND NOTHING ELSE, OFF THE HEADING. Section 5 maps «Митрополит» to `metropolitan`, and the heading gives that one rank. THE BODY ALSO CALLS HIM A PRINCE — «ако је био кнез над једним народом», though he was a prince over a people, and earlier «постаде митрополитом и господарем Црне Горе», metropolitan AND lord of Montenegro, which section 5 would map to `prince`. It is NOT added: the Julian 12 October established that a rank is read off the heading and not inferred from the body, and this is the same test pointing the other way. It is in this note and in the report instead. `dates` ARE BOTH ATTESTED AND BOTH ARE THE BOOK’S OWN DIGITS, not an age and not a reign: birth 1749 and death 1830, each given with its day of the month. The days themselves are not in `dates`, which holds years; the feast day is the attestation’s and is the day of his death, 18 October, which the entry states. `office` IS THE BARE `Metropolitan`, AND THE SEE IS NOT IN IT FOR A REASON. `tests/i18n.test.mjs` asserts that every distinct `office` string in the corpus has an entry in all four locale packs and that none of the four repeats the English, so a new see is a code commit in `src/ui/locales/*.js` and not a reader’s act: «Metropolitan of Montenegro» went in first and turned the suite red with «ru has no office for: Metropolitan of Montenegro». The packs hold no Montenegro office at all, and composing four translations is exactly the kind of invention this run may not make — the Serbian half would be read, «митрополит Црногорски», the Russian would be derived off `Metropolitan of Dabar-Bosnia`, and the Romanian and the Greek would be mine. So the bare `Metropolitan` is used, which the packs already carry in all four and which `basil-of-ostrog` — another metropolitan of these same mountains — already holds for the same reason. The see is in this note, in the quoted heading, and in the prose, and adding it to the packs is in the report FOR THE AUTHOR. NO `locations`, although this is the entry of the range that most nearly earns one: «у селу Његушу» is a village and «у манастиру Цетињском» a monastery, and neither is a coordinate. NO `related`: Metropolitan Сава, his predecessor, is named and no folder read here is him; Наполеон is named and is not a saint. NO hymn — the Prologue prints none, ever, and this day’s verse is Bishop Nikolai’s own. WHAT THE BOOK SAYS AND NO OTHER BOOK IN THIS CORPUS DOES, since this folder begins with it: he entered the monastic state IN HIS TWELFTH YEAR; he became metropolitan and lord of Montenegro on the death of Metropolitan Sava in 1782; he spent his whole life, knightly and holy, on his people — INSIDE, working with all his strength TO RECONCILE THE FEUDING TRIBES, and OUTSIDE, to defend the land and the people from rapacious attackers — AND SUCCEEDED IN BOTH; he was glorified above all by his VICTORY OVER NAPOLEON’S ARMY IN BOKA AND DALMATIA; he was HARSH TOWARDS HIMSELF and just and forbearing towards everyone else; and he LIVED IN A CRAMPED CELL LIKE A SIMPLE MONK although he was a prince over a people. His wonderworking relics rest INCORRUPT in the monastery of Cetinje."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -11,6 +11,11 @@
       "form": "Λουκάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Οκτωβρίου, «Άγιος Λουκάς ο Ευαγγελιστής», with the rank words left off."
+    },
+    {
+      "form": "Лука",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. октобар ст. ст., „Св. Лука апостол и јеванђелист.“ — «Св.» is \"saint\" and not a rank, and «апостол и јеванђелист» is the pair of grades this corpus keeps in `types`, so all of it comes off and the bare personal name is the whole of the form; the heading gives him no epithet and no see. `foldchk.py` measured the string as held by `doukas-the-tailor` in sr and `luke-of-bathys-ryax` in ru before this day, so this form takes that fold to three folders and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.10.2026 (18. октобар ст. ст.) — „Св. Лука апостол и јеванђелист.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry and the longest of the three. The heading is quoted whole, with the closing full stop the Prologue prints, which is BRIEF-SERBIAN section 4; «апостол и јеванђелист» in it is the `apostle` and the `evangelist` this folder already holds in `types`, so nothing is added there, and «љекар» in the body is the `physician` and the icon-painting the `iconographer`, both of which it holds as well. This entry calls him ТHE FOUNDER OF CHRISTIAN ICONOGRAPHY outright. `dates` UNTOUCHED, AND THREE NUMBERS REFUSED. This folder holds no `dates` at all and still holds none. The entry gives «написао Јеванђеље, око 60. године» — a YEAR FOR THE GOSPEL and not for the man; «Беше му 84 године, када га... обесише» — AN AGE, which is refused and may not be subtracted from anything; and the translation of the relics «у време цара Констанција, сина Константиновог», which is A REIGN and not a year. None of the three is a birth or a death, and nothing was derived from them by arithmetic. WHAT THE BOOK ADDS. He was FROM ANTIOCH and learnt Greek philosophy, MEDICINE AND PAINTING well in his youth. HE CAME TO JERUSALEM WHILE THE LORD WAS STILL AT WORK ON EARTH, saw the Saviour face to face, heard his teaching and witnessed his miracles; believing, he was NUMBERED AMONG THE SEVENTY and sent out to preach. He was the one who saw the risen Lord on the road to Emmaus with Cleopas. After Pentecost he returned to Antioch and became the fellow-worker of the apostle Paul, travelling with him as far as Rome; the entry quotes Colossians 4:14 for it, «Поздравља вас Лука љекар љубазни». After Paul’s martyrdom he preached THROUGH ITALY, DALMATIA, MACEDONIA and other parts. HE PAINTED AN ICON OF THE MOST HOLY THEOTOKOS — AND NOT ONE BUT THREE — and icons of the apostles Peter and Paul as well. In old age he visited LIBYA AND UPPER EGYPT, and came back from Egypt to Greece, where he went on preaching with great zeal in spite of his great age. He dedicated BOTH the Gospel AND the Acts to THEOPHILUS, PRINCE OF ACHAIA. He was eighty-four when the idolaters HANGED HIM ON AN OLIVE TREE in the city of Thebes in Boeotia. NO NEW `related`, AND TWO NAMES DELIBERATELY NOT LINKED. Paul and Cleopas are both in this entry and this folder already relates both; Peter is named only as the subject of an icon, which is a dedication and not a companion, and Theophilus of Achaia and the emperor Constantius are named and no folder read here is either of them. THE FOLD THIS FORM MAKES: «Лука» was held by `doukas-the-tailor` in sr and `luke-of-bathys-ryax` in ru, a pair the gate was printing as UNREAD; this form makes it three folders, so a three-folder key is in `scripts/corpus-gate.mjs` in the same commit and there was no narrower key to delete. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
