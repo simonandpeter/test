@@ -11,6 +11,11 @@
       "form": "Μεθόδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Ιουνίου, «Άγιος Μεθόδιος ο Ιερομάρτυρας επίσκοπος Πατάρων», with the rank words and the see left off."
+    },
+    {
+      "form": "Методије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Свештеномученик Методије, епископ патарски“ — Свештеномученик is the rank and „епископ патарски“ is a second rank and the see, and §6 takes both off, as the folder’s Romanian and Greek notes already say in their own words. The bare forename is what is left and the heading offers nothing else. **The fold is deliberate and forced**: `foldchk.py` returns `methodius-of-constantinople` and `methodius-of-moravia`, both `sr`, for «Методије», so this is the third folder on the string, and the three are a patriarch, an apostle of the Slavs and this bishop of Patara. `corpus-gate.mjs` prints the row and a `READ_FOLDS` key is added for it in the same commit, writing the row and registering the fold being two acts."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.07.2026 (20. јун ст. ст.) — „Свештеномученик Методије, епископ патарски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 20 June is the same menologion number this folder’s other venerated rows carry, so there is no second day and no §4 note is owed. **A FIRST DATE ON A FOLDER THAT HELD `dates: null`, AND IT IS A FLAT YEAR.** Neither of the two books that made this folder gave a year of any kind. doxologia places the suffering in the reign of Aurelian and prints no year, and the folder’s own prose says so in as many words; saint.gr’s own account gives no year either, and only the opinion of S. Eustratiades which it sets against itself puts the death at Chalcis in Syria under Diocletian. This book states one year flat: „Незнабошци се дигоше на њега, мучише га и посекоше у Халкиди Сиријској 311. године“ — the pagans rose against him, tortured him and cut him down at Chalcis in Syria in the year 311. `death` 311 to 311, display «311», basis traditional. **NOTHING IS WIDENED AGAINST AURELIAN, BECAUSE A REIGN IS NOT A YEAR.** The standing rule refuses an emperor as a source for a year, so doxologia’s Aurelian is not a second reading to widen towards and the field is not «X or Y»: there is exactly one year on offer in three books and it is written flat. Nor is anything derived from the tension between Aurelian and this year; the disagreement is stated in the life and nowhere in a field. THE PLACE, AND WHICH BOOK OWNS IT. Chalcis in Syria is in the corpus already, but only as the **dissenting** opinion saint.gr prints against its own narrative of a murder by a planted servant — and **this book makes Chalcis its own account**, with a year attached, which is the first time the corpus holds it as a calendar’s own reading rather than as a scholar’s correction. No `locations` all the same: a place named once in a clause is not a coordinate, and the folder already carries Patara, Olympus, Tyre and Philippi in prose as four books’ four opinions about his see. WHAT ELSE IS NEW, AND IT IS LITTLE. „Из млада се посветио подвигу и као град на гори био виђен и позван на епископство“ — from his youth he gave himself to the ascetic struggle and, like a city on a hill, was seen and called to the episcopate, an image neither other book has. That he wrote **against the heresy of Origen** this book shares with doxologia, and its „богодухновене речи као муња засијаше по свему свету“ is doxologia’s own lightning sentence in Serbian, so two books now agree on it word for word. `ls saints | grep -i origen` holds only `leonides-father-of-origen`, and Origen himself is this entry’s heresiarch and no folder; **no rows at all** on this day. `types` UNTOUCHED, `office` UNTOUCHED. Свештеномученик is the `hieromartyr` and епископ the `bishop`, both of which the folder carries, and the `office` «Bishop» is already there; патарски is the see, which §6 keeps out of the stored form and which the folder’s own §10-reserved display name already carries. „Учен и красноречив архијереј“ — learned and eloquent — is in the body and would not have been written even had the corpus a type for it. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FIFTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Свети Левкије, епископ врунтисиопољски, у Италији“ — Leucius, born in Alexandria, early into a monastery, counted worthy of great revelations and of a mighty grace, so that he raised the dead and drove demons out of men; bishop first in Alexandria, then by a command from heaven crossing into Italy to the pagan city of Vruntisiopolj, which he baptised whole and in which he built a church of the Mother of God; and after much and successful labour passing over into eternity in the time of the emperor Theodosius II, in the fifth century. **Three folders hold the name and not one of them is he.** `ls saints | grep -i leuci` returns exactly three: `leucius-of-caesarea`, a martyr of 249–251 kept with Thyrsus and Coronatus, who is not a bishop and not of Italy; `leucius-companion-of-peter`, a martyr kept with Peter and Severus on the Greek 11 January; and `leucius-of-volokolamsk`, a Russian. `ls saints | grep -iE 'brundis|brindis'` returns nobody at all. Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the fifth century, Theodosius II and the city are written nowhere**, because there is nothing to write them on. The day’s verse is his, and a verse is not a hymn and not a folder either. THE DAY’S SIXTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Блажени Студије“ — Studius, a notable patrician and consul in Constantinople, who founded near the Golden Gate the church of Saint John the Forerunner and the monastery called the Studion after him; a house that became famous for many glorious men, spiritual fathers, ascetics and sufferers for the faith; destroyed by the Latin crusaders in 1204, restored by the emperor Constantine Palaeologus Porphyrogenitus in 1293, and with a Turkish mosque standing on the place now. `ls saints | grep -i studi` returns five folders and **every one of them is a Studite and not the Studius the house is named after** — `damascene-the-studite`, `james-of-studion`, `naucratius-the-studite`, `nicholas-the-studite`, `theodore-the-studite`. The last of those is the man this entry names as the house’s most famous son, and **he takes no row and no mention in any prose written today**: a founder’s monastery is a dedication and a later inhabitant of it is not a relation. Ruling 3 on Studius himself: named here, no folder from me, and **1204, 1293 and the consulship are written nowhere**. The Блажени of his heading therefore decides nothing, there being no folder for it to decide a type on; had there been one it would still be the §5 reading «fool-for-christ *or* righteous — read which», and a patrician and consul who founds a monastery is neither obviously."
     }
   ],
   "hymns": [
@@ -97,5 +112,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 311,
+      "latest": 311,
+      "display": "311",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 20. јун ст. ст.: „Незнабошци се дигоше на њега, мучише га и посекоше у Халкиди Сиријској 311. године“ — the pagans rose against him, tortured him and cut him down at Chalcis in Syria in the year 311. The folder held no `dates` at all before this. doxologia places the suffering in the reign of Aurelian and prints no year; saint.gr gives no year in its own narrative and only the opinion it sets against itself, that of S. Eustratiades, puts the death at Chalcis in Syria under Diocletian. A reign is not a source for a year, so nothing is widened towards Aurelian and nothing is derived from the disagreement, which is stated in the life instead (5 October 2026)."
+    }
   }
 }

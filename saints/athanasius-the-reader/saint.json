@@ -10,15 +10,20 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Ιουνίου, «Άγιοι Αριστοκλής ο πρεσβύτερος, Δημητριανός διάκονος και Αθανάσιος αναγνώστης», which prints him as «Αθανάσιος αναγνώστης»; the rank word is left off the stored form."
+    },
+    {
+      "form": "Атанасије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. јун ст. ст., „Свети мученици Аристокл, Димитријан и Атанасије“ — the third of the three bare forenames, with Свети and мученици off. „чтец“ is in the body and not in the heading, so it was never a candidate for the form, and «the Reader» of the display name is the corpus’s own off saint.gr’s heading. **The fold is deliberate and forced**: `foldchk.py` returns `athanasius-of-attaleia` and `athanasius-once-a-magician`, both `sr`, for «Атанасије», so this is the third folder on the string, out of the forty-odd Athanasius folders the corpus keeps, and **the heading offers nothing at all to break it with** — no see, no place, no by-name, three forenames in a row and a single rank word over all three. This is the Zosimus case of 19 June happening to a commoner name. A `READ_FOLDS` key is added for it in the same commit."
     }
   ],
   "dates": {
     "death": {
       "earliest": 302,
-      "latest": 302,
-      "display": "302",
+      "latest": 306,
+      "display": "302 or 306",
       "basis": "traditional",
-      "note": "saint.gr's heading for each of the three: «(; - 302)», and its narrative «Το 302 μ.Χ.» for the year of the martyrdom."
+      "note": "Two books, two years, and the field is widened rather than chosen. saint.gr’s heading for each of the three: «(; - 302)», and its narrative «Το 302 μ.Χ.» for the year of the martyrdom. The Охридски пролог for 20. јун ст. ст.: „а Димитријана и Атанасија у огњу спале 306. године“ — Demetrian and Athanasius were burned in the fire in the year 306. Four years apart, nothing averaged and neither book preferred; the two books also disagree about the manner of the death, which is written in the life and in no field (5 October 2026)."
     }
   },
   "related": [
@@ -53,8 +58,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.07.2026 (20. јун ст. ст.) — „Свети мученици Аристокл, Димитријан и Атанасије“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-03&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the third of its three men. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The heading is quoted whole, as it is on the other two. **THE DAY IS NOT THE SAME NUMBER**: this folder’s only other venerated row is Greek and on 23 June, this book keeps him on the 20th, and the `serbian` row was `undocumented`, so no §4 second-day note is owed and the row goes on the day of the page read. **THE DATE IS WIDENED**, exactly as on `demetrianus-the-deacon` and for the same two sentences: `death` earliest 302, latest 306, display **«302 or 306»**, basis traditional. saint.gr «(; - 302)» and «Το 302 μ.Χ.»; this book 306. The «X or Y» form and not the dash, there being no stated range on either side. **AND HE IS ON THE SIDE OF THE DISAGREEMENT THAT MOVES**: „а Димитријана и Атанасија у огњу спале“ — burned in the fire, where saint.gr beheaded all three. Both written, neither chosen. **`types` UNTOUCHED, AND THE LECTOR TYPE IS REFUSED A SECOND TIME.** The heading gives Свети, which §5 says is not a rank, and мученици, which is the rank and gives the `martyr` this folder already carries and nothing else. „Атанасије чтец“ — the reader — stands in the **body**, and a rank inferred from the body is not written. This folder’s `types` is `martyr` alone, with no reader type on it, and **it stays that way**: the corpus’s own display name «Athanasius the Reader» comes off saint.gr’s heading «Αθανάσιος αναγνώστης», and §10 reserves display names, so the fact that the display name already says it is no warrant for the body to put it in `types`. This is the second lector type this wave has refused off a body. No `office`, no `locations`. **No new rows**, the three relating one another already. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FIFTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Свети Левкије, епископ врунтисиопољски, у Италији“ — Leucius, born in Alexandria, early into a monastery, counted worthy of great revelations and of a mighty grace, so that he raised the dead and drove demons out of men; bishop first in Alexandria, then by a command from heaven crossing into Italy to the pagan city of Vruntisiopolj, which he baptised whole and in which he built a church of the Mother of God; and after much and successful labour passing over into eternity in the time of the emperor Theodosius II, in the fifth century. **Three folders hold the name and not one of them is he.** `ls saints | grep -i leuci` returns exactly three: `leucius-of-caesarea`, a martyr of 249–251 kept with Thyrsus and Coronatus, who is not a bishop and not of Italy; `leucius-companion-of-peter`, a martyr kept with Peter and Severus on the Greek 11 January; and `leucius-of-volokolamsk`, a Russian. `ls saints | grep -iE 'brundis|brindis'` returns nobody at all. Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the fifth century, Theodosius II and the city are written nowhere**, because there is nothing to write them on. The day’s verse is his, and a verse is not a hymn and not a folder either. THE DAY’S SIXTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Блажени Студије“ — Studius, a notable patrician and consul in Constantinople, who founded near the Golden Gate the church of Saint John the Forerunner and the monastery called the Studion after him; a house that became famous for many glorious men, spiritual fathers, ascetics and sufferers for the faith; destroyed by the Latin crusaders in 1204, restored by the emperor Constantine Palaeologus Porphyrogenitus in 1293, and with a Turkish mosque standing on the place now. `ls saints | grep -i studi` returns five folders and **every one of them is a Studite and not the Studius the house is named after** — `damascene-the-studite`, `james-of-studion`, `naucratius-the-studite`, `nicholas-the-studite`, `theodore-the-studite`. The last of those is the man this entry names as the house’s most famous son, and **he takes no row and no mention in any prose written today**: a founder’s monastery is a dedication and a later inhabitant of it is not a relation. Ruling 3 on Studius himself: named here, no folder from me, and **1204, 1293 and the consulship are written nowhere**. The Блажени of his heading therefore decides nothing, there being no folder for it to decide a type on; had there been one it would still be the §5 reading «fool-for-christ *or* righteous — read which», and a patrician and consul who founds a monastery is neither obviously."
     }
   ],
   "text": {
