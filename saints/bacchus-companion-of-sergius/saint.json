@@ -16,6 +16,11 @@
       "form": "Вакх",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 331, headed «Вакх Римлянин, мч.», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Вакх",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. октобар ст. ст., „Св. муч. Сергије и Вакх“ — Св. is «saint» and not a rank and муч. is the martyr grade this corpus puts in `types`, so both come off and the bare personal name, the second of the heading’s two, is the whole of the form. It is the same string as the `ru` form this folder already stores, because the Serbian heading and the Russian name page spell the name identically; the two calendars are both recorded and nothing is folded by it."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.10.2026 (7. октобар ст. ст.) — „Св. муч. Сергије и Вакх“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, the second of its two names. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. THE HEADING IS AN ENUMERATED COMPANY OF TWO and §5 counts the names it prints: Сергије and Вакх, two names, therefore up to two folders, and the corpus already holds both — so the entry is two upgrades and no arrival. The quoted line is the one heading, whole, on both rows. THE RANK WORD IS муч., martyr by §5, and `types` IS LEFT AT `great-martyr`, WHICH IS NOT A CORRECTION OF IT: the folder took `great-martyr` from doxologia’s «Sfantul Mare Mucenic» and the Greek page, three books against one abbreviation, and a scalar field has no «X or Y» — the Prologue’s grade is recorded here instead. `dates` UNTOUCHED, AND THE PROLOGUE IS THE REASON IT COULD NOT MOVE. The folder holds `death` 290–303 off the Russian day line «Мчч. Сергия и Вакха (290-303)»; this entry closes «Пострадаше ови красни витези вере Христове око 303. г.», about 303, which lies inside the span the folder already carries. **Taking it would narrow a source’s range to one end of itself**, which is refused, and widening is for two books that disagree — these two agree. NO NEW `related`: Maximian is an emperor in a life and the governor Antiochus is the adversary of the story, and neither is a relation; the pair already relate each other. No `locations` — the entry names Rome, Barbalissos and Rosaf and the folder has never been placed, and a located saint with a thirteen-year death span is a `map-span` question nobody asked. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE ONE NEW FACT IS THE PLACE OF HIS DEATH, AND IT IS HIS AND NOT HIS COMPANION’S. «Пострада св. Вакх у граду Варвалису» — he suffered in the city of Barbalissos. The Romanian life has him beaten to death and buried by the faithful in one of the caves outside «the city» and never names it; the Greek says only that Antiochus scourged him to death; the Russian carries one life for the pair. **This book names the city, and it is a different city from the Rosaf where Sergius was beheaded**, which the same sentence makes plain. The rest is already here: the two as the first men at Maximian’s court, the refused sacrifice, the stripping of the rank, the women’s clothes and the iron hoops, the parade through Rome, Antiochus who owed them his office, and the servants relieving one another at the beating until the whole body was broken. The Prologue adds the image the others do not: out of the broken and bloodied body his holy soul went out and was carried to the Lord on the hands of angels. The sentence the two speak to Antiochus is recorded on `sergius-companion-of-bacchus`’s row and is said for both of them. THE FORM COINCIDES WITH A FORM THIS FOLDER ALREADY HOLDS, AND THAT IS NOT A FOLD. `foldchk.py` returns `[('bacchus-companion-of-sergius', 'ru')]` for «Вакх»: the Serbian heading and the Russian name page spell the name identically, so the `sr` form is the same string as the stored `ru` one **on the same folder**. `nameKeys` is a Set and the gate folds across folders, so one folder holding one string twice in two languages widens nothing; the form is still written, because it is what this calendar prints and the `ru` note cannot say so."
     }
   ],
   "hymns": [
