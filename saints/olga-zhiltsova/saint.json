@@ -1,0 +1,72 @@
+{
+  "slug": "olga-zhiltsova",
+  "display_name": "Olga (Zhiltsova)",
+  "names": [
+    {
+      "form": "Ольга (Жильцова)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 1 марта ст. ст., name page 13686, «Ольга (Жильцова), прмц.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/rusurn.py` finds the surname on no folder at all, and no folder holds the bare «Ольга» either."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 1 марта ст. ст. — «Cщмчч. Василия , Петра , Иоанна , Вениамина , Михаила пресвитеров, прмч. Антония , прмцц. Анны , Дарии , Евдокии , Ольги , Александры , Матроны , мч. Василия , мц. Надежды (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260301.html",
+        "year": 2026
+      },
+      "note": "The line is one line for fourteen people and this folder is one of them. azbyka.ru’s own page for this saint lists further days besides 14 марта, all of them synaxes; the moveable ones among them are no fixed day and no offset from Pascha this corpus can hold, and the fixed ones are another host’s commemorations and not this calendar’s. They are named in the life and recorded nowhere else."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 14 martie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 14 Μαρτίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 14 March 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученица Ольга родилась в 1887 году в селе Горетово Луховицкого уезда Рязанской губернии в семье крестьянина Егора Жильцова»"
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the fourteen for 1 марта ст. ст. with «(1938)», and azbyka.ru has her shot on 14 March 1938, which is that Julian 1 March by the civil reckoning: the day of death and the feast are the same day. No day is recorded here because this corpus records years."
+    }
+  },
+  "office": "Novice",
+  "related": [
+    "eudocia-arkhipova",
+    "basil-arkhipov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
