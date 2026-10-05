@@ -1,0 +1,111 @@
+{
+  "slug": "yaropolk-izyaslavich",
+  "display_name": "Yaropolk Izyaslavich",
+  "names": [
+    {
+      "form": "Ярополк Изяславич",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 2364, «Святой благоверный князь Ярополк Изяславич», with the rank words left off the head. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Петр Владимиро-Волынский",
+      "lang": "ru",
+      "note": "His baptismal name with his city, read out of the title of the shorter of the two life pages the name page hangs behind him, «Благоверный князь Петр Владимиро-Волынский, Ярополк». The day line gives the same name, «во св. Крещении Петра». `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "office": "Prince",
+  "types": [
+    "prince",
+    "passion-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Блгв. Ярополка, во св. Крещении Петра, кн. Владимиро-Волынского (1086).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": null,
+      "latest": 1059,
+      "display": "the 1050s or earlier",
+      "basis": "traditional",
+      "note": "The shorter life page: «Точное время рождения св. Ярополка неизвестно, полагают, что не позже 50-х гг. XI столетия». The page gives only the upper bound, and the null lower bound is that finding and not an omission."
+    },
+    "death": {
+      "earliest": 1086,
+      "latest": 1086,
+      "display": "1086",
+      "basis": "traditional",
+      "note": "Both life pages close with «(+ 1086)» — «был коварно убит по проискам князей Ростиславичей в 1086 г.» on the shorter — and the day line closes his clause «(1086)». No day of the month is given for the death; the 5 December the longer page names is the burial."
+    }
+  },
+  "related": [
+    "boris-son-of-vladimir",
+    "gleb-prince-and-passion-bearer",
+    "nestor-the-chronicler"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Яко благоверен и праведен,/ за любовь Христа Бога от своих си смерть приял еси, Ярополче,/ страстотерпче святый, благоверный княже Волынский,/ и пролиял еси кровь твою,/ якоже прежде сродницы твои и страстотерпцы, Богоблаженнии Борис и Глеб,/ ихже подвигом ревнуя благочестно,/ Господеви взывал еси усердно:/ даруй ми кончину, якоже братиям моим,/ да и аз омыю грехи моя кровию моею/ и избавлюся мира сего тщетнаго и мятежнаго./ Темже, днесь сошедшеся в память твою,/ верою и любовию славим Господа,/ укрепившаго Тебе в подвизе напрасныя смерти,/ якоже бо агнец незлобивый,/ от раба заколен еси,/ и себе самаго жертву непорочну Господеви принесл еси,/ Егоже моли, присноблаженне,/ спасти Отечество твое/ и сыновом Российстим спастися.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Тропарь благоверного Ярополка»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one right-believing and righteous, for the love of Christ God thou didst receive death at the hands of thine own, O Yaropolk, holy passion-bearer, right-believing prince of Volhynia, and didst pour out thy blood as thy kinsmen and fellow passion-bearers before thee, the God-blessed Boris and Gleb. Emulating their struggle in piety, thou didst cry fervently to the Lord: grant me an end such as my brothers had, that I too may wash away my sins with my own blood and be delivered from this vain and troubled world. Therefore, gathered today for thy memory, we glorify with faith and love the Lord who strengthened thee in the struggle of an untimely death; for as a guileless lamb thou wast slaughtered by a servant, and didst bring thyself as an undefiled sacrifice to the Lord. Pray to Him, ever-blessed one, that thy fatherland be saved and the sons of Russia be saved.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Возсия днесь преславная память твоя,/ благородне страстотерпче Христов, Ярополче Богомужне,/ созывающи нас к похвалению Христа, Бога нашего./ Темже, к тебе днесь притекающе,/ с любовию взываем радостно:/ блаженна земля, упитавшаяся кровьми твоими,/ и свята селения, приимшая дух твой,/ идеже в рай, нетленныя пищи наслаждался,/ не забуди нас, воспевающих тя,/ но присно поминай в молитвах твоих к Богу,/ да избавимся от всех бед и скорбей,/ инее присно память твою почитающи.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Кондак благоверного Ярополка»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy most glorious memory has shone forth today, O noble passion-bearer of Christ, God-manly Yaropolk, calling us together to the praise of Christ our God. Therefore, running to thee today, we cry out with love and gladness: blessed is the earth that was fed with thy blood, and holy are the dwellings that received thy spirit, where in paradise thou dost delight in incorrupt food. Forget not us who sing of thee, but remember us always in thy prayers to God, that we may be delivered from all troubles and sorrows, we who ever honour thy memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

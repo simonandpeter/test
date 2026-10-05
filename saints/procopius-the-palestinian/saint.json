@@ -11,13 +11,27 @@
       "form": "Προκόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Προκόπιος ο Παλαιστίνιος», with the rank words left off."
+    },
+    {
+      "form": "Прокопий Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1845, «Прокопий Кесарийский (Палестинский), мч.», with the rank word left off. The parenthesis is the source’s own. `.tmp/foldchk.py` reports no folder holding this form; the corpus holds a bare «Прокопий» and two Прокопий with surnames, and none of the three is this man."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Мч. Прокопия чтеца (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +61,15 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "303",
+      "basis": "traditional",
+      "note": "The folder held no dates at all: saint.gr gave him none. The Russian day line closes his clause «(303)»; the Russian life page gives no year either, and no emperor. The year is the day line’s alone."
+    }
+  },
+  "office": "Reader"
 }

@@ -10,22 +10,36 @@
       "form": "Μένιγνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Μένιγνος ο κναφέας», with the rank words left off."
+    },
+    {
+      "form": "Менигн",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1518, «Менигн, белильник, мч.», with the rank word left off and the trade kept out of the form, since the trade is the epithet this folder is named by in English. `.tmp/foldchk.py` reports no folder holding this form — the corpus’s other Менигн, a Venerable of the Greek 4 July, holds only a Greek form."
     }
   ],
   "dates": {
     "death": {
-      "earliest": 251,
+      "earliest": 250,
       "latest": 251,
-      "display": "about 251",
+      "display": "250 or 251",
       "basis": "traditional",
-      "note": "saint.gr: «έζησε στα χρόνια του βασιλιά Δεκίου (περί το 251 μ.Χ.)», and the Nikodemos passage the page prints repeats it, «κατά τους χρόνους του βασιλέως Δεκίου, εν έτει σνα΄ [251]». The year is written «περί», about; the page gives no year of birth."
+      "note": "The two calendars give two years and the corpus chooses neither. saint.gr: «έζησε στα χρόνια του βασιλιά Δεκίου (περί το 251 μ.Χ.)». The Russian day line closes his clause «(250)» and the life page closes «обезглавлен (+ 250)», setting him «при императоре Декии (249 - 251)». Both years are Decius’s reign and the interval carries both readings."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Мч. Менигна (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

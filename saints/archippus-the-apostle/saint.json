@@ -127,6 +127,38 @@
         "text": "Having you as a great star, Archippus, and enlightened by the rays of your wonders, the Church calls to you: save those who honour your memory in faith.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Апостоли святии,/ молите милостиваго Бога,/ да прегрешений оставление// подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Тропарь апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O holy apostles, pray to the merciful God that He may grant to our souls the forgiveness of our offences.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Яко звезды всесветлыя, просвещающия концы,/ апостолы Христовы восхвалим,/ Филимона славнаго, и Архиппа священнаго,/ и Онисима, и Марка, и Аполлоса,/ с нимиже и Апфию всемудрую, вопиюще:// молите непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Кондак апостолов»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As stars all-radiant, lighting the ends of the earth, let us praise the apostles of Christ — Philemon the glorious and Archippus the sacred, and Onesimus, and Mark, and Apollos, and with them Apphia the all-wise — crying out: pray without ceasing for us all.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
     }
   ],
   "dates": {
@@ -150,6 +182,21 @@
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 февраля ст. ст. — «Апп. От 70-ти Архиппа и Филимона и мц. равноап. Апфии (I).»",
         "url": "https://days.pravoslavie.ru/Days/20260219.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian",
+        "note": "**The second of the two Russian days.** The Сретенский monastery’s calendar prints the three apostles on 19 февраля ст. ст. and again here, and the second of the two life pages it hangs behind their names opens by calling this one «вторая память 22 ноября», the second commemoration — so the two rows are one calendar keeping one company twice, and not two companies. The day also carries the «Тропарь апостолов» and the «Кондак апостолов», and the kontakion names this one."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Апп. от 70-ти Филимона и Архиппа и мц. равноап. Апфии (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
         "year": 2026
       }
     },
@@ -211,6 +258,7 @@
     "apphia-wife-of-philemon",
     "john-chrysostom",
     "paul-the-apostle",
-    "philemon-the-apostle"
+    "philemon-the-apostle",
+    "onesimus-the-apostle"
   ]
 }

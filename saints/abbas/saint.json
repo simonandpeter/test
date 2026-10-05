@@ -12,6 +12,11 @@
       "form": "Αββάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Όσιος Αββάς», with the rank words left off."
+    },
+    {
+      "form": "Агавва Исмаильтянин, Сирийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 47, «Агавва Исмаильтянин, Сирийский, прп.», with the rank word left off. The two place epithets are the source’s own and are kept in the order it prints them. `.tmp/sr-foldpred.mjs abbas` reports the form adds a new fold key with no other holder."
     }
   ],
   "related": [
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The Greek and the Russian calendars keep one man on this day under two names, and the identification is made on the life and not on the name. saint.gr’s «Όσιος Αββάς» had been a Hagarene, came to believe through a monk, went with him to the great ascetic Eusebius on the mountain near Asicha, stayed with him and succeeded him over the monastery there. days.pravoslavie.ru’s «Агавва исмаильтянин» was an Ishmaelite by birth, laboured in Syria, and was a novice under «преподобного Евсевия». Hagarene and Ishmaelite are the one thing; the elder is the one man; the day is the same 22 November on both calendars; and Агавва is the Slavonic of Ἀββᾶς. A name scan found nothing, because this folder held no Russian form and the two forms do not fold together — the feast scan found it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Прп. Агаввы исмаильтянина (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The folder held no dates at all: saint.gr gave him no year and no century. The Russian day line closes his clause with «(V)», the fifth century, and the Russian life page gives no year, no reign and no emperor either. The thirty-eight years of his hermitage are a length and not a date, and no birth year is derived from them here."
+    }
   }
 }

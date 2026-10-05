@@ -1,0 +1,113 @@
+{
+  "slug": "michael-of-tver",
+  "display_name": "Michael of Tver",
+  "names": [
+    {
+      "form": "Михаил Тверской",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1562, «Святой благоверный князь Михаил Тверской», with the rank words left off the head. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Михаил Ярославич",
+      "lang": "ru",
+      "note": "The patronymic form, read out of the title of the first of the two life pages the name page hangs behind him, «Святой благоверный великий князь Михаил Ярославич, Тверской чудотворец». `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "office": "Grand Prince",
+  "types": [
+    "prince",
+    "martyr",
+    "passion-bearer"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Блгв. кн. Михаила Тверского (1318).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1272,
+      "latest": 1272,
+      "display": "1272",
+      "basis": "traditional",
+      "note": "Both of the two lives the name page hangs behind him give the year flat and agree: «родился в 1272 году, вскоре по смерти отца» on the first, «родился в 1272 году уже после смерти своего отца» on the second."
+    },
+    "death": {
+      "earliest": 1318,
+      "latest": 1319,
+      "display": "1318 or 1319",
+      "basis": "traditional",
+      "note": "The page disagrees with itself and the corpus chooses neither year. The day line closes his clause «(1318)» and the second life page closes «(+ 1318)»; the first life page dates the murder itself, «вонзил ему нож в ребра и вырезал сердце (22 ноября 1319 г.)». No third source was read, so the interval carries both readings."
+    }
+  },
+  "related": [
+    "alexander-nevsky",
+    "anna-of-kashin",
+    "macarius-of-optina",
+    "theodore-prince-of-yaroslavl"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Возвысив ум твой к Богу,/ и жития со Ангелы возжелел еси,/ тленную славу земную оставил еси, блаженне,/ и положил еси душу твою за люди твоя,/ восприял еси венец противу трудов твоих, Богомудре Михаиле,/ моли Христа Бога о чтущих любовию святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Тропарь благоверного князя Михаила Тверского»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having raised thy mind to God, and desired the life of the angels, thou didst leave behind the corruptible glory of earth, O blessed one, and didst lay down thy soul for thy people; thou hast received a crown in return for thy labours, O God-wise Michael. Pray to Christ God for those who honour thy holy memory with love.",
+        "rendered": "site"
+      },
+      "tone": "глас 8"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Вышних ища и земную славу презрев,/ Церковь Божию обагрил еси твоею кровию,/ за Нюже и пострадал еси, святе Михаиле,/ заколение неправедное прием, веселяся./ Темже со Ангелы предстоя Христу Богу,/ моли непрестанно за вся ны.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Кондак благоверного князя Михаила Тверского»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking the things on high and despising the glory of earth, thou didst dye the Church of God crimson with thy blood, for which thou also didst suffer, O holy Michael, receiving an unjust slaughter with gladness. Therefore, standing with the angels before Christ God, pray without ceasing for us all.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
