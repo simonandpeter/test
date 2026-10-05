@@ -1,0 +1,59 @@
+{
+  "slug": "onesius-5-march",
+  "display_name": "Onesius (5 March)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Онисий Усуровский (Исаврийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 1663, «Онисий Усуровский (Исаврийский), мч.», with the grade word left off; the day's own line declines the bare forename and gives no place at all. Both toponymics are kept because both are part of the name the index carries, **and they contradict the life behind the same line**, which says he lived in Palestine. The gate's own `nameKeys` reports no folder holding the fold of this form, of the bare «Онисий», of `Onesius` or of this display name."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Мч. Онисия (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "The only one of the day's ancient entries the corpus did not already hold. **The name is Онисий and not Онисим or Онисифор**, of which the corpus keeps eight and five; `.tmp/rusurn.py` finds no folder holding any form beginning Ониси but those thirteen, and none of them stands on this day. He is not named on the Greek, Romanian or Serbian 5 March, none of which the corpus holds him from."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1,
+      "latest": 100,
+      "display": "1st century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line for 5 марта ст. ст. with (I) and gives no year; its life gives neither a year, a century nor a reign. The century is this one calendar's and no second source has been read for him."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

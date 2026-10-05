@@ -6,11 +6,17 @@
       "form": "Κοδράτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word and the office «ο δήμιος» left off."
+    },
+    {
+      "form": "Кодрат (Квадрат)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 13967, «Кодрат (Квадрат), мч.», with the grade word left off. The day's own line declines the name. The parenthesis is the calendar's own and is kept, and it is load bearing: the shared life spells him Квадрат throughout while the line and the name link spell him Кодрат, and the link prints both. `.tmp/foldchk.py` reports no folder holding «Кодрат (Квадрат)» — and reports the bare «Кодрат» held by `quadratus-the-apostle` in both `ru` and `sr`, so stripping the calendar's parenthesis to a bare forename is what would have folded this martyr onto one of the Seventy."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "dates": {
     "death": {
@@ -24,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Мчч. Павла , сестры его Иулиании и с ними Кодрата , Акакия и Стратоника (ок. 273)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "note": "The line names all five of the company and this folder is one of the three soldiers. The two it names first, the brother and sister of Ptolemais, already carry a venerated russian row for 17 августа ст. ст., whose line reads «Мчч. Павла, Иулиании и прочих с ними (ок. 273)» and enumerates nobody; this 4 марта line is the only one of the two that names these three at all, and so it is the day their row cites."
     },
     {
       "church": "romanian",

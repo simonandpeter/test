@@ -16,6 +16,11 @@
       "form": "Герасим",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 4 March on pravoslavno.rs, „Преподобни Герасим.“, with the rank word Преподобни left off. The heading carries neither the Jordan nor the Thebaid, both of which are in the body."
+    },
+    {
+      "form": "Герасим Иорданский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 504, «Преподобный Герасим Иорданский», with the rank words left off. The day's own line declines the name. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -38,18 +43,27 @@
   ],
   "dates": {
     "death": {
-      "earliest": 475,
+      "earliest": 451,
       "latest": 475,
-      "display": "475",
+      "display": "451 or 475",
       "basis": "traditional",
-      "note": "doxologia.ro's own closing note weighs the sources and concludes: «a ajuns până la domnia lui Zenon (474-481), întru a cărui vreme, în anul al doilea, Cuviosul Gherasim a murit. Și a fost această moarte în anul 475, după nașterea lui Hristos, indictionul 13». The same note rejects the Prologue's placing of him under Constantine the Bearded (668-685)."
+      "note": "The two readings are kept and neither is chosen. days.pravoslavie.ru closes its line for 4 марта ст. ст. with (451) and its shorter life «Преподобный Герасим мирно отошел ко Господу в 451 г.»; doxologia.ro, saint.gr and the Охридски пролог all give 475, and saint.gr makes 451 the year of his tonsure in the desert of the Jordan instead. The longer of the two Russian lives dates only his coming into Palestine, to about 450."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Прп. Герасима , иже на Иордане (451)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -144,6 +158,22 @@
       },
       "english": {
         "text": "Rising like a heavenly star, thou didst make bright in a holy manner, with the light of thy virtues, the desert of the Jordan, O venerable and God-minded father Gerasimus.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Возгоревся рачением горним,/ жестость пустыни Иордановы паче всех мира сладких предпочел еси;/ отонудуже повинуся тебе зверь даже до смерти, отче,/ послушне и жалостне на гробе твоем скончася,/ прославльшу тя тако Богу,/ к Немуже моляся, и о нас,// отче Герасиме, поминай.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Кондак преподобного Герасима»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Kindled with love for the things on high, thou didst prefer the hardness of the desert of the Jordan above all the sweet things of the world; wherefore the beast was obedient unto thee even unto death, O father, and ended its days upon thy grave in obedience and in grief, God having so glorified thee. Praying unto him, remember us also, O father Gerasimus.",
         "rendered": "site"
       }
     }

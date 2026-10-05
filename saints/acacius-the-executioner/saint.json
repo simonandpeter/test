@@ -6,11 +6,17 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Παύλος και Ιουλιανή και οι μαζί μ' αυτούς μαρτυρήσαντες Στρατόνικος, Κοδράτος και Ακάκιος οι δήμιοι», with the rank word and the office «ο δήμιος» left off."
+    },
+    {
+      "form": "Акакий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 13968, «Акакий, мч.», with the grade word left off. The day's own line declines the name. The link gives the bare forename and no more, and the note says so because that is what a bare form has to say. `.tmp/foldchk.py` reports no folder holding «Акакий» at all, although the corpus keeps fifteen folders whose Greek form folds together as ακακιοσ and four whose Serbian form folds as акакије: this is the first Russian form of the name in the corpus."
     }
   ],
   "sex": "male",
   "types": [
-    "martyr"
+    "martyr",
+    "soldier"
   ],
   "dates": {
     "death": {
@@ -24,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Мчч. Павла , сестры его Иулиании и с ними Кодрата , Акакия и Стратоника (ок. 273)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "note": "The line names all five of the company and this folder is one of the three soldiers. The two it names first, the brother and sister of Ptolemais, already carry a venerated russian row for 17 августа ст. ст., whose line reads «Мчч. Павла, Иулиании и прочих с ними (ок. 273)» and enumerates nobody; this 4 марта line is the only one of the two that names these three at all, and so it is the day their row cites."
     },
     {
       "church": "romanian",

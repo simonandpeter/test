@@ -16,6 +16,11 @@
       "form": "Конон Баштован",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 5 March on pravoslavno.rs, „Свети мученик Конон Баштован.“, with the rank word мученик left off and Свети, which is not a rank. Баштован, the gardener, is kept: it is the by-name his trade gives him, it is what this folder's English name already carries from the other two calendars, and it is what the Prologue uses to tell him from the Conon of the entry before."
+    },
+    {
+      "form": "Конон Мандонский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 1267, «Конон Мандонский (Памфилийский), градарь (огородник), мч.», with the rank and grade words left off. The day's own line declines the name. The two words left off are the trade, градарь with огородник glossing it, which is the gardener of this folder's display name; both toponymics are kept because both are part of the name the index carries. **The index names a province the life does not**: Памфилийский, of Pamphylia, where the life has him born at Nazareth in Galilee and living at Мандон. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -34,8 +39,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Мч. Конона градаря (III)»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

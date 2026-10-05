@@ -16,6 +16,11 @@
       "form": "Марко Подвижник",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 5 March on pravoslavno.rs, „Преподобни Марко Подвижник.“, with the rank word Преподобни left off. Подвижник, the ascetic, is kept rather than stripped as a second rank: it is the by-name this folder's English name already carries from the other two calendars, which print «Marcu Pustnicul» and «Μάρκος ο ασκητής», and the bare forename would fold with the corpus's other men of the name."
+    },
+    {
+      "form": "Марк Нитрийский, Египетский, Келлийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 1463, «Марк Нитрийский, Египетский, Келлийский, Постник», with the one rank word left off. The line itself declines the name and gives only Постника, the faster. All three toponymics are kept because all three are part of the name the index carries, **and the index has one more than the life does**: the life page is titled «Марк Нитрийский, Египетский, Постник», without Келлийский. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/sr-foldpred.mjs` predicts no fold for it."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Прп. Марка Постника (V)»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -100,5 +114,14 @@
     "mark-the-athenian",
     "photius-of-constantinople",
     "symeon-the-new-theologian"
-  ]
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The first century any source read gives him, and it is given twice over: days.pravoslavie.ru closes its line for 5 марта ст. ст. with (V) and opens its life «Преподобный Марк подвизался в V веке в Нитрийской пустыне». doxologia.ro, saint.gr and the Охридски пролог give no year and no century, so this folder had no dates at all until now. It is recorded as a floruit and not as a death because the calendar dates his ascetic life and not his end."
+    }
+  }
 }

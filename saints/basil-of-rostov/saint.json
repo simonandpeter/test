@@ -6,17 +6,32 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιος Βασίλειος βασιλεύς Ροστώβ της Ρωσίας», with the rank word, the title and the country left off. The day's line calls him βασιλεύς, king; the body of the page calls him πρίγκιπας, prince, throughout, and that is the word this folder's `types` carries."
+    },
+    {
+      "form": "Василий (Василько) Ростовский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 386, «Святой благоверный князь Василий (Василько) Ростовский», with the rank words left off. The day's own line declines the name. `.tmp/foldchk.py` reports no folder holding this form. The parenthesis is the calendar's own and is kept: Василько is the name the chronicles call him by throughout both lives, and it is not a rank or a see."
     }
   ],
   "sex": "male",
   "types": [
-    "prince"
+    "prince",
+    "passion-bearer"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him in Russia, so that calendar is the one most likely to hold him, and it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Блгв. кн. Василия (Василько) Ростовского (1238)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,18 +61,18 @@
   ],
   "dates": {
     "birth": {
-      "earliest": 1209,
+      "earliest": 1208,
       "latest": 1209,
-      "display": "1209",
+      "display": "1208 or 1209",
       "basis": "attested",
-      "note": "saint.gr: «Ο Άγιος Βασίλειος γεννήθηκε στις 7 Δεκεμβρίου 1209 μ.Χ.», and the page heads him «(1209 - 1238)»."
+      "note": "Both readings give the seventh of December and they are one year apart. saint.gr, from which this folder was written, gives 1209; days.pravoslavie.ru's longer life gives «родился 7 декабря 1208 года в Ростове». Neither is chosen. Both agree he was under ten when his father died in February 1218 and not yet thirty when he was killed in 1238."
     },
     "death": {
       "earliest": 1238,
       "latest": 1238,
       "display": "1238",
       "basis": "attested",
-      "note": "saint.gr puts the final battle on «Στις 4 Μαρτίου 1238 μ.Χ.» and has him taken and hanged after it; the page heads him «(1209 - 1238)»."
+      "note": "The fourth of March 1238, the day of the battle on the river Сить, in all sources read; he was killed some days later in the Шернский forest, which neither calendar dates separately."
     }
   },
   "related": [
