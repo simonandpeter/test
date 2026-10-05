@@ -1,0 +1,9 @@
+# Publius of Egypt
+
+The Православный церковный календарь of the Сретенский monastery names him on 5 апреля ст. ст. in four words, «Прп. Пуплия Египетского (IV).», and the name link behind the line, page 1861, repeats them as «Пуплий Египетский, прп.» and gives him this one day and no other. Behind the line there is a life, and it is short: two paragraphs, one incident, and no birthplace, no family, no monastery and no year of death. He is not the Publius of the city on the Euphrates whom the Romanian, Greek and Serbian calendars keep on 25 January — the councillor who gave away his father’s property, dug himself a cave in the mountains and weighed his disciples’ bread on the scales — and nothing on either page links the two.
+
+He struggled in the Egyptian desert in the reign of Julian the Apostate. Before his campaign against the Persians the emperor sent a demon to reconnoitre the road his army was to take; Publius saw the design in spirit, stood up to pray with his hands raised, and praying so for a day and a night barred the devil’s road. Ten days the evil spirit waited for the ascetic to finish his prayer, and when it had waited in vain it went back to the emperor and reported its defeat.
+
+Julian swore in his anger that he would avenge himself on Publius when he came back from the campaign, and he never came back — he was killed soon after and had no time to keep the oath. After his death one of his commanders gave away his estate to the poor and received the monastic tonsure at Publius’s hands. The commander is not named, and nothing else is told of the ascetic: the page prints no hymn for him, and the day page prints none under his name either.
+
+*After the Православный церковный календарь of the Сретенский monastery for 5 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260405.html) and [the life](https://days.pravoslavie.ru/Life/life789.htm); read 6 October 2026.*

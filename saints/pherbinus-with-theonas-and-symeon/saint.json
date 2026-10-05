@@ -10,6 +10,11 @@
       "form": "Φερβίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιοι Θεωνάς. Συμεών και Φερβίνος», with the rank word left off."
+    },
+    {
+      "form": "Форвин",
+      "lang": "ru",
+      "note": "Read out of the title on the third of the three name links behind the line for 5 апреля ст. ст., name page 2327, «Форвин, прп.», with the rank abbreviation left off. The calendar gives him no toponymic, no see and no by-name, so the bare forename is the whole of the form it prints. No folder holds this form, and it is the letter-for-letter Russian of the Greek Φερβίνος this folder was made from."
     }
   ],
   "related": [
@@ -19,8 +24,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Прпп. Феоны , Симеона и Форвина (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the three names’ single line for 5 апреля ст. ст. with «(IV)». It is the first date this folder has carried: saint.gr, which is the only other book that keeps the three, says of them only that they reposed in peace and prints no year, no reign and no century. The century is written on all three folders off the one line that names all three, and it rests on the identification this folder’s life states and does not hide."
+    }
   }
 }

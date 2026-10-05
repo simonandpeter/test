@@ -44,7 +44,7 @@
         "day": 5,
         "month": 10,
         "calendar": "julian",
-        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists three other days: «19 июня», his repose, «5 апреля (перенесение мощей)», and «26 января (интронизация)», the day of his enthronement as the first patriarch of Moscow. One row per church is the schema, so the other days are recorded here and he does not render on them."
+        "note": "This day is the synaxis of the hierarchs of Moscow, which the calendar marks «(Моск. Свт.)» and does not expand. His name page lists three other days: «19 июня», his repose, «5 апреля (перенесение мощей)», and «26 января (интронизация)», the day of his enthronement as the first patriarch of Moscow. One row per church is the schema, so the other days are recorded here and he does not render on them. **The 5 апреля day page was read on 6 October 2026 and gives that translation its year**: «Перенесение мощей свт. Иова , патриарха Московского и всея Руси (1652).» — 1652, when the relics were brought from Staritsa to the Dormition cathedral in Moscow. It is a translation of relics and therefore a feast and not a folder, and this row is not moved onto it; the troparion and the kontakion that day prints are his own and are in this folder’s hymns."
       },
       "source": {
         "text": "days.pravoslavie.ru, 5 октября ст. ст. — «Свтт. Московских Петра, Феогноста, Алексия, Киприана, Фотия, Ионы, Геронтия, Иоасафа, Макария, Филиппа, Иова, Ермогена, Тихона, Петра, Филарета, Иннокентия и Макария.»",
@@ -52,7 +52,7 @@
         "year": 2026,
         "note": "The rank is the alt text of the icon the page sets immediately before this line, «Совершается служба с полиелеем» — a polyeleos service, the one rank on the day above the plain one. He is the eleventh of the seventeen names and the first patriarch on it."
       },
-      "note": "The index keeps his enthronement as a feast in its own right, which for the first patriarch of Moscow is the thing it would keep. It prints no year; the folder's dates still rest on their own source."
+      "note": "The index keeps his enthronement as a feast in its own right, which for the first patriarch of Moscow is the thing it would keep. It prints no year; the folder’s dates still rest on their own source."
     },
     {
       "church": "romanian",
@@ -82,5 +82,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Православия поборниче,/ веры Христовы исповедниче,/ первоиерарше Церкве Русския,/ святителю отче Иове,/ за ны Христа Бога моли:/ веру отеческую утвердити,/ грехов оставление нам даровати// и подати миру велию милость.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 5 апреля ст. ст., under «Молитвы»: «Тропарь святителя Иова», глас 5. His own and a proper: it names him, «святителю отче Иове», and it names the office the Russian church gives him, first hierarch of the Russian Church. The folder held no hymn at all before, saint.gr having printed none.",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Champion of Orthodoxy, confessor of the faith of Christ, first hierarch of the Russian Church, holy father Job, pray Christ God for us: that the faith of our fathers be made firm, that the forgiveness of sins be granted us, and that great mercy be given to the world.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "В годину лютых искушений/ многострадальному Иову подобяся,/ в жертву живу и непорочну/ себе Христу принесл еси,/ обратив паству к покаянию,/ терпеливе Иове святителю,/ моли и нам за вся благодарити Господа/ и всегда воздавати// славу Богови.",
+      "source": {
+        "text": "days.pravoslavie.ru, the same day page, «Кондак святителя Иова», глас 7. His own and a proper: it names him twice and turns his name, as the service for a first patriarch deposed in the Time of Troubles would, on the much-suffering Job of the Old Testament whose name he was given at his tonsure.",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In a season of cruel trials, being made like the much-suffering Job, you offered yourself to Christ as a living and spotless sacrifice and turned your flock to repentance, O patient hierarch Job; pray that we too may give thanks to the Lord for all things and always render glory to God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
