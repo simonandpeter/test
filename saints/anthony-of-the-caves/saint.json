@@ -15,6 +15,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Όσιος Αντώνιος ο Ρώσος ο Εσφιγμενίτης», with the rank word and the two bynames — the Russian, the Esphigmenite — left off."
+    },
+    {
+      "form": "Антоније кијево-печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. јул ст. ст., „Антоније кијево-печерски.“ — **the whole heading, because the heading is nothing but the name**: there is no rank word in it to strip, not even „Св.“, and „кијево-печерски“ is a by-name and not a see, so §6 keeps it and the form is the fullest this calendar gives. `foldchk.py` returns no holder for the string and `sr-foldpred.mjs` predicts a new key with no other holder — **and the by-name is what keeps it so**, the corpus holding more than twenty Anthony folders, so this is §6’s rule earning its keep for the second time in this wave."
     }
   ],
   "sex": "male",
@@ -84,8 +89,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 15.09.2026 (2. септембар ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.07.2026 (10. јул ст. ст.) — „Антоније кијево-печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE HEADING CARRIES NO RANK WORD AT ALL**, not even „Св.“ — three words, two of them the name and the third the by-name — which is the first such heading of this range and is why `types` gains nothing from it. The identification is plain: the by-name „кијево-печерски“ is this folder’s own ground, and the body gives Lyubech near Chernihiv, the Holy Mountain, the monastery of Esfigmenou, the cave by Kyiv, the setting of Theodosius as abbot, and the year. **FOUR CALENDARS AND TWO DAYS.** The Romanian and Greek rows stand on this very 10 July and the Russian row on the 2 September; the `serbian` row was `undocumented`, so it is written plainly on this book’s day and nothing of the other three is touched. **`dates` UNTOUCHED, AND THE BOOK CONFIRMS THE YEAR THE FOLDER ALREADY HOLDS.** „Представи се Господу 1073. год. у 90 год. свога живота“ — he reposed to the Lord in 1073 in the 90th year of his life. 1073 is the folder’s `death`, `attested` off days.pravoslavie.ru, and it agrees to the year. **The age of ninety is an age and not a date**, and nothing is subtracted from 1073 to reach a birth, though the folder’s `birth` of 983 is exactly what that subtraction would give and the temptation is therefore at its strongest here. Two numbers that agree are still not a reading, and the arithmetic is the Sretensky calendar’s, not this book’s. `types` UNTOUCHED at `venerable`: the heading ranks him not at all, and „Основатељ и отац монаштва у Русији“, founder and father of monasticism in Russia, is a body sentence and not a type this vocabulary has. **`wonderworker` is refused** for the eighth time in this wave — „Имаше велики дар прозорљивости и исцелења болних“, he had a great gift of clairvoyance and of healing the sick, stands in the body; and **`abbot` is refused twice over**, because the book says the opposite: he set Theodosius as abbot and himself stayed in the cave „као безмолвник“, as a keeper of silence. No `locations`: Lyubech, Chernihiv, the Holy Mountain, Esfigmenou and Kyiv are a narrative. **ONE RELATED ROW ALREADY EXISTS AND NO NEW ONE IS MADE.** The folder relates `theodosius-of-the-kyiv-caves` in both directions already, and he is the one man this entry names, so the life can link him. The abbot on the Holy Mountain who sent him back to Russia on a heavenly revelation is unnamed in the book. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
