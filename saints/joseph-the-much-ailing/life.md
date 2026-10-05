@@ -1,0 +1,9 @@
+# Joseph the Much-Ailing
+
+The Православный церковный календарь of the Сретенский monastery keeps him on 4 апреля ст. ст. — «Прп. Иосифа многоболезненного, Печерского (XIV).» — and the name page behind that line, number 1060, is an index carrying two readings of him, both short and both agreeing. He lived in the fourteenth century. For many years he suffered from one illness after another, and in the weight of it he turned to God in prayer and made a vow: that if the Lord gave him his health he would serve the brethren of the Kyiv Caves monastery to the end of his days.
+
+The prayer was heard. After his recovery he entered that monastery, took the monastic tonsure and set himself to labour in fasting and prayer and to serve the brethren with love and with patience; and when he died he was buried in the Far Caves. That is the whole of what the calendar has of him — no birthplace, no family, no abbot, no year, and no account of the illness beyond the word the Church has made his name, «Многоболезненный», the much-ailing.
+
+The calendar lists a second day beside this one, «28 августа (Печер.(Д))», which is the synaxis of the fathers of the Far Caves and not a commemoration of his own; it is recorded here and not in the feast. The day page prints two hymns under his name, a troparion and a kontakion both in глас 8. The troparion is the common of a venerable father with his name set in it, and is sung to him; the kontakion is his own, and it tells his life back in five lines — the long sickness, the prayer and the promise of the monastic habit, the health received from God, the unslackening labour in the Caves, and the healing of those who honour him.
+
+*After the Православный церковный календарь of the Сретенский monastery for 4 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260404.html) and [the life](https://days.pravoslavie.ru/Life/life777.htm); read 5 October 2026.*
