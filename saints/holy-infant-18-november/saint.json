@@ -10,13 +10,27 @@
       "form": "Άγιο Νήπιο",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιο Νήπιο», with the rank words left off. The form recorded is the line's whole designation, because the page gives the child no name, no sex and no parents."
+    },
+    {
+      "form": "Варул Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 18 ноября ст. ст., «Варул Антиохийский, отрок, мч.», with the rank word and «отрок» — which is his age and not his name — left off; the line declines it. This is the only one of the four calendars that gives this child a name at all. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 ноября ст. ст. — «Мчч. Романа диакона и отрока Варула (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261118.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -46,11 +60,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 304,
+      "earliest": 303,
       "latest": 304,
-      "display": "304",
+      "display": "303 or 304",
       "basis": "traditional",
-      "note": "saint.gr's head line: «Αγιο Νηπιο (; - 304)», the same year its page for «Άγιος Ρωμανός» gives for his drowning, the scene the infant's notice belongs to. The page gives the child no other year and no age."
+      "note": "Two sources one year apart and the interval is widened to hold both. saint.gr gave the 304 this folder held flat, which is the year it gives the deacon of the same day; days.pravoslavie.ru closes the line for 18 ноября ст. ст. with «(303)» and its life page closes the child’s death «(+ 303)». Neither page gives an age or a year of birth."
     }
   },
   "related": [

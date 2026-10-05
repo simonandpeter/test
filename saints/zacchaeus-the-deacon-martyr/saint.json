@@ -11,6 +11,11 @@
       "form": "Ζακχαίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Νοεμβρίου, «Άγιοι Ζακχαίος ο Διάκονος και Αλφαίος», with the rank words left off. The line keeps the two together; the bare personal name is taken out of it and the rank left to `types`."
+    },
+    {
+      "form": "Закхей Гадаринский, Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 18 ноября ст. ст., «Закхей Гадаринский, Кесарийский (Палестинский), диакон, сщмч.», with the grade and rank words left off. The parenthesis is the calendar’s own and 82 stored `ru` forms already carry a second see this way. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 18 ноября ст. ст. — «Мчч. Закхея , диакона Гадаринской Церкви, и Алфея , чтеца в Кесарии Палестинской (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261118.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -65,11 +79,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 307,
+      "earliest": 303,
       "latest": 307,
-      "display": "307",
+      "display": "303 or 307",
       "basis": "traditional",
-      "note": "saint.gr: «Την επομένη τους αποκεφάλισαν (307 μ.Χ.)», and the head line «Αγιος Ζακχαιος ο Διακονος (; - 307)»."
+      "note": "Two sources four years apart and the interval is widened to hold both, neither narrowed. saint.gr gave the 307 this folder held flat; days.pravoslavie.ru closes the line for 18 ноября ст. ст. with «(303)» and closes its life page «(+ 303)». That page puts the persecution in the reign of Diocletian, «(284–305)», which holds the 303 and not the 307, and this corpus narrows no source’s own reading on that account. Neither page gives a year of birth."
     }
   },
   "related": [
