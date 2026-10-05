@@ -3,13 +3,19 @@
   "display_name": "Paul (28 June)",
   "sex": "male",
   "types": [
-    "physician"
+    "physician",
+    "venerable"
   ],
   "names": [
     {
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Ιουνίου, «Άγιος Παύλος ο ιατρός», with the rank words and the calling left off."
+    },
+    {
+      "form": "Павле",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 28 June, „Преподобни Павле Лекар.“ — both words of the heading’s title left off. Преподобни is `venerable`, added to `types` by this reading; **Лекар is a rank word too and not an epithet** — BRIEF-SERBIAN.md §5 maps Лекар to `physician`, which this folder already carried off the Greek line — so §6 strips it as well and what is left is the single word Павле. That is the shape §6 warns about and it folds: five other folders already store a bare Павле. The fold is in this commit’s FINDINGS and in `READ_FOLDS`. The heading offers nothing else; Коринћанин, a Corinthian, is in the body and not in the heading."
     }
   ],
   "attestations": [
@@ -40,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.07.2026 (28. јун ст. ст.) — „Преподобни Павле Лекар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third and last entry. **The identification rests on four things agreeing and none of them on the name alone.** saint.gr’s line for 28 Ιουνίου, which made this folder, is «Άγιος Παῦλος ο ιατρός», Paul the physician, and its page says only that he died in peace. This book’s heading for the same menologion day is „Преподобни Павле Лекар.“: the same day, the same name, the same calling, and the same manner of death — „У старости мирно се упокоји угодивши Богу животом својим на земљи.“, he reposed peacefully in old age, having pleased God by his life on earth. **AND THIS BOOK GIVES THE FOLDER ITS FIRST LIFE AND ITS FIRST DATE**, where the Greek page had one sentence and no century at all. „Живео у VIII веку.“ — he lived in the eighth century — is written as `floruit` 701—800, **not as a death**: the book says he lived in that century, and the sentence that gives his repose gives no year with it. That follows `john-psychaites` and `leo-of-catania`, both of which carry a Prologue century as `floruit`, against `john-of-gothia`, whose own sentence (Упокоји се мирно у VIII веку) puts the century on the repose itself. **AUTHOR: a distinguishing epithet is available for the first time.** „Родом Коринћанин.“ makes him a Corinthian by birth, where the Greek page named no country at all and the display name has had to be the day. §10 reserves a display name, so nothing is changed and `Paul of Corinth` is named here for you. **NOBODY IN THE ENTRY TAKES A ROW, AND NOBODY IN IT IS NAMED.** The dissolute woman the demon put up to the slander, the heretics who dragged him out of the monastery, the blacksmith the newborn child pointed at and the child itself are all anonymous in the book, so there is nothing to refuse and nothing to identify. **One rank word in the body is refused**: the child’s own words call him Павле монах, Paul the monk, and the heading does not, so `monk` is not written — the Julian 27 June ruling again. No `locations`: Corinth is named in a clause and the monastery and the city of the procession are not named at all. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "The folder held no date at all: saint.gr’s page for 28 Ιουνίου gives him no century and no year. The Охридски пролог for 28. јун ст. ст. closes his entry „Живео у VIII веку.“ — he lived in the eighth century. It is a lifespan and not a repose: „У старости мирно се упокоји угодивши Богу животом својим на земљи.“ gives the repose and gives no year with it, so the century is `floruit` and `death` stays absent (6 October 2026)."
+    }
   }
 }

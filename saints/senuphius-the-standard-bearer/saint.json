@@ -1,0 +1,53 @@
+{
+  "slug": "senuphius-the-standard-bearer",
+  "display_name": "Senuphius the Standard-bearer",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Сенуфије Заставоносац",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 28 June, „Преподобни Сенуфије Заставоносац.“ — Преподобни left off, which BRIEF-SERBIAN.md §5 reads as `venerable` and which this folder carries. Заставоносац is kept: it is not in §5’s table of ranks, the entry explains it as a by-name earned at a particular war rather than as a grade, and the heading gives nothing else — no city, no monastery and no year — so without it the stored form would be the single word Сенуфије, which `usableName` refuses and which is the shape §6 warns about. This is the opposite call from the one the Julian 27 June made on Странопримац, which was dropped because it described what that man did and distinguished him from no other Samson; the difference is that this heading has nothing else in it at all."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 28 Ιουνίου (6 October 2026). That day’s Greek page was read for this corpus on 1 October 2026, for `paul-28-june`, and the corpus holds thirteen folders on the menologion’s 28/6 out of the Greek and Russian books, not one of which reads as this man; but the page was not re-opened for him and no absence is claimed here."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.07.2026 (28. јун ст. ст.) — „Преподобни Сенуфије Заставоносац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-11&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of three entries, one paragraph. **The first new folder of the Serbian wave**, which had made none in its first twenty-eight days: `.tmp/sr-namesweep.mjs` over this day returns no folder whose personal name is this name, `ls saints` has nothing beginning senuph, sinuph, senouph or senuf, and `grep -ril` over `saints/` for those four stems returns nothing either — the §7 check for a Serbian vernacular form the sweep’s alias table might miss, run because the sweep came back empty. Ruling 3 reports a person no folder holds rather than creating him **unless the entry is substantial**, and this one is: it is a numbered entry with its own heading and a five-sentence life, and the whole of the day’s verse is about him and about nobody else on the day. **NO `dates`, AND THE REASON IS A RULING THIS CORPUS CONTRADICTS ELSEWHERE.** „Велики испосник и чудотворац из Мисирске пустиње; савременик патријарха Теофила и цара Теодосија Великог.“ makes him a great faster and wonderworker of the Egyptian desert and a contemporary of the patriarch Theophilus and of the emperor Theodosius the Great, and that is the only chronology the entry has: no year, no reign-span, no age, no consulate. A reign is not a year and an emperor is no source for one, which is the reading the Julian 26 and 27 June both made. **AUTHOR: the corpus does not hold that line everywhere.** `abraham-of-carrhae` carries `floruit` 395—408 whose own note says it is taken from the emperor the page calls Theodosius the Great, so a folder already exists that does what this one refuses to do. Nothing is written here and the disagreement is named instead. **TWO RANK WORDS IN THE BODY, BOTH REFUSED, AND BOTH ARE TYPES THIS CORPUS HAS.** испосник is `ascetic` and чудотворац is `wonderworker`, the entry opens with both of them, and the heading gives only Преподобни. The Julian 27 June ruled that a rank word in a body is not written even when the vocabulary has it and the body says it plainly, and that ruling is followed here although this is a folder being made rather than one being changed. `types` is `venerable` alone. **AUTHOR: you may write both.** **THE PATRIARCH TAKES NO FOLDER AND NO ROW.** `ls saints | grep -i theophil` returns twenty-three folders and not one of them is a patriarch of Alexandria; an identification off a bare forename is not an identification, so he is named in the life and in no field, and Ruling 3 refuses him a folder of his own. No `locations`: the Egyptian desert and Constantinople are named in clauses and neither is a point. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
+    }
+  ],
+  "related": [
+    "theodosius-the-great"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
