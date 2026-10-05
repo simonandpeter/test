@@ -12,6 +12,11 @@
       "form": "Елезвой Эфиопский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 24 октября ст. ст., «Елезвой Эфиопский, царь, затворник», with the rank and the state of life left off. The line itself declines it and adds a second name in brackets, «Блж. Елезвоя (Калеба), царя Ефиопского»."
+    },
+    {
+      "form": "Елезвој",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. октобар ст. ст., „Св. Елезвој цар Етиопски.“ — «Св.» is \"saint\" and not a rank and «цар» is the `king` grade this corpus keeps in `types`, so both come off; «Етиопски» is the realm that follows the rank word and is left off with it, the folder’s display name already reading of Ethiopia. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`. This is the folder’s second name form of any kind."
     }
   ],
   "attestations": [
@@ -42,8 +47,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 November 2026 (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.11.2025 (24. октобар ст. ст.) — „Св. Елезвој цар Етиопски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-06&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (section 4), URL year 2025. «цар» is the `king` this folder holds — section 5 says to read which of king and emperor the man was, and the entry calls him emperor of Ethiopia while the folder’s display name and type read king, which is not a disagreement this reader resolves — and the fifteen years in the monastery are the `ascetic` it also holds. `types` untouched; the body’s «замонашити се» and «као истинити монах» would be `monk`, and that is NOT added, because the Julian 12 October established that a rank is read off the heading and this heading gives «цар» only. `dates` UNTOUCHED AND A FLAT YEAR REFUSED. The folder holds `death` «between 553 and 555» and this entry says «Упокоји се 555. год.» — ONE END OF THE INTERVAL ALREADY ON FILE. Narrowing a range to one end of itself on a second book’s flat figure is refused; the same refusal was made for Martin of Tours on 10-12 and for Artemius on 10-20. WHAT THE BOOK ADDS, AND IT IS A VOW AND A DESERT. Fired with zeal for the faith he raised an army against Dunaan. BUT AT THE BEGINNING OF THE WAR HE HAD NO SUCCESS, AND MUCH OF HIS ARMY PERISHED IN A WATERLESS DESERT. THEN HE WEPT BITTERLY BEFORE GOD AND PROMISED TO BECOME A MONK IF GOD WOULD HELP HIM BEAT THE MURDERER OF CHRISTIANS. Having beaten Dunaan he returned to Ethiopia and AT ONCE LEFT THE IMPERIAL COURT AND ENTERED A MONASTERY, where he struggled strictly as a true monk FOR A FULL FIFTEEN YEARS. GOD GAVE HIM THE GRACE OF WONDERWORKING BEFORE AND AFTER HIS DEATH. None of that is in the folder’s only other book, the Russian calendar, which is the single row it had before today — its romanian and greek rows are `undocumented`, so the Prologue is the SECOND calendar to keep him at all. No new `related`: `aretas-of-nagran` is already on this folder both ways and is the whole reason this entry exists. Dunaan and Justin are named and neither is a saint. No `office`, no `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Елезвој», and this is this folder’s SECOND name form — it had only the Russian one. THE DAY’S THIRD ENTRY IS REFUSED WHOLE. It is „Свих жалосних радост.“ — the Joy of All Who Sorrow — and the entry’s own first line says what it is: «Тако се назива једна чудотворна икона Пресвете Богородице», that is the name of a wonderworking icon of the Theotokos. AN ICON IS NOT A PERSON, and section 5 refuses it as it refuses «Пренос моштију» and a «Празник»; the heading enumerates nobody. Its body names ЕФИМИЈА, sister of the patriarch ЈОАКИМ, healed at Moscow in 1688 of a grievous wound in her side after a voice told her to go to the church of the Transfiguration and have the priest pray before that icon — and both of them are refused with the entry, being in a body and not in a heading. No folder was created and nothing was written anywhere for this entry. Note that the heading’s own quotation marks are the Serbian low-9 pair the Prologue prints, and the row quoting it nests them inside the same pair, which is what section 4 asks for. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
