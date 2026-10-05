@@ -11,6 +11,11 @@
       "form": "Ματθαίος",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Ματθαίος», with no rank word attached."
+    },
+    {
+      "form": "Матфей",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 1500, «Апостол Матфей», with the rank word left off. The calendar gives him no toponymic and no second name, so the bare forename is the fullest form it has; `matthew-monk-martyr-1918` already holds the same form, and the two are the apostle and a monk martyred in 1918."
     }
   ],
   "sex": "male",
@@ -22,8 +27,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Апостола и евангелиста Матфея (60).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -174,6 +188,38 @@
         "rendered": "site"
       },
       "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Усердно от мытницы к звавшему Владыце Христу,/ явльшуся на земли человеком за благость,/ Тому последовав, апостол избранный явился еси/ и благовестник Евангелия вселенней велегласен./ Сего ради чтим честную память твою, Матфее богоглаголиве,/ моли Милостиваго Бога,// да грехов оставление подаст душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Тропарь апостола и евангелиста Матфея», глас 3. His own, and it names him.",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Readily you followed Christ the Master who called you away from the tax-booth, Him who appeared on earth to men out of His goodness; and you were shown an apostle chosen, and a loud-voiced herald of the Gospel to the whole world. Therefore we honour your precious memory, Matthew who speak of God: pray to the merciful God that He may grant our souls the forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мытарства иго отверг,/ правды игу притяглся еси/ и явился еси купец всеизряднейший,/ богатство принес юже с высоты премудрость./ Отонудуже проповедал еси истины слово/ и унылых воздвигл еси души,// написав час судный.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Кондак апостола и евангелиста Матфея», глас 4. His own: it is about the tax-booth he left and the Gospel he wrote.",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Throwing off the yoke of tax-gathering you were harnessed to the yoke of righteousness, and were shown a merchant beyond compare, bringing back as your riches the wisdom from on high. From there you preached the word of truth and raised up downcast souls, having written of the hour of judgement.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -184,5 +230,18 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 60,
+      "latest": 60,
+      "display": "60",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 16 ноября ст. ст. with «(60)» and its life ends «Тело святого апостола осталосы невредимым, и он отошел ко Господу (60 г.)». Neither the Romanian nor the Greek page this folder was written from gave a year. The 42 the same life gives for the writing of the Gospel is the book’s year and not his, and is left in the prose."
+    }
+  },
+  "related": [
+    "fulvian-of-ethiopia",
+    "james-son-of-alphaeus"
   ]
 }

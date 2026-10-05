@@ -10,13 +10,27 @@
       "form": "Ευστόχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Νοεμβρίου, «Άγιοι Ελπίδιος, Μάρκελλος και Ευστόχιος», with the rank words left off. The line enumerates the three; the bare personal name is taken out of it."
+    },
+    {
+      "form": "Евстохий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 15 ноября ст. ст., «Евстохий, мч.», with the rank word left off. The calendar gives the three no toponymic and no surname, so the stored form is the bare forename the link carries; the line itself has it in the genitive."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 ноября ст. ст. — «Мчч. Елпидия , Маркелла и Евстохия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261115.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line of the three for 15 ноября ст. ст. with «(IV)», the fourth century. Its life sets them «при императоре Юлиане Отступнике (361 - 363)», and saint.gr gave 361 for the same reign; those are the reign’s years and not theirs, and no narrower interval is taken from them. The century is the calendar’s own statement about the three."
+    }
   }
 }
