@@ -17,6 +17,11 @@
       "form": "Евтихије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 6 April on pravoslavno.rs, „Свети Евтихије, патријарх цариградски.“, with Свети left off — it is not a rank — and with патријарх цариградски left off as well, which is the see this corpus keeps in `office` and this folder already carries there. The heading leaves no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Евтихий Константинопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 6 апреля ст. ст., name page 725, «Святитель Евтихий Константинопольский, архиепископ Константинопольский», with the grade word and the repeated see left off. The day’s own line gives «Евтихия , архиеп. Константинопольского» in the genitive. No folder holds this form."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Свт. Евтихия , архиеп. Константинопольского (582).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -141,6 +155,38 @@
       },
       "english": {
         "text": "Richly dost thou pour out the graces of a God-given portion, O holy Eutychius, upon those who cry to thee in praise: Rejoice, bright gladness of the Fathers.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правило веры и образ кротости,/ воздержания учителя/ яви тя стаду твоему/ Яже вещей Истина,/ сего ради стяжал еси смирением высокая,/ нищетою богатая,/ отче Евтихие,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 6 апреля ст. ст., under «Молитвы»: «Тропарь святителя Евтихия», глас 4. **It is a common**, the troparion of a hierarch — the rule of faith and the image of meekness — with his name set into it, «отче Евтихие», which by the standing ruling makes it his service and is copied whole. The day page prints it twice, in two redactions differing in capitals and in one stop; this is the first of the two.",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Truth of things has shown you to your flock a rule of faith, an image of meekness and a teacher of abstinence; therefore you have gained the heights by humility and riches by poverty, O father Eutychius. Pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Божественнаго верно Евтихия вси поюще, людие,/ любовию да ублажим, яко пастыря велика и служителя,/ и учителя премудра, и прогонителя ересей,// молит бо Господа о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, the same day page, «Кондак святителя Евтихия», глас 8. His own and a proper: it names him and it names what he is remembered for, the driving out of heresies. The page prints this one twice as well, the two differing only in the last division mark.",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Singing in faith of the divine Eutychius, let us all bless him with love as a great shepherd and servant and a most wise teacher and a driver-out of heresies; for he prays the Lord for us all.",
         "rendered": "site"
       }
     }

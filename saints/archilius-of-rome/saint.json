@@ -1,0 +1,68 @@
+{
+  "slug": "archilius-of-rome",
+  "display_name": "Archilius of Rome",
+  "names": [
+    {
+      "form": "Архилий Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the second of the two name links behind the line for 6 апреля ст. ст., name page 278, «Архилий Римский, иерей, сщмч.», with the office word and the rank abbreviation left off. The day’s own line gives «Архилия иерея» in the genitive with no toponymic, so the city comes from the link. No folder holds this form or the bare «Архилий»."
+    },
+    {
+      "form": "Алхимий",
+      "lang": "ru",
+      "note": "The second form the same calendar prints for him, in the title of the life page behind the line: «Святые мученики Иеремий и иерей Архилий (Алхимий)». It is given in brackets against the forename alone and carries no toponymic, and it is stored because the page prints it; no folder holds it."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Мчч. Иеремия и Архилия иерея (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the two men’s line for 6 апреля ст. ст. with «(III)» and its one-sentence life says «приняли мученическую кончину в III веке». No year is printed on either, and no other calendar read for this corpus keeps him."
+    }
+  },
+  "related": [
+    "jeremiah-of-rome"
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -21,6 +21,11 @@
       "form": "Методије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 May, „Свети Кирил и Методије Равноапостолни.“ — Свети left off, which is not a rank, and Равноапостолни left off, which is the `equal-to-the-apostles` this upgrade adds to `types` and which stands over both names and belongs to neither alone. The heading gives no epithet and no see; Thessalonica, the parents, the ten years among the Slavs, Olympus, Moravia and the Five are all in the body, and his name in the world, which saint.gr gives as Μιχαήλ, is not on this page at all. A direct walk of every `names` entry in `saints/` finds no folder holding Методије, so the form folds with nothing — the corpus's other Methodii having no Serbian form."
+    },
+    {
+      "form": "Мефодий, учитель Словенский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 6 апреля ст. ст., name page 1525, «Равноапостольный Мефодий, учитель Словенский», with the grade word left off; the index page behind it carries the same title. The epithet is kept because it is not a rank and because the bare «Мефодий» is already held by `methodius-monk-martyr-1937` as its `ru` form, which the full form keeps this folder out of; `.tmp/foldchk.py` was run on both strings before this draft. The day’s own line calls him «архиеп. Моравского» instead, which is the see and not the name."
     }
   ],
   "sex": "male",
@@ -40,8 +45,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Свт. Мефодия , архиеп. Моравского (885).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -122,6 +136,38 @@
       },
       "english": {
         "text": "Having received the radiance of the Apostles, ye were seen to be lights and teachers of the Slavs, preaching to all the word of grace. But, O all-blessed Cyril and Methodius, deliver from all harm and affliction those who cry: rejoice, blessed pair.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Святителя Твоего, Христе,/ творящим светло торжество успения/ милость Твою свыше подаждь,/ отверзи же Царствия двери,/ разреши же узы наша многих грехов/ ходатайством святаго Твоего ученика,/ отца нашего.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 6 апреля ст. ст., under «Молитвы»: «Тропарь равноапостольного Мефодия, архиепископа Моравского», глас 4. It is headed with his name and his see and is the troparion of this day, which the calendar keeps as the day of his falling asleep — «творящим светло торжество успения», to those who keep the festival of the repose brightly. The folder held only a Greek kontakion before, off the joint entry for the two brothers on 11 May.",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "To those who brightly keep the festival of the repose of Your hierarch, O Christ, grant Your mercy from on high; open to us the doors of the Kingdom and loose the bonds of our many sins, by the intercession of Your holy disciple, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Божественна и верна Мефодия/ вси воспоим, людие, и любовию ублажим,/ яко пастыря великаго словеном,/ служителя Троицы честна,/ прогонителя ереси,/ молит бо ся о всех нас.",
+      "source": {
+        "text": "days.pravoslavie.ru, the same day page, «Кондак равноапостольного Мефодия, архиепископа Моравского», глас 2. His own and a proper: it names him and calls him the great shepherd of the Slavs. It is built on the same model as the kontakion the same page prints for Eutychius, the hierarch of this day — the same phrases of the wise shepherd and the driver-out of heresy — and both are copied as the page has them.",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us all sing of the divine and faithful Methodius, O people, and bless him with love as the great shepherd of the Slavs, an honourable servant of the Trinity and a driver-out of heresy; for he prays for us all.",
         "rendered": "site"
       }
     }
