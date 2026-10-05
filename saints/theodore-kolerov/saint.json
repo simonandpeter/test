@@ -1,0 +1,70 @@
+{
+  "slug": "theodore-kolerov",
+  "display_name": "Theodore (Kolerov)",
+  "names": [
+    {
+      "form": "Феодор (Колеров)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 9405, «Феодор (Колеров), протоиерей, сщмч.», with the grade and rank words left off; the day’s own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and no folder holds the surname in any spelling, while the bare «Феодор» is held by eight."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Сщмч. Феодора пресвитера и с ним мчч. Анании и Михаила (1929).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "azbyka.ru: «Феодор Ксенофонтович Колеров родился в 1882 году в селе Семеновском Тверской губернии в семье священника». The Sretensky life gives the village and the priest’s family and no year."
+    },
+    "death": {
+      "earliest": 1929,
+      "latest": 1929,
+      "display": "1929",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 16 ноября ст. ст. with «(1929)», and both lives put the execution at eleven at night on the Julian 16 November of that year, which the Sretensky life writes «16 (29 н. ст.) ноября 1929 года» and azbyka.ru writes 29 ноября. The day of death and the feast are the same day, and no day is recorded here because this corpus records years."
+    }
+  },
+  "related": [
+    "ananias-boikov",
+    "michael-boldakov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

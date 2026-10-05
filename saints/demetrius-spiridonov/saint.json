@@ -1,0 +1,68 @@
+{
+  "slug": "demetrius-spiridonov",
+  "display_name": "Demetrius (Spiridonov)",
+  "names": [
+    {
+      "form": "Димитрий (Спиридонов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 16 ноября ст. ст., name page 9966, «Димитрий (Спиридонов), мч.», with the grade word left off; the line itself declines the forename and gives no surname. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` none holding the surname Спиридонов in any `ru` form over 5,813 folders and nothing for the stem `spiridonov`. The patronymic Spiridonovich, which azbyka.ru gives, is left in the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Мч. Димитрия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru: «Димитрий Спиридонович Спиридонов родился в 1871 году». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 16 ноября ст. ст. with «(1938)»; azbyka.ru: «Его расстреляли 29 ноября 1938 года», by the decision of a troika of 5 November 1938. The 29 November is the civil day of that Julian 16 November, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "related": [
+    "nicholas-mezentsev"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

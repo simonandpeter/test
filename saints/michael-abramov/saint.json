@@ -1,0 +1,67 @@
+{
+  "slug": "michael-abramov",
+  "display_name": "Michael (Abramov)",
+  "names": [
+    {
+      "form": "Михаил (Абрамов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 16 ноября ст. ст., name page 9351, «Михаил (Абрамов), протоиерей, сщмч.», with the grade and rank words left off; the line itself declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar’s own link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` reports no folder holding the surname Абрамов in any `ru` form over 5,807 folders, and nothing for the stem `abramov` in a slug or a display name; the bare «Михаил» is held by twelve."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 ноября ст. ст. — «Сщмчч. Иоанна , Николая , Виктора , Василия , Макария и Михаила пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261116.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 noiembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Νοεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 November 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "azbyka.ru: «Михаил Иванович Абрамов родился 1 ноября 1885 г. (по другим документам 3 ноября 1885 г.) в деревне Роговая, Дурновской волости, Пронского уезда, Рязанской губернии в крестьянской семье». The two documents differ by two days and agree on the year, which is what is recorded; days.pravoslavie.ru gives no year."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 16 ноября ст. ст. with «(1937)», and the day of the shooting, 29 November 1937, is the civil day on which that Julian 16 November falls, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years. azbyka.ru puts the resolution of the троика of the УНКВД for the Kalinin region on 27 November 1937 and the execution in the internal prison on 29 November."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
