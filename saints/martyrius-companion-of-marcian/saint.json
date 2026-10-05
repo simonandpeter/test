@@ -17,6 +17,11 @@
       "form": "Мартирий Константинопольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 25 октября ст. ст., «Мартирий Константинопольский, иподиакон, мч.», with the grade and the rank word left off."
+    },
+    {
+      "form": "Мартирије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 25. октобар ст. ст., „Св. муч. Маркијан и Мартирије.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name, the second of the heading’s two, is the whole of the form; the subdeaconship is in the body and this folder keeps it in `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -83,8 +88,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 07.11.2025 (25. октобар ст. ст.) — „Св. муч. Маркијан и Мартирије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-07&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading is an ENUMERATED COMPANY OF TWO — Маркијан and Мартирије — so BRIEF-SERBIAN section 5 counts two names, two folders are owed a row, and the corpus holds both. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. The quoted line is the one heading, whole, on both rows, and the two folders already relate one another. `types` AND `office` UNTOUCHED, AND THE ENTRY CONFIRMS BOTH OFFICES WORD FOR WORD. «муч.» is the `martyr` both hold and the standing against Arianism the `confessor`; «Маркијан беше чтец а Мартирије ипођакон при саборној цркви» is exactly the `Reader` and `Subdeacon` the two folders already carry in `office`, confirmed here from a fourth book. AND THE ENTRY ADDS A SECOND OFFICE FOR BOTH THAT THE CORPUS HAS NO FIELD FOR: «под патријархом Павлом беху патријархови нотари (писари)», under the patriarch Paul they were THE PATRIARCH’S NOTARIES, which is also what the Greek line already on these folders calls them, «οι νοτάριοι». `office` holds one string and the reader does not append to it, so the notaryship is here and in the prose. `dates` UNTOUCHED: both folders hold `death` 355 and the entry says «бише посечени, 355. год.» — the same year exactly. WHAT THE BOOK ADDS, AND IT IS A WHOLE CHAPTER OF CHURCH HISTORY. They were clergy under PAUL THE PATRIARCH OF CONSTANTINOPLE in the time of the emperor CONSTANTIUS. AFTER THE DEATH OF CONSTANTINE THE GREAT THE ARIAN HERESY, WHICH HAD BEEN SMOTHERED UNTIL THEN, CAME ALIVE AGAIN AND BEGAN TO SPREAD, AND THE EMPEROR CONSTANTIUS HIMSELF LEANED TOWARDS IT. AT COURT WERE TWO INFLUENTIAL MAGNATES, ЈЕВСЕВИЈЕ AND ФИЛИП, BOTH FIERY ARIANS, AND BY THEIR INFLUENCE THE PATRIARCH PAUL WAS THROWN OFF HIS THRONE AND BANISHED TO ARMENIA, WHERE THE ARIANS STRANGLED HIM; and the patriarchal throne was taken by the wicked МАКЕДОНИЈЕ. At a time when Orthodoxy had two bitter fights to wage at once, against the pagans and against the heretics, these two put their whole strength and resolve into it. THE ARIANS TRIED FIRST TO BRIBE THEM, and when the two refused with contempt they condemned them to death. AT THE PLACE OF EXECUTION THEY RAISED THEIR HANDS AND THANKED GOD FOR A MARTYR’S END: «Господе, радујемо се што оваквом смрћу излазимо из овога живота. Удостој нас, бити причасницима живота вечнога, Ти животе наш!» — Lord, we rejoice that we go out of this life by such a death; count us worthy to be partakers of eternal life, thou who art our life. Then they bowed their holy heads under the sword. AND ST JOHN CHRYSOSTOM LATER RAISED A CHURCH IN THEIR NAME OVER THEIR WONDERWORKING RELICS — which is where these folders’ existing `related` rows to him and to Paul come from on this calendar as well. FOUR PEOPLE NAMED AND NONE GETS A ROW. `paul-the-confessor`, `john-chrysostom` and `constantine-the-great` are all three already on both folders both ways, and none of them is in this heading, so none is owed an attestation — only the prose, which they get. ЈЕВСЕВИЈЕ and ФИЛИП, the two Arian magnates: no folder read here is either, Ruling 3. МАКЕДОНИЈЕ, who took the throne: the corpus holds `macedonius-ii-of-constantinople` and three other Macedonii, and this man is the Arian the book calls «злочестиви» — NOTHING WAS WRITTEN AND NO ROW WAS MADE, because identifying a heresiarch with a saint’s folder on a shared forename is exactly the error the fold keys exist to stop. The emperor Constantius is named and is not a saint. No `locations`: Constantinople and Armenia are named and neither is a coordinate. The Prologue prints no troparion and no kontakion. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Мартирије», so this folder is its only holder and no key is owed — which is worth saying beside the other half of the same heading, whose form took a two-folder fold to three."
     }
   ],
   "hymns": [
