@@ -11,6 +11,11 @@
       "form": "Όλγα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουλίου, «Αγία Ισαπόστολος Όλγα (μετονομασθείσα Ελένη) η βασίλισσα», with the rank word, the title and the parenthesis left off."
+    },
+    {
+      "form": "Јелена",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. јул ст. ст., „Св. Јелена.“ — „Св.“ is not a rank and the bare forename is the whole of what is left; there is no by-name, no see and no toponymic in the heading to keep. **It is not the name the folder is called by**: this book gives „Јелена“ as the name and says «Olga» was hers before baptism, which is a reading for §10 and not a change a reader may make. `foldchk.py` returns `helen-the-empress`, `sr`, for the string and `sr-foldpred.mjs` predicts one other holder, the same folder, so this is the second folder on the form and the heading offers nothing whatever to break the fold with."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.07.2026 (11. јул ст. ст.) — „Св. Јелена.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE DAY’S FIRST ENTRY IS REPORT-ONLY AND THE ENTRY SAYS SO ITSELF.** „Св. вел. муч. Ефимија.“ opens „Ова светитељка празнује се 16. септембра, када је и пострадала“ — this saint is celebrated on 16 September, when she also suffered — and `euphemia-the-great-martyr` already carries a **venerated** `serbian` row on that very 16 September, with „Ефимија“ stored as its `sr` form. §1 is explicit: a saint who already has a venerated `serbian` row from another day is a reading for the report and never a draft. No row, no name form, no life paragraph. **THIS BOOK HEADS HER BY HER BAPTISMAL NAME AND NOT BY THE ONE THE FOLDER IS NAMED FOR**, which is the whole difficulty of the entry and is §10’s business and not mine. The heading is „Св. Јелена.“ and the body’s first clause is „Велика кнегиња руска, пре крштења звана Олга“ — the great Russian princess, before her baptism called Olga. So the name this calendar prints is **Јелена**, Helen, and «Olga» is on this book’s account the name she bore before the font. The `display_name` «Olga of Kyiv» is therefore a form **this book contradicts**, and §10 reserves a display name to the author: it is left exactly as it stands and reported. **THE IDENTIFICATION IS NOT IN DOUBT AND IS NOT MADE ON THE NAME.** The body gives the grand princess of Rus, the wife of prince Igor, the baptism at Constantinople by the patriarch Polyeuctus, the great zealot of the Orthodox faith in Russia, and the repose in 969 — and the Romanian and Greek rows already stand on this very 11 July. **`dates` UNTOUCHED, AND THE BOOK CONFIRMS THE YEAR.** „Упокојила се 969. год.“ against the folder’s `death` 969 to 969, `traditional`; the two agree to the year, and two numbers that agree are no more a reading than two that disagree, so nothing is rewritten. `types` UNTOUCHED at `equal-to-the-apostles`: the heading’s only word before the name is „Св.“, which §5 says is not a rank and yields no type at all. **`princess` is refused**, „Велика кнегиња руска“ standing in the body and not in the heading — the same refusal as the six monks of 5 July and the soldier of 9 July, and the first of this range made against a `types` word rather than a row. **No `office`** for the same reason. No `locations`: Kyiv and Constantinople in a narrative are not coordinates. **NO NEW `related` ROWS.** Prince Igor her husband, prince Svyatoslav, and the patriarch Polyeuctus who baptised her are a husband, a son and a baptiser; `ls saints | grep -i polyeuct` and `grep -i \"^igor\"` turn up no man this book names, and a kinship is a reading and not a name match. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

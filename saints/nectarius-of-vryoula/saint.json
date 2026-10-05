@@ -11,12 +11,18 @@
       "form": "Νεκτάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Νεκτάριος από τα Βρύουλλα ο Νέος οσιομάρτυρας», with the rank words and the place left off. The page gives his baptismal name as Νικόλαος."
+    },
+    {
+      "form": "Нектарије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. јул ст. ст., „Преп. муч. Нектарије.“ — „Преп. муч.“ is the rank, which `types` now carries, and the heading holds nothing else: the bare forename is the whole form, and «of Vryoula» in the display name is the corpus’s own off the body. `foldchk.py` returns `nectarius-of-constantinople`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form."
     }
   ],
   "sex": "male",
   "types": [
     "new-martyr",
-    "monk"
+    "monk",
+    "venerable-martyr"
   ],
   "dates": {
     "death": {
@@ -65,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.07.2026 (11. јул ст. ст.) — „Преп. муч. Нектарије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS THE PLACE, THE DAY AND THE YEAR.** „Родом из Вриула у Малој Азији“ is this folder’s own Vryoula, the Romanian and Greek rows stand on this very 11 July, and the body ends „Посечен за Христа од Турака у свом месту рођења 11. јула 1820. год. у 21 год. својој“ — beheaded for Christ by the Turks in his own birthplace on 11 July 1820, in his twenty-first year. **`types` GAINS `venerable-martyr` OFF THE HEADING**, exactly as the third entry’s does and off the same abbreviation „Преп. муч.“; the folder held `new-martyr` and `monk`, both of which the body earns — the skete of Saint Anna on the Holy Mountain, and the Turks — and not that word. **`dates` UNTOUCHED.** `death` 1820 to 1820, `attested`, and this book gives the same year. **The age of twenty-one is an age**, and nothing is subtracted from 1820 to reach a birth, though the arithmetic is as plain here as it was on Anthony of the Caves yesterday and the folder has no `birth` for it to agree or disagree with. **The seventeenth year, in which he was forcibly made a Turk, is likewise an age** and is not a date of anything. **WHAT IS NEW IS ONE SENTENCE OF HIS MOTHER’S AND IT IS THE HINGE OF THE ENTRY.** Forcibly converted at seventeen, he appeared before his mother as a Turk, and she cried out to him: „Одлази од мене, не познајем те. Ја сам те родила као хришћанина а не као Турчина.“ — Go away from me, I do not know you; I bore you a Christian and not a Turk. **He repented bitterly on that word**, went to the Holy Mountain and was tonsured in the skete of Saint Anna, and then, resolved to perish for Christ and so wash away his sin, went back to Vryoula, where he suffered. **The entry compares him to the day’s third saint in so many words** — „Имао сличну судбу као и св. Никодим“, he had a fate like that of Saint Nicodemus — which is this book pairing two men of two centuries by the shape of their story and **not** a kinship: `nicodemus-of-elbasan` died in 1722 and this man in 1820, and **no `related` row is written in either direction**, a likeness of fate being the furthest thing from a relation. The mother takes no row either; she is unnamed. No `locations`: Vryoula, Asia Minor, the Holy Mountain and the skete of Saint Anna are a narrative. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
