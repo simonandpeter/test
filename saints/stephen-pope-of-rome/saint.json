@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Αυγούστου, «Άγιος Στέφανος Ιερομάρτυρας Πάπας Ρώμης και οι συν αυτώ», with the rank word, the see and the clause about his companions left off. The page glosses the name from στέφανος, the one who bears the prize, the one worthy of the crown of victory."
+    },
+    {
+      "form": "Стефан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 2 August, „Свешт. муч. Стефан папа Римски, и други с њим.“ — Свешт. муч. stripped, which §5 maps to `hieromartyr`, and папа Римски stripped as a see, which this folder carries in `office` as `Pope of Rome`. What is left is the bare forename, and it folds with twelve other folders: the widest fold this reader has written, keyed in `scripts/corpus-gate.mjs` in the same commit. The heading offers nothing else, и други с њим being a company that enumerates nobody."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.08.2026 (2. август ст. ст.) — „Свешт. муч. Стефан папа Римски, и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of three entries. **AND THIS BOOK KEEPS HIM A DAY EARLIER THAN THE GREEK DOES.** saint.gr’s line, which made this folder, is for 3 Αυγούστου; this heading, „Свешт. муч. Стефан папа Римски, и други с њим.“, stands under 2. август ст. ст. One day apart on two calendars, each row carrying its own day, which is what the four rows are for. **THE FOLDER HELD NO DATE AND NOW HOLDS A PONTIFICATE.** „Био папа у Риму од 253-257. год.“ — he was pope at Rome from 253 to 257 — is written as `floruit` 253—257, display «pope at Rome, 253—257». **It is not written as a death.** „Пострада у време Валеријана са 12 својих клирика.“ puts his suffering in the time of Valerian with twelve of his own clergy, and a reign is not a year; that the pontificate ends in 257 and the death falls in it would give 257 by inference, and an inference is not a reading. **WHAT THE HEADING GIVES AND WHAT THE BODY DOES NOT.** Свешт. муч. is `hieromartyr` by §5 and the folder carries it; папа is a see and goes in `office`, which already reads `Pope of Rome`; so nothing is added and both agree. **и други с њим enumerates nobody**, so the twelve clerics of the body get no rows — the §5 reading of the day. „Борио се против јеретика Новатијана.“ has him fight the heretic Novatian and „Исцеливши Лукилу, ћерку трибуна Немезија, крсти обоје.“ has him heal Lucilla, the daughter of the tribune Nemesius, and baptise them both: `ls saints | grep -iE \"lucill|nemesi\"` returns five companions of a Lucillian and a Nemesius of Cyprus, and not one of them is either of these two, so both are named in the life and take nothing, which Ruling 3 would require in any case. Novatian takes nothing, a heretic being no folder. **AND THE ONE DETAIL THIS BOOK HAS THAT NO OTHER BOOK OF THIS FOLDER HAS**: „Посечен за време литургисања.“ — beheaded while he was celebrating the liturgy. No `locations`: Rome is named in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "related": [
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 253,
+      "latest": 257,
+      "display": "253–257",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind: saint.gr gave it a line and no year. The Охридски пролог for 2. август ст. ст. opens his entry „Био папа у Риму од 253-257. год.“ — he was pope at Rome from 253 to 257. That is a pontificate and is written as one; it is **not** written as a death. „Пострада у време Валеријана са 12 својих клирика.“ dates the suffering by the reign of Valerian and by nothing else, and deriving 257 from the end of the papacy would be an inference rather than a reading (6 October 2026)."
+    }
   }
 }
