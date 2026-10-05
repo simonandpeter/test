@@ -16,6 +16,11 @@
       "form": "Иаков",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 867, headed «Апостол Иаков Алфеев», with the rank word and the patronymic epithet left off."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. октобар ст. ст., „Св. апостол Јаков“ — Св. is «saint» and not a rank, and апостол is the `apostle` this corpus puts in `types`, so both come off and the bare personal name is the whole of the form. **The heading gives him no patronymic**, where the Romanian stores «Iacob al lui Alfeu» and the Greek «Ιάκωβος του Αλφαίου», so there is nothing fuller to store from this book. `foldchk.py` measured the string as held by five other folders before this day, all of them `sr`; the six-folder fold is read in the `serbian` row’s note and in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.10.2026 (9. октобар ст. ст.) — „Св. апостол Јаков“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. **A READER WHO FINDS ALMOST NOTHING NEW SHOULD SAY SO, AND THIS IS THAT ENTRY.** Everything it tells is already on this folder from the Romanian, the Greek synaxis page and the two Russian lives: the son of Alphaeus, one of the twelve great apostles, own brother of the apostle and evangelist Matthew, witness of the Lord’s words and wonders; the preaching allotted to him at Eleutheropolis and the places round it after Pentecost, and then in Egypt; the casting out of demons and the healing of every sickness in the name of the Lord Jesus; and the crucifixion at Ostracine. TWO SMALL ADDITIONS AND ONE SPECIFICATION. The entry names the fruit of the preaching in institutional terms the other books do not — churches were founded and set in order, priests and bishops appointed — and it adds the Lord’s **passion, resurrection and ascension** to the list of what he witnessed. It also says who crucified him: од незнабожаца, by the heathen, where the Russian life says only that he was crucified. `dates` UNTOUCHED AND NECESSARILY SO: the folder holds `dates: null` and **this entry prints no year for anything**. The appended paragraph carries no four-digit year at all, deliberately — with neither a birth nor a death on the folder, `date-audit`’s `stated` reads its prose for both. Measured after the write: `stated` unmoved. `types` UNTOUCHED at `apostle`, corroborated by апостол and by «један од дванаест великих апостола». `related` UNTOUCHED: `matthew-the-apostle` is already there and the brotherhood this entry asserts is exactly the row that holds it; `andrew-the-first-called` is already there from the Russian life and this entry does not name him. No `locations`, no `office`. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE FOLD, AND IT GOES FROM FIVE FOLDERS TO SIX. `foldchk.py` measured «Јаков» before this day as held by five folders, all of them `sr` and all from earlier Serbian waves: `james-of-nisibis`, `james-of-samosata`, `james-of-studion`, `james-son-of-zebedee` and `james-the-confessor`. **The gate has been printing that five-folder row as unread, because no key was ever added for it**; the key for the six is written into `scripts/corpus-gate.mjs` in the same commit, which is the second of the two acts that reading a fold is. Six men on six days: the bishop of Nisibis on 13 January, the martyr of Samosata on 29 January, the confessor of Studion on 24 March, the confessor bishop on 21 March, the apostle son of Zebedee on 30 April, and this apostle son of Alphaeus on 9 October. The bare Serbian forename is the whole of what they share. TWO OF THE DAY’S FIVE ENTRIES ARE REFUSED UNDER RULING 3 and are named here so that the next reader does not have to find them again. «Св. Димитрије патријарх Александријски», the eleventh bishop of Alexandria after Mark the Evangelist, who governed from 189 to 231 and in whose time Pantaenus of the catechetical school was sent to India and found there the Gospel Matthew had written in Hebrew: **forty-six folders are displayed as a Demetrius and not one of them is of Alexandria.** «Св. Стеван деспот српски», son of the despot Djuradj and Jerina, blinded at Adrianople with his brother Grgur, despot of Serbia from 1458, married to Angelina the daughter of Skanderbeg, dead in Italy in 1468 and lying at Krušedol: **fifty-four folders are displayed as a Stephen and not one of them is this despot, nor does the corpus hold Angelina, Grgur, Mara or the son Maximus named in the entry.** A person the Prologue names but no folder holds gets no folder from a reader, so both are a reading for the report and neither is in any prose."
     }
   ],
   "hymns": [
