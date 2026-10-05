@@ -11,6 +11,11 @@
       "form": "Υάκινθος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Ιουλίου, «Άγιος Υάκινθος ο κουβικουλάριος (θαλαμηπόλος)», with the rank word and the office left off."
+    },
+    {
+      "form": "Јакинт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. јул ст. ст., „Св. муч. Јакинт“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives, and «the Chamberlain» of the display name is the corpus’s own disambiguation off the Greek page’s κουβικουλάριος. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јакинт», so there is no fold."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.07.2026 (3. јул ст. ст.) — „Св. муч. Јакинт“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 3 July is the same menologion number this folder’s Romanian and Greek rows carry, so there is no second day and no §4 note is owed — and the Greek row’s own note about a 3 June repetition certain synaxaria make is left exactly as it stands, this book saying nothing about it. **THE FIRST DATE OF ANY KIND THIS FOLDER HAS HELD.** `dates` was **null**: doxologia’s life names the emperor Trajan and prints no year, and saint.gr gives only that reign, which it dates 98 to 117 — a reign, which is refused as a source for a year. This book ends „Чесно пострада млади Јакинт и вечном славом увенча се 108 год.“ — the young Hyacinth suffered honourably and was crowned with eternal glory in the year 108. One book, one year, stated flat: `death` 108 to 108, display «108», basis traditional. **Nothing is widened**, because no second book gives a year to widen against; 108 falls inside the reign saint.gr dates and that agreement is recorded as an agreement and not used as a source. **THREE BOOKS, THREE LENGTHS OF STARVATION, AND NONE OF THEM IS A DATE.** doxologia has him killed by hunger and thirst with no number of days; saint.gr has forty days in which he never touched the idol-meat and his spirit given up on the forty-first; this book says „после 8 дана умре у тамници“, after eight days he died in the prison. Durations all three, written in the life and into no field, and nothing is reckoned from any of them. WHAT IS NEW. **His answer to the emperor, quoted.** „Jа сам хришћанин, Христа поштујем, Њему се клањам, и Њему приносим на жртву живу себе самог“ — I am a Christian, I honour Christ, I bow to Him, and to Him I offer myself alive as a sacrifice; and he stood firm „тврд као дијамант“, hard as a diamond. **The tortures**: beaten, spat upon and scraped before he was thrown into prison, where neither other book has him tortured at all. **And the two angels, which is the one wonder in the entry.** The jailers saw two shining angels in the prison, „један покриваше тело мучениково својом светлом одећом, а други полагаше диван венац на главу његову“ — one covering the martyr’s body with his own bright garment, the other laying a wondrous crown on his head — and the whole prison was full of light and fragrance. This is the fourth angel of this wave found in a torture the other books tell without one. `types` UNTOUCHED: `martyr` is there and „Св. муч.“ is the `martyr`; Свети is not a rank, and „Младић“ — a youth — is not one either. No `office`: „дворјанин цара Трајана“, a courtier of the emperor Trajan, is the same office the Greek form’s note calls κουβικουλάριος and the display name calls «the Chamberlain», and **an `office` string is not invented** — they go through the packs’ `offices` branch, whose keys are English phrases the data already wrote down, and this folder has carried `office: null` with the chamberlainship in its display name since it was made. No `locations`: this book names no place at all, where doxologia had Rome and Caesarea in Cappadocia, and a book that names none cannot bound the one that does. **No rows**: Trajan is an emperor in a life, which is not automatically a relation; the jailers and the angels are not folders; and the informer Urbicius of the Romanian life is not in this book at all. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FOURTH ENTRY IS REFUSED FOR WANT OF A FOLDER, AND THE NEAREST NAME IS REFUSED ON THE DOUBLE-COMMEMORATION RULE. „Преп. Исаија Отшелник“ — Isaiah the hermit, who struggled in the Egyptian Scetis in the fifth and sixth centuries, is mentioned in the book of Barsanuphius and John (answer 249 and others) as a man of particular holiness, wrote many instructions for monks and hermits, of which little survived and much was destroyed by the Muslims, and whose sayings on the mind before it wakes from the sleep of sloth, on the sign that a sin is forgiven, and on the crown of the virtues being love fill most of the entry. **No folder holds him, and eight folders begin with his name.** `ls saints | grep -i '^isaiah'` returns eight: `isaiah-the-prophet`, who is the Old Testament prophet; `isaiah-of-rostov`, `isaiah-of-the-kyiv-caves`, `isaiah-of-valaam`, `isaiah-of-peking` and `isaiah-of-kykkos`, none of them an Egyptian; `isaiah-companion-of-terentius`, one of a company; and `isaiah-the-egyptian`, whose epithet is the trap. **`isaiah-the-egyptian` is not this man and may not take this row.** His `types` is `martyr`, his `death` is 284 to 305 off saint.gr’s reign of Diocletian, and he is one of the twelve martyrs of Caesarea in Palestine listed with Pamphilus — three centuries before a hermit of the fifth and sixth, and a martyr rather than a writer of instructions. **And he already carries a venerated `serbian` row, on the Julian 16 February**, read off this same book’s entry for the twelve. Two commemorations on one calendar means two men, which is how the Prologue’s Egyptian monk Дула was kept off `doulas-of-cilicia` on 15 June, and it settles this one the same way. `grep -ril scetis saints/` returns fifteen folders and **not one of them is an Isaiah**. Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the fifth and sixth centuries are written nowhere**, because there is nothing to write them on. `barsanuphius-the-great` exists and **takes no row**: the book that mentions Isaiah is a citation and not a kinship, and the entry it would hang on is refused in any case."
     }
   ],
   "hymns": [
@@ -118,5 +133,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 108,
+      "latest": 108,
+      "display": "108",
+      "basis": "traditional",
+      "note": "The folder’s first date of any kind; `dates` was null before this reading. The Охридски пролог for 3. јул ст. ст.: „Чесно пострада млади Јакинт и вечном славом увенча се 108 год.“ — the young Hyacinth suffered honourably and was crowned with eternal glory in the year 108. doxologia’s life names the emperor Trajan and prints no year; saint.gr gives only that reign, dating it 98 to 117, and a reign is no source for a year. Nothing is widened, no second book giving a year to widen against, and 108 falling inside that reign is recorded as an agreement rather than used as a source. The three books give three lengths for the starvation — none, forty days and eight — and those are durations, not dates (5 October 2026)."
+    }
+  }
 }
