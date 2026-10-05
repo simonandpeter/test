@@ -16,6 +16,11 @@
       "form": "Папила Фиатирский, Пергамский",
       "lang": "ru",
       "note": "The heading of days.pravoslavie.ru's name page 1734, «Папила Фиатирский, Пергамский, диакон, сщмч.», with the office and the rank word left off. The day line gives «Папилы диакона» without either epithet."
+    },
+    {
+      "form": "Папила",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. октобар ст. ст., „Св. муч. Карп и Папила.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name, the second of the heading’s two, is the whole of the form; the heading gives neither man an epithet, and the see in the body stays in `office` where this folder already keeps it. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so this folder is the only holder and there is no fold to record."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.10.2026 (13. октобар ст. ст.) — „Св. муч. Карп и Папила.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-10-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the heading is an ENUMERATED COMPANY OF TWO — Карп and Папила — so BRIEF-SERBIAN section 5 counts two names, two folders are owed a row, and the corpus holds both. The heading is quoted whole, with the closing full stop the Prologue itself prints: section 4 asks for the line as the book sets it, and `.tmp/srbody.mjs` no longer strips that stop. The quoted line is the one heading, whole, on both rows. TWO PEOPLE THE BODY NAMES AND NEITHER GETS A ROW. Агатодор, Carpus’s servant, who followed his master the whole way in grief until he too was taken for torture, and Агатоника, Papylas’s sister, who leapt into the furnace after them — `agathodorus-servant-of-carpus-and-papylas` and `agathonica-sister-of-papylas` are both in this corpus and both are already venerated on this same menologion day in the Russian, Romanian and Greek calendars. NEITHER IS NAMED IN THIS HEADING, and section 4 and section 5 make the heading the test, not the body: a person narrated in a body but not enumerated in the heading gets no row from this source. They are named and linked in the prose instead, which costs nothing, because all four folders already relate one another in both directions. WHAT THE BOOK ADDS. The governor is named Валерије and the reign is Декијево. Both men were Pergamenes by birth; Carpus was bishop of Thyatira and Papylas his deacon; they were tied to horses and driven to Sardis, tormented there, HEALED OF THEIR WOUNDS BY AN ANGEL OF GOD WHO STRENGTHENED THEM, then tied to horses again and dragged back to Pergamum. CARPUS LAUGHED under the scourging that turned his whole body into one wound, and told those who asked why that he saw the heavens opened and the Lord seated on his throne with the cherubim and the seraphim about him. PAPYLAS HEALED A MAN BLIND IN ONE EYE by prayer in the middle of his own torture, and many who saw it believed. The beasts left them unharmed, the furnace did not scorch them, and they were beheaded at the last. `dates` UNTOUCHED: the entry closes «Најзад их све мачем посекоше, 251. год.» and both folders already hold `death` 251 exactly, so there is nothing to widen and nothing to narrow. `types` untouched — «муч.» is the `martyr` both hold, «епископ Тијатирски» is the `bishop` and the `office` Carpus holds, and «ђакон» is the `deacon` Papylas holds. No `office` change: «епископ Тијатирски» says again what `Bishop of Thyateira` already says. No `locations`: Pergamum, Sardis and Thyatira are named and none of them is a coordinate. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, which is on Злата. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Папила», so no fold and no key."
     }
   ],
   "hymns": [
