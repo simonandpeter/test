@@ -11,15 +11,20 @@
       "form": "Ζώσιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ζώσιμος», with the rank word left off."
+    },
+    {
+      "form": "Зосим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Свети мученик Зосим“ — Свети is not a rank and мученик is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives, and «the Soldier» of the display name is the corpus’s own disambiguation off another book. **The fold is deliberate and forced**: `foldchk.py` returns `zosimas-of-palestine` and `zosimas-of-solovki`, both `sr`, for «Зосим», so this is the third folder on the string, and the heading offers nothing to break it with."
     }
   ],
   "dates": {
     "death": {
       "earliest": 98,
-      "latest": 98,
-      "display": "98",
+      "latest": 116,
+      "display": "98 or 116",
       "basis": "traditional",
-      "note": "saint.gr: «ἀλλὰ το 98 μ.Χ. ο έπαρχος στην Αντιόχεια της Πισιδίας Δομιτιανός ... διέταξε το θάνατό του», with the page head «(; - 98)». The page also dates Trajan 89–117, which does not fit the usual reckoning of that reign and is left as the page has it."
+      "note": "Two books, two years, and the field is widened rather than chosen. saint.gr: «ἀλλὰ το 98 μ.Χ. ο έπαρχος στην Αντιόχεια της Πισιδίας Δομιτιανός … διέταξε το θάνατό του», with the page head «(; - 98)». The Охридски пролог for 19. јун ст. ст.: „После многих мучења секиром посечен 116. године“ — after many torments, cut down with an axe in the year 116. Both years fall inside the reign of Trajan, which this book names and which saint.gr dates 89 to 117; that reign is not a source for either year and is only why the two readings are compatible. Nothing is averaged and neither book is preferred (5 October 2026)."
     }
   },
   "attestations": [
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.07.2026 (19. јун ст. ст.) — „Свети мученик Зосим“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 19 June is the same menologion number this folder’s Greek row carries, its only other venerated row, so there is no second day and no §4 note is owed. **THE FIRST WIDENED DATE OF THIS WAVE, AND THE RULE IS EXPLICIT ABOUT IT.** The folder held `death` 98 to 98, display «98», off saint.gr’s «ἀλλὰ το 98 μ.Χ. ο έπαρχος στην Αντιόχεια της Πισιδίας Δομιτιανός … διέταξε το θάνατό του» and its page head «(; - 98)». This book ends the entry „после многих мучења секиром посечен 116. године“ — after many torments, cut down with an axe in the year 116. **Two books, two years, eighteen apart, and the standing rule is to widen and not to choose**: `death` earliest 98, latest 116, display «98 or 116», basis traditional, both sentences in the note. Nothing is averaged, nothing is preferred, and the display takes the «X or Y» form the rule names for exactly this — not a dash, because these are two readings and not a range either book gives. Both years fall inside Trajan, whom this book names („у време цара Трајана“) and whose years saint.gr gives as 89 to 117, which **is not a source for either year** and is only the reason the two readings are compatible at all. A SECOND DISAGREEMENT, AND IT GOES INTO THE LIFE AND NOT INTO A FIELD. saint.gr has him receive the Christian teaching and be baptised **before** his arrest, and names the eparch Domitian at Antioch of Pisidia who ordered his death; this book has a voice from heaven in the middle of the torments telling him „Мужај се, Зосиме, и крсти се. Ја сам с тобом!“ — be a man, Zosimus, and be baptised, I am with thee. The two put the baptism on opposite sides of the arrest. **Both are written and neither is chosen**, which is the same shape as the swineherd on 15 June and the high officials on 17 June. WHAT ELSE IS NEW: the manner of death is an **axe**, where saint.gr said beheading plainly; and „ангели Божји јављали му се у тамници“, angels of God appeared to him in the prison, which no other book has and which is the third angel this wave has found in a torture told without one elsewhere. `types` UNTOUCHED: `martyr` and `soldier` are both there, „Свети мученик“ is the `martyr` and „војник римски“ the `soldier`. No `office` — a soldier’s service is not a see. No `locations`: this book names no place at all, where saint.gr named Apollonias of Sozopolis and Antioch of Pisidia, and a book that names none cannot bound the one that does. **No rows**: Trajan is an emperor, the eparch is not named here, and the voice from heaven and the angels are not folders. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FOURTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Преподобни Јован отшелник“ — John the hermit, who struggled in the sixth century near Jerusalem, reached by his ascesis so high a degree of purity and power that the wild beasts obeyed him, and reposed in the Lord in deep old age in 586. **Two folders read like him and neither is he.** `john-the-hermit-of-crete` is kept by the Greek calendar on **7 October**, holds no dates, and is of Crete, not of the desert near Jerusalem; `john-of-jerusalem` has `office` «Patriarch of Jerusalem», which a hermit is not. `ls saints | grep -iE 'john-the-herm|john-the-anchor|john-of-jerus'` returns those two and nothing else. Ruling 3: named here, left out of every life on this day, and no folder from me — and the sixth century and the year 586 are written nowhere, because there is nothing to write them on."
     }
   ],
   "hymns": [

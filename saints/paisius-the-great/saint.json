@@ -11,6 +11,11 @@
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουνίου, «Όσιος Παΐσιος ο Μέγας και θεοφόρος», with the rank word and the epithets left off."
+    },
+    {
+      "form": "Пајсије Велики",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Преподобни Пајсије Велики“ — Преподобни is the rank and comes off, and „Велики“ is **kept**, because §5 is explicit that it is not a rank but the epithet «the Great»: it distinguishes him and does not grade him, which is exactly what §6 says a form should carry. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Пајсије Велики» and also for the bare «Пајсије», so neither form would have folded and the choice between them was made on the rule and not on the fold — which is the opposite case to the day before, where keeping a by-name was what avoided one."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.07.2026 (19. јун ст. ст.) — „Преподобни Пајсије Велики“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 19 June is the same menologion number this folder’s other venerated row or rows carry, so there is no second day and no §4 note is owed. A YEAR OF DEATH WHERE TWO BOOKS HAD ONLY AN OLD AGE. The folder holds `birth` 300 `traditional` off saint.gr’s page head «(300 - ;)» and **no `death` at all**: that page says only that he died at a very advanced age, and doxologia gave no year of any kind. This book states one flat: „Преселио се у вечност 400. године“. `death` 400 to 400, display «400», basis traditional, the sentence in the note. The `birth` is passed back **verbatim**, note and all, because `upgrade.py` replaces the whole `dates` object and a field not retyped exactly would be a silent edit; its note’s remark that saint.gr gives no year of death is still true of saint.gr and is left standing. The two years together make a hundred, which is a lifespan this folder now implies and **which is written nowhere as a number**, and `map-span` is not at risk because the folder has no `locations`. WHAT ELSE IS NEW, IN A FOLDER THAT IS ALREADY LONG. „Мисирац по рођењу и језику“ — an Egyptian by birth **and by language**, which neither other book says. That his teacher took him „за саученика преподобног Јовану Колову, који и описа житије Пајсијево“ — as fellow-disciple of John Kolovos, who also wrote Paisius’s life. **The folder’s doxologia account ends «The account is signed by a humble John»**, and this book names a John who wrote it; the agreement is stated in the life as an agreement and **not asserted as an identification**, which is not a reader’s to make. `ls saints | grep -i kolov` returns four Russian surnames and no John Kolovos, so no folder and no row. THE FASTS, AND THE SEVENTY DAYS. „Често није окушао хлеб по петнаест дана, још чешће по недељу дана, а једном је, по сведоџби Јована Колова, седамдесет дана проживео не окусивши ништа“ — fifteen days without tasting bread often, a week more often, and once seventy days with nothing at all, on John Kolovos’s testimony. The folder had the week and the two weeks off doxologia and the twenty-one days before Christ appeared; **the seventy days are new**. These are durations of fasting and not dates. THE APPEARANCES, AND NOT ONE OF THEM IS A RELATION. The prophet whose book he particularly loved and often read appeared to him more than once; angels of God appeared often; and the Lord Christ himself appeared and said „Мир теби, возљубљени угодниче мој!“ — a saying the folder did not have, its other quotation being doxologia’s «My chosen Paisius, thou sufferest much evil for me». **`jeremiah-the-prophet` takes no row**: an appearance is not a relation, which is the Three Hierarchs ruling exactly, and the new paragraph writes «the prophet whose book he loved» without the name even though the folder’s older prose names him — because `related-floor` reads a prose name as well as a linked one and this paragraph has no need of it. THE DEMONS AS ANGELS OF LIGHT. „Имао је велику борбу са духовима злобе, који су му се јављали понекад онакви какви и јесу а понекад у виду ангела светлих“, and the servant of God was never once deceived or beguiled. New, and the one thing in the entry that is about discernment rather than about austerity. WHO CARRIED THE RELICS, AND THE NAME THIS BOOK PUTS ON HIM. doxologia has «the abbot Isidore’s men» and saint.gr «father Isidore» take the relics to Pisidia. This book says „преподобни Исидор Пелусиот“, Isidore of Pelusium. `isidore-of-pelusium` exists — and **takes no row**, because this is an identification made off a name in another man’s life, which is not an identification, and because carrying a man’s relics is not a kinship. **AND THE NAME IS WRITTEN HERE RATHER THAN IN THE PROSE, BECAUSE THE FIRST DRAFT PUT IT IN THE PROSE AND `npm test` CAUGHT IT.** The paragraph first read «… buried them honourably: Isidore of Pelusium, where the other two books had an abbot and a father of that name and no more», and `related-floor.test.mjs` failed twice on it — once for the forward row and once for the reverse — because the string is this folder’s display name exactly. **That is §6’s trap measured rather than guessed**: the folder’s own older prose names an «abbot Isidore» and a «father Isidore» and passes, and this book’s fuller form does not. The fix was §6’s — the name out of the prose and into this note — applied as a `life_replace`-only spec, `.tmp/sr-drafts/fix-06-19.json`, with the same change made in the day’s generator so that the generator still reproduces the folder, and this row then re-applied with `.tmp/sr-reapply-json.py`, which touches the json half only. Nothing was added to `scripts/related-floor-exclusions.json`. `types` UNTOUCHED, AND **`wonderworker` IS REFUSED**. `venerable`, `hermit` and `ascetic` are all there; Преподобни is the `venerable`; and **„Велики“ is not a rank at all** but the epithet «the Great», which §5 of this wave’s brief says belongs in the display name and not in `types` — the display name already has it. „Био је прозорљивац и чудотворац знаменит по свему Мисиру“ stands in the **body**, and a rank read off a body is not written, which is why `wonderworker` was refused on Niphon on 14 June and is refused here. There is no type for прозорљивац at all. No `office`, no `locations`. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FOURTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Преподобни Јован отшелник“ — John the hermit, who struggled in the sixth century near Jerusalem, reached by his ascesis so high a degree of purity and power that the wild beasts obeyed him, and reposed in the Lord in deep old age in 586. **Two folders read like him and neither is he.** `john-the-hermit-of-crete` is kept by the Greek calendar on **7 October**, holds no dates, and is of Crete, not of the desert near Jerusalem; `john-of-jerusalem` has `office` «Patriarch of Jerusalem», which a hermit is not. `ls saints | grep -iE 'john-the-herm|john-the-anchor|john-of-jerus'` returns those two and nothing else. Ruling 3: named here, left out of every life on this day, and no folder from me — and the sixth century and the year 586 are written nowhere, because there is nothing to write them on."
     }
   ],
   "hymns": [
@@ -114,6 +129,13 @@
       "display": "300",
       "basis": "traditional",
       "note": "saint.gr: «Ο όσιος Παΐσιος καταγόταν από την Αίγυπτο και γεννήθηκε το έτος 300 μ.Χ.», with its page head «(300 - ;)». The page gives no year of death, saying only that he died at a very advanced age, and doxologia gave no year at all."
+    },
+    "death": {
+      "earliest": 400,
+      "latest": 400,
+      "display": "400",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 19. јун ст. ст. says „Преселио се у вечност 400. године“ — he passed over into eternity in the year 400. The folder had no `death` at all before this: saint.gr said only that he died at a very advanced age and doxologia gave no year. Nothing is derived from the two years together: the hundred years they imply is a lifespan and is written nowhere, and the seventy-day fast and the fifteen days and the week this entry gives are durations of fasting and not dates (5 October 2026)."
     }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Ιούδας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουνίου, «Άγιος Ιούδας ο Απόστολος», with the rank words left off."
+    },
+    {
+      "form": "Јуда",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јун ст. ст., „Свети апостол Јуда“ — Свети is not a rank and апостол is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. **The by-names are in the body and are not built onto the form**: the entry says he is called „Јуда Јаковљев“ after his more notable brother, and also Левијем and Тадејем, and the «brother of the Lord» of the display name is not in this heading at all. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јуда», so there is no fold — which is worth having measured, the corpus keeping a `thaddeus-apostle-of-the-seventy` whom this very entry exists to tell him apart from."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.07.2026 (19. јун ст. ст.) — „Свети апостол Јуда“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 19 June is the same menologion number this folder’s other venerated row or rows carry, so there is no second day and no §4 note is owed. `dates` UNTOUCHED AND STILL ABSENT. The folder holds no `dates` object, because neither doxologia nor saint.gr gave a year, and **this book gives none either** — no year for the preaching, none for the crucifixion near Ararat. Nothing is written. A GENEALOGY THE FOLDER HALF HELD, AND ONE NAME IN IT THAT IS NEW. doxologia had Joseph the carpenter and Salome «the daughter of Haggai, son of Barachiah and brother of Zacharias», and the four sons «James, Joses, Simon and Jude» out of Matthew. This book has the same four and spells the second „Јосију“, and its Salome is „ћерком Ангеја, сина Варахина Захаријана“ — the same three names in the same order, so **two books now agree on a genealogy the corpus had from one**. THE HUMILITY, AND A SECOND REASON FOR IT. The folder already explains why he calls himself „брат Јаковљев“ and not the brother of the Lord: humility, and that at the beginning he had sinned in ignorance and unbelief. This book adds the scene that makes it concrete — **when the aged Joseph before his death wished to give Jesus a share of the property along with his other children, all of them opposed it, Jude among them, and only James willingly divided a part off his own share and set it aside for Jesus.** Neither other book has it, and it is written into the life. The epistle’s opening is quoted with its reference, „Јуда слуга Исуса Христа, брат Јаковљев“ (Јд 1, 1). THE TWO THADDEUSES, AND THE „(в. “ INSTRUMENT NOT NEEDED. The entry says he is also called Levi and Thaddeus, and then distinguishes him: „има још један Тадеј, од Седамдесеторице апостола (в. 21. август), но овај Тадеј, или Јуда, био је један од великих апостола“. The standing instrument for a „(в. “ and a date is to read the Prologue’s own other day — and **here there is nothing to read it for**, because the entry itself says what the other day holds and says that the two are different men. `thaddeus-apostle-of-the-seventy` exists and **takes no row**: a man an entry exists to distinguish its subject *from* is not a relation. saint.gr’s own page already warned that the two are confused and the folder already records that warning. THE PREACHING, AND IT IS WIDER HERE THAN IN EITHER OTHER BOOK. Judea, Samaria, Galilee, Idumaea, Syria, Arabia, Mesopotamia and Armenia — eight regions, where saint.gr had Mesopotamia and Edessa and doxologia had «many countries». And at Edessa, „граду Авгаровом“, the city of Abgar, he completed the preaching of that other Thaddeus — **the one place this book brings the two men together, and it is a succession in a city and not a kinship**, so still no row. `ls saints | grep -i abgar` holds nobody. The end agrees with the folder: taken by the pagans in the parts about Ararat, crucified and killed with arrows. `types` UNTOUCHED: `apostle` and `martyr` are both there, апостол is the `apostle` and the arrows are the `martyr`. No `office`, no `locations` — eight regions in one clause are not a coordinate. **No rows at all.** `grep` finds no folder for James the brother of the Lord under any of `james-brother-of`, `james-the-just`, `james-of-jerusalem` or `james-the-less`; Joses, Simon, Joseph the carpenter, Salome, Haggai, Barachiah and Zacharias are named in the folder’s older prose already and no folder holds any of them as this entry means them. The Prologue prints no troparion and no kontakion; the day carries only the verse. THE DAY’S FOURTH ENTRY IS REFUSED FOR WANT OF A FOLDER. „Преподобни Јован отшелник“ — John the hermit, who struggled in the sixth century near Jerusalem, reached by his ascesis so high a degree of purity and power that the wild beasts obeyed him, and reposed in the Lord in deep old age in 586. **Two folders read like him and neither is he.** `john-the-hermit-of-crete` is kept by the Greek calendar on **7 October**, holds no dates, and is of Crete, not of the desert near Jerusalem; `john-of-jerusalem` has `office` «Patriarch of Jerusalem», which a hermit is not. `ls saints | grep -iE 'john-the-herm|john-the-anchor|john-of-jerus'` returns those two and nothing else. Ruling 3: named here, left out of every life on this day, and no folder from me — and the sixth century and the year 586 are written nowhere, because there is nothing to write them on."
     }
   ],
   "hymns": [
