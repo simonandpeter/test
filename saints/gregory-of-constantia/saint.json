@@ -7,6 +7,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Μαρτίου, «Άγιοι Γρηγόριος Επίσκοπος Κωνσταντίας της Κύπρου και Αδριανός», with the rank word and the see left off."
+    },
+    {
+      "form": "Григорий Кипрский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 540, «Святитель Григорий Кипрский, епископ», with the rank words left off. **The link and the line give different toponymics**: the line has the see, еп. Констанции Кипрской, and the link has the island, Кипрский. The link's is stored, per BRIEF-RUSSIAN §3, and the line's is named here and in the life. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Свт. Григория , еп. Констанции Кипрской»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      },
+      "note": "The only one of the day's ten lines that closes without a year, and the only one of its nine people with no life page behind it. The line names no companion, so `adrianus-of-cyprus`, whom the Greek line of the same day pairs with him, keeps an undocumented russian row."
     },
     {
       "church": "romanian",

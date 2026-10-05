@@ -16,6 +16,11 @@
       "form": "Јаков Посник",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 4 March on pravoslavno.rs, „Свети Јаков Посник.“, with Свети left off, which is not a rank. Посник is kept as the by-name that distinguishes him: the corpus keeps the same epithet in English display names (`eustratius-the-faster`, `macarius-the-faster`, `john-the-faster-of-the-cave`), which `scripts/draft-saint.mjs`'s rank check would refuse if it read as a rank, and the bare forename would fold with `james-of-nisibis` and `james-of-samosata`. Nothing was added to `types` from it."
+    },
+    {
+      "form": "Иаков Кармильский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 4 марта ст. ст., name page 873, «Иаков Кармильский (Палестинский), постник, отшельник», with the two rank words left off; the day's own line gives only «Иакова постника», the faster, and no toponymic at all. Both toponymics are kept because both are part of the name the calendar's index carries, and **the index disagrees with its own life**, which puts his caves not on Carmel or in Palestine but near the Phoenician city of Порфирион. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 4 марта ст. ст. — «Прп. Иакова постника (VI)»",
+        "url": "https://days.pravoslavie.ru/Days/20260304.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
