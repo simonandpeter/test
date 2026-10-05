@@ -11,6 +11,11 @@
       "form": "Βαρλαάμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Άγιος Βαρλαάμ», with the rank word left off."
+    },
+    {
+      "form": "Варлаам Антиохиец, Кесарийский (Каппадокийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., name page 352, «Варлаам Антиохиец, Кесарийский (Каппадокийский), мч.», with the rank word left off; the line itself gives the bare declined forename and nothing else. Both epithets are kept because the calendar prints both, although its own life page names only Antioch. `.tmp/foldchk.py` reports no folder holding this form, and the two other Barlaams of this same day stand on name pages 353 and 355 with different strings."
     }
   ],
   "sex": "male",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Мч. Варлаама (ок. 304).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -91,6 +105,22 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ὁ ὑψωθεῖς ἐν τῷ Σταυρῷ."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явился еси преудивлен крепостию, всесожжения ливан благовонен себе принесл еси, жертву Христу, и венец почести приим Варлааме, присно моли за ны, страдальче.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Кондак мученика Варлаама»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown most wonderful in strength; thou didst offer thyself as fragrant frankincense of whole-burnt offering, a sacrifice to Christ, and didst receive the crown of honour, O Barlaam: pray for us always, O sufferer.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

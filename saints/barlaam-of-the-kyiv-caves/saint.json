@@ -11,6 +11,11 @@
       "form": "Βαρλαάμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Νοεμβρίου, «Όσιος Βαρλαάμ ηγούμενος του Σπηλαίου», with the rank word and the office left off."
+    },
+    {
+      "form": "Варлаам Печерский",
+      "lang": "ru",
+      "note": "The name link behind his line for 19 ноября ст. ст., name page 355, gives «Преподобный Варлаам, игумен Печерский», and the first of the two life pages behind it is titled «Преподобный Варлаам Печерский». The form kept here is that title with the leading rank word left off, which is the calendar’s own nominative and not a reconstruction. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "dates": {
@@ -25,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Прп. Варлаама , игумена Печерского (1065).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads both of his life pages «Дни памяти: 28 сентября (Печер.(Б)) , 19 ноября». The 28 сентября, which that page marks as the Caves synaxis, is a second Russian day for him — neither a repetition of this one nor thirteen days from it — and this schema keeps one feast per church, so it is recorded here as a note and he does not render on it."
     },
     {
       "church": "romanian",
@@ -58,6 +73,41 @@
     "life": "life.md"
   },
   "related": [
-    "nikon-of-the-kyiv-caves"
+    "nikon-of-the-kyiv-caves",
+    "anthony-of-the-caves"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Мира красная и славу его оставль,/ притекл еси в пещеру,/ идеже от силы преуспевая в силу,/ был еси вождь Христова стада, всеславне Варлааме,/ еже яко упас добре, упаси и нас, молим тя,/ сохраняя от всех зол, да тя ублажаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Тропарь преподобного Варлаама, 1-го игумена Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving the fair things of the world and its glory, thou didst run to the cave, where, advancing from strength to strength, thou wast made the leader of Christ’s flock, O all-glorious Barlaam. As thou didst shepherd it well, shepherd us also, we pray thee, keeping us from every evil, that we may call thee blessed.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Отеческаго прещения не устрашился еси,/ ласканиям того не повинулся еси,/ ниже лестию низложился еси женскою, всечестне Варлааме,/ но непобедимь от тех пребыл еси,/ надеяся на Господа своего, Емуже молися о душах наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Кондак преподобного Варлаама, игумена Печерского, в Ближних пещерах»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast not frightened by thy father’s threatening, nor didst thou yield to his coaxing, nor wast thou cast down by a woman’s flattery, O all-honoured Barlaam, but didst remain unconquered by them, hoping in thy Lord; to whom pray thou for our souls.",
+        "rendered": "site"
+      }
+    }
   ]
 }
