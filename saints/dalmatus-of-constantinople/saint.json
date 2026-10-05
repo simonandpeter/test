@@ -11,6 +11,11 @@
       "form": "Δαλμάτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Αυγούστου, «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος», with the rank word and the two companions left off."
+    },
+    {
+      "form": "Далмат",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 3 August, „Преп. Исакије, Далмат и Фауст.“ — Преп. left off, which governs all three names in it and which §5 maps to `venerable`. The heading gives no see, no city and no by-name, so the bare forename is the whole of the form; `.tmp/sr-foldpred.mjs` reports it folds with nothing."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.08.2026 (3. август ст. ст.) — „Преп. Исакије, Далмат и Фауст.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of four entries, and its heading enumerates three men: „Преп. Исакије, Далмат и Фауст.“, under one rank word that governs all three. His row was `undocumented`. **A CENTURY ON A FOLDER THAT HELD NO DATE AT ALL.** „Угодивши Богу представио се мирно, у V столећу.“ — having pleased God he reposed peacefully, in the fifth century — is written as `death` 401–500, display «5th century», basis traditional. Neither doxologia nor saint.gr gave this folder a year. **AND THE SAME SENTENCE CORROBORATES A ROW THIS READER WROTE SIX DAYS AGO.** „Свети Далмат беше најпре официр при цару Теодосију Великом, и цар га држаше у великој части.“ makes him first an officer under the emperor Theodosius the Great, held by him in great honour — and `theodosius-the-great` is `related` on this folder already, in both directions, so nothing is added; it is the same emperor the Julian 28 June related to `senuphius-the-standard-bearer`, and this is a second entry of the same book putting a saint of this corpus beside him. **WHAT ELSE THE ENTRY GIVES.** „Но када се у њему пробуди дух, он презре све светско, напусти свој чин, узе свога јединца сина Фауста, и с њим оде у предграђе Цариграда, у обитељ св. Исакија, где се обојица постригоше у иноке.“ has him despise the world, leave his rank, take his only son Faustus and go to Isaac’s house in the suburbs of Constantinople, where both were tonsured; „Доцније се та обитељ по Далмату назвала Далматска.“ has the house named Dalmatou after him; „Далмат се предаваше посту понекад и до 40 дана. И постом победи невидљиву силу демонску.“ has him fast sometimes up to forty days and conquer the invisible demonic power by fasting; „Участвовао на III Васељ. Сабору, и борио се против јереси Несторијеве.“ has him at the Third Ecumenical Council fighting the heresy of Nestorius. **`types` UNTOUCHED AND TWO BODY WORDS REFUSED.** Преп. is `venerable` and the folder has it; `abbot` and `presbyter` it has from the other two books. официр, an officer, is not in §5’s table at all — војник is, and this is not that word — and игуман would give `abbot`, which is there already. The Council is no folder and Nestorius is no folder. No `locations`: Constantinople is named in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty-two lines on the third entry alone, Anthony on his rock „Мртва стена и човек на стени, Бурно море около се пени Антоније у Бога удубљен Ум свој Богу стално уздизаше И молитве срцем узносаше.“, and it is in no field and in no life (§3), read before this was written."
     }
   ],
   "hymns": [
@@ -126,5 +141,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "The folder held no date: neither doxologia nor saint.gr gives it a year. The Охридски пролог for 3. август ст. ст.: „Угодивши Богу представио се мирно, у V столећу.“ — having pleased God he reposed peacefully, in the fifth century. The same entry has him an officer under Theodosius the Great and at the Third Ecumenical Council, both of which sit inside that century and neither of which is used to narrow it (6 October 2026)."
+    }
   }
 }

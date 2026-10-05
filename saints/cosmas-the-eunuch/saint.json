@@ -1,0 +1,50 @@
+{
+  "slug": "cosmas-the-eunuch",
+  "display_name": "Cosmas the Eunuch",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Козма шкопац",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 3 August, „Преп. Козма шкопац.“ — Преп. left off, which §5 maps to `venerable`. **шкопац is kept**: it is in no rank table of §5, it is not a grade, and it is the only thing in the heading that distinguishes him, the Pharan lavra and Antioch both being in the body. Without it the form would be a bare Козма, which `usableName` refuses and which would fold with every other Cosmas that stores a Serbian form."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 3 Αυγούστου (6 October 2026). That day’s Greek page was read for this corpus on 1 October 2026 and gave eleven saints, of whom the corpus keeps Anthony the Roman, Dalmatus, Faustus, Salome, Stephen of Rome and six others; no Cosmas was among them. The page was not re-opened for him and no absence is claimed here."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.08.2026 (3. август ст. ст.) — „Преп. Козма шкопац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of four entries, and **the second new folder of this Serbian wave**. `ls saints | grep -i \"^cosmas\"` returns sixteen folders and not one of them is a monk of the Pharan lavra or a eunuch: the nearest by date are `cosmas-of-chalcedon`, a bishop and confessor on the Romanian 18 April, and `cosmas-the-protos` of Athos, who died in 1280; `grep -lis eunuch` over every Cosmas folder returns nothing. Ruling 3 reports a person no folder holds rather than creating him **unless the entry is substantial**, and this one is: a numbered entry with its own heading, five sentences, a saying of his own quoted, a named patriarch with a year on him, a burial place and a posthumous healing. **NO `dates`, AND THE ENTRY PUTS A YEAR WITHIN ONE SENTENCE OF HIM.** „Под старост дође у Антиохију патријарху Григорију (†584), и ту сконча свој живот.“ — in his old age he came to Antioch, to the patriarch Gregory (died 584), and there ended his life. **The 584 is the patriarch’s death and not his**, and reasoning that a man who died during a patriarchate that ended in 584 died by 584 is an inference and not a reading. Nothing is written, and the year is in the life as the patriarch’s. **ONE RANK WORD WRITTEN, ONE REFUSED, AND ONE WORD THAT IS NOT A RANK AT ALL.** Преп. is `venerable` and is written. „Монах из лавре Фаранске. Врло учен у Светом Писму.“ makes him a monk of the Pharan lavra, very learned in the Holy Scriptures; Монах would give `monk` and is in the body, so it is refused, which is the Julian 27 June ruling. **шкопац, a eunuch, is in no rank table of §5 and is not a grade**, so it is kept in the display name and in the stored form, where it is the only thing distinguishing him. **NO `related` ROW, AND THE NAME IN THE ENTRY IS A GREAT ONE.** „Толико је ценио дела св. Атанасија Великог, да је говорио ученику своме: „када чујеш какву реч из књига св. Атанасија, ако немаш хартије, на рубини је запиши.““ — he valued the works of Athanasius the Great so much that he told his disciple that when he heard any word out of the books of Athanasius and had no paper, he should write it on his garment. **An esteem for a man’s writings is not a relation**: he never met him, five generations separate them, and the corpus keeps him as `athanasius-of-alexandria`, whose display name this book’s «Атанасије Велики» is not. No row, and the name is in the life measured with `.tmp/sr-prosenew.mjs` first. The patriarch Gregory of Antioch holds no folder and takes nothing; the disciple and the paralytic are unnamed. No `locations`: the Pharan lavra and Antioch are named in clauses. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
