@@ -11,6 +11,11 @@
       "form": "Πέτρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιουνίου, «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι», with the rank words left off."
+    },
+    {
+      "form": "Петар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 29 June, „Свети апостол Петар.“ — Свети is not a rank and апостол is, so §6 leaves the bare forename and the heading offers nothing else at all: no see, no city and no by-name. It folds with two other folders and the fold is in this commit’s FINDINGS and in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -22,7 +27,8 @@
     "john-the-baptist",
     "andrew-the-first-called",
     "agatha-of-catania",
-    "cyril-of-catania"
+    "cyril-of-catania",
+    "linus-of-rome"
   ],
   "attestations": [
     {
@@ -62,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.07.2026 (29. јун ст. ст.) — „Свети апостол Петар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of two entries, and the row this folder had from no Slavonic book until now. **AND THE ENTRY CLOSES BY NAMING A SECOND DAY OF ITS OWN BOOK.** „И тако упокоји се велики слуга великог Господара, и прими венац славе вечне (в. 16. јануар).“ — and so the great servant of the great Master reposed and received the crown of eternal glory (see 16 January). That is the Prologue sending its reader to another of its own days for this same apostle. **It is named and not read**: the Julian 16 January is outside this reader’s range, no page of it was fetched, nothing is claimed about what it prints, and this row keeps 29 June, which is the day the entry stands on. Whoever reads the Julian 01-16 will be adding a §4 second-day note to a row that is already venerated, arriving the way `naum-of-ohrid` did. **THE ROW WRITTEN FROM THIS ENTRY, AND THE ACT THAT GROUNDS IT.** „Поставивши Лина за епископа у Риму и посаветовавши и утешивши стадо Христово, Петар пође радосно на смрт.“ — having appointed Linus bishop in Rome, and having counselled and comforted the flock of Christ, Peter went gladly to his death. `linus-of-rome` is `Bishop of Rome`, an apostle of the Seventy and a hieromartyr of the first century in this corpus already, so the identification is not off a bare forename; and **appointing a man to a see by name is a personal act between two men**, which a dedication, an appearance, the carrying of relics and the sharing of a day are not. The row is written both ways in this batch, and that folder had four rows before, all of them his companions on the Greek 5 November. **TWO NAMES THAT LOOK LIKE FOLDERS AND ARE NOT.** „Био је рибар, и најпре се звао Симеоном, но Господ је благозволео назвати га Кифом, или Петром (Јн 1, 42).“ has the Lord name him Кифа, or Peter, citing John 1.42 — and this corpus keeps a `cephas-the-apostle` of its own, one of the Seventy, kept on the Greek 8 December. **This book’s Кифа is this apostle himself and not that man**, which is a distinction a reader could lose in one sentence: no row, no name form, and nothing touched on that folder. The sorcerer of „Имао је велику борбу са Симоном Волхом, који се издавао за бога, а у ствари био је слуга сатанин.“ holds no folder under any form of the name — the corpus keeps a Simon the Zealot, a Simon of Simonopetra and seven more, and not one of them is this man — and Ruling 3 refuses him in any case, as it refuses Nero and Jonah the father. **NO `dates`, AND THE FOLDER HAD NONE BEFORE.** The entry gives no year for anything: „По заповести опакога цара Нерона, Симоновог пријатеља, Петар би осуђен на смрт.“ dates the sentence by the command of the wicked emperor Nero and nothing else, and a reign is not a year. No `locations`: Bethsaida, Jerusalem, Palestine, Asia Minor, Illyricum, Italy and Rome are all named in clauses and none of them is a point. `types` untouched at `apostle`, which is the heading’s own rank word; рибар, a fisherman, is in the body and is in no rank table. **TWO MISPRINTS RECORDED AND NEITHER REPAIRED.** „Он је први од ученика јасно изразио веру у Господа Исуса рекавши: „Ти су Христос, Син Бога живога“ (Мт 16, 16).“ prints Ти су where the sense and the citation want Ти си, thou art; and „Чинио је моћна чудеса: лечио је болесне, ваксрсавао мртве; чак и од сенке његове исцељивали су се болесници.“ prints ваксрсавао where the word is васкрсавао, raised. Neither is quoted in the life and neither is corrected here. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty lines on the pair together and it is in no field and in no life (§3), read before this was written: „Петар прости човек, Павле школовани – Благодаћу Духа оба обасјани.“ sets the unlearned man beside the schooled one, and „Кад им бурног дана стиже бурно вече Нерон крвожедни живот им пресече.“ gives the death to Nero. It names no third person and adds no fact the two entries do not carry."
     }
   ],
   "hymns": [

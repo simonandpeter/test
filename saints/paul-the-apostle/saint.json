@@ -11,6 +11,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Ιουνίου, «Άγιοι Πέτρος και Παύλος Πρωτοκορυφαίοι Απόστολοι», with the rank words left off."
+    },
+    {
+      "form": "Павле",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 29 June, „Свети апостол Павле.“ — Свети is not a rank and апостол is, so §6 leaves the bare forename; the heading gives no city and no by-name, and Тарс and племе Венијаминово are both in the body. It folds with six other folders, one of which was added to the corpus the same day, and the fold is in this commit’s FINDINGS and in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -27,7 +32,9 @@
     "peter-the-apostle",
     "phoebe-the-deaconess",
     "timothy-of-ephesus",
-    "aristobulus-of-britain"
+    "aristobulus-of-britain",
+    "ananias-the-apostle",
+    "gamaliel-the-teacher-of-the-law"
   ],
   "attestations": [
     {
@@ -66,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.07.2026 (29. јун ст. ст.) — „Свети апостол Павле.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-12&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of two entries, and the row this folder had from no Slavonic book until now. **TWO `related` ROWS WRITTEN, AND THE FIRST OF THEM COMPLETES A ROW THE CORPUS ALREADY HELD ONE WAY.** „Крштен од апостола Ананије, прозват Павлом и увршћен у службу великих апостола.“ — baptised by the apostle Ananias, renamed Paul and numbered in the service of the great apostles. `ananias-the-apostle` is `Bishop of Damascus` and an apostle of the Seventy in this corpus, kept on 1 October by all four calendars — **including this same book, whose 1 October heading that folder already quotes** — so the identification is not off a bare forename. That folder related to this one before today and **this one did not relate back**, and the reason the floor never caught it is measurable: this folder’s own prose off saint.gr already names Ananias unlinked, and the only thing keeping the test quiet is that his display name is the single word `Ananias`, which `usableName` refuses. The row is supplied here and the pair is two-way. **THE SECOND IS THE TEACHER.** „Најпре се звао Савле, учио се код Гамалила, био фарисеј и гонитељ Хришћанства.“ — he was first called Saul, studied under Gamaliel, was a Pharisee and a persecutor of Christianity. `gamaliel-the-teacher-of-the-law` is the righteous teacher of the law of the first century, kept by the Romanian 2 August, and that folder carried **no `related` key at all**. Teacher and disciple is a relation by the Euthymius ruling, so the row is written both ways and is the first that folder has. **NO `dates`, AND THE FOLDER HAD NONE BEFORE.** „Пошто је испунио све дане и ноћи трудом и страдањем за Христа, пошто је организовао цркву по многобројним местима, и пошто је достигао ту меру савршенства, да је могао рећи: „Не живим ја него Христос живи у мени“, тада је био посечен у Риму, у време цара Нерона, кад и апостол Петар.“ puts the beheading at Rome in the time of the emperor Nero and at the same time as the apostle Peter, and that is the whole of the chronology: a reign and a companion, neither of them a year. Nothing is written, which is the reading the Julian 28 June made on Senuphius and the Julian 26 and 27 June before it. No `locations`: Tarsus, Damascus, Arabia, Spain and Rome are named in clauses. `types` untouched at `apostle`, the heading’s own rank word; фарисеј is not a rank in any table and апостол незнабожаца, apostle of the Gentiles, is a by-name and not a grade. **AND THE REACH DISAGREES WITH THE GREEK PAGE WITHOUT CONTRADICTING IT.** „Са пламеном ревношћу проповедао Јеванђеље свуда од граница Арабије до Шпаније, међу Јеврејима и међу незнабошцима.“ has him preach everywhere from the borders of Arabia to Spain, where saint.gr counted four missionary journeys and made him the founder of the Church of Greece. Both are in the life and neither is reconciled. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty lines on the pair together and it is in no field and in no life (§3), read before this was written: „Петар прости човек, Павле школовани – Благодаћу Духа оба обасјани.“ sets the unlearned man beside the schooled one, and „Кад им бурног дана стиже бурно вече Нерон крвожедни живот им пресече.“ gives the death to Nero. It names no third person and adds no fact the two entries do not carry."
     }
   ],
   "hymns": [
