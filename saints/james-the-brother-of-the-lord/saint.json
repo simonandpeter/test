@@ -17,6 +17,11 @@
       "form": "Иаков, брат Господень",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Апостол Иаков, брат Господень», with the rank word left off; the kinship clause is part of the name the calendar gives him, and the line itself declines it as «Апостола Иакова , брата Господня по плоти»."
+    },
+    {
+      "form": "Јаков брат Господњи",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. октобар ст. ст., „Св. апостол Јаков брат Господњи.“ — «Св.» is \"saint\" and not a rank and «апостол» is the `apostle` grade this corpus keeps in `types`, so both come off; «брат Господњи» STAYS, because it is the by-name the calendar gives and section 6 asks for the fullest form it prints. It is also what keeps this form out of the fold: the bare «Јаков» is held in sr by six folders and the gate already prints that fold as read with a key, which a seventh holder would have forced to be deleted and rewritten. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form."
     }
   ],
   "sex": "male",
@@ -34,7 +39,9 @@
   "related": [
     "john-the-theologian",
     "joseph-the-betrothed",
-    "symeon-the-god-receiver"
+    "symeon-the-god-receiver",
+    "basil-the-great",
+    "john-chrysostom"
   ],
   "attestations": [
     {
@@ -83,8 +90,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.11.2025 (23. октобар ст. ст.) — „Св. апостол Јаков брат Господњи.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (section 4). The URL year is 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. «апостол» is the `apostle` this folder holds, the thirty years at Jerusalem the `bishop` and the `office` it already carries, and the death the `martyr`; `types` untouched. SECTION 6 IS THE WHOLE POINT OF THIS DAY AND THE BY-NAME IS KEPT. The bare «Јаков» is held in sr by SIX folders already — `james-of-nisibis`, `james-of-samosata`, `james-of-studion`, `james-son-of-alphaeus`, `james-son-of-zebedee` and `james-the-confessor` — and the gate prints that six-folder fold as READ, with a key. The bare «Игњатије» became a read TWO-folder fold three days ago, on the Julian 20 October, when `ignatius-of-stara-zagora` took it beside `ignatius-of-rostov`. Storing a bare forename on either folder here would have widened a key that is already read and forced its deletion and replacement. Both of this day’s headings give a by-name — «брат Господњи» and «Цариградски» — and section 6 asks for the fullest form the calendar gives, so both are kept and the day writes no key and deletes none. That is not a convenience: it is the rule, and the fold it did not make is the measurement. `dates` UNTOUCHED AND AN AGE REFUSED. The folder holds `death` «62 or 63». The entry closes «Беше Јакову 63 године када пострада за Господа свога» — SIXTY-THREE YEARS OLD, which is AN AGE and not a year, and the coincidence that 63 is also one end of the interval on file makes it no more usable. «Био епископ у Јерусалиму 30 година» is a length of office and not a date either. WHAT THE BOOK ADDS, AND THE FIRST OF IT IS WHY HE IS CALLED WHAT HE IS CALLED. He is named the Brother of the Lord because he was a son of the righteous Joseph, the betrothed of the Theotokos — and the entry tells the story behind it: WHEN JOSEPH WAS DYING HE DIVIDED HIS PROPERTY AMONG HIS SONS AND WISHED TO LEAVE A PORTION TO THE LORD JESUS AS WELL, AND ALL THE BROTHERS OPPOSED IT, NOT RECKONING JESUS THEIR BROTHER; JAMES LOVED JESUS GREATLY AND DECLARED THAT HE WOULD TAKE HIM ON HIS OWN PORTION. THAT IS WHY HE IS CALLED THE BROTHER OF THE LORD. By tradition HE WENT INTO EGYPT WITH THE VIRGIN AND JOSEPH when Herod sought to kill the newborn King. Of his life: ALL HIS DAYS HE ATE NEITHER FAT NOR OIL BUT LIVED ON BREAD AND WATER ONLY; he was A VIRGIN TO THE END; he kept long vigils at night. The Lord NUMBERED HIM AMONG THE SEVENTY, and after the Resurrection APPEARED TO HIM PARTICULARLY, as Paul witnesses in 1 Corinthians 15. BY THE LORD’S OWN DIRECTION HE COMPOSED THE FIRST LITURGY, WHICH WAS TOO LONG FOR LATER CHRISTIANS, SO THAT SAINT BASIL AND SAINT JOHN CHRYSOSTOM HAD TO SHORTEN IT — two folders this corpus holds, and two new `related` rows here, reciprocated in this same commit, because an abbreviation of his own liturgy is his story and not a dedication. THE UNBELIEVING JEWS THEMSELVES WONDERED AT HIS RIGHTEOUSNESS AND CALLED HIM JAMES THE JUST. And the death in full: when АНАН became high priest he and the other elders planned to kill him; at a Passover with a great crowd in Jerusalem THEY TOLD HIM TO GO UP ON THE ROOF OF THE TEMPLE AND SPEAK AGAINST CHRIST, and he went up and preached Christ as the Son of God and the true Messiah, his resurrection and his eternal glory in heaven; THEY PUSHED HIM OFF THE ROOF, he fell and was badly hurt BUT WAS STILL ALIVE, AND A MAN RAN UP AND STRUCK HIM ON THE HEAD SO HARD THAT HIS BRAIN CAME OUT OF HIS HEAD. ONE PERSON NAMED AND NO FOLDER HOLDS HIM, WHICH IS RULING 3: АНАН the high priest. Herod is named and is not a saint. No `office` change, no `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

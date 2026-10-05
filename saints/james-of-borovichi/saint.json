@@ -17,6 +17,11 @@
       "form": "Иаков Боровичский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 23 октября ст. ст., «Праведный Иаков Боровичский», with the rank word left off."
+    },
+    {
+      "form": "Јаков Боровицки",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. октобар ст. ст., „Св. муч. Јаков Боровицки.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off; «Боровицки» STAYS as the by-name the calendar gives, which is section 6’s fullest form and is also what holds this form out of the six-folder fold on the bare «Јаков». `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "attestations": [
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.11.2025 (23. октобар ст. ст.) — „Св. муч. Јаков Боровицки.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (section 4), URL year 2025. «муч.» is a `martyr` THIS FOLDER DOES NOT HOLD — it carries `righteous`, `venerable` and `fool-for-christ` — and NOTHING WAS ADDED, because the entry says in its first line that nothing is known of him except what he revealed after his own death in a vision, and it gives no martyrdom, no persecutor and no manner of death at all. A rank word in a heading over a body that contradicts it is a question and not a `types_add`; it is in the report. THE YEAR IN THIS ENTRY IS NOT A DEATH YEAR, AND THE FOLDER’S IS. The folder holds `death` «c. 1540». This entry says «Његово тело допливало је једнога дана по реци Мети пред Боровиц 1540. год. и ту се зауставило» — HIS BODY CAME FLOATING DOWN THE RIVER MSTA TO BOROVICHI IN 1540 AND STOPPED THERE. So 1540 is the year the body ARRIVED, not the year he died, and this book gives no year for his death whatever. `dates` UNTOUCHED: the folder’s «c. 1540» is another book’s reading and a reader does not replace one book’s death year with another book’s arrival year, nor widen on it. Recorded because the two numbers are identical and the two events are not. WHAT THE BOOK ADDS, WHICH IS ALMOST NOTHING AND SAYS SO. «О овоме светитељу зна се само онолико колико је он открио после своје смрти у визији људима из места Боровица» — of this saint only so much is known as he himself revealed after his death, in a vision, to the people of the place Borovichi. Then the body on the river, and that MANY WONDERS WERE SHOWN FORTH FROM HIS RELICS. The river Мета is named, which the folder’s other two books do not give. No `related`, no `office`, no `locations`: Borovichi and the Msta are named and neither is a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Јаков Боровицки», and the by-name is what keeps it out of the six-folder «Јаков» fold. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
