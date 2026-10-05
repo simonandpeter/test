@@ -1,0 +1,69 @@
+{
+  "slug": "nicholas-zelenov",
+  "display_name": "Nicholas (Zelenov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Зеленов)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link in the line for 20 ноября ст. ст., name page 13862, «Николай (Зеленов), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. "
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Алексия, Александра, Владимира, Иоанна, Алексия, Василия, Николая, Иоанна, Емилиана, Николая пресвитеров, и прмчч. Арсения, Евтихия и Илариона, прмц. Иоанникии игумении (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. **Two sources put him in two places on the same day and this folder does not choose.** His own entry at azbyka.ru, out of fond.ru and the Moscow diocese’s volumes, has him shot at Butovo near Moscow; the article pstgu.ru supplies to the azbyka pages of the Tikhvin case names a «Николай Зеленов» among seven shot at Тихвин the same 3 December 1937. The life written here is his own entry’s, which is the only page azbyka gives this name, and the disagreement is recorded rather than settled."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Николай родился в 1887 году в сельце Бочевино Бронницкого уезда Московской губернии в семье крестьянина Поликарпа Зеленова». days.pravoslavie.ru gives no year of birth. "
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 20 ноября ст. ст. with «(1937)», which it gives to the whole company of fourteen; azbyka.ru: «Священник Николай Зеленов был расстрелян 3 декабря 1937 года на полигоне Бутово под Москвой и погребен в безвестной общей могиле», and 3 декабря 1937 is the civil day of this Julian 20 November. No day is recorded here because this corpus’s `dates` are years. The other reading of the place is in the `russian` row’s note; the year is not in dispute."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "slug": "john-zabolotny",
+  "display_name": "John (Zabolotny)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Заболотный)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link in the line for 20 ноября ст. ст., name page 13050, «Иоанн (Заболотный), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. "
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Алексия, Александра, Владимира, Иоанна, Алексия, Василия, Николая, Иоанна, Емилиана, Николая пресвитеров, и прмчч. Арсения, Евтихия и Илариона, прмц. Иоанникии игумении (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. **The two calendars rank him differently and the `types` follow the source of record.** days.pravoslavie.ru puts him fourth among the ten it calls «пресвитеров» and titles his name page «Иоанн (Заболотный), иерей, сщмч.»; azbyka.ru puts him first among four it calls «прмчч.» and titles his page «Преподобномученик Иоанн Заболотный, иеромонах». The life, which is azbyka’s, says he was tonsured a monk at the Уманский monastery about 1922 and ordained priest in 1927, so `monk` is written beside the two ranks the source of record gives and the office is left as that source’s «иерей». Whether he is a hieromartyr presbyter or a venerable-martyr hieromonk is the author’s."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1899,
+      "latest": 1899,
+      "display": "1899",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Иоанн (в миру Иван Васильевич Заболотный) родился в 1899 году в селе Клиновое Балтского уезда Подольской губернии». days.pravoslavie.ru gives no year of birth. "
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 20 ноября ст. ст. with «(1937)», which it gives to the whole company of fourteen; azbyka.ru: «Казнен 3 декабря на полигоне Бутово близ Москвы и погребен в безвестной общей могиле», and 3 декабря 1937 is the civil day of this Julian 20 November. No day is recorded here because this corpus’s `dates` are years. "
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}
