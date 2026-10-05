@@ -11,6 +11,11 @@
       "form": "Προκόπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Ιουλίου, «Όσιος Προκόπιος ο δια Χριστόν σαλός ο εν Ουστούζη, ο θαυματουργός», with the rank word, the epithets and the place left off."
+    },
+    {
+      "form": "Прокопије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. јул ст. ст., „Св. Прокопије Јуродиви“ — Св. is not a rank, and „Јуродиви“ **is** the rank: §5 lists Христа ради јуродиви / Јуродиви as `fool-for-christ`, which this folder already carries in `types`, so it comes off and may not be kept to break a fold. The bare forename is what is left. «of Ustyug» in the display name is the corpus’s own, and „Устјужски“ in the body is a body and not a heading. **The fold is therefore shared with this same day’s first entry**, and was measured both ways: `foldchk.py` returns `procopius-of-sazava`, `sr`, for «Прокопије» and NO FOLDER HOLDS THIS FORM for «Прокопије Јуродиви». Three folders hold the string after this day."
     }
   ],
   "dates": {
@@ -50,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.07.2026 (8. јул ст. ст.) — „Св. Прокопије Јуродиви“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 8 July is the same menologion number this folder’s Greek row carries, its only other venerated row, so there is no second day and no §4 note is owed. **`dates` UNTOUCHED, AND THE AGREEMENT IS EXACT.** The folder holds `death` 1303 to 1303 off saint.gr, «κοιμήθηκε το 1303 μ.Χ.», with the page headed «(; - 1303)». This book opens the entry „Устјужски чудотворац, †1303“ — the wonderworker of Ustyug, died 1303 — **with the dagger and the year and nothing between them**. Two books, one year, nothing to widen and nothing to add: the field is passed back verbatim, note and all. The canonisation of 1818 that saint.gr gives is a glorification and not a death, and is not in this book at all. WHAT IS NEW, AND IT IS ALMOST ALL OF HIM. The folder’s own life says saint.gr «has no details of the life … apart from one wonder». This book has the life: **that he was a Varangian by origin and a merchant by trade**; that coming to Novgorod on business „он се удиви красоти Православља и прими веру православну“, he marvelled at the beauty of Orthodoxy and received the Orthodox faith; that wishing to be a perfect Christian he gave all his property to the poor and set himself to practise every remaining virtue; **that he feigned madness so that people should not praise him**, while he saw into the hearts and the fates of men and into natural events which afterwards really happened; that his body was found dead in the street and covered with snow; and that a church was built over the wonderworking relics. **AND THE ONE WONDER BOTH BOOKS TELL, THEY TELL DIFFERENTLY.** saint.gr has an enormous black cloud over the city, the churches filling, Procopius reproaching the people and urging them to pray, the cloud breaking up, and then the stretch of ground outside the city covered with black **meteorite stones** which would have left no man alive. This book says „Својом плачном молитвом пред иконом Богородице одвратио ужасну тучу од града Устјуга и тако привео грешни град к покајању“ — by his weeping prayer before the icon of the Mother of God he turned a terrible **hail** away from the town of Ustyug and so brought the sinful town to repentance. Hail against stones from the sky, a prayer before an icon against a reproach to the people, and the repentance before the deliverance rather than after it. **Both are written in the life and neither is chosen**, which is the shape used for the baptism of Zosimus on 19 June and for Martha’s burial on 4 July. `types` UNTOUCHED: `fool-for-christ` and `wonderworker` are both there. „Јуродиви“ in the heading **is** the `fool-for-christ` and the folder holds it, so nothing is written — and that same fact is why the form folds, below. „чудотворац“ stands in the body and the folder holds `wonderworker` already off saint.gr, so it is recorded as an agreement and not used as a source. **`merchant` is not a type at all** and none is written off the trade. No `office`, no `locations`: Novgorod and Ustyug in a narrative are not coordinates. **NO NEW ROWS.** The folder already relates `procopius-of-usya`, whom this book does not name; the icon is not a person, and the sinful town is not a folder. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE DAY’S TWO PROCOPII FOLD ONTO EACH OTHER, AND THAT IS MEASURED AND FORCED.** Entry 1 is „Св. вел. муч. Прокопије“ and entry 2 is „Св. Прокопије Јуродиви“. Свети is not a rank; „вел. муч.“ is the great-martyr; and **„Јуродиви“ is a rank too** — §5 lists Христа ради јуродиви / Јуродиви as `fool-for-christ`, which is a `types` word and not a by-name. So both headings reduce to the bare «Прокопије», and the two folders this day writes take the same `sr` form. `foldchk.py` returns `procopius-of-sazava`, `sr`, for that string, so after this day **three folders hold it**, two of them written on one day. **This is the 18 June case with the answer going the other way**: there both entries were a Leontius and keeping „прозорљиви“ was the only reason the day’s two folders did not fold together — but that word is a by-name with no `types` behind it, where „Јуродиви“ is the rank the folder already carries. A rank may not be kept in a form to break a fold. «Прокопије Јуродиви» was measured and holds nobody, and was refused on the rule; „Устјужски“, which would also have broken it, stands in the **body** and a by-name is kept only where the heading itself gives one. The three are told apart by their display names, their `types` and their days: a `great-martyr` and `soldier` of Caesarea on 8 July, a `fool-for-christ` and `wonderworker` of Ustyug on 8 July, and the Bohemian abbot of Sázava."
     }
   ],
   "related": [
