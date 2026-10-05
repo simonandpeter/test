@@ -17,6 +17,11 @@
       "form": "Ермије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The heading's form is Ермије and the body's is Ермија; the heading's is the one stored, as the quoted line is the heading. Dalmatia is in the body and not in the heading, and this corpus keeps a see in `office`."
+    },
+    {
+      "form": "Ерм (Ермий) Далматский",
+      "lang": "ru",
+      "note": "Read out of the heading on azbyka.ru’s own page for him, «Апостол от 70-ти Ерм (Ермий), епископ Далматский», with the enumeration of the Seventy and the office word left off and the second form kept in the brackets the page prints it in. **days.pravoslavie.ru, which is the calendar of record here, gives only «Апостол Ерм», name page 791, and the bare «Ерм» is held as a `ru` form by two other folders already** — `hermas-of-rome` and `hermas-5-november`; the gate folds nothing shorter than four characters, so storing it would have made no fold key and still an exact string across three folders, and the fuller heading is what tells this one from them. `.tmp/foldchk.py` named the two sitting folders and `.tmp/sr-foldpred.mjs` answers that the stored form adds a key no other folder holds."
     }
   ],
   "sex": "male",
@@ -36,8 +41,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Апп. от 70 Иродиона, Агава, Асинкрита, Руфа, Флегонта, Ерма и иже с ними (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -99,6 +113,22 @@
       },
       "english": {
         "text": "O holy apostles, pray the merciful God to grant our souls forgiveness of sins.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Явистеся Христовы ученицы и апостоли всечестнии,/ Иродионе славне, Агаве и Руфе,/ Асинкрите, Флегонте со Ермом,/ присно молитеся Господеви// подати нам согрешений прощение, поющим вас.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Кондак апостолов», глас 2. Theirs and a proper: it names all six of the company in order, and it names him last, «Флегонте со Ермом». The same kontakion stands under «Молитвы» on each of the six name pages, filed there under 8 апреля.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown forth as the disciples of Christ and his all-honourable apostles — glorious Herodion, Agabus and Rufus, Asyncritus, Phlegon with Hermas: pray without ceasing to the Lord that he grant forgiveness of sins to us who sing your praises.",
         "rendered": "site"
       }
     }

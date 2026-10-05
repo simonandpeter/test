@@ -17,6 +17,11 @@
       "form": "Флегонт",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 April on pravoslavno.rs, „Св. апостоли Иродион, Агав, Руф, Асинкрит, Флегонт и Ермије.“, where Св. апостоли heads the whole company of six and belongs to no one of them, so each forename stands bare. The see is in the body and not in the heading, and this corpus keeps a see in `office`."
+    },
+    {
+      "form": "Флегонт Марафонский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 8 апреля ст. ст., name page 2313, «Святитель Флегонт, епископ Марафонский, апостол от 70-ти, сщмч.», with the rank word, the office word, the enumeration of the Seventy and the rank abbreviation left off. The day’s own line gives the forename alone, «Флегонта». No folder holds this form, and no folder but this one holds the bare «Флегонт», which it carries as its `sr` form; `.tmp/sr-foldpred.mjs` answers that the stored form adds a key no other folder holds."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Апп. от 70 Иродиона, Агава, Асинкрита, Руфа, Флегонта, Ерма и иже с ними (I).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -147,6 +161,22 @@
       },
       "english": {
         "text": "As those initiated into Christ and sharers of the apostles' tent, ye six disciples, shining in all the earth like a lamp of six lights, made known his condescension and broke up the dreadful darkness, kindling for all the light of truth.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Явистеся Христовы ученицы и апостоли всечестнии,/ Иродионе славне, Агаве и Руфе,/ Асинкрите, Флегонте со Ермом,/ присно молитеся Господеви// подати нам согрешений прощение, поющим вас.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Кондак апостолов», глас 2. Theirs and a proper: it names all six of the company in order, and it names him fifth, «Асинкрите, Флегонте со Ермом». The same kontakion stands under «Молитвы» on each of the six name pages, filed there under 8 апреля.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown forth as the disciples of Christ and his all-honourable apostles — glorious Herodion, Agabus and Rufus, Asyncritus, Phlegon with Hermas: pray without ceasing to the Lord that he grant forgiveness of sins to us who sing your praises.",
         "rendered": "site"
       }
     }

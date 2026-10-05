@@ -180,6 +180,22 @@
         "text": "Today the honoured festival of the apostles has appeared, plainly granting the forgiveness of their offences to all who keep their memory.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Явистеся Христовы ученицы и апостоли всечестнии,/ Иродионе славне, Агаве и Руфе,/ Асинкрите, Флегонте со Ермом,/ присно молитеся Господеви// подати нам согрешений прощение, поющим вас.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Кондак апостолов», глас 2. Theirs and a proper: it names all six of the company in order, and it names him first, «Иродионе славне», glorious Herodion. The same kontakion stands under «Молитвы» on each of the six name pages, filed there under 8 апреля.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown forth as the disciples of Christ and his all-honourable apostles — glorious Herodion, Agabus and Rufus, Asyncritus, Phlegon with Hermas: pray without ceasing to the Lord that he grant forgiveness of sins to us who sing your praises.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
