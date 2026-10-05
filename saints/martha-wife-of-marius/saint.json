@@ -6,6 +6,11 @@
       "form": "Marta",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 6 iulie, «Sfinții Mucenici Marius și Marta, soția sa, și fiii lor Audifaciu și Avacum»."
+    },
+    {
+      "form": "Марта",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. јул ст. ст., „Св. муч. Марин и Марта,“ — Св. is not a rank and муч. is the rank, which `types` already carries; both come off, „Марин и“ is the other name the heading enumerates, and the bare forename is left. «wife of Marius of Persia» in the display name is the corpus’s own and is not in this heading. **The fold is forced and it is three deep, and one of the two holders is a folder this same reader wrote the form onto two days ago**: `foldchk.py` returns `martha-of-antioch`, whose «Марта» was written on 4 July, and `martha-sister-of-lazarus`, both `sr`. There is nothing in the heading to break it with, and the three are told apart by their display names, their days and their `types` as they were before."
     }
   ],
   "sex": "female",
@@ -25,11 +30,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 270,
+      "earliest": 269,
       "latest": 270,
-      "display": "c. 270",
+      "display": "269 or about 270",
       "basis": "traditional",
-      "note": "doxologia.ro reasons from the names in the account: «Deoarece în istorisirea din Viețile Sfinților sunt amintiți Episcopul Calist al Romei (217-222) și Împăratul Claudiu al II-lea Goticul (268-270), se înțelege că venirea la Roma a celor patru sfinți a fost în jurul anului 220, iar moartea lor mucenicească prin anul 270.»"
+      "note": "Two books, two years one apart, and the field is widened rather than chosen. doxologia.ro reasons from the names in the account: «Deoarece în istorisirea din Viețile Sfinților sunt amintiți Episcopul Calist al Romei (217-222) și Împăratul Claudiu al II-lea Goticul (268-270), se înțelege că venirea la Roma a celor patru sfinți a fost în jurul anului 220, iar moartea lor mucenicească prin anul 270.» The Охридски пролог for 6. јул ст. ст. states one year flat, and states it of the whole company: „Сви пострадаше у време цара Клаудија Флавија у Риму, 269 год.“ — all suffered in the time of the emperor Claudius Flavius at Rome, in the year 269. The plural is why this folder’s date is widened on a sentence about her and not on another folder’s prose. The emperor is no source for either year, and nothing is averaged (5 October 2026)."
     }
   },
   "attestations": [
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.07.2026 (6. јул ст. ст.) — „Св. муч. Марин и Марта,“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-19&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, the second of the two names its heading enumerates. The heading is quoted as the Prologue prints it, as every heading of this wave is — and this day one of them ends in a comma, which is kept. The Julian 6 July is the same menologion number this folder’s Romanian row carries, its only other venerated row, so there is no second day and no §4 note is owed. **THE SAME WIDENED DATE, AND IT IS NOT WIDENED ON ANOTHER FOLDER’S PROSE.** The folder held `death` 270 to 270, display «c. 270», off the same doxologia reasoning from two reigns. This book states 269, and the sentence that states it is „Сви пострадаше“ — **all** of them suffered — which is the plural that makes the widening this folder’s own and not her husband’s, exactly as „пострадаше“ did for the two Roman brothers on 1 July. `death` earliest 269, latest 270, display «269 or about 270», basis traditional. WHAT IS NEW is the same as on her husband, the entry being one entry: the selling of everything in Persia, the journey to Rome with the sons to venerate the apostles’ relics, and the answer to the emperor about why they had left their household gods to seek dead men. Her own act in the body is the drawing of Quirinus’s body out of the Tiber and its honourable burial, which this book gives to the two of them together. `types` UNTOUCHED: `martyr` is there and „Св. муч.“ is the `martyr`. No `office`, no `locations`. **NO NEW ROWS.** The folder already relates `marius-of-persia`, `audifax-son-of-marius` and `abachum-son-of-marius`. **THE COMPANY, THE COMMA, AND FOUR FOLDERS THAT STAND ON THIS NUMBER AND GET NO ROW.** The heading is „Св. муч. Марин и Марта,“ — it ends in a **comma**, and the body picks the sentence up: „са синовима Авдифаксом и Авакумом, свештеником Валентином, Кирином, Астеријем и многим другим“, with their sons Audifax and Abachum, the presbyter Valentine, Quirinus, Asterius and many others. §5 says count what the **heading** enumerates, and the heading enumerates **two**: Marin and Marta. So this entry is two rows and the body’s five named companions get none. **This is the 18 June ruling at its most expensive yet.** `audifax-son-of-marius` and `abachum-son-of-marius` both exist, both are `martyr`, both are kept **venerated by the Romanian calendar on the Julian 6 July — the same number these two rows are written on** — and both are **already related by both parents’ folders**, so the relation is not what is missing. What is refused is a `serbian` attestation row quoted off a heading that does not carry them. Valentine, Quirinus and Asterius are the same refusal with the identification unmade besides: `ls saints | grep -i valentine` returns five, of whom `valentine-of-rome` is kept on 14 February and `valentine-of-interamna` on 30 July and 14 February, and **an identification made off a name in another man’s life is not an identification**; the corpus holds no Quirinus of this account, and thirty-odd folders carry Asterius. „и многим другим“, and many others, names nobody at all, and a narrated martyrdom with no name gets no row and no folder. **AND THE SCENES THOSE NAMES CARRY ARE STILL WORTH THE LIFE.** Quirinus was thrown into the Tiber and **Marin and Marta drew his body out and buried it honourably** — which is their own act and goes into both their lives. Valentine the presbyter was handed over to a commander Asterius to be talked into denying Christ, and instead healed Asterius’s daughter, blind two years, by prayer, and then baptised Asterius and his whole house. That is **not** their act and is written as the entry’s, in the one sentence that makes clear whose story it is. The Prologue prints no troparion and no kontakion; the day carries only the verse. **THE DAY’S THIRD ENTRY IS A FEAST AND IS REFUSED TWICE OVER.** „Обретеније моштију св. Јулијаније девице“ — the finding of the relics of the holy virgin Juliana. §5 is explicit that an «Обретење моштију» is a feast and not a folder, which is the first refusal; **and no folder holds her**, which is the second. The entry says she was the daughter of the prince of Olshansk, died about 1540 a virgin of sixteen, and that two hundred years after her death the diggers of a new grave beside the great church of the Kyiv lavra came on her relics whole and incorrupt, as though she had only just fallen asleep; many wonders came of them, and she herself appeared more than once to individual persons. `ls saints | grep -i juliana` returns seven and **not one of them is she**: `juliana-4-december`, `juliana-mother-of-saturninus`, `juliana-of-amisos`, `juliana-of-lazarevo`, `juliana-of-nicomedia`, `juliana-of-ptolemais` and `juliana-of-rhosus`. `ls saints | grep -i olshan` holds nobody. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јулијанија». Ruling 3: named here, left out of every life written on this day, and no folder from me — and **the year 1540, the sixteen years, and the two hundred years are written nowhere**, the first being hedged „около“ in any case and the other two being durations. **AND THE ONE MAN IN THAT ENTRY WHO DOES HAVE A FOLDER TAKES NO ROW.** „знаменити Петар Могила“ — the famous Peter Mohyla — had one of those visions of her, and `peter-mohyla` is a folder kept venerated by the Romanian calendar on 22 December. An appearance is not a relation, which is the Three Hierarchs ruling; the entry is a feast, so no row of any kind hangs on it; and the folder it would hang on is Juliana’s, which does not exist."
     }
   ],
   "hymns": [
