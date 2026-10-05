@@ -10,6 +10,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος», with the rank words left off."
+    },
+    {
+      "form": "Иоанн Бет-Селевкийский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the clause for 20 ноября ст. ст., name page 961, «Иоанн Бет-Селевкийский (Персидский), сщмч.», with the grade word left off. **This form folds**, and the fold is the evidence: `john-companion-of-james-the-presbyter` holds the identical string off the same name page read for 1 ноября ст. ст. Two folders, one name page, one life. The fold is written rather than hidden so that the author can see the two from either end."
     }
   ],
   "related": [
@@ -31,8 +36,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Нирсы еп. и Иосифа, ученика его, Иоанна, Саверия, Исакия и Ипатия, епископов Персидских; мч. Азата скопца, Сасония, Феклы, Анны и иных многих мужей и жен, в Персиде пострадавших (343).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "**His name page is listed on two days and this corpus keeps two folders for them.** Name page 961 prints «Дни памяти: 1 ноября , 20 ноября», and behind both of them the one Persian life, life2574, in which a bishop John is stoned. The row for 1 ноября is already written, on `john-companion-of-james-the-presbyter`, and its own note records that the 20 ноября was seen and refused there because deciding that two commemorations are one man is not a reader’s. This row is the other half of that refusal: it is written here, on the folder the Greek calendar made for this very company on this very day, and the two folders are left standing. If the author merges them, one of these two rows goes."
     },
     {
       "church": "romanian",

@@ -1,0 +1,69 @@
+{
+  "slug": "hilarion-pisarets",
+  "display_name": "Hilarion (Pisarets)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Иларион (Писарец)",
+      "lang": "ru",
+      "note": "Read out of the title on his name link in the line for 20 ноября ст. ст., name page 9212, «Иларион (Писарец), иеромонах, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. "
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Алексия, Александра, Владимира, Иоанна, Алексия, Василия, Николая, Иоанна, Емилиана, Николая пресвитеров, и прмчч. Арсения, Евтихия и Илариона, прмц. Иоанникии игумении (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. **The source of record disagrees with itself about his rank.** Its day line counts him third of the «прмчч.», the monk-martyrs, and its own name page titles him «Иларион (Писарец), иеромонах, сщмч.», a hieromartyr. azbyka.ru heads his page «Преподобномученик Иларион (Писарец), иеромонах» and its day line puts him with the «прмчч.» too, so the `types` follow the line that makes this row and the second reading of the name page is recorded here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Иларион родился в 1871 году в селе Собичево Глуховского уезда Черниговской губернии в семье крестьянина Павла Писарца». days.pravoslavie.ru gives no year of birth. "
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 20 ноября ст. ст. with «(1937)», which it gives to the whole company of fourteen; azbyka.ru: «Иеромонах Иларион (Писарец) был расстрелян 3 декабря 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой», and 3 декабря 1937 is the civil day of this Julian 20 November. No day is recorded here because this corpus’s `dates` are years. "
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

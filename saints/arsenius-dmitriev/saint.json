@@ -1,0 +1,68 @@
+{
+  "slug": "arsenius-dmitriev",
+  "display_name": "Arsenius (Dmitriev)",
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Арсений (Дмитриев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 20 ноября ст. ст., name page 13864, «Арсений (Дмитриев), игумен, прмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. The sweep over Дмитриев returned `joannicius-dmitriev` and `vladimir-presbyter-martyr-1918-3-september`. The first is worth naming: this day has both an Арсений (Дмитриев) and an Иоанникия (Кожевникова), and the corpus’s existing Иоанникий (Дмитриев) crosses the two halves of that pair and is neither of them."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "abbot"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Алексия, Александра, Владимира, Иоанна, Алексия, Василия, Николая, Иоанна, Емилиана, Николая пресвитеров, и прмчч. Арсения, Евтихия и Илариона, прмц. Иоанникии игумении (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. azbyka.ru hangs behind his page the shared article on the Tikhvin case and gives him «11 июля (переходящая) – Соборы Новгородских и Санкт-Петербургских святых», which was seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 20 ноября ст. ст. with «(1937)», which it gives to the whole company of fourteen; the article azbyka.ru prints out of pstgu.ru closes «были расстреляны в Тихвине 3 декабря 1937 года», and 3 декабря 1937 is the civil day of this Julian 20 November. No day is recorded here because this corpus’s `dates` are years, and no year of birth is given for this person anywhere read."
+    }
+  },
+  "related": [
+    "john-sarv",
+    "basil-kandelyabrov",
+    "nicholas-pokrovsky",
+    "emilian-panasevich",
+    "joannicia-kozhevnikova"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

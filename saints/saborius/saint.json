@@ -10,6 +10,11 @@
       "form": "Σαβώριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Ισάκιος, Ιωάννης, Σαβώριος, Ωνάμ, Παππίας και Ισαάκιος», with the rank words left off."
+    },
+    {
+      "form": "Саверий Бет-Селевкийский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the clause for 20 ноября ст. ст., «Святитель Саверий Бет-Селевкийский (Персидский), епископ, сщмч.», with the grade words left off; the clause itself declines the bare forename. The see in the epithet is the same one the name page gives John, and no English form of it is written here for the same reason. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -31,8 +36,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Нирсы еп. и Иосифа, ученика его, Иоанна, Саверия, Исакия и Ипатия, епископов Персидских; мч. Азата скопца, Сасония, Феклы, Анны и иных многих мужей и жен, в Персиде пострадавших (343).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

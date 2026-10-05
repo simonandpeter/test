@@ -8,4 +8,10 @@ After the death of their parents the three were denounced to Maximian, and when 
 
 This folder is Thespesius, named second, one of the two who followed their father's trade, brother to [Eustathius](/saints/eustathius-20-november) and [Anatolius](/saints/anatolius-20-november).
 
-*After saint.gr's calendar for 20 Νοεμβρίου — [the day](https://www.saint.gr/11/20/index.aspx) and [the life the three share](https://www.saint.gr/3052/saint.aspx); read 2 October 2026.*
+The Сретенский monastery’s calendar keeps the three of them on one line for the Julian 20 November, «Мчч. Евстафия, Феспесия и Анатолия (312).», and its life page is three sentences long and gives four facts the Greek page did not. They were natives of the city of Gangra; they were the children of a rich merchant; they were baptised by the bishop [Anthimus of Nicomedia](/saints/anthimus-of-nicomedia); and they died as martyrs at Nicaea, having borne the cruellest tortures. The Greek page had given the baptism and the bishop; the birthplace and the merchant father are new, and so is Nicaea as the place of death.
+
+**The year does not agree with the year this folder held.** saint.gr put the three of them «στα χρόνια του βασιλιά Μαξιμιανού το έτος 300»; days.pravoslavie.ru closes its line with «(312)» and its life page with «(+ 312)». Twelve years, two sources, and nothing read chooses between them, so the interval is widened to hold both and the display stops being a single year.
+
+He is the second of the three on the line, on the name page and in the life page’s title, and the brother in the middle: the page makes no distinction between the three beyond the order in which it names them.
+
+*After saint.gr's calendar for 20 Νοεμβρίου — [the day](https://www.saint.gr/11/20/index.aspx) and [the life the three share](https://www.saint.gr/3052/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 20 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261120.html) and [the life the three share](https://days.pravoslavie.ru/Life/life2573.htm); read 6 October 2026.*

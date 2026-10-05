@@ -8,4 +8,10 @@ After the death of their parents the three were denounced to Maximian, and when 
 
 This folder is Anatolius, named last, the brother who was on the journey into the East with his father Philotheos when Lucian met them, brother to [Eustathius](/saints/eustathius-20-november) and [Thespesius](/saints/thespesius-20-november).
 
-*After saint.gr's calendar for 20 Νοεμβρίου — [the day](https://www.saint.gr/11/20/index.aspx) and [the life the three share](https://www.saint.gr/3052/saint.aspx); read 2 October 2026.*
+The Сретенский monastery’s calendar keeps the three of them on one line for the Julian 20 November, «Мчч. Евстафия, Феспесия и Анатолия (312).», and its life page is three sentences long and gives four facts the Greek page did not. They were natives of the city of Gangra; they were the children of a rich merchant; they were baptised by the bishop [Anthimus of Nicomedia](/saints/anthimus-of-nicomedia); and they died as martyrs at Nicaea, having borne the cruellest tortures. The Greek page had given the baptism and the bishop; the birthplace and the merchant father are new, and so is Nicaea as the place of death.
+
+**The year does not agree with the year this folder held.** saint.gr put the three of them «στα χρόνια του βασιλιά Μαξιμιανού το έτος 300»; days.pravoslavie.ru closes its line with «(312)» and its life page with «(+ 312)». Twelve years, two sources, and nothing read chooses between them, so the interval is widened to hold both and the display stops being a single year.
+
+He is named last of the three on the line, on the name page and in the life page’s title. The corpus keeps more than a dozen folders for an Anatolius and this one is told apart by the day, which is why its slug carries one.
+
+*After saint.gr's calendar for 20 Νοεμβρίου — [the day](https://www.saint.gr/11/20/index.aspx) and [the life the three share](https://www.saint.gr/3052/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 20 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261120.html) and [the life the three share](https://days.pravoslavie.ru/Life/life2573.htm); read 6 October 2026.*

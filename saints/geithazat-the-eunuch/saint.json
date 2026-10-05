@@ -10,6 +10,11 @@
       "form": "Γεϊθαζέτ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Άγιοι Γεϊθαζέτ ο ευνούχος, Σασάνης, Νοηλμάρης και Ζαρουαντίνης», with the rank words left off."
+    },
+    {
+      "form": "Азат Гадиабский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the clause for 20 ноября ст. ст., «Азат Гадиабский (Персидский), мч.», with the grade words left off; the clause itself declines the bare forename. The Cyrillic forename is Азат where the Greek folder’s is Γεϊθαζέτ, and the row’s note says on what the two were joined. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Сщмчч. Нирсы еп. и Иосифа, ученика его, Иоанна, Саверия, Исакия и Ипатия, епископов Персидских; мч. Азата скопца, Сасония, Феклы, Анны и иных многих мужей и жен, в Персиде пострадавших (343).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "The Greek and the Russian name him differently and the match is made on the epithet and the company, not on the letters. saint.gr has Γεϊθαζέτ ο ευνούχος first of a group of four; the Russian clause has «мч. Азата скопца» first of a group whose next name is Сасоний, which is saint.gr’s Σασάνης in the same second place. «Скопец» is «ο ευνούχος». The forenames differ — Azat against Geithazat — and nothing read reconciles them; the eunuch, the place in the company and the day do."
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 343,
+      "latest": 343,
+      "display": "343",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the clause for 20 ноября ст. ст. with «(343)» and closes its life page with «(+ 343)», and the page gives no year of birth and no other date. The year is the whole company’s, not this one figure’s: the page gives it once, at the end of a sentence that gathers «Сасоний, Фекла, Анна и многие другие мужчины и женщины»."
+    }
   }
 }

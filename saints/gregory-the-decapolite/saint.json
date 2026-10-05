@@ -11,6 +11,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 20 Νοεμβρίου, «Όσιος Γρηγόριος ο Δεκαπολίτης», with the rank word left off."
+    },
+    {
+      "form": "Григорий Декаполит",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 20 ноября ст. ст., name page 539, «Преподобный Григорий Декаполит», with the rank word left off; the line itself declines the two words. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Прп. Григория Декаполита (816).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "The name link behind the line, name page 539, carries **two** life pages for one man, life2568 and life6540, and they disagree about where he was born and how he came to the monastic life. Both were read and both are in the life; neither is preferred, because the calendar does not prefer one."
     },
     {
       "church": "romanian",
@@ -93,6 +108,54 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их// в мире управи живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Тропарь преподобного Григория и святителя Прокла»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who dealest with us ever according to Thy gentleness, take not away Thy mercy from us, but by their prayers govern our life in peace.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Образ был еси воздержания,/ Божественным Духом вся просветив:/ правоверия течение совершил еси,/ учением мир просветил еси/ и зловерных обличил еси смыслы,/ отче преподобне Григорие,/ Христа Бога моли даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Тропарь преподобного Григория Декаполита»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast a pattern of abstinence, enlightening all things by the divine Spirit; thou didst accomplish the course of right believing, thou didst enlighten the world by thy teaching and didst reprove the minds of the ill-believing, O venerable father Gregory: entreat Christ God to grant us great mercy.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Светлое тя солнце Церковь познавает,/ добродетелей красотами и исцелений лучами/ всех просвещая, Христов угодниче:/ темже празднуем честную память твою/ и почитаем подвиги твоя,// всеблаженне отче премудре Григорие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Кондак преподобного Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The Church knows thee for a radiant sun, enlightening all by the beauties of the virtues and by the rays of healings, O thou well-pleasing to Christ. Therefore we keep thy precious memory and honour thy struggles, O all-blessed and most wise father Gregory.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
     }
   ]
 }

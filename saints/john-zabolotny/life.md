@@ -1,0 +1,9 @@
+# John (Zabolotny)
+
+The Сретенский monastery’s calendar names him fourth of the fifteen and gives no life; the life here is azbyka.ru’s for the civil 3 декабря, out of fond.ru, and it ranks him differently from the calendar that made this folder. In the world Иван Васильевич Заболотный, he was born in 1899 in the village of Клиновое in the Balta district of the province of Podolia, now in the Kirovohrad region of Ukraine, into a peasant family. He was called up into the Red Army in 1918 and hid from the service; at the end of 1919 he was arrested for desertion and later put in a forced-labour camp near Odessa.
+
+Freed in 1922 he became a brother of the Уманский monastery, where he was tonsured a monk and stayed until the house was closed. In 1927 he was ordained priest and served in various churches of Ukraine, and from 1935 in churches of the Zaraysk district of the Moscow region.
+
+He was arrested on 16 November 1937 at Стрелецкая Слобода in the Zaraysk district on a charge of «ведении активной контрреволюционной деятельности и высказывании террористических настроений против коммунистов», and held in the prison of Kolomna. He admitted nothing. On 27 November 1937 the special troika of the NKVD administration for the Moscow region sentenced him to be shot; he was executed on 3 December at the Butovo range near Moscow and buried in a common unmarked grave. His name was included in the Synaxis of the New Martyrs and Confessors of Russia by the determination of the Holy Synod of 26 December 2001.
+
+*After the Православный церковный календарь of the Сретенский monastery for 20 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261120.html) and [his name page](https://days.pravoslavie.ru/name/13050.html), which carries no life; and the life printed by the Russian church calendar at azbyka.ru for 3 декабря out of fond.ru — [the entry](https://azbyka.ru/days/sv-ioann-zabolotnyj); read 6 October 2026.*

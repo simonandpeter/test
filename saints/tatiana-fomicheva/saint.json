@@ -1,0 +1,70 @@
+{
+  "slug": "tatiana-fomicheva",
+  "display_name": "Tatiana (Fomicheva)",
+  "office": "Novice",
+  "names": [
+    {
+      "form": "Татиана (Фомичева)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 20 ноября ст. ст., name page 9925, «Татиана (Фомичева), послушница, прмц.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` reports no folder holding this form, `.tmp/sr-foldpred.mjs` predicts no fold for it, and `.tmp/rusurn.py` was run over the surname: every folder it returned carries a different forename. The sweep over Фомичева returned nothing. The corpus keeps three other women of the Soviet years named Татиана and all three have a different surname and a different day: `tatiana-nun-martyr-1937`, whose display name is the surname Грибкова, on 1 сентября; `tatiana-chekmazova` on 28 сентября; and `tatiana-besfamilnaya` on 8 октября."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 20 ноября ст. ст. — «Прмц. Татианы (после 1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261120.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs, and 20 ноября. Only the second was read, and only the second is a row. **She has a year clause of her own and it is the reason for this row’s own note.** The line for the company closes «(1937)»; hers is a separate sentence closing «(после 1937)», after 1937. days.pravoslavie.ru does carry a life for her — life4785, which it titles for her and for the archpriest `vladimir-medvedyuk` together — and that life explains the clause: it says of her only that she «приняла смерть в заключении», took death in confinement, and gives no date for it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 3 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 3 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 3 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1897,
+      "latest": 1897,
+      "display": "1897",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru: «Послушница Татиана родилась в 1897 году в селе Надовражное неподалеку от города Истра Московской губернии в семье крестьянина Алексея Фомичева»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": null,
+      "display": "after 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(после 1937)» after her name on 20 ноября ст. ст. — after 1937, which is a finding and not a year: the calendar is saying that it does not know when she died, only that it was not before that. Its own life page says why, and says it of her alone: on 29 November 1937 she was sentenced to ten years in a corrective labour camp, not to death, and «послушница Татиана Фомичева приняла смерть в заключении» — she took death in confinement, with no date. The upper bound is left open for that reason, which is how `anastasia-lebedeva` carries the same clause off the same calendar."
+    }
+  },
+  "related": [
+    "vladimir-medvedyuk"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
