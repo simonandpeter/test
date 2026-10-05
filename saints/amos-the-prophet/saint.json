@@ -6,6 +6,11 @@
       "form": "Amos",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iunie, «Sfântul Proroc Amos»."
+    },
+    {
+      "form": "Амос",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 15. јун ст. ст., „Свети пророк Амос“ — Свети is not a rank and пророк is the rank, which `types` already carries; both come off and the bare forename is left, which is all the heading gives. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Амос», so there is no fold. The book’s own closing note distinguishes him from the other Amos, father of Isaiah, who was no prophet and died no martyr; the folder’s life already says so."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.06.2026 (15. јун ст. ст.) — „Свети пророк Амос“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 15 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. A FIRST DATE ON A FOLDER THAT HELD NONE, AND IT IS BC. The folder carried no `dates` object at all — doxologia.ro gave no year. This book closes the entry with one: „Живео је у VIII веку пре Христа“. `floruit` -800 to -701, display «8th century BC», basis traditional, the sentence in the note; the bracket is the century the book names and nothing narrower, and the shape follows `micah-the-prophet`, which already holds -800 to -701 for the same century off days.pravoslavie.ru. **No `death` and no `birth`**: the entry has him carried barely alive to his village and giving up his soul there, which is a death with no year beside it. A TRADE THE OTHER BOOK DID NOT GIVE, AND THE TWO BOOKS DIFFER. This one is flat: „Амос је био чувар свиња богаташа јерусалимских“ — he kept the swine of the rich men of Jerusalem. The folder’s life, off doxologia.ro, has him passing his days herding flocks. Both are written, each as its own book’s word, and nothing is chosen between them. WHAT ELSE IS NEW. Born in the village of Tekoa near Bethlehem (the folder already had it); simple in birth and in life; and God, who looks not at who a man is outwardly but at the purity of his heart, and who had taken two others from among the sheep and set them over his people, chose him for a prophet. **He rebuked the king Uzziah and his priests for idolatry** — „изобличавао цара Озију и његове жречеве за идолопоклонство“ — where the folder’s Romanian life puts the golden heifers of Bethel under Jeroboam and makes Uzziah only the king of Judah in whose days he began; the difference is written as this book’s reading and the other is left standing. The prophecy against Amaziah is fuller here than in the folder: the Assyrians would subdue Israel, the king and Amaziah’s sons would be cut down, and **Amaziah’s wife would be defiled by Assyrian soldiers before his eyes**, because Amaziah too had led the people into fornication with idols — and all of it came to pass. NO ROWS, AND TWO NAMES DELIBERATELY NOT WRITTEN AGAIN. „и Мојсеја и Давида узео од оваца“ is a comparison; `moses-the-prophet` exists and the corpus keeps fourteen Moseses and some twenty Davids, **a comparison is not a relation**, and the sentence is written «two others from among the sheep» rather than with the names, although the folder’s older prose already carries them. Uzziah and Amaziah and Amaziah’s son are in the life and `ls saints | grep -iE 'uzziah|amaziah'` holds none of them. The book’s closing pointer, „(Видети Стари Завет, Књига пророка Амоса.)“, is a reference and not a source of anything. `types` UNTOUCHED: пророк is `prophet`, which is there, and `martyr` is there already and is what the staff across the forehead says. No `office`, and **no `locations`**: Tekoa and Bethlehem are one clause of birth with nothing to bound them. The Prologue prints no troparion and no kontakion; the day carries only the verse. REFUSED ON THIS DAY WITH NO FOLDER TO HANG THEM ON, ALL BY RULING 3 AND ALL KEPT OUT OF EVERY LIFE WRITTEN HERE: the day’s second entry, the enumerated company „Свети мученици Вит, Модест и Крискентија“ — three names by §5 and therefore up to three folders, and this draft holds none of them, because `grep -ril 'Vitus' saints/*/saint.json` returns only `two-hundred-twenty-two-chinese-martyrs`, `grep -ril 'Crescenti'` returns `crescentianus` (a soldier martyred at Saldo in Italy in 287, a man and not the nurse) and `marcellinus-of-rome`, and the four Modestus folders are the companions of Julian, of Zoticus and the bishop of Jerusalem, none of them the teacher of a boy of Sicily; the third entry, „Преподобни мученик Дула“, the monk of Egypt slandered by a brother of stealing church things — **not `doulas-of-cilicia`**, whose own life off saint.gr makes him a layman of the village of Zephyri in Cilicia tortured under the eparch Maximus, a different man on the same menologion number, which is the standing rule that two commemorations on one calendar mean two men read from the Greek side; and the fifth entry, „Свети Јефрем, патријарх српски“, the patriarch who crowned Lazar, for whom `ls saints | grep -iE 'ephraim|ephrem|efrem'` returns Antioch, Atskuri, Katounakia, Nea Makri, Rostov, Russia, the Kyiv Caves, Tomis, Kiev, Novotorzhsk and an 18 January, and not one of Serbia."
     }
   ],
   "hymns": [
@@ -64,5 +79,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": -800,
+      "latest": -701,
+      "display": "8th century BC",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 15. јун ст. ст. closes the entry „Живео је у VIII веку пре Христа“ — he lived in the eighth century before Christ. The folder held no date of any kind before this: doxologia.ro gave no year. The same entry has him carried barely alive to Tekoa and giving up his soul there, which is a death with no year beside it, so there is no `death` and no `birth` (5 October 2026)."
+    }
   }
 }

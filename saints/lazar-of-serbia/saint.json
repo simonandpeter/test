@@ -7,6 +7,11 @@
       "form": "Lazăr",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iunie, «Sfântul Mare Mucenic Lazăr, Cneazul Serbiei»."
+    },
+    {
+      "form": "Лазар",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 15. јун ст. ст., „Свети мученик Лазар, кнез српски“ — Свети is not a rank, мученик is the rank and „кнез српски“ is a rank with its realm (Кнез is `prince`, which `types`, `office` and the display name already carry between them); all of it comes off and the bare forename is left. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Лазар», so there is no fold, although the corpus keeps eleven Lazarus folders under other scripts — which is why the form is checked and not reasoned about."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026). Doxologia's life is plainly an account of a Serbian saint, but no Serbian calendar was read for this row."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.06.2026 (15. јун ст. ст.) — „Свети мученик Лазар, кнез српски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, and the longest of this wave. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 15 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. `dates` LEFT AS THEY STOOD, AND THE DAY INSIDE THE LIFE A SECOND TIME. The folder holds `birth` 1329 and `death` 1389 off doxologia.ro, the death `attested`. This book states the same day and year flat — „сукоби се на Косову пољу 1389. године 15. јуна са турским царем Амуратом, где буде посечен“ — so there is nothing to widen and nothing to choose; `dates` is not touched and the agreement is recorded here. The day in that sentence is this row’s feast. A GRADE THE HEADING AND THE BODY DO NOT GIVE ALIKE, AND `office` IS NOT TOUCHED. The heading says „кнез српски“ — prince of Serbia, which is the `office` the folder already states and the `prince` its `types` already hold. The body says he was crowned „за цара српског“, emperor of the Serbs, by the patriarch after the death of the emperor Uroš. **A scalar field has no «X or Y» and no `office` string is invented**: the crowning is written into the life as this book’s words and the field is left exactly as it was. `types` UNTOUCHED for the same reason — the heading gives мученик, `martyr`, and the folder already holds the stronger `great-martyr` off doxologia’s «Mare Mucenic»; a weaker grade is not added beside it. WHAT IS NEW, AND IT IS THE RELICS. The folder had Vrdnik, Belgrade after the Second World War and 1989 back to Ravanica. This book gives „Раваници код Ћуприје“ for the first burial, „Раваницу Сремску“ for the second, **the year 1942** for the move to Belgrade, the Saborna crkva for where he was laid, and that he lies there incorrupt giving consolation and healing to all who turn to him in prayer — and then its own closing parenthesis, „(Сада његове свете мошти почивају у манастиру Раваници)“, which agrees with the folder’s 1989. Also new: that he renewed Hilandar and Gornjak, raised Ravanica and Lazarica, and was `ktitor` of a Russian monastery on the Holy Mountain. NO ROWS, AND TWO NAMES KEPT OUT OF THE NEW PROSE. **The Russian monastery is named here and not there**: the book calls it „манастира руског Пантелејмона“, the corpus keeps five Panteleimon folders, **a dedication is not a relation**, and `related-floor` reads a prose name as well as a linked one. **The patriarch who crowned him** is the day’s own fifth entry and has no folder, so ruling 3 keeps him out of the prose as well as out of the corpus; the life says «the patriarch». The emperors Dušan, Uroš and Murad, and the monk Isaiah of the embassy, are already in the folder’s older prose from doxologia and nothing is added for them; no folder holds Dušan, Uroš or Murad, **an emperor in a life is not a relation**, and the Second World War and the year 1942 are history and not a feast. No `locations`: Prilepac is already unbounded in the folder and Ravanica, Ravanica in Srem, Belgrade, Hilandar, Gornjak and Lazarica are six places in two clauses. The Prologue prints no troparion and no kontakion; the day carries only the verse. REFUSED ON THIS DAY WITH NO FOLDER TO HANG THEM ON, ALL BY RULING 3 AND ALL KEPT OUT OF EVERY LIFE WRITTEN HERE: the day’s second entry, the enumerated company „Свети мученици Вит, Модест и Крискентија“ — three names by §5 and therefore up to three folders, and this draft holds none of them, because `grep -ril 'Vitus' saints/*/saint.json` returns only `two-hundred-twenty-two-chinese-martyrs`, `grep -ril 'Crescenti'` returns `crescentianus` (a soldier martyred at Saldo in Italy in 287, a man and not the nurse) and `marcellinus-of-rome`, and the four Modestus folders are the companions of Julian, of Zoticus and the bishop of Jerusalem, none of them the teacher of a boy of Sicily; the third entry, „Преподобни мученик Дула“, the monk of Egypt slandered by a brother of stealing church things — **not `doulas-of-cilicia`**, whose own life off saint.gr makes him a layman of the village of Zephyri in Cilicia tortured under the eparch Maximus, a different man on the same menologion number, which is the standing rule that two commemorations on one calendar mean two men read from the Greek side; and the fifth entry, „Свети Јефрем, патријарх српски“, the patriarch who crowned Lazar, for whom `ls saints | grep -iE 'ephraim|ephrem|efrem'` returns Antioch, Atskuri, Katounakia, Nea Makri, Rostov, Russia, the Kyiv Caves, Tomis, Kiev, Novotorzhsk and an 18 January, and not one of Serbia."
     }
   ],
   "hymns": [

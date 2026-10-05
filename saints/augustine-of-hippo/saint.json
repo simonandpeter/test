@@ -26,6 +26,11 @@
       "form": "Augustin",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 15 iunie, «Fericitul Augustin»."
+    },
+    {
+      "form": "Августин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 15. јун ст. ст., „Блажени Августин, епископ ипонски“ — „Блажени“ is the qualified title and not a rank this corpus writes, and „епископ ипонски“ is a rank with its see, which `types`, `office` and the display name already carry between them; all of it comes off and the bare forename is left, which is all the heading gives. `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Августин», so there is no fold — although this folder already stores a Russian «Августин Иппонийский» and the corpus keeps `augustine-belyaev`, `augustine-of-canterbury` and two more, none of which holds this exact string."
     }
   ],
   "sex": "male",
@@ -102,8 +107,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 6,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.06.2026 (15. јун ст. ст.) — „Блажени Августин, епископ ипонски“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-06-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s sixth and last entry. The heading is quoted as the Prologue prints it, without a closing full stop, as every heading of this wave is. The Julian 15 June is the same menologion number this folder’s other venerated row carries, so there is no second day and no §4 note is owed. **THE PARAGRAPH ON THIS FOLDER WAS ADDED BY HAND AND NOT BY `upgrade.py`.** This slug is on `tests/lives.test.mjs`’s `BEFORE_THE_RULE` list: its life was written before the closing-source-line rule and carries none, and `upgrade.py` asserts on a `rfind` of a blank line and a star before it will touch a life. So this entry carries no `life_para` and no `source_clause`; the row and the name form went through the script, and the paragraph was appended by hand **with the citation inside it and no closing line**, so the folder stays exempt. `dates` LEFT AS THEY STOOD. The folder holds `birth` 354 and `death` 430, both `attested`, with the days 13 November and 28 August. This book prints „(354-430)“ at the end of three lines and agrees exactly; there is nothing to widen and nothing to choose. **Two numbers in the same sentence are refused**: „Тридесет пет година прослављао Господа као епископ ипонски“ is a duration of office, and „свега на земљи поживео седамдесет шест година“ is a lifespan, and neither becomes a year here. WHAT THE ENTRY IS, AND IT IS FOUR LINES. His turning from paganism to Christianity „благодарећи саветима, сузама и молитвама мајке му Монике“ — by the counsels, the tears and the prayers of his mother Monica; that he was a great teacher of the Church and an influential writer „с извесним неодобреним крајностима у учењу“, with certain unapproved extremes in his teaching; and the thirty-five years as bishop of Hippo. THE ONE `related` ROW IS ALREADY THERE, IN BOTH DIRECTIONS. `monica-mother-of-augustine` is in this folder’s `related` and this folder is in hers, and she had not been named in its prose until now; the conversion is her own story and the name is written in with its link. `types` UNTOUCHED, AND **Блажени IS REFUSED AS A TYPE**. §5 of this wave’s brief reads Блажени as `fool-for-christ` *or* `righteous`, to be read which — and here it is neither. It is the Slavonic rendering of the Latin *beatus*, the qualified title this book explains in the next clause by the unapproved extremes, and the folder’s own older prose already calls it «a more qualified title». No type comes off it. `епископ` is `bishop`, which is there; the great teacher and writer is the `theologian` it already holds. `office` UNTOUCHED: „епископ ипонски“ is «Bishop of Hippo», which it states. No `locations` added — the folder already holds three, read off other books. The Prologue prints no troparion and no kontakion; the day carries only the verse. REFUSED ON THIS DAY WITH NO FOLDER TO HANG THEM ON, ALL BY RULING 3 AND ALL KEPT OUT OF EVERY LIFE WRITTEN HERE: the day’s second entry, the enumerated company „Свети мученици Вит, Модест и Крискентија“ — three names by §5 and therefore up to three folders, and this draft holds none of them, because `grep -ril 'Vitus' saints/*/saint.json` returns only `two-hundred-twenty-two-chinese-martyrs`, `grep -ril 'Crescenti'` returns `crescentianus` (a soldier martyred at Saldo in Italy in 287, a man and not the nurse) and `marcellinus-of-rome`, and the four Modestus folders are the companions of Julian, of Zoticus and the bishop of Jerusalem, none of them the teacher of a boy of Sicily; the third entry, „Преподобни мученик Дула“, the monk of Egypt slandered by a brother of stealing church things — **not `doulas-of-cilicia`**, whose own life off saint.gr makes him a layman of the village of Zephyri in Cilicia tortured under the eparch Maximus, a different man on the same menologion number, which is the standing rule that two commemorations on one calendar mean two men read from the Greek side; and the fifth entry, „Свети Јефрем, патријарх српски“, the patriarch who crowned Lazar, for whom `ls saints | grep -iE 'ephraim|ephrem|efrem'` returns Antioch, Atskuri, Katounakia, Nea Makri, Rostov, Russia, the Kyiv Caves, Tomis, Kiev, Novotorzhsk and an 18 January, and not one of Serbia."
     }
   ],
   "locations": [
