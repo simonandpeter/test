@@ -11,6 +11,11 @@
       "form": "Πρόχορος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιανουαρίου, «Όσιος Πρόχορος», with the rank word left off."
+    },
+    {
+      "form": "Прохор Пчињски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. октобар ст. ст., „Преп. Прохор Пчињски.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, leaving the bare name with the epithet the heading prints. The epithet is kept: four folders in this corpus are named Prochorus, so a bare «Прохор» would fold on a forename, and section 6 asks for the fullest form the calendar gives. «Пчињски» is after the river Pčinja, which saint.gr spells Πσίνζα on this same folder’s Greek page — the two spellings are the reason this entry is an upgrade and not a new folder. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form and for the bare forename alike. This is also this folder’s FIRST name form outside Greek."
     }
   ],
   "dates": {
@@ -49,11 +54,25 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.11.2026 (19. октобар ст. ст.) — „Преп. Прохор Пчињски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-11-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, one person, quoted whole with its closing full stop (section 4). THIS IS THE NAMESWEEP TRAP OF BRIEF-SERBIAN SECTION 7, AND IT WAS CAUGHT BY READING THE FOLDER AND NOT BY A SCORE. «Прохор Пчињски» reads as a saint no folder holds: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for it and for the bare «Прохор», and the four Prochoruses the corpus keeps are `prochorus-of-georgia`, `prochorus-the-deacon`, `prochorus-the-lebednik` and `prochorus-of-vranski` — none of them spelt anything like Pčinja. The identification is in THIS FOLDER’S OWN LIFE, written off saint.gr long before this wave: he lived the ascetic life «at the monastery the page calls Vranski in Bulgaria, near the river it spells Πσίνζα», and he came from Bulgaria about the end of the tenth century and the beginning of the eleventh. Πσίνζα IS THE PČINJA. So this is an upgrade and not a new folder, and the proof is a river’s name in Greek letters. THE DISPLAY NAME IS THE MONASTERY AND THIS BOOK GIVES THE RIVER, AND NOTHING WAS CHANGED. The folder reads «Prochorus of Vranski», which is saint.gr’s spelling of the monastery; this book calls him Пчињски, after the Pčinja, which is what he is called in Serbian. Section 10 reserves a display name and a reader names a sourced correction rather than making one. It is in the report. THE DAY IS NOT THE GREEK DAY. saint.gr keeps him on 15 January and this book on the Julian 19 October. Both rows now stand on the folder, each on its own church, which is what the schema is for. `dates` UNTOUCHED AND THE BOOK IS INSIDE THEM. The folder holds `floruit` 951 to 1050, «late 10th and early 11th century»; this entry says «Упокојио се ... у XI столећу», he fell asleep in the eleventh century, which lies inside that floruit and closes nothing. No `death` is added, because the century is not a year and the floruit already covers it — unlike the Julian 18 October’s hermit, whose book gave a FLOOR the folder did not have. `types` untouched: «Преп.» is the `venerable` this folder holds and the `ascetic` beside it is the same book’s «подвизавао». WHAT THE BOOK ADDS, AND IT IS ALMOST ALL OF WHAT THIS FOLDER NOW HAS. He was THE CONTEMPORARY AND FRIEND of John of Rila and of Gabriel of Lesnovo — two folders this corpus holds, so two `related` rows, reciprocated in this same commit. GOD SHOWED HIM THE PLACE OF HIS STRUGGLE IN ANSWER TO HIS PRAYER, and the place was A GROVE BY THE RIVER PČINJA, where he struggled to old age and death. The entry then says in so many words that ONLY GOD WHO SEES ALL KNOWS HIS LABOURS AND TEMPTATIONS, and that his greatness can be judged instead from HIS MYRRH-STREAMING RELICS AND THE COUNTLESS WONDERFUL HEALINGS WHICH HAVE NOT CEASED EVEN TO THIS DAY. No `office`, no `locations`: a grove by a river is not a coordinate. THE FORM KEEPS ITS EPITHET because four folders share the bare «Прохор» and section 6 asks for the fullest the calendar gives. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "john-of-rila",
+    "gabriel-of-lesnovo"
+  ]
 }
