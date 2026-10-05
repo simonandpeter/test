@@ -10,23 +10,37 @@
       "form": "Πολύκαρπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Απριλίου, «Άγιος Πολύκαρπος», with the rank word left off."
+    },
+    {
+      "form": "Поликарп Александрийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 2 апреля ст. ст., name page 1810, «Поликарп Александрийский, мч.», with the rank word left off. The day’s own line declines the forename alone, «Поликарпа». The toponym is kept because the bare «Поликарп» is held by `polycarp-of-smyrna` as its sr form, and the calendar keeps four other Polycarps on other days."
     }
   ],
   "related": [],
   "dates": {
     "death": {
       "earliest": 286,
-      "latest": 305,
-      "display": "between 286 and 305",
+      "latest": 400,
+      "display": "286–305 or 4th century",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Μάρτυς Πολύκαρπος έζησε κατά τους χρόνους της βασιλείας του ασεβούς Μαξιμιανού (286 - 305 μ.Χ.) και καταγόταν από την πόλη της Αλεξάνδρειας.» The page gives no year of its own; the interval is the reign it prints."
+      "note": "Two books disagree and the range is widened to hold both rather than choose. saint.gr sets him in the reign of Maximian and prints that reign as 286 to 305, which is what this folder held before; days.pravoslavie.ru closes his line for 2 апреля ст. ст. with «(IV)», the fourth century, and its life has him reproach «императора Максимиана (305 - 313)», a different reign for the same name. Neither page gives him a year of his own, and nothing here is arithmetic."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 апреля ст. ст. — «Мч. Поликарпа (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260402.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

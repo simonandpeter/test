@@ -16,6 +16,11 @@
       "form": "Едесије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 2 April on pravoslavno.rs, „Св. муч. Амфијан и Едесије“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Едесий Патарский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the brothers’ line for 2 апреля ст. ст., name page 749, «Едесий Патарский, Александрийский, мч.», with the rank word left off and the second toponym — Alexandria, where this page has him die — left in the life rather than folded into the form. The day’s own line declines the forename alone, «Едесия». No folder holds this form or the bare «Едесий». The brothers have two different name pages, 151 and 749, under the one calendar line."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 апреля ст. ст. — «Мчч. Амфиана и Едесия (306).»",
+        "url": "https://days.pravoslavie.ru/Days/20260402.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
