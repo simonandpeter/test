@@ -11,6 +11,11 @@
       "form": "Κήρυκος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιοι Κήρυκος και Ιουλίττα η μητέρα του», with the rank word left off. The page's hymn has the dative «Κηρύκῳ» and its summary verse «υἷα», the son."
+    },
+    {
+      "form": "Кирик",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 15. јул ст. ст., „Св. муч. Кирик и Јулита.“ — „Св. муч.“ is the rank, which `types` already carries, and the heading enumerates two bare forenames with no by-name, no place and no kinship in them; «son of Julitta» in the display name is the corpus’s own. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder, which on a five-letter bare forename is the second piece of luck this range has had and is **the opposite of what the day’s other form got**."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.07.2026 (15. јул ст. ст.) — „Св. муч. Кирик и Јулита.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, an **enumerated pair both of whose folders this corpus holds and already relates in both directions**, which is the fourth time this range has met that shape. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is the kinship and the city and the day: the two folders are named for each other, the body gives Iconium of Lycaonia and the flight to Seleucia, and the Romanian and Greek rows stand on this very 15 July. **`dates` WRITTEN WHERE THE FOLDER HAD NONE, AND THE YEAR BELONGS TO BOTH.** `dates: null` before. The Охридски пролог for 15. јул ст. ст. closes the passion „После многих мука и Јулита би мачем посечена, 304. год.“ — after many torments Julitta too was beheaded with the sword, in 304. The year closes the one scene, and „и Јулита“, Julitta too, is what makes it the year of both: the child suffered first and in the same trial, „Видећи како Кирик пострада пре ње“. Neither doxologia nor saint.gr gave a year. So `death` is 304 to 304, display «304», basis traditional, on this folder and on his mother’s. **The age of three is an age and the only one in the entry** — „а када му беше три године, она га научи вери и молитви“, and when he was three years old she taught him the faith and prayer as much as a child of that age could receive — and nothing is reckoned from 304 by it, though 301 would be the answer and would be a birth year invented out of a mother’s catechesis. `types` UNTOUCHED at `martyr`, which „муч.“ is. **`virgin` and `infant` are not on offer**, the second not being a word this vocabulary has at all. No `office`, no `locations` — Iconium, Lycaonia, Seleucia and Ohrid are a narrative. **NO NEW `related` ROWS.** The mother is already two-way. The judge who took the child on his knees and then dashed him to the ground is unnamed, Diocletian is an emperor, and the church of the Holy Theotokos Bolnička at Ohrid, where the book says a part of their relics lies, is **a church and not a folder** — a dedication is not a relation, which is the rule §6 states and which this day could have broken twice. **WHAT IS NEW IS THE CHILD’S OWN WORDS AND HIS OWN ACT.** The judge, to grieve her and shake her, took the child in his arms and began to caress him; and Cyricus cried out at the top of his voice „Ја сам хришћанин, пусти ме матери!“ — I am a Christian, let me go to my mother — **and began to scratch the judge with his little hands, turning his face away from him**; at which the judge grew angry, struck the child against the ground and pushed him away with his foot, and the child rolled down the stone steps and gave up his holy and innocent soul to God. **And his mother’s response is the entry’s point**: seeing how Cyricus suffered before her, Julitta was joyful and gave thanks to God that He had counted her son worthy of a martyr’s crown. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -104,5 +119,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 304,
+      "latest": 304,
+      "display": "304",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 15. јул ст. ст. closes the passion „После многих мука и Јулита би мачем посечена, 304. год.“ — after many torments Julitta too was beheaded with the sword, in 304. The year closes the one scene, and „и Јулита“, Julitta too, is what makes it the year of both: the child suffered first and in the same trial, „Видећи како Кирик пострада пре ње“. Neither doxologia nor saint.gr gave a year."
+    }
   }
 }
