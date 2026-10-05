@@ -1,0 +1,68 @@
+{
+  "slug": "john-vishnevsky",
+  "display_name": "John (Vishnevsky)",
+  "names": [
+    {
+      "form": "Иоанн (Вишневский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 19 ноября ст. ст., name page 13885, «Иоанн (Вишневский), иерей, сщмч.», with the grade and rank words left off; the line itself declines the forename and gives no surname at all. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/rusurn.py` none holding the surname Вишневский in any `ru` form over 5,822 folders. Ivan Vsevolodovich, the civil form azbyka gives, is left in the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 19 ноября ст. ст. — «Сщмч. Иоанна пресвитера (1920).»",
+        "url": "https://days.pravoslavie.ru/Days/20261119.html",
+        "year": 2026
+      },
+      "note": "azbyka.ru heads him with three days: 7 февраля, which it marks «переходящая», the moveable synaxis of the new martyrs and confessors of the Russian Church; 11 февраля, the synaxis of the saints of Ekaterinburg; and 2 декабря, which is this Julian 19 November in the civil reckoning and the day he was shot. A moveable feast cannot be held by this corpus, and one row per church is the schema, so the other two days are recorded here; the day of this row is the day the Sretensky day page listed him on."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 2 decembrie, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 2 Δεκεμβρίου, the corresponding civil day (5 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 2 December 2026 (5 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1888,
+      "latest": 1888,
+      "display": "1888",
+      "basis": "attested",
+      "note": "azbyka.ru: «Иван Всеволодович Вишневский родился 6 октября 1888 года в семье священника села Федьковка». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1920,
+      "latest": 1920,
+      "display": "1920",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 19 ноября ст. ст. with «(1920)»; azbyka.ru: «2 декабря 1920 года отец Иоанн был расстрелян», which is the civil day of that Julian 19 November, so the day of death and the feast are the same day. No day is recorded here because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
