@@ -1,0 +1,88 @@
+{
+  "slug": "nicholas-simo",
+  "display_name": "Nicholas (Simo)",
+  "names": [
+    {
+      "form": "Николай (Симо)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 5 апреля ст. ст., name page 9382, «Николай (Симо), протоиерей, сщмч.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Николая», with the rank word beside it, which is why the surname is needed: the corpus already holds some seventy Nicholases of the Russian twentieth century. No folder holds this form and no folder holds the surname; `.tmp/foldchk.py` and `.tmp/rusurn.py` were both run before this draft, and the only Cyrillic hits for «Симо» were the inside of Симон and Симонопетра."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Сщмч. Николая пресвитера (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "6 December 1875",
+      "basis": "attested",
+      "note": "azbyka.ru’s life opens «Священномученик Николай родился 6 декабря 1875 года в городе Аренсбурге Эстляндской губернии в семье священника Адама Симо». The day and the month are the source’s own and are given in old style, as the year 1875 requires; no new-style pair is printed and none is constructed here. days.pravoslavie.ru gives no year of birth. azbyka.ru’s calendar for the civil 18 April, which is the Julian 5 April, carries the life; it was read in the in-app Browser pane on 6 October 2026, the site answering nothing else. The life there is signed игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Апрель», Тверь 2006."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 5 апреля ст. ст. with «(1931)» and azbyka.ru’s life ends «Протоиерей Николай Симо был расстрелян 18 апреля 1931 года и погребен в безвестной могиле», the collegium of the OGPU having passed the sentence on 13 April. 18 April 1931 is the civil date of the Julian 5 April, so this calendar keeps him on the day he died. The source’s own date is written as one number and not as a pair."
+    }
+  },
+  "related": [
+    "john-of-kronstadt"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Правосла́вия свети́льника вели́каго,/ свята́го пра́веднаго Иоа́нна Кроншта́дтскаго сослужи́телем был еси́./ Во времена́ безбо́жныя креста́ своего́ не отве́рглся еси́,/ да́же до проли́тия кро́ве ве́рен Го́сподеви пребы́в,/ священному́чениче Нико́лае,/ моли́ Христа́ Бо́га// спасти́ся душа́м на́шим.",
+      "source": {
+        "text": "azbyka.ru, Православный церковный календарь, his own page under the civil 18 April, «Тропари, кондаки, молитвы и величания — Тропарь, глас 4». His own and a proper: it names him, «священномучениче Николае», and it names the elder whose concelebrant he was. days.pravoslavie.ru prints no hymn under his line, and the page gives him no kontakion.",
+        "url": "https://azbyka.ru/days/sv-nikolaj-simo",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were a concelebrant of the great lamp of Orthodoxy, the holy righteous John of Kronstadt. In the godless times you did not deny your cross, but remained faithful to the Lord even to the shedding of your blood, O hieromartyr Nicholas: pray Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

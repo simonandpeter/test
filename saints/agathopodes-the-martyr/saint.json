@@ -16,6 +16,11 @@
       "form": "Агатопод",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 5 April on pravoslavno.rs, „Св. муч. Агатопод и Теодул“, with the rank words Св. муч. left off; they head the pair and belong to neither name. The heading gives the two forenames bare, with no epithet and no city — Thessalonica is in the body — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Агафопод Солунский (Фессалоникийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his part of the line for 5 апреля ст. ст., name page 64, «Агафопод Солунский (Фессалоникийский), диакон, сщмч.», with the office word and the rank abbreviation left off and the city kept in both the forms the calendar prints. The day’s own line gives the forename in the genitive with the office beside it. No folder holds this form or the bare «Агафопод»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Мчч. Агафопода диакона, Феодула чтеца и иже с ними (ок. 303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

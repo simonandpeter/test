@@ -14,6 +14,11 @@
       "form": "Teodora din Tesalonic",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 5 aprilie, «Sfânta Cuvioasă Teodora din Tesalonic»."
+    },
+    {
+      "form": "Феодора Солунская (Фессалоникийская)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 5 апреля ст. ст., name page 2711, «Феодора Солунская (Фессалоникийская), прп.», with the rank abbreviation left off and the city kept in both the forms the calendar prints. The day’s own line gives «Феодоры Солунской» in the genitive. No folder holds this form, and none holds «Феодора Солунская» alone."
     }
   ],
   "sex": "female",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: the Moscow Patriarchate’s day pages for this civil week (days.pravoslavie.ru, 10–16 August Julian) were read for their own lists and not searched for this figure (2026-08-22)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Прп. Феодоры Солунской (892).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -76,10 +90,10 @@
   "dates": {
     "death": {
       "earliest": 879,
-      "latest": 879,
-      "display": "879",
-      "basis": "attested",
-      "note": "The Prologue: reposed in her seventy-fifth year, in 879."
+      "latest": 892,
+      "display": "879 or 892",
+      "basis": "traditional",
+      "note": "Two books disagree by thirteen years and the range is widened to hold both rather than choose. The folder held a flat 879, basis attested, off the Ohrid Prologue: reposed in her seventy-fifth year, in 879. days.pravoslavie.ru closes her line for 5 апреля ст. ст. with «(892)» and its life marks the death «(+ 892)» in the body. Neither book gives a day of the month for the death and neither cites the other; nothing is averaged and the basis drops to traditional because the two attestations cannot both be right."
     }
   },
   "related": [

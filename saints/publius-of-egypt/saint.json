@@ -1,0 +1,66 @@
+{
+  "slug": "publius-of-egypt",
+  "display_name": "Publius of Egypt",
+  "names": [
+    {
+      "form": "Пуплий Египетский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 5 апреля ст. ст., name page 1861, «Пуплий Египетский, прп.», with the rank abbreviation left off. The day’s own line declines the same two words. No folder holds this form, and none holds the bare «Пуплий» either; `.tmp/foldchk.py` was run on both before this draft."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Прп. Пуплия Египетского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 361,
+      "latest": 363,
+      "display": "361–363",
+      "basis": "attested",
+      "note": "The life states the reign he lived under and dates it itself: «Преподобный Пуплий подвизался в Египетской пустыне во время царствования императора Юлиана Отступника (361–363)». That is the one span the page fixes him in, and the parenthesis is the page’s own."
+    },
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line for 5 апреля ст. ст. with «(IV)» and gives no year. The life says only that the emperor died before he could keep his oath against the ascetic, and that one of his commanders was tonsured afterwards at the ascetic’s hands, so the page puts the death after 363 and before the century is out without naming a year for it."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

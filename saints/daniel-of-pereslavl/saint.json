@@ -17,6 +17,11 @@
       "form": "Данило Перејаславски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 7 April on pravoslavno.rs, „Преп. Данило Перејаславски.“, with the rank word Преп. left off. The by-name Перејаславски is kept, because it is what the heading gives beyond the forename and what distinguishes him from `daniel-the-egyptian`, which holds the bare Данило."
+    },
+    {
+      "form": "Даниил Переяславский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 7 апреля ст. ст., name page 582, «Преподобный Даниил Переяславский», with the grade word left off; the index page behind it carries the same title. The day’s own line declines the same two words. The calendar spells the toponymic Переяславский where its own life spells the town Переславль-Залесский, and the form is stored as the name link prints it. No folder holds this form."
     }
   ],
   "related": [
@@ -41,8 +46,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Прп. Даниила Переяславского (1540).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -82,5 +96,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "От юности, блаженне, всего себе Господеви возложив,/ выну повинуяся Богу,/ противяся же диаволу,/ над страстьмй греховными воцарился еси,/ тем сам храм Божий быв,/ и обитель красну во славу Пресвятыя Троицы воздвигнув/ и собранное тобою в ней стадо Христово Богоугодно упасши,/ преставился еси к вечным обителем,/ отче Данииле,/ моли Триипостаснаго во едином Существе Бога спастися душам нашим.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 7 апреля ст. ст., under «Молитвы»: «Тропарь преподобного Даниила Переяславского», глас 3. His own and a proper: it names him, «отче Данииле», and it names what he did, the raising of a fair monastery to the glory of the Holy Trinity. The folder held no hymn at all before, saint.gr and the Ohrid Prologue having printed none. The word «страстьмй» is the page’s own spelling and is copied as it stands.",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having laid your whole self upon the Lord from your youth, O blessed one, ever obeying God and resisting the devil, you came to reign over the passions of sin; and so, having yourself become a temple of God, and having raised a fair monastery to the glory of the Most Holy Trinity, and having shepherded in a way pleasing to God the flock of Christ you gathered in it, you passed over to the eternal dwellings, O father Daniel. Pray the God who is three Persons in one Essence that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Невечерняго Света пресветлое светило,/ жития чистотою просвещающее всех,/ явился еси, отче Данииле:/ образ бо и правило иноком был еси,/ сиротам нее отец и питатель вдовицам./ Сего ради и мы, чада твоя, вопием ти:/ радуйся, радосте и венче наш;/ радуйся, многое имый к Богу дерзновение;/ радуйся, граду нашему велие утверждение.",
+      "source": {
+        "text": "days.pravoslavie.ru, the same day page, «Кондак преподобного Даниила Переяславского», глас 8. His own and a proper: it names him and calls him a father to orphans and a feeder of widows, which is the thing his life is made of. The word «нее» is the page’s own and is copied as it stands.",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You have been shown, O father Daniel, a most radiant lamp of the Light that knows no evening, enlightening all by the purity of your life; for you were a pattern and a rule to monks, a father to orphans and a feeder of widows. Therefore we also, your children, cry to you: rejoice, our joy and our crown; rejoice, you who have great boldness before God; rejoice, great strengthening of our city.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

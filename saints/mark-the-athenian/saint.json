@@ -14,6 +14,11 @@
       "form": "Марко Трачески",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 5 April on pravoslavno.rs, „Преп. Марко Трачески“, with the rank word Преп. left off. Трачески is kept: it is not a rank but the by-name the heading gives him, and the body explains it — the mountain he lived on, in Libya or Ethiopia, was called Траческа. The body gives a second by-name as well, „Назива се још и Атинским јер му Атина беше родно место“, he is also called the Athenian because Athens was his birthplace, and that is the one this folder's English name carries, because it is the one the entry explains and it cannot be read as the country of Thrace. One Serbian form is stored, the fullest the heading gives; a bare Марко would fold with `mark-of-arethusa`, `mark-of-byblos` and `mark-of-ephesus`."
+    },
+    {
+      "form": "Марк Афинянин, Фраческий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 5 апреля ст. ст., name page 1458, «Марк Афинянин, Фраческий, прп.», with the rank abbreviation left off and both epithets kept, in the calendar’s own order and with its comma. The day’s own line declines them as «Марка Афинского, Фраческого». No folder holds this form, and none holds «Марк Афинянин» alone."
     }
   ],
   "dates": {
@@ -28,8 +33,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 5 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Прп. Марка Афинского, Фраческого (400).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

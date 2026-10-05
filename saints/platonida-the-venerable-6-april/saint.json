@@ -11,6 +11,11 @@
       "form": "Πλατωνίς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Απριλίου, «Οσία Πλατωνίς», with the rank word left off."
+    },
+    {
+      "form": "Платонида Сирская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her line for 6 апреля ст. ст., name page 2646, «Платонида Сирская, прп.», with the rank abbreviation left off. The day’s own line gives «Платониды Сирской» in the genitive, with the same toponymic, which is the one neither doxologia nor saint.gr printed. No folder holds this form and none holds the bare «Платонида», although the corpus keeps two other Platonidas."
     }
   ],
   "sex": "female",
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Прп. Платониды Сирской (308).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,6 +74,15 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 308,
+      "latest": 308,
+      "display": "308",
+      "basis": "attested",
+      "note": "The first date this folder has carried. days.pravoslavie.ru closes her line for 6 апреля ст. ст. with «(308)» and its life ends «Достигнув глубокой старости, преподобная Платонида мирно скончалась в 308 году». doxologia.ro and saint.gr, the two books the folder was made from, print no year, no reign and no century for her at all. The deep old age is not turned into a year of birth, an age being not a year."
+    }
   },
   "related": [
     "fevronia-of-sivapol"

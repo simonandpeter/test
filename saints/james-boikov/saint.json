@@ -1,0 +1,70 @@
+{
+  "slug": "james-boikov",
+  "display_name": "James (Boikov)",
+  "names": [
+    {
+      "form": "Иаков (Бойков)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 6 апреля ст. ст., name page 9581, «Иаков (Бойков), иерей, сщмч.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, and on this day the surname does not separate him from his elder brother either, so the forename and the year do it. The life calls him Яков Яковлевич in the body and he signs a letter «иерей Яков Бойков». No folder holds this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Cщмч. Иакова пресвитера (1943).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1896,
+      "latest": 1896,
+      "display": "1896",
+      "basis": "attested",
+      "note": "The life opens «Священномученик Иаков родился в 1896 году в городе Бежецке в семье священника Иакова Бойкова» — born in 1896 at Bezhetsk to a priest of his own name."
+    },
+    "death": {
+      "earliest": 1943,
+      "latest": 1943,
+      "display": "19 April 1943",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 6 апреля ст. ст. with «(1943)» and its life ends «Отец Иаков умер в лагере от голода 19 апреля 1943 года» — he died in the camp of hunger on 19 April 1943. **19 April 1943 is the civil date of the Julian 6 April**, so this calendar keeps him on the day he died. The source prints the date as one number and no new-style pair is constructed from it."
+    }
+  },
+  "related": [
+    "john-boikov"
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

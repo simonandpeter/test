@@ -1,0 +1,60 @@
+{
+  "slug": "serapion-the-sindonite",
+  "display_name": "Serapion the Sindonite",
+  "names": [
+    {
+      "form": "Серапион Синдонит, Египетский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 7 апреля ст. ст., name page 1967, «Серапион Синдонит, Египетский, прп.», with the rank abbreviation left off and both epithets kept in the calendar’s own order and with its comma. The day’s own line gives him no epithet at all, «Прп. Серапиона монаха.», which is why the link is needed. **The epithets are kept because the bare «Серапион» is already held by four folders** — `serapion-disciple-of-cronides`, `serapion-of-pskov` and `serapion-of-rome` as their `ru` form and `serapion-venerable-21-march` as its `sr` one — and `.tmp/foldchk.py` was run on both strings before this draft."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable",
+    "ascetic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Прп. Серапиона монаха.»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "**The day’s own line gives no year of any kind**, which is rare on this calendar: «Прп. Серапиона монаха.» closes with a full stop and no parenthesis. The life behind it opens «Преподобный Серапион жил в V веке в Египте», and that century is the whole of the dating any page read gives him. No year, no reign and no abbot."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

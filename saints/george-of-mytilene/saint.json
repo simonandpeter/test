@@ -17,6 +17,11 @@
       "form": "Георгије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 7 April on pravoslavno.rs, „Св. Георгије исповедник.“, with Св. left off — it is not a rank — and with исповедник left off as well, the rank word this source uses for a confessor, which this folder already carries in `types`. The heading leaves no epithet and names neither the see nor the island, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Георгий Митиленский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 7 апреля ст. ст., name page 493, «Святитель Георгий Митиленский, митрополит, исповедник», with the grade word, the office word and the rank word left off. The day’s own line declines the forename and then gives the rank and the see, «исп., митр. Митиленского». No folder holds this form, and the bare «Георгий» is held by three folders as their `ru` form, which the toponymic keeps this one out of."
     }
   ],
   "sex": "male",
@@ -29,8 +34,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Прп. Георгия , исп., митр. Митиленского (после 820).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -16,6 +16,11 @@
       "form": "Калиопије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 7 April on pravoslavno.rs, „Св. муч. Калиопије.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Каллиопий Помпеопольский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 7 апреля ст. ст., name page 1161, «Каллиопий Помпеопольский, мч.», with the rank abbreviation left off. The day’s own line gives the forename alone, «Каллиопия». The toponymic is the city he was tried and crucified in and not the Perge of Pamphylia the life gives for his birth, and it is stored as the calendar prints it. No folder holds this form."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Мч. Каллиопия (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

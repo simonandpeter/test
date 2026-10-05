@@ -10,6 +10,11 @@
       "form": "Διακόσιοι Μάρτυρες οι εν Σινώπη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Απριλίου, «Άγιοι Διακόσιοι Μάρτυρες οι εν Σινώπη», with the rank word Άγιοι left off. The number and the word Μάρτυρες are kept because they are what names the company; the page names none of the two hundred."
+    },
+    {
+      "form": "200 воинов",
+      "lang": "ru",
+      "note": "Read out of the day’s own line for 7 апреля ст. ст., «и с ними 200 воинов», which is how the calendar names the company. **The company has no name link of its own**: the day’s line carries two, for the deacon and for the woman, and the figure is plain text. It is a count and an office and not a personal name, which is what the calendar gives a company of two hundred nobody enumerates, and it is stored as the line prints it. No folder holds this form."
     }
   ],
   "related": [
@@ -20,8 +25,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 апреля ст. ст. — «Мчч. Руфина диакона, Акилины и с ними 200 воинов (ок. 310).»",
+        "url": "https://days.pravoslavie.ru/Days/20260407.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

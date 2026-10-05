@@ -11,6 +11,11 @@
       "form": "Πλάτων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Απριλίου, «Όσιος Πλάτων ηγούμενος της Μονής Στουδίου», with the rank word and the office left off."
+    },
+    {
+      "form": "Платон Студийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 5 апреля ст. ст., name page 1804, «Платон Студийский, игумен, исповедник», with the office word and the rank word left off. The day’s own line declines the forename and then gives the rank and the house, «исп. Студийского». No folder holds this form, and none holds the bare «Платон» — which matters, because eleven folders carry a Plato or a Platon of some kind and the toponymic is what keeps this one out of a fold."
     }
   ],
   "sex": "male",
@@ -23,8 +28,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 апреля ст. ст. — «Прп. Платона , исп. Студийского (814).»",
+        "url": "https://days.pravoslavie.ru/Days/20260405.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -67,17 +81,17 @@
   "dates": {
     "birth": {
       "earliest": 732,
-      "latest": 732,
-      "display": "732",
+      "latest": 735,
+      "display": "732 or 735",
       "basis": "traditional",
-      "note": "saint.gr: «γεννήθηκε στην Κωνσταντινούπολη το 732 από γονείς ευγενείς και πλούσιους, του Στεργίου και της Ευφημίας», and the page's heading has «(732 - 814)»."
+      "note": "Two books give two years three apart and the range is widened to hold both rather than choose. The folder held a flat 732 off saint.gr, «γεννήθηκε στην Κωνσταντινούπολη το 732 από γονείς ευγενείς και πλούσιους, του Στεργίου και της Ευφημίας», with «(732 - 814)» in that page’s heading. days.pravoslavie.ru’s life for 5 апреля ст. ст. opens «Преподобный Платон родился в 735 году в благочестивой христианской семье от родителей Сергия и Евфимии», and closes with his repose on 8 April 814 «на 79-м году жизни», which is the 735 and not the 732. Neither book is preferred and nothing is averaged."
     },
     "death": {
       "earliest": 814,
       "latest": 814,
       "display": "814",
       "basis": "traditional",
-      "note": "saint.gr: «υπέστη μαζί με τους ανιψιούς του Θεόδωρο και Ιωσήφ, συνεχείς εξορίες και κακουχίες μέχρι πού πέθανε στις 4 Απριλίου του 814», and the page's heading has «(732 - 814)»."
+      "note": "Both books give 814 and the year is untouched. saint.gr has «υπέστη μαζί με τους ανιψιούς του Θεόδωρο και Ιωσήφ, συνεχείς εξορίες και κακουχίες μέχρι πού πέθανε στις 4 Απριλίου του 814», with «(732 - 814)» in its heading. days.pravoslavie.ru closes his line with «(814)» and its life with «отошел ко Господу в Лазареву субботу на 79-м году жизни, 8 апреля 814 года» — the same year on a different day of the month, which is recorded in the life and moves no feast."
     }
   },
   "related": [

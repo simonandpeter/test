@@ -1,0 +1,63 @@
+{
+  "slug": "prokhor-mikhailov",
+  "display_name": "Prokhor (Mikhailov)",
+  "names": [
+    {
+      "form": "Прохор (Михайлов)",
+      "lang": "ru",
+      "note": "Read out of the title on the second of the two name links behind the line for 6 апреля ст. ст., name page 10027, «Прохор (Михайлов), мч.», with the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Прохора». The life calls him Прохор Михайлов without the brackets. No folder holds this form; `sergius-mikhailov` holds «Сергий (Михайлов)» and is a different man."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 апреля ст. ст. — «Мчч. Петра и Прохора (1918).»",
+        "url": "https://days.pravoslavie.ru/Days/20260406.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1918,
+      "latest": 1918,
+      "display": "1918",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the two men’s line for 6 апреля ст. ст. with «(1918)», and its life dates the events: the inventory of the church on 27 March 1918, the volost assembly and the arrests in April, and the killing on the road to Вышний Волочек. The page gives no day of the month for the deaths themselves, so the year is written flat and no dual date is constructed."
+    }
+  },
+  "related": [
+    "peter-zhukov"
+  ],
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
