@@ -11,6 +11,11 @@
       "form": "Ερμόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Ιουλίου, «Άγιοι Ερμόλαος, Έρμιππος και Ερμοκράτης», with the rank word left off. The page glosses the name as «Ο Ερμής του λαού»."
+    },
+    {
+      "form": "Ермолај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 26. јул ст. ст., „Свештеномученик Ермолај.“ — «Свештеномученик» is the rank, written out in full, and is left off by §6. **The heading is that one word and the name and nothing else**, so the bare forename is the whole of the form; «of Nicomedia» in the display name is the corpus’s own and the body’s first three words are where it comes from. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, so the bare form costs nothing even though two folders of all but the same name are kept on this very day — their Serbian forms are not written, by §5, which is read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -61,8 +66,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 08.08.2026 (26. јул ст. ст.) — „Свештеномученик Ермолај.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-08&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (§4). «Свештеномученик» is the `hieromartyr` this folder already carries by §5, written out in full as on the 23 July; `presbyter` beside it is not in the heading and is left alone, though the body opens with it — «Свештеник Никомидијски», a priest of Nicomedia, three words and no verb. Nothing moves. **THE SHARPEST §5 CASE OF THIS RANGE, AND IT COSTS TWO ROWS THAT WOULD HAVE LOOKED OBVIOUS.** The body names two men: „Ермолај некако избеже смрт том приликом, заједно са друга два свештеника, Ермипом и Ермократом.“, Hermolaus somehow escaped death on that occasion together with two other priests, Ермип and Ермократ, and „С њим пострадаше и Ермип и Ермократ, и сви бише увенчани венцем победе и славе у царству Христовом.“, with him suffered Hermippus and Hermocrates also. **`hermippus-of-nicomedia` and `hermocrates-of-nicomedia` ARE FOLDERS OF THIS CORPUS, they are kept on THIS VERY MENOLOGION NUMBER, 26/7, their `serbian` rows stand `undocumented`, and they get NO ROW FROM THIS READING** — because §5 is explicit that a person narrated in a body but not named in the heading gets none. The heading is one rank and one name. Two folders a day apart from a row, left as they stand, and this is the case the rule exists for: an attestation says what a calendar’s own line prints, and this line prints Hermolaus. **They are linked in the prose and they already relate this folder in both directions**, so nothing is lost but the rows, and `proseprobe.mjs` reported all three names **OK** before the paragraph was written. Named for the author. **THE DATE IS REFUSED, AND THE GROUND IS NEW: TWO POINTS ONE YEAR APART.** The folder holds `death` earliest 305, latest 305, display «305», basis traditional. This entry ends „Чесно пострадаше около 304. године.“ — they suffered honourably **about the year 304**. That is not an empty field and it is not an interval: it is a second point, one year off the first, and hedged with «около», about. Writing it would displace a recorded year on the authority of a book that says ºbout»; widening to 304–305 would be a widening and is the author’s. Nothing is written. **This is the third date shape this range has refused in three days** — a year outside an interval on the 23 July, a century overlapping one on the 24, and now a hedged point beside a bare one. WHAT THE BOOK ADDS, AND THE FIRST THING IS A CROSS-REFERENCE TO A MASSACRE. „Свештеник Никомидијски.У време цара Максимијана и он беше са оних 2000 мученика које осуди цар да се у цркви и заједно са црквом сажежу (в. 28. децембар).“ — in the time of the emperor Maximian he too was among **THOSE TWO THOUSAND MARTYRS whom the emperor condemned to be burned in the church and together with the church**, with the entry’s own pointer to the 28 December. „Ермолај крсти св. Пантелејмона, с ким заједно би изведен пред суд, мучен, и најзад мачем посечен.“ — **Hermolaus baptised Panteleimon**, with whom he was brought before the court, tortured and beheaded. The baptism is the one fact this folder’s `related` row to `panteleimon-the-healer` rests on, confirmed here from a third book. **NO NEW `related`.** All four people the entry names — Hermippus, Hermocrates, Panteleimon and the emperor Maximian — are either already on this folder both ways or are no saint. The two thousand martyrs of the church are a company this entry does not enumerate and the corpus is not searched for on a number. No `office`. No `locations`: Nicomedia is named and is not written as a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
