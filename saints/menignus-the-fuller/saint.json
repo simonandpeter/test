@@ -15,6 +15,11 @@
       "form": "Менигн",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1518, «Менигн, белильник, мч.», with the rank word left off and the trade kept out of the form, since the trade is the epithet this folder is named by in English. `.tmp/foldchk.py` reports no folder holding this form — the corpus’s other Менигн, a Venerable of the Greek 4 July, holds only a Greek form."
+    },
+    {
+      "form": "Менигнос",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 22. новембар ст. ст., „Св. муч. Менигнос.“ — «Св.» is “saint” and «муч.» is the `martyr` grade `types` keeps, so both come off and the heading prints nothing else; the Hellespont and the trade that gave him his by-name are in the body, and the by-name itself the book gives in Serbian as «Бељо», a description of the trade and not a second name. Measured: no other folder holds this string."
     }
   ],
   "dates": {
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.12.2025 (22. новембар ст. ст.) — „Св. муч. Менигнос.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-05&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's third entry, seven sentences. `dates` UNTOUCHED: the book dates him only by the reign of Decius, and the «250 or 251» this folder holds from two calendars sits inside it, so a reign narrows nothing. No `related`: the entry names nobody but Decius. WHAT THE ENTRY ADDS: the Hellespont as his country and the bleaching of cloth as his trade, from which he was by-named the Bleacher; that he TORE UP THE IMPERIAL DECREE against the Christians; the Lord appearing to him in prison with the same words another of this month's martyrs hears, «не бој се, ја сам с тобом», do not fear, I am with you; the fetters melting like wax and the prison opening of itself so that he walked out; his recapture and trial; his fingers cut off hand and foot before he was beheaded; and his head shining at night like a candle. Measured: no other folder in the corpus holds «Менигнос»."
     }
   ],
   "text": {
