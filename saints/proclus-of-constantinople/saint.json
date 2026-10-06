@@ -17,6 +17,11 @@
       "form": "Прокл Константинопольский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 20 ноября ст. ст., name page 1839, «Святитель Прокл Константинопольский, патриарх», with the rank words left off; the line itself gives «архиеп.» where the name page gives «патриарх» and the life page uses both. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Прокл",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. новембар ст. ст., „Св. Прокл патријарх Цариградски.“ — «Св.» is “saint” and not a rank, «патријарх» is the `patriarch` grade `types` keeps, and «Цариградски» is the see this folder already carries in `office` as Patriarch of Constantinople; §6 strips a rank and a see, so the bare forename is what is left. It joins a fold of two with `proclus-of-callippi`, declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Св. Прокл патријарх Цариградски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry, the longest of the five. `dates` UNTOUCHED: the book says «сконча мирно у Господу 446. године», which is the earlier side of the «446 or 447» this folder already holds from two calendars a year apart, and a third book choosing between them does not close the interval. TWO YEARS IT ADDS AND NEITHER GOES INTO `dates`, because neither is a date of birth, death or floruit: 426 for his consecration as bishop of Cyzicus and 435 for his election as patriarch, with twenty years served as a hierarch. They are in the life. ONE `related` ROW ADDED, both ways: the emperor Theodosius the Younger, at whose wish and the patriarch's the relics of John Chrysostom were brought from Comana to Constantinople, and who walked in the litany at the earthquake — which is this patriarch's own story. John Chrysostom, whose disciple he was, and the empress Pulcheria were already related both ways. WHAT THE ENTRY ADDS: the two notable events of his time; the translation of Chrysostom's relics; the great earthquake at Constantinople and about it which threw down many of the finest and largest buildings; the litany of patriarch, emperor, clergy, nobles and people; THE CHILD CAUGHT UP INTO THE AIR until it could no longer be seen and set down gently again, who said it had been carried to heaven among the angels and had heard them singing «Свјатый Боже, свјатый крјепкiй, свјатый безсмертный, помилуј нас»; the whole litany taking up that song and the earthquake ceasing at once; the hymn becoming established in the Church from then on; and the child reposing soon after and being buried in the church of Saint Irene."
     }
   ],
   "images": [
@@ -85,7 +100,8 @@
     "paul-the-apostle",
     "pulcheria-the-empress",
     "atticus-of-constantinople",
-    "sisinnius-of-constantinople"
+    "sisinnius-of-constantinople",
+    "theodosius-the-younger"
   ],
   "hymns": [
     {

@@ -16,6 +16,11 @@
       "form": "Григорий Декаполит",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 20 ноября ст. ст., name page 539, «Преподобный Григорий Декаполит», with the rank word left off; the line itself declines the two words. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Григорије Декаполит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. новембар ст. ст., „Преп. Григорије Декаполит.“ — «Преп.» is the `venerable` grade `types` already keeps and comes off. «Декаполит» stays: it is neither a rank nor a see but the epithet that distinguishes him, which §6 keeps, and it is also the only thing in the heading that does. Measured: a bare «Григорије» would have joined the four-folder fold this reader keyed three days ago for the Julian 17 November, and keeping the epithet is what stops this folder from widening it to five."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Преп. Григорије Декаполит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry. `dates` UNTOUCHED: the book says he ended peacefully «у IX столећу у Цариграду», in the ninth century at Constantinople, and the 816 this folder holds off saint.gr is inside that century, so a century does not narrow a year. No `locations` added: Constantinople is where this book puts his death where the folder's own sources put his life in several places, and the entry lists Byzantium, Rome and Mount Olympus as among them. No `related` row: the only people the entry names are his parents, Sergius and Maria, neither of them a saint of this corpus. WHAT THE ENTRY ADDS: the Decapolis of Isauria as his birthplace and the names and standing of his parents, the flight into the desert and the monastic tonsure when they wished to marry him off at the end of his schooling, the places he lived — Byzantium, Rome, Mount Olympus — the heavenly light that shone round him, the angels who appeared to him, and that he saw the beauty of the angels and heard their sweet singing. The Serbian form is „Григорије Декаполит“ and it folds with nothing."
     }
   ],
   "related": [

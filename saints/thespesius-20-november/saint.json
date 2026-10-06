@@ -15,6 +15,11 @@
       "form": "Феспесий Никейский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his place in the line for 20 ноября ст. ст., name page 2280, «Феспесий Никейский, мч.», with the rank word left off; the line itself declines the bare forename. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Теспесије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 20. новембар ст. ст., „Св. муч. Јевстатије, Теспесије и Анатолије.“ — «Св.» is “saint”, «муч.» is the `martyr` grade, and the names beside his are the company; the heading prints nothing else, so the form is the bare forename as this book spells it, with т where the Greek has θ and the Russian «Феспесий» has ф. Measured: no other folder holds this string."
     }
   ],
   "related": [
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 03.12.2025 (20. новембар ст. ст.) — „Св. муч. Јевстатије, Теспесије и Анатолије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-03&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name in the day's third entry. `dates` UNTOUCHED for the same reason as on his brothers: «око 313. године» falls outside the «300 or 312» this folder holds from two calendars. No `related` row added. Measured: no other folder in the corpus holds the form «Теспесије», so it folds with nothing. The entry is told as one story for the three brothers and the paragraph here is that story, with the bishop of Nicomedia left unnamed for the reason recorded on `eustathius-20-november`."
     }
   ],
   "text": {
