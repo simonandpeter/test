@@ -1,0 +1,62 @@
+{
+  "slug": "constantine-sokolov",
+  "display_name": "Constantine (Sokolov)",
+  "names": [
+    {
+      "form": "Константин (Соколов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 марта ст. ст., «Константин (Соколов), иерей, сщмч.», with the rank words left off. The day's own line declines the forename and gives the name without the surname. The calendar sets the surname in brackets and it is kept so."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru's line for 12 марта ст. ст. closes with: «Сщмч. Иоанна, Константина пресвитеров, прмч. Владимира (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст. — «Сщмч. Иоанна, Константина пресвитеров, прмч. Владимира (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "note": "The line is one line for three men and this folder is one of them. Neither the day page nor name page 14236 carries a life, and the day page prints no hymn under his name. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it. azbyka.ru, which has lives for some of the martyrs and confessors of these years, was not read for him."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 25 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 25 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 25 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
