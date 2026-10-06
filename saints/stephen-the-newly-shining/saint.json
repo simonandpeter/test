@@ -6,6 +6,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Όσιος Στέφανος ο νεολαμπής «ὁ ἐν τῷ Ἁγίῳ Ἀντίπᾳ κειμένου»», with the rank word left off. The by-name and the church he lies in are left off the stored form."
+    },
+    {
+      "form": "Стефан Новосијатељ",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. децембар ст. ст., „Преподобни Стефан Новосијатељ.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Новосијатељ» is the Newly Shining, an epithet and no rank in BRIEF-SERBIAN §5’s table; it is this folder’s own display epithet, the Greek «ο νεολαμπής» in Serbian, and it is what tells him from the many folders that share a bare Стефан, so §6’s fullest form keeps it. The Greek form stored here is the bare «Στέφανος» with the by-name and the church he lies in taken off; this one is the fuller. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.12.2025 (9. децембар ст. ст.) — „Преподобни Стефан Новосијатељ.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преподобни» is the `venerable` held, and `presbyter` and `confessor` came off saint.gr — THIS BOOK MAKES THE PRIESTHOOD HIS FATHER’S AND NOT HIS, «Отац му беше свештеник Велике Цркве», his father was a priest of the Great Church, and it says nothing of a priesthood of his own; nothing was added and the `presbyter` already there is the Greek page’s and is left as it stands. **`dates` DELIBERATELY UNTOUCHED, AND THIS IS THE DAY’S REFUSAL.** The book says «упокојио се у Господу 829. године у 73. години свога земног живота», he reposed in the Lord in 829 in the seventy-third year of his earthly life, having struggled fifty-five years. The folder carries birth 838 and death 912 off saint.gr’s head «(838 - 912)», WITH THE SAME AGE OF SEVENTY-THREE, and the folder’s own date note already records that saint.gr’s body contradicts its head by putting him in the eighth century. So this book’s 829 AGREES WITH THE GREEK PAGE’S BODY AND NOT ITS HEAD — and it then contradicts itself in the same four lines, because it makes his father a priest of the Great Church «у време патријарха Методија», in the days of the patriarch Methodios, whose patriarchate was 843 to 847 and who cannot have ordained the father of a man dead in 829. NO INTERVAL WAS BUILT: the only one that would hold 829 and 912 together is a death from 829, which is EARLIER THAN THE BIRTH OF 838 THIS FOLDER RECORDS, and the birth cannot be moved without subtracting the age of seventy-three from the year of death, which BRIEF.md §5 forbids. Three readings, two of them inside one book each, and the folder keeps the dates it had while all three are written down here and in the life. FOR THE AUTHOR. NO `locations`: Constantinople, the church of Saint Peter the Apostle and the church of the martyr Antipas are three places and the folder has never held a coordinate. NO `related` ROW: his parents Захарија and Теофанија are no folders this corpus holds; the patriarch Methodios is named only as a date; and the two saints who appear to him in the entry, PETER THE APOSTLE AND THE MARTYR ANTIPAS, are named as the churches he shut himself up in and as visions, not as companions — sharing a shrine is a dedication, which BRIEF.md §4 says is not a relation, so neither row was written and the life names them as the book does. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

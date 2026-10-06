@@ -1,0 +1,60 @@
+{
+  "slug": "ammon-of-cyprus",
+  "display_name": "Ammon of Cyprus",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "archbishop"
+  ],
+  "names": [
+    {
+      "form": "Амон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 9. децембар ст. ст., „Преподобни Амон.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps, which leaves the bare forename; the heading offers nothing else at all, and the island and the archbishopric are in the body. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldnew.mjs` measured the string at two other holders, `ammon-of-tabennisi` and `ammonius-10-january`, and no READ_FOLDS key existed for the pair, so a new three-member key goes into `scripts/corpus-gate.mjs` in this commit and the gate’s unread count falls by one. The book prints no Latin form of his name."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 9. децембар ст. ст.: „Послуживши верно цркви и угодивши Богу, скончао мирно у VI веку.“ — having served the church faithfully and pleased God, he died in peace in the sixth century. The book states a century and no year, so the bounds are that century and nothing narrower, and no year was reckoned from the Damian he is said to have succeeded, because that Damian is not identified here."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 9 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 9 Δεκεμβρίου (7 October 2026). The corpus holds five folders on the menologion 9/12 from the other three calendars and no Ammon is among them; it also holds nine Ammon and Ammonius folders and not one of them is of Cyprus or an archbishop, which is what made this an arrival and not an upgrade."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.12.2025 (9. децембар ст. ст.) — „Преподобни Амон.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth and last entry, and the day’s one arrival. Four lines are the whole dossier: «Рођен и васпитан на Кипру. Због велике духовне учености и многих врлина, нарочито милосрђа, би постављен за архиепископа после светог Дамјана. Послуживши верно цркви и угодивши Богу, скончао мирно у VI веку.» — born and brought up in Cyprus; for great spiritual learning and many virtues, and his mercy above all, he was made archbishop after Saint Damian; having served the church faithfully and pleased God, he died in peace in the sixth century. `types`: `venerable` from «Преподобни» and `archbishop` from «архиепископа», both of them words the book uses of him. THE SEE IS NOT NAMED AND THE DISPLAY NAME IS THE ISLAND, NOT THE SEE: Cyprus is where the book says he was born and brought up, and «архиепископа после светог Дамјана» names a predecessor and no throne. The island is the only place he is given and it is what the display name carries; nothing here claims he was archbishop OF Cyprus, and that is a question for the author. NO `office`: `i18n.test.mjs` wants every office string in all four locale packs and there is in any case no see to put in one. THE DAMIAN WAS NOT IDENTIFIED: the corpus holds thirteen Damian folders and not one of them is an archbishop of anywhere, let alone of Cyprus, so naming one would be a guess and NO `related` row was written. `dates`: the sixth century, which the book states and which is all it states. NO `locations`: Cyprus is an island and the folder holds no coordinate. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
