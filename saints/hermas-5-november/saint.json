@@ -34,12 +34,13 @@
         "day": 5,
         "month": 11,
         "calendar": "julian",
-        "note": "The name page also lists «4 января (70 ап.)», the synaxis of the Seventy Apostles, which is a synaxis and not a second feast; this folder renders on 5 ноября ст. ст. only. His life pages add «8 марта» to the same two days, and that day page was not read either, so it is a note here and not a feast."
+        "note": "The name page also lists «4 января (70 ап.)», the synaxis of the Seventy Apostles, which is a synaxis and not a second feast; this folder renders on 5 ноября ст. ст. only. **The 8 марта his life pages add has now been read on the day page itself and it does keep him**: «Ап. Ерма (I).» is the second entry of 8 марта ст. ст., and the «Ерма» of it links name page **792**, the same page the 5 ноября line links and the same page whose two lives this folder already cites. So the Russian keeps him on both days, and the 8 March day is recorded here rather than as a second row, one row per church being the schema. This replaces a note that said the 8 марта day page «was not read either»."
       },
       "source": {
         "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 ноября ст. ст. — «Апп. от 70-ти Патрова , Ерма , Лина , Гаия , Филолога (I).»",
         "url": "https://days.pravoslavie.ru/Days/20261105.html",
-        "year": 2026
+        "year": 2026,
+        "note": "The same calendar's line for 8 марта ст. ст. is «Ап. Ерма (I).», behind the same name page 792, whose «Дни памяти» are «4 января (70 ап.), 8 марта, 5 ноября»."
       }
     },
     {
