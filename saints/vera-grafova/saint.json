@@ -1,0 +1,63 @@
+{
+  "slug": "vera-grafova",
+  "display_name": "Vera (Grafova)",
+  "sex": "female",
+  "types": [
+    "venerable",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Сщмч. Димитрия пресвитера и прп. Веры исповедницы (1932)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "traditional",
+      "note": "The year the day line prints for her and for the presbyter Demetrius beside her at once, and the only year this calendar gives either of them."
+    }
+  },
+  "names": [
+    {
+      "form": "Вера (Графова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 14441, «Вера (Графова), прп., исповедница», with the rank and grade words left off. The day line declines the forename and prints no surname. The corpus holds the surname nowhere else; `theophanes-grafov` carries the masculine «Графов», a different string and a different man, and nothing read connects them."
+    }
+  ],
+  "related": [
+    "demetrius-blagoveshchensky"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

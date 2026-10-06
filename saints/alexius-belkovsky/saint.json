@@ -1,0 +1,70 @@
+{
+  "slug": "alexius-belkovsky",
+  "display_name": "Alexius (Belkovsky) of Veliky Ustyug",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "hierarch",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Сщмч. Алексия, архиеп. Великоустюжского (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1842,
+      "latest": 1842,
+      "display": "1842",
+      "basis": "attested",
+      "note": "His life on days.pravoslavie.ru: «Священномученик Алексий (в миру Петр Филиппович Бельковский) родился в 1842 году в селе Рождествино Каширского уезда Тульской губернии в семье священника Филиппа Евфимовича Бельковского.» The page gives the year and not the day."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "November 1937",
+      "basis": "attested",
+      "note": "The same life: «После короткого пребывания в тюрьме архиепископ Алексий в ноябре 1937 года скончался и был погребен на городском кладбище.» It gives the month and not the day. The day line prints the year alone. The page also says he was ninety-five when arrested in the autumn of 1937, which agrees with the birth year above."
+    }
+  },
+  "names": [
+    {
+      "form": "Алексий (Бельковский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9104, «Святитель Алексий (Бельковский), архиепископ Великоустюжский, сщмч.», with the rank word, the grade with its see, and the martyr’s grade left off. His life page gives his name in the world as Петр Филиппович Бельковский and his father’s as Филипп Евфимович Бельковский; the monastic forename is the one the calendar commemorates him under. No other folder in this corpus holds this surname."
+    }
+  ],
+  "office": "Archbishop",
+  "text": {
+    "life": "life.md"
+  }
+}

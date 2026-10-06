@@ -1,0 +1,62 @@
+{
+  "slug": "sergius-felitsyn",
+  "display_name": "Sergius (Felitsyn)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Сщмчч. Иоанна, Константина, Николая, Сергия, Владимира, Иоанна, Феодора, Николая, Николая, Павла, Сергия пресвитеров, прмч. Данакта, Космы прмцц. Маргариты, Тамары, Антонины и Нимфодоры, мц. Матроны (1937)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 15 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 15 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 15 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the day line prints for the whole company of eighteen at once, and the only year this calendar gives him."
+    }
+  },
+  "names": [
+    {
+      "form": "Сергий (Фелицын)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru’s name page 9794, «Сергий (Фелицын), иерей, сщмч.», with the rank and grade words left off. The day line declines the forename and prints no surname for any of the eighteen, so the surname is read from the name page and not from the line. No other folder in this corpus holds this surname."
+    }
+  ],
+  "office": "Priest",
+  "text": {
+    "life": "life.md"
+  }
+}
