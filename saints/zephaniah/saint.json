@@ -11,6 +11,11 @@
       "form": "Σοφονίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Προφήτης Σοφονίας», with the rank word left off."
+    },
+    {
+      "form": "Софоније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. децембар ст. ст., „Свети пророк Софоније.“ — with «Свети» (not a rank, simply “saint”) and «пророк» (the `prophet` grade `types` keeps) left off, which leaves the bare forename as the whole of the form; the heading offers nothing else to distinguish him by. `sr-foldpred.mjs` measured the folded string at 0 other holders, so no READ_FOLDS key is owed."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.12.2025 (3. децембар ст. ст.) — „Свети пророк Софоније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025 because that is the page `sr-civil.mjs` gave for a Julian day between 10-20 and 12-18 and therefore the page actually read. `types` UNTOUCHED: «пророк» is the `prophet` the folder already holds. `dates` UNTOUCHED and this is an AGREEMENT, not a silence — the book says «Живео и пророковао у VII веку пре Христа за време благочестивог цара јудејског Јосије», the seventh century before Christ under the devout king Josiah of Judah, which is exactly the interval and the reign saint.gr gave and the folder already carries. NO `locations`: «гора Саварата» is the mount the folder’s life already names off two other calendars and no coordinate was ever held. NO `related` row: the only other persons the entry names are the prophet Jeremiah, whom it calls his contemporary, and king Josiah, and sharing a generation is not a relation — the life is written without either name. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

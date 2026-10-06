@@ -11,6 +11,11 @@
       "form": "Συνετός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Συνετός», with the rank word left off."
+    },
+    {
+      "form": "Разумник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. децембар ст. ст., „Свети мученик Разумник.“ — with «Свети» (“saint”) and «мученик» (the `martyr` grade `types` keeps) left off, which leaves the name the heading gives. IT IS THE SLAVONIC RENDERING AND NOT THE GREEK NAME, and the book says so itself in its first line: «Грчко му је име Синетос или Синезије», his Greek name is Synetos or Synesios. Those two are the book’s own Cyrillic spellings of a Greek name and were NOT drafted as forms of their own — the Greek «Συνετός» in this folder was read off a Greek page, and §6 and BRIEF.md §5 both forbid a reader to make a script form out of another book’s transcription. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.12.2025 (12. децембар ст. ст.) — „Свети мученик Разумник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, quoted whole with its closing full stop; URL year 2025. **THE HEADING NAMES HIM IN TRANSLATION AND THE BODY GIVES THE GREEK BACK**: «Грчко му је име Синетос или Синезије», his Greek name is Synetos or Synesios, where «Разумник» is the Slavonic rendering of it — the Intelligent — and that sentence is what identifies him beyond doubt as saint.gr’s «Άγιος Συνετός» and doxologia.ro’s «Sfântul Mucenic Sinet». The stored form is the heading’s «Разумник», §6 asking for the form the calendar prints: «Синетос» and «Синезије» are the book’s own Cyrillic renderings of a Greek name, not Greek-script forms, and the Greek form this folder already holds was read off a Greek page, so neither was drafted as a second form. `types` UNTOUCHED: «мученик» is the `martyr` held, and «чтец» — a reader — is a grade the corpus’s `types` vocabulary does not carry, so nothing was added for it and it is in the life instead. **`dates` DELIBERATELY STILL ABSENT**: the entry dates him only by a reign, «у време цара Аврелијана», in the days of the emperor Aurelian, and gives that reign no years; BRIEF.md §4 says that where the page gives no year there is no `dates` object, and the reign’s own dates are not on this page to be taken. NO `locations`: Rome is named and the folder has never held a coordinate. NO `related` row: the entry names nobody but the emperor. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

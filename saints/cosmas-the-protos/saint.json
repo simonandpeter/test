@@ -55,8 +55,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.12.2025 (5. децембар ст. ст.) — „Преподобни мученици карејски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-18&prolog=1",
+        "year": 2025
+      },
+      "note": "**THE DAY’S SECOND ENTRY IS A COMPANY HEADING THAT NAMES NOBODY, AND THIS ROW RESTS ON A READING OF THE BODY.** The heading is „Преподобни мученици карејски.“ — the venerable martyrs of Karyes — and the four lines under it say «Пострадали од паписта у време уније, коју створи с папом цар Михаил Палеолог (1260-1281.). Прот Свете Горе би обешен, а остали мачем посечени (в. 10. октобар).»: they suffered from the papists in the time of the union the emperor Michael Palaeologus made with the pope, the PROTOS OF THE HOLY MOUNTAIN WAS HANGED and the rest were beheaded. This folder is the Protos of the Holy Mountain, a `venerable-martyr` whom the Greek and Romanian calendars keep on this same menologion day and whose death saint.gr puts in 1280 under the patriarchate of John Bekkos, 1275–1282 — inside the reign the heading names. The identification is of the Protos and not of a name, and the row is given because THE HEADING IS A TRUE DESCRIPTION OF HIM: a venerable martyr of Karyes is what this folder holds. That is the whole of the difference from the Juliana refused on 12-04, whose host heading named Barbara alone and described Juliana not at all. NO SECOND FOLDER FOR «the rest»: the heading enumerates nobody, counts nobody and names nobody, so BRIEF.md §4’s ruling makes it one entry and a company folder here would be a company this corpus invented. NO `sr` NAME FORM, and that follows from the same fact — the heading contains no personal name to copy, and §6 forbids a form a reader supplies. `types` UNTOUCHED: «Преподобни мученици» is the `venerable-martyr` already held and `monk` is the tonsure. `dates` UNTOUCHED: the heading’s parenthesis «(1260-1281.)» is the REIGN OF MICHAEL PALAEOLOGUS and not a date for any man, and the folder’s 1280 sits inside it. NO `locations`. NO `related` row: the entry names no saint, and the emperor and the pope are no folders. The book’s own cross-reference «в. 10. октобар» is to its 10 October, which is OUTSIDE this reader’s range and is left for whoever reads that day. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

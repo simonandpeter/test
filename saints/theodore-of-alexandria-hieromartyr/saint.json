@@ -67,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for 23 August – 19 September 2026 (10 August – 6 September ст. ст.); its page for 12. септембар ст. ст. was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.12.2025 (3. децембар ст. ст.) — „Свештеномученик Теодор, архиепископ александријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. The Serbian book keeps him on the Julian 3 December, which is the Romanian day and NOT the Greek and Russian 12 September the folder also carries — three calendars, two days, and the row simply records the day this book prints. NO `sr` NAME FORM, AND THAT IS A REFUSAL: stripping «Свештеномученик» (a rank) and «архиепископ александријски» (a rank and a see, which this corpus puts in `office` and the display name) leaves the bare «Теодор», which `sr-foldpred.mjs` measures at FIVE other holders — and `scripts/corpus-gate.mjs` already carries a READ_FOLDS key for exactly those five, so storing the bare form would widen a keyed fold to six for no gain in telling him apart. The 12-02 reader refused the bare «Атанасије» on the same ground. `types` UNTOUCHED, AND THAT IS THE DAY’S OPEN QUESTION: the heading calls him hieromartyr and archbishop of Alexandria, as doxologia.ro’s Romanian line does, while saint.gr records with Eustratiades that the episcopal attribution is a mistake and he was a simple devout Christian, no Theodore standing in the list of patriarchs before Theodore I the Scribe (608–610). The corpus holds `martyr` alone and nothing was added on a rank two books assert and a third calls an error. `dates` ADDED, and it is the first date of any kind this folder has carried: «најзад посекоше га за веру 606. године» — at the last they beheaded him for the faith in 606, after two years of patriarchate. NO `locations`. NO `related` row: the entry names nobody else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -79,5 +89,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 606,
+      "latest": 606,
+      "display": "606",
+      "basis": "traditional",
+      "note": "Охридски пролог за 3. децембар ст. ст.: „После двогодишњег патријарховања би од незнабожаца мучен и поруган. Метнуше му трнов венац на главу, и најзад посекоше га за веру 606. године.“ — after two years of patriarchate he was tortured and mocked by the heathen, a crown of thorns was set on his head, and at the last he was beheaded for the faith in 606. The first year any source has given this folder; saint.gr and doxologia.ro both tell the story and neither dates it. The year is this book’s and sits against saint.gr’s own note that no Theodore stands in the Alexandrian patriarchal list before Theodore I the Scribe (608–610), which is two years later — the disagreement is recorded here and in the life and nothing is chosen, the basis staying traditional."
+    }
+  }
 }

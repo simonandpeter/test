@@ -19,6 +19,11 @@
       "form": "Βαρβάρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Αγία Βαρβάρα η Μεγαλομάρτυς», with the rank word left off."
+    },
+    {
+      "form": "Варвара",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. децембар ст. ст., „Света великомученица Варвара.“ — with «Света» (“saint”, not a rank) and «великомученица» (the `great-martyr` grade `types` keeps) left off, which leaves the bare forename; the heading offers nothing else. It is spelt exactly as the Russian form the folder already stores, so `sr-foldpred.mjs` reports that the form adds no new fold key at all."
     }
   ],
   "sex": "female",
@@ -84,8 +89,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.12.2025 (4. децембар ст. ст.) — „Света великомученица Варвара.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-17&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «великомученица» is the `great-martyr` the folder holds and `virgin` is the maiden of the tower. `dates` UNTOUCHED and it is an AGREEMENT: «Пострада света Варвара 306. године» — she suffered in 306, which is the «c. 306» the folder already carries off days.pravoslavie.ru inside the bounds of Maximian’s reign. ONE DISAGREEMENT RECORDED: this book puts her father in «граду Илиопољу Мисирском», the EGYPTIAN Heliopolis, where the Orthodox Church in America’s life — the folder’s own principal source, down to the URL — has Heliopolis in SYRIA. Two Heliopolises, nothing chosen, no `locations` key made, and the folder has never held one. NO `related` ROW ADDED and the entry names three other people: her father Диоскор, the prefect Мартијан to whom he gave her, and the woman Јулијанија who asked for martyrdom on seeing the Lord heal her in prison. The first two are her executioners and not companions. THE THIRD IS THE DAY’S OPEN QUESTION AND IS SET OUT ON HER OWN FOLDER BELOW — the corpus holds `juliana-4-december` and this book names her only in the body and gives her no heading of her own, so no row could quote a line that names her, and nothing was written on her. The Prologue prints no troparion and no kontakion."
     }
   ],
   "historicity": "traditional",

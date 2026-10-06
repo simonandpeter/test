@@ -136,6 +136,8 @@ February with Marcian; the Romanian calendar keeps her on 10 September.
 
 The Ohrid Prologue, for the Serbian calendar, tells her life in a few lines: the daughter of the emperor [Arcadius](/saints/arcadius-the-emperor); vowed to lifelong virginity, and as a sign of the vow the maker of a holy table of gold and precious stones for the cathedral church; co-ruler with her brother Theodosius the Younger and a great zealot for the Orthodox faith, by whose efforts the Third Ecumenical Council was called at Ephesus and condemned the heresy of Nestorius; the builder of the famous church of the Theotokos at Blachernae in Constantinople; after Theodosius’s death married to Marcian, the emperor chosen, but living with him as with a brother; and the finder of the relics of the Forty Martyrs of Sebaste. She reposed in the Lord, it says, on 10 September 453, in the fifty-fifth year of her life.
 
+The Ohrid Prologue's entry for the Julian 14 December names her in another saint's story, and after his death: [Thyrsus of Caesarea](/saints/thyrsus-of-caesarea), the catechumen of Caesarea in Bithynia whom the saw could not cut, appeared to her in a vision and advised her to bury the relics of the Forty Martyrs beside his own — his own having been laid, at the end of the fourth century, in a church the caesar Flavius built for him near Constantinople. That vision is why this folder now carries Thyrsus as a relation in both directions; nothing else on it was touched, and it takes no Serbian attestation row from a day that is not its own.
+
 *After the Viețile Sfinților as printed by doxologia.ro —
 [the life](https://doxologia.ro/viata-sfintei-pulheria-imparateasa), read 5 September 2026 — this
 time whole; the earlier reading had stopped partway. The Greek entry is

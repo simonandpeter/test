@@ -20,12 +20,19 @@
     "archbishop"
   ],
   "dates": {
+    "floruit": {
+      "earliest": 203,
+      "latest": 251,
+      "display": "203–251",
+      "basis": "traditional",
+      "note": "Охридски пролог за 12. децембар ст. ст.: „Био најпре епископом кападокијским. Но у време гоњења Северова 203. године бачен у тамницу и прогнан.“ — he was first bishop of Cappadocia, and in the persecution of Severus in 203 he was thrown into prison and exiled. THE 203 IS A YEAR NO OTHER SOURCE IN THIS FOLDER GAVE, and the bounds here run from it to the year of his death, which doxologia.ro and this book both put at 251. Nothing between the two bounds is claimed, and no year of birth was reckoned from either."
+    },
     "death": {
       "earliest": 251,
       "latest": 251,
       "display": "251",
       "basis": "attested",
-      "note": "doxologia.ro: «Istovit de pe urma suferințelor, moare în închisoare în anul 251»; the same page dates the persecution «împăratul Deciu (249-251)» and says he was arrested «între anii 249 și 251»."
+      "note": "doxologia.ro: «Istovit de pe urma suferințelor, moare în închisoare în anul 251»; the same page dates the persecution «împăratul Deciu (249-251)» and says he was arrested «între anii 249 și 251». The Охридски пролог за 12. децембар ст. ст. agrees to the year: „бачен у тамницу, у којој и сконча свој земаљски живот и пређе ка Господу 251. године.“ — thrown into prison, where he ended his earthly life and went over to the Lord in 251."
     }
   },
   "attestations": [
@@ -66,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.12.2025 (12. децембар ст. ст.) — „Свештеномученик Александар, епископ јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. NO `sr` NAME FORM, AND THAT IS A REFUSAL ON THE 12-03 READING: stripping «Свештеномученик» (a rank) and «епископ јерусалимски» (a rank and a see, which this corpus puts in `types` and the display name) leaves the bare «Александар», which `sr-foldpred.mjs` measures at SIX other holders — and `scripts/corpus-gate.mjs` already carries a READ_FOLDS key for exactly those six, written for the Julian 3 July, whose own reading says the Prologue gives that fold no way to break. Storing the form would widen a keyed six to seven for no gain in telling him apart. `types` UNTOUCHED: «Свештеномученик» is the `hieromartyr` held, and the `archbishop` is the other calendars’ word for a see this book calls «епископ». `dates`: the `death` of 251 UNTOUCHED and AGREED — «пређе ка Господу 251. године», which is doxologia.ro’s «moare în închisoare în anul 251» — and a `floruit` ADDED whose earlier bound is this book’s own stated year: «у време гоњења Северова 203. године бачен у тамницу и прогнан», in the persecution of Severus in 203 he was thrown into prison and exiled. That is a year neither other calendar gave, and it brackets his public life with the death. WHAT THE BOOK ADDS: that HE WAS FIRST BISHOP OF CAPPADOCIA before he took the throne of Jerusalem; that he FOUNDED THE FAMOUS LIBRARY OF JERUSALEM, which Eusebius used in writing his Church History; and that under Decius he was tortured in various ways and thrown to the beasts, and when he came out alive and untouched by them was thrown into prison, where he ended his earthly life. NO `locations`: Cappadocia and Jerusalem are two places and the folder has never held a coordinate. NO `related` ROW ADDED: `narcissus-of-jerusalem` was already here, and Eusebius, Severus and Decius are no folders this corpus holds. THE ROMANIAN ROW’S SECOND DAY, 16 mai, is already noted there and this book gives him no second day of its own. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

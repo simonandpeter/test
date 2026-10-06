@@ -11,6 +11,11 @@
       "form": "Λουκάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Λουκάς ο Νέος Στυλίτης», with the rank word and the by-name left off."
+    },
+    {
+      "form": "Лука Столпник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Лука Столпник.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Столпник» is kept on the same reading as this day’s Данило Столпник: §5 maps it to `stylite`, and it is also the whole of what the heading gives beyond the forename, the one thing that tells him from the other Lukes, and §6 asks for the fullest form the calendar gives. IT IS NOT THIS FOLDER’S DISPLAY EPITHET: the Greek «ο Νέος» and the Romanian «cel Nou» call him the New, and this book calls him the Stylite. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -57,11 +62,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.12.2025 (11. децембар ст. ст.) — „Преподобни Лука Столпник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. THE HEADING’S BY-NAME IS NOT THIS FOLDER’S: it calls him «Столпник», the Stylite, where the Greek and Romanian lines call him «ο Νέος» and «cel Nou», the New, which is the epithet the display name carries. Both are in the folder now, the stored form being this book’s. `types` UNTOUCHED AND TWO OF THEM CONFIRMED: «Столпник» is the `stylite` held, and the `soldier` is confirmed in so many words — «Као војник учествовао у рату против Бугара», as a soldier he took part in the war against the Bulgars. `presbyter` is saint.gr’s and this book says nothing of it; it was left as it stood. `dates` ADDED, and it is the first date of any kind this folder has carried: «упокоји се између 970-980. године», he reposed between 970 and 980 — an interval the book states as an interval, so the bounds are its own and nothing was narrowed. WHAT THE BOOK ADDS: that he lived at Constantinople in the days of the emperor Constantine Porphyrogenitus; that he came out of that war against the Bulgars alive and unhurt where he saw many thousands perish, and that SEEING THE FINGER OF GOD IN HIS OWN SURVIVAL he despised the vanity of the world; and that the pillar he withdrew to was near Chalcedon and he spent a full forty-five years on it. NO `locations`: Constantinople and Chalcedon are two places and the folder has never held a coordinate. NO `related` row: the entry names only the emperor, who is no folder this corpus holds. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 970,
+      "latest": 980,
+      "display": "970–980",
+      "basis": "traditional",
+      "note": "Охридски пролог за 11. децембар ст. ст.: „Угодивши Богу, упокоји се између 970-980. године и пресели се у бољи живот.“ — having pleased God he reposed between 970 and 980. The first date of any kind this folder has carried: doxologia.ro and saint.gr both print him and neither gives a year. THE BOOK STATES AN INTERVAL AND NOT A YEAR, so the bounds are the ones it prints and nothing has been narrowed; the forty-five years it gives him on the pillar are a length and no birth year was reckoned from them."
+    }
   }
 }

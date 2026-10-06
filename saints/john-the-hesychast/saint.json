@@ -6,6 +6,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Ιωάννης ο ησυχαστής, επίσκοπος Κολωνίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Јован Ћутљиви (Молчалник)",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. децембар ст. ст., „Свети Јован Ћутљиви (Молчалник).“ — with only «Свети» left off, that being “saint” and not a rank. «Ћутљиви» is the Silent and «Молчалник» the Slavonic word for the same thing, which the heading itself sets in the parenthesis; neither is a rank in BRIEF-SERBIAN §5’s table, both distinguish him from every other Јован, and §6 asks for the fullest form the calendar gives, so the parenthesis is kept exactly as printed. `sr-foldpred.mjs` measured the folded string at 0 other holders — the gate folds the parentheses away, so this is read as one string and is not the bare «јован» key that eleven folders share."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.12.2025 (3. децембар ст. ст.) — „Свети Јован Ћутљиви (Молчалник).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop and its parenthesis, which is the heading’s own; URL year 2025. `types` UNTOUCHED — «Свети» is not a rank, and `venerable`, `bishop`, `ascetic` and `hermit` are all already held; the book’s «прерушен у проста монаха» is the disguise and not a tonsure this folder lacks, and the presbyterate SABBAS PROPOSED FOR HIM WAS NEVER CONFERRED, because John confessed at the moment of ordination that he was already in the episcopal grade. `dates` UNTOUCHED and it is an AGREEMENT: «упокоји се мирно 558. године у стотину четвртој години живота свога» — he reposed in peace in 558 in the hundred and fourth year of his life, which is the year and the age saint.gr gave and the folder already carries. NO `locations`. NO `related` row added: `sabbas-the-sanctified` is already `related` both ways and is the one person in the entry who belongs to his story; the patriarch Elias of Jerusalem, his brother Пергамије, his uncle Теодор and the emperors Zeno and Justinian are named by the book as the setting of his flight from the see, not as companions, and the life is written to keep the folder’s existing unlinked «Elias, bishop of Jerusalem» phrasing rather than print a display name `related-floor.test.mjs` would then demand a row for. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

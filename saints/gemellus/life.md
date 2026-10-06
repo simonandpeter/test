@@ -6,4 +6,8 @@ When he had given the order and they had brought Gemellus before him, the page s
 
 The page then quotes at length the Synaxaristes of Saint Nicodemus the Hagiorite, whose account of the torments is a different one — a red-hot iron belt, a forced march behind the apostate as far as Edessa, nails driven into his head, a flaying from the feet to the shoulders, and a baptism received on the way from a priest he met, after which he came out of the font whole — and which ends, as the notice does, with his crucifixion. The couplet over his name says that Gemellus gladly bears the crucifixion on a tree for the sake of the God who was crucified.
 
-*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3215/saint.aspx); read 2 October 2026.*
+The Ohrid Prologue keeps him on the same menologion day and closes a date the Greek page had left open as a whole reign: he was tortured and crucified, it says, in the year 361, which is the year the passage of Nicodemus that saint.gr quotes had also given. It adds the city and the deed. He was an honourable citizen of Ankyra; and when the emperor Julian the Apostate came to that city, he went out before him and publicly convicted him of his apostasy. For that he was tortured and crucified.
+
+And while he hung in his torments upon the cross, the book says, a voice was heard from heaven: blessed are you, Gemellus.
+
+*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3215/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 10. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1), read 7 October 2026.*

@@ -11,6 +11,11 @@
       "form": "Απολλώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», with the rank word left off. The page glosses the name itself, «Φωτισμένος και αποκαλυπτικός όπως ο Απόλλων»."
+    },
+    {
+      "form": "Аполоније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Филимон, Аполоније, Аријан и други.“ — with «Свети мученици» left off and the second of the three bare forenames taken; the reader of this folder’s display name is not in this book at all. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Филимон, Аполоније, Аријан и други.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s enumerated three, the heading quoted whole on each of the three folders; URL year 2025, and the day all three already carry on their Romanian and Greek rows. `types` UNTOUCHED: «мученици» is the `martyr` held, and NOTHING WAS ADDED FOR THE READER OF HIS DISPLAY NAME — this book does not call him one, and `reader` is not in the vocabulary in any case. `dates` UNTOUCHED: the `floruit` 290 is saint.gr’s one year for the company and this book gives only «У време Диоклецијана», with no year. NO `locations`: Egypt is a country. NO `related` ROW ADDED: `philemon-the-flute-player` and `arianus-of-the-thebaid` are already here in both directions. WHAT THE BOOK ADDS, AND IT IS NOT FLATTERING AND IS THE SOURCE’S OWN: he was seized by the judge Arianus and threatened with torture, and HE TOOK FRIGHT AT THE TORMENTS AND BRIBED A PAGAN MUSICIAN to put on his clothes and offer the sacrifice to the idols in his place — which is how that man came to stand before the idols, be converted on the spot and die a martyr. He was beheaded with him at the last. `docs/CORPUS.md` §3 is explicit that a reading which looks wrong is the source’s and not the scrape’s, and this is in the life as the book has it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

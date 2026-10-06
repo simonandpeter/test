@@ -11,6 +11,11 @@
       "form": "Μηνάς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος», with the rank word and the by-name left off."
+    },
+    {
+      "form": "Мина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученици Мина, Ермоген и Евграф.“ — with «Свети мученици» left off, that being “holy” and the `martyr` grade `types` keeps, and the first of the three bare forenames taken; the heading gives the three nothing else, and the Athens of this folder’s display name is in the body and not the heading. `sr-foldpred.mjs` measured the folded string at one other holder, `menas-of-constantinople`, and no READ_FOLDS key existed for it, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Свети мученици Мина, Ермоген и Евграф.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, AN ENUMERATED THREE, so BRIEF-SERBIAN §5 counts three and each of the three folders takes this one heading whole with its closing full stop; the corpus holds all three. URL year 2025. He is the first name. `types` UNTOUCHED: «мученици» is the `martyr` held. `dates` UNTOUCHED AND STILL ABSENT, AND THE REFUSAL IS DELIBERATE: the entry names the emperor «Максимин» and gives his reign no years, so there was no interval to take and BRIEF.md §4 forbids making one; the folder had no `dates` and still has none. NO `locations`: Athens, Constantinople and Alexandria are three places and the folder has never held a coordinate. NO `related` ROW ADDED: `hermogenes-of-alexandria` and `eugraphus` are already `related` here in both directions and are the only persons the entry names besides the emperor. WHAT THE BOOK ADDS, where the Romanian and Greek lines gave three names: that he and Hermogenes were Athenians by birth and both in great honour at Constantinople; that he was known for his learning and his eloquence and OUTWARDLY PASSED FOR A PAGAN WHILE BEING A CONVINCED CHRISTIAN IN HIS HEART; that the emperor sent him to Alexandria to quiet a riot and root Christianity out, and that he made the peace and then declared himself a Christian and converted many; that Hermogenes, sent to punish him, cut off his feet and his tongue and put out his eyes and threw him in prison, where the Lord Jesus himself appeared and healed him; and that the sight of that healing is what made Hermogenes a Christian. Their relics were thrown into the sea and came by a wonder to Constantinople, where the bishop, warned in a dream, met them and buried them honourably. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

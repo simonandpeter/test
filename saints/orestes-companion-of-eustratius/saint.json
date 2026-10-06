@@ -11,6 +11,11 @@
       "form": "Ορέστης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off. The page glosses the name itself, «(όρος + ίσταμαι) = ο ορεσίβιος»."
+    },
+    {
+      "form": "Орест",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off and the last of the five bare forenames taken; the «companion of Eustratius» of the display name is this corpus’s own and §6 keeps a clause naming another saint out of a stored form. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -22,7 +27,8 @@
     "eustratius-of-arabraca",
     "auxentius-companion-of-eustratius",
     "eugene-of-satala",
-    "mardarius"
+    "mardarius",
+    "demetrius-of-rostov"
   ],
   "attestations": [
     {
@@ -61,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The fifth and last name of the day’s enumerated five; the heading is quoted whole on each of the five folders; URL year 2025. `types` UNTOUCHED, and NO `soldier` was added although the book makes him «такође, угледан војник», a notable soldier too, and «млад и красан војник» who overtopped all the other soldiers in height — the same refusal as on `eugene-of-satala`, one word of one book on a folder the other calendars give no rank of its own; named for the author. `dates` UNTOUCHED AND STILL ABSENT. NO `locations`. `related_add`: `demetrius-of-rostov`, in both directions, on the entry’s own sentence «а свети Орест јавио се и светом Димитрију Ростовском (в. 28. октобар)» — and Saint Orestes appeared also to Saint Demetrius of Rostov, with the book’s own cross-reference to its 28 October, which is the day this corpus keeps that man on. A posthumous apparition to a named saint is this folder’s own story and not furniture, and the row is written on both folders. NO OTHER `related` ROW: the four companions are already here. WHAT THE BOOK ADDS: that HIS CROSS FELL OUT OF HIS BOSOM as he was shooting at a target before Lysias, by which Lysias knew him for a Christian — a thing he then confessed openly — and that he breathed his last on red-hot iron. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

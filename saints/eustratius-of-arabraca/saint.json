@@ -11,6 +11,11 @@
       "form": "Ευστράτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off. The page glosses the name itself, «(από ευ + στρατός) = ο αρχηγός ένδοξου στρατού»."
+    },
+    {
+      "form": "Евстратије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off, that being “holy” and the grade `types` keeps, and the first of the five bare forenames taken; the heading gives the five nothing but their names, and the Arabraca of this folder’s display name is in the body. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `eustratius-of-mount-olympus`, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit."
     }
   ],
   "sex": "male",
@@ -22,7 +27,8 @@
     "auxentius-companion-of-eustratius",
     "eugene-of-satala",
     "mardarius",
-    "orestes-companion-of-eustratius"
+    "orestes-companion-of-eustratius",
+    "blaise-of-sebaste"
   ],
   "attestations": [
     {
@@ -61,8 +67,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, AN ENUMERATED FIVE, so BRIEF-SERBIAN §5 counts five and each of the five folders takes this one heading whole with its closing full stop; the corpus holds all five and they are already `related` to one another in every direction. URL year 2025. He is the first name. `types` UNTOUCHED: «мученици» is the grade of which the folder holds the fuller `great-martyr`, which is the other two calendars’ word, and `soldier` is confirmed in so many words — «Евстратије свети беше римски војвода у граду Саталиону», a Roman commander. **THE BOOK PUTS HIM IN THE CITY THIS CORPUS GIVES TO ANOTHER OF THE SAME FIVE.** It makes him commander in САТАЛИОН, which is the Satala of `eugene-of-satala`’s display name, and says in the same breath that he and Mardarius were both from АРАВРАКИН, which is the Arabraca of his own. So the two cities the corpus has used to tell two of the five apart are, in this book, one man’s post and one man’s birthplace. NOTHING WAS RENAMED, no `locations` key was made, and both readings are in the life. `dates` UNTOUCHED AND STILL ABSENT: the entry names the emperors Диоклецијан and Максимијан and the governors Лисије and Агрикола and gives none of them years. `related_add`: `blaise-of-sebaste`, in both directions, because the entry says «Пред смрт причести светог Евстратија у тамници свети Власије (в. 11. фебруар)» — before his death Saint Blaise communed him in prison, with the book’s own cross-reference to its 11 February, which is the day this corpus keeps that Blaise on; a man who gave him his last communion is his story and not furniture. NO OTHER `related` ROW: the four companions are already here. HIS PRAYER IS NOT IN `hymns`: «Од светог Евстратија остала је красна молитва која се чита на суботној полуноћници: Величаја величају тја Господи» — a prayer read at the Saturday midnight office, of which the book prints the first words only. BRIEF-SERBIAN §3 takes no hymn from this source, and a prayer is not a troparion or a kontakion; it is named in the life. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

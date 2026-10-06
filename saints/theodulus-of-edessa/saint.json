@@ -51,8 +51,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.12.2025 (3. децембар ст. ст.) — „Преподобни Теодул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop; URL year 2025. THE DAY’S ONE IDENTIFICATION, and it is made on the body and not the name: the Greek 3 December carries two Theoduli, `theodulus-the-cypriot` the fool-for-christ and this one, and the book’s four lines are this one’s and no other’s — «Знаменити патриције на двору Теодосија Великог. По смрти своје жене остави сујету света», a famous patrician at the court of Theodosius the Great who after the death of his wife left the vanity of the world for a pillar, which is the eparch-turned-stylite this folder holds and not the Cypriot. NO `sr` NAME FORM, AND IT IS A REFUSAL: the heading prints a rank and a bare forename and nothing else, so stripping «Преподобни» (the `venerable` grade already held) leaves «Теодул», which `sr-foldpred.mjs` measures at FOUR other holders — a bare forename beside fuller ones is the fold BRIEF-SERBIAN §6 warns of, there is nothing in the heading to widen it with, and no key is written for a form that would not tell him from four other men. `types` UNTOUCHED: «Преподобни» is `venerable`, and `stylite` and `ascetic` are the pillar and the thirty years. `dates` UNTOUCHED: the book gives no year at all, naming only the reign of Theodosius the Great, which is the interval 379–395 the folder already carries off saint.gr. TWO DISAGREEMENTS RECORDED AND NEITHER RESOLVED. The book puts the pillar «код Ефеса», by EPHESUS, where saint.gr sent him to EDESSA — the city in this folder’s own display name — and it gives him «пуних тридесет година» on it, a full THIRTY years, where saint.gr gave forty after a climb at the age of forty-two. Nothing was renamed, no `locations` key was made, and both readings are in the life, which is `docs/CORPUS.md` §3. `related` UNTOUCHED: `theodosius-the-great` is already `related` both ways and is the only person the entry names. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

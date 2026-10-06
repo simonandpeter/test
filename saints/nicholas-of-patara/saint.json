@@ -1,0 +1,53 @@
+{
+  "slug": "nicholas-of-patara",
+  "display_name": "Nicholas of Patara",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Николај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 6. децембар ст. ст., „Свети Николај, епископ патарски.“ — «Свети» is “saint” and not a rank, and «епископ патарски» is the grade with the see it holds, which §6 keeps out of a stored form and which this folder carries in `types` and in the display name instead; so the bare personal name is the whole of the form. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldnew.mjs` measured the string at three other holders — `nicholas-of-metsovo`, `nicholas-of-novgorod` and `nicholas-of-pskov` — and his nephew joins it in the same batch, so the key in `scripts/corpus-gate.mjs` goes from three members to five in this commit and the three-member key it replaces is deleted with its reading carried forward. The book prints no Latin form of his name."
+    }
+  ],
+  "related": [
+    "nicholas-of-myra"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 6 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Δεκεμβρίου (7 October 2026). The corpus holds six folders on the menologion 6/12 from the other three calendars and no bishop of Patara is among them, which is a fact about what was read on those days and not an absence on this one."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.12.2025 (6. децембар ст. ст.) — „Свети Николај, епископ патарски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-19&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry of four, and the first of this day’s two arrivals. Its whole body is one sentence — «Стриц великога светитеља Николаја, који овога и настави на духовни живот и рукоположи за свештеника.», the uncle of the great saint Nicholas, who both set him on the spiritual life and ordained him priest — and the day’s FIRST entry, which is his nephew’s, adds the rest of what is known of him here: that the nephew learnt the spiritual life «код свог стрица Николаја, епископа патарског» and was tonsured in the monastery of New Sion, «основаном тим истим стрицем његовим», founded by that same uncle of his. HE IS NOT HIS NEPHEW AND THE TWO ENTRIES ARE WHAT PROVE IT: the book prints them as two headings on one day, one the archbishop of Myra and one the bishop of Patara, and the second is called the first’s uncle in its own first word. `types`: `bishop`, which the heading states and nothing else does. NO `dates`: the book gives him no year, no century and no reign, and BRIEF.md §4 forbids inventing one — his nephew’s 343 in the entry above is his nephew’s. NO `office`: `i18n.test.mjs` wants every office string in all four locale packs and “Bishop of Patara” is not in them, so the see is in the display name and the life. NO `locations`: Patara is named as his see and the folder has never held a coordinate. `related`: `nicholas-of-myra`, in both directions, which is the one relation the entry asserts and the only person it names. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -6,6 +6,11 @@
       "form": "Γέμελλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιος Γέμελλος», with the rank word left off."
+    },
+    {
+      "form": "Гемел",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученик Гемел.“ — with «Свети» (“saint”) and «мученик» (the `martyr` grade `types` keeps) left off, which leaves the bare forename; the heading offers nothing else, and the city is in the body. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -15,10 +20,10 @@
   "dates": {
     "death": {
       "earliest": 361,
-      "latest": 363,
-      "display": "under Julian the Apostate",
+      "latest": 361,
+      "display": "361",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Γέμελλος έζησε στα χρόνια του βασιλιά Ιουλιανού του παραβάτη (361 - 363 μ.Χ.)», and the Nicodemus passage the same page quotes adds «εν έτει τξα΄ [361]». The interval is that reign, which is as close as the page comes to a year for the martyrdom."
+      "note": "**Two sources on one year, and this NARROWS a reign to a date; it was 361–363, «under Julian the Apostate», before this reading.** saint.gr: «Ο Άγιος Γέμελλος έζησε στα χρόνια του βασιλιά Ιουλιανού του παραβάτη (361 - 363 μ.Χ.)» — the interval was that reign, which is as close to a year as the page's own prose came — and the Nicodemus passage the same page quotes adds «εν έτει τξα΄ [361]». The Охридски пролог за 10. децембар ст. ст. states it outright: „Зато би мучен и на крст распет 361. године.“ — for that he was tortured and crucified on the cross in 361. The Greek page's quoted authority and this book agree on the year, so the bounds close on it; the basis stays traditional, neither being a document."
     }
   },
   "attestations": [
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Свети мученик Гемел.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «мученик» is the `martyr` held, and «честан грађанин», an honourable citizen, is no rank. `dates` NARROWED, WHICH IS THE RARE DIRECTION: the folder held 361–363, the whole reign of Julian the Apostate, with the display «under Julian the Apostate», because that reign is as close to a year as saint.gr came in its own prose. THIS BOOK STATES THE YEAR — «Зато би мучен и на крст распет 361. године», for that he was tortured and crucified in 361 — and it agrees with the Nicodemus passage saint.gr quotes, «εν έτει τξα΄ [361]», which was already in the folder’s own note without being made the finding. Two sources on one year, so the interval closes on 361. WHAT THE BOOK ADDS: that he was a citizen of ANKYRA; that when Julian the Apostate came to that city he went out before him and PUBLICLY CONVICTED HIM OF APOSTASY, which is why he suffered; and that while he hung in his torments on the cross a voice was heard from heaven, «Блажен си ти, Гемеле!», blessed are you, Gemellus. NO `locations`: Ankyra is the one place he is given and the folder has never held a coordinate. NO `related` ROW ADDED: `nicodemus-the-hagiorite` is already here, being the writer saint.gr quotes for him, and this entry names only the emperor, who is no folder. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

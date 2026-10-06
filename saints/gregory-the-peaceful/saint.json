@@ -6,6 +6,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Όσιος Γρηγόριος ο Σιναΐτης ο Ειρηνικός», with the rank word left off."
+    },
+    {
+      "form": "Григорије Ћутљиви",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. децембар ст. ст., „Преподобни Григорије Ћутљиви.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Ћутљиви» is the Silent, an epithet and no rank in BRIEF-SERBIAN §5’s table, and it is what tells him from the forty-odd Gregory folders, so §6’s fullest form keeps it. IT IS NOT THE BY-NAME THIS FOLDER IS DISPLAYED UNDER: saint.gr calls him «ο Ειρηνικός», the Peaceful, and this book the Silent — two books, two epithets, and the form is copied as this one prints it rather than bent towards the other. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -22,7 +27,14 @@
       "latest": 1400,
       "display": "14th century",
       "basis": "traditional",
-      "note": "saint.gr: «ασκήτεψε στο Άγιον Όρος και ίδρυσε τη μονή του Οσίου Γρηγορίου (Πρώην Μονή Αγίου Νικολάου) το 14ο αιώνα μ.Χ.» The page gives no year of birth and none of death."
+      "note": "saint.gr: «ασκήτεψε στο Άγιον Όρος και ίδρυσε τη μονή του Οσίου Γρηγορίου (Πρώην Μονή Αγίου Νικολάου) το 14ο αιώνα μ.Χ.» The page gives no year of birth and none of death, and dates the founding of the monastery to that century."
+    },
+    "death": {
+      "earliest": 1406,
+      "latest": 1406,
+      "display": "1406",
+      "basis": "traditional",
+      "note": "Охридски пролог за 7. децембар ст. ст.: „Овај Божји човек упокојио се мирно 1406. године.“ — this man of God reposed in peace in 1406. The first year of any kind this folder has carried; saint.gr gives none. IT IS SIX YEARS OUTSIDE THE `floruit` ABOVE AND THAT IS DELIBERATE: the Greek page dates the founding of his monastery to the fourteenth century and this book dates his death to the fifteenth, and a man who founded a house in one century and died early in the next is not a contradiction. Neither reading is chosen and neither was adjusted to fit the other."
     }
   },
   "attestations": [
@@ -53,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.12.2025 (7. децембар ст. ст.) — „Преподобни Григорије Ћутљиви.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-20&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. THE IDENTIFICATION IS CERTAIN AND IS MADE ON THE MONASTERY: this folder is the founder of the monastery of the venerable Gregory on Athos, «Πρώην Μονή Αγίου Νικολάου», formerly the monastery of Saint Nicholas, which is word for word what this entry says — «Оснивач Светогорског манастира светог Николаја, познатог због њега под именом Григоријата», the founder of the Athonite monastery of Saint Nicholas, known because of him as Gregoriou. AND THE TWO BOOKS GIVE HIM TWO DIFFERENT BY-NAMES: this one calls him «Ћутљиви», the Silent, where saint.gr calls him «ο Ειρηνικός», the Peaceful, which is the epithet this folder’s display name carries. Nothing was renamed; the second by-name is recorded here and in the life. `types` UNTOUCHED: «Преподобни» is the `venerable` held and `monk` was there. `dates`: a `death` of 1406 ADDED beside the `floruit` the folder held, AND THEY SIT IN TWO DIFFERENT CENTURIES ON PURPOSE. saint.gr dates the founding of the monastery to the fourteenth century and gives no year of birth and none of death; this book says «Овај Божји човек упокојио се мирно 1406. године», he reposed in peace in 1406, which is the fifteenth. A man who founded a house in the fourteenth century and died six years into the fifteenth is not a contradiction and nothing is chosen between them; both readings stand, the `floruit` untouched. WHAT THE BOOK ADDS, and the Greek page had the consequence without the cause: that he was «Пореклом Србин», a Serb by origin; that his cell stands a quarter of an hour from the monastery, where he did penance and prayed in silence; and that in the great fire at the monastery in 1761 some monks took his relics and carried them into Serbia — which is how the relics saint.gr reports at the monastery of Gornjak in Serbia got there. NO `locations`. NO `related` ROW ADDED: `gregory-of-sinai`, his teacher, is already `related` here both ways, and this entry names nobody at all. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

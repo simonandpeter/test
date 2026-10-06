@@ -11,6 +11,11 @@
       "form": "Άννα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Δεκεμβρίου, «Δικαία Άννα η προφήτιδα Μητέρα του προφήτη Σαμουήλ», with the rank word and the description left off."
+    },
+    {
+      "form": "Ана",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. децембар ст. ст., „Света Ана, матер пророка Самуила.“ — with «Света» (“saint”, not a rank) and the kinship clause «матер пророка Самуила» left off, which is the same stripping the Romanian «Ana» and the Greek «Άννα» already stored here were made by; §6 keeps a clause that names another saint out of a stored form, and the kinship stays in the display name where this corpus puts it. `sr-foldpred.mjs` reports that the form adds no new fold key, the folded string being the one the Romanian form already makes."
     }
   ],
   "sex": "female",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.12.2025 (9. децембар ст. ст.) — „Света Ана, матер пророка Самуила.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: `prophetess` is what the other two calendars call her — doxologia.ro «Sfânta Prorociță Ana» and saint.gr «Δικαία Άννα η προφήτιδα» — and this book gives her no rank word at all beyond «Света», so nothing was added and nothing taken away. `dates` UNTOUCHED AND STILL ABSENT: the entry gives no year, no century and no reign, and cites its own source as I Samuel. NO `locations`: «из Арматема или Ариматеје» is the town in two spellings the book itself offers and the folder has never held a coordinate. NO `related` ROW ADDED: `samuel-the-prophet` her son is already `related` here in both directions and is the one person the entry ties her to; Elkanah her husband, Saul and David whom her son anointed are no folders this corpus holds under those names. WHAT THE BOOK ADDS: the husband’s name and the town, with the book’s own two spellings of it and its own scriptural citation; that she was barren and grieved and wept bitterly for it; that God loosed her barrenness for her unceasing sighs and prayers; that she dedicated the son to God from his very infancy; and that the song of thanksgiving she sang — wondrous, it says, for its wisdom and its beauty — is still used in the services of the Church to this day. The Prologue prints no troparion and no kontakion, and that song is NOT put in `hymns`: it is a canticle of Scripture the book cites by chapter and verse and does not print, and BRIEF-SERBIAN §3 takes no hymn from this source."
     }
   ],
   "text": {

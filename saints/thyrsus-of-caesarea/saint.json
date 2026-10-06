@@ -20,6 +20,11 @@
       "form": "Θύρσος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους», which names the three together; the rank word is left off. The page prints no gloss of this name."
+    },
+    {
+      "form": "Тирс",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Тирс, Левкије и Калиник.“ — with «Свети мученици» left off, that being “holy” and the `martyr` grade `types` keeps, and the first of the three bare forenames taken; the Caesarea of this folder’s display name is in the body and §6 keeps a city out of a stored form in any case. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because the corpus holds a `thyrsus-20-january` and a `thyrsus-of-karpasia`: neither stores a Serbian form and no string folds against this one."
     }
   ],
   "sex": "male",
@@ -82,8 +87,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 30.08.2026 (17. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Тирс, Левкије и Калиник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, AN ENUMERATED THREE, so BRIEF-SERBIAN §5 counts three and each of the three folders takes this one heading whole with its closing full stop; the corpus holds all three and they are already `related` to one another. URL year 2025. He is the first name. **A DAY NO OTHER CALENDAR KEEPS HIM ON**: the Russian, Romanian and Greek rows on this folder are all 17 August, and this book puts him on the Julian 14 December with Leucius and Callinicus — which is the day the Romanian calendar keeps those two on and not him. The serbian row was `undocumented`, so the row lands here and none of the other three was touched. `types` UNTOUCHED: «мученици» is the `martyr` held. `dates` UNTOUCHED: the entry names the emperor «Кумврикије», Decius’s successor, and the «кесар Флавије» who built his church at the end of the fourth century, and gives neither of them a year; the 249–251 the folder carries is days.pravoslavie.ru’s and stands. `related_add`: `pulcheria-the-empress`, in both directions, on the entry’s closing sentence — «Светитељ се јавио у визији царици Пулхерији и препоручио јој, да сахрани мошти чердесет мученика до његових моштију», the saint appeared in a vision to the empress Pulcheria and advised her to bury the relics of the Forty Martyrs beside his own. A named apparition with an instruction in it is this folder’s story, on the reading made for `orestes-companion-of-eustratius` and `demetrius-of-rostov` on 12-13. NO ROW FOR THE FORTY MARTYRS: the corpus keeps them as forty separate folders and the entry names not one of them, so there is nobody to write a row to. NO OTHER `related` ROW: Leucius, Callinicus and `cornutus-of-iconium` are already here, and the bishop of Caesarea «Филеј» who baptised him is no folder this corpus holds. NO `locations`. WHAT THE BOOK ADDS: that he and Leucius were honourable citizens of Caesarea in Bithynia, HE A CATECHUMEN AND NOT YET BAPTISED and Leucius already baptised; that it was the sight of Leucius’s death that kindled him; that an invisible hand of God healed his wounds, opened the prison doors and led him out, and that he went straight to the bishop to be baptised; that he bore his second torture as though in sleep and not awake, and that many idols fell at the power of his prayer; and that when they put him in a wooden chest to saw him through, the saw could not so much as scratch the wood, so that he rose out of the chest, gave thanks to God for his torments and gave up his spirit in peace. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -92,7 +107,8 @@
   "related": [
     "callinicus-of-caesarea",
     "cornutus-of-iconium",
-    "leucius-of-caesarea"
+    "leucius-of-caesarea",
+    "pulcheria-the-empress"
   ],
   "hymns": [
     {

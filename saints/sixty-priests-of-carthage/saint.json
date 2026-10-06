@@ -16,10 +16,10 @@
   "dates": {
     "death": {
       "earliest": 474,
-      "latest": 476,
-      "display": "474 - 476",
+      "latest": 484,
+      "display": "474–484",
       "basis": "traditional",
-      "note": "saint.gr: «μαρτύρησαν στην Καρχηδόνα στα χρόνια του βασιλιά Ζήνωνα (474 - 476 μ.Χ.)». The interval is the page's own parenthesis for Zeno's reign and not a year it gives for the martyrdom."
+      "note": "**Two books, two rulers and two regnal brackets; the interval holds both, and it was 474–476 before this reading.** saint.gr: «μαρτύρησαν στην Καρχηδόνα στα χρόνια του βασιλιά Ζήνωνα (474 - 476 μ.Χ.)» — the years of the emperor Zeno, whose reign that page brackets 474 to 476. The Охридски пролог за 8. децембар ст. ст.: „Пострадали од јеретика аријеваца у време владе краља вандалскога Гунерика или Гензерика (477-484)“ — in the reign of the Vandal king Hunneric, or Genseric, bracketed 477 to 484. Neither bracket is a year either book gives for the martyrdom itself; both are reigns, and the bounds here are the union of the two. Nothing is chosen."
     }
   },
   "attestations": [
@@ -50,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети мученици у Африци.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The second of the three groups the day’s third entry counts: «шездесеторици језици одрезани», sixty had their tongues cut out, which is this folder — sixty, counted and unnamed, with their tongues cut out, exactly as saint.gr keeps them on its 7 Δεκεμβρίου. The company heading „Свети мученици у Африци.“ is quoted whole on each of the three folders and is a true description of each. THE ONE THING THIS BOOK DOES NOT SAY IS THAT THEY WERE PRIESTS: it says «шездесеторици», sixty of them, where saint.gr heads them «Άγιοι Εξήκοντα Ιερείς», sixty priests, and the display name and the `presbyter` type on this folder are that page’s and are left exactly as they were. NO `sr` NAME FORM, the heading holding no personal name and its one company designation belonging to all three groups at once. `types` UNTOUCHED. `dates` WIDENED from 474–476 to 474–484 on the same two regnal brackets as the two priests — Zeno’s «(474 - 476 μ.Χ.)» against the Vandal king’s «(477-484)» — with nothing chosen. NO `locations`: Africa in this book, Carthage in that one. NO `related` row: neither book names one of them. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

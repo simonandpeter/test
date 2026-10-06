@@ -12,6 +12,11 @@
       "form": "Ερμογένης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος», with the rank word left off."
+    },
+    {
+      "form": "Ермоген",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученици Мина, Ермоген и Евграф.“ — with «Свети мученици» left off and the second of the three bare forenames taken; the see this folder is named for is in the body and not the heading, and §6 keeps a see out of a stored form in any case. `sr-foldpred.mjs` measured the folded string at two other holders, `hermogenes-of-moscow` and `hermogenes-of-nicomedia`, and no READ_FOLDS key existed for the pair, so a new three-member key goes into `scripts/corpus-gate.mjs` in this commit."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Свети мученици Мина, Ермоген и Евграф.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s enumerated three; the heading is quoted whole on each of the three folders; URL year 2025. `types` UNTOUCHED: «мученици» is the `martyr` held, and the `bishop` is confirmed in so many words by this book — «И би Ермоген постављен за епископа у Александрији», and Hermogenes was made bishop in Alexandria, which is the very see this folder is named for. `dates` UNTOUCHED AND STILL ABSENT: the emperor Максимин is named with no years. NO `locations`: Athens, Constantinople and Alexandria. NO `related` ROW ADDED: `menas-the-athenian` and `eugraphus` are already `related` here both ways. WHAT THE BOOK ADDS, AND IT IS A WHOLE BIOGRAPHY NEITHER OTHER CALENDAR HAD: that he was an Athenian by birth, EPARCH OF CONSTANTINOPLE, and a pagan outwardly and inwardly though merciful and a doer of many good works; that the emperor sent HIM to punish Menas, and that he cut off Menas’s feet and tongue, put out his eyes and jailed him; and that seeing Menas wonderfully healed in that prison he was baptised, began to preach, and was made bishop of the city — after which the emperor tortured and beheaded him with the man he had mutilated. His relics were thrown into the sea with Menas’s and came by a wonder to Constantinople. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

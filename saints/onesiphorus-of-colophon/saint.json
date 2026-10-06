@@ -80,7 +80,8 @@
       "feast": {
         "day": 7,
         "month": 9,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "A SECOND SERBIAN DAY, and the same book names both. The Охридски пролог’s heading for the Julian 8 December is „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1, read 7 October 2026 — an enumerated company of SEVEN where saint.gr’s 8 Δεκεμβρίου prints six, this book alone putting Онисифор among them; and the body of that entry sends him back to this very day, «Посебно празнује се … Онисифор 7. септембра», Onesiphorus is specially celebrated on 7 September, which is the day this row records and the day the Greek calendar keeps him on too. It also says that all seven are celebrated on 4 January with the rest of the lesser apostles. One attestation row per church is the schema, so BRIEF.md §4’s ruling applies: the other days are a note on this feast and he does not render on the Julian 8 December or 4 January. NOTHING ELSE UNDER THIS KEY WAS CHANGED — same day, same month, same calendar, same source — which is what `replace_venerated` is sanctioned for. NO `related` ROWS to the other six: sharing a heading is not a relation, which is BRIEF-SERBIAN §6, and none of their lives names him."
       },
       "source": {
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.09.2026 (7. септембар ст. ст.) — „Св. апостоли Евод и Онисифор.“",

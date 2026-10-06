@@ -12,6 +12,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Δεκεμβρίου, «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός», with the rank and the see left off."
+    },
+    {
+      "form": "Николај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 6. децембар ст. ст., „Свети Николај Чудотворац, архиепископ мирликијски.“ — with «Свети» (“saint”), «Чудотворац» (the `wonderworker` grade BRIEF-SERBIAN §5 maps and `types` keeps) and «архиепископ мирликијски» (a rank and a see) all left off, which leaves the bare personal name. That stripping is the one this corpus has already made on him: the Greek form stored here is the bare «Νικόλαος», read off saint.gr’s «Άγιος Νικόλαος Αρχιεπίσκοπος Μύρων της Λυκίας, ο Θαυματουργός» with the Wonderworker taken off in the same way. The fold the bare string joins is keyed in `scripts/corpus-gate.mjs` at five members in this commit."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.12.2025 (6. децембар ст. ст.) — „Свети Николај Чудотворац, архиепископ мирликијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-19&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the longest the Prologue has given any saint in this reader’s range; quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «архиепископ» is the `archbishop` held, «Чудотворац» the `wonderworker`, and `hierarch` was already there. `dates` WIDENED on the death from a flat 330 to 330–343, TWO BOOKS THIRTEEN YEARS APART: saint.gr heads him «(; - 330)» and says «μετά την κοίμησή του το 330 μ.Χ.»; this book closes «Упокојио се 6. децембра 343. године (в. 9. мај)». Nothing is chosen. NO BIRTH ADDED: saint.gr puts his birth in the third century and this book gives no year for it at all, so the folder stays without one. `related_add`: `nicholas-of-patara`, this day’s arrival, in both directions — the entry says he learnt the spiritual life «код свог стрица Николаја, епископа патарског» and was tonsured in the monastery of New Sion «основаном тим истим стрицем његовим», founded by that same uncle, which is a relation the book asserts twice. NO OTHER `related` ROW: `constantine-the-great` and `stephen-of-decani` were already there; his parents Теофан and Нона, the heretic Arius whom he struck at Nicaea, and the emperors Diocletian and Maximian are no folders this corpus holds. NO `locations`, and the folder has never held one — Patara, Myra and New Sion are three places. THE BOOK’S OWN CROSS-REFERENCE «в. 9. мај» is to its 9 May, the translation of his relics, which is OUTSIDE this reader’s range and is left for whoever reads that day; it is a cross-reference and not a second heading, so no second-day note was written on it. THE FOLD: §6’s stripping leaves the bare «Николај», which `sr-foldpred.mjs` measured at three other holders; with this day’s `nicholas-of-patara` the key in `scripts/corpus-gate.mjs` goes from three members to five in this commit, and the three-member key it replaces is deleted with its reading carried forward. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -67,10 +82,10 @@
   "dates": {
     "death": {
       "earliest": 330,
-      "latest": 330,
-      "display": "330",
+      "latest": 343,
+      "display": "330–343",
       "basis": "traditional",
-      "note": "saint.gr's head line, «Αγιος Νικολαος Αρχιεπισκοπος Μυρων Της Λυκιας, ο Θαυματουργος (; - 330)», and the same page's «μετά την κοίμησή του το 330 μ.Χ.». The page gives no birth year and puts his birth in the third century: «Ο Άγιος Νικόλαος γεννήθηκε τον 3ο αιώνα μ.Χ. στα Πάταρα της Λυκίας»."
+      "note": "**Two books thirteen years apart, and the interval holds both; it was a flat 330 before this reading.** saint.gr's head line reads «Αγιος Νικολαος Αρχιεπισκοπος Μυρων Της Λυκιας, ο Θαυματουργος (; - 330)» and the same page says «μετά την κοίμησή του το 330 μ.Χ.». The Охридски пролог за 6. децембар ст. ст. closes its entry „Упокојио се 6. децембра 343. године (в. 9. мај).“ — he reposed on 6 December 343. Both books agree that he was at the First Ecumenical Council of Nicaea, which was in 325, so neither year is impossible; nothing is chosen and the basis stays traditional. NO BIRTH YEAR: saint.gr puts his birth in the third century without a year and this book gives none at all."
     }
   },
   "hymns": [
@@ -116,6 +131,7 @@
   ],
   "related": [
     "constantine-the-great",
-    "stephen-of-decani"
+    "stephen-of-decani",
+    "nicholas-of-patara"
   ]
 }

@@ -6,6 +6,11 @@
       "form": "Απολλώς",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Аполос",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off and the second of the seven bare forenames taken. IT IS THE SAME STRING `apelles-the-apostle` ALREADY STORES, read by another reader off this book’s own Julian 10 September, and the fold the two make is keyed in `scripts/corpus-gate.mjs` in this commit with the question set out: this book cross-references its 8 December Аполос to its 10 September Аполос as one man, and the corpus keeps two folders. The form is copied as printed and nothing was merged on it."
     }
   ],
   "sex": "male",
@@ -51,8 +56,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s enumerated seven; the heading is quoted whole with its closing full stop on each of the seven folders; URL year 2025. **THIS IS THE DAY’S OPEN IDENTITY QUESTION AND THE ROW IS PLACED ON THE READING OF THE HEADING, NOT OF THE CROSS-REFERENCE.** The heading is the same list of names saint.gr prints for 8 Δεκεμβρίου, one longer, and this folder is the Απολλώς of that Greek line — so the row goes here. BUT the body of the entry says «Посебно празнује се свети Аполос 10. септембра», Apollos is specially celebrated on 10 September, AND THE CORPUS ALREADY HOLDS A SERBIAN «Аполос» READ OFF THIS BOOK’S OWN 10 SEPTEMBER: `apelles-the-apostle` stores it, with a previous reader’s note saying the Prologue there prints «Св. Аполос, Лукије и Климент», taking him for the Apollos of Acts 18:24–25, where the Greek and Russian calendars name that man Apelles. So this book’s cross-reference asserts that its 8 December Аполос and its 10 September Аполос are one man, and the corpus keeps them as two folders. NOTHING WAS MERGED, no second folder was made, and no row was moved off `apelles-the-apostle`; the question is named for the author. `types` UNTOUCHED: `apostle` and `bishop` are both held. `dates` UNTOUCHED AND STILL ABSENT: the entry gives no year for any of the seven. NO `related` ROW ADDED — the other five of the Greek six are already here both ways, and nothing links this folder to `apelles-the-apostle` except the cross-reference, which is exactly what is in doubt. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured «Аполос» at one other holder, `apelles-the-apostle`, so the key in `scripts/corpus-gate.mjs` is new, two members wide, and says what is and is not known about the pair. NO `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

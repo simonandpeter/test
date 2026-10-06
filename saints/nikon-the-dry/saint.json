@@ -6,6 +6,11 @@
       "form": "Νίκων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Δεκεμβρίου, «Όσιος Νίκων ο Ξηρός «ὁ ἐν τῷ Σπηλαίῳ»», with the rank word left off. The by-names «ο Ξηρός» and «ὁ ἐν τῷ Σπηλαίῳ» are left off the stored form."
+    },
+    {
+      "form": "Никон Сухи",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. децембар ст. ст., „Преподобни Никон Сухи.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Сухи» is the Dry, an epithet and no rank, which the body itself glosses as the great emaciation of his body, and it is what tells him from the other Nikon folders, so §6’s fullest form keeps it; the Greek form stored here is the bare «Νίκων» with «ο Ξηρός» and «ὁ ἐν τῷ Σπηλαίῳ» taken off, so this one is the fuller of the two. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -41,11 +46,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.12.2025 (11. децембар ст. ст.) — „Преподобни Никон Сухи.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преподобни» is the `venerable` held and `monk` the tonsure in the Kyivan caves; «велики прозорљивац» is seeing into what is hidden and the corpus has no type for it. `dates` ADDED, and it is the first date of any kind this folder has carried, with the day as well as the year: «Упокоји се мирно у Господу 11. децембра 1101. године» — he reposed in peace in the Lord on 11 December 1101, which is this book’s own menologion day. saint.gr prints him and gives no year. WHAT THE BOOK ADDS IS THE WHOLE STORY, where the Greek line gave two by-names: that he was taken captive by the Tatars as a monk of the Kyivan caves and spent three years in slavery, chained, tortured and mocked; that WHEN HIS KINSMEN BROUGHT MONEY TO RANSOM HIM HE REFUSED IT, saying that if the Lord had wanted him free he would not have given him into the hands of these lawless men; that he told his master Christ would free him in three days, and the Tatar, thinking he meant to run, cut the tendons under his knees — and that on the third day he was carried to Kyiv in an instant by an invisible hand; and that the Tatar came afterwards to Kyiv, recognised his former slave, repented, was baptised, AND BECAME THE NOVICE AND DISCIPLE OF HIS OWN FORMER SLAVE. It also glosses the by-name: he was called the Dry for the great emaciation of his body. NO `locations`: the caves of Kyiv and the Tatar captivity are the two places and the folder has never held a coordinate. NO `related` row: the entry names nobody — not the master, not the kinsmen. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1101,
+      "latest": 1101,
+      "display": "1101",
+      "basis": "traditional",
+      "note": "Охридски пролог за 11. децембар ст. ст.: „Упокоји се мирно у Господу 11. децембра 1101. године.“ — he reposed in peace in the Lord on 11 December 1101, which is this book's own menologion day for him. The first date of any kind this folder has carried: saint.gr prints him with two by-names and the cave he lies in, and gives no year at all."
+    }
   }
 }

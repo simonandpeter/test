@@ -5,19 +5,25 @@
     {
       "form": "Савва Сторожевский",
       "lang": "ru"
+    },
+    {
+      "form": "Сава Сторожевски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. децембар ст. ст., „Преподобни Сава Сторожевски.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Сторожевски» is the watch-hill the monastery stands on and not a rank, it is what tells him from thirty other folders whose name folds to Sabbas, and §6 asks for the fullest form the calendar gives, so the whole of the rest of the heading is the form. It is the Serbian spelling of the Russian «Савва Сторожевский» the folder already stores, one в and one Serbian suffix apart. `sr-foldpred.mjs` measured the folded string at 0 other holders, so no READ_FOLDS key is owed."
     }
   ],
   "sex": "male",
   "types": [
-    "venerable"
+    "venerable",
+    "wonderworker"
   ],
   "dates": {
     "death": {
-      "earliest": 1407,
+      "earliest": 1406,
       "latest": 1407,
-      "display": "1407",
+      "display": "1406 or 1407",
       "basis": "attested",
-      "note": "Wikipedia’s article “Sabbas of Storozhi”: a Russian monk who died in 1407, founder and first hegumen of the monastery on Storozhi hill."
+      "note": "**Two years in three sources, and the interval holds both; it was a flat 1407 before this reading, against the folder’s own life.** Wikipedia’s article “Sabbas of Storozhi” has him die in 1407, and that is where the 1407 came from. The life printed by the Sretensky calendar (days.pravoslavie.ru) and written into this folder says he died in great old age on 3 December 1406. The Охридски пролог за 3. децембар ст. ст. closes its entry „Прешао из овог живота у бољи 1406. године“ — he passed over from this life to a better one in 1406. Two books say 1406 and one says 1407; nothing is chosen, and the basis stays attested because every one of the three states a year of its own."
     }
   },
   "attestations": [
@@ -48,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.12.2025 (3. децембар ст. ст.) — „Преподобни Сава Сторожевски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fifth entry, quoted whole with its closing full stop; URL year 2025. THE FOLDER’S OWN RUSSIAN ROW SAID THIS DAY WAS COMING: it keeps the Julian 10 August for the second finding and translation of the relics in 1998 and its note reads „his principal feast is 3 December (Julian)“, which is the day this book prints him on, so the serbian row lands on the principal feast and the russian one stays where it is. `types_add`: `wonderworker`, off «и велики чудотворац» — and a great wonderworker — where the folder held `venerable` alone; «Преподобни» is that `venerable` and «велики» is the epithet BRIEF-SERBIAN §5 keeps out of `types`. NO `abbot`: this entry does not say he was one, and the hegumenates in the folder’s life come off days.pravoslavie.ru, not off this book. `dates` WIDENED from a flat 1407 to 1406–1407, and the widening resolves an inconsistency the folder already had — its `dates` note cited Wikipedia’s 1407 while its own life, written off days.pravoslavie.ru, said he died on 3 December 1406; this book says «Прешао из овог живота у бољи 1406. године», he passed from this life to a better one in 1406. Two of the three sources now say 1406 and one says 1407; nothing is chosen. `related` UNTOUCHED: `sergius-of-radonezh` is already `related` both ways and is the only person the entry names. NO `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

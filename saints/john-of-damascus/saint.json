@@ -11,6 +11,11 @@
       "form": "Ιωάννης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Όσιος Ιωάννης ο Δαμασκηνός», with the rank word left off."
+    },
+    {
+      "form": "Јован Дамаскин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. децембар ст. ст., „Свети Јован Дамаскин.“ — with only «Свети» left off, that being “saint” and not a rank. «Дамаскин» is the by-name of his city and not a rank, it is the whole of what tells him from the eleven folders that share a bare «јован», and §6 asks for the fullest form the calendar gives. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.12.2025 (4. децембар ст. ст.) — „Свети Јован Дамаскин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-17&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: `venerable`, `monk`, `presbyter`, `hymnographer` and `theologian` are all already held, and «први министар калифа» is an office of state and no rank in BRIEF-SERBIAN §5’s table. NO `office` ADDED: the four locale packs would each owe a word for the caliph’s first minister and a reader should not invent four, so the ministry is in the life only. `dates` WIDENED on the death from a flat 749 to 749–776 — TWO BOOKS TWENTY-SEVEN YEARS APART. saint.gr says «κοιμήθηκε ειρηνικά το 749 μ.Χ.» and heads him «(; - 749)»; this book closes «Упокојио се мирно око 776. године у стотину четвртој години свога живота», he reposed in peace about 776 in the hundred and fourth year of his life. Nothing is chosen and the basis stays traditional. `birth` UNTOUCHED AND NOT RECOMPUTED: a hundred and four years back from 776 is a year this book does not print, and BRIEF.md §5 keeps an inferred year out of the file; the age is in the life and in this note instead. NO `locations`, and the folder has never held one — which also keeps `map-span.test.mjs` out of it, the widened death and the open birth now reading as a hundred and one years. NO `related` ROW ADDED: the monastery of Saint Sabbas is a dedication and BRIEF.md §4 says a dedication is not a relation; the caliph Abdalmelech and the emperor Leo the Isaurian are no folders this corpus holds. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -123,14 +138,14 @@
       "latest": 700,
       "display": "late 7th century",
       "basis": "traditional",
-      "note": "saint.gr: «Γεννήθηκε στη Δαμασκό στα τέλη του 7ου αιώνα μ.Χ.». The page gives no year, only the end of that century."
+      "note": "saint.gr: «Γεννήθηκε στη Δαμασκό στα τέλη του 7ου αιώνα μ.Χ.». The page gives no year, only the end of that century. The Охридски пролог за 4. децембар ст. ст. gives no year of birth either, only an age at death — „у стотину четвртој години свога живота“, in the hundred and fourth year of his life — and that age is deliberately NOT subtracted from its year of death to make a birth year here."
     },
     "death": {
       "earliest": 749,
-      "latest": 749,
-      "display": "749",
+      "latest": 776,
+      "display": "749–776",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε με οσιότητα πάνω από εκατό χρόνια και κοιμήθηκε ειρηνικά το 749 μ.Χ.», and its heading reads «(; - 749)»."
+      "note": "**Two books twenty-seven years apart, and the interval holds both; it was a flat 749 before this reading.** saint.gr: «Έζησε με οσιότητα πάνω από εκατό χρόνια και κοιμήθηκε ειρηνικά το 749 μ.Χ.», and its heading for him reads «(; - 749)». The Охридски пролог за 4. децембар ст. ст. closes „Упокојио се мирно око 776. године у стотину четвртој години свога живота“ — he reposed in peace about 776 in the hundred and fourth year of his life. Both books make him over a hundred years old and they put his repose a generation apart; nothing is chosen and the basis stays traditional."
     }
   },
   "related": [

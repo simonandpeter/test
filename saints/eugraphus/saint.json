@@ -11,6 +11,11 @@
       "form": "Εύγραφος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Δεκεμβρίου, «Άγιοι Μηνάς ο Καλλικέλαδος, Ερμογένης και Εύγραφος», with the rank word left off."
+    },
+    {
+      "form": "Евграф",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. децембар ст. ст., „Свети мученици Мина, Ермоген и Евграф.“ — with «Свети мученици» left off and the last of the three bare forenames taken; the heading gives the three nothing but their names. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.12.2025 (10. децембар ст. ст.) — „Свети мученици Мина, Ермоген и Евграф.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s enumerated three; the heading is quoted whole on each of the three folders; URL year 2025. `types` UNTOUCHED: «мученици» is the `martyr` held, and «тајник», a secretary, is a post and no rank in BRIEF-SERBIAN §5’s table. `dates` UNTOUCHED AND STILL ABSENT: the emperor Максимин is named with no years. NO `locations`. NO `related` ROW ADDED: `menas-the-athenian` and `hermogenes-of-alexandria` are already `related` here both ways. WHAT THE BOOK ADDS: that he was the secretary and friend of Saint Menas, that he was not on trial at all but came forward of his own accord before the tribunal when he saw how bravely the two bore their torments, that he shouted in the emperor’s face «И ја сам хришћанин!», I too am a Christian, and that the emperor in a rage drew his own sword and cut him down — before any executioner, and before the other two were beheaded. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

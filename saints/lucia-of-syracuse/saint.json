@@ -11,6 +11,11 @@
       "form": "Λουκία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Αγία Λουκία η παρθένος», with the rank word and «η παρθένος» left off. The page's hymns print the vocative «Λούκια» once beside «Λουκία»; the nominative of the calendar line is the form stored."
+    },
+    {
+      "form": "Лукија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Света мученица Лукија (Луција), девица.“ — with «Света» (“saint”), «мученица» (the `martyr` grade) and «девица» (the `virgin`) left off, which leaves the heading’s own first spelling of her name. THE PARENTHESISED «Луција» IS THE SAME NAME SPELT A SECOND WAY AND WAS NOT DRAFTED AS A SECOND FORM: §6 asks for one form per folder and the two are one name, not a name and an epithet — unlike the «Јован Ћутљиви (Молчалник)» of 12-03, where the parenthesis held a different word. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `lucia-of-rome-companion-of-rix`, whose own Serbian form came off this same book for the Julian 6 July, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit — and the reading says plainly that both are women, both martyrs and both of the same persecution."
     }
   ],
   "sex": "female",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Света мученица Лукија (Луција), девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop and its parenthesis, which is the heading’s own alternative spelling of her name; URL year 2025. `types` UNTOUCHED: «мученица» is the `martyr` held and «девица» the `virgin`. `dates` UNTOUCHED and it is an AGREEMENT TO THE YEAR: «Пострада 304. године», which is saint.gr’s 304 under the governor Paschasius and the emperor Diocletian; the book names Пасхасије too and gives him no title. NO `locations`: Catania is named and Syracuse is not, and the folder has never held a coordinate. NO `related` ROW ADDED: `agatha-of-catania` is already `related` here in both directions and is the saint at whose grave she and her mother prayed and who appeared to her there; `leo-of-catania` was already here too. HER MOTHER AND HER BETROTHED ARE NAMED BY NOTHING and are no folders. WHAT THE BOOK ADDS, where the Greek line gave the year and the governor: that she went WITH HER MOTHER to the grave of Agatha at Catania and that Agatha appeared to her there; that her mother, who had an issue of blood, was healed in that church by a wonder at the same time; that she gave her whole estate away to the destitute, WHICH EMBITTERED HER BETROTHED, and that it was he who accused her to the judge as a Christian; that when the judge ordered her taken to a brothel to be defiled SHE BECAME IMMOVABLE AS THOUGH NAILED TO THE GROUND, and a multitude of men could not shift her from the spot; and that an enraged pagan then drove a sword into her throat. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
