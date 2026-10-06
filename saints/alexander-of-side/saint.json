@@ -11,6 +11,11 @@
       "form": "Александар",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 15 March on pravoslavno.rs, „Свети мученик Александар.“, with the rank words Свети мученик left off. The heading gives no city — Side of Pamphylia is the body's first sentence — so the bare forename is what the source gives."
+    },
+    {
+      "form": "Александр Сидский (Памфилийский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 марта ст. ст., «Александр Сидский (Памфилийский), иерей, сщмч.», with the rank words left off. The day's own line declines the name to «Александра» and puts the city in a phrase, «иерея в Сиде», rather than in the name."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 марта ст. ст. — «Сщмч. Александра, иерея в Сиде (279-275).»",
+        "url": "https://days.pravoslavie.ru/Days/20260315.html",
+        "year": 2026
+      },
+      "note": "The julian 15/3 agrees with the Serbian julian 15/3 this folder already carried; the Romanian keeps him a day earlier on its revised-julian 14/3. The figure the line closes with, «(279-275)», runs backwards and can be no reign, and the life page behind the same line names «при императоре Аврелиане (270 - 275)» — which is exactly the interval this folder already holds from doxologia. The line's figure is therefore read as a slip of this page against itself, the interval is unchanged, and the slip is recorded here rather than averaged. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
