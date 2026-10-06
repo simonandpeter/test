@@ -16,11 +16,17 @@
       "form": "Иуст",
       "lang": "ru",
       "note": "Read out of the calendar's own life for the four, «Святой Иуст, называемый Варсавою», which prints the nominative; the day's line declines it, «Иуста», and the name link behind the line is titled with the other of his names, «Святой Варсава, апостол от 70-ти». His own life page is headed «Святой Варсава (Иосиф, Иуст), апостол от 70-ти» and gives all three."
+    },
+    {
+      "form": "Јуст",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“ — «Св. ап.» is \"saint\" plus the `apostle` grade, and the other four names are the heading’s other members, so the bare personal name is the whole of the form. The heading gives him no see and no patronymic: «син Јосифа Обручника» and «епископ … у Елевтеропољу» are both in the body, and the see is already the folder’s `office`. `foldchk.py` finds the string on `justus-1-june`, so the form joins a fold of two, keyed in `READ_FOLDS` in the same commit. Four characters exactly, which is the shortest form this block has stored and just inside `nameKeys`’s four-character minimum — one letter shorter and it would not be indexed for folds at all."
     }
   ],
   "sex": "male",
   "types": [
-    "apostle"
+    "apostle",
+    "martyr"
   ],
   "office": "Bishop of Eleutheropolis",
   "attestations": [
@@ -63,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, fourth of the five apostles it enumerates. THE HEADING ENUMERATES FIVE APOSTLES — «Клеопа, Терције, Марко, Јуст и Артем» — so the brief’s enumeration ruling makes it one folder per named member, and all five rows quote the whole heading. FOUR of the five take a row here. THE FIFTH, Марко, TAKES NOTHING: `mark-of-byblos` already carries a venerated serbian row out of this same book’s Julian 27 September, where it identifies him in the same words this entry does, and section 1 makes a saint already venerated on another day report-only. The reading is in the commit message. ONE `types` ROW ADDED, READ AND NOT ASSUMED: `martyr`, off «Као епископ пострадао за Јеванђеље у Елевтеропољу» — as bishop he suffered for the Gospel at Eleutheropolis. `hieromartyr` was refused for the same reason as on `tertius`, in the same commit. The folder’s `apostle` and its `office` «Bishop of Eleutheropolis» are confirmed and untouched. `dates` UNTOUCHED: `death` 1 to 100 off the Russian «(I)», and this entry gives no year. WHAT THE BOOK ADDS, AND IT IS A GENEALOGY AND A LOST LOT. HE WAS THE SON OF JOSEPH THE BETROTHED. AND HE WAS THE OTHER CANDIDATE: chosen by lot TOGETHER WITH MATTHIAS for the place of Judas the betrayer, AND REMAINED UNCHOSEN. That is this folder’s own two `related` rows — `joseph-the-betrothed` and `matthias-the-apostle` — stated by a third book, so both rows are confirmed and neither is new, and no row is owed. The new paragraph links both and the reciprocals were checked rather than assumed. No `locations`: Eleutheropolis is named and is already in the `office`. THE FORM FOLDS AND THE FOLD IS KEYED: «Јуст» is already held by `justus-1-june`, a `martyr` of 163 whom doxologia names in a bare line, so this takes the key from one holder to two. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "text": {

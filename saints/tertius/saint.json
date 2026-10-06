@@ -17,11 +17,17 @@
       "form": "Тертий",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 30 октября ст. ст., «Апостол от 70-ти Тертий», with the rank words left off. The line itself declines the name, «Тертия»."
+    },
+    {
+      "form": "Терције",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 30. октобар ст. ст., „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“ — «Св. ап.» is \"saint\" plus the `apostle` grade, and the other four names are the heading’s other members, so the bare personal name is the whole of the form. «епископ Иконијски» is in the body and is already the folder’s `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, and the near string «Теренције», which the Julian 28 October gave to `terence-husband-of-neonilla`, folds to a different key."
     }
   ],
   "sex": "male",
   "types": [
-    "apostle"
+    "apostle",
+    "martyr"
   ],
   "attestations": [
     {
@@ -72,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 12.11.2025 (30. октобар ст. ст.) — „Св. ап. Клеопа, Терције, Марко, Јуст и Артем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-12&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, second of the five apostles it enumerates. THE HEADING ENUMERATES FIVE APOSTLES — «Клеопа, Терције, Марко, Јуст и Артем» — so the brief’s enumeration ruling makes it one folder per named member, and all five rows quote the whole heading. FOUR of the five take a row here. THE FIFTH, Марко, TAKES NOTHING: `mark-of-byblos` already carries a venerated serbian row out of this same book’s Julian 27 September, where it identifies him in the same words this entry does, and section 1 makes a saint already venerated on another day report-only. The reading is in the commit message. ONE `types` ROW ADDED, READ AND NOT ASSUMED: `martyr`, off «скончао мученички као епископ Иконијски» — he ended in martyrdom as bishop of Iconium. The folder held `apostle` alone and the `office` «Bishop of Iconium», which this sentence confirms. `hieromartyr` WAS REFUSED: the book states the martyrdom and the bishopric in one clause but does not use the compound rank word, and composing a third grade out of two facts a book states separately is my arithmetic and not its reading — the same refusal made for `stephen-the-sabaite`’s missing see on the Julian 28 October. `dates` UNTOUCHED: the folder holds `death` 1 to 100, «1st century», off the Russian calendar’s «(I)» for the day’s apostles, and this entry gives no year at all. WHAT THE BOOK ADDS, AND BOTH ARE NEW TO THIS FOLDER. HE WROTE PAUL’S EPISTLE TO THE ROMANS, with the chapter and verse printed — Рим. 16, 22 — which is the Tertius who says «I Tertius, who wrote this epistle, greet you in the Lord». AND HE WAS BISHOP OF ICONIUM AFTER THE APOSTLE SOSIPATER, with the book’s own cross-reference to its 10 November entry. That succession is why this folder already relates `sosipater-of-iconium`, both ways, so no `related` row is owed — and the row was written off another source, which this book now independently grounds. No `locations`: Iconium is named and is already in the `office`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Терције», which is worth noting because the corpus keeps several Terences and one of them took the Serbian «Теренције» two days ago — a different string, a different key, no collision. The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about king Milutin."
     }
   ],
   "hymns": [
