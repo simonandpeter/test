@@ -11,6 +11,11 @@
       "form": "Αυξέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off. The page glosses the name itself, «(από το ρήμα αυξάνω) = ο μεγάλος»."
+    },
+    {
+      "form": "Аксентије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off and the second of the five bare forenames taken; the «companion of Eustratius» of the display name is this corpus’s own and §6 keeps a clause naming another saint out of a stored form. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `auxentius-of-bithynia`, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit — and the reading names the near thing, which is that the Bithynian is a `presbyter` too."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s enumerated five; the heading is quoted whole on each of the five folders; URL year 2025. `types`: NOTHING ADDED, AND THAT IS A REFUSAL WORTH NAMING. The entry calls him «Аксентије свештеник», Auxentius THE PRIEST, and says the governors tortured him FIRST BECAUSE HE WAS A PRIEST — which is `presbyter` in §5’s table — but `i18n` and the vocabulary are not the obstacle here: the folder holds the bare `great-martyr` the other two calendars gave it, and a grade this reader would add on one word of one book, for a man the Romanian and Greek lines name without any rank of his own, is better named in the report than written. FOR THE AUTHOR: if the priesthood is to be recorded, `presbyter` is the type and this entry is the source. `dates` UNTOUCHED AND STILL ABSENT: the emperors and the governors are named without years. NO `locations`. NO `related` ROW ADDED: the four companions are already here in every direction, and `blaise-of-sebaste`, who communed Eustratius in prison, is Eustratius’s story and takes his row on that folder and not on this one. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

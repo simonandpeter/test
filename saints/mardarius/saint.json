@@ -11,6 +11,11 @@
       "form": "Μαρδάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off."
+    },
+    {
+      "form": "Мардарије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off and the fourth of the five bare forenames taken. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because the corpus holds a `mardarius-the-recluse` whom the Greek calendar keeps on this very day: that folder’s only form is the Greek «Μαρδάριος» and no Serbian string folds against this one."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The fourth name of the day’s enumerated five; the heading is quoted whole on each of the five folders; URL year 2025. `types` UNTOUCHED: the folder holds `great-martyr` and this book makes him «прост граданин», a simple townsman, which is no rank — THE ONE OF THE FIVE WHO WAS NEITHER SOLDIER NOR PRIEST. `dates` UNTOUCHED AND STILL ABSENT. NO `locations`: the book makes him and Eustratius both of АРАВРАКИН, the Arabraca of that man’s display name, and this folder has never held a coordinate. NO `related` ROW ADDED: the four companions are already here, and his wife and his two small children are named by nothing. THE CORPUS HOLDS A SECOND MARDARIUS AND HE IS NOT THIS ONE: `mardarius-the-recluse` is a `venerable` and `hermit` of the Kyivan caves in the thirteenth century, whom the Greek calendar keeps on this same 13 December, and nothing was written on him; this folder is the townsman of the five. WHAT THE BOOK ADDS, and it is the most domestic scene of the day: he saw the martyrs being led through Aravrakin FROM THE ROOF OF HIS OWN HOUSE, took leave of his wife and his two small children, and ran after them shouting into the torturers’ faces „И ја сам хришћанин као и господин мој Евстратије“ — I too am a Christian, like my lord Eustratius. He died under torture. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

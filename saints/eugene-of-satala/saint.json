@@ -11,6 +11,11 @@
       "form": "Ευγένιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιοι Ευστράτιος, Αυξέντιος, Ευγένιος, Μαρδάριος και Ορέστης», with the rank word left off. The page glosses the name itself, «(ευ + γένος) = ο έχων καλή καταγωγή και αισθήματα»."
+    },
+    {
+      "form": "Евгеније",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“ — with «Свети мученици» left off and the third of the five bare forenames taken; the Satala of this folder’s display name is not in the heading and is the city this book gives to Eustratius instead. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `eugene-of-cherson`, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свети мученици Евстратије, Аксентије, Евгеније, Мардарије и Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s enumerated five; the heading is quoted whole on each of the five folders; URL year 2025. `types` UNTOUCHED: the folder holds the `great-martyr` the other two calendars gave, and NO `soldier` WAS ADDED although this book makes him one — «Евгеније му беше друг у војсци», Eugene was his comrade in the army — for the same reason as the priesthood refused on `auxentius-companion-of-eustratius`: one word of one book, on a folder the other calendars give no rank of its own. FOR THE AUTHOR: if it is to be recorded, `soldier` is the type and this entry is the source, and the same sentence makes `orestes-companion-of-eustratius` «такође, угледан војник», a notable soldier too. **AND THIS BOOK GIVES THE SATALA OF HIS DISPLAY NAME TO ANOTHER MAN**: «Евстратије свети беше римски војвода у граду Саталиону», Eustratius was the Roman commander in the city of Satalion, while Eugene is given no city at all. Nothing was renamed, no `locations` key was made, and the disagreement is in both folders’ lives. `dates` UNTOUCHED AND STILL ABSENT. NO `related` ROW ADDED: the four companions are already here. WHAT THE BOOK ADDS: that he stepped before the judge DURING EUSTRATIUS’S TORTURE and shouted „Лисије, и ја сам хришћанин“, Lysias, I too am a Christian, and that he died under torture. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

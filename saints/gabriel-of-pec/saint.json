@@ -6,6 +6,11 @@
       "form": "Γαβριήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Δεκεμβρίου, «Άγιος Γαβριήλ ο Ιερομάρτυρας Αρχιεπίσκοπος Πεκίου Σερβίας», with the rank words and the see left off."
+    },
+    {
+      "form": "Гаврил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. децембар ст. ст., „Свештеномученик Гаврил, патријарх српски.“ — with «Свештеномученик» (the `hieromartyr` grade `types` keeps) and «патријарх српски» (a rank with the church it governs) left off, which is the stripping `uros-of-serbia`’s «цар српски» already stands on; so the bare personal name is the whole of the form and the Peć of the display name is this corpus’s own. It is the first Serbian form this folder has carried, and the folder’s only other form was Greek. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -52,8 +57,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.12.2025 (13. децембар ст. ст.) — „Свештеномученик Гаврил, патријарх српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, quoted whole with its closing full stop; URL year 2025. AND IT IS THE SERBIAN BOOK ON A SERBIAN PATRIARCH, which the Greek calendar had been the only source for. `types` UNTOUCHED: «Свештеномученик» is the `hieromartyr` held, `new-martyr` is the Turkish centuries, and the `archbishop` is the other calendar’s word for the throne this book calls «патријарх српски». `dates` UNTOUCHED, AND THE REFUSAL IS THE POINT: the folder carries 1659–1681, «1659 or 1681», because saint.gr states 13 December 1659 in its narrative and then records that Otto Meinardus puts the martyrdom at 13 October 1681. THIS BOOK IS A SECOND WITNESS FOR 1659 — «обешен у Бруси 1659. године», hanged at Brusa in 1659 — but a second witness for one of two readings does not settle the other, which is a published scholar’s dating, and `docs/CORPUS.md` §3 says the interval records the disagreement. Two books now say 1659 and one says 1681; the interval stands and the display stays. NO `floruit` WAS BUILT from the 1655 of the Moscow Council below, because its upper bound would have had to be a year the death interval leaves open. WHAT THE BOOK ADDS, and the Greek page had none of it: that in the terrible time of Turkish rule over Serbia this great hierarch WENT TO RUSSIA, where he took part in the Council of Moscow of 1655; that on his return he was accused as a traitor; that certain men among the Jews laid a further charge against him BECAUSE HE HAD BROUGHT SEVERAL JEWS OVER TO THE CHRISTIAN FAITH, alleging in it that he was working to baptise Turks, so as to enrage the Turkish authorities the more; that brought to trial he was sentenced TO ACCEPT THE FAITH OF MUHAMMAD; and that since he would not so much as hear of it he was imprisoned and then condemned and hanged at Brusa, going to his beloved Christ to receive a double crown, as hierarch and as martyr. NO `locations`: Peć, Russia, Moscow and Brusa are four places and the folder has never held a coordinate. NO `related` row: the entry names no saint. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
