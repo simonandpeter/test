@@ -17,6 +17,11 @@
       "form": "Стахий",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Стахий, епископ Византийский, апостол от 70-ти», with the rank words and the see left off. The line itself declines the name, «Стахия»."
+    },
+    {
+      "form": "Стахије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“ — «Св. апостоли» is \"holy\" plus the `apostle` grade this corpus keeps in `types`, and the five names after his are the other members the heading enumerates. So the bare personal name is the whole of the form; the see is in the body and already in the folder’s `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, first of the six apostles it enumerates. THE HEADING ENUMERATES SIX APOSTLES — «Стахије, Амплије, Урван, Наркис, Апелије и Аристовул» — the largest company in this six-day block, so the brief’s enumeration ruling makes it one folder per named member and all the rows quote the whole heading. FIVE of the six take a row here. THE SIXTH, Аристовул, TAKES NOTHING: `aristobulus-of-britain` already carries a venerated serbian row on the Julian 16 March out of this same book AND already holds the Serbian form «Аристовул», so section 1 makes him report-only. «Св. апостоли» is the `apostle` grade all six folders already hold and the body’s «Од Седамдесеторице» is the same claim. `types` UNTOUCHED: `apostle` from the heading, `bishop` from «постави за епископа у Византији», and the `office` «Bishop of Byzantium» matches it exactly. `dates` UNTOUCHED AND A SUBTRACTION REFUSED. The folder holds `death` 54 flat off saint.gr. This entry gives NO YEAR and instead gives a LENGTH OF OFFICE: «После 16 година епископовања упокоји се мирно у Господу» — after sixteen years as bishop he reposed peacefully in the Lord. Sixteen years before 54 would put his consecration at 38, and that arithmetic is not in the book and was not written; the sixteen years are in the life as the book states them. WHAT THE BOOK ADDS, AND TWO OF THE THREE ARE NEW. HE WAS THE HELPER OF ANDREW THE FIRST-CALLED and it was ANDREW WHO SET HIM AS BISHOP IN BYZANTIUM — the folder already relates Andrew both ways, so no row is owed and the paragraph links him. HE BUILT A CHURCH AT ARGYROPOLIS. He GOVERNED HIS FLOCK FAITHFULLY AND ZEALOUSLY FOR SIXTEEN YEARS AND REPOSED PEACEFULLY — which is a death in his bed, where two of the five men named beside him in this heading are martyred. NO NEW `related`, no `locations` — Byzantium and Argyropolis are named, the first is already in the `office` and neither is proposed as a coordinate. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Стахије». The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

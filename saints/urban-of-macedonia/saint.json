@@ -17,6 +17,11 @@
       "form": "Урван",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 31 октября ст. ст., «Святитель Урван, епископ Македонский, апостол от 70-ти, сщмч.», with the rank words and the see left off. The line itself declines the name, «Урвана»."
+    },
+    {
+      "form": "Урван",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“ — «Св. апостоли» is \"holy\" plus the `apostle` grade, and the other five names are the heading’s other members, so the bare personal name is the whole of the form; «у Македонији» is the body’s and is already the folder’s `office`. The Serbian and Russian forms of this name are the SAME STRING, «Урван», which this folder already held in `ru` — so the form is stored for the Serbian pack’s sake and adds no fold key at all, as `sr-foldpred.mjs` reports. The two other holders of the string, `urban-child-martyr` and `urban-the-envoy-of-nicomedia`, were already folded with this folder before this day."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, third of the six apostles it enumerates. THE HEADING ENUMERATES SIX APOSTLES — «Стахије, Амплије, Урван, Наркис, Апелије и Аристовул» — the largest company in this six-day block, so the brief’s enumeration ruling makes it one folder per named member and all the rows quote the whole heading. FIVE of the six take a row here. THE SIXTH, Аристовул, TAKES NOTHING: `aristobulus-of-britain` already carries a venerated serbian row on the Julian 16 March out of this same book AND already holds the Serbian form «Аристовул», so section 1 makes him report-only. «Св. апостоли» is the `apostle` grade all six folders already hold and the body’s «Од Седамдесеторице» is the same claim. `types` UNTOUCHED, `apostle` and `hieromartyr`, on the same reading as `ampliatus-of-diospolis` in this same commit: this book makes him a bishop and then says of the two of them together «Обојица мученички скончаше за Христа Господа». `dates` UNTOUCHED: `death` 1 to 100 off the Russian «(I)», no year in this entry. WHAT THE BOOK ADDS: he too worked with Andrew the First-Called and was set bishop by him, IN MACEDONIA — which the folder carries as «Bishop in Macedonia» — and he ended in martyrdom with Ampliatus. Andrew is already related both ways. THE FORM ADDS NO NEW FOLD KEY, AND THIS IS THE ONE CASE OF ITS KIND IN THE BLOCK. `foldchk.py` finds «Урван» on THREE folders — `urban-child-martyr`, `urban-the-envoy-of-nicomedia` and THIS ONE, whose own Russian form is the identical string — so the key already exists and this folder is already in it. `sr-foldpred.mjs` reports `the form adds no new fold key`: the slug set does not change, so `foldKey` does not change, so NO `READ_FOLDS` key is owed and none was written. That is a different fact from folding onto nothing, and it is the reason this day has one fold and not two. No new `related`, no `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

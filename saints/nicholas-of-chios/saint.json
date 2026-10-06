@@ -6,6 +6,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 31 Οκτωβρίου, «Άγιος Νικόλαος από τη Χίο ο Νεομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Никола Хиоски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. муч. Никола Хиоски.“ — «Св. муч.» is the martyr grade this corpus keeps in `types` and comes off, leaving the bare name with the by-name the heading prints. «Хиоски» is kept under section 6: it is the island he was born and died on, which is a by-name and not a see, and it is load-bearing — the bare «Никола» is already held by `nicholas-of-magnesia` and `nicholas-the-grocer-of-karpenisi`, both of them new-martyrs of the same centuries, and the corpus keeps a great many Nicholases besides. This is the folder’s FIRST name form outside Greek."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. муч. Никола Хиоски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, one person, quoted whole with its closing full stop (section 4), and THIS FOLDER’S SECOND VENERATED ROW AND SECOND NAME FORM OF ANY LANGUAGE — it held one Greek form and one Greek row before today. `types` UNTOUCHED: the folder holds `new-martyr`, and the heading says «Св. муч.» while the body supplies the rest — tortured and beheaded by the Turks in 1754, which is what makes the grade a new-martyr rather than a martyr. The body’s «Побожан младић и велики ревнитељ вере Христове» is a character and not a rank, so nothing was added for it. `dates` UNTOUCHED AND EXACTLY CONFIRMED: the folder holds `death` 1754 off saint.gr’s «μαρτύρησε στις 31 Οκτωβρίου», and this entry says «посечен 1754. год.» — the same year, flat in both books. WHAT THE BOOK ADDS: THE VILLAGE. «Рођен у селу Кириаху на острву Хиосу» — born in the village of Kiriah on the island of Chios, and tortured and beheaded there, and there he gave up his righteous soul to God. The island was already the folder’s display name; the VILLAGE is new, and so is the fact that he was born and died in the same place. NO `locations` was written from it: a village this corpus has no gazetteer entry for is not a coordinate, and the folder has none. NO `related` — the entry names nobody at all. No `office`. THE FORM IS FREE BECAUSE IT KEEPS THE BY-NAME: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Никола Хиоски» and names `nicholas-of-magnesia` and `nicholas-the-grocer-of-karpenisi` for the bare «Никола» — two other new-martyrs of the Turkish centuries, which is exactly the company a bare forename would have been lost in. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

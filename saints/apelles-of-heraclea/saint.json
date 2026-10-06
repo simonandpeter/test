@@ -17,6 +17,11 @@
       "form": "Апеллий",
       "lang": "ru",
       "note": "Read out of the day's own kontakion for the six, which prints the name in the Slavonic — «Апеллия, Урвана же и Аристовула» — and out of the line, which declines it the same way. **Not read off the name link**, which is titled for another man of a like name, «Апостол от 70-ти Аполлос Александриец»; the nominative «Апеллий» is the form the calendar's separate life for him is headed with, «Апостол Апеллий из числа 70-ти»."
+    },
+    {
+      "form": "Апелије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“ — «Св. апостоли» is \"holy\" plus the `apostle` grade, and the other five names are the heading’s other members, so the bare personal name is the whole of the form; «у Ираклији Тракијској» is the body’s and the see without its province is already the folder’s `office`. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. апостоли: Стахије, Амплије, Урван, Наркис, Апелије и Аристовул.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, fifth of the six apostles it enumerates. THE HEADING ENUMERATES SIX APOSTLES — «Стахије, Амплије, Урван, Наркис, Апелије и Аристовул» — the largest company in this six-day block, so the brief’s enumeration ruling makes it one folder per named member and all the rows quote the whole heading. FIVE of the six take a row here. THE SIXTH, Аристовул, TAKES NOTHING: `aristobulus-of-britain` already carries a venerated serbian row on the Julian 16 March out of this same book AND already holds the Serbian form «Аристовул», so section 1 makes him report-only. «Св. апостоли» is the `apostle` grade all six folders already hold and the body’s «Од Седамдесеторице» is the same claim. `types` UNTOUCHED: `apostle` and `bishop`, and NO `hieromartyr` — his own sentence states a see and nothing else, and the martyrdom in the paragraph belongs by name to Ampliatus and Urban. `dates` UNTOUCHED: `death` 1 to 100 off the Russian «(I)», no year here. WHAT THE BOOK ADDS: ONE WORD, AND IT IS A REAL ONE. «Апелије свети би епископ у Ираклији Тракијској» — bishop in Heraclea OF THRACE. The folder’s `office` reads «Bishop in Heraclea» with no province, and there is more than one Heraclea; this book names Thrace. The `office` WAS NOT REWRITTEN — an office is not a reader’s to change under section 10 — and the province is in the life and in the report instead. NO `related` AT ALL, WHICH IS WORTH STATING: this folder has none, and unlike every other man in this heading the book names nobody with him — not Andrew, not Philip, not Barnabas. He is the one apostle of the six this paragraph leaves unattached. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Апелије». The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

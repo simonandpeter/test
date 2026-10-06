@@ -16,6 +16,11 @@
       "form": "Епимах Новый, Александрийский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind his line for 31 октября ст. ст., «Епимах Новый, Александрийский, мч.», with the rank word left off. The line itself gives the bare forename in the genitive, «Епимаха», and no by-name at all; the two by-names are the link's."
+    },
+    {
+      "form": "Епимах",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 31. октобар ст. ст., „Св. муч. Епимах.“ — «Св.» is \"saint\" and not a rank and «муч.» is the martyr grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form. The heading gives him no city, and the body gives THREE mentions of Egypt and a martyrdom at Alexandria, none of which is the Pelusium of the display name — so there was nothing to keep as a by-name even if the heading had offered one. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 31,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 13.11.2025 (31. октобар ст. ст.) — „Св. муч. Епимах.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-13&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, one person, quoted whole with its closing full stop (BRIEF-SERBIAN section 4). `types` UNTOUCHED: «муч.» is the `martyr` this folder holds and the body’s «удаљи се још као младић у пустињу» the `hermit` beside it. `dates` UNTOUCHED: the folder holds `death` 250 FLAT off saint.gr’s bracket «Αγιος Επιμαχος ο Αιγυπτιος (; - 250)», and this entry says «око 250. год.», ABOUT 250 — the same number more loosely stated, which is the same situation as the two Zenobii on the Julian 30 October and changes nothing. THE THREE EGYPTS, AND WHY THE FOLDER’S OWN NAMES DISAGREE WITHOUT CONTRADICTING. The display name is «Epimachus of Pelusium», the Russian form is «Епимах Новый, Александрийский», and this entry opens «Родом из Мисира, у Мисиру се подвизавао, у Мисиру и мученички скончао земни живот» — Egyptian by birth, an ascetic in Egypt, martyred in Egypt — and then puts the martyrdom at ALEXANDRIA. Pelusium and Alexandria are both in Egypt, so the three readings agree on the country and differ on the city; nothing was changed and the display name was not touched. WHAT THE BOOK ADDS, AND IT IS A WHOLE LIFE AND A MIRACLE. IN IMITATION OF JOHN THE BAPTIST HE WITHDREW TO THE DESERT WHILE STILL A YOUTH; and for his great love of God THE SPIRIT OF GOD GUIDED HIM INTO ALL TRUTH AND TAUGHT HIM HOW TO STRUGGLE WITHOUT ANY OTHER TEACHER. Then he learned that the unbelievers were torturing and killing Christians at Alexandria for Christ’s sake, and WENT INTO THE CITY AND SMASHED THE IDOLS. Under torture he cried out „Удрите ме, пљујте ме, ставите ми трнов венац на главу, дајте ми трску у руке, напојте ме жучем, на крст ме распните и копљем прободите, – то претрпи Господ мој, то и ја хоћу да претрпим.“ — strike me, spit on me, set a crown of thorns on my head, put a reed in my hands, give me gall to drink, crucify me on a cross and pierce me with a spear: my Lord endured that, and I wish to endure it too. AND THEN THE MIRACLE, which no other book on this folder has: among the crowd watching was A WOMAN BLIND IN ONE EYE, weeping bitterly at the sight; and when the torturers were scraping the martyr’s body A DROP OF HIS BLOOD FELL ON HER BLIND EYE AND SHE SAW AT ONCE, and the eye became as sound as the other, and she cried out „Велики је Бог, кога верује овај страдалник!“ — great is the God this sufferer believes in. Then they beheaded him. NO `related`: JOHN THE BAPTIST IS NAMED AS THE PATTERN OF HIS WITHDRAWAL AND GETS NO ROW. He is in no heading, which is Ruling 3 and section 5, and an imitation at three centuries’ distance is not a relation the way the Julian 29 October’s Agathangelus was — there a man set himself to copy a martyrdom in his own monastery two years before. The new paragraph was measured with `proseprobe.mjs` first and names him without a link. The woman is unnamed. No `locations`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Епимах». The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
