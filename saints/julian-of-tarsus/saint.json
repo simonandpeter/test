@@ -16,6 +16,11 @@
       "form": "Јулијан Тарсанин",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s heading for 21. јун ст. ст., „Свети мученик Јулијан Тарсанин“ — Свети is not a rank and мученик is the rank, which `types` already carries; both come off, and Тарсанин is **kept**, being the by-name the heading itself gives. **Keeping it is the whole reason this folder does not fold, and the saving is measured**: `foldchk.py` returns NO FOLDER HOLDS THIS FORM for «Јулијан Тарсанин», and for the bare «Јулијан» it returns four holders — `julian-companion-of-pamphilus`, `julian-of-antinoopolis`, `julian-of-samosata` and `julian-presbyter-of-ancyra`, all `sr` — which this folder would have made a fifth. This is the 18 June rule paying for itself a second time, and more dearly: there it kept two of one day’s own folders apart, here it keeps one folder out of a fold of five. The folder’s Romanian form «Iulian din Tars» carries the same by-name in its own language, so two calendars agree that the city belongs to his name."
+    },
+    {
+      "form": "Иулиан Аназарвский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Иулиан Аназарвский, мч.», with the rank word left off. The Russian by-name is the city of his birth, where the Romanian, Greek and Serbian forms this folder holds all name Tarsus, the city his mother moved to."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Мч. Иулиана Аназарвского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "This is an identification, and here is the whole of what it rests on. The Russian calendar keeps this man on 16 марта where the Romanian, Greek and Serbian keep him on 21 June, so the match is not on the day but on the dossier, and the Russian life page gives three things that the doxologia life this folder was built from gives as well: the city of Anazarbus, which is in his Russian by-name; that his relics were at Antioch; and that John Chrysostom honoured him with a word of praise, which this page makes his 47th homily. Three coincidences and no fourth man: the Russian calendar's own 21 июня ст. ст. page was fetched and read and names no Иулиан at all, so this calendar keeps him once, here. Two things do differ and are recorded rather than smoothed: this page puts the suffering itself at Antioch in Syria and under Maximian Galerius, 305 to 311, where doxologia has him carried through the cities of Cilicia under Diocletian and killed at Aegae; and the page disagrees with itself on the rank, heading the life «Священномученик Иулиан Аназаврский» while the day's own line reads «Мч.». No date was written: this folder deliberately records none, because the one year doxologia prints is the year of a burial, and the Russian reign is kept in this note instead. The day page prints no hymn under his name. If the author reads these as two men, the row comes off and a second folder is the answer."
     },
     {
       "church": "romanian",

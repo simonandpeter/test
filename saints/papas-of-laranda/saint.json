@@ -10,6 +10,11 @@
       "form": "Papa",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 martie."
+    },
+    {
+      "form": "Папа Ларандский, Селевкийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Папа Ларандский, Селевкийский, мч.», with the rank word left off. The link names both the city he lived in and the city he was last taken to; the day's own line gives the name alone, declined to «Папы»."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for 14 September (Julian) was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Мч. Папы (305-311).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "The julian 16/3 is the same menologion day the Romanian keeps him on; the Greek keeps him on 14 September, which is a different day and not a conversion. The reign the line gives, 305 to 311, is the reign the life page names as Maximian's and falls inside the 303 to 311 this folder already holds from saint.gr for Galerius — the same emperor under both names — so the interval is unchanged and the Russian reading is recorded here. The day page prints no hymn under his name."
     },
     {
       "church": "romanian",
