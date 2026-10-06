@@ -12,6 +12,11 @@
       "form": "Μόδεστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Άγιος Μόδεστος Αρχιεπίσκοπος Ιεροσολύμων», with the rank word and the see left off. The page glosses the name itself, «(από την λατινική λέξη modestus) = ο εγκρατής, ο σώφρων»."
+    },
+    {
+      "form": "Модест",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 18. децембар ст. ст., „Свети Модест, патријарх јерусалимски.“ — with «Свети» left off, which §5 says is not a rank, and «патријарх јерусалимски» left off, that being the `patriarch` grade §5 maps, `types` keeps and `office` carries. The bare forename is what is left. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `модест` at NO other holder, so no READ_FOLDS key is written — and that is in spite of the corpus holding two other Modestus folders, the companion of Julian and the companion of Zoticus, neither of which carries a Serbian form."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети Модест, патријарх јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, quoted whole with its closing full stop; URL year 2025. The third calendar to keep him, and **it agrees with the Romanian on the DAY against the Greek**: doxologia.ro keeps him on 18 decembrie and this book on the Julian 18 December, while saint.gr keeps him on 16 Δεκεμβρίου. That is a difference between two churches’ own calendars and not a second feast of his: one row per church is the schema, this row carries the Julian 18/12, and the Greek row’s 16/12 is untouched. `types` UNTOUCHED: «патријарх јерусалимски» is the `patriarch` held and the `office` already carries the see; `hierarch` was there. `dates`: the `floruit` of 632 to 634 UNTOUCHED, and a `death` ADDED in 633, which this book states and which falls INSIDE that patriarchate, so the two agree rather than compete. **AND THE READING THAT MATTERS MOST HERE: THIS BOOK SIDES AGAINST THE TRADITION saint.gr CALLED CONFUSED.** The Greek page says the years of the patriarchate, 632 to 634, are the one thing known for certain, and that the account which has his parents die under Maximian, 286 to 305, cannot be squared with them. This book has the parents die when he was FIVE MONTHS OLD and his own death in 633 IN HIS NINETY-SEVENTH YEAR, which puts the parents’ death nowhere near Maximian and is consistent with the patriarchate. **NO YEAR OF BIRTH WAS COMPUTED AND NONE IS STORED**: subtracting an age from a year is the thing the 12-09 reader refused to do and it is refused here. NO `locations`: Egypt, Mount Sinai and Jerusalem are three places and the folder has never held a coordinate. NO `related` ROW: the entry names no person at all — not the parents, not the heathen master, not a teacher. WHAT THE BOOK ADDS, where the Greek page had the patriarchate and a warning about the rest: that he was FIVE MONTHS OLD when his parents died and was brought up a Christian by God’s providence; that when he grew up he WAS SOLD AS A SLAVE to a heathen in Egypt, and converted his own master to the faith of Christ, and was given his freedom by him; that he withdrew to MOUNT SINAI and struggled there until his FIFTY-NINTH YEAR; that he was then chosen patriarch of Jerusalem; and that he fed the flock of Christ as a true shepherd and reposed peacefully in 633, in the ninety-seventh year of his life. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -121,7 +136,14 @@
       "latest": 634,
       "display": "632 to 634",
       "basis": "attested",
-      "note": "saint.gr states these as the one thing it knows for certain about his dating, and uses them to call the rest of his received life confused: «γνωρίζουμε ότι τα χρόνια της πατριαρχίας του Αγίου αυτού ήταν από το 632 μ.Χ. μέχρι το 634 μ.Χ.» The interval is his patriarchate and not his life; no year of birth and no year of death is given, and the page itself notes that the account which has his parents die under Maximian, 286 to 305, cannot be squared with these."
+      "note": "UNCHANGED, and now CONFIRMED from a second direction. saint.gr states these as the one thing it knows for certain about his dating and uses them to call the rest of his received life confused: «γνωρίζουμε ότι τα χρόνια της πατριαρχίας του Αγίου αυτού ήταν από το 632 μ.Χ. μέχρι το 634 μ.Χ.» The interval is his patriarchate and not his life. The Охридски пролог за 18. децембар ст. ст. gives no years for the patriarchate itself, but the death it states, 633, falls inside these bounds, and the fifty-ninth year in which it has him elected is consistent with the ninety-seventh in which it has him die. Nothing was widened or narrowed."
+    },
+    "death": {
+      "earliest": 633,
+      "latest": 633,
+      "display": "633",
+      "basis": "traditional",
+      "note": "A year the folder did not have, and it falls inside the patriarchate the Greek page dates. Охридски пролог за 18. децембар ст. ст.: „Пасао стадо Христово као прави пастир и упокојио се мирно 633. године у деведесет седмој години свога живота.“ — he fed the flock of Christ as a true shepherd and reposed peacefully in 633, in the ninety-seventh year of his life. **NO YEAR OF BIRTH WAS RECKONED FROM THE AGE AND NONE IS STORED.** Subtracting ninety-six from 633 would give one, and that is exactly the step this run has already refused once, on the Julian 12-09: a birth is a reading and not arithmetic. The age is recorded here because of what it does to the dossier — it makes the parents’ death, which this book puts at five months old, fall about a century after Maximian, the emperor the tradition saint.gr called confused had them dying under. The basis is traditional, no document being cited."
     }
   },
   "images": [

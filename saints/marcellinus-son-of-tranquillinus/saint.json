@@ -50,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети мученик Севастијан и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. A ROW UNDER A COMPANY TAIL — «и други с њим» — and the ruling is set out in full in the `sebastian-of-rome` row of this same reading; it is an author question. The body names him, second of the two brothers, and the corpus already keeps him on this same menologion 18/12 from the Greek. NO `sr` NAME FORM: the heading holds one personal name and it is Sebastian’s; «Маркелин» is a body name. `types`, `dates`, `locations` and `related` all UNTOUCHED. WHAT THE BOOK SAYS OF HIM: the same as of his brother — both in prison for Christ and on the point of apostasy, both steadied by Sebastian, both tortured and PIERCED WITH SPEARS, and their father Tranquillinus healed of gout and baptised with his house; and that Sebastian’s face shone while he was speaking to the two of them. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

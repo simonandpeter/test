@@ -49,8 +49,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.12.2025 (18. децембар ст. ст.) — „Свети мученик Севастијан и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-31&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. A ROW UNDER A COMPANY TAIL — «и други с њим» — the ruling being in the `sebastian-of-rome` row of this same reading; an author question. The body names him and the corpus already keeps him on this same menologion 18/12 from the Greek, which until now was his only calendar. **HE IS NOT `tiburtius-brother-of-valerian`**, whom the Russian and the Greek keep on 22 November; the identification is by the day and by the company — the son of Chromatius the eparch of Rome, in Sebastian’s circle. NO `sr` NAME FORM: the heading holds one personal name and it is Sebastian’s; «Тивуртије» is a body name. `types`, `dates`, `locations` and `related` all UNTOUCHED. WHAT THE BOOK SAYS OF HIM, and it is the one ordeal in the entry it tells in full: that he was THE SON OF CHROMATIUS, the eparch of Rome whom Sebastian healed of gout and brought to baptism with him; that he was taken second of the company, after Zoe; that THE JUDGE SET HOT COALS BEFORE HIM and told him to choose life or death — either to throw incense and burn it to the idols, or to stand barefoot on the coals himself; that he CROSSED HIMSELF AND STOOD BAREFOOT ON THEM AND WAS UNHURT; and that he was afterwards BEHEADED WITH THE SWORD. Chromatius his father has no folder in this corpus and was left out; he is in the report. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [
