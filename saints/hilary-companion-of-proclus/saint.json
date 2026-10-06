@@ -11,6 +11,11 @@
       "form": "Ιλάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουλίου, «Άγιοι Πρόκλος και Ιλάριος», with the rank word left off. The page's hymn and its summary verse spell the name with the rough breathing, «Ἱλάριος»."
+    },
+    {
+      "form": "Иларије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. муч. Прокл и Иларије.“ — „Св. муч.“ is the rank and the second of the two bare forenames the heading enumerates is the whole of the form; «companion of Proclus» in the display name is the corpus’s own. `foldchk.py` returns `hilary-of-poitiers`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form and the heading offers nothing to break it with."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.07.2026 (12. јул ст. ст.) — „Св. муч. Прокл и Иларије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The second half of the day’s first entry; the same heading, quoted whole, stands over both rows, which is what §4 requires of an enumerated company. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is his uncle and his city: „Прокл беше стриц Иларију“, and this folder is named for that very companionship. **`dates` STAY NULL**, for the same reason as his uncle’s — „у време Трајаново“ is a reign. `types` UNTOUCHED at `martyr`. **His own act is his one line**: while Proclus was being tortured Hilary came forward to the judge and said „И ја сам хришћанин“, I am a Christian too, and he was beheaded with the sword where his uncle was crucified. **THE NAME FORM FOLDS AND THE UNCLE’S DOES NOT**, which is this entry’s one finding: „Иларије“ is already held by `hilary-of-poitiers`, so the pair’s two bare forenames out of one heading go one into a fold and one into none. No new `related` rows. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

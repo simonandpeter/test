@@ -12,6 +12,11 @@
       "form": "Βλαδίμηρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Ιουλίου, «Άγιος Βλαδίμηρος ο Ισαπόστολος βασιλιάς των Ρώσων», with the rank word, the title and the style left off."
+    },
+    {
+      "form": "Владимир",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 15. јул ст. ст., „Св. Владимир велики кнез руски.“ — „Св.“ is not a rank, „велики кнез“ **is** the rank, grand prince, which `types` already carries as `prince`, and „руски“ is the territory that rank governs and comes off with it. „велики“ is not the epithet «the Great»: it stands before кнез and modifies it, not after the forename as in §5’s «Макарије Велики». So the bare forename is the whole form. `foldchk.py` returns **eight** holders, every one of them a twentieth-century Russian new martyr holding the string in `ru`, and `sr-foldpred.mjs` predicts the same eight — so this is the **ninth** folder on the string and the deepest fold of this wave, three deeper than «Кирил» on 9 July. His baptismal name Василије is in the body and is not stored."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.07.2026 (15. јул ст. ст.) — „Св. Владимир велики кнез руски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-28&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is not in doubt: the grand prince of Rus, son of prince Svyatoslav and grandson of Igor and Olga, the embassy to Constantinople, the idol Perun pulled down and thrown into the Dnieper, and 1015 — and the Romanian and Greek rows stand on this very 15 July. **THE FORM FOLDS NINE FOLDERS DEEP, WHICH IS THE DEEPEST FOLD THIS SERBIAN WAVE HAS WRITTEN**, and the reason is a two-word rank. The heading is „Св. Владимир велики кнез руски.“: „Св.“ is not a rank, „велики кнез“ is the rank — **grand prince**, which §5 reads `prince` and which this folder already carries — and „руски“ is the territory that rank governs and comes off with it, as a see does. **„велики“ is deliberately not read as the epithet «the Great».** §5 warns that Велики in «Макарије Велики» is an epithet and belongs in the display name, and that is a Велики standing **after** a bare forename; here it stands **before кнез** and modifies it, and «Владимир велики кнез руски» is «Vladimir, grand prince of Rus» and not «Vladimir the Great, prince of Rus». Reading it the other way would have given a two-word form, broken a fold of nine, and been a mistranslation — so the bare forename stands and the fold is accepted. **`dates` UNTOUCHED, AND THE BOOK CONFIRMS THE YEAR.** „Упокоји се у Господу 1015. год.“ against the folder’s `death` 1015 to 1015, `attested`; the `birth` of 958 is not touched and this book offers nothing to touch it with — **no age at all**, which breaks a run of three days in which an age was the thing refused. `types` UNTOUCHED at `equal-to-the-apostles` and `prince`, both of which this entry earns — the one by the baptism of himself and his people, the other by the heading’s own „велики кнез“. `office` UNTOUCHED at «Prince»: the heading says grand prince of Rus and the folder says Prince, which is the same rank less the territory, and **a reader does not improve an `office` string**. No `locations`: Kyiv, Constantinople, Hagia Sophia and the Dnieper are a narrative. **HIS BAPTISMAL NAME IS GIVEN AND IS NOT STORED.** „На крштењу назват Василије“, at his baptism named Basil — in the **body**, not the heading, so §4 and §6 keep it out of a stored form, exactly as Golinduhia’s Марија was kept out on 12 July. Had it been taken it would have folded with a great many men. **This is the second time in five days that this book has given a saint two names**, and on the 11 July the baptismal one was in the heading and the other in the body, which is why Olga’s stored form is Јелена and his is not Василије: the rule is the heading and not the font. **ONE MISSING RECIPROCAL IS SUPPLIED SO THAT THE GRANDMOTHER CAN BE NAMED.** The body says „а унук Игора и Олге“, and grandson of Igor and Olga. This folder already related `olga-of-kyiv`; **`olga-of-kyiv` did not relate it back**, so naming her in this life would have failed the two-way floor. The reciprocal is added to her folder in this same batch, with no row and no other change, and the life then links her. `boris-son-of-vladimir`, whom this folder also relates, is not named in this book at all. **Igor and Svyatoslav take no rows** — a grandfather and a father with no folder this book names. **AND THEODORE AND HIS SON JOHN ARE NAMED HERE FOR THE SECOND TIME IN THIS RANGE AND HOLD NO FOLDER EITHER TIME.** „Ова црква беше подигнута на оном истом месту, где раније мученички пострадаше за Христа св. Теодор и син му Јован (в. 12. јули)“ — the church was raised on the very place where Theodore and his son John had earlier suffered for Christ, with the book’s own cross-reference to the Julian 12 July, where they are the day’s fifth entry and where `ls saints | grep -i varangian` returned nobody. Reported on both days, created on neither. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [

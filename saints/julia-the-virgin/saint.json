@@ -6,6 +6,11 @@
       "form": "Iulia",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 16 iulie, «Sfânta Muceniță Iulia», with the rank word left off."
+    },
+    {
+      "form": "Јулија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 16. јул ст. ст., „Св. муч. Јулија девица.“ — „Св.“ is not a rank, „муч.“ and „девица“ are the two ranks `types` already carries, and the bare forename is what is left; «the Virgin» in the display name is the corpus’s own rendering of the second of those ranks and §6 keeps a rank out of a stored form. `foldchk.py` returns `julia-of-ancyra`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form and the heading offers nothing but ranks to break it with."
     }
   ],
   "sex": "female",
@@ -40,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.07.2026 (16. јул ст. ст.) — „Св. муч. Јулија девица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-29&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, and **the folder’s only other venerated row is the Romanian one**, off a bare doxologia line «Sfânta Muceniță Iulia» with no epithet, no place and no year; the Greek calendar does not keep her at all. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. So the identification rests on the day and on the two words the two headings share, „муч.“ and „девица“ against «Muceniță» — which is thin, and is said to be thin: this is a bare Romanian line and a full Serbian entry on the same number, and nothing in the corpus contradicts it. **`dates` WRITTEN WHERE THE FOLDER HAD NONE, AS A STATED CENTURY.** `dates: null` before. This book says „Чесно пострада у VI столећу“, she suffered honourably in the sixth century, so `death` is 501 to 600, display «6th century», basis traditional. **The century is stated and not hedged**, as Thomas of Maleon’s was on 7 July and unlike Lampadius’s „вероватно“ on 5 July, and **the interval is the whole century**, there being no qualifier to narrow it with. `types` UNTOUCHED at `martyr` and `virgin`, both earned by this heading — „муч.“ and „девица“ — which makes this **the first row of the range whose heading independently confirms every type the folder held**, the second being the day’s first entry. No `office`, no `locations`: Carthage, Syria and Corsica are a narrative, and a folder dated to a whole century with a `locations` would have to answer `map-span`. **THE BOOK SAYS THE PERSIANS TOOK CARTHAGE, AND THAT IS RECORDED AND NOT CORRECTED.** „Када Персијанци покорише Картагену, многи народ би одвучен у ропство“ — when the Persians subdued Carthage, many of the people were dragged off into slavery. It is this book’s sentence; §10 reserves the reading and a reader does not improve a source, so it goes into the life as the book has it and the note says so. **NO NEW `related` ROWS.** The pagan merchant of Syria who owned her, the monks of the nearby island the angel told of her death, and the bright maiden the night watchmen saw are an owner, monks and — on the book’s own account — the saint herself. **WHAT IS NEW IS EVERYTHING, AND THE SECOND HALF IS A BUILDING STORY.** She was of a notable family of Carthage; taken captive and fallen into the hands of a pagan merchant in Syria, who advised her more than once to deny Christ and come over to his own faith and never got her consent, and who, finding her faithful and trustworthy in service, left her in peace and spoke to her of faith no more. He loaded a ship with goods, took her with him and set out by sea to far countries for trade; and when they reached Corsica there was a pagan feast, and the merchant joined in the foul sacrifice while Julia stayed in the ship **weeping that so many people live in stupid error and do not know the truth**. The pagans somehow learned of her, dragged her out of the ship against her own master’s protest, and tortured her terribly: they cut off her breasts and threw them onto a stone, and then crucified her, and on the cross she gave up her spirit to God. **Her death was announced by an angel of God to monks on the nearby island Margarita, or Gorgona**, and they crossed over and buried the martyr’s body honourably. Many wonders were worked at her grave through the centuries, and she appeared to some from the other world. **And then, after many years**, the faithful wanted to build a new church in her honour in another place, the old one being both cramped and dilapidated; they gathered the stone, the brick, the sand and the rest on the new site — and on the night before the day they meant to lay the foundation, **all of that material was carried by an invisible hand to the old little church**. In perplexity the people moved it back to the new place, and the same thing happened again. **And the night watchmen saw a most radiant maiden carting the material to the old church on white oxen.** From this all understood that Julia did not wish her church built in another place, so they pulled the old church down and raised the new one on that same spot. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; doxologia’s 16 iulie line «Sfânta Muceniță Iulia» gave a rank and a name only, and the Greek calendar does not keep her. The Охридски пролог for 16. јул ст. ст. says „Чесно пострада у VI столећу“ — she suffered honourably in the sixth century. The century is stated and not hedged, so the interval is the whole of it."
+    }
   }
 }

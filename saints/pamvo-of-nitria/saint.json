@@ -11,6 +11,11 @@
       "form": "Παμβώ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 18 Ιουλίου, «Όσιος Παμβώ», with the rank word left off. The Greek calendar keeps a second Παμβώ on the same day, «Όσιος Παμβώ ο Έγκλειστος», who carries a byname where this one has none."
+    },
+    {
+      "form": "Памво",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 18. јул ст. ст., „Преп. Памво.“ — „Преп.“ is the rank, which `types` already carries, and the bare forename is all that is left; the heading gives no by-name and no place, and «of Nitria» in the display name is the corpus’s own, off the body’s „на гори Нитријској“. `foldchk.py` returns **no holder** and `sr-foldpred.mjs` predicts a new key with no other holder — **and that is because `pambo-the-recluse` holds no Serbian form**, the two folders differing in English by one letter and standing on the same day-number. A fold waiting, not a fold avoided."
     }
   ],
   "sex": "male",
@@ -60,11 +65,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 18,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 31.07.2026 (18. јул ст. ст.) — „Преп. Памво.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-31&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE SECOND WRONG-MAN TRAP OF THIS RANGE, AND IT IS SHARPER THAN AQUILA’S BECAUSE THE FOLDERS RELATE EACH OTHER.** `pambo-the-recluse` is a folder of this corpus, a `venerable` and `confessor` with `death` **1241**, kept **venerated by the Greek calendar on the 18 July** — the very number this book prints — with an `undocumented` `serbian` row standing empty, and he **relates this folder and is related by it**, so a reader following the `related` list would have met him first. **He is not the man, and the body settles it in its first two clauses**: „Мисирац и подвижник на гори Нитријској. Савременик св. Антонија Великог“ — an Egyptian and an ascetic on the mountain of Nitria, a contemporary of Anthony the Great — and it ends „Упокојио се у Господу 386. год.“ A fourth-century Egyptian of Nitria against a recluse dead in 1241: **eight hundred and fifty-five years**, which is the widest gap any wrong-man trap of this wave has offered. The row goes on the Nitrian and `pambo-the-recluse` is left exactly as he stands. **`dates` WRITTEN WHERE THE FOLDER HAD NONE.** `dates: null` before — neither doxologia nor saint.gr gave a year — and `death` is now 386 to 386, display «386», basis traditional. A flat year into an empty field. **And the year is what makes the identification safe**, not the name: 386 and Nitria and Anthony the Great are three facts and the other folder contradicts all three. `types` UNTOUCHED at `venerable` and `hermit`: „Преп.“ is the `venerable`, and the `hermit` the folder already holds is not in this heading and is not taken away by its silence. **`ascetic` is refused**, „подвижник“ standing in the body; and **`wonderworker` is refused for the tenth time in this wave**, the seeing into the fates of the living and the dead standing in the body too. No `office`, no `locations` — Nitria, Egypt and Alexandria are a narrative. **ONE MISSING RECIPROCAL IS SUPPLIED SO THAT THE GREAT ANTHONY CAN BE NAMED.** The folder relates `anthony-the-great`; **`anthony-the-great` did not relate it back**, so naming him in this life would have failed the two-way floor. The reciprocal is added to his folder in this same batch with no row and no other change. **Theophilus the patriarch of Alexandria takes no row** — `ls saints | grep -i theophilus-of-alex` returns nobody — and the two brothers of the day’s third entry take none either, for want of a folder. **WHAT IS NEW IS TWO HABITS, A FACE, AND TWO SAYINGS.** He was known especially for two things: that by long practice he **locked his tongue**, so as never to utter a superfluous word, and that he **never ate any bread but what he had earned with his own hands, weaving mats**. He was like an angel of God, and in old age his face shone as Moses’s once did, so that the monks could not look him in the face. He gave no quick answer even to the simplest question without prayer in his heart and reflection first. **When the patriarch Theophilus of Alexandria visited the monks of Nitria** the monks begged Pambo, „Реци папи назидателну реч, која би му била од користи“ — say an edifying word to the pope that would profit him — and the silent Pambo answered „Ако му моје ћутање не користи, то му ни моја реч неће користити“: if my silence does not profit him, neither will my word. **And travelling once in Egypt with monks**, when they came past a group of men who went on sitting while the monks passed, he addressed them: „Устаните и поздравите монахе, да благослов од њих примите, јер они непрестано беседе с Богом, и уста су њихова света“ — stand up and greet the monks, that you may receive a blessing from them, for they converse unceasingly with God and their mouths are holy. **ENTRY 3 IS A PAIR OF BROTHERS NO FOLDER HOLDS, AND THEIR POINT IS MADE INSIDE THE DAY’S SECOND ENTRY.** „Преп. Пајсије и Исаија.“ — „Браћа рођена, од богата рода. Обојица монаси. Један се посвети због подвига у пустињи, а други због дела милосрђа према људима. Обојицу виде св. Памво у Рају. Тиме се реши спор међу монасима око тога: шта је боље, подвиг или дела милосрђа. И једно и друго кад се врши у име Христово води у Рај.“ — brothers by birth, of a rich family, both monks; one was sanctified by ascetic struggle in the desert and the other by works of mercy towards men; **Pambo saw them both in Paradise**, and by that the dispute among the monks over which is better, ascetic struggle or works of mercy, was settled — both, when they are done in the name of Christ, lead to Paradise. `ls saints | grep -i paisi` returns nine folders and `grep -i isaiah` eight, and not one pair of them is two brothers of a rich family seen in Paradise by Pambo: the nearest are `paisius-the-great`, an Egyptian, and `isaiah-the-egyptian`, who is one of the twelve martyrs of Caesarea and **already carries a venerated `serbian` row on the 16 February**, so the same pair of refusals that met Helle on 14 July meets him here. Ruling 3: **reported, not created** — and the entry is six sentences with no year, no place, no see and no epithet, which is the thinnest dossier of this day. **The vision is written into Pambo’s life**, because it is Pambo’s own act and the entry says so, and the brothers are named there as the book names them, without a link and without a row. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 386,
+      "latest": 386,
+      "display": "386",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; neither doxologia nor saint.gr gave a year. The Охридски пролог for 18. јул ст. ст. ends „Упокојио се у Господу 386. год.“ The year, with Nitria and the contemporaneity with Anthony the Great, is also what keeps this entry off `pambo-the-recluse`, who is kept on the same day-number by the Greek calendar and died in 1241."
+    }
   }
 }

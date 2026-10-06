@@ -11,6 +11,11 @@
       "form": "Σάρρα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Ιουλίου, «Οσία Σάρρα», with the rank word left off."
+    },
+    {
+      "form": "Сара Мисирска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. јул ст. ст., „Преп. Сара Мисирска.“ — „Преп.“ is the rank, which `types` already carries, and „Мисирска“ is a **toponymic by-name and not a see**, Egypt being a country and no rank word in the heading governing it, so §6 keeps it and the form is the fullest this calendar gives. **It is also the only by-name any of her three calendars prints**, doxologia and saint.gr both giving a bare rank and forename. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.07.2026 (13. јул ст. ст.) — „Преп. Сара Мисирска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-26&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS THE DAY AND THE BARE RANK, BECAUSE THAT IS ALL ANY OF THE THREE BOOKS GIVES.** doxologia prints «Sfânta Cuvioasă Sara» and saint.gr «Οσία Σάρρα», both of them a rank and a forename and nothing else, both on this very 13 July; and this heading adds the one word none of them has, „Мисирска“, Egyptian. One woman, one rank, one day in three calendars. **`dates` WRITTEN WHERE THE FOLDER HAD NONE.** `dates: null` before — neither other book gave a year. This book ends „Упокојила се у Господу 370. год.“, so `death` is 370 to 370, display «370», basis traditional: a flat year into an empty field, which the narrowing rule permits. **The sixty years she spent on the bank of the Nile are a duration** and nothing is reckoned back from 370 by them, though 310 would be the answer. `types` UNTOUCHED at `venerable`, which „Преп.“ is and all the heading gives. **`virgin` is refused**, „Као девица отишла на подвиг“, as a virgin she went out to the ascetic life, standing in the body — and this is the second `virgin` refused off a body in this wave. **`ascetic` is refused on the same ground**, „подвизавала се“ being a verb in the body and „Преп.“ the only rank in the heading. **`abbess` is refused twice over**: she drew many women to the monastic life „Својим примером“, by her example, which is not an office, and the book gives her no community to be head of. No `office`, no `locations` — the Nile and Alexandria are a narrative. **§10, AND A DISPLAY NAME THIS BOOK COULD IMPROVE.** The `display_name` is «Sara (13 July)», which disambiguates her by the day because the two books the folder was built from gave nothing else to do it with. **This book gives „Мисирска“**, Egyptian, and the body gives the Nile and Alexandria — so the day in the display name is no longer the only thing available. §10 reserves a display name to the author: it is left exactly as it stands and reported. The slug keeps the day for the same reason a slug always may; a slug is not a name. No new `related` rows: the many women she drew to the monastic life are unnamed, and `nicodemus-the-hagiorite`, whom the folder already relates, is not named in this book. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
@@ -64,5 +79,14 @@
   },
   "related": [
     "nicodemus-the-hagiorite"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 370,
+      "latest": 370,
+      "display": "370",
+      "basis": "traditional",
+      "note": "The folder held no dates at all; doxologia printed «Sfânta Cuvioasă Sara» and saint.gr «Οσία Σάρρα», a rank and a forename each with no year. The Охридски пролог for 13. јул ст. ст. ends „Упокојила се у Господу 370. год.“ The sixty years it says she spent on the bank of the Nile are a duration and nothing is reckoned from them."
+    }
+  }
 }

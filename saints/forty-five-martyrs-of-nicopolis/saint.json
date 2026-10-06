@@ -11,6 +11,11 @@
       "form": "Σαράντα Πέντε Μάρτυρες",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Ιουλίου, «Άγιοι Σαράντα Πέντε Μάρτυρες», with the rank word left off. The company's own hymn on the page addresses them as «Μάρτυρες τοῦ Κυρίου, Τεσσαράκοντα πέντε»."
+    },
+    {
+      "form": "45 мученика",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. јул ст. ст., „Св. 45 мученика: Леонтије, Маврикије, Александар, Сисиније и прочи.“ — „Св.“ is not a rank and yields nothing, and what is left after it is the company’s name, „45 мученика“, followed by a colon and the four names the heading enumerates. **The enumeration is the company’s members and not part of the company’s name**, and „и прочи“, and the rest, says so in the heading itself; the same shape as `four-hundred-forty-martyrs-of-italy`, which stores „Четири стотине и четрдесет мученика“ and no names. `foldchk.py` returns no holder for the string and `sr-foldpred.mjs` predicts a new key with no other holder, so this form folds with nobody."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.07.2026 (10. јул ст. ст.) — „Св. 45 мученика: Леонтије, Маврикије, Александар, Сисиније и прочи.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-23&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS NOT IN DOUBT AND THE FOUR ENUMERATED NAMES ARE NOT THE SAME FOUR.** This folder was built off doxologia and saint.gr, which keep the company on this very 10 July, and the Greek page’s narrative is this book’s: Nicopolis in Armenia, the edict of Licinius, the duke Lysias, the forty-five giving themselves up of their own accord, the prison without bread or water, the hands and the feet cut off and the fire. **saint.gr names four leading men of the city — Daniel, Mauricius, Antony and Leontius — and this heading enumerates four — Леонтије, Маврикије, Александар, Сисиније — of whom only two are the same two.** Two books, one company, eight names between them and six distinct ones; neither list is a list of the forty-five, each closing in effect with the Prologue’s own „и прочи“, and the rest. **NONE OF THE FOUR GETS A FOLDER, AND THAT IS Ruling 3 AND NOT A JUDGEMENT ON THE ENTRY.** The company is one folder and the company’s folder is the one the two other calendars keep on this day, so the row belongs here. `ls saints | grep -i nicopol` returns this folder and `nicopolitianus-of-sebasteia` and nobody else, and of the four names the corpus holds a Leontius twenty-one times, a Mauricius twice and a Sisinius five times without one of them being of Nicopolis — `leontius-of-the-forty-martyrs` and `sisinius-of-the-forty-martyrs` are of Sebaste, `maurice-of-apamea` is of Apamea — and an identification made off a forename in a company is no identification. **Named in the life, created nowhere.** **`dates` WIDENED, AND THIS IS THE ONE FIELD THIS ENTRY MOVES.** The folder held `death` 315 to 315, display «315», off saint.gr, whose heading gives «(; - 315)» and whose narrative dates **the edict** to 315: «Όταν το 315 μ.Χ. ο αυτοκράτορας Λικίνιος εξέδωσε διάταγμα κατά των χριστιανών». This book dates **the martyrdom**, and to a different year: „Чесно пострадаше и царство наследише 319. год.“ — they suffered honourably and inherited the Kingdom in 319. That is four years outside the point already recorded and **not inside it**, so the narrowing rule does not apply and the established treatment for two books with two flat years does: the interval is widened to 315 to 319, display «between 315 and 319», basis traditional, with both books’ words in the note. Nothing is chosen between them. `types` UNTOUCHED at `martyr`, which „муч.“ is; `office` stays null, a company having none; no `locations`, Nicopolis in Armenia in a narrative being no coordinate on a folder whose dates are an interval. **`great-martyr` is not even on offer** — the heading’s rank word is the plain one. **NO NEW RELATED ROWS.** The noblewoman Власијана who carried water to the prison window, the angel who came into the prison to comfort them, the two jailers converted at the trial, Licinius and Lysias are a benefactress, an angel, two converts, an emperor and a judge, and no folder of this corpus holds any of them under those names. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "hymns": [
@@ -117,10 +132,10 @@
   "dates": {
     "death": {
       "earliest": 315,
-      "latest": 315,
-      "display": "315",
+      "latest": 319,
+      "display": "between 315 and 319",
       "basis": "traditional",
-      "note": "saint.gr heads the company and each of its four named men «(; - 315)», and its narrative dates the edict they gave themselves up under: «Όταν το 315 μ.Χ. ο αυτοκράτορας Λικίνιος εξέδωσε διάταγμα κατά των χριστιανών». The Romanian source the folder was built from gave no year."
+      "note": "Two books and two flat years, four apart, and neither is chosen. saint.gr heads the company and each of its four named men «(; - 315)», and its narrative dates the edict they gave themselves up under: «Όταν το 315 μ.Χ. ο αυτοκράτορας Λικίνιος εξέδωσε διάταγμα κατά των χριστιανών» — so 315 there is the year of the edict. The Охридски пролог for 10. јул ст. ст. dates the martyrdom itself: „Чесно пострадаше и царство наследише 319. год.“ The Romanian source the folder was built from gave no year."
     }
   },
   "images": [

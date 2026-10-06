@@ -11,6 +11,11 @@
       "form": "Πρόκλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Ιουλίου, «Άγιοι Πρόκλος και Ιλάριος», with the rank word left off."
+    },
+    {
+      "form": "Прокл",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. јул ст. ст., „Св. муч. Прокл и Иларије.“ — „Св. муч.“ is the rank, which `types` already carries, and the heading enumerates two bare forenames with no by-name, no place and no see; «of Callippi» in the display name is the corpus’s own, off the body. `foldchk.py` returns no holder and `sr-foldpred.mjs` predicts a new key with no other holder, which on a bare forename of five letters is the day’s one piece of luck — the companion’s form was not so fortunate."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.07.2026 (12. јул ст. ст.) — „Св. муч. Прокл и Иларије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-25&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, an **enumerated pair both of whose folders this corpus holds and already relates in both directions**, which is the easiest shape this source produces and the third time this range has met it. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. The identification is the place and the kinship and the day: „Ови мученици беху родом из Калипте у Азији“ is this folder’s own Callippi, „и Прокл беше стриц Иларију“ — Proclus was Hilary’s paternal uncle — is the relation the two folders already record, and the Romanian and Greek rows stand on this very 12 July. **`dates` STAY NULL, AND THE REIGN IS WHY.** The folder holds no `dates` at all and this book offers „Пострадаше у време Трајаново“, they suffered in the time of Trajan. **A reign is no source for a year** — the rule that refused a year off Decius’s reign and off the reign of Michael and Theodora on 9 July, and off Julian the Apostate before that — and Trajan’s reign would in any case have to be looked up outside this book, which is the whole of the objection. Written into the life, written into no field. `types` UNTOUCHED at `martyr`, which „муч.“ is and all the heading gives. No `locations`: Callippi in Asia is a narrative. No new `related` rows — the two are already two-way, and the judge who sentenced them is unnamed. **WHAT IS NEW IS TWO SPEECHES.** Asked „Каквога си рода?“, of what family are you, Proclus answered „Род је мој Христос, и надежда моја Бог мој“ — my family is Christ, and my hope is my God. Threatened with torments he answered that if his judges feared to transgress the emperor’s command lest they fall into short-lasting torments, how much more do Christians fear to transgress the command of God lest they fall into eternal ones. And **the two deaths are different deaths**: Proclus was crucified and Hilary beheaded with the sword. The Prologue prints no troparion and no kontakion; the day carries only the verse. **ENTRY 5 IS A FATHER AND A SON AND NEITHER HAS A FOLDER.** „Св. муч. Теодор и Јован.“ — „Отац и син, по пореклу Варјази, који беху крштени па се доселише у незнабожни град Кијев да живе. Јаросни незнабошци срушише кућу над њима, те обојица погибоше за Христа. Њихове се мошти покоје у Антонијевим пештерама. Њима се највише моле бездетни и они којима се деца не држе.“ — a father and a son, Varangians by descent, who were baptised and then settled in the pagan city of Kyiv to live; furious pagans pulled the house down on them and both perished for Christ; their relics rest in Anthony’s caves; and those who pray to them most are the childless and those whose children do not live. `ls saints | grep -i varangian` returns **nobody**, and the corpus holds scores of Theodores and scores of Johns without one of Kyiv who died with his son under a house. Ruling 3: **reported, not created.** The entry is four sentences and this book is the only calendar of the four that prints them — and the refusal has a cost that will be visible three days later, because the Julian 15 July’s entry on Vladimir says the church of the Most Holy Theotokos at Kyiv was raised „на оном истом месту, где раније мученички пострадаше за Христа св. Теодор и син му Јован (в. 12. јули)“ — on the very place where Theodore and his son John had earlier suffered — so the pair are named twice in this range and hold no folder either time."
     }
   ],
   "hymns": [

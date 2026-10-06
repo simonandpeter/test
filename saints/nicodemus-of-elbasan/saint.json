@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "new-martyr",
-    "monk"
+    "monk",
+    "venerable-martyr"
   ],
   "names": [
     {
       "form": "Νικόδημος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Ιουλίου, «Άγιος Νικόδημος από το Ελβασάν ο Νέος οσιομάρτυρας», with the rank words and the place left off. Νικόδημος is the name he took as a monk; the page does not print the name he was baptised with."
+    },
+    {
+      "form": "Никодим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. јул ст. ст., „Преп. муч. Никодим.“ — „Преп. муч.“ is the rank and `types` now carries it, and nothing else is in the heading at all: no by-name, no place, no see, so the bare forename is the whole form. «of Elbasan» in the display name is the corpus’s own, off the body’s „Родом из Елбасана“, and §6 keeps a reader from putting it into a stored form. `foldchk.py` returns `nicodemus-of-serbia`, `sr`, and `sr-foldpred.mjs` predicts that one other holder, so this is the second folder on the form."
     }
   ],
   "dates": {
@@ -53,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.07.2026 (11. јул ст. ст.) — „Преп. муч. Никодим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-07-24&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry. The heading is quoted as the Prologue prints it, with its closing full stop, which is what §4 asks for and what `srbody.mjs` now hands back. **THE IDENTIFICATION IS THE PLACE AND THE DAY AND THE YEAR TOGETHER.** „Родом из Елбасана“ is this folder’s own ground, the Greek row stands on this very 11 July, and the body ends „би посечен 11. јула 1722. год.“ — he was beheaded on 11 July 1722, the day and the year both. **`types` GAINS `venerable-martyr` OFF THE HEADING.** „Преп. муч.“ is Преподобномученик abbreviated and §5’s table reads it `venerable-martyr`; the folder held `new-martyr` and `monk` and not that word, and the body earns both of the two it held — he was tonsured on the Holy Mountain and he died at the hands of the Turks in 1722. All three stand together now, which is what the two calendars between them say he was. This is the second `types` word of this range written off a heading rather than refused off a body. **`dates` UNTOUCHED.** The folder holds `death` 1722 to 1722, `attested`; this book gives the same year and adds the day, 11 July, which is the feast and not a field — the schema has no month-and-day for a death and a `display` of «11 July 1722» would be a form this corpus does not use. The three years he spent weeping over his apostasy are a duration. **WHAT IS NEW IS THE WHOLE SHAPE OF THE FALL.** He was married and had children; deceived by the Turks he took Islam and forced his children into it with him, **all but one son, who fled to the Holy Mountain and was tonsured**; and it was going to the Holy Mountain to fetch that son back that undid him — the Mountain made such an impression on him that he repented, returned to the faith of Christ and was tonsured himself. Then, after three years of weeping, he resolved to go back to Albania **to expiate his sin in the very place where he had committed it**, declared himself a Christian before the Turks and was beheaded. The folder’s `related` row to `acacius-the-kausokalyvite` is untouched; the son is unnamed in this book and takes no row. No `locations`: Elbasan, the Holy Mountain and Albania are a narrative. The Prologue prints no troparion and no kontakion; the day carries only the verse."
     }
   ],
   "text": {
