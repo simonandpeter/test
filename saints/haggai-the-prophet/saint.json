@@ -11,6 +11,11 @@
       "form": "Αγγαίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Προφήτης Αγγαίος», with the rank word left off. The page glosses the name itself, «(εβραϊκή λέξη) = ευφροσύνη Κυρίου, εορτή»."
+    },
+    {
+      "form": "Агеј",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 16. децембар ст. ст., „Свети пророк Агеј.“ — with «Свети» left off, which §5 says is not a rank, and «пророк» left off, that being the `prophet` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `агеј` at NO other holder, so no READ_FOLDS key is written. THE NAMESWEEP MISSED THIS FOLDER, and the miss is BRIEF-SERBIAN §7’s own false negative: «Агеј» romanises to a skeleton that is not Haggai’s, and the sweep answered «nothing but rank words in this line». The folder was found from the candidate file’s menologion list, not from the sweep."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.12.2025 (16. децембар ст. ст.) — „Свети пророк Агеј.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-29&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. The third calendar to keep him on this menologion day. `types` UNTOUCHED: «пророк» is the `prophet` held. `dates` UNTOUCHED AND NOW AGREED BY A SECOND BOOK: the folder’s floruit bounds came from doxologia.ro’s «mai înainte de întruparea Domnului Hristos cu patru sute șaptezeci de ani» less the thirty-six years of prophesying, and this book prints the same figure — «Пророковао на 470. година пре Христа». Two books, one number, nothing to widen or narrow. NO `locations`: Babylon and Jerusalem are two places and the folder has never held a coordinate. NO `related` ROW ADDED: Zerubbabel and «Исус свештеник», Jesus the priest, are no folders this corpus holds, and the `joshua-son-of-nun` it does hold is a different man of a different age. WHAT THE BOOK ADDS: that he was BORN IN BABYLON during Israel’s captivity; that he was OF THE TRIBE OF LEVI; that he visited Jerusalem as a young man; that he urged Zerubbabel and Jesus the priest to rebuild the temple of the Lord, prophesying it a greater glory than Solomon’s, and that he lived to see a part of that temple built; and that he died in old age and was laid with his fathers. It cites its own prophecy, Haggai 2:9, and gives the reason for it — that in that new temple the Lord the Saviour would appear. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

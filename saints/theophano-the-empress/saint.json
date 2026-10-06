@@ -11,6 +11,11 @@
       "form": "Θεοφανώ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Δεκεμβρίου, «Αγία Θεοφανώ η Θαυματουργή σύζυγος του βασιλιά Λέοντα του σοφού», with the rank word, the by-name and the clause naming her husband left off."
+    },
+    {
+      "form": "Теофанија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 16. децембар ст. ст., „Света Теофанија, царица.“ — with «Света» left off, which §5 says is not a rank, and «царица» left off, that being the `empress` grade §5 maps and `types` keeps. The bare forename is the whole of what the heading gives; the by-name «Чудотворна» the Greek page carries and the husband it names are not in this heading. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `теофанија` at NO other holder, so no READ_FOLDS key is written. THE NAMESWEEP MISSED THIS FOLDER TOO, the same §7 false negative as «Агеј»: it offered Photina, Photini, Tatiana and Aphthonius and never Theophano. The folder was found from the candidate file’s menologion list."
     }
   ],
   "sex": "female",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 29.12.2025 (16. децембар ст. ст.) — „Света Теофанија, царица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-29&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. The third calendar to keep her on this menologion day. `types` UNTOUCHED: «царица» is the `empress` held, and §5 says to read which of empress and queen the woman was — she was the wife of a Byzantine emperor, so empress. `dates` ADDED, the folder having carried NONE: a death in 892, which this book states flatly. NO `locations`: the folder has never held a coordinate and the entry names no place at all, not even the city. `related` UNTOUCHED: `basil-the-macedonian`, her father-in-law, was already here; her husband Leo the Wise, her parents Constantine and Anne, and the patriarch who objected to the church are no folders this corpus holds under those names, and the prophet Elijah, on whose feast the parrot spoke, shares nothing with her but a date in the story. WHAT THE BOOK ADDS, and it is most of a life: her parents CONSTANTINE AND ANNE, kin to several emperors, long childless and praying to the Theotokos for a child; her marriage to Leo son of the emperor Basil the Macedonian; THE SLANDER of a knife carried in Leo’s boot to kill his father, for which the credulous Basil shut up son and daughter-in-law for THREE YEARS; the emperor’s PARROT, which on the feast of the holy prophet Elijah cried out at a banquet „Авај, авај, господине Лаве!“ over and over, until the court begged for their release and the emperor relented; that she reckoned her imperial dignity as nothing, fasting, praying, giving much alms and renewing many monasteries and churches; that no false word and no superfluous word came out of her mouth, and least of all a slander; and that she took leave of her kin before her death. AND ITS LAST CLAIM, WHICH IS A CLAIM ABOUT A FEAST AND NOT ABOUT HER: that Leo wished to raise a church in her name over her grave, that the patriarch objected, and that he therefore raised the church „Свим Светим“ — To All Saints — saying that if Theophano had been sanctified let her be glorified together with the rest; and that the feast of All Saints on the Sunday after Holy Trinity was established then. That is recorded here and in the life as the book’s own statement; it is not a second feast of hers and no row was moved for it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -99,5 +114,14 @@
         "rendered": "site"
       }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 892,
+      "latest": 892,
+      "display": "892",
+      "basis": "traditional",
+      "note": "The first date this folder has carried, and the Ohrid Prologue is the only one of its three sources to give one. Охридски пролог за 16. децембар ст. ст.: „Пред смрт своју призва све своје ближње, и с њима се опрости, па предаде душу своју Богу 892. године.“ — before her death she called all her kin and took leave of them, and gave up her soul to God in the year 892. doxologia.ro and saint.gr both gave her no year at all. No year of birth is given by anybody, and none was reckoned from her husband’s reign; the basis is traditional, no document being cited."
+    }
+  }
 }
