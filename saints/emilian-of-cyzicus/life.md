@@ -6,4 +6,8 @@ He was bishop of Cyzicus after Nicholas, in the years 787 to 815. He contended w
 
 He suffered many hardships and afflictions, the page closes, and he died at last in exile, as a true confessor of the right faith. saint.gr prints no year for his birth and none for his death, and gives no place beyond the see itself.
 
-*After saint.gr's calendar for 8 Αυγούστου — [the day](https://www.saint.gr/08/08/index.aspx) and [the life](https://www.saint.gr/2233/saint.aspx); read 1 October 2026.*
+The Ohrid Prologue of Bishop Nikolai Velimirović gives him the first entry of its Julian 8 August, and it is the first account this folder has had: the Greek calendar gave it the years of his episcopate and a line. He was bishop in Cyzicus, it says, in the time of the wicked emperor Leo the Armenian, the iconoclast. Because he would not submit to the imperial decrees on throwing the icons out of the churches, he too was sent into exile, together with other Orthodox bishops.
+
+In exile he lived five years, bearing many torments and many humiliations for Christ’s sake. He ended in 820, the entry says, and passed over among the citizens of heaven. That year is the first this folder has held for his death: what it held was the span of his episcopate, 787 to 815, which saint.gr gives and which is not a span of his life. The two readings sit beside each other now, and the five years of exile are the ones between them.
+
+*After saint.gr's calendar for 8 Αυγούστου — [the day](https://www.saint.gr/08/08/index.aspx) and [the life](https://www.saint.gr/2233/saint.aspx); read 1 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 8. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1), read 6 October 2026.*

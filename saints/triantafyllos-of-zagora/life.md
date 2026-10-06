@@ -6,4 +6,8 @@ For some reason unknown to us, the page says, he fell into a quarrel with some T
 
 The page adds that his memory is honoured on that day both at Zagora and at Alykes of Volos, and that a portion of his relic is treasured at the monastery of Saint Nicholas on the island of Andros, together with his icon.
 
-*After saint.gr's calendar for 8 Αυγούστου — [the day](https://www.saint.gr/08/08/index.aspx) and [the life](https://www.saint.gr/2242/saint.aspx); read 1 October 2026.*
+The Ohrid Prologue of Bishop Nikolai Velimirović keeps him on the Julian 8 August under one heading with a second new-martyr, and gives the two of them five sentences between them. He was of Zagora by birth, it says; and it calls both of the men under its heading Slavs, and both of them young and simple men, where saint.gr makes this one a Greek of Zagora in Magnesia and a sailor. The two pages are not reconciled here.
+
+But the love of Christ was dearer to them than the world and than life, the entry says: they gave up their lives and did not betray Christ. They suffered for the faith of Christ at the hands of the Turks, and this one at Constantinople in 1680. That is the year and the city saint.gr already gave this folder, and the Prologue gives them again. The other man of the heading suffered at Thessalonica in 1794, a hundred and fourteen years later, and the two have nothing in common but the day.
+
+*After saint.gr's calendar for 8 Αυγούστου — [the day](https://www.saint.gr/08/08/index.aspx) and [the life](https://www.saint.gr/2242/saint.aspx); read 1 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 8. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1), read 6 October 2026.*
