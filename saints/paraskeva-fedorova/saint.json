@@ -1,0 +1,60 @@
+{
+  "slug": "paraskeva-fedorova",
+  "display_name": "Paraskeva (Fedorova)",
+  "names": [
+    {
+      "form": "Параскева (Федорова)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14439, «Параскева (Федорова), мц.», with the rank word left off. The day line gives only «Мц. Параскевы (1938).» and no surname."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and she does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Мц. Параскевы (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes her line with: «Мц. Параскевы (1938).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
