@@ -11,6 +11,11 @@
       "form": "Ерминингельд Готфский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Ерминингельд Готфский, царевич, мч.», with the grade and the rank word left off. The day's own line declines it as «Ерминингельда , царевича Готфского»."
+    },
+    {
+      "form": "Ерминигелд",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. новембар ст. ст., „Св. муч. Ерминигелд царевић.“ — «Св.» is \"saint\" and not a rank, «муч.» is the `martyr` grade this corpus keeps in `types`, and «царевић» is the station the folder keeps as `prince`, so all three come off and the bare personal name is the whole of the form (section 6). It is not the Russian «Ерминингельд» the folder already holds, which carries an extra н and the toponymic Готфский; this is one letter shorter and folds with nothing. `sr-foldpred.mjs` measured 0 other holders."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.11.2025 (1. новембар ст. ст.) — „Св. муч. Ерминигелд царевић.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, one man, five sentences. Quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED and the heading confirms both: «муч.» is the `martyr` and «царевић» the king’s son, which is the `prince` the folder holds — the corpus has no «tsarevich» and prince is the type it keeps for a king’s son. `dates` UNTOUCHED AND THIS IS DELIBERATE: the entry states «586. год.» flatly, which is the LATER of the two years the folder already holds as an interval, «585 or 586», saint.gr having written «περί το 585 μ.Χ.» and days.pravoslavie.ru «(586)». A third book agreeing with one side of an open interval is recorded here and does not close it, because the disagreement is still two sources against one reading. NO `locations`: no place at all is named in the entry — not Spain, not Seville, not Toledo. WHERE THIS BOOK CONTRADICTS THE ONE THE FOLDER WAS WRITTEN FROM, AND BOTH READINGS NOW STAND IN THE LIFE. days.pravoslavie.ru has the father repent and NOT DARE to accept Orthodoxy himself, charging the bishop Leander with bringing his heir into the faith instead; this book has him repent, «одрече се јереси и врати у Православље» — renounce the heresy and return to Orthodoxy himself. Neither is preferred and the life says both, which is section 3 of `docs/CORPUS.md` on two sources disagreeing. WHAT THE BOOK ADDS: the father is named Лувигелд and held «Аријеве јереси»; the son was thrown into prison and ON THE MORNING OF PASCHA the king sent a heretic bishop to give him communion; he would not receive the communion from a heretic’s hands, the bishop reported it, and the executioners cut off his head. NO `related` ROW ADDED: the father is a king and no folder, the heretic bishop is unnamed, and `leander-of-seville`, already `related` both ways, is not in this entry at all. NO FOLD: `sr-foldpred.mjs` measured «Ерминигелд» at 0 other holders. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

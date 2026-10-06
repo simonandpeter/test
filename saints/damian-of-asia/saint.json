@@ -16,6 +16,11 @@
       "form": "Дамиан Азийский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Святой бессребренник Дамиан Азийский», with the rank words left off. The day's own line declines it as «Дамиана»."
+    },
+    {
+      "form": "Дамјан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. новембар ст. ст., „Св. Козма и Дамјан.“ — «Св.» is \"saint\" and not a rank, and the heading gives him no see, no place and no by-name, so the bare personal name, the second of the heading’s two, is the whole of the form (section 6). «of Asia» in the display name is this corpus’s own, off the Russian «Дамиан Азийский» and the Romanian «Damian din Asia». `sr-foldpred.mjs` measured the folded string as held by `damian-of-arabia`, `damian-of-esphigmenou`, `damian-of-rome` and `damian-the-healer`, so this form takes that fold to five and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.11.2025 (1. новембар ст. ст.) — „Св. Козма и Дамјан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s first entry, whose heading is an ENUMERATED PAIR — Козма and Дамјан — so section 5 counts two names and both folders take the same one heading, whole, with its closing full stop. URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. `types` UNTOUCHED and all three confirmed: «Бесребреници и чудотворци» for `unmercenary` and `wonderworker`, «Беху научени лекарској вештини» for `physician`. `dates` UNTOUCHED: no year, no emperor, no reign in the entry. NO `locations`. THE ENTRY’S ONE DISTINGUISHING FACT IS AGAINST HIM AND IS WRITTEN DOWN AS THE BOOK HAS IT: «Козма истински наљути на брата свог Дамјана, што овај узе три јајца од неке жене Паладије» — Cosmas was truly angry with him for taking three eggs, and ordered that he should not be buried beside him; and the same entry acquits him, «не узе та три јајца као награду … него што га ова закле Пресветом Тројицом», and has the two buried together at Ферема by a revelation of God. THE MOTHER TAKES NO ROW: `theodotia-of-asia`, named in the body as «њихова мајка, Теодотија», is not in the heading. THE WOMAN’S NAME IS KEPT OUT OF THE PROSE: «Паладија» against the corpus’s `palladia-companion-of-meletius`, a different woman on a different day, nothing read linking them. THE FOLD: the bare «Дамјан» was held by four folders and this makes five; the key is in `scripts/corpus-gate.mjs` in the same commit and the four-member key it replaces is deleted there. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [

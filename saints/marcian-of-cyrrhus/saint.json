@@ -11,12 +11,18 @@
       "form": "Маркиан Кирский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 2 ноября ст. ст., «Преподобный Маркиан Кирский», with the rank word left off, and repeated as the title of both of his life pages. The day's own line declines the name and gives a different by-name, «Маркиана Киринейского»."
+    },
+    {
+      "form": "Маркијан Кирски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. новембар ст. ст., „Преп. Маркијан Кирски.“ — «Prep.» is the `venerable` grade `types` keeps and comes off; «Кирски» does not. It is the adjective of Кир, the city of Cyrrhus the body says he came from, and it STANDS FREE OF ANY RANK WORD, unlike the «еп. Патавски» of this same day and the «еп. Наесонски» of the next, which are the complements of a rank and come off with it as `andrew-of-crete`’s «архиеп. Критски» does. So section 6’s own example governs it — `Аврамије Смоленски`, the bare name with everything that distinguishes him and nothing that ranks him. **THIS FORM WAS WRITTEN BARE ON 7 OCTOBER 2026 AND CORRECTED THE SAME DAY, IN THE COMMIT FOR THE JULIAN 3 NOVEMBER, WHICH IS THE DAY THAT FORCED THE QUESTION**: there a bare «Илија» folds `elias-3-november` onto `elias-the-egyptian`, a DIFFERENT MAN WITH THE SAME EPITHET, and only the toponymic keeps the two apart — so stripping a free-standing toponymic is not a neutral habit but one that folds men together. The bare form made a five-member «Маркијан» fold; `sr-foldpred.mjs` measures this one at 0 other holders, so the fold is back to the four it was and the five-member key is deleted. «of Cyrrhus» in the display name is this corpus’s own English for the same city, off the Russian «Маркиан Кирский» and saint.gr’s notice."
     }
   ],
   "sex": "male",
   "types": [
     "venerable",
-    "hermit"
+    "hermit",
+    "wonderworker"
   ],
   "attestations": [
     {
@@ -57,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.11.2025 (2. новембар ст. ст.) — „Преп. Маркијан Кирски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, one man, nine sentences, and the FIRST LIFE this folder has had beyond the Greek notice and the Russian line. Quoted whole with its closing full stop (section 4); URL year 2025. `types`: `venerable` and `hermit` UNTOUCHED and both confirmed — «Преп.» is the venerable grade and «повукао се у пустињу Халкидску на подвиг отшелнички» the hermit — AND `wonderworker` IS ADDED, off «Чудотворац велики за живота и по смрти», a great wonderworker in life and after death, which is section 5’s «Чудотворац» and a type this corpus already holds. `dates` WIDENED from a flat 388 to 387–388: the entry closes «Упокојио се у Господу 387. год.» where days.pravoslavie.ru prints «(388)» on its line and «Скончался в 388 г.» in one life and «около 388 года» in another. One year apart, two books, nothing chosen. NO `office`: «Из града Кира у Сирији» is where he came from and not a see he held, and he held none — he was a hermit. NO `locations`: Cyrrhus in Syria and the desert of Chalcis are both named and this folder has never held the key; a located saint with no second coordinate buys `map-span.test.mjs` and nothing else. NO `related` ROW, AND FOUR PEOPLE ARE NAMED. «Савременик патријарха Флавијана Антиохијског и царева: Констанција и Валента» — Flavian of Antioch and the emperors Constantius and Valens are a dating device and not a relation, and the corpus holds no Flavian of Antioch; its `flavian-of-constantinople` is a different see and a different man and no row claims otherwise. The disciple «Јевсевије», whom he ordered to hide and secretly bury his body because of the many who venerated him, is the one person in the entry who stands in a relation to him — AND THE CORPUS HOLDS ELEVEN EUSEBII AND NOT ONE OF THEM IS SAID BY ANY PAGE READ TO BE THIS DISCIPLE, so no row is made and he is named in the prose only. THE FOLD: `sr-foldpred.mjs` measured «Маркијан» as held by `marcian-companion-of-martyrius`, `marcian-of-constantinople`, `marcian-of-durostorum` and `marcian-of-the-brazen-gate`, so this form takes that fold to five; the key is in `scripts/corpus-gate.mjs` and the four-member key it replaces is deleted there. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -66,11 +82,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 388,
+      "earliest": 387,
       "latest": 388,
-      "display": "388",
+      "display": "387 or 388",
       "basis": "traditional",
-      "note": "The first date this folder has held: saint.gr gave no year of birth and none of death. days.pravoslavie.ru prints «(388)» on the line and its first life closes «Скончался в 388 г.»; its second life, of the same man on the same page, closes «Скончался в мире около 388 года», about 388. The flat year is the one printed on the day line and is taken; the hedge is recorded here and the basis is traditional rather than attested because of it. Both lives open him in the fourth century."
+      "note": "**Two books one year apart, and the interval holds both; it was a flat 388 before this reading.** saint.gr gave no year of birth and none of death. days.pravoslavie.ru prints «(388)» on the line, closes its first life «Скончался в 388 г.» and closes its second life of the same man on the same page «Скончался в мире около 388 года», about 388; the flat year is the one printed on the day line and was taken. The Охридски пролог for 2. новембар ст. ст. closes its entry «Упокојио се у Господу 387. год.» — he reposed in the Lord in the year 387. Nothing is chosen, and the basis stays traditional for the hedge as well as for the disagreement. Both books open him in the fourth century."
     }
   }
 }

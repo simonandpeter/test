@@ -17,6 +17,11 @@
       "form": "Никандр Мирский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 4 ноября ст. ст., «Святитель Никандр Мирский, епископ, сщмч.», with the rank words left off. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Никандр",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. новембар ст. ст., „Свешт. муч. Никандр еп. Мирски и Ермеј презвитер.“ — «Свешт. муч.» is the `hieromartyr` grade `types` keeps, «еп.» the `bishop`, and «Мирски» is the complement of «еп.», the see it governs, so it comes off with the rank: the same reading as «еп. Патавски» on 2 November and «еп. Наесонски» on 3 November, and not the free-standing toponymic of «Илија Египатски». The see is already in this folder’s `office`. `sr-foldpred.mjs` measured the bare string as held by `nicander-of-pskov`, so this form makes the fold two wide and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.11.2025 (4. новембар ст. ст.) — „Свешт. муч. Никандр еп. Мирски и Ермеј презвитер.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-17&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the heading is AN ENUMERATED PAIR — Никандр and Ермеј — so section 5 counts two names, two folders are owed a row, and the corpus holds both. Quoted whole with its closing full stop; URL year 2025. `types` and `office` UNTOUCHED and the heading confirms both: «Свешт. муч.» is the `hieromartyr`, «еп.» the `bishop`, and «Мирски» is the see already in `office` as Bishop of Myra. `dates` UNTOUCHED at the first century: the entry gives NO year, no emperor and no reign, and its one chronological statement — «Обојица рукоположени од апостола Тита», both ordained by the apostle Titus — is the same first century days.pravoslavie.ru prints as «(I)». NO `locations`: the see is in `office` and the entry names no other place. ONE RECIPROCAL ROW SUPPLIED, AND IT WAS ONE-WAY BEFORE THIS READING. `titus-the-apostle` is `related` on this folder already and DID NOT RELATE BACK — his folder carries no `related` key at all — and an ordainer and the man he ordained is a relation this entry states outright rather than one inferred, so the reciprocal is written on `titus-the-apostle` for both men of this pair. That is the fifth one-way row this wave has found and completed. NO OTHER `related` ROW: `hermaeus-companion-of-nicander` is already here in both directions, and the judge «Ливаније» before whom they were accused is no folder this corpus holds. WHAT THE BOOK ADDS, AND IT IS THIS FOLDER’S FIRST PASSION IN ANY DETAIL. The two were marked by great zeal in the faith and great love of labour in winning the heathen for Christ the Lord, and were accused for it to a judge named Libanius, who put them to bitter examinations: they were beaten with stones and dragged over stones, they were imprisoned and starved, and they endured many other torments WHICH NO MORTAL MAN COULD HAVE ENDURED WITHOUT PARTICULAR HELP FROM GOD. The Lord appeared to them in various ways, and when they were thrown into a fiery furnace HE SENT HIS ANGEL, WHO COOLED THE FIRE FOR THEM. At the last the heartless torturers BURIED THEM ALIVE IN GRAVES and covered them over with earth. The entry closes on a sentence that is about the two of them and not a hymn: «Но узалуд људи убијају, кад Господ оживљује: и узалуд бешчесте, кога Господ прославља.» — but men kill in vain, when the Lord brings to life; and in vain they dishonour him whom the Lord glorifies. THE FOLD: `sr-foldpred.mjs` measured the bare «Никандр» as held by `nicander-of-pskov`, so this form makes a TWO-member fold where the string had one holder and no key, and the key is in `scripts/corpus-gate.mjs`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

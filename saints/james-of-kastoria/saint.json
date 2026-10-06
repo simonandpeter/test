@@ -6,6 +6,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός», with the rank words left off."
+    },
+    {
+      "form": "Јаков",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. новембар ст. ст., „Преп. муч. Јаков са ученицима Јаковом и Дионисијем.“ — «Преп. муч.» is the `venerable-martyr` grade this corpus keeps in `types`, and the heading gives the elder no see, no place and no by-name, so the bare personal name is the whole of the form (section 6); «of Kastoria» in the display name is this corpus’s own, off saint.gr’s «από την Καστοριά». `sr-foldpred.mjs` measured the folded string as held by six folders, and this entry adds two holders at once, this one and `james-the-deacon-of-kastoria`; the eight-member key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.11.2025 (1. новембар ст. ст.) — „Преп. муч. Јаков са ученицима Јаковом и Дионисијем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, and the heading is AN ENUMERATED COMPANY OF THREE — Јаков and his disciples Јаков and Дионисије — so section 5 counts three names, three folders are owed a row, and the corpus holds all three. Quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преп. муч.» is exactly the `venerable-martyr` the folder holds, and `monk` is the Greek «ο νέος Οσιομάρτυρας» reading already there. `dates` UNTOUCHED: the entry states «пострадао за веру од Турака у Једрену 1. нов. 1520. год.», which is the day and the year the folder already holds off saint.gr, to the day — a fourth-century-style agreement that needs no interval. NO `locations`: Костур, Цариград, Св. Гора, Једрене, Галачиште and Солун are six places in one entry and this folder has never held the key. WHAT THE BOOK ADDS, AND IT IS THE REASON HE GAVE EVERYTHING AWAY — a whole scene saint.gr’s notice does not have. He was a guest of a Turkish bey; the Turks ate meat while he kept the fast, and the bey said „Велика је ваша вера хришћанска!“ and told how his own wife had gone out of her mind, and how after all the doctors he took her to the Patriarch for a prayer to be read over her — and the moment the Patriarch opened the book a light out of heaven shone through the church, and at the end of the prayer she was well. Hearing a Turk praise the Christian faith, James gave away the whole of his property and went to the Holy Mountain. TWO READINGS WHERE THIS BOOK AND THE GREEK NOTICE DISAGREE, AND NEITHER IS CHOSEN. This book tonsures him «у манастиру Иверу», at Iviron; saint.gr tonsures him at Docheiariou and only afterwards puts him at the skete of the Forerunner that then belonged to Iviron. And this book puts the monastery of Saint Anastasia where his relics rest «у Галачисту близу Солуна», at Galatista, where saint.gr puts it at Vasilika. Both disagreements are in the life. NO `related` ROW ADDED: the two disciples are `related` both ways already; the envious brother, the bey, the bey’s wife and the Patriarch are all unnamed in the entry; the parents it names, «Мартина и Параскеве», are already in this life in the Greek forms saint.gr printed and ARE NOT REPEATED, because `Martin` is the exact `display_name` of two folders in this corpus and `related-floor.test.mjs` matches a display name in unlinked prose. THE FOLD: the bare «Јаков» was held by six folders and this entry makes it eight, the other new holder being the deacon of the same heading; the eight-member key is in `scripts/corpus-gate.mjs` in the same commit and the six-member key it replaces is deleted there. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

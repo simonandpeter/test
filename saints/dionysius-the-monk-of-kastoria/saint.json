@@ -6,6 +6,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Νοεμβρίου, «Άγιοι Ιάκωβος ο νέος Οσιομάρτυρας από την Καστοριά και οι δύο μαθητές του Ιάκωβος ο Διάκονος και Διονύσιος ο Μοναχός», with the rank words left off."
+    },
+    {
+      "form": "Дионисије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. новембар ст. ст., „Преп. муч. Јаков са ученицима Јаковом и Дионисијем.“ — the heading prints his name in the instrumental, «Дионисијем», and THE FORM STORED IS THE NOMINATIVE RESTORED BY A READER, as `acacius-companion-of-patrick` already does for the three presbyters of the Julian 19 May; it is said here because it is a reading and not a copy. «Преп. муч.» is the `venerable-martyr` grade `types` keeps, and the heading gives him no epithet and no see, so the bare personal name is the whole of the form (section 6); «the Monk, disciple of James of Kastoria» in the display name is this corpus’s own, off saint.gr. `sr-foldpred.mjs` measured the folded string as held by `dionysius-companion-of-lucillian`, `dionysius-companion-of-quadratus`, `dionysius-companion-of-socrates`, `dionysius-of-athos` and `dionysius-of-lampsacus`, so this form takes that fold to six and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.11.2025 (1. новембар ст. ст.) — „Преп. муч. Јаков са ученицима Јаковом и Дионисијем.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s third entry, whose heading is AN ENUMERATED COMPANY OF THREE — the elder Јаков and the disciples Јаковом and Дионисијем, named in the instrumental — so section 5 counts three names and all three folders take the same one heading, whole, with its closing full stop. URL year 2025. THE ENTRY SAYS NOTHING OF THIS DISCIPLE ON HIS OWN ACCOUNT BEYOND HIS NAME, exactly as saint.gr says nothing of him beyond his rank: its body is the elder’s story and the only sentence that reaches the disciples is the last, «Мошти његове чудотворне, као и његових ученика, почивају у ман. св. Анастасије у Галачисту близу Солуна» — which puts their relics with his, and at Galatista, where saint.gr puts the same monastery at Vasilika. Both readings are in the life and neither is chosen. `types` UNTOUCHED: «Преп. муч.» governs all three names and is the `venerable-martyr` the folder holds; `monk` is saint.gr’s «ο Μοναχός» and this book does not repeat it. `dates` UNTOUCHED: the entry’s «1. нов. 1520. год.» is the day and the year the folder already holds. NO `locations`. NO `related` ROW ADDED: the other two of the three are `related` both ways already. THE FOLD: the bare «Дионисије» was held by five folders and this makes six; the key is in `scripts/corpus-gate.mjs` in the same commit and the five-member key it replaces is deleted there. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

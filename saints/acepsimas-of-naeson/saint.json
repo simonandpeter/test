@@ -17,6 +17,11 @@
       "form": "Акепсим Наессонский (Анисский), Арбельский, Персидский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 3 ноября ст. ст., «Святитель Акепсим Наессонский (Анисский), Арбельский, Персидский, епископ, сщмч.», with the rank words at both ends left off. The line itself gives «Акепсима», the genitive, with «еп.» for the grade and no by-name at all."
+    },
+    {
+      "form": "Акепсим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. новембар ст. ст., „Свешт. муч. Акепсим еп. Наесонски и други с њим.“ — «Свешт. муч.» is the `hieromartyr` grade `types` keeps, «еп.» the `bishop`, and «Наесонски» is the complement of «еп.», the see it governs, so it comes off with the rank: the same reading as «еп. Патавски» on the Julian 2 November and as `andrew-of-crete`’s «архиеп. Критски». The see is already in this folder’s `office`. `sr-foldpred.mjs` measured «Акепсим» at 0 other holders, which is worth saying because the corpus holds five more men of this name — `acepsimas-3-november` on this very day, `akepsimas-29-january`, `akepsimas-martyr-7-december`, `akepsimas-martyr-11-december` and `akepsees-of-arbela` — and none of them stores a Cyrillic Акепсим standing alone."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.11.2025 (3. новембар ст. ст.) — „Свешт. муч. Акепсим еп. Наесонски и други с њим.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, eleven sentences, and the FIRST NARRATIVE LIFE this folder has had: the Greek notice gave it a reign and the Romanian and Russian lines a company. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. THE HEADING NAMES ONE MAN AND CLOSES «и други с њим», others with him, WHICH ENUMERATES NOBODY — so section 5 gives ONE row, and the two companions the BODY names take none: «сутрадан буду доведени и Јосиф, презвитер и старац од 70 година, и Аитал ђакон» — Joseph a presbyter and an old man of seventy, and Aithalas a deacon, who are `joseph-presbyter-of-persia` and `aithalas-the-deacon`, both held by this corpus, both `related` here in both directions, and both refused a serbian row because the heading does not name them. THAT IS THE THIRD TIME IN THREE DAYS. Theodotia on 1 November and the twenty-eight soldiers and the emperor’s mother on 2 November were the same shape, and so is this. AUTHOR: a ruling on whether a person the BODY names and the HEADING does not may ever take a row would settle every day of this book; at present the answer taken is no, and it is costing rows the other three calendars already carry. `types` and `office` UNTOUCHED and the heading confirms both: «Свешт. муч.» is the `hieromartyr`, «еп.» the `bishop`, and «Наесонски» is the see already in `office` as Bishop of Naeson in Persia. `dates` UNTOUCHED at «about 330»: the entry closes «Пострадаше ови Христови војници у IV веку, у Персији, а за време незнабожног цара Саворија» — in the fourth century, in Persia, in the time of the heathen king Shapur — which contains the Greek page’s «περί το 330» and adds no number, so there is nothing to widen. NO `locations`: Persia is the whole of the geography and no city is named. WHAT THE BOOK ADDS, AND IT IS THE WHOLE OF A STORY NO OTHER PAGE READ FOR THIS FOLDER CARRIES: he was an old man of eighty, full of every Christian virtue; a child filled with the grace of the Spirit of God ran up to him at his own table and kissed him on the head, saying „Благо овој глави, јер ће за Христа примити мучење!“ — blessed is this head, for it shall receive martyrdom for Christ — and the prophecy was soon fulfilled; when he was bound and one of his household asked what he commanded concerning the house, he answered „То више није дом мој, ја бесповратно одлазим у дом вишњи.“ — this is no longer my house, I am going beyond return to the house on high; and after THREE YEARS in prison and many torments his head was struck off. AND THE BOOK’S TWO COMPANION DEATHS ARE RECORDED HERE EVEN THOUGH NEITHER MAN TAKES A ROW: the two were buried to the thighs in the earth and Christians were ordered to strike them with stones; Joseph’s body vanished that night by the Providence of God, and over Aithalas’s body grew a tree called «марсина» which healed every disease and every torment in men for five years, until the malicious and envious heathen cut it down. The Prologue prints no troparion and no kontakion."
     }
   ],
   "images": [
