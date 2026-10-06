@@ -11,12 +11,18 @@
       "form": "Τιμόθεος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Οκτωβρίου, «Άγιος Τιμόθεος ο Εσφιγμενίτης ο νέος Οσιομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Тимотеј Есфигменски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 29. октобар ст. ст., „Преп. муч. Тимотеј Есфигменски.“ — «Преп. муч.» is the `venerable-martyr` grade this corpus keeps in `types` and comes off, leaving the bare name with the by-name the heading prints. «Есфигменски» is kept under section 6: it is the monastery he is named for, which is a by-name and not a see, and it is load-bearing — the bare «Тимотеј» is held by `timothy-of-ephesus`, `timothy-of-prusa` and `timothy-of-symbola`. It is also the by-name `agathangelus-of-esphigmenou` carries, which is the folder this entry names as his model and which is now related. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form."
     }
   ],
   "sex": "male",
   "types": [
     "new-martyr",
-    "monk"
+    "monk",
+    "venerable-martyr"
   ],
   "dates": {
     "death": {
@@ -64,11 +70,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 11.11.2025 (29. октобар ст. ст.) — „Преп. муч. Тимотеј Есфигменски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-11&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, one person, quoted whole with its closing full stop (section 4). ONE `types` ROW ADDED, READ AND NOT ASSUMED: `venerable-martyr`, off the heading’s «Преп. муч.», which the brief’s table maps to exactly that. The folder held `new-martyr` and `monk`, which the body also carries — he died under the Turks in 1820 and was a monk of the Lavra and then of Esphigmenou — but not the monastic half of the martyr grade. AND THE PRECEDENT IS INSIDE THIS VERY ENTRY: the man this book names as the model he set himself, `agathangelus-of-esphigmenou`, carries `new-martyr`, `venerable-martyr` AND `monk` together in this corpus already. So the addition brings him into line with a folder read off another source, which is why it was made here and NOT made for `anastasia-the-roman` on this same day, whose folder already holds a martyr grade of its own and three types that cover the same ground. `dates` UNTOUCHED AND THE BOOK CONFIRMS THE YEAR AND ADDS THE PLACE. The folder holds `death` 1820, basis `attested`, off doxologia’s «la 29 octombrie 1820 i s-a tăiat capul». This entry says «посечен био у Једрену 29. окт. 1820. год.» — the same day and the same year, WITH ADRIANOPLE added, which doxologia did not name. A confirmation, not a change. WHAT THE BOOK ADDS, AND NEARLY ALL OF IT IS NEW. He was FROM KISANI, A VILLAGE OF THRACE. HE WAS MARRIED AND HAD TWO DAUGHTERS. THE TURKS SEIZED HIS WIFE AND MADE HER A MUSLIM, AND TO GET HER OUT OF THE HAREM HE OUTWARDLY TURNED MUSLIM HIMSELF — and having got her out he put her into a women’s monastery and went himself to the Holy Mountain, FIRST TO THE LAVRA AND AFTERWARDS TO ESPHIGMENOU. He longed for martyrdom for Christ AFTER THE PATTERN OF AGATHANGELUS OF ESPHIGMENOU. HIS BODY WAS THROWN INTO THE RIVER, AND HIS GARMENT WAS CARRIED TO THE MONASTERY OF ESPHIGMENOU BY THE ELDER HERMAN, HIS SPIRITUAL FATHER. ONE `related` ROW, RECIPROCATED IN THIS COMMIT, AND IT IS EARNED BY AN ACT THE ENTRY NARRATES: `agathangelus-of-esphigmenou` is not a dedication and not a shared day — he is kept on 19 April — but the martyr whose death this man deliberately set himself to imitate, in a monastery they both belonged to. That folder’s `related` was an empty list before this and now holds one row. THE ELDER HERMAN GETS NOTHING: he is narrated and in no heading, which is Ruling 3, and the two Hermans this corpus keeps are of Alaska and of Vyazniki. The wife and the two daughters are narrated, unnamed and in no heading, so section 5 gives them nothing. No `locations`: Kisani, Thrace, the Holy Mountain, the Lavra, Esphigmenou and Adrianople are named and none is proposed as a coordinate. THE FORM IS FREE BECAUSE IT KEEPS THE BY-NAME: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Тимотеј Есфигменски» and names three folders for the bare «Тимотеј». The Prologue prints no troparion and no kontakion; the day’s verse is Bishop Nikolai’s own and is about Abraham."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "agathangelus-of-esphigmenou"
+  ]
 }

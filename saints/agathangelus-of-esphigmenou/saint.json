@@ -19,7 +19,9 @@
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 19 April, „Преп. муч. Агатангел.“, with Св. not present and Преп. муч. left off, which is the `venerable-martyr` this folder already carries in `types`. The heading is a rank and a bare forename and nothing else: Thrace, the worldly name and Esphigmenou are all in the body, and the monastery is what this folder's display name carries. No other folder in the corpus holds this form in any language — measured off `saints/` and confirmed by the gate printing no `? \"агатангел\"` line; `agathangelus`, the folder of that bare English name, carries no Serbian or Russian form at all."
     }
   ],
-  "related": [],
+  "related": [
+    "timothy-of-esphigmenou"
+  ],
   "dates": {
     "birth": {
       "earliest": 1799,
