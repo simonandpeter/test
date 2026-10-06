@@ -13,6 +13,11 @@
       "form": "Αιμιλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Αιμιλιανός ο Ομολογητής, επίσκοπος Κυζίκου», with the rank word and the epithet and see left off."
+    },
+    {
+      "form": "Емилијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 8 August, „Св. Емилијан Исповедник еп. Кизички.“ — Св. left off, which is not a rank; Исповедник left off, which §5 maps to `confessor`; and еп. Кизички left off, which is a rank and a see and which this folder already carries as `bishop` and as the `office` «Bishop of Cyzicus». What is left is the bare forename, with nothing in the heading that is not a rank or a see. `.tmp/sr-foldpred.mjs` reports that it folds with two other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "attestations": [
@@ -43,8 +48,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.08.2026 (8. август ст. ст.) — „Св. Емилијан Исповедник еп. Кизички.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of five entries. His row was `undocumented` and the Greek line was this folder’s only book. **A DEATH YEAR BESIDE AN EPISCOPATE, AND THE `dates` OBJECT NOW HOLDS BOTH.** „Сконча 820 год. и пресели се међу грађане небеске.“ — he ended in 820 and passed over among the citizens of heaven — is written as `death` 820, flat, basis traditional. **The folder held no death and no birth at all**: what it held was a `floruit` of 787–815, `attested`, and that interval is **the years of his episcopate and not of his life**, as its own note says off saint.gr, which also says only that he lived between the eighth and the ninth centuries. `upgrade.py` replaces the whole `dates` object, so the floruit is copied back unchanged with its note and the death is added beside it; nothing of the Greek reading is lost and the two do not contradict — an episcopate ending in 815 and a death in 820 leave exactly the five years the entry itself accounts for. **AND THE ENTRY ACCOUNTS FOR THEM: THIS IS THE CLEANEST CORROBORATION IN THE BLOCK.** „Како се не хте покорити декретима царским о избацивању икона из цркве, то и он би, с другим православним епископима, послат у изгнанство.“ has him sent into exile with other Orthodox bishops for refusing to obey the imperial decrees on throwing the icons out of the churches, and „У изгнанству проживе 5 година трпећи многе муке и многа понижења Христа ради.“ has him live five years in that exile bearing many torments and many humiliations for Christ’s sake. 815 plus five is 820. **That arithmetic is not written anywhere**: the floruit is the Greek’s, the 820 is this book’s, and the five years are quoted in the note as the reason the two fit rather than as a third date derived from them. **`types` AND `office` UNTOUCHED.** Исповедник is `confessor` and еп. Кизички is a see with its rank: the folder holds `hierarch`, `bishop` and `confessor` with `office` «Bishop of Cyzicus», and all three words of the heading are already in it. Св. is not a rank. **NO `related` ROW:** `theophylact-of-nicomedia` was `related` here before this reading and is not in this entry; the other Orthodox bishops exiled with him are unnamed, which is the whole reason they take nothing; and Лав Јерменин, Leo the Armenian, is an iconoclast emperor named to date a persecution. No `locations`: Cyzicus is in the `office` and the place of exile is not named at all. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "dates": {
@@ -54,6 +69,13 @@
       "display": "between 787 and 815",
       "basis": "attested",
       "note": "saint.gr gives the years of his episcopate and not of his life: «Ο Αιμιλιανός ήταν επίσκοπος Κυζίκου μετά το Νικόλαο, στα χρόνια 787 - 815 μ.Χ.» The same page says only that he lived «μεταξύ 8ου και του 9ου αιώνα μ.Χ.», and it gives no year of birth and no year of death, so no birth or death interval is proposed."
+    },
+    "death": {
+      "earliest": 820,
+      "latest": 820,
+      "display": "820",
+      "basis": "traditional",
+      "note": "The folder held no death year: saint.gr gave the years of the episcopate only. The Охридски пролог for 8. август ст. ст.: „Сконча 820 год. и пресели се међу грађане небеске.“ — he ended in 820 and passed over among the citizens of heaven. The same entry has him five years in exile for refusing the imperial decrees against the icons, „У изгнанству проживе 5 година трпећи многе муке и многа понижења Христа ради.“, which accounts for the gap between the episcopate the Greek page dates to 815 and this year without either being used to compute the other (6 October 2026)."
     }
   },
   "hymns": [

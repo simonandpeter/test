@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "venerable-martyr",
-    "wonderworker"
+    "wonderworker",
+    "martyr"
   ],
   "names": [
     {
       "form": "Αστέριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Αστέριος ο οσιομάρτυρας και θαυματουργός», with the rank words and the epithets left off. The page glosses the name from ἀστήρ as the one who shines like a star."
+    },
+    {
+      "form": "Астерије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 7 August, „Св. муч. Марин и Астерије.“ — Св. муч. left off, which governs both names in it and which §5 maps to `martyr`. The heading gives him nothing else at all: сенатор is in the body, and «(7 August)» in the display name is the corpus’s own device for a man the calendar names bare. It folds with one other folder, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "attestations": [
@@ -41,11 +47,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.08.2026 (7. август ст. ст.) — „Св. муч. Марин и Астерије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third of five entries, and its heading enumerates two men: „Св. муч. Марин и Астерије.“. His row was `undocumented`. **THE PROLOGUE PRINTS THIS PAIR TWICE, AND THE CORPUS ALREADY CARRIES THE OTHER HALF OF IT OFF THIS SAME BOOK.** The Julian 17 March of the same Prologue is headed „Свети мученик Марин.“ and tells this entry’s story over again: a soldier who would not sacrifice, beheaded, and a senator named Asterius who watched his passion, wrapped the body in his own costly cloak, carried it off on his shoulder, buried it honourably and was cut down himself for it. `marinus-martyr-17-march` has been venerated `serbian` on **17/3** since 4 October, read out of this book by another reader, and it stores «Марин» as its `sr` form. So §1 applies to him: a saint already venerated `serbian` on another day is a reading for the report and never a draft. **His name is in this heading and he gets no row from it, and that is the point of the rule rather than an accident of it.** **AND THE SAME PAIR OF RULES GIVES ASTERIUS HIS ROW HERE AND NOWHERE ELSE.** The 17 March heading names Marinus only, so §5 gave Asterius nothing there although the body narrated him; this heading names him, so the row is his on 7/8. The two readings are consistent and neither reader had to know the other’s. **THE IDENTIFICATION, WHICH IS saint.gr’S OWN AND NOT MINE.** This folder’s `types` came from the Synaxaristes of Saint Nikodemos, «Oσιομάρτυς και θαυματουργός», and the same saint.gr page says that **in most of the codices he is written down as «μάρτυς και συγκλητικός, δια ξίφους τελειωθείς»** — a martyr and a senator, brought to his end by the sword. „Први беше војник а други сенатор римски.“ makes the second of the two a Roman senator and „Незнабошци видећи то посекоше и њега мачем.“ kills him with the sword. The majority reading the Greek page prints and the Prologue’s entry are the same man, on the same menologion day, and that is the match. A second Roman senator called Marinus exists in this corpus and was checked and excluded: `marinus-the-senator`, born and raised at Rome, denounced by his colleagues and beheaded there at the end of the third century, kept by the Greek on 16 December — a different city, a different day and a different story from a soldier at Caesarea in Palestine. **`types`: `martyr` ADDED.** Св. муч. governs both names in the heading and §5 maps муч. to `martyr`; the folder held `venerable-martyr` and `wonderworker` from the minority reading, and five folders of this corpus already carry `martyr` beside `venerable-martyr`, so the two sit together without contradiction. `wonderworker` is left alone: it is the Greek’s and this entry does not deny it. сенатор is not a rank in §5 and gives no type. **`dates`: `death` about 260 ON A FOLDER THAT HELD NONE.** „Чесно пострадаше за Христа око 260 год.“ — they suffered honourably for Christ about 260 — is plural and covers both men, and „У време цара Галијена Марин свети служаше као војник у Кесарији Палестинској. Због вере Христове би посечен мачем.“ puts the soldier’s service under the emperor Gallienus, whose sole reign began in 260. Written as 260–260, display «about 260», traditional. **It also narrows the other man’s interval and that is left alone**: `marinus-martyr-17-march` holds `death` 201–300, «3rd century», off this book’s own „у III веку“ on the other day, and about 260 would narrow it to a decade — but §1 makes that folder report-only here, so it is untouched and named in the findings. **ONE `related` ROW, WRITTEN BOTH WAYS.** Attending a man’s passion and burying his body is the plainest personal act in the entry, and neither folder had any `related` key at all. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 260,
+      "latest": 260,
+      "display": "about 260",
+      "basis": "traditional",
+      "note": "The folder held no date: saint.gr says outright that when and where he was martyred the synaxaria do not report. The Охридски пролог for 7. август ст. ст.: „Чесно пострадаше за Христа око 260 год.“ — they suffered honourably for Christ about 260, said of both men in the heading. „У време цара Галијена Марин свети служаше као војник у Кесарији Палестинској. Због вере Христове би посечен мачем.“ puts the soldier whose body he buried in the service of the emperor Gallienus, whose sole reign began in 260; the reign is not used to narrow the year (6 October 2026)."
+    }
+  },
+  "related": [
+    "marinus-martyr-17-march"
+  ]
 }

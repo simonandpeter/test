@@ -10,6 +10,11 @@
       "form": "Τριαντάφυλλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Τριαντάφυλλος από τη Ζαγορά», with the rank word and the clause about his country left off. The page glosses the name from the flower: «(από το άνθος τριαντάφυλλο = τριάντα + φύλλα) = ο ωραίος σαν το ριαντάφυλλο»."
+    },
+    {
+      "form": "Триандафил",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 8 August, „Св. новомуч. Триандафил и Спасо.“ — Св. новомуч. left off, which governs both names in it and which §5 maps to `new-martyr`. The heading gives him nothing else at all: Загора is in the body, and «of Zagora» in the display name came from saint.gr. The book writes Триандафил where the Greek gives Τριαντάφυλλος; copied as printed, never transliterated. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
     }
   ],
   "attestations": [
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.08.2026 (8. август ст. ст.) — „Св. новомуч. Триандафил и Спасо.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth of five entries, and its heading enumerates two men: „Св. новомуч. Триандафил и Спасо.“. His row was `undocumented`. **THE SECOND OF THE TWO IS ALREADY VENERATED `serbian` ON ANOTHER DAY, UNDER A NAME THIS FOLDER’S OWN BOOK DOES NOT USE HERE.** „Триандафил беше родом из Загоре а Спасо из Радовишта, епархије Струмичке.“ and „За веру Христову пострадали од Турака, и то Триандафил у Цариграду 1680 год., а Спасо у Солуну 1794 год.“ put Спасо at Радовиште in the diocese of Струмица and kill him at Thessalonica in 1794; `anastasius-of-radovishte` is Anastasius of Radovishte, born 1774 at Radovishte in the diocese of Strumica, dead at Thessalonica in 1794, and it has been venerated `serbian` on **29/8 since 5 September**, read out of this same book, where its heading is „Св. муч. Анастасије.“ **The same book calls one man Спасо on one day and Анастасије on another**, and it is the place, the diocese, the city and the year that make the identification and not either name. §1 makes him report-only: a reading for the report and never a draft. **So the second `sr` name form his folder could have is not written either**, and a §4 second-day note on his 29/8 row is owed and not written. Both are named in the findings. **`dates` UNTOUCHED AND EXACTLY CORROBORATED.** The folder holds `birth` 1663 and `death` 1680, both flat and both `attested` off saint.gr, which puts his birth at Zagora of Magnesia and his martyrdom in the Hippodrome of Constantinople at eighteen. „За веру Христову пострадали од Турака, и то Триандафил у Цариграду 1680 год., а Спасо у Солуну 1794 год.“ gives Цариград and 1680 for him, agreeing to the year and the city. **AND ONE CLAUSE OF THIS ENTRY DISAGREES WITH saint.gr AND IS NOT WRITTEN ANYWHERE.** „Обојица Словени, обојица млади и прости људи.“ — both of them Slavs, both young and simple men — where saint.gr makes this one a Greek of Zagora in Magnesia and a sailor on a Zagorian ship. Zagora in Thessaly and the Slav lands are not the same claim about a man. The ethnicity is in no field of this corpus to put it in, the display name is not touched, and the disagreement is recorded here rather than resolved. **`types` UNTOUCHED.** Св. новомуч. is `new-martyr` and the folder has it; the heading gives nothing else. **NO `related` ROW BETWEEN THE TWO MEN OF THE HEADING, AND THAT IS A DECISION.** They share a heading and nothing else: one suffered at Constantinople in 1680 and the other at Thessalonica in 1794, a hundred and fourteen years apart, in two cities, under no common judge, and the entry says so itself in one sentence. **Sharing a day is not a relation, the same way a dedication is not**, and a heading is a day. `anastasius-of-radovishte` gains nothing from this folder and this folder gains nothing from it. No `locations`: Zagora is in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "dates": {

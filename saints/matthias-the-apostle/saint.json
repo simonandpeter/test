@@ -11,6 +11,11 @@
       "form": "Ματθίας",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Ματθίας», with no rank word attached."
+    },
+    {
+      "form": "Матија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 9 August, „Св. апостол Матија.“ — Св. left off, which is not a rank, and апостол left off, which §5 maps to `apostle` and which the folder already carries. What is left is the bare name. The book writes Матија where the Romanian gives Matia and the Greek Ματθίας; copied as printed, never transliterated. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.08.2026 (9. август ст. ст.) — „Св. апостол Матија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of three entries, the longest on the page, and the Romanian keeps him on this same 9/8. His row was `undocumented`. **NO `dates`, AND THE ENTRY GIVES NOT ONE YEAR ALTHOUGH IT IS FIFTEEN SENTENCES LONG.** The folder held none and holds none. Pentecost, the Resurrection and the high priest Annas are all in it and not one of them is written as a year: the corpus does not date an apostle off a narrative that names no number. **`types` UNTOUCHED.** апостол is `apostle` and the folder has it with `martyr` beside it, and „Тада изведоше св. Матију и убише камењем, а по том секиром одсекоше му главу (ово беше римски начин убијања осуђених, а лицемери Јевреји применише тај начин над мртвим човеком, да би показали Римљанима, као да је убијени био и противник римски).“ is the martyrdom that earns the second. Св. is not a rank; there is nothing else in the heading. **ONE RECIPROCAL ROW SUPPLIED, AND IT WAS ONE-WAY BEFORE THIS READING.** „Учио се код св. Симеона Богопримца у Јерусалиму.“ — he was taught by Saint Symeon the God-Receiver at Jerusalem. `symeon-the-god-receiver` is `related` on this folder already and **did not relate back**: five rows on that folder and this one not among them. A master and his pupil is a relation, it is stated outright, and the reciprocal is supplied — which makes this the fourth one-way row this wave has found and completed. `justus-of-eleutheropolis`, the other man of the lot, is `related` here already and is **not named in this entry at all**: „У почетку беше Матија прибројан у Седамдесет мањих ученика Христових, но по Васкресењу Господа, пошто место Јуде издајника би упражњено, апостоли коцком изабраше овога Матију на место Јудино за једнога од Дванаест великих апостола (Дела Ап. 1, 23).“ cites Дела Ап. 1, 23 without printing his name, so nothing is added and nothing is claimed from it. **AND THE JAMES IN THIS ENTRY TAKES NOTHING, WHICH IS A DECISION.** „Анан, онај исти Анан који пре тога уби апостола Јакова, осуди и Матију на смрт.“ — Annas, the same Annas who had killed the apostle James before that, condemned Matthias too to death. **That sentence relates Annas to James, not Matthias to James**: it is there to tell the reader what kind of judge he had, and the corpus keeps more than one apostle of the name, so even the identification would be a second reading on top of a relation that is not stated. No row, and the name is kept out of the life. **AND THE ENTRY’S PARENTHESIS IS RECORDED HERE AND NOT CARRIED INTO THE LIFE**, for the third time in this block: „Тада изведоше св. Матију и убише камењем, а по том секиром одсекоше му главу (ово беше римски начин убијања осуђених, а лицемери Јевреји применише тај начин над мртвим човеком, да би показали Римљанима, као да је убијени био и противник римски).“ closes with a bracket explaining that beheading with an axe was the Roman way of killing the condemned and that hypocritical Jews used it on a man already dead so as to show the Romans that the dead man had been an enemy of Rome as well. It is read, it is quoted here whole as the book’s, and the life says that he was stoned and then beheaded with an axe, which is the half of the sentence that is about him. **NO `locations`:** Bethlehem, Jerusalem, Judea, Ethiopia and Macedonia are five places in one entry and the folder has never had the key; a saint who reads as moving across that much ground is `map-span.test.mjs`’s problem and not a gain. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty-two lines on the first entry, Matthias setting the prophets before the Jews, and it is in no field and in no life (§3), read before this was written."
     }
   ],
   "hymns": [

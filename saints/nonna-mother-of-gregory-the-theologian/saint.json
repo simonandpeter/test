@@ -11,6 +11,11 @@
       "form": "Νόννα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Αυγούστου, «Αγία Νόννα», with the rank word left off."
+    },
+    {
+      "form": "Нона",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 5 August, „Св. Нона.“ — Св. left off, which is not a rank and gives no type. The heading is that word and her name and nothing else, so the form is the bare name; the corpus’s own display name carries «mother of Gregory the Theologian», which is the corpus’s and not this book’s. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
     }
   ],
   "sex": "female",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.08.2026 (5. август ст. ст.) — „Св. Нона.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth and last entry, four sentences, and the Romanian and Greek both keep her on this same 5/8. Her row was `undocumented`. **TWO BOOKS, ONE YEAR, AND THEY DISAGREE ABOUT WHOSE DEATH IT IS — AND THE INTERVAL THE FOLDER ALREADY HOLDS COVERS BOTH READINGS, SO NOTHING IS WRITTEN.** „Представила се мирно као ђакониса 374. год.“ — she reposed peacefully as a deaconess in 374 — makes the 374 **her own** death. The folder’s `dates` note records that doxologia makes the same 374 **her husband’s** death and puts hers after it, which is why the stored interval is `earliest` 374 with `latest` null and the display «after 374». **The Prologue’s reading is the earliest point of that interval and is therefore already inside it**, so narrowing it to a flat 374 would be preferring this book to the other on a question neither settles, and opening it further is not possible: an interval open at the top already holds everything. Untouched, and the disagreement is here and in the life where a reader can see it. **THE RANK IN THE BODY IS ONE THE VOCABULARY HAS, AND IT IS STILL REFUSED.** „Представила се мирно као ђакониса 374. год.“ calls her a ђакониса, and `deaconess` is in §9’s list — but ђакониса is **in the body and not in the heading**, and „Св. Нона.“ is Св. and the bare name and nothing else. The Julian 27 June ruling refuses a body rank word, so `types` stays at `righteous`, which is what the Romanian «Sfânta Nona» and the Greek «Αγία Νόννα» gave it. **This is the clearest case the wave has produced of the heading-or-body question costing a type the corpus could have expressed**, as against the two myrrh-bearers it has no word for at all, and it is named in the findings for that reason. **NO `related` ROW ADDED, AND HER HUSBAND IS THE REASON ONE COULD NOT BE.** „Мајка св. Григорија Богослова.“ and „Молитвом је св. Нона спасла од буре и свога сина Григорија Богослова.“ are her son, and `gregory-the-theologian` is `related` here already and in both directions. „Тако молитвом својом к Богу обратила је мужа свога из незнабожачке глупости у веру хришћанску.“ and „Муж њен Григорије доцније би епископом у граду Назијанзу.“ are her husband, whom her prayer turned from heathen folly to the Christian faith and who later became bishop in the city of Nazianzus: **`ls saints | grep -i nazianz` returns nothing and no folder in this corpus holds Gregory the Elder**, so Ruling 3 names him here and writes nothing. `basil-the-great` and `john-chrysostom`, the folder’s other two rows, are not in this entry at all. No `locations`: Nazianzus is her husband’s see and not a place stated of her. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {

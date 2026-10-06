@@ -13,6 +13,11 @@
     {
       "form": "Косма Этолийский",
       "lang": "ru"
+    },
+    {
+      "form": "Козма",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 4 August, „Свешт. муч. Козма равноапостолни.“ — Свешт. муч. left off, which §5 maps to `hieromartyr`, and равноапостолни left off too, which it maps to `equal-to-the-apostles`. **Both strippings are ranks and the heading has nothing else in it**, so what is left is the bare forename, with neither the Aetolia nor the Megadendron of the body to distinguish him by. `.tmp/sr-foldpred.mjs` reports that it folds with three other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -81,8 +86,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.08.2026 (4. август ст. ст.) — „Свешт. муч. Козма равноапостолни.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-17&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of two entries. **THE PROLOGUE PUTS HIM TWENTY DAYS FROM THE DAY THE OTHER THREE CALENDARS GIVE HIM, AND THE ENTRY LEAVES NO DOUBT IT IS THE SAME MAN.** This folder was venerated russian, romanian and greek on 24/8 before this reading and its `serbian` row was `undocumented`; this book heads him „Свешт. муч. Козма равноапостолни.“ on the Julian 4 August, which is the civil 17 August, where 24 August old style is the civil 6 September. The identification is not made on the name: „Родом од Етолије, из села Мегадендрон (Велико Дрво).“ gives Aetolia and the village of Megadendron, „Као младић отишао у Св. Гору, где у Филотејском манастиру буде пострижен за инока.“ the tonsure at Philotheou on the Holy Mountain, „Козма буде удављен од Турака, па онда бачен у реку 1779. год.“ the strangling and the river in 1779, and „Чудотворне мошти почивају му у селу Колкоидас у храму Св. Богородице недалеко од града Фиери.“ the relics near Fier — every one of which this folder already carried from doxologia.ro and saint.gr. The row therefore carries 4/8, which is the day that was read; the twenty days are the books’ own disagreement and are not reconciled here. **`dates` UNTOUCHED, AND THE ENTRY CORROBORATES BOTH OF THEM INDEPENDENTLY.** The folder holds `birth` 1714 and `death` 1779, both flat and both `attested`. „Козма буде удављен од Турака, па онда бачен у реку 1779. год.“ gives the 1779 outright, and „Пострадао за Господа свога у 65 год. живота.“ — he suffered for his Lord in the sixty-fifth year of his life — is the birth year over again by the book’s own arithmetic rather than by mine, so nothing is written: a fourth source agreeing with a stored date is not a reason to touch it. **`types` UNTOUCHED.** Свешт. муч. is `hieromartyr` and равноапостолни is `equal-to-the-apostles`, and the folder holds both. инок in the body would give `monk` and is refused as a body word, which is the Julian 27 June ruling. **NO `related` ROW.** The entry names the patriarch Серафим II of Constantinople, who holds no folder, and a Kurt Pasha, who is nobody’s saint; the two folders this one already relates to, `anthimos-the-new-of-cephalonia` and `nicodemus-the-hagiorite`, are not in this entry at all. The monastery of Philotheou takes nothing: a dedication is not a relation, and `dometios-of-philotheou` is a different man. **NO `locations`:** Megadendron, Albania, Kolkoidas and Fier are all named in clauses, the folder has no `locations` key, and a located saint is a liability to `map-span.test.mjs` rather than a gain. **AND THE ENTRY’S ONE POLEMICAL CLAUSE IS RECORDED HERE AND NOT CARRIED INTO THE LIFE**: „И обиђе све придунавске крајеве проповедајући Јеванђеље, но највише се задржа у Албанији, где и пострада од неког Курт паше, кога Јевреји раздражише против Козме.“ has the pasha incited against Cosmas by Jews. It is the book’s own sentence, it is read, and the life says he suffered under a pasha in Albania without it. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is thirty lines on the first entry, Iamblichus walking into a city he cannot recognise, and it is in no field and in no life (§3), read before this was written."
     }
   ],
   "text": {

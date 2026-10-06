@@ -11,6 +11,11 @@
       "form": "Μύρων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Αυγούστου, «Άγιος Μύρων», with the rank word left off."
+    },
+    {
+      "form": "Мирон",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 8 August, „Св. Мирон Чудотворац еп. Критски.“ — Св. left off, which is not a rank; Чудотворац left off, which §5 maps to `wonderworker`; and еп. Критски left off, which is a rank and a see and which this folder already carries as `bishop` and as the `office` «Bishop of Crete». What is left is the bare forename. `.tmp/sr-foldpred.mjs` reports that it folds with two other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.08.2026 (8. август ст. ст.) — „Св. Мирон Чудотворац еп. Критски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of five entries, and the Romanian keeps him on this same 8/8. His row was `undocumented`. **A YEAR ON A FOLDER THAT HELD NO DATE AT ALL, AND AN AGE THAT IS NOT A BIRTH.** „Упокоји се око 350 год. у старости својој од 100 година.“ — he reposed about 350, in his hundredth year — is written as `death` 350–350, display «about 350», basis traditional. **No `birth`**: about 350 less 100 is arithmetic on a rounded year and a round age, and it is the Julian 7 August ruling over again, where 213 less 116 was refused inside one sentence. Neither doxologia nor saint.gr gave this folder a year, and the hundred years are in the note and in the life and in no field. **`types` AND `office` UNTOUCHED, AND ONE RANK WORD REFUSED FOR BEING IN THE BODY AFTER ALL.** Чудотворац is `wonderworker` and еп. Критски is a see with its rank: the folder holds `hierarch`, `bishop` and `wonderworker` with `office` «Bishop of Crete». „Због превеликих добродетељи би рукоположен за презвитера а потом и за епископа.“ has him ordained presbyter for his great virtues and only afterwards bishop; презвитер would give `presbyter`, it is **in the body and not in the heading**, and it is refused — and here the refusal does cost something, because `presbyter` is on no other book of this folder either. **NO `related` ROW AND NO `locations`.** The entry names no person: the thieves on his threshing floor are «непознате лопове», unknown thieves, and they are the whole of the cast. Crete is in the `office`. **WHAT THE ENTRY ADDS, WHICH IS THIS FOLDER’S FIRST LIFE.** „Беше најпре жењен и бављаше се земљорадњом.“, that he was married first and worked the land; „Од плодова земаљских са свога имања раздаваше Мирон радо и обилно бедним људима.“, that he gave the fruits of his own estate gladly and abundantly to the poor; „Једном затече непознате лопове на свом гумну где краду жито. Не казујући се ко је св. Мирон поможе лоповима, да напуне вреће, поможе им и да дигну на леђа и да умакну.“, the scene the entry is built round — he came on thieves stealing his grain and, without saying who he was, helped them fill their sacks, helped them get them on their backs and helped them get away; and „Беше чудотворац велики, и чињаше многа добра и моћна дела именом Господа Исуса.“, that he was a great wonderworker and did many good and mighty works in the name of the Lord Jesus. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [
@@ -88,5 +103,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 350,
+      "latest": 350,
+      "display": "about 350",
+      "basis": "traditional",
+      "note": "The folder held no date: neither doxologia nor saint.gr gives it a year. The Охридски пролог for 8. август ст. ст.: „Упокоји се око 350 год. у старости својој од 100 година.“ — he reposed about 350, in his hundredth year. **No `birth` is written**: about 350 less 100 is arithmetic on a rounded year and a round age and not a reading (6 October 2026)."
+    }
+  }
 }

@@ -12,6 +12,11 @@
       "form": "Φάβιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Φάβιος ο Ιερομάρτυρας επίσκοπος Ρώμης», with the rank word and the see left off. The page's own text calls the form a mistake and gives Φαβιανός as the correct one, «ή σωστότερα Φαβιανός», so both stand in this note and the listing's form is the one recorded."
+    },
+    {
+      "form": "Фавије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 5 August, „Свешт. муч. Фавије (Фавијан) папа Римски.“ — Свешт. муч. left off, which §5 maps to `hieromartyr`, and папа Римски left off too, which §5 sends to `office` and which this folder already carries as «Bishop of Rome». **The heading prints a second spelling in brackets, (Фавијан), and the body uses both**; §6 allows one form per folder, so the headword before the bracket is stored and the gloss inside it is recorded here rather than added as a second form. `.tmp/sr-foldpred.mjs` reports that either spelling folds with nothing."
     }
   ],
   "sex": "male",
@@ -65,11 +70,24 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.08.2026 (5. август ст. ст.) — „Свешт. муч. Фавије (Фавијан) папа Римски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of four entries, and the Romanian and Greek both keep him on this same 5/8. His row was `undocumented`. **THE HEADING PRINTS TWO SPELLINGS OF HIS NAME AND ONE FORM IS STORED.** „Свешт. муч. Фавије (Фавијан) папа Римски.“ gives Фавије and then (Фавијан) in brackets, and the body uses both: „Најпре беше Фавијан сеоски свештеник, а по том, када при избору папе сиђе бео голуб на њега, изабран за папу.“ writes Фавијан and „Но кад се зацари опаки Декије, наста страшно гоњење хришћана, у коме пострада и св. Фавије, мачем обезглављен 250. год.“ writes Фавије. §6 allows one `sr` form per folder, so the headword is stored and the bracketed variant is recorded in the form’s own note rather than added as a second form; the choice is the reading that the word before the bracket is the book’s lemma and the word inside it the book’s gloss. **AUTHOR: a ruling would settle this for the rest of the wave, since the Prologue does this more than once.** **`dates` UNTOUCHED AND EXACTLY CORROBORATED.** The folder holds `death` 250, flat and `attested`, from doxologia; „Но кад се зацари опаки Декије, наста страшно гоњење хришћана, у коме пострада и св. Фавије, мачем обезглављен 250. год.“ gives the same 250 and adds the manner, beheaded with the sword when the wicked Decius came to the throne. A third source agreeing to the year is not a reason to touch it. **`types` AND `office` UNTOUCHED.** Свешт. муч. is `hieromartyr`, which the folder has; папа Римски is a see and §5 sends it to `office`, where this folder already carries «Bishop of Rome» and `bishop` beside it, so nothing is added and nothing is renamed — «Pope of Rome» is not in the four locale packs and an `office` that is not in all four is a defect. сеоски свештеник, a village priest, would give `presbyter` and is in the body, and is refused as a body word. **ONE `related` ROW WRITTEN, AND IT IS THIS FOLDER’S FIRST OF ANY KIND.** „Крсти цара Филипа и сина му царевића Филипа, и, уз помоћ крштеног сенатора Понтија, сруши многе идоле и идолске храмове.“ has him baptise the emperor Philip and his son, and with the help of the baptised senator Понтије throw down many idols and idol temples; „Много штићаше и помагаше цркву као сенатор, и би велики пријатељ папе Фавија.“, in the entry two below, has that senator protect and help the church and be a great friend of pope Фавије. **The two entries name each other**, which is as plain a relation as this book gives, and `pontius-the-senator` is created on this same day out of entry 3, so the row is written in both directions. The emperor Philip and his son hold no folder and take nothing; Decius is an emperor named to date a persecution. **NO `locations`:** Rome is named in a clause and the folder has never had the key. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "pontius-the-senator"
+  ]
 }

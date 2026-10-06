@@ -1,0 +1,62 @@
+{
+  "slug": "hormisdas-the-persian",
+  "display_name": "Hormisdas the Persian",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Гормиздас",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fifth heading for the Julian 8 August, „Св. муч. Гормиздас.“ — Св. муч. left off, which §5 maps to `martyr`. The heading is that rank and the name and nothing else, so the form is the bare name; Persia, the court and the king are all in the body. **«the Persian» in the display name is this corpus’s own addition and not the book’s**, made so that a bare «Hormisdas» would not match the sentence in `benjamin-the-deacon`’s life that names a Hormisdas of noble birth, which would have forced a `related` row in both directions off another folder’s prose. `.tmp/sr-foldnew.mjs` reports both keys of the form with 0 other holders and `.tmp/foldchk.py` returns NO FOLDER HOLDS THIS FORM. The book spells him with a Г where the Greek and Latin forms this corpus has met spell him with an H; copied as printed, never transliterated."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 418,
+      "latest": 418,
+      "display": "418",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 8. август ст. ст.: „Најзад би Гормиздас свети убијен, 418. год. одмах после страдања св. Авде епископа (в. 31. март).“ — at last Hormisdas was killed, in 418, immediately after the passion of St Abdas the bishop, see 31 March. The entry gives no birth year and no age. The year fits what the corpus holds round this persecution without having been taken from it: `abda-bishop-of-persia` is dated to the fifth century, `benjamin-the-deacon` between 418 and 442 and `nine-martyrs-with-abda` to 412. The basis is `traditional` because this is a hagiographical calendar and the only book this folder has (6 October 2026)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 8 Αυγούστου (6 October 2026). That day’s Greek page was read for this corpus on 1 October 2026 and gave fourteen folders, among them Emilian of Cyzicus, Myron of Crete, Triantafyllos of Zagora and Anastasius of Radovishte, four of the five entries of this Prologue day; no Hormisdas was among them. The page was not re-opened for him and no absence is claimed here."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.08.2026 (8. август ст. ст.) — „Св. муч. Гормиздас.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-21&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth and last entry, and **the fourth new folder of this Serbian wave**. `ls saints | grep -iE \"hormi|ormizd|gormi|hormazd\"` returns nothing; `.tmp/sr-namesweep.mjs` scores him against twenty-nine folders of which every one of the first ten is a Germanus, and names nobody of his name; `.tmp/foldchk.py` on the literal «Гормиздас» returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldnew.mjs` reports both of its keys with 0 holders. Ruling 3 creates rather than reports only where the entry is substantial, and this one is: a numbered entry with its own heading, nine sentences, a named king, a rank and an estate taken away, an occupation imposed, the king’s own calculation and its failure, torments, a year, and a cross-reference to another day. **AND THERE IS ONE PLACE IN THE CORPUS WHERE HIS NAME ALREADY STANDS, WHICH IS WHY THE DISPLAY NAME IS NOT A BARE ONE.** `grep -ril hormisdas saints/` hits exactly one folder, `benjamin-the-deacon`, whose life says of the Persian persecution that among those sacrificed on the altar of the true faith were «Hormisdas, of noble birth, and Benjamin the deacon» — read there off saint.gr and doxologia, and plainly this man: „Беше велмож на двору Персијског цара Издегерда.“ makes him a велмож, a magnate, at the court of the Persian king Yazdegerd. **No folder holds him, and the corpus does hold the company unnamed** as `nine-martyrs-with-abda`, «The Nine Martyrs with Abda», whose own `sr` and Greek forms enumerate nobody and whose `death` is 412. A named martyr of this persecution standing as his own folder beside that company is the shape the corpus already has: `benjamin-the-deacon` is exactly that, and it relates to the Nine. **The display name is «Hormisdas the Persian» and not «Hormisdas», deliberately**: `related-floor.test.mjs` reads a life’s prose through the page’s own index, a bare «Hormisdas» would have matched that sentence in another folder’s life and demanded a `related` row in both directions off a reading that is not mine, and three words put the decision back where it belongs. **AUTHOR: the row between this folder and `benjamin-the-deacon` is probably true and is not written, because the Prologue’s entry does not name Benjamin and the other folder’s prose is not my source.** **ONE `related` ROW, WRITTEN BOTH WAYS, AND THE CROSS-REFERENCE IS WHY.** „Најзад би Гормиздас свети убијен, 418. год. одмах после страдања св. Авде епископа (в. 31. март).“ — at last Hormisdas was killed, in 418, immediately after the passion of St Abdas the bishop (see 31 March). **`abda-bishop-of-persia` has been venerated `serbian` on exactly 31/3 since this wave read that day**, off this same book, and is «Abda (Abdias)», a bishop in Persia with a `sr` form «Авда»: the cross-reference and the corpus agree exactly and independently, which is the third time this block has had that and the strongest shape of it, because here the reference carries a day and the day is the day the row stands on. **Immediately after another man’s passion is not a date and not a reign**: it puts the two deaths in one persecution and in sequence, which is the companion relation the corpus already writes between Abdas and Benjamin. Written both ways; that folder had two `related` rows and now has three. **`dates`: `death` 418, flat, basis `traditional`**, which fits what the corpus holds round it without being narrowed to it: Abdas is 401–500, Benjamin 418–442 and the Nine 412. **`types`: `martyr` alone.** Св. муч. is `martyr`; велмож is a rank of a court and not of the Church and is in no table of §5. The king Издегерд takes nothing. **NO `locations`:** Persia is a country in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
+    }
+  ],
+  "related": [
+    "abda-bishop-of-persia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

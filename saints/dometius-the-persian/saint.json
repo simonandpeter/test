@@ -11,6 +11,11 @@
       "form": "Δομέτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Δομέτιος ο Πέρσης και οι δύο μαθητές του», with the rank words and the epithets left off."
+    },
+    {
+      "form": "Дометије",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 7 August, „Преп. муч. Дометије.“ — Преп. муч. left off, which §5 maps to `venerable-martyr`. The heading gives no ethnonym and no city, so the bare forename is the whole of the form; «the Persian» in the display name is the corpus’s own, off the Romanian «Dometie Persul», and Persia is in the body. `.tmp/sr-foldpred.mjs` reports it folds with nothing, although nine other folders share the Greek Δομέτιος."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.08.2026 (7. август ст. ст.) — „Преп. муч. Дометије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of five entries, and the Romanian and Greek both keep him on this same 7/8. His row was `undocumented`. **A YEAR ON A FOLDER THAT HELD NO DATE AT ALL.** „Тако сконча овај Божји светитељ 363 год. и пресели се у царство Божје.“ — so this saint of God ended in 363 and passed over to the kingdom of God — is written as `death` 363, flat, basis traditional. **Neither doxologia nor saint.gr gave this folder a year**, and this is the first it has held. The reign in „Када дође у те пределе Јулијан Одступник, чу за Дометија, па посла људе, који га зазидаше у пећини жива са два његова ученика.“ is Julian the Apostate’s and the 363 sits inside it, which is corroboration and not a second reading. **`types` UNTOUCHED, AND EVERY RANK WORD IN THE ENTRY IS ALREADY THERE OR REFUSED.** Преп. муч. is `venerable-martyr` and the folder has it. „Старац Нурвел га зађакони, па када га хтеде принудити и у чин свештеника, Дометије одбеже у неку пустињску гору, и настани се у једној пештери.“ has the elder Nurvel ordain him deacon and then try to force the priesthood on him, at which he fled to a desert mountain: `deacon` is on the folder already from the other two books, and it is a body word here, so the heading adds nothing and nothing is taken away. замонаши се in „Толико заволи веру истиниту, да напусти све светско, и замонаши се у једном манастиру код града Нисивије.“ would give `monk`, which is likewise there already and likewise a body word. **`presbyter` is NOT written**: the entry has him refuse the rank and run, so the one rank the book nearly gives him is the one it denies him. **NO `related` ROW ADDED.** `constantine-the-great` and `dometius-8-march` were `related` here before this reading. „Рођен у Персији као незнабожац, у време цара Константина.“ puts his birth in Persia in the time of Constantine, which is an emperor named to date a life and is not what that row rests on; nothing is added. **The archimandrite Нурвел takes nothing** — `ls saints | grep -iE \"^nurvel|nurbel\"` returns nothing, so Ruling 3 names him here, and he is the one man in this entry whose own story the entry tells, sixty years without eating anything cooked. The two disciples walled up alive with him are unnamed, which the Greek line this folder already carries also says. No `locations`: Nisibis is named in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [
@@ -107,5 +122,14 @@
   "related": [
     "constantine-the-great",
     "dometius-8-march"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": 363,
+      "display": "363",
+      "basis": "traditional",
+      "note": "The folder held no date: neither doxologia nor saint.gr gives it a year. The Охридски пролог for 7. август ст. ст.: „Тако сконча овај Божји светитељ 363 год. и пресели се у царство Божје.“ — so this saint of God ended in 363 and passed over to the kingdom of God. The same entry has him walled up alive by men sent by Julian the Apostate, whose reign contains that year and is not used to widen or narrow it (6 October 2026)."
+    }
+  }
 }
