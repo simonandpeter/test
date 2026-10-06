@@ -19,6 +19,11 @@
       "form": "Σπυρίδων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Δεκεμβρίου, «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου», with the rank, the by-name and the see left off."
+    },
+    {
+      "form": "Спиридон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. децембар ст. ст., „Свети Спиридон Чудотворац, епископ тримифунтски.“ — with «Свети» (“saint”), «Чудотворац» (the `wonderworker` grade §5 maps and `types` keeps) and «епископ тримифунтски» (a rank and a see) all left off, which leaves the bare forename. That is the stripping this corpus had already made on its Greek form, the bare «Σπυρίδων» read off «Άγιος Σπυρίδων ο Θαυματουργός, επίσκοπος Τριμυθούντος Κύπρου». THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured the string at one other holder, `spyridon-of-the-cave`, whose own Serbian form came off this same book for the Julian 31 October, and no READ_FOLDS key existed, so a new two-member key goes into `scripts/corpus-gate.mjs` in this commit."
     }
   ],
   "sex": "male",
@@ -33,14 +38,14 @@
       "latest": 300,
       "display": "late 3rd century",
       "basis": "inferred",
-      "note": "The Orthodox Church in America’s life says only \"towards the end of the third century\"; the bounds are that phrase, not a recorded year."
+      "note": "The Orthodox Church in America’s life says only \"towards the end of the third century\"; the bounds are that phrase, not a recorded year. The Охридски пролог за 12. децембар ст. ст. gives no year of birth either, and no age at death to reckon one from."
     },
     "death": {
       "earliest": 348,
       "latest": 348,
-      "display": "c. 348",
+      "display": "348",
       "basis": "traditional",
-      "note": "The year printed beside his name on days.pravoslavie.ru for 12 December (old style), where it is given as «ок. 348» — about 348."
+      "note": "**Two sources on one year, one of them hedging it and one not; the display was «c. 348» before this reading and the bounds have not moved.** days.pravoslavie.ru prints the year beside his name for 12 December (old style) as «ок. 348», about 348, which is where the «c.» came from. The Охридски пролог за 12. децембар ст. ст. states it flat: „Прославивши Бога чудесима многим и користивши много, како појединцима, тако и целој Цркви Божјој, упокоји се у Господу 348. године.“ — he reposed in the Lord in 348. Two books agree on the year and only one of them calls it approximate, so the display gives the year; the basis stays traditional, neither being a document."
     }
   },
   "attestations": [
@@ -93,8 +98,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was not read for this saint (2026-08-31). The Russian calendar's own page for the day was, and is cited above."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.12.2025 (12. децембар ст. ст.) — „Свети Спиридон Чудотворац, епископ тримифунтски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. It is the fourth calendar to keep him on this menologion day, which the Russian, Romanian and Greek rows all already carry. `types` UNTOUCHED: «Чудотворац» is the `wonderworker` held, «епископ» the `bishop`, and `hierarch` was there. `dates`: the DISPLAY of the death NARROWED from «c. 348» to «348», the bounds being unchanged at 348 both ways. days.pravoslavie.ru prints «ок. 348», about 348, which is where the «c.» came from; this book states it flat — «упокоји се у Господу 348. године» — so two sources now give the one year and only one of them hedges it. `birth` UNTOUCHED: this book gives no year of birth, and the late-third-century bounds stay the `inferred` reading they were. NO `locations`: Cyprus, Trimythous, Nicaea and Corfu are four places and the folder has never held a coordinate. NO `related` ROW ADDED: `constantine-the-great` was already here, and the emperor «Констанс» this entry says he healed of a heavy sickness is no folder this corpus holds under that name — naming a Constantius or a Constans out of the emperors it does hold would be a guess. WHAT THE BOOK ADDS, where three calendars had the bishop and the wonders: that his parents were simple people, FARMERS, and that he remained simple and humble to his death; that he married in his youth and had children, and gave himself wholly to God when his wife died; that AS BISHOP HE DID NOT CHANGE HIS WAY OF LIFE, working his own cattle and tilling his own land and keeping very little of the fruit of it for himself; the list of his wonders — rain in a drought, the course of a river stopped, several dead raised, an emperor healed, angels seen and heard; and the soldier at the palace gate who took him for a beggar and struck him in the face, to whom the meek and guileless man turned the other cheek. The Prologue prints no troparion and no kontakion."
     }
   ],
   "historicity": "attested",
