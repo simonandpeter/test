@@ -16,6 +16,11 @@
       "form": "Евпсихије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 9 April on pravoslavno.rs, „Св. муч. Евпсихије.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. The heading leaves no epithet and names neither the city nor the reign, so the bare forename is all the source gives; it is the identical form, off an identical heading, that `eupsychius-of-caesarea-under-hadrian` carries for the Julian 7 September, and that fold is deliberate and recorded."
+    },
+    {
+      "form": "Евпсихий Кесарийский (Каппадокийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 9 апреля ст. ст., name page 696, «Евпсихий Кесарийский (Каппадокийский), мч.», with the rank abbreviation left off and both epithets kept, the second in the brackets the calendar prints it in. The day’s own line gives the forename alone in the genitive, «Евпсихия». **The bare «Евпсихий» was deliberately not stored**: `.tmp/foldchk.py` reports it as the `ru` form `eupsychius-of-caesarea-under-hadrian` already holds, so storing it would have put one exact string on two folders that this corpus keeps apart on purpose. `.tmp/sr-foldpred.mjs` reports the stored form as a new key with no other holder."
     }
   ],
   "sex": "male",
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 апреля ст. ст. — «Мч. Евпсихия (362).»",
+        "url": "https://days.pravoslavie.ru/Days/20260409.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -130,7 +144,8 @@
   },
   "related": [
     "basil-the-great",
-    "eupsychius-of-caesarea-under-hadrian"
+    "eupsychius-of-caesarea-under-hadrian",
+    "mercurius"
   ],
   "dates": {
     "death": {
@@ -138,7 +153,7 @@
       "latest": 362,
       "display": "362",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 9 April: „Св. Евписхије беше најпре везан за дрво и мучен љуто, а по том посечен, 362. год.“ — first bound to a tree and cruelly tortured, and then beheaded, in the year 362. The year is printed flat and not as «about». It is the only year any source read for this folder gives: doxologia.ro's life sets the martyrdom in the reign of Julian the Apostate without a number and saint.gr does the same, and 362 falls inside that reign. `node .tmp/dd.mjs 362` reads in Russian and Greek."
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 9 April: „Св. Евписхије беше најпре везан за дрво и мучен љуто, а по том посечен, 362. год.“ — first bound to a tree and cruelly tortured, and then beheaded, in the year 362. The year is printed flat and not as «about». **days.pravoslavie.ru is now a second witness for it, and prints it on the day line itself**: «Мч. Евпсихия (362).», the only year in that line, with its life page closing the torments «судья отдал приказание усечь мученика мечом (+ 362)». The other two sources read for this folder give no number at all: doxologia.ro’s life sets the martyrdom in the reign of Julian the Apostate and saint.gr does the same, and days.pravoslavie.ru dates that reign «(361 - 363)», inside which 362 falls. `node .tmp/dd.mjs 362` reads in Russian and Greek."
     }
   }
 }
