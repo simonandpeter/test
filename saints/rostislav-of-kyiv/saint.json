@@ -6,6 +6,11 @@
       "form": "Ροστισλάβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Μαρτίου, «Άγιος Ροστισλάβος ο Πρίγκιπας Κιέβου και Σμολένσκ», with the rank words left off."
+    },
+    {
+      "form": "Ростислав Мстиславич Киевский, Смоленский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 14 марта ст. ст., «Ростислав (в крещении Михаил) Мстиславич Киевский, Смоленский, великий князь», with the rank words left off. The link's parenthesis «в крещении Михаил» is a sentence about the name and not part of it, so it is not stored; the day's own line hyphenates the two names together as «Ростислава-Михаила», and the baptismal name Михаил is recorded here rather than written into the form. That is a reading and may be reversed."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст. — «Блгв. вел. кн. Ростислава-Михаила (1167).»",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "note": "This day is his repose: the life page behind the line says he died on the road to Kyiv on 14 марта 1167. That year is nine short of the 1176 this folder held from saint.gr, and the same page adds that other sources give 1168, so the death interval is now 1167 to 1176 and chooses none of the three. The name page lists two further days, «8 июня (Белорус.)» and «8 июня»; one row per church is the schema, so they are recorded here and the folder does not render on them. The day page prints a troparion for him and it is copied here."
     },
     {
       "church": "romanian",
@@ -47,15 +62,33 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1176,
+      "earliest": 1167,
       "latest": 1176,
-      "display": "1176",
+      "display": "1167–1176",
       "basis": "traditional",
-      "note": "saint.gr: «έζησε το 12ο αιώνα μ.Χ. στη Ρωσία και κοιμήθηκε με ειρήνη το έτος 1176 μ.Χ.», and the page heads him «(; - 1176)», leaving the year of his birth a question mark."
+      "note": "Three readings and the interval holds them all. days.pravoslavie.ru closes its line for 14 марта ст. ст. with «(1167)» and its life page ends «Святой князь скончался на пути в Киев 14 марта 1167 года. (В других источниках указан 1168 год.)» — so that page itself offers 1167 and 1168. saint.gr says «κοιμήθηκε με ειρήνη το έτος 1176 μ.Χ.» and heads him «(; - 1176)». Nothing is chosen."
     }
   },
   "related": [],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Обрете тя строителя градов и церквей / земля Киевская, / великий княже Ростиславе, / смуты устранял еси, единство храня, / темже Господь тебе мудрость низпосла, / сего ради Христу Богу молися / спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 марта ст. ст., «Тропарь благоверному великому князю Ростиславу - Михаилу», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260314.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The land of Kyiv found in you a builder of cities and of churches, great prince Rostislav; you put away strife and kept unity, and for that the Lord sent wisdom down upon you. Therefore pray to Christ God that our souls be saved.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
