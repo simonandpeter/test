@@ -1,0 +1,60 @@
+{
+  "slug": "pardus-the-hermit",
+  "display_name": "Pardus",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "hermit"
+  ],
+  "names": [
+    {
+      "form": "Пард",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 15. децембар ст. ст., „Преподобни Пард Отшелник.“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps, and «Отшелник» left off, that being the `hermit` grade the same table maps and `types` also keeps; what is left is the bare forename, which is the whole of what the heading gives beyond the two ranks. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs`, which imports the real `fold` from `scripts/corpus-index.mjs` and so sees bracket-hidden folds too, puts the key `пард` at NO other holder, so no READ_FOLDS key is written and the gate’s collision count does not move. The nearest folder the namesweep offered, `parodos-the-presbyter`, is Parodos and not Pardus, and a direct grep of `saints/*/saint.json` for `pardus` and for `Пард` finds nothing, which is what made this an arrival. The book prints no Latin form of his name."
+    }
+  ],
+  "dates": {
+    "floruit": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 15. децембар ст. ст.: „Живео у Палестини у VI веку.“ — he lived in Palestine in the sixth century. The book states a century and no year, and says it of his life and not of his death, so the interval is a `floruit` with that century for its bounds and nothing narrower. No year of birth and no year of death are claimed, because none is given and no age is given to reckon one from."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 15 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026). The corpus holds nine folders on the menologion 15/12 from the other three calendars — Eleutherius of Illyricum, Anthia his mother, Coremmon the Eparch, Eleutherius the Cubicularius, Paul of Latros, Stephen of Sourozh, Susanna the Deaconess, Gurias the companion of Barsanuphius and the Two Executioners — and no Pardus is among them."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 15 Δεκεμβρίου (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 28.12.2025 (15. децембар ст. ст.) — „Преподобни Пард Отшелник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-28&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth and last entry, quoted whole with its closing full stop; URL year 2025, which is what `sr-civil.mjs` gives for a Julian day between 10-20 and 12-18 and therefore the page actually read. It is the day’s one arrival, the other three entries all being folders the corpus already held. Two sentences are the whole dossier: «У младости био рабаџија, но због једног нехотичног греха напустио свет и повукао се у пустињу на подвиг. Живео у Палестини у VI веку.» — in his youth he was a carter, but on account of one unintentional sin he left the world and withdrew into the desert to the ascetic struggle; he lived in Palestine in the sixth century. `types`: `venerable` from «Преподобни» and `hermit` from «Отшелник», both of them words the heading uses of him and both in §5’s table. NO `office`: the book gives him none, and `i18n.test.mjs` wants every office string in all four locale packs. NO `locations`: Palestine is the one place named, it is a country and not a place, and this folder has no coordinate to hang on it. NO `related`: the entry names nobody at all — no teacher, no monastery, no companion — and sharing the day with the other three entries is not a relation. THE SIN IS NOT NAMED by the book and is not guessed at here. The display name is the bare personal name: the book gives him no see, no monastery and no toponym, and «Отшелник» is a rank `types` carries, so the slug keeps the epithet and the name does not. The Prologue prints no troparion and no kontakion, for him or for anybody on the day."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
