@@ -10,17 +10,32 @@
       "form": "Μάξιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Μάξιμος ο Καπιτουλάριος», with the rank words left off."
+    },
+    {
+      "form": "Максим Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1434, «Максим Римский, мч.», with the rank word left off. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
     "valerian-husband-of-cecilia",
-    "cecilia-of-rome"
+    "cecilia-of-rome",
+    "tiburtius-brother-of-valerian"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Мц. Кикилии (Цецилии) и мчч. Валериана, Тивуртия и Максима (ок. 230).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 230,
+      "latest": 230,
+      "display": "about 230",
+      "basis": "traditional",
+      "note": "The folder held no dates at all: saint.gr gave him none. The Russian life page closes his death with a year of its own, «святой мученик Максим был насмерть забит плетьми (+ 230)», and the day line closes the whole company’s clause with «(ок. 230)», which is the «about». The page gives no year of birth."
+    }
   }
 }

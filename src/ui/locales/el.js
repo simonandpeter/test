@@ -1237,6 +1237,7 @@ export const el = {
     'reign of Asa': 'βασιλεία του Ασά',
     'reign of Theophilus': 'βασιλεία του Θεοφίλου',
     'second half of the 6th century': 'δεύτερο μισό του 6ου αι.',
+    'the 1050s or earlier': 'η δεκαετία του 1050 ή νωρίτερα',
     'the 1720s': 'η δεκαετία του 1720',
     'the reign of Constantine Porphyrogennetos': 'η βασιλεία Κωνσταντίνου του Πορφυρογέννητου',
     'to the mid-12th century': 'έως τα μέσα του 12ου αι.',

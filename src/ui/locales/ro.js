@@ -1236,6 +1236,7 @@ export const ro = {
     'reign of Asa': 'domnia lui Asa',
     'reign of Theophilus': 'domnia lui Teofil',
     'second half of the 6th century': 'a doua jumătate a sec. al VI-lea',
+    'the 1050s or earlier': 'cel târziu anii 1050',
     'the 1720s': 'anii 1720',
     'the reign of Constantine Porphyrogennetos': 'vremea domniei lui Constantin Porfirogenetul',
     'to the mid-12th century': 'până la mijlocul sec. al XII-lea',

@@ -1,0 +1,60 @@
+{
+  "slug": "michael-the-soldier-of-bulgaria",
+  "display_name": "Michael the Soldier of Bulgaria",
+  "names": [
+    {
+      "form": "Михаил Болгарский, воин",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his clause for 22 ноября ст. ст., name page 1549, «Михаил Болгарский, воин», which carries no rank word to leave off; «воин» is the soldier the day line also calls him. `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "righteous",
+    "soldier"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Прав. Михаила воина, болгарина (866).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 866,
+      "latest": 866,
+      "display": "866",
+      "basis": "traditional",
+      "note": "The day line closes his clause «(866)». The life page gives no year of death and no year of birth: it sets him «во время правления императора Михаила III Пьяного (855 - 867)» and says he was made a commander at twenty-four, and no birth year is derived from that age here."
+    }
+  },
+  "related": [],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1255,6 +1255,7 @@ export const ru = {
     'reign of Asa': 'царствование Асы',
     'reign of Theophilus': 'царствование Феофила',
     'second half of the 6th century': 'вторая половина VI в.',
+    'the 1050s or earlier': 'не позднее 1050-х годов',
     'the 1720s': '1720-е годы',
     'the reign of Constantine Porphyrogennetos': 'царствование Константина Порфирородного',
     'to the mid-12th century': 'до середины XII в.',

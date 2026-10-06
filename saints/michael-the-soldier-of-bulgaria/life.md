@@ -1,0 +1,11 @@
+# Michael the Soldier of Bulgaria
+
+Michael was one of the first Christians of Bulgaria, and lived in the city of Potuka in the reign of the emperor the page calls «Михаила III Пьяного», Michael III the Drunkard, whose years it gives as 855–867. He came of an old Bulgarian family, and while he was still a child people called him «святое дитя», the holy child. From his youth he kept a blameless life, had the fear of God, fasted, gave alms generously to the poor and visited the sick, and was meek and humble. At twenty-four he was set over a company of soldiers.
+
+Turks made war on the Christians, the page says — the word is the calendar’s own, and it sits oddly against the ninth century it has just dated him into; the corpus copies what the page prints and corrects nothing. In the fighting Michael put heart into his whole company by his courage. When the Bulgarians’ allies the Greeks fled the field he fell to the ground and prayed with tears for the salvation of the Christians, and then led his men against the enemy; he broke into the middle of their ranks, scattered them, and himself came away unhurt.
+
+Going home after the war he delivered the people of a city in the wilderness of Raithu from an enormous serpent that came out of a lake and ate their children. He reached home, and a few days later gave up his spirit to the Lord whom he had loved from his youth. After his death he worked a multitude of miracles, granting healings to those who came to him with reverence. His relics were carried from Potuka to Tarnovo in 1206, and at the beginning of the nineteenth century they were carried to Wallachia.
+
+The day line closes his clause «(866)» and the life page gives no year at all for his death, only the reign. He is not the Bulgarian ruler baptised Michael whom the Greek and Serbian calendars keep on 2 May and whom this corpus already holds: that one is a prince and the baptiser of his people, and this one a soldier of Potuka under a Byzantine emperor of the same name. The corpus keeps them as two folders.
+
+*After the Православный церковный календарь of the Сретенский monastery for 22 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261122.html) and [the life](https://days.pravoslavie.ru/Life/life2585.htm); read 6 October 2026.*

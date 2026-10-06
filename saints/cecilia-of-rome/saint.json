@@ -11,6 +11,11 @@
       "form": "Κικιλία",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιοι Κικιλία, Βαλεριανός και Τιβούρτιος», with the rank word left off."
+    },
+    {
+      "form": "Кикилия (Цецилия) Римская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind her clause for 22 ноября ст. ст., name page 2551, «Кикилия (Цецилия) Римская, мц.», with the rank word left off. The parenthesis is the source’s own: the day line prints the same pair, «Мц. Кикилии (Цецилии)», and the calendar offers no third reading to settle which of the two is the lemma. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "female",
@@ -21,8 +26,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Мц. Кикилии (Цецилии) и мчч. Валериана, Тивуртия и Максима (ок. 230).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -116,11 +130,11 @@
   },
   "dates": {
     "death": {
-      "earliest": 284,
+      "earliest": 230,
       "latest": 305,
-      "display": "under Diocletian (284–305)",
+      "display": "230 or under Diocletian (284–305)",
       "basis": "traditional",
-      "note": "saint.gr: «Η Αγία Κικιλία έζησε τον 3ο μ.Χ. αιώνα» and «Κατά τον επί Διοκλητιανού διωγμού η Κικιλία, ο Βαλέριος και ο Τιβούρτιος συνέχιζαν να δηλώνουν την πίστη τους στον Ιησού Χριστό». The page gives no year; the interval is the reign it names for the persecution, and its own century for her life is the wider claim beside it."
+      "note": "Two calendars disagree and the corpus chooses neither. saint.gr set the three under Diocletian, «Κατά τον επί Διοκλητιανού διωγμόν», which is 284–305; the Russian calendar’s day line closes the clause «(ок. 230)» and its life page kills Maximus, the last of the four, at «(+ 230)». The interval carries both readings and the basis stays traditional, as it was on the Greek reading alone."
     }
   },
   "images": [
