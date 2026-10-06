@@ -11,6 +11,11 @@
       "form": "Τρόφιμος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 21 Ιουλίου, «Άγιοι Θεόφιλος, Τρόφιμος και άλλοι Δεκατρείς Μάρτυρες», with the rank word left off. His own page heads him «Άγιος Τρόφιμος ο Μάρτυρας»."
+    },
+    {
+      "form": "Трофим",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 23. јул ст. ст., „Св. муч. Трофим и Теофил, и још тринаест с њима.“ — «Св.» is “saint” and «муч.» the rank, both left off by §6, and the heading is one rank over two bare forenames and a count, with no see, no city and no by-name among them, so the bare forename is the whole of the form; the companionship this corpus keeps in the English display name is no part of what the book calls him. The form is the nominative the heading itself prints. `foldchk.py` before the draft returned `[(’trophimus-companion-of-paul’, ’sr’), (’trophimus-of-antioch’, ’ru’), (’trophimus-of-antioch’, ’sr’)]` — two folders, one of them holding the string twice, so the fold this makes is read in this batch’s commit message."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 05.08.2026 (23. јул ст. ст.) — „Св. муч. Трофим и Теофил, и још тринаест с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-05&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (§4), and **it is an ENUMERATED COMPANY OF TWO WITH THIRTEEN MORE WHO ARE NOT ENUMERATED AT ALL** — «Трофим и Теофил, и још тринаест с њима». §5 counts the names the heading prints: two, and two folders are owed a row, both of which the corpus holds and which already relate one another. **The thirteen get nothing**, the heading naming not one of them and the body not returning to them — the same ruling that refused «и други с њим» on the Julian 2 August; the Greek line already on these folders counts them the same way, «και άλλοι Δεκατρείς Μάρτυρες». The quoted line is the one heading, whole, on both rows. **AND THE SERBIAN DAY IS THE ROMANIAN ONE AND NOT THE GREEK ONE, FOR THE SECOND TIME IN THREE DAYS.** Both folders are venerated romanian on **23/7** and venerated greek on **21/7**: saint.gr keeps the company two days earlier. This book prints them on the Julian 23 July, so both `serbian` rows are 23/7 and agree with the Romanian. No second-day note is owed by anybody; the two-day gap is the Greek calendar’s own and is recorded rather than reconciled. Ezekiel went the other way on the 21 July — Greek 23/7 against Romanian 21/7 — so the two calendars have now been found two days apart in both directions inside one week of this book. `types` UNTOUCHED. «Св.» is “saint” and «муч.» is the `martyr` both folders carry; the heading gives nothing else, and the tortures in the body are not ranks. **THE DATE, AND IT IS THE SHARPEST REFUSAL OF THIS RANGE BECAUSE THE YEAR IS OUTSIDE THE INTERVAL AND NOT INSIDE IT.** Both folders hold `death` earliest 284, latest 304, display «under Diocletian (284–304)», basis traditional, off saint.gr. This entry states a year outright: „Чесно пострадаше у Ликији 308. год.“ — they suffered honourably in Lycia **in the year 308**. **308 is not inside 284 to 304. It is four years after the end of it.** So this is not the narrowing rule’s case at all: a stated year fills an empty field and does not displace a recorded interval, and a year outside the interval would be a **widening**, which is the author’s and not a reader’s. Nothing is written, nothing is averaged, nothing is adjusted. **AND THE BOOK DOES NOT SIT WITH ITSELF, WHICH IS NOW A HABIT OF IT AND NOT AN ACCIDENT.** The same entry opens „Пострадаше у Ликији у време цара Диоклецијана.“ — they suffered in Lycia **in the time of the emperor Diocletian** — and Diocletian laid down the purple in 305, three years before the year the entry ends with. The corpus’s own interval IS that reign, as the Greek page gave it. So the book names the reign and then names a year outside it, exactly as the Julian 23 June named Valerian and then 275, and the Julian 22 June dated a council to 361 and put it under Jovian. **An emperor is no source for a year and a reign is not a date**, so neither statement is used to correct the other and both are recorded. The one-line alternative for the author is named in this batch’s commit message. WHAT THE BOOK ADDS. „Пошто се никако не хтеше Христа одрећи, нити жртве идолима принети, то бише стављени на разне муке: тукоше их камењем, стругаше оштрим гвожђем, пребише им колена, и најзад тако измучене и више мртве него живе бацише их у огањ.“ — since they would in no way deny Christ nor sacrifice to the idols they were put to various torments: **beaten with stones, scraped with sharp iron, their knees broken**, and at the last, more dead than alive, thrown into the fire. „Сила Божја сачува их неповређене у огњу. Тада их изведоше и мачем посекоше.“, the power of God kept them unharmed in the fire, and then they were brought out and beheaded with the sword. „Но Господ их прослави и на земљи и у царству Свом небеском.“, the Lord glorified them both on earth and in his own heavenly kingdom. **The broken knees and the fire that would not burn them are in neither other book these folders hold.** NO NEW `related`: the two already relate each other both ways and the entry establishes nothing else. **The thirteen companions take no row because they take no folder**; the corpus holds `martyrs-slain-by-the-bulgars` and `seven-martyrs-at-carthage` on this same menologion number and neither is this company. No `office` on either. No `locations`: Lycia is named and is not written as a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
