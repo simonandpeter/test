@@ -1,0 +1,60 @@
+{
+  "slug": "peter-tsarapkin",
+  "display_name": "Peter (Tsarapkin)",
+  "names": [
+    {
+      "form": "Петр (Царапкин)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 10025, «Петр (Царапкин), мч.», with the rank word left off. The day line declines the forename and prints no surname, so the surname is read from the name page; the corpus keeps eleven other folders on the bare «Петр», which is why the surname is carried here."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Мч. Петра (после 1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": null,
+      "display": "after 1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(после 1937)» after his name on 26 ноября ст. ст. — after 1937, which is a finding and not a year: the calendar is saying it does not know when he died, only that it was not before that. The upper bound is left open for that reason."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

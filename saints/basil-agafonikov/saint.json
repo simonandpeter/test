@@ -1,0 +1,62 @@
+{
+  "slug": "basil-agafonikov",
+  "display_name": "Basil (Agafonikov)",
+  "names": [
+    {
+      "form": "Василий (Агафоников)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13870, «Василий (Агафоников), протоиерей, сщмч.», with the rank words left off. The day line itself declines the forename and prints no surname at all, so the surname is read from the name page and not from the line."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Сщмчч. Иоанна , Георгия , Назария , Василия , Василия , Илии , Василия , Даниила , Михаила , Николая пресвитеров, прмч. Тихона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the day line prints for the whole company at once: «Сщмчч. Иоанна , Георгия , Назария , Василия , Василия , Илии , Василия , Даниила , Михаила , Николая пресвитеров, прмч. Тихона (1937).». No other source was found to give him a year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

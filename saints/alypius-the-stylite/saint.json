@@ -11,6 +11,11 @@
       "form": "Αλύπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Αλύπιος ο Κιονίτης», with the rank word left off; «ο Κιονίτης», the pillar-man, is the page's own epithet and is left out of the stored form because the folder's `types` carry it."
+    },
+    {
+      "form": "Алипий Столпник, Адрианопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 137, «Преподобный Алипий Столпник, Адрианопольский», with the rank word left off. The day line itself declines the name and gives only «Алипия столпника», so the by-name of Adrianople is read from the name page and not from the line."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His two life pages both head themselves «День памяти: 26 ноября» and give no other day, so the calendar keeps him on this one day alone."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Прп. Алипия столпника (640).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -102,18 +117,73 @@
       },
       "tone": "Ἦχος πλ. δ’.",
       "model": "Ὡς ἀπαρχὰς τῆς φύσεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 1",
+      "text": "Терпения столп был еси,/ ревновавый праотцем, преподобне,/ Иову во страстех, Иосифу во искушениих,/ и Безплотных жительству, сый в телеси,/ Алипие отче наш,// моли Христа Бога спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Тропарь преподобного Алипия (глас 1)»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were a pillar of patience, venerable father, emulating the forefathers of old — one in his sufferings and one in his temptations — and the life of the bodiless powers while yet in the body. Alypius our father, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Страшен и неприступен показался еси бесом воистину,/ уязвляя сих раною священных твоих молитв/ и далече отгоняя ополчения страстная постом/ и колеблющимся был еси, всеблаженне, непреклонное утверждение,/ Алипие преподобне,/ моли Христа Бога/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Ин тропарь преподобного Алипия (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly you were shown to be terrible and unapproachable to the demons, wounding them with the stroke of your holy prayers and driving the armies of the passions far off by fasting; and to the wavering, all-blessed one, you were an unbending support. Venerable Alypius, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко добродетелей вину и постников удобрение,/ Церковь славит тя днесь и воспевает, Алипие:/ молитвами твоими подаждь чтущим любовию доблести твоя и борения/ лютых прегрешений избавление,// яко тезоименитый.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Кондак преподобного Алипия (глас 8)»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a ground of the virtues and an adornment of ascetics, the Church glorifies you today and sings your praise, Alypius. By your prayers grant deliverance from grievous transgressions to those who honour your valour and your wrestlings with love — you who are true to your name.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
   },
   "dates": {
+    "birth": {
+      "earliest": 522,
+      "latest": 522,
+      "display": "522",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's first life for him opens «Преподобный Алипий Столпник родился в 522 году в г. Адрианополе в Пафлогонии». No other calendar read gives him a year of birth at all; saint.gr says outright that its page gives none."
+    },
     "death": {
       "earliest": 608,
-      "latest": 608,
-      "display": "608",
+      "latest": 640,
+      "display": "608 or 640",
       "basis": "traditional",
-      "note": "saint.gr heads the page «Οσιος Αλυπιος ο Κιονιτης (; - 608)» and the narrative repeats it: «Πέθανε ειρηνικά το έτος 608 μ.Χ., αφού έζησε 100 χρόνια, κατ' άλλους 120». The page gives no year of birth, and its two readings of his age are not turned into one here."
+      "note": "Two calendars, two years, and nothing read breaks the tie. saint.gr heads his page «Οσιος Αλυπιος ο Κιονιτης (; - 608)» and its narrative closes «Πέθανε ειρηνικά το έτος 608 μ.Χ., αφού έζησε 100 χρόνια, κατ' άλλους 120» — died in peace in 608, having lived a hundred years, or by other accounts a hundred and twenty. days.pravoslavie.ru carries two lives for him on 26 ноября and both close on 640: «Почил преподобный Алипий в 640 г., в возрасте 118 лет». The Russian reading is the one that adds up against its own year of birth, 522, and 118 is within a couple of years of saint.gr's own alternative age; but the year is not the same year, so the interval carries both and nothing is chosen."
     }
   }
 }

@@ -1,0 +1,60 @@
+{
+  "slug": "tikhon-buzov",
+  "display_name": "Tikhon Buzov",
+  "names": [
+    {
+      "form": "Тихон Бузов",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13874, «Тихон Бузов, архимандрит, прмч.», with the rank words left off. The calendar prints his surname without parentheses, which is how it is kept here."
+    }
+  ],
+  "sex": "male",
+  "office": "Archimandrite",
+  "types": [
+    "venerable-martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists no other day: 26 ноября is the whole of what it gives him, and unlike the ten priests of the same line he is not carried on 26 января."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Сщмчч. Иоанна , Георгия , Назария , Василия , Василия , Илии , Василия , Даниила , Михаила , Николая пресвитеров, прмч. Тихона (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 9 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 9 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 9 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the day line prints for the whole company at once: «Сщмчч. Иоанна , Георгия , Назария , Василия , Василия , Илии , Василия , Даниила , Михаила , Николая пресвитеров, прмч. Тихона (1937).». No other source was found to give him a year."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
