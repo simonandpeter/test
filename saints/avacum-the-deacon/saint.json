@@ -6,12 +6,18 @@
       "form": "Avacum",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 17 decembrie, «Sfântul Mucenic Avacum, diaconul», with the rank word left off; «diaconul» is kept in the English display name because it is the only thing the line says of him besides the name."
+    },
+    {
+      "form": "Авакум",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 17. децембар ст. ст., „Преподобни новомученици: Пајсије и Авакум.“ — the second of the two names the heading prints after the colon, bare as it prints them, the grades «Преподобни» and «новомученици» belonging to the heading and now both in `types`. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN AND IT IS A REAL ONE: `fk.mjs` puts the key `авакум` at ONE other holder, `habakkuk` — the Old Testament prophet, whose own Serbian form is the same word — so this form takes the fold from one member to two and a new READ_FOLDS key goes into `scripts/corpus-gate.mjs` in this same commit. The Latin `avacum` keys for this pair and the Greek `αββακουμ` key already exist in that file and are untouched; this is the Cyrillic string, which had no key."
     }
   ],
   "sex": "male",
   "types": [
     "martyr",
-    "deacon"
+    "deacon",
+    "new-martyr"
   ],
   "attestations": [
     {
@@ -40,11 +46,33 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Преподобни новомученици: Пајсије и Авакум.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and last entry, quoted whole with its closing full stop; URL year 2025. **The heading names its two members, so it is two folders** — BRIEF.md §4’s enumerated company — and the other, `paisius-of-trnava`, is this day’s arrival, written in the batch `sr-12-17` of this same commit. The second calendar to keep him: doxologia.ro’s line for 17 decembrie, «Sfântul Mucenic Avacum, diaconul», printed the name and the rank only, and his page there prints the name only, so this book is the first dossier this folder has had. `types_add`: `new-martyr`, from the heading’s own «новомученици», which §5 maps to it; `martyr` and `deacon` were already held and the book states both — «његов сабрат и ђакон». `dates` ADDED, the folder having carried NONE: a death in 1814, with the full date the book gives. NO `locations`: Trnava, Čačak, Belgrade and the Kalemegdan are four places and this folder has no coordinate. `related_add`: `paisius-of-trnava`, his abbot and the man impaled beside him, both ways in this commit. **WHAT THE BOOK ADDS, AND WHERE ITS LAST WORDS ACTUALLY ARE**: that he was the fellow-brother and the deacon of Paisius, abbot of the monastery of Trnava near Čačak; that both were impaled on the stake by the Turks as Christians, at Belgrade on the Kalemegdan, on 17 December 1814; that CARRYING HIS OWN STAKE THROUGH THE STREETS OF BELGRADE THE BRAVE AVACUM SANG; and that when his mother begged him weeping to turn Turk and save his life, „одговори јој овај дивни Христов војник:“ — this wonderful soldier of Christ answered her — AND THERE THE PROSE OF THE ENTRY STOPS, AT A COLON. The answer is the opening of the day’s ПЕСМА: „Majко мојa на мл’јеку ти хвала / Ал’ не хвала на твоме савјету: / Срб је Христов, радује се смрти.“ It is quoted in the life as the martyr’s reported answer, which is what the book makes it by breaking off there, and it is NOT a hymn and NOTHING went into `hymns`: §3 forbids this source’s verse absolutely, and this is that verse. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 1814,
+      "latest": 1814,
+      "display": "1814",
+      "basis": "traditional",
+      "note": "The first date this folder has carried. Охридски пролог за 17. децембар ст. ст.: „Обојица као хришћани набијени од Турака на колац, у Београду на Калемегдану 17. децембра 1814. године.“ — both of them, as Christians, impaled on the stake by the Turks, at Belgrade on the Kalemegdan, on 17 December 1814. **The book gives the full date and it is the same day of the same month this calendar keeps him on.** doxologia.ro, which is the folder’s other source, printed his name and his rank and nothing more. No year of birth is given, and no age to reckon one from; the basis is traditional, the book citing no document."
+    }
+  },
+  "related": [
+    "paisius-of-trnava"
+  ]
 }

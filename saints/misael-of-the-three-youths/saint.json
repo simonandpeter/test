@@ -11,6 +11,11 @@
       "form": "Μισαήλ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ», with the rank word left off. The page gives this name no gloss, and prints the rank as «Αγιος Μισαηλ (αγιοι Τρεις Παιδες)»."
+    },
+    {
+      "form": "Мисаил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — the third of the three names the heading prints after the colon, bare as it prints them. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `мисаил` at NO other holder, so no READ_FOLDS key is written — and that is in spite of `misael-of-abalatsk` standing on this very menologion day, a folder which carries no Serbian form."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. The heading NAMES HIM, third of the three youths. The third calendar to keep him on this menologion day. `types` UNTOUCHED: `martyr` is held and this book’s beheading is a second witness to it. NO `dates`, for the reason given in the `daniel-the-prophet` entry. NO `locations`, NO `related` ROW ADDED — the other two youths, Daniel and `cyril-of-alexandria` were all here. **HE IS NOT THE OTHER MISAEL THE CORPUS KEEPS ON THIS DAY**: `misael-of-abalatsk` stands on the menologion 17/12 too, and he is a Russian of the Abalatsk monastery, whom nothing in this entry touches; the identification here is by the heading’s own company, the three youths of Babylon named in order. WHAT THE BOOK ADDS: the royal tribe of Judah; the golden idol in the plain of Dura and the refusal to bow; the fiery furnace, the angel who cooled it, the walking unhurt and the singing of „Благословен јеси Господе отаца наших“; the king’s horror and the honours; and HIS OWN ACT — he caught the head of Azarias in his turn, and his own was caught by Daniel. The sung words are the youths’ canticle in the book’s narrative and NOTHING was put in `hymns`, which §3 forbids. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

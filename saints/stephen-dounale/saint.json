@@ -11,6 +11,11 @@
       "form": "Δουναλέ",
       "lang": "el",
       "note": "The name saint.gr says he bore before his tonsure, printed on the same line for 17 Δεκεμβρίου and again in the body: «έγινε μοναχός με το όνομα Στέφανος, από Δουναλέ»."
+    },
+    {
+      "form": "Данил (Донале)",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 17. децембар ст. ст., „Преподобни Данил (Донале).“ — with «Преподобни» left off, that being the `venerable` grade §5 maps and `types` keeps. What is left is kept WHOLE, with the parenthesis as the book prints it, because both words are the book’s own and neither can be called the name and the other a gloss. BRIEF-ADDENDUM §2 is explicit that parentheses are not part of a name key, so the string keys as `данил донале`. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts that key at NO other holder, so no READ_FOLDS key is written FOR THIS FORM. **It is not the bare «Данил» this same commit writes onto `daniel-the-prophet`**: that string keys as `данил`, a different key, which the commit does key — and had this form been stored as a bare «Данил» the two men of one day would have landed in one fold, which is exactly the collision BRIEF-ADDENDUM §2 was written about. The form is the PRE-TONSURE name; the name the folder is titled by, Stephen, is what the body says the patriarch gave him and is not in the heading."
     }
   ],
   "sex": "male",
@@ -25,7 +30,14 @@
       "latest": 919,
       "display": "919",
       "basis": "attested",
-      "note": "The one year saint.gr gives him, for his coming to Constantinople: «το ίδιο έκανε και όταν στη συνέχεια πήγε στην Κωνσταντινούπολη το 919 μ.Χ.» Everything else in the page is undated, and no year of birth and no year of death is given."
+      "note": "UNCHANGED. The one year saint.gr gives him, for his coming to Constantinople: «το ίδιο έκανε και όταν στη συνέχεια πήγε στην Κωνσταντινούπολη το 919 μ.Χ.» The Охридски пролог gives no year for that journey, but it does say whom he spoke with there — «царевима, Константином и Романом Порфирородним», the emperors Constantine and Romanus Porphyrogennetos — which is consistent with a tenth-century Constantinople and was NOT used to narrow or move the year, an emperor’s name not being a date."
+    },
+    "death": {
+      "earliest": 976,
+      "latest": 1000,
+      "display": "late 10th century",
+      "basis": "traditional",
+      "note": "**A year the Greek page did not give, and it sits oddly beside the one the Greek page did; both are recorded and the oddness is NOT resolved.** Охридски пролог за 17. децембар ст. ст.: „Пресели се у Царство Христово крајем X века.“ — he passed over into the Kingdom of Christ at the END of the tenth century, which is the bounds here and no narrower. saint.gr puts him at Constantinople in 919. The two together give him a life of some eighty years after that journey, which is possible and strained; and this book’s own emperors, Constantine and Romanus, belong to the first two thirds of that century, not its end. Nothing was moved and nothing was reconciled: the floruit is the Greek page’s year, the death is this book’s century-end, and the tension between them is an author question."
     }
   },
   "attestations": [
@@ -56,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Преподобни Данил (Донале).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop; URL year 2025. The second calendar to keep him, saint.gr being the first and only. **THE IDENTIFICATION, WHICH IS NOT MADE ON THE NAME**: this folder is saint.gr’s «Όσιος Στέφανος ο Ομολογητής πρώην ονομαζόμενος Δουναλέ», Stephen the Confessor formerly called Dounale, and this heading’s man is «Данил (Донале)». The agreement is in the dossier and not in the forename — a Spanish grandee of an island near Cadiz who gave up rank and wealth, was tonsured at Rome, went on to Constantinople and then to Jerusalem, and was there given the great schema and THE NAME STEPHEN. Both books make the Spanish nobleman and the monk Stephen one man, and both put him on 17 December. **THE PRE-TONSURE NAME DIFFERS BETWEEN THE TWO BOOKS AND IS NOT RESOLVED**: the Greek has only Δουναλέ, this book has «Данил» with «(Донале)» after it in parentheses, as though the one were a reading of the other. Nothing was renamed; the folder keeps its Greek-sourced display name and the Serbian form carries both words as the heading prints them. `types` UNTOUCHED, and A GRADE WAS DECLINED: «претрпе многе муке и смрт» — he suffered many torments and death for the name of Jesus — would make him a `martyr` or a `venerable-martyr` beside the `venerable`, `confessor` and `monk` he holds, but the heading ranks him «Преподобни» only and saint.gr ranks him confessor, so a grade out of one body clause was not written. AUTHOR QUESTION. `dates`: the `floruit` of 919 UNTOUCHED, and a `death` ADDED in the late tenth century, which this book states and the Greek page did not. **THE TWO SIT ODDLY TOGETHER AND THE ODDNESS IS RECORDED, NOT RESOLVED** — see the `death` note. NO `locations`: the island of Niverta, Cadiz, Rome, Constantinople, Jerusalem and Egypt are six places and the folder has never held a coordinate. NO `related` ROW ADDED: the emperors Constantine and Romanus Porphyrogennetos and the patriarch Christodulus of Jerusalem are no folders this corpus holds under those names. WHAT THE BOOK ADDS, where saint.gr had the island, the pilgrimages, the money and the tonsure: that he was GREAT LORD AND GOVERNOR of the island; that at Constantinople HE CONVERSED WITH THE EMPERORS, Constantine and Romanus Porphyrogennetos; that the great schema and the name Stephen came from THE PATRIARCH CHRISTODULUS at Jerusalem; that he was harried by the Saracens, WHO TRIED TO MAKE HIM SHAVE HIS BEARD; and that he withdrew to Egypt, where he suffered many torments and death for the name of Jesus. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

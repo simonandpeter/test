@@ -11,6 +11,11 @@
       "form": "Ανανίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Δεκεμβρίου, «Προφήτης Δανιήλ και οι Άγιοι Τρεις Παίδες Ανανίας, Αζαρίας και Μισαήλ», with the rank word left off. The page glosses the name itself, «(εβραϊκή λέξη) = Ον ο Κύριος ελέησε»."
+    },
+    {
+      "form": "Ананије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 17. децембар ст. ст., „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“ — the first of the three names the heading prints after the colon, bare as it prints them, the grades «Свети», «пророк» and «три отрока» belonging to the heading and not to this name. THE FOLD WAS MEASURED BEFORE THE FORM WAS WRITTEN: `fk.mjs` puts the key `ананије` at NO other holder, so no READ_FOLDS key is written. THE ENGLISH NAME IS NOT SAFE THE SAME WAY and the life was written around it: `ananias-the-apostle`’s whole display name is the bare «Ananias», so every mention of this youth in a life is inside a hand-written link, which `related-floor.mjs`’s `prose()` strips before matching."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.12.2025 (17. децембар ст. ст.) — „Свети пророк Данил и три отрока: Ананије, Азарије и Мисаил.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. The heading NAMES HIM, first of the three youths, which is what makes this a row on his own folder and not a row on a company. The third calendar to keep him on this menologion day. `types` UNTOUCHED: `martyr` is held, and this book’s beheading with the sword for the true faith is a second witness to it. NO `dates`: the figure the entry gives, about five hundred years before Christ, stands in a singular sentence about Daniel and was NOT carried over to the youths — see the `daniel-the-prophet` entry of this same reading. NO `locations`: Babylon, the plain of Dura, Judaea and Mount Gebal are four places and the folder has never held a coordinate. NO `related` ROW ADDED: the other two youths, Daniel and `cyril-of-alexandria` were all four here already, and Nebuchadnezzar is no folder. WHAT THE BOOK ADDS: that he was of the royal tribe of Judah; that when the king made the golden idol in the plain of Dura the three youths would not bow to it and were thrown into the fiery furnace for it; that an angel of God appeared in the furnace and cooled the fire, so that they walked about in it unhurt and sang „Благословен јеси Господе отаца наших“; that the king saw the wonder and was horrified, and brought them out and heaped great honours on them; and that HE WAS BEHEADED FIRST OF THE FOUR, and Azarias spread out his garment and caught his head. The sung words are the three youths’ own canticle out of the furnace, quoted by the book in its narrative, and NOTHING was put in `hymns`, which §3 forbids absolutely from this source. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
