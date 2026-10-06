@@ -8,7 +8,8 @@
     "preacher"
   ],
   "related": [
-    "comgall-of-bangor"
+    "comgall-of-bangor",
+    "martin-of-tours"
   ],
   "dates": {
     "birth": {
@@ -29,8 +30,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Прп. Колумбана, игумена Люксейского (615).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "**His is the one name on this day whose entry into the Russian calendar has a date**: azbyka.ru’s life closes «14 мая 2018 года на заседании Священного Синода было принято решение о включении имени преподобного Колумбана, игумена Люксейского, в месяцеслов Русской Православной Церкви» — the Holy Synod resolved on 14 May 2018 to include him in the menologion of the Russian Church. days.pravoslavie.ru’s name page gives him no «Дни памяти» line at all and no life; azbyka.ru gives the civil 6 декабря and no other day."
     },
     {
       "church": "romanian",
@@ -60,5 +71,12 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "names": [
+    {
+      "form": "Колумбан Люксейский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 15005, «Колумбан Люксейский, прп.», with the rank word left off; the day line itself declines the name and calls him «игумена Люксейского». `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form."
+    }
+  ]
 }

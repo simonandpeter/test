@@ -12,6 +12,11 @@
       "form": "Αμφιλόχιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Αμφιλόχιος Επίσκοπος Ικονίου», with the rank word and the see left off."
+    },
+    {
+      "form": "Амфилохий Иконийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 153, «Святитель Амфилохий Иконийский, епископ», with the grade words left off; the day line itself declines the forename and abbreviates the see, «Свт. Амфилохия, еп. Иконийского». `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Свт. Амфилохия, еп. Иконийского (после 394).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "His name page prints one day and no other. **The year clause is not a death year as this folder’s Greek and Romanian sources give one**: days.pravoslavie.ru writes «(после 394)», after 394, where its own life closes «В 394 году святой епископ Иконийский Амфилохий с миром отошел ко Господу». The folder’s interval is left at the 394 the other two calendars attest, and the Russian clause is recorded in the date note."
     },
     {
       "church": "romanian",
@@ -68,7 +83,8 @@
   ],
   "related": [
     "basil-the-great",
-    "gregory-the-theologian"
+    "gregory-the-theologian",
+    "gregory-of-akragas"
   ],
   "hymns": [
     {
@@ -120,6 +136,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "tone": "глас 4",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Тропарь святителей Амфилохия и Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness, take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Божественный гром, труба Духа,/ веры садоделателю и сечиво ересей, иерарше Амфилохие,/ Троицы угодниче великий,/ со Ангелы предстоя присно,/ моли непрестанно о всех нас.",
+      "tone": "глас 2",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Кондак святителя Амфилохия»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O divine thunder, trumpet of the Spirit, planter of the faith and axe that cuts down heresies, O hierarch Amphilochius, great servant of the Trinity, standing ever with the angels, pray without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
