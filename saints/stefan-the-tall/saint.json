@@ -1,0 +1,59 @@
+{
+  "slug": "stefan-the-tall",
+  "display_name": "Stefan the Tall",
+  "sex": "male",
+  "names": [
+    {
+      "form": "Стеван Високи",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Спомен Стевана Високог,“, with «Спомен» — the book’s word for a commemoration — left off. **THE HEADING PRINTS THE NAME IN THE GENITIVE AND THE NOMINATIVE IS RESTORED, WHICH IS GRAMMAR AND NOT TRANSLITERATION, AND IS FLAGGED HERE RATHER THAN PASSED OVER.** «Спомен» governs the genitive and the body names him nowhere again, so no nominative is printed on the page: Стевана Високог → Стеван Високи, the forename shedding its -a and the by-name its definite -ог for -и. **The by-name is kept, and §6 is why**: a bare Стеван or Стефан would have folded onto the thirteen folders the gate already reads under «стефан», and the by-name is the whole of what keeps this form out of that fold. `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both, and `foldchk.py` `NO FOLDER HOLDS THIS FORM` for the form and for the bare forename alike. No Romanian, Greek or Russian form is written: none of those books was opened for him."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1427,
+      "latest": 1427,
+      "display": "1427",
+      "basis": "traditional",
+      "note": "Охридски пролог: „После многих трудова и невоља скончао 19. јула 1427. године.“"
+    }
+  },
+  "related": [
+    "lazar-of-serbia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 19 июля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 19 iulie, which is the page for this menologion number — not 1 august, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 19 Ιουλίου, which is the page for this menologion number. The corpus holds eight folders on that number already and none of them is this man."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.08.2026 (19. јул ст. ст.) — „Спомен Стевана Високог,“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third and last entry, and the only new folder of the day. **THE HEADING IS QUOTED AS THE MARKUP GIVES IT, CLOSING COMMA AND ALL** — „Спомен Стевана Високог,“. The Prologue’s own `<strong>` element ends on a comma here, not a full stop, because the entry’s first clause runs on out of the heading into the body; §4 says quote the heading whole and `srbody.mjs` no longer strips a closing stop, so the comma stands and is not tidied. **THAT IT IS A PERSON AND NOT A FEAST RESTS ON THE BOOK’S OWN WORD.** «Спомен» is the word this book uses for a commemoration, and the same reading made `monk-who-condemned-no-one` a folder off „Спомен на монаха“ on the Julian 30 March; here the commemoration NAMES ITS MAN, «Стевана Високог», so §5 counts one name and one folder is owed. It is neither an icon nor a council nor a translation of relics. **THE NAME IS IN THE GENITIVE AND THE NOMINATIVE IS RESTORED, WHICH IS A READING AND IS SAID HERE AND IN THE FORM’S OWN NOTE.** The heading governs the genitive after «Спомен» and the body never names him again, so no nominative is printed anywhere on the page. The restoration is grammar and not transliteration, the same act the three presbyters of the Julian 19 May needed: Стевана Високог → Стеван Високи. **NO `types` AT ALL, AND THE REFUSAL IS THE POINT OF THIS ROW.** The heading carries NO rank word — not «деспот», not кнез, not Преп., not Св. — and neither does the body. **The one rank in the entry belongs to his father**: „сина св. кнеза Лазара српског и кнегиње Милице.“, son of the holy prince Lazar of Serbia and of the princess Milica, where кнез is `prince` and кнегиња `princess` by §5 — and `lazar-of-serbia` already carries both `prince` and the `Prince` office off this same book’s 15 June. A rank read off a father is not the son’s rank, and the history this man is a despot in is out of a book this reading did not open, so the folder is written with `types` omitted rather than guessed. Named for the author. **ONE DATE, STATED, AND THE FIELD IS NEW BECAUSE THE FOLDER IS.** „После многих трудова и невоља скончао 19. јула 1427. године.“ — after many labours and troubles he died on the 19th of July 1427. `death` earliest 1427, latest 1427, display «1427», basis traditional. **The day of death the book gives is the menologion day of this very entry**, 19 July, which is the ordinary case and not a second feast. No `birth`: the book gives none. **ONE `related` ROW, AND THREE THINGS THAT TAKE NONE.** `lazar-of-serbia` is his father and is named in the heading’s own continuation, so the row goes both ways and `proseprobe.mjs` was run over the paragraph before it was written. **Милица, his mother, holds no folder**: `ls saints | grep -i milica` returns nothing and `grep -iE ’milica’ saints/*/saint.json` returns nothing, so she is named in the prose with no link and no row, Ruling 3. **The two monasteries take nothing either** — „Оснивач красних задужбина Манасије и Каленића.“, founder of the fair endowments of Manasija and Kalenić — because a foundation is a dedication and a dedication is not a relation, and `proseprobe.mjs` confirmed that neither name is in the page’s name index. **NO `office` AND NO `locations`.** No see and no title is given him, and the Balkans is not a coordinate. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, and that verse is on the second entry’s man alone and does not mention this one."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

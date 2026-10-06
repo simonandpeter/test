@@ -11,6 +11,11 @@
       "form": "Μακρίνα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουλίου, «Οσία Μακρίνα αδελφή του Μεγάλου Βασιλείου», with the rank word and the kinship clause left off."
+    },
+    {
+      "form": "Макрина",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Преп. Макрина.“ — «Преп.» is the rank word and is left off by §6, and the heading gives no epithet and no by-name at all, so the bare forename is the whole of the form. **The heading offers nothing to tell her from her grandmother**, which is why `foldchk.py` returns `[(’macrina-the-elder’, ’sr’)]` for this string and why the fold is read in this batch’s commit message rather than avoided: there is no fuller Serbian form on the page to reach for."
     }
   ],
   "sex": "female",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.08.2026 (19. јул ст. ст.) — „Преп. Макрина.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop (§4). «Преп.» is the `venerable` this folder already carries, so nothing is read off the heading into `types`, and «Св.» does not appear in it at all. **`dates` UNTOUCHED, AND FOR ONCE BECAUSE TWO BOOKS AGREE TO THE YEAR.** The folder holds `birth` 324 and `death` 379 off saint.gr, and this entry ends „Упокоји се у Господу 379. год.“ — she reposed in the Lord in the year 379, the same number. Nothing is widened and nothing is narrowed; this is the first row of this day whose silence on `dates` is agreement rather than refusal. **THE FOLD THIS FORM MAKES, AND IT IS TWO WOMEN OF ONE HOUSE.** `foldchk.py` measured «Макрина» as already held in sr by `macrina-the-elder`, and `sr-foldpred.mjs` answered `new key, other holders: 1 macrina-the-elder`, so the fold is two wide and is read in this batch’s commit message. **The two are grandmother and granddaughter**: `macrina-the-elder` is kept on the 30 May by the Romanian and Serbian calendars, is `righteous`, is dated to the 4th century, and relates `basil-the-elder` and `gregory-the-wonderworker-of-neocaesarea`; this woman is the eldest sister of Basil the Great, daughter of Emilia, dated 324 to 379. **Both owe their Serbian form to this same book**, which prints the one name for both of them and nothing beside it, and that is the whole of why the fold exists. WHAT THE BOOK ADDS, AND IT IS HER OWN VOICE TWICE OVER. The two other books in this folder tell her life through Gregory’s letter and through saint.gr’s summary of it; THIS ONE IS THE ONLY ONE OF THE THREE THAT QUOTES HER. As a virgin she was betrothed early to a young man of good birth, and when her betrothed died she vowed never to marry: „Но када њен обручник умре, Макрина се заветова никада не ступати у брак говорећи: „није право да девојка, обручена једном веренику, иде за другога; по закону природном треба да буде једно супруженство као што је једно рођење и једна смрт“.“ — it is not right that a girl betrothed to one bridegroom should go after another; by the law of nature there should be one marriage as there is one birth and one death. SHE JUSTIFIED IT BY FAITH IN THE RESURRECTION, reckoning her betrothed not dead but alive in God, and said „„Грех је и срамота, вели, да супруга не сачува верности, када јој супруг оде у неку далеку страну.““ — it is a sin and a shame for a wife not to keep faith when her husband has gone away into some far country. THEN SHE AND HER MOTHER TOOK THE HABIT TOGETHER, „По том заједно са својом мајком Емилијом прими монаштво у неком девичком манастиру, где се подвизаваху са другим инокињама.“, in a convent of virgins where they struggled with the other nuns, LIVING BY THE LABOUR OF THEIR OWN HANDS and giving the greater part of their time to the thought of God. HER MOTHER DIED, AND THEN HER BROTHER BASIL; AND IN THE NINTH MONTH AFTER BASIL’S DEATH GREGORY CAME TO VISIT HER AND FOUND HER ON HER DEATHBED. Her dying prayer is given whole: „„Ти Господе упокојаваш телеса наша сном смрти на неко време, па ћеш их опет пробудити последњом трубом. Прости мене и дај ми да кад се душа свуче од телесне одеће, предстане Теби непорочна и без греха и да буде као тамјан пред Тобом“.“ — thou, Lord, layest our bodies to rest in the sleep of death for a time and wilt wake them with the last trumpet; forgive me, and grant that when the soul is stripped of the body’s clothing it may stand before thee undefiled and without sin, and be as incense before thee. AND SHE SIGNED HERSELF ON BROW, EYES, FACE AND HEART AND BREATHED OUT: „По том направи руком крсни знак на челу, на очима, на лицу, на срцу и – издахну.“. NO NEW `related`, AND ONE RECIPROCAL SUPPLIED. The entry names Basil the Great, Gregory of Nyssa and the mother Emilia, and all three are already `related` on this folder; `proseprobe.mjs` reported `gregory-of-nyssa` as **OWES back**, so the reverse row goes in with this batch and nothing else in that folder is touched. The betrothed who died is nobody’s folder. No `office`. No `locations`: the convent is „неком девичком манастиру“, some convent of virgins, and the book names no place at all on this day. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
