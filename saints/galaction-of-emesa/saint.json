@@ -16,6 +16,11 @@
       "form": "Галактион Емесский (Финикийский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Галактион Емесский (Финикийский), мч.», with the rank words left off. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Галактион",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Преп. муч. Галактион и Епистима.“ — «Преп. муч.» is the `venerable-martyr` grade `types` keeps, and the heading gives the pair nothing but their two bare names, so the first of them is the whole of the form (section 6). «of Emesa» in the display name is this corpus’s own and is the city THIS BOOK DOES NOT GIVE HIM: it says Едеса where the Russian form says Емесский. `sr-foldpred.mjs` measured the folded string as held by `galaction-of-vologda`, so this form makes the fold two wide and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Преп. муч. Галактион и Епистима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading is AN ENUMERATED PAIR — Галактион and Епистима — so section 5 counts two names, two folders are owed a row, and the corpus holds both. Quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преп. муч.» is exactly the `venerable-martyr` both folders hold, and `monk` is the tonsure the body gives him. `dates` WIDENED from a flat «c. 250» to 250–253: saint.gr puts the pair in the third century under Decius, which is where the 250 came from, and this entry closes «пострадаше и венце на небу примише 253. год.» — they suffered and received their crowns in heaven in 253. Three years apart, two books, nothing chosen. **AND THE BOOK PUTS THEM IN A DIFFERENT CITY FROM THE ONE THEIR DISPLAY NAMES CARRY.** «Родом из града Едесе у Финикији» — from the city of EDESSA in Phoenicia, where the Russian calendar’s own name form is «Галактион Емесский (Финикийский)», EMESA in Phoenicia, and this corpus’s display name is «of Emesa». The province is the same in both and the city is not. NOTHING WAS RENAMED and no `locations` key was made; the disagreement is recorded here and in the life, which is `docs/CORPUS.md` section 3 on two sources disagreeing. WHAT THE BOOK ADDS, AND IT IS THE WHOLE OF A HOUSEHOLD. His mother Левкипија was BARREN UNTIL SHE WAS BAPTISED; she then brought her own husband to the true faith, and baptised and raised her son in it. When Galaction came of an age to marry, his good mother reposed and his father betrothed him to a maiden, Episteme. He would not enter marriage on any terms, and instead counselled her FIRST TO BE BAPTISED AND THEN TO BE TONSURED AT THE SAME HOUR AS HIMSELF. The two withdrew to Mount Публион, he to a men’s and she to a women’s monastery, and each proved a true luminary in his own: first at labour, first at prayer, first in humility and obedience, first in love. THEY NEVER LEFT THEIR MONASTERIES AND NEVER SAW ONE ANOTHER AGAIN UNTIL BEFORE DEATH. A bitter persecution came and both were brought to trial; and when Galaction was being mercilessly scourged, EPISTEME WEPT, AND THEN THEY SCOURGED HER TOO. Then they cut off their hands, then their feet, then at last their heads. NO `related` ROW ADDED AND THREE PEOPLE ARE NAMED. Episteme is `related` here in both directions already. The mother Левкипија is no folder this corpus holds. And «Евтолије», who took their bodies and buried them honourably, who had FIRST BEEN A SLAVE OF EPISTEME’S PARENTS AND AFTERWARDS A MONK TOGETHER WITH GALACTION, AND WHO WROTE THE LIFE OF THE TWO, is no folder either — and he is the book’s own source for the entry, which is worth recording even though nothing can be done with it. NO `locations`: Edessa, Phoenicia and Mount Publion are three places and this folder has never held the key. THE FOLD: `sr-foldpred.mjs` measured «Галактион» as held by `galaction-of-vologda`, so this form makes a TWO-member fold where the string had one holder and no key; the key is in `scripts/corpus-gate.mjs`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -167,10 +182,10 @@
   "dates": {
     "death": {
       "earliest": 250,
-      "latest": 250,
-      "display": "c. 250",
+      "latest": 253,
+      "display": "250–253",
       "basis": "traditional",
-      "note": "saint.gr: «Οι Άγιοι Γαλακτίων και Επιστήμη έζησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος», and of the beheading «(περί το 250 μ.Χ.)»."
+      "note": "**Two books three years apart, and the interval holds both; it was a flat «c. 250» before this reading.** saint.gr: «Οι Άγιοι Γαλακτίων και Επιστήμη έζησαν τον 3ο αιώνα μ.Χ., όταν αυτοκράτορας ήταν ο Δέκιος» — the third century, under the emperor Decius, whose reign is where the 250 came from, the page printing no year of its own. The Охридски пролог for 5. новембар ст. ст. closes its entry «Он и написа житије ових дивних Христових мученика, који пострадаше и венце на небу примише 253. год.» — they suffered and received their crowns in heaven in 253, a year three past the end of Decius. Nothing is chosen and the basis stays traditional."
     }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Иона Новгородский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Иона, архиепископ Новгородский», with the rank words left off. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Јона",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Св. Јона архиепископ Новгородски.“ — «Св.» is \"saint\" and not a rank, «архиепископ» is the `archbishop` grade `types` keeps, and «Новгородски» is the complement of «архиепископ», the see it governs, so it comes off with the rank: the same reading as «еп. Патавски», «еп. Наесонски» and «еп. Мирски» on the three days before this one, and as `andrew-of-crete`’s «архиеп. Критски». The see is already in this folder’s `office`. `sr-foldpred.mjs` measured the bare string as held by `jonah-of-moscow`, `jonah-the-prophet` and `jonah-the-sabaite`, so this form makes the fold four wide and the key is in `scripts/corpus-gate.mjs`. His baptismal name «Иванушка», which the entry prints inside another man’s reported speech and in a diminutive, is NOT stored: it is not the form the book names him by."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Св. Јона архиепископ Новгородски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, one man, eleven sentences. Quoted whole with its closing full stop; URL year 2025. `types` and `office` UNTOUCHED and the heading confirms both: «архиепископ» is the `archbishop` and «Новгородски» the see already in `office` as Archbishop of Novgorod; `wonderworker` is this folder’s own and the entry’s last two sentences are exactly that. **`dates` UNTOUCHED AT 1470, AND THIS BOOK PRINTS 1570 — A CENTURY LATER.** «Упокоји се мирно 5. нов. 1570. године» against days.pravoslavie.ru’s two life pages, which give «Архиепископ Иона почил о Господе 5 ноября 1470 г.» and agree with one another; the DAY is the same in both books and only the century differs, the folder’s basis is `attested`, and the gate refuses an `attested` interval spanning more than a century. AND THE ENTRY CONTRADICTS ITS OWN YEAR IN ITS OWN SENTENCES: it has him prophesied over as a boy by «Михаил, јуродиви Клопски», who is `michael-of-klops` and whom this corpus dates to the fifteenth century, and chosen «по смрти архиеп. Јевтимија», after the death of `euthymius-of-novgorod`, likewise fifteenth — so 1570 cannot stand beside the people the same entry puts around him. SO NOTHING WAS WIDENED AND NOTHING WAS CORRECTED IN THE DATA: the year is recorded here and in the life as what this book prints, and 1470 stands. AUTHOR: this is the first figure in this block that reads as a slip in the source rather than as a disagreement between sources, and the handling taken — record, do not widen, do not repair — is a reading of mine and not a rule I was given. NO `related` ROW ADDED AND FOUR PEOPLE ARE NAMED. `michael-of-klops` and `euthymius-of-novgorod` are both `related` here IN BOTH DIRECTIONS already, so a third book confirms both. The see of Metropolitan of Moscow he was offered and refused pleading old age is the see of `jonah-of-moscow`, also `related` here already, and the entry does not name that man. And the God-fearing widow who took him in as an orphan and raised him is unnamed. NO `locations`: Novgorod and Moscow are named and the folder has never held the key. WHAT THE BOOK ADDS: he was born in Novgorod and left an orphan early; a God-fearing widow took and raised him; Michael the fool-for-Christ of Klops, seeing him as a boy, said to him prophetically „Иванушка, учи се приљежно, јер ћеш бити архиепископ у овоме великом Новгороду“ — Ivanushka, study diligently, for you will be archbishop in this great Novgorod — WHICH ALSO GIVES HIS BAPTISMAL NAME, Иван, in a diminutive and in another man’s mouth; he was pious and merciful AS FEW MORTAL MEN ARE; he raised churches and monasteries; he refused the see of Moscow for his old age; and A HUNDRED YEARS AFTER HIS DEATH THERE WAS A GREAT FIRE IN NOVGOROD IN WHICH HIS RELICS DID NOT BURN, but afterwards began to show a healing power and to give off a wonderful fragrance. THE BAPTISMAL NAME IS NOT STORED AS A NAME FORM: it is printed inside reported speech and in a diminutive, which is neither the form the book names him by nor a form it prints of its own account. THE FOLD: `sr-foldpred.mjs` measured the bare «Јона» as held by `jonah-of-moscow`, `jonah-the-prophet` and `jonah-the-sabaite`, so this form makes a FOUR-member fold where the string had three holders and no key; the key is in `scripts/corpus-gate.mjs`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

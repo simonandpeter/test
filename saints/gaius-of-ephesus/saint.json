@@ -11,6 +11,11 @@
       "form": "Гаий",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 5 ноября ст. ст., «Святитель Гаий, епископ Ефесский, апостол от 70-ти», with the rank words and the see left off; the see is recorded as the office. The line itself gives the name in the genitive."
+    },
+    {
+      "form": "Гај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. новембар ст. ст., „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“ — «Св. апостоли» left off, and the heading gives the five nothing but five bare names in the nominative, so the fourth of them is the whole of the form (section 6). The book writes the Serbian ј where the Russian form this folder already stores writes «Гаий»; copied as printed and never bent towards the other book. `sr-foldpred.mjs` reports it adds no new fold key, the folded string being three letters and below the four `nameKeys` requires."
     }
   ],
   "sex": "male",
@@ -63,8 +68,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.11.2025 (5. новембар ст. ст.) — „Св. апостоли: Патров, Ерма, Лин, Гај и Филолог.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The fourth name of the day’s second entry, an ENUMERATED COMPANY OF FIVE with no «и други» at the end, so all five folders take the same one heading, whole, with its closing full stop. URL year 2025. `types` AND `office` UNTOUCHED AND THE TWO BOOKS AGREE ON HIS SEE: «Гај у Ефесу (Рим. 16, 23)», bishop in Ephesus, which is the Bishop of Ephesus already in `office`, and the reference is correct as printed. «Св. апостоли» is the `apostle` and «Беху из седамдесет апостола» the Seventy. `dates` UNTOUCHED at the first century: no year at all. NO `locations`, NO `related` ROW: the other four are `related` here in both directions already. NO FOLD: «Гај» folds to three letters, below the four the gate’s `nameKeys` requires, so it makes no key — and it is a different string from the Russian «Гаий» this folder already stores, which is worth saying because a reader comparing them by eye would read them as the same name spelled two ways, and they are. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
