@@ -1,0 +1,63 @@
+{
+  "slug": "victorinus-of-pettau",
+  "display_name": "Victorinus of Pettau",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Викторин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 2. новембар ст. ст., „Свешт. муч. Викторин еп. Патавски.“ — «Свешт. муч.» is the `hieromartyr` grade this corpus keeps in `types` and «еп.» the `bishop`, and «Патавски» is the complement of «еп.», the see it governs, so it comes off with the rank: that is the reading `andrew-of-crete`’s Serbian form already stands on, where «Св. Андреј архиеп. Критски» gave the bare Андреј because the see was governed by the rank word. «of Pettau» in the display name is therefore this corpus’s own English, as «of Crete» is there. The fuller «Викторин Патавски» was considered and refused for that reason, and nothing is lost by it: `sr-foldpred.mjs` measures the bare form at 0 other holders, so neither reading would have folded with anything. The book prints no Latin form of his name."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 303,
+      "latest": 303,
+      "display": "about 303",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 2. новембар ст. ст., the whole of its last sentence about him: „Пострадао за веру Христову око 303. год.“ — he suffered for the faith of Christ about the year 303. The equal bounds with the word «about» kept in `display` are this corpus’s existing reading of «ок.», as `abraham-the-recluse` and `athanasius-of-medikion` carry «ок. 360» and «ок. 814». The entry gives no year of birth, no age and no emperor, and this is the only book this folder has (7 October 2026)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 2 ноября ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Νοεμβρίου (7 October 2026). The corpus holds twenty-four folders on the menologion 2/11 from the other three calendars and no Victorinus is among them, which is a fact about what was read on those days and not an absence on this one."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.11.2025 (2. новембар ст. ст.) — „Свешт. муч. Викторин еп. Патавски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third and shortest entry, five sentences, and the ONE ARRIVAL OF THIS DAY: the other two entries are six men the corpus already holds. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. THE SWEEP SAID NOTHING AND THE SWEEP WAS WRONG, AND THIS IS THE DEFECT A PREVIOUS READER NAMED. `sr-namesweep.mjs` answered this heading with the same noise block it answers every «Свешт. муч.» heading with — cyprian-of-antioch, cyprian-of-carthage, dionysius-of-alexandria, dionysius-the-areopagite, emilian-of-trebia, hierotheus-of-athens, justina-of-antioch, kuksha-of-the-kyiv-caves, pothinus-of-lyon — which is the rank abbreviation being scored and not the personal name, and it named no Victorinus at all although the corpus holds three. So the folder was decided by `grep -ril victorin saints/*/saint.json`, which returns `victorinus-companion-of-agapitus`, `victorinus-martyred-at-evreux` and `victorinus-of-corinth`, AND BY READING WHAT EACH OF THE THREE IS: a companion of Agapitus, a martyr of Évreux and one of the ten of Corinth, none of them a bishop, none of them of Pettau, and `grep -rilE 'pettau|poetovio|patavski|Патавск|Петавск' saints/ src/` returning nothing in the whole repository. `types` from the heading alone: «Свешт. муч.» is `hieromartyr`, «еп.» is `bishop`. NO `office`, AND THAT IS A TEST AND NOT A READING: `tests/i18n.test.mjs` requires every `office` string in all four locale packs and «Bishop of Pettau» is in none of them, so the see lives in the display name only. NO `locations`: the entry says only «Многи држе, да је био Словенац по пореклу», that many hold he was a Slovene by origin, which is a claim about his birth and not a place of death, and a located saint with no second coordinate buys `map-span.test.mjs` and nothing else. The Prologue prints no troparion and no kontakion. NO FOLD: `sr-foldpred.mjs` measures «Викторин» at 0 other holders and no folder in the corpus stores the Cyrillic string."
+    }
+  ],
+  "related": [
+    "jerome-of-stridon"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

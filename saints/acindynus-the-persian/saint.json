@@ -16,6 +16,11 @@
       "form": "Акиндин Персидский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 2 ноября ст. ст., «Акиндин Персидский, мч.», with the rank word left off. The day's own line declines it as «Акиндина»."
+    },
+    {
+      "form": "Акиндин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. новембар ст. ст., „Св. муч. Акиндин, Пигасије, Анемподист, Афтоније, Елпидифор и други с њима.“ — «Св.» is \"saint\" and not a rank, «муч.» is the `martyr` grade `types` keeps, and the heading gives the five no see, no place and no by-name, so the bare personal name, the first of its five, is the whole of the form (section 6). All five names are printed in the NOMINATIVE here and nothing was restored. «the Persian» in the display name is this corpus’s own, off the Russian «Акиндин Персидский». `sr-foldpred.mjs` measured the folded string as held by `acindynus-20-april` and `acindynus-of-nicomedia`, so this form makes a THREE-member fold where the string had two holders and no key, and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.11.2025 (2. новембар ст. ст.) — „Св. муч. Акиндин, Пигасије, Анемподист, Афтоније, Елпидифор и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading is AN ENUMERATED COMPANY OF FIVE closed by «и други с њима», others with them, which enumerates nobody — so BRIEF-SERBIAN section 5 counts five names, five folders are owed a row, the corpus holds all five, and the others are refused. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. The five already relate one another in both directions, so NO `related` ROW IS ADDED. `types` UNTOUCHED at `martyr`: «Св. муч.» governs all five names and is that grade; «слуге на двору» is a station at court and not a rank. NO `locations`: Persia is the whole of the geography and no city is named. AND THREE COMPANIES THE BODY COUNTS TAKE NOTHING, WHICH IS THE HEADING RULE AGAIN. «око 7000 других хришћана» beheaded with Elpidephorus; «са 28 војника» thrown into the furnace with the first three — and the corpus HOLDS a folder `twenty-eight-martyrs`, kept on the menologion 3/11, a day away from this one; and «са мајком царевом», with the emperor’s own mother, who believed and burned with them. The heading names none of the three, so none takes a row, and the emperor’s mother is a person this book names and leaves anonymous. AUTHOR: `twenty-eight-martyrs` is the second company this wave has met that the corpus already keeps whole while the heading beside it names nobody. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [
@@ -172,10 +187,10 @@
   "dates": {
     "death": {
       "earliest": 330,
-      "latest": 345,
-      "display": "330–345",
+      "latest": 355,
+      "display": "330–355",
       "basis": "traditional",
-      "note": "Two calendars fifteen years apart, and the interval holds both. saint.gr gave «(; - 330)» for each of the five, which these folders carried as a flat 330; days.pravoslavie.ru closes the same company's line «(ок. 341-345)», about 341 to 345, and its life sets the whole story in the reign of «Сапора II (310 - 381)», which contains both readings and settles neither. Nothing is chosen."
+      "note": "**Three calendars, three years, and the interval holds all three; it was 330–345 before this reading widened it.** saint.gr gave «(; - 330)» for each of the five, which these folders once carried as a flat 330; days.pravoslavie.ru closes the same company’s line «(ок. 341-345)», about 341 to 345, and its life sets the whole story in the reign of «Сапора II (310 - 381)», which contains every reading and settles none. The Охридски пролог for 2. новембар ст. ст. opens the entry «Хришћани из Персије; пострадали у време цара Сапора (Саворија), 355. год.» — Christians of Persia, who suffered in the time of the emperor Shapur, in the year 355 — which is ten years past the Russian ceiling and twenty-five past the Greek year, and is the same king. Nothing is chosen and the basis stays traditional."
     }
   }
 }

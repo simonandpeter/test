@@ -16,6 +16,11 @@
       "form": "Анемподист Персидский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 2 ноября ст. ст., «Анемподист Персидский, мч.», with the rank word left off. The day's own line declines it as «Анемподиста»."
+    },
+    {
+      "form": "Анемподист",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 2. новембар ст. ст. — «Св. муч.» left off, which section 5 maps to `martyr`, and the heading gives the five nothing but their five bare names in the nominative, so the third of them is the whole of the form (section 6). «the Persian» in the display name is this corpus’s own, off the Russian «Анемподист Персидский». `sr-foldpred.mjs` measured 0 other holders."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.11.2025 (2. новембар ст. ст.) — „Св. муч. Акиндин, Пигасије, Анемподист, Афтоније, Елпидифор и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s first entry, an ENUMERATED COMPANY OF FIVE closed by «и други с њима», which enumerates nobody: section 5 counts five names and all five folders take the same one heading, whole, with its closing full stop. URL year 2025. He is the third of the court servants, sewn into a leather bag and thrown into the sea with Acindynus and Pegasius, brought out alive, and burned at last in the furnace with twenty-eight soldiers and the king’s mother. `types` UNTOUCHED at `martyr`. NO `locations`, NO `related` ROW: the five relate one another both ways already. `dates` WIDENED to 330–355 with the other four: the entry’s «355. год.» is a third year ten past the Russian ceiling. NO FOLD: `sr-foldpred.mjs` measured «Анемподист» at 0 other holders. The Prologue prints no troparion and no kontakion."
     }
   ],
   "related": [
@@ -172,10 +187,10 @@
   "dates": {
     "death": {
       "earliest": 330,
-      "latest": 345,
-      "display": "330–345",
+      "latest": 355,
+      "display": "330–355",
       "basis": "traditional",
-      "note": "Two calendars fifteen years apart, and the interval holds both. saint.gr gave «(; - 330)» for each of the five, which these folders carried as a flat 330; days.pravoslavie.ru closes the same company's line «(ок. 341-345)», about 341 to 345, and its life sets the whole story in the reign of «Сапора II (310 - 381)», which contains both readings and settles neither. Nothing is chosen."
+      "note": "**Three calendars, three years, and the interval holds all three; it was 330–345 before this reading widened it.** saint.gr gave «(; - 330)» for each of the five, which these folders once carried as a flat 330; days.pravoslavie.ru closes the same company’s line «(ок. 341-345)», about 341 to 345, and its life sets the whole story in the reign of «Сапора II (310 - 381)», which contains every reading and settles none. The Охридски пролог for 2. новембар ст. ст. opens the entry «Хришћани из Персије; пострадали у време цара Сапора (Саворија), 355. год.» — Christians of Persia, who suffered in the time of the emperor Shapur, in the year 355 — which is ten years past the Russian ceiling and twenty-five past the Greek year, and is the same king. Nothing is chosen and the basis stays traditional."
     }
   }
 }
