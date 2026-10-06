@@ -10,6 +10,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's page for 10 Απριλίου, which heads him «Αγιος Θεόδωρος» and lists him among the company of «Άγιοι Αφρικανός, Θεόδωρος, Μάξιμος, Πομπήιος, Τερέντιος και άλλοι τεσσαράκοντα Μάρτυρες», with the rank word left off."
+    },
+    {
+      "form": "Феодор Африканский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 10 апреля ст. ст., name page 2179, «Феодор Африканский, мч.», with the rank abbreviation left off. **The bare «Феодор» is held as a `ru` form by eight other folders**, from a boyar of Chernigov to a prince of Yaroslavl to four presbyters shot in 1937, so storing it would have put one string on nine. The day’s own line gives the forename alone in the genitive. `.tmp/foldchk.py` reports no folder holding this form and `.tmp/sr-foldpred.mjs` reports it as a key no other folder holds; the bare forename was refused because this corpus is full of it."
     }
   ],
   "related": [
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Мчч. Терентия , Помпия , Африкана , Максима , Зинона , Александра , Феодора и иных 33-х (ок. 249-251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The line stands in the day’s first paragraph. It prints a space before each comma because each of the seven names is a link; the words are the page’s own."
+      }
     },
     {
       "church": "romanian",
@@ -107,6 +122,23 @@
       },
       "english": {
         "text": "As followers of Christ the prize-bearers said in the arena, contending firmly: let us not be afraid, fellow-strugglers, for a delight that has no successor awaits us.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мученическая честная память прииде днесь,/ веселящи всяческая,/ Терентия премудраго и дружины его./ Темже убо стецемся, да приимем исцеления,/ сии бо благодать от Бога прияша Духа Святаго// исцеляти недуги душ наших.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Кондак мучеников», глас 2, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The one hymn the day prints. It names «Терентия премудраго и дружины его», Terentius the all-wise and his company, and names no other member, so it stands here as the company’s hymn and not as this man’s own. It is taken onto this folder because this folder’s `russian` row stands on the day that prints it."
+      },
+      "english": {
+        "text": "The honoured memory of the martyrs has come today, gladdening all things — the memory of Terentius the all-wise and of his company. Let us therefore run together, that we may receive healings; for these have received from God the grace of the Holy Spirit, to heal the sicknesses of our souls.",
         "rendered": "site"
       }
     }
