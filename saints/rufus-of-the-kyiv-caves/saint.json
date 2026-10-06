@@ -11,6 +11,11 @@
       "form": "Ρούφος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Απριλίου, «Όσιος Ρούφος εν τη Λαύρα του Κιέβου ασκήσαντος», with the rank word and the clause naming where he lived the ascetic life left off."
+    },
+    {
+      "form": "Руф Печерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 8 апреля ст. ст., name page 1888, «Преподобный Руф, затворник Печерский», with the rank word and the grade word «затворник» left off and the toponymic kept. The day’s own line declines the same three words. **The bare «Руф» is held as an `sr` form by `rufus-apostle-of-thebes`, whom this same Russian day keeps, and by `rufus-of-cyzicus`**, and the gate folds nothing shorter than four characters, so the bare form would have made no fold key and still an exact string across three folders; the toponymic is what the name page prints and it is what keeps this one single. The hymn headings call him «послушливый», the Obedient, which is not stored because the name link does not give it. `.tmp/foldchk.py` and `.tmp/sr-foldpred.mjs` were both run before this draft."
     }
   ],
   "related": [],
@@ -26,8 +31,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Прп. Руфа, затворника Печерского (XIV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -57,5 +71,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Послушание святое, нарицающееся живот,/ преподобне отче Руфе, прием,/ живот вечный оным постигл еси,/ идеже живя, не забуди и нас, хвалящих тя.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Тропарь преподобного Руфа послушливого, затворника Печерского, в Дальних пещерах», глас 8. His own and a proper: it names him, «преподобне отче Руфе», and it turns on the one thing every book read for this folder says of him. **The heading carries the by-name «послушливого», the Obedient, which no prose page on any of the four calendars gives him**; the folder held no hymn at all before, saint.gr having printed none.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received holy obedience, which is called life, O venerable father Rufus, by it you attained to eternal life; and living there, do not forget us also, who praise you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Честна смерть твоя, преподобне Руфе, пред Господем,/ честне бо и преподобне жизнь твою в послушании святом препроводил еси./ Тем тя убо почитаем,/ яко послушником образ и наставник.",
+      "source": {
+        "text": "days.pravoslavie.ru, Православный церковный календарь of the Сретенский monastery for 8 апреля ст. ст., under «Молитвы»: «Кондак преподобного Руфа послушливого, затворника Печерского, в Дальних пещерах», глас 6. His own and a proper: it names him and it makes him a pattern and a teacher to the obedient, which is the comparison the Russian prose draws and the Greek page does not.",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Honourable is your death, O venerable Rufus, before the Lord, for honourably and in a manner befitting a venerable one did you pass your life in holy obedience. Therefore we honour you as a pattern and a teacher to the obedient.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

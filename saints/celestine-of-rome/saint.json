@@ -17,6 +17,11 @@
       "form": "Келестин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 8 April on pravoslavno.rs, „Св. Келестин папа Римски.“, with Св. left off — it is not a rank — and with папа Римски left off as well: the see is what this corpus keeps in `office`, where this folder already has «Bishop of Rome». The heading leaves no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Келестин I Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 8 апреля ст. ст., name page 1192, «Святитель Келестин I Римский, папа», with the rank word and the office word left off and **the ordinal kept, which no other book read for this folder gives him**. The day’s own line gives the forename and the see declined, «Келестина, папы Римского». The life opens with a second spelling in brackets, «Келестин (Целестин)», which is not stored as a separate form because it is a variant of the same word in the same sentence of the same page. No folder holds this form."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Свт. Келестина, папы Римского (432).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -1,0 +1,68 @@
+{
+  "slug": "sergius-rodakovsky",
+  "display_name": "Sergius (Rodakovsky)",
+  "names": [
+    {
+      "form": "Сергий (Родаковский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 8 апреля ст. ст., name page 9401, «Сергий (Родаковский), протоиерей, сщмч.», with the office word and the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Сергия», with the rank word and the grade beside it. azbyka.ru heads its page «Священномученик Сергий Родаковский, пресвитер», without the brackets, and gives his father’s name as «Петра Родаковского». **The bare «Сергий» is held as a `ru` form by six folders already** and is a fold the gate has read at six, so storing it would have widened that fold to seven and forced it to be read again; the surname the name page prints is what keeps this folder out of it. No folder holds this form, no folder holds the surname and no slug or display name contains it; `.tmp/foldchk.py` and `.tmp/rusurn.py` were both run before this draft."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 апреля ст. ст. — «Сщмч. Сергия пресвитера (1933).»",
+        "url": "https://days.pravoslavie.ru/Days/20260408.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 aprilie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Απριλίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 April 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "Both pages give the year and they differ on the uyezd. days.pravoslavie.ru’s page of the twenty-three says «родился в 1882 году в городе Житковичи Минской губернии в семье псаломщика»; azbyka.ru says «родился в 1882 году в городе Житковичи Мозырского уезда Минской губернии в семье псаломщика Петра Родаковского», adding the uyezd and the father’s name. The year is not in dispute and neither page gives a day or a month. The date is printed as one number and no new-style pair is constructed from it."
+    },
+    "death": {
+      "earliest": 1933,
+      "latest": 1933,
+      "display": "1933",
+      "basis": "attested",
+      "note": "The year is what days.pravoslavie.ru brackets after his line for 8 апреля ст. ст., «(1933)». **The day is deliberately not written into the display, because what both pages date is the sentence and not the shooting.** days says «21 апреля 1933 года приговорили к расстрелу. Приговор был приведён в исполнение» — sentenced on that day, and the sentence was carried out, with no date for the carrying out; azbyka says «21 апреля 1933 года тройка ОГПУ приговорила протоиерея Сергия Родаковского к расстрелу, он был расстрелян и погребен в безвестной могиле», which is the same sequence in one sentence and still dates only the sentence. **21 April 1933 is the civil date of the Julian 8 April**, so this calendar keeps him on the day he was sentenced; whether that was also the day he was shot is a thing neither page says. The date is printed as one number and no new-style pair is constructed from it."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
