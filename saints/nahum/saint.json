@@ -11,6 +11,11 @@
       "form": "Ναούμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Δεκεμβρίου, «Προφήτης Ναούμ», with the rank word left off."
+    },
+    {
+      "form": "Наум",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. децембар ст. ст., „Свети пророк Наум.“ — «Свети» is “saint” and not a rank and «пророк» is the `prophet` grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form; the heading gives him no epithet, where the Greek life calls him the Elkesite. `foldchk.py` measured the string as held in ru by `naum-of-aglomazovo`, a martyr of 1918, so this form makes a two-folder fold and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.12.2025 (1. децембар ст. ст.) — „Свети пророк Наум.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the first of two, both of them upgrades and neither a new folder. The menologion scan put seven folders on 1/12 in another calendar and this is the prophet the Romanian and Greek calendars already keep on their own 1 December. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. `types` UNTOUCHED: «пророк» is the `prophet` the folder already holds, and «Свети» is “saint” and not a rank. `dates` REPLACED, AND THIS IS THE ONE READING ON THE DAY THAT CHANGES A RECORDED FACT. The folder held `floruit` 460 BC to 460 BC off saint.gr, «άκμασε περί το 460 π.Χ.»; this book says «Живео на седам стотина година пре Христа», seven hundred years before Christ, which is two and a half centuries earlier. CORPUS.md section 3 is explicit that two sources disagreeing are recorded as an interval carrying both readings and that nothing is chosen, so the floruit is now 700 to 460 BC with both pages quoted in the note; `basis` stays `traditional` and the folder is unlocated, so `map-span.test.mjs` is not in play. No `locations`: Елкесем and the Jordan are named and neither is a coordinate the reader may set. ONE PERSON NAMED AND HE ALREADY HAS A ROW: Јона, `jonah-the-prophet`, who is in `related` both ways already and whose preaching is the whole point of this entry. The Prologue prints no troparion and no kontakion. THE FOLD THIS FORM MAKES: `foldchk.py` measured «Наум» as held in ru by `naum-of-aglomazovo` alone, so this form makes it a two-folder fold and a key is in `scripts/corpus-gate.mjs` in the same commit; there was nothing narrower to delete."
     }
   ],
   "images": [
@@ -123,11 +138,11 @@
   },
   "dates": {
     "floruit": {
-      "earliest": -460,
+      "earliest": -700,
       "latest": -460,
-      "display": "c. 460 BC",
+      "display": "700–460 BC",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε τον 5ο αιώνα προ Χριστού (άκμασε περί το 460 π.Χ.) και ήταν από τη φυλή του Συμεών»."
+      "note": "Two books disagree and neither is chosen (CORPUS.md section 3). saint.gr: «Έζησε τον 5ο αιώνα προ Χριστού (άκμασε περί το 460 π.Χ.) και ήταν από τη φυλή του Συμεών»; the Охридски пролог for 1. децембар ст. ст.: „Живео на седам стотина година пре Христа.“"
     }
   }
 }

@@ -11,6 +11,11 @@
       "form": "Αββακούμ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Προφήτης Αββακούμ», with the rank word left off."
+    },
+    {
+      "form": "Авакум",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s first heading for 2. децембар ст. ст., „Свети пророк Авакум.“ — «Свети» is “saint” and not a rank and «пророк» is the `prophet` grade, so both come off; the heading gives him no epithet and the body’s “son of Asaphat” is not part of it. `sr-foldpred.mjs` measures the form at 0 other holders."
     }
   ],
   "sex": "male",
@@ -54,8 +59,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.12.2025 (2. децембар ст. ст.) — „Свети пророк Авакум.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry of five, and an upgrade: the Romanian and Greek calendars already keep this prophet on their own 2 December and the menologion scan found the folder. Quoted whole with its closing full stop (section 4); URL year 2025. THE SWEEP NAMED FIVE AND ONLY ONE IS HIM: abachum-son-of-marius, avacum-the-deacon, habakkuk, habakkuk-of-thessalonica and habakkuk-the-ascetic-of-cyprus. `habakkuk` is the minor prophet the other two calendars keep on this same menologion day; `avacum-the-deacon` is the deacon of the Serbian uprising hanged in 1814; `habakkuk-of-thessalonica` and `habakkuk-the-ascetic-of-cyprus` are a new-martyr and a Cypriot ascetic; `abachum-son-of-marius` is one of the Roman company of Marius and Martha. One of the five, and it is the one on the day. `types` UNTOUCHED: «пророк» is the `prophet` the folder holds. `office` UNTOUCHED — none, and this book gives none. `dates` REPLACED, as CORPUS.md section 3 requires of two sources that disagree: the folder held `floruit` 672 to 650 BC off saint.gr, and this book says «Пророковао на шест стотина година пре Христа за време цара Манасије», six hundred years before Christ in the reign of Manasseh, which is half a century later than the Greek page’s later bound; the interval is now 672 to 600 BC and the note quotes both. Unlocated, so `map-span.test.mjs` is not in play. WHAT THE BOOK ADDS: the father Asaphat, the flight into the land of the Ishmaelites before Nebuchadnezzar, the return to farming in Judaea, the angel who carried him by the hair to Babylon with the labourers’ dinner for Daniel in the lions’ pit, the prophecy of the freeing of Jerusalem and of the time of Christ, the burial at Kela and the uncovering of the relics. FOUR PEOPLE NAMED AND NONE GETS A ROW. Данило: `daniel-the-prophet` holds the display name “Daniel”, one word, which `cross-link.js` does not index and `related-floor` therefore never finds, and the pit is an episode of his book rather than a companionship — the paragraph names him because the story is unintelligible without him and no row was made. Навуходоносор, Кир and Манасија are kings and not saints this corpus holds. Теодосије Велики, in whose days the relics were found, IS a folder, `theodosius-the-great`, and its display name is three words and in the renderer’s index; the paragraph therefore says “the emperor Theodosius” and not his full form, because an emperor who reigned when a relic was uncovered is furniture and the `related` row it would have forced would have been false. No `locations`: Kela, Judaea and Babylon are named and none is a coordinate. The Prologue prints no troparion and no kontakion. NO FOLD: `sr-foldpred.mjs` measures «Авакум» at 0 other holders."
     }
   ],
   "hymns": [
@@ -98,10 +113,10 @@
   "dates": {
     "floruit": {
       "earliest": -672,
-      "latest": -650,
-      "display": "672–650 BC",
+      "latest": -600,
+      "display": "672–600 BC",
       "basis": "traditional",
-      "note": "saint.gr: «ήταν από τη φυλή του Συμεών και γιος του Σαφάτ και ο χρόνος που έδρασε τίθεται μεταξύ 650 και 672 π.Χ.»"
+      "note": "Two books disagree and neither is chosen (CORPUS.md section 3). saint.gr: «ήταν από τη φυλή του Συμεών και γιος του Σαφάτ και ο χρόνος που έδρασε τίθεται μεταξύ 650 και 672 π.Χ.»; the Охридски пролог for 2. децембар ст. ст.: „Пророковао на шест стотина година пре Христа за време цара Манасије.“"
     }
   },
   "images": [

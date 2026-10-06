@@ -11,6 +11,11 @@
       "form": "Μυρώπη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Αγία Μυρώπη», with the rank word left off. The same page gives «Μερόπη» as an alternative and the hymns spell her «Μυρόπη»."
+    },
+    {
+      "form": "Миропија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s second heading for 2. децембар ст. ст., „Света мученица Миропија.“ — «Света» is “saint” and not a rank and «мученица» is the `martyr` grade, so both come off and the bare personal name is the whole of the form; the heading gives her no epithet and no island. `sr-foldpred.mjs` measures the form at 0 other holders."
     }
   ],
   "sex": "female",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.12.2025 (2. децембар ст. ст.) — „Света мученица Миропија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry of five, and an upgrade: the Romanian and Greek calendars keep her on their own 2 December and the menologion scan found the folder. Quoted whole with its closing full stop (section 4); URL year 2025. The sweep named her first and then sixty-six Marias and Maiors below her, the romaniser folding «Миропија» towards m-r; `myrope` is the only Myrope in the corpus and she is the one on the day. `types` UNTOUCHED: «мученица» is the `martyr` the folder holds and the `virgin` beside it is what the other two books gave it; this book calls her «света девица Христова» in the body, which is that same `virgin` confirmed from a third book. `office` UNTOUCHED — none. `dates` REPLACED AND THIS IS AN ADDITION, NOT A DISAGREEMENT: the folder held `floruit` 250 to 250 off saint.gr, which says in words that it gives no year for her birth or her death, and this book closes „Пресели се света Миропија у вечност 251. године.“ So a `death` of 251 joins the floruit, which is carried forward word for word; the two do not contradict and nothing was widened. Unlocated, so `map-span.test.mjs` is not in play. WHAT THE BOOK ADDS: the Christian parents, the father’s death and the move to Chios with her mother, the burial of Isidore’s body and the censing of it, the prince Numerian and the guards he meant to kill, her own confession to save them, the scourging, the midnight light with the angels and Isidore in the midst, his words to her, the fragrance that filled the prison and the guard who was baptised and martyred for what he saw. TWO PEOPLE NAMED AND ONE ALREADY HAS A ROW BOTH WAYS. Исидор војник is `isidore-of-chios`, already in this folder’s `related` and the whole hinge of the entry, and the paragraph links him; the book’s own cross-reference «в. 14. маја» is his day in this same book and is recorded here rather than acted on. Нумеријан the prince is her persecutor and no folder. No `locations`: Ephesus and Chios are named, and the folder stays unlocated for the same reason it was unlocated before. The Prologue prints no troparion and no kontakion. NO FOLD: `sr-foldpred.mjs` measures «Миропија» at 0 other holders."
     }
   ],
   "related": [
@@ -73,7 +88,14 @@
       "latest": 250,
       "display": "mid 3rd century",
       "basis": "traditional",
-      "note": "saint.gr: «Έζησε στα μέσα του 3ου αιώνα μ.Χ. και γεννήθηκε στην πόλη Έφεσο», and it places her death in the persecution of Decius. It gives no year for either."
+      "note": "saint.gr: «Έζησε στα μέσα του 3ου αιώνα μ.Χ. και γεννήθηκε στην πόλη Έφεσο», and it places her death in the persecution of Decius. It gives no year for either. Carried forward unchanged."
+    },
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 2. децембар ст. ст. closes „Пресели се света Миропија у вечност 251. године.“ — the first year of death this folder has had, and it does not contradict the Greek page’s “middle of the third century”, which the floruit beside it still carries (7 October 2026)."
     }
   },
   "hymns": [

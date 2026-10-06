@@ -6,6 +6,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Δεκεμβρίου, «Όσιος Αθανάσιος ο Έγκλειστος “ἐν τῷ Σπηλαίῳ”», with the rank word left off. The two epithets in this folder's name are the page's own, «ὁ Ἔγκλειστος» and «ἐν τῷ Σπηλαίῳ»."
+    },
+    {
+      "form": "Атанасије, затворник печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 2. децембар ст. ст., „Преподобни Атанасије, затворник печерски.“ — «Преподобни» is the `venerable` grade and comes off, and everything after the comma is what the book prints to tell this Athanasius from the others, with its own comma and its own lower case kept rather than tidied. Section 6 wants the fullest form the calendar gives and a bare forename beside a fuller one is a fold the gate stops on: the bare «Атанасије» is already on four folders, and затворник is not a rank this corpus keeps in `types`, so it belongs in the form. `sr-foldpred.mjs` measures this form at 0 other holders."
     }
   ],
   "sex": "male",
@@ -42,11 +47,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.12.2025 (2. децембар ст. ст.) — „Преподобни Атанасије, затворник печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry of five, and an upgrade: the folder exists, carried a venerated GREEK row for the same 2 December and nothing else, and the menologion scan found it. Quoted whole with its closing full stop (section 4); URL year 2025. THE SWEEP RETURNED 370 ATHANASII AND SETTLED NOTHING; what settled it is that the heading names the Caves — «затворник печерски», the recluse of the Kyiv Caves — and the corpus holds exactly one Athanasius of the Caves, this one, whose display name is that same phrase in English and whose Greek row stands on this same menologion day. `types` UNTOUCHED: «Преподобни» is the `venerable` the folder holds, and the `monk` and `wonderworker` beside it came from the Greek page. Затворник, a recluse, is NOT a type: section 5’s table has Пустињак and Отшелник for `hermit` and the corpus keeps no `recluse`, so the word stays in the name form and the prose and nothing was added. `office` UNTOUCHED — none. `dates` WRITTEN FOR THE FIRST TIME: the folder held `dates: null`, and this book closes „Упокоји се у Господу 1176. године.“ so `death` is 1176 with equal bounds and `traditional` basis. Nothing was widened and nothing contradicted, because there was nothing there. Unlocated, and it stays unlocated: the Caves are in the name and not a coordinate the reader may set. WHAT THE BOOK ADDS, AND IT IS THE WHOLE OF THE FOLDER’S STORY: the death after a long asceticism, the washing and clothing and preparation for burial, the two days lying dead, the coming alive, the brethren finding him sitting up and weeping, and the twelve years afterwards shut in a cell on bread and water alone without a word to anybody. NOBODY IS NAMED IN THE ENTRY AT ALL and no `related` row is owed in either direction. The Prologue prints no troparion and no kontakion. NO FOLD: the bare «Атанасије» WOULD HAVE MADE ONE OF FIVE — `foldchk.py` finds it on athanasius-i-of-constantinople, athanasius-of-attaleia, athanasius-once-a-magician and athanasius-the-reader — and was refused for that reason; `sr-foldpred.mjs` measures the fuller form the heading actually gives at 0 other holders."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1176,
+      "latest": 1176,
+      "display": "1176",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 2. децембар ст. ст. closes „Упокоји се у Господу 1176. године.“ — the only year any source has given this folder; it held no `dates` at all before. The entry gives no year of birth and no age (7 October 2026)."
+    }
   }
 }

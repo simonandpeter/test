@@ -1,0 +1,65 @@
+{
+  "slug": "uros-of-serbia",
+  "display_name": "Uroš of Serbia",
+  "sex": "male",
+  "types": [
+    "king",
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Урош",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s third heading for 2. децембар ст. ст., „Свети Урош, цар српски.“ — «Свети» is “saint” and not a rank, and «цар српски» is the grade with the realm it governs, which comes off with it on the reading `victorinus-of-pettau`’s form already stands on; so the bare personal name is the whole of the form and “of Serbia” in the display name is this corpus’s own English. `sr-foldpred.mjs` measures the form at 0 other holders and `foldchk.py` finds the string on no folder, so neither reading would have folded with anything. The book prints no Latin form of his name."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1367,
+      "latest": 1367,
+      "display": "1367",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 2. децембар ст. ст.: „Мученички пострада добри Урош 2. децембра 1367. године у тридесет првој својој години.“ — the day, the year and the thirty-first year of his life. NO BIRTH YEAR IS RECORDED: the book states an age and not a year, and subtracting one from the other is arithmetic this corpus does not put in a folder (7 October 2026)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 2 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 2 Δεκεμβρίου (7 October 2026). The corpus holds seventeen folders on the menologion 2/12 from the other three calendars and no Uroš is among them, which is a fact about what was read on those days and not an absence on this one."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.12.2025 (2. децембар ст. ст.) — „Свети Урош, цар српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-15&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry of five, and THE ONE ARRIVAL OF THIS DAY: of the other four, three are folders the corpus already holds on the menologion 2/12 and the fifth is a man this book itself keeps on another day. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. THE SWEEP WAS USELESS HERE AND THE FOLDER WAS DECIDED BY GREP. `sr-namesweep.mjs` answered this heading with aeros-the-archbishop, ares-19-december, ares-of-the-egyptian-desert, arius-of-egypt, charis, charissa-companion-of-leonides, chryse-of-slatena, chryse-the-martyr, eros-brother-of-orentius and raisa-of-alexandria above 239 weaker rows — the romaniser folding «Урош» onto a vowel-and-r skeleton that catches Ares, Eros and Charis and naming no Serbian ruler at all. So the decision came from `grep -rl «Uroš|Urosh|Урош» saints/*/saint.json saints/*/life.md`, which returns joasaph-of-meteora, lazar-of-serbia, stephen-milutin, stephen-of-decani and five lives, AND FROM READING WHAT EACH OF THEM IS. `stephen-of-decani` is Stephen Uroš III, dead 1331 or 1336; `stephen-milutin` is the son of Uroš I; `joasaph-of-meteora` is the son of Symeon Uroš Palaiologos; and `lazar-of-serbia`’s own folder settles it in words, saying of the emperors named in its life that “no folder holds Dušan, Uroš or Murad” — a reading written on another day of this same wave, which is the strongest statement available that this man had no folder. He has one now, and that sentence is stale in exactly that one respect. `types` FROM THE HEADING AND ONE WORD OF THE BODY: «цар» is the `king` of section 5’s table, read as the man being a crowned ruler and not a consort, and «Мученички пострада» in the body is the book saying outright that he suffered as a martyr, which is the `martyr` grade; Страстотрпац would have been `passion-bearer` and the book does not print it, so it is not here. NO `office`, AND THAT IS A TEST AND NOT A READING: `tests/i18n.test.mjs` requires every `office` string in all four locale packs, the packs carry “King of Serbia” and “King of the Serbs” and no form of words for an emperor or a tsar of the Serbs, and calling a цар a king in the one field that prints the title would be this reader choosing a rendering the source does not give. The gap is in the report. NO `locations`: Fruška Gora, the monastery of Jazak, Belgrade and Lake Ohrid are all named and none of them is where he died, which the book does not say at all. FIVE PEOPLE NAMED AND THREE GET A ROW. `lazar-of-serbia` and `stephen-stiljanovic` are the two bodies his relics were laid beside in 1942 and `naum-of-ohrid` is the saint of the monastery built in his reign — a dedication is a relation (CORPUS.md section 3) — and all three get a row here and a row back in the same batch. Dušan his father and Grgur his magnate hold no folder, and Vukašin who killed him is not a saint: `vukasin-of-klepci` is a `new-martyr` of the Second World War and a different man, and no row was made for the name. The Prologue prints no troparion and no kontakion. NO FOLD: `sr-foldpred.mjs` measures «Урош» at 0 other holders, and “Uroš of Serbia” appears in no life in the corpus, so the renderer’s own name index gains a form that matches nothing already written."
+    }
+  ],
+  "related": [
+    "lazar-of-serbia",
+    "stephen-stiljanovic",
+    "naum-of-ohrid"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
