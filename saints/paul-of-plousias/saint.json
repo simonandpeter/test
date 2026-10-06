@@ -12,6 +12,11 @@
       "form": "Παύλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Παύλος ο Ομολογητής επίσκοπος Πλουσιάδος», with the rank words and the see left off."
+    },
+    {
+      "form": "Павел Прусиадский",
+      "lang": "ru",
+      "note": "The nominative behind the «Павла» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 1698, «Святитель Павел Прусиадский, епископ, исповедник», with the rank words and the office left off. The line itself declines both the name and the see, «Свт. Павла исп., еп. Прусиадского»."
     }
   ],
   "sex": "male",
@@ -26,13 +31,31 @@
       "display": "late 8th or early 9th century",
       "basis": "traditional",
       "note": "doxologia.ro: «Cuviosul Pavel a trăit în perioada iconoclastă (sfârșitul secolului al VIII-lea și începutul secolului al IX-lea)». The bounds are the two centuries the page names; it gives no year."
+    },
+    "death": {
+      "earliest": 850,
+      "latest": 850,
+      "display": "about 850",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru's life589 closes «Святой исповедник преставился около 850 года» — he reposed about the year 850. It is the only year of death any of the four calendars read for him gives; the Greek and the Romanian both name the iconoclast period and no year, which is the floruit above, and 850 falls inside it. The day's own line prints «(IX)» after his name."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The Russian calendar keeps him on 7 March where the Greek and the Romanian keep him on 8 March — one day apart in the menologion, and not the thirteen days of the style conversion."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Свт. Павла исп., еп. Прусиадского (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The day page prints no hymn under his name: its four hymns are the kontakion of the seven bishops who were bishops in Cherson and two troparia and a kontakion of the Mother of God before her icon «Споручница грешных». His name page is 1698, and the other Paul of this same day has 1697."
     },
     {
       "church": "romanian",
