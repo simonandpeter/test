@@ -1,0 +1,62 @@
+{
+  "slug": "pontius-the-senator",
+  "display_name": "Pontius the Senator",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Понтије сенатор",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 5 August, „Св. муч. Понтије сенатор.“ — Св. муч. left off, which §5 maps to `martyr`. **сенатор is kept**: it is in no rank table of §5, it is not a grade of the Church, and it is the only thing in the heading that distinguishes him, Rome and the Alps both being in the body. `.tmp/sr-foldnew.mjs` reports both keys of the form with 0 other holders, and `.tmp/foldchk.py` returns NO FOLDER HOLDS THIS FORM."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 257,
+      "latest": 257,
+      "display": "257",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 5. август ст. ст.: „Посечен мачем 257. год. и погребан од свог пријатеља Валерија.“ — cut down with the sword in 257 and buried by his friend. The entry gives no birth year and no age; the twenty-two barren years of his parents’ marriage fix neither. The basis is `traditional` because this is a hagiographical calendar and the only book this folder has (6 October 2026)."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 5 Αυγούστου (6 October 2026). That day’s Greek page was read for this corpus on 1 October 2026 and gave eleven folders, among them Eusignius of Antioch, Fabian of Rome and Nonna, the three other entries of this Prologue day; no Pontius was among them. The page was not re-opened for him and no absence is claimed here."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.08.2026 (5. август ст. ст.) — „Св. муч. Понтије сенатор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third of four entries, the longest on the page, and **the third new folder of this Serbian wave**. `ls saints | grep -iE \"^ponti\"` returns nothing and `ponticus-of-lyons` alone answers a grep for the stem, a different man of a different city; `.tmp/sr-namesweep.mjs` scores him against nine folders of which the nearest are four Panteleimons and `ponticus-of-lyons`, and names nobody of his name; `.tmp/foldchk.py` on the literal «Понтије сенатор» returns NO FOLDER HOLDS THIS FORM and `.tmp/sr-foldnew.mjs` reports both of its keys with 0 holders. Ruling 3 reports a person no folder holds rather than creating him **unless the entry is substantial**, and this one is the most substantial on the day: a numbered entry with its own heading, twelve sentences, both parents named, a baptism with the baptiser named, three conversions, a flight, two emperors for the arrest, a saying of his own quoted, a year, a manner of death and a named friend who buried him and wrote his life. **`dates`: `death` 257, FLAT, BASIS `traditional`.** „Посечен мачем 257. год. и погребан од свог пријатеља Валерија.“ — cut down with the sword in 257 and buried by his friend. The basis is `traditional` and not `attested` because the Prologue is a hagiographical calendar and not a document: the folder is this book’s and nothing else’s. **No `birth`**, although the entry comes closer to giving one than most: „Нероткиња Јулија заче тек после 22 године брачног живота и роди Понтија.“ has his barren mother conceive only after twenty-two years of married life, which fixes nothing without a wedding year, and 257 less an unstated age is not a reading. **`types`: `martyr` ALONE, AND сенатор IS KEPT OUT OF IT AND INTO THE NAME.** Св. муч. is `martyr`. сенатор is in the heading, it is not in any rank table of §5, and it is not a grade of the Church at all, so it is kept in the display name and in the stored form, where it is the only thing distinguishing him; the corpus writes `athanasius-the-roman-senator`, `dorymedon-the-senator` and `marinus-the-senator` the same way, and `senator` is in no `types` of any of the three. **ONE `related` ROW, AND THE TWO ENTRIES NAME EACH OTHER.** „Много штићаше и помагаше цркву као сенатор, и би велики пријатељ папе Фавија.“ — he protected and helped the church greatly as a senator, and was a great friend of pope Фавије — and entry 2 of the same page, „Крсти цара Филипа и сина му царевића Филипа, и, уз помоћ крштеног сенатора Понтија, сруши многе идоле и идолске храмове.“, has that pope throw down the idols with this senator’s help. `fabian-of-rome` had **no `related` key at all**; the row is written both ways. **Four names in the entry take nothing**, all under Ruling 3: his father Марко and his mother Јулија, who hold no folder; папа Понтијан, who baptised him and holds no folder, and who is not this man — the corpus has no Pontian at all; and his friend Валерије, who was baptised with him, buried him and wrote his life, and whom no folder holds either. **Валерије is also the one name in this entry that could not have been written even if he had a folder**: `valerius` is a bare «Valerius» in this corpus, a martyr of 23 April kept with George, and he is a different man, so the name is kept out of the life and put here. **NO `locations`:** Rome and the Alps are named in clauses, and a located folder with one flat year is a liability to `map-span.test.mjs`. **AND THE LONGEST PASSAGE IN THE ENTRY IS A POLEMICAL ONE, RECORDED HERE AND NOT CARRIED INTO THE LIFE.** „Ту се десише и многи Чивути који викаху судији: „Уби, уби одмах тога мађионичара!““ and „На то св. Понтије уздиже руке к небу и рече: „Благодарим Ти, Боже мој, што и Чивути вичу против мене као и негда оци њихови против Христа „Распни га, распни!““ are a crowd calling on the judge to kill the magician and the saint’s answer thanking God that they cry against him as their fathers once cried against Christ, both using a word for Jews this corpus does not print. They are read, they are quoted here in full as the book’s, and the life says that many wonders were shown under his torments and that many turned to Christ, which is the same sentence’s other half. **AUTHOR: the same ruling is wanted here as on the Julian 4 August.** The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty-eight lines on the third entry, the two young patricians going into a church at evening and hearing the psalm against the idols, and it is in no field and in no life (§3), read before this was written."
+    }
+  ],
+  "related": [
+    "fabian-of-rome"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

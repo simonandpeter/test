@@ -11,6 +11,11 @@
       "form": "Ευσίγνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Αυγούστου, «Άγιος Ευσίγνιος», with the rank word left off."
+    },
+    {
+      "form": "Евсигније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 5 August, „Св. муч. Евсигније.“ — Св. муч. left off, which §5 maps to `martyr`. The heading gives no city and no by-name, so the bare forename is the whole of the form; Antioch is in the body, where a name form may not reach. `.tmp/sr-foldpred.mjs` reports it folds with nothing."
     }
   ],
   "sex": "male",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.08.2026 (5. август ст. ст.) — „Св. муч. Евсигније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-18&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of four entries, and the Romanian and Greek both keep him on this same 5/8. His row was `undocumented`. **`dates` UNTOUCHED, AND THE BOOK’S FLAT YEAR SITS INSIDE THE INTERVAL THE FOLDER ALREADY HELD.** „Огорчени Јулијан нареди те му главу одсекоше. Пострада Евсигније у дубокој старости 362 год. и пресели се у царство небеско.“ — the embittered Julian gave the order and they cut off his head; Eusignius suffered in deep old age in 362 and passed over to the heavenly kingdom. The folder holds `death` 361–363, display «under Julian», basis traditional, which was written from the reign and not from a year; **362 is the middle of it**, so narrowing the interval onto the new reading would throw away what the other two books gave and gain nothing a reader can check. Nothing is written, and the year is in the row note and in the life as the book’s. **A RELATION STATED, AND THE ONE IDENTIFICATION IN THIS BLOCK THAT RESTS ON A NAME AND AN EPITHET RATHER THAN ON A DAY.** „Присуствовао мучењу св. муч. Василиска (22. маја), видео мноштво ангела и самог Господа Исуса, како од ангела прима душу овог светог мученика.“ — he was present at the martyrdom of the holy martyr Basiliscus, the entry adding the day 22 May in brackets, and saw a multitude of angels and the Lord Jesus himself receiving that martyr’s soul from the angels. Being present at a man’s passion is the same act the Julian 7 August relates Asterius to Marinus by, so the row is written both ways — **but which Basiliscus is a reading, and it is made here on the name plus one stored form.** The corpus holds two: `basiliscus-the-elder`, a Greek «Άγιος Βασιλίσκος ο γέρων» of 29 July, who is an elder and not a martyr of a passion anybody attended; and `basiliscus-of-amasea`, a martyr whose **Russian stored form is «Василиск Команский»**, Basiliscus of Comana, who is the Basiliscus of Comana the Slavonic books keep on 22 May. **No folder in this corpus carries any feast on 22/5**, so the cross-reference points at a day nothing is kept on, and the match is therefore not on the day. It is written because the epithet names the right man and the only other candidate is excluded by his own rank and day, and it is named in the findings as the block’s one name-and-epithet identification so that the author can strike it in one line if it is wrong. `constantine-the-great` was `related` here already and in both directions: „Војевао при цару Константину и видео крст, који се јавио Константину.“ has him campaign under Constantine and see the cross that appeared to him, and „Цар позва Евсигнија на суд, но он изобличи цара страшно за одступништво од вере и укори га светлим примером великог Константина.“ has him rebuke Julian by Constantine’s bright example, so nothing is added there. **`types` UNTOUCHED.** Св. муч. is `martyr` and the folder has it; војник, a soldier, is in the body and not in the heading and is refused as a body word under the Julian 27 June ruling — and `soldier` is on the folder already from the other two books, so the refusal costs nothing here. Maximian, Julian the Apostate and the sons of Constantine are emperors named to place a life and take no row; the two men who asked him to judge their quarrel are unnamed. No `locations`: Antioch is named in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [
@@ -130,6 +145,7 @@
     }
   ],
   "related": [
-    "constantine-the-great"
+    "constantine-the-great",
+    "basiliscus-of-amasea"
   ]
 }
