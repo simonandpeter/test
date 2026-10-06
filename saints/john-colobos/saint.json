@@ -16,6 +16,11 @@
       "form": "Иоанн Колов",
       "lang": "ru",
       "note": "The forename and the by-name of the calendar's name page heading, «Иоанн Колов, Младший, Скитский, отшельник», with the rank word and the page's two further by-names left off; the day's line prints the same two words in the genitive, «Прп. Иоанна Колова»."
+    },
+    {
+      "form": "Јован Колов",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Преп. Јован Колов.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Колов» stays: it is a by-name and not a rank, and the entry’s own second sentence explains it, «Колов – означава Мали», Colobos means the Little, because he was small of stature. That is the fullest bare form the heading gives and it is what keeps him apart from the other Johns. The Russian form already stored writes «Иоанн Колов»."
     }
   ],
   "sex": "male",
@@ -75,8 +80,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Преп. Јован Колов.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. `dates` UNTOUCHED: the entry gives no year at all, so the fifth century this folder holds from its other calendars stands. The three other saints its body names — his teacher, his pupil and his fellow-pupil — are all folders this one ALREADY related to in both directions, so the life links them and no `related` row was added or owed. His brother, who came with him to Scetis and had to hold back his zeal, is named in the book and is NOT named in the life: he has no folder, and the bare forename would have read as one of the corpus’s other men of that name."
     }
   ],
   "text": {

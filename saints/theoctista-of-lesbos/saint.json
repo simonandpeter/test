@@ -16,6 +16,11 @@
       "form": "Феоктиста Паросская",
       "lang": "ru",
       "note": "The heading of the calendar's name page for her, «Феоктиста Паросская, прп.», with the rank word left off — the by-name is the island she spent thirty-five years on and not the island she was born on, where the Greek and Romanian forms this folder already carries name Lesbos. The day's line gives the forename alone and in the genitive, «Прп. Феоктисты»."
+    },
+    {
+      "form": "Теоктиса Пароска",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Преп. Теоктиса Пароска.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Пароска» stays: an epithet on the name with no rank noun to govern it, as «Аврамије Смоленски» is. It names the island this corpus does NOT name her for, and it is stored as the book prints it rather than bent towards the display name."
     }
   ],
   "sex": "female",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Преп. Теоктиса Пароска.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s sixth entry. `dates` UNTOUCHED: the entry gives 881, which is ONE SIDE of the interval this folder already holds — days.pravoslavie.ru 881 and saint.gr 889 — and a third book agreeing with one of two readings is no reason to close an interval. The entry names her for Paros, the island she hid and died on, where this corpus names her for Lesbos, the island she was born and tonsured on; BOTH ARE IN THE ENTRY, the display name is unchanged, and the Russian form this folder already stores is «Феоктиста Паросская», which names her the way this book does."
     }
   ],
   "text": {

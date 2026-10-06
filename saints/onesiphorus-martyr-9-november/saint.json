@@ -16,6 +16,11 @@
       "form": "Онисифор",
       "lang": "ru",
       "note": "The heading of the calendar's name page for him, «Онисифор, мч.», with the rank word left off; it gives no by-name, no city and no year, so the bare forename is all of it. The day's line prints it in the genitive, «Мчч. Онисифора и Порфирия»."
+    },
+    {
+      "form": "Онисифор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Св. Муч. Онисифор и Порфирије.“ — «Св.» is “saint” and not a rank and «Муч.» is the `martyr` grade `types` keeps, so both come off and the heading leaves the two of them nothing but their bare names; the first is the whole of this form. «(9 November)» in the display name is this corpus’s own way of telling him from the four other folders of the name and is no part of what the book calls him."
     }
   ],
   "sex": "male",
@@ -72,8 +77,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Св. Муч. Онисифор и Порфирије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading is AN ENUMERATED PAIR, so two folders are owed a row and the corpus holds both. `dates` UNTOUCHED: the entry names the reign of Diocletian, which is exactly the interval 284–305 both folders already carry off days.pravoslavie.ru’s joint life, and it prints no year of its own. It adds one fact neither of the pages this folder cites had: the relics were buried in Pentapolis. No `locations` key was made from that — a place of burial named in one clause is not a reading of where the folder should sit on a map."
     }
   ],
   "hymns": [

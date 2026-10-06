@@ -11,6 +11,11 @@
       "form": "Ευθύμιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Νοεμβρίου, «Όσιοι Ευθύμιος και Νεόφυτος κτήτορες της Μονής Δοχειαρίου Αγίου Όρους», with the rank word left off."
+    },
+    {
+      "form": "Јевтимије Дохијарски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 9. новембар ст. ст., „Преп. Јевтимије Дохијарски и ученик му Неофит.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Дохијарски» stays: it is the by-name of the monastery he founded, standing on the name itself with no rank noun to govern it, and it is what keeps him apart from the thirty other folders of this forename. This corpus’s English name for him is built on the office the same sentence gives him, steward of the Lavra, and the two namings agree."
     }
   ],
   "sex": "male",
@@ -60,11 +65,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.11.2025 (9. новембар ст. ст.) — „Преп. Јевтимије Дохијарски и ученик му Неофит.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-22&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, and the heading names TWO — the teacher and «и ученик му Неофит», and his disciple Neophytos — so two folders take a row off the one quoted line. `dates` ADDED where there were none: this folder carried NO dates object at all, its Romanian and Greek pages giving no year, and the entry says «Упокојио се мирно 990. год.» The year is recorded as traditional, one source being all there is for it. The entry also says the two of them were SERBS BY ORIGIN and kinsmen of high Byzantine nobility, which no other calendar this folder cites says; it is in the life and no `locations` key was made from it."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 990,
+      "latest": 990,
+      "display": "990",
+      "basis": "traditional",
+      "note": "The only year any source read gives him, and this folder had no date at all before it. The Охридски пролог for 9. новембар ст. ст.: «Јевтимије, најпре друг св. Атанасија и економ његове Лавре, а по том оснивач манастира Дохијара. Упокојио се мирно 990. год.» — first the companion of Athanasius and steward of his Lavra, then the founder of the monastery of Docheiariou, reposed in peace in 990. Neither doxologia.ro nor saint.gr gave this folder any year, so there is nothing to agree or disagree with it and the basis is traditional rather than attested."
+    }
   }
 }
