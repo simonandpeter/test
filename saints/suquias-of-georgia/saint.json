@@ -10,22 +10,37 @@
       "form": "Σούκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Απριλίου, «Άγιος Σούκιος ο Μάρτυρας και οι συν αυτώ δέκα εννέα Μάρτυρες», with the rank word and the companions' clause left off."
+    },
+    {
+      "form": "Сухий Месукевийский, Грузинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 15 апреля ст. ст., name page 2083, «Сухий Месукевийский, Грузинский, мч.», with the rank word left off; the day's own line gives «Сухия» in the genitive and carries the Месукевийских epithet on the heading rather than on him. Both epithets are the calendar's own nominative and are kept. The gate's key for it, 'грузинскии месукевиискии сухии', has no other holder, measured."
     }
   ],
   "dates": {
     "death": {
-      "earliest": 101,
-      "latest": 200,
-      "display": "2nd century",
+      "earliest": 100,
+      "latest": 130,
+      "display": "100–130",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Μάρτυς Σούκιος και οι Χριστιανοί που μαρτύρησαν μαζί του, άθλησαν κατά τον 2ο αιώνα μ.Χ. στη Γεωργία»."
+      "note": "Narrowed from the century saint.gr gave, and by the Russian calendar's own hand. days.pravoslavie.ru closes the line for 15 апреля ст. ст. with «(100-130)», and its life sets the three readings out: «Это совершилось в 123 году (по другим данным - в 130 году; афонская пергаментная рукопись XI века Иверского монастыря указывает 100 год)» — it happened in 123, by other accounts in 130, and an eleventh-century parchment of the Iviron monastery on Athos gives 100. Three years from one page, none chosen, and the interval holds all three. It reaches one year earlier than saint.gr's second century, which this folder held as 101 to 200; the earlier end is the Athonite manuscript's and the source's own."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 апреля ст. ст. — «Мчч. Месукевийских - Сухия и дружины его: Андрея , Анастасия , Талале , Феодорита , Ивхириона , Иордана , Кондрата , Лукиана , Мимненоса , Нерангиоса , Полиевкта , Иакова , Фоки , Доментиана , Виктора , Зосимы (100-130) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260415.html",
+        "year": 2026,
+        "note": "The day's third entry, marked «(Груз.)» for the Georgian church. It carries no typikon icon, so no `rank` is recorded, and the day prints no hymn under the company's name. The name page behind his own link (2083) gives «День памяти: 15 апреля» and no other day. **This calendar names the sixteen companions the Greek page this folder already cites counts as nineteen and names not at all**, and the two counts cannot both be right: sixteen names against nineteen unnamed martyrs, on the same day, for the same company. The sixteen therefore have no folder here and the author question stands open; the names are printed in this folder's life as the calendar prints them, which is this corpus's way with the forty of Sebaste."
+      }
     },
     {
       "church": "romanian",
@@ -55,5 +70,8 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "gregory-the-illuminator"
+  ]
 }

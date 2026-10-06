@@ -16,6 +16,11 @@
       "form": "Трофим",
       "lang": "sr",
       "note": "His own name, read out of the Ohrid Prologue's first heading for the Julian 15 April, „Св. апостоли Аристарх, Пуд и Трофим.“, with Св. left off — it is not a rank — and апостоли left off, which is the `apostle` this folder carries in `types`. One rank word stands over three names and belongs to none of them, so what is left is the bare forename; the companionship clause this corpus keeps in his display name is not part of the source's name for him, and the heading gives no epithet and no city. `trophimus-of-antioch` already holds this same bare form, so the two fold, and the fold is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Трофим",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 15 апреля ст. ст., name page 2129, «Священномученик Трофим, апостол от 70-ти», with the rank word and the grade left off; the day's own line gives the name in the genitive, «Трофима», and the calendar's nominative has nothing fuller than the bare forename. The gate's fold key for it, 'трофим', is one this folder already holds through its Serbian form «Трофим», so the fold's membership — `trophimus-companion-of-paul`, `trophimus-companion-of-theophilus`, `trophimus-of-antioch` — is unchanged by this row, measured before and after."
     }
   ],
   "sex": "male",
@@ -35,8 +40,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 апреля ст. ст. — «Апп. от 70-ти Аристарха , Пуда и Трофима (ок. 67).»",
+        "url": "https://days.pravoslavie.ru/Days/20260415.html",
+        "year": 2026,
+        "note": "The day's first entry and the only one of the five to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. **It keeps the three of the Seventy on the Romanian and Serbian calendars' day and not the Greek one**, which this folder's own row puts on 14 April; one row per church, so nothing was moved. The name page behind the line (2129) and the life both give «Дни памяти: 4 января (70 ап.) , 15 апреля»: the January day is the synaxis of the Seventy, a commemoration of a whole company and not a second day of his own, so no note of a second feast is written. The day prints one hymn under «Молитвы», a kontakion of the apostles in the fourth tone, which is this entry's and is added here with its English."
+      }
     },
     {
       "church": "romanian",
@@ -133,9 +149,35 @@
         "text": "As holy fellow travellers of Paul the herald of God, you passed through the inhabited world with him, sowing the knowledge of God — Aristarchus of godly mind, with the divine Trophimus and Pudens the glorious. Therefore, having contended, you were worthily glorified together with him.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Явися апостольский честный сей праздник,/ просвещая нас и греховную мглу прогоняя, зовущим:// явися Свет, и прииде избавление.",
+      "english": {
+        "text": "This honoured feast of the apostles has shone forth, enlightening us and driving away the gloom of sin, as we cry out: the Light has shone forth, and deliverance has come.",
+        "rendered": "site"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 апреля ст. ст. — «Кондак апостолов», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260415.html",
+        "year": 2026,
+        "note": "The only hymn the day prints. It is headed for the apostles and names none of the three, so it is a common of apostles serving the day's first entry, which is theirs — copied whole as the page has it, per BRIEF.md §4's ruling that a common printed under a saint's name is that saint's service. Read out of the page by `.tmp/rubody.mjs`, which reads `div.trop` under «Молитвы» and not a life page. The English is typed here."
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 65,
+      "latest": 67,
+      "display": "c. 65–67",
+      "basis": "traditional",
+      "note": "The first years any source read for this folder gives him, and the source gives two. days.pravoslavie.ru closes the line for 15 апреля ст. ст. with «(ок. 67)», and the life it serves for the three together ends «одновременно со святым апостолом Павлом (+ ок. 67)» — at the same time as the apostle Paul, about 67. His own life page, served from the same index, closes «Святой Трофим был усечен мечом в Риме вместе с апостолами Аристархом и Пудом при императоре Нероне около 65 г.» — beheaded at Rome about 65. Both readings are the source's own, the interval holds both, and neither is chosen. The doxologia and saint.gr pages this folder already cites gave the reign, 54 to 68, and no year."
+    }
   }
 }
