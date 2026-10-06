@@ -16,6 +16,11 @@
       "form": "Нил Постник, Синайский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Нил Постник, Синайский, пресвитер, отшельник», with the two grade words left off; both are in `types`. The line itself gives the forename and the epithet alone and in lower case, «Прп. Нила постника»; azbyka.ru capitalises the epithet, «прп. Нила Постника (V)»."
+    },
+    {
+      "form": "Нил Синајски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. новембар ст. ст., „Преп. Нил Синајски.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Синајски» stays: it is the by-name of the mountain, it stands on the name with no rank noun to govern it, and without it the form would collide with the other Nilus this very day keeps. The Russian form already stored is «Нил Постник, Синайский», with the ascetic grade inside it in the older manner this corpus no longer copies."
     }
   ],
   "sex": "male",
@@ -70,8 +75,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.11.2025 (12. новембар ст. ст.) — „Преп. Нил Синајски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. `dates` UNTOUCHED, AND THIS IS THE DAY’S ONE REAL QUESTION: the entry says «Упокојио се мирно око 450. године у 80. години живота земаљског» — reposed about 450, in the eightieth year of his life — where this folder holds 401–500, «5th century», taken from two calendar lines that print nothing but «(V)». About 450 falls INSIDE that century, so recording it as the death would be narrowing a hundred years to one on the authority of a third book, which is the opposite of what the brief sanctions; the figures are in the life and in this note instead, AND THE AUTHOR MAY WANT THEM IN `dates`. The age would also give a birth about 370, which is not written anywhere. WHAT THE ENTRY ADDS: he was prefect in Constantinople before Sinai, a married man with a son and a daughter, and the withdrawal was AGREED WITH HIS WIFE, she going with the daughter to a women’s monastery in Egypt and he with the son to Sinai; sixty years on the mountain; and one saying of his own. The son is a folder this one already relates to in both directions and the life links him."
     }
   ],
   "hymns": [

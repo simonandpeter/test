@@ -10,4 +10,8 @@ The Russian calendar gives him four sentences where the Greek gave the bare line
 
 The day page prints no hymn under his name, and the folder therefore has none.
 
-*After saint.gr's calendar for 12 Νοεμβρίου — [the day](https://www.saint.gr/11/12/index.aspx) and [the life](https://www.saint.gr/3014/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery, 12 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261112.html) and [the life](https://days.pravoslavie.ru/Life/life2528.htm), read 5 October 2026.*
+The Ohrid Prologue gives him three short clauses and that is all: he was of Shiloh; he prophesied a thousand years before Christ; and he foretold to Jeroboam, Solomon's servant, that he would be made king over ten tribes of Israel, with the chapter and verse printed for it.
+
+The first and the third this folder already had in substance from the Russian calendar, whose own name form for him carries Shiloh. The second is new and is a round figure in the book's own words, so it is recorded as a floruit of about 1000 BC beside — not instead of — the 960 BC this folder holds for his death from two Russian pages. Nothing is chosen between them and neither displaces the other.
+
+*After saint.gr's calendar for 12 Νοεμβρίου — [the day](https://www.saint.gr/11/12/index.aspx) and [the life](https://www.saint.gr/3014/saint.aspx); read 1 October 2026; and the Православный церковный календарь of the Сретенский monastery, 12 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261112.html) and [the life](https://days.pravoslavie.ru/Life/life2528.htm), read 5 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 12. новембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-25&prolog=1), read 7 October 2026.*

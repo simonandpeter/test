@@ -11,6 +11,11 @@
       "form": "Ахия Силомлянин",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 12 ноября ст. ст., «Ахия Силомлянин, пророк», with the rank word left off. The line itself gives the forename alone, «Прор. Ахии»; azbyka.ru prints the by-name on its own line, «прор. Ахии Силомлянина (960 г. до Р. Х.)». Силомлянин is the man of Shiloh, which the life gives as the town he came from."
+    },
+    {
+      "form": "Ахија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 12. новембар ст. ст., „Св. пророк Ахија.“ — «Св.» is “saint” and «пророк» is the `prophet` grade `types` keeps, so both come off and nothing is left but the bare forename; Shiloh is in the body and not in the heading, and it is already inside the Russian form «Ахия Силомлянин». This is the folder’s first Serbian form and it held only the Greek and the Russian."
     }
   ],
   "sex": "male",
@@ -54,20 +59,37 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 25.11.2025 (12. новембар ст. ст.) — „Св. пророк Ахија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-25&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, THREE CLAUSES LONG. `dates` GAINS A FLORUIT AND KEEPS ITS DEATH: the entry says «Пророковао на 1000 година пре Христа», he prophesied a thousand years before Christ, which is a round figure in the book’s own words and a different fact from the 960 BC two Russian pages give for his death. It is recorded as a floruit of about 1000 BC BESIDE that death and not instead of it; nothing is chosen and the death is untouched. The other two clauses — Shiloh, and the prophecy to Solomon’s servant over the ten tribes with the chapter and verse printed — this folder already had in substance, Shiloh being inside its Russian name form. Jeroboam and Solomon are named in the book, have no folder here, and the life names them as the book does."
     }
   ],
   "text": {
     "life": "life.md"
   },
   "dates": {
+    "floruit": {
+      "earliest": -1000,
+      "latest": -1000,
+      "display": "c. 1000 BC",
+      "basis": "traditional",
+      "note": "The Охридски пролог for 12. новембар ст. ст.: «Пророковао на 1000 година пре Христа» — he prophesied a thousand years before Christ. A ROUND FIGURE IN THE BOOK’S OWN WORDS, recorded as it is stated and not sharpened; it is the only reading of his lifetime any source gives, days.pravoslavie.ru and azbyka.ru giving the year of his death alone and saint.gr no year at all. It stands beside the death below rather than against it: a man who prophesied about 1000 BC and died in deep old age in 960 BC is one reading and not two."
+    },
     "death": {
       "earliest": -960,
       "latest": -960,
       "display": "960 BC",
       "basis": "traditional",
-      "note": "As printed by days.pravoslavie.ru for 12 ноября ст. ст.: «Прор. Ахии (960 до Р.Х.).» Its life page closes «Пророк Ахия умер в глубокой старости за 960 лет до Рождества Христова», and azbyka.ru's line for the same day prints «прор. Ахии Силомлянина (960 г. до Р. Х.)». saint.gr, which was the folder's only source, gave no year at all."
+      "note": "As printed by days.pravoslavie.ru for 12 ноября ст. ст.: «Прор. Ахии (960 до Р.Х.).» Its life page closes «Пророк Ахия умер в глубокой старости за 960 лет до Рождества Христова», and azbyka.ru’s line for the same day prints «прор. Ахии Силомлянина (960 г. до Р. Х.)». saint.gr, which was the folder’s only source, gave no year at all. Unchanged by the Serbian reading of 7 October 2026, which adds the floruit above and does not touch this."
     }
   }
 }
