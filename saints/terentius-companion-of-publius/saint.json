@@ -6,6 +6,11 @@
       "form": "Τερέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Μαρτίου, «Άγιοι Αφρικανός, Πούπλιος και Τερέντιος οι Μάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Терентий Петрийский (Африканский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 13 марта ст. ст., «Мученик Терентий Петрийский (Африканский)», with the rank word left off. The day's own line declines the name to «Терентия» and gives no epithet."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 13 марта ст. ст. — «Мчч. Африкана, Публия и Терентия (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20260313.html",
+        "year": 2026
+      },
+      "note": "The line is one line for the three and this folder is one of them; the Russian day agrees with the Greek 13 Μαρτίου this folder already carried. The short reading the line links, life633, sets their suffering at Петрия in the third century and gives no governor, no emperor and no year. The calendar's name page for him, 2093, also serves a second and much longer reading, life822, of a Terence with a company of forty in Africa under Decius; the two are not the same man in this folder's reading and nothing here is taken from the second. It is an open question for a later reader."
     },
     {
       "church": "romanian",
@@ -50,5 +65,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 13 марта ст. ст. with «(III)», and the reading behind it says «Святые мученики Африкан, Публий и Терентий пострадали в III веке в Петрии». The century is all either gives."
+    }
   }
 }
