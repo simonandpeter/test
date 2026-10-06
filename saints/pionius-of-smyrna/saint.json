@@ -16,6 +16,11 @@
       "form": "Пионије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 March on pravoslavno.rs, „Свети мученици Пионије и други с њим.“, with the rank word мученици left off and Свети, which is not a rank. The heading gives no epithet and does not name Smyrna, which this folder's English name carries and which the body's first words supply."
+    },
+    {
+      "form": "Пионий Смирнский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 марта ст. ст., «Пионий Смирнский, пресвитер, сщмч.», with the rank words left off."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Сщмч. Пиония, пресвитера Смирнского, и иже с ним (250)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The line's «и иже с ним» names nobody, so it is one entry and one folder, per the standing ruling on a company heading that enumerates no members. The life page behind it names four companions in its title — «Священномученики Пионий и Лин, пресвитеры Смирнские, святые мученицы Савина и Македония и святой мученик Асклипиад» — and they are in the reader's report and are not folders made off this line. The line's 250 falls inside this folder's existing interval and nothing was narrowed. No hymn."
     },
     {
       "church": "romanian",

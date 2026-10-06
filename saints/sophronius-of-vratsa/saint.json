@@ -11,6 +11,11 @@
       "form": "Σωφρόνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Μαρτίου, «Άγιος Σωφρόνιος ο Διδάσκαλος Επίσκοπος Βράτσης της Βουλγαρίας», with the rank words left off."
+    },
+    {
+      "form": "Софроний Врачанский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 11 марта ст. ст., «Святитель Софроний Врачанский, Болгарский, епископ», with «Святитель» and the rank «епископ» left off. «Болгарский» is left off as well: the day's own line sets the nationality apart from the name, as «(Болг.)» after the year, which is how this calendar marks a saint of another local church."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not among the names printed by days.pravoslavie.ru for 9 сентября ст. ст. (civil 22 September, checked 2026-08-30); no other day checked."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст. — «Свт. Софрония, еп. Врачанского (1813) (Болг.)»",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "note": "The line marks him «(Болг.)», a saint of the Bulgarian church, and the calendar carries no life page for him. Its day page prints a troparion and a kontakion under his name; both are copied here. The year 1813 is the one this folder already held."
     },
     {
       "church": "romanian",
@@ -81,5 +96,39 @@
   },
   "related": [
     "paul-of-russia"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Щитом веры вооружився,/ мечем словесе безбожныя агаряны посекая,/ стадо твое упасл еси на земли./ В Небесней же обители вселився,/ Христа моли даровати народу нашему/ мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Тропарь святителя Софрония, епископа Врачанского», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Armed with the shield of faith, cutting down the godless Hagarenes with the sword of the word, you shepherded your flock on earth; and now, dwelling in the mansion of heaven, pray to Christ to grant our people peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Архиереев похвала и страдальцев украшение быв,/ святителю Софроние,/ добродетельми прославився,/ возсиял еси, яко солнце,/ нас просвещая и греховную тьму неведения отгоняя./ Но, яко имея дерзновение к Богу,/ мир испроси душам нашим и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 марта ст. ст., «Кондак святителя Софрония, епископа Врачанского», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260311.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were the praise of bishops and the adornment of sufferers, O hierarch Sophronius; glorified by your virtues you shone out like the sun, enlightening us and driving off the sinful darkness of ignorance. Having boldness before God, ask peace for our souls and great mercy.",
+        "rendered": "site"
+      }
+    }
   ]
 }
