@@ -6,4 +6,8 @@ Moved by a holy longing, Thomas visited many monasteries and carried away much f
 
 God counted him worthy of the gift of foresight too. Once, the page says, he wrote an answer to the emperor Leo the Wise without opening the letter that had been sent him. Later Thomas withdrew to some quiet hermitage, and there death found him in deep old age but in a continual spiritual flowering and vigour. The couplet over his name says that Thomas, having made God his unbreakable foundation, proved stronger than the machinery of the demons.
 
-*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3216/saint.aspx); read 2 October 2026.*
+The Ohrid Prologue keeps him on the same menologion day and agrees with the Greek page on the century: he reposed in the Lord in deep old age in the ninth century. Its four lines are mostly epithets — a great faster, a conqueror of demons, and a man who saw into what was hidden — and then one scene, which the Greek page has too and which this book tells more bluntly: the emperor Leo the Wise wrote him a letter, and he answered it without opening it.
+
+Nothing was added to this folder's ranks on the strength of those epithets, and no second interval was built out of a century it already carried.
+
+*After saint.gr's calendar for 10 Δεκεμβρίου — [the day](https://www.saint.gr/12/10/index.aspx) and [the life](https://www.saint.gr/3216/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 10. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-23&prolog=1), read 7 October 2026.*
