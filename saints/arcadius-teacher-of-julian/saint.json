@@ -6,6 +6,11 @@
       "form": "Αρκάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 6 Μαρτίου, «Όσιος Αρκάδιος», with the rank word left off."
+    },
+    {
+      "form": "Аркадий Кипрский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 6 марта ст. ст., name page 258, «Аркадий Кипрский, прп.», with the grade word left off; the day's own line declines it. **The by-name is the one that misleads**: it is «of Cyprus», which is the English display name of the archbishop this corpus keeps separately, and only the life tells them apart. `.tmp/foldchk.py` reports no folder holding this form and none holding the bare «Аркадий», and `.tmp/sr-foldpred.mjs` no other holder of the key it folds to — though the Greek «Αρκάδιος» on this folder already folds seven, and that fold is read in the gate's own key for it."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Прп. Аркадия Кипрского (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "note": "**The line names the wrong-man trap of this day and the life behind it resolves it.** «Аркадия Кипрского» is Arcadius of Cyprus, which is the display name of a *different* folder in this corpus — `arcadius-archbishop-of-cyprus`, the archbishop of the see, whom days.pravoslavie.ru does not print on this day at all. The life behind this line is this man's: an ascetic who laboured on Cyprus under Constantine the Great and was «наставником святых мучеников Иулиана-врача и Еввула», the teacher of the martyrs Julian the physician and Euboulos, and who died peacefully soon after burying them. The two folders already relate one another in both directions. The (IV) closing the line is the fourth century; azbyka.ru prints the year, ок. 361, and the `death` row recorded here is off those two Russian pages read together."
     },
     {
       "church": "romanian",
@@ -51,7 +66,14 @@
       "latest": 337,
       "display": "under Constantine the Great (306–337)",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Αρκάδιος ασκήτεψε στην Κύπρο κατά τον 4ο αιώνα μ.Χ. ... Έκανε πολλούς αγώνες στα χρόνια της βασιλείας του Κωνσταντίνου του Μεγάλου» — the fourth century and the reign of Constantine the Great are the page's own; it gives the reign no years of its own, and the bounds here are that emperor's reign. No year of birth or of repose is given."
+      "note": "saint.gr: «Ο Όσιος Αρκάδιος ασκήτεψε στην Κύπρο κατά τον 4ο αιώνα μ.Χ. ... Έκανε πολλούς αγώνες στα χρόνια της βασιλείας του Κωνσταντίνου του Μεγάλου» — the fourth century and the reign of Constantine the Great are the page's own; it gives the reign no years of its own, and the bounds here are that emperor's reign. No year of birth or of repose is given. **This is the span of his labours on Cyprus and not of his life**: the Russian life behind the 6 марта ст. ст. line has him outlive disciples killed under Julian the Apostate, whose reign it gives as 361 to 363, so the `death` row below stands later than this `latest` on purpose and neither bound is changed."
+    },
+    "death": {
+      "earliest": 361,
+      "latest": 361,
+      "display": "c. 361",
+      "basis": "traditional",
+      "note": "Two Russian pages read against each other, and neither of the two earlier sources had a death at all. days.pravoslavie.ru's life for 6 марта ст. ст. says he wept for the martyrdom of his disciples Иулиан and Еввул, «казненных Юлианом Отступником (361 - 363)», buried them, and «в скором времени сам мирно отошел ко Господу» — soon afterwards departed peacefully; it states no year, and its line closes only with (IV). azbyka.ru's calendar for the same civil day states the year outright, «прп. Аркадия Кипрского (ок. 361)». The bounds are that one year because that is the one year printed; the earlier reign is kept in `floruit`."
     }
   },
   "related": [

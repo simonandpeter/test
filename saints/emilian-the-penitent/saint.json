@@ -11,13 +11,28 @@
       "form": "Емилијан",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 7 March on pravoslavno.rs, „Преподобни Емилијан.“, with the rank word Преподобни left off. The heading gives no epithet and no place; Rome is in the body's first sentence, and the English epithet this folder carries is a chosen one and not a form of any name the source prints. `Емилијан` is held by no other folder."
+    },
+    {
+      "form": "Емилиан Италийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 7 марта ст. ст., name page 776, «Емилиан Италийский, прп.», with the grade word left off; the day's own line declines it. The by-name is kept because the bare forename is already the fold this folder sits in — «емилијан», with `emilian-of-durostorum`, which the gate has read — and because the corpus holds nine other Emilians, one of them a martyr of Rome on this very day. `.tmp/foldchk.py` reports no folder holding this form and `.tmp/sr-foldpred.mjs` reports 0 other holders of the key it folds to, so neither the read fold nor any other is widened."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 7 марта ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прп. Емилиана Италийского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "**The only one of the four calendars read that puts a life behind his name**, and the only one that gives him a century. The folder was made off the Охридски пролог, which prints the bare «Емилијан» under a rank word; this line adds the by-name Италийский, the name he was born with, the whole story of the cave and the voice, and the (VI) which is the first date this folder has ever carried. **The by-name is also what separates him from the other Emilian of this same day**: saint.gr keeps a martyr of Rome of about 259 on 7 March and this corpus holds him and his two companions as `emilian-the-roman`, `james-companion-of-emilian` and `marianus-companion-of-emilian`. Both men are Romans of one name; one is a martyr of the third century and this one a penitent of the sixth who died in his bed, and no relation is asserted between them."
     },
     {
       "church": "romanian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "**The first date this folder has carried.** days.pravoslavie.ru closes its line for 7 марта ст. ст. with (VI) and its life gives neither a year, a reign nor a century of its own; the Охридски пролог behind the existing Serbian row gives nothing at all. The life has him die peacefully in his monastery after a late repentance, so the century is a century and no narrower bound is available from any page read."
+    }
   }
 }

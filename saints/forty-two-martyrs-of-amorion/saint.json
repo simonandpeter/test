@@ -16,6 +16,11 @@
       "form": "Четрдесетдва мученика из Амореје",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 6 March on pravoslavno.rs, „Света четрдесетдва мученика из Амореје.“, with Света left off, which is not a rank. The number, the word мученика and the city are the whole of what the heading gives them, as they are in the Romanian and Greek forms this folder already holds; the body names none of the forty-two, so nothing fuller could be reached."
+    },
+    {
+      "form": "42 мученика в Амморее",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 6 марта ст. ст., name page 14541, «42 мученика в Амморее»; the day's own line declines it. The seven individual names the same line prints are deliberately not stored as forms of this folder — they are the members' names and not the company's, and storing them would fold this folder into the corpus's Constantines, Theodores and Theophiluses. `.tmp/foldchk.py` reports no folder holding this form and `.tmp/sr-foldpred.mjs` no other holder of the key it folds to."
     }
   ],
   "sex": "male",
@@ -41,8 +46,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Мч. 42-х во Амморее Константина , Аетия , Феофила , Феодора , Мелиссена , Каллиста , Васоя и прочих с ними (ок. 845).»",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "note": "The fourth calendar of the four to keep them on this day-number, and **the only one of the four that names seven of the forty-two in the day's own line**: Константин, Аетий, Феофил, Феодор, Мелиссен, Каллист, Васой, «и прочих с ними». The name index behind the line gives each of the seven a page of its own — 1268, 77, 2259, 2176, 1511, 1162 and 393 — and all seven pages carry the same life, life579, which is the company's. **No folder is made for any of the seven and no name form of any of them is stored here**, because they are not names of the company; they are named in the life instead. The year on the line, ок. 845, is the year this folder already records and is the Serbian book's year, against the Greek page's 842."
     },
     {
       "church": "romanian",
@@ -118,6 +133,54 @@
       },
       "english": {
         "text": "Let us honour the God-gathered phalanx of the Word, the Forty-two Martyrs, who all contended in one endeavour; for united in the grace of the faith they holily formed a company that cannot be pulled down, and, their necks cut through by the sword, were shown to be heirs of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мученицы Твои, Господи,/ во страданиих своих венцы прията нетленный от Тебе, Бога нашего,/ имуще бо крепость Твою,/ мучителей низложиша,/ сокрушиша и демонов немощный дерзости./ Тех молитвами/ спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Тропарь мучеников 42-х во Амморее». days.pravoslavie.ru prints it among the «Молитвы» at the foot of the day page for 6 марта ст. ст. The text is copied as that page prints it, including two readings azbyka.ru's own copy of the same hymn spells differently — «венцы прията нетленный» and «демонов немощный дерзости» there against «венцы́ прия́ша нетле́нныя» and «де́монов немощны́я де́рзости» here; nothing is corrected. **This text is the common of martyrs**, and the Greek reader of this folder refused it in Greek for that reason, taking only the proper apolytikion; it is taken here because the Russian page heads it with the company's own name, «Тропарь мучеников 42-х во Амморее», and because azbyka.ru prints the same three hymns under the heading «Мученикам иже во Аммории, сорока двум».",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyrs, O Lord, in their contests received crowns of incorruption from Thee, our God; for having Thy strength they overcame their tormentors, and broke the strengthless daring of the demons. At their prayers, O Christ our God, save Thou our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Новоявленныя звезды веры,/ за Христа усердно пострадавшия,/ похвальными венцы достойне вси венчаем,/ о нас молящияся Христу,// яко суще столпы и забрала христианского начальства.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Кондак мучеников», printed between the troparion of the forty-two and a second kontakion of theirs. The day page heads this one «мучеников» without the number; azbyka.ru prints the same text for the same civil day under «Мученикам иже во Аммории, сорока двум» as their kontakion in the second tone, which is why it is taken as theirs and not as a mis-hang.",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Newly shown forth as stars of the faith, who suffered ardently for Christ, we all fittingly crown you with crowns of praise, as you pray to Christ for us, being pillars and bulwarks of the Christian realm.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "На земли Христа ради страдальчествовавше,/ явлынеся, благочестивии венечницы,/ Небеса прилете жити в радости:/ всякую бо кознь вражию низложивше болезньми и кровьми ваших язв,/ хвалящим свыше присно грехов разрешение подаваете.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Кондак мучеников 42-х во Амморее», the second kontakion of the three the day page gives them; azbyka.ru prints it for the same civil day as «Ин кондак, глас 4», another kontakion, which is what the two headings together mean. Its text there reads «я́вльшеся» and «Небеса́ прия́сте жи́ти» where the page copied here reads «явлынеся» and «Небеса прилете жити»; nothing is corrected.",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having contended upon earth for Christ's sake, O godly wearers of the crown, ye were shown forth and went up to dwell in the heavens in gladness; for having cast down every device of the enemy by the pains and the blood of your wounds, ye ever grant from above the loosing of sins to them that praise you.",
         "rendered": "site"
       }
     }
