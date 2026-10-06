@@ -10,6 +10,11 @@
       "form": "Νικόλαος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Ιουλίου, «Άγιος Νικόλαος του Νόβγκοροντ», with the rank word and the place left off. The page glosses the name as the victor out of the people, the victory of the people."
+    },
+    {
+      "form": "Николај",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. јул ст. ст., „Блажени Николај.“, with «Блажени» — the rank, which §5 makes a read-which and which the body settles as `fool-for-christ` — left off by §6. **The heading gives no by-name at all**; «of Novgorod» in the display name is the corpus’s own and the body is where the town comes from, so a form assembled out of a heading and a body is not written and the fold is read instead. `foldchk.py` returned `[(’nicholas-of-metsovo’, ’sr’), (’nicholas-of-pskov’, ’sr’)]`."
     }
   ],
   "attestations": [
@@ -40,11 +45,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.08.2026 (27. јул ст. ст.) — „Блажени Николај.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (§4). **«Блажени» IS THE ONE RANK WORD IN §5’S TABLE THAT HAS TO BE READ RATHER THAN LOOKED UP**, the table giving it as «fool-for-christ *or* righteous — read which». **The body settles it in its first four words**: „Христа ради јуродиви Новгородски. Син богатих родитеља.“, a fool for Christ’s sake, of Novgorod. So it is `fool-for-christ`, which is the one type this folder already carries, and nothing is added. **That is the first time this range has had to exercise a read-which**, and it cost one clause. **A FIRST DEATH YEAR, AND THE WHOLE `dates` OBJECT WAS ABSENT.** This folder had no `dates` at all — its only other book is saint.gr, which gave none. The entry ends „Упокојио се у Господу 1392. год.“, he reposed in the Lord in the year **1392**. `death` earliest 1392, latest 1392, display «1392», basis traditional. An empty field, a stated point, no interval to displace. **THE FOLD THIS FORM MAKES, AND ONE OF THE TWO SITTING HOLDERS IS A FOOL FOR CHRIST OF A RUSSIAN TOWN TOO.** `foldchk.py` measured «Николај» as already held in sr by `nicholas-of-metsovo` and `nicholas-of-pskov`, and `sr-foldpred.mjs` answered `new key, other holders: 2`. **`nicholas-of-pskov` is the near pair and it is near on three things at once**: he is a `fool-for-christ`, his only type, as this man is; he is of a Russian town, as this man is; and his `death` is 1576 **attested** against this man’s 1392 traditional. One hundred and eighty-four years and two towns apart, and nothing else to tell them by. Read in this batch’s commit message. WHAT THE BOOK GIVES, IN SIX SENTENCES. „Христа ради јуродиви Новгородски. Син богатих родитеља.“ — the son of rich parents; „Оставио богатство и као јурод јурио по улицама, и кроз јуродство поучавао људе.“, he left his riches and **ran about the streets as a fool, and taught the people through his folly**. „Његов друг истога подвига био је блажени Теодор.“ — **his fellow in the same struggle was the blessed Теодор**; and „Јурећи се једанпут пред светом они обојица претрче реку поврх воде.“, **racing each other once in front of everybody, the two of them ran across the river on top of the water.** **THE BLESSED Теодор GETS NO ROW, AND HE IS A FOLDER** — `theodore-of-novgorod` exists in this corpus and is plainly the man, the two being the paired fools of Novgorod. He is named in this body and not in this heading, so §5 refuses him a `serbian` row, and `proseprobe.mjs` returned `0 name(s) the index would link` so no test asks for a `related` row either. **That is the fourth folder in two days that §5 keeps a row from**, and the one it is hardest to lose: this folder’s `related` is `null` and the running on the water is an act of the two of them together. Named for the author. No `office`. No `locations`: Novgorod is in the body and is not written as a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 1392,
+      "latest": 1392,
+      "display": "1392",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Упокојио се у Господу 1392. год.“"
+    }
   }
 }

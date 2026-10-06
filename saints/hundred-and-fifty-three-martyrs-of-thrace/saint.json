@@ -10,6 +10,11 @@
       "form": "Εκατό πενήντα τρεις Μάρτυρες",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Ιουλίου, «Άγιοι Εκατό πενήντα τρείς Μάρτυρες από τη Θράκη», with the rank word and the place left off."
+    },
+    {
+      "form": "Сто педесет и три мученика",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. јул ст. ст., „Сто педесет и три мученика,“, with nothing at all — the heading carries no Св., no Свети and no word that is not part of what the company is called, so the form is the heading entire less its closing comma — left off by §6. **The saint is a company, so the rank is the name**: «мученика» is the rank and it cannot be stripped, the numeral and it together being the whole of what the book calls them, which is the shape the gate records under `name forms where the rank is the name` and the shape this folder’s existing Greek form already has. Five words, far above the two-word floor `usableName` applies. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "attestations": [
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.08.2026 (27. јул ст. ст.) — „Сто педесет и три мученика,“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth and last entry, and **the shortest of this range: a heading and five words.** The heading is quoted as the markup gives it, **closing comma and all** — „Сто педесет и три мученика,“ — the clause running on out of the `<strong>` element into the body, which is the second heading of this range to end on a comma after «Спомен Стевана Високог,» on the 19 July. The body is „потопљених у мору у Тракији.“, drowned in the sea in Thrace, and that is the entirety of it. **THAT THIS COMPANY TAKES A ROW WHERE A COMPANY’S MEMBERS WOULD NOT IS THE READING OF THIS ROW.** §5 and BRIEF.md’s Ruling say a synaxis that enumerates nobody is one entry and no folder per member — and this heading enumerates nobody at all, so **no member folder is made and none is looked for**. But `hundred-and-fifty-three-martyrs-of-thrace` **is itself a folder of this corpus**, kept on this very menologion number by saint.gr as «Εκατό πενήντα τρεις Μάρτυρες», and the company is the saint. The heading names the company, so the company’s folder takes the row. **This is the corpus’s own established practice and it was measured before it was followed**: fifty-eight folders whose slug reads as a company already carry a venerated `serbian` row off this same book, among them `fifteen-thousand-martyrs-of-pisidia`, `forty-five-martyrs-of-nicopolis`, `four-hundred-forty-martyrs-of-italy`, `fathers-slain-at-sinai` and `fathers-slain-at-raithu`. **THE NAME FORM IS THE COMPANY AND THE RANK IS THE NAME.** «Сто педесет и три мученика» is stored whole, less the heading’s comma: the numeral is what distinguishes them and «мученика» is the rank that is also the name, the two together being all the book calls them, and the folder’s existing Greek form is built the same way. **AND THE GATE’S OWN NAMES CHECK DOES NOT FLAG THIS FORM, WHICH WAS MEASURED BOTH WAYS AND IS WORTH THE LINE**: `name forms where the rank is the name` stands at **8 before this row and 8 after it**, and `name forms whose first word is a rank` at **4 and 4**, because that check reads the FIRST WORD and this form leads with a numeral. The eight it does hold are forms that lead with Μάρτυρες, Преподобномученики and the like. So this is a company form the gate passes silently, and a reader looking for the corpus’s company-name readings will not find this one among them. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` and `sr-foldpred.mjs` `new key, other holders: 0 (none)`. Five words, so it is far above the two-word floor `usableName` applies. `types` UNTOUCHED: «мученика» is the `martyr` the folder already carries and the heading gives nothing else. **NO `dates`, AND THE BOOK GIVES NOTHING TO MAKE ONE FROM.** The folder has no `dates` object and keeps none: no year, no century, no emperor, no persecutor and no occasion — only a sea and a province. **This is the only row of this range written off an entry that offers no date of any kind at all.** **NO `related`** — the folder has none and the entry names nobody, not even the emperor under whom they drowned. No `office`. No `locations`: Thrace is named and is not written as a coordinate, and the sea is not a place. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, and **that verse is on Panteleimon alone** — **and this is the fullest day of the range, five entries, of which the verse versifies one**. The eighth day running, and the thinnest proportion yet."
     }
   ],
   "text": {
