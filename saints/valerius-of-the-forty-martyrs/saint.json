@@ -11,6 +11,11 @@
       "form": "Ουαλέριος",
       "lang": "el",
       "note": "Read out of the list of the forty names on saint.gr's page for the company, «Κατά τους Παρισινούς Κώδικες 1575 και 1476 τα ονόματα τους ήταν: … Ουαλέριος …», with the rank word left off."
+    },
+    {
+      "form": "Валерий Севастийский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's enumerating line for 9 марта ст. ст., «Мученик Валерий Севастийский», with the rank word left off."
     }
   ],
   "sex": "male",
@@ -30,8 +35,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст. — «40 мучеников, в Севастийском озере мучившихся: … Уалерия (Валерия) … (ок. 320)»",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "note": "The day's enumerating line names all forty; the quotation is elided to the company's title, this man's name as the line declines it, and the line's own date. The date «ок. 320» falls inside the reign this folder's interval already holds and is narrower than it, so the interval was not narrowed."
     },
     {
       "church": "romanian",
@@ -144,6 +159,70 @@
       },
       "english": {
         "text": "Ranged together in piety and in steadfastness, you triumphed over the enemy as martyrs, brave forty soldiers of Christ. As you are of one form in your contests and in grace, keep in love and in peace those who cry to you: hail, holy regiment.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Болезньми святых, имиже о Тебе пострадаша,/ умолен буди, Господи,/ и вся наша болезни исцели,/ Человеколюбие, молимся.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст., «Тропарь 40 мучеников, в Севастийском озере мучившихся», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By the sufferings of the saints, wherein they suffered for thee, be entreated, O Lord, and heal all our sufferings, we pray thee, O lover of mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Страстотерпцы всечестнии,/ воини Христовы четыредесяте,/ твердии оружницы,/ сквозе бо огнь и воду проидосте/ и Ангелом сограждане бысте,/ с нимиже молитеся Христу о иже верою хвалящих вас./ Слава Давшему вам крепость,/ слава Венчавшему вас,/ слава Подавающему вами всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст., «Ин тропарь 40 мучеников, в Севастийском озере мучившихся», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "All-honoured passion-bearers, forty soldiers of Christ, steadfast men at arms: you passed through fire and water and became fellow-citizens of the angels. With them pray to Christ for those who praise you in faith. Glory to him who gave you strength; glory to him who crowned you; glory to him who through you grants healing to all.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Страстотерпцы Христовы четыредесяте,/ во граде Севастийстем мужественно пострадавшии,/ чрез огнь и воду прошедшии,/ в покой вечный вшедшии,/ молитеся о нас ко Господу,/ да жизнь мирну сохранит/ и души наша спасет, яко Человеколюбец.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст., «Ин тропарь 40 мучеников, в Севастийском озере мучившихся», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Forty passion-bearers of Christ, who suffered manfully in the city of Sebaste, who passed through fire and water and entered into eternal rest: pray for us to the Lord, that he keep our life in peace and save our souls, for he loves mankind.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 6",
+      "text": "Все воинство мира оставльше,/ на Небесех Владыце прилепистеся,/ страстотерпцы Господни четыредесять,/ сквозе огнь бо и воду прошедше, блаженнии,/ достойно восприясте славу с Небес/ и венцев множество.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст., «Кондак 40 мучеников, в Севастийском озере мучившихся», глас 6",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving behind the whole army of the world, you clung to the Master in the heavens, forty passion-bearers of the Lord; for having passed through fire and water, blessed ones, you worthily received glory out of heaven and a multitude of crowns.",
         "rendered": "site"
       }
     }
