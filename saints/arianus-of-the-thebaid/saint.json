@@ -11,6 +11,11 @@
       "form": "Αρριανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», with the rank word left off. The page gives this name no gloss, as it glosses the other two."
+    },
+    {
+      "form": "Аријан",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Филимон, Аполоније, Аријан и други.“ — with «Свети мученици» left off and the third of the three bare forenames taken; the Thebaid of this folder’s display name is not in this book, which says only Egypt. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Филимон, Аполоније, Аријан и други.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s enumerated three, the heading quoted whole on each of the three folders; URL year 2025, and the day all three already carry on their Romanian and Greek rows. `types` UNTOUCHED: «мученици» is the `martyr` held, and «судија», a judge, is the office he persecuted from and no rank of the Church. `dates` UNTOUCHED: the `floruit` 290 is saint.gr’s one year for the company; this book gives «У време Диоклецијана» with no year, and names Diocletian again as the emperor who condemned him, which narrows nothing. NO `locations`: Egypt is a country and the Thebaid of the display name is not in this book. NO `related` ROW ADDED: `philemon-the-flute-player` and `apollonius-the-reader` are already here in both directions, and `hypatius-of-the-thebaid`, who is `related` here and whom the Greek calendar keeps on this same day, IS NOT NAMED BY THIS HEADING and got nothing. WHAT THE BOOK ADDS, and it is his whole turn: he was the judge who tormented the Christians bitterly in Egypt, who seized Apollonius and threatened him, who laughed when the bribed musician shouted that he was a Christian, and who beheaded them both — AND WHO THEN BECAME A CHRISTIAN HIMSELF, after his blind eye was healed by a wonder AT PHILEMON’S GRAVE. Condemned to death by Diocletian, he was executed with four soldiers who also declared themselves Christians; those four are the heading’s «и други» and the book names none of them. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

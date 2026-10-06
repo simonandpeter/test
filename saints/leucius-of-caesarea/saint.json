@@ -15,6 +15,11 @@
       "form": "Λεύκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Αυγούστου, «Άγιοι Θύρσος, Λεύκιος, Κορωνάτος και η συνοδεία τους», which names the three together; the rank word is left off. The page glosses the name from the Latin lux, lucis, light: the bright, the shining one."
+    },
+    {
+      "form": "Левкије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Тирс, Левкије и Калиник.“ — with «Свети мученици» left off and the second of the three bare forenames taken; the Caesarea of the display name is in the body. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -77,8 +82,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not on the Православни подсетник’s calendar line for 30.08.2026 (17. август ст. ст.), nor in its Ohrid Prologue for that day (pravoslavno.rs, checked 2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Тирс, Левкије и Калиник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The second name of the day’s enumerated three; the heading is quoted whole on each of the three folders; URL year 2025. The day is the Romanian calendar’s own for him, where the Russian and Greek rows on this folder are 17 August. `types` UNTOUCHED: «мученици» is the `martyr` held. `dates` UNTOUCHED: the 249–251 is days.pravoslavie.ru’s and this book names the emperor «Кумврикије», Decius’s successor, with no year, which is consistent with that interval and narrows nothing. NO `locations`: Caesarea in Bithynia is named and the folder has never held a coordinate. NO `related` ROW ADDED: Thyrsus, Callinicus and `cornutus-of-iconium` are already here. WHAT THE BOOK ADDS: that he was an honourable citizen of Caesarea in Bithynia and ALREADY BAPTISED where Thyrsus was still a catechumen; that he went before the emperor of his own accord and convicted him with a question — „Зашто си сам на своју душу заратио, о Кумврикије?“, why have you made war on your own soul, Koumvrikios? — and that after being beaten and tortured HE WENT TO HIS BEHEADING AS GLADLY AS TO A WEDDING. It is his death that the entry makes the cause of Thyrsus’s confession. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

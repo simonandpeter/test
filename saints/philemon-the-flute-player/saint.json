@@ -11,6 +11,11 @@
       "form": "Φιλήμων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Φιλήμων, Απολλώνιος, Αρριανός και οι τέσσερις Προτεκτοράτοι», with the rank word left off. The page glosses the name itself, «(από το φίλημα) = ο αγαπών και αγαπώμενος»."
+    },
+    {
+      "form": "Филимон",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Филимон, Аполоније, Аријан и други.“ — with «Свети мученици» left off and the first of the three bare forenames taken; the flute-player of this folder’s display name is the trade the body gives him and no part of a name. THE FOLD IS KEYED in `scripts/corpus-gate.mjs` at three members in this commit."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Филимон, Аполоније, Аријан и други.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, AN ENUMERATED THREE WITH AN OPEN TAIL — «и други», and others, which names nobody and counts nobody — so BRIEF-SERBIAN §5 counts the three names and the tail is one entry and no folder. The corpus holds all three. URL year 2025; this is the day all three already carry on their Romanian and Greek rows. He is the first name. **NO ROW FOR «и други», AND THERE IS A FOLDER IT MIGHT HAVE MEANT.** The body makes the tail four soldiers executed with the judge Arianus «који такође себе објавише хришћанима», who also declared themselves Christians, and names none of them; the corpus also keeps `hypatius-of-the-thebaid` on this same menologion day, `related` to Arianus, and THIS HEADING DOES NOT NAME HIM. Nothing was written on him or on the four, and whether either is the «и други» is a question for the author. `types` UNTOUCHED: «мученици» is the `martyr` held, and «музикант» is a trade. `dates` UNTOUCHED: the folder’s `floruit` 290 is saint.gr’s one year for the company, and this book names only «У време Диоклецијана», in the days of Diocletian, with no year — so there was nothing to narrow. NO `locations`: Egypt is a country. NO `related` ROW ADDED: `apollonius-the-reader` and `arianus-of-the-thebaid` are already here in both directions. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldpred.mjs` measured «Филимон» at two other holders, `philemon-of-cyzicus` and `philemon-the-apostle`, and no READ_FOLDS key existed for that pair, so a new three-member key goes into `scripts/corpus-gate.mjs` in this commit and the gate’s unread count falls by one. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

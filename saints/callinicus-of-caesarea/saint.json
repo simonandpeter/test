@@ -11,6 +11,11 @@
       "form": "Καλλίνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 14 Δεκεμβρίου, «Άγιοι Θύρσος, Λεύκιος και Καλλίνικος», with the rank word left off. The page glosses the name itself, «(κάλλος + νίκη) = ο ωραίος και ένδοξος νικητής». The alternative «Κορωνάτος» the page reports is recorded in the attestation and not stored as a second form."
+    },
+    {
+      "form": "Калиник",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. децембар ст. ст., „Свети мученици Тирс, Левкије и Калиник.“ — with «Свети мученици» left off and the last of the three bare forenames taken; the Caesarea of the display name is in the body, and «жрец идолски» is the station the body gives him and not part of a name. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -59,8 +64,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (28 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.12.2025 (14. децембар ст. ст.) — „Свети мученици Тирс, Левкије и Калиник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The third name of the day’s enumerated three; the heading is quoted whole on each of the three folders; URL year 2025, and this is the day the Romanian and Greek rows on this folder already carry. `types` UNTOUCHED: «мученици» is the `martyr` held, and «жрец идолски», AN IDOL-PRIEST, is the station he was converted out of and no rank of the Church — nothing was added for it. `dates` UNTOUCHED: the folder’s `floruit` of 225–275 is saint.gr’s «στα μέσα του 3ου αιώνα», and this book names the emperor Koumvrikios, Decius’s successor, without a year, which that interval already covers. NO `locations`. NO `related` ROW ADDED: Thyrsus, Leucius and `cornutus-of-iconium` are already here. WHAT THE BOOK ADDS, and it is the whole of what he was: THE IDOL-PRIEST OF THE THREE. Where Thyrsus and Leucius were honourable citizens of Caesarea, he served the idols — and he was converted to the faith of Christ by seeing many idols fall at the power of Thyrsus’s prayer under torture. He was condemned with Thyrsus and beheaded with the sword, where the saw sent against Thyrsus could not scratch the wood of his chest. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
