@@ -10,6 +10,11 @@
       "form": "Ειρήνη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 16 Απριλίου, «Αγία Ειρήνη», with the rank word left off."
+    },
+    {
+      "form": "Ирина Коринфская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 16 апреля ст. ст., name page 2522, with the rank word left off; the day's own line gives the name in the genitive, «Ирины». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The city epithet is the calendar's own nominative and is what tells her from the Irene of Aquileia the same day keeps, whose own name page gives «Ирина Аквилейская»."
     }
   ],
   "related": [
@@ -18,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 апреля ст. ст. — «Мч. Леонида и мцц. Хариессы , Ники , Галины , Калисы , Нунехии , Василиссы , Феодоры , Ирины и иных (258).»",
+        "url": "https://days.pravoslavie.ru/Days/20260416.html",
+        "year": 2026,
+        "note": "The day's second entry, which **names her inside the company** where the Greek page this folder was written from keeps her beside it, martyred at the same time and in the same place. The name page behind the line gives «День памяти: 16 апреля» and no other day. It carries no typikon icon, so no `rank` is recorded; the day's one icon stands before the first entry, and neither of the day's two hymns is this company's. **The line's year is 258, where the Greek page this folder already cites puts the martyrdom in the reign of Decius, 249 to 251**; this folder's interval, 249 to 281, holds both, so `dates` were not touched. The line also closes the company with «и иных» — and others — who are not named and have no folder. **This calendar's name page for every one of the nine serves a second life besides the company's own: the life of a martyr of Corinth under Decius and of the disciples who gathered to him, two of whom were drowned in the sea and one of those called Леонид.** That is the calendar's own grouping of two dossiers under one name and it is recorded here as such; no identification was made by this reader. The same name pages print a teaser for an article on Православие.Ru which makes Leonid the leader of a women's choir arrested at Troezen; an article is not the calendar's life, nothing has been taken from it, and it is named in the report."
+      }
     },
     {
       "church": "romanian",
@@ -49,5 +64,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 258,
+      "latest": 258,
+      "display": "258",
+      "basis": "traditional",
+      "note": "The first year any source read for this folder gives her, and this folder had no `dates` at all. days.pravoslavie.ru closes the line for 16 апреля ст. ст. with «(258)», and both of the lives it serves under her name say the same: «пострадала в Греции в 258 году в день Святой Пасхи» and «была усечена мечом в день Святой Пасхи в 258 г. в Коринфе». saint.gr, the only source read for this folder before, gave no year and no place. The Greek page for the company she is set beside dates that martyrdom to the reign of Decius, 249 to 251, which this year lies outside; the two readings are the sources' own, this row records the one its own calendar gives, and the disagreement is noted on the company's folders as well."
+    }
   }
 }

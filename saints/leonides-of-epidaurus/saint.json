@@ -15,6 +15,11 @@
       "form": "Леонид",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's heading for the Julian 16 April, „Св. муч. Леонид и с њим мученице: Хариеса, Никија, Галина, Калида, Нунехија, Василиса и Теодора.“, with Св. left off — it is not a rank — and without муч. and мученице, which are the `martyr` this folder already carries in `types`. One rank word stands over the whole company and belongs to none of them, so what is left for this saint is the bare forename; the heading gives no epithet, no city and no see, and the companionship clause this corpus keeps in some of these display names is not part of the source's name for anybody. No other folder in the corpus holds this Serbian form. Measured, and wider than predicted: `corpus-gate.mjs` run without `--batch` lists `? \"леонид\" — leonid-presbyter-martyr-1937, leonides-of-epidaurus`, and `leonid-presbyter-martyr-1937` holds a bare **Russian** Леонид of the same spelling off days.pravoslavie.ru. So the fold crosses languages, as «Максим» and «Капитон» do, and a check of Serbian forms alone did not see it. Recorded as a deliberate fold in the run's findings."
+    },
+    {
+      "form": "Леонид Коринфский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 16 апреля ст. ст., name page 1341, with the rank word left off; the day's own line gives the name in the genitive, «Леонида». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. **The epithet is Corinth, where the Greek calendar's form and this folder's display name have Epidaurus**; the two are the source's own and neither was changed. The corpus keeps fifteen other folders on this forename, so the key was measured rather than guessed."
     }
   ],
   "related": [
@@ -24,13 +29,24 @@
     "kallida-companion-of-leonides",
     "nounechia-companion-of-leonides",
     "basilissa-companion-of-leonides",
-    "theodora-companion-of-leonides"
+    "theodora-companion-of-leonides",
+    "quadratus-of-corinth"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 апреля ст. ст. — «Мч. Леонида и мцц. Хариессы , Ники , Галины , Калисы , Нунехии , Василиссы , Феодоры , Ирины и иных (258).»",
+        "url": "https://days.pravoslavie.ru/Days/20260416.html",
+        "year": 2026,
+        "note": "The day's second entry, which heads the company with him as the Greek and Serbian rows this folder already carries do. The name page behind the line gives «День памяти: 16 апреля» and no other day. It carries no typikon icon, so no `rank` is recorded; the day's one icon stands before the first entry, and neither of the day's two hymns is this company's. **The line's year is 258, where the Greek page this folder already cites puts the martyrdom in the reign of Decius, 249 to 251**; this folder's interval, 249 to 281, holds both, so `dates` were not touched. The line also closes the company with «и иных» — and others — who are not named and have no folder. **This calendar's name page for every one of the nine serves a second life besides the company's own: the life of a martyr of Corinth under Decius and of the disciples who gathered to him, two of whom were drowned in the sea and one of those called Леонид.** That is the calendar's own grouping of two dossiers under one name and it is recorded here as such; no identification was made by this reader. The same name pages print a teaser for an article on Православие.Ru which makes Leonid the leader of a women's choir arrested at Troezen; an article is not the calendar's life, nothing has been taken from it, and it is named in the report."
+      }
     },
     {
       "church": "romanian",
