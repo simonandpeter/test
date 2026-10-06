@@ -18,4 +18,10 @@ The saint is also remembered in the life of [Nicodemus of Lake Kozha](/saints/ni
 
 Nicetas asked him to explain what was happening, and when Basil had been told he said: my child Nicetas, come at six o'clock to the metropolitan church; there you will find me and I will give you something to drink, and the prayers of the Most Holy Theotokos will help you to be cured. Nicetas went to the church at that hour, and Basil gave him a vessel and commanded him to drink it, after first making the sign of the honourable and life-giving Cross. He was well at once.
 
-*After saint.gr's calendar for 2 Αυγούστου — [the day](https://www.saint.gr/08/02/index.aspx) and [the life](https://www.saint.gr/2197/saint.aspx); read 1 October 2026.*
+The Ohrid Prologue of Bishop Nikolai Velimirović keeps him on the same second of August as the Greek calendar and gives the shape of the whole life in ten sentences. His father was called Jacob and his mother Anna. In his sixteenth year he gave himself to the podvig of folly for Christ, and he endured in that hard podvig for seventy-two years; he lived eighty-eight years in all. He went barefoot, bareheaded and in rags, and had no settled dwelling anywhere.
+
+He set sinners right, rebuked the great, prophesied truly and had visions at a distance. Having suffered his fill of hunger, of frost and of the insults of men, the blessed Basil gave up his holy soul to God. The emperor Ivan was at his funeral with the metropolitan, and he was buried in the Moscow church of the Most Holy Mother of God, which was called by his name afterwards.
+
+The sixteen and the seventy-two add up to the eighty-eight the entry gives, so the book agrees with itself; the years this folder carries from another source make the life a year longer than that, and the difference is left standing, since this entry gives no absolute year at all.
+
+*After saint.gr's calendar for 2 Αυγούστου — [the day](https://www.saint.gr/08/02/index.aspx) and [the life](https://www.saint.gr/2197/saint.aspx); read 1 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 2. август ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-15&prolog=1), read 6 October 2026.*

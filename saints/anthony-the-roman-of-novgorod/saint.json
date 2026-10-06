@@ -11,6 +11,11 @@
       "form": "Αντώνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Αυγούστου, «Όσιος Αντώνιος ο θαυματουργός Ρωμαίος Νοβογορδίας», with the rank word and the epithets left off. The page glosses the name from αντί and ωνούμαι as the one who bids higher, the more generous one."
+    },
+    {
+      "form": "Антоније Римљанин",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 3 August, „Преп. Антоније Римљанин.“ — Преп. left off, which §5 maps to `venerable`. **Римљанин is kept**: it is an ethnonym and not a rank, it is in no table of §5, and it is the only thing in the heading that distinguishes him — Novgorod is in the body. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
     }
   ],
   "attestations": [
@@ -41,27 +46,40 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.08.2026 (3. август ст. ст.) — „Преп. Антоније Римљанин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third of four entries, and the Greek keeps him on this same 3/8. **BOTH OF THIS FOLDER’S YEARS DISAGREE WITH THIS BOOK, AND BOTH INTERVALS ARE OPENED RATHER THAN MOVED.** „Рођен у Риму 1086 год. од родитеља благочестивих и имућних.“ — born at Rome in 1086 of devout and well-off parents — against the flat 1067 the folder held; and „Поживе Антоније дуго као игуман тога манастира, и пројавив велику благодатну силу кроз чудеса многа, сконча мирно 1146 год. и пресели се у дворе Господње.“ puts the repose in **1146** against the flat 1147 it held. `birth` becomes 1067–1086 and `death` 1146–1147, neither year preferred, which is the shape `polycarp-of-alexandria`, `theodosia-of-tyre` and the Julian 30 June’s `george-the-iberian` all carry. **Nineteen years between the two births is the widest disagreement this reader has met**, and it is not resolved. **THE ROW WRITTEN, AND IT IS THAT FOLDER’S FIRST OF ANY KIND.** „У Новгороду прими га архијереј Никита љубазно и поможе му подићи цркву Св. Богородице, где после би манастир.“ — at Novgorod the hierarch Nicetas received him kindly and helped him raise the church of the Holy Mother of God, where a monastery was afterwards. `nicetas-of-novgorod` is `Bishop of Novgorod` in this corpus, died 1108 or 1109, which fits an arrival in the first decade of that century however the birth is read; **receiving a stranger and helping him build** is a personal act between two men and not a dedication, so the row is written both ways, and that folder carried **no `related` key at all**. The church itself takes nothing: a dedication is not a relation. **WHAT THE ENTRY GIVES THAT THE GREEK LINE DID NOT.** „У то време одвоји се црква Римска од цркве Источне, и сви који осташе верни цркви Источној бише гоњени од клира Римског. Међу гоњенима беше и Антоније.“ puts his flight in the schism — in that time the Roman church separated from the Eastern, and all who stayed faithful to the Eastern were persecuted by the Roman clergy, and Anthony was among the persecuted — and „Он раздаде све наслеђено имање, и замонаши се. На једној стени у мору стојећи подвизаваше се 14 месеци. Стена се међутим одвоји од свог основа и неким чудним промислом доплови водом до Новгорода.“ has him give away his whole inheritance, take the habit, stand on a rock in the sea for fourteen months, and the rock break from its base and sail by some strange providence over the water to Novgorod. `types` untouched at `venerable` and `wonderworker`: Преп. is `venerable` and the folder has it, Римљанин is an ethnonym the display name carries and is no rank, and игуман in the body would give `abbot` and is refused as a body word. No `locations`: Rome and Novgorod are named in clauses and the rock is not a place this corpus can put a point on. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is twenty-two lines on the third entry alone, Anthony on his rock „Мртва стена и човек на стени, Бурно море около се пени Антоније у Бога удубљен Ум свој Богу стално уздизаше И молитве срцем узносаше.“, and it is in no field and in no life (§3), read before this was written."
     }
   ],
   "dates": {
     "birth": {
       "earliest": 1067,
-      "latest": 1067,
-      "display": "1067",
+      "latest": 1086,
+      "display": "1067 or 1086",
       "basis": "traditional",
-      "note": "saint.gr's head line for the entry, «Οσιος Αντωνιος ο Θαυματουργος Ρωμαιος Νοβογορδιας (1067 - 1147)». The page gives no sentence about either year."
+      "note": "The folder held a flat 1067. The Охридски пролог for 3. август ст. ст. opens his entry „Рођен у Риму 1086 год. од родитеља благочестивих и имућних.“ — born at Rome in 1086 of devout and well-off parents. Nineteen years apart, and the interval is opened to hold both rather than one being preferred (6 October 2026)."
     },
     "death": {
-      "earliest": 1147,
+      "earliest": 1146,
       "latest": 1147,
-      "display": "1147",
+      "display": "1146 or 1147",
       "basis": "traditional",
-      "note": "saint.gr's head line for the entry, «Οσιος Αντωνιος ο Θαυματουργος Ρωμαιος Νοβογορδιας (1067 - 1147)». The page gives no sentence about either year."
+      "note": "The folder held a flat 1147. The Охридски пролог for 3. август ст. ст. closes his entry „Поживе Антоније дуго као игуман тога манастира, и пројавив велику благодатну силу кроз чудеса многа, сконча мирно 1146 год. и пресели се у дворе Господње.“ — he ended peacefully in 1146 and passed over to the courts of the Lord. One year apart, and the interval is opened to hold both (6 October 2026)."
     }
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "related": [
+    "nicetas-of-novgorod"
+  ]
 }

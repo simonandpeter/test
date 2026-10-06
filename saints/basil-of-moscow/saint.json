@@ -11,6 +11,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 2 Αυγούστου, «Άγιος Βασίλειος ο δια Χριστόν σαλός και θαυματουργός στη Μόσχα», with the rank word and the clauses after the name left off. The page prints no Russian form of the name and none is supplied here."
+    },
+    {
+      "form": "Василије Московски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 2 August, „Св. блажени Василије јуродиви Московски.“ — Св. is not a rank and is dropped with the two that are, блажени and јуродиви, both of which §5 reads as `fool-for-christ` here. Московски is a toponymic and not a rank, so §6 keeps it: it is the whole of what distinguishes him in this heading, and without it the form would be a bare Василије. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 15.08.2026 (2. август ст. ст.) — „Св. блажени Василије јуродиви Московски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-15&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third of three entries, and the Greek calendar keeps him on this same 2/8, so the two agree exactly on the day. **`dates` UNTOUCHED, AND THE ONE REASON IS THAT THIS BOOK GIVES AGES AND NOT YEARS.** „У 16. години својој предао се подвигу јуродства, и у том тешком подвигу издржао 72 године. Живео свега 88 година.“ — in his sixteenth year he gave himself to the podvig of folly and endured in that hard podvig for 72 years, and he lived 88 years in all. Sixteen and seventy-two make eighty-eight, so the entry is consistent with itself — and the folder carries birth 1468 and death 1557 from another book, which is a span of **eighty-nine**. **A one-year disagreement between an age and a pair of years, and nothing is written from it**: an age is not a year, this entry gives no absolute year of any kind, and a span computed from two other years is not this book’s statement. Recorded, not resolved. **THE RANK WORDS BOTH AGREE WITH WHAT THE FOLDER HOLDS.** Св. is not a rank; блажени is `fool-for-christ` **or** `righteous` by §5, to be read, and јуродиви in the same heading settles it — both point to `fool-for-christ`, which the folder carries already, so nothing is added. чудотворац is not in the heading and is in the folder from another book; прорицао истинито and имао виђења на даљину in the body would support it and are not written from, the body not being the heading. **NOBODY IN THE ENTRY TAKES A ROW.** „Отац му се зваше Јаков а мати Ана.“ names his father Jacob and his mother Anna; „На погребу му био цар Иван с митрополитом.“ has the emperor Ivan at his funeral with the metropolitan, who is not named. Two folders carry the bare display names `Jacob` and `Anna` and neither is a parent of this man; `usableName` refuses a one-word form in any case, measured with `.tmp/sr-prosechk.mjs` before the paragraph was written. The emperor holds no folder. „Сахрањен у храму Московском Пресвете Богородице, назватом после по његовом имену.“ has him buried in the Moscow church of the Most Holy Mother of God, afterwards called by his name — a dedication, and this corpus has ruled that a dedication is not a relation. No `locations`: Moscow is named in a clause. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "dates": {

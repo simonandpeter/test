@@ -11,6 +11,11 @@
       "form": "Ελεάζαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 1 Αυγούστου, «Άγιοι Επτά Μακκαβαίοι, η μητέρα τους Σολομονή και ο διδάσκαλός τους Ελεάζαρος», with the rank word and the clause about his pupils left off. The page's sub-heading for him is «Αγιος Ελεαζαρος Διδασκαλος Των Επτα Μακκαβαιων», and it glosses the name as a Hebrew word, the help of God."
+    },
+    {
+      "form": "Елеазар",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 1 August, „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“ — свештеник stripped, which §5 maps to `presbyter` and which this folder already carries in `types`. What is left is the bare forename, which `.tmp/sr-foldpred.mjs` reports folds with nothing: the other Eleazar folders of this corpus store no Serbian form."
     }
   ],
   "sex": "male",
@@ -65,8 +70,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.08.2026 (1. август ст. ст.) — „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-14&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first entry, and the heading names him with his rank: „Седам Макавеја, Соломонија матер њихова и Елеазар свештеник.“. **свештеник CORROBORATES A TYPE THE FOLDER ALREADY HELD** — §5 maps it to `presbyter`, which is in this folder’s `types` off the other two books, so nothing is added and the agreement is recorded. Старац, an old man, is not a rank. **AND THE ENTRY MAKES A CLAIM NO OTHER BOOK OF THIS FOLDER MAKES**: „Старац Елеазар, свештеник и један од седамдесет преводиоца Старог Завета на грчки језик, не хте јести свињског меса.“ — the elder Eleazar, a priest and **one of the seventy translators of the Old Testament into the Greek tongue**, would not eat swine’s flesh. „За то би мучен и у огњу спаљен.“ is his death, before the king ever leaves Jerusalem. The Septuagint claim is written into the life as this book’s own and into no field, there being no field for it. `death` about 180 BC off „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“, whose subject is all of them; the folder held no date. **He is not `eleazar-1-august`**, a bare Greek line of the same day which this corpus keeps as a second man; nothing on that folder was touched and deciding whether two entries are one person is not a reader’s to decide. **And he is not the Елеазар of the body list**, who is one of the seven brothers. No `locations`. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [
@@ -106,5 +121,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": -180,
+      "latest": -180,
+      "display": "about 180 BC",
+      "basis": "traditional",
+      "note": "The folder held no date of any kind, neither doxologia nor saint.gr giving a year in its prose. The Охридски пролог for 1. август ст. ст. closes its first entry „Сви чесно пострадаше за веру у једног живога Бога око 180 год. пре Христа.“ — all of them suffered honourably for the faith in the one living God about the year 180 before Christ. The subject is Сви, all of them, so the one sentence dates every holder of this entry; «about» is kept in the display and the interval is left flat, which is the shape `elisha-the-prophet` and `abraham-of-pechenga` carry (6 October 2026)."
+    }
   }
 }

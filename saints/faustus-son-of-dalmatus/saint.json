@@ -11,6 +11,11 @@
       "form": "Φαύστος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Αυγούστου, «Όσιοι Δαλμάτιος, Φαύστος, και Ισαάκιος», with the rank word and the two companions left off."
+    },
+    {
+      "form": "Фауст",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s first heading for the Julian 3 August, „Преп. Исакије, Далмат и Фауст.“ — Преп. left off, which governs all three names in it. The heading gives nothing else at all: «son of Dalmatus» in the display name is the corpus’s own and the body is where the sonship is stated. It folds with one other folder and the fold is in this commit’s FINDINGS and in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -60,8 +65,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.08.2026 (3. август ст. ст.) — „Преп. Исакије, Далмат и Фауст.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s first of four entries, and its heading enumerates three men: „Преп. Исакије, Далмат и Фауст.“, under one rank word that governs all three. His row was `undocumented`, and **the heading is the whole of why he gets one**: he is the third name in it. **NO `dates`, AND THE ENTRY IS EXPLICIT ABOUT HAVING NONE FOR HIM.** „Син његов Фауст подражаваше оца у свему, и после богоугодног живота сконча мирно у тој обитељи Далматској.“ — his son Faustus imitated his father in everything, and after a God-pleasing life ended peacefully in that same house of Dalmatou — is the whole of his part of the entry, and it gives no year, no age and no reign. The fifth century the entry gives two sentences earlier belongs to the father: „Угодивши Богу представио се мирно, у V столећу.“ has «представио се» in the singular with Dalmatus for its subject, where this sentence starts a new one with Син његов. **A century stated of a father is not a century stated of a son**, so `dates` stays absent, and that is the one reading this entry turns on. `types` untouched at `venerable` and `monk`: Преп. governs him in the heading and the folder has it, and „Но када се у њему пробуди дух, он презре све светско, напусти свој чин, узе свога јединца сина Фауста, и с њим оде у предграђе Цариграда, у обитељ св. Исакија, где се обојица постригоше у иноке.“ tonsures him in the body, which is where `monk` came from in the other books. `dalmatus-of-constantinople` and `isaac-of-constantinople` are both `related` here already and the first is two-way; the second is the one-way row named in Isaac’s note. No `locations`. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "hymns": [

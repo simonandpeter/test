@@ -11,12 +11,19 @@
       "form": "Σαλώμη",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Αυγούστου, «Αγία Σαλώμη η Μυροφόρος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Саломија",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 3 August, „Св. Саломија мироносица.“ — Св. is not a rank and is dropped with мироносица, which **is** a rank word and which this corpus has no type for; the stripping is recorded in the row note. What is left is the name alone, which `.tmp/sr-foldpred.mjs` reports folds with nothing. The book writes Саломија where the Greek gives Σαλώμη and the Romanian Salomeea; copied as printed."
     }
   ],
   "sex": "female",
   "related": [
     "john-the-theologian",
-    "mary-of-cleopas"
+    "mary-of-cleopas",
+    "james-son-of-zebedee",
+    "joseph-the-betrothed"
   ],
   "attestations": [
     {
@@ -55,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.08.2026 (3. август ст. ст.) — „Св. Саломија мироносица.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-16&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth and last entry, two sentences, and the Romanian and Greek both keep her on this same 3/8. **THREE KINSHIPS IN ONE SENTENCE, AND THE CORPUS HELD ONE OF THEM HALF-WAY AND TWO NOT AT ALL.** „Мати св. апостола Јакова и Јована, жена Заведејева, а кћи Јосифа обручника Пресвете Богородице.“ — mother of the holy apostles James and John, wife of Zebedee, and daughter of Joseph the Betrothed of the Most Holy Mother of God. Kinship is a relation, and these are kinships stated outright rather than inferred: `james-son-of-zebedee` and `joseph-the-betrothed` are written both ways and neither had any row to this folder, and **`john-the-theologian` was `related` here already and did not relate back** — thirty-nine rows on that folder and this one not among them — so the reciprocal is supplied, which makes this the second one-way row this block has found and completed. Zebedee himself holds no folder and takes nothing. **AND THE RANK IN THE HEADING IS ONE THIS CORPUS STILL HAS NO TYPE FOR, FOR THE SECOND TIME IN THIS WAVE.** „Св. Саломија мироносица.“: Св. is not a rank; мироносица, myrrh-bearer, is a rank word, it is in the heading, and by the standing rule it ought to be written — and `grep -ho types` over the corpus still returns no myrrh-bearer type anywhere. **This folder’s `types` is `null` before and after**, as it was before this reading, the Romanian «mironosița» and the Greek «Μυροφόρος» having given it nothing either. **AUTHOR: this is the same question the Julian 27 June raised on `joanna-the-myrrhbearer`, and it is now two folders whose one rank word the vocabulary cannot express.** **NO `dates`.** „Служила Господу за време Његовог земаљског живота и удостојила се бити међу првовесницима васкрсења Његовог.“ — she served the Lord during His earthly life and was counted worthy to be among the first messengers of His resurrection — is the whole of the rest, and there is no year, no age and no reign in the entry. No `locations`. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
