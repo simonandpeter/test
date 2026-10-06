@@ -17,6 +17,11 @@
       "form": "Акакије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 17 April, „Св. Акакије еп. Мелитински.“, with Св. left off — it is not a rank — and with еп. Мелитински left off, a rank this folder already carries in `types` and a see this corpus keeps in `office`. The heading gives no epithet beyond the see, so the bare forename is what is left. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"акакије\" — acacius-of-melitene, acacius-the-kausokalyvite`, and `acacius-the-kausokalyvite` already held this same bare Serbian form. A deliberate fold, recorded in the run's findings; the thirteen other folders of this spelling carry no Serbian form."
+    },
+    {
+      "form": "Акакий Мелитинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 6599, «Святитель Акакий Мелитинский, епископ», with the rank word and the office left off; the day's own line gives the name in the genitive, «Акакия». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The see is the calendar's own nominative and is this folder's `office` besides."
     }
   ],
   "sex": "male",
@@ -36,8 +41,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Прп. Акакия , еп. Мелитинского (ок. 435).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's second entry, and the second of the three to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. **The line grades him «Прп.», venerable, where the name page behind it grades him «Святитель», a hierarch, and the life's own heading repeats the first**; this folder's `types` already hold both readings and were not changed. Its year, about 435, is the one this folder already carries. The name page gives «День памяти: 17 апреля» and no other day. None of the day's four hymns is his."
+      }
     },
     {
       "church": "romanian",

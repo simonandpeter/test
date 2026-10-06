@@ -11,6 +11,11 @@
       "form": "Παΐσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Όσιος Παΐσιος, διά Χριστόν σαλός», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Паисий Киевский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 14949, «Паисий Киевский, прп., Христа ради юродивый», with the rank word and the office left off; the day's own line gives the name in the genitive, «Паисия». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. Both the rank word and the words for the kind of asceticism, which are this folder's `types`, are left off; the city stays. **The surname the linked article gives him is not in the calendar's own nominative and is not stored here.**"
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Прп. Паисия Киевского, Христа ради юродивого (1893).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's seventh entry. It carries no typikon icon — the day's three stand before the first three entries — so no `rank` is recorded, and none of the day's four hymns is his. **The day page prints no life under his name and there is no life page behind the line**; its year, 1893, is the one this folder already carries. The name page behind it (14949) gives «День памяти: 17 апреля» and no other day, and the only other thing on it is a teaser for an article on Православие.Ru by a named author, which gives him a surname the calendar's own nominative does not carry and quotes a saying of his. An article is not the calendar's life; nothing has been taken from it, and it is named in the report."
+      }
     },
     {
       "church": "romanian",

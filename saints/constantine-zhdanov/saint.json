@@ -1,0 +1,61 @@
+{
+  "slug": "constantine-zhdanov",
+  "display_name": "Constantine (Zhdanov)",
+  "names": [
+    {
+      "form": "Константин (Жданов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 16 апреля ст. ст., name page 15015, «Константин (Жданов), иерей, сщмч.», with the rank word and the grade left off; the day's own line declines the forename and gives no surname at all. The surname in brackets is part of the name the calendar's link gives and is kept. No folder in this corpus holds this form, none holds the surname in either script, and none holds the fold key the gate makes of the form, «жданов константин», which the bare «константин» fold does not reach."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 апреля ст. ст. — «Сщмч. Константина пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260416.html",
+        "year": 2026,
+        "note": "The third of the day's four entries, standing on a line of its own, and the whole of it. The day's one typikon icon stands before the first entry, the three sisters of Aquileia, so no `rank` is recorded here. The day page prints no life under his name and there is no life page behind the line; of its two hymns under «Молитвы», one is the three sisters' kontakion and the other a troparion of the Tambov icon, and neither is his. The name page behind the line (15015) gives «Дни памяти: 26 января (Новомуч.) , 16 апреля»: the January day is the synaxis of the new martyrs and confessors of Russia, a commemoration of a company and not a second day of his own, so no second row and no note of a second feast is written. That page carries nothing else at all — no life, no icon and no parish."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 16 апреля ст. ст. with «(1919)», which is this calendar's way of printing the year of death. It is the only year any source read for this folder gives him, and the page says nothing of where or how. No day is recorded because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

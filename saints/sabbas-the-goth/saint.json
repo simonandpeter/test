@@ -10,6 +10,11 @@
       "form": "Сава Готски",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 15 April on pravoslavno.rs, „Св. муч. Сава Готски.“, with Св. left off — it is not a rank — and with муч. left off, which is the `martyr` this folder carries in `types`. Готски is kept: it is not a rank word but the people he belonged to as the heading itself names him, and it is what this folder's English name carries as «the Goth». Keeping it is what holds the form out of a fold — the corpus keeps seven other folders whose forename reads as this one, among them `sava-of-serbia`, `sava-of-buzau` and `sabbas-of-krypetsk`."
+    },
+    {
+      "form": "Савва Готфский, Муссовский (Валахийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 15 апреля ст. ст., name page 1894, «Савва Готфский, Муссовский (Валахийский), мч.», with the rank word left off; the day's own line gives «Саввы Готфского» in the genitive and the two further epithets only the link has. The second and third are read off the life: the Муссова is the river he was drowned in, which the life names, and the bracketed Валахийский is the calendar's own and is kept, parentheses and all, because the gate's key drops brackets anyway. That key, 'валахиискии готфскии муссовскии савва', has no other holder — measured, which matters on a forename the corpus keeps ten folders on."
     }
   ],
   "dates": {
@@ -22,13 +27,24 @@
     }
   },
   "related": [
-    "bretanion-of-tomis"
+    "bretanion-of-tomis",
+    "basil-the-great"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 15 апреля ст. ст., which is the page for this menologion day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 апреля ст. ст. — «Мч. Саввы Готфского (372).»",
+        "url": "https://days.pravoslavie.ru/Days/20260415.html",
+        "year": 2026,
+        "note": "The day's fourth entry. It carries no typikon icon, so no `rank` is recorded; the day's one icon stands before the first entry, and the day prints no hymn under his name. The name page behind the line (1894) and the life both give «День памяти: 15 апреля» and no other day. **The life says he suffered on 12 апреля**, three days before the day that keeps him, which is neither the day page's number nor a difference of thirteen, so BRIEF.md §8 leaves the day page standing and the difference is recorded here and nowhere else. The life also makes him thirty-eight years old at his death where the Ohrid Prologue this folder already cites makes it his thirty-first year; both are the sources' own, the year 372 is the same in both, and `dates` were not touched."
+      }
     },
     {
       "church": "romanian",

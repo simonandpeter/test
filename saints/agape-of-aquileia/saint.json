@@ -16,6 +16,11 @@
       "form": "Агапија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's heading for the Julian 16 April, „Св. муч. Агапија, Хионија и Ирина.“, with Св. left off — it is not a rank — and without муч., which is the `martyr` this folder already carries in `types`. One rank word stands over the whole company and belongs to none of them, so what is left for this saint is the bare forename; the heading gives no epithet, no city and no see, and the companionship clause this corpus keeps in some of these display names is not part of the source's name for anybody. No other folder in the corpus holds this Serbian form."
+    },
+    {
+      "form": "Агапия Аквилейская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 16 апреля ст. ст., name page 2367, with the rank word left off; the day's own line gives the name in the genitive, «Агапии». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The city epithet is the calendar's own nominative and is kept; the line prints no epithet for any of the three."
     }
   ],
   "sex": "female",
@@ -31,13 +36,25 @@
   ],
   "related": [
     "chionia-of-aquileia",
-    "irene-of-aquileia"
+    "irene-of-aquileia",
+    "anastasia-pupil-of-chrysogonus"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 апреля ст. ст. — «Мцц. Агапии , Ирины и Хионии (304).»",
+        "url": "https://days.pravoslavie.ru/Days/20260416.html",
+        "year": 2026,
+        "note": "The day's first entry and the only one of the four to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. It keeps the three on the same day the Romanian, Greek and Serbian rows this folder already carries do, and gives the same year, 304, so `dates` were not touched. The name page behind the line gives «День памяти: 16 апреля» and no other day. The day prints the three a kontakion in the fourth tone, added here with its English."
+      },
+      "rank": "simple"
     },
     {
       "church": "romanian",
@@ -149,6 +166,23 @@
       "english": {
         "text": "Being mirrors of virginity and shining with light, you flashed out spiritually the brightnesses of the contest, which make the whole Church glorious and drive away the night of sicknesses: Chionia and Agape, with Irene, treasures of Christ.",
         "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Крепко душу, Ирино, ополчила еси верою,/ яве лукаваго посрамивши,/ и ко Христу привела еси тьмы людей множества, блаженная,/ и, порфиру от кровей носящи,/ со Ангелы ныне веселишися.",
+      "english": {
+        "text": "Strongly did you arm your soul with faith, O Irene, and openly put the evil one to shame; and you brought multitudes of people to Christ, O blessed one; and wearing the purple of your own blood, you now rejoice with the angels.",
+        "rendered": "site"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 апреля ст. ст. — «Кондак мучениц Агапии, Ирины и Хионии», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260416.html",
+        "year": 2026,
+        "note": "One of the two hymns the day prints; the other is a troparion of the Tambov icon and belongs to nobody here. It is headed for all three sisters and its text addresses the youngest of the three by name, which is not a mis-hang: a proper that names somebody else is one, and she is one of the three it is headed for. Copied whole as the page has it onto each of the three, per BRIEF.md §4's ruling. Read out of the page by `.tmp/rubody.mjs`, which reads `div.trop` under «Молитвы» and not a life page. The English is typed here."
       }
     }
   ],

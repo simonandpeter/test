@@ -15,18 +15,36 @@
       "form": "Γουζθαδάτ",
       "lang": "el",
       "note": "The alternative form saint.gr prints in the body of the same page: «ο Συμεών γνώρισε τον Γοθαζάτ (ή Γουζθαδάτ), λιποτάκτη χριστιανό»."
+    },
+    {
+      "form": "Хусдазад (Усфазан) Селевкийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 2357, «Хусдазад (Усфазан) Селевкийский, мч.», with the rank word and the office left off; the day's own line gives the name in the genitive, «Хусдазата». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The alternative in brackets is the calendar's own and is kept with it, because the gate's key drops brackets and the body of the life uses that second form throughout."
     }
   ],
   "related": [
     "simeon-of-persia",
     "audelas-companion-of-simeon",
-    "phousik-companion-of-simeon"
+    "phousik-companion-of-simeon",
+    "ananias-companion-of-simeon",
+    "askitrea-daughter-of-phousik"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Сщмч. Симеона , еп. Персидского, и с ним мчч. @6[Авделая] и Анании пресвитеров, Хусдазата евнуха, Фусика , Азата , мч. Аскитреи и иных многих (344).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's first entry, and the first of the three to carry a typikon icon. **The identification is the two pages' own and not this reader's inference from the name alone.** The Greek page this folder was written from calls him «Γοθαζὰτ» and also «Γουζθαδάτ», and makes him a Christian who had changed his faith to save his head and whom the bishop turned back to Christ, beheaded with him; this calendar calls him «Хусдазад (Усфазан)», a eunuch and the king's own former tutor who had bowed to the sun out of fear and whom the bishop shamed into repentance, put to death for it. Same day, same company, same bishop, same apostasy and same return, and the second Greek spelling is this calendar's first Russian one letter for letter. The two accounts differ in where the meeting happened — the prison in the Greek, the road to it here — and that difference is recorded in the life and not resolved. The line enumerates six of the company and closes «и иных многих», and many others, who are not named; the life counts a thousand martyrs, then another hundred and another hundred and fifty. **The day page's markup for the first presbyter is broken — it prints «@6[Авделая]», an unexpanded template, and he alone of the six has no `name:` link behind him.** The name page for the entry (2001) gives «День памяти: 17 апреля» and no other day, and its «Служба» line names the three the day's service is for: the bishop, Acacius of Melitene and Zosimas of Solovki. None of the day's four hymns is this company's. Two of the company had no folder here before this batch and now have one."
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +74,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 344,
+      "latest": 344,
+      "display": "344",
+      "basis": "traditional",
+      "note": "The first year any source read for this folder gives him, and this folder had no `dates` at all. days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(344)», and its life for the company dates the decree that began the persecution to 344 and the bishop's own death to «13 апреля 344», with the killing continuing through Pascha week to the twenty-third of April. This martyr died inside that week. The Greek page this folder was written from gave no year at all."
+    }
   }
 }
