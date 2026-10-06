@@ -1,0 +1,63 @@
+{
+  "slug": "thousand-persian-martyrs",
+  "display_name": "The Thousand Persian Martyrs",
+  "names": [
+    {
+      "form": "1000 персидских мучеников",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the first half of the line for 14 апреля ст. ст., name page 14680, «1000 персидских мучеников»; the day's own line declines them as «Мчч. 1000 Персидских». The calendar's link gives the company no other designation and the page behind it carries no life and no further word, only «День празднования: 14 апреля». `.tmp/foldchk.py` reports no folder holding this form."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Мчч. 1000 Персидских и Азата скопца (341).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The first half of the day's fourth entry, which names this company and one man beside it; the line carries no typikon icon, so no `rank` is recorded. **It enumerates nobody**, so by `docs/CORPUS.md` §10.1 and BRIEF.md §4's ruling it is one entry and one folder and not a thousand, and that is said plainly in the life. The company's own name page (14680) gives «День празднования: 14 апреля» and nothing else at all — no life, no place, no manner of death. **It is not `thousand-martyrs`**, the Greek calendar's company of 30 Σεπτεμβρίου, who are beheaded by the sword in a country the synaxarion does not name: a different day, a different calendar and a different notice, and nothing read links the two."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 341,
+      "latest": 344,
+      "display": "341–344",
+      "basis": "traditional",
+      "note": "**One source disagreeing with itself.** days.pravoslavie.ru's line for 14 апреля ст. ст. closes «Мчч. 1000 Персидских и Азата скопца (341).», while the life the same line links says the eunuch «вместе с 1000 мучениками был казнен в 344 г.» — executed with the thousand martyrs in 344 — and the second life that index serves, of the bishop of Seleucia-Ctesiphon and his company, puts the tax edict and the persecution in 344 too, has the bishop beheaded on 13 April of that year and says the killings went on through Pascha week until 23 April. The interval carries both readings and neither is chosen. `node .tmp/dd.mjs '341–344'` reads in Russian and Greek."
+    }
+  },
+  "related": [
+    "azat-the-eunuch",
+    "simeon-of-persia"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

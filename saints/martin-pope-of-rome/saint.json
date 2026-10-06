@@ -16,6 +16,11 @@
       "form": "Мартин",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 14 April on pravoslavno.rs, „Св. Мартин исповедник, папа Римски.“, with Св. left off — it is not a rank — and with исповедник and папа Римски left off as well: the first is the rank word this folder already carries in `types`, and the second is the see, which this corpus keeps in `office` and which this folder already has there. The heading leaves no epithet, so the bare forename is what the source gives."
+    },
+    {
+      "form": "Мартин I Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 14 апреля ст. ст., name page 1488, «Святитель Мартин I Римский, папа, исповедник», with the rank words and the office left off; the day's own line gives the name in the genitive and the see as «папы Римского», which is this folder's `office`. The regnal number is part of the name the calendar's link gives and is kept. `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "sex": "male",
@@ -26,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru was read for 10 August – 6 September (Julian); its page for this day was not read (26 August 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Свт. Мартина исп., папы Римского (655).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The day's first entry and the only one of the six to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. **It keeps him on the Romanian and Serbian calendars' day and not the Greek one**, which this folder's own rows put on 20 September and on a second Greek page on 13 April; one row per church, so nothing was moved. Its year, 655, is the year this folder already carries, and its life closes «+ 16 сентября 655» — the 16 September, which is what the Greek 20 September day is about and which no source read for this folder had stated before. The name page (1488) gives «День памяти: 14 апреля» and no other day. The day prints one hymn under his name, a troparion in the fourth tone, added here with its English."
+      }
     },
     {
       "church": "romanian",
@@ -144,6 +160,23 @@
       },
       "english": {
         "text": "As a hierarch and teacher of things unspeakable thou wast shown a declarer of the true theology, and didst pour out streams of doctrine, O Martin; for in all wisdom thou didst teach Christ in two perfect natures and two wills, to those who cry to thee: rejoice, all-blessed father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Истинных повелений устне распространил еси, / зловерие низложил еси, Богомудре Мартине, / святителю всечестне, / поминай нас, угодниче Христов, / еже к Нему ходатайствы твоими, / да в мире устроиши живот наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Тропарь святого Мартина Исповедника, папы Римского», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "One of the four hymns the day prints; the other three are the Vilnius company's. It names this saint and no other. Copied out of the page by `.tmp/rubody.mjs` rather than retyped."
+      },
+      "english": {
+        "text": "You spread abroad the lips of true commandments and cast down false belief, O God-wise Martin, all-honourable hierarch. Remember us, O servant of Christ, by your intercessions to him, that you may order our life in peace.",
         "rendered": "site"
       }
     }

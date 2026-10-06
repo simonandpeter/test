@@ -15,6 +15,11 @@
       "form": "Евстатије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 14 April on pravoslavno.rs, „Св. муч. Антоније, Јован и Евстатије.“, where Св. муч. heads the three and belongs to no one of them, so each forename stands bare. The heading gives no epithet and does not name Vilnius, which is in the body and which this corpus keeps in the display name. The bare form is shared with `eustathius-of-antioch` and that fold is deliberate and recorded. This is also the folder's second name form of any kind: it held only the Greek Ευστάθιος."
+    },
+    {
+      "form": "Евстафий Виленский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the third of the three forenames in the line for 14 апреля ст. ст., name page 709, «Мученик Евстафий Виленский», with the rank word left off; the day's own line declines the three forenames together and gives the epithet once, in the plural, as «Литовских». `.tmp/foldchk.py` reports no folder holding this form."
     }
   ],
   "related": [
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Мчч. Антония, Иоанна и Евстафия Литовских (1347).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The day's second entry, one line naming all three of the company, and it carries no typikon icon, so no `rank` is recorded. The year in it, 1347, is the year these three folders already carry from the Greek and Serbian calendars. The name page behind this place in the line (709) gives «День памяти: 14 апреля» and no other day. **This is the company's home calendar and it is the only one of the four to print a service for them**: three hymns under «Молитвы», two troparia and a kontakion, all headed for the three together and all copied onto all three folders. The life the line links is one account of all three and is cited on all three."
+      }
     },
     {
       "church": "romanian",
@@ -74,5 +89,58 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Иже земных, чести и славы отвергшеся,/ доблии и честнии страдальцы,/ веры ради крепко и мужественно муки претерпесте,/ на смерть себе вдавше за Живот всех — Владыку./ Темже и Христос преславно столпом облачным/ с Небесе вас озари/ и почестьми и венцы от Престола славы венча./ Со Ангелы Тому предстояще,/ молите спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Тропарь мучеников Антония, Иоанна и Евстафия Литовских», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "One of the three hymns the day page prints under «Молитвы» for this company. All three are headed for «мучеников Антония, Иоанна и Евстафия Литовских» and name the three together, so each is this martyr's own and each is copied whole onto all three folders. Copied out of the page by `.tmp/rubody.mjs` rather than retyped."
+      },
+      "english": {
+        "text": "Having cast off the honour and the glory of earthly things, O valiant and honourable sufferers, you endured torments strongly and manfully for the faith, and gave yourselves over to death for the Life of all, the Master. Therefore Christ shone upon you gloriously from heaven in a pillar of cloud, and crowned you with honours and crowns from the throne of glory. Standing with the angels before him, pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От корене неплодна, преблаженнии,/ возрастивше Православный веры ветви,/ первомучеником тезоименитии явистеся:/ злаго бо и нечестиваго князя ярости не убоястеся,/ повелевающа Христа отрещися./ Сего ради мученическия венцы приемше/ и со Ангелы Престолу Владычню предстояще,/ о нас молитеся, преблаженнии,/ православно чтущих святую память вашу.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Ин тропарь мучеников Антония, Иоанна и Евстафия Литовских», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "One of the three hymns the day page prints under «Молитвы» for this company. All three are headed for «мучеников Антония, Иоанна и Евстафия Литовских» and name the three together, so each is this martyr's own and each is copied whole onto all three folders. Copied out of the page by `.tmp/rubody.mjs` rather than retyped."
+      },
+      "english": {
+        "text": "Out of a barren root, O most blessed ones, you raised up branches of the Orthodox faith, and were shown to bear the names of the first martyrs; for you did not fear the fury of the wicked and impious prince who commanded you to deny Christ. Therefore, having received the crowns of martyrdom and standing with the angels before the Master's throne, pray for us, O most blessed ones, who honour your holy memory in the Orthodox way.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Отеческую прелесть оставльше, святии,/ приведостеся Христови,/ всем души усердием стаете мужемудренно до смерти./ Темже и взясте победы почесть воистинну,/ о всех Владыку нашего непрестанно моляще.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Кондак мучеников Антония, Иоанна и Евстафия Литовских», глас 3, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "One of the three hymns the day page prints under «Молитвы» for this company. All three are headed for «мучеников Антония, Иоанна и Евстафия Литовских» and name the three together, so each is this martyr's own and each is copied whole onto all three folders. Copied out of the page by `.tmp/rubody.mjs` rather than retyped."
+      },
+      "english": {
+        "text": "Having left behind the error of your fathers, O holy ones, you were brought to Christ, and with all the zeal of your souls stood firm and manfully wise unto death. Therefore you have truly taken the prize of victory, praying without ceasing to our Master for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

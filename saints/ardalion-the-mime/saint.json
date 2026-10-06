@@ -15,23 +15,38 @@
       "form": "Ардалион Глумац",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 14 April on pravoslavno.rs, „Св. муч. Ардалион Глумац.“, with Св. left off — it is not a rank — and with муч. left off as well, the rank word this source uses for a martyr, which this folder already carries in `types`. **Глумац is kept**: it is not a rank word in `BRIEF-SERBIAN.md` §5's table but the trade the entry's whole account turns on, the player of parts, and it is the by-name this folder's own English display name carries as «the Mime». This is also the folder's second name form of any kind: it held only the Greek Αρδαλίων."
+    },
+    {
+      "form": "Ардалион",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 14 апреля ст. ст., name page 247, «Ардалион, мч.», with the rank word left off; the day's own line gives the name in the genitive. The calendar's link gives no epithet and no trade, where the Serbian form this folder stores carries Глумац; the bare form is what this page has. `.tmp/foldchk.py` reports no folder holding it."
     }
   ],
   "related": [],
   "dates": {
     "death": {
       "earliest": 298,
-      "latest": 298,
-      "display": "298",
+      "latest": 311,
+      "display": "298–311",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Αρδαλιων ο Μιμος (; - 298)» and sets him «στα χρόνια του Διοκλητιανού (298)»; no year of birth is printed."
+      "note": "**Two sources put his martyrdom under two emperors whose reigns do not overlap, so the interval holds both ends.** saint.gr heads him «Αγιος Αρδαλιων ο Μιμος (; - 298)» and sets him «στα χρόνια του Διοκλητιανού (298)», which is where this folder's interval stood. The Ohrid Prologue names Maximian and prints no year. days.pravoslavie.ru names him precisely — «при императоре Максимиане Галерии (305 - 311)» — and dates that reign, which agrees with the Prologue's emperor and cannot hold 298; its own line for the day prints only «(IV)», the fourth century, which holds neither 298 nor nothing. Neither reading is preferred and the interval is widened from the earlier end to the later. `node .tmp/dd.mjs '298–311'` reads in Russian and Greek. Read 7 October 2026."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 14 апреля ст. ст. — «Мч. Ардалиона (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260414.html",
+        "year": 2026,
+        "note": "The day's third entry, on the same menologion number all four calendars now keep him on, and it carries no typikon icon, so no `rank` is recorded. The name page (247) gives «День памяти: 14 апреля» and no other day. **Its life settles which emperor the Prologue meant and puts a span on him**: «при императоре Максимиане Галерии (305 - 311)», Maximian Galerius, with the reign dated — where saint.gr sets the martyrdom in the years of Diocletian and gives the 298 this folder held. The line itself prints only «(IV)». The two readings do not overlap and neither is chosen: the `dates` interval is widened to hold both and the note says which page gives which end."
+      }
     },
     {
       "church": "romanian",
