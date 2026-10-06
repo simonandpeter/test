@@ -16,6 +16,11 @@
       "form": "Косма Азийский",
       "lang": "ru",
       "note": "Read out of the title on his name link behind the line for 1 ноября ст. ст., «Святой бессребренник Косма Азийский», with the rank words left off. The day's own line declines it as «Космы»."
+    },
+    {
+      "form": "Козма",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 1. новембар ст. ст., „Св. Козма и Дамјан.“ — «Св.» is \"saint\" and not a rank, and the heading gives him no see, no place and no by-name, so the bare personal name, the first of the heading’s two, is the whole of the form (section 6). «of Asia» in the display name is this corpus’s own, off the Russian «Косма Азийский» and the Romanian «Cosma din Asia». `sr-foldpred.mjs` measured the folded string as held by `cosmas-of-arabia`, `cosmas-of-maiuma`, `cosmas-of-rome` and `kosmas-of-aetolia`, so this form takes that fold to five and the key is in `scripts/corpus-gate.mjs`."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 1,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 14.11.2025 (1. новембар ст. ст.) — „Св. Козма и Дамјан.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-14&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading is an ENUMERATED PAIR — Козма and Дамјан — so BRIEF-SERBIAN section 5 counts two names, two folders are owed a row, and the corpus holds both. Quoted whole with its closing full stop (section 4); URL year 2025, as `sr-civil.mjs` gives for the Julian 10-20 to 12-18. `types` UNTOUCHED, and the entry confirms all three from a fourth book: «Бесребреници и чудотворци» is the `unmercenary` and the `wonderworker`, and «Беху научени лекарској вештини» the `physician`. `dates` UNTOUCHED: the entry gives no year, no emperor and no reign at all, and the folder’s 3rd–4th century interval rests on two readings of one Russian page. NO `locations`: Азија and Ферема are named and neither is a coordinate this folder has ever held. THE MOTHER IS NAMED IN THE BODY AND TAKES NO ROW. «По смрти оца њихова мајка, Теодотија, посвети све време и труд, да синове своје васпита и подигне као истините хришћане» — `theodotia-of-asia` is kept by this corpus on this same menologion 1/11 off the Russian calendar and is `related` here in both directions already, but she is NOT IN THE HEADING, and an attestation quotes the heading, so no serbian row was written for her. AND THE WOMAN OF THE THREE EGGS IS KEPT OUT OF THE PROSE. The entry names her «Паладија»; the corpus holds `palladia-companion-of-meletius`, a different woman on a different day, nothing read links the two, and the name is left out of the life rather than risked against `related-floor`, so the life says only that she was a woman Damian had healed. THE FOLD THIS FORM MAKES: the bare «Козма» was held by four folders before today and this makes five; the key is in `scripts/corpus-gate.mjs` in the same commit and the four-member key it replaces is deleted there. The Prologue prints no troparion and no kontakion."
     }
   ],
   "images": [
