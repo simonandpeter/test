@@ -1829,9 +1829,15 @@ test('a saint named in a life is a link in it and a row under Related', async ({
    */
   await page.goto('/saints/john-the-long-suffering', { waitUntil: 'networkidle' });
   const anthony = page.locator('[data-life] a[href*="/saints/anthony-of-the-caves"]');
-  await expect(anthony).toHaveCount(2);
-  await expect(anthony.first()).toHaveText(/Anthony of the\s+Caves/);
-  await expect(anthony.nth(1)).toHaveText('Anthony');
+  /*
+   * Each pinned mention by its own text, not by index and not by a total: the
+   * Serbian 18 July added a third link in a paragraph below both of these
+   * (`Anthony of the Kyiv Caves`, the folder's own display name), and any
+   * later calendar reaching this day may add a fourth. What must not go is
+   * either hand-written one.
+   */
+  await expect(anthony.filter({ hasText: /^Anthony of the\s+Caves$/ })).toHaveCount(1);
+  await expect(anthony.filter({ hasText: /^Anthony$/ })).toHaveCount(1);
   await expect(page.locator('[data-related] a[href*="/saints/anthony-of-the-caves"]')).toHaveCount(1);
 });
 
