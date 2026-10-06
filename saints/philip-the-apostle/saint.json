@@ -16,6 +16,11 @@
       "form": "Филипп",
       "lang": "ru",
       "note": "The bare name out of days.pravoslavie.ru's name page 2291, headed «Филипп, апостол из 12-ти»; the day's own line declines it. Five other folders already store this form."
+    },
+    {
+      "form": "Филип",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 14. новембар ст. ст., „Св. апостол Филип.“ — «Св.» is “saint” and not a rank and «апостол» is the `apostle` grade `types` keeps, so both come off and the heading gives nothing else: the bare forename is the whole of the form. It joins a fold of two that this same book made, and the key is widened to three in the same commit."
     }
   ],
   "sex": "male",
@@ -34,7 +39,8 @@
     "andrew-the-first-called",
     "bartholomew-the-apostle",
     "mariamne-sister-of-philip",
-    "narcissus-of-athens"
+    "narcissus-of-athens",
+    "john-the-theologian"
   ],
   "attestations": [
     {
@@ -99,8 +105,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 14,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 27.11.2025 (14. новембар ст. ст.) — „Св. апостол Филип.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-27&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry. `dates` UNTOUCHED: «Пострада овај дивни апостол 86. године у време цара Дометијана» falls inside the «about 81–96» this folder already holds, which is Domitian’s reign, so a year inside an interval narrows nothing. ONE `related` ROW ADDED, forward: the entry puts him at Hierapolis at the common work of the Gospel with John the Theologian, his sister and Bartholomew — a company this folder related to in part and not at all to the first of them — so the life links him and the row is owed. WHAT THE ENTRY ADDS: Bethsaida, the high priest struck blind and black, two earthquakes that swallow his persecutors, the serpent the heathen fed and worshipped, the upside-down crucifixion on a tree, Bartholomew taken down alive and himself already dead, the relics carried to Rome, AND A MAN THIS READER DID NOT IDENTIFY: the bishop Bartholomew set over the baptised, whom the two apostles had healed of forty years’ blindness, is named in the book, and the corpus keeps a `stachys-of-byzantium` of that name whose dossier is the first bishop of Byzantium. NOTHING WAS LINKED AND NO ROW WAS WRITTEN: the entry makes him bishop of the baptised at Hierapolis in Phrygia and nothing read joins the two accounts. The life tells him without his name, and it is a question for the author."
     }
   ],
   "hymns": [
