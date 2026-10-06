@@ -11,13 +11,28 @@
       "form": "Πορφύριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Άγιος Πορφύριος ο Στρατηλάτης», with the rank word left off. The same page gives «Πορφυρίων» as an alternative form of the name, which is not recorded as a separate form."
+    },
+    {
+      "form": "Порфирий Стратилат, Александрийский",
+      "lang": "ru",
+      "note": "The heading of the name link behind days.pravoslavie.ru's line for 24 ноября ст. ст., name page 1829, «Порфирий Стратилат, Александрийский, мч.», with the grade left off the head. «Стратилат» is kept in the form, as the corpus keeps it in «Феодор Стратилат» and «Андрей Стратилат», because the calendar prints it as part of the name and not as the rank word in front of it. `.tmp/ru-foldnew.mjs` reports no folder holding this form; the bare «Порфирий» was refused, because seven folders of this corpus already answer to it."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Мц. Августы , мчч. Порфирия Стратилата и 200 воинов (305-313).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "note": "The name link behind the line heads him «Порфирий Стратилат, Александрийский, мч.» and its life page is the joint life of Catherine, Augusta and Porphyrius: he is the воевода whom the empress persuaded to escort her to Catherine in the prison, who believed there, and who confessed Christ before everyone with the two hundred soldiers when the wheels broke, and was beheaded. That is the man saint.gr's «ο Στρατηλάτης» is, down to the two hundred soldiers the Greek page also gives him. The Russian day is one menologion number before the 25 November the Greek row carries — one day, not the thirteen of a style conversion — so each church keeps its own day here. **The two hundred soldiers are still no folder**: this page does not name one of them either."
     },
     {
       "church": "romanian",
@@ -47,5 +62,18 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 313,
+      "display": "between 305 and 313",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints a reign and not a year, closing the line «(305-313)», and the life page behind it sets the whole passion in the reign of the emperor Максимин, «во время правления императора Максимина (305 - 313)». That reign is the interval, and this folder had no date at all before it; saint.gr, which made the folder, gave him no year."
+    }
+  },
+  "related": [
+    "catherine-of-alexandria",
+    "basilissa-wife-of-maxentius"
+  ]
 }

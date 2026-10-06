@@ -11,6 +11,11 @@
       "form": "Μερκούριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Άγιος Μερκούριος ο Μεγαλομάρτυρας», with the rank word left off."
+    },
+    {
+      "form": "Меркурий Кесарийский (Каппадокийский)",
+      "lang": "ru",
+      "note": "The heading of the name link behind days.pravoslavie.ru's line for 24 ноября ст. ст., name page 1519, «Меркурий Кесарийский (Каппадокийский), военачальник, вмч.», with the rank and the grade left off the head. The parenthesis is the page's own. `.tmp/ru-foldnew.mjs` reports no folder holding this form; the bare «Меркурий» was refused, because four folders of this corpus would answer to it."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Вмч. Меркурия (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "note": "The name link behind the line heads him «Меркурий Кесарийский (Каппадокийский), военачальник, вмч.» and its life page is the life of this folder's man: a soldier of Decius and Valerian, beheaded at Caesarea in Cappadocia, and afterwards sent by the Theotokos at the prayer of Basil the Great against Julian the Apostate. «вмч.» is великомученик, the `great-martyr` this folder carries and the only one of the corpus's four Mercuriuses that does. The Russian day is one menologion number before the 25 November the Greek and Romanian rows carry, which is a difference of one day and not the thirteen of a style conversion, so each church keeps its own day here. The life page gives no year for the beheading — it dates the two reigns and not the death — so this folder's `dates` are left as the Greek reading made them."
     },
     {
       "church": "romanian",
@@ -96,6 +111,38 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Мученик Твой, Господи, Меркурий/ во страдании своем венец прият нетленный от Тебе, Бога нашего,/ имеяй бо крепость Твою,/ мучителей низложи,/ сокруши и демонов немощныя дерзости./ Того молитвами// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Тропарь великомученика Меркурия»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thy martyr Mercurius, O Lord, received in his suffering an incorruptible crown from thee our God; for having thy strength he cast down the persecutors and broke the feeble insolence of the demons. By his prayers save our souls.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Во бранех непобедимаго воина/ и в бедах непостыдна заступника,/ песньми Меркурия ублажим, славяще,/ празднующия бо память его весело// от бед избавляет и скорбей.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Кондак великомученика Меркурия»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us bless Mercurius with hymns and glorify him, the soldier unconquered in battle and the defender who does not put us to shame in trouble; for he gladly delivers from troubles and from sorrows those who keep his memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
     }
   ],
   "text": {

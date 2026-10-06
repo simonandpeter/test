@@ -144,6 +144,54 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Добродетельми, яко лучами солнечными,/ просветила еси неверныя мудрецы,/ и, якоже пресветлая луна ходящим в нощи,/ неверия тьму отгнала еси/ и царицу уверила еси,/ вкупе же и мучителя обличила еси,/ богозванная невесто, блаженная Екатерино,/ желанием востекла еси в Небесный чертог/ к прекрасному Жениху Христу,/ и от Него царским венцем венчалася еси:/ Емуже, со Ангелы предстоящи,/ за ны молися,// творящия пречестную память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Тропарь великомученицы Екатерины»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With thy virtues, as with the rays of the sun, thou didst enlighten the unbelieving philosophers; and like the bright moon to those who walk by night thou didst drive off the darkness of unbelief, didst bring the empress to faith and at the same time didst rebuke the persecutor, O bride called of God, blessed Catherine. With longing thou didst run up to the heavenly bridal chamber, to the most beautiful Bridegroom Christ, and from him wast crowned with a royal crown. Standing before him with the angels, pray for us who keep thy most honourable memory.",
+        "rendered": "site"
+      },
+      "tone": "глас 4"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Лик честный Божественне, мучениколюбцы,/ воздвигните ныне,/ почитающе всемудрую Екатерину,/ сия бо в тризнищи Христа проповеда и змия попра,// риторов разумы укротивши.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Кондак великомученицы Екатерины»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Raise up now an honourable choir in godly fashion, O lovers of the martyrs, honouring the all-wise Catherine; for in the arena she preached Christ and trampled the serpent, having tamed the minds of the rhetors.",
+        "rendered": "site"
+      },
+      "tone": "глас 2"
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Витийствующи днесь, Екатерина мученица/ и витиям обличи умовредную ересь,/ Ангел бо с Небесе к той прийде, силу от Вышняго принесе,/ юже приемши, мужески рече:/ Христос есть мучеником похвала.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Ин кондак великомученицы Екатерины»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Speaking today as an orator, the martyr Catherine rebuked the orators for their mind-harming error; for an angel came to her from heaven and brought her strength from the Most High, and receiving it she said manfully: Christ is the boast of the martyrs.",
+        "rendered": "site"
+      },
+      "tone": "глас 3"
     }
   ],
   "images": [
@@ -154,6 +202,8 @@
   ],
   "related": [
     "hundred-and-fifty-rhetors",
-    "basilissa-wife-of-maxentius"
+    "basilissa-wife-of-maxentius",
+    "porphyrius-the-stratelates",
+    "simon-of-soyga"
   ]
 }
