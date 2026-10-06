@@ -6,6 +6,11 @@
       "form": "Επαφρόδιτος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος οι Απόστολοι εκ των Εβδομήκοντα», with the rank words left off."
+    },
+    {
+      "form": "Епафродит",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off and the fourth of the seven bare forenames taken; the see the body gives him is not in the heading and is not the one this folder is displayed under either. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -49,8 +54,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The fourth name of the day’s enumerated seven; the heading is quoted whole on each of the seven folders; URL year 2025. `types` UNTOUCHED: `apostle` and `bishop` are both held. `dates` UNTOUCHED AND STILL ABSENT. THE BOOK DISAGREES WITH THIS FOLDER’S DISPLAY NAME: it seats him «у Адријанији Памфилијској», in Adrianias of Pamphylia, where this corpus calls him Epaphroditus of Philippi after the Philippians of the epistle. Two sees, two books, NOTHING RENAMED and the disagreement recorded here and in the life; no `locations` key was made on either. NO `related` ROW ADDED: the other five of the Greek six are already here both ways. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -16,10 +16,10 @@
   "dates": {
     "death": {
       "earliest": 474,
-      "latest": 476,
-      "display": "474 - 476",
+      "latest": 484,
+      "display": "474–484",
       "basis": "traditional",
-      "note": "saint.gr: «μαρτύρησαν στην Καρχηδόνα στα χρόνια του βασιλιά Ζήνωνα (474 - 476 μ.Χ.) και όταν άρχοντας εκεί ήταν ο Ονώριχος ο Αρειανός». The interval is the page's own parenthesis for Zeno's reign and not a year it gives for the martyrdom."
+      "note": "**Two books, two rulers and two regnal brackets; the interval holds both, and it was 474–476 before this reading.** saint.gr: «μαρτύρησαν στην Καρχηδόνα στα χρόνια του βασιλιά Ζήνωνα (474 - 476 μ.Χ.) και όταν άρχοντας εκεί ήταν ο Ονώριχος ο Αρειανός» — the years of the emperor Zeno, whose reign that page brackets 474 to 476, with Honorichos the Arian as the ruler on the spot. The Охридски пролог за 8. децембар ст. ст.: „Пострадали од јеретика аријеваца у време владе краља вандалскога Гунерика или Гензерика (477-484) за истину вере православне.“ — they suffered from the Arian heretics in the reign of the Vandal king Hunneric, or Genseric, which it brackets 477 to 484. Neither bracket is a year either book gives for the martyrdom itself; both are reigns, and the bounds here are the union of the two. Nothing is chosen."
     }
   },
   "attestations": [
@@ -50,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети мученици у Африци.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "**THE DAY’S THIRD ENTRY IS A COMPANY HEADING THAT NAMES NOBODY AND COUNTS THREE GROUPS, AND THE CORPUS ALREADY HOLDS THE THREE.** The heading is „Свети мученици у Африци.“ and the body says «Два свештеника сажежена, шездесеторици језици одрезани, три стотине мирјана посечени» — two priests burned, sixty had their tongues cut out, three hundred laymen beheaded — under the Vandal king «Гунерика или Гензерика (477-484)». saint.gr’s 7 Δεκεμβρίου keeps exactly those three as three folders of its own: `two-priests-of-carthage`, `sixty-priests-of-carthage` and `three-hundred-martyrs-of-africa`. Each takes this one heading, which is a true description of each of them, on the reading this wave made on 12-05 for the Protos of Karyes. NO NEW COMPANY FOLDER WAS MADE: the heading enumerates nobody and the corpus’s own three groups account for every one of its counts. This folder is the two priests, counted and unnamed in both books. AND THE TWO BOOKS DISAGREE ON THE MANNER OF THEIR DEATH: this one says they were BURNED, saint.gr says they were SAWN IN TWO — «πριόνι» in its couplet — and nothing is chosen; both are in the life. NO `sr` NAME FORM, and the reason is the heading: it holds no personal name, and the one company designation it does hold would have to be stored identically on three folders, which would say that the three groups are one. `types` UNTOUCHED: `martyr` and `presbyter` are the two priests. `dates` WIDENED from 474–476 to 474–484: saint.gr dates them by the reign of the emperor Zeno, which it parenthesises «(474 - 476 μ.Χ.)», and this book by the reign of the Vandal king it dates «(477-484)» — two rulers, two regnal brackets, eight years of daylight between their ends, and the interval now holds both. NO `locations`: this book says Africa and saint.gr says Carthage, and the folder has never held a coordinate. NO `related` row: neither book names a single one of them, and the two Monophysite bishops saint.gr blames are no folders this corpus holds. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

@@ -49,8 +49,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети мученици у Африци.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The third of the three groups the day’s third entry counts: «три стотине мирјана посечени», three hundred LAYMEN beheaded, which is this folder — three hundred, counted and unnamed, all beheaded, as saint.gr keeps them on its 7 Δεκεμβρίου, and the word мирјана confirms the bare `martyr` this folder holds against the `presbyter` of the other two groups. The company heading „Свети мученици у Африци.“ is quoted whole on each of the three folders and is a true description of each. NO `sr` NAME FORM: the heading holds no personal name and its one company designation belongs to all three groups at once. `types` UNTOUCHED. `dates` UNTOUCHED, AND THIS IS THE ONE OF THE THREE WHERE THE TWO BOOKS DO NOT DISAGREE: this folder already carries 474–491 for Zeno’s whole reign, which CONTAINS the «(477-484)» this book brackets for the Vandal king, so there was nothing to widen; the display stays «under Zeno», which is the only ruler saint.gr names here, and the Vandal king is recorded in the life. NO `locations`: both books say Africa for these three hundred. NO `related` row: neither book names one of them, and the two Monophysite bishops saint.gr blames for the persecution are no folders this corpus holds. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

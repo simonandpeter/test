@@ -11,6 +11,11 @@
       "form": "Πατάπιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Δεκεμβρίου, «Όσιος Πατάπιος», with the rank word left off."
+    },
+    {
+      "form": "Патапије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Преподобни Патапије.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps, which leaves the bare forename; the heading offers nothing else, the same as saint.gr’s «Όσιος Πατάπιος» and doxologia.ro’s «Sfântul Cuvios Patapie». `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Преподобни Патапије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преподобни» is the `venerable` held, and `monk`, `hermit` and `wonderworker` are all there — the Egyptian desert, the hut by the Blachernae and the healings are what they were given for. `dates` ADDED, and it is the first date of any kind this folder has carried: «У старости дубокој упокоји се и пређе у Царство небеско, у VII веку» — in deep old age he reposed and passed into the heavenly kingdom, in the seventh century. saint.gr and doxologia.ro both print him and neither gives a century. NO `locations`: Thebes in Egypt, the Egyptian desert and Constantinople are three places and the folder has never held a coordinate. NO `related` row: the entry names nobody at all — the blind boy, the man with dropsy, the youth with the unclean spirit and the woman with the wound are the four it heals and none of them is named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -119,5 +134,14 @@
       "file": "images/icon.jpg",
       "meta": "images/icon.meta.json"
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 601,
+      "latest": 700,
+      "display": "7th century",
+      "basis": "traditional",
+      "note": "Охридски пролог за 8. децембар ст. ст.: „У старости дубокој упокоји се и пређе у Царство небеско, у VII веку.“ — in deep old age he reposed and passed over into the heavenly kingdom, in the seventh century. The first date of any kind this folder has carried: saint.gr and doxologia.ro both print him and neither gives a year or a century. The book states a century and no year, so the bounds are that century and nothing narrower."
+    }
+  }
 }

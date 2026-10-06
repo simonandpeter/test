@@ -4,4 +4,8 @@ saint.gr's calendar for 8 December keeps six apostles of the Seventy in one entr
 
 What it does give him is his couplet, which reads him against the apostle Peter whose Aramaic name he bears: Cephas was eager to imitate Peter, so that he might be seen bringing his calling into his works. The gloss the site sets under the name — that Keph or Kepha is a Chaldean word and means rock — is its standing note on the name itself, and the page makes no claim that this apostle of the Seventy is Peter.
 
-*After saint.gr's calendar for 8 Δεκεμβρίου — [the day](https://www.saint.gr/12/08/index.aspx) and [the life](https://www.saint.gr/3203/saint.aspx); read 2 October 2026.*
+The Ohrid Prologue keeps him on the same menologion day, in a company of seven where the Greek calendar printed six, and it seats him at Iconium — a city this folder had never carried, and one the book names without calling him a bishop, so nothing has been added to his ranks on it. Of all seven together it says that they preached the Gospel of Christ with a burning love, that they suffered torments for his holy name, and that they passed over into the kingdom of everlasting joy.
+
+It also records its own other days for him, and there are two: all seven are celebrated on 4 January with the rest of the lesser apostles, and he is celebrated with [Caesar](/saints/caesar-the-apostle) on 30 March. One attestation row per church is the schema, so the day recorded here is the one whose heading names him, and the others are noted rather than kept; neither of them has been read.
+
+*After saint.gr's calendar for 8 Δεκεμβρίου — [the day](https://www.saint.gr/12/08/index.aspx) and [the life](https://www.saint.gr/3203/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 8. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1), read 7 October 2026.*

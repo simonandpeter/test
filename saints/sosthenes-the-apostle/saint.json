@@ -11,6 +11,11 @@
       "form": "Κρίσπος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 4 Δεκεμβρίου, «Άγιος Κρίσπος», with the rank word left off."
+    },
+    {
+      "form": "Состен",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 8. децембар ст. ст., „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“ — with «Свети апостоли» left off, that being “holy” and the `apostle` grade `types` keeps, and the first of the seven bare forenames taken. The heading gives the seven nothing but their names; the see this folder’s display name carries is not in it and is not the see the body gives him either. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 21.12.2025 (8. децембар ст. ст.) — „Свети апостоли Состен, Аполос, Тихик, Епафродит, Онисифор, Кифа и Кесар.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-21&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, AN ENUMERATED COMPANY OF SEVEN NAMES, so BRIEF-SERBIAN §5 counts seven and each of the seven folders takes this one heading whole with its closing full stop; URL year 2025. The corpus holds all seven, so there is no arrival here. He is the first name. ONE NAME MORE THAN THE GREEK LINE: saint.gr’s 8 Δεκεμβρίου prints six — «Άγιοι Σωσθένης, Κηφάς, Απολλώς, Τυχικός, Καίσαρ και Επαφρόδιτος» — and this book adds Онисифор, who already stands venerated on another Serbian day and takes a note instead of a row. `types` UNTOUCHED: «апостоли» is the `apostle` held and `bishop` is the see this entry itself gives him. `dates` UNTOUCHED AND STILL ABSENT: the entry gives no year and no century for any of the seven. THE BOOK DISAGREES WITH THIS FOLDER’S OWN DISPLAY NAME: «Свети Состен би епископ у Кесарији» — he was bishop in CAESAREA, where this corpus calls him Sosthenes of Colophon and gives the Caesarea to `apollos-the-apostle`. NOTHING WAS RENAMED and the disagreement is recorded here and in the life. THE BOOK’S OWN OTHER DAYS, recorded and not acted on: all seven are celebrated on 4 January with the rest of the lesser apostles; it gives separate days to Apollos (10 September), Onesiphorus (7 September) and Cephas and Caesar (30 March). This row records the day whose heading it quotes. NO `related` ROW ADDED: the five other men of the Greek six are already `related` here in both directions, and Онисифор is not — sharing a heading is not a relation, which is BRIEF-SERBIAN §6, so the life does not name him. NO `locations`. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
