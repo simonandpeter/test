@@ -12,6 +12,11 @@
       "form": "Αμβρόσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Δεκεμβρίου, «Άγιος Αμβρόσιος επίσκοπος Μεδιολάνων», with the rank and the see left off."
+    },
+    {
+      "form": "Амвросије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. децембар ст. ст., „Свети Амвросије, епископ медиолански (милански).“ — with «Свети» (“saint”) and «епископ медиолански (милански)» left off, that being a rank and a see with the book’s own gloss on the see, all of which §6 keeps out of a stored form; so the bare personal name is the whole of the form, which is the same stripping the Greek «Αμβρόσιος» and the Romanian «Ambrozie» already stored here were made by. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.12.2025 (7. децембар ст. ст.) — „Свети Амвросије, епископ медиолански (милански).“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-20&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop and its parenthesis, which is the heading’s own gloss of the see — Mediolanum, that is Milan; URL year 2025. `types` UNTOUCHED: «епископ» is the `bishop` held and `hierarch` was there already. `dates` UNTOUCHED and it is an AGREEMENT WITH A DETAIL ADDED: «Скончао мирно на освитку Васкрса 397. године» — he died in peace at the dawn of Pascha in 397, which is saint.gr’s year and its own head «(340 - 397)»; the book gives no year of birth and the 340 stands alone as it did, and the dawn of Pascha is a day the `dates` object has no field for and is recorded in the life instead. `related_add`: `celsus-disciple-of-nazarius`, the fourth of the martyrs whose relics the entry says he uncovered — «Открио је мошти светих мученика Протасија, Гервасија, Назарија и Келсија (в. 14. октобар)». The other three, `protasius-of-milan`, `gervasius-of-milan` and `nazarius-of-milan`, were already `related` here in both directions and Celsus was the one gap; his own folder takes the matching row in this same file. THE BOOK’S CROSS-REFERENCE «в. 14. октобар» is to its own 14 October for those martyrs and is not a second day for him. NO OTHER `related` ROW: `theodosius-the-great` is already here both ways and IS the emperor this entry means — the one Ambrose barred from the church until he had repented of his sin — and the empress Justina, the tyrant Maximus and the usurper Eugenius are no folders this corpus holds. NO `locations`, and the folder has never held one. The Prologue prints no troparion and no kontakion, and the Те Deum this entry credits to him — «Тебе Бога хвалим» — is named in the life and NOT put in `hymns`: BRIEF-SERBIAN §3 is absolute that this source yields no hymn, and the book prints the title only and not a line of the text."
     }
   ],
   "hymns": [
@@ -169,6 +184,7 @@
     "theodosius-the-great",
     "nazarius-of-milan",
     "gervasius-of-milan",
-    "protasius-of-milan"
+    "protasius-of-milan",
+    "celsus-disciple-of-nazarius"
   ]
 }
