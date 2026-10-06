@@ -11,6 +11,11 @@
       "form": "Авкт Амфипольский (Македонский)",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Авкт Амфипольский (Македонский), мч.», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Авкта»."
+    },
+    {
+      "form": "Авкт",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s entry for 7. новембар ст. ст.. THE HEADING PRINTS HIM IN THE INSTRUMENTAL, „Св. муч. Тесалоникија са Авктом и Таврионом.“ — «са Авктом и Таврионом», with Auctus and Taurion — and a declined form is not a name form, so the form stored here is the NOMINATIVE THE BODY PRINTS: «Два чесна грађанина, Авкт и Таврион, укореше Клеона». That is a copied script form off the same page and not a case I put back myself; the brief forbids transliterating a form the page does not print, and this one the page prints."
     }
   ],
   "sex": "male",
@@ -58,8 +63,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.11.2025 (7. новембар ст. ст.) — „Св. муч. Тесалоникија са Авктом и Таврионом.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-20&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the heading names all three of them, so three folders take a row off the one quoted line. `dates` UNTOUCHED: the entry gives NO year, so the 739 this folder holds from the Russian line still stands alone and still has nothing corroborating it. What the entry does give is the city in words — «у Македонском граду Амфипољу, према садашњој Кавали», in the Macedonian city of Amphipolis over against present-day Kavala — which until now was only an adjective inside the Russian name forms; NO `locations` key was made from it, the brief preferring no point to a wrong one. It also gives the father: an idol-priest, rich and haughty, who drove his daughter out and then denounced the two citizens who rebuked him. He is named in the book and is not named in the lives, having no folder and no row."
     }
   ],
   "text": {

@@ -11,6 +11,11 @@
       "form": "Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Νοεμβρίου, «Άγιοι Τριάντα τρεις Μάρτυρες «οἱ ἐν Μελιτινῇ»», with the rank word left off."
+    },
+    {
+      "form": "Јерон с дружином",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. новембар ст. ст., „Св. муч. Јерон с дружином.“ — «Св.» is “saint” and not a rank and «муч.» is the `martyr` grade `types` keeps, so both come off, and what is left is how THIS BOOK NAMES THE COMPANY: one man and «с дружином», with his company. It is a company form like the Romanian «33 de Mucenici din Melitina» this folder already stores and not one man’s name, which is why the bare «Јерон» is NOT stored here: this folder is the thirty-three, and a bare forename on it would read as a personal name for a folder that has no single person in it."
     }
   ],
   "sex": "unknown",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.11.2025 (7. новембар ст. ст.) — „Св. муч. Јерон с дружином.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-20&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the folder it belongs to is the COMPANY and not a man. The heading names one person and then says «с дружином», with his company, so it names nobody else; the BODY then enumerates all thirty-two beside him by name, with a sentence of its own saying that it does so because their names are written in the Book of Life. THAT ENUMERATION WAS NOT MADE INTO FOLDERS. The Russian, the Romanian and the Greek all keep this company as the single folder this row lands on, and §10.1’s one-folder-per-member ruling cannot be applied to an enumeration whose members the corpus already holds collectively without making thirty-three duplicates of the folder being upgraded — which is the failure the brief calls the worst this job has. The two folders the corpus keeps for Hieron’s brothers, `antonius-brother-of-hieron` and `matronianus-brother-of-hieron`, take NO row either: this book names no brother at all, and the only kinsman in its account is one who fell away from the faith before the sentence. `dates` UNTOUCHED: the entry dates the suffering to 298, which falls INSIDE the reign of Diocletian and Maximian the folder already records from the Russian page, and a year inside an interval is no reason to narrow it."
     }
   ],
   "hymns": [

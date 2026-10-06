@@ -16,6 +16,11 @@
       "form": "Лазарь Галисийский",
       "lang": "ru",
       "note": "Read out of the name link behind days.pravoslavie.ru's line for 7 ноября ст. ст., «Лазарь Галисийский, иеромонах», with the rank words left off; the epithet the page gives is kept. The line itself gives the name in the genitive, «Лазаря Галисийского»."
+    },
+    {
+      "form": "Лазар Галасијски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 7. новембар ст. ст., „Преп. Лазар Галасијски.“ — «Преп.» is the `venerable` grade `types` keeps and comes off, while «Галасијски» is the by-name of the mountain he went up to and is what distinguishes him from the other six Lazaruses this corpus holds, so it stays: the fullest bare form the heading gives. The book writes it with one s where the Russian form already stored writes «Лазарь Галисийский»; copied as printed and never bent towards the other book."
     }
   ],
   "sex": "male",
@@ -73,8 +78,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.11.2025 (7. новембар ст. ст.) — „Преп. Лазар Галасијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-20&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. `dates` WIDENED to 1053–1100, a third reading added to two: days.pravoslavie.ru gives 1053 and saint.gr 1054, and this book closes «крајем XI столећа», at the end of the eleventh century. All three are in the note and nothing is chosen. The entry does not reconcile that century with the emperor it names in the sentence before, Constantine Monomachos, and this reader did not reconcile it either. The monastery of his tonsure IS named in the book and is NOT named in his life: it carries another saint’s name, and the brief’s ruling is that a house carrying a saint’s name is not a relation between two men, so naming it would have owed a `related` row in both directions that would have been false. `types` untouched: «Преп.» is the `venerable` grade the folder already holds and the body gives the pillar that is its `stylite`."
     }
   ],
   "hymns": [
@@ -166,10 +181,10 @@
   "dates": {
     "death": {
       "earliest": 1053,
-      "latest": 1054,
-      "display": "1053 or 1054",
+      "latest": 1100,
+      "display": "1053–1100",
       "basis": "traditional",
-      "note": "Two sources and neither is chosen. days.pravoslavie.ru prints «(1053)» on its line for 7 ноября ст. ст. and «Преподобный Лазарь скончался 72-х лет, в 1053 году» in his life, while saint.gr's head line reads «Οσιος Λαζαρος ο Θαυματουργος, ο Γαλλησιωτης (; - 1054)» and its text «πέθανε με αγιότητα σε βαθιά γεράματα το 1054 μ.Χ.», which this folder held alone until now. The Russian life gives his age at death as seventy-two; no page read gives the year of his birth, and none is inferred here."
+      "note": "Three sources now and none is chosen; it was 1053 or 1054 before this reading. days.pravoslavie.ru prints «(1053)» on its line for 7 ноября ст. ст. and «Преподобный Лазарь скончался 72-х лет, в 1053 году» in his life; saint.gr’s head line reads «Οσιος Λαζαρος ο Θαυματουργος, ο Γαλλησιωτης (; - 1054)» and its text «πέθανε με αγιότητα σε βαθιά γεράματα το 1054 μ.Χ.»; and the Охридски пролог for 7. новембар ст. ст. closes «У старости преселио се Лазар свети у вечност, крајем XI столећа» — in old age he passed over into eternity at the end of the eleventh century. The interval is widened to the end of that century to hold the third reading rather than discard it, and the same entry names the emperor Constantine Monomachos as his great admirer in the sentence before, which this reader could not reconcile with its own century. The Russian life gives his age at death as seventy-two; no page read gives the year of his birth, and none is inferred here."
     }
   }
 }
