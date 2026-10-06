@@ -1,0 +1,71 @@
+{
+  "slug": "athanasius-milov",
+  "display_name": "Athanasius (Milov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Афанасий (Милов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9479, «Афанасий (Милов), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Милов returned nothing at all, and no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru gives him the synaxis of the New Martyrs and the civil 5 декабря and no other day. **He is the one name of this line the day line singles out by rank**: the calendar writes «Афанасия пресвитера и Иоанна диакона», naming his grade and the deacon’s where it has governed the eight before them with one «сщмчч. ... пресвитеров»."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «Афанасий Дмитриевич Милов родился в 1877 в селе Солдатское Нижнеломовского уезда Пензенской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». **azbyka.ru gives the sentence’s date and not the execution’s**: «Священномученик был расстрелян по приговору тройки УНКВД Северо-Казахстанской области от 2 декабря 1937 года» — shot by the sentence of 2 December 1937, which dates the sentence and leaves the day of the shooting unsaid. Nothing is inferred from the company: the ten others of this line were shot on 4 December and the five Optina men on the 5th, and his page says neither. The year is all that is recorded."
+    }
+  },
+  "related": [
+    "basil-bova"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

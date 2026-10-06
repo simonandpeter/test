@@ -10,6 +10,11 @@
       "form": "Σισίνιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Όσιος Σισίνιος ο Ομολογητής», with the rank words left off."
+    },
+    {
+      "form": "Сисиний Кизический",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 2023, «Святитель Сисиний Кизический, епископ, сщмч.», with the grade and rank words left off; the day line itself declines the forename and abbreviates the see. `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form, and in particular it does not fold onto `sisinnius-22-november`, `sisinnius-of-constantinople` or `sisinnius-of-milan`, which hold the bare forename or another see."
     }
   ],
   "dates": {
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Сщмч. Сисиния, еп. Кизического (III),»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "His name page prints one day and no other. **The two calendars put him in two persecutions.** days.pravoslavie.ru writes «(III)», the third century, and its life has him suffer under Диоклитиан, bracketed «(284–305)», and be beheaded; saint.gr, on which this folder was made, has him take part in the fight against the heresy of Arius and finish his life in that contest, which is the fourth century. Both readings are in the life and the folder’s `floruit` is left as it stood."
     },
     {
       "church": "romanian",

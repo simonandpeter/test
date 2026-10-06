@@ -12,6 +12,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 23 Νοεμβρίου, «Άγιος Γρηγόριος επίσκοπος Ακραγαντίνων», with the rank word and the see left off."
+    },
+    {
+      "form": "Григорий Акрагантийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 530, «Святитель Григорий Акрагантийский, епископ», with the grade words left off; the day line itself declines the forename and abbreviates the see. `.tmp/sr-foldpred.mjs` predicts «new key, other holders: 0 (none)» for this form."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Свт. Григория, еп. Акрагантийского (VI-VII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "His name page prints one day and no other. **The Russian clause dates him by centuries and its life by a council, and neither agrees with the 690 this folder holds**: days.pravoslavie.ru writes «(VI-VII)», the sixth to seventh century, and its life has him at the Fifth Ecumenical Council of 553 and under a patriarch of Jerusalem it brackets «(563 - 574)» and a patriarch of Constantinople it brackets «(552 - 565)». The interval is left as the Greek and Romanian sources set it, 690 being inside the Russian centuries, and the disagreement is in the date note."
     },
     {
       "church": "romanian",
@@ -110,6 +125,54 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Ἡ Παρθένος σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "text": "Боже отец наших,/ творяй присно с нами по Твоей кротости,/ не отстави милость Твою от нас,/ но молитвами их/ в мире управи живот наш.",
+      "tone": "глас 4",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Тропарь святителей Амфилохия и Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "O God of our fathers, who ever dealest with us according to Thy gentleness, take not Thy mercy from us, but by their prayers guide our life in peace.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Светолучными сиянии Церковь Святаго Духа световодит/ светлое совершающия твое успение,/ преподобне отче всеблаженне Григорие.",
+      "tone": "глас 4",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Кондак святителя Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "With the radiant beams of the Holy Spirit the Church gives light to those who brightly keep thy falling asleep, O venerable and all-blessed father Gregory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "text": "Яко добродетелей учителя и святителем украшение/ Церковь, поющи тя, славит, Григорие,/ молитвами твоими подаждь чтущим тя любовию/ добродетелем исправление и соблазн избавление,/ яко непобедим.",
+      "tone": "глас 8",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Ин кондак святителя Григория»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a teacher of the virtues and an adornment of hierarchs the Church, singing of thee, glorifies thee, O Gregory; by thy prayers grant to those who honour thee with love amendment in virtue and deliverance from temptation, for thou art unconquerable.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -126,6 +189,7 @@
   },
   "related": [
     "alexander-nevsky",
-    "justinian-rhinotmetos"
+    "justinian-rhinotmetos",
+    "amphilochius-of-iconium"
   ]
 }

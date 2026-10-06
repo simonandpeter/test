@@ -1,0 +1,71 @@
+{
+  "slug": "eleazar-spiridonov",
+  "display_name": "Eleazar (Spiridonov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Елеазар (Спиридонов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 9574, «Елеазар (Спиридонов), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the name declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Спиридонов returned one folder, `demetrius-spiridonov`, of another forename and another day; no key of the proposed record has another holder, and the corpus keeps no other Елеазар."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Сщмч. Елеазара пресвитера и мч. Александра (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 23 ноября. Only the second was read and only the second is a row. azbyka.ru adds two Crimean synaxes — «2 декабря – Собор новомучеников и исповедников Крымской митрополии» and «28 декабря – Собор Крымских святых» — both seen and neither read. **His clause names two people and this is the first of them**: the calendar closes the day’s martyrs with «Сщмч. Елеазара пресвитера и мч. Александра (1937).»"
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 6 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «Священномученик священник Елеазар Спиридонов родился в 1874 году в Крыму, в Евпатории, в семье крымских греков»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his clause for 23 ноября ст. ст. with «(1937)»; azbyka.ru gives the day and his age: «Он проработал в Колымских рудниках меньше 5 месяцев, скончавшись 6 декабря 1937 года в возрасте 64 лет», and the civil 6 декабря is this Julian 23 ноября. **This is a term served and not an execution**: the sentence of July 1937 was five years in a corrective labour camp on the Kolyma, and he died in the mines less than five months into it."
+    }
+  },
+  "related": [
+    "alexander-uksusov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

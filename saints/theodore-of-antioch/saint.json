@@ -1,0 +1,59 @@
+{
+  "slug": "theodore-of-antioch",
+  "display_name": "Theodore of Antioch",
+  "names": [
+    {
+      "form": "Феодор Антиохийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 2177, «Феодор Антиохийский, исповедник», with the grade and rank words left off; the day line itself gives the name declined and without the by-name. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: no key of the proposed record has another holder. The corpus keeps seventy-four other Theodores and the nearest of them is discussed in the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Мч. Феодора Антиохийского (после 363).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "His name page prints one day and no other: «День памяти: 23 ноября». **The clause’s year is not a year of death**: the calendar writes «(после 363)», after 363, and its own life says why — he outlived the emperor who tortured him and died in old age and in peace. azbyka.ru keeps him for the same civil day under the slug `sv-feodor-antiohijskij` and prints the same short notice."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 6 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 363,
+      "latest": null,
+      "display": "after 363",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints «(после 363)» after his name on 23 ноября ст. ст. — after 363, which is a finding and not a year. 363 is the death of Юлиан Отступник, whose reign the life brackets «(361 - 363)» and under whom the tortures happened; the life then says «Святой мученик Феодор дожил до старости и с миром отошел ко Господу», that he lived to old age and departed to the Lord in peace, and gives no year for it and no year of birth. The upper bound is left open for that reason, which is how `tatiana-fomicheva` carries the same clause off the same calendar."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

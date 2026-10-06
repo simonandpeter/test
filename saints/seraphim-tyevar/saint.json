@@ -1,0 +1,68 @@
+{
+  "slug": "seraphim-tyevar",
+  "display_name": "Seraphim (Tyevar)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Серафим (Тьевар)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 13866, «Серафим (Тьевар), иеромонах, прмч.», with the grade and rank words left off; the day line itself gives the name declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Тьевар returned nothing at all, and no key of the proposed record has another holder; the corpus’s twenty other Серафим carry a different by-name or surname each."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Прмч. Серафима (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 23 ноября. Only the second was read and only the second is a row. **The two sources differ on his grade**: days.pravoslavie.ru’s name page calls him an иеромонах and azbyka.ru’s own day index calls him a монах. The `office` follows the name page, which is the source of record, and the life says when he was ordained. azbyka.ru adds four synaxes — of the Perm metropolia, of the New Martyrs of Solovki, of the saints of Moscow, and the general synaxis — all seen and none read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 6 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1899,
+      "latest": 1899,
+      "display": "1899",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Преподобномученик Серафим (в миру Антоний Максимович Тьевар) родился 30 июля 1899 года в Москве»."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his own sentence for 23 ноября ст. ст. with «(1931)»; azbyka.ru gives the day and the place: «Иеромонах Серафим (Тьевар) скончался 6 декабря 1931 года в 1-ом отделении Вишерского исправительно-трудового лагеря», and the civil 6 декабря is this Julian 23 ноября. **This is a term served and not an execution**: the sentence of 30 April 1931 was three years in a camp, and he died in the camp seven months into it."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "slug": "boris-kozlov",
+  "display_name": "Boris (Kozlov)",
+  "names": [
+    {
+      "form": "Борис (Козлов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 14490, «Борис (Козлов), мч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Козлов returned two folders, `natalia-martyr-1937` and `paul-kozlov`, both of other forenames; no key of the proposed record has another holder, and the corpus’s other Борис, the passion-bearer, holds no surname. **No `office` is recorded**: he was a layman, and the office the article gives him — church warden — is in none of the four locale packs."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru adds «31 июля – Собор Калужских святых» and «24 октября – Собор всех святых, в Оптиной пустыни просиявших», which were seen and not read. It also hangs the one shared article behind all five pages of this company, and gives four of them one page between them. **He is the one of the five the calendar does not call a «прмч.»**: the line closes «и мч. Бориса (1937)», a plain martyr, because he was not a monk."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1886,
+      "latest": 1886,
+      "display": "1886",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Мученик Борис родился 23 июля 1886 года в деревне Слепцово Козельского уезда Калужской губернии в семье крестьянина Антона Козлова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». **The shared article gives this company a day one later than the ten other names of the same line**, and the day it gives is the day the calendar keeps them on: «Господу угодно было, чтобы в самый день праздника Введения Пресвятой Богородицы, 4 декабря, они пробыли в молитве, хотя и в тюрьме, но на земле ... были расстреляны на следующий день, 5 декабря 1937 года, и погребены в общей безвестной могиле». 5 December 1937 is this Julian 22 ноября. No day is recorded in this field because this corpus’s `dates` are years."
+    }
+  },
+  "related": [
+    "eutychius-didenko",
+    "abenir-sinitsyn",
+    "savva-suslov",
+    "mark-makhrov"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

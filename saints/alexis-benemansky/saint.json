@@ -1,0 +1,72 @@
+{
+  "slug": "alexis-benemansky",
+  "display_name": "Alexis (Benemansky)",
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Алексий (Бенеманский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9269, «Алексий (Бенеманский), протоиерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Бенеманский returned nothing at all, and no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru adds «18 июля (переходящая) – Собор Тверских святых», which was seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4744: «Священномученик Алексий Константинович Бенеманский родился 6 января 1881 года в селе Баранья Гора Новоторжского уезда Тверской губернии в семье священника Константина Бенеманского»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». **life4744 dates the execution to the Julian day before the one he is kept on**, in both styles: «21 ноября (4 декабря н. ст.) 1937 года по приговору Тройки Н. К. В. Д. протоиерей Алексий Бенеманский был расстрелян». The row follows the day page that lists him."
+    }
+  },
+  "related": [
+    "elijah-gromoglasov",
+    "thaddeus-of-tver"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

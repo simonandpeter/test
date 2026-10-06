@@ -1,0 +1,66 @@
+{
+  "slug": "john-vasilyev-23-november",
+  "display_name": "John (Vasilyev) (23 November)",
+  "names": [
+    {
+      "form": "Иоанн (Васильев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 23 ноября ст. ст., name page 13867, «Иоанн (Васильев), исповедник», with the grade and rank words left off; the day line itself gives the name declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: **the one form in this batch another folder already holds.** `john-vasilyev` stores the identical «Иоанн (Васильев)», off this same calendar’s 18 сентября ст. ст., and is a different man: born 1876 against this one’s 1869, dead in 1937 against 1932. Two name pages, two days, two years. The display name and slug carry the day, as `john-smirnov-24-october`’s do; the fold has a FINDINGS row and a `READ_FOLDS` key in this batch’s commit. azbyka.ru keeps this one under the slug `sv-ioann-vasilev-ispovednik`, \"the confessor\", which is that site’s own way of telling the two apart. The sweep over Васильев returned `eugene-vasilyev` as well, of another forename."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 23,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 23 ноября ст. ст. — «Св. Иоанна исп (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20261123.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 23 ноября. Only the second was read and only the second is a row. **The calendar does not call him a martyr**: his sentence is «Св. Иоанна исп (1932).», a saint and a confessor, and he is the one name on this day that carries no rank of martyrdom. azbyka.ru adds «5 сентября (переходящая) – Собор Московских святых», which was seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 6 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 6 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 6 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1869,
+      "latest": 1869,
+      "display": "1869",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Исповедник Иоанн родился в 1869 году в селе Мартьяново Серпуховского уезда Московской губернии в семье рабочего-слесаря Сергея Васильева». The year is what keeps this folder apart from `john-vasilyev`, which gives 1876."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his own sentence for 23 ноября ст. ст. with «(1932)»; azbyka.ru gives the day: «Иван Сергеевич Васильев умер 6 декабря 1932 года и был погребен в безвестной могиле», and the civil 6 декабря is this Julian 23 ноября. **This is a term served and outstayed, not an execution**: the sentence of 4 November 1929 was three years of banishment, it expired on 3 September 1932, he was not released, and he died in the place of exile three months later."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

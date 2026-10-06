@@ -1,0 +1,68 @@
+{
+  "slug": "theodore-gusev-22-november",
+  "display_name": "Theodore (Gusev) (22 November)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Феодор (Гусев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9815, «Феодор (Гусев), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: **the one form in this batch that another folder already holds.** `theodore-martyr-1940` stores the identical «Феодор (Гусев)», off this same calendar’s 19 января ст. ст., «Мч. Феодора (1940)» — a layman, a `martyr` and not a hieromartyr, with no office, three years later and on another day. Two name pages, two days, two years, two grades: two men, and the display name and slug here carry the day as `john-smirnov-24-october` and `alexander-orlov-20-october` do. The fold has a FINDINGS row and a `READ_FOLDS` key in this batch’s commit. The sweep over Гусев returned three further folders — `matthew-gusev`, `michael-gusev` and `nicholas-gusev` — all of other forenames."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru adds the synaxis of the new martyrs of Butovo and the synaxis of the saints of Moscow, both seen and neither read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1875,
+      "latest": 1875,
+      "display": "1875",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Священномученик Феодор родился 2 февраля 1875 года в семье священника села Никольское Клинского уезда Московской губернии Евдокима Гусева»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». azbyka.ru gives the day and the place: «Священник Феодор Гусев был расстрелян 4 декабря 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой». 4 December 1937 is the Julian 21 ноября. The year is what keeps this folder apart from `theodore-martyr-1940`, which stores the same Russian form."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

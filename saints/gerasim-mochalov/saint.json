@@ -1,0 +1,68 @@
+{
+  "slug": "gerasim-mochalov",
+  "display_name": "Gerasim (Mochalov)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Герасим (Мочалов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9207, «Преподобномученик Герасим (Мочалов), иеромонах», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Мочалов returned nothing at all, and no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "hieromonk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. **azbyka.ru gives him six days, five of them synaxes days.pravoslavie.ru does not print at all**: the synaxis of the new martyrs of Butovo, «6 июля – Собор Владимирских святых», the synaxis of the saints of Moscow, «1 октября – Собор новомучеников и исповедников земли Владимирской», the civil 5 декабря, and «10 декабря – Собор новомучеников и исповедников Радонежских». All were seen and none was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Преподобномученик Герасим (в миру Григорий Игнатьевич Мочалов) родился в 1870 году в селе Маринино Дмитровской волости Дмитровского уезда Московской губернии в крестьянской семье»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». azbyka.ru gives the day and the place: «Иеромонах Герасим (Мочалов) был расстрелян 4 декабря 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой». 4 December 1937 is the Julian 21 ноября, one day before the day he is kept on."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
