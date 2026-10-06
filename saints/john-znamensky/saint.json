@@ -1,0 +1,69 @@
+{
+  "slug": "john-znamensky",
+  "display_name": "John (Znamensky)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Знаменский)",
+      "lang": "ru",
+      "note": "The nominative behind the «Иоанна» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 14234, «Иоанн (Знаменский), иерей, сщмч.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname at all. Знаменский is a family surname and not a monastic name: his father was the priest Василий Знаменский. azbyka.ru writes it without brackets, «Священномученик Иоанн Знаменский, пресвитер»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1868,
+      "latest": 1868,
+      "display": "1868",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Иоанн родился 8 марта 1868 года в селе Владыкино Санкт-Петербургского уезда Санкт-Петербургской губернии в семье священника Василия Знаменского». The day of birth is 8 March; this corpus records years."
+    },
+    "death": {
+      "earliest": 1923,
+      "latest": 1923,
+      "display": "1923",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 8 марта ст. ст. with «(1923)», and azbyka.ru says «Священник Иоанн Знаменский был расстрелян безбожниками-большевиками в 1923 году в городе Талды-Кургане и погребен в безвестной могиле». **Neither page gives a day for the execution** — the only 8 March in his dossier is the day he was born — so unlike every other twentieth-century folder of this range nothing read says why the calendar keeps him on this day, and nothing is inferred from the coincidence."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Сщмч. Иоанна пресвитера (1923).»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The day page carries no life for him and his name page 14234 carries none; the life in this folder is azbyka.ru's. The day page prints no hymn under his name — its four hymns are Theophylact of Nicomedia's two and three of the Mother of God before her Kursk-Root icon. Name page 14234 lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church, and azbyka.ru lists three further synaxes besides, among them the synaxis of the saints of the Central Asian metropolitan district, where he spent the whole of his priesthood. One row per church being the schema, the second days are recorded here and in the life and he renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
