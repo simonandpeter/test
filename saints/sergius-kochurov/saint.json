@@ -1,0 +1,62 @@
+{
+  "slug": "sergius-kochurov",
+  "display_name": "Sergius (Kochurov)",
+  "names": [
+    {
+      "form": "Сергий (Кочуров)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14527, «Сергий (Кочуров), иерей, сщмч.», with the rank and grade words left off. The day line gives «Сщмч. Сергия пресвитера (1941).» and no surname."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Сщмч. Сергия пресвитера (1941).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1941,
+      "latest": 1941,
+      "display": "1941",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Сергия пресвитера (1941).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

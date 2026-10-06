@@ -6,4 +6,6 @@ In 1917 he was sent to America and appointed administrator of the Serbian Orthod
 
 He went to the Lord after ten years of pastorate, on 12 December 1935, and was buried at his own foundation, the monastery of Saint Sava at Libertyville. The Serbian Church canonised him in 2015, and his relics were found intact in 2017.
 
-*After doxologia.ro's calendar for 12 decembrie — [the day](https://doxologia.ro/12-decembrie) and [the life](https://doxologia.ro/sfantul-ierarh-mardarie-uskokovic-de-libertyville); read 25 September 2026.*
+The Russian calendar keeps him too, on the same day under the old reckoning, and marks the line as a Serbian commemoration: «Свт. Мардария (1935) (Серб.).» Its name page gives his surname in Cyrillic, «Мардарий (Ускокович)», and the one day; it carries no life for him, and the day page carries no hymn under his name. The year it prints is the year the Romanian page already gave.
+
+*After doxologia.ro's calendar for 12 decembrie — [the day](https://doxologia.ro/12-decembrie) and [the life](https://doxologia.ro/sfantul-ierarh-mardarie-uskokovic-de-libertyville); read 25 September 2026; and the Православный церковный календарь of the Сретенский monastery for 29 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261129.html) and [the name page](https://days.pravoslavie.ru/name/14981.html), which carries no life, read 7 October 2026.*

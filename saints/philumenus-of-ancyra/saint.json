@@ -1,0 +1,59 @@
+{
+  "slug": "philumenus-of-ancyra",
+  "display_name": "Philumenus of Ancyra",
+  "names": [
+    {
+      "form": "Филумен Анкирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2305, «Филумен Анкирский, мч.», with the trailing grade left off. The day line gives only «Мч. Филумена (ок. 274).», without the city."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page and his life page both give «День памяти: 29 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Мч. Филумена (ок. 274).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 274,
+      "latest": 274,
+      "display": "c. 274",
+      "basis": "traditional",
+      "note": "The day line prints «ок. 274», about 274, and the life page is flat about it: «Святой мученик Филумен пострадал за Христа в 274 году, в. гонение на христиан императора Аврелиана (270 - 275)». The reign the page gives contains the year, and the display keeps the calendar's own «ок.»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

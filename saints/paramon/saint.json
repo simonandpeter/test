@@ -11,6 +11,11 @@
       "form": "Παράμονος",
       "lang": "el",
       "note": "Read out of saint.gr's heading «Αγιος Παραμονος (; - 250)» on the page of «Άγιος Παράμονος και οι Τριακόσιοι Εβδομήντα Μάρτυρες» for 29 Νοεμβρίου, with the rank word left off."
+    },
+    {
+      "form": "Парамон Вифинский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1735, «Парамон Вифинский, мч.», with the trailing grade left off. The day line gives only «Мч. Парамона», without the by-name, and Bithynia is read from the name page."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page and his life page both give «День памяти: 29 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Мч. Парамона и с ним 370-ти мучеников (250).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
