@@ -1,0 +1,69 @@
+{
+  "slug": "seraphim-ostroumov",
+  "display_name": "Seraphim (Ostroumov)",
+  "names": [
+    {
+      "form": "Серафим (Остроумов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13084, «Святитель Серафим (Остроумов), архиепископ Смоленский, сщмч.», with the rank words and the see left off the head; the see is in `office` and in the calendar's own quoted line. The day line gives the name in the genitive, «Сщмчч. Серафима , архиеп. Смоленского»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archbishop",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "archbishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists nine beside this one: the moveable 7 февраля for that same synaxis, the moveable 8 августа for the Собор Смоленских святых, the moveable 5 сентября for the Собор Московских святых, 8 сентября for the Собор святых Орловской митрополии, 23 сентября for the Собор Липецких святых, 18 ноября for the memory of the fathers of the Council of 1917–1918, this day twice — once as his repose and once for the Собор новомучеников и исповедников земли Смоленской — and 10 декабря for the Собор новомучеников и исповедников Радонежских. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "azbyka.ru, out of grad-petrov.ru: «родился в 1880 году в Москве в семье псаломщика». The page gives no month and no day."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «был расстрелян в лесу под Смоленском 8 декабря 1937 года»; the Сретенский day line closes the clause of fifteen «(1937)». 8 December 1937 was in that year the Julian 25 ноября."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

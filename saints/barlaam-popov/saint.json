@@ -1,0 +1,72 @@
+{
+  "slug": "barlaam-popov",
+  "display_name": "Barlaam (Popov)",
+  "names": [
+    {
+      "form": "Варлаам (Попов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14435, «Варлаам (Попов), протоиерей, сщмч.», with the rank words left off. The day line gives the name in the genitive and without the surname; azbyka.ru gives his patronymic, Варлаам Петрович Попов. The corpus holds seven other Попов folders and no other Варлаам among them."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church, and azbyka.ru lists the moveable 7 февраля for that same synaxis and nothing else beside this day. One row per church is the schema, so the other day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "azbyka.ru's full life, out of the Bryansk diocesan site and the PSTGU database: «Родился 19 июня 1880 года в семье священника села Лобанова Радогощской волости Севского уезда Орловской губернии»; the short life on the same page gives the year alone."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Расстрелян 8 декабря 1937 года в городе Брянске», and the short life on the same page: «Известен только день мученической кончины протоиерея Варлаама – 8 декабря 1937 года». The Сретенский day line closes the clause of fifteen «(1937)»."
+    }
+  },
+  "related": [
+    "tikhon-of-moscow"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

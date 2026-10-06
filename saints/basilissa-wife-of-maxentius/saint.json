@@ -3,24 +3,41 @@
   "display_name": "Basilissa, wife of Maxentius",
   "sex": "female",
   "types": [
-    "martyr"
+    "martyr",
+    "empress"
   ],
   "names": [
     {
       "form": "Βασίλισσα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 25 Νοεμβρίου, «Αγία Βασίλισσα», with the rank word left off."
+    },
+    {
+      "form": "Августа (Василисса) Римская",
+      "lang": "ru",
+      "note": "The heading of the name link behind days.pravoslavie.ru's line for 24 ноября ст. ст., name page 2366, «Августа (Василисса) Римская, императрица, мц.», with the rank and the grade left off the head. The parenthesis is the page's own and is what pairs the two names; the day line itself gives only «Мц. Августы», in the genitive and without the second name. `.tmp/ru-foldnew.mjs` reports no folder holding this form."
     }
   ],
   "related": [
     "catherine-of-alexandria",
-    "hundred-and-fifty-rhetors"
+    "hundred-and-fifty-rhetors",
+    "porphyrius-the-stratelates"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Мц. Августы , мчч. Порфирия Стратилата и 200 воинов (305-313).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      },
+      "note": "**That the Russian «Августа» is this folder's woman is a reading, and this is it.** The name link behind the line heads her «Августа (Василисса) Римская, императрица, мц.» — the calendar itself prints both names for one person, and azbyka.ru titles its page for her the same way, «Мученица Августа (Василисса) Римская, императрица». The life page behind the link is the joint life of Catherine, Augusta and Porphyrius, in which she is the reigning emperor's wife who heard of Catherine, had Porphyrius escort her to the prison, believed there, confessed Christ when the wheels broke and was beheaded — which is saint.gr's one sentence for this folder at greater length. **The two calendars name different emperors**: saint.gr makes her «σύζυγος του βασιλιά Μαξεντίου», the wife of Maxentius, and the Russian page sets the whole passion under Максимин, 305 to 313. The display name is left as the Greek reading made it and the disagreement is recorded here rather than resolved; it is a thing an author may want to rule on. The Russian day is one menologion number before the Greek 25 November, one day and not the thirteen of a style conversion."
     },
     {
       "church": "romanian",
@@ -50,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 305,
+      "latest": 313,
+      "display": "between 305 and 313",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru prints a reign and not a year, closing the line «(305-313)», and the life page behind it sets the whole passion in the reign of the emperor Максимин, «во время правления императора Максимина (305 - 313)». That reign is the interval, and this folder had no date at all before it; saint.gr, which made the folder, gave her no year."
+    }
   }
 }

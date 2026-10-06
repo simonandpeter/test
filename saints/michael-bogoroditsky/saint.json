@@ -1,0 +1,69 @@
+{
+  "slug": "michael-bogoroditsky",
+  "display_name": "Michael (Bogoroditsky)",
+  "names": [
+    {
+      "form": "Михаил (Богородицкий)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14352, «Михаил (Богородицкий), сщмч.», with the rank word left off. The day line gives the name in the genitive and without the surname, «Сщмчч. Евгения и Михаила пресвитеров (1937)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists three more beside this day: the moveable 7 февраля for that same synaxis, 10 августа for the Собор святых Тамбовской митрополии and 23 сентября for the Собор Липецких святых, the two provinces he was born and served in. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Сщмчч. Евгения и Михаила пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1872,
+      "latest": 1872,
+      "display": "1872",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «родился в 1872 году в селе Студенецкие Выселки Липецкого уезда Тамбовской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «приговорен к высшей мере наказания и расстрелян 7 декабря 1937 года»; the Сретенский day line closes his clause «(1937)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

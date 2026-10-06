@@ -1,0 +1,69 @@
+{
+  "slug": "evgraph-evarestov",
+  "display_name": "Evgraph (Evarestov)",
+  "names": [
+    {
+      "form": "Евграф (Еварестов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9318, «Евграф (Еварестов), протоиерей, сщмч.», with the rank words left off. azbyka.ru heads its own page for him «Священномученик Евграф Еварестов, пресвитер», without the parentheses; the calendar's own punctuation is kept."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists two more beside this day: the moveable 7 февраля for that same synaxis, and 3 июня for the Собор Уфимских святых, the synaxis of the saints of Уфа, the city he served in. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Сщмч. Евграфа пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1857,
+      "latest": 1857,
+      "display": "1857",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «родился в 1857 году в Самарской губернии в семье сельского священника»."
+    },
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "azbyka.ru: «Приговор был приведен в исполнение 7-8-го декабря 1919 г.» — the page gives the two days and not one, and the year flat; the Сретенский day line closes his clause «(1919)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

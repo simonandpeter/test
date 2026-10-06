@@ -1,0 +1,69 @@
+{
+  "slug": "john-tarasov",
+  "display_name": "John (Tarasov)",
+  "names": [
+    {
+      "form": "Иоанн (Тарасов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9337, «Иоанн (Тарасов), протоиерей, сщмч.», with the rank words left off. The day line gives the name in the genitive and without the surname, and names three Иоанн in the one clause."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists three beside this one: the moveable 7 февраля for that same synaxis, the moveable 29 мая for the Собор новомучеников, в Бутове пострадавших, and the moveable 5 сентября for the Собор Московских святых. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1867,
+      "latest": 1867,
+      "display": "1867",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «родился 18 февраля 1867 года в селе Бородино Клинского уезда Московской губернии в семье крестьянина Якова Ивановича Тарасова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «Протоиерей Иоанн Тарасов был расстрелян 8 декабря 1937 года»; the Сретенский day line closes the clause of fifteen «(1937)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

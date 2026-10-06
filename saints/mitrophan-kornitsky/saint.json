@@ -1,0 +1,69 @@
+{
+  "slug": "mitrophan-kornitsky",
+  "display_name": "Mitrophan (Kornitsky)",
+  "names": [
+    {
+      "form": "Митрофан (Корницкий)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14358, «Митрофан (Корницкий), сщмч.», with the rank word left off. The day line gives the name in the genitive and without the surname, «Сщмчч. Александра , Алексия , Иоанна , Корнилия и Митрофана пресвитеров (1937)»."
+    }
+  ],
+  "sex": "male",
+  "office": "Archpriest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists two more beside this day: the moveable 7 февраля for that same synaxis, and 3 октября for the Собор Брянских святых, the region he was shot in. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 24 ноября ст. ст. — «Сщмчч. Александра , Алексия , Иоанна , Корнилия и Митрофана пресвитеров (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261124.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 7 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 7 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 7 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1873,
+      "latest": 1873,
+      "display": "1873",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «родился в местечке Троянов Житомирской губернии в 1873 году»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "azbyka.ru: «отец Митрофан был расстрелян в Клинцах 7 декабря 1937 года»; the Сретенский day line closes his clause «(1937)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
