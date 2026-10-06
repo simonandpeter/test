@@ -6,6 +6,11 @@
       "form": "Ηλίας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Νοεμβρίου, «Όσιος Ηλίας», with the rank word left off."
+    },
+    {
+      "form": "Илија Египатски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 3. новембар ст. ст., „Преп. Илија Египатски.“ — «Преп.» is the `venerable` grade `types` keeps and comes off; «Египатски» DOES NOT, and this is the one form of this block where that decision is forced rather than argued. It stands free of any rank word, unlike the «еп. Патавски» and «еп. Наесонски» of these same two days, so section 6’s own example governs it — `Аврамије Смоленски`, the bare name with everything that distinguishes him and nothing that ranks him. And the distinguishing is not theoretical: `sr-foldpred.mjs` measures a bare «Илија» as held by two folders, one of which is `elias-the-egyptian`, A DIFFERENT MAN WITH THE SAME EPITHET — a martyr of the company of Pamphilus at Caesarea in Palestine kept on 16 February — so the bare form would have folded this venerable of the Thebaid onto the very folder a reader most needs to keep him apart from. The fuller form measures 0 other holders and makes no fold at all. «(3 November)» in the display name is this corpus’s own, off saint.gr’s four-word page."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 16.11.2025 (3. новембар ст. ст.) — „Преп. Илија Египатски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-16&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, seven sentences, and THE FIRST LIFE THIS FOLDER HAS: saint.gr’s page for it is four words long, «Ο Όσιος Ηλίας απεβίωσε ειρηνικά», the venerable Elias died peacefully, with no city, no century and no account of anything he did. Quoted whole with its closing full stop (section 4); URL year 2025. THE IDENTIFICATION RESTS ON THE DAY AND THE GRADE AND ON NOTHING ELSE, AND IT IS SAID HERE BECAUSE THE GREEK LINE GIVES NOTHING ELSE TO REST IT ON: both books keep an Elias on the menologion 3 November, both call him venerable — «Преп.» against «Όσιος» — and the Greek page prints no fact this entry could contradict. AND THE NEAR MISS IS THE REASON THE FORM BELOW IS NOT A BARE FORENAME. `sr-foldpred.mjs` measured a bare «Илија» as held by `elias-martyr-with-patermuthius` AND BY `elias-the-egyptian` — and `elias-the-egyptian` IS NOT THIS MAN. That folder is one of the twelve martyrs of the company of Pamphilus beheaded at Caesarea in Palestine under Diocletian, kept on 16 February by three calendars including this book, and «the Egyptian» there is one of five epithets saint.gr prints over that company; this entry’s man is a venerable ascetic of the Thebaid who died in his bed in his hundred and tenth year. ONE EPITHET, TWO MEN, AND THE FOLD INSTRUMENT IS WHAT PUT THE QUESTION. No row was moved and no merge is proposed. `types` UNTOUCHED at `venerable`: «Преп.» is that grade, and although the entry describes seventy years in desert rocks it uses NO rank noun for it — no «Пустињак», no «Подвижник», no «Отшелник» — so no `hermit` and no `ascetic` was added, section 5’s mapping being a reading of the words the book prints and not of the life it describes. NO `dates`, AND THE ENTRY HAS TWO NUMBERS AND NEITHER IS A YEAR: «70 година проживео» in the desert and «Упокојио се у 110 години живота», he reposed in the hundred and tenth year of his life. No absolute year, no emperor, no reign, no century. The folder stays in `date-audit`’s undated tray, where it already was. NO `locations`: the entry names Антиное, the chief city of the Thebaid, with the book’s own modern gloss «данашњи Шеик Ибада, близу града Малави у Египту», and that is where he struggled and not a coordinate this folder has ever held. The Prologue prints no troparion and no kontakion — the sentence it closes on is a saying of his own, not a hymn."
     }
   ],
   "text": {
