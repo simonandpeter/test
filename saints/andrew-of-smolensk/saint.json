@@ -1,0 +1,59 @@
+{
+  "slug": "andrew-of-smolensk",
+  "display_name": "Andrew of Smolensk",
+  "sex": "male",
+  "types": [
+    "prince"
+  ],
+  "names": [
+    {
+      "form": "Андреј Смоленски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. октобар ст. ст., „Св. Андреј кнез Смоленски.“ — «Св.» is \"saint\" and not a rank and «кнез» is the `prince` grade this corpus keeps in `types`, so both come off and the bare name keeps the by-name the heading prints. The by-name is kept because four folders in this corpus already hold the bare «Андреј» — `andrew-companion-of-paul`, `andrew-of-crete`, `andrew-the-monk-martyr-of-crete` and `andrew-the-presbyter-confessor` — so a bare forename would fold on a forename, and section 6 asks for the fullest form the calendar gives. `sr-foldnew.mjs` reports 0 other holders for both keys the folder would add."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1390,
+      "latest": 1390,
+      "display": "1390",
+      "basis": "traditional",
+      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 27 October: „Упокојио се у Господу мирно 1390. год.“ — he reposed in the Lord peacefully in 1390. The entry gives no birth year, no age and no century beside it, so there is no `birth`. The other year it prints, 1540, is the finding of his relics and not a date of his life."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (6 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s calendar for the corresponding day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.11.2025 (27. октобар ст. ст.) — „Св. Андреј кнез Смоленски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry and the only new folder on it. «кнез» is the `prince` this folder takes and the heading gives no second rank word: it does not say Преподобни, Праведни or Чудотворац, so there is no `venerable`, no `righteous` and no `wonderworker` here — the body says his RELICS are wonderworking, which is a fact about the relics and not a title the calendar gives the man. The entry is three sentences and the life says so. NO `locations`: the only place in the whole entry is «један манастир», one monastery, unnamed, and Smolensk reaches the page only inside the by-name. NO `office`: «црквењак», a sexton or church servant, is not in the four locale packs. NO `related`: the entry names nobody. NO HYMN: the Prologue prints no troparion and no kontakion, and this day’s verse is Bishop Nikolai’s own and is about Nestor. THE NEAREST FOLDER AND WHY IT IS NOT HIM: `andrew-prince-of-suzdal`, also a prince, died 1365 and is kept on the Greek 2 June — twenty-five years and a different day apart, and nothing read links them."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

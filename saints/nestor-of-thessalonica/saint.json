@@ -16,6 +16,11 @@
       "form": "Нестор Солунский (Фессалоникийский)",
       "lang": "ru",
       "note": "Read whole off the title on the name link behind his line for 27 октября ст. ст., «Нестор Солунский (Фессалоникийский), мч.», with the rank word left off; the bracketed second form of the city is the calendar's own. The line on the day page declines the name and gives only the first form."
+    },
+    {
+      "form": "Нестор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. октобар ст. ст., „Св. муч. Нестор.“ — «Св.» is \"saint\" and not a rank and «муч.» is the `martyr` grade this corpus keeps in `types`, so both come off and the bare personal name is the whole of the form. The heading gives no by-name and no city: «у Солуну», which is what the folder’s display name is built on, is the body’s first sentence. The next entry on the same day does carry a by-name, «Летописац», and that is what keeps the two Nestors of this day apart. `foldchk.py` finds this string on `nestor-of-maghid`, so the form joins a fold of two, keyed in `READ_FOLDS` in the same commit."
     }
   ],
   "sex": "male",
@@ -68,8 +73,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.11.2025 (27. октобар ст. ст.) — „Св. муч. Нестор.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, one person, quoted whole with the closing full stop the Prologue prints (BRIEF-SERBIAN section 4). «муч.» is the `martyr` this folder already holds, so `types` is untouched. TWO NESTORS ON ONE DAY, AND THE HEADINGS DO NOT TELL THEM APART — THE BODIES DO. This heading is bare, «Св. муч. Нестор.», and entry 2 is «Преп. Нестор Летописац». What settles entry 1 on this folder is its own first sentence: «У време страдања св. Димитрија Мироточивог беше у Солуну неки младић Нестор, који се научи вери Христовој од самог св. Димитрија» — in the time of the suffering of Demetrius the Myrrh-streamer there was at Thessalonica a youth named Nestor who learned the faith of Christ from Demetrius himself. That is this folder and no other, and the corpus’s third Nestor, `nestor-the-unlearned`, is on the Russian 27 October and the Greek 29 October and is neither of these two. `dates` UNTOUCHED AND THE BOOK AGREES EXACTLY. The folder holds `death` 306, whose `note` says saint.gr heads him «(; - 306)» while giving no year in its narrative. This entry closes «Тако сконча свој млади земаљски живот овај славни хришћански јунак Нестор, 306. год.» — the same year, printed in the narrative instead of in a heading, which CONFIRMS the folder’s only date rather than moving it. Nothing was changed, and the confirmation is the point: the Greek page’s year was a bracket and this one is a sentence. WHAT THE BOOK ADDS. Lyaeus’s scaffold described as a threshing floor on pillars with the sharpened spears planted point-upward beneath it, so that a beaten man was pushed off the top into a whole forest of them and the heathen crowd watched him writhe until he died. CHRISTIANS WERE DRAGGED TO THE FIGHT BY FORCE, on the emperor’s own order, whenever nobody volunteered — which is the Prologue’s explanation of why Nestor acted, and is on neither of this folder’s other pages in that form. The blessing in the prison is given as a prophecy in two halves: «Лија ћеш победити, али ћеш за Христа пострадати.» — thou shalt overcome Lyaeus, but thou shalt suffer for Christ. Nestor’s own cry is «Боже Димитријев, помози ми!», and the crowd’s answer after the throw is «велики је Бог Димитријев!» — the god of Demetrius is great. And the sentence passed on the two men is one sentence: Nestor cut down with the sword, Demetrius run through with spears. NO NEW `related`. `demetrius-the-myrrhstreamer` is already related both ways and is linked in this folder’s life. Лије, the Vandal gladiator, and Максимијан are narrated and in no heading, so Ruling 3 and section 5 give them nothing, and no folder read here holds either. No `locations`, no `office`. THE FORM FOLDS AND THE FOLD IS KEYED. «Нестор» is already held by `nestor-of-maghid`, the hieromartyr bishop this same book keeps on the Julian 28 February, so this form takes the key from one holder to two; `sr-foldpred.mjs` named him before the write and a `READ_FOLDS` key goes in with this commit. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [

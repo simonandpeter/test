@@ -16,6 +16,11 @@
       "form": "Нестор Летописец",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 27 октября ст. ст., «Преподобный Нестор Летописец», with the rank word left off. The line on the day page itself declines the name; the day page's hymn headings give the fuller «Нестор Летописец, Печерский, в Ближних пещерах», which is the monastery and the caves and not more of the name."
+    },
+    {
+      "form": "Нестор Летописац",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. октобар ст. ст., „Преп. Нестор Летописац.“ — «Преп.» is the `venerable` grade this corpus keeps in `types` and comes off, leaving the bare name with the by-name the heading prints. «Летописац» is kept under section 6, which keeps a by-name the heading gives, and it is load-bearing twice over on this day: it is what tells this Нестор from the martyr of Thessalonica in the entry above him, and it is what keeps this form out of the two-folder fold the bare «Нестор» joins. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for the stored form."
     }
   ],
   "dates": {
@@ -79,8 +84,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 10,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.11.2025 (27. октобар ст. ст.) — „Преп. Нестор Летописац.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-09&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, one person, quoted whole with its closing full stop (section 4). «Преп.» is the `venerable` this folder already holds and the monastery in the body the `monk` beside it, so `types` is untouched. THE BY-NAME IS WHAT MAKES THIS DAY LEGIBLE. Two entries on one day are both named Нестор; this one carries «Летописац», the Chronicler, and the body confirms it — the Kyiv Caves monastery in his seventeenth year, the abbacy of Theodosius, and the first history of the Russian people. Section 6 keeps a by-name the heading gives, so the stored form is «Нестор Летописац» and not the bare forename, and that is also what keeps this form out of the fold the other entry joins. `dates` UNTOUCHED, AND THE BOOK LANDS ON THE YEAR THE FOLDER ALREADY DISPLAYS. The folder holds `death` 1109 to 1119 with the display «c. 1114», a hedge taken off saint.gr. This entry says «Када се Нестор упокоји 27. окт. 1114. год.» — an exact day and an exact year, 1114, which is the midpoint of that interval and the number the display already prints. NARROWING 1109-1119 TO 1114 WAS REFUSED: it would turn another book’s deliberate hedge into a certainty on the strength of one sentence, and the folder already tells the reader 1114. A book agreeing with the midpoint of an interval narrows nothing, which is the same reading the Julian 19 October made for Joel. The `birth` 1050 is untouched and this entry gives no birth year — only that he entered the monastery in his seventeenth year, which is an age and not a date. WHAT THE BOOK ADDS, AND MOST OF IT IS ABOUT HIS HUMILITY. He entered the Kyiv Caves monastery IN HIS SEVENTEENTH YEAR, still under the abbacy of Theodosius. He wrote THE FIRST HISTORY OF THE RUSSIAN PEOPLE, and WOVE INTO IT THE HISTORY OF RUSSIAN ASCETICISM — which is this book’s own way of describing what the chronicle is, and is on neither of the folder’s other two pages. He was MARKED BY AN UNUSUAL HUMILITY AND MEEKNESS, and IN HIS OWN CELEBRATED LITERARY WORK HE OFTEN CALLS HIMSELF UNWORTHY, COARSE, AN IGNORAMUS, AND FILLED WITH EVERY SIN. But God, who knows the hearts of men, glorified him; and when he fell asleep HIS RELICS WORKED A MULTITUDE OF WONDERS. NO NEW `related`: `theodosius-of-the-kyiv-caves` is already related both ways and is linked in the new paragraph; the entry names nobody else at all. No `locations` — the Kyiv Caves monastery is named and is not a coordinate on this folder. No `office`. THE FORM IS FREE: `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Нестор Летописац» and `sr-foldpred.mjs` predicts 0 other holders, so no fold and no `READ_FOLDS` key is owed for it. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
