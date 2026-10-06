@@ -12,6 +12,11 @@
       "form": "Γρηγόριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 10 Απριλίου, «Άγιος Γρηγόριος Ε' Πατριάρχης Κωνσταντινουπόλεως», with the rank word, the numeral and the see left off."
+    },
+    {
+      "form": "Григорий V",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 10 апреля ст. ст., name page 6700, «Святитель Григорий V, патриарх Константинопольский, сщмч.». The two rank words and the see are left off, the see because it is this folder’s `office` and is printed as one; the numeral is kept, and it is what tells him from the twenty-eight other folders the plain gate already folds onto the bare Greek «Γρηγόριος». `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "sex": "male",
@@ -39,8 +44,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Сщмч. Григория V, патриарха Константинопольского (1821).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "His life page on the same site lists one day and only one, «День памяти: 10 апреля», which is this day. The Greek and Romanian rows already on this folder keep him on the same menologion number in the revised Julian calendar."
+      }
     },
     {
       "church": "romanian",
@@ -145,6 +160,40 @@
       },
       "english": {
         "text": "Gathered all together today, true children of Greece, in the city of Athens, let us keep the feast of the patriarch Gregory brightly with divine songs.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Благословен еси, Христе Боже наш,/ укрепивши Божественнаго патриарха,/ низпославый тому свыше Свою благодать,/ имже и нас свободил еси от работы вражия,/ Человеколюбие, слава Тебе.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Тропарь священномученика Григория, Патриарха Константинопольского», глас 8, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The first of the two troparia the day prints under his name. It names the patriarch and no other saint, so it is his own and not a mis-hang."
+      },
+      "english": {
+        "text": "Blessed art Thou, O Christ our God, who didst strengthen the divine patriarch and send down upon him Thy grace from on high, by whom Thou hast also freed us from the bondage of the enemy. O Lover of mankind, glory to Thee.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 7",
+      "text": "Святителю и мучениче Григорие,/ за люди твоя душу положивый/ и в светоносный день Христова Воскресения пострадавый,/ молися Страдавшему за ны и Воскресшему/ Церковь Православную незыблему всегда хранити,/ пастве же твоей и Русстей земле, святыя мощи твоя с любовию лета многа хранившей,/ даровати мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Ин тропарь священномученика Григория, Патриарха Константинопольского», глас 7, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The second troparion, printed as «Ин тропарь», another troparion. It names him and the Russian land that kept his relics, and no other saint."
+      },
+      "english": {
+        "text": "O hierarch and martyr Gregory, who didst lay down thy life for thy people and suffer on the light-bearing day of Christ’s Resurrection: pray to Him who suffered for us and is risen, that He keep the Orthodox Church unshaken for ever, and grant peace and great mercy to thy flock and to the Russian land, which kept thy holy relics with love for many years.",
         "rendered": "site"
       }
     }

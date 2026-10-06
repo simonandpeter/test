@@ -1,0 +1,53 @@
+{
+  "slug": "martyrs-of-daou-pendeli",
+  "display_name": "The Martyrs of the Pantokrator Monastery at Daou Pendeli",
+  "sex": "unknown",
+  "types": [
+    "venerable-martyr"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1680,
+      "latest": 1680,
+      "display": "c. 1680",
+      "basis": "traditional",
+      "note": "The only year on the page, in the brackets its day line closes with: «Прмчч. многих священной обители Пантократора, в Дау Пендели (Аттика) пострадавших (ок. 1680).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Прмчч. многих священной обители Пантократора, в Дау Пендели (Аттика) пострадавших (ок. 1680).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The line carries no typikon icon, so no rank is recorded. It enumerates nobody — «многих», many, is the whole of its reckoning — so it is one entry and not a folder for each, by the ruling in docs/CORPUS.md §10.1 on a company a source does not name. The entry behind the line, name page 14999, is an index page carrying the heading and the day and no life."
+      },
+      "note": "**No «ru» name form is stored, on purpose.** What the calendar prints is a description and not a name: the index entry heads them «Прмчч. обители Пантократора, в Дау Пендели», and with the rank abbreviation taken off what is left is a genitive phrase that is not a nominative form of anything. Expanding «Прмчч.» and keeping it, as martyrs-of-martyropolis keeps «Μάρτυρες εν Μαρτυροπόλει», would both reconstruct an abbreviation and add a fifth row to the gate’s hand-held list of companies whose rank is their name, which is a code change. A language with no recorded form is left out rather than filled, per docs/CORPUS.md §3."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "saint.gr’s page for 10 Απριλίου, the same menologion day, was read and does not name them; no other Greek day was searched for them, and the Greek church keeps them, so this is a gap and not a refusal (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

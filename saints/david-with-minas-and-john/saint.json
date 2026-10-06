@@ -11,6 +11,11 @@
       "form": "Δαβίδ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 12 Απριλίου, «Άγιοι Μηνάς, Δαβίδ και Ιωάννης οι Οσιομάρτυρες», with the rank words left off."
+    },
+    {
+      "form": "Давид Палестинский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 561, «Давид Палестинский, прмч.», with the rank word left off. The day’s own line gives the name in the genitive."
     }
   ],
   "related": [
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прмчч. Мины , Давида и Иоанна (после 636).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "One line for the three men, one life page behind all three names, and one sentence in it. The line gives no province; the name links behind it add the Palestinian epithet to each."
+      }
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 636,
+      "latest": 700,
+      "display": "after 636",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «В VII веке они приняли мученическую кончину от арабов, которые пронзили их стрелами (+ после 636 года, когда Иерусалим был взят арабами)»; the day line closes «(после 636)». The lower bound is the page’s own terminus, the taking of Jerusalem by the Arabs; the upper is the end of the century it names, since it says the seventh and nothing narrower. The folder stood undated. Read 7 October 2026."
+    }
   }
 }

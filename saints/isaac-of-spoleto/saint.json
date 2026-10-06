@@ -13,13 +13,28 @@
       "form": "Исаак Сирин II",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 12 April on pravoslavno.rs, „Преп. Исаак Сирин II. (Исаак Сирин I празнује се 28. Јан.).“, with the rank word Преп. left off and the parenthesis left off as well — it is the book's own cross-reference to its 28 January entry and not part of a name. The numeral **is** kept: it is the only thing the heading gives beyond the forename and the by-name, and it is exactly what the source uses to distinguish him from the Isaac the Syrian the corpus already holds, who carries the bare Исаак Сирин off that same 28 January heading. Spoleto, which the English name takes, is in the body and not in the heading."
+    },
+    {
+      "form": "Исаак Сирин, Сполетский, Италийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 1098, «Преподобный Исаак Сирин, Сполетский, Италийский», with the rank word left off. The day’s own line gives the name in the genitive. **Both of the calendar’s place epithets are kept and the bare «Исаак Сирин» was refused**, because that string is what the corpus prints for a different man."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прп. Исаака Сирина в Сполете Италийском (550).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "**This calendar calls him «Исаак Сирин», which is the name this corpus prints for the father of Nineveh**, and distinguishes the two only by the place words it adds: the line has «в Сполете Италийском» and the index entry «Сполетский, Италийский». The Serbian form already on this folder, «Исаак Сирин II», was written to hold the same clash off, and the folder already carries a `related` row to `isaac-the-syrian`. The index lists two readings and one of them, life840, is a title with no body at all."
+      }
     },
     {
       "church": "romanian",
@@ -53,5 +68,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 550,
+      "latest": 550,
+      "display": "c. 550",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Скончался около 550 г.», and the day line prints «(550)» flatly. The folder held no `dates` at all, because saint.gr gave no year; the circa is the reading taken, being the weaker of the page’s own two. Read 7 October 2026."
+    }
   }
 }

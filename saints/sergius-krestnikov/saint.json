@@ -1,0 +1,74 @@
+{
+  "slug": "sergius-krestnikov",
+  "display_name": "Sergius (Krestnikov)",
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "office": "Novice",
+  "names": [
+    {
+      "form": "Сергий (Крестников)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 13713, «Сергий (Крестников), прмч.», with the rank word left off. The day’s own line gives the name in the genitive. The surname is kept in the brackets the calendar prints it in. azbyka.ru heads him «Преподобномученик Сергий Крестников, послушник», without the brackets, and calls him Сергей Александрович throughout its prose; the stored form is the one the calendar whose row this folder carries prints."
+    }
+  ],
+  "related": [
+    "sergius-of-radonezh",
+    "alexis-of-zosimova"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1893,
+      "latest": 1893,
+      "display": "1893",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Сергий (Сергей Александрович Крестников) родился 1 июля 1893 года в городе Москве»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «Послушник Сергий Крестников был расстрелян 25 апреля 1938 года и погребен в общей безвестной могиле»; the Sretensky day line prints «(1938)» for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His index entry on days.pravoslavie.ru lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. azbyka.ru's entry for him lists that synaxis as a moveable 7 февраля and adds three more: the saints of Radonezh on 19 июля, the saints of Moscow on 5 сентября and the new martyrs and confessors of Radonezh on 10 декабря. One row per church is the schema, so the other days are recorded here and he does not render on them. azbyka.ru heads his own day 25 апреля, which is this Julian day in new style — thirteen days, the style conversion, and not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прмч. Сергия (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The line gives the baptismal name alone, in the genitive, with the rank and the year, and makes him a venerable-martyr and so a monastic rather than a presbyter. The surname, the rank of novice and the other days are on the name page behind it, 13713; the life is on azbyka.ru and not on this site at all."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

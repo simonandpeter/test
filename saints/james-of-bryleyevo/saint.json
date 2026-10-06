@@ -12,6 +12,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Ιάκωβος του Βρυλέεφ», with the rank word left off."
+    },
+    {
+      "form": "Иаков Брылеевский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 870, «Иаков Брылеевский, прп.», with the rank word left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "related": [
@@ -24,13 +29,30 @@
       "display": "15th century",
       "basis": "traditional",
       "note": "saint.gr: «Ο Όσιος Ιάκωβος του Βρυλέεφ έζησε στη Ρωσία κατά τον 15ο αιώνα μ.Χ.». The page gives no year of birth and none of death, and its heading carries no years."
+    },
+    "death": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "15th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Преподобный Иаков скончался в XV веке и был погребен во Введенской церкви» — he reposed in the fifteenth century, which is a statement about the death where saint.gr’s was about the life, so it is recorded beside the floruit and not in place of it. Neither page gives a year. Read 7 October 2026."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Прпп. Иакова Железноборовского (1442) и Иакова Брылевского, сподвижника его (XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "One line for the two men, the teacher with his year and the disciple with his century. **The line and the name page spell the disciple differently** — «Иакова Брылевского» in the genitive on the day line against «Иаков Брылеевский» on the name page — and the name page’s form is the one stored, being the calendar’s own nominative."
+      }
     },
     {
       "church": "romanian",

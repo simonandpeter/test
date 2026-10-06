@@ -12,6 +12,11 @@
       "form": "Καλλίνικος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Καλλίνικος ο εκ Ρουμανίας», with the rank word and the clause naming his country left off."
+    },
+    {
+      "form": "Каллиник Черникский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 14907, «Святитель Каллиник Черникский, епископ Рымника-Вылчи, епископ, свт.», with the rank words and the see left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds. The see the Russian title gives, «епископа Рымника-Вылчи», is Râmnicu Vâlcea, which this folder’s Romanian life already names; `office` is left as it stood, because what is read here is a Russian rendering of a Romanian see and not a new finding about it."
     }
   ],
   "sex": "male",
@@ -50,8 +55,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Свт. Каллиника Черникского (1868) (Рум.).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "The line carries the tag «(Рум.)», Romanian, which this calendar puts against a saint it keeps from another local church’s reckoning, and the day page gives him no life page at all. The year in the line is the one this folder already carries from doxologia.ro."
+      }
     },
     {
       "church": "romanian",

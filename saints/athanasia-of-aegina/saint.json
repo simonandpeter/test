@@ -11,6 +11,11 @@
       "form": "Атанасија",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 12 April on pravoslavno.rs, „Преп. Атанасија.“, with the rank word Преп. left off. The heading leaves no epithet and does not name the island, which is in the body; Aegina, which the English name takes, is therefore not part of the form the source prints. This is also the folder's second name form of any kind: it held only the Romanian Atanasia de la Eghina."
+    },
+    {
+      "form": "Афанасия Эгинская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 2422, «Афанасия Эгинская, игумения», with the rank word left off. The day’s own line gives the name in the genitive."
     }
   ],
   "sex": "female",
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прп. Афанасии игумении (860).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The line gives the rank and the office and the year 860, which this folder already carries from doxologia.ro. The life behind it is the longest account of her this corpus has read, and it closes the repose «+ 14 августа 860 года» — **a death date and not a feast**: this page keeps her on 12 апреля and the 14 August it gives is the day she died, which is the day doxologia prints too. `dates` are therefore unchanged."
+      }
     },
     {
       "church": "romanian",
@@ -75,6 +90,8 @@
     "life": "life.md"
   },
   "related": [
-    "john-the-theologian"
+    "john-the-theologian",
+    "john-the-baptist",
+    "nicholas-of-myra"
   ]
 }

@@ -1,0 +1,68 @@
+{
+  "slug": "demetrius-vdovin",
+  "display_name": "Demetrius (Vdovin)",
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "names": [
+    {
+      "form": "Димитрий (Вдовин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 10 апреля ст. ст., name page 13712, «Димитрий (Вдовин), мч.», with the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. **The bare «Димитрий» was refused**: the plain gate already carries it as an unread fold of four folders, and the day’s own line gives nothing but that forename in the genitive. azbyka.ru heads him «Мученик Димитрий Вдовин», without the brackets, and calls him Дмитрий Михайлович throughout its prose; the stored form is the one the calendar whose row this folder carries prints."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1883,
+      "latest": 1883,
+      "display": "1883",
+      "basis": "attested",
+      "note": "azbyka.ru: «Мученик Димитрий родился 3 февраля 1883 года в городе Коломне Московской губернии»."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "azbyka.ru: «Дмитрий Михайлович Вдовин скончался 23 апреля 1942 года в Средне-Бельском исправительно-трудовом лагере»; the Sretensky day line prints «(1942)» for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His index entry on days.pravoslavie.ru lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. azbyka.ru’s entry for him lists that synaxis as a moveable 7 февраля and adds two moveable synaxes, the saints of the Birobidzhan diocese on 13 июля and the saints of Moscow on 5 сентября. One row per church is the schema, so the other days are recorded here and he does not render on them. azbyka.ru heads his own day 23 апреля, which is this Julian day in new style — thirteen days, the style conversion, and not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Мч. Димитрия (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The line gives the baptismal name alone, in the genitive, with the rank abbreviation and the year, and makes him a layman and not a presbyter. The surname and the other days are on the name page behind it, 13712; the life is on azbyka.ru and not on this site at all."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

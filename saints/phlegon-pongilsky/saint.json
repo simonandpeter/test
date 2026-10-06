@@ -1,0 +1,75 @@
+{
+  "slug": "phlegon-pongilsky",
+  "display_name": "Phlegon (Pongilsky)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Archpriest",
+  "names": [
+    {
+      "form": "Флегонт (Понгильский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 10 апреля ст. ст., name page 10863, «Флегонт (Понгильский), протоиерей, сщмч.», with the rank words left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone and in the genitive. azbyka.ru heads him «Священномученик Флегонт Понгильский, пресвитер», without the brackets; the bracketed form is the one the calendar whose row this folder carries prints, and it is the form stored."
+    }
+  ],
+  "related": [
+    "demetrius-the-myrrhstreamer",
+    "agathangel-preobrazhensky",
+    "benjamin-voskresensky"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Флегонт родился 28 марта 1871 года в селе Каряево Угличского уезда Ярославской губернии»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «Протоиерей Флегонт Понгильский скончался 23 апреля 1938 года в одном из лагерей Новосибирской области»; the Sretensky day line prints «(1938)» for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His index entry on days.pravoslavie.ru lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. azbyka.ru’s entry for him lists that synaxis as a moveable 7 февраля and adds two diocesan synaxes, 5 июня with the saints of Rostov and Yaroslavl. One row per church is the schema, so the other days are recorded here and he does not render on them. azbyka.ru heads his own day 23 апреля, which is this Julian day in new style — thirteen days, the style conversion, and not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Сщмч. Флегонта пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026,
+        "note": "The line gives the baptismal name alone, in the genitive, with the rank abbreviation and the year. The surname, the rank of archpriest and the other days are on the name page behind it, 10863; the life is on azbyka.ru and not on this site at all."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
