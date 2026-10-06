@@ -10,6 +10,11 @@
       "form": "Конон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 6 March on pravoslavno.rs, „Свети мученици Конон отац и Конон син.“, with the rank word мученици left off and Свети, which is not a rank. The heading distinguishes the two men only as father and son, so the bare forename is all it gives either of them; the kinship is in this folder's English name, where this corpus puts such clauses, and not in the Serbian form."
+    },
+    {
+      "form": "Конон Иконийский, Младший (сын)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 6 марта ст. ст., name page 1264, «Конон Иконийский, Младший (сын), прмч.», with the grade word left off; the day's own line declines the forename and distinguishes the two men only by «и сына его». The whole form is kept for the reason given on his father's folder. `.tmp/foldchk.py` reports no folder holding this form, and `.tmp/sr-foldpred.mjs` no other holder of the key it folds to."
     }
   ],
   "dates": {
@@ -27,8 +32,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for 6 марта ст. ст., which is the page for this menologion number."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Прмчч. Конона и сына его Конона (270-275).»",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "note": "One line for the two of them, and the first life either folder has carried: both were already folders, made off the Охридски пролог for this same day-number, which gives each of them the bare «Конон» under one rank word and nothing else — the fold the gate reports for that form is read in this batch. **The grade differs between the two calendars and nothing is changed in `types` on that account**: the Serbian book made them `martyr`, and this line grades them прмч., venerable-martyrs, which is the grade the life behind it argues for, since they are monks of a monastery at Iconium. The span on the line, 270-275, is the reign of Aurelian and is the span this folder already records. He is the younger, name page 1264 against the father's 1265, and the life behind the line is the only source read that gives him a rank of his own: «семнадцатилетний сын мученика - диакон Конон», which is why `office` now says Deacon."
     },
     {
       "church": "romanian",
@@ -58,5 +73,6 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Deacon"
 }

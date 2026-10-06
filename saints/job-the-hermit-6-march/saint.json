@@ -11,6 +11,11 @@
       "form": "Јов",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 6 March on pravoslavno.rs, „Блажени Јов.“, with Блажени left off. The heading gives no epithet, no place and no name in the world; `Јов` is held by no other folder."
+    },
+    {
+      "form": "Иов, в схиме Иисус, Анзерский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 6 марта ст. ст., name page 6649, «Преподобный Иов, в схиме Иисус, Анзерский», with the grade word left off; the day's own line declines it. **The whole form is kept rather than the forename** because the bare «Иов» is a fold waiting to happen and the calendar prints the by-name: `.tmp/foldchk.py` reports no folder holding «Иов» and none holding this form, and `.tmp/sr-foldpred.mjs` reports no other holder of the key this form folds to. The second life of the same man is titled more shortly, «Преподобный Иов Анзерский»."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr puts him at Moscow and at the monastery it calls Solofski, so that calendar is the one most likely to hold him, and it was not read."
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Прп. Иова , в схиме Иисуса, Анзерского (1720).»",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "note": "**The calendar that knows who he was.** The Greek and Serbian rows on this folder are a bare «Όσιος Ιώβ ο Ερημίτης» and its Serbian counterpart; the Russian line names his schema name and his island and gives the year 1720 this folder already records, and the index puts two separate lives behind it. The same two life pages head themselves «Дни памяти: 6 марта , 29 мая (обретение мощей)» — the finding of his relics on 29 мая, which is a second feast **no row is written for here**. He is a Russian of Moscow, born 1635 and dead on this day in 1720, canonised for church-wide veneration at the Jubilee Council of Bishops of August 2000."
     },
     {
       "church": "romanian",
@@ -78,5 +93,9 @@
   },
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Hieroschemamonk",
+  "related": [
+    "eleazar-of-anzersky"
+  ]
 }
