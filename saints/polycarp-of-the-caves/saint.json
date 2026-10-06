@@ -1,0 +1,60 @@
+{
+  "slug": "polycarp-of-the-caves",
+  "display_name": "Polycarp of the Caves",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "names": [
+    {
+      "form": "Поликарп Печерски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 24. јул ст. ст., „Преподобни Поликарп игуман Печерски.“, with «Преподобни» — the rank — and «игуман» — the grade, which is the `abbot` in `types` — both left off by §6. **«Печерски» IS KEPT AND IS THE WHOLE OF WHY THIS FORM LANDS IN NO FOLD**: the bare «Поликарп» is already held in sr by `polycarp-of-smyrna`. It is a toponymic by-name and not a see, he being an abbot and not a bishop, so §6 keeps it, and it is the fullest form this calendar gives him. The form is the nominative the heading itself prints. No Romanian, Greek or Russian form is written: none of those books was opened for him, and the Russian calendar is the one most likely to hold him, which is said in this batch’s commit message."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1182,
+      "latest": 1182,
+      "display": "1182",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Упокоји се Свети Поликарп у Господу 1182. год.“"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 24 июля ст. ст., which is the page for this menologion number. **This is the calendar most likely to hold him**, the Kyiv Caves being its own house and 1182 inside its range; the corpus already keeps `basil-of-the-kyiv-caves`, `nikon-of-the-kyiv-caves`, `theodosius-of-the-kyiv-caves` and others of that Lavra off that calendar, and none of them is this abbot. The Russian page itself was not opened."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 24 iulie, which is the page for this menologion number — not 6 august, which merely shares his civil date in 2026 and is the Transfiguration."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 24 Ιουλίου, which is the page for this menologion number. The corpus holds ten folders on that number already and none of them is an abbot of the Kyiv Caves."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 24,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.08.2026 (24. јул ст. ст.) — „Преподобни Поликарп игуман Печерски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-06&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second and last entry, quoted whole with its closing full stop (§4), and the only new folder of the day. `types` IS `venerable` AND `abbot`, BOTH READ OFF THE HEADING. «Преподобни» is `venerable` and «игуман» is `abbot`, both in §5’s table, and «Печерски» is the by-name. **Nothing is read out of the body**, and the body offers a great deal — see below — but no rank. **AND THERE IS NO `office`, BECAUSE THE FOUR LOCALE PACKS HAVE NO STRING FOR IT.** The heading gives him a see of a kind: abbot OF THE CAVES, and the body names the house, «лавра Кијево-Печерска». `grep -ohE \"’[^’]*Caves[^’]*’\" src/ui/locales/sr.js` returns `Abbot of the Pskov Caves monastery`, `Archimandrite of the Lavra of the Caves`, `Presbyter of the Lavra of the Caves of Kiev`, `Steward of the Kyiv Caves`, `of the Kyiv Caves` and `recluse of the Kyiv Caves` — **and not one of them is an abbot of the Kyiv Caves**. An `office` must already exist in all four packs, so the field is left out and the house is in the prose. **A FOURTH MISSING OFFICE, named for the author beside `Abbess`, `Metropolitan of Montenegro` and `Bishop of Meglen`.** **ONE DATE, STATED, AND THE FIELD IS NEW BECAUSE THE FOLDER IS.** „Упокоји се Свети Поликарп у Господу 1182. год.“ — Saint Polycarp reposed in the Lord in the year 1182. `death` earliest 1182, latest 1182, display «1182», basis traditional. **No `birth`, no country, no family**: the entry gives none and there is no span to refuse this time either. **NO FOLD, AND §6 IS THE WHOLE REASON.** `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both keys, and `foldchk.py` `NO FOLDER HOLDS THIS FORM`. **The bare «Поликарп» is held in sr by `polycarp-of-smyrna`**, the apostolic father, so the toponymic the heading prints is the whole of what keeps this form out of a fold with him; `polycarp-of-alexandria`, `polycarp-of-bryansk`, `polycarp-the-new` and `polycarp-venerable-8-february` are four further Polycarps and none of them is this man. WHAT THE BOOK GIVES, AND THE FIRST SENTENCE IS A QUOTATION INSIDE THE ENTRY. „Имађаше „љубав према Богу и ближњима, радост због савести непорочне, мир због победе свих страсти, стрпљење при напастима и бедама, благост у покорности свима, милосрђе према сиротим, веру несумњиву у извршењу заповести, истину у испуњењу обета, кротост у непознавању гнева, уздржљивост итд.““ — **forty-two words of virtues set inside the book’s own low-nine quotation marks and ended with an «итд.», an and-so-forth**: love towards God and his neighbours, joy because of a conscience without reproach, peace because of the conquest of all the passions, patience in temptations and troubles, mildness in subjection to everyone, mercy towards the poor, faith without doubt in carrying out the commandments, truth in the keeping of vows, meekness in not knowing anger, self-restraint. **The quotation is not attributed to anybody**, so nothing is said here about whose words they are. Then „Тако добро управљаше лавром Кијево-Печерском, да му се по смрти не може наћи достојан наследник међу монасима (јер и који беху достојни из смерности не хтеше се примити игуманства), да братија бише принуђена узети за игумана мирског јереја Василија.“ — **he governed the Lavra of the Kyiv Caves so well that after his death no worthy successor could be found among the monks, FOR THOSE WHO WERE WORTHY WOULD NOT OUT OF HUMILITY ACCEPT THE ABBACY, so that the brethren were forced to take a secular priest, Василије, for abbot.** That is the whole of his life in this book: a list of virtues and the fact that nobody could replace him. **NO `related`, AND THE PRIEST WHO SUCCEEDED HIM FAILS RULING 3.** `basil-of-the-kyiv-caves` is a folder of this corpus and is **not** him: a `venerable-martyr` whose `death` the corpus records as **1098 attested**, eighty-four years before this abbacy fell vacant, kept on 11 August by three calendars. A secular priest made abbot after 1182 and a monk-martyr dead in 1098 are not one man, and the shared forename is the only thing between them. `basil-of-the-alamanoi` and `basil-of-thessalonica` are not him either. `proseprobe.mjs` over the drafted life returned **`0 name(s) the index would link`**, so the Lavra’s own name trips nothing — which was worth measuring, a house carrying a saint’s name being the trap this wave has sprung on before. No `locations`: the Lavra is named and is not a coordinate. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, and **that verse is on Christina alone** — twenty-four lines of it — **and says nothing of this man**, which was read before it was said."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
