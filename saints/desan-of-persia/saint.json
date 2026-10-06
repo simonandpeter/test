@@ -1,0 +1,66 @@
+{
+  "slug": "desan-of-persia",
+  "display_name": "Desan of Persia",
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Дисан Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 9 апреля ст. ст., name page 636, «Святитель Дисан Персидский, епископ, сщмч.», with the title Святитель, the office word and the rank abbreviation left off. The day’s own line gives the forename alone in the genitive, «Дисана», with «еп.» beside it, and the life page’s title gives the nominative «Дисан» with no epithet. **The bare «Дисан» was not stored and did not need to be**: no folder holds it, but the epithet is what the calendar’s own name page prints and it is also what azbyka.ru’s heading gives, «Мученики Дисан, епископ, Мариав, пресвитер, Авдиес Персидские и прочие 270», where Персидские is plural and covers all three. `.tmp/foldchk.py` and `.tmp/sr-foldnew.mjs` were both run before this draft and no folder holds this form or its folded key."
+    }
+  ],
+  "related": [
+    "mariab-of-persia",
+    "audiesius-of-persia",
+    "ias-of-persia"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 апреля ст. ст. — «Мчч. Дисана еп., Мариава пресвитера, @7[Авдиеса] и прочих 270-ти (362-364).»",
+        "url": "https://days.pravoslavie.ru/Days/20260409.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 9 aprilie, the civil day on which that calendar keeps this menologion day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "saint.gr’s listing for 9 Απριλίου was read and gives this company one entry, «Άγιος Αυδιήσιος και οι συν αυτόν μάρτυρες», under the name of Audiesius alone; it names this man nowhere in the listing and only inside that entry’s prose, so the Greek calendar yields no commemoration of his own and no feast could be written from it. Read 6 October 2026."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 April 2026, the civil day of the Julian 9 April."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 355,
+      "latest": 364,
+      "display": "between 355 and 364",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life for the company closes its one sentence of narrative with the year: «Святые мученики епископ Дисан, пресвитер Мариав, Авдиес и прочие 270 приняли мученическую смерть (+ около 362 - 364) от персидского царя Сапора II», about 362 to 364, and its day line prints the same bracket, «(362-364)». azbyka.ru’s calendar for the civil 22 April carries that sentence word for word with «† около 362–364». **saint.gr dates the same company differently**: its heading for the entry under Audiesius’s name reads «(; - 355)» and its prose puts the sack of Byzate in which they were taken «κατά το 30ο έτος της βασιλείας» of Shapur II, whose reign the same page gives as «(325 - 379 μ.Χ.)» — a thirtieth year of 355. Neither reading is chosen; the interval carries both, and every year in it falls inside the reign both pages give. Read 6 October 2026."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}

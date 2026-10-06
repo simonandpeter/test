@@ -10,23 +10,41 @@
       "form": "Αυδιήσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Απριλίου, «Άγιος Αυδιήσιος και οι συν αυτόν μάρτυρες», with the rank word left off. The page's own heading prints the name in the form «Αυδιησους» in its couplet: «Ὢν αἰχμάλωτος Αὐδιησοῦς τὴν τύχην»."
+    },
+    {
+      "form": "Авдиес",
+      "lang": "ru",
+      "note": "Read out of the title of the life page behind his place in the line for 9 апреля ст. ст., «Мученики епископ Дисан, пресвитер Мариав, Авдиес и прочие 270», which gives the nominative; the day’s line itself has the genitive and prints it inside an unexpanded template token, «@7[Авдиеса]». **He is the one of the three named men who has no name page on this calendar**, so there is no titled nominative to take an epithet from, where Дисан and Мариав both have one and both have «Персидский» on it; azbyka.ru’s heading spreads the epithet over all three as a plural, «Авдиес Персидские», which is not a form for one man. The bare form is what the host of record gives. `.tmp/foldchk.py` reports no folder holding it and `.tmp/sr-foldpred.mjs` a new key with no other holder."
     }
   ],
-  "related": [],
+  "related": [
+    "desan-of-persia",
+    "mariab-of-persia",
+    "ias-of-persia"
+  ],
   "dates": {
     "death": {
       "earliest": 355,
-      "latest": 355,
-      "display": "355",
+      "latest": 364,
+      "display": "between 355 and 364",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Αυδιησιος Και Οι Συν Αυτον Μαρτυρες (; - 355)», and its prose puts the sack of Byzate in which the company was taken «κατά το 30ο έτος της βασιλείας» of Shapur II, whose reign the same page gives as «(325 - 379 μ.Χ.)» — a thirtieth year that agrees with the heading. The page gives no birth year."
+      "note": "days.pravoslavie.ru’s life for the company closes its one sentence of narrative with the year: «Святые мученики епископ Дисан, пресвитер Мариав, Авдиес и прочие 270 приняли мученическую смерть (+ около 362 - 364) от персидского царя Сапора II», about 362 to 364, and its day line prints the same bracket, «(362-364)». azbyka.ru’s calendar for the civil 22 April carries that sentence word for word with «† около 362–364». **saint.gr dates the same company differently**: its heading for the entry under Audiesius’s name reads «(; - 355)» and its prose puts the sack of Byzate in which they were taken «κατά το 30ο έτος της βασιλείας» of Shapur II, whose reign the same page gives as «(325 - 379 μ.Χ.)» — a thirtieth year of 355. Neither reading is chosen; the interval carries both, and every year in it falls inside the reign both pages give. Read 6 October 2026."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 апреля ст. ст. — «Мчч. Дисана еп., Мариава пресвитера, @7[Авдиеса] и прочих 270-ти (362-364).»",
+        "url": "https://days.pravoslavie.ru/Days/20260409.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -17,6 +17,11 @@
       "form": "Вадим",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 9 April on pravoslavno.rs, „Преп. муч. Вадим.“, with Преп. муч. left off — the rank words this source uses for a venerable-martyr, which this folder already carries in `types`. The heading leaves no epithet and names neither the monastery nor the country, so the bare forename is what the source gives; it folds with nothing, no other folder holding a Serbian Вадим."
+    },
+    {
+      "form": "Вадим Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 9 апреля ст. ст., name page 330, «Вадим Персидский, архимандрит, сщмч.», with the office word and the rank abbreviation left off. The day’s own line gives the forename alone in the genitive, «Вадима», with «архимандрита» beside it. The bare «Вадим» is the `sr` form this same folder already holds off the Ohrid Prologue, so the epithet the name page prints is what is stored, and it keeps the two forms distinct as well as faithful. `.tmp/foldchk.py` and `.tmp/sr-foldpred.mjs` were both run before this draft: no folder holds this form, and it adds a key no other folder holds."
     }
   ],
   "sex": "male",
@@ -27,8 +32,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 апреля ст. ст. — «Прмч. Вадима архимандрита и 7 учеников его (376).»",
+        "url": "https://days.pravoslavie.ru/Days/20260409.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -91,7 +105,7 @@
       "latest": 376,
       "display": "376",
       "basis": "traditional",
-      "note": "saint.gr heads him «Αγιος Βαδιμος Οσιομαρτυρας Και Οι Επτα Μαθητες Του (; - 376)». The page's prose gives no year of its own, setting him only in the reign of «Σαπώρ ο Β' (325 - 379 μ.Χ.)», within which the heading's year falls."
+      "note": "saint.gr heads him «Αγιος Βαδιμος Οσιομαρτυρας Και Οι Επτα Μαθητες Του (; - 376)». The page’s prose gives no year of its own, setting him only in the reign of «Σαπώρ ο Β' (325 - 379 μ.Χ.)», within which the heading’s year falls. **days.pravoslavie.ru is a second witness for 376 and prints it twice**: on its day line for 9 апреля ст. ст., «Прмч. Вадима архимандрита и 7 учеников его (376).», and at the end of its life page, where the executioner at last struck the head off «(+ 376)». That page dates Shapur’s reign «(310 - 381)» instead, and 376 falls inside that too, so the two reign readings do not disturb the year. The Ohrid Prologue also closes on 376."
     }
   }
 }

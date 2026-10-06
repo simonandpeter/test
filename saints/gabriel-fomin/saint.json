@@ -1,0 +1,69 @@
+{
+  "slug": "gabriel-fomin",
+  "display_name": "Gabriel (Fomin)",
+  "sex": "male",
+  "types": [
+    "martyr"
+  ],
+  "names": [
+    {
+      "form": "Гавриил (Фомин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his line for 9 апреля ст. ст., name page 14453, «Гавриил (Фомин), мч.», with the rank abbreviation left off and the surname kept in the brackets the calendar prints it in. The day’s own line gives the forename alone, «Гавриила». azbyka.ru calls him «Гавриил Фомин» without the brackets, and gives his patronymic in the body of the life as Харитонович and his father as the peasant Харитон Фомин. **The bare «Гавриил» was not stored**: it is the `ru` form `gabriel-presbyter-martyr-1937` already holds, and storing it would have put one string on two folders. `.tmp/foldchk.py`, `.tmp/rusurn.py` and `.tmp/sr-foldnew.mjs` were all run before this draft; no folder holds this form, and no folder holds the surname Фомин as a name form — `sebastian-of-karaganda`, who carries it in his prose, is Стефан Васильевич Фомин and a different man."
+    }
+  ],
+  "related": [
+    "sergius-lyubomudrov"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 апреля ст. ст. — «Мч. Гавриила (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260409.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 22 aprilie, the corresponding civil day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s list for 22 Απριλίου, the corresponding civil day."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 April 2026."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1882,
+      "latest": 1882,
+      "display": "1882",
+      "basis": "attested",
+      "note": "azbyka.ru’s life opens «Гавриил Фомин родился в 1882 году в селе Ивачево Зарайского уезда в семье крестьянина Харитона Фомина». days.pravoslavie.ru gives no year of birth, its line for 9 апреля ст. ст. carrying only the year of death. Read in the in-app Browser pane on 6 October 2026."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "22 April 1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 9 апреля ст. ст. with «(1942)», and azbyka.ru’s life ends «Гавриил Харитонович Фомин скончался 22 апреля 1942 года в Унженском концлагере НКВД и был погребен в безвестной могиле». **22 April 1942 is the civil date of the Julian 9 April**, so this calendar keeps him on the day he died. The date is printed as one number and no new-style pair is constructed from it. Read in the in-app Browser pane on 6 October 2026."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
