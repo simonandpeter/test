@@ -6,6 +6,11 @@
       "form": "Διονύσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 15 Μαρτίου, «Άγιος Αγάπιος και των συν αυτώ μάρτυρες: Πλήσιος, Ρωμύλος, Τιμόλαος, Αλέξανδρος, Αλέξανδρος (έτερος), Διονύσιος καί Διονύσιος (έτερος)», with the rank words left off."
+    },
+    {
+      "form": "Дионисий Кесарийский (Палестинский)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 15 марта ст. ст., «Дионисий Кесарийский (Палестинский), мч.», with the rank word left off. The day line itself declines the name and gives no epithet."
     }
   ],
   "sex": "male",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 15,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 15 марта ст. ст. — «Мч. Агапия и с ним семи мучеников: Пуплия, Тимолая, Ромила, двух Александров и двух Дионисиев (I, II) (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20260315.html",
+        "year": 2026
+      },
+      "note": "The line is one line for the eight and this folder is one of them; it enumerates them, so it is eight rows and not one. The year it closes with, 303, is the year the Ohrid Prologue also gives and which this folder already records as falling inside the reign of Diocletian; it is not written over the interval. The life page behind the line, life646, puts the suffering at Caesarea in Palestine under that reign, which it dates 284 to 305. The day page prints no hymn for any of the eight. The calendar keeps two name pages for the two Dionysii of the line, 622 and 623, both titled «Дионисий Кесарийский (Палестинский)» and the second of them marked «(другой)». Nothing on either page says which of the two men it belongs to, so the shared form is stored on both folders without that marker and no attempt was made to say which is which."
     },
     {
       "church": "romanian",
