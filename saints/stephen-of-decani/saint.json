@@ -12,6 +12,11 @@
       "form": "Стефан Урош III, Дечанский, Сербский",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind its line for 11 ноября ст. ст., «Стефан Урош III, Дечанский, Сербский, король, вмч.», with the rank and grade words left off. The line itself declines the name and gives the forename alone with one by-name, «Стефана Дечанского». It is the first form in any language this folder has held besides the Romanian «Ștefan»."
+    },
+    {
+      "form": "Стефан Дечански",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 11. новембар ст. ст., „Св. муч. Стефан Дечански краљ Српски.“ — «Св.» is “saint”, «муч.» is the `martyr` grade `types` keeps, and «краљ Српски» is the `king` grade with the nation it governs, so it comes off entire the way a see does: the same reading «Јона архиепископ Новгородски» got on the Julian 5 November. «Дечански» stays — it is the by-name of the church he built in thanksgiving, which the entry describes, it stands on the name with no rank noun to govern it, and it is what keeps him apart from the forty other folders of this forename."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026) — a Serbian king is the likeliest of these four calendars to hold him, and that page has not been opened."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 24.11.2025 (11. новембар ст. ст.) — „Св. муч. Стефан Дечански краљ Српски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-24&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry. `dates` UNTOUCHED: the entry ends him «као мученик скончао 1336. год.», which is ONE SIDE of the 1331-or-1336 this folder already holds, and a third book agreeing with one of two readings is no reason to close an interval. `types` UNTOUCHED AND `martyr` REFUSED: the heading calls him «Св. муч.» and the body says he lived and ended as a martyr, strangled by his own son’s order, and the folder carries `king` alone — but the Russian and Romanian calendars that made it keep him as a king, the grade would be the book’s word against theirs, and a type is a reading of the sources together rather than of the newest one. IT IS AN AUTHOR QUESTION AND IT IS IN THE COMMIT MESSAGE. The three saints the entry names in his story — his father, the bishop who appeared to him twice, and his wife’s folder — were ALREADY related in both directions. TWO MORE ARE NAMED AND LEFT OUT OF THE LIFE: the entry sets him beside Sava and prince Lazar as a triad of Serbian sanctity, which is a statement about the nation’s saints and not about companions, so §6’s ruling on furniture applies and the names are not written."
     }
   ],
   "text": {
