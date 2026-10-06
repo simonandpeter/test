@@ -6,6 +6,11 @@
       "form": "Βασίλειος",
       "lang": "el",
       "note": "Read out of the body of saint.gr's page «Άγιοι Μάρτυρες που συμμαρτύρησαν με τον Άγιο Στέφανο τον νέο για τις άγιες εικόνες» for 28 Νοεμβρίου: «ένας από αυτούς, ο Βασίλειος, τυφλώθηκε από τους δήμιους». The page gives him no heading of his own and no rank word."
+    },
+    {
+      "form": "Василий Византийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 374, «Василий Византийский, мч.», with the trailing grade left off. The day line declines the forename and gives no by-name, so «Византийский» is read from the name page. The Greek page that made this folder calls him instead a companion of Stephen the New, which is what the Russian life for the company says of him in prose."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page gives «День памяти: 28 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Мчч. Стефана , Василия , Григория , другого Григория , Иоанна и иных многих (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for the company with a Roman numeral where it would otherwise print a year — «Мчч. Стефана , Василия , Григория , другого Григория , Иоанна и иных многих (VIII).» — and that is the only dating any calendar read gives him; saint.gr printed none. The interval is the whole of the century and no year inside it is chosen."
+    }
   }
 }

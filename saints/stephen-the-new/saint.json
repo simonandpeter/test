@@ -11,6 +11,11 @@
       "form": "Στέφανος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Όσιος Στέφανος ο Ομολογητής, ο Νέος», with the rank words left off."
+    },
+    {
+      "form": "Стефан Новый, Константинопольский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2062, «Стефан Новый, Константинопольский, прмч.», with the trailing grade left off. The day line gives «Стефана Нового» without the city."
     }
   ],
   "sex": "male",
@@ -38,8 +43,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads itself «День памяти: 28 ноября» and gives no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Прмч. и исп. Стефана Нового (767).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -82,7 +97,11 @@
     "john-of-the-legatarioi",
     "peter-of-olympus",
     "anna-companion-of-stephen-the-new",
-    "basil-companion-of-stephen-the-new"
+    "basil-companion-of-stephen-the-new",
+    "stephen-the-byzantine",
+    "gregory-the-byzantine",
+    "gregory-the-byzantine-the-second",
+    "john-the-byzantine"
   ],
   "hymns": [
     {
@@ -134,6 +153,70 @@
       },
       "tone": "Ἦχος δ’.",
       "model": "Ἐπεφάνης σήμερον."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Постнически предподвизався на горе,/ умная врагов ополчения/ всеоружием Креста погубил еси, всеблаженне,/ паки же ко страдальчеству мужески вооружился еси,/ убив Копронима мечем веры,/ и обоих ради венчался еси от Бога,// преподобномучениче Стефане приснопамятне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Тропарь преподобномученика Стефана Нового (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Striving first as an ascetic on the mountain, all-blessed one, you destroyed the spiritual armies of the enemy with the whole armour of the Cross; then you armed yourself manfully for the contest of suffering, slaying Copronymus with the sword of faith, and for both you were crowned by God, ever-remembered venerable-martyr Stephen.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Яко предпросиявый, Стефане, житием постническим,/и в мире облистал еси течением страдальчества,/ разгнал еси мрачную прелесть еретичествующих,/ показавый истинную славу православных,/ сего ради прославился/ яко Божественный свидетель Истины Христовы.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Ин тропарь преподобномученика Стефана Нового Стефана Нового (глас 3)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Shining out first, Stephen, by the life of fasting, and blazing upon the world by the course of your suffering, you scattered the dark delusion of the heretics and showed the true glory of the Orthodox; and for this you were glorified as a divine witness of the Truth of Christ.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Из неплодна, преподобне, корене возрасте ветвь,/ первострадальцу тезоимените,/ монахов наставник велик, отче, явился еси,/ и ярости не убоявся царя,/ не хотяща Христов чествовати образ,/ сего ради скончався,// мученический венец приял еси, Стефане.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Кондак преподобномученика Стефана Нового (глас 3)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A branch grown from a barren root, venerable one, bearing the name of the first of the sufferers, you were shown a great teacher of monks, father; and not fearing the rage of an emperor who would not honour the image of Christ, you came to your end and received the martyr's crown, Stephen.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Троицы рачителя и Божественнаго Стефана/ восхвалим верно песньми, празднолюбцы, от сердца,/ яко почествовавша начертание красное Владыки и Матере Его,/ и согласно ныне от любве возопиим ему, радующеся:/ радуйся, отче приснославне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Ин кондак преподобномученика Стефана Нового Стефана Нового (глас 8)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us who love the feast praise faithfully in hymns, out of the heart, the lover of the Trinity, the divine Stephen, who honoured the beautiful depiction of the Master and of his Mother; and let us now with one voice cry to him out of love, rejoicing: rejoice, ever-glorious father.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
