@@ -6,4 +6,6 @@ Two years after his marriage his wife died, and he went to Edessa, having first 
 
 The page gives no year for that death and no account of what he said or did on the pillar, and it prints no hymn for him. Its couplet is the one play it makes on the office he gave up: Theodulus prudently gave back an eparchy of earth for the eparchies of the heavens.
 
-*After saint.gr's calendar for 3 Δεκεμβρίου — [the day](https://www.saint.gr/12/03/index.aspx) and [the life](https://www.saint.gr/251/saint.aspx); read 2 October 2026.*
+The Ohrid Prologue keeps him on the same menologion day, in four lines that identify him by his office and his pillar rather than by his name: a famous patrician at the court of Theodosius the Great who, after the death of his wife, left the vanity of the world. On two points it does not agree with the Greek page. It withdraws him from Constantinople to a pillar by Ephesus, where saint.gr sent him to the Edessa this folder is named for, and it gives him a full thirty years on that pillar where the Greek page gave forty. The province of the ascetic is the same in both books; the city and the count of the years are not, and neither is chosen here.
+
+*After saint.gr's calendar for 3 Δεκεμβρίου — [the day](https://www.saint.gr/12/03/index.aspx) and [the life](https://www.saint.gr/251/saint.aspx); read 2 October 2026; and the Охридски пролог of Bishop Nikolai Velimirović, as the Православни подсетник serves it for 3. децембар ст. ст. — [the day](https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-16&prolog=1), read 7 October 2026.*
