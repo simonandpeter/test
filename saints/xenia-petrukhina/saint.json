@@ -1,0 +1,70 @@
+{
+  "slug": "xenia-petrukhina",
+  "display_name": "Xenia (Petrukhina)",
+  "names": [
+    {
+      "form": "Ксения (Петрухина)",
+      "lang": "ru",
+      "note": "The nominative behind the «Ксении» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 14232, «Ксения (Петрухина), прмц.», with the rank word left off; the day's own line declines the forename and gives no surname. Петрухина is a family surname and not a monastic name: her father was the peasant Семен Петрухин. azbyka.ru writes it without brackets, «Ксения Петрухина»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1897,
+      "latest": 1897,
+      "display": "1897",
+      "basis": "attested",
+      "note": "azbyka.ru, in the one life it gives her and Anna together: «Преподобномученица Ксения родилась в 1897 году в селе Чанки Коломенского уезда Московской губернии в семье крестьянина Семена Петрухина»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Послушницы Ксения Петрухина и Анна Горохова были расстреляны 20 марта 1938 года и погребены в общей безвестной могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of her death and her feast are the same day."
+    }
+  },
+  "related": [
+    "anna-gorokhova"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people and this folder is one of them. The day page carries no life for her and her name page 14232 carries none; the life in this folder is azbyka.ru's, which is one life for her and Anna (Gorokhova) together — the two were born in the same village, were novices of the same house, were exiled together in 1931 and were sentenced and shot together. **Name page 14232 lists a third day where seven of the nine are given two**, «26 апреля (Бут.)», the synaxis of the new martyrs who suffered at Butovo, which days.pravoslavie.ru gives only to her and to Anna although its own lives have all nine buried at Butovo; azbyka.ru gives that synaxis to all nine, on its own moveable reckoning of it. Name page 14232 also adds «26 января (Новомуч.)». The second and third days are recorded here and she renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
