@@ -11,6 +11,11 @@
       "form": "Μαρκέλλα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Ιουλίου, «Αγία Μαρκέλλα η Παρθενομάρτυς η Χιοπολίτιδα», with the rank word and the bynames left off. The site's own gloss above the life is on the masculine ΜΑΡΚΕΛΛΟΣ."
+    },
+    {
+      "form": "Маркела",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. јул ст. ст., „Св. муч. Маркела.“ — «Св.» is “saint” and «муч.» the rank, both left off by §6, and the heading gives no by-name at all although the body names Chios twice. **The island is NOT taken into the form, because it is not in the heading** — §6 keeps what the heading gives, and the form lands in no fold without it, so nothing was lost by leaving it. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`."
     }
   ],
   "sex": "female",
@@ -64,8 +69,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.08.2026 (22. јул ст. ст.) — „Св. муч. Маркела.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth and last entry, quoted whole with its closing full stop (§4). «Св.» is “saint” and «муч.» is the `martyr` this folder already carries; `virgin` beside it is not in the heading and is left alone, though the body corroborates it — „По предању Маркела је била необично побожна девојка, која рано остане без мајке.“, an unusually pious girl who lost her mother early. **`dates` UNTOUCHED, AND THIS BOOK SAYS IN SO MANY WORDS THAT IT DOES NOT KNOW.** The folder holds `death` 1401 to 1500, the fifteenth century, off saint.gr. This entry gives no year, no century and no emperor, and it says why: „Но житије њено непознато је.“ — **but her life is unknown**. That is the plainest statement of ignorance this wave has met in the book itself, and it is the reason the interval is not touched: there is nothing here to narrow it with and nothing to widen it with. WHAT THE BOOK ADDS, AND IT IS A CULT RATHER THAN A LIFE. „На острву Хиосу ова светитељка ужива огромно поштовање. У цркви њеној, дешавају се посвегодишње чудеса.“ — on the island of Chios this saint enjoys an enormous veneration and **wonders happen in her church every year**. By tradition her heathen and brutish father wanted to live with his daughter as with a wife, „Њен незнабожни и зверски отац хтео је да живи са ћерком као са женом.“; „Маркела побегне од оца. Но овај, разјарен као прави звер, стигне је, па је на комаде исече.“, she fled from him and he, enraged like a true beast, overtook her and **cut her to pieces**. And then the thing that is in no other book this folder holds: „Близу храма њеног налази се неко камење, које овда онда бива као крвљу прожмано.“ — near her church are certain stones which from time to time become as though soaked with blood; „То камење народ узима, носи у цркву, моли се св. Маркели, па меће на болеснике, који од тога оздрављају.“, the people take the stone into the church, pray to Saint Marcella, and lay it on the sick, who are made well by it. **NO FOLD AND NO NEW `related`.** `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Маркела» and `sr-foldpred.mjs` `new key, other holders: 0 (none)`. The folder’s three existing rows — `macarius-notaras`, `nektarios-of-aegina` and `nikephoros-of-chios` — are untouched and none of the three is in this entry. **THE FATHER WHO KILLED HER TAKES NO ROW**: he is named by no name at all. No `office`. No `locations`: Chios is named and is not written as a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

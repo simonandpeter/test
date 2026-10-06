@@ -11,6 +11,11 @@
       "form": "Ανθούσα",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Ιουλίου, «Οσία Ανθούσα η ομολογήτρια», with the rank word and the byname left off."
+    },
+    {
+      "form": "Антуса",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. јул ст. ст., „Преподобна Антуса.“, with «Преподобна» — the rank — left off by §6. **The heading gives no by-name and the body names no place for her at all**, which is why this folder’s display name carries its day instead; the bare form is the whole of what this calendar gives. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM`, although the corpus holds `anthousa-the-new` and the fold was therefore a real possibility and was measured."
     }
   ],
   "sex": "female",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.08.2026 (27. јул ст. ст.) — „Преподобна Антуса.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth entry, quoted whole with its closing full stop (§4). «Преподобна» is the `venerable` this folder already carries; `confessor` and `virgin` beside it are not in the heading and are left alone, though the whole shape of the entry is a confessor’s. Nothing moves. **A FIRST DEATH YEAR BESIDE A `floruit`, THE SAME SHAPE AS OLYMPIAS ON THE 25 JULY.** The folder holds `floruit` 741/741, display «741», basis traditional, and **no `death`**. The entry ends „У време иконоборства под Константином Копронимом свих 90 монахиња буду убијене, а преп. Антуса по том и сама сконча 759. год.“ — in the time of the iconoclasm under Constantine Copronymus **all ninety nuns were killed, and the venerable Anthousa herself came to her end after them, in the year 759**. `death` 759/759, display «759», basis traditional; `floruit` untouched. **The folder now says she flourished in 741 and died in 759 — eighteen years, a claim both books can carry**, which is the test the 25 July stated and the 26 July applied twice. **NO FOLD.** `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` for «Антуса» and `sr-foldpred.mjs` `new key, other holders: 0 (none)` — although the corpus holds `anthousa-the-new`, which this folder already relates, so the fold was a real possibility and was measured. WHAT THE BOOK GIVES, IN TWO SENTENCES. „После дугог осамљеничког подвига основала манастир од 90 сестара.“ — **after a long struggle in solitude she founded a monastery of NINETY SISTERS**; and then the ninety and herself. **THE NINETY NUNS TAKE NO FOLDER AND NO ROW**: the entry names not one of them, which is §5 and BRIEF.md’s Ruling together, and a corpus is not searched for on a number. **CONSTANTINE COPRONYMUS IS AN ICONOCLAST EMPEROR AND NOBODY’S SAINT.** No new `related`: `anthousa-the-new` is already on this folder both ways and is not in this entry at all. No `office`. No `locations`: the book names no place for her, which is why this folder’s display name carries its day instead. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
@@ -70,6 +85,13 @@
       "display": "741",
       "basis": "traditional",
       "note": "saint.gr: «Η Οσία Ανθούσα η ομολογήτρια έζησε στα χρόνια του αυτοκράτορα Κωνσταντίνου του Κοπρώνυμου (741 μ. Χ.)» — the one year the page prints, set against the beginning of that reign. It gives no year of her birth and none of her death, which it says was peaceful. The folder's Romanian source gave no year at all."
+    },
+    "death": {
+      "earliest": 759,
+      "latest": 759,
+      "display": "759",
+      "basis": "traditional",
+      "note": "Охридски пролог: „У време иконоборства под Константином Копронимом свих 90 монахиња буду убијене, а преп. Антуса по том и сама сконча 759. год.“"
     }
   },
   "related": [

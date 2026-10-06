@@ -11,6 +11,11 @@
       "form": "Δίος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 19 Ιουλίου, «Όσιος Δίος», with the rank word left off. The apolytikion addresses him in the vocative, «Δίε μακάριε»."
+    },
+    {
+      "form": "Дије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 19. јул ст. ст., „Преп. Дије.“ — «Преп.» is the rank word and is left off by §6. The form is the Serbian vernacular and not the Greek Δίος or the Romanian Die this folder already holds; the body prints the same nominative a second time, „И поживе св. Дије тачно још 15 година, и настави многе на пут спасења, многе исцели, многима поможе у разним бедама и невољама, па најзад предаде душу своју Господу, коме целога живота верно послужи.“, so nothing is restored by a reader here. `foldchk.py` returns `NO FOLDER HOLDS THIS FORM` and `sr-foldpred.mjs` `new key, other holders: 0 (none)`. **Four characters, so it is inside duplicate detection and not under its floor.**"
     }
   ],
   "sex": "male",
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 19,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 01.08.2026 (19. јул ст. ст.) — „Преп. Дије.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-01&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (§4). «Преп.» is the `venerable` this folder already carries; `abbot` and `wonderworker` beside it are not in the heading and are left exactly as they stand, though the body corroborates the second word for word — „Пошто издржа дуготрајну и трудну борбу са ђаволом и похоти телесном, даде му се од Бога велики дар чудотворства.“, a great gift of wonderworking given him of God. **A FIRST DATE, AND THE FIELD WAS EMPTY.** `dates` was absent from this folder altogether before today: doxologia gives no year and saint.gr dates only Atticus’s patriarchate, 406 to 425. This entry ends „Упокоји се 430. год. у дубокој старости.“ — he reposed in the year 430, in a deep old age. `death` earliest 430, latest 430, display «430», basis traditional, the sentence in the note. **An empty field is filled and no interval is displaced.** **AND THE TWO BOOKS NAME TWO DIFFERENT EMPERORS, WHICH IS RECORDED AND NOT REPAIRED.** saint.gr, already quoted in this folder’s prose, has him living «in the years of Theodosius the Great», who died in 395 and whose folder this one already relates in both directions. This book has „Слава о њему убрзо се распростре, тако да га и сам цар Теодосије Млађи посети, да прими савет од њега, а патријарх Атик приволи га те га рукоположи за презвитера.“ — the emperor Theodosius the YOUNGER himself visited him to take counsel of him, and the patriarch Atticus prevailed on him and ordained him presbyter. **Theodosius the Younger reigned 408 to 450 and this book puts the repose in 430, so the two statements of this folder are of two different reigns thirty-five years apart.** Neither is adjusted, neither is averaged and the existing `related` row to `theodosius-the-great` is left standing: a reader does not repair a source. The year written is the year this book states, and it is the book that names the later emperor. WHAT THIS BOOK ADDS. THREE WONDERS NAMED OUTRIGHT, which neither other book has: „Твораше чудеса велика и страшна силом молитве своје: тако учини те сух штап озелени, сух бунар напуни се водом, неверна човека умртви и опет васкрсе.“ — he made a dry staff grow green, he filled a dry well with water, and he put an unbelieving man to death and raised him again. „У молитвама својим најчешће се обраћаше св. Тројици.“, in his prayers he turned most often to the Holy Trinity. AND THE DEATH THAT WAS NOT ONE: „Вест о његовој смрти привуче многи народ; дође и патријарх Атик, заједно с патријархом Антиохијским Александром.“ — news of his death drew a great crowd, and the patriarch Atticus came to it together with Alexander the patriarch of Antioch, **and when they would have buried him he rose up all at once as though waking out of sleep** and said «God has granted me fifteen more years of this life»; and he lived exactly fifteen years more. The folder’s Romanian account has him told the hour of his death by a man who appeared to him and then dying once; this one has him raised at his own funeral, and the two are left side by side. TWO ROWS ADDED AND ONE REFUSED. `atticus-of-constantinople` is a folder of this corpus, patriarch of Constantinople and dated 425, and HE IS THE MAN WHO ORDAINED THIS SAINT, so he belongs to the story and takes a row both ways; the folder’s own Greek paragraph already named him unlinked and he had no row at all. `theodosius-the-younger` takes a row both ways for the same reason, the visit being an act of the entry. **ALEXANDER THE PATRIARCH OF ANTIOCH GETS NOTHING, ON RULING 3**: `ls saints | grep -i ’^alexander’` returns more than forty folders and not one of them is a patriarch of Antioch — `alexander-patriarch-of-constantinople` is a different see and a different man — so he is named in the prose without a link and without a row. No `office`: the heading gives none, and `presbyter` is an ordination the body narrates and not a rank the heading grants. No `locations`: Antioch of Syria and Constantinople are named in clauses. The Prologue prints no troparion and no kontakion."
     }
   ],
   "hymns": [
@@ -122,6 +137,17 @@
     }
   ],
   "related": [
-    "theodosius-the-great"
-  ]
+    "theodosius-the-great",
+    "atticus-of-constantinople",
+    "theodosius-the-younger"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 430,
+      "latest": 430,
+      "display": "430",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Упокоји се 430. год. у дубокој старости.“"
+    }
+  }
 }

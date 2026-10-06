@@ -1,0 +1,63 @@
+{
+  "slug": "elias-of-jerusalem",
+  "display_name": "Elias of Jerusalem",
+  "sex": "male",
+  "types": [
+    "patriarch"
+  ],
+  "office": "Patriarch of Jerusalem",
+  "names": [
+    {
+      "form": "Илија",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 20. јул ст. ст., „Св. Илија патријарх Јерусалимски и св. Флавијан патријарх Антиохијски.“ — with «св.» and «патријарх Јерусалимски» left off, the first being “saint” and the second a rank and a see, both of which §6 keeps out of a stored form. **The heading offers nothing else at all**, so the bare forename is the whole of the form and the see that distinguishes him is in `office` instead. The form is the nominative the heading itself prints, nothing restored by a reader. `foldchk.py` was run before the draft and `sr-foldnew.mjs` after the display name was chosen; the fold each form makes is read in this batch’s commit message."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 518,
+      "latest": 518,
+      "display": "518",
+      "basis": "traditional",
+      "note": "Охридски пролог: „И после два дана оба светитеља скончају, 518. године.“"
+    }
+  },
+  "related": [
+    "flavian-of-antioch"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 20 июля ст. ст., which is the page for this menologion number."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 20 iulie, which is the page for this menologion number — not 2 august, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 20 Ιουλίου, which is the page for this menologion number. The corpus holds seven folders on that number already and not one of them is a patriarch of Jerusalem."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 20,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 02.08.2026 (20. јул ст. ст.) — „Св. Илија патријарх Јерусалимски и св. Флавијан патријарх Антиохијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-02&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second and last entry, quoted whole with its closing full stop (§4), and **it is an ENUMERATED COMPANY OF TWO** — Илија patriarch of Jerusalem and Флавијан patriarch of Antioch — so §5 counts two names and two folders are owed, neither of which the corpus held. The quoted line is the one heading, whole, on both rows. **NEITHER MAN WAS IN THE CORPUS AND BOTH SIT BESIDE A WRONG MAN OF HIS OWN NAME, WHICH IS WHY THE SEE IS IN `office` ON BOTH.** `flavian-of-constantinople` is a folder of this corpus — `hierarch`, `patriarch` and `confessor`, ARCHBISHOP OF CONSTANTINOPLE, `death` 449 attested, **and it already holds the identical Serbian string «Флавијан» off this same book’s 18 February**. He is not this man: a different see, and sixty-nine years earlier, where this entry puts both its men dead in 518 under Anastasius. `elias-martyr-with-patermuthius` and `elias-the-egyptian` hold «Илија» in sr already and are both martyrs of the great persecution — one of Pamphilus’s company, dead between 284 and 305 and kept on 16 February, and Elias the Glorious, dead between 305 and 311 and kept with Patermuthius on 17 September — neither a patriarch and neither on this day. **The whole of what tells either new man from his namesakes is the see the heading gives, and the see is not part of a stored name form by §6** — so it goes into `office`, where `Patriarch of Jerusalem` and `Patriarch of Antioch` both already exist in all four locale packs, measured before drafting. `types` IS `patriarch` AND NOTHING ELSE, READ OFF THE HEADING. «св.» is “saint” and no rank; «патријарх» with a see is `patriarch` by §5. **`hierarch` IS REFUSED**, the heading not carrying Јерарх and the two words not being interchangeable in §5’s table; **`confessor` IS REFUSED TOO**, and that one costs something — „Велики ревнитељи вере и бранитељи Православља.“, great zealots for the faith and defenders of Orthodoxy, and „Умрли обојица у изгнанству куда их прогна јеретички цар Анастасије.“, both dead in exile where the heretical emperor Anastasius banished them, is a confessor’s whole shape; but Исповедник is not in the heading and a rank read out of a body is not written. **ONE DATE EACH, STATED, AND IT IS THE ONLY NUMBER ON THE PAGE.** „И после два дана оба светитеља скончају, 518. године.“ — and after two days both the saints came to their end, in the year 518. `death` earliest 518, latest 518, display «518», basis traditional, on both folders. Both fields are new because both folders are. **No `birth`, no `floruit`, and no century for either**: the book gives none, and the reign of Anastasius is a reign and not a date. **THE THING THE ENTRY IS ABOUT, AND IT IS THE DAY’S BEST FINDING.** „Тачно провидели смрт цара Анастасија и своју.“ — they foresaw exactly the death of the emperor Anastasius and their own; and „Истовремено писали су они један другом, из удаљених места: „Анастасије цар данас умре, пођимо и ми на Суд Божји с њим.““, at the same time, from places far apart, the two of them wrote to one another: **the emperor Anastasius has died today, let us go with him to the judgement of God.** Two letters crossing, each saying the same thing, written the day the emperor died by two men who could not have heard of it. **TWO `related` ROWS, BOTH WAYS, AND THEY ARE THE ONLY ONES.** Each man is in the other’s heading and in the other’s only sentence, so each life links the other and each folder relates the other; `proseprobe.mjs` was run over both paragraphs before either was written and returned **`0 name(s) the index would link`** for both, which is the measurement that matters here, because `flavian-of-constantinople`’s display name is the BARE «Flavian» and a sentence naming «Flavian of Antioch» could have been read as naming him. **THE EMPEROR ANASTASIUS GETS NOTHING**: the book calls him јеретички, heretical, he is nobody’s saint, and `ls saints | grep -i anastasi` returns no emperor. No `locations`: Jerusalem and Antioch are sees in `office` and the places of exile are not named at all. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, and **that verse is twenty-six lines on the prophet Elijah alone and says nothing of these two men**, which was read before it was said."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

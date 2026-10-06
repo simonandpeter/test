@@ -12,6 +12,11 @@
       "form": "Κλήμης",
       "lang": "el",
       "note": "Read out of saint.gr's line for 22 Νοεμβρίου, «Άγιος Κλήμης ο Θαυματουργός επίσκοπος Αχρίδας της Βουλγαρίας», with the rank word, the epithet and the see left off."
+    },
+    {
+      "form": "Климент",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 27. јул ст. ст., „Свети Климент архиепископ Охридски.“, with «Свети» and «архиепископ Охридски» — the first “saint”, the second a rank and a see, the see being the `Archbishop of Ohrid` the folder already carries in `office` — left off by §6. **The see is the only thing in this heading that would have broken a fold, and §6 keeps a see out of a stored form**, so the bare forename goes in and the fold is read instead: `foldchk.py` returned `[(’clement-apostle-of-sardis’, ’ru’), (’clement-apostle-of-sardis’, ’sr’), (’clement-of-ancyra’, ’sr’)]` before the draft — three pairs for two folders, one of them holding the string twice."
     }
   ],
   "sex": "male",
@@ -66,8 +71,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 09.08.2026 (27. јул ст. ст.) — „Свети Климент архиепископ Охридски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-09&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second entry, quoted whole with its closing full stop (§4). «Свети» is “saint”, «архиепископ Охридски» is a rank and a see — the `archbishop` in `types` and the `Archbishop of Ohrid` already in `office` — and §6 strips both, so the bare forename is the whole of the form. `hierarch` beside it is not in the heading and is left alone. **`dates` UNTOUCHED BECAUSE TWO BOOKS AGREE TO THE YEAR, AND THIS FOLDER’S IS `attested`.** It holds `death` 916/916, display «916», basis **attested**, and this entry ends „После великог труда и верне службе Богу упокојио се мирно у Охриду 916. год.“ — he reposed peacefully at Ohrid **in the year 916**. The same number exactly, and the only `attested` basis this range has met agreeing with this book. Nothing widened, nothing narrowed. **THE FOLD THIS FORM MAKES.** `foldchk.py` measured «Климент» as already held by `clement-apostle-of-sardis` in both `ru` and `sr` and by `clement-of-ancyra` in `sr`, and `sr-foldpred.mjs` answered `new key, other holders: 2`. That row was already `?`, unread, with no key; it is three wide now and read in this batch’s commit message. WHAT THE BOOK ADDS, AND IT IS THE WHOLE JOURNEY SOUTH. „Ученик св. Методија и Кирила.“ — a disciple of Saint Methodius **and Saint Cyril**; „По смрти св. Методија Климент, под притиском Немаца, крете из Моравије на југ.“, and after Methodius’s death Clement set out from Moravia southwards **under pressure from the Germans**. „С Гораздом, Наумом, Савом и Ангеларијем – сви заједно прозвати Петочисленици – пређе Дунав, погостова у цара Бориса Михаила, и по том дође у Охридску страну.“ — **with Горазд, Наум, Сава and Ангеларије, all of them together called the Петочисленици — THE FIVE — he crossed the Danube, was a guest of the emperor Boris Michael, and came into the land of Ohrid.** „Прво основа манастир у Белици, где му беше и његово прво епископско седиште.“, he founded a monastery at Белица first, **where his first episcopal seat was**; „Доцније се пресели у Охрид, одакле разви велику архипастирску и просветитељску делатност за сву ближу и даљ у околину.“, later he moved to Ohrid. „У Охриду подиже св. Климент цркву св. Пантелејмону.“ — **at Ohrid he raised a church to Saint Panteleimon**, who is the day’s own first entry, which is the second time in two days that one entry of this book dedicates something to another. „Имађаше много ученика, који преписиваху књиге словенским писменима за словенски народ. При тој делатности нарочито му помагаше св. Наум.“ — **his many disciples copied books out in the Slavonic letters for the Slavonic people, and Saint Naum especially helped him in it**. „Чинио је чудеса и за живота свога, као што његове мошти пројављују целебну моћ до данашњега дана.“, he worked wonders in his lifetime and his relics do to this day; „Чудотворне мошти његове почивају у негдашњем храму Свете Богородице, који се доцније прозвао по имену св. Климента.“, and they rest in **what was once the church of the Holy Mother of God and was afterwards called by his own name**. **FIVE FOLDERS THAT EXIST ARE NAMED IN THIS BODY AND NOT ONE TAKES A ROW, BY §5.** `gorazd-of-bohemia`, `naum-of-ohrid`, `angelarius-of-bohemia` and `boris-michael-of-bulgaria` are all four folders of this corpus and all four are in the sentence about the Five; `methodius-of-moravia` is a folder and is already `related` on this one. **The heading names Clement and nobody else**, so no row is owed to any of them — the same ruling that kept Hermippus and Hermocrates off a row yesterday, applied here to four. **Сава of the Five is a sixth case and fails Ruling 3 besides**: `ls saints | grep -i ’^sava’` returns six folders — of Serbia, the Second, the Third, of Buzau, of Vatopedi and Brancovici of Transylvania — and not one of them is a companion of Clement out of Moravia. **Кирил is named and the corpus holds no folder under that name read here**: `ls saints | grep -iE ’^cyril-of-moravia|^cyril-equal’` returns nothing, although `methodius-of-moravia` exists, which is itself worth the line. **No new `related` row of any kind**, and `proseprobe.mjs` over the drafted paragraph returned **`0 name(s) the index would link`**, so no test asks either. All six are named for the author. **THE CHURCH OF SAINT PANTELEIMON AT OHRID AND THE CHURCH OF THE MOTHER OF GOD ARE DEDICATIONS** and a dedication is not a relation. No `locations`: Moravia, the Danube, Ohrid and Белица are named and none is written as a coordinate. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {
