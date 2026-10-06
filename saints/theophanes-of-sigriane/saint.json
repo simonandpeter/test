@@ -16,6 +16,11 @@
       "form": "Теофан Сигријан",
       "lang": "sr",
       "note": "The forename is read out of the Ohrid Prologue's first heading for the Julian 12 March on pravoslavno.rs, „Преподобни Теофан Исповедник.“, with both rank words left off — Преподобни and Исповедник, which are the two the folder's `types` carry. The by-name is read out of the body's first sentence, which gives it and explains it: he was called Sigrian because of the place Sigria where he was born. It is kept rather than stripped, as Тирон and Двојеслов are kept elsewhere in this wave, and it is what this folder's English name already carries."
+    },
+    {
+      "form": "Феофан Сигрианский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 марта ст. ст., «Феофан Сигрианский, Летописец, исповедник, прп.», with the rank words left off. «Летописец», the Chronicler, is left off as well: it is the office the Chronography earned him and not part of the name, and the line itself does not print it."
     }
   ],
   "sex": "male",
@@ -34,17 +39,27 @@
     },
     "death": {
       "earliest": 815,
-      "latest": 815,
-      "display": "815",
+      "latest": 818,
+      "display": "815–818",
       "basis": "traditional",
-      "note": "saint.gr's head line, as the folder's own life has it: «saint.gr heads him 760 to 815 and names his parents Isaac and Theodotia»."
+      "note": "The two calendars disagree and the interval holds both. saint.gr heads him 760 to 815. days.pravoslavie.ru's line for 12 марта ст. ст. closes «(818)» and its life page says he was pressed to accept the iconoclast heresy under Leo the Armenian, whose reign it gives as 813 to 820, held out, was shut in prison, and «Пробыв в темнице 23 дня, Преподобный исповедник скончался (+ 818)». Nothing is chosen."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст. — «Прп. Феофана исп., Сигрианского (818)»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "note": "The line's year, 818, is three years later than the 815 this folder held from saint.gr, and the life page behind the line gives the same 818 with the circumstances: twenty-three days in prison under Leo the Armenian. The death interval was widened to 815-818 and neither reading is chosen. The day page prints a troparion and a kontakion for him; both are copied here."
     },
     {
       "church": "romanian",
@@ -138,6 +153,38 @@
       },
       "english": {
         "text": "Guide of Orthodoxy, teacher of piety and of gravity, luminary of the inhabited world, God-inspired adornment of monastics, wise Theophanes: by your teachings you enlightened all, lyre of the Spirit. Intercede with Christ our God that our souls be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 5",
+      "text": "Воздержанием житие украсил/ и, уды умертвив,/ победил еси вражия козни, отче Феофане,/ преставился еси к Богу в вечную жизнь,/ яко достоин причастник,/ моляся непрестанно/ помиловати души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Тропарь преподобного Феофана исповедника, Сигрианского», глас 5",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You adorned your life with abstinence and, putting your members to death, overcame the wiles of the enemy, father Theophanes; and you passed over to God into eternal life as a worthy partaker of it, praying without ceasing that our souls be shown mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Свыше прием Божественное откровение,/ со тщанием изшел еси от среды молвы житейский/ и, уединився, преподобне, чудес приял еси действо/ и пророчества достоинство,/ богатства и супружницы лишився.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Кондак преподобного Феофана исповедника, Сигрианского», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received a divine revelation from on high, you went out in haste from the middle of the world's clamour; and living alone, venerable one, you received the working of wonders and the dignity of prophecy, having given up your riches and your wife.",
         "rendered": "site"
       }
     }

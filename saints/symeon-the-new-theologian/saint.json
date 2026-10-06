@@ -16,6 +16,11 @@
       "form": "Симеон Нови Богослов",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 12 March on pravoslavno.rs, „Преподобни Симеон Нови Богослов.“, with the rank word Преподобни left off. Нови Богослов is kept whole, although Богослов is in the rank table: it is the by-name the Church knows him by and the one this folder's English name carries, and a bare Симеон would fold with a great many folders."
+    },
+    {
+      "form": "Симеон Новый Богослов",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 12 марта ст. ст., «Симеон Новый Богослов, игумен», with the rank «игумен», abbot, left off; that grade is in this folder's `types`."
     }
   ],
   "sex": "male",
@@ -44,8 +49,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст. — «Прп. Симеона Нового Богослова (1021)»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "note": "The line dates him 1021 where saint.gr heads him «(949 - 1022)» and says in its life «Κοιμήθηκε με ειρήνη το έτος 1022 μ.Χ.». **The year on this folder was not touched** and the disagreement is recorded here rather than resolved: one year's difference between two calendars on an eleventh-century repose is the kind of thing a third source settles, and no third source was read. The calendar's own life page, life626.htm, was not read either; the identity is not in question. The day page prints five hymns for him, three troparia and two kontakia, and all five are copied here."
     },
     {
       "church": "romanian",
@@ -141,6 +156,87 @@
       },
       "tone": "Ἦχος γ’.",
       "model": "Θείας πίστεως."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Божественное озарение, Симеоне отче,/ восприяв в души твоей,/ светило в мире показался еси светлейшее,/ разгоняя того мракобесие/ и всех уверяя искати, юже погубиша, благодать Духа,/ Егоже прилежно моли/ даровати нам велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Тропарь преподобного Симеона Нового Богослова», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Having received the divine illumination in your soul, father Symeon, you were shown to the world as its brightest light, driving off its obscurantism and persuading all to seek the grace of the Spirit, which they had lost. Pray earnestly to him, that he grant us great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 1",
+      "text": "Внешния мудрости пребывая непричастен,/ Божественныя же преисполнен был еси последи/ и Новый Богослов воистинну всеми познася, Симеоне./ Сего ради твою память, отче мудре, почитающе, тебе вопием:/ слава тя прославльшему Христу,/ слава тя дивна Показавшему,/ слава Действующему тобою всем исцеления.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Ин тропарь, новосоставленный, преподобного Симеона Нового Богослова», глас 1",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Remaining without part in the wisdom that is outside, you were afterwards filled full of the divine wisdom, and were known by all as the New Theologian in truth, O Symeon. Therefore, honouring your memory, wise father, we cry to you: glory to Christ who glorified you; glory to him who showed you wonderful; glory to him who works healings for all through you.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко Света Трисолнечнаго зритель / и таинственнаго Богословия сказатель, / освященне Симеоне, отче наш, / испроси душам нашим просвещения свыше / и страстей отгони от нас мглу, / яко бо, служитель велий Христов,/ всем подаеши полезная, преподобне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Ин тропарь преподобного Симеона Нового Богослова», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As a beholder of the Light of the Three Suns and an expounder of the hidden theology, consecrated Symeon our father, ask enlightenment from on high for our souls and drive the fog of the passions away from us; for as a great servant of Christ you give to all what is profitable, venerable one.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Светом просвещен Трисолнечным, Богомудре,/ Богослов явился еси Пребожественныя Троицы./ Свыше премудростию словес обогатився,/ источил еси Богомудрия Божественный струй,/ от нихже пиюще, вопием:/ радуйся, треблаженне Симеоне Богонаученне.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Кондак преподобного Симеона Нового Богослова», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Enlightened by the Light of the Three Suns, wise in God, you were shown to be the theologian of the supremely divine Trinity. Enriched from on high with wisdom of words, you poured out divine streams of God-given wisdom; and drinking of them we cry: rejoice, thrice-blessed Symeon, taught of God.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Яко Богослов Божий Божественнейший/ и молитвенник наш велий ко Господу,/ присно, Симеоне, моли даровали нам грехов прощение/ и живота исправление, преподобне",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 марта ст. ст., «Ин кондак преподобного Симеона Нового Богослова», глас 2, подобен «Кровей твоих:»",
+        "url": "https://days.pravoslavie.ru/Days/20260312.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the most divine theologian of God and our great intercessor before the Lord, pray always, O Symeon, that forgiveness of sins and amendment of life be granted us, venerable one.",
+        "rendered": "site"
+      },
+      "model": "Кровей твоих:"
     }
   ],
   "text": {
