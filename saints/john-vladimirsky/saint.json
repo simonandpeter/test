@@ -1,0 +1,69 @@
+{
+  "slug": "john-vladimirsky",
+  "display_name": "John (Vladimirsky)",
+  "names": [
+    {
+      "form": "Иоанн (Владимирский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9604, «Иоанн (Владимирский), иерей, сщмч.», with the rank words left off, and the title of the one life page the calendar hangs behind any of this day's twenty names. The day line gives the name in the genitive and without the surname, and names three Иоанн in the one clause."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page and his life page both list one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists two beside this one: the moveable 7 февраля for that same synaxis, and the moveable 18 июля for the Собор Тверских святых. One row per church is the schema, so the other days are recorded here and he does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Сщмчч. Серафима , архиеп. Смоленского, Григория , Иоанна , Василия , Космы , Иоанна , Симеона , Илариона , Ярослава , Александра , Иоанна , Виктора , Андрея , Варлаама пресвитеров и мч. Павла (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1877,
+      "latest": 1877,
+      "display": "1877",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's own life: «родился 21 марта 1877 года в селе Боронкино Луковниковского уезда Тверской губернии в семье священника Михаила Владимирского». azbyka.ru prints the same sentence with a different district, Старицкого for Луковниковского; the year and the day agree."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's own life: «Священник Иоанн Владимирский был расстрелян 8 декабря 1937 года»; the day line closes the clause of fifteen «(1937)»."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "magdalene-zabelina",
+  "display_name": "Magdalene (Zabelina)",
+  "names": [
+    {
+      "form": "Магдалина (Забелина)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14524, «Магдалина (Забелина), прмц.», with the grade left off. The day line gives the name in the genitive and without the surname, «Прмц. Магдалины (1931)»; azbyka.ru heads her «Преподобномученица Магдалина (Забелина), инокиня» and gives her baptismal name as Мария."
+    }
+  ],
+  "sex": "female",
+  "office": "Nun",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "monastic"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 25,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Her name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. azbyka.ru lists two beside this one: the moveable 7 февраля for that same synaxis and the moveable 5 сентября for the Собор Московских святых. One row per church is the schema, so the other days are recorded here and she does not render on them."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 25 ноября ст. ст. — «Прмц. Магдалины (1931).»",
+        "url": "https://days.pravoslavie.ru/Days/20261125.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 8 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 8 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 8 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1863,
+      "latest": 1863,
+      "display": "1863",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «родилась в 1863 году в городе Орле в семье рабочего Сергея Забелина и в крещении была наречена Марией». The page gives no month and no day."
+    },
+    "death": {
+      "earliest": 1931,
+      "latest": 1931,
+      "display": "1931",
+      "basis": "attested",
+      "note": "azbyka.ru: «инокиня Магдалина 8 декабря 1931 года скончалась и была погребена в безвестной могиле»; the Сретенский day line closes her clause «(1931)». 8 December 1931 was in that year the Julian 25 ноября."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

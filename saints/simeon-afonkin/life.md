@@ -1,0 +1,9 @@
+# Simeon (Afonkin)
+
+The Сретенский monastery's calendar names him seventh in its clause of fifteen for 25 ноября ст. ст. and carries no life for him; azbyka.ru prints a short one out of pstgu.ru. Семен Иванович Афонькин was born on 13 February 1870 at Оброчено in the Краснослободск district of the province of Penza. Of his schooling, his ordination and his family the page says nothing, and nothing is added here.
+
+He was a priest in the town of Каскелен in Kazakhstan, and the page says he bore the labour of pastoral service there with honour in those hard years. He was in canonical communion with the archbishop of Alma-Ata, Тихон (Шарапов), but was living practically outside the law, and so had to serve not in a church but in a house of prayer.
+
+His arrest followed on 24 November 1937. The charge was that he «среди населения г. Каскелена распространял антисоветскую пропаганду» — spread anti-Soviet propaganda among the people of Каскелен while instilling religious convictions in them; that of the new constitution he had said it was issued not for the whole people but for a certain category of persons; and that he had slandered the Soviet government by saying that Christians had been put into bondage and driven into the collective farms, where the people were mocked. He did not admit himself guilty of any of it. The troika of the NKVD administration for the Alma-Ata region sentenced him to the highest measure of punishment, and he was shot on 8 December 1937.
+
+*After the Православный церковный календарь of the Сретенский monastery for 25 ноября ст. ст. — [the day](https://days.pravoslavie.ru/Days/20261125.html) and [the name page](https://days.pravoslavie.ru/name/9795.html); and the life azbyka.ru prints out of pstgu.ru — [the page](https://azbyka.ru/days/sv-simeon-afonkin); read 7 October 2026.*
