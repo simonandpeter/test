@@ -16,6 +16,11 @@
       "form": "Алексије Човек Божји",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 17 March on pravoslavno.rs, „Свети Алексије Човек Божји.“, with Свети left off, which is not a rank. Човек Божји is kept: it is not a rank word but the by-name the heading gives him, the Man of God, and it is what this folder's English name already carries. A bare Алексије would fold with `alexis-of-moscow`."
+    },
+    {
+      "form": "Алексий, человек Божий",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 марта ст. ст., «Преподобный Алексий, человек Божий», with the rank word left off. «человек Божий» is the by-name the calendar gives him and not a rank, so it stays; the day's own line gives the same words, declined."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст. — «Прп. Алексия, человека Божия (411).»",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "note": "The julian 17/3 is the same menologion day the other three calendars keep him on, and his name page lists no other. The year the line closes with, 411, is the year this folder already holds, and the calendar's longer reading gives the day with it: «погребены в храме во имя святого Вонифатия 17 марта 411 года», which is the day the calendar keeps him on. That reading also gives 1216 as the year his relics were found; no calendar read keeps him on it and it is recorded here only. The day page prints two troparia and a kondak for him, all three copied here. The calendar hangs two separate readings of his life on the same name page and they agree in substance."
     },
     {
       "church": "romanian",
@@ -131,6 +146,54 @@
       },
       "english": {
         "text": "Keeping today with reverence the all-venerable feast of most blessed Alexis, let us hymn him and say: rejoice, thou delightful adornment of the venerable.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Возвысився на добродетель и ум очистив,/ к Желанному и Крайнему достигл еси,/ безстрастием же украсив житие твое,/ и пощение изрядное восприим совестию чистою,/ в молитвах яко безплотен пребывая,/ возсиял еси яко солнце в мире,/ преблаженне Алексие.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст., «Тропарь преподобного Алексия, человека Божия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Lifted up to virtue and having cleansed your mind, you reached him who is desired and is the last end; you adorned your life with freedom from passion, took up an exceptional fasting with a clean conscience, and kept to prayer as though you had no body. And so you shone like the sun in the world, most blessed Alexis.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 4",
+      "text": "Яко чистоты светильник пресветел показася,/ дивный Алексие,/ ибо тленный чертог/ на нетленное Божие Царствие пременив,/ яко целомудрил делатель преизряден./ Сего ради предстоиши Господеви, всех Царю./ Егоже моли, даровати нам мир и велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст., «Ин тропарь преподобного Алексия, человека Божия», глас 4",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You were shown to be a most radiant lamp of purity, wonderful Alexis, for you exchanged a bridal chamber that perishes for the imperishable Kingdom of God, as a most excellent workman of chastity. And so you stand before the Lord, the King of all; pray to him to give us peace and great mercy.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Дом родителей твоих, яко чужд, имев,/ водворился еси в нем нищеобразно/ и, по преставлении венец прием славы,/ дивен на земли явился еси, Алексие, человече Божий,// Ангелом и человеком радование.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст., «Кондак преподобного Алексия человека Божия», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Holding your parents' house as a stranger's, you lodged in it in the likeness of a beggar; and when you had passed over and received the crown of glory you were shown wonderful upon the earth, Alexis, man of God, the gladness of angels and of men.",
         "rendered": "site"
       }
     }

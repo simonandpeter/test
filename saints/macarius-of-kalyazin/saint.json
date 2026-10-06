@@ -4,37 +4,53 @@
   "sex": "male",
   "types": [
     "venerable",
-    "abbot"
+    "abbot",
+    "wonderworker"
   ],
   "names": [
     {
       "form": "Μακάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Μαρτίου, «Όσιος Μακάριος ηγούμενος της μονής Κολγιαζίν της Ρωσίας», with the rank word and the office left off."
+    },
+    {
+      "form": "Макарий Калязинский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 17 марта ст. ст., «Преподобный Макарий Калязинский», with the rank word left off. The day's own line declines the name and puts the place in a phrase, «игумена Калязинского»."
     }
   ],
   "related": [],
   "dates": {
     "birth": {
-      "earliest": 1402,
+      "earliest": 1400,
       "latest": 1402,
-      "display": "1402",
+      "display": "1400–1402",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Μακάριος, κατά κόσμο Ματθαίος, γεννήθηκε το έτος 1402 μ.Χ. στο χωριό Κοζίνο της Ρωσίας», and the page heads him «(1402 - 1483)»."
+      "note": "The two calendars disagree by two years and the interval holds both. saint.gr: «Ο Όσιος Μακάριος, κατά κόσμο Ματθαίος, γεννήθηκε το έτος 1402 μ.Χ. στο χωριό Κοζίνο της Ρωσίας», and the page heads him «(1402 - 1483)». days.pravoslavie.ru's reading for 17 марта ст. ст. opens «родился в 1400 году в селе Грибково (Кожине) близ города Кашина в семье боярина Василия Кожи». Nothing is chosen."
     },
     "death": {
       "earliest": 1483,
       "latest": 1483,
       "display": "1483",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Όσιος Μακάριος κοιμήθηκε με ειρήνη το έτος 1483 μ.Χ.», and the page heads him «(1402 - 1483)»."
+      "note": "Both calendars give the same year. saint.gr: «Ο Όσιος Μακάριος κοιμήθηκε με ειρήνη το έτος 1483 μ.Χ.», and the page heads him «(1402 - 1483)». days.pravoslavie.ru closes its line for 17 марта ст. ст. with «(1483)» and its reading with «Преставился преподобный 17 марта 1483 года»."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026). The Greek page calls him a Russian abbot, so a Russian row is likely and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст. — «Прп. Макария, игумена Калязинского, чудотворца (1483).»",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "note": "The julian 17/3 is the same menologion day the Greek keeps him on, and the calendar's own life says so in both styles: «Память преподобного Макария, Калязинского чудотворца, совершается 17/30 марта, в день его кончины». Its readings put his birth in 1400, two years before the 1402 saint.gr heads him with, so the birth interval is now 1400 to 1402 and chooses neither; the death 1483 is the year both give. The wonderworker the line names is added to types and the office is set from «игумена». The name page lists a second day, «26 мая (обретение мощей)», the finding of his relics in 1521, which is a feast and not a second fixed day for him; it and the «16/29 ноября» name-day the page says his own monastery kept are recorded here and the folder renders on neither. The page also places him in the synaxis of the saints of Tver, which it marks as a moveable commemoration. The day page prints a troparion and a kondak for him and both are copied here."
     },
     {
       "church": "romanian",
@@ -64,5 +80,40 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "office": "Abbot",
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Плотская мудрования, отче Макарие,/ воздержанием и бдением умертвил еси,/ место бо, на немже поты твоя излиял еси,/ яко труба, вопиет к Богу,/ поведающи твоя исправления,/ и по смерти честныя твоя мощи источают исцеления./ Темже вопием ти:/ моли Христа Бога, да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст., «Тропарь преподобного Макария, игум. Калязинского, чудотворца», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "The thoughts of the flesh you put to death, father, by abstinence and by watching; for the place on which you poured out your sweat cries aloud to God like a trumpet and tells of your amendments, and after your death your honoured relics pour out healings. Therefore we cry to you: pray to Christ God, that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 2",
+      "text": "Вышних желая, воздержанием, и труды, и поты насладився,/ желание плоти твоей обуздав,/ чудес дар прием от Христа Бога,/ светильник явился еси пресветлый./ Темже Христова Церковь песньми славит тя,/ преподобне Макарие, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 марта ст. ст., «Кондак преподобного Макария, игум. Калязинского, чудотворца», глас 2",
+        "url": "https://days.pravoslavie.ru/Days/20260317.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Longing for the things above, finding your delight in abstinence and in labours and in sweat, you bridled the desire of your flesh; and having received the gift of wonders from Christ God you were shown a most radiant lamp. Therefore the Church of Christ glorifies you with hymns, venerable father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
