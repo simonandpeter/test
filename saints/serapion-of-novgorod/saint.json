@@ -1,0 +1,98 @@
+{
+  "slug": "serapion-of-novgorod",
+  "display_name": "Serapion of Novgorod",
+  "names": [
+    {
+      "form": "Серапион Новгородский",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 16 марта ст. ст., «Святитель Серапион Новгородский, архиепископ», with the rank words left off. The day's own line declines the name to «Серапиона» and puts the see in a phrase, «архиеп. Новгородского»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hierarch",
+    "archbishop",
+    "monk",
+    "abbot",
+    "wonderworker"
+  ],
+  "office": "Archbishop of Novgorod",
+  "dates": {
+    "death": {
+      "earliest": 1516,
+      "latest": 1516,
+      "display": "1516",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes its line for 16 марта ст. ст. with «(1516)» and its life page says «Приняв схиму, святитель мирно скончался 16 марта 1516 г.» — the day the calendar keeps him on. The page gives no year of birth."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 16,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст. — «Свт. Серапиона, архиеп. Новгородского (1516).»",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "note": "The day the calendar keeps him on is the day its own life page gives for his death, 16 марта 1516. That page lists no other day for him. It also gives a second date that is not a feast on any calendar read: his relics were found on 7 апреля 1517 and lie under the floor of the Serapion chamber by the cathedral of the Holy Trinity at the Lavra. The day page prints a troparion and a kondak for him and both are copied here."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 29 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 29 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 29 March 2026 (7 October 2026)."
+    }
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "ru",
+      "tone": "Глас 8",
+      "text": "Твердый адамант воистину, отче, показался еси, во всем подобяся владыце своему святителю, неправедная изгнания, радуяся, претерпел еси: темже и Христос святителем и мучеником сликовна тя сотвори и дарова тя стаду твоему, яко сокровище неотъемлемо, чудесы всех обогащающа. Темже и мы, сошедшеся к раце мощей твоих, любовию вопием ти: моли о нас, пречестный архиерею Серапионе, отче наш!",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст., «Тропарь святителя Серапиона, архиепископа Новгородского», глас 8",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Truly you were shown to be hard adamant, father, likening yourself in all things to your own Lord and High Priest; and rejoicing you bore unjust banishments. Therefore Christ made you to stand in the one choir with hierarchs and with martyrs, and gave you to your flock as a treasure that cannot be taken away, enriching all with wonders. And so we too, gathered at the shrine of your relics, cry to you with love: pray for us, most honourable bishop Serapion, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "ru",
+      "tone": "Глас 3",
+      "text": "Яко венцем, пресветлым украсися днесь великий Нов град, и ликует в память пастыря своего и учителя, яко диадиму царскую возложши, великая же она лавра светло радуется, идеже прослави Бог Своего угодника, и прояви последнему роду нашему цельбоносныя мощи твоя, святителю Серапионе, и Церкви Божия веселитися созывающи на славословие, велегласно вопиющи: радуйся, граду твоему и обители похвала и всея Русския земли пресветлый светильниче!",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 16 марта ст. ст., «Кондак святителя Серапиона, архиепископа Новгородского», глас 3",
+        "url": "https://days.pravoslavie.ru/Days/20260316.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As with a crown most radiant, great Novgorod is adorned today, and keeps festival in memory of its shepherd and teacher as though it had put on a royal diadem; and that great Lavra shines with gladness, where God glorified his servant and showed to this last generation of ours your healing relics, O hierarch Serapion. And the Church of God calls us to rejoice and to give praise, crying out with a loud voice: rejoice, boast of your city and of your house, and most radiant lamp of all the Russian land.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
