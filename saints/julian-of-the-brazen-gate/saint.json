@@ -11,6 +11,11 @@
       "form": "Ιουλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's page for the ten who suffered at the Chalke Gate, whose head line for this one is «Αγιος Ιουλιανος Που Μαρτυρησε Στη Χαλκη» and whose enumeration reads «Ιουλιανός»; the rank word and the clause about the martyrdom are left off."
+    },
+    {
+      "form": "Јулијан",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s third heading for the Julian 9 August, „Св. муч. Јулијан, Маркијан, и други с њима.“ — Св. муч. left off, which governs both names in it and which §5 maps to `martyr`. The heading gives him nothing else: «of the Brazen Gate» in the display name is this corpus’s own, off the Greek line about Chalke, and the gate is not in this entry at all. It folds with six other folders, the widest fold of this block, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -68,11 +73,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.08.2026 (9. август ст. ст.) — „Св. муч. Јулијан, Маркијан, и други с њима.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third and last entry, **two sentences for a company of ten this corpus keeps whole**, and its heading enumerates two of them and then says «и други с њима», and others with them. „Св. муч. Јулијан, Маркијан, и други с њима.“. The Romanian and Greek rows on this folder both quote company lines — «Sfinții 10 Mucenici Mărturisitori» and «Άγιοι Δέκα Μάρτυρες που μαρτύρησαν στη Χάλκη» — so this is the first book of the three to name any of them singly. His row was `undocumented`. **TWO ROWS WRITTEN AND EIGHT REFUSED, OFF ONE HEADING.** §5: a heading that enumerates nobody gets no row, and «и други с њима» enumerates nobody. The eight who get nothing are `alexius-of-the-brazen-gate`, `demetrius-of-the-brazen-gate`, `james-of-the-brazen-gate`, `john-of-the-brazen-gate`, `leontius-of-the-brazen-gate`, `peter-of-the-brazen-gate`, `phocas-of-the-brazen-gate` and `maria-the-patrician`, every one of them already `related` to this folder in both directions and every one of them on this same menologion 9/8 in the Greek and the Romanian. **So a company the other two calendars keep whole is split two from eight by this reading**, and that is the Seven Youths of 4 August with the sign reversed: there the heading counted and named nobody and all seven were refused; here it names two and the other eight are refused. It is the sixth decision in six days to turn on the heading. **`dates`: `death` 716 ON A FOLDER THAT HELD NONE — AND THE SENTENCE CONTRADICTS ITSELF, AND IS NOT REPAIRED.** „Пострадаше у одбрани икона од опакога цара Лава Исавријанина, 716. год., и венчаше са славом неувелом.“ — they suffered in defence of the icons under the wicked emperor Leo the Isaurian, in 716, and were crowned with an unfading glory. **Leo the Isaurian came to the throne in 717**, so 716 is a year before the reign the same clause names, exactly as the Julian 7 August’s „у време Антонина 213. год.“ was. The year the book states is what is written, the contradiction is recorded, and nothing is reconciled. **And this writes a date onto two of ten members of one company and leaves eight undated**, all ten having held no `dates` at all before today: the asymmetry is real, it follows from the heading rule rather than from anything about the men, and it is named here and in the findings so that nobody meets it as a mystery. **AUTHOR: if the eight are to carry the same year, that is one line from you and not a reading of mine.** **`types` UNTOUCHED** at `martyr` and `confessor`: Св. муч. is `martyr`, the heading has nothing else, and `confessor` is the Romanian «Mărturisitori». **NO `related` ROW ADDED AND NO `locations`:** the nine other folders are all `related` both ways already, Leo is an emperor named to date a persecution, and the Brazen Gate itself is a gate. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 716,
+      "latest": 716,
+      "display": "716",
+      "basis": "traditional",
+      "note": "The folder held no date: neither doxologia nor saint.gr dates the company. The Охридски пролог for 9. август ст. ст.: „Пострадаше у одбрани икона од опакога цара Лава Исавријанина, 716. год., и венчаше са славом неувелом.“ — they suffered in defence of the icons under the wicked emperor Leo the Isaurian, in 716. **The year is at odds with the reign the same clause names**, Leo the Isaurian having come to the throne in 717; the book’s year is recorded as it stands and is not reconciled. Written on this folder and on `marcian-of-the-brazen-gate`, the two the heading names, and on none of the other eight of the company, whose rows this heading does not reach (6 October 2026)."
+    }
   }
 }

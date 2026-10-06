@@ -11,6 +11,11 @@
       "form": "Αντωνίνος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Αυγούστου, «Άγιος Αντωνίνος από την Αλεξάνδρεια», with the rank word and the clause about his country left off. The life page adds a variant in parenthesis, «(ή Αντώνιος)», which is not recorded as a second form here because the page offers it as an alternative and not as a form of its own."
+    },
+    {
+      "form": "Антоније",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 9 August, „Св. муч. Антоније.“ — Св. муч. left off, which §5 maps to `martyr`. The heading is that rank and the name and nothing else; Alexandria is the body’s whole two words. **The book prints Антоније, which is Antony and not Antoninus**, where the Romanian line gives «Antonin» and the Greek «Αντωνίνος»; it is copied as printed and not bent towards the other two, which is §6’s rule, and the identification rests on the day and on Alexandria rather than on the name. `.tmp/sr-foldpred.mjs` reports that it folds with three other folders, and that fold is a row in this commit’s FINDINGS and a key in `READ_FOLDS`."
     }
   ],
   "sex": "male",
@@ -55,8 +60,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 22.08.2026 (9. август ст. ст.) — „Св. муч. Антоније.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-22&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of three entries, four sentences, and **the Romanian and Greek both keep him on this same 9/8 under a different form of his name, which is what the identification turns on.** His row was `undocumented`. **THE BOOK CALLS HIM АНТОНИЈЕ AND THE OTHER TWO CALL HIM ANTONINUS.** „Св. муч. Антоније.“ is Antony, not Antoninus; the Romanian row quotes «Sfântul Mucenic Antonin» and the Greek «Άγιος Αντωνίνος από την Αλεξάνδρεια». **The match is not on the name**: it is on the day, 9/8 in all three, and on „Грађанин Александријски.“ — a citizen of Alexandria — which is exactly the «από την Αλεξάνδρεια» the Greek line prints and the only thing either calendar says about him beyond his rank. Two words in the Prologue and three in the Greek line, and they are the same two facts. **The `sr` form is stored as the book prints it, Антоније, and not bent towards the Αντωνίνος of the other books**, which is §6’s rule about a copied form and the reason this folder now folds with three Anthonys. **NO `dates`.** The entry gives no year, no emperor and no reign — only a «књаза незнабожачког», a heathen prince — and the folder held none before. **`types` UNTOUCHED** at `martyr`: Св. муч. is `martyr`, Грађанин is a citizen and not a rank, and there is nothing else. **NO `related` ROW:** the prince is unnamed and the crowd he preached to from the fire is a crowd. **NO `locations`:** Alexandria is the one thing the entry says about him, and it is in the row above and in the life. **WHAT THE ENTRY ADDS, WHICH IS THIS FOLDER’S FIRST LIFE AND IS MOSTLY A SPEECH.** „Изведен пред књаза незнабожачког он слободно изјави веру своју и би мучен, бијен и струган, но Христа се не хте одрећи.“ has him declare his faith freely before the prince and be tortured, beaten and raked without consenting to deny Christ; „Најзад бачен у огањ, из сред кога он говораше народу: браћо моја возљубљена, не робујте телу, него се брините више о души, која вам је од Бога дата, и сродна је Богу и божанским силама.“ has him thrown into the fire and speaking to the people out of the middle of it, beloved brethren, do not be slaves to the body but care more for the soul, which is given you by God and is akin to God and to the divine powers; and „– И тако поучавајући народ и горећи у огњу предаде душу своју свету Богу.“ has him give up his soul to God while still teaching the people and burning. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
