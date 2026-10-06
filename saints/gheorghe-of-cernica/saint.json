@@ -11,6 +11,11 @@
       "form": "Γεώργιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Γεώργιος της Τσερνίκα», with the rank word left off."
+    },
+    {
+      "form": "Георгий Черникский",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 3 декабря ст. ст., name page 14493, «Георгий Черникский, прп.», with the grade word left off. The epithet is Cernica, his own monastery, in Russian form."
     }
   ],
   "sex": "male",
@@ -38,8 +43,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Прп. Георгия Черникского (1806) (Рум.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -6,4 +6,8 @@ Two years after his marriage his wife died, and he went to Edessa, having first 
 
 The page gives no year for that death and no account of what he said or did on the pillar, and it prints no hymn for him. Its couplet is the one play it makes on the office he gave up: Theodulus prudently gave back an eparchy of earth for the eparchies of the heavens.
 
-*After saint.gr's calendar for 3 Δεκεμβρίου — [the day](https://www.saint.gr/12/03/index.aspx) and [the life](https://www.saint.gr/251/saint.aspx); read 2 October 2026.*
+The Russian calendar keeps him on the Julian 3 December and prints one line, «Прп. Феодула Константинопольского (ок. 440).», with no life page behind it. Its name page adds the whole of what it has: «Феодул Константинопольский, Ефесский, епарх, прп., столпник» — of Constantinople, of Ephesus, an eparch, venerable, a stylite. So this calendar confirms the eparchy and the pillar that the Greek page gave and sets against it two cities that are not Edessa, and it gives the one year of his death that any book read here has given.
+
+It also carries his two hymns, which stand on the day page and on his name page under the heading «преподобного Феодула Цареградского», of Tsargrad, which is Constantinople again. The kontakion is the whole argument of his life in four lines: he exchanged a perishable emperor and a glory soon gone for things that abide for ever, and went up from the sorrowful life on the pillar to the joy above.
+
+*After saint.gr's calendar for 3 Δεκεμβρίου — [the day](https://www.saint.gr/12/03/index.aspx) and [the life](https://www.saint.gr/251/saint.aspx); read 2 October 2026; and the Православный церковный календарь of the Сретенский monastery for 3 декабря ст. ст. — [the Russian day](https://days.pravoslavie.ru/Days/20261203.html) and [his name page](https://days.pravoslavie.ru/name/2226.html), read 7 October 2026.*

@@ -6,6 +6,11 @@
       "form": "Θεόδουλος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 3 Δεκεμβρίου, «Όσιος Θεόδουλος “ο από επάρχων”», with the rank word left off. The page's own epithet is «ὁ ἀπὸ ἐπάρχων», the one from among the eparchs; the city in this folder's name is the Edessa it says he went to."
+    },
+    {
+      "form": "Феодул Константинопольский, Ефесский, епарх, столпник",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 3 декабря ст. ст., name page 2226, «Феодул Константинопольский, Ефесский, епарх, прп., столпник», with only the rank word «прп.» left off. Everything else is kept, because every word of it is how this calendar tells him from the other Theodulus of the same day in the Greek books: «епарх» is the office the Greek page renders «ὁ ἀπὸ ἐπάρχων» and «столпник» the pillar, and neither is a grade this corpus keeps in `types` as a rank word. The two city epithets are the calendar’s own and they are not this folder’s: it is named for Edessa, where the Greek life puts the pillar, and this page says Constantinople and Ephesus. Both readings are recorded and neither is chosen."
     }
   ],
   "sex": "male",
@@ -20,14 +25,30 @@
       "latest": 395,
       "display": "379–395",
       "basis": "traditional",
-      "note": "saint.gr: «Υπήρξε πατρίκιος στα χρόνια του Θεοδοσίου του Μεγάλου (379-395)». The page gives no year of birth and none of death; the forty years on the pillar and the age of forty-two at which he climbed it are its own figures and are left in the life rather than turned into a date."
+      "note": "saint.gr: «Υπήρξε πατρίκιος στα χρόνια του Θεοδοσίου του Μεγάλου (379-395)» — the years of the reign he was a patrician under, which is the eparchy and not his life. The page gives no year of birth and none of death; the forty years on the pillar and the age of forty-two at which he climbed it are its own figures and are left in the life rather than turned into a date. Carried forward unchanged (7 October 2026)."
+    },
+    "death": {
+      "earliest": 440,
+      "latest": 440,
+      "display": "about 440",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s line for 3 декабря ст. ст.: «Прп. Феодула Константинопольского (ок. 440).» — the first year of death any source has given this folder, which held a floruit only. It does not contradict the Greek page’s 379-395: those are the years of the reign he served as patrician in, and a man who left the eparchy at the end of that reign and then stood decades on a pillar dies about then. Nothing read states his age or his birth, so neither is recorded."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 3,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Прп. Феодула Константинопольского (ок. 440)»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +81,39 @@
   },
   "related": [
     "theodosius-the-great"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "В тебе, отче, известно спасеся, еже по образу,/ приим бо крест, последовал еси Христу/ и, дея, учил еси презирати убо плоть, преходит бо,/ прилежати же о души, вещи безсмертней./ Темже и со Ангелы срадуется, преподобне Феодуле, дух твой.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Тропарь преподобного Феодула Цареградского»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "In you, father, that which was made after the image was surely saved: for taking up the cross you followed Christ, and by your doing you taught men to despise the flesh, since it passes away, and to care for the soul, a thing immortal. Therefore your spirit rejoices together with the angels, venerable Theodulus.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Царя тленнаго и скорогибнущия славы,/ мудре отче, изменил еси вечно пребывающими,/ от столпнаго же и прискорбнаго жития в Горнее и всерадостное взыде,/ превеличества славы Небесному Царю сцарствуя, Феодуле,/ моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Кондак преподобного Феодула Цареградского»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "A perishable emperor and a glory soon gone you exchanged, wise father, for the things that abide for ever; and from the life of the pillar and its sorrow you went up to the height and to all joy. Reigning with the heavenly King in the greatness of his glory, Theodulus, pray without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
   ]
 }

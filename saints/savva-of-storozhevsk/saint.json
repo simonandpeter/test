@@ -5,6 +5,11 @@
     {
       "form": "Савва Сторожевский",
       "lang": "ru"
+    },
+    {
+      "form": "Савва Сторожевский",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 3 декабря ст. ст., name page 1904, «Преподобный Савва Сторожевский», with the rank word left off. The day’s own line adds a second epithet in brackets, «(Звенигородского)», and the life page’s first sentence prints both together, «Савва Сторожевский, Звенигородский»; the name page’s own heading is the form taken. «Сторожевский» is the hill of Storozhi, where the watch against Moscow’s enemies once stood and where he built his monastery, and it is the epithet that tells him from the twenty-odd other Sabbases in this corpus."
     }
   ],
   "sex": "male",
@@ -13,11 +18,11 @@
   ],
   "dates": {
     "death": {
-      "earliest": 1407,
+      "earliest": 1406,
       "latest": 1407,
-      "display": "1407",
-      "basis": "attested",
-      "note": "Wikipedia’s article “Sabbas of Storozhi”: a Russian monk who died in 1407, founder and first hegumen of the monastery on Storozhi hill."
+      "display": "1406 or 1407",
+      "basis": "traditional",
+      "note": "Two sources disagree and neither is chosen (CORPUS.md section 3). days.pravoslavie.ru’s line for 3 декабря ст. ст. brackets «(1406)» and its life closes «Скончался святой Савва в глубокой старости 3 декабря 1406 года»; the reading this folder already carried was Wikipedia’s “Sabbas of Storozhi”, a Russian monk who died in 1407. The earlier reading was recorded as `attested` from an encyclopaedia; with a calendar against it the basis drops to `traditional` and both years stand (7 October 2026)."
     }
   },
   "attestations": [
@@ -57,5 +62,39 @@
   },
   "related": [
     "sergius-of-radonezh"
+  ],
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Пустыни явился еси доброе прозябение, преподобне,/ от юности бо изволил еси чистое житие,/ духовному твоему учителю последуя,/ и того учением ум к Небесным вперив,/ и стаду твоему премудр наставник показался еси,/ тем и Христос яко пресветла тя светильника чудесы обогати.// Савво, отче наш, моли спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Тропарь преподобного Саввы»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You appeared as the good shoot of the wilderness, venerable one, for from youth you chose a pure life, following your spiritual teacher and by his teaching lifting your mind to the things of heaven; and you were shown a most wise guide to your flock, and therefore Christ enriched you with wonders as a shining lamp. Savva our father, pray that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Господним желанием распалився,/ страсти плотския воздержанием оттряс,/ Божественнаго света незаходимое светило явился еси,/ чудес лучами всех просвещаеши,/ притекающих к мощем твоим,// Савво преподобне, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 3 декабря ст. ст. — «Кондак преподобного Саввы»",
+        "url": "https://days.pravoslavie.ru/Days/20261203.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Set alight with longing for the Lord, you shook off the passions of the flesh by abstinence and were shown an unsetting lamp of the divine light; with the rays of your wonders you enlighten all who run to your relics, venerable Savva our father.",
+        "rendered": "site"
+      }
+    }
   ]
 }
