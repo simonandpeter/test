@@ -1,0 +1,67 @@
+{
+  "slug": "catherine-konstantinova",
+  "display_name": "Catherine (Konstantinova)",
+  "names": [
+    {
+      "form": "Екатерина (Константинова)",
+      "lang": "ru",
+      "note": "The nominative behind the «Екатерины» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 13696, «Екатерина (Константинова), прмц.», with the rank word left off; the day's own line declines the forename and gives no surname. Константинова is a family surname and not a monastic name: her father was the peasant Григорий Константинов. azbyka.ru writes it without brackets, «Екатерина Константинова»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1887,
+      "latest": 1887,
+      "display": "1887",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученица Екатерина родилась в 1887 году в деревне Саврасово Солнечногорской волости Клинского уезда Московской губернии в семье зажиточного крестьянина Григория Константинова»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Послушница Екатерина Константинова была расстреляна 20 марта 1938 года и погребена в общей безвестной могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of her death and her feast are the same day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people and this folder is one of them. The day page carries no life for her and her name page 13696 carries none; the life in this folder is azbyka.ru's, and it is the one life of the nine that goes on past the execution: in 1940 the district's own police were found to have invented the witness statements in almost every case they brought, and the inquiry that established it was then set aside and her sentence confirmed as correct. Name page 13696 adds «26 января (Новомуч.)», and azbyka.ru adds the synaxis of the new martyrs who suffered at Butovo and the synaxis of the saints of Moscow; the second days are recorded here and she renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "slug": "nilus-tyutyukin",
+  "display_name": "Nilus (Tyutyukin)",
+  "office": "Hieromonk",
+  "names": [
+    {
+      "form": "Нил (Тютюкин)",
+      "lang": "ru",
+      "note": "The nominative behind the «Нила» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 9235, «Нил (Тютюкин), иеромонах, сщмч.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname. Нил is the name he was given at the tonsure; in the world he was Николай Федорович Тютюкин."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "new-martyr",
+    "hieromonk"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1871,
+      "latest": 1871,
+      "display": "1871",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученик Нил родился 4 мая 1871 года в селе Ольявидово Дмитровского уезда Московской губернии в семье крестьян Федора и Анны Тютюкиных и в крещении был наречен Николаем». The day of birth is 4 May; this corpus records years."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Иеромонах Нил (Тютюкин) был расстрелян 20 марта 1938 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of his death and his feast are the same day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people, eight of them women, and this folder is the one man of it. The day page carries no life for him and his name page 9235 carries none; the life in this folder is azbyka.ru's. **The two halves of the same calendar give him two different ranks**: the day's line abbreviates «Прмч.», преподобномученик, a venerable-martyr, and the heading of name page 9235 reads «сщмч.», священномученик, a hieromartyr. Both are literally available to a hieromonk and the calendar does not choose; `types` follows the day line, which is this row's source, and azbyka.ru, which titles him «Преподобномученик Нил (Тютюкин), иеромонах». Name page 9235 adds «26 января (Новомуч.)», and azbyka.ru adds the synaxis of the new martyrs who suffered at Butovo and the synaxis of the saints of Moscow; the second days are recorded here and he renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

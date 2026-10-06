@@ -6,6 +6,11 @@
       "form": "Δομέτιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιος Δομέτιος», with the rank word left off."
+    },
+    {
+      "form": "Дометий Персиянин",
+      "lang": "ru",
+      "note": "The nominative behind the «Дометия» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 644, «Дометий Персиянин, прмч.», with the rank word left off; the day's own line declines it and spells the by-name differently, «Дометия перса». The identical nominative stands on name page 643 for the Dometius of 7 августа, with two further by-names after it, and this folder stores the shorter form the shorter page gives."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Прмч. Дометия перса (363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "**The Russian calendar gives this bare Greek Dometius a by-name, and it is the by-name of another folder of this corpus.** Its line calls him «Дометия перса», Dometius the Persian, and his name page is 644, «Дометий Персиянин, прмч.», whose «День памяти» is this one day and nothing else. The same calendar keeps on 7 августа ст. ст. a second «Прмч. Дометия» whose own name page, **643**, is headed «Дометий Персиянин, Сирийский, иеродиакон, сщмч.» and whose life, life4387, is «Преподобномученик Дометий Персянин и двое его учеников» — the Persian with his two disciples whom the Greek and the Romanian keep on 7 August and whom this corpus holds as `dometius-the-persian`. So the calendar of record carries **two adjacent name pages, both headed «Дометий Персиянин», on two different days and with two different ranks**, and it is the day that assigns this row: 644 to this folder, 643 to the other. No hymn and no life hangs on 644 at all, and nothing read says the two are one man or that they are two. Whether this corpus should hold one Dometius the Persian or two is the author's; the `related` row between the two folders, written by the reader of the Greek 8 March, is left as the whole of what is asserted."
     },
     {
       "church": "romanian",

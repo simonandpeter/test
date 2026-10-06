@@ -1,0 +1,70 @@
+{
+  "slug": "antonina-novikova",
+  "display_name": "Antonina (Novikova)",
+  "names": [
+    {
+      "form": "Антонина (Новикова)",
+      "lang": "ru",
+      "note": "The nominative behind the «Антонины» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 13697, «Антонина (Новикова), прмц.», with the rank word left off; the day's own line declines the forename and gives no surname. Новикова is a family surname and not a monastic name: her father was Андрей Новиков. azbyka.ru writes it without brackets, «Антонина Новикова»."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1880,
+      "latest": 1880,
+      "display": "1880",
+      "basis": "attested",
+      "note": "azbyka.ru, in the one life it gives her and Nadezhda together: «Преподобномученица Антонина родилась в 1880 году в селе Горки Зарайского уезда Рязанской губернии в семье Андрея Новикова, владельца кирпичного завода»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Послушницы Егорьевского Троице-Мариинского монастыря Антонина Новикова и Надежда Круглова были расстреляны 20 марта 1938 года и погребены в общей безвестной могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of her death and her feast are the same day."
+    }
+  },
+  "related": [
+    "nadezhda-kruglova"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people and this folder is one of them. The day page carries no life for her and her name page 13697 carries none; the life in this folder is azbyka.ru's, which is one life for her and Nadezhda (Kruglova) together — the two were novices of the same house, were exiled together in 1931, shared one room after it, and were sentenced and shot together. Name page 13697 adds «26 января (Новомуч.)», and azbyka.ru adds the synaxis of the new martyrs who suffered at Butovo, the synaxis of the saints of Ryazan and the synaxis of the saints of Moscow — the only one of the nine to whom it gives the Ryazan synaxis, she being Ryazan-born; the second days are recorded here and she renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

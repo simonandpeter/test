@@ -1,0 +1,67 @@
+{
+  "slug": "eudocia-sinitsina",
+  "display_name": "Eudocia (Sinitsina)",
+  "names": [
+    {
+      "form": "Евдокия (Синицина)",
+      "lang": "ru",
+      "note": "The nominative behind the «Евдокии» of days.pravoslavie.ru's line for 7 марта ст. ст., name page 13695, «Евдокия (Синицина), прмц.», with the rank word left off; the day's own line declines the forename and gives no surname. **The two calendars spell the surname differently**: days.pravoslavie.ru has «Синицина» and azbyka.ru «Синицына», and the form stored is the source of record's. Синицына is a family surname and not a monastic name: her father was the peasant Ефрем Синицын."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "venerable-martyr",
+    "monastic"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1879,
+      "latest": 1879,
+      "display": "1879",
+      "basis": "attested",
+      "note": "azbyka.ru: «Преподобномученица Евдокия родилась в 1879 году в селе Тропарево Можайского уезда Московской губернии в семье крестьянина Ефрема Синицына»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of the nine for 7 марта ст. ст. with «(1938)», and azbyka.ru gives the day: «Послушница Евдокия Синицына была расстреляна 20 марта 1938 года и погребена в общей безвестной могиле на полигоне Бутово под Москвой». The civil 20 March 1938 is that Julian 7 March, so the day of her death and her feast are the same day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 7 марта ст. ст. — «Прмч. Нила , прмцц. Матроны , Марии , Евдокии , Екатерины , Антонины , Надежды , Ксении и Анны (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260307.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine people and this folder is one of them. The day page carries no life for her and her name page 13695 carries none; the life in this folder is azbyka.ru's. Name page 13695 adds «26 января (Новомуч.)», and azbyka.ru adds the synaxis of the new martyrs who suffered at Butovo and the synaxis of the saints of Moscow; the second days are recorded here and she renders on none of them."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 20 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 20 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 20 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

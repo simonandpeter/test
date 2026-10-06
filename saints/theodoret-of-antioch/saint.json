@@ -12,6 +12,11 @@
       "form": "Теодорит",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 8 March on pravoslavno.rs, „Свети свештеномученик Теодорит.“, with the rank word свештеномученик left off and Свети, which is not a rank. The heading gives no epithet and does not name Antioch, which this folder's English name carries and which the body of the entry supplies."
+    },
+    {
+      "form": "Феодорит Антиохийский",
+      "lang": "ru",
+      "note": "The nominative behind the «Феодорита» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 2207, «Феодорит Антиохийский, пресвитер, сщмч.», with the grade and the rank word left off; the day's own line declines the name and the see, «Сщмч. Феодорита , пресвитера Антиохийского»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian",
+        "note": "The Russian and the Serbian both keep him on 8 March where the Greek keeps him on 3 March — five days apart in the menologion, and not the thirteen of the style conversion. His name page 2207 lists this one day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Сщмч. Феодорита , пресвитера Антиохийского (361-363).»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The day page prints no hymn under his name: its four hymns are a troparion and a kontakion of Theophylact of Nicomedia and three of the Mother of God before her Kursk-Root icon «Знамение». The line closes «(361-363)», which is the reign of Julian the Apostate and not a year of death."
     },
     {
       "church": "romanian",

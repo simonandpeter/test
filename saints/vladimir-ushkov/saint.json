@@ -1,0 +1,68 @@
+{
+  "slug": "vladimir-ushkov",
+  "display_name": "Vladimir (Ushkov)",
+  "office": "Psalmist",
+  "names": [
+    {
+      "form": "Владимир (Ушков)",
+      "lang": "ru",
+      "note": "The nominative behind the «Владимира» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 13699, «Владимир (Ушков), псаломщик, мч.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname at all. Ушков is a family surname and not a monastic name: his father was the peasant Егор Ушков. azbyka.ru writes it without brackets, «Мученик Владимир Ушков»."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "new-martyr"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1885,
+      "latest": 1885,
+      "display": "1885",
+      "basis": "attested",
+      "note": "azbyka.ru: «Мученик Владимир родился в 1885 году в селе Конобеево Бронницкого уезда Московской губернии в семье крестьянина Егора Ушкова»."
+    },
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes his line for 8 марта ст. ст. with «(1942)», and azbyka.ru gives the day: «Псаломщик Владимир Ушков скончался в заключении в Онеглаге 21 марта 1942 года и был погребен в безвестной могиле». The civil 21 March 1942 is that Julian 8 March, so the day of his death and his feast are the same day."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Мч. Владимира (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The day page carries no life for him and his name page 13699 carries none; the life in this folder is azbyka.ru's. The day page prints no hymn under his name. Name page 13699 lists a second day, «26 января (Новомуч.)», and azbyka.ru lists two further synaxes besides, one of them the synaxis of the saints of the Archangel metropolitanate. One row per church being the schema, the second days are recorded here and he renders on none of them. **He is a layman**, the only one among the twelve twentieth-century folders written for the Julian 7 and 8 March: a carter and a button-maker, church warden and then psalmist of his own village, and the calendar ranks him «Мч.» accordingly."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 21 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 21 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 21 March 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

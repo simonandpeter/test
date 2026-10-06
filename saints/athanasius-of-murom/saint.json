@@ -7,6 +7,11 @@
       "form": "Αθανάσιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας», with the rank word and the description left off."
+    },
+    {
+      "form": "Афанасий Мурманский",
+      "lang": "ru",
+      "note": "The nominative behind the «Афанасия» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 300, «Преподобный Афанасий Мурманский», with the rank word left off; the day's own line declines the name and both by-names, and the title of his own life page adds «Олонецкий» which the name link does not. The shorter form the name link gives is what is stored."
     }
   ],
   "sex": "male",
@@ -18,8 +23,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr cites OCA among its own sources for this page, so a Russian row is likely to exist and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Прпп. Лазаря (1391) и Афанасия (XV) Мурманских (Муромских), Олонецких.»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The line is one line for two men and this folder is the second of them. His name page 300 lists this one day and no other, and gives two lives, one of them four sentences of his own and one shared with Lazarus. **The day page prints no hymn under his name**, and the shared life's closing sentence, «известны тропарь и кондак святому», says only that a troparion and a kontakion to him are known; no text of either is printed and none is taken. The folder's `dates` are written from this calendar and are its first."
     },
     {
       "church": "romanian",
@@ -52,5 +67,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1401,
+      "latest": 1500,
+      "display": "mid-15th century",
+      "basis": "traditional",
+      "note": "The folder's first date, and the Russian calendar is the only one of the four to give it. Its line closes «Афанасия (XV)» — the fifteenth century, which is the interval — and its life for him opens «Подвизался около половины XV века в обители преподобного Лазаря Мурманского (+ 1391 г.)», he laboured about the middle of the fifteenth century in the house of Lazarus of Murom; the shared life says the same, «В середине XV века в обители преподобного Лазаря Мурманского игуменом был преподобный Афанасий». The bounds are the century the line states and the modifier on the display is what the two lives say about where in it he stood, which is the shape `agnes-of-rome` already carries for a late third century inside 201–300; nothing read narrows it further, and no year of birth or of death is printed anywhere."
+    }
   }
 }

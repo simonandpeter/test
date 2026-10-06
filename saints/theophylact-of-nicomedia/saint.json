@@ -17,6 +17,11 @@
       "form": "Теофилакт",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 8 March on pravoslavno.rs, „Свети Теофилакт, епископ никомидијски.“, with Свети left off, which is not a rank, and the see епископ никомидијски left off as well. What remains is the bare forename, which is all the heading gives him."
+    },
+    {
+      "form": "Феофилакт Никомидийский",
+      "lang": "ru",
+      "note": "The nominative behind the «Феофилакта» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 2274, «Святитель Феофилакт Никомидийский, епископ, исповедник», with the rank words and the office left off; the day's own line declines the name and the see, «Прп. Феофилакта исп., еп. Никомидийского»."
     }
   ],
   "sex": "male",
@@ -28,8 +33,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (19 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Прп. Феофилакта исп., еп. Никомидийского (842-845).»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The day page prints a troparion and a kontakion under his name and both are in this folder. His name page 2274 lists this one day and no other. The calendar abbreviates his rank «Прп.», преподобный, a venerable, where the Greek and the Romanian both make him a confessor bishop; the folder keeps the three types the earlier calendars gave and adds none from this one, because `monk` already carries what «Прп.» says about him."
     },
     {
       "church": "romanian",
@@ -143,6 +158,38 @@
         "text": "As an unbreakable champion of Orthodoxy and a strong reproof of false belief we praise thee and cry out to thee, O Theophylact, initiate of the holy mysteries: keep from every assault those who in faith keep thy memory, interceding that our souls may be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Таяся, пожил еси, прехвальне,/ но Христос тя показа,/ яко светило на свещнице мысленнем,/ и скрижали ти вручи учений духовных,/ имиже, святителю Феофилакте,/ и нас озари.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Тропарь преподобного Феофилакта, исповедника, епископа Никомидийского»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou didst live hidden, O all-praised one, but Christ set thee forth as a lamp upon the lampstand of the mind, and put into thy hands the tablets of spiritual teachings; with them, O hierarch Theophylact, enlighten us also.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Светильник светел показался еси в концех,/ святителю Феофилакте,/ единосущна Отцу и Духу Слова ты проповедав,/ Божественных отец Собор уяснил еси,/ Троице угодник явился еси.// Ейже предстоя, моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Кондак преподобного Феофилакта»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Thou wast shown a bright lamp unto the ends of the earth, O hierarch Theophylact: preaching the Word to be of one essence with the Father and the Spirit, thou didst make plain the Council of the divine fathers and wast revealed a servant well-pleasing to the Trinity. Standing now before her, pray without ceasing for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -151,10 +198,10 @@
   "dates": {
     "death": {
       "earliest": 840,
-      "latest": 840,
-      "display": "840",
+      "latest": 845,
+      "display": "840 or about 845",
       "basis": "traditional",
-      "note": "saint.gr heads him «Οσιος Θεοφυλακτος Επισκοπος Νικομηδειας (; - 840)» and says «ο Όσιος Θεοφύλακτος στο Στρόβιλο, όπου επί τριάντα έτη παρέμεινε με καρτερία και εκεί εκοιμήθηκε με ειρήνη το έτος 840 μ.Χ.» No year of birth is printed; doxologia.ro, from which this folder was first written, gave no year at all."
+      "note": "Two calendars disagree by five years and the interval holds both. saint.gr heads him «Οσιος Θεοφυλακτος Επισκοπος Νικομηδειας (; - 840)» and says «ο Όσιος Θεοφύλακτος στο Στρόβιλο, όπου επί τριάντα έτη παρέμεινε με καρτερία και εκεί εκοιμήθηκε με ειρήνη το έτος 840 μ.Χ.»; days.pravoslavie.ru closes its line «(842-845)» and its life «Здесь он томился тридцать лет до самой кончины, последовавшей около 845 года». The thirty years of exile are the same in both. No year of birth is printed by any of the four; doxologia.ro, from which this folder was first written, gave no year at all."
     }
   },
   "related": [
@@ -163,6 +210,8 @@
     "joseph-archbishop-of-thessalonica",
     "nicetas-of-medikion",
     "theodore-the-studite",
-    "tarasius-of-constantinople"
+    "tarasius-of-constantinople",
+    "michael-of-synada",
+    "paul-of-plousias"
   ]
 }

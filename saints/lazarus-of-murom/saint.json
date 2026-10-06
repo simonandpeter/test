@@ -7,6 +7,11 @@
       "form": "Λάζαρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 8 Μαρτίου, «Όσιοι Λάζαρος και Αθανάσιος εκ Ρωσίας», with the rank word and the description left off."
+    },
+    {
+      "form": "Лазарь Мурманский, Олонецкий",
+      "lang": "ru",
+      "note": "The nominative behind the «Лазаря» of days.pravoslavie.ru's line for 8 марта ст. ст., name page 1326, «Преподобный Лазарь Мурманский, Олонецкий», with the rank word left off; the day's own line declines the name and both by-names. The two by-names are the island house and the Olonets country it stood in, and both are part of the name the calendar's own link gives."
     }
   ],
   "sex": "male",
@@ -34,8 +39,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026). saint.gr cites OCA among its own sources for this page, so a Russian row is likely to exist and has not been read."
+      "status": "venerated",
+      "feast": {
+        "day": 8,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 8 марта ст. ст. — «Прпп. Лазаря (1391) и Афанасия (XV) Мурманских (Муромских), Олонецких.»",
+        "url": "https://days.pravoslavie.ru/Days/20260308.html",
+        "year": 2026
+      },
+      "note": "The line is one line for two men and the calendar hangs two lives behind it, one of them shared. His name page 1326 lists this one day and no other. The calendar gives the house two names in the one line, «Мурманских (Муромских)» — of Murman and of Murom — and the island it stood on «остров Муч, на озере Онега», which its own parenthesis renders Мурманский остров на Онежском озере; this folder keeps Murom, which is the form the Greek calendar gave it. **The day page prints no hymn under either man's name**: its four hymns are Theophylact of Nicomedia's two and three of the Mother of God before her Kursk-Root icon. The shared life says of the other man that «известны тропарь и кондак святому», that a troparion and a kontakion to him are known, which is a statement about a service and not a text to copy."
     },
     {
       "church": "romanian",
