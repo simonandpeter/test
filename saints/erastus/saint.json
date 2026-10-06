@@ -17,6 +17,11 @@
       "form": "Ераст",
       "lang": "ru",
       "note": "The heading of the calendar's name page 790, «Святитель Ераст, епископ Панеадский, апостол от 70-ти», with the rank word and the two appositions left off. The day's line declines it, «Ераста»."
+    },
+    {
+      "form": "Ераст",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. новембар ст. ст., „Св. апостоли Олимп, Ераст, Кварт, Родион, Сосипатер и Терције.“ — «Св. апостоли» off, and the second of the six bare names is the whole of this form. It is the IDENTICAL STRING this folder already stores for `ru`, which is two calendars agreeing and not a duplicate: it is stored under its own language and adds no new fold key. The see and the office this entry gives him are already in the folder and are confirmed by it, not changed."
     }
   ],
   "sex": "male",
@@ -74,8 +79,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.11.2025 (10. новембар ст. ст.) — „Св. апостоли Олимп, Ераст, Кварт, Родион, Сосипатер и Терције.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, and the heading ENUMERATES SIX of the Seventy — Олимп, Ераст, Кварт, Родион, Сосипатер, Терције — so the brief’s enumeration ruling makes it one row per named member and every row quotes the whole heading. THREE OF THE SIX TAKE A ROW HERE AND THREE DO NOT. `herodion-the-apostle`, `sosipater-of-iconium` and `tertius` each already carry a venerated serbian row out of this same book on another of its own days, and §1 makes a saint already venerated elsewhere report-only — and THE BOOK ITSELF SAYS SO IN THIS ENTRY, printing «Родион 8. априла, Сосипатер 28. априла, а Терције 30. октобра», which are exactly the three days those three rows already stand on. They take a SECOND-DAY NOTE on the row they have instead, which is the brief’s own remedy, their existing row copied back verbatim with one sentence added. `dates` UNTOUCHED on all of them: the entry gives no year for any of the six."
     }
   ],
   "hymns": [

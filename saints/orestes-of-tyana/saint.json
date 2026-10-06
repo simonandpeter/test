@@ -16,6 +16,11 @@
       "form": "Орест Тианский (Каппадокийский)",
       "lang": "ru",
       "note": "The heading of the calendar's name page 1678, «Орест Тианский (Каппадокийский), мч.», with the rank word left off; the second epithet is parenthesised on the page itself. The day's line declines the name and gives his trade instead of an epithet, «Мч. Ореста врача»."
+    },
+    {
+      "form": "Орест",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 10. новембар ст. ст., „Св. муч. Орест.“ — «Св.» is “saint” and «муч.» the `martyr` grade `types` keeps, so both come off and nothing is left but the bare forename; the city in the display name is this corpus’s own and is not in the heading, though the body gives it twice."
     }
   ],
   "sex": "male",
@@ -69,8 +74,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 23.11.2025 (10. новембар ст. ст.) — „Св. муч. Орест.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-23&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the longest of the three: where this folder had a line it now has two speeches of his own and the whole order of the torments. `dates` UNTOUCHED — the entry names the reign of Diocletian and prints no year, and the folder already holds 304. `types` untouched: «муч.» is the `martyr` grade it holds and «лекар по занимању», a physician by trade, is its `physician`. ONE `related` ROW ADDED, one way: the entry closes on an apparition no other calendar this folder cites records — he appeared to Demetrius of Rostov and showed him all the wounds on his body — so the life links that folder and owes it a row. It is not written in the other direction: the reading is in this book’s account of the martyr, and nothing read was consulted on the side of the metropolitan who saw him. NO `locations`: Tyana in Cappadocia is named and is already inside the Russian name form."
     }
   ],
   "hymns": [
@@ -135,5 +150,8 @@
       "basis": "traditional",
       "note": "The year in the calendar's own bracket: days.pravoslavie.ru, 10 ноября ст. ст., «Мч. Ореста врача (304).», and its life page says the same in words — «Влачимый по камням, святой мученик отошел ко Господу в 304 году». Neither doxologia.ro nor saint.gr gave this folder a year."
     }
-  }
+  },
+  "related": [
+    "demetrius-of-rostov"
+  ]
 }
