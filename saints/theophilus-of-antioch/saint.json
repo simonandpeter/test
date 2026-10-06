@@ -1,0 +1,59 @@
+{
+  "slug": "theophilus-of-antioch",
+  "display_name": "Theophilus of Antioch",
+  "sex": "male",
+  "types": [
+    "bishop"
+  ],
+  "names": [
+    {
+      "form": "Теофил",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s fourth heading for 6. децембар ст. ст., „Свети Теофил, епископ антиохијски.“ — «Свети» is “saint” and not a rank, and «епископ антиохијски» is the grade with the see, which §6 keeps out of a stored form; so the bare personal name is the whole of the form. THE FOLD THIS MAKES IS WRITTEN AND KEYED: `sr-foldnew.mjs` measured the string at two other holders, `theophilus-companion-of-trophimus` and `theophilus-of-selention`, so the key in `scripts/corpus-gate.mjs` goes from two members to three in this commit and the two-member key it replaces is deleted with its reading carried forward. The corpus keeps more than twenty Theophilus folders and the fold is three because only these three hold a Serbian form at all."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 181,
+      "latest": 181,
+      "display": "181",
+      "basis": "traditional",
+      "note": "Охридски пролог за 6. децембар ст. ст.: „Управљао црквом Антиохијском тринаест година, и упокојио се 181. године.“ — he governed the church of Antioch thirteen years and reposed in 181. The thirteen years are a length and not a bound, so no `floruit` was built out of them by subtraction; the year of death is the one year the book prints."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 6 декабря ст. ст. (7 October 2026)."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for 6 Δεκεμβρίου (7 October 2026). The corpus holds more than twenty Theophilus folders and none of them is of Antioch; `sr-namesweep.mjs` and a sweep of every one of those folders for the word Antioch both came back empty, which is what made this an arrival and not an upgrade."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 19.12.2025 (6. децембар ст. ст.) — „Свети Теофил, епископ антиохијски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-19&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth and last entry, and the second of this day’s two arrivals. Four lines: well schooled in Hellenic philosophy, he was baptised after reading the Holy Scripture and became a great protector of the Christian faith; his work «О вери», On the Faith, is preserved to this day; he governed the church of Antioch thirteen years and reposed in 181. `types`: `bishop` ALONE, and the restraint is deliberate — the vocabulary carries `apologist`, and a man who read himself into the faith out of philosophy, defended it and left a book about it reads like one, but «заштитник вере хришћанске» is a description and not a rank, and BRIEF-SERBIAN §5 makes the mapping a thing to read and not to assume. `dates`: death 181, the one year the book prints. The thirteen years of his episcopate are a length and no `floruit` was built out of them by subtraction. NO `office`: “Bishop of Antioch” is not in the four locale packs that `i18n.test.mjs` checks, so the see is in the display name and the life. NO `locations`. NO `related` row: the entry names nobody. The Prologue prints no troparion and no kontakion."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
