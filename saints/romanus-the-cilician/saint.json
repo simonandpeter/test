@@ -6,6 +6,11 @@
       "form": "Ρωμανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 9 Φεβρουαρίου, «Όσιος Ρωμανός ο Κίλικας ο θαυματουργός», with the rank word left off."
+    },
+    {
+      "form": "Роман Антиохийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1873, «Роман Антиохийский (Сирийский), отшельник», with the trailing grade and the alternative by-name left off; its life page 3236 is titled «Преподобный Роман Антиохийский». The day line gives only «Романа чудотворца», the wonderworker, with no by-name at all."
     }
   ],
   "sex": "male",
@@ -17,8 +22,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The Greek keeps him on 9 February and this calendar on 27 November; his name page 1873 gives «День памяти: 27 ноября» and no other day, so the two churches simply keep one man on two days."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Прп. Романа чудотворца (V).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 500,
+      "display": "5th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes both its line and its life with the same Roman numeral where a year would stand — «Прп. Романа чудотворца (V).» and «Достигнув глубокой старости, он с миром отошел ко Господу (V)» — so the century is the whole of the dating. saint.gr prints no year for him at all. The interval is the whole of the century and no year inside it is chosen."
+    }
   }
 }

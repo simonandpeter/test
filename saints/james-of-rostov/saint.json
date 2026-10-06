@@ -6,12 +6,18 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Ιάκωβος ο θαυματουργός επίσκοπος Ροστοβίας», with the rank words left off."
+    },
+    {
+      "form": "Иаков Ростовский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 883, «Святитель Иаков Ростовский, епископ», with the rank and the trailing grade left off. The day line declines it and splits the see off, «Иакова , еп. Ростовского»."
     }
   ],
   "sex": "male",
   "types": [
     "bishop",
-    "wonderworker"
+    "wonderworker",
+    "hierarch"
   ],
   "dates": {
     "death": {
@@ -19,14 +25,24 @@
       "latest": 1392,
       "display": "1392",
       "basis": "traditional",
-      "note": "saint.gr: «Ο Άγιος Ιάκωβος ο θαυματουργός ήταν επίσκοπος Ροστοβίας. Κοιμήθηκε το 1392 μ.Χ.», and its head line gives «(; - 1392)»."
+      "note": "saint.gr: «Ο Άγιος Ιάκωβος ο θαυματουργός ήταν επίσκοπος Ροστοβίας. Κοιμήθηκε το 1392 μ.Χ.», and its head line gives «(; - 1392)». days.pravoslavie.ru agrees and gives the day as well: «Скончался святитель Иаков здесь же 27 ноября 1392 года», which is the day the calendar keeps him on."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 23 мая (Ростов.) , 27 ноября», the May day being the synaxis of the saints of Rostov. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Свт. Иакова , еп. Ростовского (1392).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -56,5 +72,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Избран от юности Богови быв,/ святителю Иакове,/ сего ради архиерейства саном почтен,/ упасл еси люди, яже тебе Богом врученныя./ Темже и по преставлении / чудес дарования от Бога приял еси/ исцеляти различныя недуги./ Моли о нас, совершающих честную память твою,/ да тебе непрестанно величаем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Тропарь святителя Иакова, епископа Ростовского (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Chosen for God from your youth, holy hierarch James, you were honoured for it with the rank of the priesthood and shepherded the people God entrusted to you. And after your departure you received from God the gift of wonders, to heal manifold sicknesses. Pray for us who keep your honoured memory, that we may magnify you without ceasing.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Яко архиереев сопрестольник/ и святителем изрядный поборник был еси, святителю Иакове,/ непрестанно сохраняй отечество твое, град же и люди,/ тебе верою почитающия и честным мощем твоим покланяющияся,/ да велегласно тебе вопием:/ радуйся, Иакове Богомудре.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Кондак святителя Иакова, епископа Ростовского (глас 8)»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As one who shared the throne of the bishops and was an excellent champion of the hierarchs, holy hierarch James, keep without ceasing your own country, your city and your people, who honour you in faith and venerate your precious relics, that we may cry aloud to you: rejoice, James wise in God.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

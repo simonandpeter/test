@@ -1,0 +1,60 @@
+{
+  "slug": "andrew-of-simbirsk",
+  "display_name": "Andrew of Simbirsk",
+  "names": [
+    {
+      "form": "Андрей (Огородников) Симбирский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14260, «Андрей (Огородников) Симбирский, Христа ради юродивый», with the rank clause left off. The day line gives only «Андрея Симбирского» and no surname, so the surname is read from the name page."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "fool-for-christ",
+    "righteous"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «21 мая (обретение мощей)», the finding of his relics. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Блж. Андрея Симбирского (1841).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1841,
+      "latest": 1841,
+      "display": "1841",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Блж. Андрея Симбирского (1841).» The calendar carries no life page for him, and gives him no year of birth."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

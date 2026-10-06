@@ -11,6 +11,11 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 27 Νοεμβρίου, «Άγιος Ιάκωβος ο Πέρσης ο Μεγαλομάρτυρας», with the rank words left off."
+    },
+    {
+      "form": "Иаков Персиянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 881, «Иаков Персиянин, вмч.», with the rank word left off; its life page 3234 adds the by-name «(Рассеченный)», the cut-apart, which the heading does not carry and which is not stored here."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads itself «День памяти: 27 ноября» and gives no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Вмч. Иакова Персянина (421).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -108,6 +123,38 @@
       },
       "tone": "Ἦχος β’.",
       "model": "Τὰ ἄνω ζητῶν."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мучении странноужасными и доблестию терпения/ всех преудивил еси, многострадальне,/ над коимждо составом удеси резания,/ благодарны мольбы предивне изрекл еси Господу./ Тем, во страдании твоем венец прием,/ к Престолу возшел еси Небеснаго Царя Христа Бога, Иакове,// Того моли спасти души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Тропарь великомученика Иакова Персянина (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "By torments strange and dreadful and by the valour of your endurance you astonished all, much-suffering one; and over the cutting away of every joint of your limbs you wonderfully spoke prayers of thanksgiving to the Lord. So, having received the crown in your suffering, you went up to the throne of the heavenly King, Christ our God, James; entreat him to save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Уверився доброю сопружницею, терпеливодушне,/ и Страшнаго Судища убоявся,/ персское повеление и страх, Иакове, поплевал еси/ и явился еси мученик честный,// телом, яко розга, режем.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Кондак великомученика Иакова Персянина (глас 2)»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Persuaded by your good wife, patient-souled one, and taking fear of the dread Judgement, you spat upon the Persian command and the Persian terror, James, and were shown an honoured martyr, your body cut like a vine-branch.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -121,5 +168,14 @@
   ],
   "related": [
     "amphilochius-of-pochaev"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 421,
+      "latest": 421,
+      "display": "421",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line for him with the year — «Вмч. Иакова Персянина (421).» — and its life page places him by the reigns he served at court, «персидского царя Издегерда (399 - 420) и его преемника Варахрана (420 - 438)», which is consistent with it. Neither doxologia.ro nor saint.gr gave him a year."
+    }
+  }
 }
