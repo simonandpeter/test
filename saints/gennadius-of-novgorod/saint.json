@@ -6,11 +6,17 @@
       "form": "Γεννάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve hierarchs of Novgorod on the page for 10 Φεβρουαρίου, «Γεννάδιος (κοιμήθηκε 1505 μ.Χ.)», with the rank word left off."
+    },
+    {
+      "form": "Генадије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 4. децембар ст. ст., „Свети Генадије, архиепископ новгородски.“ — with «Свети» (“saint”) and «архиепископ новгородски» left off, the latter being a rank and a see, which §6 keeps out of a stored form and which this corpus puts in `types` and the display name instead. That leaves the bare forename. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because the corpus holds ten Gennadius folders: none of them stores a Serbian form, and the fold the gate would make is of this string and not of the English name."
     }
   ],
   "sex": "male",
   "types": [
-    "hierarch"
+    "hierarch",
+    "archbishop"
   ],
   "attestations": [
     {
@@ -40,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding menologion day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 4,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 17.12.2025 (4. децембар ст. ст.) — „Свети Генадије, архиепископ новгородски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-17&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop; URL year 2025. A DIFFERENT DAY FROM THE ONE THE CORPUS HELD, and it is a day of his own rather than a company: the Greek calendar keeps him on 10 February inside the synaxis of the twelve hierarchs of Novgorod, and this book gives him his own entry on the Julian 4 December. The serbian row was `undocumented`, so the row simply lands; the greek row is untouched and stays on 10 February. `types_add`: `archbishop`, which the heading states outright — «архиепископ новгородски» — where the folder held the generic `hierarch` it got from a Greek enumeration that named only his see and his year. NO `office`: `i18n.test.mjs` wants every office string in all four locale packs and “Archbishop of Novgorod” is not in them, so the see stays in the display name and the life. `dates` UNTOUCHED and it is an AGREEMENT: «Упокојио се у Господу 1505. године», which is the year saint.gr’s enumeration gave and the folder already carries. WHAT THE BOOK ADDS IS EVERYTHING THE GREEK PAGE SAID IT DID NOT HAVE — that page recorded „the name, the see and the year, and nothing else“, and this entry gives him three things besides: that he was a notable writer and a champion of and sufferer for the truth of Christ; that he gathered the scattered books of Holy Scripture together into one; that he composed a paschal key for five hundred and thirty-two years ahead; and that his wonderworking relics are in the Chudov monastery in Moscow. NO `locations`. NO `related` row: the entry names nobody else. The Prologue prints no troparion and no kontakion."
     }
   ],
   "dates": {
