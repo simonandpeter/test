@@ -10,13 +10,28 @@
       "form": "Мартинијан",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 11 April on pravoslavno.rs, „Св. муч. Прокес и Мартинијан.“, where Св. муч. heads the pair and belongs to neither name, so each forename stands bare. The heading gives him no epithet; «the Jailer» in the English name is what the entry's first sentence says the two men were, and the corpus keeps such a clause in the display name. It is the same bare form `martinian-of-caesarea` holds off this same Prologue's heading for 13. фебруар ст. ст., „Преподобни Мартинијан.“, and that fold is deliberate and recorded in the run's findings."
+    },
+    {
+      "form": "Мартиниан Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 1493, «Мартиниан Римский, мч.», with the rank word left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (4 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Мчч. Прокесса и Мартиниана (ок. 67).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "One line for the two men, and one life page behind both names. The line gives no city and no rank beyond «Мчч.»; the name links behind it add the Roman epithet to each."
+      }
     },
     {
       "church": "romanian",
@@ -51,5 +66,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 67,
+      "latest": 67,
+      "display": "c. 67",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Святые Прокесс и Мартиниан были усечены мечом (+ ок. 67)», and the day line closes «(ок. 67)». The folder stood undated because the Ohrid Prologue it was written from printed no year at all, so nothing is displaced. Read 7 October 2026."
+    }
   }
 }

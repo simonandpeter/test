@@ -11,14 +11,29 @@
       "form": "Φαρμούθιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Φαρμούθιος ο Αναχωρητής», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Фармуфий Египетский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 2162, «Фармуфий Египетский, пустынник», with the rank word left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "related": [],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Прп. Фармуфия (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "A bare line with a century and no more. The name link behind it gives the country and the manner of life, «Фармуфий Египетский, пустынник», and the life page behind it is one sentence long."
+      }
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Преподобный Фармуфий жил в IV веке в той же пустыне, где подвизался в студенце (колодце) преподобный Иоанн (память 29 марта), которого питал святой Фармуфий»; the day line gives «(IV)». The page says he *lived* in the fourth century, so this is recorded as a floruit and not as a death; the folder held no `dates` at all before, because saint.gr gave no year. Read 7 October 2026."
+    }
   }
 }

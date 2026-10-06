@@ -11,6 +11,11 @@
       "form": "Јован",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 18 April, „Преп. Јован.“, with Преп. left off, which is the venerable this folder already carries in `types`. **The heading is a rank word and a bare forename and nothing else** — the discipleship this corpus keeps in his display name is the body's first sentence, not the heading's — so there is no fuller form to store. Six folders already hold this bare Serbian form; this is a seventh, and the fold is recorded as deliberate in the run's findings."
+    },
+    {
+      "form": "Иоанн Солунский (Фессалоникийский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 1018, «Иоанн Солунский (Фессалоникийский), прп.», with the rank word left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds. The second epithet is kept in the brackets the calendar prints it in; the bare «Иоанн» was refused, because the plain gate already folds ten folders onto the Serbian «Јован» of which this one is a member."
     }
   ],
   "sex": "male",
@@ -22,8 +27,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His life page on the same site heads «Дни памяти: 11 апреля , 18 апреля» and keeps both. This row stands on 11 апреля, the day whose page listed him; 18 апреля is the day the `romanian` and `greek` rows already on this folder carry, and the difference is seven days and not the thirteen of the style conversion, so the two are two commemorations. One row per church is the schema, so the eighteenth is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Прп. Иоанна , ученика прп. Григория Декаполита (IX).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "The line names him only as the disciple of his teacher and gives a century, «(IX)»; the name link behind it gives him Thessalonica twice over, in both of the Russian adjectives for the city. The life page behind the line is the fullest account of him this corpus has read."
+      }
     },
     {
       "church": "romanian",
@@ -76,6 +92,23 @@
         "text": "With the streams of your tears you worked the barren desert, and with sighs from the depths you made your labours bear fruit a hundredfold; and you became a light to the world, shining with wonders, John our father. Pray to Christ God that our souls be saved.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Воздержанием, отче, житие украсив,/ и плоть умертвил еси,/ темже и победил еси вражия прилоги, преблаженне,/ и прешел еси к Богу/ в безскорбный и вечный живот,/ яко достоин наследник, Иоанне,// Емуже молися спастися нам.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Кондак преподобного Иоанна», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "It names this saint and no other, so it is his own proper and not a hymn mis-hung from a neighbour on the day. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Adorning thy life with abstinence, O father, thou didst put the flesh to death, and so didst overcome the assaults of the enemy, O most blessed one, and didst pass over to God into a life eternal and without sorrow, as a worthy heir, O John. Pray to Him, that we may be saved.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -84,15 +117,23 @@
   "related": [
     "gregory-the-decapolite",
     "john-chrysostom",
-    "joseph-the-hymnographer"
+    "joseph-the-hymnographer",
+    "nicholas-of-myra"
   ],
   "dates": {
+    "birth": {
+      "earliest": 775,
+      "latest": 800,
+      "display": "late 8th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Преподобный Иоанн родился в конце VIII века» — born at the end of the eighth century. The folder held no birth date; the bounds are the last quarter of that century and nothing narrower is stated. Read 7 October 2026."
+    },
     "death": {
       "earliest": 820,
       "latest": 820,
       "display": "about 820",
       "basis": "traditional",
-      "note": "The Ohrid Prologue for 18. април ст. ст.: „Скончао мирно око 820. год.“ — he reposed peacefully about 820; the page's «око», about, is why the display says about 820. The folder held no `dates` before, and the Romanian life it was written from closes «No year is given anywhere in the notice», so nothing was displaced. The same entry puts his sufferings under Leo the Armenian, whose iconoclasm the Romanian life also names. No year of birth is recorded anywhere read."
+      "note": "The Ohrid Prologue for 18. април ст. ст.: „Скончао мирно око 820. год.“ — he reposed peacefully about 820. days.pravoslavie.ru agrees by way of his teacher: it dates Gregory’s repose «около 820 года» and says «вскоре за ним отошел ко Господу и его верный ученик Иоанн», soon after him his faithful disciple John departed to the Lord. Neither page gives John a year of his own, so the reading is unchanged. Read 7 October 2026."
     }
   }
 }

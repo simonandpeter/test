@@ -1,0 +1,74 @@
+{
+  "slug": "nicholas-gavarin",
+  "display_name": "Nicholas (Gavarin)",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Гаварин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 14245, «Николай (Гаварин), иерей, сщмч.», with the rank words left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds. The surname is kept in the brackets the calendar prints it in. azbyka.ru heads him «Священномученик Николай Гаварин, пресвитер», without the brackets; the stored form is the one the calendar whose row this folder carries prints."
+    }
+  ],
+  "related": [
+    "nicholas-of-myra",
+    "macarius-metropolitan-of-moscow"
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1870,
+      "latest": 1870,
+      "display": "1870",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священномученик Николай родился 23 декабря 1870 года в городе Якобштадте Курляндской губернии в семье священнослужителя Иоанна Гаварина»."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "azbyka.ru: «Священник Николай Гаварин скончался в Ухтпечлаге 24 апреля 1938 года и был погребен в безвестной могиле»; the Sretensky day line prints «(1938)» for him."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His index entry on days.pravoslavie.ru lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia. azbyka.ru's entry for him lists that synaxis as a moveable 7 февраля and adds three more: the saints of Komi on 11 февраля, the Belarusian saints on 11 июля and the saints of Moscow on 5 сентября. One row per church is the schema, so the other days are recorded here and he does not render on them. azbyka.ru heads his own day 24 апреля, which is this Julian day in new style — thirteen days, the style conversion, and not a second feast."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Сщмч. Николая пресвитера (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "The line gives the baptismal name alone, in the genitive, with the rank and the year. The surname, the rank of priest and the other days are on the name page behind it, 14245; the life is on azbyka.ru and not on this site at all."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

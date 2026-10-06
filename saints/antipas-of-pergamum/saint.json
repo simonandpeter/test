@@ -17,6 +17,11 @@
       "form": "Антипа",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 11 April on pravoslavno.rs, „Свешт. муч. Антипа епископ Пергамски, у Азији.“, with Свешт. муч. left off — the rank words this source uses for a hieromartyr, which this folder already carries in `types` — and with епископ Пергамски, у Азији left off as well: a second rank word and the see with its province, both of which this folder already keeps in `types` and in `office`. The heading leaves no epithet, so the bare forename is what the source gives, and no other folder holds a Serbian Антипа."
+    },
+    {
+      "form": "Антипа Пергамский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 205, «Святитель Антипа Пергамский, епископ, сщмч.», with the rank words and the see left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "sex": "male",
@@ -36,8 +41,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Сщмч. Антипы , еп. Пергама Асийского (ок. 68).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "The line stands in the day’s first paragraph and prints a space before its comma because the name is a link. It gives the see as «еп. Пергама Асийского», bishop of Pergamum of Asia, which is the see this folder’s `office` already records, and closes with a year this folder did not hold."
+      }
     },
     {
       "church": "romanian",
@@ -134,6 +149,40 @@
         "text": "The hierarch and renowned great-martyr, the most excellent guardian of the city of Pergamum, and the adversary of the common enemy — Antipas let us praise in songs as we are bound to do, as one who heals aching teeth, crying to him with longing: rejoice, thrice-blessed father.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Идольския лести упразднил еси, Антипо,/ и, диавольскую поправ силу,/ пред богоборцы дерзновенно Христа исповедал еси./ Темже со Ангельскими чины в Вышних водворяяся,/ Владыце всех славословие принося,/ и о нас молебное благодарение предлагаеши,/ благодать цельбы даруя./ Сего ради тя чтим,/ священномучениче Антипо,/ моли Христа Бога,// да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Тропарь священномученика Антипы», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "It names this saint and no other, so it is his own proper and not a hymn mis-hung from a neighbour on the day. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Thou didst bring the deceit of the idols to nothing, O Antipas, and trampling down the power of the devil didst boldly confess Christ before those who fight against God. Therefore, dwelling on high with the ranks of angels, thou offerest praise to the Master of all and settest before Him thanksgiving and supplication for us, bestowing the grace of healing. For this we honour thee, O hieromartyr Antipas: pray to Christ God, that He may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Апостолов сопрестольник и святителей украшение/ был еси, блаженне,/ мученически прославився,/ возсиял еси, якоже солнце, всех просвещая,/ Антипо священне,/ разрушил еси безбожия нощь глубокую./ Сего ради тя почитаем,/ яко Божественнаго суща священомученика// и целеб подателя.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Кондак священномученика Антипы», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "It names this saint and no other, so it is his own proper and not a hymn mis-hung from a neighbour on the day. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Thou wast a sharer of the apostles' throne and an adornment of hierarchs, O blessed one; glorified in martyrdom, thou didst shine out like the sun and give light to all, O sacred Antipas, and didst break up the deep night of godlessness. Therefore we honour thee as a divine hieromartyr and a giver of healings.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -147,11 +196,11 @@
       "basis": "unknown"
     },
     "death": {
-      "earliest": 92,
+      "earliest": 68,
       "latest": 92,
-      "display": "92",
+      "display": "68–92",
       "basis": "traditional",
-      "note": "saint.gr: «τότε έδωσε εντολή να τον ρίξουν σε ένα πυρωμένο χάλκινο ομοίωμα βοδιού, όπου τελειώθηκε ο βίος του, το έτος 92 μ.Χ.», and the page's heading has «Αγιος Αντιπας Επισκοπος Περγαμου (; - 92)». The page gives no birth year and sets him in the years of Domitian, «(81 - 96 μ.Χ.)»."
+      "note": "**Two calendars, two years, and the interval carries both.** days.pravoslavie.ru’s life: «Он отошел ко Господу спокойно, как бы уснув (+ ок. 68)», and the day line closes «(ок. 68)»; the reign it sets him in is Nero's, «в царствование императора Нерона (54 - 68)». saint.gr: «τότε έδωσε εντολή να τον ρίξουν σε ένα πυρωμένο χάλκινο ομοίωμα βοδιού, όπου τελειώθηκε ο βίος του, το έτος 92 μ.Χ.», and the same page’s heading has «Αγιος Αντιπας Επισκοπος Περγαμου (; - 92)». Nero’s reign ends in the Russian year and the Greek year falls a quarter-century outside it; no third source was read, so neither is chosen. Read 7 October 2026."
     }
   }
 }

@@ -11,26 +11,52 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 11 Απριλίου, «Όσιος Ιάκωβος του Ζελέζνιυ - Μπορόκ», with the rank word left off."
+    },
+    {
+      "form": "Иаков Железноборовский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 11 апреля ст. ст., name page 871, «Преподобный Иаков Железноборовский», with the rank word left off. The day’s own line gives the name in the genitive. `.tmp/sr-foldpred.mjs` reports the stored form as a key no other folder holds."
     }
   ],
   "related": [
     "james-of-bryleyevo",
-    "sergius-of-radonezh"
+    "sergius-of-radonezh",
+    "longinus-the-centurion",
+    "john-the-baptist",
+    "nicholas-of-myra"
   ],
   "dates": {
+    "birth": {
+      "earliest": 1351,
+      "latest": 1400,
+      "display": "second half of the 14th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s first life: «Родился во второй половине XIV века в Костромской земле»; its second says the same, «родился во второй половине XIV века». The folder held no birth date, because saint.gr gave none. Read 7 October 2026."
+    },
     "death": {
       "earliest": 1442,
       "latest": 1442,
       "display": "1442",
       "basis": "traditional",
-      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1442 μ.Χ.», and the page's heading has «Οσιος Ιακωβος Του Ζελεζνιυ - Μποροκ (; - 1442)». The page gives no birth year."
+      "note": "saint.gr: «Κοιμήθηκε με ειρήνη το έτος 1442 μ.Χ.», and the page’s heading has «Οσιος Ιακωβος Του Ζελεζνιυ - Μποροκ (; - 1442)». days.pravoslavie.ru gives the day with the year: «Скончался преподобный глубоким старцем 11 апреля 1442 г.». The two agree and the year is unchanged; the day is the menologion day both calendars keep him on."
     }
   },
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 11,
+        "month": 4,
+        "calendar": "julian",
+        "note": "His life pages on the same site head «Дни памяти: 11 апреля , 5 мая (обретение мощей)» and the life dates the finding of his incorrupt relics to 5 May 1613. One row per church is the schema, so the second day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Прпп. Иакова Железноборовского (1442) и Иакова Брылевского, сподвижника его (XV).»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "One line for the two men, the teacher with his year and the disciple with his century. **The line and the name page spell the disciple differently** — «Иакова Брылевского» in the genitive on the day line against «Иаков Брылеевский» on the name page — and the name page’s form is the one stored, being the calendar’s own nominative."
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +86,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Небеснаго желая,/ земная возненавидел еси/ и, взем крест свой, последовал еси Христу/ и от Него прием дарования чудес,/ исцеляти недужныя;/ но, яко имея дерзновение ко Святей Троице,/ испроси православным Христианом здравие и спасение,/ на враги же победу/ и не забуди, посещая чад своих,/ припадающих к цельбоносному гробу твоему,/ Иакове, преподобне отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Тропарь преподобного Иакова Железноборовского», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "It names this saint and no other, so it is his own proper and not a hymn mis-hung from a neighbour on the day. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Desiring the things of heaven, thou didst hate the things of earth, and taking up thy cross didst follow Christ, and from Him didst receive the gift of wonders, to heal the sick. Having therefore boldness before the Holy Trinity, ask health and salvation for Orthodox Christians, and victory over their enemies; and forget not to visit thy children, who fall down before thy healing-bearing tomb, O James, our venerable father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Сердечная очи, досточудне, ко Господу вперив/ и телесныя страсти из корене исторгая,/ неболезненную жизнь в болезнех восприял еси, преподобне,/ болезнем же лютым даеши исцеление просящим с верою у тебе,/ темже молим тя, досточудне,/ исцели наша болезни душевныя и телесныя, да зовем ти:/ радуйся, Иакове Богомудре, отче наш.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 11 апреля ст. ст. — «Кондак преподобного Иакова Железноборовского», глас 8, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260411.html",
+        "year": 2026,
+        "note": "It names this saint and no other, so it is his own proper and not a hymn mis-hung from a neighbour on the day. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Fixing the eyes of thy heart upon the Lord, O most wondrous one, and tearing up the passions of the body by the root, thou didst receive in sicknesses a life free from sickness, O venerable father; and to those who ask of thee with faith thou givest healing of grievous sickness. Therefore we pray thee, most wondrous one: heal the sicknesses of our souls and of our bodies, that we may cry to thee, Rejoice, O James, our God-wise father.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
