@@ -11,6 +11,11 @@
       "form": "Γεννάδιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Νοεμβρίου, «Όσιος Γεννάδιος ο Βατοπαιδινός», with the rank words left off. The epithet «ο Βατοπαιδινός» is left to the display name; he is not the patriarch Gennadius kept in another line of the same day."
+    },
+    {
+      "form": "Генадије Ватопедски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. новембар ст. ст., „Преп. Генадије Ватопедски.“ — «Преп.» is the `venerable` grade `types` already keeps and comes off. «Ватопедски» is the monastery he belonged to: not a rank and not a see, and this folder carries no `office` for it, so §6's rule that the form keeps everything which distinguishes him keeps it. THIS IS DELIBERATELY NOT THE READING THE GREEK FORM ON THIS FOLDER TOOK, which left «ο Βατοπαιδινός» to the display name — and the difference is the point: a bare «Генадије» would fold onto `gennadius-patriarch-of-constantinople`, whom the same calendars keep elsewhere and whom this folder's own Greek note is at pains to say he is not. Measured: no other folder holds this two-word string."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.11.2025 (17. новембар ст. ст.) — „Преп. Генадије Ватопедски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's third entry, three sentences, and the same three saint.gr prints: the office, the oil and the attribution of the wonder to the Mother of God. STILL NO `dates`: this book gives him no century, no abbot and no reign either, so the folder's `dates` stays null, which is what two sources now agree in withholding. No `related`: the entry names no person. WHAT IT ADDS to what the folder had: that the vessel was an EMPTIED CASK rather than a jar, and that the miracle was ascribed not only to the Most Holy Theotokos, to whom the monastery is dedicated, but PARTICULARLY TO AN ICON OF HERS THAT STOOD THERE — the icon is not named and no feast of it is claimed here."
     }
   ],
   "text": {

@@ -17,6 +17,11 @@
       "form": "Григорий Чудотворец, Неокесарийский",
       "lang": "ru",
       "note": "Read out of the title on the name link behind his line for 17 ноября ст. ст., name page 551, «Святитель Григорий Чудотворец, Неокесарийский», with the leading rank word left off; the line itself declines the name and prints the see as a separate clause. The epithet Чудотворец is kept because the calendar prints it inside the name string on both the name page and the second of its two life pages. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Григорије",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. новембар ст. ст., „Св. Григорије Чудотворац еп. Неокесаријски.“ — «Св.» is “saint” and not a rank, «Чудотворац» is the `wonderworker` grade and «еп.» the `bishop` grade, both of which `types` already keeps, and «Неокесаријски» is the see this folder already carries in `office` as Bishop of Neocaesarea in Pontus. §6 strips a rank and a see, so all four words come off and the bare forename is what is left. It joins a fold of four — the string was ALREADY THREE WIDE AND UNREAD — declared in `scripts/corpus-gate.mjs` in the same commit."
     }
   ],
   "sex": "male",
@@ -71,8 +76,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.11.2025 (17. новембар ст. ст.) — „Св. Григорије Чудотворац еп. Неокесаријски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's first entry, the longest of the three, and the fourth and last of this folder's rows to leave `undocumented`. `dates` UNTOUCHED: the book says «Скончао земни живот 270. године у дубокој старости», and 270 is inside the 270 this folder already holds for the death off saint.gr, so nothing is narrowed and nothing widened; the «deep old age» is not a year and no birth is moved by it. ONE `related` ROW ADDED, both ways: the entry has the Most Holy Theotokos appear to him WITH John the Theologian, and at her command John delivers him the Symbol of Faith that is known by Gregory's name — which is his story and not furniture, so the life links him and the reciprocal row is added in the same file. TWO MEN NAMED AND NOT LINKED: Origen at Alexandria, under whom he studied some years and from whom he received baptism, whom this corpus does not keep; and Phaedimus, bishop of Amasea, who meant to consecrate him and whom he hid in the desert from, and who consecrated him at last «чудним начином», by a wonderful means the book does not describe — `phaedimus` and `fedim` match no folder in the corpus. WHAT THE ENTRY ADDS: the by-name «a second Moses», the Hellenic and Egyptian philosophy abandoned for its barrenness, command over evil spirits and over mountains and waters, invisibility before his persecutors, sight of events and of men's thoughts at a distance, and the count the book ends on — seventeen Christians in Caesarea when he came and seventeen heathen in it when he died. The Serbian form „Григорије“ widens a fold to four and the key is written in the same commit."
     }
   ],
   "images": [
@@ -85,7 +100,8 @@
     "alexander-of-comana",
     "macrina-the-elder",
     "troadius",
-    "gregory-brother-of-the-wonderworker"
+    "gregory-brother-of-the-wonderworker",
+    "john-the-theologian"
   ],
   "hymns": [
     {

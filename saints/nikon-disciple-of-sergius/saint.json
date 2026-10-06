@@ -16,6 +16,11 @@
       "form": "Никон Радонежский",
       "lang": "ru",
       "note": "The name link behind his line for 17 ноября ст. ст., name page 1644, gives «Преподобный Никон, игумен Радонежский», and the first of the two life pages behind it is titled «Преподобный Никон Радонежский, игумен». The form kept here is that title with the leading rank word and the trailing grade left off, which is the calendar’s own nominative and not a reconstruction. `.tmp/foldchk.py` reports no folder holding this form."
+    },
+    {
+      "form": "Никон Радонежски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог's heading for 17. новембар ст. ст., „Преп. Никон Радонежски.“ — «Преп.» is the `venerable` grade `types` already keeps and comes off; «Радонежски» is the place his monastery stands in and is neither a rank nor a see, so §6 keeps it as the thing that distinguishes him, and it is also the form the Russian calendar's own name page gives him, «Никон Радонежский». Measured: no other folder in the corpus holds this string, and it folds with nothing."
     }
   ],
   "attestations": [
@@ -56,8 +61,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 30.11.2025 (17. новембар ст. ст.) — „Преп. Никон Радонежски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-30&prolog=1",
+        "year": 2025
+      },
+      "note": "The day's second entry, five sentences. The `[~]` hint marked this line as a possible feast on the words alone; IT IS A PERSON and the hint is wrong, as the brief says it may be. `dates` UNTOUCHED: the book says «Упокојио се 17. нов. 1426. год.», and 1426 is one side of the «1426 or 1427» this folder already holds as two sources a year apart; closing an interval on the earlier of its own two years is not something a third book settles, so the interval stands. TWO `related` ROWS ADDED, both ways: the entry has Sergius of Radonezh appear to him together with Peter and Alexius, the reposed metropolitans of Moscow, to tell him the barbarian invasion is permitted by God for some good and will pass — which is this man's own story, so the life links both metropolitans and the reciprocal rows are added in the same file. Sergius was already related both ways. WHAT THE ENTRY ADDS: that he was Sergius's disciple and his successor in the abbacy, the prayer that the calamity be turned from the Russian people, the vision and its message, the rebuilding of the monastery of the Holy Trinity, and that he served many as an example of ascetic life."
     }
   ],
   "dates": {
@@ -70,7 +85,9 @@
     }
   },
   "related": [
-    "sergius-of-radonezh"
+    "sergius-of-radonezh",
+    "peter-of-moscow",
+    "alexis-of-moscow"
   ],
   "text": {
     "life": "life.md"
