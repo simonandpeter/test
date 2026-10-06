@@ -1,0 +1,62 @@
+{
+  "slug": "nicholas-goryunov",
+  "display_name": "Nicholas (Goryunov)",
+  "names": [
+    {
+      "form": "Николай (Горюнов)",
+      "lang": "ru",
+      "note": "Read out of the name link behind days.pravoslavie.ru's line for 9 марта ст. ст., «Николай (Горюнов), протодиакон, сщмч.», with the rank words left off. The day's own line declines the forename and gives the name without the surname."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "deacon"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "The year days.pravoslavie.ru closes the line of the nine with for 9 марта ст. ст.: «… прмцц. Наталии и Александры (1938).»"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 9,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 9 марта ст. ст. — «Сщмчч. Михаила, Алексия, Димитрия, Сергия, Сергия пресвитеров и Николая диакона, прмч. Иоасафа и прмцц. Наталии и Александры (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260309.html",
+        "year": 2026
+      },
+      "note": "The line is one line for nine persons and this folder is one of them. Neither the day page nor name page 9836 carries a life. The name page lists a second day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of Russia; it is recorded here and the folder does not render on it."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 22 martie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 22 Μαρτίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 22 March 2026 (7 October 2026)."
+    }
+  ],
+  "office": "Protodeacon",
+  "text": {
+    "life": "life.md"
+  }
+}
