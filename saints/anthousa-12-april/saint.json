@@ -6,6 +6,11 @@
       "form": "Antuza",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 aprilie, «Sfânta Cuvioasă Antuza»."
+    },
+    {
+      "form": "Анфуса Омонийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 2407, «Анфуса Омонийская, игумения, дева», with the rank words left off. The day’s own line gives the name in the genitive. The epithet names the Homonoia monastery she founded, which is what tells her from the four other folders holding the Romanian «Antuza»."
     }
   ],
   "sex": "female",
@@ -15,8 +20,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прп. Анфусы девы (801).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The line gives the rank «Прп.» and the word «девы», virgin, and a year. The life behind it is the whole of who she was — an emperor’s daughter, a twin, and the foundress of a monastery in Constantinople — where the Romanian page this folder was written from gave a name and a rank."
+      }
     },
     {
       "church": "romanian",
@@ -46,5 +61,26 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "dates": {
+    "birth": {
+      "earliest": 750,
+      "latest": 750,
+      "display": "750",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru’s life: «Она и ее брат, будущий император Лев Хазар (775 - 780), были близнецами и родились 25 января 750 года». Read 7 October 2026."
+    },
+    "death": {
+      "earliest": 801,
+      "latest": 801,
+      "display": "801",
+      "basis": "traditional",
+      "note": "«Смиренная и кроткая подвижница прожила 52 года и мирно скончалась в 801 году», and the day line prints «(801)». The page disagrees with itself by a year: a birth on 25 January 750 and a repose in 801 make fifty-one years and not fifty-two. The years are both recorded as the page gives them and the arithmetic is not corrected. The folder held no `dates` at all. Read 7 October 2026."
+    }
+  },
+  "related": [
+    "anthousa-the-venerable-27-july",
+    "irene-wife-of-leo-iv",
+    "tarasius-of-constantinople"
+  ]
 }

@@ -12,6 +12,11 @@
       "form": "Василије",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's second heading for the Julian 12 April on pravoslavno.rs, „Св. Василије исповедник.“, with Св. left off — it is not a rank — and with исповедник left off as well, the rank word this source uses for a confessor, which this folder already carries in `types`. The heading leaves no epithet and names neither the see nor the province; both are in the body, and this corpus keeps a see in `office`. The bare form is shared with three other folders and that fold is deliberate and recorded."
+    },
+    {
+      "form": "Василий Парийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 382, «Святитель Василий Парийский, епископ, исповедник», with the rank words and the see left off. The day’s own line gives the name in the genitive."
     }
   ],
   "sex": "male",
@@ -23,8 +28,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Прп. Василия исп., еп. Парийского (после 754).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The line gives the rank as «исп.», confessor, and the see as «еп. Парийского», which is the see this folder’s `office` already records. The page prints above the life a heading for an icon of three hierarchs together, which is a picture and not a commemoration."
+      }
     },
     {
       "church": "romanian",
@@ -77,6 +92,23 @@
         "text": "A rule of faith and an image of gentleness, a teacher of abstinence: so the truth of things has shown you to your flock. Therefore you gained by humility the things on high, and by poverty the things that are rich. Father and hierarch Basil, entreat Christ God to save our souls.",
         "rendered": "site"
       }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Вышняго светом озарився, блаженне,/ просвещаеши вся,/ иже любовию чествующия твое, отче, честное страдание./ Василие священнострадальне,/ моли Христа Бога// непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Кондак преподобного Василия», глас 2, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The one hymn the day prints under a saint’s name; the other is for an icon of the Mother of God. It names this saint and no other. Copied out of the page by `.tmp/ru0411/hymns.py` rather than retyped."
+      },
+      "english": {
+        "text": "Illumined with the light of the Most High, O blessed one, thou givest light to all who with love honour thy precious suffering, O father. O Basil, sacred sufferer, pray thou unceasingly to Christ God for us all.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
@@ -91,10 +123,10 @@
   "dates": {
     "death": {
       "earliest": 701,
-      "latest": 750,
-      "display": "first half of the 8th century",
+      "latest": 800,
+      "display": "8th century",
       "basis": "traditional",
-      "note": "The Ohrid Prologue at pravoslavno.rs for the Julian 12 April: „Сконча у првој половини VIII века, и пресели се ка Господу.“ — he ended in the first half of the eighth century. The interval is the phrase and nothing narrower: no year is printed and none was chosen inside it. It is the only dating any source read for this folder gives — doxologia.ro's line «Sfântul Vasile Mărturisitorul, Episcopul Pariei» prints no year — and the iconoclasm the entry sets him in is consistent with it. `node .tmp/dd.mjs \"first half of the 8th century\"` reads in Russian and Greek."
+      "note": "**Two calendars put the repose in two halves of one century, so the century is what they agree on.** The Ohrid Prologue at pravoslavno.rs for the Julian 12 April put the repose in the first half of the eighth century, which is where this folder’s interval stood. days.pravoslavie.ru: «Прп. Василия исп., еп. Парийского (после 754)», and the life sets the whole of his confessorship after «\"Неправедный свиток\" Собора 754 года, созванного при Константине Копрониме (741 - 775)» — after 754, which falls in the second half. Neither reading is chosen and the interval is widened to hold both. Read 7 October 2026."
     }
   }
 }

@@ -1,0 +1,65 @@
+{
+  "slug": "zeno-of-verona",
+  "display_name": "Zeno of Verona",
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop",
+    "confessor"
+  ],
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Зинон Веронийский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind this place in the line for 12 апреля ст. ст., name page 834, «Святитель Зинон Веронийский, епископ, исповедник», with the rank words and the see left off. The day’s own line gives the name in the genitive. **The bare «Зинон» was refused**: `.tmp/foldchk.py` finds it on eight other folders of this corpus as a `ru` or `sr` form — zeno-20-april, zeno-companion-of-eudoxius, zeno-companion-of-peleus, zeno-companion-of-zoilus, zeno-of-diospolis, zeno-of-ikalto, zeno-of-nicomedia and zeno-the-martyr-22-june — so the see is what tells him apart, and the calendar prints it."
+    }
+  ],
+  "related": [
+    "gregory-the-dialogist"
+  ],
+  "dates": {
+    "death": {
+      "earliest": 260,
+      "latest": 380,
+      "display": "260–380",
+      "basis": "traditional",
+      "note": "**One page disagreeing with itself by a hundred and twenty years, read the way two churches disagreeing are read.** the day line closes «(ок. 260)», and the life closes «Скончался он около 380 года» and sets his episcopate under «Констанций (353–361) и Валент (364–378)» — two reigns neither of which touches 260. No third source has been read, so neither year is chosen and the interval carries both. Read 7 October 2026."
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 12,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 12 апреля ст. ст. — «Сщмч. Зинона , еп. Веронийского (ок. 260).»",
+        "url": "https://days.pravoslavie.ru/Days/20260412.html",
+        "year": 2026,
+        "note": "The line’s rank is «Сщмч.», hieromartyr; the index entry behind it heads him «епископ, исповедник», bishop and confessor; and the life, titled «Священномученик», describes no martyrdom at all and has him simply repose. All three readings are in `types` and none is preferred. He stands on no other calendar this corpus reads."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

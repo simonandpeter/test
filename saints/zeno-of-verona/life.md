@@ -1,0 +1,13 @@
+# Zeno of Verona
+
+Zeno was a Greek by birth and came of Syria. From his youth he took the monastic life and laboured at the study of the Holy Scriptures, and wandering among the monasteries he came to the city of Verona and settled there; the people of the city chose him their bishop. That is all the Russian church calendar says of his beginnings, and it is the whole of what this corpus has read about him, for he stands on no other calendar it reads.
+
+The emperors then reigning, Constantius, whose years the page gives as 353 to 361, and Valens, 364 to 378, favoured the Arian heresy, which had been condemned at the First Ecumenical Council in 325, and with their support the Arians began a persecution of the Orthodox. Zeno bore every oppression from the heretics with courage, and in his sermons and his letters held firmly to the Orthodox teaching of the Lord Jesus Christ as the Only-begotten Son of God, begotten of the Father before all ages. The page credits him with sixteen long and seventy-seven short discourses and instructions.
+
+**The page gives two deaths and they are a hundred and twenty years apart.** Its day line closes «(ок. 260)», about 260, and calls him «Сщмч.», hieromartyr; its life says «Скончался он около 380 года», he reposed about the year 380, and sets the whole of his episcopate in the reigns of two emperors of the middle and later fourth century, neither of which touches 260. No third source has been read for him, so neither year is chosen and the death is recorded as the interval between them, with both readings in the note.
+
+The ranks disagree with each other in the same way. The day line makes him a hieromartyr; the index entry behind it heads him «Святитель Зинон Веронийский, епископ, исповедник», the hierarch Zeno of Verona, bishop, confessor; and the life, titled «Священномученик», describes no martyrdom at all but has him simply repose. All three readings are recorded in `types` and none is preferred.
+
+[Gregory the Dialogist](/saints/gregory-the-dialogist), the page closes, tells of a wonder worked on Zeno's day in the year 558. There was a great flood in Italy that spring; the Tiber came out of its banks and drowned the country round, and the Atesis, which runs by Verona, overflowed too. The water reached the church built in Zeno's name and rose to the very windows. The doors of the church stood open, but the water did not rush in: it stopped and stood like a wall, and did the church no harm.
+
+*After the Православный церковный календарь of the Сретенский monastery for 12 апреля ст. ст. — [the day](https://days.pravoslavie.ru/Days/20260412.html) and [the life](https://days.pravoslavie.ru/Life/life839.htm); read 7 October 2026.*
