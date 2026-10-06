@@ -1,0 +1,101 @@
+{
+  "slug": "theophanes-grafov",
+  "display_name": "Theophanes (Grafov)",
+  "names": [
+    {
+      "form": "Феофан (Графов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 13694, «Феофан (Графов), иеродиакон, прмч.», with the grade and rank words left off; the day’s own line gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the form and over the surname, and the gate’s own `nameKeys` over the proposed folder: the surname returns no folder at all, no folder holds this form, and the proposed folder folds with nobody in either script."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "deacon"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Сщмч. Иоанна пресвитера и прмчч. Мардария и Феофана (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "**The line puts three men together and they are not a company.** It names a presbyter and then, under a second grade word, two monastics, and closes with one year for all three; the three lives read on azbyka.ru give three deaths on one day in three places — a camp in the Komi country, a shooting near Углич and a camp at Каргополь — and not one of the three names either of the others. Sharing a day is not a relation, so no `related` row is written for any of them.\n\n**No `office` is written, and the reason is the locale packs.** Both hosts call him иеродиакон — name page 13694 and azbyka.ru’s own heading — and the four packs under `src/ui/locales/` read no bare `Hierodeacon`, only `Hierodeacon of Zilantov`, which is another man’s. The nearest folder in the corpus, a hierodeacon venerable-martyr of the same year, carries no `office` either, so this one follows it and the rank is left to `types`. Whether `Hierodeacon` should be added to the packs is the author’s. azbyka gives him four synaxes besides this day, all seen and none read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru, out of игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Март»: «Преподобномученик Феофан родился 6 января 1874 года в слободе Никитской Переславского уезда Владимирской губернии в семье крестьянина Федора Графова и в крещении был наречен Феодосием». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 5 марта ст. ст. with «(1938)». azbyka.ru: «Иеродиакон Феофан (Графов) скончался в лагере в городе Каргополе 18 марта 1938 года и был погребен в безвестной могиле», and the civil 18 March 1938 is this Julian 5 March. He was not shot: the ten-year sentence ran out in the camp."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Мирска́го мяте́жа удали́вся,/ во оби́тель и́ноческую всели́лся еси́,/ иде́же, диа́конскаго чи́на удосто́ився,/ по́двигом до́брым подвиза́лся еси́./ Во дни же гоне́ний на Це́рковь Ру́сскую/ темни́чныя у́зы и рабо́ты го́рькия Христа́ ра́ди претерпе́в,/ тве́рдость во испове́дании ве́ры яви́л еси́./ Те́мже ны́не, во оби́телех Небе́сных пребыва́я/ и с ли́ки а́нгельскими Бо́гу предстоя́,/ помина́й нас, любо́вию чту́щих тя,// Феофа́не преподо́бне, о́тче наш.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Феофан (Графов)», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-feofan-grafov",
+        "year": 2026
+      },
+      "english": {
+        "text": "Withdrawing from the tumult of the world, thou didst settle in a monastic house, where, being counted worthy of the order of deacon, thou didst strive the good strife. And in the days of the persecution of the Russian Church, having endured the bonds of prison and bitter labours for Christ’s sake, thou didst show firmness in the confession of the faith. Therefore now, dwelling in the mansions of heaven and standing before God with the angelic choirs, remember us who honour thee with love, O venerable Theophanes, our father.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Вы́шняго блаже́нства взыску́я,/ преподобному́чениче Феофа́не диа́коне,/ по́двигом до́брым подвиза́лся еси́,/ в годи́ну же лю́тых гоне́ний,/ любо́вь и ве́рность Христу́ сохрани́в,/ в ра́дость Го́спода твоего́ вшел еси́./ Сего́ ра́ди приле́жно мо́лим тя:/ испроси́ у Го́спода Це́ркви Ру́сстей благостоя́ние,/ Оте́честву на́шему мир// и душа́м на́шим ве́лию ми́лость.",
+      "source": {
+        "text": "Азбука веры, месяцеслов (azbyka.ru) — «Феофан (Графов)», тропарь и кондак",
+        "url": "https://azbyka.ru/days/sv-feofan-grafov",
+        "year": 2026
+      },
+      "english": {
+        "text": "Seeking the blessedness of the Most High, O venerable martyr Theophanes the deacon, thou didst strive the good strife; and in the season of fierce persecutions, keeping love and faithfulness to Christ, thou didst enter into the joy of thy Lord. Therefore we pray thee earnestly: ask of the Lord well-being for the Russian Church, peace for our fatherland, and great mercy for our souls.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

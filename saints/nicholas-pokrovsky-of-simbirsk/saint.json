@@ -1,0 +1,68 @@
+{
+  "slug": "nicholas-pokrovsky-of-simbirsk",
+  "display_name": "Nicholas (Pokrovsky) of Simbirsk",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Николай (Покровский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 14256, «Николай (Покровский), иерей, сщмч.», with the grade and rank words left off; the day’s own line gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the form and over the surname, and the gate’s own `nameKeys` over the proposed folder: the corpus already keeps a folder holding this exact form, and it is a different man — the sweep over Покровск returned six folders, five of them other forenames and the sixth a Николай whose name page on this same host is 13863, whose year is 1937 and whose day is 20 ноября ст. ст. The fold is recorded in the gate’s `READ_FOLDS` and in this batch’s findings."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Сщмч. Николая пресвитера (1919).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "**Two men of one name on one host, told apart by two name pages, two years and two days.** This is name page 14256, «(1919)», 5 марта ст. ст.; the corpus’s existing holder of the same Russian form is name page 13863, «(1937)», 20 ноября ст. ст., one of the Tikhvin case. azbyka.ru’s own calendar search returns exactly one page for the name, and it is this man, the priest of Симбирск shot in 1919; the 1937 man has no azbyka page under it. azbyka also gives him «7 февраля (переходящая) — Собор новомучеников и исповедников Церкви Русской» and «3 июня — Собор Симбирских святых», both of which were seen and neither of which was read or recorded as a feast."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1864,
+      "latest": 1864,
+      "display": "1864",
+      "basis": "attested",
+      "note": "azbyka.ru: «Николай Сергеевич Покровский родился в 1864 году в семье священника». The death sentence quoted in the same life gives his age as 55 in 1919, which agrees. days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1919,
+      "latest": 1919,
+      "display": "1919",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes its line for 5 марта ст. ст. with «(1919)». The dean’s report quoted in the azbyka.ru life dates the shooting to the night of 4/17 to 5 March and the burial to 6 March; the sentence itself is headed 18 марта 1919, which is the same day in the new style. Only the year is recorded, because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

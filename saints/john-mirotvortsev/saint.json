@@ -1,0 +1,68 @@
+{
+  "slug": "john-mirotvortsev",
+  "display_name": "John (Mirotvortsev)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Миротворцев)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 5 марта ст. ст., name page 9620, «Иоанн (Миротворцев), иерей, сщмч.», with the grade and rank words left off; the day’s own line gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the form and over the surname, and the gate’s own `nameKeys` over the proposed folder: no folder in the corpus holds this form, the surname returns nothing at all, and the proposed folder folds with nobody in either script."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 5 марта ст. ст. — «Сщмч. Иоанна пресвитера и прмчч. Мардария и Феофана (1938).»",
+        "url": "https://days.pravoslavie.ru/Days/20260305.html",
+        "year": 2026
+      },
+      "note": "**The line puts three men together and they are not a company.** It names a presbyter and then, under a second grade word, two monastics, and closes with one year for all three; the three lives read on azbyka.ru give three deaths on one day in three places — a camp in the Komi country, a shooting near Углич and a camp at Каргополь — and not one of the three names either of the others. Sharing a day is not a relation, so no `related` row is written for any of them. azbyka.ru gives him four synaxes besides this day — of the New Martyrs, of the Komi saints, of the Rostov and Yaroslavl saints and of the Saratov saints — all of which were seen and none of which was read or recorded as a feast."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 18 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 18 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 18 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1881,
+      "latest": 1881,
+      "display": "1881",
+      "basis": "attested",
+      "note": "azbyka.ru, out of игумен Дамаскин (Орловский), «Жития новомучеников и исповедников Российских ХХ века. Март»: «Священномученик Иоанн родился 25 марта 1881 года в селе Елшанка Саратовского уезда Саратовской губернии в семье крестьянина Николая Миротворцева». days.pravoslavie.ru gives no year of birth."
+    },
+    "death": {
+      "earliest": 1938,
+      "latest": 1938,
+      "display": "1938",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 5 марта ст. ст. with «(1938)», which it gives to all three of that line. azbyka.ru: «Священник Иоанн Миротворцев скончался в Ухтпечлаге 18 марта 1938 года и был погребен в безвестной могиле» — and the civil 18 March 1938 is this Julian 5 March. He was not shot: the ten-year sentence ran out in the camp."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
