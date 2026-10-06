@@ -26,6 +26,11 @@
       "form": "Ioan Gură de Aur",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 30 ianuarie, «Sfinţii Trei Ierarhi: Vasile cel Mare, Grigorie Teologul şi Ioan Gură de Aur»."
+    },
+    {
+      "form": "Јован Златоуст",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. новембар ст. ст., „Св. Јован Златоуст.“ — «Св.» is “saint” and not a rank, and «Златоуст», the golden-mouthed, is an epithet and in none of §5’s rank rows, so it stays and makes the form the fullest the heading gives; a bare «Јован» is a string ten folders of this corpus already share. THIS IS THE FOLDER’S FIRST SERBIAN FORM — it held Russian, Greek, ancient Greek, Latin and Romanian and no Serbian at all — and it matches the Russian «Иоанн Златоуст» word for word in sense."
     }
   ],
   "sex": "male",
@@ -106,8 +111,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: pravoslavno.rs was read for the civil week 23–29 August 2026 (10–16 August ст. ст.), which names other saints; its page for this saint’s day was not read (2026-08-23)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.11.2025 (13. новембар ст. ст.) — „Св. Јован Златоуст.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry and the fullest on the page. `dates` UNTOUCHED AND THIS IS WORTH STATING: the entry gives «Рођен у Антиохији 354. год.» where this folder holds «c. 347» for the birth off its other sources, and the two are SEVEN YEARS APART. The birth is not widened to hold both, because this folder’s own interval is already an approximation and the brief’s instruction on two readings is to record the disagreement — IT IS RECORDED HERE AND IN THE LIFE, which prints the book’s 354, AND THE AUTHOR MAY WANT THE INTERVAL WIDENED. The death the entry gives, «на Крстов дан 14. септембра 407. год.», is exactly the day and year the folder already records. ONE NAME THE LIFE DOES NOT PRINT, and it is the day’s near miss: the entry names the patriarch who ordained him priest as Flavian, the successor of Meletius, and THE CORPUS’S `flavian-of-antioch` IS A DIFFERENT MAN — a patriarch of Antioch whose folder records his death in 518, which cannot be the man who ordained a priest before 400. The life therefore says “the patriarch who had succeeded Meletius” and names nobody, and no `related` row was written. The two saints the life does name, his mother and Meletius, were already related in both directions. THE APOSTLES who appeared to him twice, and the martyr in whose church he received his last communion, are left unnamed for the same reason: this corpus keeps more than one folder under each of those names and the entry gives nothing to choose between them."
     }
   ],
   "locations": [
@@ -212,7 +227,8 @@
     "eutropius-companion-of-tigrius",
     "james-the-brother-of-the-lord",
     "marcian-companion-of-martyrius",
-    "martyrius-companion-of-marcian"
+    "martyrius-companion-of-marcian",
+    "meletius-of-antioch"
   ],
   "text": {
     "life": "life.md"

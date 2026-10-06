@@ -15,6 +15,11 @@
       "form": "Никифор Кесарийский (Палестинский)",
       "lang": "ru",
       "note": "The heading of the calendar's name link behind his place in the line for 13 ноября ст. ст., page 1624, «Никифор Кесарийский (Палестинский), мч.», with the rank word left off; the bracketed word is the calendar's own, the province behind the city. The line itself declines the name and gives no by-name at all, «Мчч. Антонина , Никифора и Германа»."
+    },
+    {
+      "form": "Никифор",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. новембар ст. ст., „Св. муч. Антонин, Никифор, Герман и Манета.“ — «Св. муч.» off, and the second of the four bare names is the whole of this form. The fold it joins is keyed in the same commit and already had three holders."
     }
   ],
   "dates": {
@@ -63,14 +68,25 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.11.2025 (13. новембар ст. ст.) — „Св. муч. Антонин, Никифор, Герман и Манета.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s second entry, and the heading ENUMERATES FOUR — Антонин, Никифор, Герман, Манета — so four folders take a row off the one quoted line, which is the same four the Russian calendar keeps on this day. `dates` UNTOUCHED: «Пострадаше сви 308. год.» falls inside the «286–305 or about 308» all four folders already hold, and a year inside an interval is no reason to close it. THE PROLOGUE NAMES NO ZEBINAS, where three of these four folders are named for him in English off the Greek calendar’s 20 October company; nothing was renamed on that and no row was added for him, his name not being in this heading or this body. ONE `related` ROW ADDED IN BOTH DIRECTIONS: the three men already related to one another and to Zebinas but NOT ONE OF THEM RELATED TO MANATHO, and she related to nobody at all, although this entry and the Russian line put all four in one company — so the four rows missing between her and them are supplied here. The governor who condemned them is named in the book and has no folder."
     }
   ],
   "related": [
     "zebinas-20-october",
     "germanus-companion-of-zebinas",
-    "antoninus-companion-of-zebinas"
+    "antoninus-companion-of-zebinas",
+    "manatho"
   ],
   "text": {
     "life": "life.md"

@@ -11,6 +11,11 @@
       "form": "Δαμασκηνός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 13 Νοεμβρίου, «Άγιος Δαμασκηνός ο Νέος Οσιομάρτυρας ο Κωνσταντινουπολίτης», with the rank words left off. The page's own head line is «Αγιος Δαμασκηνος ο Νεος Οσιομαρτυρας ο Κωνσταντινουπολιτης (; - 1681)»; the epithets are left out of the bare form."
+    },
+    {
+      "form": "Дамаскин",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 13. новембар ст. ст., „Преп. муч. Дамаскин.“ — «Преп.» is the `venerable` grade and «муч.» the `martyr` grade, both of which `types` keeps, so both come off and nothing is left but the bare monastic name. His baptismal name «Дијаманди» is in the body and is NOT stored: it is the name the book says he was called BEFORE, not the form it names him by. «(13 November)» in the display name is this corpus’s own."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 13,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 26.11.2025 (13. новембар ст. ст.) — „Преп. муч. Дамаскин.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-11-26&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s third entry. `dates` UNTOUCHED: «Би посечен пред капијом Фанара 13. нов. 1681. године» gives the folder’s own 1681 and, with it, the day the folder is kept on. `types` untouched: «Преп. муч.» is the `venerable-martyr` grade it holds and the `new-martyr` beside it is what the whole account is. WHAT THE ENTRY ADDS, and the folder had almost none of it: Galata in Constantinople for his birth; A NAME BEFORE HIS NAME, Дијаманди; an immoral youth that went as far as apostasy to Islam; twelve years as a monk on the Holy Mountain after the repentance; the mosques he went about crossing himself and shouting in; the gate of the Phanar; and the relics on Halki. The Lavra he spent the twelve years in carries a saint’s name in the book and that name is NOT in the life, a house carrying a saint’s name not being a relation between two men. NO `locations` key was made from any of the four places."
     }
   ],
   "text": {
