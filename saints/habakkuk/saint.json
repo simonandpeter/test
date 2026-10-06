@@ -25,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Прор. Аввакума (VII-VI до Р.Х.)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -105,6 +115,38 @@
         "rendered": "site"
       },
       "tone": "Ἦχος β’."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Пророка Твоего Аввакума память, Господи, празднующе,/ тем Тя молим:// спаси души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Тропарь пророка Аввакума»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Keeping the memory of your prophet Habakkuk, O Lord, we pray you through him: save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Возгласивый вселенней от юга пришествие Божие от Девы, Аввакуме богоглаголиве,/ и на Божественней стражи предстоянием/ слышания от светоносна Ангела/ Христово Воскресение возвестил еси миру,/ сего ради весело зовем ти:// радуйся, пророков светлая доброто.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Кондак пророка Аввакума»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You who proclaimed to the whole world the coming of God from the Virgin out of the south, Habakkuk who speak of God, and who standing at your divine watch and hearing from a light-bearing angel announced to the world the Resurrection of Christ — for this we cry gladly to you: rejoice, bright beauty of the prophets.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {

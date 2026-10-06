@@ -11,6 +11,11 @@
       "form": "Урош",
       "lang": "sr",
       "note": "Read out of the Охридски пролог’s third heading for 2. децембар ст. ст., „Свети Урош, цар српски.“ — «Свети» is “saint” and not a rank, and «цар српски» is the grade with the realm it governs, which comes off with it on the reading `victorinus-of-pettau`’s form already stands on; so the bare personal name is the whole of the form and “of Serbia” in the display name is this corpus’s own English. `sr-foldpred.mjs` measures the form at 0 other holders and `foldchk.py` finds the string on no folder, so neither reading would have folded with anything. The book prints no Latin form of his name."
+    },
+    {
+      "form": "Стефан Урош V, Сербский",
+      "lang": "ru",
+      "note": "Read out of the `name:` link behind days.pravoslavie.ru’s line for 2 декабря ст. ст., name page 2074, «Стефан Урош V, Сербский, король», with the trailing grade «, король» left off. The existing `sr` form is the bare «Урош» from a Prologue heading that gave him nothing else; this calendar prints the baptismal forename Стефан before the dynastic one, the regnal numeral, and the realm as an adjective, and BRIEF-RUSSIAN section 2 asks for the fullest form the calendar gives."
     }
   ],
   "dates": {
@@ -25,8 +30,17 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day, 2 декабря ст. ст. (7 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 2,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Св. Стефана Уроша, царя Сербского (1367)»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -61,5 +75,39 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 3",
+      "text": "Юношески процвел еси/ во отечествии твоем, добротою украшен,/ и неправедную и безвременную смерть подъял еси,/ Уроше всечестне;/ царскаго корене плод сладок,/ аще и не во время созрев,/ в Господню житницу вселился еси/ и жалость велию сродству твоему оставил еси./ Молися о нас, творящих святую память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Тропарь святого Стефана Уроша V, царя Сербского»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You flowered in your youth in your fatherland, adorned with goodness, and you took an unjust and untimely death upon you, all-honoured Uroš; sweet fruit of a royal root, though ripened out of season, you were gathered into the Lord’s granary and left a great grief to your kindred. Pray for us who keep your holy memory.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Отрасли благородныя цвет прекрасный явился еси, Уроше всечестне,/ завистию бо убиен был еси от твоих присных,/ Божиим же Духом просвещен,/ святороднаго племене свят был еси/ и, мученическим венцем увязся,/ в чертозе Небеснем водворяешися./ Молися о нас, святе, творящих любовию память твою.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 2 декабря ст. ст. — «Кондак святого Стефана Уроша V»",
+        "url": "https://days.pravoslavie.ru/Days/20261202.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "You appeared as the fairest flower of a noble shoot, all-honoured Uroš, for you were killed out of envy by your own kin; and enlightened by the Spirit of God you were a holy man of a holy-born race, and bound with the martyr’s crown you dwell now in the heavenly chamber. Pray for us, holy one, who keep your memory with love.",
+        "rendered": "site"
+      }
+    }
+  ]
 }
