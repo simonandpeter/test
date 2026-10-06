@@ -11,6 +11,11 @@
       "form": "Ανδρέας",
       "lang": "el",
       "note": "Read out of saint.gr's list of the twelve on its page for the Synaxis of 30 Ιουνίου, «Ανδρέας», with no rank word attached."
+    },
+    {
+      "form": "Андрей Первозванный",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 186, «Апостол Андрей Первозванный», with the rank word left off. The day line declines it, «Апостола Андрея Первозванного». Первозванный, the first-called, is the by-name this folder's display name already carries."
     }
   ],
   "sex": "male",
@@ -40,8 +45,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life pages head «Дни памяти: 20 июня (Перенесение мощей) , 30 июня (12 ап.) , 30 ноября» — the translation of his relics, the synaxis of the Twelve, and his own day. One row per church is the schema, so his own day is the feast here and the other two are recorded in this note; the Romanian rows on this folder record the same split from the other side."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 ноября ст. ст. — «Апостола Андрея Первозванного (62).»",
+        "url": "https://days.pravoslavie.ru/Days/20261130.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -176,9 +191,50 @@
         "rendered": "site"
       },
       "model": "Τοὺς ἀσφαλεῖς."
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Яко апостолов первозванный/ и верховнаго сущий брат,/ Владыце всех, Андрее, молися,/ мир вселенней даровати// и душам нашим велию милость.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 ноября ст. ст. — «Тропарь апостола Андрея Первозванного (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "As the first-called of the apostles and the brother of their chief, Andrew, pray to the Master of all to grant peace to the world and great mercy to our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мужества тезоименитаго богоглагольника/ и Церкве возследователя верховнаго,/ Петрова сродника восхвалим,/ зане якоже древле сему/ и ныне нам воззва:// приидите, обретохом Желаемаго.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 ноября ст. ст. — «Кондак апостола Андрея Первозванного (глас 2)»",
+        "url": "https://days.pravoslavie.ru/Days/20261130.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Let us praise the speaker of God whose very name is courage, the chief follower of the Church, the kinsman of the chief apostle; for as he called out to him of old, so now he calls out to us: come, we have found the one we longed for.",
+        "rendered": "site"
+      }
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 62,
+      "latest": 62,
+      "display": "c. 62",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line with the year, «Апостола Андрея Первозванного (62).», and both of its life pages repeat it, one of them with the word about: «Мученическая кончина апостола Андрея Первозванного последовала около 62 года после Рождества Христова», and the other «(+ 62)». Neither doxologia.ro nor saint.gr gave this folder a year at all, so this is its first, and the display keeps the «около»."
+    }
   }
 }

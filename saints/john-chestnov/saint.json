@@ -1,0 +1,62 @@
+{
+  "slug": "john-chestnov",
+  "display_name": "John (Chestnov)",
+  "names": [
+    {
+      "form": "Иоанн (Честнов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13883, «Иоанн (Честнов), иерей, сщмч.», with the rank and grade words left off. The day line gives «Сщмч. Иоанна пресвитера (1937).» and no surname. No other folder in this corpus holds the surname at all."
+    }
+  ],
+  "sex": "male",
+  "office": "Priest",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 ноября ст. ст. — «Сщмч. Иоанна пресвитера (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261130.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 13 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 13 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 13 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year days.pravoslavie.ru closes his line with: «Сщмч. Иоанна пресвитера (1937).»"
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
