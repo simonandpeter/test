@@ -4,13 +4,19 @@
   "sex": "male",
   "types": [
     "venerable",
-    "monk"
+    "monk",
+    "ascetic"
   ],
   "names": [
     {
       "form": "Καρίων",
       "lang": "el",
       "note": "Read out of saint.gr's line for 24 Νοεμβρίου, «Όσιος Καρίων», with the rank words left off."
+    },
+    {
+      "form": "Карион",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. децембар ст. ст., „Преподобни Карион и Захарија.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps, and the first of the two names taken, the heading giving the pair nothing but their bare forenames. `sr-foldpred.mjs` measured the folded string at 0 other holders, which is worth saying because `karion-the-martyr` carries the same English display name: that folder’s only form is the Greek «Καρίων» and no Serbian string folds against this one."
     }
   ],
   "related": [
@@ -44,8 +50,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.12.2025 (5. децембар ст. ст.) — „Преподобни Карион и Захарија.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s fourth entry, AN ENUMERATED PAIR — two names in the heading, so BRIEF-SERBIAN §5 counts two, and the corpus holds both. Quoted whole with its closing full stop; URL year 2025. THE IDENTIFICATION WAS MADE ON THE PARENTAGE AND NOT THE NAME, because the corpus holds TWO folders whose display name is the bare «Karion»: `karion-the-martyr`, a `martyr` the Greek calendar keeps on 1 February, and this one, the `venerable` `monk` kept on 24 November. The book’s man is «Отац и син, оба велики подвижници мисирски» — father and son, both great Egyptian ascetics, the father having left a living wife with two children to go to the monks — which is this folder, already `related` in both directions to `zacharias-son-of-carion`, and not the martyr. `types_add`: `ascetic`, off «велики подвижници мисирски», where the folder held `venerable` and `monk`; «велики» is the epithet BRIEF-SERBIAN §5 keeps out of `types`. `dates` UNTOUCHED AND STILL ABSENT: the entry gives no year, no century and no reign, and BRIEF.md §4 says that where the page gives no year there is no `dates` object. NO `locations`: «мисирски» is Egypt, a country and not a place the folder could be pinned to. NO `related` ROW ADDED: his son is already there both ways and is the only person named. The Prologue prints no troparion and no kontakion."
     }
   ],
   "text": {

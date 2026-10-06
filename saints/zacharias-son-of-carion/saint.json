@@ -68,7 +68,8 @@
       "feast": {
         "day": 24,
         "month": 3,
-        "calendar": "julian"
+        "calendar": "julian",
+        "note": "A SECOND SERBIAN DAY, and the same book keeps both. The Охридски пролог gives him a whole entry of his own on the Julian 24 March, „Преподобни Захарија.“, which is the day this row records and the day the Romanian and the Greek calendars keep him on too; and it gives him a second on the Julian 5 December, in the enumerated pair „Преподобни Карион и Захарија.“ — https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-18&prolog=1, read 7 October 2026 — whose four lines are his father’s story and his own, and where it is he who answers the question who the true monk is. One attestation row per church is the schema, so BRIEF.md §4’s ruling applies: the second day is a note on this feast, naming the day and the heading, and he does not render on the Julian 5 December. NOTHING ELSE UNDER THIS KEY WAS CHANGED — same day, same month, same calendar, same source, same note — which is the whole of what `replace_venerated` is sanctioned for."
       },
       "source": {
         "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 06.04.2026 (24. март ст. ст.) — „Преподобни Захарија.“",

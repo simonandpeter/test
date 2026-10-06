@@ -11,6 +11,11 @@
       "form": "Σάββας",
       "lang": "el",
       "note": "Read out of saint.gr's line for 5 Δεκεμβρίου, «Άγιος Σάββας ο Ηγιασμένος», with the rank word left off."
+    },
+    {
+      "form": "Сава Освећени",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 5. децембар ст. ст., „Преподобни Сава Освећени.“ — with «Преподобни» left off, that being the `venerable` grade `types` keeps. «Освећени» is the Sanctified, the epithet and not a rank, and it is the whole of what tells him from the thirty-odd folders whose names fold to Sabbas; §6 asks for the fullest form the calendar gives. `sr-foldpred.mjs` measured the folded string at 0 other holders."
     }
   ],
   "sex": "male",
@@ -57,8 +62,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 5,
+        "month": 12,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 18.12.2025 (5. децембар ст. ст.) — „Преподобни Сава Освећени.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2025-12-18&prolog=1",
+        "year": 2025
+      },
+      "note": "The day’s first entry, quoted whole with its closing full stop; URL year 2025. `types` UNTOUCHED: «Преподобни» is the `venerable` held, and `monk`, `abbot` and `presbyter` are all there — the book’s seven monasteries and its «наставник монасима» are the abbacy already recorded. `dates` WIDENED on the death from a flat 534 to 532–534, TWO BOOKS TWO YEARS APART AND BOTH GIVING THE SAME AGE: saint.gr heads him «(440 - 534)» and says he went to the Lord in peace at ninety-four in 534; this book closes «упокоји се свети Сава 532. године у деведесет четвртој години живота», in 532 in the ninety-fourth year of his life. Nothing is chosen. `birth` UNTOUCHED AND NOT RECOMPUTED: ninety-four years back from 532 is a year this book does not print. NO `locations`, and the folder has never held one — Mutalaska in Cappadocia, the Flavian monastery, Palestine, Mount Castellium are four places and the key was never there. NO `related` ROW ADDED and the entry names five people, every one of whom is already in the folder’s `related` in both directions or is no folder: `euthymius-the-great`, whose community he stayed longest in and who prophesied the lavra over him, with the book’s own cross-reference «в. 20. јануар»; `theoctistus-of-palestine` beside him; and his neighbour, whom THIS BOOK CALLS «Теодосије Велики» AND WHO IS NOT THE EMPEROR OF THAT NAME THE CORPUS HOLDS UNDER `theodosius-the-great` — he is `theodosius-the-cenobiarch`, already `related` here both ways, and the life is written to name the Cenobiarch and not the emperor, because `related-floor.test.mjs` matches a display name exactly and the emperor’s row would be false. His father Јован and his mother Софија, whom he tonsured in her old age, are no folders. The Prologue prints no troparion and no kontakion."
     }
   ],
   "images": [
@@ -157,14 +172,14 @@
       "latest": 440,
       "display": "440",
       "basis": "traditional",
-      "note": "saint.gr's head line, «Αγιος Σαββας ο Ηγιασμενος (440 - 534)», read with the same page's «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη»."
+      "note": "saint.gr's head line, «Αγιος Σαββας ο Ηγιασμενος (440 - 534)», read with the same page's «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη». The Охридски пролог за 5. децембар ст. ст. gives no year of birth and only the same age at death — „у деведесет четвртој години живота“ — and that age is deliberately NOT subtracted from its year of death to make a second birth year here."
     },
     "death": {
-      "earliest": 534,
+      "earliest": 532,
       "latest": 534,
-      "display": "534",
+      "display": "532–534",
       "basis": "traditional",
-      "note": "saint.gr: «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη», with the page's own head «(440 - 534)»."
+      "note": "**Two books two years apart, giving the same age; it was a flat 534 before this reading.** saint.gr: «Σε ηλικία ενενήντα τεσσάρων ετών, το 534 μ.Χ., ανήλθε προς Κύριον εν ειρήνη», with its own head «(440 - 534)». The Охридски пролог за 5. децембар ст. ст.: „После трудног и много плодног живота упокоји се свети Сава 532. године у деведесет четвртој години живота.“ — after a laborious and most fruitful life he reposed in 532 in the ninety-fourth year of his life. Ninety-four years in both books and two years between their dates; nothing is chosen and the basis stays traditional."
     }
   }
 }
