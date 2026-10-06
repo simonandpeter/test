@@ -11,6 +11,11 @@
       "form": "Στυλιανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Στυλιανός ο Παφλαγόνας», with the rank word left off; the epithet «ο Παφλαγόνας» is the folder's own distinguishing word already and is not repeated in the stored form."
+    },
+    {
+      "form": "Стилиан Пафлагонянин",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 13102, «Стилиан Пафлагонянин, прп.», with the trailing grade left off. The day line declines the name and makes the by-name an adjective of its own, «Стилиана Пафлагонского»."
     }
   ],
   "sex": "male",
@@ -22,8 +27,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page gives «День памяти: 26 ноября» and no other day, so the calendar keeps him on this one day alone."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Прп. Стилиана Пафлагонского (V-VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -86,5 +101,14 @@
     "basil-the-great",
     "gregory-the-theologian",
     "john-chrysostom"
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 401,
+      "latest": 600,
+      "display": "5th–6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line for him with a century range in Roman figures where it would otherwise print a year — «Прп. Стилиана Пафлагонского (V-VI).» — and that is the whole of what it says about when he lived. Neither doxologia.ro nor saint.gr gives him a year or a century at all, so this interval is the only dating any calendar read supplies and it is recorded at the full width of the parenthesis; no year within it is chosen."
+    }
+  }
 }

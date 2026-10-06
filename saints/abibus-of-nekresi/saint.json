@@ -21,6 +21,11 @@
       "form": "Авид",
       "lang": "sr",
       "note": "Read out of the Охридски пролог's naming clause in the entry headed „Преподобни оци грузијски.“ for 7. мај ст. ст. — „А имена су њихова: Авид, Антоније, Давид, Зинон, Тадеј, Иса, Издериос, Јосиф, Михаил, Пир, Стефан и Шијо.“ The list carries no rank word and no epithet on any of the twelve; Преподобни heads the whole company in the heading and belongs to no one name, and the see or monastery each folder's English name keeps is nowhere on this page. So the bare forename is the whole of the form. **A new two-folder fold**: `abda-bishop-of-persia` holds the identical spelling as its Russian form, so this is a Serbian form meeting a Russian one, as «Капитон» and «Никон» did; the gate had no row for it before this batch. Measured before drafting."
+    },
+    {
+      "form": "Авив Некресский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 21 heads him «Священномученик Авив Некресский, Кахетинский»; with the rank off it the form is «Авив Некресский», and the second by-name, of Kakheti, is left out as the day line leaves it out. The day line gives «Сщмч. Авива , еп. Некресского»."
     }
   ],
   "sex": "male",
@@ -35,8 +40,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The calendar marks the line «(Груз.)», a commemoration of the Georgian church, and his name page 21 gives this one day. It is the same 29 ноября doxologia.ro keeps him on as a second Romanian day, which this folder's Romanian row already notes, and which that page says is the day of his martyrdom."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Сщмч. Авива , еп. Некресского (ок. 552-560) (Груз.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -88,12 +103,12 @@
     "life": "life.md"
   },
   "dates": {
-    "floruit": {
-      "earliest": 501,
-      "latest": 600,
-      "display": "6th century",
+    "death": {
+      "earliest": 552,
+      "latest": 560,
+      "display": "c. 552–560",
       "basis": "traditional",
-      "note": "Охридски пролог за 7. мај ст. ст.: „У VI веку, а на двесто година после тога како је света Нина проповедала Јеванђеље у Грузији, јави се Пресвета Богоматер Јовану, подвижнику Антиохијском, и нареди му да избере дванаест својих ученика и оде у Грузију“ — the century the book gives for the mission itself, which is this man's only dating anywhere in this corpus. The same interval stands on `anthony-of-martkopi` from doxologia's identical statement. `node .tmp/dd.mjs \"6th century\"` reads it as «VI в.» and «6ος αι.» The book prints no year of birth and none of death for any of the thirteen."
+      "note": "days.pravoslavie.ru closes his line with an interval where it would otherwise print a year — «Сщмч. Авива , еп. Некресского (ок. 552-560) (Груз.).», about 552 to 560 — which is the narrowest dating any calendar read gives him and falls inside the sixth century the Охридски пролог puts him in: „У VI веку“. The interval is the whole of what the calendar prints and no year inside it is chosen."
     }
   }
 }

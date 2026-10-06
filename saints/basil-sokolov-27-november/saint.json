@@ -1,0 +1,62 @@
+{
+  "slug": "basil-sokolov-27-november",
+  "display_name": "Basil (Sokolov, 27 November)",
+  "names": [
+    {
+      "form": "Василий (Соколов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 9287, «Василий (Соколов), протоиерей, сщмч.», with the rank and grade words left off. The day line itself declines the forename and prints no surname at all, so the surname is read from the name page and not from the line. The corpus already keeps `basil-sokolov`, who holds this same form: he is name page 9509, «Василий (Соколов), иерей, сщмч.», a priest on 16 ноября ст. ст. with a life out of azbyka.ru and a birth year of 1880. This man is name page 9287, an archpriest, on 27 ноября ст. ст., with no life anywhere. Two name pages, two days, two grades. The day in this folder's display name is what tells the two apart, as it does for `basil-nikolsky-14-november`."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Сщмчч. Николая , архиеп. Владимирского, Василия , Бориса , Феодора , Николая , Алексия , Иоанна , Сергия , Иоанна , Сергия , Николая , Димитрия , Владимира , Иоанна пресвитеров, прмчч. Иоасафа , Кронида , Николая , Ксенофонта , Алексия , Аполлоса , Серафима , Никона и мч. Иоанна (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "traditional",
+      "note": "The year the day line prints for the whole company of twenty-three at once, and the only year the calendar gives him."
+    }
+  },
+  "office": "Archpriest",
+  "text": {
+    "life": "life.md"
+  }
+}

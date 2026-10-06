@@ -1,0 +1,61 @@
+{
+  "slug": "saturninus-of-toulouse",
+  "display_name": "Saturninus of Toulouse",
+  "names": [
+    {
+      "form": "Сатурнин Тулузский",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru's name page 14896 heads him «Святитель Сатурнин первый епископ Тулузский, епископ Тулузский, сщмч.», which repeats the see twice over; with the rank, the grade and the repeated see off it, the name and its by-name are «Сатурнин Тулузский». The day line gives «Сщмч. Сатурнина , первого епископа Тулузского (III).»"
+    }
+  ],
+  "sex": "male",
+  "office": "Bishop",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page gives «День памяти: 29 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Сщмч. Сатурнина , первого епископа Тулузского (III).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 12 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 12 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 12 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 201,
+      "latest": 300,
+      "display": "3rd century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line with a Roman numeral where it would otherwise print a year — «Сщмч. Сатурнина , первого епископа Тулузского (III).» — so the century is the whole of the dating, and the interval is the whole of the century."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

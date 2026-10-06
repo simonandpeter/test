@@ -1,0 +1,60 @@
+{
+  "slug": "seventeen-monks-in-india",
+  "display_name": "The Seventeen Monks in India",
+  "names": [
+    {
+      "form": "17 монахов в Индии",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6936, «Преподобномученики 17 монахов в Индии», with the rank word left off. The calendar gives the company no names of its own, only the count and the country."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "venerable-martyr",
+    "monk"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "Their name page 6936 gives this day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Прмчч. 17-ти монахов в Индии (IV).»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 301,
+      "latest": 400,
+      "display": "4th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line with a Roman numeral where it would otherwise print a year — «Прмчч. 17-ти монахов в Индии (IV).» — so the century is the whole of the dating and the interval is the whole of the century."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

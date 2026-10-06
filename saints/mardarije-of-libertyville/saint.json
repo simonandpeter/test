@@ -7,6 +7,11 @@
       "form": "Mardarie (Uskokovic) de Libertyville",
       "lang": "ro",
       "note": "Read out of doxologia.ro's line for 12 decembrie, «Sfântul Ierarh Mardarie (Uskokovic) de Libertyville», with the rank word left off; the page spells the family name without its Serbian diacritic."
+    },
+    {
+      "form": "Мардарий (Ускокович)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 14981, «Святитель Мардарий (Ускокович), епископ», with the rank and the trailing grade left off. The day line gives only «Свт. Мардария (1935) (Серб.).» and no surname. The Cyrillic here is the Russian calendar's own spelling of a Serbian surname the corpus otherwise holds only in the Latin letters doxologia.ro printed."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "The calendar marks the line «(Серб.)», a commemoration of the Serbian church, and his name page 14981 gives this one day. It is the same day doxologia.ro keeps him on: the Julian 29 ноября is the civil 12 December, and the Romanian row on this folder reads 12 decembrie of the revised calendar."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Свт. Мардария (1935) (Серб.).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

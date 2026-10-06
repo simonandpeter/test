@@ -11,6 +11,11 @@
       "form": "Ειρήναρχος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Ειρήναρχος και οι Επτά Άγιες Γυναίκες», with the rank word left off."
+    },
+    {
+      "form": "Иринарх Севастийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1087, «Иринарх Севастийский, мч.», with the trailing grade left off. The day line gives only «Иринарха», with no by-name; Sebaste is read from the name page and from the title of the life, «Мученик Иринарх Севастийский и с ним 7 жен»."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads itself «День памяти: 28 ноября» and gives no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Мч. Иринарха и святых семи жен (303).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",

@@ -12,6 +12,11 @@
       "form": "Θεόδωρος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 28 Νοεμβρίου, «Άγιος Θεόδωρος Αρχιεπίσκοπος Ροστώβ», with the rank word and the see left off."
+    },
+    {
+      "form": "Феодор Ростовский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2198, «Святитель Феодор, архиепископ Ростовский», with the rank and the see left off, and the title of its life page 6882, «Святитель Феодор Ростовский, архиепископ», which gives the same form. The day line splits the see off, «Феодора , архиеп. Ростовского»."
     }
   ],
   "sex": "male",
@@ -33,8 +38,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads «Дни памяти: 20 августа (Переложение мощей) , 28 ноября», the August day being the laying out of his relics. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Свт. Феодора , архиеп. Ростовского (1394).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -79,5 +94,55 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "От юности твоей добре воспитався трудами,/ воздержанием, постом и молитвами,/ чисту и непорочну сотворил еси душу твою,/ сего ради на престоле святительства сел еси,/ и яко звезда многосветлая, просвещая верных сердца/ зарими чудес твоих, отче наш, святителю Феодоре,/ и ныне моли Христа Бога да спасет души наша.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Тропарь святителя Феодора, архиепископа Ростовского (глас 4)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Well brought up from your youth by labours, by abstinence, by fasting and by prayers, you made your soul clean and unspotted, and for this you sat on the throne of a hierarch; and like a star of many beams you light the hearts of the faithful with the dawning of your wonders, our father, holy hierarch Theodore. Pray now to Christ God that he may save our souls.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "От юности, премудре, прилежно подвизався,/ и извещением Святаго Духа/ превеликую обитель воздвиже Пресвятей Богородице/ в похвалу Рождества Ей,/ струими же слез твоих безплотныя враги погрузил еси,/ и, житий твоего целомудрием со Ангельскими лики совокупився,/ преподобие отче Феодоре,/ с ними же Христа Бога моли/ спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Ин тропарь святителя Феодора, архиепископа Ростовского (глас 5)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "From your youth, all-wise one, you strove diligently, and by the declaration of the Holy Spirit you raised a very great house to the most holy Mother of God in praise of her Nativity; with the streams of your tears you drowned the bodiless enemies, and by the chastity of your life you were joined to the choirs of angels, venerable father Theodore. With them pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "В молитвах Господеви предстоя,/ якоже крепкий адамант во утвари,/ по вся дни и нощи пред лицем Божиим светяся молитвами,/ ихже ради трудов Незаходимаго Света сподобився,/ но, яко имея дерзновение/ к рбждшемуся от Святыя Девы Христу Богу нашему,/ Егоже моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Кондак святителя Феодора, архиепископа Ростовского (глас 2)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Standing before the Lord in prayer, like a hard diamond in its setting, shining with prayers all the days and nights before the face of God, and counted worthy for those labours of the Light that never sets: since you have boldness before Christ our God, born of the holy Virgin, entreat him without ceasing for us all.",
+        "rendered": "site"
+      }
+    }
+  ]
 }

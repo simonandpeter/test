@@ -1,0 +1,51 @@
+{
+  "slug": "new-martyrs-and-confessors-of-radonezh",
+  "display_name": "The New Martyrs and Confessors of Radonezh",
+  "names": [
+    {
+      "form": "Новомученики и исповедники Радонежские",
+      "lang": "ru",
+      "note": "days.pravoslavie.ru prints the entry and its name page 14690 as «Собор новомучеников и исповедников Радонежских», where «Собор», the synaxis, governs the genitive. The form is given here in the nominative without that word, as `new-martyrs-of-jasenovac` already stores «Новомученики Ясеновацкие» for the same construction."
+    }
+  ],
+  "sex": "unknown",
+  "types": [
+    "new-martyr",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 27,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page 14690 gives this day and no other."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 27 ноября ст. ст. — «Собор новомучеников и исповедников Радонежских.»",
+        "url": "https://days.pravoslavie.ru/Days/20261127.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 10 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 10 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 10 December 2026 (7 October 2026)."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

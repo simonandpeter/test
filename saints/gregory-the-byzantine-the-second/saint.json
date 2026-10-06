@@ -1,0 +1,63 @@
+{
+  "slug": "gregory-the-byzantine-the-second",
+  "display_name": "Gregory the Byzantine (the second)",
+  "names": [
+    {
+      "form": "Григорий Византийский (другой)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 538, «Григорий Византийский,(другой), мч.», with the trailing grade left off. The day line declines the forename and gives no by-name at all, so «Византийский» is read from the name page. The page writes the heading «Григорий Византийский,(другой), мч.», with the comma inside; the word «(другой)», another, is how the calendar tells this Gregory from the one before him in the same line, and it is kept here in the form so that the two do not fold together."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "martyr",
+    "confessor"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page gives «День памяти: 28 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Мчч. Стефана , Василия , Григория , другого Григория , Иоанна и иных многих (VIII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 701,
+      "latest": 800,
+      "display": "8th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line with a Roman numeral where it would otherwise print a year — «Мчч. Стефана , Василия , Григория , другого Григория , Иоанна и иных многих (VIII).» — so the century is the whole of the dating. Its life for the company places them with Stephen the New, whom this calendar dates 767, and says they were executed after his death; the interval is still the century the page prints and no year inside it is chosen."
+    }
+  },
+  "related": [
+    "stephen-the-new"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

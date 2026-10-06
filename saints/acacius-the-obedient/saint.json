@@ -11,6 +11,11 @@
       "form": "Ακάκιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Ακάκιος «ὁ ἐν τῇ Κλίμακι»», with the rank word left off; the epithet «ὁ ἐν τῇ Κλίμακι», the one in the Ladder, is left out of the stored form and said in the life."
+    },
+    {
+      "form": "Акакий Синайский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 92, «Акакий Синайский, прп.», with the trailing grade left off. The day line declines it, «Акакия Синайского». The calendar calls him of Sinai where saint.gr calls him «ὁ ἐν τῇ Κλίμακι», the one in the Ladder, and both mean the same thing: the obedient novice of the fourth step."
     }
   ],
   "sex": "male",
@@ -21,8 +26,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page and his life page both head «Дни памяти: 7 июля , 29 ноября». One row per church is the schema, so 7 июля is recorded here and he does not render on it; it is the same second day doxologia.ro keeps him on, which this folder's Romanian row already notes from the other side."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Прп. Акакия Синайского (VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -83,6 +98,31 @@
       },
       "tone": "Ἦχος δ΄.",
       "model": "Ταχὺ προκατάλαβε."
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 2",
+      "text": "Мир оставль, Христу последовал еси от младенства,/ премудре Акакие преподобне,/ Того подражая вольное смирение,/ низвергл еси гордостнаго мучителя,// моли непрестанно о всех нас.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Кондак преподобного Акакия (глас 2)»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Leaving the world, you followed Christ from childhood, all-wise and venerable Acacius; and imitating his willing humility you threw down the proud tormentor. Pray without ceasing for us all.",
+        "rendered": "site"
+      }
     }
-  ]
+  ],
+  "dates": {
+    "death": {
+      "earliest": 501,
+      "latest": 600,
+      "display": "6th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line with a Roman numeral where it would otherwise print a year — «Прп. Акакия Синайского (VI).» — and that is the only dating any calendar read gives him; neither doxologia.ro nor saint.gr printed one. The interval is the whole of the century and no year inside it is chosen."
+    }
+  }
 }

@@ -12,6 +12,11 @@
       "form": "Φρουμέντιος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 30 Νοεμβρίου, «Άγιος Φρουμέντιος αρχιεπίσκοπος Αβησσυνίας», with the rank word and the see left off."
+    },
+    {
+      "form": "Фрументий Индийский (Эфиопский)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 2339, «Святитель Фрументий Индийский (Эфиопский), архиепископ», with the rank and the trailing grade left off. The calendar gives him two countries, India first and Ethiopia in brackets after it, and the day line keeps both: «Свт. Фрументия , архиеп. Индийского (Ефиопского)»."
     }
   ],
   "sex": "male",
@@ -24,8 +29,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (25 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 30,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page 2339 gives «День памяти: 30 ноября» and no other day."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 30 ноября ст. ст. — «Свт. Фрументия , архиеп. Индийского (Ефиопского) (ок. 380).»",
+        "url": "https://days.pravoslavie.ru/Days/20261130.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -71,7 +86,14 @@
       "latest": 341,
       "display": "330–341",
       "basis": "traditional",
-      "note": "saint.gr: «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.), κάποιος φιλόσοφος από την Τύρο, που ονομαζόταν Φρουμέντιος, πήγε στην Αβησσυνία», and «αφού τον χειροτόνησε επίσκοπο (το έτος 341 μ.Χ.) με τον τίτλο “Ἀξώμης”». The page gives no year of birth and none of death."
+      "note": "saint.gr: «Στα χρόνια του μεγάλου Κωνσταντίνου (330 μ.Χ.)», and the consecration that page describes falls inside the episcopate it names; the interval is the one that folder was first written with and is kept."
+    },
+    "death": {
+      "earliest": 380,
+      "latest": 380,
+      "display": "c. 380",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes his line with «ок. 380», about 380, where it would otherwise print a year. Neither doxologia.ro nor saint.gr gave him a year of death at all, so this is the folder's first, and the display keeps the calendar's own «ок.»"
     }
   },
   "related": [

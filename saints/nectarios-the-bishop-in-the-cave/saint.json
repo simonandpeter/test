@@ -6,6 +6,11 @@
       "form": "Νεκτάριος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 29 Νοεμβρίου, «Όσιος Νεκτάριος “ἐπίσκοπος ἐν τῷ Σπηλαίῳ”», with the rank word left off. The epithet «ἐν τῷ Σπηλαίῳ» is the page's own and it offers no other."
+    },
+    {
+      "form": "Нектарий Печерский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 1590, «Преподобный Нектарий Печерский», with the rank word left off, and the title of its life page 3249, which gives the same form. The day line declines it, «Нектария Печерского». «Печерский» is the by-name saint.gr renders as «ἐν τῷ Σπηλαίῳ», in the Cave, which is this folder's display name."
     }
   ],
   "sex": "male",
@@ -16,8 +21,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 29,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page and his life page both head «Дни памяти: 28 сентября (Печер.(Б)) , 29 ноября», the September day being the synaxis of the fathers of the Near Caves. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 29 ноября ст. ст. — «Прп. Нектария Печерского (XII).»",
+        "url": "https://days.pravoslavie.ru/Days/20261129.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -47,5 +62,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "floruit": {
+      "earliest": 1101,
+      "latest": 1200,
+      "display": "12th century",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line with a Roman numeral and its life says the same in words — «Прп. Нектария Печерского (XII).» and «подвизался в XII веке», he struggled in the twelfth century. That is a century of life and not a year of death, so it is recorded as a floruit; saint.gr printed no year at all."
+    }
   }
 }

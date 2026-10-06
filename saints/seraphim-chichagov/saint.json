@@ -1,0 +1,103 @@
+{
+  "slug": "seraphim-chichagov",
+  "display_name": "Seraphim (Chichagov)",
+  "names": [
+    {
+      "form": "Серафим (Чичагов)",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 6608, «Священномученик митрополит Серафим (Чичагов)», with the rank and the grade left off. The day line gives «митрополита Серафима» and no surname."
+    }
+  ],
+  "sex": "male",
+  "office": "Metropolitan",
+  "types": [
+    "hieromartyr",
+    "new-martyr",
+    "metropolitan"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 28,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His name page lists one other day, «26 января (Новомуч.)», the synaxis of the new martyrs and confessors of the Russian Church. One row per church is the schema, so that day is recorded here and he does not render on it."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Сщмч. митрополита Серафима (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 11 decembrie, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 11 Δεκεμβρίου, the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 11 December 2026 (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1856,
+      "latest": 1856,
+      "display": "1856",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru's fuller life: «Святитель Серафим (в миру Леонид Михайлович Чичагов) родился 9 января 1856 года в Санкт-Петербурге, в семье полковника артиллерии Михаила Никифоровича Чичагова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "The year the day line closes with, «Сщмч. митрополита Серафима (1937).», and the life gives the day: «11 декабря того же года был расстрелян на полигоне в Бутово под Москвой»."
+    }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 5",
+      "text": "Воинство Царя Небеснаго/ паче земнаго возлюбив,/ служитель пламенный Святыя Троицы явился еси,/ наставления Кронштадтскаго пастыря в сердце своем слагая,/ данная ти от Бога многообразная дарования/ к пользе народа Божия приумножил еси,/ учитель благочестия/ и поборник единства церковнаго быв,/ пострадати даже до крове сподобился еси,/ священномучениче Серафиме,/ моли Христа Бога// спастися душам нашим.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Тропарь священномученика митрополита Серафима (глас 5)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Loving the army of the heavenly King above the army of earth, you were shown a burning servant of the Holy Trinity, laying up in your heart the counsels of the pastor of Kronstadt. The manifold gifts God gave you, you multiplied for the good of the people of God; you were a teacher of godliness and a champion of the unity of the Church, and you were counted worthy to suffer even unto blood. Hieromartyr Seraphim, pray to Christ God that our souls may be saved.",
+        "rendered": "site"
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 6",
+      "text": "Саровскому чудотворцу тезоименит быв,/ теплую любовь к нему имел еси,/ писаньми твоими подвиги и чудеса того миру возвестив,/ верныя к его прославлению подвигл еси/ и благодарственнаго посещения/ самаго преподобнаго сподобился еси./ С нимже ныне, священномучениче Серафиме,/ в Небесных чертозех водворяяся,/ моли Христа Бога// серафимския радости нам причастником быти.",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 28 ноября ст. ст. — «Кондак священномученика митрополита Серафима (глас 6)»",
+        "url": "https://days.pravoslavie.ru/Days/20261128.html",
+        "year": 2026
+      },
+      "english": {
+        "text": "Bearing the name of the wonderworker of Sarov, you had a warm love towards him; by your writings you made his labours and his wonders known to the world, you moved the faithful to his glorification, and you were counted worthy of a visit of thanks from the venerable one himself. Dwelling now with him in the heavenly chambers, hieromartyr Seraphim, pray to Christ God that we may share the joy of the seraphim.",
+        "rendered": "site"
+      }
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

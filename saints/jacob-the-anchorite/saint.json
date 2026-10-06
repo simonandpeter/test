@@ -12,13 +12,28 @@
       "form": "Ιάκωβος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 26 Νοεμβρίου, «Όσιος Ιάκωβος ο Αναχωρητής», with the rank words left off."
+    },
+    {
+      "form": "Иаков Сирийский",
+      "lang": "ru",
+      "note": "The heading of days.pravoslavie.ru's name page 886, «Иаков Сирийский, отшельник», with the trailing grade left off; its life page 3230 is titled «Преподобный Иаков Сирийский» and agrees. The day line declines the name and adds the epithet separately, «Иакова отшельника Сирийского»."
     }
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (2 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 26,
+        "month": 11,
+        "calendar": "julian",
+        "note": "His life page heads itself «День памяти: 26 ноября» and gives no other day, so the calendar keeps him on this one day alone."
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 26 ноября ст. ст. — «Прп. Иакова отшельника Сирийского (457).»",
+        "url": "https://days.pravoslavie.ru/Days/20261126.html",
+        "year": 2026
+      }
     },
     {
       "church": "romanian",
@@ -48,5 +63,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 457,
+      "latest": 457,
+      "display": "457",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes its line for him with the year — «Прп. Иакова отшельника Сирийского (457).» — and it is the only year any calendar read has given him: saint.gr says in so many words that its page gives him no year and no century. The life page behind the line gives no year either; it says only that he reposed in advanced age."
+    }
   }
 }
