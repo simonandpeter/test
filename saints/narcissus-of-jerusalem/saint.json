@@ -11,6 +11,11 @@
       "form": "Νάρκισσος",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Άγιος Νάρκισσος ο Ιερομάρτυρας Πατριάρχης Ιεροσολύμων», with the rank words and the epithets left off. The page glosses the name from the flower and retells the myth beside it."
+    },
+    {
+      "form": "Наркис",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fifth heading for the Julian 7 August, „Свешт. муч. Наркис патријарх Јерусалимски.“ — Свешт. муч. left off, which §5 maps to `hieromartyr`, and патријарх Јерусалимски left off too, which is a rank and a see and which this folder already carries as `patriarch` and as the `office` «Patriarch of Jerusalem». What is left is the bare forename, which `.tmp/sr-foldpred.mjs` reports folds with nothing, although the Romanian «Narcis» and the Greek «Νάρκισσος» each fold this folder with `narcissus-of-athens` already."
     }
   ],
   "sex": "male",
@@ -57,11 +62,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue as printed by pravoslavno.rs for the corresponding Julian day (24 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.08.2026 (7. август ст. ст.) — „Свешт. муч. Наркис патријарх Јерусалимски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fifth and shortest entry, **one sentence of eleven words**, and the Romanian and Greek both keep him on this same 7/8. His row was `undocumented`. **A YEAR ON A FOLDER THAT HELD NO DATE AT ALL, AND AN AGE THAT IS NOT WRITTEN.** „Посечен у време Антонина 213. год. у 116. години свога живота.“ — beheaded in the time of Antoninus in 213, in the hundred-and-sixteenth year of his life. `death` 213, flat, traditional: it is the first date this folder has held, neither doxologia nor saint.gr giving it a year. **No `birth`, and the entry all but hands one over**: 213 less 116 is 97, and that subtraction is arithmetic on two stated numbers and not a reading, which is the Julian 3 August ruling about a father’s century seen from the other side. The 116 years are in the row and in the life and in no field. **AND THE ONE SENTENCE CONTRADICTS ITSELF, AND IS NOT REPAIRED.** Antoninus Pius died in 161 and Antoninus is the only emperor the sentence names, so a beheading under Antoninus in 213 does not fit any reign of that name unless the Antoninus meant is one of the later emperors who carried the name as a title. **The book’s words are quoted as they stand and the year it states is what is written**, exactly as the Julian 3 August left a misprint recorded and unrepaired; the reconciliation is somebody’s reading and not a reader’s correction. **`types` AND `office` UNTOUCHED.** Свешт. муч. is `hieromartyr` and патријарх is `patriarch`, and the folder has both; Јерусалимски is the see, and «Patriarch of Jerusalem» is already its `office` and is in all four locale packs. **NO `related` ROW AND NO `locations`:** the entry names one emperor and nothing else, and Jerusalem is inside the heading as a see rather than as a place he is placed at. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 213,
+      "latest": 213,
+      "display": "213",
+      "basis": "traditional",
+      "note": "The folder held no date: neither doxologia nor saint.gr gives it a year. The Охридски пролог for 7. август ст. ст. is one sentence long: „Посечен у време Антонина 213. год. у 116. години свога живота.“ — beheaded in the time of Antoninus in 213, in the hundred-and-sixteenth year of his life. **No `birth` is written**: 213 less 116 is arithmetic on two stated numbers and not a reading. The sentence is also at odds with itself, no emperor Antoninus having reigned in 213 unless the name is read as the title the later emperors carried, and it is quoted as it stands rather than reconciled (6 October 2026)."
+    }
   }
 }

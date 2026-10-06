@@ -4,7 +4,8 @@
   "sex": "male",
   "types": [
     "venerable",
-    "abbot"
+    "abbot",
+    "hermit"
   ],
   "office": "Abbot",
   "names": [
@@ -12,6 +13,11 @@
       "form": "Ωρ",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ωρ», with the rank words and the epithets left off."
+    },
+    {
+      "form": "Ор Тиваидски",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s second heading for the Julian 7 August, „Преп. Ор. Отшелник Тиваидски.“ — Преп. left off, which §5 maps to `venerable`, and Отшелник left off, which it maps to `hermit` and which is written into `types` by this reading. **Тиваидски is kept**: it is a toponym and not a rank, and it is the only thing left in the heading that distinguishes him. Without it the form would be a bare «Ор» of two letters, which is below the length at which the gate folds a form at all and which `usableName` would refuse; `.tmp/sr-foldpred.mjs` measured both and reports that the two-word form adds a key no other folder holds while the bare one adds no key at all. The heading’s Thebaid disagrees with the Nitria of this folder’s display name, which came from saint.gr; the disagreement is recorded in the row note and the display name is not touched."
     }
   ],
   "attestations": [
@@ -42,11 +48,30 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.08.2026 (7. август ст. ст.) — „Преп. Ор. Отшелник Тиваидски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s second of five entries. His row was `undocumented` and the Greek line was this folder’s only book. **A RANK WORD IN THE HEADING THAT THE FOLDER DID NOT HAVE, AND IT IS WRITTEN.** „Преп. Ор. Отшелник Тиваидски.“ — Отшелник, a hermit, which §5 maps to `hermit`. The folder held `venerable` and `abbot` with `office` «Abbot», both from the Greek; `hermit` is added. **This is the one type this block has been able to add from a heading**, and it is the mirror of the Julian 5 August, where `deaconess` was in a body and had to be refused. It also agrees with what the folder already says: saint.gr has him live as a hermit for a few years before the brotherhoods, and „Када себе добро утврди и просвети у самоћи, тада основа постепено неколико манастира, и би изврстан духовни вођ и наставник многих монаха.“ has him found the monasteries only after he had established and enlightened himself in solitude. **A YEAR ON A FOLDER THAT HELD NO DATE AT ALL.** „Упокоји се у дубокој старости око 390 год.“ — he reposed in deep old age, about 390 — is written as `death` 390–390, display «about 390», basis traditional, which is the shape 118 folders of this corpus already use for an око year. **No `birth`**: „Руфин који га посети овако га описује: „У својој одећи он је личио на ангела Божјег, деведесетолетни старац с дугом брадом као снег белом, веома пријатне спољашности. Поглед његов светлио се нечим надчовечанским.““ calls him a ninety-year-old elder, and 390 less 90 is arithmetic and not a reading — the ninety is also the age saint.gr gives at his death, which is a different claim from an age at a visit, and the entry does not say the visit was at the end. **THE PLACE IN THE HEADING DISAGREES WITH THE ONE IN THE DISPLAY NAME, AND NOTHING IS RENAMED.** This book calls him Тиваидски, of the Thebaid; saint.gr put his asceticism on the mountain of Nitria and this corpus took «Or of Nitria» from that. Both are in Egypt and several hundred miles apart. The display name is the corpus’s own choice and is not this book’s to move; the Thebaid is kept in the stored `sr` form, where it is what the heading prints, and the disagreement is recorded here. **NO `related` ROW.** „Руфин који га посети овако га описује: „У својој одећи он је личио на ангела Божјег, деведесетолетни старац с дугом брадом као снег белом, веома пријатне спољашности. Поглед његов светлио се нечим надчовечанским.““ is a description of him by Руфин, who visited him — and **a visit is a meeting and would be a relation if he had a folder**. He has none: `ls saints | grep -iE \"^rufin\"` returns `rufinus-7-may`, `rufinus-of-rome` and `rufinus-the-deacon`, a martyr, a martyr and a deacon, none of them the writer who went round the monks of Egypt. Ruling 3 names him here and writes nothing, and his name is safe in the life because a one-word display name is not in the cross-linker’s index. The disciple of „Једном га опомену ученик, да је дошао Васкрс, и да треба празновати. Чувши то он изађе напоље, диже руке к небу, и три дана проведе у молитви без одмора. Па објасни ученику: „То и јесте празновање Васкрса за монаха, да ум свој узвиси и с Богом сједини“.“ is unnamed. No `locations`: the Thebaid is a region in a heading and not a point. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person."
     }
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 390,
+      "latest": 390,
+      "display": "about 390",
+      "basis": "traditional",
+      "note": "The folder held no date: saint.gr gives it no year at all, only an age. The Охридски пролог for 7. август ст. ст.: „Упокоји се у дубокој старости око 390 год.“ — he reposed in deep old age, about 390. No `birth` is written: the entry calls him a ninety-year-old elder inside Rufinus’s description of a visit, which is not an age at death, and 390 less 90 would be arithmetic rather than a reading (6 October 2026)."
+    }
   }
 }

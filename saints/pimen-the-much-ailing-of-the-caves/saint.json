@@ -11,6 +11,11 @@
       "form": "Ποίμην",
       "lang": "el",
       "note": "Read out of saint.gr's line for 7 Αυγούστου, «Όσιος Ποίμην ο εν τω σπηλαίω ο Πολύπαθης», with the rank words and the epithets left off."
+    },
+    {
+      "form": "Пимен Многоболезнени",
+      "lang": "sr",
+      "note": "Read out of the Ohrid Prologue’s fourth heading for the Julian 7 August, „Преп. Пимен Многоболезнени.“ — Преп. left off, which §5 maps to `venerable`. **Многоболезнени is kept**: it is not a rank, it is in no table of §5, and it is the whole of what distinguishes him from the three other Pimens this corpus keeps and from the faster of the same Lavra, whom the Greek keeps on this same day. `.tmp/sr-foldpred.mjs` reports the two-word form folds with nothing."
     }
   ],
   "attestations": [
@@ -41,8 +46,18 @@
     },
     {
       "church": "serbian",
-      "status": "undocumented",
-      "note": "Not checked: the Ohrid Prologue on pravoslavno.rs for the corresponding Julian day (1 October 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 7,
+        "month": 8,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 20.08.2026 (7. август ст. ст.) — „Преп. Пимен Многоболезнени.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-20&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s fourth of five entries. His row was `undocumented` and the Greek line was this folder’s only book. **`dates` UNTOUCHED AND EXACTLY CORROBORATED.** The folder holds `death` 1110, flat, basis traditional; „Пред смрт устаде с постеље потпуно здрав, и одмах припреми себи гроб, и упокоји се у Господу 1110 год.“ — before his death he rose from his bed completely well, at once prepared his own grave, and reposed in the Lord in 1110 — gives the same year. A second source agreeing is not a reason to touch a stored date, and the basis is not promoted either: this book is a hagiographical calendar and not a document, so `traditional` is still what the interval is. **`types` UNTOUCHED.** Преп. is `venerable` and the folder has it; постригу га за монаха in „Ноћу му се јаве ангели и постригу га за монаха. Том приликом му рекну, да ће до смрти боловати, и да ће пред саму смрт оздравити. Тако и би.“ would give `monk`, which is there already and is a body word besides. Многоболезнени, much-ailing, is not a rank and is kept in the stored form, where it is the only thing distinguishing him from the three other Pimens of this corpus and from the faster of the same Lavra, whom the Greek keeps on this same day. **NO `related` ROW AND NO `locations`.** The entry names no person at all: the angels who tonsured him by night are angels, and „Донесен у Печерску лавру ради исцелења, он ту оста до смрти.“ brings him to the Caves Lavra for healing without naming anybody in it. The Lavra itself takes nothing — a dedication is not a relation, and `pimen-the-faster-of-the-caves` is a different man whom nothing in this entry mentions. Kyiv is in a clause. **WHAT THE ENTRY ADDS THAT THE GREEK LINE DID NOT**, which is the whole of this folder’s first life: „Од малена болешљив, и од малена жељан монаштва.“, sickly from childhood and longing for monasticism from childhood; „Он се више мољаше Богу за болест него за здравље.“, that he prayed to God for sickness rather than for health; „Ноћу му се јаве ангели и постригу га за монаха. Том приликом му рекну, да ће до смрти боловати, и да ће пред саму смрт оздравити. Тако и би.“, the tonsure by angels and their word that he would be ill until death and be made well just before it, and that so it was; „20 година лежао је у постељи.“, twenty years in bed; and „Чинио чудеса за живота и био необично прозорљив.“, wonders in his lifetime and an unusual clairvoyance. The Prologue prints no troparion and no kontakion: the day carries the verse only, which is Bishop Nikolai’s own and belongs to no person. The ПЕСМА is thirty lines on the second entry, three sayings of Or on truthfulness and on thinking himself the worst of God’s creatures, and it is in no field and in no life (§3), read before this was written."
     }
   ],
   "dates": {
