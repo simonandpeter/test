@@ -1,0 +1,71 @@
+{
+  "slug": "fridolin-of-sackingen",
+  "display_name": "Fridolin of Säckingen",
+  "sex": "male",
+  "types": [
+    "venerable",
+    "abbot"
+  ],
+  "office": "Abbot",
+  "names": [
+    {
+      "form": "Фридолин Зекингенский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 6 марта ст. ст., name page 14994, «Фридолин Зекингенский, прп.», with the grade word left off; the day's own line declines it. azbyka.ru heads its own page with the same two words under the same grade, «Преподобный Фридолин Зекингенский». `.tmp/foldchk.py` reports no folder holding this form, and no folder of this corpus holds any form of the name in any language."
+    }
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 6,
+        "month": 3,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 6 марта ст. ст. — «Прп. Фридолина Зекингенского (V-VI).»",
+        "url": "https://days.pravoslavie.ru/Days/20260306.html",
+        "year": 2026
+      },
+      "note": "The one person on the day the corpus did not already hold, and **the only one of the six whose life is not on this site**: the name link behind the line, page 14994, prints the heading and «День памяти: 6 марта» and nothing else — no life, no hymn, no second day. The life is read at azbyka.ru instead, whose own list for the same civil day keeps him on the same day and in the same company. **The reason a saint of the upper Rhine stands on a Russian day is recent and the azbyka page states it**: on 14 May 2018 a session of the Holy Synod took his name into the menologion of the Russian Orthodox Church."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 19 martie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's list for 19 Μαρτίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 19 March 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 538,
+      "latest": 540,
+      "display": "538 or 540",
+      "basis": "traditional",
+      "note": "**Two years from the one source that gives any, and they are on the same site.** azbyka.ru's page for him opens «Преподобный Фридолин Зекингенский († 538)», its short life closes «Скончался в 538 году в Зекингене и был там погребён», and its full life says he departed to the Lord on 6 March 538; but the same site's calendar list for the same civil day prints «прп. Фридолина Зекингенского (540)». days.pravoslavie.ru, the source of the attestation, gives no year at all — its line closes with (V-VI), the fifth to sixth centuries, and the name page behind it carries nothing. Both years are kept as the bounds because neither page prefers one, and no century is written instead because two stated years are narrower than two stated centuries."
+    },
+    "birth": {
+      "earliest": 430,
+      "latest": 470,
+      "display": "mid-5th century",
+      "basis": "traditional",
+      "note": "azbyka.ru's full life: «Преподобный Фридолин родился в благородной ирландской семье в середине V века» — born into a noble Irish family in the middle of the fifth century. No year is given on either of its two lives and days.pravoslavie.ru gives nothing; the bounds are the middle four decades of that century and the display is the page's own phrase."
+    }
+  },
+  "related": [
+    "hilary-of-poitiers"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
