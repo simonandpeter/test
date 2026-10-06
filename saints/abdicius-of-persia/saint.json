@@ -1,0 +1,66 @@
+{
+  "slug": "abdicius-of-persia",
+  "display_name": "Abdicius of Persia",
+  "sex": "male",
+  "office": "Deacon",
+  "types": [
+    "hieromartyr",
+    "deacon"
+  ],
+  "names": [
+    {
+      "form": "Авдикий Персидский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind his place in the line for 10 апреля ст. ст., name page 10, «Авдикий Персидский, диакон, сщмч.», with the office word and the rank abbreviation left off. The day’s own line gives the forename alone in the genitive, «Авдикия», with «диаконов» governing both deacons. **No folder in this corpus holds any form of this name**: `.tmp/foldchk.py` finds «Авдикий» on none at all, bare or otherwise, and `.tmp/sr-foldnew.mjs` reports the stored form as a key no other folder holds. The English display name follows the Russian form, this being the only calendar read that names him and the only script form any source read gives him."
+    }
+  ],
+  "related": [
+    "james-of-pharatha",
+    "azas-the-deacon",
+    "acepsimas-of-naeson"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 10,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 10 апреля ст. ст. — «Мчч. Иакова пресвитера, Азадана и Авдикия диаконов, Персидских (ок. 380).»",
+        "url": "https://days.pravoslavie.ru/Days/20260410.html",
+        "year": 2026
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s list for 10 aprilie, the civil day on which that calendar keeps this menologion day."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "saint.gr’s listing for 10 Απριλίου was read, and it keeps this company as two men and not three — «Άγιος Ιάκωβος ο Πρεσβύτερος» and «Άγιος Αζάς ο Διάκονος», whose folders this one now relates. **It names no third deacon anywhere in that entry**, so the Greek calendar yields no commemoration of this man and no feast could be written from it. Read 6 October 2026."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 23 April 2026, the civil day of the Julian 10 April."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 332,
+      "latest": 380,
+      "display": "between 332 and 380",
+      "basis": "traditional",
+      "note": "**Two calendars, two years, forty-eight years apart, and the interval carries both.** days.pravoslavie.ru closes its day line for 10 апреля ст. ст. with «(ок. 380)» and its life opens «Святые мученики Иаков пресвитер и диаконы Азадан и Авдикий скончались в Персии при царе Сапоре около 380 года» — about the year 380, under a king Shapur it does not number. saint.gr dates the same arrest «Καταγγέλθηκαν (332 μ.Χ.) σαν χριστιανοί», denounced as Christians in 332, and names the king: «Σαπώρ Β΄», whose reign ends in 379, so the Greek year falls inside a reign the Russian year falls just outside. **A third thing read pulls the same way as the Russian year and is not a year**: the Russian life says the three were taken «вместе с епископом Акепсимом», with the bishop Acepsimas, whose own folder this corpus dates 376. Neither year is chosen. Read 6 October 2026."
+    }
+  },
+  "hymns": [],
+  "text": {
+    "life": "life.md"
+  }
+}
