@@ -17,6 +17,11 @@
       "form": "Зосим",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's fourth heading for the Julian 17 April, „Преп. Саватије и Зосим.“, with Преп. left off, which is the venerable the rank table reads out of it and which this folder's `types` and the site's own honorific carry. One rank word stands over the pair and belongs to neither name, and the heading gives him no epithet and no monastery — Solovki is in the body, and this corpus keeps it in the display name and in `office`. So the bare forename is left, and the Prologue's form is Зосим and not Зосима. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"зосим\" — zosimas-of-palestine, zosimas-of-solovki`, and `zosimas-of-palestine` already held this same bare Serbian form, Зосим and not Зосима, off its own Prologue heading. A deliberate fold, recorded in the run's findings."
+    },
+    {
+      "form": "Зосима Соловецкий",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 854, «Преподобный Зосима, игумен Соловецкий», with the rank word and the office left off; the day's own line gives the name in the genitive, «Зосимы». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The grade «игумен» is left off with the rank word, since it is this folder's `office` and not part of the name; the island stays, and that is what tells him from the eleven other folders this corpus keeps on the forename."
     }
   ],
   "dates": {
@@ -35,8 +40,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "polyeleos",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Прп. Зосимы , игумена Соловецкого (1478).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's third entry, and **the only one of the nine to carry the polyeleos icon**, whose alt reads «Совершается служба с полиелеом»; the other two icons on the day are the plain sign and stand before the first and second entries. **This is his home calendar and the only one of the four to print him a service**: two hymns, a troparion in the fourth tone and a kontakion in the eighth, both added here with English renderings typed in this batch, and the first hymns this folder has had. Its year, 1478, is the one this folder already carries, and its life closes «(+ 17 апреля 1478)», which is this row's own day. The life page gives «Дни памяти: 17 апреля , 8 августа (перенесение мощей)»: the August day is the translation of his relics with Sabbatius's in 1566, which is a feast of the relics and not a second day of his own, and one row per church is the schema, so it is recorded here and he does not render on it."
+      }
     },
     {
       "church": "romanian",
@@ -76,5 +92,41 @@
   ],
   "text": {
     "life": "life.md"
-  }
+  },
+  "hymns": [
+    {
+      "church": "russian",
+      "kind": "troparion",
+      "lang": "cu",
+      "tone": "глас 4",
+      "text": "Изволением Божественного разума/ вселился еси в пустыню/ и тамо, вперив ум твой в Небесныя обители,/ равно Ангелом житие на земли пожив,/ в молитвах, и трудех, и пощениих/ образ был еси твоим учеником./ Отонудуже Бог, видя твое благое изволение,/ умножи тебе чада в пустыни, слез твоих теченьми напаяемей./ Но, яко имея дерзновение к Богу,/ поминай стадо, еже собрал еси, мудре,/ и не забуди, якоже обещался еси,/ посещая чад твоих,/ Зосимо преподобне, отче наш.",
+      "english": {
+        "text": "By the will of the divine Mind you settled in the wilderness, and there, fixing your mind upon the dwellings of heaven, you lived on earth a life equal to the angels, and were a pattern to your disciples in prayers and labours and fastings. Wherefore God, seeing your good will, multiplied your children in the wilderness, watered by the streams of your tears. But since you have boldness before God, remember the flock you gathered, O wise one, and do not forget, as you promised, to visit your children, venerable Zosimas, our father.",
+        "rendered": "site"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Тропарь преподобного Зосимы», глас 4, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "One of the day's four hymns, and one of the two headed for him; it names him and no other. The other two are a troparion and a kontakion of the saint whose finding of relics the day also keeps, and they went nowhere. Read out of the page by `.tmp/rubody.mjs`, which reads `div.trop` under «Молитвы» and not a life page. The English is typed here, and this is the first hymn any source read for this folder has given it."
+      }
+    },
+    {
+      "church": "russian",
+      "kind": "kontakion",
+      "lang": "cu",
+      "tone": "глас 8",
+      "text": "Христовою любовию уязвися, преподобне,/ и Того Крест славный, на рамо взем,/ понесл еси, божественне вооружився,/ и непрестанныя молитвы, яко копие в руце, имый,/ крепко ссекл еси бесовская ополчения.// Тем зовем ти: радуйся, преподобне отче Зосимо, монахов удобрение.",
+      "english": {
+        "text": "Wounded with the love of Christ, O venerable one, and taking his glorious Cross upon your shoulder, you carried it, armed with God; and holding unceasing prayer like a spear in your hand, you cut down the ranks of the demons mightily. Therefore we cry to you: rejoice, venerable father Zosimas, the adorning of monks.",
+        "rendered": "site"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Кондак преподобного Зосимы», глас 8, under «Молитвы»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The second of the two hymns the day heads for him; it names him and no other. Read out of the page by `.tmp/rubody.mjs`. The English is typed here."
+      }
+    }
+  ]
 }

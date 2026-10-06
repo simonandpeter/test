@@ -1,0 +1,61 @@
+{
+  "slug": "theodore-nedosekin",
+  "display_name": "Theodore (Nedosekin)",
+  "names": [
+    {
+      "form": "Феодор (Недосекин)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 9818, «Феодор (Недосекин), иерей, сщмч.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname. The surname in brackets is part of the name the calendar's link gives and is kept. No folder in this corpus holds the surname in either script, and the gate's key for the form, «недосекин феодор», has no other holder — which matters on a forename the corpus keeps well over a hundred folders on."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Сщмч. Феодора пресвитера (1942).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The last of the day's nine entries, standing on a line of its own, and the whole of it. It carries no typikon icon — the day's three stand before the first three entries — so no `rank` is recorded, and none of the day's four hymns is his. The day page prints no life under his name and there is no life page behind the line. The name page behind it (9818) gives «Дни памяти: 26 января (Новомуч.) , 17 апреля»: the January day is the synaxis of the new martyrs and confessors of Russia, a commemoration of a company and not a second day of his own, so no second row and no note of a second feast is written. That page carries nothing else at all — no life, no icon, no parish and no article."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1942,
+      "latest": 1942,
+      "display": "1942",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(1942)», which is this calendar's way of printing the year of death. It is the only year any source read for this folder gives him, and the page says nothing of where or how. No day is recorded because this corpus records years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "michael-novitsky",
+  "display_name": "Michael (Novitsky)",
+  "names": [
+    {
+      "form": "Михаил (Новицкий)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 9358, «Михаил (Новицкий), протоиерей, исп.», with the grade and the rank word left off; the day's own line declines the forename and gives no surname. The surname in brackets is part of the name the calendar's link gives and is kept. The gate's key for it, «михаил новицкии», has no other holder; the corpus does keep one other folder on this surname, `valerian-novitsky`, a priest of the Minsk region shot in 1930, whose form folds to «валериан новицкии» and not to this. Nothing read links the two men."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "confessor",
+    "presbyter"
+  ],
+  "office": "Priest",
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Св. Михаила исп., пресвитера (1935).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The eighth of the day's nine entries. It carries no typikon icon — the day's three stand before the first, second and third entries — so no `rank` is recorded, and none of the day's four hymns is his. The name page behind the line (9358) gives «Дни памяти: 26 января (Новомуч.) , 17 апреля»: the January day is the synaxis of the new martyrs and confessors of Russia, a commemoration of a company and not a second day of his own, so no second row and no note of a second feast is written. **The day's line and the name page both grade him «исп.», a confessor, while the life page they lead to heads his paragraph «Священномученик», a hieromartyr**; the calendar's own day line governs the `types` here and the disagreement is recorded. That life is a long page of twenty-three Belarusian new martyrs, one paragraph each; `rubody.mjs` caps a page from the middle, so his paragraph was read with `--max 0`."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1889,
+      "latest": 1889,
+      "display": "1889",
+      "basis": "attested",
+      "note": "The life page the name link leads to opens his paragraph «родился в 1889 году в большой священнической семье» — born in 1889 into a large priestly family. It names no place of birth."
+    },
+    "death": {
+      "earliest": 1935,
+      "latest": 1935,
+      "display": "1935",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(1935)», and the life page heads his paragraph «(+ 1935 г.)». The page sets the death on the third day of Pascha, after an assault in the night between Great Friday and Great Saturday; this corpus records years, so the day is in the life and not here."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "askitrea-daughter-of-phousik",
+  "display_name": "Askitrea, daughter of Phousik",
+  "names": [
+    {
+      "form": "Аскитрея Селевкийская",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 2415, «Аскитрея Селевкийская, мц.», with the rank word left off; the day's line gives «Аскитреи» in the genitive and no epithet. The city is the calendar's own nominative. No folder in this corpus holds this form or anything like it, and the gate's key for it has no other holder, measured."
+    }
+  ],
+  "sex": "female",
+  "types": [
+    "martyr"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Сщмч. Симеона , еп. Персидского, и с ним мчч. @6[Авделая] и Анании пресвитеров, Хусдазата евнуха, Фусика , Азата , мч. Аскитреи и иных многих (344).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The last of the six the day's first entry names before «и иных многих». **The line sets her among the martyrs without saying whose daughter she is; the life says it** — «вместе со святым Фусиком была замучена и его дочь мученица Аскитрея» — and that is what this folder's display name is read from. The day's first entry, and the first of the three to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. The line enumerates six of the company by name and closes «и иных многих», and many others, who are not named; the life counts a thousand martyrs, then another hundred and another hundred and fifty. **The day page's markup for the first presbyter is broken — it prints «@6[Авделая]», an unexpanded template, and he alone of the six has no `name:` link behind him**; the life's own heading gives his nominative. The name page for this entry (2001) gives «День памяти: 17 апреля» and no other day, and the «Служба» line under it names the three the day's service is for: Simeon, Acacius of Melitene and Zosimas of Solovki. The day's four hymns are two for Zosimas and two for the finding of another saint's relics, and none is this company's."
+      }
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr for the corresponding civil day (7 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: pravoslavno.rs for the corresponding Julian day (7 October 2026)."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 344,
+      "latest": 344,
+      "display": "344",
+      "basis": "traditional",
+      "note": "days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(344)», and its life for the company gives the year twice over: the decree that began the persecution in 344, and the bishop's own death «(+ 13 апреля 344)», with the killing going on through Pascha week to the twenty-third of April. This martyr died inside that week, so the year is his as well; the page gives him no other date and no birth, and the day it gives for the bishop is not his and is not recorded here."
+    }
+  },
+  "related": [
+    "phousik-companion-of-simeon",
+    "simeon-of-persia",
+    "audelas-companion-of-simeon",
+    "gothazat-companion-of-simeon",
+    "ananias-companion-of-simeon",
+    "azat-the-eunuch"
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}

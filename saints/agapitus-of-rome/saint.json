@@ -18,6 +18,11 @@
       "form": "Агапит",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's third heading for the Julian 17 April, „Св. Агапит папа Римски.“, with Св. left off — it is not a rank — and with папа Римски left off: this corpus keeps the see in `office`, where this folder already has Bishop of Rome, and the rank in `types`. The heading gives no epithet beyond the see, so the bare forename is left. Measured, and the reader's prediction was wrong: `corpus-gate.mjs` run without `--batch` lists `? \"агапит\" — agapitus-of-rome, agapitus-the-deacon`, and `agapitus-the-deacon` holds a bare **Russian** Агапит of the same spelling, so the fold crosses languages and no check of Serbian forms could have seen it. A deliberate fold, recorded in the run's findings."
+    },
+    {
+      "form": "Агапит I Римский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 55, «Святитель Агапит I Римский, папа», with the rank word and the office left off; the day's own line gives the name in the genitive, «Агапита». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The regnal number is part of the name the calendar's link gives and is kept; the see is this folder's `office` and is left out of the form."
     }
   ],
   "dates": {
@@ -32,8 +37,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Свт. Агапита , папы Римского (536).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's fifth entry. It carries no typikon icon — the day's three stand before the first three entries — so no `rank` is recorded, and none of the day's four hymns is his. The name page behind the line (55) gives «День памяти: 17 апреля» and no other day, and the nominative it carries gives him the regnal number the line does not. Its year, 536, is the one this folder already carries, and the life adds the year of his accession, 535."
+      }
     },
     {
       "church": "romanian",

@@ -17,18 +17,36 @@
       "form": "Αὐδελλᾶς",
       "lang": "el",
       "note": "The form saint.gr prints in his own couplet on the same page: «Eις τον Aυδελλάν. Ἄρκτου τὸ δεινὸν Αὐδελλᾶς ἔδυ στόμα»."
+    },
+    {
+      "form": "Авделай",
+      "lang": "ru",
+      "note": "**Read off the heading of the life and not off a name link, because this is the one entry of the six whose link the day page fails to render**: the line prints «@6[Авделая]», an unexpanded template with the genitive inside it, and there is no `/name/` page behind it. The life's heading gives «Авделай и Ананий пресвитеры», a nominative plural with his name first, and the body declines him «Авделаем» and «Авделай». The form is three letters longer than the four-character floor and no folder holds it, measured. No epithet, because the source gives him none."
     }
   ],
   "related": [
     "simeon-of-persia",
     "gothazat-companion-of-simeon",
-    "phousik-companion-of-simeon"
+    "phousik-companion-of-simeon",
+    "ananias-companion-of-simeon",
+    "askitrea-daughter-of-phousik"
   ],
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (30 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Сщмч. Симеона , еп. Персидского, и с ним мчч. @6[Авделая] и Анании пресвитеров, Хусдазата евнуха, Фусика , Азата , мч. Аскитреи и иных многих (344).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's first entry, and the first of the three to carry a typikon icon. **He alone of the six names on the line has no `name:` link behind him, because the day page's markup for him is broken** — it prints «@6[Авделая]», an unexpanded template, where the other five carry a link to the calendar's nominative. His nominative is therefore read off the heading of the life instead, «Авделай», and that is what the `ru` form here is. The line enumerates six of the company and closes «и иных многих», and many others, who are not named; the life counts a thousand martyrs, then another hundred and another hundred and fifty. **The day page's markup for the first presbyter is broken — it prints «@6[Авделая]», an unexpanded template, and he alone of the six has no `name:` link behind him.** The name page for the entry (2001) gives «День памяти: 17 апреля» and no other day, and its «Служба» line names the three the day's service is for: the bishop, Acacius of Melitene and Zosimas of Solovki. None of the day's four hymns is this company's. Two of the company had no folder here before this batch and now have one."
+      }
     },
     {
       "church": "romanian",
@@ -58,5 +76,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 344,
+      "latest": 344,
+      "display": "344",
+      "basis": "traditional",
+      "note": "The first year any source read for this folder gives him, and this folder had no `dates` at all. days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(344)», and its life for the company dates the decree that began the persecution to 344 and the bishop's own death to «13 апреля 344», with the killing continuing through Pascha week to the twenty-third of April. This martyr died inside that week. The Greek page this folder was written from gave no year at all."
+    }
   }
 }

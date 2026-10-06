@@ -16,6 +16,11 @@
       "form": "Симеон",
       "lang": "sr",
       "note": "Read out of the Ohrid Prologue's first heading for the Julian 17 April, „Свешт. муч. Симеон епископ Персијски.“, with Св. left off — it is not a rank — with Свешт. муч. left off, which is the `hieromartyr` this folder already carries in `types`, and with епископ Персијски left off, a rank and a see this corpus keeps in `types` and in the display name. The heading gives no epithet beyond the see, so the bare forename is what the source leaves."
+    },
+    {
+      "form": "Симеон Ктезифонтский, Селевкийский (Персидский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 2001, «Святитель Симеон Ктезифонтский, Селевкийский (Персидский), епископ, сщмч.», with the rank word and the office left off; the day's own line gives the name in the genitive, «Симеона». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. All three epithets are the calendar's own nominative and are kept, brackets and all, since the gate's key drops brackets anyway; the corpus keeps more than forty folders on this forename, so the key was measured rather than guessed."
     }
   ],
   "sex": "male",
@@ -26,8 +31,19 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "rank": "simple",
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Сщмч. Симеона , еп. Персидского, и с ним мчч. @6[Авделая] и Анании пресвитеров, Хусдазата евнуха, Фусика , Азата , мч. Аскитреи и иных многих (344).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's first entry, and the first of the three to carry a typikon icon, whose alt reads «Cовершается служба, не отмеченная в Типиконе никаким знаком» — a service the Typikon marks with no sign at all. Its year, 344, is the second of the two this folder already holds, and **its life gives the day of his death, «13 апреля 344», which no source read for this folder had stated** — four days before the day that keeps him, which is neither the day page's number nor a difference of thirteen, so BRIEF.md §8 leaves the day page standing and the difference is recorded here. The line enumerates six of the company and closes «и иных многих», and many others, who are not named; the life counts a thousand martyrs, then another hundred and another hundred and fifty. **The day page's markup for the first presbyter is broken — it prints «@6[Авделая]», an unexpanded template, and he alone of the six has no `name:` link behind him.** The name page for the entry (2001) gives «День памяти: 17 апреля» and no other day, and its «Служба» line names the three the day's service is for: the bishop, Acacius of Melitene and Zosimas of Solovki. None of the day's four hymns is this company's. Two of the company had no folder here before this batch and now have one."
+      }
     },
     {
       "church": "romanian",
@@ -157,7 +173,9 @@
     "gothazat-companion-of-simeon",
     "phousik-companion-of-simeon",
     "sadoth-of-persia",
-    "thousand-persian-martyrs"
+    "thousand-persian-martyrs",
+    "ananias-companion-of-simeon",
+    "askitrea-daughter-of-phousik"
   ],
   "dates": {
     "death": {

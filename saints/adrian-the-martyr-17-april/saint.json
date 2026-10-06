@@ -11,6 +11,11 @@
       "form": "Αδριανός",
       "lang": "el",
       "note": "Read out of saint.gr's line for 17 Απριλίου, «Άγιος Αδριανός ο Νέος», with the rank word and the epithet left off."
+    },
+    {
+      "form": "Адриан Коринфский",
+      "lang": "ru",
+      "note": "Read out of the title on the name link behind the line for 17 апреля ст. ст., name page 73, «Мученик Адриан Коринфский», with the rank word and the office left off; the day's own line gives the name in the genitive, «Адриана». No folder in this corpus holds this form, and the gate's key for it has no other holder, measured. The city epithet is the calendar's own nominative and is what tells him from the other folders this corpus keeps on the forename; the day's line gives him no epithet and this folder's display name has only its day."
     }
   ],
   "sex": "male",
@@ -20,8 +25,18 @@
   "attestations": [
     {
       "church": "russian",
-      "status": "undocumented",
-      "note": "Not checked: days.pravoslavie.ru for the corresponding Julian day (20 September 2026)."
+      "status": "venerated",
+      "feast": {
+        "day": 17,
+        "month": 4,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 17 апреля ст. ст. — «Мч. Адриана (251).»",
+        "url": "https://days.pravoslavie.ru/Days/20260417.html",
+        "year": 2026,
+        "note": "The day's fourth entry. It carries no typikon icon — the day's three stand before the first three entries — so no `rank` is recorded, and none of the day's four hymns is his. The name page behind the line (73) gives «День памяти: 17 апреля» and no other day, and serves two readings of him, the shorter inside the longer. **The city in the calendar's nominative, Corinth, is the only place any source read for this folder gives him**, and the year 251 is the only year."
+      }
     },
     {
       "church": "romanian",
@@ -60,5 +75,14 @@
   ],
   "text": {
     "life": "life.md"
+  },
+  "dates": {
+    "death": {
+      "earliest": 251,
+      "latest": 251,
+      "display": "251",
+      "basis": "traditional",
+      "note": "The first year any source read for this folder gives him, and this folder had no `dates` at all. days.pravoslavie.ru closes the line for 17 апреля ст. ст. with «(251)»; the shorter of the two readings it serves says he suffered in the persecution of 251, and the longer sets it in the reign of the emperor Decius, which it dates 249 to 251, and closes «(+ 251)». saint.gr, the only source read for this folder before, gave no year."
+    }
   }
 }
