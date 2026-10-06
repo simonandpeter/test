@@ -1,0 +1,59 @@
+{
+  "slug": "cornelius-of-pereslavl",
+  "display_name": "Cornelius of Pereslavl",
+  "sex": "male",
+  "types": [
+    "venerable"
+  ],
+  "names": [
+    {
+      "form": "Корнилије Перејаславски",
+      "lang": "sr",
+      "note": "Read out of the Охридски пролог’s heading for 22. јул ст. ст., „Преп. Корнилије Перејаславски.“, with «Преп.» — the rank — left off by §6. **«Перејаславски» IS KEPT AND IS THE WHOLE OF WHY THIS FORM LANDS IN NO FOLD**: it is neither a rank nor a see, he is a monk and holds no see, and the bare «Корнилије» is already held in sr by `cornelius-the-centurion`. `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both, and `foldchk.py` `NO FOLDER HOLDS THIS FORM`. The form is the nominative the heading itself prints. No Romanian, Greek or Russian form is written: none of those books was opened for him, and the Russian calendar is the one most likely to hold him, which is said in this batch’s commit message."
+    }
+  ],
+  "dates": {
+    "death": {
+      "earliest": 1693,
+      "latest": 1693,
+      "display": "1693",
+      "basis": "traditional",
+      "note": "Охридски пролог: „Пред смрт примио схиму и упокојио се 22. јула 1693. године.“"
+    }
+  },
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "undocumented",
+      "note": "Not checked: days.pravoslavie.ru for 22 июля ст. ст., which is the page for this menologion number. **This is the calendar most likely to hold him**, Pereslavl being a Russian town and the year 1693 inside the Russian calendar’s densest centuries; `grep -rilE ’pereslavl|perejaslav|pereyaslav’ saints/*/saint.json` returns eight folders and none of them is this man, but the Russian page itself was not opened."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro’s calendar for 22 iulie, which is the page for this menologion number — not 4 august, which merely shares his civil date in 2026."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr’s εορτολόγιο for 22 Ιουλίου, which is the page for this menologion number. The corpus holds five folders on that number already and none of them is a Russian monk of the seventeenth century."
+    },
+    {
+      "church": "serbian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 7,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православни подсетник (pravoslavno.rs), Охридски пролог за 04.08.2026 (22. јул ст. ст.) — „Преп. Корнилије Перејаславски.“",
+        "url": "https://www.pravoslavno.rs/index.php?q=citanja&datum=2026-08-04&prolog=1",
+        "year": 2026
+      },
+      "note": "The day’s third entry, quoted whole with its closing full stop (§4), and the only new folder of the day. **«Преп.» is the `venerable` this folder takes and the heading’s only rank word.** **THREE TYPES ARE REFUSED AND ALL THREE ARE IN THE BODY.** „У 15. години замонаши се од старца Павла.“, in his fifteenth year he was MADE A MONK by the elder Павле, which is Монах by §5 and is not in the heading; „Доцније се повукао у пустињу на молчаније.“, later he withdrew INTO THE DESERT for silence, which would be Пустињак; and „Постом себе је тако исушио, да је личио на костур.“, by fasting he had dried himself out so far that he was like a skeleton, which would be Испосник. A rank read out of a body is not written, so `types` is `venerable` and nothing else. **THE GREAT SCHEMA HE RECEIVED BEFORE DEATH IS NOT A TYPE EITHER** and this vocabulary has no word for it. **ONE DATE, STATED TO THE DAY, AND THE FIELD IS NEW BECAUSE THE FOLDER IS.** „Пред смрт примио схиму и упокојио се 22. јула 1693. године.“ — before his death he received the schema and reposed on the 22nd of July 1693. `death` earliest 1693, latest 1693, display «1693», basis traditional. **The day of death the book gives is the menologion day of this very entry**, 22 July, which is the ordinary case and not a second feast. **NO `birth`, AND THE ARITHMETIC IS REFUSED TWICE.** The entry gives his age at tonsure, fifteen, and the length of his silence, thirty years. Neither is a date, and a birth year got by subtracting either from 1693 would be this reading computing a fact rather than reading one — the same refusal the twenty-seven years of Ezekiel’s prophecy took on the day before. **NO FOLD, AND §6 IS WHY FOR THE SECOND TIME TODAY.** `sr-foldnew.mjs` answered `keys: 2` with `holders: 0 (none)` for both keys of «Корнилије Перејаславски», and `foldchk.py` `NO FOLDER HOLDS THIS FORM`. **The bare «Корнилије» is held in sr by `cornelius-the-centurion`**, so the toponymic the heading prints is the whole of what keeps this form out of a fold. «Перејаславски» is neither a rank nor a see — he is a monk and holds no see — so §6 keeps it: it is a by-name and the fullest form this calendar gives him. **NO `related` AND NO FOLDER FOR THE ELDER WHO TONSURED HIM, ON RULING 3.** `ls saints | grep -i ’^paul’` returns more than twenty folders and `sr-namesweep.mjs` returned nothing but Cornelii; not one Paul read here is an elder of a Pereslavl house in the seventeenth century, and an identification off a bare forename is not an identification. **AND THE CORPUS’S FOUR OTHER CORNELII ARE NOT HIM**: `cornelius-of-komel` 1455 to 1537, `cornelius-of-paleostrov` dead 1420, `cornelius-of-pskov` 1501 to 1570 and `cornelius-the-centurion` of the Acts. The nearest in kind, the abbot of the Pskov Caves, died a hundred and twenty-three years before this man. `grep -rilE ’pereslavl|perejaslav|pereyaslav’ saints/*/saint.json` returns eight folders and `daniel-of-pereslavl` is the only monastic of the town among them; he is not this man and no row is made. No `office`: the heading gives none and the book names no house. No `locations`: Pereslavl is in the by-name and the desert is not a coordinate. The Prologue prints no troparion and no kontakion; the day carries only Bishop Nikolai’s verse, and **that verse is on Mary Magdalene alone** — twenty-six lines of it — **and says nothing of this man, of Phocas or of Marcella**, which was read before it was said."
+    }
+  ],
+  "text": {
+    "life": "life.md"
+  }
+}
