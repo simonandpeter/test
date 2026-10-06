@@ -1,0 +1,68 @@
+{
+  "slug": "john-baranov",
+  "display_name": "John (Baranov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иоанн (Баранов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9595, «Иоанн (Баранов), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Баранов returned one folder, `joseph-monk-martyr-1918`, whose forename is Иосиф and whose day and year are neither of these; no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. azbyka.ru adds «11 июля (переходящая) – Собор Белорусских святых», which was seen and not read; days.pravoslavie.ru gives him the same Belarusian synaxis under its own date, 8 июня, which is the one other day its name page prints."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «Иван Самсонович Баранов родился в 1874 году на территории современной Белоруссии, в селе Рудня-Прибытковская Гомельской губернии»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». azbyka.ru closes «Приговор приведен в исполнение 4 декабря 1937 года», and 4 December 1937 is the Julian 21 ноября, one day before the day he is kept on."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "joasaph-zhevakhov",
+  "display_name": "Joasaph (Zhevakhov)",
+  "office": "Bishop",
+  "names": [
+    {
+      "form": "Иоасаф (Жевахов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 13865, «Святитель Иоасаф (Жевахов), епископ Могилевский, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Жевахов returned nothing; the corpus keeps twelve other Joasaphs and every one carries a different by-name, and no key of the proposed record has another holder. **The office is recorded as the bare `Bishop`** because `Bishop of Mogilev` is in none of the four locale packs and this wave does not add office keys; the see is in the life."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "bishop"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads his name page with three days: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church; 8 июня, marked «(Белорус.)», the synaxis of the saints of Belarus; and 22 ноября. Only the last was read and only the last is a row. **azbyka.ru gives him six days and they do not line up with those three.** Its page lists the synaxis of the New Martyrs, a bare 1 июня with no label at all, the synaxis of the Belarusian saints, the synaxis of the saints of Kursk, the synaxis of the New Martyrs of Solovki, and the civil 5 декабря. The unlabelled June day is what the two sources disagree about and it was not read; it is noted and nothing is claimed for it. He is the only name on this day whose two sources disagree about his other commemorations."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru, out of pstgu.ru: «Священномученик Иоасаф, епископ Могилевский (в миру Владимир Давидович Жевахов), родился в 1874 году в Полтавской губернии». days.pravoslavie.ru gives no year of birth and no life."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». azbyka.ru gives the day and the place: «Приговор был приведен в исполнение в день вынесения, 4 декабря 1937 года, в Курске». That day is the Julian 21 ноября of 1937, one day before the day he is kept on."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

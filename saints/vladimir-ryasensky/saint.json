@@ -1,0 +1,68 @@
+{
+  "slug": "vladimir-ryasensky",
+  "display_name": "Vladimir (Ryasensky)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Владимир (Рясенский)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9538, «Владимир (Рясенский), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Рясенский returned nothing at all, and no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Владимира пресвитера (1932).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. **His is the one name on this day with a year of its own.** The calendar gives him a sentence to himself, closing «(1932)», before the sixteen it closes with «(1937)», and the life explains the five years between them: he was not shot but sentenced, and died serving the sentence. azbyka.ru adds «18 июля (переходящая) – Собор Тверских святых» and «29 августа (переходящая) – Собор Кузбасских святых», which were seen and not read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1891,
+      "latest": 1891,
+      "display": "1891",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru, life4787: «Священномученик Владимир родился в 1891 году в городе Осташкове Тверской губернии в семье священника Федора Рясенского»."
+    },
+    "death": {
+      "earliest": 1932,
+      "latest": 1932,
+      "display": "1932",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru prints «(1932)» after his name on 22 ноября ст. ст., and its life4787 gives the day and the manner: «Священник умер в день праздника Введения во храм Пресвятой Богородицы, 4 декабря 1932 года». **This is a term served and not an execution.** The sentence of 26 December 1930 was five years in a camp; he was sent under escort to the camps of Мариинск on 30 January 1931 and died there, the life says, «через полтора года», a year and a half later. No day is recorded in this field because this corpus’s `dates` are years."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "slug": "james-sokolov",
+  "display_name": "James (Sokolov)",
+  "office": "Priest",
+  "names": [
+    {
+      "form": "Иаков (Соколов)",
+      "lang": "ru",
+      "note": "Read out of the title on the name link in the line for 22 ноября ст. ст., name page 9584, «Иаков (Соколов), иерей, сщмч.», with the grade and rank words left off; the day line itself gives the forename declined and no surname at all. `.tmp/foldchk.py` and `.tmp/rusurn.py` were run over the surname and `.tmp/ru-foldnew.mjs` over the proposed record: the sweep over Соколов returned six folders — `alexander-sokolov`, `basil-sokolov`, `paul-sokolov`, `peter-sokolov`, `theophanes-presbyter-martyr-1920` and `vladimir-presbyter-martyr-1940` — and every one of them carries a different forename; no key of the proposed record has another holder."
+    }
+  ],
+  "sex": "male",
+  "types": [
+    "hieromartyr",
+    "presbyter"
+  ],
+  "attestations": [
+    {
+      "church": "russian",
+      "status": "venerated",
+      "feast": {
+        "day": 22,
+        "month": 11,
+        "calendar": "julian"
+      },
+      "source": {
+        "text": "Православный церковный календарь, Сретенский монастырь (days.pravoslavie.ru), 22 ноября ст. ст. — «Сщмч. Иоасафа, еп. Могилевского, сщмчч. Иоанна, Василия, Павла, Иакова, Феодора, Илии, Алексия, Афанасия пресвитера и Иоанна диакона, прмчч. Герасима, Евтихия, Авенира, Саввы, Марка и мч. Бориса (1937).»",
+        "url": "https://days.pravoslavie.ru/Days/20261122.html",
+        "year": 2026
+      },
+      "note": "days.pravoslavie.ru heads the name page with two days and no more: 26 января, marked «(Новомуч.)», the synaxis of the New Martyrs and Confessors of the Russian Church, and 22 ноября. Only the second was read and only the second is a row. **azbyka.ru gives him a different first day from days.pravoslavie.ru’s.** Its page lists «29 мая (переходящая) – Собор новомучеников, в Бутове пострадавших», the synaxis of the new martyrs who suffered at Butovo, and «5 сентября (переходящая) – Собор Московских святых», where days.pravoslavie.ru gives only the general synaxis of 26 января. Both were seen and neither was read."
+    },
+    {
+      "church": "romanian",
+      "status": "undocumented",
+      "note": "Not checked: doxologia.ro's list for 5 decembrie, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "greek",
+      "status": "undocumented",
+      "note": "Not checked: saint.gr's Ορθόδοξος Συναξαριστής for 5 Δεκεμβρίου, the corresponding civil day (6 October 2026)."
+    },
+    {
+      "church": "serbian",
+      "status": "undocumented",
+      "note": "Not checked: the Ohrid Prologue at pravoslavno.rs for 5 December 2026 (6 October 2026)."
+    }
+  ],
+  "dates": {
+    "birth": {
+      "earliest": 1874,
+      "latest": 1874,
+      "display": "1874",
+      "basis": "attested",
+      "note": "azbyka.ru, out of fond.ru: «Священномученик Иаков родился в 1874 году в селе Тимоново Дмитровского уезда Московской губернии в семье псаломщика Ивана Соколова»."
+    },
+    "death": {
+      "earliest": 1937,
+      "latest": 1937,
+      "display": "1937",
+      "basis": "attested",
+      "note": "days.pravoslavie.ru closes the line of sixteen names for 22 ноября ст. ст. with «(1937)». azbyka.ru gives the day and the place: «Священник Иаков Соколов был расстрелян 4 декабря 1937 года и погребен в безвестной общей могиле на полигоне Бутово под Москвой». 4 December 1937 is the Julian 21 ноября."
+    }
+  },
+  "text": {
+    "life": "life.md"
+  }
+}
